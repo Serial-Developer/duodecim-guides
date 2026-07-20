@@ -1,0 +1,1042 @@
+{
+  "slug": "the-emperor",
+  "name": "The Emperor",
+  "page": "The_Emperor_(Dissidia_012)",
+  "url": "https://dissidia.wiki/The_Emperor_(Dissidia_012)",
+  "origin": "Final Fantasy II",
+  "icon": "empy",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-empy.png",
+  "infobox": {
+    "Name": "The Emperor (皇帝)",
+    "Original game": "Final Fantasy II",
+    "Base ATK (LV100)": "110 (Average)",
+    "Base DEF (LV100)": "112 (High)",
+    "Run Speed": "8 (Below Average)",
+    "Dash Speed": "81 (Below Average)",
+    "Fall Speed": "97 (Slow)",
+    "Fall Speed Ratio After Dodge": "44 (Slow)",
+    "Fastest BRV": "21F (Bombard)",
+    "Fastest HP": "35F (Flare, Ground)",
+    "1-Hit HP": "Yes (Flare, Dreary Cell)",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "Yes (Magic Block)",
+    "Weapon": "Daggers, Poles, Rods, Staves",
+    "Armor": "Bangles, Clothing, Hairpins, Hats, Headbands, Robes",
+    "Exclusive weapons": "Diamond Mace, Demon's Rod, Mateus's Malice",
+    "Alignment": "Chaos",
+    "Voice Actor (JP)": "Kenyu Horiuchi",
+    "Voice Actor (ENG)": "Christopher Corey Smith"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "The Emperor is a defensive, trap-laying powerhouse. His strategy revolves around filling the stage with lingering projectiles and uninteractable spells that force nearby opponents to move. Deny space with the unblockable Thunder Crest, pollute the stage with Flares and set up Dreary Cells for airborne threats. The Emperor is effective in stopping characters in close range, because his traps stay active even when he gets hit. This makes him hard to catch, and lets him take advantage of traded hits more than anyone else in the game. If The Emperor is left alone, the chargeable homing Starfall HP attack creates a unique win condition for him; This is a barrage of projectiles that rain down on the field, which allow The Emperor to call Jecht assist and charge another one to chain them together in large stages. Side by Side builds are very strong because of this and traps leading to HP damage in general. EX builds are also viable if they are needed, and the assist synergy is adequate for interruptions and combos.",
+        "Historically The Emperor has been considered a high tier character. His traps restrict melee characters’ options a lot and force them to take big risks to stop further escalation. However, without traps he relies on fundamental defense (blocks, dodge timing) to stay alive. His aerial offense is exceptionally flawed due to lack of conventional melee pokes |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        "and fast mid range tools. Long range fighters (e.g. Ultimecia, Kefka) give him a lot of trouble, who can largely ignore The Emperor's traps. The Emperor also has to watch out for disjointed |",
+        "A part of an attack that isn't close to the character's hurtbox. If this part of an attack gets hit by opponent's attack, the character using it will not take damage.",
+        "attacks, such as Squall’s Blasting Zone or Firion’s Rope Knife. When played well, The Emperor is a strong, suffocating character with free-form combo conversions and a high skill ceiling. However, his disadvantages are also far more pronounced when they are in effect, creating one of the most lopsided characters in competitive Dissidia 012."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Area-Denial: Traps fill space and deny the opponent's options, which can create rewarding chain reactions.\nUnique Win Condition: Starfall takes time to cast, but it is unavoidable once it starts. It forces opponents to approach and interact with his traps, or expend resources to avoid HP damage.\nDefensive Mixups : The Emperor can adjust his attack and dodge timing even against adept opponents thanks to low full recovery on most of his moves and trade potential with projectiles.\nAssist Gain: Rotating low recovery moves, such as Starfall, Mine and Dreary Cell fill the assist gauge quickly. Every trap and Flare can lead to HP damage, which fill the assist gauge even faster with Side by Side <img></img> builds.\nHigh Damage Punishes : Thunder Crest and Dynamite enable high damage combos, which can be greatly boosted with Mines. Assists that knock downwards (e.g. Jecht and Yuna) can practically double the damage with repeated combos. A Thunder Crest combo can secure a Bravery Break break from 2000 bravery.\nActionable Recovery : The Emperor has shorter recovery on his attacks than most characters. This lets him attack and block afterwards faster than majority of the roster.",
+              "Lack of Air Melee Abare : The lack of Melee moves in the air is a huge downside when there are no traps around him. Although emergency Mine and Dreary Cell can still trade with certain moves, they are unreliable, and a major flaw in his game plan.\nPolarizing Matchups : Both a good and a bad thing. With all his upsides, The Emperor lacks severely in offense, giving him the most polarizing matchup spread in the entire game. Some characters are outright denied with the right conditions, while others can neglect the traps and eventually force offense that The Emperor is not well suited for.\nPolarizing Stage Strengths: Stages affect his game plan harder than most other characters, requiring him to sometimes learn new effective strategies for some of the more unorthodox / smaller stages."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/The_Emperor_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/ca/Brv_the_emperor_bombard.jpeg",
+              "damage": "5, 5 x 3 (20)",
+              "startup": "21F",
+              "type": "Physical > Magical",
+              "priority": "Melee High",
+              "exForce": "84",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Sweep with staff. Extra explosion damage on hit.",
+              "name": "Bombard",
+              "notes": "Bombard is The Emperor's close-range poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. It breaks blocks, counterpokes lower priority attacks in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\nand creates assist combos on hit. If the blue Flare is reflected, The Emperor can use Bombard to reflect it back and regain its control. This is a very useful move to have. It is very safe to use by itself due to its short (actionable) recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n. The combination of Melee High priority and 21-frame startup |\nThe time it takes before an attack can do damage.\nspeed are exceptional.\nDespite these strengths, Bombard can be risky to use without traps protecting The Emperor. It has very short range and the staff's hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nis a bit awkward. It follows the staff motion precisely, while being active |\nThe period of time when an attack is capable of doing damage.\nlonger to The Emperor's right.\nBombard sends opponents away and straight up. It has so much hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nthat several assists can combo from it easily. Also it's a nice combo ender after Thunder Crest, since it gives better positioning and EX Force. Bombard can be combo'd into the vacuum of Mines and Dreary Cell with specific positioning as well. This makes it useful for some setups that can confuse the opponent even more."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/9c/Brv_the_emperor_landmine_1.jpeg",
+              "damage": "each (35)",
+              "startup": "29F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Absorb",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Lay mine. Multiples OK; they will persist a long time.",
+              "name": "Landmine",
+              "notes": "Up to 8 Landmines can be on the field.\nLandmine is a staple move for The Emperor. It fills assist gauge safely, adds lots of damage during Thunder Crest combos, and quickly occupies a bit of space. The short recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nmakes this attack rather non-committal, which is great for filling assist gauge when nothing else is going on. Landmines can stop basic movement, but they lose to dashes. They have a slight vacuum effect against opponents who are in hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n, but it doesn't come into play often due to the grounded position.\nThe vacuum effect from Dreary Cell and Landmines can create assist combos. However, this can mess up ground Wall Rush assists (e.g. Jecht, Yuna, Gilgamesh) if the opponent falls into them first, instead of Thunder Crest. Flare can salvage the situation, which is worth noting.\nThe Emperor lays 2 Landmines at a time. If The Emperor tries setting more than 8 Landmines, the earliest Landmines will simply disappear."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/14/Brv_the_emperor_light_crest_g_1.jpeg",
+              "damage": "each (7)",
+              "startup": "37F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Draw vertical light sigil. Fires when foe enters range; large vertical range.",
+              "name": "Light Crest (ground)",
+              "notes": "Only 1 grounded Light Crest can be on the field.\nLight Crest is a secondary tool, best used in conjunction with Flare and Dreary Cell to anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nopponents. It has situational combo potential with assists, prior aerial traps and vacuum effect from Mine / Dreary Cell, but usually it sees less use than The Emperor's other moves. It has fairly high recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\ncompared to his other attacks, and the low hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nmakes it difficult to use for combos. Light Crest does give The Emperor more time to set up more traps if it hits, though.\nLight Crest activates when the opponent is above the light sigil. It fires 5 projectiles, which have slight tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n. They can also bounce off of walls and projectiles. The firing angle can cross up |\nAn attack that comes from above that hits behind block. This can also change opponent's directional attack input on the ground.\nblocks, which isn't reliable, but happens more often than not. The sigil spawns slightly above the ground, which makes it miss against standing characters immediately."
+            },
+            {
+              "variants": [
+                "Level 1",
+                "Level 2",
+                "Level 3"
+              ],
+              "image": "https://dissidia.wiki/images/3/31/Brv_the_emperor_dynamite_g_1.jpeg",
+              "damage": [
+                "30 (1 x 5, 25)",
+                "40 (1 x 7, 33)",
+                "50 (1 x 10, 40)"
+              ],
+              "startup": [
+                "43F",
+                "80F (charge) 3F (hitbox after shot)",
+                "120F (charge) 3F (hitbox after shot)"
+              ],
+              "type": [
+                "Magical",
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Low (Special when sticked)",
+                "Ranged Mid (Special when sticked)",
+                "Ranged High (Special when sticked)"
+              ],
+              "exForce": [
+                "60+",
+                "60+",
+                "each hit (3)"
+              ],
+              "effects": [
+                "Absorb, Wall Rush",
+                "Absorb, Wall Rush",
+                "Absorb, Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Emit bomb from staffthat lands and draws in foe.",
+              "name": "Dynamite (ground)",
+              "notes": "Dynamite's ground version is mostly identical with the aerial version. It puts The Emperor airborne, which is useful for placing the projectile in front of The Emperor. Aerial Dynamite can't shoot straight down, so this covers a niche angle if needed in a pinch. This is also useful for maintaining Pre-Jump <img></img> accessory booster.\nSince The Emperor becomes airborne with this attack, he becomes more vulnerable to air brv assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\n. This is notable when fighting anyone with Kuja or Tidus assist, for example.\nFor more information, please refer to the aerial version."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/5e/Brv_the_emperor_thunder_crest_1.jpeg",
+              "damage": "2 x 17, 6 (40)",
+              "startup": "35F",
+              "type": "Magical",
+              "priority": "Unblockable",
+              "exForce": "60",
+              "effects": "Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Draw sigil on the ground. Paralyzes foe when in range.",
+              "name": "Thunder Crest",
+              "notes": "Only 1 idle Thunder Crest can be on the field.\nIf Thunder Crest activates, another Thunder Crest can be placed.\nThunder Crest is THE trap of all time, a must-have for The Emperor. It is used for area denial, block staggers and various combos. It is quite effective against close-range characters, such as Onion Knight, Jecht and Prishe. The Emperor can combo into Flares for solo HP damage with this move, and the BRV damage potential skyrockets with Landmines. Getting hit by Thunder Crest is deadly, but there's more: Thunder Crest is a true unblockable, which means it ignores every other priority. Blocks and LV2 Assist Change always lose to it. Standing near Thunder Crest provides a notable advantage for these reasons. Once Thunder Crest is set, The Emperor can start setting up other traps, such as Landmines, Flares and Dreary Cell. Since Thunder Crest remains active |\nThe period of time when an attack is capable of doing damage.\neven when The Emperor gets hit, it can be used to trade |\nWhen two opposing attacks hit each other at the same time, dealing damage. In Dissidia 012, this is usually in the context of assist character hitting their target while player character takes damage.\nagainst attacks, such as Firion's Lord of Arms. Trading with HP attacks in this fashion can lead to guaranteed Bravery Breaks.\nThunder Crest is slow enough that The Emperor can get punished |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nby fast attacks if he uses it after a ground dodge. The Emperor may need to use Starfall to provoke opponents into Thunder Crest's range. It is ground only and it does not interact with projectiles or disjointed |\nA part of an attack that isn't close to the character's hurtbox. If this part of an attack gets hit by opponent's attack, the character using it will not take damage.\nattacks. Just to name a few, watch out for Kefka's Trine, Cloud's Firaga and Squall's Thunder Barret and Blasting Zone.\nThe Thunder Crest sigil travels a short distance forward on the ground. It can bounce off of walls, and it stops at ledges. Thunder Crest has a slight upward hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nand the sigil itself is very accurate to its hitbox. It can activate as soon as it's visible right in front of The Emperor. The opponent can dodge Thunder Crest and activate it this way, but then The Emperor can place another Thunder Crest. When Thunder Crest is active |\nThe period of time when an attack is capable of doing damage.\n, it slightly draws in characters and assists.\nThe Emperor can lock off and place Thunder Crest in any direction he faces, if it is set to neutral Circle <img></img> input."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/15/Brv_the_emperor_mine_1.jpeg",
+              "damage": "each (35)",
+              "startup": "23F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Absorb",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Drop mine. Multiples OK; they will persist a long time.",
+              "name": "Mine",
+              "notes": "Up to 8 Mines can be on the field.\nMine is similar to Landmine in many ways, a key move for The Emperor. It is fast, non-committal and occupies the air space quickly. Great for filling assist gauge in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\nsafely, thanks to its low recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n. Mine is also a high BRV damage option as combo filler |\nAn attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.\n, such as during Thunder Crest and assist combos in the corner specifically.\nMine has a different spread compared to Landmines. It still pulls opponents in if they are in hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n, which can cause chain reactions into other traps or even assist combo conversions |\nTurning a hit (unlikely or otherwise) into a combo through situational awareness.\n.\nThe Emperor always sets 2 Mines at a time. The projectiles explode after a set time. Up to 8 Mines can be active |\nThe period of time when an attack is capable of doing damage.\n. If The Emperor tries setting more than 8 Mines, the earliest Mines will simply disappear."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/be/Brv_the_emperor_light_crest_a_1.jpeg",
+              "damage": "each (7)",
+              "startup": "37F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Draw horizontal light sigil. Fires when foe enters range; faces opponent's direction.",
+              "name": "Light Crest (midair)",
+              "notes": "Only 1 midair Light Crest can be on the field.\nMidair Light Crest is more horizontally aligned, but acts similarly to ground version otherwise. It is still a secondary tool, best used as a preemptive anti-air |\nAttacking an airborne opponent from below, usually on the ground.\n, or stopping slow moves above The Emperor, such as Exdeath's Black Hole. The relatively long recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n(aside from dodge cancels |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n) is still a factor as well.\nIt has a huge activation range vertically, and strong 360° detection range. Unfortunately this makes it easy to disarm with movement alone. If opponents gets close, Light Crest fires 4 projectiles at them with same hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nand homing |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nas ground version. On its own the hit stun is not that threatening, but it still has potential to chain into other traps with vacuum effect (Dreary Cell, Mine). Wall hits can help with converting |\nTurning a hit (unlikely or otherwise) into a combo through situational awareness.\nto assist combos.\nIf the opponent is not careful, Light Crest can also activate Assist Charge, which greatly benefits The Emperor."
+            },
+            {
+              "variants": [
+                "Level 1",
+                "Level 2",
+                "Level 3"
+              ],
+              "image": "https://dissidia.wiki/images/f/f2/Brv_the_emperor_dynamite_a_lv1.jpeg",
+              "damage": [
+                "30 (1 x 5, 25)",
+                "40 (1 x 7, 33)",
+                "50 (1 x 10, 40)"
+              ],
+              "startup": [
+                "43F",
+                "80F (charge) 3F (hitbox after shot)",
+                "120F (charge) 3F (hitbox after shot)"
+              ],
+              "type": [
+                "Magical",
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Low (Special when sticked on surface)",
+                "Ranged Mid (Special when sticked on surface)",
+                "Ranged High (Special when sticked on surface)"
+              ],
+              "exForce": [
+                "60+",
+                "60+",
+                "each hit (3)"
+              ],
+              "effects": [
+                "Absorb, Wall Rush",
+                "Absorb, Wall Rush",
+                "Absorb, Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Emit bomb from staffthat lands and draws in foe.",
+              "name": "Dynamite (midair)",
+              "notes": "Dynamite is used as a tool for pressure and combos. Charging it increases priority, which staggers or crushes blocks the longer it is charged. This, along with strong pull effect and generous hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nmake it good for starting assist combos whether it hits or gets blocked. The max charge (LV3) Dynamite can also combo naturally into the sticking ball against characters on the ground / at a wall. LV3 Dynamite holds the opponent in place long enough to knock them into other traps, such as Flares or Dreary Cells. It has consistency issues with combos against opponents at the ceiling, though.\nOnce Dynamite sticks on the surface, it starts pulling opponents in from midrange and deal damage continuously on contact. Here, Dynamite turns into a Special priority move for the consecutive hits and the final explosion. Blocking it is impossible due to the priority, but attacks, dashes and higher Ranged priority moves can still nullify it. The explosion has a decently sized hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\n, so attacks with few active |\nThe period of time when an attack is capable of doing damage.\nframes can fail to protect the opponent if they are misplaced. The explosion always knocks the opponent away from The Emperor, which means it can be influenced with the camera. This is useful for getting the best angle for Wall Rush or chaining other traps together.\nThe Emperor takes aim at the opponent during startup |\nThe time it takes before an attack can do damage.\n, but any further adjustments must be done manually before firing. The Emperor can adjust the aim in any direction, with a maximum angle of ~45°. This can be done even without charging Dynamite. Charging Dynamite affects all of its properties, such as attack priority, BRV damage, max range, the strength of the absorb vacuum effect and duration once it sticks to surface. The explosion does most of the damage, so finding ways to connect it is important for maximizing Dynamite's potential."
+            }
+          ]
+        }
+      },
+      "moveCount": 8,
+      "sources": [
+        "https://dissidia.wiki/The_Emperor_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/a/aa/Hp_the_emperor_starfall_g_1.jpeg",
+              "damage": "each (3)",
+              "startup": "521F",
+              "type": "Magical",
+              "priority": "Unblockable",
+              "exForce": "0",
+              "effects": "Absorb, Wall Rush, Block Low (Ranged)",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Call down giant meteor. Long cast. Aim with analog stick.",
+              "name": "Starfall (ground)",
+              "notes": "(1) Sigils are drawn as Starfall reaches completion...\n(1) Sigils are drawn as Starfall reaches completion...\n(2) Once completed, projectiles rain down.\n(2) Once completed, projectiles rain down.\n(3) The Emperor can move while the meteor falls!\n(3) The Emperor can move while the meteor falls!\nStarfall is The Emperor's signature long-range pressure tool. It is used to get quick access to low altitude air HP attacks, fill assist gauge quickly with repeated button presses, and force HP damage on anyone who plays too passively. Casting Starfall takes over 8,5 seconds, but it hits almost anywhere and becomes borderline inescapable without meter. The long attack duration and the ability to move while Starfall does damage allow repositioning and casting more Starfalls. In essence, this is a provocation tool and a unique win condition with Side by Side <img></img>, since The Emperor gets enough assist gauge from Starfall hits to loop it with Jecht assist multiple times.\nThe Emperor can move while casting, and is completely actionable once he is finished casting. When Starfall is successfully cast, The Emperor also gets brief invincibility |\nA state where a character cannot be hit, fully impervious to damage.\nbefore his casting state ends.\nThe Emperor blocks Ranged Low attacks while casting, which is great for protecting against moves such as Sephiroth's Shadow Flare, Lightning's Blizzara and Shantotto's Stun. If Starfall is only pressed briefly, The Emperor becomes actionable very quickly. This is great for filling assist gauge faster, but it also functions as a type of command block |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\nfor The Emperor.\nStarfall's grounded version is mostly identical with the midair version, which is used more often. However, the slight initial upward movement lets The Emperor avoid very low grounded attacks, such as Tifa's Waterkick and Cecil's Valiant Blow. Since Starfall puts The Emperor airborne, it also preserves the Pre-Jump <img></img> booster without actually using a jump. Overall a great attack, even if it does not activate all that often."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/b8/Hp_the_emperor_flare_g1.jpeg",
+              "damage": "-",
+              "startup": "35F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "60",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Gather globe of blue light that slowly homes in on opponent.",
+              "name": "Flare (ground)",
+              "notes": "Only 1 Flare can be set at a time.\nIf Flare is reflected, The Emperor can set another Flare.\nThe Emperor can reclaim Flares by reflecting with Bombard, but using Flare again removes all reclaimed Flares.\nBlue Flare is one of The Emperor's signature moves. It is often used to occupy space and make it harder for opponents to fight near The Emperor. It is also used in Thunder Crest combos for solo HP damage. Flare can force opponents to move or reflect it with an HP attack, which gives The Emperor a chance to strike back. Flare has little hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nand mostly leads to situational combos, but it can take out assists with Auto Assist Lock On and protect The Emperor against various melee attacks. The explosion is a bit larger than the actual projectile. This can lead to unexpected hits when it collides with surfaces, or gets near opponents. Flare also spawns close to The Emperor before it becomes an active |\nThe period of time when an attack is capable of doing damage.\nprojectile. It can function as a deceptively fast interruption tool because of this.\nWhile Flare is a good move, The Emperor is briefly vulnerable to counterattacks after using it. This requires good reactions from the opponent, but caution is advised anyway. Watch out for characters dodging through Flare, or assists hitting from the sides. High priority command blocks (Jecht Block, Exdeath Omni Block) and Bravery Boost on Dodge builds also work against The Emperor here. Lastly, blodges can activate the explosion without dealing damage to the opponent.\nIf blue Flare is reflected, The Emperor can reflect it back with Bombard as many times as he wants while they last. The opponent's choice to reflect Flare can be used to set up more traps or fill assist gauge."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/1b/Hp_the_emperor_dreary_cell_g1.jpeg",
+              "damage": "-",
+              "startup": "69F (total), 43F (activation)",
+              "type": "Magical",
+              "priority": "Unblockable",
+              "exForce": "36/54/72",
+              "effects": "Absorb",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Set discreet light trap. Detonates when foe approaches.",
+              "name": "Dreary Cell (ground)",
+              "notes": "Up to 3 Dreary Cells can be set, regardless of version.\nDreary Cell is a single hit trap that detonates once the opponent gets close to it. Similar to other traps, Dreary Cell is used for area denial, disrupting aggressive play and solo HP combos. Even if The Emperor gets hit, Dreary Cell can stop the opponent afterwards. The unblockable priority ignores other moves, so opponents must evade the explosion to avoid damage. Since Dreary Cell only does HP damage after detonating, it also activates meter depletion and Side by Side <img></img> assist gain effects. For these reasons, Dreary Cell is very effective as an anti-melee character tool. If that's not enough, the absorb effect pulls in anyone without strong momentum or short recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nfor their attacks. Many assists can also get caught in the blast, which makes Dreary Cell even safer to use.\nThe ground version is often used in tandem with Thunder Crest for support. The Emperor has no innate protection while using Dreary Cell, so watch out for projectiles and other midrange attacks that avoid the sigil; Squall's Thunder Barret, Kuja's Snatch Shot and Firion's Reel Axe to name a few. Dreary Cell also has an innate weakness against Bravery Boost on Dodge builds, though that's normal for The Emperor.\nThe placed sigil is rather small, but it depicts the activation range pretty accurately. The absorb effect works even when the sigil is idle and the opponent is in hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n. The pull effect is stronger than Mine, so it has more potential to drag opponents into Flares and Mines."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3b/Hp_the_emperor_starfall_a1.jpeg",
+              "damage": "each (3)",
+              "startup": "521F (8.6 seconds)",
+              "type": "Magical",
+              "priority": "Unblockable",
+              "exForce": "0",
+              "effects": "Absorb, Wall Rush, Block Low (Ranged)",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Call down giant meteor. Long cast. Aim with analog stick.",
+              "name": "Starfall (midair)",
+              "notes": "Starfall's midair version is mostly identical with the ground version, but it is even more important. This is used more often since it's an aerial move. The practical applications are the same; Forced HP damage, constant magic shield while casting and quick assist gains by tapping Square <img></img> and dodging. The Emperor wants to use Starfall after the traps have been set, since it forces most opponents to approach and interact with his traps. This can be difficult for some characters to deal with, such as Tifa, Zidane and Jecht, as it creates disproportionate risk for them to stop the situation.\nIf The Emperor succeeds, the opponent is forced to take HP damage or spend Assist / EX gauge to avoid it. The frame advantage |\nFighting game term that describes who is able to act first. Player who can act first is considered \"plus\", while a player who acts second is considered \"minus\" in a given situation.\nis huge; Thanks to Jecht assist, and Side by Side's <img></img> assist gain effect, a successful Starfall enables further Starfalls that are pretty much guaranteed. At bare minimum, Starfall's grounded Wall Rush ensures the second Starfall can be cast halfway.\nOnce Starfall is cast, it can be very overwhelming. The Emperor gets invincibility as he recovers from the cast. Starfall is completely unblockable and stays out even if The Emperor gets hit somehow. It hits almost anywhere. Auto Assist Lock On ability stops the opponent's assist and then switches back to the main target afterwards.\nThis is easily one of the most important moves for The Emperor. It rounds out his screen pressure, so building intuition for checkmate |\nA situation where a player has no options to avoid losing a situation or a match. For example, hitting an opponent who has a full EX gauge and killing bravery can activate EX Revenge and guarantee a win.\nsituations, when to fake out and when to just move while casting are crucial for effective high level play"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/e1/Hp_the_emperor_flare_a1.jpeg",
+              "damage": "-",
+              "startup": "35F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "60",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Gather globe of red light that awaits remote detonation.",
+              "name": "Flare (midair)",
+              "notes": "Only 1 red Flare can be set on the field.\nWall Rushes downward on hit.\nThe red Flare is also used for area denial, protection and combos. It has two main differences; It Wall Rushes downwards for more HP damage and assist combos, which is great for Thunder Crest combos. It also tracks |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nthe opponent for a short period, and then stays in place for some time. This is more of a defensive trap by comparison. The Emperor can use it to stop reckless air dashes and create tricky setups with Mines and Dreary Cell vacuum effect.\nJust like blue Flare, the red Flare is spawned close to The Emperor before it becomes an active |\nThe period of time when an attack is capable of doing damage.\nprojectile. It can function as a deceptively fast interruption tool because of this. Flare will stay on the field after startup |\nThe time it takes before an attack can do damage.\nno matter what. That means it can trade |\nWhen two opposing attacks hit each other at the same time, dealing damage. In Dissidia 012, this is usually in the context of assist character hitting their target while player character takes damage.\nwith opponent's attacks. Midair Flare behaves similarly to ground version when it detonates; It produces a separate explosion which is bigger than the projectile itself.\nIf given enough time, The Emperor can also use Flare to create tricky okizeme |\nJapanese term for attacking an opponent who is getting up.\nsetups."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/11/Hp_the_emperor_dreary_cell_a.jpeg",
+              "damage": "-",
+              "startup": "69F (total), 43F (activation)",
+              "type": "Magical",
+              "priority": "Unblockable",
+              "exForce": "36/54/72",
+              "effects": "Absorb",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Set discreet light trap. Detonates when foe approaches.",
+              "name": "Dreary Cell (midair)",
+              "notes": "Up to 3 Dreary Cells can be set, regardless of version.\nAerial Dreary Cell substitutes Thunder Crest in the air, which makes this version more important for The Emperor. It can be placed anywhere, although only three Dreary Cells can be set at a time. Its traits are otherwise shared with the ground version, including the single hit HP, absorb effect and vulnerability to Bravery Boost on Dodge builds.\nThis Dreary Cell is still effective against close-range attacks with longer recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, such as Jecht Stream, Cloud's Slashing Blow and Onion Knight's Turbo-Hit. However, The Emperor should watch out for attacks with strong aerial momentum and medium range; Squall's Beat Fang and Prishe's Raging Fists can evade the explosion, while Yuna's Sonic Wings can pierce through without activating Dreary Cell. Tidus air BRV assist is also a universal whiff punish |\nHitting an opponent who missed (whiffed) their attack.\noption against air Dreary Cell, so caution is advised when opponent has assist gauge."
+            }
+          ]
+        }
+      },
+      "moveCount": 6,
+      "sources": [
+        "https://dissidia.wiki/The_Emperor_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Power of Hellfire!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nBlood Magic",
+        "The Emperor's EX mode is fairly powerful, despite the compact perks. Critical hits are great for Thunder Crest and Landmines, while Blood Magic restores enough health for a serious momentum shift. The Emperor generates a decent amount of EX with his key moves, and playing the long game with Starfall complements his traps and EX Core races alike. He may not be the fastest to reach EX mode, but the effects are devastating once he activates it."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Blood Magic",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Activates when HP attack hits] Absorbs HP equivalent to damage dealt.",
+            "Blood Magic heals the same amount of HP damage that The Emperor inflicts on the opponent. This is quite potent when considering The Emperor's high bravery damage output and his ability to connect HP attacks. A single assist combo can prove to be very beneficial. Having EX Mode is already good for the assist gauge drain and its guaranteed match finishes, but it is also very effective for creating comebacks and cementing huge health leads."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Absolute Dominion",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "An attack that takes over the opponent's mind. Absorbs HP damage dealt. Enter the commands that display on screen.",
+            "Absolute Dominion is a relatively straightforward EX Burst to execute. Tap whatever button is shown on screen five times to get a perfect EX Burst. Even if character movement is set to directional buttons <img></img>, they must always be used when prompted. No analog stick inputs for this EX Burst."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "6, 13 (19)",
+                  "16x4, 17 (100 total)",
+                  "Magical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/The_Emperor_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [
+        "Main article: The Emperor (Combos)"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [
+            "The Emperor has various combos, though most of the practical combos revolve around Thunder Crest."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Notation Info"
+                ],
+                [
+                  "AC",
+                  "Assist Chase <img></img>"
+                ],
+                [
+                  "AST BRV",
+                  "Assist (Bravery) <img></img> + <img></img>"
+                ],
+                [
+                  "AST HP",
+                  "Assist (HP) <img></img> + <img></img>"
+                ],
+                [
+                  "Chase",
+                  "Chase <img></img>"
+                ],
+                [
+                  "Empty Chase",
+                  "Begins Chase, then nothing."
+                ],
+                [
+                  "DC",
+                  "Dodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n<img></img> + <img></img>"
+                ],
+                [
+                  "LL",
+                  "Landing Lag"
+                ],
+                [
+                  "WR",
+                  "Wall Rush"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Punish / Trap StarterGroundStaple BRV > HP Combo\nThunder Crest > Flare\n~40 + HP\n120\nBase Damage (Breakdown): 2 x 17, 6 + HP\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60 > 60\nThe Emperor's staple solo combo for HP damage. A bread-and-butter , so to speak. This can be done whenever Thunder Crest connects and The Emperor is close to opponent. Block staggers, trades or just stray hits are all ok. If Thunder Crest connects before The Emperor can move afterwards, the grounded blue Flare can be pressed repeatedly and it works consistently."
+                ],
+                [
+                  "Punish / Trap StarterGroundHigher HP Damage\nThunder Crest > DC (↑) > Flare (Midair)\n17~ + HP & WR\n120~\nBase Damage (Breakdown): 2 x 17 > HP + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60? > 60\nIn close range, The Emperor can also dodge upwards and combo into the red midair Flare for more HP damage with Wall Rush. The dodge cancel can be pressed repeatedly and the Flare has enough time to connect afterwards. Since red Flare forces ground Wall Rush, an early hit can take away max damage from Thunder Crest. This is often negligible, as The Emperor benefits a lot from assist combos and Side by Side's <img></img> assist gain.\nFor assist combos, it is best to call assist right before red Flare Wall Rushes. This is to ensure The Emperor can do another Thunder Crest as a follow-up."
+                ],
+                [
+                  "Punish / Trap StarterGroundBRV Damage\nThunder Crest > Move Closer <img></img> > Landmine\n110\n60\nBase Damage (Breakdown): 2 x 17 > 35 + 35\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60 > 0 + 0\nThis combo capitalizes on Landmine's high damage for Bravery. To ensure both Landmines connect, move closer to the opponent for a split-second before using the attack. This can be made slightly easier if Landmines are set to up ↑ + Circle <img></img>. That makes it so that The Emperor only has to hold up and press Circle <img></img> when appropriate."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist (Jecht)",
+          "text": [
+            "The Emperor primarily uses Jecht's air BRV assist for assist combos. The downward slam makes it ideal for additional Thunder Crest combos. Whenever Thunder Crest connects, Jecht air BRV can follow up. Use that if nothing else works. Optimizing damage for Thunder Crest routes takes some work, but it is worth the effort."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Notation Info"
+                ],
+                [
+                  "AC",
+                  "Assist Chase <img></img>"
+                ],
+                [
+                  "AST BRV",
+                  "Assist (Bravery) <img></img> + <img></img>"
+                ],
+                [
+                  "AST HP",
+                  "Assist (HP) <img></img> + <img></img>"
+                ],
+                [
+                  "Chase",
+                  "Chase <img></img>"
+                ],
+                [
+                  "Empty Chase",
+                  "Begins Chase, then nothing."
+                ],
+                [
+                  "DC",
+                  "Dodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n<img></img> + <img></img>"
+                ],
+                [
+                  "LL",
+                  "Landing Lag"
+                ],
+                [
+                  "WR",
+                  "Wall Rush"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Punish / Trap StarterGroundBRV Damage, HP\nThunder Crest > Move Closer <img></img> > Landmine > AST BRV > Move Closer <img></img> > Thunder Crest > Jump > Flare (Midair)\n190 + HP & WR\n180~\nBase Damage (Breakdown): 40 > 35 + 35 (Landmine) > 40 (AST) > 40 > HP + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60 > 0 + 0 > 60~ > 60\nA fairly standard mid level Thunder Crest combo with Landmine fillers and HP Wall Rush. The following notes assume that Thunder Crest is done close to opponent.\nAfter Thunder Crest, The Emperor must move closer to connect both Landmines consistently. The BRV damage is high enough to outclass several combo fillers in the game, so it's recommended to practice this. Call assist immediately after doing Landmine, but before they connect. When done correctly, Landmines should hit and Jecht assist still picks up successfully.\nAfter Jecht assist connects, move towards opponent with basic movement <img></img> or a Ground Dash. Then use Thunder Crest after Jecht assist has done two downward hits (he says \"I'll give it to you!\" during this). If done correctly, Jecht slams the opponent down and Thunder Crest connects smoothly afterwards. If Thunder Crest hits a bit later, The Emperor has more time to jump and midair Flare more easily."
+                ],
+                [
+                  "Punish / Trap StarterGroundCombo After Side by Side <img></img> Assist Gain\nThunder Crest > Flare > AST BRV > Move Closer <img></img> > Thunder Crest > Jump > Flare (Midair)\n114~ + HP & WR\n180~\nBase Damage (Breakdown): 40 + HP > 40 (AST) > 34~ + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60 + 60 > 60~ + 0\nIf The Emperor needs assist gauge from HP attacks (EXP to Assist or Side by Side <img></img>), this is a useful route for air BRV assist. The timing is a bit strict though; Call assist almost immediately after blue Flare does HP damage. If done correctly, Jecht assist should pick up before Thunder Crest knocks the opponent too far. Afterwards the execution is fairly straightforward. Move closer to opponent and use Thunder Crest again. If Thunder Crest hits a bit later, The Emperor has more time to jump and midair Flare more easily."
+                ],
+                [
+                  "HP StarterStarfall, 1 Assist Gauge, Side by Side <img></img>Starfall Loop\n1st Starfall > DC > 2nd Starfall (Hold <img></img>, Move Away <img></img>) > 1st Starfall WR > AST BRV > 2nd Starfall OK > DC > Repeat...\n69+ HP & WR\n0\nVideo\nBase Damage (Breakdown): ~9 x 3 + HP & WR > 42 + WR (AST) > Repeat...\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 0...\nThe infamous Starfall loop. This is what The Emperor works towards in any given match, so if he gets this far, victory is pretty much guaranteed. If Starfall activates, The Emperor can use Jecht assist to buy himself enough time to cast another Starfall before the opponent can interrupt it. Side by Side <img></img> causes subsequent Starfalls to fill assist gauge even with the initial bravery hits, which guarantees assist for each repetition. This may not be intended by developers, but it is a very strong side effect for The Emperor.\nThe mileage of Starfall loop can vary greatly depending on the matchup and the stage, but the general rule is longer distance means higher chance of Starfall activation. If the opponent has no long-range attacks to stop The Emperor, that is even better. This is best done in large stages such as Order's Sanctuary or Old Chaos Shrine, where Jecht assist can create larger gaps while The Emperor is running away.\nThe Emperor must start casting the second Starfall while the first one is raining down. Assist must be called after the Wall Rush, while still casting Starfall. To ensure only BRV assist is used, hold Square <img></img> and Circle <img></img>, then press L <img></img>. This can be tricky to perform with the face buttons, but it is the most consistent way to do it with 2 full assist gauges. Remember to move away from the opponent <img></img> while casting Starfall as well.\nOnce Starfall has activated, the only thing opponent can do is use Assist or EX to escape. If they mistime Assist Change early (see video example), they can still get hit by Starfall and suffer the loop regardless. Without Side by Side <img></img>, The Emperor cannot guarantee nearly as many Starfalls even with 2 assist gauges. This is still unavoidable HP damage, but naturally it gets cut off much earlier, while relying on existing resources. This is one reason to use Side by Side builds over others."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/The_Emperor_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "Main page: The Emperor (012) Builds",
+        "The Emperor works well with various builds. He can use EX as an inevitable factor or invest into bravery damage. Side by Side <img></img> is also very effective for a couple reasons; The Emperor commonly lands HP attacks without assist, so he benefits from the assist gain effect every time it happens. It also lets The Emperor get assist gauge consistently with subsequent Starfalls once the first Starfall has been cast. This leads to the notorious Starfall loop with Jecht assist.",
+        "Because of this, Side by Side builds are very powerful for The Emperor. However, his synergy with other build styles leave room for player expression without compromising his other strengths."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Side by Side + High Base BRV",
+          "text": [
+            "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Stats"
+                ],
+                [
+                  "HP",
+                  "9683"
+                ],
+                [
+                  "CP",
+                  "450"
+                ],
+                [
+                  "BRV",
+                  "1683"
+                ],
+                [
+                  "ATK",
+                  "177"
+                ],
+                [
+                  "DEF",
+                  "184"
+                ],
+                [
+                  "LUK",
+                  "60"
+                ],
+                [
+                  "Max Booster",
+                  "x3.5"
+                ]
+              ]
+            },
+            {
+              "caption": "Special Effect:",
+              "rows": [
+                [
+                  "Equipment"
+                ],
+                [
+                  "Assist",
+                  "Jecht / Yuna"
+                ],
+                [
+                  "Weapon <img></img>",
+                  "Piggy's Stick <img></img> (Peltast's Gear)"
+                ],
+                [
+                  "Hand <img></img>",
+                  "Chainsaw <img></img> (Equip Machines)"
+                ],
+                [
+                  "Head <img></img>",
+                  "Thornlet"
+                ],
+                [
+                  "Body <img></img>",
+                  "Maximillian <img></img> (Cavalier's Gear)"
+                ],
+                [
+                  "Accessory 1",
+                  "Bravery Orb <img></img>"
+                ],
+                [
+                  "Accessory 2",
+                  "Dismay Shock <img></img>"
+                ],
+                [
+                  "Accessory 3",
+                  "Battle Hammer <img></img>"
+                ],
+                [
+                  "Accessory 4",
+                  "Empty EX Gauge <img></img>"
+                ],
+                [
+                  "Accessory 5",
+                  "Summon Unused <img></img>"
+                ],
+                [
+                  "Accessory 6",
+                  "Pre-EX Mode <img></img>"
+                ],
+                [
+                  "Accessory 7",
+                  "Pre-EX Revenge <img></img>"
+                ],
+                [
+                  "Accessory 8",
+                  "Blue Gem <img></img>"
+                ],
+                [
+                  "Accessory 9",
+                  "Hero's Seal <img></img>"
+                ],
+                [
+                  "Accessory 10",
+                  "Side by Side <img></img>"
+                ],
+                [
+                  "Summon <img></img>",
+                  "Rubicante"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "<img></img> Landmine",
+                  "<img></img> Mine"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "↑+<img></img> Bombard",
+                  "↑+<img></img> Dynamite"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "↓+<img></img> Thunder Crest",
+                  "↓+<img></img> Light Crest"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "<img></img> Flare",
+                  "<img></img> Flare"
+                ],
+                [
+                  "",
+                  "↑+<img></img> Starfall"
+                ],
+                [
+                  "↓+<img></img> Dreary Cell",
+                  "↓+<img></img> Dreary Cell"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Actions"
+                ],
+                [
+                  "Ground Evasion"
+                ],
+                [
+                  "Midair Evasion"
+                ],
+                [
+                  "Ground Block"
+                ],
+                [
+                  "Midair Block"
+                ],
+                [
+                  "Aerial Recovery"
+                ],
+                [
+                  "Recovery Attack"
+                ],
+                [
+                  "Controlled Recovery"
+                ],
+                [
+                  "Wall Jump"
+                ],
+                [
+                  "Omni Air Dash+"
+                ],
+                [
+                  "Omni Ground Dash+"
+                ],
+                [
+                  "Speed Boost++"
+                ],
+                [
+                  "Jump Boost++"
+                ],
+                [
+                  "Jump Times Boost++"
+                ],
+                [
+                  "Ground Evasion Boost"
+                ],
+                [
+                  "Midair Evasion Boost"
+                ],
+                [
+                  "Evasion Boost"
+                ],
+                [
+                  "Descent Speed Boost"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Support"
+                ],
+                [
+                  "Always Target Indicator"
+                ],
+                [
+                  "EX Core Lock On"
+                ],
+                [
+                  "Auto Assist Lock On"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Extra"
+                ],
+                [
+                  "Perseverance"
+                ],
+                [
+                  "Disable Counterattack"
+                ],
+                [
+                  "EXP to HP"
+                ],
+                [
+                  "Machinery"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "CP"
+                ],
+                [
+                  "450 / 450"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Build Overview",
+          "text": [
+            "This high base bravery with Side by Side is very similar to the ones that Zidane, Firion and Golbez use. The idea is also similar: High burst damage with each HP attack and assist combo that follows. The Emperor can build lots of momentum against close-range characters who struggle to break through traps, such as Jecht and Zidane. If The Emperor can cast Starfall successfully, the subsequent Starfall loops can end the match very quickly and decisively."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/The_Emperor_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Synergies",
+          "text": [
+            "Jecht\nOne of The Emperor’s strongest assists. Jecht trades some range issues from Yuna for fast braveries, long setup time for traps and deadly win condition with Starfall. He holds the opponent long enough to enable the infamous Starfall loops from a successful Starfall cast. This is very strong with assist gauge depletion, Side by Side and in large stages especially.\nJecht also sets up Thunder Crest follow-ups, similar to Yuna and Gilgamesh. Jecht’s ground BRV is also useful for converting from stray midair Flare or Dynamite Wall Rush on reaction. It’s great for building momentum, though The Emperor can struggle to combo afterwards from afar. In this regard, jecht assist provides notable benefits both in large stages and small stages.\nJecht’s usual downsides are in effect here. He gets locked from LV2 Assist Change easily. If the opponent escapes with LV1 Assist Change, The Emperor can struggle to protect Jecht or get high reward due to missing fast aerial melee attacks.",
+            "Yuna\nOne of the strongest and reliable assists for The Emperor. Yuna's air BRV is the main draw here. It has immunity against LV2 Assist Change staggers. It converts |",
+            "Turning a hit (unlikely or otherwise) into a combo through situational awareness.",
+            "reliably from Thunder Crest and Bombard. It has adequate range for whiff punishes |",
+            "Hitting an opponent who missed (whiffed) their attack.",
+            "and interruptions. The air BRV also leads to Thunder Crest on the ground consistently, though the short attack duration makes it hard sometimes in neutral |",
+            "The stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.",
+            ". Yuna can also stabilize trap setups, and is one of the safest assists against Assist Change > Assist Lock attempts. This is great for keeping assist gauge advantage.",
+            "Yuna's ground BRV is less reliable, but it allows The Emperor to do Dynamite combos even from far away. Yuna's air HP is also fast and save against LV2 Assist Change if needed for interruptions or combos. Ground HP is not as fast, but nice for scramble situations or interrupting opponents when casting Starfall.\nYuna assist has a few downsides too. Her lateral range is lacking, and she sometimes struggles to pierce through projectiles. Her Wall Rush range is on the shorter side too, and the short attack duration on air BRV makes it harder to combo with out of the blue in neutral |",
+            "The stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.",
+            ". Her HP assists cannot reflect back blue Flare easily despite ground HP having a Melee High priority hitbox |",
+            "An invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.",
+            ".",
+            "|-|Gilgamesh=\nSomething akin to a \"Melee Yuna\", Gilgamesh trades LV2 Assist Change immunity for more range, melee HP attacks. Air BRV is slower than Yuna for whiff punishes, but it has more range and BRV damage (with Excalibur). It combos reliably from Thunder Crest and Bombard, and the ground Wall Rush lets The Emperor set up another Thunder Crest for more damage. Gilgamesh air BRV has similar duration as Yuna's, so setups only need minimal adjustment. His ground BRV Wall Rushes from longer distances, and if it doesn't, The Emperor can try to salvage the combo with Flare in close-range.",
+            "Gilgamesh's air HP is a fast melee HP for whiff punishment, and it can reflect back blue Flares. Ground HP is considerably slower, but it can be a decent (albeit expensive) option for finishing matches in grounded scramble situations.",
+            "Similar to Yuna, Gilgamesh has no Assist Chase and relies on mid-range ground Wall Rush. Gilgamesh is less reliable with vacuum effect setups and he is more vulnerable to LV2 Assist Change staggers than Yuna.",
+            "|-|Tidus=\nTidus assist has no height requirement for HP combos, and he is safer against Assist Lock attempts than most assists.",
+            "The air BRV Hop Step is once again the main draw here. Its fast startup |",
+            "The time it takes before an attack can do damage.",
+            "is great for whiff punishing |",
+            "Hitting an opponent who missed (whiffed) their attack.",
+            "on reaction. A delayed Assist Chase lets The Emperor combo into Flare or Mine, so the basic needs are met.",
+            "Ground BRV allows consistent combos from red Flare, though there is little time to react. It can lead to Thunder Crest follow-ups on flat ground though. Air HP Slice n Dice can also pin opponents down and deal HP damage even if The Emperor's traps happen to hit too early. Spiral Cut can punish some attacks, but it's not used often.",
+            "|-|Cecil=\nA helpful assist when long lateral reach is needed.",
+            "Air BRV has huge range for both unique whiff punishes |",
+            "Hitting an opponent who missed (whiffed) their attack.",
+            "and conversions |",
+            "Turning a hit (unlikely or otherwise) into a combo through situational awareness.",
+            "from weird hits, where even Gilgamesh might not reach. It also provides a ground Wall Rush to work with, and works fine from his important hits. Ground BRV is a niche punish |",
+            "Attacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.",
+            "tool, only really used if The Emperor is in range to convert from the Wall Rush.",
+            "Air HP can be very annoying for the opponent if put into a bad situation by traps, as well as catch floaty air dodges when anticipated. And it gives a ground Wall Rush too for a nice damaging combo.",
+            "Ground HP is once again a niche punish, although a fine one at that. It can catch ground dodges if anticipated, but it's often avoided like the ground BRV.",
+            "Cecil's huge air BRV and HP range makes him good for The Emperor, as he can uniquely punish and deal with moves that can otherwise completely shut him down with how safe they are. Not the first choice, but worth considering when weighing options.",
+            "|-|Kuja=\nDuodecim's top tier assist, reliable when you need him. He has few notable traits for The Emperor, but far from the worst choice in general.",
+            "Not the most optimal of combo conversions |",
+            "Turning a hit (unlikely or otherwise) into a combo through situational awareness.",
+            ", but still has a great air BRV whiff punisher |",
+            "Hitting an opponent who missed (whiffed) their attack.",
+            "and a decent ground BRV for catching dodges. Both BRVs have Assist Chase and lots of hit stun |",
+            "The period of time when a character cannot do an action after getting hit by an attack.",
+            ", which makes Kuja most reliable for Assist Chase combos specifically. The air BRV is particularly noteworthy, because it moves forward and up so much, that it largely ignores reflected Blue Flares. Kuja's BRVs have strong tracking |",
+            "Tracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".",
+            ", so Dreary Cell's vacuum can easily pull in nearby opponents.",
+            "Kujas HPs are also very notable: Air HP is one more thing to throw into scramble situations with The Emperor's traps. Ground HP works as a possible dodge punish, whiff punish and Red Flare combo extender if it's ever needed to close the match.",
+            "|-|Sephiroth=\nA niche matchup |",
+            "Two specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.",
+            "specific assist. Yet another option for The Emperor in case other assists are not cutting it.",
+            "His range is a point of interest, as his air and ground BRV are both good whiff punish |",
+            "Hitting an opponent who missed (whiffed) their attack.",
+            "tools, and can poke through certain moves. They also lead to Assist Chase, but The Emperor needs to manually delay his follow-up to combo afterwards.",
+            "Sephiroth's air HP is even more of a niche punish and scramble glue. It has strong homing in such situations, and it can cover plenty of space. It can be hard to avoid when traps have been set. Ground HP is much the same, but least notable for The Emperor."
+          ],
+          "tables": []
+        },
+        {
+          "title": "The Emperor Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Thunder Crest",
+                  "35F",
+                  "Ground",
+                  "Player",
+                  "2 x 17, 6 (40)",
+                  "Absorb"
+                ],
+                [
+                  "BRV",
+                  "Mine",
+                  "23F",
+                  "Air",
+                  "Opponent",
+                  "35 each (up to 70)",
+                  "Chase, Absorb"
+                ],
+                [
+                  "HP",
+                  "Flare",
+                  "35F",
+                  "Ground",
+                  "Player",
+                  "-",
+                  "-"
+                ],
+                [
+                  "HP",
+                  "Flare",
+                  "37F",
+                  "Air",
+                  "Opponent",
+                  "-",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist Overview",
+          "text": [
+            "The Emperor assist is niche, but powerful under certain circumstances. He enables various ground combos with Thunder Crest, and Mines do lots of damage after long holds and early ground Wall Rush assist calls. Contrary to most assists, The Emperor is difficult to Assist Lock due to his priorities ignoring LV2 Assist Change staggers. Hitting The Emperor manually is also challenging, since he disappears quickly after his attacks. This gives him a distinct advantage, even if it comes at the cost of accessible assist combos for many characters.",
+            "The main thing that limits The Emperor's combo potential is having his attack tied to the player's position; Thunder Crest only comes out if the player character is on the ground, and Mine only comes out if the character is in the air. That being said, The Emperor is one of the few assists viable for double assist combos thanks to his disappearance before Thunder Crest (and sometimes Mine) combo disables assist gauge temporarily. Squall is especially effective at capitalizing on The Emperor's strengths and combo potential. Prishe can also combo into Mines with delayed Raging Fists, creating elaborate high damaging air combos. Other than that, The Emperor assist is not commonly used in competitive play.",
+            "Further reading: The Emperor (Assist Tier List)"
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/The_Emperor_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/The_Emperor_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/The_Emperor_(Dissidia_012)"
+  ]
+}

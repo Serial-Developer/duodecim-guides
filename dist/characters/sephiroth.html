@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sephiroth — Guide Dissidia 012 [duodecim]</title>
+<meta name="description" content="Guide compétitif français de Sephiroth dans Dissidia 012 [duodecim] Final Fantasy : frame data, plan de jeu, builds, assists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/main.css">
+
+</head>
+<body>
+<nav class="guide-top" aria-label="Sections du guide"><div class="chips-nav">
+<a href="../index.html">← Sélection</a>
+<a href="#overview">Vue d'ensemble</a><a href="#moves">Coups</a><a href="#unique">Mécanique unique</a><a href="#gameplan">Plan de jeu</a><a href="#matchups">Matchups</a><a href="#builds">Builds</a><a href="#assist">Assists</a><a href="#community">Tech communautaire</a><a href="#sources">Sources</a>
+</div></nav>
+<div class="guide-layout">
+<nav class="guide-toc" aria-label="Sommaire"><ol>
+<li><a href="../index.html" class="backlink">← Sélection</a></li>
+<li><a href="#overview">Vue d'ensemble</a></li><li><a href="#moves">Coups</a></li><li><a href="#unique">Mécanique unique</a></li><li><a href="#gameplan">Plan de jeu</a></li><li><a href="#matchups">Matchups</a></li><li><a href="#builds">Builds</a></li><li><a href="#assist">Assists</a></li><li><a href="#community">Tech communautaire</a></li><li><a href="#sources">Sources</a></li>
+</ol></nav>
+<main class="guide-main">
+<section class="hero" id="hero">
+<img class="portrait" src="../assets/portraits/sephiroth.png" alt="Portrait officiel de Sephiroth dans Dissidia 012 [duodecim]">
+<div class="hero-id">
+<p class="origin">Final Fantasy VII</p>
+<h1>Sephiroth</h1>
+
+<div class="chips"><span class="chip ">BRV la + rapide <b>15F (Transience)</b></span><span class="chip ">HP la + rapide <b>43F (Octaslash, Heaven's Light)</b></span><span class="chip ">Dash <b>81 (Below Average)</b></span><span class="chip ">ATK <b>111</b></span><span class="chip ">DEF <b>111</b></span><span class="chip ok">HP 1 coup <b>Oui</b></span><span class="chip ok">HP links <b>Oui</b></span></div>
+</div>
+</section>
+<section id="overview"><h2>Vue d'ensemble</h2>
+<div class="banner info">Contenu éditorial français en cours de rédaction — données brutes ci-dessous.</div>
+<p><strong>Tier list 2017 (tournoi, dissidia.wiki)</strong> : <span class="badge prio-melee-high">A</span> — 8ᵉ sur 30.</p>
+
+<h3>Stats &amp; vitesses</h3>
+<div class="table-scroll"><table class="stats"><tr><th>Nom</th><td>Sephiroth (セフィロス)</td></tr><tr><th>Jeu d'origine</th><td>Final Fantasy VII</td></tr><tr><th>ATK de base (LV100)</th><td>111 (High)</td></tr><tr><th>DEF de base (LV100)</th><td>111 (Average)</td></tr><tr><th>Vitesse de course</th><td>9 (Slow)</td></tr><tr><th>Vitesse de dash</th><td>81 (Below Average)</td></tr><tr><th>Vitesse de chute</th><td>85 (Average)</td></tr><tr><th>Chute après esquive</th><td>41 (Below Average)</td></tr><tr><th>BRV la plus rapide</th><td>15F (Transience)</td></tr><tr><th>HP la plus rapide</th><td>43F (Octaslash, Heaven's Light)</td></tr><tr><th>HP en 1 coup</th><td>Yes (Multiple)</td></tr><tr><th>HP links</th><td>Yes (Combos only)</td></tr><tr><th>Command block</th><td>Yes (Scintilla)</td></tr><tr><th>Armes</th><td>Greatswords, Katanas</td></tr><tr><th>Armures</th><td>Chestplates, Gauntlets, Heavy Armor,Helms, Light Armor, Shields</td></tr><tr><th>Armes exclusives</th><td>Masamune Blade, Masamune, One-Winged Angel</td></tr><tr><th>Camp</th><td>Chaos</td></tr><tr><th>Doubleur (JP)</th><td>Toshiyuki Morikawa</td></tr><tr><th>Doubleur (ENG)</th><td>George Newbern</td></tr></table></div>
+<figure class="diagram" role="img" aria-label="Profil de mobilité comparé à la moyenne du cast">
+<figcaption>Profil de mobilité (mode normal)</figcaption>
+<div class="table-scroll"><svg viewBox="0 0 720 174" xmlns="http://www.w3.org/2000/svg" style="min-width:480px">
+<title>Profil de mobilité : valeurs du personnage (barres) contre moyenne du cast (trait or)</title>
+<text x="142" y="29" fill="var(--text)" font-size="12" text-anchor="end">Course</text><rect x="150" y="18" width="46.956521739130444" height="18" rx="3" fill="var(--violet)"><title>Course : 9 (moyenne du cast : 7.3)</title></rect><line x1="188" y1="14" x2="188" y2="38" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 7.3</title></line><text x="202.95652173913044" y="29" fill="var(--muted)" font-size="11">9</text><text x="142" y="63" fill="var(--text)" font-size="12" text-anchor="end">Dash</text><rect x="150" y="52" width="422.608695652174" height="18" rx="3" fill="var(--violet)"><title>Dash : 81 (moyenne du cast : 78.5)</title></rect><line x1="559.8176718092567" y1="48" x2="559.8176718092567" y2="72" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 78.5</title></line><text x="578.608695652174" y="63" fill="var(--muted)" font-size="11">81</text><text x="142" y="97" fill="var(--text)" font-size="12" text-anchor="end">Chute</text><rect x="150" y="86" width="443.47826086956525" height="18" rx="3" fill="var(--violet)"><title>Chute : 85 (moyenne du cast : 83.5)</title></rect><line x1="585.4782608695652" y1="82" x2="585.4782608695652" y2="106" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 83.5</title></line><text x="599.4782608695652" y="97" fill="var(--muted)" font-size="11">85</text><text x="142" y="131" fill="var(--text)" font-size="12" text-anchor="end">Chute post-esquive</text><rect x="150" y="120" width="213.9130434782609" height="18" rx="3" fill="var(--violet)"><title>Chute post-esquive : 41 (moyenne du cast : 33.5)</title></rect><line x1="324.6984572230014" y1="116" x2="324.6984572230014" y2="140" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 33.5</title></line><text x="369.9130434782609" y="131" fill="var(--muted)" font-size="11">41</text>
+</svg></div>
+<p class="mv-desc">Valeurs brutes du wiki (page personnage) — <strong>plus la valeur est basse, plus le personnage est rapide</strong>. Trait pointillé or : moyenne des 31 personnages.</p>
+</figure>
+</section>
+<section id="moves"><h2>Coups</h2>
+<figure class="diagram" role="img" aria-label="Startup des coups de Sephiroth">
+<figcaption>Startup des coups de Sephiroth</figcaption>
+<div class="table-scroll"><svg viewBox="0 0 760 446" xmlns="http://www.w3.org/2000/svg" style="min-width:560px">
+<title>Startup des coups de Sephiroth</title>
+<line x1="370" y1="20" x2="370" y2="420" stroke="var(--surface-2)" stroke-width="1"/><text x="370" y="434" fill="var(--muted)" font-size="11" text-anchor="middle">20F</text><line x1="530" y1="20" x2="530" y2="420" stroke="var(--surface-2)" stroke-width="1"/><text x="530" y="434" fill="var(--muted)" font-size="11" text-anchor="middle">40F</text><line x1="690" y1="20" x2="690" y2="420" stroke="var(--surface-2)" stroke-width="1"/><text x="690" y="434" fill="var(--muted)" font-size="11" text-anchor="middle">60F</text><text x="202" y="41" fill="var(--text)" font-size="12" text-anchor="end">Transience</text><rect x="210" y="30" width="120" height="16" rx="3" fill="var(--muted)"><title>Transience : 15F (Melee Low)</title></rect><text x="336" y="41" fill="var(--muted)" font-size="11">15F</text><text x="202" y="67" fill="var(--text)" font-size="12" text-anchor="end">Sudden Cruelty</text><rect x="210" y="56" width="136" height="16" rx="3" fill="var(--muted)"><title>Sudden Cruelty : 17F (Melee Low)</title></rect><text x="352" y="67" fill="var(--muted)" font-size="11">17F</text><text x="202" y="93" fill="var(--text)" font-size="12" text-anchor="end">Reaper</text><rect x="210" y="82" width="168" height="16" rx="3" fill="var(--muted)"><title>Reaper : 21F (Melee Low)</title></rect><text x="384" y="93" fill="var(--muted)" font-size="11">21F</text><text x="202" y="119" fill="var(--text)" font-size="12" text-anchor="end">Godspeed</text><rect x="210" y="108" width="184" height="16" rx="3" fill="var(--success)"><title>Godspeed : 23F (Melee Low, Ranged Low)</title></rect><text x="400" y="119" fill="var(--muted)" font-size="11">23F</text><text x="202" y="145" fill="var(--text)" font-size="12" text-anchor="end">Fervent Blow</text><rect x="210" y="134" width="216" height="16" rx="3" fill="var(--success)"><title>Fervent Blow : 27F (Melee Low, Ranged Low)</title></rect><text x="432" y="145" fill="var(--muted)" font-size="11">27F</text><text x="202" y="171" fill="var(--text)" font-size="12" text-anchor="end">Oblivion</text><rect x="210" y="160" width="216" height="16" rx="3" fill="var(--muted)"><title>Oblivion : 27F (Melee Low)</title></rect><text x="432" y="171" fill="var(--muted)" font-size="11">27F</text><text x="202" y="197" fill="var(--text)" font-size="12" text-anchor="end">Octaslash (ground)</text><rect x="210" y="186" width="344" height="16" rx="3" fill="var(--gold)"><title>Octaslash (ground) : 43F (Melee High)</title></rect><text x="560" y="197" fill="var(--muted)" font-size="11">43F</text><text x="202" y="223" fill="var(--text)" font-size="12" text-anchor="end">Octaslash (midair)</text><rect x="210" y="212" width="344" height="16" rx="3" fill="var(--gold)"><title>Octaslash (midair) : 43F (Melee High)</title></rect><text x="560" y="223" fill="var(--muted)" font-size="11">43F</text><text x="202" y="249" fill="var(--text)" font-size="12" text-anchor="end">Heaven's Light</text><rect x="210" y="238" width="344" height="16" rx="3" fill="var(--gold)"><title>Heaven's Light : 43F (Melee High)</title></rect><text x="560" y="249" fill="var(--muted)" font-size="11">43F</text><text x="202" y="275" fill="var(--text)" font-size="12" text-anchor="end">Shadow Flare (ground)</text><rect x="210" y="264" width="360" height="16" rx="3" fill="var(--success)"><title>Shadow Flare (ground) : 45F (Ranged Low)</title></rect><text x="576" y="275" fill="var(--muted)" font-size="11">45F</text><text x="202" y="301" fill="var(--text)" font-size="12" text-anchor="end">Shadow Flare (midair)</text><rect x="210" y="290" width="360" height="16" rx="3" fill="var(--success)"><title>Shadow Flare (midair) : 45F (Ranged Low)</title></rect><text x="576" y="301" fill="var(--muted)" font-size="11">45F</text><text x="202" y="327" fill="var(--text)" font-size="12" text-anchor="end">Scintilla (ground)</text><rect x="210" y="316" width="360" height="16" rx="3" fill="var(--gold)"><title>Scintilla (ground) : 45F (Block Mid, Melee High)</title></rect><text x="576" y="327" fill="var(--muted)" font-size="11">45F</text><text x="202" y="353" fill="var(--text)" font-size="12" text-anchor="end">Scintilla (midair)</text><rect x="210" y="342" width="360" height="16" rx="3" fill="var(--gold)"><title>Scintilla (midair) : 45F (Block Mid, Melee High)</title></rect><text x="576" y="353" fill="var(--muted)" font-size="11">45F</text><text x="202" y="379" fill="var(--text)" font-size="12" text-anchor="end">Hell's Gate</text><rect x="210" y="368" width="440" height="16" rx="3" fill="var(--gold)"><title>Hell's Gate : 55F (Melee High)</title></rect><text x="656" y="379" fill="var(--muted)" font-size="11">55F</text><text x="202" y="405" fill="var(--text)" font-size="12" text-anchor="end">Black Materia</text><rect x="210" y="394" width="504" height="16" rx="3" fill="var(--success)"><title>Black Materia : 63F (Ranged High)</title></rect><text x="720" y="405" fill="var(--muted)" font-size="11">63F</text>
+</svg></div>
+<p class="mv-desc">Startup en frames (60 i/s, données dissidia.wiki). Couleur : <span style="color:var(--muted)">Melee Low</span> · <span style="color:var(--violet)">Melee Mid</span> · <span style="color:var(--gold)">Melee High</span> · <span style="color:var(--success)">Ranged</span>.</p>
+</figure>
+<h3 style="color:var(--gold)">Braveries</h3>
+<h3>Au sol</h3>
+
+<details class="move">
+<summary><span class="mv-name">Reaper</span>
+<span class="mv-meta">21F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">45 (2, 1 x 5, 10 &gt; 2, 1 x 6, 10 &gt; 3, 1 x 5, 2)</span></td></tr><tr><th>Startup</th><td><span class="mono">21F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">93</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Fervent Blow</span>
+<span class="mv-meta">27F</span><span class="badge prio-ranged">Melee Low, Ranged Low</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">35 (5, 4 x 5 &gt; 1 x 3, 7)</span></td></tr><tr><th>Startup</th><td><span class="mono">27F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Melee Low, Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Shadow Flare (ground)</span>
+<span class="mv-meta">45F</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">each (3)</span></td></tr><tr><th>Startup</th><td><span class="mono">45F</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Cancels</th><td>Dodge, Block, Attack</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Transience</span>
+<span class="mv-meta">15F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">20 (1 x 7, 13)</span></td></tr><tr><th>Startup</th><td><span class="mono">15F</span></td></tr><tr><th>Type</th><td>Physical (1st hit) Magical (other hits)</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge (hit / whiff) Block &amp; Attack (whiff only)</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3>En l’air</h3>
+
+<details class="move">
+<summary><span class="mv-name">Sudden Cruelty</span>
+<span class="mv-meta">17F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">40 (2 x 8, 9, 4, 1 x 5, 6)</span></td></tr><tr><th>Startup</th><td><span class="mono">17F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">87</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Godspeed</span>
+<span class="mv-meta">23F</span><span class="badge prio-ranged">Melee Low, Ranged Low</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">35 (5, 4 x 5, 1, 2, 7)</span></td></tr><tr><th>Startup</th><td><span class="mono">23F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Melee Low, Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">33</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Oblivion</span>
+<span class="mv-meta">27F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">25 (6, 1 x 9, 10)</span></td></tr><tr><th>Startup</th><td><span class="mono">27F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Shadow Flare (midair)</span>
+<span class="mv-meta">45F</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">each (3)</span></td></tr><tr><th>Startup</th><td><span class="mono">45F</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Cancels</th><td>Dodge, Block, Attack</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+
+<h3 style="color:var(--gold)">Attaques HP</h3>
+<h3>Au sol</h3>
+
+<details class="move">
+<summary><span class="mv-name">Black Materia</span>
+<span class="mv-meta">63F</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Level 1</th><th>Level 2</th><th>Level 3</th></tr><tr><th>Dégâts de base</th><td><span class="mono">-</span></td><td><span class="mono">-</span></td><td><span class="mono">3 x N</span></td></tr><tr><th>Startup</th><td><span class="mono">63F</span></td><td><span class="mono">90F (Min. charge) 101F (Release)</span></td><td><span class="mono">178F (Min. charge) 201F (Release)</span></td></tr><tr><th>Type</th><td>-</td><td>-</td><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td><td><span class="badge prio-ranged">Ranged High</span></td><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td><td><span class="mono">0</span></td><td><span class="mono">6</span></td></tr><tr><th>Effets</th><td>-</td><td>-</td><td>Wall Rush, Absorb</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Octaslash (ground)</span>
+<span class="mv-meta">43F</span><span class="badge prio-melee-high">Melee High</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">2 x 6, 4 (16)</span></td></tr><tr><th>Startup</th><td><span class="mono">43F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">21</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Scintilla (ground)</span>
+<span class="mv-meta">45F, 1F-42F (block)</span><span class="badge prio-melee-high">Block Mid, Melee High</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">4, 1 x 6 (10)</span></td></tr><tr><th>Startup</th><td><span class="mono">45F, 1F-42F (block)</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Block Mid, Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush, Block</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3>En l’air</h3>
+
+<details class="move">
+<summary><span class="mv-name">Hell's Gate</span>
+<span class="mv-meta">55F</span><span class="badge prio-melee-high">Melee High</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">2 x N</span></td></tr><tr><th>Startup</th><td><span class="mono">55F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">60 + 3 x N</span></td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Octaslash (midair)</span>
+<span class="mv-meta">43F</span><span class="badge prio-melee-high">Melee High</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">2 x 6, 4 (16)</span></td></tr><tr><th>Startup</th><td><span class="mono">43F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">21</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Scintilla (midair)</span>
+<span class="mv-meta">45F, 1F-42F (block)</span><span class="badge prio-melee-high">Block Mid, Melee High</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">4, 1 x 6 (10)</span></td></tr><tr><th>Startup</th><td><span class="mono">45F, 1F-42F (block)</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Block Mid, Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush, Block</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Heaven's Light</span>
+<span class="mv-meta">43F</span><span class="badge prio-melee-high">Melee High</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">43F</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3 style="color:var(--gold)">EX Mode: Reunion! &amp; EX Burst</h3>
+<div class="banner info">Contenu éditorial français en cours de rédaction — données brutes ci-dessous.</div>
+
+
+</section>
+<section id="unique"><h2>Mécanique unique</h2>
+<div class="banner" data-undocumented="1"><strong>Section non documentée sur dissidia.wiki à ce jour — à compléter.</strong> <a href="https://dissidia.wiki/Sephiroth_(Dissidia_012)" rel="external noopener">Page wiki du personnage</a> — pas de section « Unique Mechanics » dédiée ; le cas échéant, la mécanique du personnage est couverte dans la vue d'ensemble et les coups.</div>
+</section>
+<section id="gameplan"><h2>Plan de jeu &amp; techniques avancées</h2>
+<div class="banner info">Contenu éditorial français en cours de rédaction — données brutes ci-dessous.</div>
+
+<details class="move"><summary><span class="mv-name">Combos documentés (notation d'origine, dissidia.wiki)</span></summary><div class="mv-body"><p class="mono">Main article: Sephiroth (Combos)</p><p class="mono">Sephiroth has a plethora of solo combos, most of which revolve around Shadow Flare. He works well with assists both in close-range and in midrange, and he even has an infinite in Phantom Train. [1]</p><p class="mono">Main article: Sephiroth Combos (Kuja Assist)</p></div></details>
+<p class="mv-desc">Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href="../techniques.html">Techniques &amp; glitches</a>.</p>
+</section>
+<section id="matchups"><h2>Matchups</h2>
+<div class="banner" data-undocumented="1"><strong>Section non documentée sur dissidia.wiki à ce jour — à compléter.</strong> La sous-page <a href="https://dissidia.wiki/Sephiroth_(Dissidia_012)/Matchups" rel="external noopener">Matchups du wiki</a> est un squelette vide à ce jour.</div>
+<p>Vidéos de matchs : <a href="https://replaytheater.app/?game=d012&amp;c1=Sephiroth" rel="external noopener">Replay Theater — matchs de Sephiroth</a>.</p>
+</section>
+<section id="builds"><h2>Builds</h2>
+<div class="banner info">Contenu éditorial français en cours de rédaction — données brutes ci-dessous.</div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Stats</th></tr>
+<tr><td>HP</td><td>9644</td></tr>
+<tr><td>CP</td><td>450</td></tr>
+<tr><td>BRV</td><td>1175</td></tr>
+<tr><td>ATK</td><td>180</td></tr>
+<tr><td>DEF</td><td>182</td></tr>
+<tr><td>LUK</td><td>60</td></tr>
+<tr><td>Max Booster</td><td>x3.5</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+<caption>Special Effect: Seal of Lufenia</caption>
+<tr><th>Equipment</th></tr>
+<tr><td>Assist</td><td>Kuja</td></tr>
+<tr><td>Weapon &lt;img&gt;&lt;/img&gt;</td><td>One-Winged Angel</td></tr>
+<tr><td>Hand &lt;img&gt;&lt;/img&gt;</td><td>Lufenian Dirk &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Head &lt;img&gt;&lt;/img&gt;</td><td>Lufenian Hairpin &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Body &lt;img&gt;&lt;/img&gt;</td><td>Lufenian Vest</td></tr>
+<tr><td>Accessory 1</td><td>&lt;img&gt;&lt;/img&gt; Hyper Ring</td></tr>
+<tr><td>Accessory 2</td><td>&lt;img&gt;&lt;/img&gt; Muscle Belt</td></tr>
+<tr><td>Accessory 3</td><td>&lt;img&gt;&lt;/img&gt; Sniper Eye</td></tr>
+<tr><td>Accessory 4</td><td>&lt;img&gt;&lt;/img&gt; Battle Hammer</td></tr>
+<tr><td>Accessory 5</td><td>&lt;img&gt;&lt;/img&gt; Summon Unused</td></tr>
+<tr><td>Accessory 6</td><td>&lt;img&gt;&lt;/img&gt; Pre-EX Mode</td></tr>
+<tr><td>Accessory 7</td><td>&lt;img&gt;&lt;/img&gt; Aerial</td></tr>
+<tr><td>Accessory 8</td><td>&lt;img&gt;&lt;/img&gt; Opponent Summon Unused</td></tr>
+<tr><td>Accessory 9</td><td>&lt;img&gt;&lt;/img&gt; Tenacious Attacker</td></tr>
+<tr><td>Accessory 10</td><td>&lt;img&gt;&lt;/img&gt; Glutton</td></tr>
+<tr><td>Summon &lt;img&gt;&lt;/img&gt;</td><td>Rubicante</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Bravery attacks</th></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+<tr><td>HP attacks</td></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Stats</th></tr>
+<tr><td>HP</td><td></td></tr>
+<tr><td>CP</td><td></td></tr>
+<tr><td>BRV</td><td></td></tr>
+<tr><td>ATK</td><td></td></tr>
+<tr><td>DEF</td><td></td></tr>
+<tr><td>LUK</td><td></td></tr>
+<tr><td>Max Booster</td><td></td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+<caption>Special Effect:</caption>
+<tr><th>Equipment</th></tr>
+<tr><td>Assist</td><td></td></tr>
+<tr><td>Weapon &lt;img&gt;&lt;/img&gt;</td><td></td></tr>
+<tr><td>Hand &lt;img&gt;&lt;/img&gt;</td><td></td></tr>
+<tr><td>Head &lt;img&gt;&lt;/img&gt;</td><td></td></tr>
+<tr><td>Body &lt;img&gt;&lt;/img&gt;</td><td></td></tr>
+<tr><td>Accessory 1</td><td></td></tr>
+<tr><td>Accessory 2</td><td></td></tr>
+<tr><td>Accessory 3</td><td></td></tr>
+<tr><td>Accessory 4</td><td></td></tr>
+<tr><td>Accessory 5</td><td></td></tr>
+<tr><td>Accessory 6</td><td></td></tr>
+<tr><td>Accessory 7</td><td></td></tr>
+<tr><td>Accessory 8</td><td></td></tr>
+<tr><td>Accessory 9</td><td></td></tr>
+<tr><td>Accessory 10</td><td></td></tr>
+<tr><td>Summon &lt;img&gt;&lt;/img&gt;</td><td></td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Bravery attacks</th></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+<tr><td>HP attacks</td></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+</table></div>
+
+
+</section>
+<section id="assist"><h2>Synergies d'assist</h2>
+
+
+
+<div class="banner info">Contenu éditorial français en cours de rédaction — données brutes ci-dessous.</div>
+</section>
+<section id="community"><h2>Tech communautaire</h2>
+<div class="banner" data-undocumented="1"><strong>Section non documentée sur dissidia.wiki à ce jour — à compléter.</strong> Aucune trouvaille communautaire attribuable relevée dans les sources récupérées pour ce personnage.</div>
+</section>
+<section id="sources"><h2>Sources</h2>
+<ul class="sources-list"><li><a href="https://dissidia.wiki/Sephiroth_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Sephiroth_(Dissidia_012)</a></li><li><a href="https://dissidia.wiki/Sephiroth_(Dissidia_012)/Matchups" rel="external noopener">https://dissidia.wiki/Sephiroth_(Dissidia_012)/Matchups</a></li><li><a href="https://www.youtube.com/watch?v=doDji0EBSjI&amp;t=72" rel="external noopener">https://www.youtube.com/watch?v=doDji0EBSjI&amp;t=72</a></li><li><a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Tier_List_(Dissidia_012)</a></li><li><a href="https://dissidia.wiki/Tier_List_(Assist)" rel="external noopener">https://dissidia.wiki/Tier_List_(Assist)</a></li></ul>
+</section>
+</main>
+</div>
+<footer class="site"><div class="wrap">
+<p>Site de fans non commercial. Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011).</p>
+<p>Contenu textuel adapté et traduit de <a href="https://dissidia.wiki" rel="external noopener">dissidia.wiki</a> (licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="external noopener">CC BY 4.0</a>). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+{
+  "slug": "bartz-klauser",
+  "tagline": "Mime au sol solide, trahi par un jeu aérien lent et un zoning fragile",
+  "archetype": "Combattant au sol (Mime)",
+  "overview": [
+    "Bartz Klauser est le protagoniste insouciant de Final Fantasy V. Dans Dissidia 012, il incarne la classe Mime de son jeu d'origine : son moveset est entièrement emprunté aux autres Guerriers de Cosmos.",
+    "Le tableau de forces et faiblesses du wiki dresse un portrait contrasté : un jeu au sol solide, avec des pokes rapides et des HP attacks qui couvrent bien l'espace au-dessus de lui, et des builds créatifs grâce aux boosts passifs de ses coups copiés. En face, un jeu aérien qui, bien que correct en soi, est souvent surclassé par de nombreux personnages : ses pokes aériens lents et punissables compliquent la génération de jauge d'assist en sécurité, son zoning est faible — Holy inflige de lourds dégâts et offre un excellent Link BRV vers HP, mais sa priorité Ranged Low se retourne facilement contre lui — et sa génération d'EX Force est médiocre."
+  ],
+  "tierNote": "Bartz ferme la marche de la tier list 2017 : tier D, 30e sur 30. L'overview ne commente pas ce classement, mais les faiblesses documentées (air game surclassé, pokes aériens lents, zoning et EX Force faibles) vont dans le même sens.",
+  "strengths": [
+    "Jeu au sol solide : pokes rapides et HP attacks couvrant bien l'espace au-dessus de lui.",
+    "Solid Ascension : startup de 13F, meilleurs dégâts au sol (50 de base), près d'un dixième de jauge EX par touche et construction d'assist fiable.",
+    "Boosts passifs des coups copiés (Speed Boost, EX Intake, Physical Shield…) exploitables pour des builds créatifs.",
+    "Holy peut link dans Flare pour des dégâts importants, et le Link Glitch facilite grandement les confirms.",
+    "Reel Impulse : plus longue portée de ses coups au sol, priorité haute imblocable en garde normale, et +1m d'EX Intake cumulable.",
+    "Goblin Punch en EX Mode : startup de 15F, Unblockable, dégâts massifs à niveau égal."
+  ],
+  "weaknesses": [
+    "Jeu aérien moyen en soi et souvent surclassé par le reste du cast.",
+    "Pokes aériens lents et punissables : générer de la jauge d'assist en sécurité est difficile — Rush Impact (19F) est pourtant son coup aérien le plus rapide.",
+    "Zoning faible : Holy (Ranged Low) est déviée par un simple Free Air Dash, ses orbes persistantes peuvent revenir frapper Bartz et le coup est assist-punissable.",
+    "Faible génération d'EX Force globale.",
+    "Reel Impulse a une recovery extrêmement longue, punissable de multiples façons.",
+    "Solid Ascension a une portée horizontale et verticale très courte : il faut être collé à l'adversaire."
+  ],
+  "moveNotes": {
+    "Blade Crash": "Copié de Lightning et Vaan : deux coups de Blazefire Saber puis une traversée au katana. Coup lent (23F) mais qui avance légèrement, bon pour attraper un whiff à portée ; facilement blocable et punissable si lancé sans réfléchir. Bonne génération d'EX Force (90) — à arbitrer avec Hazard Raid. Chaque Blade Crash équipé ajoute 8 % de vitesse de course (Speed Boost).",
+    "Reel Impulse": "Copié de Firion et Zidane : jet de hache qui ramène l'adversaire puis taillades. La hache offre la plus longue portée de ses coups au sol et sa priorité haute (Ranged High) ne se bloque pas en garde normale, ouvrant des assist punishes sur dodge raté. L'effet EX Intake +1m se cumule (deux Reel Impulse = +2m, presque une Heaven's Cloud). Revers majeur : recovery extrêmement longue et vulnérabilité aux assist punishes — ne le lancez qu'avec au moins une barre d'assist. À bout portant, le landing lag permet un dodge cancel vers Blade Crash pour un combo solo.",
+    "Hazard Raid": "Copié de Cloud et Tifa : la charge du Climhazzard suivie du Beat Rush. Bon distance closer, mais il hérite des défauts du Climhazzard et troque son Wall Rush contre un Chase. Peu d'intérêt en build Side by Side face à Reel Impulse ; en build EX, sa génération d'EX Force (90) est le principal argument, mais le coup reste lent et rarement utilisé.",
+    "Solid Ascension": "Copié de Squall et du Warrior of Light : sa meilleure bravery au sol. Startup extrêmement rapide (13F), meilleurs dégâts au sol, quasi un dixième de jauge EX par touche et construction d'assist fiable qui le protège des assist punishes. Contrepartie : portée horizontale et verticale très faible, il faut être collé à l'adversaire et le coup punit mal les approches aériennes — ses HP anti-air compensent.",
+    "Holy": "Copié de Terra : son outil de zoning de fait, cinq orbes homing à bons dégâts unitaires qui punissent à longue distance, sanctionnent les dodges excessifs et forcent à bloquer chaque orbe — un misblock peut coûter très cher, d'autant que Holy link dans Flare. Le Link Glitch (relancer Holy avant l'impact de la première salve) rend les confirms bien plus faciles et gonfle les dégâts au-delà de la normale. Mais le coup est très lent au startup (37F), déviée par un Free Air Dash, assist-punissable, et les orbes persistantes peuvent revenir frapper Bartz après sa propre touche : quand ça marche c'est excellent, sinon c'est son pire choix.",
+    "Rush Impact": "Copié de Kain et Lightning : son coup aérien le plus rapide, et pourtant lent pour un poke (19F, comparable au Slashing Blow de Cloud). Un peu de portée et un combo assist facile, mais prévisible, médiocre en approche comme sur whiff, avec une fenêtre de dodge cancel tardive : c'est le symbole de son air game laborieux.",
+    "Slide Shooter": "Copié de Tidus et Kain : gap closer et outil d'appoint pour générer de l'assist. Fenêtres d'input généreuses et bon hit stun rendent la confirmation d'un combo assist facile, même sans Wall Rush au plafond. Sur un input neutre + Cercle, le Lock Off permet de générer de l'assist en sécurité un peu plus longtemps. Comme le Full Slide de Tidus, le ralenti d'un appel d'assist augmente fortement son tracking vertical — stratégie à réserver aux punishs et aux approches sûres, et qui repose sur l'assist Aerith, avec les sacrifices que cela implique.",
+    "Hellfire": "Invoque Ifrit et ses piliers de feu (39F au sol) ; la génération d'EX augmente avec le nombre de piliers qui touchent.",
+    "Dark Flame": "Plante l'épée au sol pour des gerbes de feu noir (53F, Ranged High) qui traquent l'adversaire jusque dans les airs et à travers les murs.",
+    "Ragnarok Blade": "Longue lame d'énergie tranchée comme une épée (45F, Melee High, Wall Rush), avec +5 % de dégâts HP sur Wall Rush.",
+    "Luminous Shard": "Lame de lumière projetée à longue portée (61F, Ranged High), assortie d'un Minor Midair Evasion Boost.",
+    "Flare": "HP Link accessible depuis Holy : trois rayons convergent pour piéger l'adversaire puis exploser. C'est la récompense qui rend Holy si dangereuse quand elle touche."
+  },
+  "exMode": {
+    "summary": [
+      "EX Mode « Job Mastered! » : Regen, Critical Boost et l'ajout du HP Goblin Punch. Les sources le qualifient d'EX Mode générique, dont l'intérêt principal est justement Goblin Punch.",
+      "Goblin Punch (R + Carré, 15F, Magical, Unblockable, Wall Rush) : un excellent coup de mêlée au startup très rapide, qui inflige de solides dégâts si la cible est du même niveau que Bartz (8 x 5). Sa portée est faible : à ne pas lancer à la légère sous peine de punish."
+    ],
+    "burst": "« Master Mime » : Bartz ajoute la force de ses alliés à ses propres talents pour une série de coups magistraux — chaque direction (haut, bas, gauche, droite) correspond à un hit."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Bartz joue au sol. Solid Ascension est le pivot : assez rapide (13F) pour punir les coups lents à portée, il inflige les meilleurs dégâts au sol, génère beaucoup d'EX Force et construit la jauge d'assist de façon fiable — de quoi garder au moins une barre pour se protéger des assist punishes ou convertir soi-même. Sa portée minuscule impose d'être collé à l'adversaire ; les approches aériennes se gèrent plutôt avec ses HP attacks qui couvrent bien l'espace au-dessus de lui (Hellfire, Dark Flame).",
+    "À distance, tout passe par Holy : punishs longue portée, sanction des dodges, pression sur le block orbe par orbe, et surtout le link vers Flare — facilité par le Link Glitch — qui apporte dégâts et touches HP. Mais la moindre approche en Free Air Dash dévie les orbes et les retourne contre lui : ne spammez pas Holy quand l'adversaire a une barre d'assist ou l'espace pour dasher.",
+    "Reel Impulse complète le kit au sol : plus longue portée, priorité haute qui force le dodge (et ouvre l'assist punish sur dodge raté), et EX Intake +1m cumulable pour les builds EX. Sa recovery interminable en fait toutefois un coup à ne lancer qu'avec une barre d'assist en réserve. En l'air, contentez-vous du minimum : Rush Impact pour les confirms d'assist, Slide Shooter comme gap closer et générateur d'assist, en exploitant ses fenêtres d'input généreuses.",
+    "Côté ressources, les sources orientent vers Kuja et Jecht comme assists (startup rapide des follow-ups, potentiel de dégâts sur les setups Holy -> Flare), l'assist Aerith n'étant justifiée que pour la stratégie de tracking renforcé de Slide Shooter. En EX Mode, Goblin Punch (15F, Unblockable) devient une menace de punish majeure à courte portée."
+  ],
+  "advancedTech": [
+    {
+      "name": "Link Glitch (Holy)",
+      "desc": "Lancez Holy à distance, puis relancez un second Holy avant que la première salve ne touche : la première ne disparaît pas et, si elle touche, elle compte comme la seconde — ce qui autorise le link dans Flare. Confirms beaucoup plus faciles et dégâts supérieurs à ce que Bartz est censé obtenir."
+    },
+    {
+      "name": "Slide Shooter assist-call tracking",
+      "desc": "Comme le Full Slide de Tidus, le ralenti provoqué par un appel d'assist augmente fortement le tracking vertical de Slide Shooter. À utiliser en punish ou sur une approche dont vous êtes sûr ; la stratégie repose sur l'assist Aerith, ce qui coûte les conversions précoces de ses autres coups aériens."
+    },
+    {
+      "name": "Lock Off (Slide Shooter)",
+      "desc": "Avec Slide Shooter réglé sur neutre + Cercle, le Lock Off permet de générer de la jauge d'assist en sécurité un peu plus longtemps."
+    },
+    {
+      "name": "Reel Impulse dodge cancel",
+      "desc": "En connectant Reel Impulse à bout portant, le landing lag autorise un dodge cancel vers Blade Crash pour un combo solo."
+    }
+  ],
+  "matchups": null,
+  "builds": {
+    "philosophy": [
+      "Un seul build est réellement documenté : un « Side by Side » avec l'assist Kuja (Lufenian Axe, Blurry Moon, set Lufenian, effet spécial Judgment of Lufenia, invocation Rubicante), 450 CP avec Equip Glitch, pour un booster maximal de x5.9.",
+      "Les notes de coups esquissent la philosophie générale : en Side by Side, l'effet EX Intake est inutile mais Reel Impulse reste préféré pour sa portée et sa priorité, et on arbitre entre Blade Crash et Hazard Raid ; en build EX, on peut équiper deux Reel Impulse (+2m d'EX Intake, presque l'équivalent d'une Heaven's Cloud) en renonçant à Blade Crash et Hazard Raid."
+    ],
+    "notes": "Le second emplacement (« Build #2 ») est vide dans les sources : aucune donnée."
+  },
+  "assist": {
+    "asAssist": [
+      "Bartz est classé Low dans la tier list assist de Muggshotter. Ses coups d'assist : Blade Crash en BRV au sol (23F, Chase), Slide Shooter en BRV aérien (25F, Wall Rush), Dark Flame en HP au sol (53F, apparaît sur le joueur, Wall Rush) et Ragnarok Blade en HP aérien (45F, Wall Rush). Le wiki ne fournit pas d'évaluation rédigée de son rôle d'assist."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "Cité dans les synergies du wiki et retenu dans le build documenté ; les notes de Slide Shooter le recommandent pour le startup rapide de ses follow-ups et le potentiel de dégâts des setups Holy -> Flare."
+      },
+      {
+        "name": "Jecht",
+        "why": "Cité dans les synergies du wiki, pour les mêmes raisons que Kuja (follow-ups rapides, setups Holy -> Flare)."
+      },
+      {
+        "name": "Aerith",
+        "why": "Uniquement pour la stratégie de tracking renforcé de Slide Shooter pendant l'appel d'assist ; les notes avertissent que ce choix sacrifie les conversions précoces des autres coups aériens."
+      }
+    ]
+  },
+  "communityTech": [],
+  "limits": [
+    "Overview très courte (trois phrases descriptives) : la synthèse repose surtout sur le tableau forces/faiblesses et les notes de coups.",
+    "Page matchups à l'état d'ébauche (stub) : aucun contenu.",
+    "Section combos vide (sous-section « Solo » sans texte ni tableau).",
+    "Aucune mécanique unique documentée (documented: false).",
+    "Aucune référence communautaire dans les sources.",
+    "Second build (« Build #2 ») entièrement vide.",
+    "Données incomplètes : startup et priorité de Flare incertains (« ? »), notes minimales pour les HP attacks (Hellfire, Dark Flame, Ragnarok Blade, Luminous Shard), niveau de déblocage et AP de Goblin Punch non renseignés."
+  ]
+}

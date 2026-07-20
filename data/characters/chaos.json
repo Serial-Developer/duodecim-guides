@@ -1,0 +1,57 @@
+{
+  "slug": "chaos",
+  "name": "Chaos",
+  "page": "Chaos_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Chaos_(Dissidia_012)",
+  "origin": "Dissidia Final Fantasy",
+  "icon": null,
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-chaos2.png",
+  "infobox": {
+    "Name": "Chaos (カオス)",
+    "Original game": "Final Fantasy"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Chaos is a non-playable boss character in Dissidia 012's single player modes."
+      ],
+      "tables": [],
+      "sources": [
+        "https://dissidia.wiki/Chaos_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": false
+    },
+    "hp": {
+      "documented": false
+    },
+    "exMode": {
+      "documented": false
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "documented": false
+    },
+    "builds": {
+      "documented": false
+    },
+    "assist": {
+      "documented": false
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Chaos_(Dissidia_012)"
+  ]
+}

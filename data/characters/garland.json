@@ -1,0 +1,907 @@
+{
+  "slug": "garland",
+  "name": "Garland",
+  "page": "Garland_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Garland_(Dissidia_012)",
+  "origin": "Final Fantasy",
+  "icon": "garland",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-garland.png",
+  "infobox": {
+    "Name": "Garland (ガーランド)",
+    "Original game": "Final Fantasy",
+    "Base ATK (LV100)": "111 (High)",
+    "Base DEF (LV100)": "112 (High)",
+    "Run Speed": "10.5 (Very Slow)",
+    "Dash Speed": "81 (Below Average)",
+    "Fall Speed": "77 (Above Average)",
+    "Fall Speed Ratio After Dodge": "41 (Below Average)",
+    "Fastest BRV": "13F (Deathblow, Highbringer high ver.)",
+    "Fastest HP": "39F (Earthquake)",
+    "1-Hit HP": "Yes (Cyclone, Blaze)",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "No",
+    "Weapon": "Axes, Greatswords, Katanas, Spears",
+    "Armor": "Gauntlets, Heavy Armor, Helms,Light Armor, Shields",
+    "Exclusive weapons": "Ogrekiller, Viking Axe, Gigant Axe",
+    "Alignment": "Chaos",
+    "Voice Actor (JP)": "Kenji Utsumi",
+    "Voice Actor (ENG)": "Christopher Sabat"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Garland is a defensive close / mid-range character. His strengths are defined by his braveries that are good at whiff punishing |",
+        "Hitting an opponent who missed (whiffed) their attack.",
+        "and accumulating EX and bravery.",
+        "On the ground, Garland pokes |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        "with Deathblow to fill assist gauge safely and threaten anyone approaching him from the air. Garland can use Lance Charge and HP attacks to break guards and catch ground dodges. Deathblow's short recovery |",
+        "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+        "also lets Garland adjust his attack timing, making his ground defense rather ambiguous.",
+        "Garland's air combat focuses on vertical positioning. Twist Drill anti-airs |",
+        "Attacking an airborne opponent from below, usually on the ground.",
+        "opponents, Bardiche comes down with high damage potential, Cyclone provides area denial and Chain Cast is an evasive, vertical whiff punisher.",
+        "Garland has above average base ATK and DEF stats. His LV100 exclusive weapon Gigant Axe is best in class for EX and damage builds. His other attributes are a bit lacking, though; He has below average movement speed, no practical solo HP links |",
+        "An HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.",
+        "and floaty air dodges. Dodging is fairly risky for Garland, as his self-defense options afterwards are slow and high commitment. His aerial offensive is somewhat limited due to his staple braveries having specific angles and notable blind spots, particularly in front of Garland. This can cause issues when creating offense head-on. Fast air dodge fall speed and command blocks |",
+        "An attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.",
+        "can limit Garland's options as well.",
+        "Garland has been considered a low tier character, but his representation from 2020 onwards present a case for higher position. His grounded defense shuts down many close-range aerial approaches, and most hits lead to lots of bravery and EX. Garland's win condition is defined by his full EX gauge and high bravery stack, where he can end matches with one EX Revenge 5x Bardiche combo. He can exploit the opponent's positioning as a defender on the ground, but his aerial offense is much more linear and restricted by comparison. Garland's long-term strategy is strong, but it always requires multiple hits and resources to guarantee a win."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Whiff Punishment - Several braveries allow Garland to react from various angles.\nBravery Damage - Bardiche, Kuja assist and Chain Cast solo combos can bravery break quickly.\nSafe Ground Neutral - Deathblow lets Garland define the pace with less risk than most characters.\nEX Gauge Economy - Generates and collects EX efficiently through combos. He can kill earlier with EX Revenge than any other character thanks to Bardiche and Bravery stacking.\nDisjoints that can go through projectiles.\nGood ground-to-ground presence against close-range characters",
+              "Below average movement - Garland is slightly slower on all fronts.\nPost-dodge vulnerability - Garland's air dodges leave him vulnerable, and Chain Cast does not protect with invincibility.\nLimited aerial dodge punish capability - HPs, Twist Drill and Bardiche need specific angles to hit. Garland struggles to hit fast fallers (e.g. Kain) and back air dodges. Offensive momentum can be difficult to create in these cases.\nFlawed aerial neutral and mixups - He can struggle against block in the air, and air HPs provide little utility against most characters.\nFast + long range vulnerability - Air braveries are slower on average, so Garland can get interrupted more easily in face-offs. His anti-zoning options are mostly limited to dashing and Bravery Boost on Dodge builds."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Garland_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Short",
+                "Long"
+              ],
+              "image": "https://dissidia.wiki/images/b/b3/Brv_garland_round_edge.jpeg",
+              "damage": [
+                "45 (7, 8, 30)",
+                "45 (7, 8, 9, 2, 2, 2, 15)"
+              ],
+              "startup": [
+                "23F",
+                "23F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low Melee Mid (2nd hit)",
+                "Melee Low, Melee Mid (2nd hit) Melee High (3rd hit)"
+              ],
+              "exForce": [
+                "30",
+                "90"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Broad sword sweep. Change combo with input timing.",
+              "name": "Round Edge",
+              "notes": "Three sword swipes with two different follow-ups. Press circle <img></img> before the third swipe for a wall rush finisher, or press circle <img></img> after it for a chase finisher. Garland's movement can be controlled freely during the first two swipes.\nRound Edge is a high commitment attack, which is mainly used after block staggers or to catch opponents by surprise. It is risky to use due to its long startup |\nThe time it takes before an attack can do damage.\nand animation length. Garland cannot dodge until the first three slashes are done. However, this move also provides notable reward on hit thanks to the precise Deathblow follow-ups; Bravery damage, EX and assist gauge are all great for Garland. Even without Deathblow follow-ups, Round Edge still provides assist combos, above average base damage and EX on the long finisher.\nRound Edge is not very safe or effective as a neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\ntool. It is quite slow and has little coverage against opponent's defensive options. The second and third round slashes have higher priority which can work sometimes, but given the overall speed, this is easier for opponents to anticipate. Since Garland stops moving by the third slash, its high priority can be difficult to use against moving opponents. It is recommended to use this move with caution.\nWhen locked off, Garland can move in any direction on the ground with Round Edge."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/00/Brv_garland_lance_charge.jpeg",
+              "damage": "30 (2 x 5, 5, 15)",
+              "startup": "31F",
+              "type": "Physical",
+              "priority": "Melee Mid",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] High-speed sword thrust. Vertically limited, good range.",
+              "name": "Lance Charge",
+              "notes": "Lance Charge is a staple move for Garland. It's a very strong ground-to-ground bravery for its speed, mid priority and assist combos on hit. This is a midrange gap closer and a whiff punisher |\nHitting an opponent who missed (whiffed) their attack.\nthat goes in a straight line. It's quite effective when used in tandem with Deathblow, such as against blocks, low priority attacks and ground dodges.\nLance Charge staggers regular blocks, and it can follow up with a ground wall rush even if it was blocked. The ground wall rush finisher sets up high damaging Kuja assist combos, so Lance Charge's reward is pretty high with meter. It can punish landing lag and counter opponents after a successful backwards / sideways blodge. Lance Charge travels pretty quickly once active |\nThe period of time when an attack is capable of doing damage.\nand the range extends slightly past the weapon visuals. It can be a difficult move to punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nat ground level due to its short recovery and mid priority\nHowever, this move is quite linear. It loses to fast sideways and upward movement, and higher priority in general. If Lance Charge misses, Garland is left airborne. He is vulnerable to attacks from above and fast assists, and his air dodge can put him in an even worse situation. It will not see much use in aerial focused matchups |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\neither, such as against Sephiroth."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/e9/Brv_garland_deathblow.jpeg",
+              "damage": "15",
+              "startup": "13F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "60",
+              "effects": "-",
+              "cancels": "Dodge, Block, Attack, Movement",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Swift upwards sword swipe. Low accuracy, quick strike.",
+              "name": "Deathblow",
+              "notes": "One of Garland's strongest bravery attacks. It's a safe poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n, anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nand a combo starter. The active |\nThe period of time when an attack is capable of doing damage.\nframes are long, the tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nis strong and it recovers |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nquickly, which make this a difficult move to contest. Deathblow is great for filling assist gauge and threatening nearby opponents. Garland does not have to dodge to make this move safe, which is very rare in this game. On hit, it combos into jump > Twist Drill, assist and generates lots of EX Force as a result.\nDeathblow is a must-have for close-range ground combat. It ties Garland's defensive gameplay together very well. Even so, it is important to mix things up, so the opponent doesn't catch Garland at a bad time. It still loses to higher priority attacks and well timed blocks. And because it's a ground move, it does little to contest halo camping |\nA strategy which involves a character staying above the opponent, often at a safe distance.\n. It does make it easier to fight with full assist gauge, though."
+            },
+            {
+              "variants": [
+                "Low",
+                "High"
+              ],
+              "image": "https://dissidia.wiki/images/7/70/Brv_garland_highbringer.jpeg",
+              "damage": [
+                "24 (5, 19)",
+                "24 (5, 2, 2, 15)"
+              ],
+              "startup": [
+                "17F",
+                "13F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "90",
+                "30"
+              ],
+              "effects": [
+                "Chase",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Swing sword upwards. Change combo with input timing.",
+              "name": "Highbringer",
+              "notes": "Highbringer functions as a poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n, post-block punisher and an assist combo starter. It is best used as an secondary ground bravery, particularly for aspiring players learning Garland. Highbringer is an uppercut with two built-in follow-up attacks. For low version, tap Circle <img></img> twice for a chase ender and 90 EX. For high version, hold Circle <img></img> to become airborne and then tap again for wall rush attack.\nHighbringer is quite fast, and it is more beginner friendly for assist combos compared to Deathblow. Both low and high versions can anti-air |\nAttacking an airborne opponent from below, usually on the ground.\n, and the hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nand wall rush allow a variety of assist combo routes. The first slash also looks and acts very similarly to Deathblow, so Highbringer often goes uncontested.\nHowever, this attack is is outclassed by Deathblow at higher levels of play. It has much longer recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, so dodges are needed for long term safety. Highbringer does not lead to the consistent Twist Drill follow-ups, so the reward on hit is weaker and more reliant on assist gauge. The high version has more requirements for notable reward such as short reaction time, assist and sometimes wall rush. It also leaves Garland airborne even if it misses, where he has to avoid getting caught after a dodge.\nAs a side note, Highbringer (High) first hit can also be dodge cancelled early on hit. However, if Highbringer (Low) first hit connects, the dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\ncannot be done as quickly."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/2b/Brv_garland_thundaga_g.jpeg",
+              "damage": "each (10)",
+              "startup": "51F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge, Block, Attack",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Call down lightning strikes that home in on opponent.",
+              "name": "Thundaga (ground)",
+              "notes": "Three bolts spawn on the opponent in a sequence, and push the opponent away. Thundaga is a long range poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n, that is mostly used to interrupt opponents. It bypasses solid objects and lingering projectiles, but the damage is low and it needs wall for combos. Garland is vulnerable to attacks during the animation, but the recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis rather short for a move like this. It can be difficult to whiff punish |\nHitting an opponent who missed (whiffed) their attack.\nfrom a distance. Just watch out for opponent's Free Air Dash and assist.\nThundaga is not used in competitive play often due to its low damage, EX generation and situational combos.\nAbout the wall combos: If opponent is against a wall, the bolts can combo into each other. Garland can follow up with Flare, Chain Cast and even air bravery assists. The upward knockback's direction is also based on where the player's camera is facing."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/58/Brv_garland_twin_swords.jpeg",
+              "damage": "30 (7, 8, 15)",
+              "startup": "21F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Swipe with twin blades. Approaches foe; limited height.",
+              "name": "Twin Swords",
+              "notes": "Garland's dedicated advancing air bravery. Twin Swords' main strength lies in having some tracking in all directions, which makes it more consistent as a counter attack after blocks.\nTwin Swords suffers from a 3-slot bravery dilemma, where it is outclassed by Twist Drill, Chain Cast and Bardiche in utility and reward. It covers a range that other braveries don't do as consistently, but it's flawed in many other ways. It's fast, but not fast enough to be always unreactable. The animation is long and every hit is low priority, which risks getting blocked or whiff punished |\nHitting an opponent who missed (whiffed) their attack.\n. The overall range is average and the tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nperiod is brief. Twin Swords also has to wall rush for assist combos, which further skews the risk / reward ratio against Garland. It is risky to use in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\noverall."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/1d/Brv_garland_chain_cast.jpeg",
+              "damage": "15 (7, 8)",
+              "startup": "45F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Swing chain. Low accuracy, but effective against any height.",
+              "name": "Chain Cast",
+              "notes": "Garland positions himself above in relation to the opponent for two vertical attacks. This is an air combo starter, air-to-ground |\nAttacking a grounded opponent while being in the air. The attacker may land on the ground as well.\nwhiff punisher |\nHitting an opponent who missed (whiffed) their attack.\nand Garland's primary post-dodge defensive option in the air. It is not invincible, but the movement can help him evade slower dodge punish attempts. On hit, Garland can dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nand combo into Twist Drill for a total of 180 EX (almost 20 % of an EX bar). Chain Cast's consistent damage output, meter generation and applications in the neutral make it an appealing choice for a third bravery slot along with Bardiche and Twist Drill. It is pretty slow and telegraphed though, so it can be blocked or dodged easily.\nChain Cast has enough hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nto make empty chase attempts safer on average, although it is not entirely safe to use in all instances. It can also hit behind the opponent's block, though exact conditions are unclear. Being significantly below or above the opponent helps, though.\nThe hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nhas some oddities. It has gaps and possibly slight deadzones between the chain itself and the tip. Before reaching proper down-forward hitbox there may be a gap just below level height. It could have a small deadzone right in front of Garland as well. This requires further research."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7e/Brv_garland_bardiche.jpeg",
+              "damage": "30",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dive] Mighty axe swing. Great for attacking from above.",
+              "name": "Bardiche",
+              "notes": "Garland's iconic crushing swing. A staple in Garland's kit due to its speed, average whiff recovery and infamous damage output. It can be used to build assist gauge on whiff and punish long recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nattacks below Garland. Bardiche is primarily run for its reward on hit, namely ground wall rush assist combos and EX Revenge. The high base damage makes Garland one of the best users of wall rush bravery enhancements (primarily <img></img> Booster).\nOutside of combos, Bardiche's reward is lacking with no EX, short assist confirm window and no automatic Sneak Attack activation. Its other applications in the neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\nare also weak due to it exclusively tracking downwards, having a small hitbox and flawed mixup options to support it. It is a loud, telegraphed and relatively slow to start low priority move on a character whose other downward attacks are all slower than 40 frames.\nDespite these flaws, Bardiche is commonly used because the damage output is high enough to outweigh the cons."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/d/dc/Brv_garland_twist_drill.jpeg",
+              "damage": "30 (4 x 2, 8, 14)",
+              "startup": "21F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Rise] Upwards lunge with sword. Great for attacking from below.",
+              "name": "Twist Drill",
+              "notes": "Another staple bravery. Twist Drill is a fast anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nattack with good combo potential, damage and EX output. Twist Drill primarily tracks opponents above Garland, and it is used as a whiff punisher |\nHitting an opponent who missed (whiffed) their attack.\nor an occasional poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. It has enough range to connect after Deathblow for 180 EX (almost 20 % of the gauge).\nTwist Drill has lots of hitstun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n. It is one of the few moves in the game that provide a safe empty chase |\nA chase sequence where the initiator does nothing.\nanywhere. This is great for both assist combos and taking EX force reliably. A late dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nwindow and empty chase are both viable starters for Garland's commonly used assists. While Garland is safe after an empty chase, he can still lose to fast attacks and command blocks |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\nif he tries to push his advantage immediately. Challenging recovery attack pokes depends on the matchup |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\nand stage positioning as well; Chasing at a corner can leave Garland closer to the opponent than usual, which is more dangerous for him.\nTwist Drill's whiff recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis long enough for it to be punishable on reaction. It has a blind spot above Garland's head, and it's only effective at dodge punishing from below. If the opponent has a good read on Garland, they can even use an air BRV assist to shut down Twist Drill.\nEven so, Twist Drill is a staple in Garland's air combat. The disjointed |\nA part of an attack that isn't close to the character's hurtbox. If this part of an attack gets hit by opponent's attack, the character using it will not take damage.\nhitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nallows him to poke through projectiles |\nA type of attack that travels independently from any character. Beams, fireballs and magic spells are often like this. Many projectiles are Ranged priority in Dissidia 012, and they can be reflected back.\nand traps, such as Ultimecia charged Knight's Lance. The first part can be dodge cancelled |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nearly enough to contest The Emperor's Dreary Cells, and the startup speed can be difficult to react to without practice.\nTwist Drill can also hit behind the opponent's block at the right distance and angle, below the opponent."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/2d/Brv_garland_thundaga_a.jpeg",
+              "damage": "each (10)",
+              "startup": "51F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge, Block, Attack",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Call down lightning strikes that home in on opponent.",
+              "name": "Thundaga (midair)",
+              "notes": "Same as the ground version, except it can be done anywhere in the air. A valid option against mages and characters with poor mobility, though it's main application is still interrupting opponents."
+            }
+          ]
+        }
+      },
+      "moveCount": 10,
+      "sources": [
+        "https://dissidia.wiki/Garland_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/28/Hp_garland_earthquake.jpeg",
+              "damage": "18 (8, 2 x 5)",
+              "startup": "39F",
+              "type": "Physical (axe) Magical (rocks)",
+              "priority": "Melee High (axe) Unblockable (rocks)",
+              "exForce": "36",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Split ground with axe. Steals bravery, then takes HP.",
+              "name": "Earthquake",
+              "notes": "Earthquake is a decent mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nagainst aggressive ground opponents in close range. It tracks well, has strong knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nand the unblockable rocks ignore LV2 Assist Change entirely. Earthquake can anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nforward ground dodges, particularly with the axe slam. The rocks can anti-air as well. This is an effective move when used sparingly.\nBecause the rocks act independently, Earthquake can be used to clash with Melee High attacks, such as Tifa's Rolling Blaze or Squall's Revolver Drive and punish them for it. If it trades |\nWhen two opposing attacks hit each other at the same time, dealing damage. In Dissidia 012, this is usually in the context of assist character hitting their target while player character takes damage.\n, the situation is also often in Garland's favor. Earthquake is difficult to punish without mid range attacks or assist, but use it with caution. Aerial attacks can still hit Garland. He often has to dodge to reduce the recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, which is risky. And assist is the primary way to make it safer on whiff |\nA missed attack that doesn't make any contact.\nas well. That can be expensive for Garland despite his ground neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\ncapability."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c9/Hp_garland_blaze_g.jpeg",
+              "damage": "-",
+              "startup": "59F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "each (9)",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shoot multiple fireballs that chase opponent.",
+              "name": "Blaze (ground)",
+              "notes": "Homing fireballs that can be dodged with well placed dodge. The ground version is not used often, since he already has relatively complete kit on the ground.\nBlaze has a bad deadzone in front of Garland, and each fireball can inflict meter depletion on hit. These are traits that carry over to its aerial version, which sees much more use in competitive play."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8f/Hp_garland_tsunami.jpeg",
+              "damage": "12 (2 x 6)",
+              "startup": "45F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "96",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Hurl chain sword. Vertically limited, very accurate.",
+              "name": "Tsunami",
+              "notes": "Tsunami is a tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n, high risk, high reward option against ground dodges. It is also a post-dodge defensive option thanks to the swift upward movement during startup |\nThe time it takes before an attack can do damage.\n. Tsunami catches ground dodges consistently, and leads to assist combos on hit. That makes this move something of an instigator when assist gauge is available.\nAgainst opponents without command blocks |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\n, doing Tsunami and reacting with an assist can be effective for a checkmate |\nA situation where a player has no options to avoid losing a situation or a match. For example, hitting an opponent who has a full EX gauge and killing bravery can activate EX Revenge and guarantee a win.\ninteraction. Tsunami can also hit aerial opponents who are close to Garland at the time of impact. Lastly, if Garland staggers an opponent with a blodge (backwards / sideway dodge), Tsunami is guaranteed.\nIf Tsunami misses, Garland is vulnerable to counter attacks for a few seconds. Assist is needed to offset this drawback, but Garland must be sure the opponent is going to strike back."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8e/Hp_garland_blaze.jpeg",
+              "damage": "-",
+              "startup": "59F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "each (9)",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shoot multiple fireballs that chase opponent.",
+              "name": "Blaze (midair)",
+              "notes": "Blaze is a secondary long range harassment tool, often used with Cyclone for safe zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\n. The projectiles track |\ntowards the opponent, and they all focus on a singular point of impact. This reduces their screen presence, but each fireball can hit the opponent. That is notable, because each fireball activates the meter depletion effect with Battle Hammer <img></img> and the like.\nDespite the projectiles' speed and relatively brief duration, it is possible to reflect one of them back at Garland. That is rarely a concern for Garland though. A more common downside to Blaze is the lack of protection around Garland once the projectiles have been fired; There is enough time to hit Garland out of Blaze after firing the projectiles, but before he can act again. Using Blaze without protection from Cyclone (or even assist) can lead to unfavorable trades with opponent's assist (Blaze hits, opponent's assist breaks Garland), or assist punishes |\n.\nBlaze is a staple for Garland, despite not having strong neutral |\napplications. It has a low hit rate at high level play, but also low risk when used sparingly from a distance. It supports Garland at a range where he doesn't have much presence, and if his opponent struggles to deal with Cyclone, it makes Blaze that much more prominent.\nIf the opponent has Auto Assist Lock On equipped, and the opponent escapes an assist combo as Garland uses Blaze, the projectiles won't track to the opponent. They will disperse instead."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/ed/Hp_garland_cyclone.jpeg",
+              "damage": "-",
+              "startup": "51F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "each (60)",
+              "effects": "Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Call forth tornado. Slow speed, homing ability.",
+              "name": "Cyclone",
+              "notes": "Cyclone is used as a passive defensive tool, assist combo extender or a safer combo finisher after assist. It has good reward on hit thanks to its EX generation and hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n- It combos into assists on hit, and even Garland can follow up if Cyclone hits late. Cyclone plays an important role in optimizing Garland's air combos for EX, namely at the ceiling and / or after EX Revenge.\nCyclone consists of two Ranged High projectiles that linger for a moment. But they don't protect Garland from all angles. Disjointed |\nA part of an attack that isn't close to the character's hurtbox. If this part of an attack gets hit by opponent's attack, the character using it will not take damage.\nattacks such as Sephiroth's Sudden Cruelty and Aerith's Seal Evil can hit Garland out of it. Advancing high priority moves such as Cloud's Braver and Squall's Rough Divide can also power through Cyclone. Because Garland cannot act again early and or take advantage of Cyclone for long, it is not suited for building offensive momentum.\nHowever, Cyclone can exploit certain shortcomings: Characters without Aerith assist, projectiles |\nA type of attack that travels independently from any character. Beams, fireballs and magic spells are often like this. Many projectiles are Ranged priority in Dissidia 012, and they can be reflected back.\n, command blocks |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\n, disjointed hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nor a relatively fast advancing Melee High attack. In these cases, Cyclone provides a consistent defensive barrier for Garland."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/2e/Hp_garland_flare.jpeg",
+              "damage": "15",
+              "startup": "47F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Strike with greatsword, causing large explosion on hit.",
+              "name": "Flare",
+              "notes": "Garland's primary HP attack after blocking and finishing assist combos. It tracks the opponent, though it's bad at turning around shortly before moving. The knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nhas high wall rush potential, which adds more damage consistently after bravery breaks.\nFlare's active frames are very brief and as such, it is not effective at punishing early blocks and catching aerial dodges with Evasion Boost. It also has plenty of recovery frames |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, which leave Garland vulnerable to attacks for a moment.\nIf Flare makes contact, Garland will transition into the second hit that deals HP damage. This is true whether the opponent escapes with LV1 Assist Change afterwards or he clashes with a lower priority melee move. It doesn't have particularly strong tracking and Garland can be hit during the animation. Cyclone and Blaze can make up for this weakness, but Flare remains a staple in Garland's arsenal regardless. It is his only consistent aerial HP for block counters."
+            }
+          ]
+        }
+      },
+      "moveCount": 6,
+      "sources": [
+        "https://dissidia.wiki/Garland_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Class Change!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nIndomitable Resolve",
+        "Garland's EX mode is conventionally strong due to his damage output. The threat of his high damaging EX Revenge combos also complements his EX mode, which depletes the opponent's assist gauge upon activation. There aren't many unique perks here, but because Garland can fill his EX gauge effectively through combos, he can get more opportunities to close out matches with it."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Indomitable Resolve",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Active while attacking] Even while taking damage, attacks can be performed without flinching.",
+            "Rare instance of super armor |",
+            "A state where a character can continue their action despite getting hit. In Dissidia 012, bravery damage can be taken during this time.",
+            "in Dissidia 012. During an attack animation, Garland will not flinch from any attack that does not inflict HP damage. This can be good as a surprise attack, and it can also work in a pinch against characters with HP links (Cyclone, anyone?), but remember that EX mode does not alter Garland's attack properties; He can still be blocked."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Soul of Chaos",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "An attack terrible enough to shake the heavens. Repeatedly press circle to add strength to the attack.",
+            "Soul of Chaos requires filling the gauge by repeatedly pressing circle <img></img>. It's not the strongest EX Burst in the game, but well above average in power thanks to Garland's high base ATK, good initial hits and bravery stacking with a full EX gauge."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "12, 12 (24)",
+                  "4x3, 3x4, 16, 16, 5x4 (100 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Garland_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [
+        "Main article: Garland (Combos)"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [
+            "Garland has a handful of solo combos, but his most practical ones start with Deathblow or Chain Cast. Both can lead to Twist Drill for plenty of damage and EX, which is great for Garland."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Poke starterGround\nDeathblow > move > jump > Twist Drill\n45\n150\nVideo\nBase Damage (Breakdown): 15 > 30\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60 > 90\nStaple combo. High EX and leads to damaging Kuja assist combos for even more EX. Move and jump as quickly as possible. The later Deathblow hits, the more time Garland has to combo into Twist Drill."
+                ],
+                [
+                  "Punish starterAir, above opponent\nChain Cast > DC > Twist Drill\n45\n180\nVideo\nBase Damage (Breakdown): 15 > 30\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 90\nStaple air combo, commonly used as a punish or an assist combo ender. 180 EX is great, which Garland can get by empty chasing immediately. If Garland has assist, he can also start an assist combo by dodge cancelling, or after empty chase ends.\nIf opponent is far after Chain Cast, Twist Drill may not land all initial hits. This combo does not require wall, but it can be easier to do near walls and corners due to reduced knockback. Garland should remain cautious when empty chasing at a corner, because being closer to the opponent makes him a bit more vulnerable to recovery attack attempts.\nWhen wall is not nearby, Garland can dodge cancel towards opponent more reliably by moving camera sideways after Assist Chase, and then moving with a quarter-circle motion. For example, the camera is tilted to the right so Garland faces to the left. The quarter-circle motion would then be left > left/up > up. The initial left should be held for almost a split second."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "EX Revenge",
+          "text": [
+            "Garland gets access to some of his strongest combos during EX Revenge, including the notorious Bardiche combo. With EX Revenge, Garland becomes very dangerous to interact with due to its damage potential."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Air starter, close to opponentFull EX Gauge, near ground\nBardiche > WR > Bardiche > WR > Bardiche > WR > Bardiche > WR > Bardiche > Flare\n165 + HP & WR (x5)\n0\nBase Damage (Breakdown): 30 + WR > 30 + WR > 30 + WR > 30 + WR > 30 + WR > 15 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 0 > 0 > 0 > 0 > 0\nGarland's EX Revenge combo is infamous for its insane damage output. It is one of, if not THE strongest EX Revenge combo in the game without assist. As long as Garland is close to the opponent, he can repeatedly use Bardiche up to five times. Each Bardiche can also wall rush, which adds even more damage near ground. This combo requires little adjustment for Garland and it should be fairly easy to execute, as long as pressing Circle <img></img> repeatedly is not an issue.\nThis combo is the reason a full EX gauge is so beneficial for Garland. It practically guarantees a bravery break for Garland. And even if it doesn't, the wall rush still lets assists follow up. As a result, this combo can do far more damage than just the listed 165 + HP WR. 4,000 HP is practically killing range for Garland, while having more health usually means being put into Near Death state.\nIt is important to note, that wall rush contributes a lot to this combo's damage output. Therefore, if Garland cannot wall rush with Bardiche or especially Flare, he won't do nearly as much damage. Furthermore, if Garland needs to approach opponent from a distance, he has less time to do Bardiches. In order to ensure maximum damage, Garland should consider activating EX Revenge close to opponent, while being near ground. Garland can also consider dodging behind the opponent at the beginning to get more critical hits from Sneak Attack extra ability."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Garland_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "|-|Hybrid (Damage)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Substitutes\nBasic: Booster for Battle Hammer (assist depletion) or Dismay Shock (EX depletion).",
+        "A strong, versatile build. High bravery damage output, enhanced EX absorption and an initial boost for meter and bravery help Garland reach a full EX bar and a subsequent OHKO faster. Use this build as your default.",
+        "Equip Master Guardsman for over 10,000 health.",
+        "|-|EX Revenge=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "A dedicated EX Revenge build.",
+        "Against a Tidus with 184 DEF, a critical hit Bardiche can inflict 600+ bravery damage. It is possible to accumulate 5000 bravery during EX Revenge alone. Add two more Bardiches during a Kuja assist combo into a Flare and it amounts to about 7000 HP damage total. One way to mitigate damage from this combo is by equipping the extra ability Disable Sneak Attack."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9644"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "956 (1147 initial)"
+            ],
+            [
+              "ATK",
+              "182"
+            ],
+            [
+              "DEF",
+              "184"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x3.5"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Gigant Axe"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Dirk <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Hairpin <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Vest"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Booster"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Large Gap in HP"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> White Gem"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Glutton"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9644"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "957 (1148 initial)"
+            ],
+            [
+              "ATK",
+              "180"
+            ],
+            [
+              "DEF",
+              "185"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x2.7"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: King of Tragedy",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Rhongomiant"
+            ],
+            [
+              "Hand <img></img>",
+              "Prytwen"
+            ],
+            [
+              "Head <img></img>",
+              "Dragon Sallet"
+            ],
+            [
+              "Body <img></img>",
+              "Wygar"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Booster"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Large Gap in BRV"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> EX Revenge"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Spider Web"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Spider's Bane"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Avenger"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Garland_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Garland Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Round Edge",
+                  "23F",
+                  "Ground",
+                  "Opponent",
+                  "2 x 4, 6, 16 (30)",
+                  "Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Bardiche",
+                  "23F",
+                  "Air",
+                  "Opponent",
+                  "30",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Tsunami",
+                  "45F",
+                  "Ground",
+                  "Opponent",
+                  "2 x 6 (12)",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Cyclone",
+                  "51F",
+                  "Air",
+                  "Opponent",
+                  "-",
+                  "Chase"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist Overview",
+          "text": [
+            "Garland is one of the weaker assists in the game. His holds |",
+            "Holding an opponent in place with an attack, usually to set up an assist combo. In Dissidia NT, other players can follow up instead of assists.",
+            "are short, so he relies on wall rush for damage and combo opportunities. Bardiche is fast and it avoids LV2 Assist Change staggers easily if it hits in neutral |",
+            "The stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.",
+            ", but it leaves very little time to follow up. Tsunami has high coverage on grounded opponents and leads to Assist Chase, but it also has high assist cost. Cyclone covers space, but it is difficult to combo into.",
+            "Generally speaking Garland assist does not see much use in competitive play, because he does not enable HP attacks consistently anywhere, or complement most characters' strengths otherwise."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "Garland works with most competitive assists.",
+            "Kuja\nKuja is the strongest assist for Garland, because he maximizes Garland's strengths on hit. Great combo potential, high damage output and retains whiff punish |",
+            "Hitting an opponent who missed (whiffed) their attack.",
+            "capability. Air BRV sets up Chain Cast combos in the air for lots of EX, while ground BRV holds the opponent for two damaging Bardiche fillers |",
+            "An attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.",
+            ". Garland can stack bravery and EX gauge to force a checkmate situation, but Kuja's Force Symphony can help in Chase sequences. The main thing to watch out for is confirming Kuja ground BRV after Bardiche, as there is not much time to react. If opponent escapes from an assist combo early, Garland has to forgo the extra Bardiches to avoid an easy Assist Lock.",
+            "Sephiroth\nSephiroth assist has less damaging and versatile combo routes, but he attacks faster on the ground and has wider hitboxes |",
+            "An invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.",
+            ". He is great for whiff punishing on the ground specifically. Bardiche ground combos are also easier to react with Sephiroth ground BRV. Bardiche fillers are still possible on the ground, and even in the air with air BRV assist. The strong pushback on Sephiroth's finishers makes Chain Cast follow-ups much less practical. Twist Drill, Bardiche and Flare still work though. That means Garland gets way less EX compared to Kuja assist, but still does competitive BRV damage with Sephiroth. And of course, Sephiroth cannot bypass LV2 Assist Change staggers as consistently as Kuja can.",
+            "Aerith\nAerith lets Garland avoid LV2 Assist Change staggers consistently at the cost of damage and whiff punish capability. Twist Drill and Chain Cast combo into Seal Evil consistently with empty chase |",
+            "A chase sequence where the initiator does nothing.",
+            ", and long range Blaze completes the synergy. This can lead to stronger meter depletion, and Aerith still lets Garland get lots of EX with Chain Cast combos afterwards. Garland rarely needs Aerith to be competitive, but it is possible to use her for double assist combos with Cyclone if needed. If Garland lands Earthquake, Aerith does Cure because Garland is on the ground.",
+            "Tidus\nTidus assist provides one of the fastest air BRVs for whiff punishes and a slower ground BRV for extended ground combos. If Garland needs The Emperor to stop doing Dreary Cells, Tidus gets the job done. The ground BRV is also nice for people who want to practice Garland's solo ground combos. Garland does not benefit much from Tidus assist otherwise, even though the air BRV combos are functional."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Garland_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Garland_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Garland_(Dissidia_012)"
+  ]
+}

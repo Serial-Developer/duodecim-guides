@@ -1,0 +1,1799 @@
+{
+  "slug": "tifa-lockhart",
+  "name": "Tifa Lockhart",
+  "page": "Tifa_Lockhart_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Tifa_Lockhart_(Dissidia_012)",
+  "origin": "Final Fantasy VII",
+  "icon": "tifa",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-tifa.png",
+  "infobox": {
+    "Name": "Tifa Lockhart (ティファ・ロックハート)",
+    "Original game": "Final Fantasy VII",
+    "Base ATK (LV100)": "108 (Very Low)",
+    "Base DEF (LV100)": "111 (Average)",
+    "Run Speed": "4 (Fast)",
+    "Dash Speed": "69 (Very Fast)",
+    "Fall Speed": "77 (Above Average)",
+    "Fall Speed Ratio After Dodge": "37 (Above Average)",
+    "Fastest BRV": "11F (Waterkick, Elbow Smash)",
+    "Fastest HP": "33F (Meteor Strike, Meteor Crusher)",
+    "1-Hit HP": "Burning Arrow",
+    "HP Links": "Yes",
+    "Command Block": "No",
+    "Weapon": "Grappling Weapons, Parrying Weapons, Poles, Rods, Staves",
+    "Armor": "Bangles, Chestplates, Clothing, Gauntlets, Hairpins, Hats, Light Armor",
+    "Exclusive weapons": "Godhand, Premium Heart, Seventh Heaven",
+    "Unlock": "Default",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Ayumi Ito",
+    "Voice Actor (ENG)": "Rachael Leigh Cook"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Tifa is a close range character with fast movement speed and the ability to feint attacks. Ground combat is bolstered by mid priority projectiles and an HP link, while aerial combat is supported by moves with vertical tracking. Decent EX gain and one of the highest damaging EX Bursts in the game the more EX meter she has remaining. Damage potential is high with HP attacks thanks to high base bravery and Aerith assist specifically. Low average bravery damage, limited utility on feints and below average vertical prowess while airborne limit her overall effectiveness, however.",
+        "Tifa is a low tier character."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Tifa_Lockhart_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/e2/Brv_tifa_beat_rush.jpeg",
+              "damage": "35 (8, 11, 16)",
+              "startup": "21F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase, Feint",
+              "cancels": "Dodge, Feint (First hit)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close~Mid] A flurry of punches. Can combo without hitting.",
+              "name": "Beat Rush",
+              "notes": "Beat Rush is a 3-hit combo that is used as a grounded punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ntool, a defensive option with its feint and to poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\noccasionally. Each hit can be delayed, which can be used to hit confirm |\nThe act of performing an attack, reacting to it hitting and following up appropriately. Ergo, \"confirming\" it.\nassist combos. It has good EX generation at 90 EX, and it hits higher than her main ground poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nWaterkick.\nTifa can feint during the startup |\nThe time it takes before an attack can do damage.\nby pressing Cross <img></img>, which lets Tifa evade any incoming blows and strike back. This is useful in the context of dodge punishment, because Beat Rush feint is Tifa's fastest way to protect herself after a ground dodge. Tifa can go behind opponents with the feint, which also works as an offensive approach.\nIn terms of damage potential, Beat Rush isn't quite as potent as Waterkick's HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\n. It requires assist for HP damage, and doing so is often more practical with the first two punches. It's reliable, but the bravery damage is a bit low. Tifa can optimize this by going for a knockback cancel |\nAn attack's knockback that is interrupted with assist. Keeps the opponent in place.\nwith the third hit. This can be pretty difficult to do, but it is also rewarding due to its high 35 base damage. If Tifa can utilize the evasive feint, she can get a decent amount of bravery this way, especially with Sneak Attack extra ability."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/ef/Brv_tifa_blizzard_g.jpeg",
+              "damage": "10",
+              "startup": "31F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "--",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire ice crystals. Slow speed, but long range.",
+              "name": "Blizzard",
+              "notes": "Blizzard is a low priority projectile. Its main applications are building assist gauge on whiff |\nA missed attack that doesn't make any contact.\nand using it as a midrange poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. The startup is reactable |\nAn attack that has slow enough startup that a human can react to it and defend correctly.\n, but the projectile moves at a decent speed. Blizzard has fairly good vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nwhile it's moving, and Tifa can fire it at sharp vertical angles. That lets Tifa poke at opponents who are above her without always committing to Rolling Blaze.\nThe reward on hit is often negligible due to its low damage, short hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nand knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\n, so Tifa won't benefit much even if it hits. If opponent is against a wall, Kuja assist can convert |\nTurning a hit (unlikely or otherwise) into a combo through situational awareness.\nthe moment Blizzard hits, though this is situational and difficult to do. The Ranged Low priority means it can lose to dashes and leave Tifa vulnerable afterwards. Therefore it is recommended to be used sparingly to interrupt opponents who aren't immediately going on the offense. Blizzard's recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis short enough for Tifa to avoid reactive assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\n, though. As a result, Blizzard is a projectile with low risk and low reward when used appropriately.\nTifa is considered airborne when using Blizzard."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/b9/Brv_tifa_blizzara.jpeg",
+              "damage": "24 (1, 2 x 10, 3)",
+              "startup": "31F",
+              "type": "Magical",
+              "priority": "Ranged Low Ranged Mid (Explosion)",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Fire multiple ice crystals. Strike opponent down.",
+              "name": "Blizzara",
+              "notes": "Blizzara is an advancing projectile that wall rushes on the ground. Compared to Blizzard, Blizzara's maximum distance is shorter and it can only travel at lower diagonal angles at most. It won't be able to reach aerial opponents as consistently in close-range, but the move is more potent in other aspects. After Blizzara hits, or has traveled its maximum amount of distance, it turns into a lingering Ranged Mid projectile. It can occupy space from midrange and call out whiffs |\nA missed attack that doesn't make any contact.\nfrom that distance. Blizzara travels fast enough to punish dodges as well with a good read |\nA read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".\n. And because it wall rushes on the ground, it can set up assist combos as well. This is good for Tifa, as she can keep her distance from opponent and create some momentum without committing to close-range mixups |\nA situation where a player has several ways to attack, which require different actions from the defending player.\n.\nBlizzara remains active |\nThe period of time when an attack is capable of doing damage.\nwhile it's exploding as a mid priority move. It will go through its multi-hits even if it misses. The projectile can hit late and wall rush immediately as a result. This is can be harder for Tifa to react to, but it's still a good source of HP damage for her with assist.\nSome caution is still advised; Blizzara is still Ranged Low priority at first, so it can lose to dashes and melee attacks. Blizzara also has longer recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nthan Blizzard, which makes Tifa vulnerable to assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\non reaction. Tifa is considered airborne when using Blizzara, so fast air BRV assists can catch her if she is not careful."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f4/Brv_tifa_blizzaga.jpeg",
+              "damage": "30 (1, 2 x 10, 9)",
+              "startup": "93F",
+              "type": "Magical",
+              "priority": "Ranged Mid",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Drop ice crystals on foe to surprise opponent.",
+              "name": "Blizzaga",
+              "notes": "Blizzaga is the slowest Blizzard-type spell for Tifa, but also the most rewarding on hit. It has respectable 30 base damage (same as Garland's Bardiche) and wall rushes on the ground. That means assist combos are still possible, much like with Blizzara. It is too slow to be used reliably after blocking a melee attack. However, if the opponent is expecting a different Blizzard spell when a match starts, Tifa can catch them with this as a one-time trick.\nThere are few key differences compared to Blizzara. It is not used to occupy space in front of Tifa, because it always spawns above the opponent. The spawn has a maximum height limit, but it can catch unaware opponents who may be air dodging towards Tifa. Blizzaga also hits late enough for Tifa to be actionable at the same time, which lets her combo into Waterkick or Meteor Strike if she's near the opponent. This isn't as common in the neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\nas it may sound, but it is one of the only solo combo routes Tifa has. Rolling Blaze can also technically combo after Blizzaga, but it is more reliable when done during assist.\nBlizzaga has the longest recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nout of all Blizzard spells. That means Tifa is even more vulnerable to assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\non reaction. Tifa is considered airborne when using Blizzaga, so fast air BRV assists can catch her if she is not careful."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/0d/Brv_tifa_waterkick.jpeg",
+              "damage": "20 (8, 12)",
+              "startup": "11F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush, Feint",
+              "cancels": "Dodge, Attack (Kick) Feint (Second Hit)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] A low-to-high kick combo. Can combo without hitting.",
+              "name": "Waterkick",
+              "notes": "Waterkick is Tifa's main close-range poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nand punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ntool. It's very fast at 11 frames and leads to her Somersault HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\non hit, which can start assist combos. |\nA combo involving an assist character.\nIt's an important move in all ground combat scenarios, including punishing ground dodges. Somersault assist combos can do considerable damage anywhere with high base bravery, so Tifa can encourage opponents to become airborne just to avoid it.\nWaterkick's range is short, but it has plenty of active |\nThe period of time when an attack is capable of doing damage.\nframes. Tifa can use that to option select |\nA situation where performing the same inputs can lead to different outcomes depending on how the characters interact.\nSomersault by repeatedly pressing Square <img></img> and then dodging when the first kick is recovering. Tifa can dodge quickly after the first kick, so she won't get whiff punished |\nHitting an opponent who missed (whiffed) their attack.\nvery easily on reaction.\nFeint can be done while Tifa is doing the second hit. If the first hit connected, Tifa can use feint to move behind her opponent and hit them in a different direction instead. This can be useful for switching sides if Tifa has her back against a wall.\nIf Tifa blocks an airborne opponent and staggers them, Waterkick will usually miss. Tifa can do the second hit even if Waterkick misses, but it needs to wall rush to do meaningful damage with assist. Tifa can only feint the second hit, so it's done more as a defensive-offensive mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\n, instead of protecting her after a ground dodge. Regardless, finishing Waterkick once in a while can disorient opponents, and Tifa needs every bit of advantage she can get."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/85/Brv_tifa_elbow_smash.jpeg",
+              "damage": "20 (8, 12)",
+              "startup": "11F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush, Feint (both hits)",
+              "cancels": "Dodge, Attack (Elbow), Feint",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Elbow smash combo. Can combo without hitting.",
+              "name": "Elbow Smash",
+              "notes": "Elbow Smash is Tifa's main air poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. It's a multi-purpose move that can start offense, build assist gauge, whiff punish |\nHitting an opponent who missed (whiffed) their attack.\nattacks with short recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nand fend off nearby opponents. She moves slightly forward with both hits, moreso with the first. Elbow Smash's fast startup |\nThe time it takes before an attack can do damage.\nis unreactable, and it's her main tool for punishing air dodges after a Free Air Dash. Tifa can also lock the opponent's assist after Assist Change with this move, while only being briefly vulnerable.\nElbow Smash is one of the primary ways to safely convert |\nTurning a hit (unlikely or otherwise) into a combo through situational awareness.\nto HP damage with assist in the air. This can be done with the first hit, but there isn't much time to react due to short hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n. The assist combos are great for Tifa, but the low base damage and limited combo routes heavily affect the total damage. Since Tifa is expected to use Elbow Smash often, she can sometimes struggle to establish good momentum even when this move hits. The low damage and melee priority can skew the risk / reward ratio in opponent's favor, as her other mixups |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nare more committal. Other similar pokes such as Cloud's Double Cut and Warrior of Light's Dayflash generate 90 EX, in addition to having other useful traits. Elbow Smash only generates 30 EX, and has situational utility for its feint.\nDespite Elbow Smash's lackluster damage, Tifa has to rely on this move. Having a poke with short recovery is essential in competitive play, so it's very valuable regardless. Just like Waterkick, Tifa can finish Elbow Smash even if it misses. Similarly, it can wall rush for assist combos, though the damage is still not especially high.\nFeint can be done while Tifa is doing the second hit. If the first hit connected, Tifa can use feint to move behind her opponent and hit them in a different direction instead. This can be useful for switching sides if Tifa has her back against a wall."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/d/d0/Brv_tifa_falcons_dive.jpeg",
+              "damage": "26",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "0",
+              "effects": "Wall Rush, Feint",
+              "cancels": "Dodge, Feint",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dive] Descend quickly from above.",
+              "name": "Falcon's Dive",
+              "notes": "Tifa's divekick acts as a secondary aerial poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nand a punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nmove against grounded opponents. It is also her strongest combo move in EX Revenge, and strongest combo filler |\nAn attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.\nduring Kuja assist, who is one of her better assists.\nFalcon's Dive has short recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, which can be cancelled |\nAn action that is interrupted early by doing another action.\nquickly. It's fairly safe to throw out, but it can be hard to hit if she's not above her opponent. Tifa doesn't move forward much before descending, so she has to make sure she is at a good angle before using Falcon's Dive. Once it connects, Falcon's Dive can wall rush in a blink of an eye, and go for an assist combo.\nThe 26 base damage and wall rush make this one of Tifa's more damaging air braveries overall. And because Tifa has more use for downward attacks than rising attacks, Falcon's Dive is also equipped often. It's a good move for its relative safety, even if it requires wall rush and assist to really shine."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3d/Brv_tifa_moonsault_kick.jpeg",
+              "damage": "40 (9, 9, 2 x 3, 16)",
+              "startup": "25F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase, Feint",
+              "cancels": "Dodge, Feint (both parts)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Graceful kicks. Can combo without hitting.",
+              "name": "Moonsault Kick",
+              "notes": "Moonsault Kick is an advancing two-stage attack that ends with a quick forward dive. The startup |\nThe time it takes before an attack can do damage.\nis slow enough to be reactable |\nAn attack that has slow enough startup that a human can react to it and defend correctly.\n, but its other strengths can offset this. For one, Tifa can feint instantly (similar to Beat Rush) to protect herself or hit behind blocks. It has the highest base damage out of Tifa's entire move list, which scales well with critical hits. It can start assist combos reliably without walls and it has decent lateral range as well.\nIn some ways, Moonsault Kick can be considered an aerial version of Beat Rush in its application. It's a relatively high damaging bravery with instant feint and good EX generation. It's more rewarding when used as a punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\n, and it supports Tifa's Elbow Smash as a mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\ntool. As such, Moonsault Kick is a staple in competitive play.\nTifa has two feints with Moonsault Kick. She can feint before the first part or the second part. Both feints can be done in a row, but the opponent can dodge in between feints if Tifa is slow and / or predictable with this. The main draw with this technique is to get more critical hits from Sneak Attack extra ability. It also works as a callout against opponents who are expecting Tifa to lunge into a block from a distance.\nIf Tifa uses Moonsault Kick while locked off, she can move in any direction she is facing. This is useful for building assist gauge safely in large stages, because Tifa creates distance from opponent, and she cannot be blocked.\nMoonsault Kick's finishing lunge is a multi-hit attack. If Tifa calls assist at a very specific time during this lunge, Moonsault Kick's knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nis negated."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/97/Brv_tifa_dolphin_blow.jpeg",
+              "damage": "29 (1 x 5, 24)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush, Feint",
+              "cancels": "Dodge, Feint",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Rise] Uppercut in the form of a dolphin. Useful from below.",
+              "name": "Dolphin Blow",
+              "notes": "Tifa ascends with a multi-hit uppercut. It may have the same startup |\nThe time it takes before an attack can do damage.\nas Falcon's Dive, but Tifa moves slightly slower during the attack. Dolphin Blow can whiff punish |\nHitting an opponent who missed (whiffed) their attack.\nopponents who are above Tifa. Similar to Falcon's Dive, it needs wall rush to deal the most damage with assists. Dolphin Blow has the second highest base damage out of Tifa's air braveries. So if Tifa gets a ceiling wall rush, Dolphin Blow is Tifa's go-to assist combo filler |\nAn attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.\nfor bravery damage.\nDolphin Blow takes longer to finish than Falcon's Dive, but it can be cancelled |\nAn action that is interrupted early by doing another action.\nvery early during its recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n. In that sense, it also works as a relatively safe secondary poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nin the neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. What makes this move a bit more situational is the reliance on ceiling wall rushes; Many stages are vertically tall, and Tifa doesn't get much reward on hit without ceilings. There aren't many matchups |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\nwhere she could use this reliably even when ceiling is available. Ultimecia is a good example of this with her charged Knight's Lance strategies. She may fight at the ceiling, but Tifa cannot use Dolphin Blow to get past Ultimecia's high priority trap. Dolphin Blow won't wall rush immediately like Falcon's Dive, so it won't necessarily trade in Tifa's favor either.\nAs such, Dolphin Blow is usually a secondary consideration for Tifa."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/17/Brv_tifa_blizzard_a.jpeg",
+              "damage": "10",
+              "startup": "31F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "--",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire ice crystals. Slow speed, but long range.",
+              "name": "Blizzard",
+              "notes": "Midair Blizzard is very similar to ground Blizzard. Low damage, short hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nand good vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n. The short recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nlets Tifa avoid assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\nthat aren't predicted as well. Just like ground Blizzard, the midair version can barely combo into Kuja assist if Tifa is sure it will hit against a cornered opponent.\nBlizzard's aerial version is not often prioritized, because it provides very few benefits compared to Tifa's essential melee moves. However, it still remains a \"low risk, low reward\" midrange poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nthat lets Tifa keep her distance from opponents. Tifa can build assist gauge with Blizzard and occasionally try to interrupt her opponent's flow. With enough patience, Tifa could potentially invite opponent to approach her."
+            }
+          ]
+        }
+      },
+      "moveCount": 10,
+      "sources": [
+        "https://dissidia.wiki/Tifa_Lockhart_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/9c/Hp_tifa_meteodrive.jpeg",
+              "damage": "15",
+              "startup": "39F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush, Feint",
+              "cancels": "Dodge, Feint",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Kick upwards, then strike down. Vertically limited.",
+              "name": "Meteodrive",
+              "notes": "Meteodrive is a close-range HP that wall rushes on the ground. The range is short, but it can be used as a block punisher |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\n. The feint covers a decent amount of distance, which can help move behind opponents. Tifa will complete the attack even if it misses, but the animation isn't the longest out of her ground HPs.\nTifa's other ground HPs cover more situations while having higher damage potential. As a result, Meteodrive is not often prioritized in competitive play."
+            },
+            {
+              "variants": [
+                "Normal",
+                "Half Charge",
+                "Full Charge"
+              ],
+              "image": "https://dissidia.wiki/images/1/1f/Hp_tifa_meteor_strike.jpeg",
+              "damage": [
+                "17 (1 x 2, 15)",
+                "22 (1 x 7, 15)",
+                "28 (1 x 13, 15)"
+              ],
+              "startup": "An invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\n7F after release || 42F, Hitbox 7F after release || 58F, Hitbox 7F after release",
+              "type": [
+                "Physical",
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee High",
+                "Melee High",
+                "Melee High"
+              ],
+              "exForce": [
+                "3 per hit",
+                "3 per hit",
+                "3 per hit"
+              ],
+              "effects": [
+                "Wall Rush, Feint",
+                "Wall Rush, Feint",
+                "Wall Rush, Feint"
+              ],
+              "cancels": [
+                "Dodge, Feint",
+                "Dodge, Feint",
+                "Dodge, Feint"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "",
+              "description": "[Close~Long] Charge at foe. Hold button to change distance.",
+              "name": "Meteor Strike",
+              "notes": "Meteor Strike is an advancing combo HP that's used for high damage potential. It has the highest base damage out of Tifa's ground HPs and works well as follow-up to Blizzaga or assists. Tifa can charge Meteor Strike by holding Square <img></img>, which increases bravery damage and travel distance. When charged, Tifa will pursue the opponent on the ground with good tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nand long active |\nThe period of time when an attack is capable of doing damage.\nframes.\nMeteor Strike is effective in assist combos, both as a starter and ender. It can wall rush on the ground in most stages, which synergizes very well with high base bravery and Side by Side <img></img> builds. If Tifa started a combo with an HP, the charged versions also give more time for base bravery to recover. In those cases, Meteor Strike is good as a general assist combo ender on the ground.\nTifa can use Meteor Strike defensively as well. She takes a low crouching stance during startup |\nThe time it takes before an attack can do damage.\n. She can evade some air-to-ground |\nAttacking a grounded opponent while being in the air. The attacker may land on the ground as well.\nattacks this way, and then immediately strike back. Tifa cannot feint during startup, but she can feint while the move is active. After a feint, Tifa can start charging Meteor Strike again. That makes Meteor Strike a relatively safe move to whiff |\nA missed attack that doesn't make any contact.\n, as Tifa can prevent herself from becoming vulnerable right in front of her opponent. Reflecting high priority projectiles is also possible in this manner.\nIf Meteor Strike connects, but the opponent escapes with Assist Change, Tifa will attempt to move behind opponent and hit them. This is not guaranteed damage against dodges, and Tifa has a relatively low maximum height limit. Blizzaga can cause a hit glitch for Meteor Strike, which can put unaware opponents into a damaging assist combo."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/ec/Hp_tifa_burning_arrow.jpeg",
+              "damage": "-",
+              "startup": "47F",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush, Feint",
+              "cancels": "Dodge, Feint",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Ultra high-speed kick. Extremely quick.",
+              "name": "Burning Arrow",
+              "notes": "Burning Arrow is Tifa's only 1-hit HP. Tifa advances forward in a straight line, and the attack is active |\nThe period of time when an attack is capable of doing damage.\nduring its entire movement. Burning Arrow works as a midrange punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ntool, usually against ground dodges. It can reflect high priority projectiles reliably. As a 1-hit HP, it is also important for resolving EX Revenge checkmates |\nA situation where a player has no options to avoid losing a situation or a match. For example, hitting an opponent who has a full EX gauge and killing bravery can activate EX Revenge and guarantee a win.\n.\nMost of Tifa's ground HPs wall rush on the ground, but Burning Arrow wall rushes on walls specifically. That limits her combo routes and the move's overall power, but it's still effective with Kuja or Tidus assists. Tifa can feint right before the kick, and then kick afterwards. That can be useful as a reactive emergency brake, in case Tifa did not make a good read |\nA read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".\non her opponent."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/d/d8/Hp_tifa_rolling_blaze_g1.jpeg",
+              "damage": "7 (1 x 7)",
+              "startup": "45F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "3 per hit (max 21)",
+              "effects": "Wall Rush, Feint",
+              "cancels": "Dodge, Feint",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Rise] Grab foe and throw to ground. Short horizontal range.",
+              "name": "Rolling Blaze",
+              "notes": "Rolling Blaze is Tifa's primary anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nattack. Tifa moves quickly at a diagonal angle while going up, while having a constant high priority hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\n. Tifa uses Rolling Blaze to threaten air space, challenge whiffs |\nA missed attack that doesn't make any contact.\nand punish dodges (forward ground dodge and air dodges). If it hits, Tifa can wall rush on the ground for big damage with assist. As such, Rolling Blaze is a very important move for Tifa.\nTifa can feint Rolling Blaze during the initial lunge to cancel |\nAn action that is interrupted early by doing another action.\nit early. She can follow up with another Rolling Blaze after the feint, which greatly extends Rolling Blaze's maximum range. This is great for Tifa, as she is only vulnerable for a very brief period during the feint. Punishing her feint requires precise timing, so Tifa can get away with using Rolling Blaze out of respect for the danger she presents.\nRolling Blaze is quite powerful in close-range, but it also has weak lateral range. It cannot reliably hit opponents who move away with directional dashes and backward dodges. Tifa also cannot travel across large stages with Rolling Blaze, so it only has presence in close-range near the ground. If Rolling Blaze clashes with a lower priority move, Tifa staggers the opponent, but won't drag them down with her. Assists can convert |\nTurning a hit (unlikely or otherwise) into a combo through situational awareness.\noff of that, but it impacts her ability to get reward against clashes specifically.\nThis is considered a staple move for Tifa. It has good neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\napplications and it yields good reward for Tifa if it connects. Similar to Burning Arrow, Rolling Blaze can also reflect higher priority projectiles."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/70/Hp_tifa_somersault.jpeg",
+              "damage": "- (+Waterkick, 8 Total)",
+              "startup": "?",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "60 / 90",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Waterkick. [Combo] Kick opponent upwards.",
+              "name": "Somersault",
+              "notes": "Somersault is Tifa's only HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\n, and it's pretty powerful at that. It has very fast startup |\nThe time it takes before an attack can do damage.\nand leads to assist combos anywhere. As an HP link, it also fills assist gauge with Side by Side <img></img> and leads to lots of damage with high base bravery builds.\nThis move is the reason Waterkick is as strong as it is; It encourages opponents to block or give up their grounded position altogether. Even if the opponent escapes with LV1 Assist Change, Tifa cannot be punished afterwards, which is a boon for an HP link. The overall safety and effectiveness of Somersault make it another staple move for Tifa."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/0c/Hp_tifa_rolling_blaze_a1.jpeg",
+              "damage": "7 (1 x 7)",
+              "startup": "45F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "3 per hit (max 21)",
+              "effects": "Wall Rush, Feint",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dive] Grab foe and throw to ground. Short horizontal range.",
+              "name": "Rolling Blaze",
+              "notes": "Aerial Rolling Blaze is similar to grounded version in many aspects. The main difference is Tifa moves at a downward angle instead of upward. It's equally important for Tifa as a threatening air-to-ground |\nAttacking a grounded opponent while being in the air. The attacker may land on the ground as well.\nmove and an assist combo |\nA combo involving an assist character.\ntool. It still wall rushes on the ground, so Tifa can deal great damage with assist. And thanks to the generous active |\nThe period of time when an attack is capable of doing damage.\nframes, it can threaten space below Tifa as well.\nSince Rolling Blaze is used from above, Tifa can damage the opponent even when it clashes with a lower priority move. Feints still increase Rolling Blaze's range a lot, so it's effective at controlling space and shutting down opponents frantically whiffing |\nA missed attack that doesn't make any contact.\nand dodging.\nThe weaknesses are also similar to the ground version. Midair Rolling Blaze has strong downward tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n, but weak lateral range. If Tifa staggers an opponent by blocking, she can miss at equal height if she is not in point blank |\nThe closest possible distance two characters can be from each other.\nrange. Opponents can move away from Tifa with directional dashes and dodges. The lack of upward movement means Tifa cannot catch opponents jumping above her, either. And though Tifa is briefly vulnerable during the feint, she can still be hit out of it.\nRolling Blaze is capable of extraordinary damage output with high base bravery builds and Aerith assist. If Tifa has two assist gauges, she can call Aerith for a second time before following through with another Rolling Blaze. This is one of Tifa's most rewarding combo routes, though the conditions for it cannot always be met in the air."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/6f/Hp_tifa_meteor_crusher.jpeg",
+              "damage": "10 (1 x 8, 2)",
+              "startup": "An invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\n17F after release",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "87",
+              "effects": "Feint",
+              "cancels": "Dodge, Feint (During Charge)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close~Mid] Unleash a flurry of attacks. Increase charge speed with button hold.",
+              "name": "Meteor Crusher",
+              "notes": "Meteor Crusher is a chargeable HP attack that transitions into a combo on hit. It's a common block punisher and assist combo ender in the air due to its speed and range when charged. Meteor Crusher is tied for fastest startup |\nThe time it takes before an attack can do damage.\nwith uncharged Meteor Strike, and the recovery is relatively short for an HP attack.\nTifa can charge Meteor Crusher by holding Square <img></img>, which has some benefits in the neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. Meteor Crusher gets a considerable range increase with a charge. When Tifa releases the charge, she moves quickly towards opponent before attacking. The charge can be held for a couple seconds after reaching max charge, and Tifa can feint while moving towards opponent. These make raw |\nWhen an attack is done as is, with nothing preceding it.\nMeteor Crusher safer to use, and its effective for punishing air dodges on reaction. If Tifa feints, she cannot charge again and must instead do Meteor Crusher in place.\nThe initial hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nis a bit small and the range is very short without a charge. A charged Meteor Crusher does not move Tifa high up if she is far from opponent. And if she chooses to charge, she is vulnerable when moving towards opponent. Meteor Crusher does not have strong downward tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n, though it can pick up opponents after clashing with a lower priority move. As a multi-hit, Tifa cannot use this to circumvent EX Revenge checkmates |\nA situation where a player has no options to avoid losing a situation or a match. For example, hitting an opponent who has a full EX gauge and killing bravery can activate EX Revenge and guarantee a win.\n, which is relevant, since air combat is very common. Tifa is vulnerable to attacks after LV1 Assist Change, but her movement and dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nwindow make it hard for opponents to punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nher\nOverall, Meteor Crusher is an important move for Tifa. It covers angles that aerial Rolling Blaze cannot, while providing some midscreen |\nAny space in the stage where neither player is in a corner or at a wall. Basically means no walls or ceilings nearby.\nutility. It's lower reward due to lack of wall rush, but assists can still combo if opponent is against a wall."
+            }
+          ]
+        }
+      },
+      "moveCount": 7,
+      "sources": [
+        "https://dissidia.wiki/Tifa_Lockhart_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Equipped Premium Heart!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nPremium Heart"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Premium Heart",
+          "text": [
+            "[Always active while in EX Mode]\nThe fuller the EX Gauge, the more damage dealt."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Final Heaven",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "A flurry of attacks ending in one ferocious tackle. Watch your timing and stop the reels. The better the combo, the more damage dealt.",
+            "Final Heaven requires stopping all seven slots on a \"Yeah!\" symbol for a perfect version. A slot stops when Cross <img></img> is pressed. When all slots have been stopped, Tifa will follow through with seven attacks. The damage for each hit depends on the symbol; Yeah is a full damage attack, hit is a lower damage attack, and miss will do no damage at all. Tifa can do any combination of yeahs, hits and misses.",
+            "Contrary to their appearance, the symbols aren't that random. Several yeah symbols scroll down in one go, so it is possible to react to them and stop the reel there. Once the first yeah has been confirmed, the remaining yeahs can be aligned with a relatively steady rhythm of one button press per ~1-1.5 seconds. Getting this timing may require a bit of practice. Auto EX Command Ω won't require any player input at all, but costs 20 capacity points.",
+            "The base damage scales with remaining EX gauge. More EX means higher damage. As such, Final Heaven is best used as soon as EX mode has been activated. Missing out on bravery critical hits during assist combos may sound bad, but it's worth noting that Final Heaven with max EX gauge is one of the strongest EX Bursts in the game."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "",
+                  "Maximum EX",
+                  "Minimum EX"
+                ],
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.",
+                  "15, 25 (40)",
+                  "8, 13 (21)"
+                ],
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.",
+                  "13 x 7 (91) (131 total)",
+                  "7 x 7 (49) (70 total)"
+                ],
+                [
+                  "Type",
+                  "??"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Tifa_Lockhart_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": true,
+      "title": "Unique Mechanics - Feints",
+      "text": [
+        "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+        "Tifa can cancel |",
+        "An action that is interrupted early by doing another action.",
+        "most of her attacks into a feint. This is an invincible dash that can go through opponents. Press Cross <img></img> during an attack's startup |",
+        "The time it takes before an attack can do damage.",
+        "to feint it. For example, Beat Rush > Cross <img></img> > Beat Rush (hits). After feint happens, Tifa can continue with the preceding attack or wait until the feint ends.",
+        "Feints allow Tifa to delay her attack for about one (1) full second before being locked into unactionable recovery frames |",
+        "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+        ". This can be used to extend an attack's range and increase ambiguity on the attack timing. Rolling Blaze is notorious for this, but braveries also benefit from the delayed timing. This is because Tifa can wait until opponent's block won't guard attacks anymore, and then strike hard.",
+        "Tifa will move forward whenever she feints. She will only move behind opponent if she is close enough to them. The direction cannot be altered manually. Tifa cannot mixup |",
+        "A situation where a player has several ways to attack, which require different actions from the defending player.",
+        "with a different attack after feinting, either. However, feints are good as a defensive option, since Tifa is invincible during it. This is great for staying safe against dodge punish attempts, and it's one of the few options in the game with invincibility.",
+        "Tifa can be hit after the feint teleport and during its recovery period, which make her vulnerable to attacks. One way to cover this is to have assist gauge ready for opponent’s interaction. Escaping damage or intercepting the opponent’s approach can work out well, but there will inevitably be a little bit of guessing involved depending on the matchup. |",
+        "Two specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.",
+        "Feints are better used sparingly early in the match to see how the opponent reacts to them. Once you get a good idea of how they respond, you can adjust your strategy accordingly.",
+        "Common counterstrategies to feints include;",
+        "Running or jumping out of range\nInterrupting with fast attacks (e.g. Squall’s Beat Fang, Yuna’s Diamond Dust)\nChasing with a homing attack (e.g. Cloud's Braver, Vaan's Inferno)\nReacting with assist and using it in tandem to pincer her."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Attacks with feints"
+            ],
+            [
+              "Attack",
+              "Feint window",
+              "Post-feint action"
+            ],
+            [
+              "Beat Rush",
+              "Before first hit",
+              "Beat Rush"
+            ],
+            [
+              "Waterkick",
+              "Before second hit",
+              "Second bravery hit of Waterkick"
+            ],
+            [
+              "Moonsault Kick",
+              "Before either hit",
+              "First part or second part depending on feint timing"
+            ],
+            [
+              "Falcon's Dive",
+              "Before first hit",
+              "Falcon's Dive"
+            ],
+            [
+              "Dolphin Blow",
+              "Before first hit",
+              "Dolphin Blow"
+            ],
+            [
+              "Meteodrive",
+              "Before first hit",
+              "Meteodrive"
+            ],
+            [
+              "Meteor Strike",
+              "Before / during first hit",
+              "Meteor Strike (can be charged)"
+            ],
+            [
+              "Burning Arrow",
+              "Before first hit",
+              "Burning Arrow"
+            ],
+            [
+              "Rolling Blaze (both)",
+              "During first part",
+              "Rolling Blaze"
+            ],
+            [
+              "Meteor Crusher",
+              "Before attack connects",
+              "Meteor Crusher (cannot be charged)"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Tifa_Lockhart_(Dissidia_012)"
+      ]
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Tifa_Lockhart_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "|-|Side by Side (All-rounder)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10904"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1215"
+            ],
+            [
+              "ATK",
+              "176"
+            ],
+            [
+              "DEF",
+              "184"
+            ],
+            [
+              "LUK",
+              "61"
+            ],
+            [
+              "Max Booster",
+              "x2.7"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: None",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Seventh Heaven"
+            ],
+            [
+              "Hand <img></img>",
+              "Hero's Shield <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Dueling Mask"
+            ],
+            [
+              "Body <img></img>",
+              "Heavy Armor <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Block Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Zephyr Cloak"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Empty EX Gauge"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Blue Gem"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Miracle Shoes"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Side by Side"
+            ],
+            [
+              "Summon <img></img>",
+              "None"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "Beat Rush",
+              "Moonsault Kick"
+            ],
+            [
+              "Waterkick",
+              "Falcon's Dive"
+            ],
+            [
+              "Blizzaga",
+              "Elbow Smash"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "Rolling Blaze",
+              "Meteor Crusher"
+            ],
+            [
+              "Burning Arrow",
+              "Rolling Blaze"
+            ],
+            [
+              "Somersault (from Waterkick)"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Basic Abilities"
+            ],
+            [
+              "Actions",
+              "Support",
+              "Extra"
+            ],
+            [
+              "Ground Evasion",
+              "Always Target Indicator",
+              "Precision Evasion"
+            ],
+            [
+              "Midair Evasion",
+              "EX Core Lock On",
+              "Counterattack"
+            ],
+            [
+              "Ground Block",
+              "Assist Lock On",
+              "Assist Critical Boost"
+            ],
+            [
+              "Midair Block",
+              "Disable Sneak Attack"
+            ],
+            [
+              "Aerial Recovery",
+              "EXP to HP"
+            ],
+            [
+              "Recovery Attack",
+              "Master Guardsman"
+            ],
+            [
+              "Controlled Recovery"
+            ],
+            [
+              "Wall Jump"
+            ],
+            [
+              "Free Air Dash"
+            ],
+            [
+              "Ground Dash"
+            ],
+            [
+              "Free Air Dash Boost"
+            ],
+            [
+              "Assist Gauge Up Dash"
+            ],
+            [
+              "Speed Boost"
+            ],
+            [
+              "Jump Times Boost"
+            ],
+            [
+              "Ground Evasion Boost"
+            ],
+            [
+              "Midair Evasion Boost"
+            ],
+            [
+              "Evasion Boost"
+            ]
+          ]
+        }
+      ],
+      "subs": [
+        {
+          "title": "Build overview",
+          "text": [
+            "A Side by Side build that doesn't specialise in damage, but instead focuses on a good balance of offense and defense. Most equipment come with useful effects to help with defense (Hero's Shield's Wall Rush HP defense for example), and accessories lean towards meter depletion and bravery boost on block and dodge. Side by Side synergises well with the three boosters for a consistent x2.7 multiplier throughout the match.",
+            "Tifa's bravery damage output is often average if not below average, which is where higher base bravery, her exclusive weapon and Assist Critical Boost come in. Landing any HP attack outside of assist combos will produce a chunk of assist bar which will help Tifa stay competitive with the meter.",
+            "Kuja assist combos off of wall rushes, staggers and unfinished bravery sequences (e.g. Elbow Smash 1st hit), which is great for learning and applying basic assist combo theory. Tifa also has access to her highest damaging assist combo filler (2x Falcon's Dive) if she wall rushes with Falcon's Dive, Meteor Strike or Rolling Blaze.",
+            "Because Side by Side freezes Tifa's EX gauge, she cannot gain EX at all. Be sure to collect any EX Cores that appear to prevent the opponent from taking advantage of the EX Force that Tifa generates."
+          ],
+          "tables": []
+        },
+        {
+          "title": "CP allocation",
+          "text": [
+            "This build has no spare Capacity Points. If you wish to use additional points to support your playstyle, you will have to replace an accessory with Hero's Essence <img></img>."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Substitutes",
+          "text": [
+            "Substitutes here."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Attacks",
+          "text": [],
+          "tables": []
+        },
+        {
+          "title": "Staple",
+          "text": [
+            "These attacks are recommended regardless of matchup, stage or player preference.",
+            "Waterkick: Poke and an assist combo starter with Somersault HP link.",
+            "Beat Rush: Poke and post-dodge defensive option. Can hit confirm the Kuja assist reliably with the first two hits.",
+            "Elbow Smash: Aerial close range poke, dodge punisher. An important assist combo starter either with the first hit or after wall rushing. Practice confirming this visually.",
+            "Falcon's Dive: Relatively safe downward (air-to-ground) poke, post-dodge defense with Feint. Assist combo starter with wall rush and for Kuja assist specifically, Tifa's strongest assist combo filler.",
+            "Rolling Blaze (ground): Assist combo starter and an anti-air.",
+            "Somersault: HP link from Waterkick. Assist combo starter and increases Waterkick's overall threat.",
+            "Meteor Crusher: Air assist combo ender, block punisher and pre-emptive dodge punisher when fully charged. Can combo into Kuja when sending the opponent into a corner (the wall / corner reduces knockback distance).",
+            "Rolling Blaze (midair): Air assist combo ender, air-to-ground dodge punisher / clash / space occupation."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Beat Rush",
+                  "Elbow Smash"
+                ],
+                [
+                  "Waterkick",
+                  "Falcon's Dive"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Rolling Blaze",
+                  "Meteor Crusher"
+                ],
+                [
+                  "Somersault(from Waterkick)",
+                  "Rolling Blaze"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Flexible",
+          "text": [
+            "These attacks are great to have, but can be swapped or removed depending on matchup, stage or player preference.",
+            "Blizzara: Ranged low projectile that becomes mid priority when it explodes at max range. It can convert to assist combo on hit after wall rushing. Occupies space in front of Tifa, but be wary of the initial low priority.",
+            "Blizzaga: Ranged mid projectile, can convert to assist combo on hit after wall rushing. Spawns on top of opponent and has limited vertical reach, but it is mid priority all the way through, staggering regular blocks.",
+            "Moonsault Kick: Slower close range poke with higher brv damage, post-dodge defense with Feint. Assist combo starter with a chase setup that doesn't require a wall, making this a good recommendation for Aerith assist specifically.",
+            "Dolphin Blow: Upward poke that is slightly faster than microdash Elbow Smash. Also works as a post-dodge defense tool with Feint. Assist combo starter with wall rush and it is Tifa's highest damaging bravery filler during air Kuja assist at the ceiling. Recommended vs. Sephiroth and Cecil.",
+            "Meteor Strike: Pseudo-poke with forward movement, slight low-profile, longer active frames and bravery damage than Rolling Blaze when charged. Leads to ground Kuja brv assist combos and of course, let's Tifa add damage with Falcon's Dive.",
+            "Burning Arrow: Single hit HP. Kuja assist can follow up after a wall rush, which increases Burning Arrow's damage potential. Because it doesn't inflict bravery damage, it also avoids EX Revenge counters with EX depletion. Good as a ground dodge punish, ground block punish or as an otherwise hard callout move."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Blizzara",
+                  "Moonsault Kick"
+                ],
+                [
+                  "Blizzaga",
+                  "Dolphin Blow"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Meteor Strike",
+                  "--"
+                ],
+                [
+                  "Burning Arrow",
+                  "--"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Avoid",
+          "text": [
+            "Generally not recommended due to being outclassed by other attacks or having no distinct utility.",
+            "Blizzard: Low priority projectile with longest reach out of the Blizzard type spells. With other spells already having higher priority and providing better reward on hit, Blizzard is not recommended for this build. It does have enough hit stun to combo into Kuja brv assist, but this requires calling him pre-emptively for consistency.",
+            "Meteodrive: Low brv damaging HP with wall rush. The wall rush lets Kuja follow up, but otherwise it is not particuarly noteworthy compared to Tifa's other HP attacks. Meteodrive does have better feint than Meteor Strike and short animation overall, however.",
+            "|-|Side by Side (high base BRV)=",
+            "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Blizzard",
+                  "--"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Meteodrive",
+                  "--"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Stats"
+                ],
+                [
+                  "HP",
+                  "9683"
+                ],
+                [
+                  "CP",
+                  "450"
+                ],
+                [
+                  "BRV",
+                  "1623"
+                ],
+                [
+                  "ATK",
+                  "175"
+                ],
+                [
+                  "DEF",
+                  "183"
+                ],
+                [
+                  "LUK",
+                  "60"
+                ],
+                [
+                  "Max Booster",
+                  "x3.5"
+                ]
+              ]
+            },
+            {
+              "caption": "Special Effect: None",
+              "rows": [
+                [
+                  "Equipment"
+                ],
+                [
+                  "Assist",
+                  "Aerith"
+                ],
+                [
+                  "Weapon <img></img>",
+                  "Piggy's Stick <img></img>"
+                ],
+                [
+                  "Hand <img></img>",
+                  "Chainsaw <img></img>"
+                ],
+                [
+                  "Head <img></img>",
+                  "Thornlet"
+                ],
+                [
+                  "Body <img></img>",
+                  "Maximillian <img></img>"
+                ],
+                [
+                  "Accessory 1",
+                  "<img></img> Muscle Belt"
+                ],
+                [
+                  "Accessory 2",
+                  "<img></img> Sniper Eye"
+                ],
+                [
+                  "Accessory 3",
+                  "<img></img> Bravery Orb"
+                ],
+                [
+                  "Accessory 4",
+                  "<img></img> Dismay Shock"
+                ],
+                [
+                  "Accessory 5",
+                  "<img></img> Empty EX Gauge"
+                ],
+                [
+                  "Accessory 6",
+                  "<img></img> Summon Unused"
+                ],
+                [
+                  "Accessory 7",
+                  "<img></img> Pre-EX Mode"
+                ],
+                [
+                  "Accessory 8",
+                  "<img></img> Pre-EX Revenge"
+                ],
+                [
+                  "Accessory 9",
+                  "<img></img> Back-Breaking Straw"
+                ],
+                [
+                  "Accessory 10",
+                  "<img></img> Side by Side"
+                ],
+                [
+                  "Summon <img></img>",
+                  "Rubicante"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Waterkick",
+                  "Moonsault Kick"
+                ],
+                [
+                  "Beat Rush",
+                  "Elbow Smash"
+                ],
+                [
+                  "Blizzara",
+                  "Falcon's Dive"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Rolling Blaze",
+                  "Meteor Crusher"
+                ],
+                [
+                  "Meteor Strike",
+                  "Rolling Blaze"
+                ],
+                [
+                  "Somersault (from Waterkick)"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Basic Abilities"
+                ],
+                [
+                  "Actions",
+                  "Support",
+                  "Extra"
+                ],
+                [
+                  "Ground Evasion",
+                  "Always Target Indicator",
+                  "Precision Evasion"
+                ],
+                [
+                  "Midair Evasion",
+                  "EX Core Lock On",
+                  "Disable Counterattack"
+                ],
+                [
+                  "Ground Block",
+                  "Assist Lock On",
+                  "EXP to Assist"
+                ],
+                [
+                  "Midair Block",
+                  "Best Dresser"
+                ],
+                [
+                  "Aerial Recovery"
+                ],
+                [
+                  "Recovery Attack"
+                ],
+                [
+                  "Controlled Recovery"
+                ],
+                [
+                  "Wall Jump"
+                ],
+                [
+                  "Air Dash"
+                ],
+                [
+                  "Free Air Dash"
+                ],
+                [
+                  "Ground Dash"
+                ],
+                [
+                  "Multi Air Slide"
+                ],
+                [
+                  "Free Air Dash Boost"
+                ],
+                [
+                  "Assist Gauge Up Dash"
+                ],
+                [
+                  "Speed Boost"
+                ],
+                [
+                  "Jump Boost"
+                ],
+                [
+                  "Jump Times Boost+"
+                ],
+                [
+                  "Ground Evasion Boost"
+                ],
+                [
+                  "Midair Evasion Boost"
+                ],
+                [
+                  "Evasion Boost"
+                ],
+                [
+                  "Descent Speed Boost"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Build Overview",
+          "text": [
+            "A Side by Side damage build that invests in high base bravery and HP wall rush to increase Tifa's damage output exponentially with Aerith assist specifically. The idea is simple: Land an HP, combo into Aerith's Seal Evil and do another HP late enough for base bravery to fully recover. A single assist combo can do over 3000 HP damage.",
+            "In match-ups where Tifa can compete with her Somersault HP link or Rolling Blaze such as Cloud and Firion, she can output a lot of HP damage without relying on high attack stat or critical hits. Any HP guarantees an Aerith followup (Meteor Crusher only at wall) and bravery hits still work well enough to secure at least one HP attack in an assist combo. Aerith is the only competitive assist that lets Tifa assist combo off of a completed Moonsault Kick without walls.",
+            "The infamous double assist combo is also possible and it's where this build really shines. If Tifa can wall rush again and use another assist meter during the first Seal Evil, she can do Rolling Blaze and call Aerith once more. Needless to say, this increases damage even further."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Point Allocation",
+          "text": [
+            "15 Capacity Points are available for another ground HP attack, the Auto-Assist Lock On support ability or additional action abilities. Removing Air Dash and Descent Speed Boost frees up another 10 points for a total of 25."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Substitutes",
+          "text": [],
+          "tables": [
+            {
+              "caption": "Substitutes",
+              "rows": [
+                [
+                  "Equipment",
+                  "Replacement",
+                  "Notes"
+                ],
+                [
+                  "Muscle Belt <img></img>",
+                  "Zephyr Cloak <img></img> / BRV = 0 <img></img> / Hero's Essence <img></img> / Great Gospel <img></img> / Hero's Seal <img></img> / Winged Boots <img></img>",
+                  "Muscle Belt isn't crucial for damage output, so it can be replaced with one of the listed accessories for increased survivability, Capacity Points (extra abilities for increased crit rate, base HP or BRV) or bravery recovery."
+                ],
+                [
+                  "Back-Breaking Straw <img></img>",
+                  "Together as One <img></img> / accessory of your choice",
+                  "Back-Breaking Straw negates Thornlet's bravery boost penalty on dodge and block. The damage output is still high even with the penalties, so if it doesn't feel deterring, it can be replaced with Together as One for more assist meter at the start which is good for stability. Otherwise this can be exchanged to suit the player preference or match-up."
+                ],
+                [
+                  "Muscle Belt <img></img> and Summon Unused <img></img>",
+                  "Battle Hammer <img></img> and BRV = 0 <img></img>",
+                  "This is for adding assist depletion to the build. Muscle Belt doesn't benefit from BRV = 0 booster, whereas Battle Hammer does, so the booster is swapped out for something stronger and more consistent.BRV = 0 applies to wall rush damage and meter depletion."
+                ],
+                [
+                  "Best Dresser (extra ability)",
+                  "Master Guardsman (extra ability)",
+                  "The base bravery (1623) can be reduced by 100 to raise the maximum health above 10,000 instead."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Attacks",
+          "text": [
+            "Tifa has a good selection of viable bravery and HP attacks, with a bit of room to accomodate different circumstances."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Staple",
+          "text": [
+            "These attacks are recommended regardless of matchup, stage or player preference.",
+            "Waterkick: Poke and an assist combo starter with Somersault HP link.",
+            "Beat Rush: Poke and post-dodge defensive option. Cannot combo into Aerith, but can synergise with her Planet Protector or even Holy if the situation allows Tifa to initiate chase.",
+            "Moonsault Kick: Slower close range poke with higher brv damage, post-dodge defense with Feint. Assist combo starter with a chase setup that doesn't require a wall, making this a good recommendation for Aerith assist specifically.",
+            "Elbow Smash: Aerial close range poke, dodge punisher. Assist combo starter with wall rush.",
+            "Rolling Blaze (ground): Assist combo starter, extender and an anti-air.",
+            "Somersault: HP link from Waterkick. Assist combo starter and increases Waterkick's overall threat.",
+            "Meteor Crusher: Air assist combo ender, block punisher and pre-emptive dodge punisher when fully charged. Can combo into Aerith at wall.",
+            "Rolling Blaze (midair): Air assist combo ender, double assist combo extender, air-to-ground dodge punisher / clash / space occupation."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Waterkick",
+                  "Moonsault Kick"
+                ],
+                [
+                  "Beat Rush",
+                  "Elbow Smash"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Rolling Blaze",
+                  "Meteor Crusher"
+                ],
+                [
+                  "Somersault(from Waterkick)",
+                  "Rolling Blaze"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Flexible",
+          "text": [
+            "These attacks are great to have, but can be swapped or removed depending on matchup, stage or player preference.",
+            "Tifa has good contenders for the remaining BRV (1 ground, 1 midair) and HP slots (2 ground):",
+            "Blizzara: Ranged low projectile that becomes mid priority when it explodes at max range. It can convert to assist combo on hit. Occupies space in front of Tifa, but be wary of the initial low priority.",
+            "Blizzaga: Ranged mid projectile, can convert to assist combo on hit. Spawns on top of opponent and has limited vertical reach, but it is mid priority all the way through, staggering regular blocks.",
+            "Falcon's Dive: Downward (air-to-ground) poke, post-dodge defense with Feint. Assist combo starter with wall",
+            "Dolphin Blow: Upward poke that is slightly faster than microdash Elbow Smash. Also works as a post-dodge defense tool with Feint. Assist combo starter with wall rush. Recommended vs. Sephiroth and Cecil.",
+            "Meteor Strike: Pseudo-poke with forward movement, slight low-profile, longer active frames and bravery damage than Rolling Blaze.Great to have.",
+            "Burning Arrow: Single hit HP. Doesn't combo into Aerith, but avoids EX Revenge counters with EX depletion."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Blizzara",
+                  "Falcon's Dive"
+                ],
+                [
+                  "Blizzaga",
+                  "Dolphin Blow"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Meteor Strike",
+                  "--"
+                ],
+                [
+                  "Burning Arrow",
+                  "--"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Avoid",
+          "text": [
+            "Generally not recommended due to being outclassed by other attacks or having little to no distinct utility.",
+            "Blizzard: Low priority projectile with longest reach out of the Blizzard type spells. With other spells already having higher priority and providing better reward on hit, Blizzard is not recommended for this build.",
+            "Meteodrive: Low brv damaging HP with wall rush. Doesn't combo into Aerith, but has better feint than Meteor Strike and short animation overall.",
+            "|-|BRV Boost on Dodge=",
+            "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+            "A build that provides bravery every time an attack is evaded with a dodge. This style of build is often reserved for specific match-ups where a character may struggle to land hits and are dealing with projectiles often. Against Sephiroth this is good for discouraging Shadow Flare use. The Emperor and Ultimecia also create situations with projectiles frequently, but all three are difficult match-ups for Tifa even with this build. Landing an HP is challenging and often carries a lot of risk, so having more bravery can justify taking the plunge.",
+            "The boosters don't depend on the opponent as much (no summon unused for example), but are weaker than a fully optimized set with boosters reliant on the other player's build. At maximum booster multiplier, a single dodge generates 146 bravery.",
+            "25 Capacity Points are available for Auto Assist Lock On support ability, another ground HP attack, additional basic actions or extra abilities."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Blizzard",
+                  "--"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Meteodrive",
+                  "--"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Stats"
+                ],
+                [
+                  "HP",
+                  "9972"
+                ],
+                [
+                  "CP",
+                  "450"
+                ],
+                [
+                  "BRV",
+                  "997"
+                ],
+                [
+                  "ATK",
+                  "174"
+                ],
+                [
+                  "DEF",
+                  "185"
+                ],
+                [
+                  "LUK",
+                  "60"
+                ],
+                [
+                  "Max Booster",
+                  "x5.5"
+                ]
+              ]
+            },
+            {
+              "caption": "Special Effect: Adamant Chains",
+              "rows": [
+                [
+                  "Equipment"
+                ],
+                [
+                  "Assist",
+                  "Aerith / Tidus"
+                ],
+                [
+                  "Weapon <img></img>",
+                  "Adamant Knife <img></img>"
+                ],
+                [
+                  "Hand <img></img>",
+                  "Adamant Shield <img></img>"
+                ],
+                [
+                  "Head <img></img>",
+                  "Dueling Mask"
+                ],
+                [
+                  "Body <img></img>",
+                  "Adamant Vest <img></img>"
+                ],
+                [
+                  "Accessory 1",
+                  "<img></img> Zephyr Cloak"
+                ],
+                [
+                  "Accessory 2",
+                  "<img></img> Dismay Shock"
+                ],
+                [
+                  "Accessory 3",
+                  "<img></img> Battle Hammer"
+                ],
+                [
+                  "Accessory 4",
+                  "<img></img> BRV > Base Value"
+                ],
+                [
+                  "Accessory 5",
+                  "<img></img> Summon Unused"
+                ],
+                [
+                  "Accessory 6",
+                  "<img></img> Pre-EX Mode"
+                ],
+                [
+                  "Accessory 7",
+                  "<img></img> Pre-EX Revenge"
+                ],
+                [
+                  "Accessory 8",
+                  "<img></img> Aerial"
+                ],
+                [
+                  "Accessory 9",
+                  "<img></img> After 30 Seconds"
+                ],
+                [
+                  "Accessory 10",
+                  "<img></img> Tenacious Attacker"
+                ],
+                [
+                  "Summon <img></img>",
+                  "Rubicante"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Waterkick",
+                  "Moonsault Kick"
+                ],
+                [
+                  "Beat Rush",
+                  "Elbow Smash"
+                ],
+                [
+                  "Blizzaga",
+                  "Dolphin Blow"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Rolling Blaze",
+                  "Meteor Crusher"
+                ],
+                [
+                  "Meteor Strike",
+                  "Rolling Blaze"
+                ],
+                [
+                  "Somersault (from Waterkick)"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Basic Abilities"
+                ],
+                [
+                  "Actions",
+                  "Support",
+                  "Extra"
+                ],
+                [
+                  "Ground Evasion",
+                  "Always Target Indicator",
+                  "Precision Evasion"
+                ],
+                [
+                  "Midair Evasion",
+                  "EX Core Lock On",
+                  "Disable Counterattack"
+                ],
+                [
+                  "Ground Block",
+                  "Assist Lock On",
+                  "EXP to HP"
+                ],
+                [
+                  "Midair Block",
+                  "Best Dresser"
+                ],
+                [
+                  "Aerial Recovery"
+                ],
+                [
+                  "Recovery Attack"
+                ],
+                [
+                  "Controlled Recovery"
+                ],
+                [
+                  "Wall Jump"
+                ],
+                [
+                  "Air Dash"
+                ],
+                [
+                  "Free Air Dash"
+                ],
+                [
+                  "Ground Dash"
+                ],
+                [
+                  "Multi Air Slide"
+                ],
+                [
+                  "Free Air Dash Boost"
+                ],
+                [
+                  "Assist Gauge Up Dash"
+                ],
+                [
+                  "Jump Boost"
+                ],
+                [
+                  "Jump Times Boost+"
+                ],
+                [
+                  "Ground Evasion Boost"
+                ],
+                [
+                  "Midair Evasion Boost"
+                ],
+                [
+                  "Evasion Boost"
+                ]
+              ]
+            },
+            {
+              "caption": "Substitutes",
+              "rows": [
+                [
+                  "Equipment",
+                  "Replacement",
+                  "Notes"
+                ],
+                [
+                  "<img></img> After 30 Seconds",
+                  "<img></img> Opponent Summon Unused",
+                  "1.2 booster to 1.3 booster, a slight increase. The opponent does not have to equip a summon, so if they don't have a summon for the fight, this booster is useless."
+                ],
+                [
+                  "<img></img> Dismay Shock",
+                  "<img></img> Opponent Empty EX Gauge",
+                  "If the opponent has Side by Side <img></img> equipped, this is another good 1.3 booster with consistent uptime."
+                ],
+                [
+                  "<img></img> Tenacious Attacker",
+                  "Free choice",
+                  "--"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Tifa_Lockhart_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Tifa's Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Beat Rush",
+                  "21F",
+                  "Ground",
+                  "Opponent",
+                  "8, 11, 16 (35)",
+                  "Chase"
+                ],
+                [
+                  "BRV",
+                  "Falcon's Dive",
+                  "23F",
+                  "Air",
+                  "Opponent",
+                  "26",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Meteodrive",
+                  "39F",
+                  "Ground",
+                  "Opponent",
+                  "15",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Rolling Blaze",
+                  "45F",
+                  "Air",
+                  "Opponent",
+                  "1 x 7",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "|-|Kuja=\nPoke and wall rush conversions, high brv damage, high risk of being locked when used.",
+            "|-|Tidus=\nPoke and wall rush conversions, lower damage, but faster startup and shorter animation on air BRV assist, making Tidus safer to use even if the opponent escapes it with LV1 Assist Change.",
+            "|-|Aerith=\nIf you don't need Kuja or Tidus for whiff punishments or conversions, Aerith can boost your damage near the ground with triple HP combos or reliably set up HP damage off of Moonsault Kick's chase. Recommended for Side by Side and / or high base bravery builds."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Tifa_Lockhart_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": true,
+      "stub": false,
+      "text": "Tifa\nMatchups Generally speaking Tifa can compete against characters with conventional close range strategies near the ground. However, she can struggle to approach against characters with lingering projectiles (Garland) and traps (The Emperor). Ultimecia is a combination of both, with relatively good zoning too.\nAir-centric matchups can prove to be difficult too (e.g. Sephiroth), if not for average poking, then lackluster reward on hit. Tifa doesn't have many winning matchups, but she does fight well on the ground. If she can rely on it or alternate between ground and air combat such as against Firion, Jecht and Cecil, she is in a good position to make big plays.\nWarrior of Light\nGarland\nTifa has no easy way to bypass Garland’s Cyclone HP. Aerith's Seal Evil BRV assist gets around it with ease.\nFirion\nThe Emperor\nOnion Knight\nCloud of Darkness\nCecil Harvey\nGolbez\nKain Highwind\nBartz\nExdeath\nGilgamesh\nTerra Branford\nKefka Palazzo\nCloud Strife\nSephiroth\nTifa Lockhart\nSquall Leonhart\nUltimecia\nLaguna Loire\nZidane Tribal\nKuja\nTidus\nJecht\nYuna\nShantotto\nPrishe\nVaan\nGabranth\nLightning\nFeral Chaos\nChaos",
+      "sources": [
+        "https://dissidia.wiki/Tifa_Lockhart_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Tifa_Lockhart_(Dissidia_012)"
+  ]
+}

@@ -1,0 +1,776 @@
+{
+  "slug": "ultimecia",
+  "name": "Ultimecia",
+  "page": "Ultimecia_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Ultimecia_(Dissidia_012)",
+  "origin": "Final Fantasy VIII",
+  "icon": "ulti",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-ulti.png",
+  "infobox": {
+    "Name": "Ultimecia (アルティミシア)",
+    "Original game": "Final Fantasy VIII",
+    "Base ATK (LV100)": "111 (High)",
+    "Base DEF (LV100)": "109 (Lowest)",
+    "Run Speed": "13.5 (Very Slow)",
+    "Dash Speed": "85 (Slow)",
+    "Fall Speed": "115 (Slowest)",
+    "Fall Speed Ratio After Dodge": "42 (Slow)",
+    "Fastest BRV": "13F (Knight's Lance)",
+    "Fastest HP": "60F (Apocalypse)",
+    "1-Hit HP": "Yes (Apocalypse, Shockwave Pulsar)",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "Yes (Knight's Lance charged)",
+    "Weapon": "Daggers, Rods, Staves,Instruments, Thrown Weapons",
+    "Armor": "Bangles, Hats, Hairpins, Clothing, Robes, Headbands",
+    "Exclusive weapons": "Valkyrie, Cardinal, Shooting Star",
+    "Alignment": "Chaos",
+    "Voice Actor (JP)": "Atsuko Tanaka",
+    "Voice Actor (ENG)": "Tasia Valenza"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Ultimecia is a defensive air-oriented character, focusing entirely on long to midrange zoning and keepaway. Although most of her moves have slow startup, they are all powerful projectiles that can harass the opponent from almost any spot on the screen. She boasts overall high damage from her projectiles which can quickly add up as stray projectiles hit the opponent or get converted into assist and HPs.",
+        "Most powerful she gets in midrange however, where she can set projectiles and pressure the opponents movement around them. And if the opponent gets too close, Knights Lance and Apocalypse make for perfect tools to keep them away.\nAlthough she doesn't have natural combos, she can build alot of opportunities to chain together her moves into high damaging sequences. Hitconfirming stray projectile hits, setting Knight's Arrow to combo into, using Knights Axe for chase setups or using Charged Lance to combo into Apocalpyse make the cornerstones of her gameplan.",
+        "With all that power in neutral comes an offset however, as Ultimecia's poor defense shows once she falls out of favorable positions. A huge dead angle of her moveset from below, poor movement and a lack of fast moves to reliably abare with make poor defensive decisions extremely exploitable. All that paired with a naturally low DEF stat.",
+        "Still despite her lacking defense, her neutral, damage and zoning prowess makes her tough to get in on for most of the cast, and every mistake can go heavily punished by her."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Fantastic Zoning One of the most well equipped Zoners in the game with multiple projectiles to set up and chain together, huge get off me tools to keep the opponent away and stuff approaches and a wide effective range. It's very hard to find spots where Ultimecia can't force you to play her game in some way\nCharged Knight's Lance deserves an honorable mention. A huge roadblock for most characters to deal with being a High Priority Projectile, capable of staggering HPs and reflecting High Priority Projectiles back as its Highest Priority as it spawns. Charged Lance and how its used can determine everything\nHigh Damage Ultimecia has alot of high damage projectiles in her arsenal. Paired with Hells Judgements up to 39 base damage, every major hit can hurt massively\nAssist Meter generates quickly due to her nature of rotating multiple options in neutral to keep pressuring the opponent\nAnti-Air Ultimecia deals quickly with opponents right above her. One of the worst spots to be in with her wide array of high reaching projectiles",
+              "Defense Ultimecia has terrible post-dodge defensive options once the opponent starts closing in. Her fastest move is a ranged low, has a floaty dodge, low jump height and slow movement. While having fantastic neutral, she is a glasscannon once the opponent finds the right spot\nA Dead Angle right below her where Ultimecia doesn't have a single move that can hit the opponent\nAssist Restrictions Ultimecias moves aren't very combo friendly for most assists in the game, Kuja being pretty much the only that provides both consistent hitconfirms from key moves while also having an excellent set up into Hell's Judgement. Not always bad but restricts her assist usage far more than most characters\nBravery Boost on Block/Dodge Anti-Zoning builds with these force Ultimecia to make major adjustments in the way she plays neutral to avoid feeding her opponent bravery for free"
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Ultimecia_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "main": {
+          "intro": "All of Ultimecia's bravery attacks have a ground and an aerial version. Attack data is shared between both versions.\nThe bravery attacks can also be charged. The first frame number indicates minimum charge time. The second frame number indicates when the hitbox appears after button release.",
+          "moves": [
+            {
+              "variants": [
+                "Normal",
+                "Charged"
+              ],
+              "damage": [
+                "each (3), max x14",
+                "each (2), max x25"
+              ],
+              "startup": [
+                "43F",
+                "91F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Ranged Mid"
+              ],
+              "exForce": [
+                "each 3",
+                "each 3"
+              ],
+              "effects": [
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Fire crimson sword. Change effect by holding or repeatedly pressing button.",
+              "name": "Knight's Blade",
+              "notes": "Uncharged Knight's Blade :\nQuickly tapping O will fire red arrows in rapid succession at the opponent.\nUncharged Knight's blade serves as a fast poking tool and deals a good amount of damage. It's also essentially the only option she has out of blocking at mid range.\nAlthough it can convert into assist, it has unfortunately a tendancy to let the opponent break free if Ultimecia gets too high above or below her opponent. Players should activate assist while still firing the swords to ensure conversion since it has a short hitstun. Because of its Magic Low priority, Uncharged Knight's blade is vulnerable to the opponent dashing through the projectile and attacking her with fast melee braveries, although it has a low endlag like many of Ultimecia's attacks.\nCharged Knight's Blade\nHolding O will have Ultimecia charging up while she contorts her body and fires a large amount of swords at the enemy. Can be cancelled by releasing the button.\nCharged Blade has a surprisingly good tracking that can catch dodges by surprise, as Ultimecia still aims towards the opponent while firing. The blades deal a very large amount of damage, can convert into assist easier than Uncharged Blade because of the longer hitstun and have Magic Mid priority, which makes them stagger blocks and impossible to dash through. It is possible to follow up Kuja assist with charged Knight's blade if the opponent is against the ceiling, if the player is aiming to chip away at the foe's bravery because of how much damage it deals.\nAlthough the longer charge time makes this move somewhat predictable, it is still good for Ultimecia to catch a breather and keep melee opponents at bay while charging her assist gauge relatively safely. Impatients opponents can easily be caught in the swarm of blades if they try to approach Ultimecia before the attack ends.\nShe is however still vulnerable to high priority projectiles hitting her while charging, and the higher endlag after cancelling than its Uncharged version makes her more prone to being punished.\nOverall, while not particularly standing out among the sorceress's attacks, Knight's Blade is a solid poking move and combo starter with high damage that is good to have against some matchups."
+            },
+            {
+              "variants": [
+                "Normal",
+                "Charged"
+              ],
+              "damage": [
+                "each 10 (up to 30)",
+                "40"
+              ],
+              "startup": [
+                "33F",
+                "53F, 3F (release)"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Ranged High"
+              ],
+              "exForce": [
+                "each 18",
+                "0"
+              ],
+              "effects": [
+                "Chase",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Create cerulean axe.Good vs. any height, changes w/hold.",
+              "name": "Knight's Axe"
+            },
+            {
+              "variants": [
+                "Normal",
+                "Charged"
+              ],
+              "damage": [
+                "each (7)",
+                "each (1), then each (7)"
+              ],
+              "startup": [
+                "41F",
+                "57F > 535F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Special > Ranged Low"
+              ],
+              "exForce": [
+                "0",
+                "0"
+              ],
+              "effects": [
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Ultra-long] Shoot arrow. Change effect by holding or repeatedly pressing button.",
+              "name": "Knight's Arrow"
+            },
+            {
+              "variants": [
+                "Normal",
+                "Charged"
+              ],
+              "damage": [
+                "15 (5 x 3)",
+                "20"
+              ],
+              "startup": [
+                "13F",
+                "33F, 15F (release). 11-19F (Block, after release)"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Block Highest, Ranged High"
+              ],
+              "exForce": [
+                "each 18",
+                "18"
+              ],
+              "effects": [
+                "Chase",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge, Attack",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Fire 3 lance projectiles.Change effect by holding button.",
+              "name": "Knight's Lance",
+              "notes": "Duration of the charged Knight's Lance is about 5 seconds (306F)."
+            }
+          ]
+        }
+      },
+      "moveCount": 4,
+      "sources": [
+        "https://dissidia.wiki/Ultimecia_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "main": {
+          "intro": "All of Ultimecia's HP attacks have a ground and an aerial version. Attack data is shared between both versions.",
+          "moves": [
+            {
+              "variants": null,
+              "damage": "each (2)",
+              "startup": "183F (LV2) / 363F (LV3), 1F (release)",
+              "type": "Magical",
+              "priority": "Melee Mid (charge), Ranged High (release)",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Great Attractor",
+              "notes": "[Long] High-speed energy ball. Boost size with button hold.\nCharging the attack is required to inflict damage. Great Attractor will be considered level 2 when button is released after charging for 187-362 frames, and level 3 when released after charging for 363 frames or more.\nLevel 3 can also be shot much earlier than intended. Release the button during 183F-186F of the charge for a level 3.\nIf the button is released during the first four frames of a half charged Great Attractor, it will become fully charged.\nGreat attractor create a sphere in front of Ultimecia that grows bigger has she charges it. Releasing the button fires the sphere at a very high speed. It is the only HP attack in Ultimecia's moveset that can wall rush.\nBecause of Great Attractor's extremly long charging time and poor vertical tracking, its uses are limited. Its main utility in most situations is to be a cheap way to charge the assist gauge, by dodge cancelling an uncharged version of the move."
+            },
+            {
+              "variants": null,
+              "damage": "-",
+              "startup": "59F, 7F (release)",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "60",
+              "effects": "Absorb",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Shockwave Pulsar",
+              "notes": "[Long] Lob azure projectiles. Boost range with button hold."
+            },
+            {
+              "variants": null,
+              "damage": "-",
+              "startup": "59F, 1F (release)",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "60",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Apocalypse",
+              "notes": "[Long] Magic array pursues foe. Track foe with button hold. On release, fire giant laser.\nUltimecia conjures a large sigil that will chase after the opponent as long as the player hold []. Releasing the button makes the Sigil explode and deal HP damage.\nNow we're talking. If one should equip a single attack on Ultimecia, it would definitely be this one. There are two ways of using Apocalypse :\nSimply pressing the button with make the sigil explode directly at Ultimecia's position. This is excellent for defense, as the explosion stays active for a long time, close range out of block HP damage, and assist follow-up if the player is too far away to cast Hell's Judgement.\nHolding [] will make the sigil pursue the opponent as long as the button is held and explode when released. This becomes even more dangerous in cramped spaces as the sigil bounces off walls while chasing foes and catch poorly timed dodges off guard because of how long the explosion lasts. One of Apocalypse's greatest strenghts is its enormous vertical range (that extends beyond the visual effect) that can make the opponent unable to see the sigil as it hits them for far below.\nApocalypse is a very safe move that is not only almost impossible to assist punish because of it's minimal endlag but will also lock the opponent's assist when released at close range if they try to. It can be dodge cancelled and comboed into Uncharged Knight's Lance or Uncharged Knight's blade thanks to its long hit stun if Ultimecia is above her opponent or close to the ceiling. Lastly, it has the advantage of being a 1 Hit HP attack, which is useful to avoid Ex Revenge Checkmates.\nApocalypse is certainly Ultimecia's Best HP attack and one the best attacks in the game period. Its versatility, safety and range makes it an attack that should be equipped at all times."
+            },
+            {
+              "variants": null,
+              "damage": "each (3) (min 3 hits, max 13 hits)",
+              "startup": "103F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "60 + 3 x N",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Hell's Judgement",
+              "notes": "[Long] Deploy magic array. Press button to steal foe's bravery."
+            }
+          ]
+        }
+      },
+      "moveCount": 4,
+      "sources": [
+        "https://dissidia.wiki/Ultimecia_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Junction Griever!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nTime Crush"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Time Crush",
+          "text": [
+            "Trap time = 5,5 (330 frames) after Ultimecia regains movement.",
+            "Time Crush freezes the opponent...\nTime Crush freezes the opponent...\n... and keeps them in place for a moment.\n... and keeps them in place for a moment."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "<img src=\"\" style=\"width:250px; height:270px; object-fit: none; object-position: 20%; border:3px solid RGB(105,86,160); inline-table;\"></img>"
+                ],
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.",
+                  ""
+                ],
+                [
+                  "The time it takes for this attack to do damage. Currently this is measured at 60 frames per second (30F would be 0.5 seconds).",
+                  "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n: ~34F after button release."
+                ],
+                [
+                  "Damage Type",
+                  ""
+                ],
+                [
+                  "Priority",
+                  ""
+                ],
+                [
+                  "The amount of EX that can be gained from EX Force. 1000 = Full EX gauge.",
+                  ""
+                ],
+                [
+                  "Effects",
+                  "Freeze (330F / 5,5 sec)"
+                ],
+                [
+                  "What this move can be cancelled into.",
+                  ""
+                ],
+                [
+                  "Assist Gain (Hit)",
+                  ""
+                ],
+                [
+                  "CP (Mastered)",
+                  ""
+                ],
+                [
+                  "[Activate with R + Square] Opponent's movements are completely frozen for a set time. However, this has a long casting time.",
+                  "Unlocked at level",
+                  "Mastered at AP"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "EX Burst: Time Compression",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "A flurry of attacks ending in one crushing blow. Watch your timing and press circle when the cursor is in the frame."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "10",
+                  "6 x 12, 18 (90) (100 total)",
+                  "Physical (initial) Magical (the rest)"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Ultimecia_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Ultimecia_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|Hybrid=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Equip Master Guardsman extra ability for +1000 HP.",
+        "|-|Build #2=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "11626"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "916"
+            ],
+            [
+              "ATK",
+              "179"
+            ],
+            [
+              "DEF",
+              "184"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x4.6"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Judgment of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Shooting Star"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Shield <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Helm <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Armor <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Earring"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Aerial"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Opponent Summon Unused"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Glutton"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Ultimecia_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Ultimecia Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Knight's Axe",
+                  "33F",
+                  "Ground",
+                  "Opponent",
+                  "10 x 3 (up to 30)",
+                  "Chase"
+                ],
+                [
+                  "BRV",
+                  "Knight's Axe",
+                  "53F",
+                  "Air",
+                  "Opponent",
+                  "40",
+                  "WallRush"
+                ],
+                [
+                  "HP",
+                  "Hell's Judgement",
+                  "103F",
+                  "Ground",
+                  "Player",
+                  "3 x 13 (39)",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Apocalypse",
+                  "59-240F",
+                  "Air",
+                  "Player",
+                  "-",
+                  "Chase"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "Kuja."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Ultimecia_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Ultimecia_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Ultimecia_(Dissidia_012)"
+  ]
+}

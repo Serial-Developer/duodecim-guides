@@ -1,0 +1,131 @@
+{
+  "slug": "squall-leonhart",
+  "tagline": "All-rounder de mêlée aux pokes rapides, fiable et accessible, roi de la depletion",
+  "archetype": "All-rounder mêlée",
+  "overview": [
+    "Squall est un all-rounder de courte portée qui s'appuie sur sa mobilité et sur une panoplie de pokes variés. Au sol, Solid Barrel et Upper Blues sont des pokes rapides à faible recovery, parfaits pour remplir la jauge d'assist et lancer l'offense ; Thunder Barret aspire l'adversaire pour un combo, et le tracking puissant de Blasting Zone avec sa hitbox très haute punit les esquives imprudentes. En l'air, Heel Crush et Aerial Circle traversent la magie basse priorité, Fire Barret soutient son offense, et Beat Fang est l'exemple type du poke fort : 15 frames, tracking notable, recovery courte et gros potentiel de combo.",
+    "Squall exploite très bien les mécaniques du système, d'où des builds hybrides courants. Ses attaques à coups retardables se marient avec de nombreux assists, ses combos au sol finis par Revolver Drive génèrent énormément d'EX, et il est l'un des meilleurs utilisateurs de meter depletion du jeu avec l'assist Yuna. Même les builds Side by Side lui vont, ses HP (Blasting Zone, Aerial Circle) fonctionnant bien en neutral ; ses counters à l'Assist Change LV2 avec Aerial Circle sont fiables.",
+    "Il a toutefois des faiblesses : génération d'EX faible sans EX Cores ni combos au sol, difficultés contre les fast fallers qui air dodgent (Prishe) et les personnages très rapides (Onion Knight, Tidus), la plupart de ses coups ratant contre eux. C'est problématique car Squall dépend de ses esquives pour rester sain, alors qu'elles l'exposent sans vraie réponse. Ses routes de combo d'assist aériennes sont limitées, il ne capitalise pas toujours sur les Bravery Breaks, et il punit mal les blocks et les whiffs hors de portée de Beat Fang.",
+    "En compétitif, Squall a un long historique de high tier : plancher d'exécution bas et outils fiables pour beaucoup de situations en font une bonne recommandation pour les nouveaux joueurs comme pour les vétérans, même si certains personnages peuvent lui tourner autour."
+  ],
+  "tierNote": "Squall est classé 5e, en tier A+, sur la tier list compétitive de 2017. L'overview confirme un long historique de high tier, porté par un plancher d'exécution bas et des outils fiables.",
+  "strengths": [
+    "Moveset flexible et direct qui met à l'aise débutants comme joueurs expérimentés.",
+    "Punition défensive facile et efficace grâce à Beat Fang, Blasting Zone et Aerial Circle.",
+    "Gros potentiel de combo, surtout près du sol : combos solo variés, conversions d'assist et combos fiables vers les HP au sol.",
+    "Synergie d'assist forte et diverse grâce aux attaques en plusieurs parties et au Wall Rush.",
+    "EX Mode qui augmente exponentiellement la portée et les dégâts du gunblade.",
+    "Meter depletion parmi les plus fortes du jeu, en particulier avec l'assist Yuna.",
+    "Builds polyvalents qui soutiennent des styles de jeu et des matchups variés."
+  ],
+  "weaknesses": [
+    "Défense post-esquive moyenne : ses air dodges flottants l'obligent à clasher avec Beat Fang ou à sacrifier de la récompense avec le build Adamant Chains.",
+    "Génération d'EX médiocre en l'air, d'où une dépendance aux EX Cores.",
+    "Sujet aux whiffs contre les déplacements rapides : plus de risques contre les fast fallers (Tidus, Prishe) et les coureurs rapides (Onion Knight, Tifa).",
+    "Extensions de combo aériennes en dessous de la moyenne : sans Wall Rush, ses dégâts de bravery souffrent dans les combats très aériens."
+  ],
+  "moveNotes": {
+    "Upper Blues": "Slash rapide avec mouvement vers l'avant : poke, whiff punisher, outil de combo et de remplissage de jauge via dodge cancel, plus fiable que ses autres braveries au sol contre les cibles mobiles. Wall Rush fiable au sol sur hit ; retarder le second coup permet d'enchaîner Beat Fang après un dodge cancel. Bon dans la plupart des matchups et des builds.",
+    "Solid Barrel": "Bravery très rapide (13F) à portée courte mais avec 90 EX et un dodge cancel rapide, dont l'annulation du troisième coup ouvre le fameux « golden combo » via landing lag. La fenêtre d'input généreuse fiabilise les conversions d'assist ; surtout utilisé en block punish et après Thunder Barret plutôt qu'en poke.",
+    "Blizzard Barret": "Projectile mono-coup lent et basse priorité au tracking étonnamment bon et au hit stun exploitable. Rarement prioritaire en compétitif : risque/récompense défavorable face à ses autres braveries au sol.",
+    "Thunder Barret": "Starter de combo signature : quatre éclairs verticaux qui servent de poke disjoint à plus longue portée, d'anti-air et de punisseur d'esquive, annulable sur hit vers des combos solo incluant ses HP. Ranged Low, startup assez lent et Squall totalement immobile : utilisé de manière prévisible, il se retourne vite contre lui.",
+    "Fusillade": "Mélange de projectiles à bonne génération d'EX (60-90), dont les deux premiers sont relativement sûrs à distance et confirmables en combo d'assist. Recouvre fonctionnellement Solid Barrel sans trait vraiment distinctif : rarement prioritaire en compétitif.",
+    "Heel Crush": "Attaque avançante Melee Mid qui bloque les Ranged Low pendant son startup (Thunder de Lightning, Heavenly Strike de Yuna) et fait stagger les adversaires qui bloquent Beat Fang. Startup long qui laisse le temps de préparer une contre-attaque ; utilisé en mixup avec Beat Fang et Fire Barret, pas indispensable dans tous les matchups.",
+    "Beat Fang": "LA bravery de Squall : 15F, homing au startup, dodge cancel précoce, whiff punisher redoutable, avec une hitbox capable de toucher derrière un block à bout portant. Le Wall Rush près du sol impose une prise de décision défensive proche de l'okizeme des jeux de combat classiques. Pas de hitbox sous lui (rate contre les fast fallers et coureurs rapides comme Tidus et Tifa), recovery annulable uniquement en air dodge, et la fin du combo est punissable par Assist Change LV2.",
+    "Mystic Flurry": "Barrage de projectiles basse priorité au comportement erratique : positionnement peu fiable, Squall totalement immobile pendant toute la durée, dodge cancel sans gain de temps. Très faible récompense pour le risque encouru ; le dernier hit d'un projectile peut toutefois Wall Rush vers un assist ou un pick-up en Beat Fang/Aerial Circle pour les joueurs audacieux.",
+    "Fire Barret": "Trois boules de feu à tête chercheuse, staple aérien utilisé avec Beat Fang pour bâtir la jauge efficacement. Le hit stun de chaque projectile ouvre des suites sur bonne lecture, et la recovery s'annule en attaque (souvent Beat Fang) même à bout portant. Squall reste brièvement immobile après le tir : vulnérable à un whiff punish d'assist bien minuté.",
+    "Fated Circle": "Explosion circulaire Ranged High : insensible aux blocks et à l'Assist Change LV2, Wall Rush, contourne les checkmates EX Revenge (pas de dégâts de bravery) et bloque même les Ranged Low. Sur un adversaire au sol, le knockback provoque souvent un Wall Rush au sol exploitable avec assist. Souvent éclipsé par ses autres HP au sol, mais excellent en troisième HP.",
+    "Revolver Drive": "HP multi-hit dirigeable librement (bouton maintenu pour prolonger) : block punisher, starter/ender de combo d'assist, jusqu'à 150 EX générés (dont il ne récupère qu'environ 40-50 % sans bonus). Sa vitesse augmente drastiquement pendant les ralentis d'appel d'assist et d'Assist Change, ce qui permet des surprises et des conversions sans mur. Percé par les priorités imblocables (Thunder Crest de The Emperor, Black Hole d'Exdeath) et limité au sol, avec une durée maximale à gérer.",
+    "Blasting Zone": "Un de ses HP les plus rapides et les plus forts : portée et hauteur énormes, tracking puissant jusqu'à l'impact, assists qui enchaînent sans mur et 90 EX. Recovery très courte, quasi impunissable sans Omni Ground Dash, invincibilité d'air dodge ou assist. Fantastique pour capitaliser sur une esquive prévisible, déranger les adversaires dans leurs pièges et refléter des projectiles haute priorité persistants (Windburst de Vaan).",
+    "Rough Divide": "Charge aérienne longue distance en un seul coup. La version au sol est généralement surclassée par ses autres HP ; la version aérienne sert de whiff punisher longue portée (après Assist Change LV1 notamment) et crée bien plus de distance qu'Aerial Circle si l'adversaire s'échappe en Assist Change, mais reste secondaire et vulnérable aux blocks haute priorité (Omni Block d'Exdeath, Jecht Block).",
+    "Aerial Circle": "HP aérien de référence, variante verticale de Fated Circle avec les mêmes atouts (Ranged High mono-coup, absorb, Wall Rush, block des Ranged Low). L'absorb aspire les adversaires immobiles pour infliger du HP après un blodge ou un Assist Change LV2. Sa grande force : la meter depletion avec l'assist Yuna, qui le fait toucher plusieurs fois sans mur, la depletion s'appliquant à chaque hit. Attention à l'assist adverse appelé juste avant l'impact, synonyme de Bravery Break."
+  },
+  "exMode": {
+    "summary": [
+      "EX Mode « Lionheart equipped! » : Regen, Critical Boost, Lionheart (RANGE) et Lionheart (HIT). La portée du gunblade augmente (ce qui aide notamment à connecter le Golden Combo), et Upper Blues, Solid Barrel et Beat Fang gagnent des coups doublés sur la plupart de leurs hits — Solid Barrel en profite le plus (dégâts de base x2) — qui peuvent eux aussi devenir critiques.",
+      "Ses braveries de combo peuvent alors pulvériser la bravery adverse : lancer un combo d'assist avec une bravery en EX Mode est un bon levier de comeback et de Bravery Break, l'EX Burst étant lui plutôt faible."
+    ],
+    "burst": "Renzokuken demande huit pressions de R quand le curseur passe dans la zone « Trigger », avec un timing généreux et régulier : une fois les premières pressions calées, le reste suit au même rythme. Squall exécute toute la séquence quoi qu'il arrive ; un trigger raté réduit simplement les dégâts du coup concerné."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Au sol, la boucle est simple : poker avec Upper Blues et Solid Barrel (dodge cancel pour remplir la jauge), contrôler l'espace avec Thunder Barret et convertir chaque touche. Thunder Barret > Solid Barrel est le combo de base (67 de dégâts, 126 EX), Thunder Barret > Blasting Zone la conversion HP la plus tolérante, et le « Golden Combo » (Solid Barrel > Upper Blues > Beat Fang via landing lag) maximise dégâts et jauge d'assist contre les joueurs humains.",
+    "En l'air, tout tourne autour de Beat Fang : poke, whiff punish, cross-up de block et Wall Rush près du sol pour un jeu d'oppression à la relevée. Fire Barret le complète pour bâtir la jauge et créer des conversions, Heel Crush couvre les Ranged Low et les blocks, et Aerial Circle sert de HP polyvalent, y compris en counter fiable après un Assist Change LV2.",
+    "La gestion des ressources est un axe central : les combos au sol finis en Revolver Drive ou Blasting Zone génèrent beaucoup d'EX (son point faible en l'air), et les EX Cores restent une source indispensable. Avec Yuna, Aerial Circle synchronisé sur le troisième hit de son assist BRV aérien inflige une depletion massive à chaque hit ; en EX Revenge, l'enchaînement Heel Crush x3 > Aerial Circle fonctionne à peu près partout.",
+    "Défensivement, Squall dépend de ses esquives, qui l'exposent : contre les fast fallers et les personnages rapides, il faut accepter de clasher avec Beat Fang, jouer la distance ou adopter le build Adamant Chains pour sécuriser les air dodges, au prix d'une partie des dégâts et de la depletion."
+  ],
+  "advancedTech": [
+    {
+      "name": "Golden Combo",
+      "desc": "Solid Barrel (3 coups) > dodge cancel > landing lag > Upper Blues (2 coups) > dodge cancel > landing lag > Beat Fang. Trois braveries avec bonus de « fresh move » sur la jauge d'assist (117 avec Comrade's Vow) ; les hits de Solid Barrel doivent être retardés au maximum. Techniquement esquivable au timing parfait, donc surtout efficace contre les humains ; amplifié par l'EX Mode."
+    },
+    {
+      "name": "Revolver Drive assist slowdown",
+      "desc": "Pendant les ralentis d'appel d'assist ou d'Assist Change, la vitesse de déplacement de Revolver Drive augmente drastiquement : de quoi fondre sur l'adversaire, créer de la distance, ou dépasser l'adversaire pour qu'un assist convertisse sans mur."
+    },
+    {
+      "name": "Depletion Yuna + Aerial Circle",
+      "desc": "En pressant Aerial Circle au moment où le deuxième/troisième hit de l'assist BRV aérien de Yuna touche, le knockback est annulé et le HP frappe plusieurs fois : aucune HP supplémentaire (hors Wall Rush) mais la meter depletion s'applique à chaque hit — la plus forte du jeu, sans mur requis."
+    },
+    {
+      "name": "Counter Assist Change LV2 (Aerial Circle)",
+      "desc": "Après avoir fait stagger l'adversaire avec un Assist Change LV2, Aerial Circle inflige du HP de manière fiable grâce à son absorb et à sa priorité Ranged High."
+    },
+    {
+      "name": "Beat Fang cross-up",
+      "desc": "Beat Fang possède une hitbox capable de toucher derrière un adversaire qui bloque à très courte distance, ignorant le block ; sa deuxième montée esquive aussi certaines interruptions (Dreary Cell de The Emperor, assists appelés en réaction)."
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "La page matchups du wiki est un stub ; seuls les éléments de l'overview sont exploitables. Squall prend plus de risques contre les fast fallers qui esquivent en l'air (Prishe, Tidus) et les coureurs très rapides (Onion Knight, Tifa) : la plupart de ses coups, Beat Fang en tête, ratent contre ces profils, alors que sa défense dépend d'esquives qui l'exposent. Le build Adamant Chains atténue le problème au prix de ses dégâts et de sa depletion. Le reste du temps, ses outils fiables et sa punition défensive facile lui permettent de rivaliser largement."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Cinq builds sont documentés, tous à 450 CP en supposant l'Equip Glitch et presque tous avec l'assist Kuja. Le build Hybrid (set Lufenian « Judgment of Lufenia », Lionheart, booster x3.5) est l'all-rounder généraliste de référence.",
+      "Adamant Chains (booster x3.5) exploite le bonus de distance d'esquive aérienne du set pour couvrir la vraie faiblesse de Squall : ses air dodges vulnérables. L'arme s'ajuste au matchup, et contre Onion Knight, Jecht ou Cloud, on adapte les accessoires vers Side by Side pour la jauge d'assist ; Hero's Essence, Winged Boots (anti-pièges) et Glutton (contre les gros générateurs d'EX comme Lightning et Shantotto) sont cités.",
+      "Le build EX Core (set Genji, booster x5.3) mise sur l'absorption d'EX via les cores, sa principale source de jauge. Side by Side (Piggy's Stick, Together as One, booster x3.8) est recommandé sur petites scènes et matchups égaux ou favorables : deux whiffs suffisent pour une barre d'assist et chaque stagger à l'Assist Change LV2 converti en Aerial Circle entretient l'avance de meter. Enfin, le build Meter Depletion (set Lufenian, assist Yuna, booster x6.9) exécute la boucle Aerial Circle + assist BRV aérien de Yuna : chaque hit HP supplémentaire déplète la jauge adverse sans dégâts additionnels."
+    ],
+    "notes": "De nombreux substituts sont listés par build (Sniper Eye, Dragonfly Orb, Dismay Shock, Muscle Belt, Together as One, Platinum Hourglass, Hyper Ring, Bravery Orb, boosters Large Gap in HP / Summon Unused / Grounded / Aerial / Assist, spéciaux Blue Gem / Growth Egg / Great Gospel / Winged Boots / Hero's Essence / Badge of Trust). La statistique LUK n'est renseignée pour aucun build."
+  },
+  "assist": {
+    "asAssist": [
+      "Les sources ne documentent pas les coups de Squall en tant qu'assist ; sa section assist du wiki est consacrée aux assists qu'il utilise. Sur la tier list assist de Muggshotter, Squall est classé Low."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "Le plus fort : gros dégâts et conversions fiables sur Wall Rush et braveries, sûr contre l'Assist Change LV2 grâce à la priorité Ranged High du HP Flare Star, qui fonctionne bien après Beat Fang et Upper Blues. Vulnérable en revanche si l'adversaire s'échappe en Assist Change."
+      },
+      {
+        "name": "Yuna",
+        "why": "La meter depletion la plus forte, n'importe où sur la scène, via la synchronisation Aerial Circle + troisième hit de son assist BRV aérien ; sa priorité Ranged Low la protège du stagger de l'Assist Change LV2."
+      },
+      {
+        "name": "Jecht",
+        "why": "Bon all-rounder : startup rapide qui convertit presque n'importe quel hit (même échangé), et suivis en Thunder Barret dès qu'il y a du sol, pour une profusion d'enders Revolver Drive très généreux en EX."
+      },
+      {
+        "name": "Tidus",
+        "why": "Assist BRV aérien rapide pour les whiff punishes, relativement sûr, avec une version au sol plus lente mais plus dommageable via Thunder Barret ; utilisable sans avantage vraiment distinctif."
+      },
+      {
+        "name": "The Emperor",
+        "why": "Jeu au sol renforcé et mines très dommageables via les Wall Rush de Beat Fang ; Thunder Crest se combote facilement, ne stagger pas à l'Assist Change LV2 et verrouille l'assist adverse grâce à sa priorité imblocable."
+      },
+      {
+        "name": "Aerith",
+        "why": "Conversion vers Seal Evil possible même sans sol grâce au potentiel de maintien de Squall, et regain partiel de jauge pendant le Seal Evil avec Ground Dash + Assist Gauge Up Dash ; mais Cure sans hit stun compromet les conversions au sol et sa depletion est la plus faible — un des choix méta les plus faibles pour lui."
+      }
+    ]
+  },
+  "communityTech": [],
+  "limits": [
+    "Pas de section « mécaniques uniques » : le wiki la marque non documentée (documented: false) pour Squall.",
+    "La page matchups est un stub sans contenu : le résumé des matchups repose uniquement sur les indices de l'overview.",
+    "Aucune référence externe (section References vide) : pas de communityTech attribuable.",
+    "La statistique LUK des builds n'est jamais renseignée (« -- »), et les gains de jauge d'assist (assistGain) sont vides pour tous les coups.",
+    "Les listes d'attaques recommandées par build (tableaux « Bravery attacks / HP attacks ») sont vides dans les données extraites, contrairement à celles de Tifa."
+  ]
+}

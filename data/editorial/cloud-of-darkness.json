@@ -1,0 +1,119 @@
+{
+  "slug": "cloud-of-darkness",
+  "tagline": "Défenseure à stances tentaculaires et command block, entre close et midrange",
+  "archetype": "Défenseure réactive à stances",
+  "overview": [
+    "Cloud of Darkness est une combattante défensive qui opère entre le close-range et le midrange. Chaque bravery attack est une stance mobile en trois temps, avec trois followups différents selon le timing d'input, ce qui permet un style de jeu réactif : occuper l'espace au sol avec des attaques à priorité mid, ou délivrer un déluge de coups. Ses nombreux HP attacks couvrent combos et neutral : Anti-Air Particle Beam pour les combos HP solo, Aura Ball pour temporiser, et le singulier command block Wrath Particle Beam pour stopper les adversaires agressifs.",
+    "Malgré une ATK de base faible, elle tire parti aussi bien des builds de dégâts que des builds Side by Side, et possède même une synergie unique, un peu gimmick, avec un build Mindbreak pour des quantités démesurées de bravery.",
+    "Historiquement, elle est considérée comme l'un des personnages les plus faibles du jeu compétitif. La raison principale tient à ses bravery attacks : la stance en trois temps doit être terminée avant de pouvoir dodge, si bien que chaque bravery est un engagement exceptionnellement long. Difficile dès lors de mettre la pression et de remplir la jauge d'assist rapidement — le gain d'assist lent sur whiff est un vrai problème de momentum. La plupart des followups de troisième temps n'offrent pas de propriétés justifiant leur startup, et les braveries aériennes protègent peu contre le rushdown tout en restant blockables. Obtenir une grosse récompense en situation de punish exige souvent assist, mur et/ou sol, qu'elle ne peut pas imposer facilement, et sa mobilité lente lui fait perdre la course aux EX Cores et à la jauge face aux adversaires défensifs.",
+    "Elle peut prospérer juste en dehors de la range de poke en position de défenseure, mais elle manque de forces notables pour compenser ses défauts : minimiser le risque et rester dans la course devient très exigeant à haut niveau."
+  ],
+  "tierNote": "Classée 28e, en tier C, dans la tier list 2017 ; l'overview la décrit historiquement comme l'un des personnages les plus faibles du jeu compétitif.",
+  "strengths": [
+    "Command block : Wrath Particle Beam est l'un des command blocks les plus sûrs du jeu, précieux en self-defense après un air dodge et pour stopper les adversaires agressifs.",
+    "Glide : possibilité de se déplacer pendant les bravery attacks, ce qui rend les whiffs un peu plus sûrs et permet de s'adapter à la situation."
+  ],
+  "weaknesses": [
+    "Bravery attacks à très fort engagement : animations longues, donc télégraphées, vulnérables aux blocks (avançants), risquées par leur long recovery et aux opportunités de combo inconstantes malgré le long startup.",
+    "Gain d'assist sur whiff : impossible de remplir la jauge rapidement en lançant des attaques, ce qui prive d'une ressource clé pour les dégâts et les comebacks.",
+    "Anti-air défaillant : difficile d'empêcher l'adversaire de planer au-dessus d'elle (startup lent, engagement élevé, angles morts, hitboxes peu fiables) ; Tentacle of Pain 1, l'option la plus rapide, convertit mal avec assist.",
+    "Anti-turtling : les adversaires peuvent fuir et la distancer sur les EX Cores et la jauge d'assist ; mobilité lente, HP télégraphés à long recovery et outils de provocation longue distance médiocres.",
+    "Dilemme de range : elle est plus en sécurité juste hors du close-range, mais ses punishes bravery les plus rapides exigent d'être au contact ; petites hitboxes initiales des stances, mixups limités et whiffs longs à assumer.",
+    "Coût en Capacity Points élevé : un loadout d'attaques complet coûte cher et laisse peu de place aux extra abilities."
+  ],
+  "moveNotes": {
+    "Tentacle of Pain": "Stance au sol en trois followups. Pain 1 (3 morsures) : string rapide avec beaucoup de hit stun et 90 EX, mais combos assist peu pratiques sans mur ni appel d'assist anticipé. Pain 2 (poussée) : attaque de midrange qui repousse les assauts, base damage élevée et Wall Rush vers combos assist. Pain 3 (bolts) : starter de combo et punish de midrange — les swipes combotent dans les bolts, qui mènent aux braveries aériennes ou à Anti-Air Particle Beam, avec assez de hit stun pour comboter en assist.",
+    "Tentacle of Spite": "Stance au sol aux followups mid priority utiles en neutral, à mixer avec Tentacle of Pain. Spite 1 (balayage) : « get off me » rapide dont le Wall Rush mène aux combos assist, et qui force une réaction de ground Wall Rush même contre Auto Recovery. Spite 2 (toupie) : self-defense mid priority et starter de combo assist, avec effet d'aspiration, mais période de recovery vulnérable après l'envoi. Spite 3 (orbe) : l'une de ses meilleures braveries au sol — orbe à tête chercheuse Ranged Mid qui stagger les blocks, tire l'adversaire vers le haut et tient assez pour les combos assist ; angle mort au-dessus d'elle et hits qui peuvent dropper sur membres étendus.",
+    "Tentacle of Suffering": "Stance aérienne. Suffering 1 (estoc) : rapide, fort tracking vertical, crée de la distance et punit près des murs ; combote dans Aerith assist n'importe où via Chase (Kuja/Jecht exigent plafond ou corner) et sert de combo filler pendant l'assist BRV air d'Exdeath. Suffering 2 (360°) : portée tout autour mais télégraphée et vulnérable aux blocks ; punish en close-range qui tient assez pour les combos assist en midscreen. Suffering 3 (2 boules) : option plutôt sûre contre les blocks à mi-distance ; les deux projectiles qui connectent combotent en assist, et contre The Emperor ou Ultimecia on peut les tirer contre les murs pour les faire réfléchir et activer Wrath Particle Beam.",
+    "Tentacle of Scorn": "Stance aérienne. Scorn 1 (2 hits) : jab rapide pour repousser et whiff punir, Wall Rush utile près des murs mais hit stun et knockback courts. Scorn 2 (vertical) : longue allonge vers le haut ou le bas selon la position adverse, Wall Rush dans les deux sens ; d'autant plus facile à bloquer que la distance est grande, avec une deadzone devant elle. Scorn 3 (projectiles) : pression occasionnelle vers le bas — si plusieurs projectiles touchent, un Free Air Dash permet de comboter derrière ; perd contre les dashes, à utiliser avec parcimonie.",
+    "[Anti-air] Particle Beam": "[Close, 39F] Colonnes de ténèbres autour d'elle, utilisées en combo solo après Pain 3, après un block stagger et pour menacer les adversaires aériens. Mène à des combos assist constants n'importe où, d'où sa valeur d'ender de combo solo avec Side by Side ; recovery assez long pour être puni (même par Kuja BRV assist), et l'adversaire peut tomber du haut du faisceau.",
+    "[Wide-Angle] Particle Beam": "[Long, 61F] HP en un coup à hitbox très large : ender de combo assist tolérant, capable d'attraper les ground dodges joués en auto pilot. Synergie unique avec les builds Mindbreak (détruit les éléments de décor de World of Darkness et Pandaemonium - Top Floor pour accumuler la bravery). Long recovery après le tir : vulnérable aux dodge > contre-attaques et assist punishes ; la hitbox est moins haute que le visuel.",
+    "[Long-Range] Particle Beam": "[Long, 83F] Zoning secondaire en neutral menant à des combos assist constants sur hit. Une fois tiré, il reste actif longtemps avec de hautes hitboxes et un tracking moyen : il faut dodge à travers tous les faisceaux. Recovery punissable mais juste assez court pour éviter les assists BRV sol lents (Kuja, Tidus). C'est aussi l'une des meilleures attaques à associer au landing cancel bug, qui la rend plus sûre et en fait un starter de combo solo.",
+    "[Feint] Particle Beam": "[Dodge, 61F] Esquive au départ puis tir de canon : sert à éviter les attaques adverses et c'est son meilleur combo filler HP avec Jecht BRV air ou Kuja BRV sol. HP en un coup à l'explosion longtemps active, mais l'invincibilité est trompeusement courte et finit avant sa réapparition ; la direction du déplacement est contrôlable librement.",
+    "[Wrath] Particle Beam (ground)": "Command block signature (block instantané 1F~13F, contre à 45F) : self-defense après dodge et outil anti-agression. Stagger les dashes et les braveries mêlée low ET mid ; sur contre réussi, un faisceau à dégâts HP apparaît sur l'adversaire avec assez de hit stun pour lancer un combo assist, avec une brève invincibilité à l'activation. Contre les projectiles, pas de stagger : l'adversaire peut dodge le faisceau à réaction et elle reste brièvement vulnérable aux assists ; la durée de block courte exige un vrai timing.",
+    "Aura Ball": "[Close, 63F/73F] Outil de self-defense passif : sphères détonantes (charge pour en créer plusieurs, orientables au stick) qui permettent de remplir la jauge d'assist plus sereinement. Les explosions, larges et longtemps actives, stoppent les assist punishes, et le dodge cancel est relativement court ; la boule explose même si elle se fait toucher. Attention aux projectiles (Shadow Flare de Sephiroth, Electrocute de Gilgamesh) et aux attaques disjointed comme Chain Cast de Garland ; les longues frames actives permettent aussi un peu d'okizeme en espaces exigus.",
+    "[0-form] Particle Beam": "[Mid, 63F] HP aérien de base : ender de combo assist et punition de block stagger, avec tracking horizontal/diagonal, longues frames actives et très fort knockback propice au Wall Rush. Haut risque toutefois : startup lent, portée trop courte contre les air dodges boostés Adamant Chains, long recovery, et c'est sa seule attaque Melee High — réfléchir un projectile Ranged High avec la laisse grande ouverte.",
+    "[Fusillade] Particle Beam": "[Long, 83F] Pression secondaire en neutral, proche de Long-Range : force un dodge ou une réaction défensive des adversaires passifs en midrange. Les projectiles sont actifs dès le tir et protègent l'avant, puis timing de dodge ambigu (angles et timings différents) ; ils continuent de frapper même après son propre dodge. Déplaçable au stick jusqu'au tir, mais dangereux si l'adversaire interrompt avec assist ou dash ; permet aussi une pression longue distance supplémentaire après Jecht BRV air.",
+    "[Wrath] Particle Beam (midair)": "Version aérienne du command block, fortement recommandée : même fonctionnement (guard instantané, courte durée, faisceau sur l'adversaire en cas de block réussi). Le compétitif se jouant beaucoup en l'air, c'est un outil de self-defense précieux, notamment juste après un air dodge pour rendre l'esquive bien plus sûre ; récompense inconstante contre les projectiles et brève vulnérabilité aux assists après le faisceau."
+  },
+  "exMode": {
+    "summary": [
+      "EX Mode « Flood of Darkness! » : Regen, Critical Boost et Null Particle Beam. Null Particle Beam permet d'annuler le recovery de n'importe quelle attaque en effectuant un HP attack : whiffs plus sûrs (enchaîner sur Wrath pour se protéger), combo Pain 3 > Anti-Air plus tolérant, et surtout Pain 3 > Wide-Angle / Feint qui devient un combo midscreen fiable avec dégâts HP Wall Rush. Il n'y a pas de limite apparente au chaînage de HP attacks tant que l'EX Mode est actif, ce qui permet aussi de saturer la scène (Wide-Angle, Aura Ball, Wrath répétés).",
+      "L'EX Mode reste toutefois bridé : les EX Modes servent souvent à garantir la victoire sur un combo assist, dont elle profite peu, et Cloud of Darkness remplit mal sa jauge EX — la plupart de ses attaques ne génèrent pas d'EX et les courses aux EX Cores sont difficiles avec son dash lent et ses longues animations."
+    ],
+    "burst": "Ultra Particle Beam : maintenir Circle pour remplir la jauge jusqu'à 120 % puis relâcher rapidement (exécution proche de l'EX Burst d'Exdeath). Dégâts bravery modestes (faible base damage initiale), mais suffisants pour conclure un match après un combo assist en Wall Rush."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Jouez la défenseure juste en dehors de la range de poke adverse : c'est là qu'elle prospère. Au sol, mixez Tentacle of Pain et Tentacle of Spite (les followups mid priority de Spite tiennent le neutral, Spite 3 stagger les blocks et soutient les approches) ; en l'air, appuyez-vous sur Wrath Particle Beam après vos air dodges pour faire hésiter les personnages de mêlée, et sur Aura Ball pour temporiser et remplir la jauge d'assist plus sereinement, à défaut de rapidement.",
+    "Le combo solo de référence est Tentacle of Pain 3 (bolts) > Anti-Air Particle Beam, prolongeable en assist derrière ; à longue distance, Spite 3 > saut > Free Air Dash permet une conversion bravery. Les combos assist pratiques partent d'un Wall Rush, de Spite 2, Spite 3, Suffering 2 ou Scorn 2. Pensez à vous écarter de l'adversaire après l'appel d'assist sur Spite 2 / Suffering 2 pour ne pas le repousser hors du combo.",
+    "Gérez l'engagement : chaque bravery est une stance complète qu'on ne peut dodge qu'après le troisième swipe — utilisez le glide au stick pour créer de la distance, augmenter la range effective ou esquiver un block avançant. Contre les adversaires défensifs, acceptez que la course aux EX Cores et à la jauge soit défavorable : les récompenses viennent des reads, de Wrath et des HP attacks qui forcent le dodge (Wide-Angle + Spite 3 / assist pour créer des situations de checkmate, encore renforcées en EX Mode par Null Particle Beam)."
+  ],
+  "advancedTech": [
+    {
+      "name": "Landing cancel bug",
+      "desc": "Bug d'annulation à l'atterrissage, à exploiter en priorité avec Long-Range Particle Beam : il rend l'attaque plus sûre et la transforme en starter de combo solo, avec Anti-Air Particle Beam ou des braveries aériennes en suite."
+    },
+    {
+      "name": "Aura Ball okizeme",
+      "desc": "Grâce aux longues frames actives et à la fenêtre de dodge relativement précoce d'Aura Ball, un Wall Rush bravery ou un Fusillade laisse le temps de poser une explosion retardée : peu pratique en espace ouvert, mais peut réussir dans les recoins et corners et déboucher sur des combos solo."
+    },
+    {
+      "name": "Reflect Suffering 3 pour activer Wrath",
+      "desc": "Contre des personnages comme The Emperor et Ultimecia, tirez Suffering 3 contre les murs pour que les projectiles soient réfléchis vers vous : ils servent alors de déclencheur au command block Wrath Particle Beam."
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "Les sources n'offrent pas d'analyse par matchup (page stub), mais dessinent des tendances : les adversaires défensifs et fuyards sont son pire scénario — ils la distancent sur les EX Cores et la jauge d'assist, et ses outils de provocation à longue distance sont médiocres. À l'inverse, Wrath Particle Beam impose le respect aux personnages agressifs de mêlée, dont il stagger dashes et braveries low/mid.",
+      "Quelques repères nommés : contre The Emperor et Ultimecia, Suffering 3 réfléchie par les murs peut activer Wrath ; attention aux projectiles de Sephiroth (Shadow Flare) et Gilgamesh (Electrocute) ainsi qu'au Chain Cast disjointed de Garland qui traversent la défense d'Aura Ball. Enfin, le build dégâts documenté est recommandé contre les utilisateurs de Side by Side qui ne contestent pas l'EX, tels que Firion, Onion Knight et Golbez."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Le wiki documente un build « Damage (High Base BRV) » : 1523 BRV de base, assist Kuja, invocation Rubicante, Everdark / Chainsaw / Thornlet / Maximillian et boosters (Sniper Eye, Dismay Shock, Battle Hammer, BRV = 0, etc.), Equip Glitch assumé pour le coût CP (440/450). L'idée : de gros dégâts HP via Wall Rush — un combo assist démarré sur un HP attack peut dépasser 3000 HP de dégâts, et comme ils viennent d'une bravery naturellement haute, la DEF adverse les réduit peu.",
+      "Le build exploite l'arme exclusive LV100 Everdark pour sa récupération de bravery, ce qui libère de la place pour la base bravery, les dégâts HP Wall Rush et la déplétion de ressources. BRV = 0 est le booster vedette : il active Sniper Eye et Dismay Shock à chaque Wall Rush d'un HP attack (par exemple 0-form Particle Beam), portant le multiplicateur de x2.3 à x3.3. Miracle Shoes et Maximillian compensent la perte de HP max de Chainsaw et Thornlet.",
+      "Une variante Side by Side remplace First to Victory par Side by Side : les reads en HP attack deviennent plus payants, au prix de la désactivation totale de la jauge EX et de l'absorption d'EX ; le booster Empty EX Gauge devient alors disponible en remplacement d'un autre booster au choix (Summon Unused par exemple). Plus largement, le personnage se prête aux builds de dégâts comme aux builds Side by Side, avec en marge la synergie Mindbreak (bravery accumulée en détruisant le décor avec Wide-Angle Particle Beam)."
+    ],
+    "notes": "Le build dégâts est recommandé contre les utilisateurs de Side by Side qui ne contestent pas l'EX (Firion, Onion Knight, Golbez) ; obtenir des dégâts tôt en attaquante, bien que risqué, y est jugé profitable car les adversaires expérimentés temporisent avant d'approcher."
+  },
+  "assist": {
+    "asAssist": [
+      "Cloud of Darkness est classée Low dans la tier list assist (Muggshotter) et le wiki ne propose aucune évaluation rédigée de son rôle d'assist (section « Assist Overview » vide).",
+      "Ses données d'assist : Tentacle of Pain (BRV sol, 37F, Wall Rush, jusqu'à 62 de base), Tentacle of Suffering (BRV air, 37F, Chase, 40 de base), [Anti-air] Particle Beam (HP sol, 39F, Chase) et [Fusillade] Particle Beam (HP air, 83F, Wall Rush)."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "Cité comme bon assist dans la section Synergies ; c'est l'assist du build documenté, et Feint Particle Beam sert de combo filler HP avec son BRV sol."
+      },
+      {
+        "name": "Jecht",
+        "why": "Cité comme bon assist ; les combos assist documentés l'utilisent, Feint sert de filler avec son BRV air, et Fusillade prolonge la pression à longue distance en profitant de son long knockdown."
+      },
+      {
+        "name": "Exdeath",
+        "why": "Cité comme bon assist ; Suffering 1 fait office de combo filler pendant son assist BRV aérien."
+      },
+      {
+        "name": "Aerith",
+        "why": "Suffering 1 combote dans Aerith assist n'importe où grâce au Chase, là où Kuja et Jecht exigent plafond ou corner."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "EX Mode Pain 3 > Anti-Air Particle Beam Corner Combo",
+      "desc": "Vidéo de démonstration du combo en corner rendu possible par Null Particle Beam : Tentacle of Pain 3 enchaîné dans Anti-Air Particle Beam pendant l'EX Mode.",
+      "source": "https://www.youtube.com/watch?v=4Ij0gudeuzE&feature=youtu.be",
+      "date": null
+    }
+  ],
+  "limits": [
+    "La page Matchups du wiki est une ébauche (stub) : aucune analyse détaillée par matchup.",
+    "Aucune mécanique unique documentée (section absente du wiki) — les stances en trois temps sont décrites dans les notes de coups, pas dans une section dédiée.",
+    "Aucune évaluation rédigée du personnage en tant qu'assist (section « Assist Overview » vide) : seuls la table de données et le classement Low de la meta sont disponibles.",
+    "Combos incomplets de l'aveu même du wiki (« This section does not show all combos right now ») ; les dégâts et gains d'EX des combos assist Jecht sont notés « ??? ».",
+    "Le coût CP de Tentacle of Pain est partiellement inconnu (« ?? (30) ») et le gain de jauge d'assist par coup n'est pas renseigné."
+  ]
+}

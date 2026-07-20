@@ -1,0 +1,905 @@
+{
+  "slug": "vaan",
+  "name": "Vaan",
+  "page": "Vaan_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Vaan_(Dissidia_012)",
+  "origin": "Final Fantasy XII",
+  "icon": "vaan",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-vaan.png",
+  "infobox": {
+    "Name": "Vaan (ヴァン)",
+    "Original game": "Final Fantasy XII",
+    "Base ATK (LV100)": "109 (Low)",
+    "Base DEF (LV100)": "112 (High)",
+    "Run Speed": "6 (Good)",
+    "Dash Speed": "77F (Average / Good)",
+    "Fall Speed": "73F (Great)",
+    "Fall Speed Ratio After Dodge": "28 (Above Average)",
+    "Fastest BRV": "19F (Axe & Shield hand, Sword & Shield hand)",
+    "Fastest HP": "21F (Torrent, up) 45F (Cataclysm)",
+    "1-Hit HP": "Yes (Cataclysm & Windburst projectile)",
+    "HP Links": "No",
+    "Command Block": "Yes (Sword & Shield switch)",
+    "Weapon": "Parrying Weapons, all normal weapons except instruments",
+    "Armor": "Shields, Bangles, Hats, Helms, Headbands, Clothing, Light Armor, Chestplates",
+    "Exclusive weapons": "Reks's Blade, Sword of Kings, Zodiac Blade",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Kensho Ono",
+    "Voice Actor (ENG)": "Bobby Edner"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Vaan is a close to mid range character in Dissidia 012 with a variety of bravery attacks in his arsenal. By utilising his unique \"Switch\" mechanic, Vaan can access a different bravery attack based on the bravery he previously used.",
+        "This is a double-edged sword - While Vaan has access to attacks with an abundance of above average properties, he is forced to commit to attacking if the player wants to use a specific bravery attack in the future. Many of Vaan's attacks have long start-up or long recovery and are designed to work at specific ranges and angles. As such, Vaan's necessity to whiff is mandated not just by the assist mechanic, but also the accessibility of his repertoire.",
+        "However, the nature of his gameplay actually lends well to low and intermediate players. Vaan's mechanical diversity exposes players to various aspects of decision making and gameplay interactions. While few staple loadouts exist, each match-up may demand specific combinations. This kind of diversity makes Vaan a compelling character to experiment with. He can crush blocks, engage from mid range, bypass projectiles, he even has infinite combos. Few solo combos exist, but assists expand his combo potential even further. Despite the relatively high damage multipliers on attacks, the below average base ATK stat means Vaan's damage output is only average without heavy investment. He scales well with investment and his mobility is good overall while boasting an above average base defense stat. Vaan's EX intake is slightly above average, but also has one of the most underwhelming EX modes in the game.",
+        "Vaan has been ranked mid and low tier throughout the game's competitive history. He is not known to be an effective counterpick character and optimising his play requires a lot of effort one might expect from a specialist. Even at his strongest, Vaan's gameplay is not necessarily polarising. He suffers from a three-slot-bravery dilemma and often times below average frame data or tracking. He is not proficient at building assist meter and he struggles against command blocks designed around mid and high priority attacks.",
+        "Players have to make compromises and take advantage of every mechanic, quirk and strategy they can. In a way, Vaan may truly exemplify the saying \"jack of all trades is a master of none\"."
+      ],
+      "tables": [],
+      "sources": [
+        "https://dissidia.wiki/Vaan_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "main": {
+          "intro": "All of Vaan's bravery attacks have two versions. Switch (SW) versions are performed when Vaan has not previously used the attack in question e.g. at the start of a match. On-hand (OH) versions are only performed if Vaan uses the same attack again after the Switch version.\nAll attacks have a ground and midair version.",
+          "moves": [
+            {
+              "variants": [
+                "Switch (SW)",
+                "On Hand (OH)",
+                "EX Mode"
+              ],
+              "damage": [
+                "30",
+                "25 (5, 7, 13)",
+                "30"
+              ],
+              "startup": [
+                "39F (Block 1~30F)",
+                "19F",
+                "39F (Block 1~30F)"
+              ],
+              "type": [
+                "Physical",
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Block Mid / Melee Low",
+                "Melee Low",
+                "Block High / Melee Low"
+              ],
+              "exForce": [
+                "60",
+                "90",
+                "60"
+              ],
+              "effects": [
+                "Chase, Block",
+                "Chase",
+                "Chase, Block"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (20)",
+              "description": "[Close] Sword and shield attack. Block attacks while switching.",
+              "name": "Sword & Shield",
+              "notes": "EX Version's blocking priority is upgraded from Block Mid to Block High, the same as few other command blocks such as Cloud of Darkness' Wrath or Exdeath Protect Guard. It will stagger opponents using Melee Mid attacks and Vaan himself will stagger against high priority (HP) attacks."
+            },
+            {
+              "variants": [
+                "Switch (SW)",
+                "On Hand (OH)",
+                "EX Mode"
+              ],
+              "damage": [
+                "30",
+                "7~25 (1~2x2, 1~2x4, 13)",
+                "29~45 (1~5x4, 25)"
+              ],
+              "startup": [
+                "33F",
+                "19F",
+                "33F"
+              ],
+              "type": [
+                "Physical",
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee High",
+                "Melee Low",
+                "Melee High"
+              ],
+              "exForce": [
+                "0",
+                "30",
+                "30"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush",
+                "Wall Rush, extra follow-up"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (20)",
+              "description": "[Close] Swipe with axe. Break foe's defense while switching.",
+              "name": "Axe & Shield"
+            },
+            {
+              "variants": [
+                "Switch (SW)",
+                "On Hand (OH)",
+                "EX Mode"
+              ],
+              "damage": [
+                "40 (10, 10, 20)",
+                "30 (13, 17)",
+                "40 (10, 10, 20)"
+              ],
+              "startup": [
+                "11F / 43F (max charge)",
+                "23F",
+                "11F / 33F (max charge)"
+              ],
+              "type": [
+                "Physical",
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low Melee Mid (3rd hit / max charge)",
+                "Melee Low",
+                "Melee Low Melee Mid (3rd hit / max charge)"
+              ],
+              "exForce": [
+                "30",
+                "30",
+                "30"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush",
+                "Wall Rush, faster charge"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (20)",
+              "description": "[Mid] Two-handed blade slash. Hold button to change range.",
+              "name": "Greatsword",
+              "notes": "One of Vaan's strongest bravery attacks. Close + mid-range. Commonly used as a close-range initiator, combo extender, a gap closer and a commital dodge punish (SW charged).\nSW is his fastest attack at 11 frames (60 FPS) and boasts great knockback and good tracking when fully charged. The damage multiplier is great, higher than Garland's Bardiche. Charging increases tracking and turns the attack into a Melee Mid priority attack. The initial hitbox is active for majority of the movement, making it very good at catching dodges that stay within the move's path. However, while it can continue travelling forward and vertically, greatsword is poor at turning around after the initial charge.\nSW Greatsword can also be used as a dodge cancel follow-up from SW Katana, SW Staff, SW Crossbow and Windburst.\nOH version is a decent advancing poke with relatively good speed, but weaker on hit compared to SW version. It is one of his fastest attacks to whiff in terms of duration and recovery. The first hit can be easily hit-confirmed for an assist without a wall, which is where Vaan is normally a bit worse on average. The tracking up close is deceptively good and the attack works well as an assist combo filler.\nThough it is somewhat predictable at it's commonly used range if not used in tandem with Katana or Crossbow, it has a rare upside that's shared among many of Vaan's on-hand braveries - It does not have an instant sound queue on start-up. The animation is not explicit and it does not emit any visual effects early to telegraph the attack. That can make it difficult for the opponent to visually react to OH Greatsword consistently.\nEX version only reduces required time for a maximum charge. Can catch unwary opponents off guard, but the EX mode's Free Switch is more valuable overall as it lets Vaan access the SW version more frequently with less risk.\nGreatsword is a consistently powerful bravery for Vaan and is a popular choice in many match-ups, such as Cecil, Cloud and Squall."
+            },
+            {
+              "variants": [
+                "Switch (SW)",
+                "On Hand (OH)",
+                "EX Mode"
+              ],
+              "damage": [
+                "50 (1 x 12, 30, 8)",
+                "30 (9,1 x 4, 17)",
+                "50 (1 x 12, 30, 8)"
+              ],
+              "startup": [
+                "39F",
+                "23F",
+                "39F"
+              ],
+              "type": [
+                "Physical",
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Mid",
+                "Melee Low",
+                "Melee Mid"
+              ],
+              "exForce": [
+                "60 ~ 90",
+                "90",
+                "60 ~ 90"
+              ],
+              "effects": [
+                "Chase",
+                "Chase",
+                "Chase, longer finisher timing"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (20)",
+              "description": "[Mid] Katana slash. Power rises with slow combo while switching.",
+              "name": "Katana"
+            },
+            {
+              "variants": [
+                "Switch (SW)",
+                "On Hand (OH)",
+                "EX Mode"
+              ],
+              "damage": [
+                "35 (4 x 5, 15)",
+                "28 (2 x 4, 7, 13)",
+                "55 (4 x 5, 4 x 5, 15)"
+              ],
+              "startup": [
+                "23F",
+                "21F",
+                "23F"
+              ],
+              "type": [
+                "Physical",
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Mid",
+                "Melee Low",
+                "Melee Mid"
+              ],
+              "exForce": [
+                "15",
+                "30",
+                "24"
+              ],
+              "effects": [
+                "Wall Rush, Absorb",
+                "Wall Rush",
+                "Wall Rush, Absorb"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (20)",
+              "description": "[Mid] Swipe with spear.Draw foe near while switching.",
+              "name": "Spear"
+            },
+            {
+              "variants": [
+                "Switch (SW)",
+                "On Hand (OH)",
+                "EX Mode"
+              ],
+              "damage": [
+                "30 (1 x 8, 22)",
+                "20 (3 x 3, 11)",
+                "38 (1 x 8, 1 x 8, 22)"
+              ],
+              "startup": [
+                "23F",
+                "21F",
+                "150"
+              ],
+              "type": [
+                "Magical",
+                "Physical",
+                "Magical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "108",
+                "114",
+                "150"
+              ],
+              "effects": [
+                "Chase",
+                "Chase",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (20)",
+              "description": "[Mid] Swipe with staff.Generates extra EX Force. SW: Move OK.",
+              "name": "Staff"
+            },
+            {
+              "variants": [
+                "Switch (SW)",
+                "On Hand (OH)",
+                "EX Mode"
+              ],
+              "damage": [
+                "30 (1 x 15, 15)",
+                "12 (4 x 3)",
+                "30 (1 x 15, 15)"
+              ],
+              "startup": [
+                "41F",
+                "31F",
+                "41F"
+              ],
+              "type": [
+                "Physical",
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Ranged Low",
+                "Ranged Low"
+              ],
+              "exForce": [
+                "max 105",
+                "0",
+                "max 105"
+              ],
+              "effects": [
+                "Chase",
+                "Chase",
+                "Chase, increased range"
+              ],
+              "cancels": [
+                "",
+                "",
+                ""
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (20)",
+              "description": "[Long] Shoot at foe with bowgun. SW: Hold button for rapid-fire.",
+              "name": "Crossbow"
+            },
+            {
+              "variants": [
+                "Switch (SW)",
+                "On Hand (OH)",
+                "EX Mode"
+              ],
+              "damage": [
+                "18 (3 x 6)",
+                "18 (3 x 6)",
+                "36 (3 x 6, 3 x 6)"
+              ],
+              "startup": [
+                "49F (Dodge 1~20F)",
+                "29F",
+                "49F (Dodge 1~20F)"
+              ],
+              "type": [
+                "Physical",
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Ranged Low",
+                "Ranged Low"
+              ],
+              "exForce": [
+                "0",
+                "0",
+                "0"
+              ],
+              "effects": [
+                "Wall Rush, Dodge",
+                "Wall rush",
+                "Wall Rush, Dodge"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (20)",
+              "description": "[Long] Shoot at foe with gun. Dodge ability while switching.",
+              "name": "Rifle"
+            }
+          ]
+        }
+      },
+      "moveCount": 8,
+      "sources": [
+        "https://dissidia.wiki/Vaan_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "damage": "2 [up], 2, 3, 3, [down] (10)",
+              "startup": "21F (up) / 69F (down)",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "24",
+              "effects": "Wall rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "40 (20)",
+              "name": "Torrent",
+              "notes": "[Long] Call down water torrents. Water fires from magic array."
+            },
+            {
+              "variants": null,
+              "damage": "-",
+              "startup": "45F",
+              "type": "-",
+              "priority": "Melee High (close) / Ranged High (rocks)",
+              "exForce": "30~60",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "40 (20)",
+              "name": "Cataclysm",
+              "notes": "[Mid] Summon multiple boulders that charge at opponent."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "damage": "1 x 9 (9)",
+              "startup": "51F",
+              "type": "Magical",
+              "priority": "Melee High",
+              "exForce": "3 per hit (27 max)",
+              "effects": "Wall rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "40 (20)",
+              "name": "Inferno",
+              "notes": "[Mid] Focus flames and charge. Strong homing capability."
+            },
+            {
+              "variants": null,
+              "damage": "15",
+              "startup": "29F (step) / 99F (wind)",
+              "type": "Physical",
+              "priority": "Melee High (step) / Ranged High (wind)",
+              "exForce": "30 / 60",
+              "effects": "Absorb",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "40 (20)",
+              "name": "Windburst",
+              "notes": "[Long] Generate tornado. Draws in foe for a set time."
+            }
+          ]
+        }
+      },
+      "moveCount": 4,
+      "sources": [
+        "https://dissidia.wiki/Vaan_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Obtained all Licenses!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nFree Switch\nZodiak"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Free Switch",
+          "text": [
+            "[Activate with R + square] Revert to unarmed attacks at any time.",
+            "Starts at 1F, ends at 31F, dodge or attack cancelable at 21F."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Zodiak",
+          "text": [
+            "[Always active while in EX Mode] Boosts stats and abilities, and greatly strengthens attacks.",
+            "Each Switch variant of a bravery attack gains a boost, such as increased range, invincibility, shorter charge time or an additional follow-up. Please refer to the bravery attack section for details."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Quickening",
+          "text": [
+            "A powerful attack infused with Mist. Shuffle options with R. Press X to select moves to use.",
+            "A consistent method for a successful EX Burst is to press R, then press X repeatedly a few times and loop this for a total of three repetitions for each Quickening."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "4, 6 (10)",
+                  "10 x 3, 5 x 6, 3 x 10 (90) (100 total)",
+                  "Magical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Vaan_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Vaan_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|Damage (Seal of Lufenia)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Ground: Spear, Axe & Shield, Sword & Shield.\nAir: Katana, Greatsword, Rifle",
+        "Equip Master Guardsman for +1000 HP.",
+        "|-|Build #2=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "11299"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "957"
+            ],
+            [
+              "ATK",
+              "178"
+            ],
+            [
+              "DEF",
+              "184"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x4.4"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Zodiac Blade"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Dirk"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Headband"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Vest"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> After 30 Seconds"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> After 30 Seconds"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Opponent Summon Unused"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Glutton"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Vaan_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [
+        "Vaan works well with Kuja, Aerith and Jecht assists."
+      ],
+      "tables": [],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Vaan_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Vaan_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Vaan_(Dissidia_012)"
+  ]
+}

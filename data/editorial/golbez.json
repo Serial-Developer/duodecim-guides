@@ -1,0 +1,119 @@
+{
+  "slug": "golbez",
+  "tagline": "Défenseur au sol explosif : Glare Hand, Rising Wave et HP links Cosmic Ray",
+  "archetype": "Défensif orienté sol à HP links",
+  "overview": [
+    "Golbez est un combattant défensif orienté sol, qui exécute frappes et projectiles simultanément. Sa stratégie tourne autour du contrôle de l'espace entre le corps à corps et la mi-distance : Rising Wave et Glare Hand en forment le socle, chaque hit menant au HP link Cosmic Ray. Si l'adversaire tente une approche frontale, la HP attack Nightglow le protège du danger immédiat et mène aux combos d'assist au plafond dans de nombreux stages. Grâce à la vitesse de ses attaques au sol, à l'abondance de ses HP links et à sa forte synergie avec les builds Side by Side, Golbez impose le respect dans les combats au sol.",
+    "Historiquement classé autour du mid tier en compétitif, son jeu au sol et le gros momentum de chaque hit lui ont valu la réputation d'un personnage explosif qui récompense la patience. Patience indispensable, car son combat aérien est risqué : les HP links aériens sortent vite, mais toutes ses attaques aériennes souffrent de longues frames de recovery, ce qui l'expose davantage aux whiff punishes. Ses outils de mi-distance sont comparativement plus faibles, en vitesse, en tracking comme en priorité.",
+    "Comme Golbez ne peut pas imposer le combat au sol avec ses seules attaques terrestres, son succès repose sur le turtling au Ground Dash pour la jauge d'assist, les bons reads et la punition des erreurs adverses. Il ne remplit pas vite sa jauge d'assist sur whiff (recovery de dodge cancel moyenne à longue) et sa génération d'EX est sévèrement surclassée par les builds Side by Side. Malgré ces manques, il est capable d'affronter une bonne partie du roster, même s'il faut du temps pour en récolter les fruits."
+  ],
+  "tierNote": "Classé 16e (tier B) de la tier list 2017, en cohérence avec l'overview qui le situe historiquement autour du mid tier en compétitif.",
+  "strengths": [
+    "Contrôle de l'espace au sol : Rising Wave et Glare Hand couvrent sa portée latérale plus vite que chez la plupart des personnages, en jeu réactif comme préventif.",
+    "Nightglow : HP attack rapide (15F de près) qui le protège avec des hitboxes haute priorité et mène aux combos d'assist au plafond dans de nombreux stages — un outil d'autodéfense fort.",
+    "Side by Side : en tant que HP linker, chaque HP link ou Nightglow connecté rend de la jauge d'assist ; combiné aux builds à haute bravery de base, la récompense sur hit est fortement amplifiée.",
+    "Sauts aériens invincibles : Golbez est brièvement invincible à chaque saut en l'air, pour un déplacement plus sûr contre les personnages de mêlée."
+  ],
+  "weaknesses": [
+    "Combat aérien committal : toutes ses attaques aériennes sont télégraphées ou à longue recovery, quelle que soit leur vitesse de startup.",
+    "Impossibilité de forcer le combat au sol : il subit le halo camping sans pouvoir l'arrêter sûrement ni constamment. Black Fang force un Bravery Break, mais seulement en EX Mode, ce qui compromet sa synergie Side by Side.",
+    "Gain de jauges lent : hors Side by Side, les jauges d'assist et d'EX se remplissent lentement — recovery moyennes à longues qui ralentissent la répétition des moves, faible génération d'EX sur la plupart des attaques, surclassée par la récompense des HP links."
+  ],
+  "moveNotes": {
+    "Rising Wave": "Utilisé pour son projectile à priorité unblockable (version lointaine) : stoppe les dashes, traverse tous les blocks et combote dans le HP link Cosmic Ray même de loin (maintenir Carré puis relâcher pour combler la distance). En mixup avec Glare Hand, il contrôle efficacement le rythme des combats au sol, et peut même attraper un adversaire qui ramasse un EX Core. Le spawn du projectile dépend de la distance : sur un adversaire proche touché par la frappe, il apparaît plus loin (permettant de pousser l'adversaire dedans avec les follow-ups) ; sur un adversaire lointain, il apparaît sur sa position, avec une portée max d'environ un quart d'Order's Sanctuary.",
+    "Glare Hand": "Son poke principal contre les adversaires au sol et à basse altitude : vitesse (17F de près), allonge et HP link vers Cosmic Ray forment le cœur du Golbez au sol. Le balayage magique punit dodges, whiffs et startups de dash au-dessus de lui, et son aspiration donne en pratique un HP link où qu'il touche (de près, maintenir Carré puis relâcher pour combler la distance vers Cosmic Ray). À ne pas spammer pour autant : la recovery n'est pas aussi courte que les autres pokes, et un adversaire qui orbite sa portée max peut dasher à travers le projectile et le forcer en mixup défensif en un clin d'œil.",
+    "Attack System (ground)": "Outil ranged secondaire, à mélanger avec Glare Hand sur un rythme lent contre les adversaires au sol : souvent un « fresh move », il remplit un peu plus vite la jauge d'assist. Golbez reste en état au sol pendant l'attaque. Les tirs magiques ont assez de hit stun pour lancer des combos d'assist, voire solo selon la position, mais leur tracking est inconstant et totalement linéaire une fois tirés (moins gênant contre les grands gabarits comme Garland et Feral Chaos, ou sur un dodge précoce). Aucune protection au-delà de la frappe rapprochée : gare aux assists au sol rapides comme Jecht et Sephiroth pendant la longue animation.",
+    "Gravity Force": "Attaque à fort engagement, surtout utilisée en combo : sa bravery la plus dommageable, particulièrement de près — utile pour les critiques sur block stagger et les combos d'assist Kuja au plafond, avec un Wall Rush vers le bas qui ouvre les combos d'assist. Golbez peut se déplacer au stick pendant le startup, et le warp après le tir projette l'adversaire dans la sphère (combos solo à un angle très précis). Avec le boost de distance d'air dodge d'Adamant Chains, le mouvement initial sert même de double dodge de fortune — à réserver aux urgences : move télégraphé, long startup, verrou d'animation, portée verticale de la sphère médiocre, warp non annulable et brève vulnérabilité en sortie. Quand l'adversaire apprend à prendre de la distance et à dodger le warp, la menace s'effondre.",
+    "Gravity System": "L'une de ses braveries aériennes principales : anti-sol, et dégâts garantis après un stagger d'Assist Change LV2. Jumps et Gravity System se combinent pour dérouter les adversaires au sol et frapper à contretemps ; contre un adversaire qui bloque la frappe rapprochée, attaquer tôt à courte distance peut attraper la recovery de block avec le laser. Sortie rapide et bon tracking vers le bas, mais recovery de whiff très longue : un miss expose aux contres.",
+    "Float System": "Autre bravery importante : son tracking vers le haut conteste les personnages aériens et punit les air dodges proches depuis le niveau du sol après un saut. Même logique anti-block que Gravity System (frapper tôt pour attraper la recovery avec le laser), mêmes défauts : sortie rapide mais longue recovery. C'est pourtant un risque à prendre : les adversaires à la jauge d'assist vidée ou verrouillée se replient en l'air, et quand Golbez a une jauge pleine et rien à faire, Float System aide à créer de l'offense.",
+    "Attack System (midair)": "Fonctionne comme la version au sol, mais la longue recovery l'expose aux whiff punishes de toutes parts, assists aériens compris. Longue animation, tracking médiocre et récompense inconstante : peu utilisée, mais jouable occasionnellement si l'adversaire ne la punit pas.",
+    "Nightglow": "Le move qui complète son jeu au sol — la raison pour laquelle on évite Golbez au sol. Principalement défensif : contre les pokes d'approche, protège après un ground dodge, punit le landing lag. Golbez s'entoure de hitboxes de mêlée haute priorité dès la frame 15, trop vite pour qu'un adversaire proche réagisse, avec une aspiration qui fonctionne même au-dessus de lui ; un cercle sombre apparaît en parallèle sur la position adverse (au sol, frame 91) et détone en dégâts HP, avec une portée max légèrement supérieure au projectile de Rising Wave. Le hit HP a un knockback vertical énorme, Wall Rush au plafond garanti dans Order's Sanctuary — avec Side by Side, cela débouche généralement sur un combo d'assist. Vulnérabilités : bref temps mort entre la fin de la magie sombre et la détonation du cercle, fenêtre exposée après un ground dodge avant l'activation, assists au sol rapides et attaques de mi-distance ; sur un miss, le dodge cancel pendant l'explosion le sécurise. Prudence contre un adversaire en Near Death (Assist Charge complet possible).",
+    "Sector Ray (midair)": "Attaque de mi-distance recommandée pour attraper les air dodges flottants (Cloud, Yuna) et protéger son assist au besoin. Les lasers ont un tracking vertical tranchant à l'activation puis restent statiques ; hitboxes modestes qui peuvent lâcher l'adversaire si un seul laser touche sous un angle bâtard. Les sphères ne traversent pas les murs mais les lasers si, avec une hitbox qui ne colle alors pas forcément au visuel. Sur hit, le Wall Rush lance les combos d'assist — récompense des bons reads dans les zones exiguës.",
+    "Genesis Rock": "Area denial lent, utilisable dans les petits stages pour la pression, avec Wall Rush vers les combos d'assist sur hit. Généralement plus de problèmes que de bénéfices : lenteur, verrou d'animation, présence de stage insuffisante dans les grands stages, vulnérabilité après le tir. Golbez monte vers l'adversaire avant de lancer les rochers, mais ceux-ci volent à sa hauteur, ce qui limite la portée. Particularité : il peut aspirer l'adversaire vers Golbez depuis une haute altitude (se placer devant et bien au-dessus de lui) — un punish de niche, sinon un gimmick.",
+    "Cosmic Ray A": "Le HP link de Golbez, la clé de voûte : il convertit la plupart de ses braveries en dégâts HP et lance les combos d'assist avec le Wall Rush. Maintenir Carré fait warper vers l'adversaire et augmente la portée — indispensable pour convertir le projectile de Rising Wave ou la frappe de Glare Hand. Vulnérable aux attaques aériennes après la fin du move si l'adversaire s'échappe en Assist Change, et sa priorité Melee expose au stagger d'Assist Change LV2 (problématique contre les ripostes HP de Squall et Sephiroth). Avec de la jauge, appeler l'assist juste avant le hit HP maintient l'adversaire en place (le ralentissement d'assist s'en charge, contrairement à un knockback cancel classique) — cela fonctionne si Golbez ne warpe pas d'abord.",
+    "Cosmic Ray B": "Identique à Cosmic Ray A, en branche de Glare Hand.",
+    "Cosmic Ray C": "Identique à Cosmic Ray A, en branche de Gravity System.",
+    "Cosmic Ray D": "Identique à Cosmic Ray A, en branche de Float System."
+  },
+  "exMode": {
+    "summary": [
+      "EX Mode « Summon Shadow Dragon! » — effets : Regen, Critical Boost et Black Fang.",
+      "Black Fang (activation R + Carré) : brise l'adversaire en un coup (Bravery Break), Golbez ne récupérant que la bravery de stage. L'attaque prend 400F (environ 6,5 secondes). D'après l'overview, c'est son seul moyen de forcer un Bravery Break contre le halo camping — mais comme il n'existe qu'en EX Mode, y recourir compromet la synergie Side by Side de ses builds."
+    ],
+    "burst": "Twin Moon : un sort puissant lancé avec un Dragon des Ombres. Il faut entrer simultanément les commandes qui s'affichent des deux côtés de l'écran."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Le plan de jeu se joue au sol : tenir l'espace rapproché et la mi-distance avec le mixup Rising Wave / Glare Hand — Rising Wave pour casser blocks et dashes avec son projectile unblockable, Glare Hand comme poke et punisher de dodges. Chaque hit se convertit en Cosmic Ray (maintenir Carré pour warper et combler la distance), dont le Wall Rush lance les combos d'assist. Nightglow verrouille le tout : autodéfense quasi instantanée après un ground dodge ou contre une approche frontale, avec un knockback vertical qui garantit le Wall Rush au plafond dans Order's Sanctuary et débouche sur un combo d'assist avec Side by Side.",
+    "La patience est le maître-mot : Golbez ne peut pas forcer le combat au sol avec ses seules attaques terrestres. Il faut turtler au Ground Dash pour la jauge d'assist, faire de bons reads et punir les erreurs à mesure qu'elles arrivent. Le momentum explosif de chaque touche — HP link, jauge Side by Side, combo d'assist — récompense cette approche.",
+    "En l'air, tout est committal : Gravity System (anti-sol, dégâts garantis après stagger d'Assist Change LV2) et Float System (contestation aérienne) sortent vite mais laissent Golbez exposé sur un miss. Quand l'adversaire se replie en l'air avec sa jauge vidée et que la vôtre est pleine, Float System devient le risque à prendre pour créer de l'offense. Les sauts aériens invincibles sécurisent les déplacements contre la mêlée.",
+    "La gestion des jauges penche entièrement vers l'assist : la génération d'EX est faible et surclassée par Side by Side, qui rend de la jauge sur chaque HP link et Nightglow connectés. Contre le halo camping, la seule réponse forçante est Black Fang en EX Mode — un arbitrage documenté, puisqu'il sacrifie la synergie Side by Side."
+  ],
+  "advancedTech": [
+    {
+      "name": "Cosmic Ray warp",
+      "desc": "Maintenir Carré pendant le link puis relâcher fait warper Golbez vers l'adversaire et allonge la portée de Cosmic Ray. C'est ce qui permet de convertir en HP le projectile lointain de Rising Wave ou la frappe de Glare Hand."
+    },
+    {
+      "name": "Cosmic Ray + assist (maintien en place)",
+      "desc": "Avec de la jauge, appeler l'assist juste avant le hit HP de Cosmic Ray garde l'adversaire en place : le ralentissement d'assist s'en charge (différent d'un knockback cancel classique), Cosmic Ray inflige quand même ses dégâts HP et l'assist enchaîne sans problème. Ne fonctionne que si Golbez n'a pas warpé d'abord."
+    },
+    {
+      "name": "Lock Off Nightglow",
+      "desc": "En Lock Off, le cercle sombre de Nightglow apparaît sur Golbez au lieu de la position adverse : plus ambigu si Golbez fait toujours face à l'adversaire. Usage surtout défensif (il peut rater un adversaire pourtant adjacent) : perturbe le timing de dash adverse, le timing d'assist punish, et attrape des approches aériennes dans des situations de niche. Ne détruit pas les éléments de stage sous ses pieds (piliers de World of Darkness, plateformes d'Ultimecia Castle ou de Pandaemonium - Top Floor)."
+    },
+    {
+      "name": "Gravity Force en double dodge de fortune",
+      "desc": "Avec le boost de distance d'air dodge d'Adamant Chains, le mouvement initial de Gravity Force (déplacement au stick pendant le startup) sert de pseudo double dodge. À réserver aux urgences : le warp n'est pas annulable et Golbez est vulnérable en sortie."
+    },
+    {
+      "name": "Push dans le projectile de Rising Wave",
+      "desc": "Sur un adversaire proche, le projectile de Rising Wave apparaît à distance : Golbez peut alors le pousser dedans avec ses follow-ups. Sur un adversaire lointain, le projectile spawn directement sur sa position (portée max d'environ un quart d'Order's Sanctuary)."
+    },
+    {
+      "name": "Aspiration en altitude de Genesis Rock",
+      "desc": "Genesis Rock peut tirer l'adversaire vers Golbez depuis une haute altitude : se placer devant l'adversaire en étant bien au-dessus de lui. Un punish de niche, sinon un gimmick."
+    }
+  ],
+  "matchups": null,
+  "builds": {
+    "philosophy": [
+      "Les données ne contiennent qu'un build détaillé, « Side by Side (Seal of Lufenia) », cohérent avec le statut de HP linker décrit dans l'overview : Golbez récupère de la jauge d'assist sur chaque HP link et Nightglow connectés, et les builds à haute bravery de base amplifient fortement sa récompense sur hit, tandis que sa génération d'EX est décrite comme sévèrement surclassée par Side by Side.",
+      "Le build (450 CP, Equip Glitch supposé) : 9623 HP, 1205 BRV, 180 ATK, 182 DEF, 60 LUK ; assist Jecht, summon Rubicante ; set Lufenian (Lufenian Lance, Lufenian Dirk, Lufenian Jacket) avec Thornlet, pour l'effet spécial Seal of Lufenia ; accessoires incluant Sniper Eye, Battle Hammer, BRV = 0, Empty EX Gauge, Summon Unused, Pre-EX Mode, Pre-EX Revenge, After 30 Seconds, Opponent Summon Unused et Side by Side."
+    ],
+    "notes": "Un second emplacement de build (« Build #2 ») figure dans les données mais est entièrement vide, et les coups équipés du build Lufenian ne sont pas renseignés. Aucune prose de philosophie de build n'accompagne les tableaux."
+  },
+  "assist": {
+    "asAssist": [
+      "La section assist de Golbez n'est pas documentée en prose (Assist Overview vide) ; la tier list assist le place en tier Mid. Ses données d'assist : Glare Hand en BRV au sol (23F, spawn sur l'adversaire, jusqu'à 26 de dégâts, Chase sur le premier hit, Wall Rush), Attack System en BRV aérien (23F la frappe / 83F le laser, Chase sur la frappe), Nightglow en HP au sol (15F de près / 91F le projectile, spawn sur le joueur, Wall Rush) et Genesis Rock en HP aérien (51F, spawn sur le joueur, Wall Rush)."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "La section synergies se limite à une phrase : « Golbez fonctionne bien avec Kuja et Jecht ». Les notes de Gravity Force mentionnent en outre les combos d'assist Kuja au plafond."
+      },
+      {
+        "name": "Jecht",
+        "why": "Cité dans la même phrase de synergies, et c'est l'assist équipé du build Side by Side (Seal of Lufenia) documenté."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Combo solo Gravity Force (avec setup d'assist Yuna)",
+      "desc": "Exemple vidéo du combo solo permis par le warp de Gravity Force qui projette l'adversaire dans la sphère à un angle très précis, référencé depuis les notes du coup.",
+      "source": "https://www.youtube.com/watch?v=vA3cZSRWYEU&t=210s",
+      "date": null
+    }
+  ],
+  "limits": [
+    "Page matchups dédiée non documentée (stub) et aucun matchup nommé dans l'overview : champ matchups à null.",
+    "Aucune mécanique unique documentée (section absente des sources).",
+    "Section combos non documentée : aucun combo détaillé dans les données.",
+    "Sector Ray (ground) sans notes d'usage : seul le tableau de données existe, la clé est omise de moveNotes.",
+    "Section assist non documentée en prose : asAssist se limite à la tier list assist (meta) et au tableau de données ; synergies réduites à une phrase (Kuja, Jecht).",
+    "Builds : un seul build (Seal of Lufenia) sans philosophie rédigée ni coups équipés ; le second emplacement de build est vide ; booster max non renseigné.",
+    "Données incomplètes dans les tableaux : Fall Speed « ?? », startup de Cosmic Ray « ?? », valeurs d'assist gain absentes.",
+    "Aucun texte de synthèse sur l'EX Mode au-delà de la liste d'effets et du tableau Black Fang ; dégâts et détails de l'EX Burst limités au tableau."
+  ]
+}

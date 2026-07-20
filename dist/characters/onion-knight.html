@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onion Knight — Guide Dissidia 012 [duodecim]</title>
+<meta name="description" content="Guide compétitif français de Onion Knight dans Dissidia 012 [duodecim] Final Fantasy : frame data, plan de jeu, builds, assists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/main.css">
+
+</head>
+<body>
+<nav class="guide-top" aria-label="Sections du guide"><div class="chips-nav">
+<a href="../index.html">← Sélection</a>
+<a href="#overview">Vue d'ensemble</a><a href="#moves">Coups</a><a href="#unique">Mécanique unique</a><a href="#gameplan">Plan de jeu</a><a href="#matchups">Matchups</a><a href="#builds">Builds</a><a href="#assist">Assists</a><a href="#community">Tech communautaire</a><a href="#sources">Sources</a>
+</div></nav>
+<div class="guide-layout">
+<nav class="guide-toc" aria-label="Sommaire"><ol>
+<li><a href="../index.html" class="backlink">← Sélection</a></li>
+<li><a href="#overview">Vue d'ensemble</a></li><li><a href="#moves">Coups</a></li><li><a href="#unique">Mécanique unique</a></li><li><a href="#gameplan">Plan de jeu</a></li><li><a href="#matchups">Matchups</a></li><li><a href="#builds">Builds</a></li><li><a href="#assist">Assists</a></li><li><a href="#community">Tech communautaire</a></li><li><a href="#sources">Sources</a></li>
+</ol></nav>
+<main class="guide-main">
+<section class="hero" id="hero">
+<img class="portrait" src="../assets/portraits/onion-knight.png" alt="Portrait officiel de Onion Knight dans Dissidia 012 [duodecim]">
+<div class="hero-id">
+<p class="origin">Final Fantasy III</p>
+<h1>Onion Knight</h1>
+<p class="tagline">Rushdown mêlée ultra-mobile dont chaque bravery débouche sur un HP link</p>
+<div class="chips"><span class="chip ">BRV la + rapide <b>11F (Multi-Hit)</b></span><span class="chip ">HP la + rapide <b>41F (Blade Torrent, Windshear)</b></span><span class="chip ">Dash <b>69 (Very Fast)</b></span><span class="chip ">ATK <b>107</b></span><span class="chip ">DEF <b>111</b></span><span class="chip ok">HP 1 coup <b>Oui</b></span><span class="chip ok">HP links <b>Oui</b></span></div>
+</div>
+</section>
+<section id="overview"><h2>Vue d'ensemble</h2>
+<p>Onion Knight est un personnage de close-range doté d'une mobilité remarquable, de bravery attacks mêlée très rapides et de quelques attaques à distance pour punir un jeu défensif négligent. Son trait le plus marquant est l'abondance de HP links : toutes ses bravery attacks peuvent se prolonger en HP attack, ce qui rend son damage output en HP très constant et autorise du burst damage avec des builds à base bravery élevée dès que l'assist est disponible.</p>
+<p>C'est un personnage agile sur tous les plans, avec parmi les meilleures vitesses de course et de dash du jeu. Il peut poursuivre les personnages fuyards comme Kefka et les punir sur air dodge, sécuriser systématiquement les EX Cores pour priver l'adversaire d'EX, et même esquiver des attaques en courant, ce qui complique la tâche de personnages au bon tracking comme Firion ou Squall. Sa vitesse de chute après un dodge le rend en outre difficile à toucher après un air dodge.</p>
+<p>Les styles de build EX et assist fonctionnent tous deux, l'assist prenant l'avantage en constance et en dégâts grâce à la base bravery élevée et à Side by Side. La génération d'EX, bien que correcte, reste en retrait car concentrée dans les HP attacks et les enders bravery magiques. Sa défense de base au-dessus de la moyenne (111) lui permet par ailleurs d'investir dans la base bravery et les HP avec moins de risque.</p>
+<p>Ces qualités ont des contreparties : ses braveries mêlée, unreactable au startup et actives longtemps, l'exposent fortement au whiff punish, surtout face aux attaques à meilleure priorité ou tracking. Ses projectiles sont trop lents pour occuper l'espace et servent surtout de punishers. Générer de la jauge d'assist en whiffant est difficile, et avec ses animations statiques et un seul HP Melee High rapide (au sol uniquement), il peine face aux projectiles persistants et aux pièges. Ultimecia et The Emperor peuvent ainsi faire pencher durablement le ratio risque/récompense en leur faveur.</p>
+<p><strong>Tier list 2017 (tournoi, dissidia.wiki)</strong> : <span class="badge prio-melee-high">B</span> — 15ᵉ sur 30. Classé 15e, en tier B, dans la tier list 2017. Historiquement placé en haut ou milieu de classement : son plan de jeu direct, sa facilité de prise en main et sa constance en font un choix confortable à beaucoup de niveaux de jeu.</p>
+<div class="two-col">
+<div class="card strengths"><h3>Forces</h3><ul><li>Menace redoutable en close-range : toutes les braveries, dont des attaques mêlée éclair, se prolongent en HP attack pour un damage output constant.</li><li>Synergie Side by Side : en HP linker dédié, il maximise le gain de jauge d'assist de l'accessoire et fiabilise les builds à base bravery élevée.</li><li>Mobilité : course rapide, dash très rapide et chute rapide après air dodge pour approcher, punir les dodges, prendre les EX Cores et esquiver.</li><li>Whiff punishment : toutes ses bravery attacks conviennent pour punir des coups manqués à différentes distances.</li><li>HP links relativement sûrs : même en cas d'Assist Change adverse avec la capacité Precision Evasion équipée, il reste difficile à punir.</li><li>Reset sûr du decay de la jauge d'assist grâce aux braveries Strength Booster et Magic Booster, sans grande prise de risque.</li><li>Dégâts bravery en EX Mode : multiplicateurs fortement augmentés sur tout le kit, de quoi broyer la bravery adverse.</li></ul></div>
+<div class="card weaknesses"><h3>Faiblesses</h3><ul><li>Whiffs très engageants : les braveries mêlée manquées ont une longue durée et exposent au whiff punishment.</li><li>Génération de jauge d'assist sur whiff laborieuse hors Side by Side et accessoires EXP to Assist / EXP.</li><li>Combat à distance faible : braveries Ranged Low et HP Ranged High mal adaptés pour occuper l'écran, et vulnérables au whiff punish par assist.</li><li>Manque d'outils contre les pièges : seul HP Melee High rapide au sol et projectiles HP aériens lents ; Cyclone de Garland ou Flare et Thunder Crest de The Emperor sont très difficiles à franchir sans risque.</li><li>Damage output bravery relativement bas : plus faible ATK de base du jeu et dépendance aux HP links.</li></ul></div>
+</div>
+<h3>Stats &amp; vitesses</h3>
+<div class="table-scroll"><table class="stats"><tr><th>Nom</th><td>Onion Knight (オニオンナイト)</td></tr><tr><th>Jeu d'origine</th><td>Final Fantasy III</td></tr><tr><th>ATK de base (LV100)</th><td>107 (Lowest)</td></tr><tr><th>DEF de base (LV100)</th><td>111 (Average)</td></tr><tr><th>Vitesse de course</th><td>2.5 (Fast)</td></tr><tr><th>Vitesse de dash</th><td>69 (Very Fast)</td></tr><tr><th>Vitesse de chute</th><td>85 (Average)</td></tr><tr><th>Chute après esquive</th><td>14 (Very Fast)</td></tr><tr><th>BRV la plus rapide</th><td>11F (Multi-Hit)</td></tr><tr><th>HP la plus rapide</th><td>41F (Blade Torrent, Windshear)</td></tr><tr><th>HP en 1 coup</th><td>Yes (Firaga)</td></tr><tr><th>HP links</th><td>Yes</td></tr><tr><th>Command block</th><td>No</td></tr><tr><th>Armes</th><td>Daggers, Parrying Weapons, Rods,Staves, Swords, Thrown Weapons</td></tr><tr><th>Armures</th><td>Bangles, Chestplates, Clothing, Gauntlets,Hats, Hairpins, Headbands, Light Armor</td></tr><tr><th>Armes exclusives</th><td>Tyrfing, Royal Sword, Onion Sword</td></tr><tr><th>Unlock</th><td>Default</td></tr><tr><th>Camp</th><td>Cosmos</td></tr><tr><th>Doubleur (JP)</th><td>Jun Fukyama</td></tr><tr><th>Doubleur (ENG)</th><td>Aaron Spann</td></tr></table></div>
+<figure class="diagram" role="img" aria-label="Profil de mobilité comparé à la moyenne du cast">
+<figcaption>Profil de mobilité (mode normal)</figcaption>
+<div class="table-scroll"><svg viewBox="0 0 720 174" xmlns="http://www.w3.org/2000/svg" style="min-width:480px">
+<title>Profil de mobilité : valeurs du personnage (barres) contre moyenne du cast (trait or)</title>
+<text x="142" y="29" fill="var(--text)" font-size="12" text-anchor="end">Course</text><rect x="150" y="18" width="13.043478260869566" height="18" rx="3" fill="var(--violet)"><title>Course : 2.5 (moyenne du cast : 7.3)</title></rect><line x1="188" y1="14" x2="188" y2="38" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 7.3</title></line><text x="169.04347826086956" y="29" fill="var(--muted)" font-size="11">2.5</text><text x="142" y="63" fill="var(--text)" font-size="12" text-anchor="end">Dash</text><rect x="150" y="52" width="360.00000000000006" height="18" rx="3" fill="var(--violet)"><title>Dash : 69 (moyenne du cast : 78.5)</title></rect><line x1="559.8176718092567" y1="48" x2="559.8176718092567" y2="72" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 78.5</title></line><text x="516" y="63" fill="var(--muted)" font-size="11">69</text><text x="142" y="97" fill="var(--text)" font-size="12" text-anchor="end">Chute</text><rect x="150" y="86" width="443.47826086956525" height="18" rx="3" fill="var(--violet)"><title>Chute : 85 (moyenne du cast : 83.5)</title></rect><line x1="585.4782608695652" y1="82" x2="585.4782608695652" y2="106" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 83.5</title></line><text x="599.4782608695652" y="97" fill="var(--muted)" font-size="11">85</text><text x="142" y="131" fill="var(--text)" font-size="12" text-anchor="end">Chute post-esquive</text><rect x="150" y="120" width="73.04347826086958" height="18" rx="3" fill="var(--violet)"><title>Chute post-esquive : 14 (moyenne du cast : 33.5)</title></rect><line x1="324.6984572230014" y1="116" x2="324.6984572230014" y2="140" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 33.5</title></line><text x="229.04347826086956" y="131" fill="var(--muted)" font-size="11">14</text>
+</svg></div>
+<p class="mv-desc">Valeurs brutes du wiki (page personnage) — <strong>plus la valeur est basse, plus le personnage est rapide</strong>. Trait pointillé or : moyenne des 31 personnages.</p>
+</figure>
+</section>
+<section id="moves"><h2>Coups</h2>
+<figure class="diagram" role="img" aria-label="Startup des coups de Onion Knight">
+<figcaption>Startup des coups de Onion Knight</figcaption>
+<div class="table-scroll"><svg viewBox="0 0 760 368" xmlns="http://www.w3.org/2000/svg" style="min-width:560px">
+<title>Startup des coups de Onion Knight</title>
+<line x1="334.44444444444446" y1="20" x2="334.44444444444446" y2="342" stroke="var(--surface-2)" stroke-width="1"/><text x="334.44444444444446" y="356" fill="var(--muted)" font-size="11" text-anchor="middle">20F</text><line x1="458.8888888888889" y1="20" x2="458.8888888888889" y2="342" stroke="var(--surface-2)" stroke-width="1"/><text x="458.8888888888889" y="356" fill="var(--muted)" font-size="11" text-anchor="middle">40F</text><line x1="583.3333333333333" y1="20" x2="583.3333333333333" y2="342" stroke="var(--surface-2)" stroke-width="1"/><text x="583.3333333333333" y="356" fill="var(--muted)" font-size="11" text-anchor="middle">60F</text><line x1="707.7777777777778" y1="20" x2="707.7777777777778" y2="342" stroke="var(--surface-2)" stroke-width="1"/><text x="707.7777777777778" y="356" fill="var(--muted)" font-size="11" text-anchor="middle">80F</text><text x="202" y="41" fill="var(--text)" font-size="12" text-anchor="end">Multi-Hit</text><rect x="210" y="30" width="68.44444444444444" height="16" rx="3" fill="var(--muted)"><title>Multi-Hit : 11F (Melee Low)</title></rect><text x="284.44444444444446" y="41" fill="var(--muted)" font-size="11">11F</text><text x="202" y="67" fill="var(--text)" font-size="12" text-anchor="end">Turbo-Hit</text><rect x="210" y="56" width="80.88888888888889" height="16" rx="3" fill="var(--muted)"><title>Turbo-Hit : 13F (Melee Low)</title></rect><text x="296.8888888888889" y="67" fill="var(--muted)" font-size="11">13F</text><text x="202" y="93" fill="var(--text)" font-size="12" text-anchor="end">Thunder</text><rect x="210" y="82" width="192.88888888888889" height="16" rx="3" fill="var(--success)"><title>Thunder : 31F (Ranged Low)</title></rect><text x="408.8888888888889" y="93" fill="var(--muted)" font-size="11">31F</text><text x="202" y="119" fill="var(--text)" font-size="12" text-anchor="end">Blizzard</text><rect x="210" y="108" width="217.77777777777777" height="16" rx="3" fill="var(--success)"><title>Blizzard : 35F (Ranged Low)</title></rect><text x="433.77777777777777" y="119" fill="var(--muted)" font-size="11">35F</text><text x="202" y="145" fill="var(--text)" font-size="12" text-anchor="end">Strength Booster (ground)</text><rect x="210" y="134" width="248.88888888888889" height="16" rx="3" fill="var(--muted)"><title>Strength Booster (ground) : 40F (-)</title></rect><text x="464.8888888888889" y="145" fill="var(--muted)" font-size="11">40F</text><text x="202" y="171" fill="var(--text)" font-size="12" text-anchor="end">Magic Booster (ground)</text><rect x="210" y="160" width="248.88888888888889" height="16" rx="3" fill="var(--muted)"><title>Magic Booster (ground) : 40F (-)</title></rect><text x="464.8888888888889" y="171" fill="var(--muted)" font-size="11">40F</text><text x="202" y="197" fill="var(--text)" font-size="12" text-anchor="end">Strength Booster (midair)</text><rect x="210" y="186" width="248.88888888888889" height="16" rx="3" fill="var(--muted)"><title>Strength Booster (midair) : 40F (-)</title></rect><text x="464.8888888888889" y="197" fill="var(--muted)" font-size="11">40F</text><text x="202" y="223" fill="var(--text)" font-size="12" text-anchor="end">Magic Booster (midair)</text><rect x="210" y="212" width="248.88888888888889" height="16" rx="3" fill="var(--muted)"><title>Magic Booster (midair) : 40F (-)</title></rect><text x="464.8888888888889" y="223" fill="var(--muted)" font-size="11">40F</text><text x="202" y="249" fill="var(--text)" font-size="12" text-anchor="end">Blade Torrent</text><rect x="210" y="238" width="255.11111111111111" height="16" rx="3" fill="var(--gold)"><title>Blade Torrent : 41F (Melee High)</title></rect><text x="471.1111111111111" y="249" fill="var(--muted)" font-size="11">41F</text><text x="202" y="275" fill="var(--text)" font-size="12" text-anchor="end">Wind Shear</text><rect x="210" y="264" width="255.11111111111111" height="16" rx="3" fill="var(--gold)"><title>Wind Shear : 41F (Melee High)</title></rect><text x="471.1111111111111" y="275" fill="var(--muted)" font-size="11">41F</text><text x="202" y="301" fill="var(--text)" font-size="12" text-anchor="end">Firaga</text><rect x="210" y="290" width="267.55555555555554" height="16" rx="3" fill="var(--success)"><title>Firaga : 43F (Ranged High)</title></rect><text x="483.55555555555554" y="301" fill="var(--muted)" font-size="11">43F</text><text x="202" y="327" fill="var(--text)" font-size="12" text-anchor="end">Comet</text><rect x="210" y="316" width="504" height="16" rx="3" fill="var(--success)"><title>Comet : 81F (Ranged High)</title></rect><text x="720" y="327" fill="var(--muted)" font-size="11">81F</text>
+</svg></div>
+<p class="mv-desc">Startup en frames (60 i/s, données dissidia.wiki). Couleur : <span style="color:var(--muted)">Melee Low</span> · <span style="color:var(--violet)">Melee Mid</span> · <span style="color:var(--gold)">Melee High</span> · <span style="color:var(--success)">Ranged</span>.</p>
+</figure>
+<h3 style="color:var(--gold)">Braveries</h3>
+<h3>Au sol</h3>
+<p class="mv-desc">Most bravery attacks have separate, higher damage multipliers during EX mode. These multipliers are highlighted in bold.</p>
+<details class="move">
+<summary><span class="mv-name">Multi-Hit</span>
+<span class="mv-meta">11F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Close] Déluge de coups au sol, faible mais très rapide à sortir (11F). Se prolonge en Extra Slice (bravery) ou en Swordshower (HP link).</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">1 x 7, 2 (9+) / 1 x 15, 2 (17+)</span></td></tr><tr><th>Startup</th><td><span class="mono">11F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">21</span></td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">20 (10)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Extra Slice</span>
+<span class="mv-meta">??</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Branche de Multi-Hit : entaille supplémentaire avec Wall Rush.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">3 x 7, 10 (+31) / 5 x 3 (59+)</span></td></tr><tr><th>Startup</th><td><span class="mono">??</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">21</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">10 (5)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Blizzard</span>
+<span class="mv-meta">35F</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Long] Projectiles de givre au sol, hauteur limitée mais grande vitesse. Se prolonge en Blizzaga (bravery) ou en Quake (HP link).</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">4 x 3 (12+) / 5 x 3 (15+)</span></td></tr><tr><th>Startup</th><td><span class="mono">35F</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">12</span></td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">20 (10)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Blizzaga</span>
+<span class="mv-meta">??</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Branche de Blizzard : fait tomber des éclats de glace, avec effet Chase et un gros gain d'EX Force (78).</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">7, 7, 18 (+32) / 10 x 4, 18 (+58)</span></td></tr><tr><th>Startup</th><td><span class="mono">??</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">78</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">10 (5)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Strength Booster (ground)</span>
+<span class="mv-meta">40F (casting)</span><span class="badge prio-melee-low">-</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Buff temporaire (40F d'incantation, annulable en attaque/dodge/block après 20F) : dégâts et défense physiques +10 %, taux de critique +5 % pendant 10 secondes (600F). Sert aussi à entretenir la jauge d'assist en sécurité.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">40F (casting)</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Physical DMG +10 %, Physical DEF +10 %, Crit Rate +5 %</td></tr><tr><th>Cancels</th><td>Dodge, Block, Attack (after 20F)</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Magic Booster (ground)</span>
+<span class="mv-meta">40F (casting)</span><span class="badge prio-melee-low">-</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Buff temporaire (40F d'incantation, annulable après 20F) : dégâts et défense magiques +10 %, taux de critique +5 % pendant 10 secondes (600F). Même rôle d'entretien sûr de la jauge d'assist.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">40F (casting)</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Magical DMG +10 %, Magical DEF +10 %, Crit Rate +5 %</td></tr><tr><th>Cancels</th><td>Dodge, Block, Attack (after 20F)</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3>En l’air</h3>
+
+<details class="move">
+<summary><span class="mv-name">Turbo-Hit</span>
+<span class="mv-meta">13F / 11F (EX Mode)</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Close] Taillade aérienne à haute vitesse (13F, 11F en EX Mode), faible mais efficace à toute hauteur. Se prolonge en Extra Lunge (bravery) ou en Guiding Swipe (HP link).</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">1 x 7, 2 (9+) / 1 x 15, 2 (17+)</span></td></tr><tr><th>Startup</th><td><span class="mono">13F / 11F (EX Mode)</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">21</span></td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">20 (10)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Extra Lunge</span>
+<span class="mv-meta">??</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Branche de Turbo-Hit : fentes supplémentaires avec Wall Rush.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">3 x 7, 10 (+31) / 3 x 15, 14 (+59)</span></td></tr><tr><th>Startup</th><td><span class="mono">??</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">21</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">10 (5)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Thunder</span>
+<span class="mv-meta">31F</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Long] Trio de boules de foudre qui courbent leur trajectoire pour traquer l'adversaire, efficace à toute hauteur. Se prolonge en Thundaga (bravery) ou en Flare (HP link).</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">each (3) / each (4)</span></td></tr><tr><th>Startup</th><td><span class="mono">31F</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">each 3</span></td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">20 (10)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Thundaga</span>
+<span class="mv-meta">??</span><span class="badge prio-melee-low">??</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Branche de Thunder : deux éclairs avec effet Chase et 78 d'EX Force.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">13, 18 (+31) / 11x2, 17x2 (+56)</span></td></tr><tr><th>Startup</th><td><span class="mono">??</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">??</span></td></tr><tr><th>EX Force</th><td><span class="mono">78</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">10 (5)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Strength Booster (midair)</span>
+<span class="mv-meta">40F (casting)</span><span class="badge prio-melee-low">-</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Version aérienne du buff physique : mêmes effets (+10 % dégâts/défense physiques, +5 % critique, 600F).</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">40F (casting)</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Physical DMG +10 %, Physical DEF +10 %, Crit Rate +5 %</td></tr><tr><th>Cancels</th><td>Dodge, Block, Attack (after 20F)</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Magic Booster (midair)</span>
+<span class="mv-meta">40F (casting)</span><span class="badge prio-melee-low">-</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Version aérienne du buff magique : mêmes effets (+10 % dégâts/défense magiques, +5 % critique, 600F), annulable en attaque/dodge/block à 20F.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">40F (casting)</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Magical DMG +10 %, Magical DEF +10 %, Crit Rate +5 %</td></tr><tr><th>Cancels</th><td>Dodge, Block, Attack (after 20F)</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+
+<h3 style="color:var(--gold)">Attaques HP</h3>
+<h3>Au sol</h3>
+<p class="mv-desc">Most HP attacks have separate, higher damage multipliers during EX mode. These multipliers are highlighted in bold.</p>
+<details class="move">
+<summary><span class="mv-name">Blade Torrent</span>
+<span class="mv-meta">41F / 39F (EX mode)</span><span class="badge prio-melee-high">Melee High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Close] Entaille ultra-rapide : HP le plus rapide du kit (41F, 39F en EX Mode), utilisable aussi en l'air, avec Wall Rush.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">1x15 (15) / 1x31 (31)</span></td></tr><tr><th>Startup</th><td><span class="mono">41F / 39F (EX mode)</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">45</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Firaga</span>
+<span class="mv-meta">43F</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Long] Boules de feu avec large explosion à l'impact ; c'est le HP en un coup (1-hit) du personnage.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">--</span></td></tr><tr><th>Startup</th><td><span class="mono">43F</span></td></tr><tr><th>Type</th><td>--</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">60</span></td></tr><tr><th>Effets</th><td>--</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Swordshower</span>
+<span class="mv-meta">??</span><span class="badge prio-melee-low">??</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Branche de Multi-Hit : pluie de lames de lumière avec Wall Rush, le HP link du jeu au sol.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">1x15 (+15) / 1x31 (+31)</span></td></tr><tr><th>Startup</th><td><span class="mono">??</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">??</span></td></tr><tr><th>EX Force</th><td><span class="mono">45</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Quake</span>
+<span class="mv-meta">??</span><span class="badge prio-melee-low">??</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Branche de Blizzard : séisme magique, 81 d'EX Force.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">2x7 (+14) / 4x7 (+28)</span></td></tr><tr><th>Startup</th><td><span class="mono">??</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">??</span></td></tr><tr><th>EX Force</th><td><span class="mono">81</span></td></tr><tr><th>Effets</th><td>--</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3>En l’air</h3>
+
+<details class="move">
+<summary><span class="mv-name">Wind Shear</span>
+<span class="mv-meta">41F</span><span class="badge prio-melee-high">Melee High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Close] Toupie à grande vitesse dirigeable au stick (41F), avec effets Absorb et Wall Rush.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">1x15 (15) / 1x31 (31)</span></td></tr><tr><th>Startup</th><td><span class="mono">41F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">45</span></td></tr><tr><th>Effets</th><td>Absorb, Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Comet</span>
+<span class="mv-meta">81F</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Long] Petits météores à viser au stick : lent (81F) mais très généreux en EX Force (105).</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">1x15 (15) / 1x31 (31)</span></td></tr><tr><th>Startup</th><td><span class="mono">81F</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">105</span></td></tr><tr><th>Effets</th><td>--</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Guiding Swipe</span>
+<span class="mv-meta">??</span><span class="badge prio-melee-low">??</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Branche de Turbo-Hit : lames de lumière rapides.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">1x15 (+15) / 1x31 (+31)</span></td></tr><tr><th>Startup</th><td><span class="mono">??</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">??</span></td></tr><tr><th>EX Force</th><td><span class="mono">45</span></td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Flare</span>
+<span class="mv-meta">??</span><span class="badge prio-melee-low">??</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Branche de Thunder : énormes explosions, 96 d'EX Force.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">1x12 (+12) / 2x12 (+24)</span></td></tr><tr><th>Startup</th><td><span class="mono">??</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">??</span></td></tr><tr><th>EX Force</th><td><span class="mono">96</span></td></tr><tr><th>Effets</th><td>--</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3 style="color:var(--gold)">EX Mode: Job Change! &amp; EX Burst</h3>
+<p>EX Mode « Job Change! » : Regen, Critical Boost, Dual Wield et Sage's Wisdom. Dual Wield change le job en Ninja lors d'une attaque physique : les attaques deviennent plus rapides que l'œil et arrachent davantage de bravery. Sage's Wisdom change le job en Sage lors d'une attaque magique et libère un pouvoir mystique scellé qui renforce les sorts.</p>
+<p>Concrètement, la plupart des bravery et HP attacks disposent de multiplicateurs de dégâts supérieurs en EX Mode (valeurs distinctes dans les tables de coups), ce qui augmente fortement le damage output bravery sur l'ensemble du kit.</p>
+<p><strong>EX Burst :</strong> Deux EX Bursts selon le job : Ninjutsu (sélectionner « Shuriken » dans le menu, ender physique, 100 de dégâts de base au total) et Spellbook (sélectionner « Holy », ender magique, 100 de base au total).</p>
+
+</section>
+<section id="unique"><h2>Mécanique unique</h2>
+<div class="banner" data-undocumented="1"><strong>Section non documentée sur dissidia.wiki à ce jour — à compléter.</strong> <a href="https://dissidia.wiki/Onion_Knight_(Dissidia_012)" rel="external noopener">Page wiki du personnage</a> — pas de section « Unique Mechanics » dédiée ; le cas échéant, la mécanique du personnage est couverte dans la vue d'ensemble et les coups.</div>
+</section>
+<section id="gameplan"><h2>Plan de jeu &amp; techniques avancées</h2>
+<p>La boucle de jeu repose sur la mobilité et la menace de HP link permanente : approchez ou attendez la faute grâce à la vitesse de course et de dash, collez des braveries mêlée unreactable au startup (Multi-Hit au sol, Turbo-Hit en l'air), et convertissez chaque touche en HP attack. Les projectiles (Blizzard, Thunder, Firaga, Comet) ne servent pas à occuper l'espace : réservez-les à la punition d'un jeu défensif négligent.</p>
+<p>Côté ressources, la génération de jauge repose surtout sur le spot dashing, les hits HP et les EX Cores, mais l'entretien des ressources est facile : utilisez Strength Booster ou Magic Booster pour reset le decay de la jauge d'assist sans grande prise de risque. Le build assist (base bravery élevée + Side by Side) offre la meilleure constance et le meilleur damage output ; investir dans l'EX reste viable si nécessaire, même si la génération d'EX est concentrée en fin de combo.</p>
+<p>Utilisez la mobilité défensivement : poursuivez les fuyards, sécurisez les EX Cores pour priver l'adversaire d'EX, esquivez en courant et profitez de la chute rapide après air dodge. Attention en revanche aux whiffs : vos braveries manquées durent longtemps, et les projectiles persistants ou pièges (Ultimecia, The Emperor) faussent votre ratio risque/récompense — vous avez très peu de moyens de les contourner en sécurité une fois qu'ils sont posés.</p>
+<h3>Techniques spécifiques</h3><div class="card"><h3 style="margin-top:0">Assist decay reset</h3><p>Incanter Strength Booster ou Magic Booster permet de réinitialiser le decay de la jauge d'assist sans s'exposer : un moyen sûr d'entretenir la ressource, là où whiffer des braveries serait dangereux.</p></div>
+
+<p class="mv-desc">Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href="../techniques.html">Techniques &amp; glitches</a>.</p>
+</section>
+<section id="matchups"><h2>Matchups</h2>
+<p>D'après l'overview : Onion Knight punit efficacement les personnages fuyards comme Kefka (poursuite et punition des air dodges) et sa vitesse de course complique la tâche même de personnages au bon tracking comme Firion et Squall. Il tient tête à une bonne partie du roster, notamment Warrior of Light, Golbez et Zidane.</p>
+<p>À l'inverse, les personnages à projectiles persistants et pièges — Ultimecia et The Emperor en tête (Flare, Thunder Crest), ainsi que le Cyclone de Garland — faussent durablement son ratio risque/récompense : sans HP Melee High rapide en l'air, il a très peu d'options sûres pour franchir ces zones une fois posées.</p>
+<p>Vidéos de matchs : <a href="https://replaytheater.app/?game=d012&amp;c1=Onion%20Knight" rel="external noopener">Replay Theater — matchs de Onion Knight</a>.</p>
+</section>
+<section id="builds"><h2>Builds</h2>
+<p>Deux builds sont documentés sous forme de tables d'équipement, tous deux avec l'assist Sephiroth et l'invocation Rubicante, en supposant l'Equip Glitch pour le coût en CP. Le premier est un build Side by Side (extra ability Best Dresser) : base bravery très élevée (1683 BRV, 10478 HP) avec Piggy's Stick, Aegis Shield, Thornlet, Maximillian et une batterie d'accessoires dont Hero's Essence, Together as One et Side by Side.</p>
+<p>Le second est un build EX Core (extra ability Master Protector pour une base BRV plus haute) : set Genji + Onion Sword (effet spécial Soul of Yamato) et accessoires boosters conditionnels (EX Core Present, Pre-EX Mode, Pre-EX Revenge, etc.) pour un Max Booster de x13.4.</p>
+<p>L'overview cadre la philosophie : les deux styles (EX et assist) fonctionnent, l'assist étant devant en constance et en dégâts grâce à la base bravery élevée et Side by Side, tandis que la DEF de base au-dessus de la moyenne (111) permet d'investir dans la base bravery et les HP avec moins de risque.</p>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Stats</th></tr>
+<tr><td>HP</td><td>10478</td></tr>
+<tr><td>CP</td><td>480</td></tr>
+<tr><td>BRV</td><td>1683</td></tr>
+<tr><td>ATK</td><td>173</td></tr>
+<tr><td>DEF</td><td>183</td></tr>
+<tr><td>LUK</td><td>61</td></tr>
+<tr><td>Max Booster</td><td></td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+<caption>Special Effect: None</caption>
+<tr><th>Equipment</th></tr>
+<tr><td>Assist</td><td>Sephiroth</td></tr>
+<tr><td>Weapon &lt;img&gt;&lt;/img&gt;</td><td>Piggy's Stick &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Hand &lt;img&gt;&lt;/img&gt;</td><td>Aegis Shield &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Head &lt;img&gt;&lt;/img&gt;</td><td>Thornlet</td></tr>
+<tr><td>Body &lt;img&gt;&lt;/img&gt;</td><td>Maximillian</td></tr>
+<tr><td>Accessory 1</td><td>&lt;img&gt;&lt;/img&gt; Dismay Shock</td></tr>
+<tr><td>Accessory 2</td><td>&lt;img&gt;&lt;/img&gt; Battle Hammer</td></tr>
+<tr><td>Accessory 3</td><td>&lt;img&gt;&lt;/img&gt; BRV = 0</td></tr>
+<tr><td>Accessory 4</td><td>&lt;img&gt;&lt;/img&gt; Blue Gem</td></tr>
+<tr><td>Accessory 5</td><td>&lt;img&gt;&lt;/img&gt; Hero's Essence</td></tr>
+<tr><td>Accessory 6</td><td>&lt;img&gt;&lt;/img&gt; First to Victory</td></tr>
+<tr><td>Accessory 7</td><td>&lt;img&gt;&lt;/img&gt; Hero's Seal</td></tr>
+<tr><td>Accessory 8</td><td>&lt;img&gt;&lt;/img&gt; Miracle Shoes</td></tr>
+<tr><td>Accessory 9</td><td>&lt;img&gt;&lt;/img&gt; Together as One</td></tr>
+<tr><td>Accessory 10</td><td>&lt;img&gt;&lt;/img&gt; Side by Side</td></tr>
+<tr><td>Summon &lt;img&gt;&lt;/img&gt;</td><td>Rubicante</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Bravery attacks</th></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+<tr><td>HP attacks</td></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Stats</th></tr>
+<tr><td>HP</td><td>10299</td></tr>
+<tr><td>CP</td><td>450</td></tr>
+<tr><td>BRV</td><td>1096</td></tr>
+<tr><td>ATK</td><td>175</td></tr>
+<tr><td>DEF</td><td>185</td></tr>
+<tr><td>LUK</td><td>63</td></tr>
+<tr><td>Max Booster</td><td>x13.4</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+<caption>Special Effect: Soul of Yamato</caption>
+<tr><th>Equipment</th></tr>
+<tr><td>Assist</td><td>Sephiroth</td></tr>
+<tr><td>Weapon &lt;img&gt;&lt;/img&gt;</td><td>Onion Sword</td></tr>
+<tr><td>Hand &lt;img&gt;&lt;/img&gt;</td><td>Genji Shield &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Head &lt;img&gt;&lt;/img&gt;</td><td>Genji Helm &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Body &lt;img&gt;&lt;/img&gt;</td><td>Genji Armor &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 1</td><td>&lt;img&gt;&lt;/img&gt; Dragonfly Orb</td></tr>
+<tr><td>Accessory 2</td><td>&lt;img&gt;&lt;/img&gt; Dismay Shock</td></tr>
+<tr><td>Accessory 3</td><td>&lt;img&gt;&lt;/img&gt; Large Gap in HP</td></tr>
+<tr><td>Accessory 4</td><td>&lt;img&gt;&lt;/img&gt; BRV &gt; Base Value</td></tr>
+<tr><td>Accessory 5</td><td>&lt;img&gt;&lt;/img&gt; EX Core Present</td></tr>
+<tr><td>Accessory 6</td><td>&lt;img&gt;&lt;/img&gt; Summon Unused</td></tr>
+<tr><td>Accessory 7</td><td>&lt;img&gt;&lt;/img&gt; Pre-EX Mode</td></tr>
+<tr><td>Accessory 8</td><td>&lt;img&gt;&lt;/img&gt; Pre-EX Revenge</td></tr>
+<tr><td>Accessory 9</td><td>&lt;img&gt;&lt;/img&gt; Aerial</td></tr>
+<tr><td>Accessory 10</td><td>&lt;img&gt;&lt;/img&gt; Opponent Summon Unused</td></tr>
+<tr><td>Summon &lt;img&gt;&lt;/img&gt;</td><td>Rubicante</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Bravery attacks</th></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+<tr><td>HP attacks</td></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+</table></div>
+
+<p class="mv-desc">Les builds ne sont fournis que sous forme de tables de stats et d'équipement, sans justification rédigée pièce par pièce.</p>
+</section>
+<section id="assist"><h2>Synergies d'assist</h2>
+<h3>Onion Knight en tant qu'assist</h3><p>Onion Knight est classé High dans la tier list assist (Muggshotter) et le wiki le décrit comme l'un des assists les plus forts en jeu compétitif : pas strictement supérieur à Kuja ou Jecht assist, mais son utilité se démarque dans d'autres domaines.</p>
+<p>Blizzard (BRV sol, 35F) est un combo à priorité Ranged qui n'est pas staggered par le LV2 Assist Change : bon pour les combos Wall Rush au sol et pour interrompre à distance un adversaire au sol, mais trop lent au startup pour punir les dodges. Turbo-Hit (BRV air, 13F) est un combo mêlée rapide qui pousse vers le mur, tient assez longtemps pour des combo fillers aux plafonds et corners, et permet des Chase conversions ; son défaut est la dépendance au wall rush (knockback assez faible), et un Turbo-Hit raté expose fortement à l'Assist Lock.</p>
+<p>Blade Torrent (HP sol, 41F) est l'un des rares HP assists au sol capables de couvrir à peu près les quatre grands angles de ground dodge : de quoi conclure un match sur un bon read. Comet (HP air, 81F) excelle pour les checkmates : longue durée, longue portée, nombreux hits et priorité Ranged immunisée aux staggers du LV2 Assist Change, avec un déplacement vers l'adversaire qui facilite les setups via Chase.</p>
+
+<h3>Assists recommandées</h3><ul><li><strong>Sephiroth</strong> — C'est l'assist retenu dans les deux builds documentés du wiki ; la section Synergies précise par ailleurs qu'Onion Knight fonctionne bien avec la plupart des assists viables en tournoi.</li></ul>
+
+</section>
+<section id="community"><h2>Tech communautaire</h2>
+<div class="banner" data-undocumented="1"><strong>Section non documentée sur dissidia.wiki à ce jour — à compléter.</strong> Aucune trouvaille communautaire attribuable relevée dans les sources récupérées pour ce personnage.</div>
+</section>
+<section id="sources"><h2>Sources</h2>
+<ul class="sources-list"><li><a href="https://dissidia.wiki/Onion_Knight_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Onion_Knight_(Dissidia_012)</a></li><li><a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Tier_List_(Dissidia_012)</a></li><li><a href="https://dissidia.wiki/Tier_List_(Assist)" rel="external noopener">https://dissidia.wiki/Tier_List_(Assist)</a></li></ul><h3>Limites connues</h3><ul class="sources-list"><li>La page Matchups du wiki est une ébauche (stub) : aucune analyse détaillée par matchup, seules les mentions de l'overview sont exploitables.</li><li>La section Combos est vide (non documentée) : aucune route de combo chiffrée n'est disponible.</li><li>Aucune mécanique unique n'est documentée pour ce personnage (section absente du wiki).</li><li>Le gain de jauge d'assist par coup n'est pas renseigné (colonnes vides) et plusieurs startups de coups de branche sont notés « ?? ».</li><li>Les builds sont donnés uniquement en tables d'équipement, sans texte explicatif détaillé.</li><li>La section References est vide : aucune tech communautaire attribuable ou datée.</li></ul>
+</section>
+</main>
+</div>
+<footer class="site"><div class="wrap">
+<p>Site de fans non commercial. Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011).</p>
+<p>Contenu textuel adapté et traduit de <a href="https://dissidia.wiki" rel="external noopener">dissidia.wiki</a> (licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="external noopener">CC BY 4.0</a>). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+</div></footer>
+
+</body>
+</html>

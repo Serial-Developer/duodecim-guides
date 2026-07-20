@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warrior of Light — Guide Dissidia 012 [duodecim]</title>
+<meta name="description" content="Guide compétitif français de Warrior of Light dans Dissidia 012 [duodecim] Final Fantasy : frame data, plan de jeu, builds, assists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/main.css">
+
+</head>
+<body>
+<nav class="guide-top" aria-label="Sections du guide"><div class="chips-nav">
+<a href="../index.html">← Sélection</a>
+<a href="#overview">Vue d'ensemble</a><a href="#moves">Coups</a><a href="#unique">Mécanique unique</a><a href="#gameplan">Plan de jeu</a><a href="#matchups">Matchups</a><a href="#builds">Builds</a><a href="#assist">Assists</a><a href="#community">Tech communautaire</a><a href="#sources">Sources</a>
+</div></nav>
+<div class="guide-layout">
+<nav class="guide-toc" aria-label="Sommaire"><ol>
+<li><a href="../index.html" class="backlink">← Sélection</a></li>
+<li><a href="#overview">Vue d'ensemble</a></li><li><a href="#moves">Coups</a></li><li><a href="#unique">Mécanique unique</a></li><li><a href="#gameplan">Plan de jeu</a></li><li><a href="#matchups">Matchups</a></li><li><a href="#builds">Builds</a></li><li><a href="#assist">Assists</a></li><li><a href="#community">Tech communautaire</a></li><li><a href="#sources">Sources</a></li>
+</ol></nav>
+<main class="guide-main">
+<section class="hero" id="hero">
+<img class="portrait" src="../assets/portraits/warrior-of-light.png" alt="Portrait officiel de Warrior of Light dans Dissidia 012 [duodecim]">
+<div class="hero-id">
+<p class="origin">Final Fantasy</p>
+<h1>Warrior of Light</h1>
+<p class="tagline">All-rounder défensif à HP links, solide sous tous les angles</p>
+<div class="chips"><span class="chip ">BRV la + rapide <b>13F (Dayflash ground)</b></span><span class="chip ">HP la + rapide <b>51F (Shining Wave)</b></span><span class="chip ">Dash <b>77 (Average / Good)</b></span><span class="chip ">ATK <b>110</b></span><span class="chip ">DEF <b>113</b></span><span class="chip ok">HP 1 coup <b>Oui</b></span><span class="chip ok">HP links <b>Oui</b></span></div>
+</div>
+</section>
+<section id="overview"><h2>Vue d'ensemble</h2>
+<p>Le Warrior of Light est un combattant de mêlée polyvalent, capable de tout faire correctement. Son style repose sur des fondamentaux classiques : pokes rapides avec Dayflash, gap closers engageants et projectiles de mi-distance. Sa mobilité standard lui permet de construire l'offense comme la défense selon le besoin, et dès qu'une ouverture se présente, ses HP links infligent de bons dégâts. Son output est soutenu par des builds à haute bravery de base, le Wall Rush HP et les combos d'assist ; il fonctionne avec de nombreux assists et ses routes de combo restent cohérentes dans la plupart des positions. Grâce à la couverture de ses HP links (Shield Strike / Rising Buckler &gt; Bitter End), il punit efficacement sous presque tous les angles.</p>
+<p>Ses atouts marquants sont défensifs : une DEF de base très élevée (113, parmi les meilleures), encore amplifiée en EX Mode (+10), et surtout Shield of Light, un command block avançant qui bloque dès la frame 1 et se conclut par un HP 1-hit avec Wall Rush — une propriété rare dans le jeu. Cette option sécurise ses dodges et lui permet de battre les attaques à basse priorité aux frames actives longues. En tant qu'all-rounder, il s'accommode d'une grande variété de builds, y compris EX et Side by Side.</p>
+<p>Ses limites : il peine contre les projectiles persistants, ses disjoints étant risqués, et ses propres projectiles restent corrects mais peu rémunérateurs à distance. Sa dépendance aux HP links l'expose aux punishes après un Assist Change LV1 ; il dispose d'options plus sûres, mais au prix des dégâts. Son air dodge a un fall speed ratio moyen, ce qui l'oblige à se couvrir ponctuellement avec Shield of Light — option puissante mais très engageante, qui le laisse vulnérable en cas d'échec.</p>
+<p>En jeu compétitif, le Warrior of Light est habituellement classé high tier : un moveset et des stats fondamentalement bons, pour un style de jeu constant et en phase avec le metagame.</p>
+<p><strong>Tier list 2017 (tournoi, dissidia.wiki)</strong> : <span class="badge prio-melee-high">A</span> — 14ᵉ sur 30. Classé 14e (tier A) de la tier list 2017 : un high tier constant, porté par un moveset fondamentalement solide qui adhère au metagame.</p>
+<div class="two-col">
+<div class="card strengths"><h3>Forces</h3><ul><li>All-rounder : stats moyennes à bonnes, HP links et un moveset avec une réponse à la plupart des situations.</li><li>Accessible : excellent pour débutants comme joueurs confirmés, idéal pour apprendre le jeu et travailler ses fondamentaux.</li><li>Command block : Shield of Light, HP 1-hit avançant qui bloque instantanément pendant tout son startup, utile en attaque comme après un dodge.</li><li>Combat au sol : projectiles et démarrages de combo assist via empty chase lui permettent d'adapter le rythme du match.</li><li>Synergie de build : fonctionne avec tous les styles courants, y compris EX, bravery boost on dodge et Side by Side.</li><li>Génération d'EX : la plupart de ses braveries produisent 30 à 90 EX Force ; Dayflash, son poke principal, en génère 90.</li><li>EX Mode : la plus haute DEF du jeu, blocage automatique des projectiles Ranged Low et dégâts accrus sur les braveries de mêlée.</li></ul></div>
+<div class="card weaknesses"><h3>Faiblesses</h3><ul><li>Peine contre les pièges : malgré projectiles et disjoints, il ne punit pas facilement les personnages abrités derrière des projectiles persistants sans ressources ni risque important.</li><li>Attaques verticales engageantes : Rising Buckler et Shield Strike sont corrects mais réactables et impossibles à annuler tôt sur whiff.</li><li>Dilemme des 4 slots de bravery : toutes ses braveries aériennes lui sont utiles, mais il ne peut pas toutes les équiper.</li><li>Air dodge flottant, protection risquée : Shield of Light couvre bien ses dodges aériens, mais l'option est très risquée et perd contre les attaques à haute priorité ; hors clash de Dayflash, ses air dodges le laissent vulnérable.</li></ul></div>
+</div>
+<h3>Stats &amp; vitesses</h3>
+<div class="table-scroll"><table class="stats"><tr><th>Nom</th><td>Warrior of Light</td></tr><tr><th>Jeu d'origine</th><td>Final Fantasy</td></tr><tr><th>ATK de base (LV100)</th><td>110 (Average)</td></tr><tr><th>DEF de base (LV100)</th><td>113 (Very High, +10 during EX Mode)</td></tr><tr><th>Vitesse de course</th><td>6 (Average / Good)</td></tr><tr><th>Vitesse de dash</th><td>77 (Average / Good)</td></tr><tr><th>Vitesse de chute</th><td>87 (Average)</td></tr><tr><th>Chute après esquive</th><td>40 (Average)</td></tr><tr><th>BRV la plus rapide</th><td>13F (Dayflash ground)</td></tr><tr><th>HP la plus rapide</th><td>51F (Shining Wave)</td></tr><tr><th>HP en 1 coup</th><td>Yes (Multiple)</td></tr><tr><th>HP links</th><td>Yes</td></tr><tr><th>Command block</th><td>Shield of Light</td></tr><tr><th>Armes</th><td>Axes, Daggers, Greatswords, Katanas, Swords</td></tr><tr><th>Armures</th><td>Chestplates, Gauntlets, Heavy Armor, Helms, Large Shields, Light Armor, Shields</td></tr><tr><th>Armes exclusives</th><td>Flame Sword, Braveheart, Barbarian's Sword</td></tr><tr><th>Unlock</th><td>Default</td></tr><tr><th>Camp</th><td>Cosmos</td></tr><tr><th>Doubleur (JP)</th><td>Toshihiko Seki</td></tr><tr><th>Doubleur (ENG)</th><td>Grant George</td></tr></table></div>
+<figure class="diagram" role="img" aria-label="Profil de mobilité comparé à la moyenne du cast">
+<figcaption>Profil de mobilité (mode normal)</figcaption>
+<div class="table-scroll"><svg viewBox="0 0 720 174" xmlns="http://www.w3.org/2000/svg" style="min-width:480px">
+<title>Profil de mobilité : valeurs du personnage (barres) contre moyenne du cast (trait or)</title>
+<text x="142" y="29" fill="var(--text)" font-size="12" text-anchor="end">Course</text><rect x="150" y="18" width="30.584707646176913" height="18" rx="3" fill="var(--violet)"><title>Course : 6 (moyenne du cast : 7.3)</title></rect><line x1="187.1264367816092" y1="14" x2="187.1264367816092" y2="38" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 7.3</title></line><text x="186.58470764617692" y="29" fill="var(--muted)" font-size="11">6</text><text x="142" y="63" fill="var(--text)" font-size="12" text-anchor="end">Dash</text><rect x="150" y="52" width="392.5037481259371" height="18" rx="3" fill="var(--violet)"><title>Dash : 77 (moyenne du cast : 78.5)</title></rect><line x1="550.3965759055956" y1="48" x2="550.3965759055956" y2="72" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 78.5</title></line><text x="548.5037481259371" y="63" fill="var(--muted)" font-size="11">77</text><text x="142" y="97" fill="var(--text)" font-size="12" text-anchor="end">Chute</text><rect x="150" y="86" width="443.4782608695652" height="18" rx="3" fill="var(--violet)"><title>Chute : 87 (moyenne du cast : 83.5)</title></rect><line x1="575.4672663668166" y1="82" x2="575.4672663668166" y2="106" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 83.5</title></line><text x="599.4782608695652" y="97" fill="var(--muted)" font-size="11">87</text><text x="142" y="131" fill="var(--text)" font-size="12" text-anchor="end">Chute post-esquive</text><rect x="150" y="120" width="203.89805097451276" height="18" rx="3" fill="var(--violet)"><title>Chute post-esquive : 40 (moyenne du cast : 33.5)</title></rect><line x1="320.68240073511635" y1="116" x2="320.68240073511635" y2="140" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 33.5</title></line><text x="359.8980509745128" y="131" fill="var(--muted)" font-size="11">40</text>
+</svg></div>
+<p class="mv-desc">Valeurs brutes du wiki (page personnage) — <strong>plus la valeur est basse, plus le personnage est rapide</strong>. Trait pointillé or : moyenne des 31 personnages.</p>
+</figure>
+</section>
+<section id="moves"><h2>Coups</h2>
+<figure class="diagram" role="img" aria-label="Startup des coups de Warrior of Light">
+<figcaption>Startup des coups de Warrior of Light</figcaption>
+<div class="table-scroll"><svg viewBox="0 0 760 446" xmlns="http://www.w3.org/2000/svg" style="min-width:560px">
+<title>Startup des coups de Warrior of Light</title>
+<line x1="340.9090909090909" y1="20" x2="340.9090909090909" y2="420" stroke="var(--surface-2)" stroke-width="1"/><text x="340.9090909090909" y="434" fill="var(--muted)" font-size="11" text-anchor="middle">20F</text><line x1="471.8181818181818" y1="20" x2="471.8181818181818" y2="420" stroke="var(--surface-2)" stroke-width="1"/><text x="471.8181818181818" y="434" fill="var(--muted)" font-size="11" text-anchor="middle">40F</text><line x1="602.7272727272727" y1="20" x2="602.7272727272727" y2="420" stroke="var(--surface-2)" stroke-width="1"/><text x="602.7272727272727" y="434" fill="var(--muted)" font-size="11" text-anchor="middle">60F</text><text x="202" y="41" fill="var(--text)" font-size="12" text-anchor="end">Dayflash (Ground)</text><rect x="210" y="30" width="85.0909090909091" height="16" rx="3" fill="var(--muted)"><title>Dayflash (Ground) : 13F (Melee Low)</title></rect><text x="301.0909090909091" y="41" fill="var(--muted)" font-size="11">13F</text><text x="202" y="67" fill="var(--text)" font-size="12" text-anchor="end">Ascension</text><rect x="210" y="56" width="98.18181818181819" height="16" rx="3" fill="var(--muted)"><title>Ascension : 15F (Melee Low)</title></rect><text x="314.1818181818182" y="67" fill="var(--muted)" font-size="11">15F</text><text x="202" y="93" fill="var(--text)" font-size="12" text-anchor="end">Dayflash (midair)</text><rect x="210" y="82" width="98.18181818181819" height="16" rx="3" fill="var(--muted)"><title>Dayflash (midair) : 15F (Melee Low)</title></rect><text x="314.1818181818182" y="93" fill="var(--muted)" font-size="11">15F</text><text x="202" y="119" fill="var(--text)" font-size="12" text-anchor="end">Crossover</text><rect x="210" y="108" width="150.54545454545453" height="16" rx="3" fill="var(--muted)"><title>Crossover : 23F (Melee Low)</title></rect><text x="366.5454545454545" y="119" fill="var(--muted)" font-size="11">23F</text><text x="202" y="145" fill="var(--text)" font-size="12" text-anchor="end">Rising Buckler</text><rect x="210" y="134" width="163.63636363636363" height="16" rx="3" fill="var(--muted)"><title>Rising Buckler : 25F (Melee Low)</title></rect><text x="379.6363636363636" y="145" fill="var(--muted)" font-size="11">25F</text><text x="202" y="171" fill="var(--text)" font-size="12" text-anchor="end">Shield Strike</text><rect x="210" y="160" width="163.63636363636363" height="16" rx="3" fill="var(--muted)"><title>Shield Strike : 25F (Melee Low)</title></rect><text x="379.6363636363636" y="171" fill="var(--muted)" font-size="11">25F</text><text x="202" y="197" fill="var(--text)" font-size="12" text-anchor="end">Sword Thrust</text><rect x="210" y="186" width="202.90909090909093" height="16" rx="3" fill="var(--violet)"><title>Sword Thrust : 31F (Melee Mid (1st hit)Melee Low (others))</title></rect><text x="418.90909090909093" y="197" fill="var(--muted)" font-size="11">31F</text><text x="202" y="223" fill="var(--text)" font-size="12" text-anchor="end">Red Fang</text><rect x="210" y="212" width="268.3636363636363" height="16" rx="3" fill="var(--success)"><title>Red Fang : 41F (Ranged Low)</title></rect><text x="484.3636363636363" y="223" fill="var(--muted)" font-size="11">41F</text><text x="202" y="249" fill="var(--text)" font-size="12" text-anchor="end">Blue Fang</text><rect x="210" y="238" width="268.3636363636363" height="16" rx="3" fill="var(--success)"><title>Blue Fang : 41F (Ranged Low)</title></rect><text x="484.3636363636363" y="249" fill="var(--muted)" font-size="11">41F</text><text x="202" y="275" fill="var(--text)" font-size="12" text-anchor="end">Ultimate Shield</text><rect x="210" y="264" width="268.3636363636363" height="16" rx="3" fill="var(--gold)"><title>Ultimate Shield : 41F (Melee High)</title></rect><text x="484.3636363636363" y="275" fill="var(--muted)" font-size="11">41F</text><text x="202" y="301" fill="var(--text)" font-size="12" text-anchor="end">White Fang</text><rect x="210" y="290" width="307.6363636363636" height="16" rx="3" fill="var(--success)"><title>White Fang : 47F (Ranged Low)</title></rect><text x="523.6363636363636" y="301" fill="var(--muted)" font-size="11">47F</text><text x="202" y="327" fill="var(--text)" font-size="12" text-anchor="end">Shining Wave</text><rect x="210" y="316" width="333.8181818181818" height="16" rx="3" fill="var(--success)"><title>Shining Wave : 51F (Melee High (blade) Ranged High (light pillar))</title></rect><text x="549.8181818181818" y="327" fill="var(--muted)" font-size="11">51F</text><text x="202" y="353" fill="var(--text)" font-size="12" text-anchor="end">Shield of Light (ground)</text><rect x="210" y="342" width="346.90909090909093" height="16" rx="3" fill="var(--gold)"><title>Shield of Light (ground) : 53F (Melee High, Block Mid)</title></rect><text x="562.909090909091" y="353" fill="var(--muted)" font-size="11">53F</text><text x="202" y="379" fill="var(--text)" font-size="12" text-anchor="end">Shield of Light (midair)</text><rect x="210" y="368" width="346.90909090909093" height="16" rx="3" fill="var(--gold)"><title>Shield of Light (midair) : 53F (Melee High, Block Mid)</title></rect><text x="562.909090909091" y="379" fill="var(--muted)" font-size="11">53F</text><text x="202" y="405" fill="var(--text)" font-size="12" text-anchor="end">Radiant Sword</text><rect x="210" y="394" width="504" height="16" rx="3" fill="var(--success)"><title>Radiant Sword : 77F (Ranged High)</title></rect><text x="720" y="405" fill="var(--muted)" font-size="11">77F</text>
+</svg></div>
+<p class="mv-desc">Startup en frames (60 i/s, données dissidia.wiki). Couleur : <span style="color:var(--muted)">Melee Low</span> · <span style="color:var(--violet)">Melee Mid</span> · <span style="color:var(--gold)">Melee High</span> · <span style="color:var(--success)">Ranged</span>.</p>
+</figure>
+<h3 style="color:var(--gold)">Braveries</h3>
+<h3>Au sol</h3>
+
+<details class="move">
+<summary><span class="mv-name">Ascension</span>
+<span class="mv-meta">15F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Combo rapproché servant aux punishes, aux combos solo au sol et à l'approche occasionnelle. Rapide (15F), anti-air, deux follow-ups au Circle puis Chase (ou Wall Rush près du plafond), et surtout le HP link Rune Saber en fin de chaîne : de bons dégâts sans assist. Recovery moyenne et aucun cancel sur whiff : un miss peut coûter son « tour ».</p></div>
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Normal</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">40 (4, 5, 11, 20)</span></td><td><span class="mono">54 (4 +5, 5 +4, 11, 20 +6)</span></td></tr><tr><th>Startup</th><td><span class="mono">15F</span></td><td><span class="mono">15F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">90</span></td><td><span class="mono">90</span></td></tr><tr><th>Effets</th><td>Chase, Wall Rush</td><td>Chase, Wall Rush, Block (Ranged Low)</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Sword Thrust</span>
+<span class="mv-meta">31F</span><span class="badge prio-melee-mid">Melee Mid (1st hit)Melee Low (others)</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Gap closer engageant qui avance vers l'adversaire, principalement utilisé pour battre les blocks au sol grâce au bouclier mid priority initial. Réactable (31F), il continue d'avancer même sur whiff, ne peut pas anti-air et se fait bloquer à la réaction : à employer avec prudence contre les blocks.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Normal</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">30 (6, 3x3, 15)</span></td><td><span class="mono">40 (6, 3x3 +4, 15 +6)</span></td></tr><tr><th>Startup</th><td><span class="mono">31F</span></td><td><span class="mono">31F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Melee Mid (1st hit)Melee Low (others)</span></td><td><span class="badge prio-melee-mid">Melee Mid (1st hit)Melee Low (others)</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td><td>Wall RushBlock (Ranged Low)</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Red Fang</span>
+<span class="mv-meta">41F</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Projectile rapide à un hit, à la plus longue portée de ses braveries (mur à mur dans Order's Sanctuary). Priorité basse, hit stun court et faible récompense : peu utilisé en compétitif, ses autres projectiles ont plus d'utilité.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">15</span></td></tr><tr><th>Startup</th><td><span class="mono">41F</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Block (Ranged Low, EX Mode)</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Blue Fang</span>
+<span class="mv-meta">41F</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Groupe de projectiles de mi-distance frappant par le haut (ou le bas). Move de niche : surtout utile dans les stages à plafond bas pour harceler les zoneurs cachés derrière leurs projectiles (Laguna sous Electro Shield, Ultimecia sous Knight's Lance chargé). Peut toucher dans le dos et ignorer le block, mais lent, à faibles dégâts et inadapté au corps à corps.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">7 each</span></td></tr><tr><th>Startup</th><td><span class="mono">41F</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Block (Ranged Low, EX Mode)</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">White Fang</span>
+<span class="mv-meta">47F</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Son projectile de référence au sol pour la pression et les combos. Il reste actionnable pendant que les éclairs avancent, ce qui couvre son approche, et le hit stun correct permet d'enchaîner sur Ascension, Dayflash et plus. Actif environ 1,7 s seulement, homing lent sur les angles verticaux prononcés : attention aux dashes qui passent au travers.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">6 each</span></td></tr><tr><th>Startup</th><td><span class="mono">47F</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Block (Ranged Low, EX Mode)</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Dayflash (Ground)</span>
+<span class="mv-meta">13F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Son poke principal : rapide (13F), 90 EX, démarreur de combo assist. Se whiff sans danger pour charger la jauge d'assist grâce à sa recovery courte et ses nombreux cancels (dodge, block, autre attaque). Sur hit, deux follow-ups au Circle avec une fenêtre longue idéale pour hit confirm, puis Chase ; l'empty chase retardé force un Wall Rush au sol et relance les combos d'assist. Un pilier de son jeu compétitif.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Normal</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">22 (3, 4, 15)</span></td><td><span class="mono">36 (3 +4, 4 +4, 15 +6)</span></td></tr><tr><th>Startup</th><td><span class="mono">13F</span></td><td><span class="mono">13F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">90</span></td><td><span class="mono">90</span></td></tr><tr><th>Effets</th><td>Chase</td><td>Chase Block (Ranged Low)</td></tr><tr><th>Cancels</th><td>A missed attack that doesn't make any contact.
+) || Dodge, Block &amp; Attack (Whiff )</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3>En l’air</h3>
+
+<details class="move">
+<summary><span class="mv-name">Crossover</span>
+<span class="mv-meta">23F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Bravery avançante avec HP link, alternative aérienne à Ascension : outil de punish contre les attaques longues et les adversaires staggered, approche possible avec parcimonie. Le follow-up au Circle cause Chase ou Wall Rush près du plafond. Doit être complété pour lancer Rune Saber ; startup limite réactable (23F) et environ une seconde avant de pouvoir dodge cancel : dangereux à whiff en neutral. Le dernier hit peut rater au plafond contre les grands gabarits (Garland, Golbez, Exdeath).</p></div>
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Normal</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">40 (5, 5, 10, 20)</span></td><td><span class="mono">50 (5, 5, 10 +4, 20 +6)</span></td></tr><tr><th>Startup</th><td><span class="mono">23F</span></td><td><span class="mono">23F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">90</span></td><td><span class="mono">90</span></td></tr><tr><th>Effets</th><td>Chase, Wall Rush</td><td>Chase, Wall Rush Block (Ranged Low)</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Rising Buckler</span>
+<span class="mv-meta">25F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Punish anti-air contre les adversaires au-dessus de lui, récompensé par le HP link Bitter End. Bouclier disjoint capable de percer les projectiles, side switch possible sur hit, follow-up fiable des assists bravery aériens de Kuja et Sephiroth. Réactable (25F) avec un cue audio distinct, sans tracking une fois lancé ; utile dans certains matchups aériens comme Sephiroth et Kuja.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Normal</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">30 (2x4, 6, 16)</span></td><td><span class="mono">42 (2x4 +6, 6, 16 +6)</span></td></tr><tr><th>Startup</th><td><span class="mono">25F</span></td><td><span class="mono">25F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td><td>Wall Rush Block (Ranged Low)</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Shield Strike</span>
+<span class="mv-meta">25F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Quasi identique à Rising Buckler mais vers le bas : son move air-to-ground principal, qui punit le jeu imprudent d'en dessous et frappe les adversaires staggered après un Assist Change LV2. HP link Bitter End également. Mêmes défauts : réactable, télégraphé, longue recovery et aucun tracking après le lancer ; le bouclier touche aussi devant lui, ce qui permet le combo HP après l'assist Sephiroth.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Normal</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">30 (2x4, 6, 16)</span></td><td><span class="mono">42 (2x4 +6, 6, 16 +6)</span></td></tr><tr><th>Startup</th><td><span class="mono">25F</span></td><td><span class="mono">25F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td><td>Wall Rush Block (Ranged Low)</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Dayflash (midair)</span>
+<span class="mv-meta">15F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Version aérienne essentielle et similaire à la version sol : rapide (15F, toujours non réactable), sûre à whiff pour la jauge d'assist, fiable pour confirmer les combos d'assist et accumuler de l'EX. La hitbox descend assez bas pour toucher un adversaire au sol. Ses dégâts sont les plus faibles de son arsenal, mais sa longévité dépend de la maîtrise de ce move.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Normal</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">22 (3, 4, 15)</span></td><td><span class="mono">36 (3 +4, 4 +4, 15 +6)</span></td></tr><tr><th>Startup</th><td><span class="mono">15F</span></td><td><span class="mono">15F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">90</span></td><td><span class="mono">90</span></td></tr><tr><th>Effets</th><td>Chase</td><td>Chase Block (Ranged Low)</td></tr><tr><th>Cancels</th><td>A missed attack that doesn't make any contact.
+) || Dodge, Block &amp; Attack (Whiff )</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+
+<h3 style="color:var(--gold)">Attaques HP</h3>
+<h3>Au sol</h3>
+
+<details class="move">
+<summary><span class="mv-name">Shield of Light (ground)</span>
+<span class="mv-meta">53F (Block from 1F to 53F)</span><span class="badge prio-melee-high">Melee High, Block Mid</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Son command block signature : il avance puis libère un blast 1-hit qui Wall Rush, en bloquant instantanément de la frame 1 jusqu'au coup. Punit les pokes à basse priorité et sert d'option défensive immédiate après un dodge au sol. Ne bloque que les priorités basses : les HP et les moves supérieurs le guard crush ou le stagger, et un miss le laisse grand ouvert. Il devient aérien à l'usage et vise automatiquement en diagonale un adversaire en l'air, sans pouvoir corriger la direction en cours.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">53F (Block from 1F to 53F)</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High, Block Mid</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Block, Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Shining Wave</span>
+<span class="mv-meta">51F</span><span class="badge prio-ranged">Melee High (blade) Ranged High (light pillar)</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>HP de longue portée en vague : contre-attaque après block stagger et outil de contrôle d'espace passif. Solide anti-air (hitboxes verticales hautes instantanées, rotation complète), faisceaux non réfléchissables qui subsistent même bloqués, et priorité Ranged High qui ignore les staggers d'Assist Change LV2 en combo. À utiliser avec parcimonie : vulnérable après le tir, perd contre les mêlées haute priorité et les command blocks de Jecht et Exdeath. Peut rater contre un déplacement très rapide traversant le projectile.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">51F</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Melee High (blade) Ranged High (light pillar)</span></td></tr><tr><th>EX Force</th><td><span class="mono">each 60</span></td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Ultimate Shield</span>
+<span class="mv-meta">41F</span><span class="badge prio-melee-high">Melee High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Son HP au sol le plus rapide (41F), pour puni les blocks, dodges proches voire attaques, avec un fort tracking hémisphérique. Il reste sur place pendant que le bouclier part ; sans contact, pas de suite de combo, ce qui le rend un peu plus sûr à distance. Réfléchit les projectiles HP sans avancer. Un hit glitch avec White Fang peut déclencher les follow-ups sans contact, ce qui peut être pénalisant ; longue recovery, gare aux Assist Changes.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">20 (4 x 3, 8)</span></td></tr><tr><th>Startup</th><td><span class="mono">41F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Rune Saber (ground)</span>
+<span class="mv-meta">?</span><span class="badge prio-melee-high">Melee High (?)</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>HP link d'Ascension, remarquable pour son potentiel de combo et sa relative sécurité face aux Assist Changes. Knockback vertical long : Wall Rush constant dans les stages à plafond bas (Sky Fortress Bahamut, Edge of Madness), et les assists multi-hits comme Sephiroth permettent le knockback cancel ailleurs. Le dernier hit, haut et longuement actif, couvre partiellement la fin d'animation, sans être totalement sûr.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">10 (2 x 3, 4) / +Ascension = (50 Total)</span></td></tr><tr><th>Startup</th><td><span class="mono">?</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High (?)</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3>En l’air</h3>
+
+<details class="move">
+<summary><span class="mv-name">Shield of Light (midair)</span>
+<span class="mv-meta">53F (Block from 1F to 53F)</span><span class="badge prio-melee-high">Melee High, Block Mid</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>La version aérienne, la plus utilisée, du command block signature : auto-défense après air dodge et call-out des moves Melee Low ou mid lents — un argument clé face aux autres all-rounders comme Cloud et Squall. En 1-hit, il déjoue aussi les checkmates EX Revenge avec l'EX depletion. Portée courte et tracking vertical limité, mais Wall Rush possible sur bonne lecture et setups de double assist avec Aerith. Indispensable.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">53F (Block from 1F to 53F)</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High, Block Mid</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Block, Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Radiant Sword</span>
+<span class="mv-meta">77F</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Projectiles à tête chercheuse de longue portée pour harceler à distance ou contester les EX Cores. Taux de contact faible : animation télégraphée, accélération progressive qui regroupe les projectiles en ligne facile à esquiver. Sur hit, Wall Rush et départ de combo assist, avec un net frame advantage après dodge cancel — mais les setups sont limités. Prudence.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">77F</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Rune Saber (midair)</span>
+<span class="mv-meta">??</span><span class="badge prio-melee-high">Melee High (?)</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>HP link de Crossover, toujours recommandé, fonctionnellement identique à la version sol. Attention aux Wall Rush au plafond : Crossover étant aérien, il peut Wall Rush avant que Rune Saber ne connecte.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">10 (2 x 3, 4) / +Crossover = (50 Tota)</span></td></tr><tr><th>Startup</th><td><span class="mono">??</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High (?)</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Bitter End A</span>
+<span class="mv-meta">??</span><span class="badge prio-melee-high">Melee High (?)</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>HP link de Rising Buckler, pilier de son jeu : récompense les whiff punishes en dégâts HP sans assist. Dégâts totaux un peu inférieurs à Rune Saber mais sans souci de plafond ; Wall Rush fiable pour démarrer les combos d'assist et longue animation propice aux knockback cancels avec Sephiroth — et à récupérer sa bravery de base avec les builds à haute BRV. Très risqué contre un adversaire sorti en Assist Change LV1 : aucune annulation avant le dernier hit, immobile et peu protégé verticalement.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">15 (2 x 6, 3) / +Rising Buckler = (29 Total)</span></td></tr><tr><th>Startup</th><td><span class="mono">??</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High (?)</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Bitter End B</span>
+<span class="mv-meta">??</span><span class="badge prio-melee-high">Melee High (?)</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Identique à Bitter End A, mais en branche de Shield Strike.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">15 (2 x 6, 3) / +Shield Strike = (29 Total)</span></td></tr><tr><th>Startup</th><td><span class="mono">??</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High (?)</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3 style="color:var(--gold)">EX Mode: Class Change! &amp; EX Burst</h3>
+<p>EX Mode « Class Change! » — effets : Regen, Critical Boost, Mirror Attack, Protect et Light's Blessing. Warrior of Light y gagne des hits supplémentaires sur ses braveries de mêlée (Light's Blessing, épées de lumière à 1 de dégât de base chacune, qui causent du hit stun sans ouvrir de nouvelles routes de combo solo), une grosse réduction de dégâts via +10 DEF de base (Protect) et le blocage des attaques Ranged Low pendant ses propres animations d'attaque, recovery comprise (Mirror Attack).</p>
+<p>Comme les EX Modes servent surtout à sécuriser une victoire via combo d'assist, les bonus défensifs jouent rarement à plein — les assists interrompent souvent l'EX Mode et l'adversaire peut fuir pour gagner du temps si Warrior of Light ne le verrouille pas dans un combo. Cela reste un EX Mode compétent dans l'ensemble.</p>
+<p><strong>EX Burst :</strong> Oversoul est un EX Burst assez standard : six entrées directionnelles correctes à saisir (stick analogique refusé), des follow-ups quasi immédiats qui laissent peu de temps à l'adversaire pour monter sa DEF, et quelle que soit la réussite, une frappe finale à 25 de dégâts de base.</p>
+
+</section>
+<section id="unique"><h2>Mécanique unique</h2>
+<div class="banner" data-undocumented="1"><strong>Section non documentée sur dissidia.wiki à ce jour — à compléter.</strong> <a href="https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)" rel="external noopener">Page wiki du personnage</a> — pas de section « Unique Mechanics » dédiée ; le cas échéant, la mécanique du personnage est couverte dans la vue d'ensemble et les coups.</div>
+</section>
+<section id="gameplan"><h2>Plan de jeu &amp; techniques avancées</h2>
+<p>La boucle de jeu s'articule autour de Dayflash : whiffer le poke sans risque pour remplir la jauge d'assist, générer 90 EX par touche et confirmer visuellement les hits pour partir en combo d'assist. Au sol, White Fang couvre l'approche et enchaîne sur Ascension (le combo White Fang &gt; Ascension &gt; Rune Saber est sa route solo de référence, 56 minimum plus HP et Wall Rush) ou sur Dayflash avec empty chase retardé pour forcer un Wall Rush au sol, ramasser tout l'EX du stage et relancer un assist.</p>
+<p>Les dégâts HP passent par trois canaux : les HP links (Ascension/Crossover &gt; Rune Saber, Rising Buckler/Shield Strike &gt; Bitter End) qui punissent sans assist sous presque tous les angles ; les combos d'assist démarrés sur Dayflash ou un Wall Rush (le combo type midscreen : Dayflash 2 hits &gt; assist BRV &gt; Assist Chase &gt; Shield Strike &gt; Bitter End) ; et Shield of Light en lecture défensive, qui convertit un block en Wall Rush.</p>
+<p>Défensivement, jouez sur la double couche : dodge puis Shield of Light instantané contre les dashes et attaques à basse priorité — l'adversaire risque des dégâts HP rien qu'en approchant. Réservez toutefois cette option, très engageante, aux moments nécessaires, car elle perd contre les priorités hautes et laisse grand ouvert sur miss.</p>
+<p>Côté ressources, la génération d'EX de Dayflash soutient la survie à long terme via la jauge EX, et les builds à haute bravery de base maximisent le retour de bravery pendant les longues animations de Bitter End en fin de combo d'assist. Attention enfin à la dépendance aux HP links : après un Assist Change LV1 adverse, Bitter End et Rune Saber deviennent punissables — privilégiez alors les options sûres au détriment des dégâts.</p>
+<h3>Techniques spécifiques</h3><div class="card"><h3 style="margin-top:0">Dayflash empty chase reset</h3><p>Retarder au maximum le Chase de Dayflash, puis le déclencher juste avant que l'adversaire touche le sol pour forcer une réaction Wall Rush. Permet de chasser sans se faire contrer, de récupérer tout l'EX du stage et de réinitialiser l'usage d'assist pour prolonger un combo si une autre barre est en stock.</p></div><div class="card"><h3 style="margin-top:0">Bitter End knockback cancel</h3><p>Presser l'assist (Sephiroth) au moment exact où le dernier coup de bravery de Bitter End connecte : l'assist frappe pendant la fin d'animation et maintient l'adversaire en place, ouvrant un second Shield Strike &gt; Bitter End n'importe où sur le stage, sans mur.</p></div><div class="card"><h3 style="margin-top:0">Ultimate Shield hit glitch</h3><p>Si White Fang connecte au moment où Ultimate Shield est lancé, le move enchaîne ses follow-ups sans contact réel avec l'adversaire. Vu la portée courte du move, ce glitch est plutôt un piège à connaître qu'un outil.</p></div><div class="card"><h3 style="margin-top:0">Double assist Aerith</h3><p>Après un Wall Rush, Shield of Light peut poser le setup d'un second assist Aerith dans le même combo ; avec une bravery de base élevée, le double assist inflige de très gros dégâts.</p></div>
+<details class="move"><summary><span class="mv-name">Combos documentés (notation d'origine, dissidia.wiki)</span></summary><div class="mv-body"><p class="mono">(Main article pending)</p><p class="mono">Warrior of Light can create assist combos with Wall Rush, Dayflash and even during his Bitter End and Rune Saber HP links |</p><p class="mono">An HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.</p><p class="mono">. This gives him flexibility in setting up HP damage. When following up after Sephiroth, delay Assist Chase a little so that Shield Strike connects more consistently.</p></div></details>
+<p class="mv-desc">Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href="../techniques.html">Techniques &amp; glitches</a>.</p>
+</section>
+<section id="matchups"><h2>Matchups</h2>
+<p>La page matchups du wiki est un stub : aucun tableau détaillé n'est documenté. Les sources livrent toutefois quelques repères : Rising Buckler prend de la valeur dans les matchups orientés air comme Sephiroth et Kuja ; Blue Fang sert à déloger les personnages retranchés derrière leurs projectiles, tels Laguna sous Electro Shield ou Ultimecia sous Knight's Lance chargé ; et de manière générale, les personnages à projectiles persistants restent sa difficulté principale. Notez aussi que le dernier hit de Crossover peut rater au plafond contre les grands gabarits (Garland, Golbez, Exdeath).</p>
+<p>Vidéos de matchs : <a href="https://replaytheater.app/?game=d012&amp;c1=Warrior%20of%20Light" rel="external noopener">Replay Theater — matchs de Warrior of Light</a>.</p>
+</section>
+<section id="builds"><h2>Builds</h2>
+<p>Warrior of Light fonctionne avec une grande variété de builds : hybrides équilibrés, Bravery Boost on Dodge, Side by Side. Comme l'essentiel de ses dégâts vient des combos d'assist sur Dayflash et de ses HP links, il est rarement construit pour les dégâts de bravery ; en revanche, une bravery de base élevée profite énormément à ses combos d'assist.</p>
+<p>Le build hybride documenté vise l'EX intake et l'EX depletion — un bon point de départ, la plupart des builds compétitifs jouant sur les dégâts, l'EX et/ou la depletion de jauges. Il repose sur le set Seal of Lufenia (avec Equip Glitch, 450 CP au total) : la baisse de DEF du set est compensée par sa DEF de base très élevée, Lufenian Dirk apporte +1 ATK pour contrebalancer la faible ATK de Heaven's Cloud, dont la portée d'absorption d'EX accrue facilite la collecte d'EX Force. Assist : Sephiroth ; summon : Rubicante.</p>
+
+<h3>Hybrid</h3><div class="table-scroll"><table class="data">
+
+<tr><th>Stats</th></tr>
+<tr><td>HP</td><td>11299</td></tr>
+<tr><td>CP</td><td>450</td></tr>
+<tr><td>BRV</td><td>996</td></tr>
+<tr><td>ATK</td><td>178</td></tr>
+<tr><td>DEF</td><td>184</td></tr>
+<tr><td>LUK</td><td>60</td></tr>
+<tr><td>Max Booster</td><td></td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+<caption>Special Effect: Seal of Lufenia</caption>
+<tr><th>Equipment</th></tr>
+<tr><td>Assist</td><td>Sephiroth</td></tr>
+<tr><td>Weapon &lt;img&gt;&lt;/img&gt;</td><td>Heaven's Cloud</td></tr>
+<tr><td>Hand &lt;img&gt;&lt;/img&gt;</td><td>Lufenian Dirk &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Head &lt;img&gt;&lt;/img&gt;</td><td>Lufenian Headband &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Body &lt;img&gt;&lt;/img&gt;</td><td>Lufenian Vest</td></tr>
+<tr><td>Accessory 1</td><td>Muscle Belt &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 2</td><td>Dismay Shock &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 3</td><td>Battle Hammer &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 4</td><td>Summon Unused &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 5</td><td>Pre-EX Mode &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 6</td><td>Pre-EX Revenge &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 7</td><td>Opponent Summon Unused &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 8</td><td>White Gem &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 9</td><td>Tenacious Attacker &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 10</td><td>Glutton &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Summon &lt;img&gt;&lt;/img&gt;</td><td>Rubicante</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Bravery attacks</th></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+<tr><td>&lt;img&gt;&lt;/img&gt; Dayflash</td><td>&lt;img&gt;&lt;/img&gt; Dayflash</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>↑+&lt;img&gt;&lt;/img&gt; Ascension</td><td>↑+&lt;img&gt;&lt;/img&gt; Crossover</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>&lt;img&gt;&lt;/img&gt; Branch: Rune Saber</td><td>&lt;img&gt;&lt;/img&gt; Branch: Rune Saber</td></tr>
+<tr><td>↓+&lt;img&gt;&lt;/img&gt; White Fang</td><td>↓+&lt;img&gt;&lt;/img&gt; Shield Strike</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td></td><td>&lt;img&gt;&lt;/img&gt; Branch: Bitter End</td></tr>
+<tr><td>HP attacks</td></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+<tr><td>&lt;img&gt;&lt;/img&gt; Shield of Light</td><td>&lt;img&gt;&lt;/img&gt; Shield of Light</td></tr>
+<tr><td>↑+&lt;img&gt;&lt;/img&gt; Ultimate Shield</td><td></td></tr>
+<tr><td>↓+&lt;img&gt;&lt;/img&gt; Shining Wave</td><td>↓+&lt;img&gt;&lt;/img&gt; Radiant Sword</td></tr>
+</table></div>
+<p class="mv-desc">Le coût CP total du build documenté suppose l'usage de l'Equip Glitch. Stats du build : 11299 HP, 996 BRV, 178 ATK, 184 DEF, 60 LUK.</p>
+</section>
+<section id="assist"><h2>Synergies d'assist</h2>
+<h3>Warrior of Light en tant qu'assist</h3><p>En tant qu'assist, Warrior of Light est l'un des plus faibles du jeu (tier Low de la tier list assist). Ses braveries ne retiennent pas l'adversaire longtemps et le repoussent vite du joueur ; sans Assist Chase, il peine à poser les HP du personnage joueur et dépend du Wall Rush. Il est conseillé de combattre près du sol pour que Rising Buckler plaque au moins l'adversaire au plancher.</p>
+<p>Rising Buckler garde une niche : la meilleure combinaison de portée verticale et de vitesse parmi les assists bravery aériens, ce qui permet des combos depuis certains moves de chase (Pummel de Laguna, finisher rapproché de Strike Energy de Kuja) — même si l'assist air BRV de Zidane lui est généralement préféré dans ce rôle. Shield of Light peut bloquer des attaques, notable en scramble et en situation de checkmate, mais en tant qu'attaque HP il reste cher et risqué.</p>
+
+<h3>Assists recommandées</h3><ul><li><strong>Sephiroth</strong> — La synergie la plus populaire en compétitif : combo depuis presque tous ses moves, Wall Rush constant, et ses multi-hits facilitent les knockback cancels n'importe où. Son angle de knockback plus bas rend Crossover &gt; Rune Saber plus constant et plus dommageable en follow-up.</li><li><strong>Aerith</strong> — Moins de dégâts de bravery et de whiff punish, mais des combos plus sûrs et de l'EX intake. Les setups de chase Dayflash brillent ici (EX, contournement des staggers d'Assist Change LV2), et Shield of Light après Wall Rush permet un double assist très dommageable avec une haute bravery de base.</li><li><strong>Jecht</strong> — Frappe plus vite que Sephiroth ; son air BRV ouvre des combos au sol prolongés pour beaucoup de bravery, avec relance possible via le reset empty chase de Dayflash (ground). Synergie compétente, au prix des knockback cancels midscreen constants.</li></ul>
+
+</section>
+<section id="community"><h2>Tech communautaire</h2>
+<div class="card"><h3 style="margin-top:0">Shining Wave peut rater contre un déplacement rapide</h3><p>Démonstration vidéo : la hitbox de la vague de Shining Wave peut manquer un adversaire traversant le projectile à grande vitesse. Tentative risquée côté adverse, donc rarement un problème en pratique.</p><p class="sources-list"><a href="https://www.youtube.com/watch?v=cDI-tsnyJbM&amp;t=25" rel="external noopener">https://www.youtube.com/watch?v=cDI-tsnyJbM&amp;t=25</a></p></div>
+</section>
+<section id="sources"><h2>Sources</h2>
+<ul class="sources-list"><li><a href="https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)</a></li><li><a href="https://www.youtube.com/watch?v=cDI-tsnyJbM&amp;t=25" rel="external noopener">https://www.youtube.com/watch?v=cDI-tsnyJbM&amp;t=25</a></li><li><a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Tier_List_(Dissidia_012)</a></li><li><a href="https://dissidia.wiki/Tier_List_(Assist)" rel="external noopener">https://dissidia.wiki/Tier_List_(Assist)</a></li></ul><h3>Limites connues</h3><ul class="sources-list"><li>Page matchups du wiki à l'état de stub : aucun matchup détaillé n'est documenté.</li><li>Aucune mécanique unique documentée (section absente des sources).</li><li>Section combos solo marquée « Main article pending » : seuls deux combos solo et trois combos assist (Sephiroth) sont détaillés.</li><li>Valeurs d'assist gain des coups non renseignées dans les données.</li><li>Startup exact des HP links (Rune Saber, Bitter End) inconnu (« ? » dans les tables), tout comme certains décomptes d'EX Force et de Comrade's Vow des combos (« ??? »).</li><li>Un seul build documenté (hybride Seal of Lufenia) ; pas de variantes détaillées (l'article builds dédié n'est pas inclus dans les données).</li></ul>
+</section>
+</main>
+</div>
+<footer class="site"><div class="wrap">
+<p>Site de fans non commercial. Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011).</p>
+<p>Contenu textuel adapté et traduit de <a href="https://dissidia.wiki" rel="external noopener">dissidia.wiki</a> (licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="external noopener">CC BY 4.0</a>). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+{
+  "slug": "terra-branford",
+  "tagline": "Zoneuse défensive à projectiles, fragile mais au EX Mode dévastateur",
+  "archetype": "Zoneuse défensive",
+  "overview": [
+    "Terra est une lanceuse de sorts défensive qui combat à coups de projectiles depuis les longues distances. Sa stratégie de base consiste à sniper avec Thundara, charger Meltdown pour harceler et caster Holy Combo. Si l'adversaire s'approche trop, elle le repousse avec Blizzard Combo, son poke rapproché. Terra est aussi une utilisatrice efficace du Reverse Free Air Dash, qui crée de la distance pour sa magie et remplit la jauge d'assist plus sereinement.",
+    "Elle peut infliger des dégâts HP en neutral via Meltdown, ses HP links ou divers setups de hit glitch depuis ses autres coups, ce qui la fait beaucoup profiter de Side by Side et des builds à haute bravery de base. Terra peine à remplir sa jauge EX, mais son EX Mode est l'un des plus puissants du jeu : Chainspell duplique tous les projectiles, pour un contrôle d'espace et des dégâts nettement supérieurs. Elle est également l'un des rares personnages capables d'un Empty Chase sans risque n'importe où, grâce au hit stun généreux de Thundara qui la protège des Recovery Attacks.",
+    "Ses faiblesses sont criantes et tiennent surtout à sa défense : Terra souffre face aux adversaires agressifs. La plupart de ses attaques sont télégraphiées, lentes à sortir et en priorité Ranged Low, donc battues par le Free Air Dash. Son poke rapproché Blizzard Combo est plus lent et moins rémunérateur que la moyenne, ses autres options (variations de timing avec Meltdown, blocks) sont risquées, ses air dodges la laissent immobile plus longtemps que la plupart des personnages, et sa mobilité sous la moyenne combinée à une DEF de base faible lui fait payer cher chaque erreur.",
+    "Au fil des années, Terra a été considérée comme l'un des personnages les plus faibles du jeu. Sa défense souffre contre le rushdown, mais prendre le momentum avec l'assist compense une partie de ses lacunes, et sa longue portée rend le combat contre Ultimecia plus abordable que pour beaucoup de personnages de corps à corps. C'est un combat en côte pour qui vise la compétition, mais elle offre un style de jeu distinct que peu de personnages possèdent."
+  ],
+  "tierNote": "Classée 26e sur 30 (tier C) dans la tier list compétitive de 2017. Les sources la décrivent depuis des années comme l'un des personnages les plus faibles du jeu, sa défense souffrant particulièrement face au rushdown.",
+  "strengths": [
+    "Portée : Thundara, Meteor, Holy Combo et Meltdown attaquent de très loin, se complètent et mènent à des combos d'assist sur hit.",
+    "Dégâts : la synergie avec les builds à haute BRV de base et les setups de hit glitch vers Ultima permettent d'infliger beaucoup de dégâts HP.",
+    "EX Mode parmi les plus forts du jeu : Chainspell duplique les projectiles (plus d'espace occupé, plus de dégâts) et Holy (Combo) devient beaucoup plus rapide.",
+    "Empty Chase sûr : Thundara est l'un des rares coups du jeu qui autorise un Chase sans se faire punir par les Recovery Attacks, où que ce soit — efficace pour récupérer de l'EX et déloger l'adversaire."
+  ],
+  "weaknesses": [
+    "Défense : options rapprochées sous la moyenne et projectiles lents de faible priorité ; l'air dodge est plus risqué (chute lente) et la DEF de base faible augmente les dégâts de bravery subis.",
+    "Zoning risqué : projectiles télégraphiés à long startup, souvent battus par le Free Air Dash et exposés aux attaques d'assist.",
+    "Renversement de momentum difficile : Terra doit prendre de gros risques (blocks et autres) pour revenir dans la partie.",
+    "Génération d'EX : la plupart de ses coups clés ne produisent quasiment pas d'EX Force ; son apport se limite aux EX Cores et à Fire au sol."
+  ],
+  "moveNotes": {
+    "Blizzard Combo (ground)": "Poke de mêlée au sol (17F) qui tire des éclats de glace, combo modifiable au stick. Il existe une version vers le haut aux dégâts de base identiques, qui ne peut Wall Rush que sur les côtés et pas au plafond.",
+    "Blizzara (ground)": "Gros bloc de glace à moyenne portée (27F, Ranged Low) doté de Magic Block et Wall Rush ; sur hit, ajoute une attaque d'éclats de glace.",
+    "Fire": "Boules de feu basses à tête chercheuse dont l'explosion est imblocable, avec effet Chase. Ses 60 EX en font l'une des rares sources d'EX Force de Terra, au sol.",
+    "Graviga": "Sphère de gravité larguée à longue portée (183F de startup), orientable au stick analogique, imblocable, avec Absorb et Wall Rush.",
+    "Meteor": "Pluie de feu à longue portée en 7 impacts : les 3e et 7e apparaissent toujours juste au-dessus de la tête de l'adversaire, les autres aléatoirement. Puissant mais peu précis.",
+    "Blizzard Combo (midair)": "Poke rapproché et l'un des coups les plus importants de Terra : outil de keepout en priorité melee, son coup le plus rapide (17F), utile pour whiff punish et interrompre les approches ; le premier hit combote en assist pour des dégâts HP, et sa courte animation en fait un remplisseur de jauge d'assist correct sur whiff. Reste lent comparé aux pokes similaires (Double Cut 13F, Beat Fang 15F), avec une base damage du premier hit parmi les plus faibles du jeu, un knockback modeste, et c'est son seul coup en Melee Low : Terra doit varier ses timings ou risquer le stagger sur block.",
+    "Blizzara (midair)": "Version aérienne de Blizzara, annulable en dodge, avec les mêmes propriétés (Magic Block, Wall Rush).",
+    "Holy Combo": "Projectiles de lumière à longue portée : si Holy touche, l'attaque enchaîne sur Flare. Son startup passe de 37F à 13F en EX Mode, ce qui aide beaucoup au contrôle d'espace.",
+    "Thundara": "Anneau d'éclairs qui se resserre sur l'adversaire (19F), avec effet Chase. Son hit stun généreux permet à Terra d'Empty Chase sans se faire punir par les Recovery Attacks, où que ce soit.",
+    "Holy": "Projectiles de lumière à vitesse normale et homing fort, avec effet Chase ; startup ramené de 37F à 13F en EX Mode.",
+    "Flood": "HP au sol secondaire : des piliers d'eau en vraie priorité imblocable (ni bloquables ni réfléchissables) qui interrompent les attaques à long startup (Meteorain de Cloud, Cyclone de Garland...) et punissent les air dodges à déplacement court ; le second pilier réapparaît sur la position adverse et attrape le landing lag. Peu utilisé à cause de sa lenteur et de sa faible couverture (esquivable avec Evasion Boost). En EX Mode, casté deux fois pour un total de 6 piliers, plus durs à esquiver.",
+    "Tornado (ground)": "Tornade invoquée autour de soi et déplaçable (43F, Melee High), avec Absorb et Wall Rush.",
+    "Firaga": "Branche de Fire : allume des explosions sur l'adversaire, avec Wall Rush ; n'inflige des dégâts de bravery (20) qu'en EX Mode.",
+    "Tornado (midair)": "Version aérienne de Tornado, aux propriétés identiques : Melee High, Absorb et Wall Rush.",
+    "Meltdown": "Seul HP 1-hit aérien de Terra et outil clé d'autodéfense, chargeable en 3 niveaux (55F/91F/145F). La version non chargée est une déflagration rapprochée rapide, utile après un stagger de block ou comme mixup ; les versions chargées (LV2 avant 145 frames, LV3 à pleine charge) sont de grosses boules de feu à longue durée active pendant lesquelles Terra peut agir, qui forcent l'approche et rebondissent sur le sol et les murs (peuvent toucher hors champ). Long startup et longue recovery : Meltdown expose aux whiff punish et assist punish, peut être renvoyé par les attaques à haute priorité (Braver, Blasting Zone, Jecht Block), disparaît si Terra est touchée, et sa vitesse moyenne autorise blodge ou Precision Evasion.",
+    "Ultima": "Branche de Holy Combo, imblocable, avec Absorb et Wall Rush. C'est le débouché des setups de hit glitch de Terra et le cœur de son combo d'EX Mode (Meltdown > Holy Combo > Ultima)."
+  },
+  "exMode": {
+    "summary": [
+      "EX Mode « Trance! » : Regen, Critical Boost, Glide et Chainspell. Chainspell (caster, puis presser Cercle ou Carré) relance le même sort avec une puissance magique accrue : tous les projectiles sont dupliqués, pour un contrôle d'espace et des dégâts nettement supérieurs — l'overview le classe parmi les EX Modes les plus forts du jeu. Holy et Holy Combo voient en outre leur startup passer de 37F à 13F, Flood est casté deux fois (6 piliers) et Meltdown tire deux projectiles HP au lieu d'un.",
+      "Glide (maintenir Croix en l'air) utilise le pouvoir d'esper caché de Terra pour se déplacer librement dans les airs."
+    ],
+    "burst": "EX Burst « Riot Blade » : l'énergie concentrée dans les deux mains est tirée en une multitude de lames ; marteler gauche et Cercle pour monter les jauges de gauche et de droite. 100 de dégâts de base au total (10 x 3 puis 14 x 5), type magique."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "En neutral, jouez la distance : snipez avec Thundara, chargez Meltdown pour harceler et forcer l'approche, castez Holy Combo. Si l'adversaire arrive au contact, Blizzard Combo sert de keepout et de whiff punish. Utilisez le Reverse Free Air Dash pour recréer de la distance et remplir la jauge d'assist en sécurité, et l'Empty Chase via Thundara pour récupérer de l'EX sans risque tout en délogeant l'adversaire.",
+    "La jauge EX est votre ressource critique : la plupart des coups clés n'en génèrent pas, donc appuyez-vous sur les EX Cores, sur Fire au sol, voire sur un build High Initial EX (Meteor > Fire > Chase suffit alors à finir de remplir la jauge sur hit). Une fois en EX Mode, Chainspell transforme le personnage : projectiles dupliqués, Holy Combo à 13F, Meltdown double.",
+    "Le plan de combo documenté (avec Jecht ou Aerith en assist) : après une confirmation, infliger assez de dégâts pour bravery break, revenir à la bravery de base et Wall Rush pour des dégâts supplémentaires. En EX Mode, préparez un Meltdown (deux projectiles HP) : dès qu'un Meltdown touche, enchaînez Holy Combo puis Ultima — le second Meltdown relance en prime la récupération de bravery de base sur hit. Après Holy Combo, retardez le premier Ultima pour débloquer la barre d'assist et attraper le dodge adverse ; près d'un mur, un Meltdown rapide peut même s'insérer pendant l'assist Jecht avant Holy Combo. Selon le build adverse, cette séquence peut terminer le match."
+  ],
+  "advancedTech": [
+    {
+      "name": "Safe Empty Chase (Thundara)",
+      "desc": "Grâce au hit stun généreux de Thundara, Terra peut initier un Chase sans rien faire (Empty Chase) sans se faire punir par les Recovery Attacks, où que ce soit sur le stage : utile pour engranger de l'EX et refuser à l'adversaire sa position."
+    },
+    {
+      "name": "Hit glitch setups",
+      "desc": "Les sources mentionnent divers setups de hit glitch depuis ses autres coups, convertis en Ultima pour de gros dégâts HP ; c'est l'une des raisons de sa synergie avec les builds à haute bravery de base."
+    },
+    {
+      "name": "Ultima retardé",
+      "desc": "Après Holy Combo, retarder le premier Ultima débloque la barre d'assist et attrape le dodge adverse : sans Evasion Boost ni Precision Evasion en face, Ultima est pratiquement garanti et peut relancer un combo d'assist avec Wall Rush si la jauge le permet."
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "La page matchups du wiki est à l'état d'ébauche : aucune analyse détaillée par personnage n'est disponible. Seuls des repères généraux ressortent de l'overview : Terra souffre avant tout face aux adversaires agressifs, ses attaques télégraphiées, lentes et en Ranged Low perdant contre le Free Air Dash, et sa défense encaissant mal le rushdown.",
+      "À l'inverse, ses capacités à longue portée rendent le combat contre Ultimecia plus abordable que pour la plupart des personnages de corps à corps."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Le build « High Initial EX » (effet Seal of Lufenia, arme Zwill Crossblade, panoplie Lufenian, Jecht ou Aerith en assist, Rubicante en summon) fait démarrer Terra avec la jauge EX remplie à 90 %. Sa génération d'EX étant l'un de ses points faibles, c'est un bon moyen de garantir l'accès à son puissant EX Mode en quelques interactions réussies : Meteor > Fire > Chase suffit à remplir la jauge sur hit, et un seul EX Core complète le reste au besoin. Extra abilities recommandées : First Strike, EX Critical Boost et Precision Evasion.",
+      "Le build « Side by Side » (effet Judgment of Lufenia, Max Booster x4,6, assist Jecht / Aerith / Sephiroth) empile les accessoires conditionnels (Empty EX Gauge, Summon Unused, Pre-EX Mode, Pre-EX Revenge, Together As One, Side By Side...) pour capitaliser sur la force de Terra en combos d'assist, avec le plan break > retour à la bravery de base > Wall Rush décrit dans le gameplan."
+    ],
+    "notes": "Les deux builds supposent l'utilisation de l'Equip Glitch (équipement « Gear ») et le coût total en CP en tient compte. Dans le build High Initial EX, le Red Gem (+5 % de dégâts) peut être remplacé librement selon le matchup ou le stage."
+  },
+  "assist": {
+    "asAssist": [
+      "En tant qu'assist, Terra est classée dans le tier Mid de la tier list assist (de Muggshotter). Ses données : Graviga en BRV au sol (183F, spawn sur le joueur, Wall Rush), Blizzara en BRV aérien (27F, spawn sur l'adversaire, Wall Rush), Flood en HP au sol (71F, Chase) et Meltdown en HP aérien (145F, Wall Rush). Les sources ne fournissent pas d'évaluation rédigée au-delà de ces données."
+    ],
+    "recommended": [
+      {
+        "name": "Jecht",
+        "why": "Assist de référence des deux builds documentés : après une confirmation, Terra vise break, retour à la bravery de base et Wall Rush ; près d'un mur, un Meltdown rapide peut s'insérer pendant l'assist Jecht avant Holy Combo."
+      },
+      {
+        "name": "Aerith",
+        "why": "Alternative à Jecht dans les deux builds documentés, avec le même plan de combo (break, reset de bravery, Wall Rush puis Holy Combo > Ultima)."
+      },
+      {
+        "name": "Kuja",
+        "why": "La section synergies indique que Terra fonctionne bien avec Aerith, Kuja et Jecht, sans plus de détail (les onglets dédiés sont vides dans les sources)."
+      }
+    ]
+  },
+  "communityTech": [],
+  "limits": [
+    "Page matchups à l'état d'ébauche (stub) : aucune analyse par personnage, seuls des repères issus de l'overview.",
+    "Section combos non documentée (sous-section Solo vide dans les sources).",
+    "Onglets de synergies d'assist (Jecht, Aerith, Kuja) vides : la recommandation n'est pas argumentée au-delà d'une phrase.",
+    "Aucune mécanique unique documentée pour Terra.",
+    "Aucune référence communautaire (section References vide), d'où un communityTech vide.",
+    "Startup inconnu pour Firaga et Ultima (« ? » dans les données) ; gain de jauge d'assist non renseigné pour tous les coups ; un variant aérien de Blizzard Combo est listé sans nom.",
+    "La liste des attaques équipées dans les builds n'est pas renseignée dans les tables extraites."
+  ]
+}

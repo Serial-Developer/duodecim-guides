@@ -1,0 +1,209 @@
+{
+  "tierList": {
+    "year": 2017,
+    "method": "\"The list is made up of MU values as half the weight, the other half from professional opinion. MU values are made up of frame data and recent tournament placement. Professional opinion is made up of player skill, the meta, and recent representation.\"",
+    "staff": "Ehx, Yunoa, Wheelz, JT, Blakklite, Dart",
+    "entries": [
+      {
+        "rank": 1,
+        "tier": "S",
+        "name": "Exdeath"
+      },
+      {
+        "rank": 2,
+        "tier": "S",
+        "name": "Prishe"
+      },
+      {
+        "rank": 3,
+        "tier": "S",
+        "name": "Ultimecia"
+      },
+      {
+        "rank": 4,
+        "tier": "A+",
+        "name": "Lightning"
+      },
+      {
+        "rank": 5,
+        "tier": "A+",
+        "name": "Squall"
+      },
+      {
+        "rank": 6,
+        "tier": "A+",
+        "name": "Jecht"
+      },
+      {
+        "rank": 7,
+        "tier": "A+",
+        "name": "Zidane"
+      },
+      {
+        "rank": 8,
+        "tier": "A",
+        "name": "Sephiroth"
+      },
+      {
+        "rank": 9,
+        "tier": "A",
+        "name": "Kuja"
+      },
+      {
+        "rank": 10,
+        "tier": "A",
+        "name": "Cloud"
+      },
+      {
+        "rank": 11,
+        "tier": "A",
+        "name": "Kefka"
+      },
+      {
+        "rank": 12,
+        "tier": "A",
+        "name": "Firion"
+      },
+      {
+        "rank": 13,
+        "tier": "A",
+        "name": "The Emperor"
+      },
+      {
+        "rank": 14,
+        "tier": "A",
+        "name": "Warrior of Light"
+      },
+      {
+        "rank": 15,
+        "tier": "B",
+        "name": "Onion Knight"
+      },
+      {
+        "rank": 16,
+        "tier": "B",
+        "name": "Golbez"
+      },
+      {
+        "rank": 17,
+        "tier": "B",
+        "name": "Kain"
+      },
+      {
+        "rank": 18,
+        "tier": "B",
+        "name": "Tidus"
+      },
+      {
+        "rank": 19,
+        "tier": "B",
+        "name": "Gilgamesh"
+      },
+      {
+        "rank": 20,
+        "tier": "B",
+        "name": "Gabranth"
+      },
+      {
+        "rank": 21,
+        "tier": "B",
+        "name": "Yuna"
+      },
+      {
+        "rank": 22,
+        "tier": "B",
+        "name": "Tifa"
+      },
+      {
+        "rank": 23,
+        "tier": "B",
+        "name": "Shantotto"
+      },
+      {
+        "rank": 24,
+        "tier": "B",
+        "name": "Garland"
+      },
+      {
+        "rank": 25,
+        "tier": "B",
+        "name": "Vaan"
+      },
+      {
+        "rank": 26,
+        "tier": "C",
+        "name": "Terra"
+      },
+      {
+        "rank": 27,
+        "tier": "C",
+        "name": "Cecil"
+      },
+      {
+        "rank": 28,
+        "tier": "C",
+        "name": "Cloud of Darkness"
+      },
+      {
+        "rank": 29,
+        "tier": "C",
+        "name": "Laguna"
+      },
+      {
+        "rank": 30,
+        "tier": "D",
+        "name": "Bartz"
+      }
+    ],
+    "note": "Feral Chaos non classé (absent de la liste tournoi 2017).",
+    "source": "https://dissidia.wiki/Tier_List_(Dissidia_012)"
+  },
+  "assistTierList": {
+    "author": "Muggshotter",
+    "tiers": {
+      "Top": [
+        "Kuja",
+        "Aerith",
+        "Jecht"
+      ],
+      "High": [
+        "Sephiroth",
+        "Tidus",
+        "Yuna",
+        "Onion Knight"
+      ],
+      "Mid": [
+        "Zidane",
+        "Gilgamesh",
+        "Terra",
+        "Vaan",
+        "The Emperor",
+        "Cecil",
+        "Kain",
+        "Exdeath",
+        "Golbez"
+      ],
+      "Low": [
+        "Ultimecia",
+        "Warrior of Light",
+        "Garland",
+        "Firion",
+        "Cloud of Darkness",
+        "Bartz",
+        "Kefka",
+        "Cloud",
+        "Tifa",
+        "Laguna",
+        "Squall",
+        "Prishe",
+        "Gabranth",
+        "Lightning"
+      ],
+      "Bottom": [
+        "Shantotto"
+      ]
+    },
+    "note": "Feral Chaos n'est pas disponible comme assist.",
+    "source": "https://dissidia.wiki/Tier_List_(Assist)"
+  }
+}

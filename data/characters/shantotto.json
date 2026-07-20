@@ -1,0 +1,882 @@
+{
+  "slug": "shantotto",
+  "name": "Shantotto",
+  "page": "Shantotto_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Shantotto_(Dissidia_012)",
+  "origin": "Final Fantasy XI",
+  "icon": "totto",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-totto.png",
+  "infobox": {
+    "Name": "Shantotto (シャントット)",
+    "Original game": "Final Fantasy XI",
+    "Base ATK (LV100)": "112 (Very High)",
+    "Base DEF (LV100)": "109 (Lowest)",
+    "Run Speed": "6 (Average / Good)",
+    "Dash Speed": "77 (Average / Good)",
+    "Fall Speed": "97 (Slow)",
+    "Fall Speed Ratio After Dodge": "43 (Slow)",
+    "Fastest BRV": "13F (Stun)",
+    "Fastest HP": "49F (Spirit Magic: Earth / Spirit Magic: Air)",
+    "1-Hit HP": "No",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "No",
+    "Weapon": "Poles Rods Staves",
+    "Armor": "Bangles Clothing Hairpins Hats Headbands Ribbons Robes",
+    "Exclusive weapons": "Jupiter's Staff Laevateinn Claustrum",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Megumi Hayashibara",
+    "Voice Actor (ENG)": "Candi Milo"
+  },
+  "sections": {
+    "overview": {
+      "documented": false,
+      "text": [],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Excellent conversion ability: Shantotto is able to turn almost any hit into HP damage with some execution, and further extend reliably with assists.\nHigh EX Force generation: All of Shantotto's HPs and Retribution build a high amount of EX Force, that further escalates with well executed combos.\nCan deny HP attack usage: An opponent being poisoned by Bio means they'll be instantly broken if they hit Shantotto with an HP attack. When not near loss, this can be used to effectively lock the opponent out of using them for a period of time.\nGood whiff punish game: Good mobility and startup on Stun to combo into HPs. A couple unconventional tools can make it scary to recklessly whiff attacks against her.",
+              "No wall rush HP: A lack of wall rush on any of Shantotto's HP attacks significantly cuts into the potential combo damage and how much she gets out of the high base brave sets she usually runs.\nExtreme Glutton vulnerability: Because all of the HP attacks Shantotto uses hit from a medium distance, the opponent will get priority when absorbing EX from her majority of the time, greatly reducing EX intake without build investment.\nAssist punish vulnerability: Because Retribution doesn't cover Shantotto's sides well, and every single one of her other attacks is Ranged, in practice almost every single attack Shantotto can use is vulnerable to raw assist.\nNo fast midair melee attack: This makes her both vulnerable to a large amount of attacks and pressure after a dodge'\nHuge recovery: In general the end lag on Shantotto's attacks is above average relative to the rest of the cast, this is especially bad on most of her HP Attacks."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Shantotto_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/ef/Brv_shantotto_a_couple_attacks.jpeg",
+              "damage": "7, 7, 16 (30)",
+              "startup": "19F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Triple two-handed strike with scepter, sending foe flying.",
+              "name": "A Couple Attacks",
+              "notes": "A straightforward 3 hits combo that has Shantotto leaping forward during the first hit and causes wall rush on the third.\nThe third hit wall rushes, and sends the opponent flying a fair distance horizontally at a low height so the opponent can't use aerial recovery, so it can"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c2/Brv_shantotto_stun_g.jpeg",
+              "damage": "-",
+              "startup": "13F",
+              "type": "-",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge, Attack (Hit)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Special] Cancel foe's attack. No attack strength, but instant. Different attack frees foe.",
+              "name": "Stun"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/ef/Brv_shantotto_bind_g.jpeg",
+              "damage": "-",
+              "startup": "65F",
+              "type": "",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Special] Make opponent unable to move. Foe is freed when hit by another attack.",
+              "name": "Bind"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/45/Brv_shantotto_bio_g.jpeg",
+              "damage": "4 x 11 (44)",
+              "startup": "33F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Darkness eats away at opponent's body, continuously stealing bravery for a set period.",
+              "name": "Bio"
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/1f/Brv_shantotto_retribution2.jpeg",
+              "damage": "15, 15 (30)",
+              "startup": "41F",
+              "type": "Physical",
+              "priority": "Melee Mid",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Spinning two-handed blow, hurling opponent forward.",
+              "name": "Retribution"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/fe/Brv_shantotto_stun_a.jpeg",
+              "damage": "-",
+              "startup": "13F",
+              "type": "-",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge, Attack (Hit)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Special] Cancel foe's attack. No attack strength, but instant. Different attack frees foe.",
+              "name": "Stun"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/b9/Brv_shantotto_bind_a.jpeg",
+              "damage": "-",
+              "startup": "65F",
+              "type": "",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Special] Make opponent unable to move. Foe is freed when hit by another attack.",
+              "name": "Bind"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/26/Brv_shantotto_bio_a.jpeg",
+              "damage": "4 x 11 (44)",
+              "startup": "33F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Darkness eats away at opponent's body, continuously stealing bravery for a set period.",
+              "name": "Bio"
+            }
+          ]
+        }
+      },
+      "moveCount": 8,
+      "sources": [
+        "https://dissidia.wiki/Shantotto_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Stone",
+                "Stonega",
+                "Quake"
+              ],
+              "image": "https://dissidia.wiki/images/7/7a/Hp_shantotto_earth_lv1.jpeg",
+              "damage": [
+                "16 (8, 8)",
+                "25 (5x5)",
+                "30 (6x5)"
+              ],
+              "startup": [
+                "49F",
+                "49F",
+                "49F"
+              ],
+              "type": [
+                "Magical",
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Mid",
+                "Ranged High",
+                "Ranged High"
+              ],
+              "exForce": [
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)"
+              ],
+              "effects": [
+                "-",
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Send boulders flying. Strength depends on bravery.",
+              "name": "Spirit Magic: Earth"
+            },
+            {
+              "variants": [
+                "Fire",
+                "Firaga",
+                "Flare"
+              ],
+              "image": "https://dissidia.wiki/images/f/f4/Hp_shantotto_fire_lv1.jpeg",
+              "damage": [
+                "12 (3 x 4)",
+                "18 (3 x 6)",
+                "24 (3 x 8)"
+              ],
+              "startup": [
+                "57F",
+                "57F",
+                "61F"
+              ],
+              "type": [
+                "Magical",
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Mid",
+                "Ranged High",
+                "Ranged High"
+              ],
+              "exForce": [
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)"
+              ],
+              "effects": [
+                "-",
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Shoot forth flame sphere. Strength depends on bravery.",
+              "name": "Spirit Magic: Fire"
+            },
+            {
+              "variants": [
+                "Thunder",
+                "Thundaga",
+                "Burst"
+              ],
+              "image": "https://dissidia.wiki/images/4/4a/Hp_shantotto_thunder_lv1.jpeg",
+              "damage": [
+                "12 (3 x 4)",
+                "16 (4 x 4)",
+                "20 (4 x 5)"
+              ],
+              "startup": [
+                "67F",
+                "71F",
+                "71F"
+              ],
+              "type": [
+                "Magical",
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Mid",
+                "Ranged High",
+                "Ranged High"
+              ],
+              "exForce": [
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)"
+              ],
+              "effects": [
+                "-",
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Call down lightning on foe. Strength depends on bravery.",
+              "name": "Spirit Magic: Thunder"
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Water",
+                "Waterga",
+                "Flood"
+              ],
+              "image": "https://dissidia.wiki/images/7/74/Hp_shantotto_water_lv1.jpeg",
+              "damage": [
+                "12 (3 x 4)",
+                "16 (4 x 4)",
+                "20 (5 x 4)"
+              ],
+              "startup": [
+                "59F",
+                "59F",
+                "59F"
+              ],
+              "type": [
+                "Magical",
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Mid",
+                "Ranged High",
+                "Ranged High"
+              ],
+              "exForce": [
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)"
+              ],
+              "effects": [
+                "-",
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Engulf opponent in water. Strength depends on bravery.",
+              "name": "Spirit Magic: Water"
+            },
+            {
+              "variants": [
+                "Aero",
+                "Aeroga",
+                "Tornado"
+              ],
+              "image": "https://dissidia.wiki/images/6/6e/Hp_shantotto_air_lv1.jpeg",
+              "damage": [
+                "10 (2 x 5)",
+                "14 (2 x 7)",
+                "18 (3 x 6)"
+              ],
+              "startup": [
+                "49F",
+                "49F",
+                "49F"
+              ],
+              "type": [
+                "Magical",
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Mid",
+                "Ranged High",
+                "Ranged High"
+              ],
+              "exForce": [
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)"
+              ],
+              "effects": [
+                "-",
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Batter foe w/violent winds. Strength depends on bravery.",
+              "name": "Spirit Magic: Air"
+            },
+            {
+              "variants": [
+                "Blizzard",
+                "Blizzaga",
+                "Freeze"
+              ],
+              "image": "https://dissidia.wiki/images/6/6e/Hp_shantotto_ice_lv1.jpeg",
+              "damage": [
+                "10 (2 x 5)",
+                "15 (3 x 5)",
+                "20 (5 x 4)"
+              ],
+              "startup": [
+                "69F",
+                "69F",
+                "69F"
+              ],
+              "type": [
+                "Magical",
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Mid",
+                "Ranged High",
+                "Ranged High"
+              ],
+              "exForce": [
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)",
+                "24~36 (Chain hit) 60 (HP hit)"
+              ],
+              "effects": [
+                "-",
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Hurl ice shards forwards. Strength depends on bravery.",
+              "name": "Spirit Magic: Ice"
+            }
+          ]
+        }
+      },
+      "moveCount": 6,
+      "sources": [
+        "https://dissidia.wiki/Shantotto_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Two-Hour Ability!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nManafont"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Manafont",
+          "text": [
+            "[Always active while in EX Mode] Bravery is instantly replenished after landing a successful HP attack."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Play Rough",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);\"></img>",
+            "A flurry of attacks leading to a blast of terribly strong magic. Select spells from the menu. Fire-Water-Thunder-Earth-Wind-Ice order deals maximal damage.",
+            "Play Rough requires inputting a series of spells via a separate menu that only appears during this EX Burst.",
+            "The correct order of the spells is: Flare > Flood > Burst > Quake > Tornado > Freeze.",
+            "The spells are listed vertically from top to bottom and the correct order is always available. The challenge here is finding Flare quickly; Its position is always shuffled, so it could be in the middle of the menu or at the top. Once you find Flare, the remaining sequence of inputs is always the same. Spell > down > spell > down etc. A down input will move the cursor to the top if it's at the bottom of the menu, so there's no need to worry about moving it to one side of the menu through quick button presses.",
+            "Each spell must be pressed twice with cross (<img></img>), first to highlight it and then to cast it. Players have roughly 5 seconds to complete this entire sequence; The camera will rotate around Shantotto and her opponent for one full rotation, and then zoom in on Shantotto at the end. Auto EX Command Ω trivialises this process, as one would expect.",
+            "This EX Burst has good damage output, if not above average. It doesn't scale with health like Cloud or Tidus, but is far from the weakest burst in the game."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "4, 3, 3, 10 (20)",
+                  "10 x 6, 20 (80) (100 total)",
+                  "Physical (first three hits), Magical (the rest)"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Shantotto_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Shantotto_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|Hybrid=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Equip Best Dresser extra ability for +100 base bravery.",
+        "|-|Build #2=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10478"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1444"
+            ],
+            [
+              "ATK",
+              "179"
+            ],
+            [
+              "DEF",
+              "181"
+            ],
+            [
+              "LUK",
+              "61"
+            ],
+            [
+              "Max Booster",
+              "x1.8"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: None",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Yuna"
+            ],
+            [
+              "Weapon <img></img>",
+              "Heaven's Cloud <img></img>"
+            ],
+            [
+              "Hand <img></img>",
+              "Hero's Shield <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Thornlet"
+            ],
+            [
+              "Body <img></img>",
+              "Maximillian <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> BRV = 0"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Blue Gem"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Glutton"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Hero's Seal"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Miracle Shoes"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Shantotto_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [
+        "Shantotto works well with Kuja, Yuna and Jecht assists."
+      ],
+      "tables": [],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Shantotto_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Shantotto_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Shantotto_(Dissidia_012)"
+  ]
+}

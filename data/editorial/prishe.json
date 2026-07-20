@@ -1,0 +1,108 @@
+{
+  "slug": "prishe",
+  "tagline": "Combattante rapide au corps à corps : hit and run sûr et guerre d'usure",
+  "archetype": "Rushdown défensif à chaînes de braveries",
+  "overview": [
+    "Prishe est une combattante rapide de courte portée dotée d'une variété de braveries melee qui s'enchaînent les unes dans les autres. Quand certaines braveries sont équipées ensemble, elles déclenchent une réaction « Skillchain » qui inflige des dégâts de bravery supplémentaires.",
+    "Prishe est connue pour son jeu défensif à faible risque au corps à corps. Raging Fists et One-Inch Punch s'y distinguent : startup rapide, recovery courte et bonne récompense sur hit. Menacez l'adversaire avec des frappes avançantes retardables, chargez One-Inch Punch pour écraser les blocks et esquivez s'ils manquent. Ses air dodges sont difficiles à punir grâce à sa vitesse de chute élevée, et sa vitesse de dash figure parmi les plus rapides du jeu, ce qui l'aide à poursuivre les adversaires et les EX Cores. Rapide, sûre et difficile à toucher, Prishe est l'exemple type du « hit and run » efficace dans Dissidia 012 : la patience est largement récompensée, car elle excelle dans la guerre d'usure.",
+    "Ses faiblesses sont plus nuancées. Ses braveries, difficiles à punir, ne peuvent pas être cancel en block ni en d'autres attaques, ce qui plafonne ses mind games défensifs — pourtant déjà efficaces. La plupart de ses attaques ont un tracking vertical médiocre et souffrent contre les longs disjoints actifs (Thunder Crest de The Emperor, Godspeed de Sephiroth). Ses 1-hit HP sont situationnelles dans les situations d'échec et mat en EX Revenge, et elle subit un dilemme de slots de bravery similaire à celui de Vaan, vu l'abondance de chaînes de combos viables.",
+    "En jeu compétitif, Prishe a fréquemment été classée parmi les personnages les plus forts du jeu. Sa stratégie est constante et relativement simple à exécuter dans la plupart des matchups, ce qui en fait un choix notable pour les blind picks. Elle offre un jeu stable aux compétiteurs, même quand elle n'a pas un avantage net."
+  ],
+  "tierNote": "Classée 2e du jeu (tier S) dans la tier list compétitive 2017, derrière Exdeath. L'overview confirme qu'elle est fréquemment considérée comme l'un des personnages les plus forts, avec une stratégie constante et facile à exécuter.",
+  "strengths": [
+    "Mobilité : vitesse de dash très élevée, forte en offense comme dans les courses aux EX Cores ; chute rapide après air dodge, donc esquives bien plus sûres que la moyenne.",
+    "Turtling : braveries rapides à recovery courte et fort potentiel de mixup grâce au One Inch Punch chargé de haute priorité ; elle combat avec très peu de risque et devient difficile à toucher.",
+    "Sûre et fiable : sa défense et sa synergie avec l'assist Aerith lui permettent de jouer le long terme, en accumulant jauge EX et bravery.",
+    "Gros dégâts de bravery : malgré une base ATK faible, One Inch Punch chargé et les combos en EX Mode font très mal, surtout après un guard break."
+  ],
+  "weaknesses": [
+    "HP attacks médiocres : comparées à ses braveries, elles ont un tracking et une couverture pauvres.",
+    "Base DEF faible : quand Prishe se fait toucher, cela fait très mal.",
+    "Dilemme des trois slots : ses loadouts compétitifs sont forts mais ne peuvent pas tout couvrir.",
+    "Échecs et mat en EX Revenge : ses 1-hit HP sont situationnelles au mieux (Nullifying Dropkick au sol, Banishga à portée maximale en l'air) ; elle s'en remet au déplacement et à l'assist.",
+    "Dépendance aux dodge cancels : surtout sensible à haut niveau, cela limite son potentiel maximal de mixup et punit les whiffs incessants dans les courses aux EX Cores."
+  ],
+  "moveNotes": {
+    "Combo (One)": "Combo rapide de trois coups de poing, la bravery la plus rapide de Prishe (11 frames). Peut s'enchaîner dans une autre bravery et combote même sans toucher. Si la chaîne démarre par Combo, le finisher rapporte environ 10 % d'EX Force en plus.",
+    "Howling Fist (One)": "Charge aux poings à mi-distance, chaînable dans une autre bravery. Chargée, elle passe de Melee Low à Melee Mid et double les dégâts.",
+    "Dragon Kick (One)": "Balayage de jambe à mi-distance ; charger ajoute un hit supplémentaire (projectile Ranged Mid) et porte les dégâts de 15 à 25.",
+    "Shoulder Tackle (One)": "Backflip puis charge sur l'adversaire, avec esquive de l'attaque adverse au démarrage (effet Dodge). Startup lent (45 frames).",
+    "Banish": "Projectile Ranged Low au sol : perles de lumière à haute vélocité tirées à longue portée. Ne déclenche pas de Skillchain.",
+    "Backhand Blow (One)": "Revers descendant Melee High (29 frames), utile pour attaquer depuis le dessus.",
+    "Spinning Attack (One)": "Ruée ascendante aux poings avec effet Absorb, idéale pour attaquer depuis le dessous.",
+    "Raging Fists (One)": "Combo de cinq coups de poing en 13 frames qui combote même sans toucher : l'un des piliers de son jeu défensif rapproché (startup rapide, recovery courte, bonne récompense sur hit).",
+    "One Inch Punch (One)": "Éclats d'énergie martelés au corps à corps, 13 frames en version normale. Chargée, elle devient Melee High à 35 de dégâts : c'est l'outil qui écrase les blocks et porte son potentiel de mixup.",
+    "Holy": "Projectile aérien Ranged Low à longue portée : perles de lumière lentes mais à fort homing. Ne déclenche pas de Skillchain.",
+    "Combo (Two)": "Version follow-up de Combo : mêmes données d'attaque, mais 75 d'EX Force (le meilleur rendement EX de ses follow-ups) et effet Chase, pour 10 CP seulement.",
+    "Howling Fists (Two)": "Follow-up de chaîne : 60 d'EX et Chase en version normale, Wall Rush en version chargée. Utilisée comme finisher, la charge requise est considérablement plus courte.",
+    "Dragon Kick (Two)": "Follow-up avec Chase dans les deux versions, 60 d'EX en normale et 75 en chargée.",
+    "Shoulder Tackle (Two)": "Follow-up en body slam avec Wall Rush, sans EX Force.",
+    "Backhand Blow (Two)": "Follow-up en revers Melee High avec Wall Rush : d'après la section Skillchain, ses finishers sont excellents pour poser des combos avec l'assist Kuja.",
+    "Spinning Attack (Two)": "Follow-up en ruée ascendante avec Wall Rush, sans EX Force.",
+    "Raging Fists (Two)": "Follow-up du combo de cinq coups avec Chase et 72 d'EX Force.",
+    "One Inch Punch (Two)": "Follow-up avec Wall Rush dans les deux versions (aucune EX Force). En finisher, la charge requise est considérablement plus courte ; le timing exact n'est pas documenté.",
+    "Asuran Fists": "HP attack au corps à corps Melee High (43 frames, à égalité la plus rapide de ses HP attacks) avec Wall Rush : charge brève puis martèlement, efficace à toute hauteur.",
+    "Nullifying Dropkick": "Dropkick chargé Melee High à mi-distance avec Wall Rush : démarrage lent (49 frames) mais bonne portée. C'est sa 1-hit HP au sol, citée comme situationnelle pour résoudre les checkmates en EX Revenge.",
+    "Auroral Uppercut": "Uppercut rapide Melee High (43 frames) avec Wall Rush, excellent pour attaquer depuis le dessous.",
+    "Banishga": "Onde de choc de lumière Ranged High (47 frames) avec Wall Rush, efficace horizontalement. À portée maximale, elle sert de 1-hit HP en l'air, là aussi situationnelle."
+  },
+  "exMode": {
+    "summary": [
+      "L'EX Mode « Two-Hour Ability! » confère Regen, Critical Boost et Hundred Fists : tant que l'EX Mode est actif, Prishe peut chaîner jusqu'à trois weapon skills et sa vitesse de déplacement augmente. Ses statistiques de mobilité passent d'ailleurs toutes un cran au-dessus en EX Mode (run, dash, chute et chute après esquive)."
+    ],
+    "burst": "« The Five Lights » : Prishe lance un éclat de Magicite, puis il faut entrer les commandes affichées dans le sens horaire pour augmenter le nombre de coups portés."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "Quand certaines braveries sont enchaînées, Prishe active une Skillchain : une explosion d'énergie qui inflige des dégâts de bravery additionnels (multiplicateur 5, physique, sans EX Force), déclenchée en parallèle de l'attaque en cours. Son nom s'affiche en haut de l'écran, comme les HP attacks et les activations d'EX Mode.",
+      "Les Skillchains ne s'activent qu'avec des chaînes de braveries physiques : Banish, Holy et les HP attacks n'en déclenchent jamais."
+    ],
+    "details": [
+      "Huit Skillchains sont répertoriées avec leurs couples starter/finisher : Compression (Howling Fist > One Inch Punch), Detonation (Combo, Howling Fist, One Inch Punch, Raging Fists, Shoulder Tackle ou Spinning Attack > Backhand Blow), Fusion (Spinning Attack > Combo, Howling Fist, Raging Fists, Shoulder Tackle ou Spinning Attack), Gravitation (Backhand Blow > One Inch Punch), Impaction (Shoulder Tackle > Combo, Howling Fist, Raging Fists, Shoulder Tackle ou Spinning Attack), Liquefaction (Combo, Howling Fist ou Raging Fists > Spinning Attack), Reverberation (Howling Fist > Shoulder Tackle) et Transfixion (One Inch Punch > Howling Fist).",
+      "Detonation est l'une des plus pratiques : les finishers Backhand Blow posent très bien les combos avec l'assist Kuja et la Skillchain part de ses starters les plus courants. Le finisher Howling Fist offre plus de flexibilité pour monter des combos assist aériens (Chase ou Wall Rush), au prix de dégâts de bravery ou d'EX Force selon le niveau de charge.",
+      "Les Skillchains restent souvent le troisième meilleur choix de follow-up : bonnes sur certains sets axés dégâts de bravery, mais sinon surclassées en récompense ou en utilité par ses autres follow-ups. Prishe ne peut assigner qu'une chaîne de bravery par slot, ce qui restreint leur viabilité globale. En revanche, le timing d'input pour connecter les attaques chargées y est plus permissif — non pas grâce au système lui-même, mais par la synergie (frame data et hit stun) entre les braveries d'une chaîne."
+    ]
+  },
+  "gameplan": [
+    "La boucle de jeu de Prishe est un hit and run défensif au corps à corps : menacer avec des frappes avançantes retardables (Raging Fists, One Inch Punch en 13 frames), charger One Inch Punch pour écraser les blocks, et se retirer d'une esquive quasi impunissable si l'adversaire ne mord pas. Sa vitesse de dash parmi les plus élevées du jeu lui permet de poursuivre les fuyards et de gagner les courses aux EX Cores. La patience paie : elle est taillée pour la guerre d'usure, en empilant jauge EX et bravery grâce à sa défense et à sa synergie avec l'assist Aerith.",
+    "Ses braveries s'enchaînent : les versions (One) démarrent la chaîne, les follow-ups (Two) décident de la suite — Chase et gros gains d'EX (Combo, Raging Fists, Dragon Kick) ou Wall Rush pour poser l'assist (Backhand Blow, One Inch Punch, Spinning Attack, Shoulder Tackle). Les finishers Backhand Blow préparent particulièrement bien les combos avec l'assist Kuja, et les Skillchains ajoutent des dégâts bonus sur certains sets. Attention au dilemme des slots : une seule chaîne par slot de bravery, donc pas de couverture complète.",
+    "Ses HP attacks au tracking médiocre restent le maillon faible : Asuran Fists et Auroral Uppercut sont ses plus rapides (43 frames, Wall Rush), Nullifying Dropkick et Banishga à portée maximale servent de 1-hit HP situationnelles pour les checkmates en EX Revenge — sinon, déplacement et assist font le travail. En EX Mode, Hundred Fists permet de chaîner jusqu'à trois weapon skills et accélère encore sa mobilité, et les combos EX Mode infligent de gros dégâts de bravery, surtout après un guard break."
+  ],
+  "advancedTech": null,
+  "matchups": {
+    "summary": [
+      "La page matchups du wiki est un stub, mais l'overview donne des repères : la stratégie de Prishe est constante et relativement simple à exécuter dans la plupart des matchups, ce qui en fait un choix notable en blind pick — elle reste solide même sans avantage net. Ses points de friction documentés : les longs disjoints actifs comme le Thunder Crest de The Emperor ou le Godspeed de Sephiroth, contre lesquels ses attaques au tracking vertical médiocre souffrent."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Ses builds se concentrent habituellement sur l'EX et les dégâts de bravery. Le build documenté (« Adamant Chains ») mise sur l'effet spécial Adamant Chains — dégâts, absorption d'EX et air dodges encore plus sûrs — avec l'assist Aerith, l'arme Cleaver, le set Adamant (Shield, Helm, Vest) et des accessoires orientés boosters (Hyper Ring, Muscle Belt, Dismay Shock, Battle Hammer, Summon Unused, trois White Drop, White Gem, Glutton), Rubicante en summon. Il s'appuie sur l'Equip Glitch (le coût total en CP le suppose réalisé).",
+      "Side by Side est déconseillé sur Prishe à cause de ses HP attacks moyennes et de son absence de combo solo vers une HP attack."
+    ],
+    "notes": "Les emplacements de braveries et de HP attacks du build ne sont pas renseignés dans les données, et le second build (« Build #2 ») est un gabarit vide."
+  },
+  "assist": {
+    "asAssist": [
+      "En tant qu'assist, Prishe est classée dans le tier Low de la tier list assist de Muggshotter. Les sources de sa page ne détaillent pas son usage en assist au-delà de ce classement."
+    ],
+    "recommended": [
+      {
+        "name": "Aerith",
+        "why": "Sa synergie avec Aerith est citée dans ses forces : défense et assist Aerith lui permettent de jouer le long terme en accumulant jauge EX et bravery. C'est aussi l'assist du build Adamant Chains documenté."
+      },
+      {
+        "name": "Kuja",
+        "why": "Citée par la page parmi les assists qui fonctionnent bien avec elle ; la section Skillchain précise que les finishers Backhand Blow posent très bien les combos avec l'assist Kuja."
+      }
+    ]
+  },
+  "communityTech": [],
+  "limits": [
+    "La page matchups du wiki est un stub : aucune analyse détaillée par personnage (seuls les exemples cités dans l'overview ont pu être repris).",
+    "Aucune section combos renseignée (sous-section Solo vide) : pas de routes de combo détaillées au-delà des mentions de l'overview et de la section Skillchain.",
+    "Le timing exact de la charge raccourcie de One Inch Punch (Two) en finisher est explicitement non documenté dans les sources.",
+    "Aucune technique avancée spécifique nommée en dehors des Skillchains (traitées dans uniqueMechanics) : advancedTech laissé à null.",
+    "Le second build (« Build #2 ») est un gabarit vide et les slots d'attaques du build principal ne sont pas renseignés.",
+    "Valeurs d'assist gain absentes des tableaux de coups ; section References vide : communityTech laissé vide."
+  ]
+}

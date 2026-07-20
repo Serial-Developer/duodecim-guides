@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bartz Klauser — Guide Dissidia 012 [duodecim]</title>
+<meta name="description" content="Guide compétitif français de Bartz Klauser dans Dissidia 012 [duodecim] Final Fantasy : frame data, plan de jeu, builds, assists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/main.css">
+
+</head>
+<body>
+<nav class="guide-top" aria-label="Sections du guide"><div class="chips-nav">
+<a href="../index.html">← Sélection</a>
+<a href="#overview">Vue d'ensemble</a><a href="#moves">Coups</a><a href="#unique">Mécanique unique</a><a href="#gameplan">Plan de jeu</a><a href="#matchups">Matchups</a><a href="#builds">Builds</a><a href="#assist">Assists</a><a href="#community">Tech communautaire</a><a href="#sources">Sources</a>
+</div></nav>
+<div class="guide-layout">
+<nav class="guide-toc" aria-label="Sommaire"><ol>
+<li><a href="../index.html" class="backlink">← Sélection</a></li>
+<li><a href="#overview">Vue d'ensemble</a></li><li><a href="#moves">Coups</a></li><li><a href="#unique">Mécanique unique</a></li><li><a href="#gameplan">Plan de jeu</a></li><li><a href="#matchups">Matchups</a></li><li><a href="#builds">Builds</a></li><li><a href="#assist">Assists</a></li><li><a href="#community">Tech communautaire</a></li><li><a href="#sources">Sources</a></li>
+</ol></nav>
+<main class="guide-main">
+<section class="hero" id="hero">
+<img class="portrait" src="../assets/portraits/bartz-klauser.png" alt="Portrait officiel de Bartz Klauser dans Dissidia 012 [duodecim]">
+<div class="hero-id">
+<p class="origin">Final Fantasy V</p>
+<h1>Bartz Klauser</h1>
+<p class="tagline">Mime au sol solide, trahi par un jeu aérien lent et un zoning fragile</p>
+<div class="chips"><span class="chip ">BRV la + rapide <b>13F (Solid Ascension)</b></span><span class="chip ">HP la + rapide <b>15F (Goblin Punch, EX)39F (Hellfire)</b></span><span class="chip ">Dash <b>77F (Average / Good)</b></span><span class="chip ">ATK <b>110</b></span><span class="chip ">DEF <b>111</b></span><span class="chip ok">HP 1 coup <b>Oui</b></span><span class="chip ok">HP links <b>Oui</b></span></div>
+</div>
+</section>
+<section id="overview"><h2>Vue d'ensemble</h2>
+<p>Bartz Klauser est le protagoniste insouciant de Final Fantasy V. Dans Dissidia 012, il incarne la classe Mime de son jeu d'origine : son moveset est entièrement emprunté aux autres Guerriers de Cosmos.</p>
+<p>Le tableau de forces et faiblesses du wiki dresse un portrait contrasté : un jeu au sol solide, avec des pokes rapides et des HP attacks qui couvrent bien l'espace au-dessus de lui, et des builds créatifs grâce aux boosts passifs de ses coups copiés. En face, un jeu aérien qui, bien que correct en soi, est souvent surclassé par de nombreux personnages : ses pokes aériens lents et punissables compliquent la génération de jauge d'assist en sécurité, son zoning est faible — Holy inflige de lourds dégâts et offre un excellent Link BRV vers HP, mais sa priorité Ranged Low se retourne facilement contre lui — et sa génération d'EX Force est médiocre.</p>
+<p><strong>Tier list 2017 (tournoi, dissidia.wiki)</strong> : <span class="badge prio-melee-high">D</span> — 30ᵉ sur 30. Bartz ferme la marche de la tier list 2017 : tier D, 30e sur 30. L'overview ne commente pas ce classement, mais les faiblesses documentées (air game surclassé, pokes aériens lents, zoning et EX Force faibles) vont dans le même sens.</p>
+<div class="two-col">
+<div class="card strengths"><h3>Forces</h3><ul><li>Jeu au sol solide : pokes rapides et HP attacks couvrant bien l'espace au-dessus de lui.</li><li>Solid Ascension : startup de 13F, meilleurs dégâts au sol (50 de base), près d'un dixième de jauge EX par touche et construction d'assist fiable.</li><li>Boosts passifs des coups copiés (Speed Boost, EX Intake, Physical Shield…) exploitables pour des builds créatifs.</li><li>Holy peut link dans Flare pour des dégâts importants, et le Link Glitch facilite grandement les confirms.</li><li>Reel Impulse : plus longue portée de ses coups au sol, priorité haute imblocable en garde normale, et +1m d'EX Intake cumulable.</li><li>Goblin Punch en EX Mode : startup de 15F, Unblockable, dégâts massifs à niveau égal.</li></ul></div>
+<div class="card weaknesses"><h3>Faiblesses</h3><ul><li>Jeu aérien moyen en soi et souvent surclassé par le reste du cast.</li><li>Pokes aériens lents et punissables : générer de la jauge d'assist en sécurité est difficile — Rush Impact (19F) est pourtant son coup aérien le plus rapide.</li><li>Zoning faible : Holy (Ranged Low) est déviée par un simple Free Air Dash, ses orbes persistantes peuvent revenir frapper Bartz et le coup est assist-punissable.</li><li>Faible génération d'EX Force globale.</li><li>Reel Impulse a une recovery extrêmement longue, punissable de multiples façons.</li><li>Solid Ascension a une portée horizontale et verticale très courte : il faut être collé à l'adversaire.</li></ul></div>
+</div>
+<h3>Stats &amp; vitesses</h3>
+<div class="table-scroll"><table class="stats"><tr><th>Nom</th><td>Bartz Klauser (バッツ・クラウザー)</td></tr><tr><th>Jeu d'origine</th><td>Final Fantasy V</td></tr><tr><th>ATK de base (LV100)</th><td>110 (Average)</td></tr><tr><th>DEF de base (LV100)</th><td>111 (Average)</td></tr><tr><th>Vitesse de course</th><td>6 (Average / Good)</td></tr><tr><th>Vitesse de dash</th><td>77F (Average / Good)</td></tr><tr><th>Vitesse de chute</th><td>89F (Below Average)</td></tr><tr><th>Chute après esquive</th><td>39F (Average)</td></tr><tr><th>BRV la plus rapide</th><td>13F (Solid Ascension)</td></tr><tr><th>HP la plus rapide</th><td>15F (Goblin Punch, EX)39F (Hellfire)</td></tr><tr><th>HP en 1 coup</th><td>Yes (Multiple)</td></tr><tr><th>HP links</th><td>Yes</td></tr><tr><th>Command block</th><td>No</td></tr><tr><th>Armes</th><td>All</td></tr><tr><th>Armures</th><td>All</td></tr><tr><th>Armes exclusives</th><td>Chocoblade, Dayspring, Dorgann's Blade</td></tr><tr><th>Camp</th><td>Cosmos</td></tr><tr><th>Doubleur (JP)</th><td>Sōichirō Hoshi</td></tr><tr><th>Doubleur (ENG)</th><td>Jason Spisak</td></tr></table></div>
+<figure class="diagram" role="img" aria-label="Profil de mobilité comparé à la moyenne du cast">
+<figcaption>Profil de mobilité (mode normal)</figcaption>
+<div class="table-scroll"><svg viewBox="0 0 720 174" xmlns="http://www.w3.org/2000/svg" style="min-width:480px">
+<title>Profil de mobilité : valeurs du personnage (barres) contre moyenne du cast (trait or)</title>
+<text x="142" y="29" fill="var(--text)" font-size="12" text-anchor="end">Course</text><rect x="150" y="18" width="29.89741084513923" height="18" rx="3" fill="var(--violet)"><title>Course : 6 (moyenne du cast : 7.3)</title></rect><line x1="186.2921348314607" y1="14" x2="186.2921348314607" y2="38" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 7.3</title></line><text x="185.89741084513923" y="29" fill="var(--muted)" font-size="11">6</text><text x="142" y="63" fill="var(--text)" font-size="12" text-anchor="end">Dash</text><rect x="150" y="52" width="383.6834391792868" height="18" rx="3" fill="var(--violet)"><title>Dash : 77 (moyenne du cast : 78.5)</title></rect><line x1="541.3989000425485" y1="48" x2="541.3989000425485" y2="72" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 78.5</title></line><text x="539.6834391792868" y="63" fill="var(--muted)" font-size="11">77</text><text x="142" y="97" fill="var(--text)" font-size="12" text-anchor="end">Chute</text><rect x="150" y="86" width="443.47826086956525" height="18" rx="3" fill="var(--violet)"><title>Chute : 89 (moyenne du cast : 83.5)</title></rect><line x1="565.9062042012702" y1="82" x2="565.9062042012702" y2="106" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 83.5</title></line><text x="599.4782608695652" y="97" fill="var(--muted)" font-size="11">89</text><text x="142" y="131" fill="var(--text)" font-size="12" text-anchor="end">Chute post-esquive</text><rect x="150" y="120" width="194.333170493405" height="18" rx="3" fill="var(--violet)"><title>Chute post-esquive : 39 (moyenne du cast : 33.5)</title></rect><line x1="316.8468411680351" y1="116" x2="316.8468411680351" y2="140" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 33.5</title></line><text x="350.33317049340496" y="131" fill="var(--muted)" font-size="11">39</text>
+</svg></div>
+<p class="mv-desc">Valeurs brutes du wiki (page personnage) — <strong>plus la valeur est basse, plus le personnage est rapide</strong>. Trait pointillé or : moyenne des 31 personnages.</p>
+</figure>
+</section>
+<section id="moves"><h2>Coups</h2>
+
+<h3 style="color:var(--gold)">Braveries</h3>
+<h3>Au sol</h3>
+
+<details class="move">
+<summary><span class="mv-name">Blade Crash</span>
+<span class="mv-meta">23</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Copié de Lightning et Vaan : deux coups de Blazefire Saber puis une traversée au katana. Coup lent (23F) mais qui avance légèrement, bon pour attraper un whiff à portée ; facilement blocable et punissable si lancé sans réfléchir. Bonne génération d'EX Force (90) — à arbitrer avec Hazard Raid. Chaque Blade Crash équipé ajoute 8 % de vitesse de course (Speed Boost).</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">8, 7, 6, 1 x 4, 15 (40)</span></td></tr><tr><th>Startup</th><td><span class="mono">23</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">90</span></td></tr><tr><th>Effets</th><td>Chase, Minor Speed Boost</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Reel Impulse</span>
+<span class="mv-meta">47</span><span class="badge prio-ranged">Ranged High (Axe), Melee Low (Dagger)</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Copié de Firion et Zidane : jet de hache qui ramène l'adversaire puis taillades. La hache offre la plus longue portée de ses coups au sol et sa priorité haute (Ranged High) ne se bloque pas en garde normale, ouvrant des assist punishes sur dodge raté. L'effet EX Intake +1m se cumule (deux Reel Impulse = +2m, presque une Heaven's Cloud). Revers majeur : recovery extrêmement longue et vulnérabilité aux assist punishes — ne le lancez qu'avec au moins une barre d'assist. À bout portant, le landing lag permet un dodge cancel vers Blade Crash pour un combo solo.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">7, 7, 3 x 3, 4, 16 (43)</span></td></tr><tr><th>Startup</th><td><span class="mono">47</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High (Axe), Melee Low (Dagger)</span></td></tr><tr><th>EX Force</th><td><span class="mono">27</span></td></tr><tr><th>Effets</th><td>Wall Rush, EX Intake Range +1m</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">35 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Hazard Raid</span>
+<span class="mv-meta">27</span><span class="badge prio-melee-low">Melee low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Copié de Cloud et Tifa : la charge du Climhazzard suivie du Beat Rush. Bon distance closer, mais il hérite des défauts du Climhazzard et troque son Wall Rush contre un Chase. Peu d'intérêt en build Side by Side face à Reel Impulse ; en build EX, sa génération d'EX Force (90) est le principal argument, mais le coup reste lent et rarement utilisé.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">3 x 4, 5, 8, 10 (35)</span></td></tr><tr><th>Startup</th><td><span class="mono">27</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee low</span></td></tr><tr><th>EX Force</th><td><span class="mono">90</span></td></tr><tr><th>Effets</th><td>Chase, Chase bravery damage +10 %</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Solid Ascension</span>
+<span class="mv-meta">13</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Copié de Squall et du Warrior of Light : sa meilleure bravery au sol. Startup extrêmement rapide (13F), meilleurs dégâts au sol, quasi un dixième de jauge EX par touche et construction d'assist fiable qui le protège des assist punishes. Contrepartie : portée horizontale et verticale très faible, il faut être collé à l'adversaire et le coup punit mal les approches aériennes — ses HP anti-air compensent.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">4, 5, 6, 7, 5, 7, 16 (50)</span></td></tr><tr><th>Startup</th><td><span class="mono">13</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">96</span></td></tr><tr><th>Effets</th><td>Chase, Wall Rush, Minor Physical Shield</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3>En l’air</h3>
+
+<details class="move">
+<summary><span class="mv-name">Holy</span>
+<span class="mv-meta">37</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Copié de Terra : son outil de zoning de fait, cinq orbes homing à bons dégâts unitaires qui punissent à longue distance, sanctionnent les dodges excessifs et forcent à bloquer chaque orbe — un misblock peut coûter très cher, d'autant que Holy link dans Flare. Le Link Glitch (relancer Holy avant l'impact de la première salve) rend les confirms bien plus faciles et gonfle les dégâts au-delà de la normale. Mais le coup est très lent au startup (37F), déviée par un Free Air Dash, assist-punissable, et les orbes persistantes peuvent revenir frapper Bartz après sa propre touche : quand ça marche c'est excellent, sinon c'est son pire choix.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">each (8)</span></td></tr><tr><th>Startup</th><td><span class="mono">37</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Chase, Minor Jump Boost</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Rush Impact</span>
+<span class="mv-meta">19</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Copié de Kain et Lightning : son coup aérien le plus rapide, et pourtant lent pour un poke (19F, comparable au Slashing Blow de Cloud). Un peu de portée et un combo assist facile, mais prévisible, médiocre en approche comme sur whiff, avec une fenêtre de dodge cancel tardive : c'est le symbole de son air game laborieux.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">6, 8, 16 (30)</span></td></tr><tr><th>Startup</th><td><span class="mono">19</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush, Jump Times Boost</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Slide Shooter</span>
+<span class="mv-meta">25</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Copié de Tidus et Kain : gap closer et outil d'appoint pour générer de l'assist. Fenêtres d'input généreuses et bon hit stun rendent la confirmation d'un combo assist facile, même sans Wall Rush au plafond. Sur un input neutre + Cercle, le Lock Off permet de générer de l'assist en sécurité un peu plus longtemps. Comme le Full Slide de Tidus, le ralenti d'un appel d'assist augmente fortement son tracking vertical — stratégie à réserver aux punishs et aux approches sûres, et qui repose sur l'assist Aerith, avec les sacrifices que cela implique.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">1 x 6, 5, 6, 3, 3, 5, 12 (40)</span></td></tr><tr><th>Startup</th><td><span class="mono">25</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush, Wall Rush Bravery damage +30 %</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+
+<h3 style="color:var(--gold)">Attaques HP</h3>
+<h3>Au sol</h3>
+
+<details class="move">
+<summary><span class="mv-name">Hellfire</span>
+<span class="mv-meta">39</span><span class="badge prio-ranged">Melee (Claw) / Ranged High (Pillars)</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Invoque Ifrit et ses piliers de feu (39F au sol) ; la génération d'EX augmente avec le nombre de piliers qui touchent.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">10 (10)</span></td></tr><tr><th>Startup</th><td><span class="mono">39</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Melee (Claw) / Ranged High (Pillars)</span></td></tr><tr><th>EX Force</th><td><span class="mono">60~150</span></td></tr><tr><th>Effets</th><td>Wall</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Dark Flame</span>
+<span class="mv-meta">53</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Plante l'épée au sol pour des gerbes de feu noir (53F, Ranged High) qui traquent l'adversaire jusque dans les airs et à travers les murs.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">53</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush, Minor Ground Evasion Boost</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3>En l’air</h3>
+
+<details class="move">
+<summary><span class="mv-name">Ragnarok Blade</span>
+<span class="mv-meta">45</span><span class="badge prio-melee-high">Melee High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Longue lame d'énergie tranchée comme une épée (45F, Melee High, Wall Rush), avec +5 % de dégâts HP sur Wall Rush.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">45</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush, Wall Rush HP damage +5%</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Luminous Shard</span>
+<span class="mv-meta">61</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Lame de lumière projetée à longue portée (61F, Ranged High), assortie d'un Minor Midair Evasion Boost.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">61</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">60</span></td></tr><tr><th>Effets</th><td>Minor Midair Evasion Boost</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Flare</span>
+<span class="mv-meta">?</span><span class="badge prio-melee-low">Unblockable (?)</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>HP Link accessible depuis Holy : trois rayons convergent pour piéger l'adversaire puis exploser. C'est la récompense qui rend Holy si dangereuse quand elle touche.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">1 x 12 (12)</span></td></tr><tr><th>Startup</th><td><span class="mono">?</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Unblockable (?)</span></td></tr><tr><th>EX Force</th><td><span class="mono">96</span></td></tr><tr><th>Effets</th><td>Minor Magic Shield</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3 style="color:var(--gold)">EX Mode: Job Mastered! &amp; EX Burst</h3>
+<p>EX Mode « Job Mastered! » : Regen, Critical Boost et l'ajout du HP Goblin Punch. Les sources le qualifient d'EX Mode générique, dont l'intérêt principal est justement Goblin Punch.</p>
+<p>Goblin Punch (R + Carré, 15F, Magical, Unblockable, Wall Rush) : un excellent coup de mêlée au startup très rapide, qui inflige de solides dégâts si la cible est du même niveau que Bartz (8 x 5). Sa portée est faible : à ne pas lancer à la légère sous peine de punish.</p>
+<p><strong>EX Burst :</strong> « Master Mime » : Bartz ajoute la force de ses alliés à ses propres talents pour une série de coups magistraux — chaque direction (haut, bas, gauche, droite) correspond à un hit.</p>
+
+</section>
+<section id="unique"><h2>Mécanique unique</h2>
+<div class="banner" data-undocumented="1"><strong>Section non documentée sur dissidia.wiki à ce jour — à compléter.</strong> <a href="https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)" rel="external noopener">Page wiki du personnage</a> — pas de section « Unique Mechanics » dédiée ; le cas échéant, la mécanique du personnage est couverte dans la vue d'ensemble et les coups.</div>
+</section>
+<section id="gameplan"><h2>Plan de jeu &amp; techniques avancées</h2>
+<p>Bartz joue au sol. Solid Ascension est le pivot : assez rapide (13F) pour punir les coups lents à portée, il inflige les meilleurs dégâts au sol, génère beaucoup d'EX Force et construit la jauge d'assist de façon fiable — de quoi garder au moins une barre pour se protéger des assist punishes ou convertir soi-même. Sa portée minuscule impose d'être collé à l'adversaire ; les approches aériennes se gèrent plutôt avec ses HP attacks qui couvrent bien l'espace au-dessus de lui (Hellfire, Dark Flame).</p>
+<p>À distance, tout passe par Holy : punishs longue portée, sanction des dodges, pression sur le block orbe par orbe, et surtout le link vers Flare — facilité par le Link Glitch — qui apporte dégâts et touches HP. Mais la moindre approche en Free Air Dash dévie les orbes et les retourne contre lui : ne spammez pas Holy quand l'adversaire a une barre d'assist ou l'espace pour dasher.</p>
+<p>Reel Impulse complète le kit au sol : plus longue portée, priorité haute qui force le dodge (et ouvre l'assist punish sur dodge raté), et EX Intake +1m cumulable pour les builds EX. Sa recovery interminable en fait toutefois un coup à ne lancer qu'avec une barre d'assist en réserve. En l'air, contentez-vous du minimum : Rush Impact pour les confirms d'assist, Slide Shooter comme gap closer et générateur d'assist, en exploitant ses fenêtres d'input généreuses.</p>
+<p>Côté ressources, les sources orientent vers Kuja et Jecht comme assists (startup rapide des follow-ups, potentiel de dégâts sur les setups Holy -&gt; Flare), l'assist Aerith n'étant justifiée que pour la stratégie de tracking renforcé de Slide Shooter. En EX Mode, Goblin Punch (15F, Unblockable) devient une menace de punish majeure à courte portée.</p>
+<h3>Techniques spécifiques</h3><div class="card"><h3 style="margin-top:0">Link Glitch (Holy)</h3><p>Lancez Holy à distance, puis relancez un second Holy avant que la première salve ne touche : la première ne disparaît pas et, si elle touche, elle compte comme la seconde — ce qui autorise le link dans Flare. Confirms beaucoup plus faciles et dégâts supérieurs à ce que Bartz est censé obtenir.</p></div><div class="card"><h3 style="margin-top:0">Slide Shooter assist-call tracking</h3><p>Comme le Full Slide de Tidus, le ralenti provoqué par un appel d'assist augmente fortement le tracking vertical de Slide Shooter. À utiliser en punish ou sur une approche dont vous êtes sûr ; la stratégie repose sur l'assist Aerith, ce qui coûte les conversions précoces de ses autres coups aériens.</p></div><div class="card"><h3 style="margin-top:0">Lock Off (Slide Shooter)</h3><p>Avec Slide Shooter réglé sur neutre + Cercle, le Lock Off permet de générer de la jauge d'assist en sécurité un peu plus longtemps.</p></div><div class="card"><h3 style="margin-top:0">Reel Impulse dodge cancel</h3><p>En connectant Reel Impulse à bout portant, le landing lag autorise un dodge cancel vers Blade Crash pour un combo solo.</p></div>
+
+<p class="mv-desc">Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href="../techniques.html">Techniques &amp; glitches</a>.</p>
+</section>
+<section id="matchups"><h2>Matchups</h2>
+<div class="banner" data-undocumented="1"><strong>Section non documentée sur dissidia.wiki à ce jour — à compléter.</strong> La sous-page <a href="https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)/Matchups" rel="external noopener">Matchups du wiki</a> est un squelette vide à ce jour.</div>
+<p>Vidéos de matchs : <a href="https://replaytheater.app/?game=d012&amp;c1=Bartz%20Klauser" rel="external noopener">Replay Theater — matchs de Bartz Klauser</a>.</p>
+</section>
+<section id="builds"><h2>Builds</h2>
+<p>Un seul build est réellement documenté : un « Side by Side » avec l'assist Kuja (Lufenian Axe, Blurry Moon, set Lufenian, effet spécial Judgment of Lufenia, invocation Rubicante), 450 CP avec Equip Glitch, pour un booster maximal de x5.9.</p>
+<p>Les notes de coups esquissent la philosophie générale : en Side by Side, l'effet EX Intake est inutile mais Reel Impulse reste préféré pour sa portée et sa priorité, et on arbitre entre Blade Crash et Hazard Raid ; en build EX, on peut équiper deux Reel Impulse (+2m d'EX Intake, presque l'équivalent d'une Heaven's Cloud) en renonçant à Blade Crash et Hazard Raid.</p>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Stats</th></tr>
+<tr><td>HP</td><td>10299</td></tr>
+<tr><td>CP</td><td>450</td></tr>
+<tr><td>BRV</td><td>916</td></tr>
+<tr><td>ATK</td><td>180</td></tr>
+<tr><td>DEF</td><td>184</td></tr>
+<tr><td>LUK</td><td>60</td></tr>
+<tr><td>Max Booster</td><td>x5.9</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+<caption>Special Effect: Judgment of Lufenia</caption>
+<tr><th>Equipment</th></tr>
+<tr><td>Assist</td><td>Kuja</td></tr>
+<tr><td>Weapon &lt;img&gt;&lt;/img&gt;</td><td>Lufenian Axe</td></tr>
+<tr><td>Hand &lt;img&gt;&lt;/img&gt;</td><td>Blurry Moon</td></tr>
+<tr><td>Head &lt;img&gt;&lt;/img&gt;</td><td>Lufenian Helm</td></tr>
+<tr><td>Body &lt;img&gt;&lt;/img&gt;</td><td>Lufenian Armor</td></tr>
+<tr><td>Accessory 1</td><td>&lt;img&gt;&lt;/img&gt; Hyper Ring</td></tr>
+<tr><td>Accessory 2</td><td>&lt;img&gt;&lt;/img&gt; Earring</td></tr>
+<tr><td>Accessory 3</td><td>&lt;img&gt;&lt;/img&gt; Dismay Shock</td></tr>
+<tr><td>Accessory 4</td><td>&lt;img&gt;&lt;/img&gt; BRV &gt; Base Value</td></tr>
+<tr><td>Accessory 5</td><td>&lt;img&gt;&lt;/img&gt; Empty EX Gauge</td></tr>
+<tr><td>Accessory 6</td><td>&lt;img&gt;&lt;/img&gt; Summon Unused</td></tr>
+<tr><td>Accessory 7</td><td>&lt;img&gt;&lt;/img&gt; Pre-EX Mode</td></tr>
+<tr><td>Accessory 8</td><td>&lt;img&gt;&lt;/img&gt; Pre-EX Revenge</td></tr>
+<tr><td>Accessory 9</td><td>&lt;img&gt;&lt;/img&gt; Opponent Summon Unused</td></tr>
+<tr><td>Accessory 10</td><td>&lt;img&gt;&lt;/img&gt; Side by Side</td></tr>
+<tr><td>Summon &lt;img&gt;&lt;/img&gt;</td><td>Rubicante</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Bravery attacks</th></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+<tr><td>HP attacks</td></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Stats</th></tr>
+<tr><td>HP</td><td></td></tr>
+<tr><td>CP</td><td></td></tr>
+<tr><td>BRV</td><td></td></tr>
+<tr><td>ATK</td><td></td></tr>
+<tr><td>DEF</td><td></td></tr>
+<tr><td>LUK</td><td></td></tr>
+<tr><td>Max Booster</td><td></td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+<caption>Special Effect:</caption>
+<tr><th>Equipment</th></tr>
+<tr><td>Assist</td><td></td></tr>
+<tr><td>Weapon &lt;img&gt;&lt;/img&gt;</td><td></td></tr>
+<tr><td>Hand &lt;img&gt;&lt;/img&gt;</td><td></td></tr>
+<tr><td>Head &lt;img&gt;&lt;/img&gt;</td><td></td></tr>
+<tr><td>Body &lt;img&gt;&lt;/img&gt;</td><td></td></tr>
+<tr><td>Accessory 1</td><td></td></tr>
+<tr><td>Accessory 2</td><td></td></tr>
+<tr><td>Accessory 3</td><td></td></tr>
+<tr><td>Accessory 4</td><td></td></tr>
+<tr><td>Accessory 5</td><td></td></tr>
+<tr><td>Accessory 6</td><td></td></tr>
+<tr><td>Accessory 7</td><td></td></tr>
+<tr><td>Accessory 8</td><td></td></tr>
+<tr><td>Accessory 9</td><td></td></tr>
+<tr><td>Accessory 10</td><td></td></tr>
+<tr><td>Summon &lt;img&gt;&lt;/img&gt;</td><td></td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Bravery attacks</th></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+<tr><td>HP attacks</td></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+</table></div>
+
+<p class="mv-desc">Le second emplacement (« Build #2 ») est vide dans les sources : aucune donnée.</p>
+</section>
+<section id="assist"><h2>Synergies d'assist</h2>
+<h3>Bartz Klauser en tant qu'assist</h3><p>Bartz est classé Low dans la tier list assist de Muggshotter. Ses coups d'assist : Blade Crash en BRV au sol (23F, Chase), Slide Shooter en BRV aérien (25F, Wall Rush), Dark Flame en HP au sol (53F, apparaît sur le joueur, Wall Rush) et Ragnarok Blade en HP aérien (45F, Wall Rush). Le wiki ne fournit pas d'évaluation rédigée de son rôle d'assist.</p>
+
+<h3>Assists recommandées</h3><ul><li><strong>Kuja</strong> — Cité dans les synergies du wiki et retenu dans le build documenté ; les notes de Slide Shooter le recommandent pour le startup rapide de ses follow-ups et le potentiel de dégâts des setups Holy -&gt; Flare.</li><li><strong>Jecht</strong> — Cité dans les synergies du wiki, pour les mêmes raisons que Kuja (follow-ups rapides, setups Holy -&gt; Flare).</li><li><strong>Aerith</strong> — Uniquement pour la stratégie de tracking renforcé de Slide Shooter pendant l'appel d'assist ; les notes avertissent que ce choix sacrifie les conversions précoces des autres coups aériens.</li></ul>
+
+</section>
+<section id="community"><h2>Tech communautaire</h2>
+<div class="banner" data-undocumented="1"><strong>Section non documentée sur dissidia.wiki à ce jour — à compléter.</strong> Aucune trouvaille communautaire attribuable relevée dans les sources récupérées pour ce personnage.</div>
+</section>
+<section id="sources"><h2>Sources</h2>
+<ul class="sources-list"><li><a href="https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)</a></li><li><a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Tier_List_(Dissidia_012)</a></li><li><a href="https://dissidia.wiki/Tier_List_(Assist)" rel="external noopener">https://dissidia.wiki/Tier_List_(Assist)</a></li></ul><h3>Limites connues</h3><ul class="sources-list"><li>Overview très courte (trois phrases descriptives) : la synthèse repose surtout sur le tableau forces/faiblesses et les notes de coups.</li><li>Page matchups à l'état d'ébauche (stub) : aucun contenu.</li><li>Section combos vide (sous-section « Solo » sans texte ni tableau).</li><li>Aucune mécanique unique documentée (documented: false).</li><li>Aucune référence communautaire dans les sources.</li><li>Second build (« Build #2 ») entièrement vide.</li><li>Données incomplètes : startup et priorité de Flare incertains (« ? »), notes minimales pour les HP attacks (Hellfire, Dark Flame, Ragnarok Blade, Luminous Shard), niveau de déblocage et AP de Goblin Punch non renseignés.</li></ul>
+</section>
+</main>
+</div>
+<footer class="site"><div class="wrap">
+<p>Site de fans non commercial. Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011).</p>
+<p>Contenu textuel adapté et traduit de <a href="https://dissidia.wiki" rel="external noopener">dissidia.wiki</a> (licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="external noopener">CC BY 4.0</a>). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+</div></footer>
+
+</body>
+</html>

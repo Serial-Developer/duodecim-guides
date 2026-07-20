@@ -1,0 +1,1172 @@
+{
+  "slug": "cloud-strife",
+  "name": "Cloud Strife",
+  "page": "Cloud_Strife_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Cloud_Strife_(Dissidia_012)",
+  "origin": "Final Fantasy VII",
+  "icon": "cloud",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-cloud.png",
+  "infobox": {
+    "Name": "Cloud Strife (クラウド・ストライフ)",
+    "Original game": "Final Fantasy VII",
+    "Base ATK (LV100)": "110 (Average)",
+    "Base DEF (LV100)": "112 (High)",
+    "Run Speed": "7 (Average)",
+    "Dash Speed": "77F (Average / Good)",
+    "Fall Speed": "87F (Below Average)",
+    "Fall Speed Ratio After Dodge": "39 (Below Average)",
+    "Fastest BRV": "13F (Double Cut)",
+    "Fastest HP": "41F (Cross Slash)",
+    "1-Hit HP": "Meteorain",
+    "HP Links": "Yes",
+    "Command Block": "No",
+    "Weapon": "Sword, Greatsword, Katana, Spear",
+    "Armor": "Shields, Bangles, Hats, Helms, Clothing, Light Armor, Large Shields, Chestplates",
+    "Exclusive weapons": "Buster Sword, Force Stealer, Butterfly Edge, Fenrir",
+    "Unlock": "Default",
+    "Alignment": "Chaos (012)Cosmos (013)",
+    "Voice Actor (JP)": "Takahiro Sakurai",
+    "Voice Actor (ENG)": "Steve Burton"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Cloud is an all-rounder |",
+        "A character who can do a bit of everything well.",
+        "with a focus on close-range fighting and damage. He can close gaps with his dash and mix up |",
+        "A situation where a player has several ways to attack, which require different actions from the defending player.",
+        "with Double Cut, its multiple cancel |",
+        "An action that is interrupted early by doing another action.",
+        "options and slower heavy hitting braveries. Cloud has HP links |",
+        "An HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.",
+        "that can deal a lot of damage, especially with assist. With a good read |",
+        "A read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".",
+        "or a dodge punish, Cloud can build some EX gauge or momentum on a short notice.",
+        "Cloud needs to get close to make his biggest plays, as his midrange tools are slow or don't have high reward. Cloud doesn't specialize in zoning |",
+        "The act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\n, but he can use his many projectiles |",
+        "A type of attack that travels independently from any character. Beams, fireballs and magic spells are often like this. Many projectiles are Ranged priority in Dissidia 012, and they can be reflected back.",
+        "on the ground to disrupt movement or do more damage during combos. He builds EX and assist gauge well with pokes |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        ", but his offense isn't bulletproof; His HP links are vulnerable against Assist Change and dodge punishing fast fallers (Kain, Kefka) or characters with command block |",
+        "An attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.",
+        "(Jecht) can be challenging. Cloud also needs to be mindful of air dodges, as he doesn't fall quickly after he finishes dodging.",
+        "Cloud works with a variety of build styles, such as damage, EX Core and Side by Side <img></img>. His assist synergy is diverse thanks to his wall rush potential and Double Cut confirms. And if Cloud gets a full EX gauge, his guard crushing EX mode can cripple the opposition.",
+        "In competitive play, Cloud has been ranked at high tier. His good base stats, damage output and coverage for many situations make him a strong character. Verticality, midrange threat, post-dodge defense, command blocks and consistent Assist Changes are Cloud's weaker points. Despite that, Cloud is a good character for new and experienced players alike who can compete with much of the cast."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Solid, easy and straightforward gameplay with an intuitive moveset and standard mobility.\nGround combat - Pokes, HP conversions and ranged attacks provide a well rounded arsenal for grounded interactions.\nDamage - With powerful wall rush moves, assist and an extensive ground combo game, Cloud can secure a lot of damage with a single opening.\nMeter generation - Cloud can whiff for assist meter consistently and build a good amount of meter on hit with Double Cut and HP links.\nBuild variety - Cloud supports a myriad of build styles that are known to be effective in competitive play.\nFlexible assist synergy thanks to wall rush potential and Double Cut confirms.\nEX Mode lets Cloud to power through blocks with Melee High priority braveries and he deals more damage the more health he has, creating one of the most damaging EX Bursts in the game.\nHigh base defense of 112 at LV100 reduces bravery damage taken more than majority of the cast.",
+              "Vulnerable HP links can limit Cloud's opportunities for HP damage against characters who can escape with Assist Change more often.\nFloaty air dodges and lack of instant defensive moves can make air dodging more susceptible to dodge punishment at higher levels of play.\nRelative linearity - Cloud has good tools for close-range combat, but well placed blocks, traps and vertical positioning can give him a bit of trouble. This can manifest as higher risk on whiff, unfavorable trades or demand for precise dashes. Without ground projectiles, his ground combat is about on par with aerial combat which will require strong fundamentals and micro-optimizations to compensate."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cloud_Strife_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f8/Brv_cloud_double_cut_g.jpeg",
+              "damage": "7, 13 (20)",
+              "startup": "13F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge, Block, Attack",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Quick slash. Low power, fast execution.",
+              "name": "Double Cut (ground)",
+              "notes": "Double Cut is Cloud's main poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nin close range. It is a 2-part attack that moves Cloud forward during the first swing. It has fast startup |\nThe time it takes before an attack can do damage.\n, short recovery and multiple cancel |\nAn action that is interrupted early by doing another action.\noptions for the first hit that are useful for mind games |\nTrying to trick the opponent into taking a wrong action.\n. This is an effective move for building assist gauge with and generates a good 90 EX on hit.\nIf Double Cut connects, Cloud has a decent amount of time to confirm the follow-up slash. It has average knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nthat leads to Chase, but it can lead to an assist combo against a wall [1]. With a fast ground assist, Double Cut's first hit also functions as an assist combo starter. It can even anti-air |\nAttacking an airborne opponent from below, usually on the ground.\naerial opponents close to the ground and combo into Cross-slash. [2]\nCloud has a variety of grounded moves, but none of them are as fast as Double Cut. Even though it's usually low reward, Double Cut ties the ground combat together. Double Cut is a good bravery with an aerial version that is arguably even more important to Cloud."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/21/Brv_cloud_sonic_break_012.jpeg",
+              "damage": "8, 12, 25 (45)",
+              "startup": "21F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush, Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Strike with three powerful blows. Sends foe flying.",
+              "name": "Sonic Break",
+              "notes": "Sonic Break is a slower, secondary poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nfor Cloud. It's a 3-hit combo attack with strong wall rush potential, and a dedicated HP link after the second hit. Cloud moves forward during the first slash, but it has more range in practice; Thanks to the absorb property, Sonic Break can be used more reliably as a whiff punisher |\nHitting an opponent who missed (whiffed) their attack.\nand occasionally as a gap closer. It pulls nearby opponents towards Cloud, with an effective range of roughly 1.8 tiles in World of Darkness. The pull has very short vertical coverage, but can guarantee a block punish against airborne opponents close to ground.\nThe base damage is pretty good by itself, and the threat of a wall rush HP link makes Sonic Break one of Cloud's more potent ground attacks. Cloud has plenty of time to confirm each follow-up input when Sonic Break hits, making it easier to use as an assist combo starter as well.\nCloud has to be careful when using Sonic Break, though; The absorb property is accompanied by distinct wind visuals and a sound effect during startup |\nThe time it takes before an attack can do damage.\n. This can make Sonic Break easier to react to even though the move itself comes out rather quickly."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/86/Brv_cloud_climhazzard.jpeg",
+              "damage": "3 x 4, 8, 15 (35)",
+              "startup": "27F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Charging attack. Slow strike, easy to wall rush.",
+              "name": "Climhazzard",
+              "notes": "Climhazzard is Cloud's slowest melee bravery on the ground. It usually functions as a punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nmove or as a combo move. This attack is telegraphed and moves Cloud forward the most out of all his ground braveries, but it also contributes greatly to his ground combo damage. The reason is two-pronged; The base damage isn't as high as Sonic Break, but the second hit can naturally combo into his air braveries for more damage and assist gauge. Because of this, it also empowers any combos that use Fire and assists with ground wall rush.\nLike Cloud's other braveries, each hit must be pressed separately with circle <img></img>. It can set up ground wall rushes and assist follow-ups with consistently.\nWhen locked off, Climhazzard will move Cloud in the direction he is facing. This can be used as a gimmicky way to retreat or move to an opponent's side. If Climhazzard hits without lock on, Cloud can still finish the combo sequence without major issues."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/bd/Brv_cloud_blade_beam.jpeg",
+              "damage": "15, 5, 10 (30)",
+              "startup": "37F",
+              "type": "Magical",
+              "priority": "Melee Mid (sword), Ranged Low (projectile)",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Launch shockwave. Fast, but has weak homing.",
+              "name": "Blade Beam",
+              "notes": "Blade Beam is a low priority projectile that moves quickly in a linear arc once fired. It is not always used in competitive play, but it is useful for sniping air dodges close to the ground [3].\nThe attack is composed of two parts - The stationary sword swing which is melee mid priority and the projectile itself. Blade Beam travels along the ground and explodes when it reaches maximum travel distance or hits the opponent. This explosion creates a chase prompt and it can even combo into Kuja assist after a dodge cancel. [4] The majority of EX Force is also generated with the explosion (60), which is important to note when using this move from a distance.\nThis is not a must-have move for Cloud in most scenarios. However, the mid priority sword can be used to reflect Ranged Mid projectiles such as Lightning's Watera. However, this is not usually needed, practical or safe to do. Blade Beam itself doesn't have tracking, but Cloud will realign the projectile until it appears. In rare instances, it is possible to only get hit by the moving projectile and have the explosion miss."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/15/Brv_cloud_firaga.jpeg",
+              "damage": "each (7, 10)",
+              "startup": "25F",
+              "type": "Magical",
+              "priority": "Ranged Mid",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shoot three fireballs. Short range, but can restrain opponent with explosions.",
+              "name": "Firaga",
+              "notes": "Firaga is Cloud's mid-range poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. Cloud can use this move to keep opponents at a distance thanks to the ranged mid priority and 80~90 degree vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n. It staggers regular blocks, stops dashes and reckless bravery attacks. If Firaga staggers a block, Cloud can call assist to start a combo.\nEach fireball can hit twice for 17 base damage per fireball. When used during assist combos, this can be a devastating 51 base damage that shreds through bravery in very close range.\nFiraga is strong, but it sees little use outside of occasional zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\nand combo fillers |\nAn attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.\n. The hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nis short, so it does not start assist combos consistently without walls or assist storage glitch. Firaga does not act as an end point for Cloud's strategy, nor is it usable in the air. Cloud stands still for the entire animation, and the fireballs don't have enough coverage against high altitude opponents, or assists with fast startup |\nThe time it takes before an attack can do damage.\n. The recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nhas a late cancel |\nAn action that is interrupted early by doing another action.\nwindow, which makes repeated use much riskier for Cloud. Firaga still loses to higher priority attacks and command blocks, in addition to well placed invincibility (air dodges, Tifa's feints)."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/07/Brv_cloud_fira.jpeg",
+              "damage": "5 x 3 (15)",
+              "startup": "25F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Hurl fireball. Faster than Fire.",
+              "name": "Fira",
+              "notes": "Fira is the odd one out of the three Fire spells Cloud can use. It is a single fireball with fastest travel time out of the three with multiple low knockback hits on contact. The total base damage is shared with Fire, but without its other benefits. The vertical tracking is weak and the projectile is still low priority as well. Fira offers no combo utility without assist [5] or close positioning near a wall.\nAll this can make Fira difficult to justify in competitive play. Cloud's other projectiles can achieve more for similar or lower risk. And when there are only 3 slots available for ground braveries, Fira ends up being outclassed in an already competitive bravery slot economy."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c3/Brv_cloud_fire.jpeg",
+              "damage": "10",
+              "startup": "25F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Hurl fireball. Slowly tracks opponent.",
+              "name": "Fire",
+              "notes": "Fire is a single hit projectile that slowly moves towards the opponent. It stays on the field for roughly 5 seconds. Up to 2 Fires can be on the stage at the same time. Its low priority and slow movement make it less ideal for zoning, but it is also less threatening when reflected back. The vertical tracking is the best out of Cloud's bravery projectiles, but Fire's overall duration keeps the travel distance in check.\nWhere Fire really shines is in combos. Fire forces landing lag on hit, which is great for close-range solo combos and extending assist combos to their logical extreme. That puts Fire in an interesting spot, where it's a low stakes projectile that can occasionally disrupt an interaction if left unattended, but also enable some of the highest damaging combos Cloud can do. When used in conjunction with Climhazzard, a clean combo can pay off well.\nIf Fire is used without being locked on to opponent, it will travel in the direction it was shot. However, locking onto an opponent will cause the projectile to track the opponent. Given the overall duration of the projectile and its slow movement, this is not known to be very practical for tricking vigilant players."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/88/Brv_cloud_slashing_blow.jpeg",
+              "damage": "5, 10, 25 (40)",
+              "startup": "21F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Powerful slashes. Change combo with analog stick.",
+              "name": "Slashing Blow",
+              "notes": "An advancing 3-hit combo. This is one of the most important braveries for Cloud due its versatility and damage potential. It is a gap closer, a whiff punisher |\nHitting an opponent who missed (whiffed) their attack.\nand a consistent counter after staggering opponents with a block. It even works as a filler |\nAn attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.\nduring assist combos. Slashing Blow has high base damage |\nThe attack's baseline damage value before equipment and stats are considered.\nand knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\n, as well as the HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\nOmnislash Version 5 for HP damage and assist combos.\nWhile Slashing Blow has many comparable traits with Sonic Break, it does not have the absorb property. The tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nshould be noted too; Slashing Blow has good lateral tracking when used at the same height as the opponent. But if they are above or below Cloud (1-2 jumps height), Cloud barely moves anywhere.\nSlashing Blow has a downward slash as the default finisher. By holding up on the analog stick (<img></img>), Cloud can perform an upward slash that sends opponents up instead. This is good for confirming a wall rush near the ceiling, but functions similarly otherwise.\nCloud can transition into Omnislash Version 5 even if only the second hit connects. [6] [7]"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/eb/Brv_cloud_aerial_fang.jpeg",
+              "damage": "25",
+              "startup": "25F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Diving attack, scooping foe with sword. Useful from above.",
+              "name": "Aerial Fang",
+              "notes": "Aerial Fang moves Cloud down before blowing the opponent at a diagonal upward angle. This move is best suited for punishing |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nattacks below Cloud, especially in air-to-ground |\nAttacking a grounded opponent while being in the air. The attacker may land on the ground as well.\nscenarios. The knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nisn't huge, and the overall reward isn't high without a wall rush and assist.\nIf Cloud is not positioned above opponent before using Aerial Fang, Cloud will stay almost stationary during the attack. The recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nisn't very long, so Cloud can get away with missing this move more often than he would expect.\nAerial Fang is interchangeable with Rising Fang, depending on the matchup |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\n."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f4/Brv_cloud_rising_fang.jpeg",
+              "damage": "3, 1 x 10, 17 (30)",
+              "startup": "21F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "33",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Powerful upward lunge. Effective near ceiling.",
+              "name": "Rising Fang",
+              "notes": "Rising Fang is an upward air-to-air |\nAttacking an airborne opponent while also being in the air.\nmove. It is often Cloud's third air bravery for its vertical coverage. It can move Cloud upwards regardless of position, which can be good for evasive movement.\nRising Fang is the opposite of Aerial Fang in many ways; Rising Fang moves Cloud upward, and on hit it will transition into a multi-hitting barrage that wall rushes upwards. The wall rush hit can also destroy Old Chaos Shrine's platform. [8] The recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis longer if it misses, but the attack is also active |\nThe period of time when an attack is capable of doing damage.\nfor a long time, the majority of Cloud's ascent. [9]\nRising Fang has no tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nonce Cloud begins ascending. If Cloud is not directly below the opponent, he will move towards them before rising with the actual attack. [10] [11] [12] The startup speed remains the same either way. If this move is done elsewhere, Cloud will simply stay still before ascending.\nIf Rising Fang hits an assist character, Cloud will not transition into the follow-up."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/16/Brv_cloud_double_cut_a.jpeg",
+              "damage": "7, 13 (20)",
+              "startup": "13F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge, Block, Attack",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Quick slash. Low power, fast execution.",
+              "name": "Double Cut (midair)",
+              "notes": "The midair Double Cut is essential for Cloud. It is great for poking |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nand filling assist gauge safely with whiffs |\nA missed attack that doesn't make any contact.\n[13].\nAll of the ground version's good qualities are shared, including the variety of cancel options and short recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n.\nBecause this is Cloud's fastest aerial move, Double Cut can be used as a consistent low damage punisher |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nin most situations where other braveries would be too slow. It can punish air dodges after Free Air Dash [14] [15], and follow up after staggering with LV2 Assist Change. [16] Double Cut won't lead to HP damage without assist, but each hit adds up over time due to the 90 EX it generates.\nThe first hit can combo into Cloud's commonly used assists, but the hit stun is somewhat short for doing it on reaction. Like the ground version, the second hit leads to chase. Since Cloud is considered airborne during this move, he can call Aerith assist and create a guaranteed setup for follow-ups. Note, that the second hit can be delayed long enough for it to miss the opponent if done late. [17]"
+            }
+          ]
+        }
+      },
+      "moveCount": 11,
+      "sources": [
+        "https://dissidia.wiki/Cloud_Strife_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3b/Hp_cloud_cross_slash.jpeg",
+              "damage": "5, 5 (10)",
+              "startup": "41F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Break through defenses with cross-shaped slashes.",
+              "name": "Cross-slash",
+              "notes": "A 3-hit combo with high knockback. Cloud moves towards the opponent with each slash, and the maximum travel distance for individual slashes is long. The tracking works whenever the opponent is in Cloud's general direction. Cross-slash has great reach against grounded opponents, and it's pretty effective against most ground dodges. If Cloud anti-airs with Double Cut, Cross-slash can be used as a solo follow-up for HP damage. The base damage isn't high, but it can wall rush from afar, which is good for starting assist combos.\nIf the opponent is above Cloud, his movement is almost completely compromised. The same is true when Cross-slash is done against a ledge. The first vertical slash can anti-air opponents close to ground, but other slashes have no vertical coverage. That means it won't work well against forward ground dodge and aerial opponents in general. Cloud cannot cancel the attack once it starts, which makes Cross-slash a rather risky move overall."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/25/Hp_cloud_meteorain_ground.jpeg",
+              "damage": "each (10)",
+              "startup": "21F (up), 81F (down)",
+              "type": "Magical",
+              "priority": "Ranged Mid (up), Ranged High (down)",
+              "exForce": "each 60",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Send countless meteors towards opponent.",
+              "name": "Meteorain (ground)",
+              "notes": "Meteors rise above Cloud before pursuing the opponent. Meteorain is Cloud's only ranged priority HP, but its long startup restricts its uses as a projectile. The meteor projectiles are fired as a barrage, with each projectile acting as a 1-hit HP attack. The maximum height from which they are fired is somewhat low. [18] However, the projectiles have horizontal tracking, which can technically protect Cloud against some air-to-ground punish attempts. The projectiles have a bravery hitbox when going up, which can combo into the projectiles going down. [19] [20]\nThey can also catch side dodges on the ground and there is enough hit stun for an assist combo near the wall.\nMeteorain's recovery is long and Cloud has no innate protection outside of the projectiles. He can be pushed away from the projectiles with a dash during startup for a punish. The projectiles also cannot instantly realign to opponent's assist with Auto Assist Lock On once the projectiles are coming down."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/23/Hp_cloud_finishing_touch.jpeg",
+              "damage": "1 x 4, 2 x 5 (+ = 34)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "27",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Sonic Break. [Combo] A whirlwind of attacks.",
+              "name": "Finishing Touch",
+              "notes": "A rising flurry of attacks that end with a downward slam. This is the HP link that amplifies Sonic Break's power as a grounded bravery. The overall base damage isn't massive, but the wall rush enables a variety of assist combos for big damage. Finishing Touch sends down at a diagonal angle, so if it's done near a ledge, the opponent is sent off the platform. This is not a problem on a stage like Lunar Subterrane, but other stages such as Orphan's Cradle have banish traps around platforms. That can reduce Finishing Touch's damage due to the missing wall rush. Some assists, like Kuja and Tidus can convert into a combo even without the wall rush. [21] [22]\nCloud is vulnerable to attacks if an opponent escapes with LV1 Assist Change. However, the time period for doing this is short, at the end of the move. Normally, Cloud will continue to ascend after a LV1 Assist Change and then stop after the final slash. If Cloud has Auto Assist Lock On equipped, he will stop moving and attack in place instead."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/0b/Hp_cloud_braver.jpeg",
+              "damage": "2, 1 x N (4+)",
+              "startup": "47F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "each 15",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Midair charge. Effective against any height.",
+              "name": "Braver",
+              "notes": "Braver is an advancing homing move that transitions into a downward dive on hit. The bravery damage is low, but each hit generates a bit of EX. If Braver connects, the dive will cause damage for a maximum of 8 hits. The attack will finish at that point regardless of remaining height, sending the opponent down. If Cloud reaches floor during Braver, he will land on the ground and send the opponent up at a diagonal angle. [23] Braver can generate up to 135 EX when all 9 hits connect (based on Force to Courage <img></img>).\nBraver has tracking all around Cloud, which is good for vertically aligned punishes. The long active frames are good for reflecting mid & high priority projectiles such as Vaan's Windburst. However, Braver also has short reach. Punishing air dodges and blocks from mid range is difficult, but the wall can mitigate this issue against dodges. Its risky to use though, as its telegraphed startup and relatively long recovery leave him vulnerable if he misses. This is also true when reflecting projectiles, so caution is advised.\nRegardless, this is a staple HP attack for Cloud. It's a faster, safer alternative for ending assist combos and Cloud's only high priority mixup against immediate blocks in the air."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/11/Hp_cloud_meteorain_aerial.jpeg",
+              "damage": "each (10)",
+              "startup": "21F (up), 81F (down)",
+              "type": "Magical",
+              "priority": "Ranged Mid (up), Ranged High (down)",
+              "exForce": "each 60",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Send countless meteors towards opponent.",
+              "name": "Meteorain (midair)",
+              "notes": "Meteorain's aerial version is mostly similar to the ground version, but with one key difference; When the projectiles come down, they have no horizontal tracking. As a result, it has less applications out in the open. Therefore, Meteorain is best used against static targets; Meteorain avoids LV2 Assist Change staggers during combos and it can even generate an obscene amount of EX in the corner with a proper setup. [24]\nIf an assist character stays out on the field for a while, Cloud can target them with aerial Meteorain and generate lots of EX Force that way. [25] Cloud gets some EX from the Assist Lock, but a portion of the EX will remain on the field. This can be done after escaping a combo with LV1 Assist Change, or by simply evading the assist attack and punishing it. A mistimed assist punish against a Cloud with Auto Assist Lock On can also cause this interaction. Cloud's mileage will vary depending on the assist, as some attacks keep the assist on the field longer than others.\nJust like the ground version, aerial Meteorain causes enough hit stun that allows combos, even with EX Revenge. Assists can follow up near the wall [26], and assist storage glitch alleviates that restriction. [27]"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/38/Hp_cloud_omnislash5.jpeg",
+              "damage": "2 x 4, 5, 7 (+ = 35)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "?",
+              "exForce": "36",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Slashing Blow. [Combo] Series of speedy slices.",
+              "name": "Omnislash Version 5",
+              "notes": "Omnislash Version 5 is Cloud's aerial HP link from Slashing Blow, and arguably one of the character-defining attacks for him. Similar to Finishing Touch, Omnislash Ver. 5 is what makes Slashing Blow as dangerous as it is, with the HP wall rush that has very high downward knockback. It is what enables high damaging assist combos from a variety of positions. The nature of an HP link gives Cloud some independence from the assist mechanic, but it also empowers him greatly with Side by Side <img></img>. This strength is shared with Finishing Touch, which gives Cloud his HP linker archetype, but it is even more valuable on an aerial move.\nThe long animation gives Cloud plenty of time to recover to base bravery after starting an assist combo with HP attack. But it also works against him; Escaping from this move with LV1 Assist Change gives the opponent plenty of time to attack Cloud who is stuck in the animation. [28] On a similar note, if Cloud hits the assist character during Assist Change, he can attempt to dodge cancel a hit reaction from a punish.\n[29]\nCloud will dive towards the ground before inflicting HP damage with a separate explosion. Cloud will land on his feet if he reaches the ground during the dive. The opponent will be left close to Cloud, behind his back, so he must be careful to avoid getting broken. If Cloud doesn't land on the ground at the end, he will remain airborne and is at much bigger frame advantage for EX Cores, assist combo fillers [30] or even pressure."
+            }
+          ]
+        }
+      },
+      "moveCount": 6,
+      "sources": [
+        "https://dissidia.wiki/Cloud_Strife_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Equipped Ultima Weapon!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nUltima Weapon (CRUSH)\nUltima Weapon (ATK)",
+        "Cloud's EX mode is quite strong due to its additional effects. The more health he has, the more damage his braveries will do. This extends to his EX Burst, which is one of the strongest bursts in the game when Cloud is at full health. Having high priority on most braveries also makes many interactions advantageous for Cloud if he gets close to his opponent.",
+        "If Cloud activates EX Mode while in his Alt 1 appearence, the EX mode will be called \"The power of mako!\" This does not change how Cloud's EX mode works."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Ultima Weapon (CRUSH)",
+          "text": [
+            "<img src=\"\" style=\"size: 200px; object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);\"></img>",
+            "[Always active while in EX Mode]\nEach attack becomes even heavier, crushing all attempts at blocking.",
+            "All melee priority attacks become Melee High priority. This is the same as HP attacks in the game, which makes blocking Cloud very dangerous. High priority command blocks such as Jecht Block and Exdeath's Omni Block can still stagger Cloud.",
+            "The high priority becomes active as soon as Cloud activates EX mode. This can be done during a bravery attack to break through an unsuspecting opponent's block.",
+            "The only bravery attacks that are unaffected by the priority change are Fire, Fira, Firaga and Blade Beam (projectile)."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Ultima Weapon (ATK)",
+          "text": [
+            "[Always active while in EX Mode]\nThe higher the user's HP, the sharper the weapon's blade.",
+            "Base damage |",
+            "The attack's baseline damage value before equipment and stats are considered.",
+            "scales to x1~x2 accordingly to current HP%, round down to nearest integer."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Omnislash",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);\"></img>",
+            "An attack slicing the opponent over and over. Repeatedly press circle to raise the gauge.",
+            "Omnislash is one of the weakest and most damaging EX Bursts in the game depending on how much health Cloud has left. Higher health means more damage, 2x at most. At 2x damage, the base damage for the initial two hits alone is over 50 % of the average EX Burst's damage. That's where much of Omnislash's damage comes from, but the subsequent barrage of slashes isn't bad either.",
+            "The input requirement is straightforward; Press circle (<img></img>) repeatedly until the gauge is filled."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "14, 14 (28)",
+                  "2 x 20 (40) (68 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cloud_Strife_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [
+        "Main article: Cloud (Combos)"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [
+            "Cloud has multiple solo combos thanks to Fire and Climhazzard second hit's natural recovery |",
+            "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+            ". Both attacks are reactable, but Cloud can use them after block staggers or assist (e.g. Jecht and Yuna).",
+            "Climhazzard leads to Double Cut and Slashing Blow, the latter is much harder. With Fire, Cloud can chain into other ground braveries if he is not too close to the opponent. Please note, that if Fire hits late, Cloud can combo into almost any other move. That is, when Cloud can already move while Fire is active |",
+            "The period of time when an attack is capable of doing damage.",
+            "."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Ground starter\nClimhazzard (2) > Double Cut\n40\n120\nVideo\nBase Damage (Breakdown): 8, 12 > 20\nOpponent Assist (Comrade's Vow): 60\nEX Force (Breakdown): 30 > 90\nMore EX compared to Slashing Blow, and has easier timing. If in doubt, do this, because Cloud can still combo into an assist with Double Cut. Repeatedly pressing Double Cut is fairly reliable."
+                ],
+                [
+                  "Projectile starter\nFire > LL > Sonic Break (2) > Finishing Touch\n44 + HP WR\n57\nVideo\nBase Damage (Breakdown): 10 > 8, 12 > 14\nOpponent Assist (Comrade's Vow): 66\nEX Force (Breakdown): 0 > 30 > 27"
+                ],
+                [
+                  "Ground starter, must hit airborne opponent\nDouble Cut (1) > Cross-slash\n17 + HP WR\n60\nVideo\nBase Damage (Breakdown): 7 > 5, 5 + HP WR\nOpponent Assist (Comrade's Vow): 25\nEX Force (Breakdown): 30 > 30\nIf the opponent misses their dodge after landing, or performs a neutral dodge, Cross-slash can have an even easier time connecting... assuming the opponent doesn't have Precision Evasion equipped. Please do not confuse this for being a fake combo; The timing is relatively strict, so there is room for human error."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "EX Revenge",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Air starter, close to opponentFull EX Gauge\nDouble Cut > Double Cut > Double Cut > Double Cut > Slashing Blow (1) > Omnislash Ver. 5\n115 + HP WR\n~36+\nVideo\nBase Damage (Breakdown): 20 > 20 > 20 > 20 > 35 + HP WR\nOpponent Assist (Comrade's Vow): 172\nEX Force (Breakdown): 0-30 + ~36\nA staple close-range EX Revenge combo. Easy to do, good damage and works in most areas. Cloud must be close to the opponent to land all four Double Cuts. If he activates EX Revenge from further distance, he has to settle for three or even two Double Cuts before doing Slashing Blow.\nCloud generates no EX with Double Cuts during EX Revenge, and he has to land Slashing Blow before Double Cut's pushback pushes the opponent away. Therefore it is likely that Cloud may not get as much EX from Slashing Blow as he normally would."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist (Kuja)",
+          "text": [
+            "Main article: Cloud Combos (Kuja Assist)",
+            "Cloud's wall rushes are great for starting assist combos. Since he has many moves that can wall rush, most of his attacks are good combo starters. Some assists can also pick up from unfinished braveries, of which Double Cut first hit (midair) is among the most important starters.",
+            "Cloud normally ends combos with the Omnislash Version 5 HP link for damage. If Cloud wants more EX Force, he can use Braver. However, the attack is much shorter, so bravery won't have as much time to recover if he started an assist combo with an HP attack."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Punish starter, no Wall Rush\nClimhazzard (2) > AST BRV > AC > Slashing Blow (1) > Omnislash 5\n105 + HP WR\n96\nVideo\nBase Damage (Breakdown): 20 > 50 (Kuja) > 35 + HP WR\nOpponent Assist (Comrade's Vow): 157\nEX Force (Breakdown): 30 > 30 + 36\nIf Climhazzard's last hit were to send the opponent into a banish trap, Kuja can be called earlier to avoid it."
+                ],
+                [
+                  "Poke / Punish starter, Wall Rush\nSonic Break > WR > AST BRV > AC > Slashing Blow (1) > Omnislash Ver. 5\n130 + WR + HP WR\n96\nVideo\nBase Damage (Breakdown): 45 + WR > 50 > 35 + HP WR\nOpponent Assist (Comrade's Vow): 232\nEX Force (Breakdown): 30 > 30 + 36\nBasic wall rush combo. Good damage and relatively easy to do."
+                ],
+                [
+                  "HP starter, Wall Rush\nCross-slash > WR > AST BRV > AC > Slashing Blow (1) > Omnislash 5\n95 + HP WR x2\n96\nVideo\nBase Damage (Breakdown): 10 + HP WR > 50 (Kuja) > 35 + HP WR\nOpponent Assist (Comrade's Vow): 145\nEX Force (Breakdown): 30 > 30 + 36\nBasic wall rush combo. Cross-slash is good at pursuing grounded opponents and the reward is decent, even though the move itself is risky to use."
+                ],
+                [
+                  "Poke starter, no wall\nDouble Cut (1) > AST BRV > AC > Slashing Blow (1) > Omnislash 5\n92\n96\nVideo\nBase Damage (Breakdown): 7 > 50 > 35 + HP WR\nOpponent Assist (Comrade's Vow): 138\nEX Force (Breakdown): 30 > 30 + 36\nOne of Cloud's primary air combo starters. The first hit has just enough hit stun for an assist conversion, but there isn't much time to react. A basic, but valuable combo at all levels of play."
+                ],
+                [
+                  "Gap closer / Punish starter, Wall Rush\nSlashing Blow (1) > Omnislash 5 > WR > AST BRV > Firaga > AC > S. Blow (1) > Omnislash 5\n~168 + HP WR x2\n132\nVideo\nBase Damage (Breakdown): 35 + HP WR > 47 (Kuja) + 51 > 35 + HP WR\nOpponent Assist (Comrade's Vow): 255\nEX Force (Breakdown): 30 + 36 > 0 > 30 + 36\nOne of the highest damaging staple combos for Cloud. Cloud is positioned very well to do a Firaga filler during Kuja's multi-hits for a lot of damage. Firaga should hit as Kuja's multi-hits begin and subsequently shred through opponent's bravery."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cloud_Strife_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "Main article: Cloud (012) Builds",
+        "Cloud has a lot of flexibility with builds. He can be built for damage via raw attack, high base bravery and wall rush. EX Core and Assist oriented builds with Side by Side <img></img> are also great."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Hybrid (EX Intake + Seal of Lufenia)",
+          "text": [
+            "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+            "This is an EX build that focuses on EX absorption via accessories and Heaven's Cloud's <img></img> EX intake range. White Drops <img></img> and White Gem <img></img> increase EX absorption by 20 % in total. Heaven's Cloud doesn't have top-of-the-line ATK, but the EX intake range boost makes it much easier to grab EX Force. Tenacious Attacker <img></img> lets Cloud absorb EX even when he is attacking. This way he doesn't have to chase after landing Double Cut. The more Double Cuts Cloud lands, the faster the EX gauge fills up. Firaga doesn't generate any EX, but it's a high damage filler move during ground Kuja assist, perfect after Omnislash Version 5.",
+            "Seal of Lufenia's special effect has a good amount of EX depletion on it. Every time Cloud gets an HP wall rush, the depletion happens twice. That adds up quickly in assist combos that start with an HP link, such as Omnislash Version 5. Lufenian Dirk <img></img> has 72 DEF instead of 73, but the boost in ATK is nice when Heaven's Cloud only has 67 ATK.",
+            "Jump Times Boost+ adds two air jumps, which can be used to safely move around while airborne. Extra abilities Counterattack and Sneak Attack increase critical hit rate for bravery damage and Precision Evasion can get Cloud out of tight spots if he dodges just before he gets hit."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Stats"
+                ],
+                [
+                  "HP",
+                  "10299"
+                ],
+                [
+                  "CP",
+                  "450"
+                ],
+                [
+                  "BRV",
+                  "996"
+                ],
+                [
+                  "ATK",
+                  "178"
+                ],
+                [
+                  "DEF",
+                  "183"
+                ],
+                [
+                  "LUK",
+                  "60"
+                ],
+                [
+                  "Max Booster",
+                  "x3.5"
+                ]
+              ]
+            },
+            {
+              "caption": "Special Effect: Seal of Lufenia",
+              "rows": [
+                [
+                  "Equipment"
+                ],
+                [
+                  "Assist",
+                  "Kuja"
+                ],
+                [
+                  "Weapon <img></img>",
+                  "Heaven's Cloud"
+                ],
+                [
+                  "Hand <img></img>",
+                  "Lufenian Dirk <img></img>"
+                ],
+                [
+                  "Head <img></img>",
+                  "Lufenian Headband <img></img>"
+                ],
+                [
+                  "Body <img></img>",
+                  "Lufenian Vest"
+                ],
+                [
+                  "Accessory 1",
+                  "<img></img> Muscle Belt"
+                ],
+                [
+                  "Accessory 2",
+                  "<img></img> Battle Hammer"
+                ],
+                [
+                  "Accessory 3",
+                  "<img></img> Large Gap in HP"
+                ],
+                [
+                  "Accessory 4",
+                  "<img></img> Summon Unused"
+                ],
+                [
+                  "Accessory 5",
+                  "<img></img> Pre-EX Mode"
+                ],
+                [
+                  "Accessory 6",
+                  "<img></img> Pre-EX Revenge"
+                ],
+                [
+                  "Accessory 7",
+                  "<img></img> White Drop"
+                ],
+                [
+                  "Accessory 8",
+                  "<img></img> White Drop"
+                ],
+                [
+                  "Accessory 9",
+                  "<img></img> White Gem"
+                ],
+                [
+                  "Accessory 10",
+                  "<img></img> Tenacious Attacker"
+                ],
+                [
+                  "Summon <img></img>",
+                  "Rubicante"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "<img></img> Sonic Break",
+                  "<img></img> Slashing Blow"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "<img></img> Branch: Finishing Touch",
+                  "<img></img> Branch: Omnislash Version 5"
+                ],
+                [
+                  "↑+<img></img> Double Cut",
+                  "↑+<img></img> Double Cut"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "↓+<img></img> Firaga",
+                  "↓+<img></img> Rising Fang"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "<img></img> Cross-slash",
+                  "<img></img> Braver"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "↓+<img></img> Meteorain"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Actions"
+                ],
+                [
+                  "Ground Evasion"
+                ],
+                [
+                  "Midair Evasion"
+                ],
+                [
+                  "Ground Block"
+                ],
+                [
+                  "Midair Block"
+                ],
+                [
+                  "Aerial Recovery"
+                ],
+                [
+                  "Recovery Attack"
+                ],
+                [
+                  "Controlled Recovery"
+                ],
+                [
+                  "Wall Jump"
+                ],
+                [
+                  "Air Dash"
+                ],
+                [
+                  "Free Air Dash"
+                ],
+                [
+                  "Ground Dash"
+                ],
+                [
+                  "Multi Air Slide"
+                ],
+                [
+                  "Free Air Dash Boost"
+                ],
+                [
+                  "Assist Gauge Up Dash"
+                ],
+                [
+                  "Jump Times Boost+"
+                ],
+                [
+                  "Ground Evasion Boost"
+                ],
+                [
+                  "Midair Evasion Boost"
+                ],
+                [
+                  "Evasion Boost"
+                ],
+                [
+                  "Descent Speed Boost"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Support"
+                ],
+                [
+                  "Always Target Indicator"
+                ],
+                [
+                  "EX Core Lock On"
+                ],
+                [
+                  "Assist Lock On"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Extra"
+                ],
+                [
+                  "Precision Evasion"
+                ],
+                [
+                  "Counterattack"
+                ],
+                [
+                  "Sneak Attack"
+                ],
+                [
+                  "Gambler's Spirit"
+                ],
+                [
+                  "Disable Counterattack"
+                ],
+                [
+                  "EXP to Assist"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "CP"
+                ],
+                [
+                  "435 / 450"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "CP Allocation",
+          "text": [
+            "15 points are available for basic action abilities (jump boost, speed boost), support abilities (Auto Assist Lock On) or extra abilities (Precision Jump, Achy, First Strike)."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Attacks (Staple)",
+          "text": [
+            "These attacks are recommended regardless of matchup, stage or player preference.",
+            "Double Cut (ground & midair)",
+            "Safe pokes that generate the most EX out of Cloud's braveries.",
+            "Slashing Blow + Omnislash Version 5",
+            "Tried-and-true BRV > HP link with high damage potential."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Attacks (Flexible)",
+          "text": [
+            "These attacks are great to have, but can be swapped or removed depending on matchup, stage or player preference.",
+            "Blade Beam",
+            "Cloud's only BRV projectile with good EX generation. Even if Blade Beam hits from a distance, Cloud can dodge towards the opponent and get most of the EX force.",
+            "Firaga",
+            "Mid priority keepout and high damage filler during ground Kuja assist. Doesn't generate EX force."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Attacks (Avoid)",
+          "text": [
+            "Generally not recommended due to being outclassed by other attacks or having little to no distinct utility.",
+            "Fira",
+            "Doesn't provide any notable utility compared to other projectiles."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cloud_Strife_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Cloud's assist data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Sonic Break",
+                  "21F",
+                  "Ground",
+                  "Opponent",
+                  "8, 12, 25 (45)",
+                  "Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Slashing Blow",
+                  "21F",
+                  "Air",
+                  "Opponent",
+                  "5, 10, 25 (40)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Cross-slash",
+                  "41F",
+                  "Ground",
+                  "Opponent",
+                  "5, 5 (10)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Braver",
+                  "47F",
+                  "Air",
+                  "Opponent",
+                  "2, 1 x N (4+)",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Cloud Assist Overview",
+          "text": [
+            "Cloud assist is one of the weaker assists in the game. While his braveries are relatively fast and high damage, he doesn't hold the opponent for long and finishes his attacks quickly with huge knockback. All of his attacks wall rush, which can be difficult to utilize in open spaces. Because of this, Cloud assist works more consistently in small stages such as Pandaemonium - Top Floor and Edge of Madness. And even then he is not best in class for whiff punishment and converting overall.",
+            "His HP attacks can pursue the opponent (Cross-slash moreso), but this is an expensive price to pay for brief stage presence. Combined with the common weakness against LV2 Assist Change (melee attacks get staggered), Cloud doesn't provide much utility that would rival the best assists in the game.",
+            "Further reading: Cloud overview in assist tier list."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "One of Cloud's distinct strengths is his synergy with many assists. Kuja, Aerith and Jecht are all staples, but he can see some success with other assists as well.",
+            "Kuja\nHigh damage, reliable conversions off of all key moves (with and without wall rush) and additional utility with HP assists make Kuja one of Cloud's strongest assists. Cloud's wall rushes enable damaging assist combos, and ground wall rush makes Kuja's Flare Star HP safe against LV2 Assist Change. Strong combo fillers are possible during ground Kuja BRV. If Cloud gets to chase after Double Cut, Kuja's Force Symphony can enforce an HP attack near walls. [31] Kuja can also work with situational conversions, such as Meteorain near wall [32] or Double Cut dodge cancel with assist storage glitch. [33]",
+            "Aerith\nAerith's bravery damage potential isn't as high as Kuja, but she can set up HP attacks for Cloud anywhere in a stage with Seal Evil. This is done by hitting Double Cut, calling Aerith before chasing and doing a chase HP attack. If the opponent dodges it, Aerith hits them and Cloud is free to follow up however he wants. This is good in aerial matchups such as Sephiroth, where Cloud may have to rely more on Double Cut than his HP links for damage. Because initiating chase attracts all EX Force to the attacker, Aerith assist complements Cloud's EX gain. Tenacious Attacker <img></img> is not mandatory, which frees up an accessory slot for utility or more damage. In addition, Aerith's holding potential with Seal Evil lets Cloud set up grounded solo combos with Fire and / or Climhazzard. Omnislash Ver. 5 is one of the most common and highest damaging starters in this regard, but Aerith must be called before Cloud becomes grounded. Aerith's whiff punishment isn't prevalent, but the synergy with aerial moves and situational utility elsewhere are enough to offset that.",
+            "Jecht\nJecht assist converts off of Cloud's wall rushes and Double Cuts (1st hit) reliably. He gives Cloud plenty of time to set up two Fires near the ground which can be used to greatly increase Cloud's maximum damage potential. Grounded wall rushes won't lead to as much damage as with Kuja assist, but Cloud can always get a Slashing Blow > Omnislash Ver. 5 for decent damage. Having fast ground and midair braveries can help Cloud with whiff punishment, but this is not usually a high priority for Cloud. But he does work well with it when needed.",
+            "Tidus\nTidus provides less damage on average than other assists, but his air bravery is a great whiff punisher. Even though its hit stun is short, assist chase lets Cloud follow up with Slashing Blow consistently. Braver also works if Cloud is close to the opponent. This is not a commonly used assist for Cloud, but it can be very useful against The Emperor.",
+            "Sephiroth\n\"Budget\" Kuja assist with better whiff punishment and more reliance on Slashing Blow finishers. Depending on the assist chase angle, even Slashing Blow can partially miss. Hell's Gate assist can be used in scramble situations, though its cost can be difficult to justify at times.",
+            "Yuna\nRanged priority air BRV is safe against LV2 Assist Change. Allows consistent combos near the ground, but not with ground wall rushes.",
+            "Cecil\nAir BRV that holds the opponent in place for long. Good near the ground, lets Cloud set up Fire combos.",
+            "Onion Knight\nRanged priority ground BRV is safe against LV2 Assist Change, good for any ground wall rush confirms. Air BRV also converts off of Double Cut with chase, but this usually requires a wall to work.",
+            "Ultimecia\nNiche, but potent near walls. Cloud can call Ultimecia before chase to enforce HP damage or high damage BRV wall rush from Ultimecia's Knight's Axe. If Cloud avoids opponent's chase attack and they get wall rushed by Ultimecia, Cloud can follow up with Slashing Blow for HP damage. [34]"
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cloud_Strife_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": true,
+      "links": [
+        {
+          "text": "Double Cut (ground) leads to assist combo against a wall.",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=154"
+        },
+        {
+          "text": "Double Cut anti-air into Cross-slash combo.",
+          "url": "https://www.youtube.com/watch?v=S0xOzHXH-hI&t=20"
+        },
+        {
+          "text": "Blade Beam snipe against air dodge.",
+          "url": "https://www.youtube.com/watch?v=UecsiwzFPfY&t=110"
+        },
+        {
+          "text": "Blade Beam combos into Kuja assist.",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=167"
+        },
+        {
+          "text": "Fira combos into Kuja assist.",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=182"
+        },
+        {
+          "text": "Slashing Blow into Omnislash Ver. 5 with only second hit (1).",
+          "url": "https://www.youtube.com/watch?v=sMPjhayhsBs&t=315"
+        },
+        {
+          "text": "Slashing Blow into Omnislash Ver. 5 with only second hit (2).",
+          "url": "https://www.youtube.com/watch?v=UecsiwzFPfY&t=505"
+        },
+        {
+          "text": "Rising Fang destroys platform.",
+          "url": "https://www.youtube.com/watch?v=UecsiwzFPfY&t=650s"
+        },
+        {
+          "text": "Rising Fang is active during majority of the ascent.",
+          "url": "https://www.youtube.com/watch?v=jmTma64t2mY&t=419"
+        },
+        {
+          "text": "Rising Fang moves towards opponent during startup.",
+          "url": "https://www.youtube.com/watch?v=UecsiwzFPfY&t=320"
+        },
+        {
+          "text": "Rising Fang moves towards opponent during startup (hits).",
+          "url": "https://www.youtube.com/watch?v=sMPjhayhsBs&t=622s"
+        },
+        {
+          "text": "Rising Fang moves Cloud upward during startup.",
+          "url": "https://www.youtube.com/watch?v=sMPjhayhsBs&t=337s"
+        },
+        {
+          "text": "Double Cut (midair) is essential for building assist gauge safely through whiffs.",
+          "url": "https://www.youtube.com/watch?v=-noH-LNiZnI&t=612"
+        },
+        {
+          "text": "Double Cut (midair) dodge punish (1).",
+          "url": "https://www.youtube.com/watch?v=UecsiwzFPfY&t=493s"
+        },
+        {
+          "text": "Double Cut (midair) dodge punish (2).",
+          "url": "https://www.youtube.com/watch?v=cfag-uXTt_Q&t=117"
+        },
+        {
+          "text": "Double Cut (midair) punish after staggering with LV2 Assist Change.",
+          "url": "https://www.youtube.com/watch?v=kuPnmf_s7BE&t=117"
+        },
+        {
+          "text": "Double Cut (midair) second hit misses when done late.",
+          "url": "https://www.youtube.com/watch?v=0uzt7zE5MR0&t=942"
+        },
+        {
+          "text": "Meteorain low maximum height.",
+          "url": "https://www.youtube.com/watch?v=sMPjhayhsBs&t=565"
+        },
+        {
+          "text": "Meteorain anti-air hit (1).",
+          "url": "https://www.youtube.com/watch?v=0uzt7zE5MR0&t=830"
+        },
+        {
+          "text": "Meteorain anti-air hit (2).",
+          "url": "https://www.youtube.com/watch?v=sMPjhayhsBs&t=426"
+        },
+        {
+          "text": "Finishing Touch assist conversion without wall rush (Kuja).",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=305"
+        },
+        {
+          "text": "Finishing Touch assist conversion without wall rush (Tidus).",
+          "url": "https://www.youtube.com/watch?v=fhoUXgLe98U"
+        },
+        {
+          "text": "Braver sends up at a diagonal angle.",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=490"
+        },
+        {
+          "text": "Meteorain (midair) generates lots of EX in the corner.",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=141s"
+        },
+        {
+          "text": "Meteorain (midair) hits opponent assist for lots of EX.",
+          "url": "https://www.youtube.com/watch?v=0NuD_F8oTTY&t=77s"
+        },
+        {
+          "text": "Meteorain (midair) combo with assist near wall.",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=505s"
+        },
+        {
+          "text": "Meteorain (midair) assist combo with assist storage glitch.",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=631"
+        },
+        {
+          "text": "Omnislash Ver. 5 punished after LV1 Assist Change.",
+          "url": "https://www.youtube.com/watch?v=rb5sOobi8EA&t=124s"
+        },
+        {
+          "text": "Omnislash Ver. 5 hits assist, Cloud can ignore a hit afterwards.",
+          "url": "https://www.youtube.com/watch?v=jmTma64t2mY&t=555s"
+        },
+        {
+          "text": "Omnislash 5 keeps Cloud airborne for easier assist combo filler.",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=377s"
+        },
+        {
+          "text": "Kuja Force Symphony assist during chase",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=519"
+        },
+        {
+          "text": "Meteorain combo with Kuja assist",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=195"
+        },
+        {
+          "text": "Double Cut dodge cancel into Kuja assist",
+          "url": "https://www.youtube.com/watch?v=kgabDr3brWc&t=596"
+        },
+        {
+          "text": "Cloud with Ultimecia assist",
+          "url": "https://www.youtube.com/watch?v=YYg2cF_CgLY"
+        }
+      ]
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Cloud_Strife_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Cloud_Strife_(Dissidia_012)",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=154",
+    "https://www.youtube.com/watch?v=S0xOzHXH-hI&t=20",
+    "https://www.youtube.com/watch?v=UecsiwzFPfY&t=110",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=167",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=182",
+    "https://www.youtube.com/watch?v=sMPjhayhsBs&t=315",
+    "https://www.youtube.com/watch?v=UecsiwzFPfY&t=505",
+    "https://www.youtube.com/watch?v=UecsiwzFPfY&t=650s",
+    "https://www.youtube.com/watch?v=jmTma64t2mY&t=419",
+    "https://www.youtube.com/watch?v=UecsiwzFPfY&t=320",
+    "https://www.youtube.com/watch?v=sMPjhayhsBs&t=622s",
+    "https://www.youtube.com/watch?v=sMPjhayhsBs&t=337s",
+    "https://www.youtube.com/watch?v=-noH-LNiZnI&t=612",
+    "https://www.youtube.com/watch?v=UecsiwzFPfY&t=493s",
+    "https://www.youtube.com/watch?v=cfag-uXTt_Q&t=117",
+    "https://www.youtube.com/watch?v=kuPnmf_s7BE&t=117",
+    "https://www.youtube.com/watch?v=0uzt7zE5MR0&t=942",
+    "https://www.youtube.com/watch?v=sMPjhayhsBs&t=565",
+    "https://www.youtube.com/watch?v=0uzt7zE5MR0&t=830",
+    "https://www.youtube.com/watch?v=sMPjhayhsBs&t=426",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=305",
+    "https://www.youtube.com/watch?v=fhoUXgLe98U",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=490",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=141s",
+    "https://www.youtube.com/watch?v=0NuD_F8oTTY&t=77s",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=505s",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=631",
+    "https://www.youtube.com/watch?v=rb5sOobi8EA&t=124s",
+    "https://www.youtube.com/watch?v=jmTma64t2mY&t=555s",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=377s",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=519",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=195",
+    "https://www.youtube.com/watch?v=kgabDr3brWc&t=596",
+    "https://www.youtube.com/watch?v=YYg2cF_CgLY"
+  ]
+}

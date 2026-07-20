@@ -1,0 +1,907 @@
+{
+  "slug": "kain-highwind",
+  "name": "Kain Highwind",
+  "page": "Kain_Highwind_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Kain_Highwind_(Dissidia_012)",
+  "origin": "Final Fantasy IV",
+  "icon": "kain",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-kain.png",
+  "infobox": {
+    "Name": "Kain Highwind (カイン・ハイウインド)",
+    "Original game": "Final Fantasy IV",
+    "Base ATK (LV100)": "110 (Average)",
+    "Base DEF (LV100)": "111 (Average)",
+    "Run Speed": "8 (Below Average)",
+    "Dash Speed": "81 (Below Average)",
+    "Fall Speed": "67 (Fast)",
+    "Fall Speed Ratio After Dodge": "16 (Very Fast)",
+    "Fastest BRV": "19F (Spiral Blow, Lance Barrage)",
+    "Fastest HP": "41F (Dragon's Fang)",
+    "1-Hit HP": "Dragon's Fang, Lancet",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "No",
+    "Weapon": "Daggers, Greatswords, Katanas, Spears, Swords",
+    "Armor": "Shields, Gauntlets, Large Shields,Helms, Light Armor, Heavy Armor",
+    "Exclusive weapons": "Black Dragon Spear, Holy Dragon Spear,Abel's Lance, Highwind",
+    "Unlock": "Default",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Koichi Yamadera",
+    "Voice Actor (ENG)": "Liam O'Brien"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Kain is a close-range aerial fighter with high vertical movement. He has a unique homing air dash which can be done after melee bravery attacks. Kain excels defensively in the air largely due to his mobility; His air jumps and Precision Jumps are top class, and his fast fall speed makes his air dodges very safe to use. His aerial attacks are fast and cover diagonal angles well, which are effective for defensive punish |",
+        "Attacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.",
+        "-oriented playstyles. When Kain gets a hit, he can alter the knockback |",
+        "The distance travelled after getting hit by an attack. The exact distance varies depending on the attack.",
+        "direction with his branching follow-ups and few, but rewarding solo combos. His wall carry |",
+        "The distance travelled when a combo is happening. Longer distance means a combo pushes the opponent closer to the wall. In Dissidia 012, longer distance is better for getting a Wall Rush.",
+        "has high potential thanks to his Lance Barrage loops and very damaging aerial HP attacks. Even though Kain's base ATK is average, his damage output is much higher in practice due to his combos, critical hits and high base damage on wall rush moves, such as Rising Drive and Sky Rave. And if Kain finds himself on the ground, he can control air space with his signature Jump HP attack and slow down the pace on a moment's notice.",
+        "Kain is defensively strong, but he relies on air braveries that aren't best-in-class for rushdown |",
+        "An offensive playstyle that focuses on getting close to the opponent and attacking them relentlessly.",
+        ". He can poke |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        ", but the attacks are all slower across the board. Kain doesn't move during their startup |",
+        "The time it takes before an attack can do damage.",
+        ", and their tracking |",
+        "Tracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".",
+        "is linear in one specific direction. His relatively slow recovery |",
+        "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+        "also makes him vulnerable to whiff punishment |",
+        "Hitting an opponent who missed (whiffed) their attack.",
+        "in close-range. This puts Kain in an awkward spot; He is defensively difficult to hit, but he has trouble hitting opponents himself. He relies on timing mixups |",
+        "A situation where a player has several ways to attack, which require different actions from the defending player.",
+        "to avoid getting blocked, and he can't always stop fast movement either. Kain has few projectiles, but they are all telegraphed or risky for poking through traps, like Ultimecia's charged Knight's Lance or The Emperor's Thunder Crest. He is a close-range character without many standout traits for offense specifically.",
+        "In competitive play, Kain has been commonly ranked at mid tier. His defensive playstyle works reliably against a variety of characters, as he is good at avoiding damage in the air or powering through with charged Jumps on the ground. He's an explosive character when he gets a clean combo, but he can struggle to force openings against defensive opponents. His assist meter building is also somewhat slow, but that's mostly a problem in small stages while under pressure. In a game where defensive play is considered strong, Kain is a competent character with a fairly straightforward moveset and high damage."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kain_Highwind_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/e0/Brv_kain_spiral_blow.jpeg",
+              "damage": "20",
+              "startup": "19F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Charge at opponent while spinning diagonally upwards.",
+              "name": "Spiral Blow",
+              "notes": "Spiral Blow is occasionally used as a poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nor a punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ntool near walls. Its relatively quick startup |\nThe time it takes before an attack can do damage.\nand low vertical angle make it good for hitting opponents in front of Kain. The base damage is decent, and it has average knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nfor wall rush. As such, Spiral Blow also works as an assist combo starter.\nKain becomes airborne when using Spiral Blow, so he cannot use this move repeatedly on the ground. It's one of the safer ground moves to whiff |\nA missed attack that doesn't make any contact.\n, but it's also low reward without wall rush and assist."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3c/Brv_kain_lance_burst.jpeg",
+              "damage": "32 (2 x 6, 5, 15)",
+              "startup": "29F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Stab w/lance and kick foe. Deal more damage when close.",
+              "name": "Lance Burst",
+              "notes": "Lance Burst is Kain's strongest ground bravery for damage. Its main application is in punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nsituations against block or dodge. The base damage is above average, and it starts combos anywhere; Assist can follow up after the stab, and Kain can dodge cancel > Lance Barrage for a solo combo. Both routes are practical for Kain with some practice, so this is often equipped in competitive play.\nLance Burst moves Kain forward, and remains active |\nThe period of time when an attack is capable of doing damage.\nuntil Kain stops moving. This is enough to punish ground dodges after a dash.\nThe main drawback is the reactable |\nAn attack that has slow enough startup that a human can react to it and defend correctly.\nstartup |\nThe time it takes before an attack can do damage.\n. This is not a huge issue in most matchups |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\nthough, as Kain does not need to fight on the ground often. He doesn't have many effective mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\noptions on the ground, often defaulting to charged Jumps for safety. Lance Burst also cannot anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nopponents."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/a/a7/Brv_kain_cyclone_g.jpeg",
+              "damage": "10",
+              "startup": "35F",
+              "type": "Physical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Launch pockets of air at foe to send upwards.",
+              "name": "Cyclone (ground)",
+              "notes": "Cyclone is a homing projectile that is sparingly used on the ground. On hit, Cyclone pulls opponents in and it has enough hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nto combo into HP attacks, notably Rising Drive. Kain needs to be in midrange to do these combos, so Cyclone is often reserved for assist combos. This is more practical for Cyclone's aerial version.\nKain is considered airborne for a very brief moment after recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, which lets him combo into Rising Drive at a distance. This is easy to miss both due to positioning and strict timing, and Kain becomes grounded if he does not act with precise timing.\nKain's ground braveries are not well suited for long-term ground combat. Cyclone is no exception; It's not very effective for controlling space due to the low priority and slow startup |\nThe time it takes before an attack can do damage.\n. It travels at medium speed once it is active |\nThe period of time when an attack is capable of doing damage.\n, but it realigns gradually against vertical opponents. Kain also remains still for a moment after casting Cyclone, so it can lose to homing dashes."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Normal + Neutral",
+                "Normal + Up / Down"
+              ],
+              "image": "https://dissidia.wiki/images/a/ac/Brv_kain_lance_barrage.jpeg",
+              "damage": [
+                "35 (7, 8 + 2 x 4, 12)",
+                "30 (7, 8 + 15)"
+              ],
+              "startup": [
+                "19F",
+                "19F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "30",
+                "90"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Multiple lance thrusts. Change combo with analog stick.",
+              "name": "Lance Barrage",
+              "notes": "Up Follow-up ↑+<img></img>\nUp Follow-up ↑+<img></img>\nNeutral Follow-up <img></img>\nNeutral Follow-up <img></img>\nDown Follow-up ↓+<img></img>\nDown Follow-up ↓+<img></img>\nLance Barrage is Kain's main poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. It moves Kain forward, which makes it the primary move for hitting opponents in front of him. This is a consistent move for punishing |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nopponents in close-range, whether it's after a whiff |\nA missed attack that doesn't make any contact.\n, block stagger or missed block. On hit, Kain can call assist for a combo or go for a directional follow-up. These follow-ups are crucial for Kain's combos and meter gain, but he benefits a lot from them.\nUp Follow-up ↑+<img></img>\nUp Follow-up does not wall rush, but generates 90 EX. This lets Kain combo into another Lance Barrage after a dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n. It is Kain's primary midscreen |\nAny space in the stage where neither player is in a corner or at a wall. Basically means no walls or ceilings nearby.\nsolo combo and also an infinite combo. The timing for the combo is somewhat strict, but Kain gets plenty of wall carry and assist gauge for successful repetitions. Once Kain is near a wall, he can end the Lance Barrage combo with Neutral Follow-up for a wall rush. As a result, Up Follow-up contributes greatly to Lance Barrage's damage potential. In competitive play, two Lance Barrages are always allowed, so Kain can get good mileage out of this follow-up. Up Follow-up also works in assist combos; Kuja assist connects in corners and Aerith assist can combo via Chase.\nNeutral Follow-up <img></img>\nMultiple advancing thrusts with lateral pushback. This has good wall carry |\nThe distance travelled when a combo is happening. Longer distance means a combo pushes the opponent closer to the wall. In Dissidia 012, longer distance is better for getting a Wall Rush.\n, and it can wall rush for assist combos. Kain can use the Air Dash Cancel to get a little bit of assist gauge before going for the wall rush assist combo.\nDown Follow-up ↓+<img></img>\nThis is similar to Up Followup in terms of base damage and EX gain. It is mainly used to confirm assist combos on the ground, because the opponent is forced into a wall rush state near ground. Kain can use the Air Dash Cancel to get a little bit of assist gauge before going for the assist combo.\nLance Barrage is also used to build assist gauge on whiff. The startup |\nThe time it takes before an attack can do damage.\nis fast enough to be unreactable as it is, but it's one of the slower moves in this regard. What makes Lance Barrage safer to use is the dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n. Kain's fall speed makes his (backward) air dodges safer on average. So as long as Kain is not whiff punished |\nHitting an opponent who missed (whiffed) their attack.\nor blocked during the two slashes, Lance Barrage is fairly safe in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. The whiff recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis average, so it's not completely safe from whiff punishes though. Kain also stops during the startup, so it is more prone to missing against moving opponents."
+            },
+            {
+              "variants": [
+                "Normal + Up",
+                "Normal + Neutral / Down"
+              ],
+              "image": "https://dissidia.wiki/images/0/06/Brv_kain_celestial_shooter.jpeg",
+              "damage": [
+                "40 (2 x 4, 7 + 4, 4, 5, 12)",
+                "30 (2 x 4, 7, 15)"
+              ],
+              "startup": [
+                "21F",
+                "21F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "30",
+                "90"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                ""
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "Quick upward lunge. Change combo with analog stick.",
+              "name": "Celestial Shooter",
+              "notes": "Up Follow-up ↑+<img></img>\nUp Follow-up ↑+<img></img>\nNeutral Follow-up <img></img>\nNeutral Follow-up <img></img>\nDown Follow-up ↓+<img></img>\nDown Follow-up ↓+<img></img>\nCelestial Shooter is Kain's dedicated upward attack. It's mainly used to build assist gauge on whiff |\nA missed attack that doesn't make any contact.\nand punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nopponents above Kain. Missed blocks and attacks with long recovery are both good for using Celestial Shooter. The startup is slightly slower than Lance Barrage, but Kain will move at a diagonal angle afterwards. This movement contributes to Celestial Shooter's range and safety in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. By alternating between Celestial Shooter and other air braveries, Kain can keep moving while building assist gauge.\nUp Follow-up ↑+<img></img>\nMultiple slices with an upward thrust at the end. This can wall rush near ceilings, and it's commonly used to start assist combos there.\nNeutral Follow-up <img></img>\nThis sends opponent forward. The base damage is lower compared to Up Follow-up, but EX gain is higher. It's mainly used in Aerith assist combos, but this move specifically is not often prioritized for that. Other assists can still combo at wall if Kain uses Chase.\nDown Follow-up ↓+<img></img>\nKain sends opponent downward. This is similar to Lance Barrage's Down Follow-up. However, because Celestial Shooter moves upwards first, the Down Follow-up cannot guarantee a wall rush reaction on the ground as consistently. Kain can combo into Aerith assist with Chase.\nCelestial Shooter has average recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, so it can be whiff punished |\nHitting an opponent who missed (whiffed) their attack.\nif Kain ends up near opponent. It's generally safe against assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\npartly due to the movement. But similar to Warrior of Light's Rising Buckler, Kain can only move in this one direction. Kain cannot hit directly upwards from a distance, so it has a blind spot right above Kain. That makes it harder to use Celestial Shooter unpredictably. To that end, timing mixups |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nare important, even if this move is borderline reactable |\nAn attack that has slow enough startup that a human can react to it and defend correctly.\n."
+            },
+            {
+              "variants": [
+                "Normal + Down",
+                "Normal + Up / Neutral"
+              ],
+              "image": "https://dissidia.wiki/images/9/93/Brv_kain_crashing_dive.jpeg",
+              "damage": [
+                "40 (1 x 7, 8 + 1 x 7, 6, 12)",
+                "30 (1 x 7, 8 + 15)"
+              ],
+              "startup": [
+                "21F",
+                "21F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "30",
+                "90"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Dive] A spinning charge. Change combo with analog stick.",
+              "name": "Crashing Dive",
+              "notes": "Up Follow-up ↑+<img></img>\nUp Follow-up ↑+<img></img>\nNeutral Follow-up <img></img>\nNeutral Follow-up <img></img>\nDown Follow-up ↓+<img></img>\nDown Follow-up ↓+<img></img>\nCrashing Dive is Kain's dedicated downward attack. It's mainly used to build assist gauge on whiff |\nA missed attack that doesn't make any contact.\nand punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nopponents below Kain. Missed blocks and attacks with long recovery are both good for Crashing Dive. Since this is a downward attack with decent travel distance, Kain can use this to occasionally approach grounded opponents. Kain can mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nCrashing Dive with dash feints and other braveries to keep opponents guessing, but this only works near ground. By alternating between Crashing Dive and other air braveries, Kain can keep moving while building assist gauge safely.\nOn hit, Kain gets access to ground wall rush and a strict dodge cancel combo with Lance Barrage. The dodge cancel combo is good for Kain, but not mandatory. The wall rush opens up practical assist combos into Rising Drive for high damage.\nUp Follow-up ↑+<img></img>\nSimilar to Lance Barrage's Up Follow-up. This lets Kain generate 90 EX and combo into Lance Barrage after a dodge. Aerith assist can also combo afterwards with Chase. The two timings for dodge cancelling |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\ninto Lance Barrage are strict (the dodge, and Lance Barrage itself). However, this is still a very rewarding combo route for Kain for its meter gain, wall carry |\nThe distance travelled when a combo is happening. Longer distance means a combo pushes the opponent closer to the wall. In Dissidia 012, longer distance is better for getting a Wall Rush.\nand independency from walls.\nNeutral Follow-up <img></img>\nSame as Celestial Shooter; This sends opponent forward. The base damage is lower compared to Down Follow-up, but EX gain is higher. It's mainly used in Aerith assist combos, but this move specifically is not often prioritized for that. Other assists can still combo at wall if Kain uses Chase.\nDown Follow-up ↓+<img></img>\nThis is used for setting up damaging assist combos on the ground. It has decent knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\n, so Kain does not need to be just above the ground to get a wall rush.\nSimilar to Celestial Shooter, Crashing Dive only travels in one direction. Kain moves downwards at a diagonal angle, and the move is active |\nThe period of time when an attack is capable of doing damage.\nduring the descent. That makes it harder to avoid blocks, especially from a distance. Timing mixups |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nare important, even if this move is borderline reactable |\nAn attack that has slow enough startup that a human can react to it and defend correctly.\n."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/a/a6/Brv_kain_cyclone_a.jpeg",
+              "damage": "10",
+              "startup": "35F",
+              "type": "Physical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Launch pockets of air at foe to send upwards.",
+              "name": "Cyclone (midair)",
+              "notes": "Aerial Cyclone is practically similar to ground version. It can be used sparingly as a midrange poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nand in assist combos to setup Kain's solo combos. Cyclone adds a little bit of damage and it can even combo into another Cyclone from midrange / long-range. When optimized this way, Cyclone can add more bravery damage than his other air braveries (e.g. Lance Barrage 1st part). [1]\nCyclone is not commonly used in competitive play due to its diminishing returns as a third bravery. It's too slow to work as a threatening zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\ntool, and the reward on hit is low without situational positioning. Kain sacrifices important vertical coverage by removing Celestial Shooter or Crashing Dive. Cyclone does not make up for it in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\nbecause it is slower to punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nattacks in addition to being vulnerable to dashes and incoming attacks."
+            }
+          ]
+        }
+      },
+      "moveCount": 7,
+      "sources": [
+        "https://dissidia.wiki/Kain_Highwind_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/b3/Hp_kain_jump_lv1_up.jpeg",
+              "damage": "2 x N",
+              "startup": "See table below",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "3 each",
+              "effects": "Wall Rush",
+              "cancels": "Dodge (Landing)",
+              "assistGain": "",
+              "cp": "40 (20)",
+              "description": "[Close~Long] Pounce on foe. Charge to change its strength.",
+              "name": "Jump"
+            }
+          ]
+        },
+        "Jump's frame data": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Version",
+                "Startup / charge time",
+                "Max charge time = 180F",
+                "Liftoff",
+                "Peak",
+                "Landing"
+              ],
+              "name": null,
+              "notes": "LV1: A quick jump that always comes down. Has some invincibility while ascending.\nLV2: Jump with longer travel distance. Attacks while ascending, can dodge at the apex.\nLV3: Similar to LV2, but travels even further.\nJump is a flexible defensive tool, a must-have for Kain. It's an emergency evasive attack after ground dodges due to its invincibility |\nA state where a character cannot be hit, fully impervious to damage.\n. Charged versions can control space and slow down the pace on demand. Jump also strikes quickly with a downward wall rush, which is effective for assist combos and interim hits during them.\nKain can hold Square <img></img> to increase Jump's level and change its properties. This is an effective space control tool for several reasons; Jump gets a rising hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nthat crushes guards and guarantees the HP hit if it connects. Kain can hold the charge for a few seconds and assess the situation. Charged Jump comes out quickly once Square <img></img> is released, and it remains active |\nThe period of time when an attack is capable of doing damage.\nuntil Kain reaches the max height. It can also track |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nopponents for medium distances.\nThe crowning glory is the dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n. If Kain charges Jump, he can air dodge at the jump's apex. This allows Kain to charge Jump and react to the situation accordingly with little risk. Only LV2 and LV3 Jumps can be dodge cancelled, but Kain can charge them quickly and threaten on a moment's notice. Dodging out of Jump also lets Kain do solo combos, but only if opponent is at Jump's max height.\nJump excels in defense and assist combos, but the uncharged (LV1) version forces Kain to land on the ground. This leaves Kain vulnerable to counterattacks, and he needs assist to make it safer if it misses. It is also prone to missing against fast attacks with short recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n. It's better than not having emergency options at all, but caution is advised.\nA charged Jump usually cannot force opponents to approach. If anything, opponents can stay far away and fill assist gauge while Kain charges Jump. This can put Kain behind in the assist gauge race, even if it's safe to do. Jump also loses effectiveness against opponents who halo camp |\nA strategy which involves a character staying above the opponent, often at a safe distance.\n. All Jumps have a maximum height, which cannot reach the ceiling in most large stages. However, few low ceiling stages work to Kain's advantage, such as Pandaemonium - Top Floor and M. S. Prima Vista.\nJump deals bravery damage during descent. This happens very quickly, but it does mean Jump is technically vulnerable to EX Revenge checkmates |\nA situation where a player has no options to avoid losing a situation or a match. For example, hitting an opponent who has a full EX gauge and killing bravery can activate EX Revenge and guarantee a win.\n."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/92/Hp_kain_dragons_fang_g.jpeg",
+              "damage": "-",
+              "startup": "41F",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Stab foe with lance. Effective against any height.",
+              "name": "Dragon's Fang",
+              "notes": "Dragon's Fang is Kain's 1-hit HP attack, and his fastest HP in general. It's commonly used after block staggers. It's relatively fast and has decent vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n. It has short reach, so Kain must be mindful of blocking disjoints |\nA part of an attack that isn't close to the character's hurtbox. If this part of an attack gets hit by opponent's attack, the character using it will not take damage.\nfrom a distance before countering with this.\nThe ground version is not used often due to Kain's mediocre ground combat outside of charged HP Jumps. The air version is functionally the same, but serves the 1-hit HP niche more reliably."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f8/Hp_kain_rising_drive.jpeg",
+              "damage": "64 (2 x 32)",
+              "startup": "49F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Rise] Spin lance charging upwards until hitting ceiling.",
+              "name": "Rising Drive"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/d/d5/Hp_kain_sky_rave.jpeg",
+              "damage": "74 (2 x 37)",
+              "startup": "49F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dive] Barrel downwards with lance until hitting ground.",
+              "name": "Sky Rave"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8c/Hp_kain_dragons_fang_a.jpeg",
+              "damage": "-",
+              "startup": "41F",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Stab foe with lance. Effective against any height.",
+              "name": "Dragon's Fang (midair)"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7d/Hp_kain_gungnir.jpeg",
+              "damage": "60 (2 x 30)",
+              "startup": "55F",
+              "type": "Physical",
+              "priority": "Ranged High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Throw energy infused lance. Flies until hitting stage.",
+              "name": "Gungnir"
+            }
+          ]
+        }
+      },
+      "moveCount": 7,
+      "sources": [
+        "https://dissidia.wiki/Kain_Highwind_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Holy Strength!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nLancet"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Lancet",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "<img src=\"\" style=\"width:250px; height:270px; object-fit: none; object-position: 36%; border:3px solid RGB(105,86,160); inline-table;\"></img>"
+                ],
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.",
+                  "-"
+                ],
+                [
+                  "The time it takes for this attack to do damage. Currently this is measured at 60 frames per second (30F would be 0.5 seconds).",
+                  "51F"
+                ],
+                [
+                  "Damage Type",
+                  "-"
+                ],
+                [
+                  "Priority",
+                  "Ranged High"
+                ],
+                [
+                  "The amount of EX that can be gained from EX Force. 1000 = Full EX gauge.",
+                  "60"
+                ],
+                [
+                  "Effects",
+                  "EX Burst"
+                ],
+                [
+                  "What this move can be cancelled into.",
+                  "Dodge, Air Dash"
+                ],
+                [
+                  "Assist Gain (Hit)",
+                  "-"
+                ],
+                [
+                  "CP (Mastered)"
+                ],
+                [
+                  "[Activate with R + Square] Damage dealt absorbed as HP and immediately recovers spent BRV. Cancel action with Air Dash.",
+                  "Unlocked at level 1",
+                  "Mastered at - AP"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "EX Burst: Dragoon's Pride",
+          "text": [
+            "File:Ex burst kain.jpeg",
+            "The ultimate dragoon jump. Repeatedly press command displayed on the screen to raise the gauge. The command will change twice at random"
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "20, 10 (30)",
+                  "70 (100 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kain_Highwind_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": true,
+      "title": "Unique Mechanic: Air Dash Cancel",
+      "text": [
+        "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+        "When Kain finishes a melee bravery attack, he can cancel |",
+        "An action that is interrupted early by doing another action.",
+        "it into a homing air dash by pressing Triangle <img></img>. Its main application is filling assist gauge with Assist Gauge Up Dash ability while approaching opponent. This can be useful for optimizing ground assist combo starters, but it sees little use in other situations. The dash and Kain's relatively slow startup |",
+        "The time it takes before an attack can do damage.",
+        "speed for his air braveries do not open up solo combo routes for Kain.",
+        "This is built-in for Kain, so he does not need to equip any dash abilities to do this. Kain will perform the air dash even when Triangle <img></img> is held down beforehand. In practice, it is similar to an input buffer |",
+        "Pressing a button during another action to ensure the next action comes out as soon as possible. Dissidia 012 does not apply input buffer in most places, so this should not be confused with input latency, or general responsiveness.",
+        ", which is rare in Dissidia 012."
+      ],
+      "tables": [],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Kain_Highwind_(Dissidia_012)"
+      ]
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kain_Highwind_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "|-|Side by Side (Damage)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "A high damage build utilising bravery damage and wall rush for small stages with low ceiling. The maximum booster value of x7.4 activates with both Large Gap in HP and BRV = 0. x5.3 when Large Gap in HP is in effect, but not BRV = 0.",
+        "Substitutes\nBasic: Hyper Ring for Battle Hammer (assist depletion) or Dismay Shock (enhanced EX depletion)",
+        "|-|Hybrid (EX)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "A damage build without sacrificing EX absorption. Recommended for medium to large stages. x2.3 booster before Large Gap in HP activates.",
+        "Substitutes",
+        "Weapon: Cleaver\nIf you intend to use Aerith assist, use Cleaver instead. Heaven's Cloud serves well if you are comfortable doing his aerial bravery loops (in the corner)."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9971"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "957"
+            ],
+            [
+              "ATK",
+              "181"
+            ],
+            [
+              "DEF",
+              "182"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x7.4"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Player Choice"
+            ],
+            [
+              "Weapon <img></img>",
+              "Highwind"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Dirk <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Headband <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Vest"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Sniper Eye"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Large Gap in HP"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> BRV = 0"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Empty EX Gauge"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Side by Side"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9644"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1075"
+            ],
+            [
+              "ATK",
+              "68"
+            ],
+            [
+              "DEF",
+              "71"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x3.5"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Player Choice"
+            ],
+            [
+              "Weapon <img></img>",
+              "Heaven's Cloud"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Dirk <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Hairpin <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Vest"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Sniper Eye"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Large Gap in HP"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Glutton"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Kain_Highwind_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Kain Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Lance Burst",
+                  "29F",
+                  "Ground",
+                  "Opponent",
+                  "2 x 6, 5, 15 (32)",
+                  "Chase"
+                ],
+                [
+                  "BRV",
+                  "Crashing Dive",
+                  "21F",
+                  "Air",
+                  "Opponent",
+                  "1 x 7, 8, 1 x 7, 6, 12 (40)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Jump",
+                  "62F",
+                  "Ground",
+                  "Opponent",
+                  "2xN",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Dragon's Fang",
+                  "41F",
+                  "Air",
+                  "Opponent",
+                  "-",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "Kuja, Onion Knight."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kain_Highwind_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": true,
+      "links": [
+        {
+          "text": "Cyclone combos into another Cyclone.",
+          "url": "https://www.youtube.com/watch?v=J1afqP4ldQQ&t=51"
+        }
+      ]
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Kain_Highwind_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Kain_Highwind_(Dissidia_012)",
+    "https://www.youtube.com/watch?v=J1afqP4ldQQ&t=51"
+  ]
+}

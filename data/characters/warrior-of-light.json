@@ -1,0 +1,1092 @@
+{
+  "slug": "warrior-of-light",
+  "name": "Warrior of Light",
+  "page": "Warrior_of_Light_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)",
+  "origin": "Final Fantasy",
+  "icon": "wol",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-wol.png",
+  "infobox": {
+    "Name": "Warrior of Light",
+    "Original game": "Final Fantasy",
+    "Base ATK (LV100)": "110 (Average)",
+    "Base DEF (LV100)": "113 (Very High, +10 during EX Mode)",
+    "Run Speed": "6 (Average / Good)",
+    "Dash Speed": "77 (Average / Good)",
+    "Fall Speed": "87 (Average)",
+    "Fall Speed Ratio After Dodge": "40 (Average)",
+    "Fastest BRV": "13F (Dayflash ground)",
+    "Fastest HP": "51F (Shining Wave)",
+    "1-Hit HP": "Yes (Multiple)",
+    "HP Links": "Yes",
+    "Command Block": "Shield of Light",
+    "Weapon": "Axes, Daggers, Greatswords, Katanas, Swords",
+    "Armor": "Chestplates, Gauntlets, Heavy Armor, Helms, Large Shields, Light Armor, Shields",
+    "Exclusive weapons": "Flame Sword, Braveheart, Barbarian's Sword",
+    "Unlock": "Default",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Toshihiko Seki",
+    "Voice Actor (ENG)": "Grant George"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Warrior of Light is a close range fighter who operates as an all-rounder |",
+        "A character who can do a bit of everything well.",
+        ". He represents a standard-fare fighting style with quick Dayflash pokes |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        ", committal gap closers and midrange projectiles. His standard mobility lets him create offense and defense as needed, and once he gets an opening, his HP links |",
+        "An HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.",
+        "can deal good damage. Warrior of Light's damage output is supported by high base bravery builds, HP wall rush and assist combos. He works well with many assists and his combo routes are consistent in most positions. Thanks to his high coverage with HP links such as Shield Strike / Rising Buckler > Bitter End, Warrior of Light can punish |",
+        "Attacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.",
+        "effectively from most angles.",
+        "As an all-rounder, Warrior of Light works with a variety of builds, including EX and Side by Side <img></img>. His standout traits are defensively oriented; He has very high base DEF stat, which is greatly amplified in EX Mode. He also has an advancing frame 1 command block |",
+        "An attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.",
+        "in Shield of Light, which is a 1-hit HP that wall rushes. This is not common in the game. It makes Warrior of Light's dodges safer and beating low priority attacks with long active |",
+        "The period of time when an attack is capable of doing damage.",
+        "frames easier.",
+        "Warrior of Light can struggle against lingering projectiles due to his risky disjoints |",
+        "A part of an attack that isn't close to the character's hurtbox. If this part of an attack gets hit by opponent's attack, the character using it will not take damage.",
+        ". His projectiles are serviceable, but often low reward at a distance. The reliance on HP links makes Warrior of Light susceptible to punishes after LV1 Assist Change. He has safer options at the cost of damage. His air dodge has an average fall speed ratio, so he has to protect himself with Shield of Light occasionally to stay safe. While this is a powerful option, it is also high commitment and leaves him vulnerable if it misses.",
+        "In competitive play, Warrior of Light has been usually ranked at high tier. His fundamentally good moveset and stats lend to a consistent playstyle that adheres to the metagame |",
+        "The general state of a game's strategy. \"Metagame\" could also refer to things outside of the game itself, such as preventing the opponent from seeing your button presses.",
+        "."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "All-rounder - Average to good stats, HP links and a fundamentally good moveset with an answer to many sitations.\nUser-friendly - Great for beginners and experienced players alike. Good for learning the game and honing fundamentals.\nCommand block - Shield of Light is an advancing single hit HP attack. It blocks instantly throughout its startup , and works both offensively and defensively after dodges.\nGround combat - Projectiles and empty chase assist combo starters allow Warrior of Light to adapt to a match's pace and improve his combo potential.\nBuild synergy - Works well with all common build styles, including EX, bravery boost on dodge and Side by Side <img></img>.\nEX generation - Most bravery attacks produce 30 to 90 EX Force. His most common poke Dayflash produces 90 EX, which supports long-term survivability with EX gauge.\nEX Mode - Boasts highest defense stat, automatically blocks Ranged Low projectiles and increases damage output of melee bravery attacks.",
+              "Struggles against traps - Despite having projectiles and disjoints, Warrior of Light cannot easily punish characters hiding inside lingering projectiles and traps without resources or considerable risk.\nCommital vertical attacks - Rising Buckler and Shield Strike braveries are serviceable, but are reactable and cannot be cancelled early on whiff.\n4-slot bravery dilemma - Warrior of Light benefits from all of his air braveries, but he cannot equip all of them\nFloaty air dodge, risky dodge protection - While Shield of Light is great at covering his air dodges, it is also high risk and doesn't work against high priority attacks. Outside of clashing with Dayflash bravery, air dodges make Warrior of Light vulnerable."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Normal",
+                "EX Mode"
+              ],
+              "image": "https://dissidia.wiki/images/2/2c/Brv_wol_ascension.jpeg",
+              "damage": [
+                "40 (4, 5, 11, 20)",
+                "54 (4 +5, 5 +4, 11, 20 +6)"
+              ],
+              "startup": [
+                "15F",
+                "15F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "90",
+                "90"
+              ],
+              "effects": [
+                "Chase, Wall Rush",
+                "Chase, Wall Rush, Block (Ranged Low)"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Throw shield to hurl opponent upwards.",
+              "name": "Ascension",
+              "notes": "Ascension is a close-range combo move that's used in punishes |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\n, ground solo combos and occasional approaches. Two follow-ups can be done with Circle <img></img>, which ends with a rising thrust. A Chase prompt appears afterwards, but if opponent is near ceiling, it will wall rush instead. Ascension is well suited for punishing grounded and airborne opponents. The initial shield is fast at 15 frames, and it anti-airs |\nAttacking an airborne opponent from below, usually on the ground.\n. It also has decent active |\nThe period of time when an attack is capable of doing damage.\nframes, until it has crossed Warrior of Light's head. That means the attack cannot hit behind his back, even though the shield is visible.\nAscension leads to Rune Saber HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\nat the end, so Warrior of Light doesn't rely on assist for HP damage. This is good for damage overall, because Ascension's base damage is quite high at 40. Warrior of Light can always finish Ascension and then do Rune Saber from below if he deems it appropriate.\nThis move has average recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, which is enough to put Warrior of Light at risk on whiff |\nA missed attack that doesn't make any contact.\n. Ascension has no other cancel |\nAn action that is interrupted early by doing another action.\noptions on whiff, so even though it's a good move, Warrior of Light can lose his \"turn\" if it misses."
+            },
+            {
+              "variants": [
+                "Normal",
+                "EX Mode"
+              ],
+              "image": "https://dissidia.wiki/images/7/7f/Brv_wol_sword_thrust.jpeg",
+              "damage": [
+                "30 (6, 3x3, 15)",
+                "40 (6, 3x3 +4, 15 +6)"
+              ],
+              "startup": [
+                "31F",
+                "31F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Mid (1st hit)Melee Low (others)",
+                "Melee Mid (1st hit)Melee Low (others)"
+              ],
+              "exForce": [
+                "30",
+                "30"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall RushBlock (Ranged Low)"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Hurl shield and charge. Instantly close in on opponent.",
+              "name": "Sword Thrust",
+              "notes": "Sword Thrust is a committal gap closer that moves towards opponent. This is mainly used to beat regular ground blocks. Warrior of Light throws a mid priority shield first, which staggers regular blocks. If it hits, a follow-up can be done with Circle <img></img>. Warrior of Light can combo into assist with or without wall rush.\nWarrior of Light moves forward even if it misses. This can catch ground dodges, but it's risky and difficult to do consistently. Sword Thrust is reactable |\nAn attack that has slow enough startup that a human can react to it and defend correctly.\nat 31 frames. Since Warrior of Light commits to the charge even on whiff |\nA missed attack that doesn't make any contact.\n, he can be blocked on reaction when he moves forward with the sword. It also takes a while before he can dodge out of it, which leaves him vulnerable to attacks. Sword Thrust cannot anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nopponents either, so its uses are more limited compared to Ascension. It's effective against blocks, but it should used with caution."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/56/Brv_wol_red_fang.jpeg",
+              "damage": "15",
+              "startup": "41F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Block (Ranged Low, EX Mode)",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shoot high-speed fireball towards opponent.",
+              "name": "Red Fang",
+              "notes": "Red Fang is a fast single hit projectile. It travels the longest distance out of Warrior of Light's bravery projectiles, from wall to wall in Order's Sanctuary. Due to its low priority, short hit stun and low reward on hit, it is not commonly used in competitive play. His other projectiles have more utility in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\nand lead to more practical combos on hit."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/90/Brv_wol_blue_fang.jpeg",
+              "damage": "7 each",
+              "startup": "41F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Block (Ranged Low, EX Mode)",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Chunks of ice slowly descend on opponent.",
+              "name": "Blue Fang",
+              "notes": "Blue Fang is a group of midrange projectiles that strike from above (or below). This is a niche move; It is mainly used in low ceiling stages (e.g. Pandaemonium - Top Floor) to keep ranged opponents in check. Warrior of Light can use this to harass characters hiding behind their projectiles, such as Laguna with Electro Shield and Ultimecia with charged Knight's Lance.\nThe projectiles' travel speed is slow, but they can hit from behind which ignores block. Each projectile has short hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n, but they can hit one after another. This is inconsistent for combo purposes, but reacting properly gets easier if multiple projectiles hit in a row. It's more reliable than Red Fang in that regard, at least. In terms of Warrior of Light's midrange presence, Blue Fang is one of the fastest. This is because the projectiles spawn near the opponent's location. If the opponent moves upwards, Blue Fang also spawns higher. Blue Fang does have a maximum range for its spawn position, though; It's roughly 30-40 % of Order's Sanctuary's length horizontally and vertically. The projectiles can cover more distance as they move to make up for this, but it's not well suited for quick reactive play.\nBlue Fang is not well suited for close-range combat. Its upward spawning position and relatively slow traversal make it ill-fit for self-defense. The projectiles are Ranged Low priority, so they lose to dashes and melee attacks even if they make contact. The bravery damage is low as well, so the reward is not high from the outset."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/2f/Brv_wol_white_fang.jpeg",
+              "damage": "6 each",
+              "startup": "47F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Block (Ranged Low, EX Mode)",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Call down lightning bolts that slowly close in on foe.",
+              "name": "White Fang",
+              "notes": "White Fang is a group of advancing lightning bolts. It's Warrior of Light's go-to projectile on the ground for pressure and combos. The Ranged Low priority still loses to dashes, blocks and melee attacks, but it has enough utility to make up for it. Warrior of Light can use White Fang to cover his approach thanks to being actionable himself while the bolts are active |\nThe period of time when an attack is capable of doing damage.\n. The bolts have a decent amount of hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n, which lets Warrior of Light follow-up with Ascension, Dayflash and more.\nThe projectiles travel at medium speed, but only remain active for roughly 1.7 seconds. As a result, their maximum uptime and travel distance are shorter compared to other projectiles. White Fang is far more practical in competitive play for offense, though. The projectiles are homing, but they adjust slowly to sharp vertical angles. White Fang works against aerial opponents at a low diagonal angle, but Warrior of Light needs to make sure the opponent won't dash through and hit him."
+            },
+            {
+              "variants": [
+                "Normal",
+                "EX Mode"
+              ],
+              "image": "https://dissidia.wiki/images/4/43/Brv_wol_dayflash_g.jpeg",
+              "damage": [
+                "22 (3, 4, 15)",
+                "36 (3 +4, 4 +4, 15 +6)"
+              ],
+              "startup": [
+                "13F",
+                "13F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "90",
+                "90"
+              ],
+              "effects": [
+                "Chase",
+                "Chase Block (Ranged Low)"
+              ],
+              "cancels": "A missed attack that doesn't make any contact.\n) || Dodge, Block & Attack (Whiff )",
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Fast horizontal slice. Low power, quick strike.",
+              "name": "Dayflash (Ground)",
+              "notes": "Dayflash is Warrior of Light's main poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. It is fast, generates good 90 EX and works as an assist combo starter. It can be whiffed |\nA missed attack that doesn't make any contact.\nsafely to build assist gauge due to its short recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nand multiple cancel |\nAn action that is interrupted early by doing another action.\noptions. Warrior of Light can mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nwith dodges, blocks or other attacks, including another Dayflash.\nOn hit, Warrior of Light can perform two follow-up slashes with Circle <img></img> if the first hit connects. This 3-hit combo has a relatively long input window, which makes it good for hit confirming |\nThe act of performing an attack, reacting to it hitting and following up appropriately. Ergo, \"confirming\" it.\nassist combos. The last hit leads to Chase. The low knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nangle and long chase prompt let Warrior of Light do empty chase |\nA chase sequence where the initiator does nothing.\nto force a grounded wall rush. This is good for getting all EX Force on the field, but also for starting assist combos. And if Warrior of Light already used assist beforehand, he can extend that combo with Dayflash empty chase to use assist again if he has another bar in stock.\nWhen used appropriately, Dayflash can control the pace of a match without high risk. It is a staple move for Warrior of Light in competitive play. Its aerial version is just as good and important to him."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Normal",
+                "EX Mode"
+              ],
+              "image": "https://dissidia.wiki/images/3/3a/Brv_wol_crossover.jpeg",
+              "damage": [
+                "40 (5, 5, 10, 20)",
+                "50 (5, 5, 10 +4, 20 +6)"
+              ],
+              "startup": [
+                "23F",
+                "23F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "90",
+                "90"
+              ],
+              "effects": [
+                "Chase, Wall Rush",
+                "Chase, Wall Rush Block (Ranged Low)"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Spinning approach and thrust opponent upwards.",
+              "name": "Crossover",
+              "notes": "Crossover is an advancing bravery with an HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\n. It is primarily used as a punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ntool against long winded attacks and staggered opponents. It can be used to approach if done sparingly. The damage potential and longer lateral reach make this an aerial alternative to Ascension.\nWarrior of Light can follow up with an upward thrust by pressing Circle <img></img>, which causes chase. If opponent is near ceiling, it can wall rush instead. The thrust has high upward knockback, which can easily wall rush at medium heights. With wall rush, empty chase |\nA chase sequence where the initiator does nothing.\ncan be done from medium distance to make it safe against Recovery Attack. Whether or not chase is done, Warrior of Light needs assist to follow up after wall rush.\nCrossover must be completed to do the Rune Saber HP link. That means Warrior of Light usually does not lose bravery damage in exchange for HP damage. The startup |\nThe time it takes before an attack can do damage.\nis borderline reactable |\nAn attack that has slow enough startup that a human can react to it and defend correctly.\nthough, and Warrior of Light stays in the animation for roughly a second before he can dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nout of it. That makes it more dangerous to whiff |\nA missed attack that doesn't make any contact.\nin neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n.\nCrossover's last hit (upward thrust) has a quirk, where it is prone to missing at the ceiling against certain characters. This requires being at the ceiling and at same height with the opponent. If this is done against characters with larger bodies, such as Garland, Golbez and Exdeath, the last hit can miss altogether."
+            },
+            {
+              "variants": [
+                "Normal",
+                "EX Mode"
+              ],
+              "image": "https://dissidia.wiki/images/b/b1/Brv_wol_rising_buckler.jpeg",
+              "damage": [
+                "30 (2x4, 6, 16)",
+                "42 (2x4 +6, 6, 16 +6)"
+              ],
+              "startup": [
+                "25F",
+                "25F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "30",
+                "30"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush Block (Ranged Low)"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "Upward swing, snagging foe with shield. Useful from below.",
+              "name": "Rising Buckler",
+              "notes": "Rising Buckler is a punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ntool against opponents who are above Warrior of Light. Its vertical reach and Bitter End HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\nmake it rewarding as an anti-air |\nAttacking an airborne opponent from below, usually on the ground.\n. It is also a consistent follow-up to Kuja and Sephiroth air bravery assists. The disjointed |\nA part of an attack that isn't close to the character's hurtbox. If this part of an attack gets hit by opponent's attack, the character using it will not take damage.\nshield can even poke through projectiles, if the opponent is not fully covered by them. To top it off, it can side switch on hit, ideal for sneaky counter attacks near walls.\nRising Buckler is not risk-free, however. It is reactable |\nAn attack that has slow enough startup that a human can react to it and defend correctly.\ndue to its 25-frame startup |\nThe time it takes before an attack can do damage.\nand distinct audio cue. It is Warrior of Light's primary upward aerial attack, which makes it more telegraphed. He stays in place for a moment before he is actionable, and won't track the opponent once the shield is thrown. If Warrior of Light blocks an opponent, he has to make sure they are above him so that Rising Buckler does not miss. Rising Buckler does not wall rush often in open spaces. It is primarily done near ground, or if the opponent can escape from Bitter End with Assist Change, since it is safer against it.\nWarrior of Light has a downward alternative in Shield Strike. He can use both attacks to have high vertical coverage, but he does not always need both. Rising Buckler specifically can be useful in some air oriented match-ups |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\n, such as Sephiroth and Kuja."
+            },
+            {
+              "variants": [
+                "Normal",
+                "EX Mode"
+              ],
+              "image": "https://dissidia.wiki/images/b/b2/Brv_wol_shield_strike.jpeg",
+              "damage": [
+                "30 (2x4, 6, 16)",
+                "42 (2x4 +6, 6, 16 +6)"
+              ],
+              "startup": [
+                "25F",
+                "25F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "30",
+                "30"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush Block (Ranged Low)"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "Downward attack, scooping foe with shield. Useful from above.",
+              "name": "Shield Strike",
+              "notes": "Shield Strike is almost identical to Rising Buckler, but it hits downward instead. On hit, it side switches and knocks at an upward angle. It is his main aerial move for air-to-ground |\nAttacking a grounded opponent while being in the air. The attacker may land on the ground as well.\nsituations and punishing |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nreckless play from above. This has high coverage against many close-range melee characters, since they rarely rely on fighting above Warrior of Light. It is also effective for hitting staggered opponents after LV2 Assist Change. Shield Strike has the Bitter End HP link as well, which makes this a more threatening move on average.\nShield Strike shares many of Rising Buckler's flaws. Its startup |\nThe time it takes before an attack can do damage.\nis reactable, and it is his primary downward attack. That makes it more telegraphed in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. It's great when used cautiously, but carries a lot of risk if it whiffs |\nA missed attack that doesn't make any contact.\n. It has long recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nand no tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nafter the shield is thrown.\nWarrior of Light does not move far if he is not above opponent, but the shield does hit in front of Warrior of Light. That lets him combo into HP after Sephiroth assist, who is one of his strongest assists."
+            },
+            {
+              "variants": [
+                "Normal",
+                "EX Mode"
+              ],
+              "image": "https://dissidia.wiki/images/5/5b/Brv_wol_dayflash_a.jpeg",
+              "damage": [
+                "22 (3, 4, 15)",
+                "36 (3 +4, 4 +4, 15 +6)"
+              ],
+              "startup": [
+                "15F",
+                "15F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "90",
+                "90"
+              ],
+              "effects": [
+                "Chase",
+                "Chase Block (Ranged Low)"
+              ],
+              "cancels": "A missed attack that doesn't make any contact.\n) || Dodge, Block & Attack (Whiff )",
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Fast horizontal slice. Low power, quick strike.",
+              "name": "Dayflash (midair)",
+              "notes": "Dayflash's aerial version is essential, and similar to ground version in many aspects. It is fast, safe to whiff |\nA missed attack that doesn't make any contact.\nfor assist gauge and reliable for confirming assist combos. It's also used to accumulate EX over time. Fights often happen in the air, so Warrior of Light relies on this move a lot.\nThe startup |\nThe time it takes before an attack can do damage.\nis slightly slower than ground Dayflash (15 frames instead of 13), but it's still unreactable. The recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis short as well, which lets him build assist gauge on whiff. He can also cancel |\nAn action that is interrupted early by doing another action.\na missed Dayflash into other attacks or block to keep opponents guessing. The hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\ngoes low enough where it can still hit grounded opponents, so Dayflash also works as an air-to-ground |\nAttacking a grounded opponent while being in the air. The attacker may land on the ground as well.\nmove.\nThis is Warrior of Light's lowest damaging move compared to his other moves, but it's also the fastest and safest to use. Assist (or Chase) is needed to get HP damage from this. It's a staple for him in competitive play, and his longevity hinges on how well he can utilize Dayflash."
+            }
+          ]
+        }
+      },
+      "moveCount": 10,
+      "sources": [
+        "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/77/Hp_wol_shield_of_light_g.jpeg",
+              "damage": "-",
+              "startup": "53F (Block from 1F to 53F)",
+              "type": "-",
+              "priority": "Melee High, Block Mid",
+              "exForce": "0",
+              "effects": "Block, Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Fire force blast from shield. Hurls foe while blocking.",
+              "name": "Shield of Light (ground)",
+              "notes": "Shield of Light is Warrior of Light's signature command block |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\n. He moves forward before unleashing a 1-hit force blast that can wall rush. Its blocking duration is very generous, as it blocks instantly from frame 1 until the move does damage. Combined with the forward movement, Shield of Light can call out low priority pokes, such as Cloud of Darkness's tentacles.\nMore importantly, Shield of Light works as an instant defensive option after a ground dodge. If Warrior of Light is about to get hit, he can use this to keep the opponent at bay. Blocks like this work against dashes and low priority attacks alike. This presents a second layer of defense that the opponent has to consider at all times, or they risk taking HP damage just for approaching.\nShield of Light is a great defensive tool, but it still carries a risk. If it misses, Warrior of Light is left wide open for punishes |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\n. Shield of Light can only block low priority moves. Higher priority moves like HP attacks and Squall's Heel Crush will guard crush or stagger Warrior of Light respectively.\nWarrior of Light becomes airborne when using this move. He automatically aims this move at a diagonal angle against airborne opponents, but he cannot change the direction halfway through."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/10/Hp_wol_shining_wave.jpeg",
+              "damage": "-",
+              "startup": "51F",
+              "type": "-",
+              "priority": "Melee High (blade) Ranged High (light pillar)",
+              "exForce": "each 60",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Shoot pillars of light. Homes in on opponent.",
+              "name": "Shining Wave",
+              "notes": "Shining Wave is a long-range wave HP attack. It is used as a counterattack after block staggers and a passive space control tool at longer distances. It is also useful against air dodges near ground.\nThis attack complements Warrior of Light's ground combat. It is a solid anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nattack thanks to its instant, tall vertical hitboxes |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nand the ability to turn in a full circle. The beams are separate entities, and they cannot be reflected back. Shining Wave does not vanish if it gets blocked, either. The Ranged High priority is great for ignoring LV2 Assist Change staggers during assist combos well.\nShining Wave is best used sparingly, as Warrior of Light is vulnerable to attacks after firing Shining Wave. It loses to high priority melee attacks and command blocks |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\nfrom Jecht and Exdeath. Since it is a ground move, it may not see much use in air-oriented fights, such as against Sephiroth or Exdeath.\nAs for other notes, the wave projectile travels at a relatively high speed once it's active |\nThe period of time when an attack is capable of doing damage.\n. It can track |\nairborne opponents, but it always moves forward at first before it starts realigning. Shining Wave can hit twice if it connects this way, though this can be difficult to aim for in a competitive match. Shining Wave can also combo into assist at a wall, but outside of that, its reward is pretty low on average.\nAs a wave HP, Shining Wave has a little quirk with its hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\n. It can miss against high speed movement that is passing through the projectile. [1] This is pretty risky to attempt though, so Warrior of Light does not have to worry about it too often."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c1/Hp_wol_ultimate_shield.jpeg",
+              "damage": "20 (4 x 3, 8)",
+              "startup": "41F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Deft shieldwork. Effective against any height.",
+              "name": "Ultimate Shield",
+              "notes": "Ultimate Shield is a combo attack used to call out blocks, nearby dodges or even attacks. It is his fastest ground HP attack, and it has strong hemisphere-like tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nwhen aiming his shield. In other words, it can hit around Warrior of Light to a certain degree.\nWarrior of Light stays in place while his shield goes towards opponent. If the shield misses, Warrior of Light will not continue with a combo. This makes it a bit safer to use from a distance. Ultimate Shield can also reflect HP projectiles without moving towards them. The reach is decent, but not enough to punish neutral ground dodges without prior movement. Assists can follow up either after wall rush or with a knockback cancel |\nAn attack's knockback that is interrupted with assist. Keeps the opponent in place.\n.\nIf White Fang connects, it can activate a hit glitch for Ultimate Shield if its done at the same time. That means the move will transition to follow-up hits despite not making any contact with opponent. This can be detrimental due to short reach. It has long recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nwhen finished, so Warrior of Light should watch out for Assist Changes when using this."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/d/dc/Hp_wol_rune_saber.jpeg",
+              "damage": "10 (2 x 3, 4) / +Ascension = (50 Total)",
+              "startup": "?",
+              "type": "Magical",
+              "priority": "Melee High (?)",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Ascension [Combo] Light beam pierces foe.",
+              "name": "Rune Saber (ground)",
+              "notes": "Rune Saber is the HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\nfrom Ascension. It is notable for its combo potential and relative safety against Assist Change counters. Both Ascension and Rune Saber have long upward knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\n. That means Rune Saber can wall rush consistently in stages with lower ceilings, such as Sky Fortress Bahamut and Edge of Madness. Rune Saber cannot hit a wall rushed opponent, though.\nThe wall rush is great for HP damage and assist combos alike. If Warrior of Light cannot guarantee a ceiling wall rush, multi-hit assists like Sephiroth can also knockback cancel |\nAn attack's knockback that is interrupted with assist. Keeps the opponent in place.\nfor combos. As a result, Rune Saber is useful as an independent source of HP damage and assist combo starter anywhere.\nRune Saber has a lengthy animation, which normally makes it risky against opponents who escaped with Assist Change. Rune Saber's last hit has a tall hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nwith long active |\nThe period of time when an attack is capable of doing damage.\nframes. This provides some cover for Warrior of Light before he can dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n, but it's not entirely safe. Opponents can still try to Assist Change out early and dodge next to Warrior of Light, but it's harder to do compared to Bitter End."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/6a/Hp_wol_shield_of_light_a.jpeg",
+              "damage": "-",
+              "startup": "53F (Block from 1F to 53F)",
+              "type": "-",
+              "priority": "Melee High, Block Mid",
+              "exForce": "0",
+              "effects": "Block, Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Fire force blast from shield. Hurls foe while blocking.",
+              "name": "Shield of Light (midair)",
+              "notes": "The signature command block |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\n. This is more commonly used since it's an aerial move, otherwise it's very similar to the ground version. Aerial Shield of Light is still used for self defense after air dodges and calling out Melee Low and slow mid priority moves. This is one of Warrior of Light's notable selling points compared to other all-rounders |\nsuch as Cloud and Squall.\nAs a 1-hit move, Shield of Light can also circumvent EX Revenge checkmates |\nA situation where a player has no options to avoid losing a situation or a match. For example, hitting an opponent who has a full EX gauge and killing bravery can activate EX Revenge and guarantee a win.\nwith EX depletion |\nAn equipment effect which empties the opponent's Assist or EX gauge by a certain amount.\n.\nThe force blast has short reach and it doesn't stay active for long. However, it can wall rush and start assist combos with a good read |\nA read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".\n. It's not commonly used in most assist combos due to limited vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nand long animation, but it can set up double assist combos with Aerith assist. Regardless, the aerial Shield of Light is a must-have for Warrior of Light."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/eb/Hp_wol_radiant_sword.jpeg",
+              "damage": "-",
+              "startup": "77F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire blades of light from seal. Blades weakly track foe.",
+              "name": "Radiant Sword",
+              "notes": "Radiant Sword is a group of long-range homing projectiles. It is primarily used to harass opponents from afar, or opponents who go for EX Cores. This is a move with low hit rate due to its telegraphed animation and gradual accelerated speed. As the speed increases, the tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nprojectiles all gather and focus on the opponent. That means they are easier to dodge once they are moving in a line. This limits Radiant Sword's ability to occupy space. The projectiles track well and reach far enough force a dodge almost anywhere. They do not go through solid objects such as walls or Empyreal Paradox's crystal, though.\nRadiant Sword's applications are very limited overall. If it hits, it can wall rush and start assist combos. Warrior of Light can dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nbefore Radiant Sword accelerates, and get significant frame advantage |\nFighting game term that describes who is able to act first. Player who can act first is considered \"plus\", while a player who acts second is considered \"minus\" in a given situation.\nfrom wall rush if it hits. This is easier said than done though, as the combo setups are limited. Use with caution."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/d/dc/Hp_wol_rune_saber.jpeg",
+              "damage": "10 (2 x 3, 4) / +Crossover = (50 Tota)",
+              "startup": "??",
+              "type": "Magical",
+              "priority": "Melee High (?)",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Crossover [Combo] Light beam pierces foe.",
+              "name": "Rune Saber (midair)",
+              "notes": "Rune Saber is the HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\nfrom Crossover. It is always recommended for Crossover, and is functionally similar to the other Rune Saber. The main thing to watch out for are ceiling wall rushes; Since Crossover is an aerial move, it is more likely to wall rush before Rune Saber connects."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/73/Hp_wol_bitter_end.jpeg",
+              "damage": "15 (2 x 6, 3) / +Rising Buckler = (29 Total)",
+              "startup": "??",
+              "type": "Physical",
+              "priority": "Melee High (?)",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Rising Buckler [Combo] Deft bladework.",
+              "name": "Bitter End A",
+              "notes": "Bitter End is another staple HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\nfor Warrior of Light. It rewards well placed whiff punishes |\nHitting an opponent who missed (whiffed) their attack.\nwith HP damage, no assist needed. Its total damage output is a bit lower compared to Rune Saber, but there is no need to worry about ceiling wall rushes. It's a consistent assist combo starter thanks to the wall rush, and the long animation sets up knockback cancels |\nAn attack's knockback that is interrupted with assist. Keeps the opponent in place.\nfor Sephiroth assist. With high base bravery builds, the animation lasts long enough to get most of the base bravery |\nThe baseline bravery that can be modified with equipment. Bravery recovers to this after bravery break.\nback at the end of an assist combo.\nBitter End is a stationary combo attack that starts quickly, but takes a few seconds to finish. It is very unsafe against opponents who escaped with LV1 Assist Change. Warrior of Light cannot cancel |\nAn action that is interrupted early by doing another action.\nBitter End until the last hit comes out. He stays still for the entire animation, and he has little protection against vertical attacks. He needs assist as backup for this, but he also needs this move to represent a threat without assist. It's a conundrum he has to work with."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/73/Hp_wol_bitter_end.jpeg",
+              "damage": "15 (2 x 6, 3) / +Shield Strike = (29 Total)",
+              "startup": "??",
+              "type": "Physical",
+              "priority": "Melee High (?)",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Shield Strike [Combo] Deft bladework.",
+              "name": "Bitter End B",
+              "notes": "Bitter End B is identical with Bitter End A."
+            }
+          ]
+        }
+      },
+      "moveCount": 9,
+      "sources": [
+        "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Class Change!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nMirror Attack\nProtect\nLight's Blessing",
+        "Warrior of Light's EX Mode has plenty of useful effects. He gets additional hits for his melee braveries, a big damage reduction in +10 base DEF and he blocks ranged low moves during his own attacks. EX modes are commonly used to secure a win with assist combo, and Warrior of Light is no different. As such, the defensive boosts may not come into play often. It is still a competent EX mode overall, though."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Mirror Attack",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Active while attacking]\nA wall of light appears while attacking, repelling weak magical attacks.",
+            "Warrior of Light can block attacks with Ranged Low priority during his own attack animations. The blocking effect activates very quickly and lasts for most, if not the whole attack animation. This applies even during a move's recovery |",
+            "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+            "."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Protect",
+          "text": [
+            "[Always active while in EX Mode]\nAn aura of light covers the body, raising defense.",
+            "Warrior of Light gets +10 DEF for the duration of his EX mode. Thus is a huge increase, which reduces bravery damage taken. That being said, it may not benefit him as consistently as he wants; Assists are often used to stop EX mode, and if WoL does not lock the opponent in place with a combo, they can run away and stall for time."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Light's Blessing",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Activates when combo hits] Swords of light appear, dealing additional damage.",
+            "Light's Blessing adds several hits to Warrior of Light's physical bravery attacks. Each light sword has a base damage of 1. The light swords cause hit stun |",
+            "The period of time when a character cannot do an action after getting hit by an attack.",
+            ", but they don't create more lenient, practical solo combo routes for Warrior of Light."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Oversoul",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "Sharp, repeated strikes like flashes of light.",
+            "<img></img> <img></img> <img></img> <img></img>",
+            "Each directional button corresponds to one attack.",
+            "Oversoul is a fairly standard EX Burst. The base damage for initial hits isn't high, but follow-up hits begin almost immediately, leaving less time for the opponent to raise their DEF.",
+            "To complete this EX Burst, Warrior of Light must press the correct button shown on screen six times. The button inputs always require a directional button. Analog stick <img></img> will not work regardless of what the character control option is set to. If Warrior of Light does not press the correct button within a short time, or presses a wrong button, he will end EX Burst early. Regardless of how well this EX Burst is done, Warrior of Light always finishes with a slash that has decent 25 base damage."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "5x3 (15)",
+                  "10x6, 25 (100 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [
+            "(Main article pending)"
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Projectile StarterGroundProjectile to HP Damage\nWhite Fang > Ascension > Rune Saber\n56 minimum + HP & WR\n90\nBase Damage (Breakdown): 6 min > 40 > 10 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 90 > 0\nWhite Fang combos into most of WoL's moves, Ascension is his staple high damage follow-up. This combo works in close range. If the opponent is further away, Warrior of Light may have to dash to combo afterwards."
+                ],
+                [
+                  "Projectile StarterGroundProjectile, Safe Chase for EX\nWhite Fang > Dayflash > Delayed Empty Chase\n28 minimum\n90\nBase Damage (Breakdown): 6 min > 22\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 90\nLess damage than Ascension, but this combo does two things: It lets WoL chase safely without getting countered and get all EX in the stage. Delay Dayflash's Chase as much as possible, then do it just before the opponent reaches the ground. This forces a wall rush reaction.\nThe second thing is it enables assist combos, and the chase also resets assist gauge if it was already used previously. This doesn't have much merit in the solo combo context, but it does leave WoL close to the opponent for pressure.\nIn a neutral situation, Dayflash can be easier to react with if White Fang hits a moving opponent. Other than that, Ascension is the stronger follow-up."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist (Sephiroth)",
+          "text": [
+            "Warrior of Light can create assist combos with Wall Rush, Dayflash and even during his Bitter End and Rune Saber HP links |",
+            "An HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.",
+            ". This gives him flexibility in setting up HP damage. When following up after Sephiroth, delay Assist Chase a little so that Shield Strike connects more consistently."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Notation Info"
+                ],
+                [
+                  "AC",
+                  "Assist Chase <img></img>"
+                ],
+                [
+                  "AST BRV",
+                  "Assist (Bravery) <img></img> + <img></img>"
+                ],
+                [
+                  "AST HP",
+                  "Assist (HP) <img></img> + <img></img>"
+                ],
+                [
+                  "Chase",
+                  "Chase <img></img>"
+                ],
+                [
+                  "Empty Chase",
+                  "Begins Chase, then nothing."
+                ],
+                [
+                  "DC",
+                  "Dodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n<img></img> + <img></img>"
+                ],
+                [
+                  "LL",
+                  "Landing Lag"
+                ],
+                [
+                  "WR",
+                  "Wall Rush"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Poke StarterGround / Air OKStaple Midscreen Combo\nDayflash (2 hits) > AST BRV > AC > Shield Strike > Bitter End\n76 + HP & WR\n???\nBase Damage (Breakdown): 3, 4 > 40 AST > 14 > 15 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): ???\nStandard combo from a safe poke. Confirm the second Dayflash hit visually, then press assist and follow up. This is an important combo to get right, as it lets WoL do HP damage without using the more telegraphed bravery attacks first."
+                ],
+                [
+                  "Punish StarterCeiling HP Wall RushHP Damage\nCrossover / Ascension > Rune Saber > WR > AST BRV > AC > Shield Strike > Bitter End\n119 + HP & WR\n???\nBase Damage (Breakdown): 40 > 10 + HP & WR > 40 AST > 14 > 15 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 0 > ?? > 30\nA standard Wall Rush combo. Make sure to do Rune Saber as soon as possible before Crossover Wall Rushes at the ceiling. This is not very practical for low ceiling stages, such as Pandaemonium - Top Floor and M. S. Prima Vista. In those stages, Crossover's BRV Wall Rush has to suffice."
+                ],
+                [
+                  "Punish StarterKnockback Cancel Midscreen HP Damage\nShield Strike / Rising Buckler > Bitter End > AST BRV > Bitter End + Assist HIT > DC > AC > Shield Strike > Bitter End\n98 + HP & WR\n???\nBase Damage (Breakdown): 14 > 15 + HP > 40 AST > 14 > 15 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): ???\nThis combo works anywhere, but Sephiroth must be timed to hit when Bitter End finishes. Press assist just as Bitter End's last bravery slash connects. WoL should be winding up his sword during the assist slowdown if done properly."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "Main article: Warrior of Light (012) Builds",
+        "Warrior of Light works with a variety of builds, such as balanced hybrid builds, Bravery Boost on Dodge and Side by Side. Most of his damage comes from Dayflash assist combos and HP links |",
+        "An HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.",
+        ", so he is not often built for bravery damage. However, Warrior of Light benefits greatly from having high base bravery |",
+        "The baseline bravery that can be modified with equipment. Bravery recovers to this after bravery break.",
+        "for assist combos."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Hybrid",
+          "text": [
+            "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+            "This is a general purpose build focused on EX intake and EX depletion. Most competitive builds focus on damage, ex and / or meter depletion, so this is a good build to start with.",
+            "Seal of Lufenia set lowers DEF, but Warrior of Light's high base DEF stat mitigates it. Lufenian Dirk <img></img> adds +1 ATK for more damage, which in turn compensates for Heaven's Cloud's <img></img> low ATK. Heaven's Cloud makes grabbing EX Force much easier due to its increased EX intake range."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Stats"
+                ],
+                [
+                  "HP",
+                  "11299"
+                ],
+                [
+                  "CP",
+                  "450"
+                ],
+                [
+                  "BRV",
+                  "996"
+                ],
+                [
+                  "ATK",
+                  "178"
+                ],
+                [
+                  "DEF",
+                  "184"
+                ],
+                [
+                  "LUK",
+                  "60"
+                ],
+                [
+                  "Max Booster",
+                  ""
+                ]
+              ]
+            },
+            {
+              "caption": "Special Effect: Seal of Lufenia",
+              "rows": [
+                [
+                  "Equipment"
+                ],
+                [
+                  "Assist",
+                  "Sephiroth"
+                ],
+                [
+                  "Weapon <img></img>",
+                  "Heaven's Cloud"
+                ],
+                [
+                  "Hand <img></img>",
+                  "Lufenian Dirk <img></img>"
+                ],
+                [
+                  "Head <img></img>",
+                  "Lufenian Headband <img></img>"
+                ],
+                [
+                  "Body <img></img>",
+                  "Lufenian Vest"
+                ],
+                [
+                  "Accessory 1",
+                  "Muscle Belt <img></img>"
+                ],
+                [
+                  "Accessory 2",
+                  "Dismay Shock <img></img>"
+                ],
+                [
+                  "Accessory 3",
+                  "Battle Hammer <img></img>"
+                ],
+                [
+                  "Accessory 4",
+                  "Summon Unused <img></img>"
+                ],
+                [
+                  "Accessory 5",
+                  "Pre-EX Mode <img></img>"
+                ],
+                [
+                  "Accessory 6",
+                  "Pre-EX Revenge <img></img>"
+                ],
+                [
+                  "Accessory 7",
+                  "Opponent Summon Unused <img></img>"
+                ],
+                [
+                  "Accessory 8",
+                  "White Gem <img></img>"
+                ],
+                [
+                  "Accessory 9",
+                  "Tenacious Attacker <img></img>"
+                ],
+                [
+                  "Accessory 10",
+                  "Glutton <img></img>"
+                ],
+                [
+                  "Summon <img></img>",
+                  "Rubicante"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "<img></img> Dayflash",
+                  "<img></img> Dayflash"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "↑+<img></img> Ascension",
+                  "↑+<img></img> Crossover"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "<img></img> Branch: Rune Saber",
+                  "<img></img> Branch: Rune Saber"
+                ],
+                [
+                  "↓+<img></img> White Fang",
+                  "↓+<img></img> Shield Strike"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "<img></img> Branch: Bitter End"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "<img></img> Shield of Light",
+                  "<img></img> Shield of Light"
+                ],
+                [
+                  "↑+<img></img> Ultimate Shield",
+                  ""
+                ],
+                [
+                  "↓+<img></img> Shining Wave",
+                  "↓+<img></img> Radiant Sword"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Sword Thrust",
+                  "31F",
+                  "Ground",
+                  "Opponent",
+                  "6, 3 x 5, 15 (30)",
+                  "Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Rising Buckler",
+                  "25F",
+                  "Air",
+                  "Opponent",
+                  "2 x 4, 6, 16 (30)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Shining Wave",
+                  "53F",
+                  "Ground",
+                  "Player",
+                  "-",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Shield of Light",
+                  "51F",
+                  "Air",
+                  "Opponent",
+                  "-",
+                  "Block, Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist Overview",
+          "text": [
+            "As an assist, Warrior of Light is one of the weaker assists in the game. His braveries do not hold the opponent in place for long and they quickly push them away from the player. The lack of Assist Chase hurts, so he struggles to serve the role of setting up HP attacks for the player character. Warrior of Light relies on Wall Rush to achieve this. It is recommended to fight near ground, so that Rising Buckler can at least slam opponents to the floor for easier combos.",
+            "Rising Buckler does have a niche despite its shortcomings as an HP setup tool; It has the highest combination of upwards reach and speed of any air bravery assist. This lets Warrior of Light assist create combos from certain chase moves, such as Laguna's Pummel and Kuja's Strike Energy close finisher. Zidane air BRV assist is usually preferred in this category, because his combo potential and wall carry |",
+            "The distance travelled when a combo is happening. Longer distance means a combo pushes the opponent closer to the wall. In Dissidia 012, longer distance is better for getting a Wall Rush.",
+            "are stronger and more consistent overall. Only a handful of assists are fit for this role, though.",
+            "Shield of Light can guard attacks, which is worth noting for scrambles |",
+            "A situation where both players are looking to quickly improvise their next action and gain advantage.",
+            "and checkmate situations. But because it is an HP attack, it is expensive and risky to use."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "Warrior of Light works well with most competitive assists.",
+            "Sephiroth\nArguably the most popular synergy in competitive play. He can combo from almost every move and Wall Rush consistently, and set up another HP link |",
+            "An HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.",
+            "afterwards. Sephiroth may be a budget Kuja assist, but his multi-hits make it easier to do knockback cancels |",
+            "An attack's knockback that is interrupted with assist. Keeps the opponent in place.",
+            "anywhere. This lets Warrior of Light deal consistent HP damage regardless of his position, while still having access to a reliable whiff punish |",
+            "Hitting an opponent who missed (whiffed) their attack.",
+            "option. Sephiroth also knocks back at a lower vertical angle compared to Kuja, which makes Crossover > Rune Saber more consistent (and damaging) as a follow-up.",
+            "Aerith\nAerith has less bravery damage and worse whiff punish tools in exchange for safer combos and EX intake. Dayflash chase setups take center stage here; They're useful for getting EX and bypassing LV2 Assist Change staggers. This is where Radiant Sword can see some use as a safer combo finisher. Knockback cancels are also possible with Rune Saber and Bitter End, so technically Warrior of Light does not need Wall Rush for combos either. They are not very easy to do, though. If Warrior of Light does get a Wall Rush, he can use Shield of Light to set up another Aerith assist. A double assist combo can be a lot of damage, particularly with high base bravery.",
+            "Jecht\nJecht hits faster than Sephiroth and his air BRV sets up extended ground combos for lots of bravery. Even if Crossover is not equipped, Ascension usually is, which is also a high damaging ground attack. If WoL wants to use assist again for even more bravery after Jecht's air BRV, Dayflash (ground) empty chase |",
+            "A chase sequence where the initiator does nothing.",
+            "reset makes it possible. This is a competent synergy in its own right, though WoL loses out on consistent midscreen |",
+            "Any space in the stage where neither player is in a corner or at a wall. Basically means no walls or ceilings nearby.",
+            "knockback cancels."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": true,
+      "links": [
+        {
+          "text": "Shining Wave misses against high speed movement passing through",
+          "url": "https://www.youtube.com/watch?v=cDI-tsnyJbM&t=25"
+        }
+      ]
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)",
+    "https://www.youtube.com/watch?v=cDI-tsnyJbM&t=25"
+  ]
+}

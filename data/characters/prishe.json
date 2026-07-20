@@ -1,0 +1,1020 @@
+{
+  "slug": "prishe",
+  "name": "Prishe",
+  "page": "Prishe_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Prishe_(Dissidia_012)",
+  "origin": "Final Fantasy XI",
+  "icon": "prishe",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-prishe.png",
+  "infobox": {
+    "Name": "Prishe (プリッシュ)",
+    "Original game": "Final Fantasy XI",
+    "Base ATK (LV100)": "109 (Low)",
+    "Base DEF (LV100)": "110 (Low)",
+    "Run Speed": "5 (Normal, Above Average), 2 (EX Mode, Fast)",
+    "Dash Speed": "73 (Normal, Fast), 69 (EX Mode, Very Fast)",
+    "Fall Speed": "75 (Normal, Above Average), 71 (EX Mode, Fast)",
+    "Fall Speed Ratio After Dodge": "21 (Normal, Very Fast), 14 (EX Mode, Very Fast)",
+    "Fastest BRV": "11F (Combo One)",
+    "Fastest HP": "43F (Asuran Fists, Auroral Uppercut)",
+    "1-Hit HP": "Yes (Nullifying Dropkick, Banishga max range)",
+    "HP Links": "No",
+    "Command Block": "No",
+    "Weapon": "Thrown Weapons, Grappling Weapons, Instruments, Poles, Parrying Weapons",
+    "Armor": "Bangles, Gauntlets, Hats, Hairpins, Headbands, Clothing, Light Armor, Chestplates",
+    "Exclusive weapons": "Koenigs Knuckles, Spharai, Glanzfaust",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Aya Hirano",
+    "Voice Actor (ENG)": "Julie Nathanson"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Prishe is a fast close-range fighter with a variety of melee braveries that can chain into each other. When certain braveries are equipped, they create a \"Skillchain\" reaction for extra bravery damage.",
+        "Prishe is known for her risk-averse defensive play in close quarters. Raging Fists and One-Inch Punch are the standouts here: Fast startup, short recovery and rewarding on hit. Threaten the opponent with delayable advancing strikes, charge One-Inch Punch to crush blocks and dodge out of the way if they miss. Her air dodges are difficult to punish due to her fast fall speed. Also, Prishe's dash speed is among the fastest, which helps her chase down opponents and EX Cores when necessary. Fast, safe and hard to hit, Prishe is a textbook example of effective \"hit and run\" in Dissidia 012. Patience is rewarded greatly, as Prishe is very capable of playing the war of attrition.",
+        "Prishe’s builds usually focus on EX and bravery damage. Adamant Chains accentuates her safe air dodges even further. Side by Side <img></img> is not recommended due to her average HP attacks and lack of solo HP combos.",
+        "Her weaknesses are more nuanced; While braveries are difficult to punish, she cannot cancel them into blocks or other attacks. This limits her maximum potential for defensive mind games |",
+        "Trying to trick the opponent into taking a wrong action.",
+        ", though it’s already effective. Most of her attacks have lackluster vertical tracking and suffer against long active disjoints (e.g. The Emperor Thunder Crest, Sephiroth Godspeed). Her 1-hit HPs are also situational in EX Revenge checkmate situations. And lastly, Prishe suffers from a bravery slot dilemma similar to Vaan due to the abundance of viable combo chains.",
+        "In competitive play, Prishe has been frequently ranked as one of the strongest characters in the game. Her strategy is consistent and relatively easy to execute in most matchups |",
+        "Two specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.",
+        ", making her a notable choice for blind picks |",
+        "A procedure in tournaments where both players submit their character choice to a third person. Both players make this choice without the opponent knowing until the choice has been made.",
+        ". She provides steady gameplay to aspiring competitors even if she is not at clear advantage."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Mobility - High dash speed makes Prishe strong in offense and EX Core races. She falls fast after air dodges, which makes it much safer to dodge on average.\nTurtling - Prishe has fast braveries with short recovery and strong mixup potential thanks to fully charged high priority One Inch Punch. Prishe can fight with little risk, which makes her difficult to hit.\nSafe and Reliable - Prishe's defense and synergy with Aerith assist lets her play the long game with EX gauge and bravery stacking.\nHigh Bravery Damage - Despite low base ATK, charged One Inch Punch and EX Mode combos hurt, particularly if Prishe gets a guard break.",
+              "Mediocre HP attacks - Compared to her braveries, HP attacks have poor tracking and coverage.\nLow Base DEF - If Prishe gets hit, it will hurt a lot\nThree Slot Dilemma - Her competitive loadouts are strong, but she cannot have full coverage with them.\nEX Revenge Checkmates - Prishe's 1-hit HP attacks are situational at best (Nullifying Dropkick on ground, max range Banishga midair), so she relies on movement and assist to resolve these situations.\nRelies on Dodge Cancels - More of a weakness at high level, but this limits her maximum mixup potential and punishes relentless whiffs in EX Core races."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Prishe_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/42/Brv_prishe_combo_1.jpeg",
+              "damage": "2, 2, 4 (8)",
+              "startup": "11F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "39 (One)",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Close] Quick three-punch combo. Generates extra EX Force. Can combo without hitting.",
+              "name": "Combo (One)",
+              "context": "Can be chained into another bravery.\nIf your attack starts with Combo, the finisher will yield about 10 % more EX force."
+            },
+            {
+              "variants": [
+                "Normal",
+                "Charged"
+              ],
+              "damage": [
+                "10 (1 x 3, 7)",
+                "20 (1 x 13, 7)"
+              ],
+              "startup": [
+                "17F",
+                "32F (charge), 2F (release)"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Mid"
+              ],
+              "exForce": [
+                "15",
+                "15"
+              ],
+              "effects": [
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "20 (10)",
+              "description": "[Mid] Charge at opponent with fists. Charge to increase its strength.",
+              "name": "Howling Fist (One)",
+              "context": "Can be chained into another bravery."
+            },
+            {
+              "variants": [
+                "Normal",
+                "Charged"
+              ],
+              "damage": [
+                "15",
+                "25 (15, 10)"
+              ],
+              "startup": [
+                "17F",
+                "26F (charge), 10F (release)"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low (kick), Ranged Mid (projectile)"
+              ],
+              "exForce": [
+                "15",
+                "15"
+              ],
+              "effects": [
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "20 (10)",
+              "description": "[Mid] Use a leg sweep. Charge for additional hit.",
+              "name": "Dragon Kick (One)"
+            },
+            {
+              "variants": null,
+              "damage": "12",
+              "startup": "45F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "15 (One)",
+              "effects": "Dodge",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Shoulder Tackle (One)",
+              "notes": "[Dodge] Backflip then charge at foe. Evade foe's attack on start."
+            },
+            {
+              "variants": null,
+              "damage": "10",
+              "startup": "31F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "15",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Banish",
+              "notes": "[Long] Fire high-speed pearls of light at opponent."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "damage": "18",
+              "startup": "29F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "15 (One)",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Backhand Blow (One)",
+              "notes": "[Close] Strike down with a backhand blow. Useful for attacking from above."
+            },
+            {
+              "variants": null,
+              "damage": "1 x 4, 11 (15)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "15 (One)",
+              "effects": "Absorb",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Spinning Attack (One)",
+              "notes": "[Close] Lunge upwards with fists. Great for attacking from below."
+            },
+            {
+              "variants": null,
+              "damage": "2 x 4, 7 (15)",
+              "startup": "13F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "15 (One)",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Raging Fists (One)",
+              "notes": "[Close] Five-punch combo. Can combo without hitting."
+            },
+            {
+              "variants": [
+                "Normal",
+                "Charged"
+              ],
+              "damage": [
+                "7 (2, 1 x 3, 2)",
+                "35 (2 x 14, 7)"
+              ],
+              "startup": [
+                "13F",
+                "32F (charge), 4F (release)"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee High"
+              ],
+              "exForce": [
+                "15",
+                "15"
+              ],
+              "effects": [
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "20 (10)",
+              "description": "[Close] Pummel energy shards into foe. Charge to increase strength.",
+              "name": "One Inch Punch (One)"
+            },
+            {
+              "variants": null,
+              "damage": "10",
+              "startup": "19F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "15",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Holy",
+              "notes": "[Long] Fire pearls of light. Slow speed, strong homing."
+            }
+          ]
+        },
+        "followups": {
+          "intro": "Attack data is mostly shared with (One) versions, but (Two) followups generate a different amount of EX and can also wall rush or initiate chase. These braveries also cost less CP to equip.",
+          "moves": [
+            {
+              "variants": null,
+              "damage": "2, 2, 4 (8)",
+              "startup": "11F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "75 (Two)",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "10 (5)",
+              "name": "Combo (Two)",
+              "notes": "Branching from _ (One) [Combo] Three-punch combo."
+            },
+            {
+              "variants": [
+                "Normal",
+                "Charged"
+              ],
+              "damage": [
+                "10 (1 x 3, 7)",
+                "20 (1 x 13, 7)"
+              ],
+              "startup": [
+                "17F",
+                "32F (charge), 2F (release)"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Mid"
+              ],
+              "exForce": [
+                "60",
+                "0"
+              ],
+              "effects": [
+                "Chase",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "10 (5)",
+              "description": "Branching from _ (One) [Combo] Charge foe with fists.",
+              "name": "Howling Fists (Two)",
+              "context": "When (Two) is used as a finisher, the required charge time is considerably shorter."
+            },
+            {
+              "variants": [
+                "Normal",
+                "Charged"
+              ],
+              "damage": [
+                "15",
+                "25 (15, 10)"
+              ],
+              "startup": [
+                "17F",
+                "26F (charge), 10F (release)"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low (kick), Ranged Mid (projectile)"
+              ],
+              "exForce": [
+                "60",
+                "75"
+              ],
+              "effects": [
+                "Chase",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "10 (5)",
+              "description": "Branching from _ (One) [Combo] Use a leg sweep.",
+              "name": "Dragon Kick (Two)"
+            },
+            {
+              "variants": null,
+              "damage": "12",
+              "startup": "45F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "0 (Two)",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "10 (5)",
+              "name": "Shoulder Tackle (Two)",
+              "notes": "Branching from _ (One) [Combo] Attack with body slam."
+            },
+            {
+              "variants": null,
+              "damage": "18",
+              "startup": "29F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "0 (Two)",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "10 (5)",
+              "name": "Backhand Blow (Two)",
+              "notes": "Branching from _ (One) [Combo] Strike w/backhand blow."
+            },
+            {
+              "variants": null,
+              "damage": "1 x 4, 11 (15)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "0 (Two)",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "10 (5)",
+              "name": "Spinning Attack (Two)",
+              "notes": "Branching from _ (One) [Combo] Upward lunge attack."
+            },
+            {
+              "variants": null,
+              "damage": "2 x 4, 7 (15)",
+              "startup": "13F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "72 (Two)",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "10 (5)",
+              "name": "Raging Fists (Two)",
+              "notes": "Branching from _ (One) [Combo] Five-punch combo."
+            },
+            {
+              "variants": [
+                "Normal",
+                "Charged"
+              ],
+              "damage": [
+                "7 (2, 1 x 3, 2)",
+                "35 (2 x 14, 7)"
+              ],
+              "startup": [
+                "13F",
+                "32F (charge), 4F (release)"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee High"
+              ],
+              "exForce": [
+                "0",
+                "0"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "10 (5)",
+              "description": "Branching from _ (One) [Combo] Beat w/energy shards.",
+              "name": "One Inch Punch (Two)",
+              "context": "When used as a (Two) finisher, the required charge time is considerably shorter. The exact timing is undocumented."
+            }
+          ]
+        }
+      },
+      "moveCount": 18,
+      "sources": [
+        "https://dissidia.wiki/Prishe_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "damage": "3 x 7 (21)",
+              "startup": "43F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "15",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Asuran Fists",
+              "notes": "[Close] Quickly charge and pummel foe. Good vs any height."
+            },
+            {
+              "variants": null,
+              "damage": "-",
+              "startup": "49F",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "40 (20)",
+              "name": "Nullifying Dropkick",
+              "notes": "[Mid] Hit foe with charging dropkick. Slow start, good range."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "damage": "2 x 5 (10)",
+              "startup": "43F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "15",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Auroral Uppercut",
+              "notes": "[Rise] Quick upward punch. Great for attacking from below."
+            },
+            {
+              "variants": null,
+              "damage": "2 x 5 (10)",
+              "startup": "47F",
+              "type": "Physical",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "40 (20)",
+              "name": "Banishga",
+              "notes": "[Mid] Emit shockwave of light. Effective horizontal attack."
+            }
+          ]
+        }
+      },
+      "moveCount": 4,
+      "sources": [
+        "https://dissidia.wiki/Prishe_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Two-Hour Ability!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nHundred Fists"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Hundred Fists",
+          "text": [
+            "[Always active while in EX Mode] Chains up to three weapon skills and increases movement speed."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: The Five Lights",
+          "text": [
+            "Throws a glowing shard of Magicite at an opponent. Enter the commands shown in clockwise fashion to increase the number of blows dealt."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "3 x 5, 5 (20)",
+                  "12 x 5, 20 (80) (100 total)",
+                  "??"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Prishe_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": true,
+      "title": "Unique Mechanics: Skillchain",
+      "text": [
+        "When certain bravery attacks are chained together, Prishe will activate a Skillchain. This is a burst of energy that deals additional bravery damage, which occurs alongside Prishe's current attack. When a Skillchain is activated, its name will also be displayed at the top of the screen, much like HP attacks and EX Mode activations.",
+        "Skillchains only activate with physical bravery attack chains. Banish, Holy and HP attacks will not activate a Skillchain.",
+        "The following table lists all viable combinations for a Skillchain.",
+        "Backhand Blow finishers are great for setting up Kuja assist combos and the Skillchain activates off of her most practical starters. That makes Detonation one of the more practical Skillchains. Howling Fist finisher provides a bit more flexibility in setting up aerial assist combos (Chase or Wall Rush) at the cost of bravery damage or EX Force depending on its charge level.",
+        "Skillchains are often Prishe's 3rd best choices for follow-up; They are good on select high bravery damage focused sets, but are otherwise outclassed in reward or utility by Prishe's other follow-ups. Prishe can only assign one bravery attack chain per bravery slot, which restricts the viability of Skillchains overall. However, the input timing for connecting charged attacks during Skillchains is more generous compared to more optimal follow-ups. This is not due to the Skillchain system specifically, but the synergy between bravery attacks in a chain (frame data and hit stun)."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Damage multiplier",
+              "Type",
+              "EX Force"
+            ],
+            [
+              "5",
+              "Physical",
+              "0"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Skillchain",
+              "Starter",
+              "Finisher"
+            ],
+            [
+              "Compression",
+              "Howling Fist",
+              "One Inch Punch"
+            ],
+            [
+              "Detonation",
+              "ComboHowling Fist One Inch Punch Raging Fists Shoulder Tackle Spinning Attack",
+              "Backhand Blow"
+            ],
+            [
+              "Fusion",
+              "Spinning Attack",
+              "Combo Howling Fist Raging Fists Shoulder Tackle Spinning Attack"
+            ],
+            [
+              "Gravitation",
+              "Backhand Blow",
+              "One Inch Punch"
+            ],
+            [
+              "Impaction",
+              "Shoulder Tackle",
+              "Combo Howling Fist Raging Fists Shoulder Tackle Spinning Attack"
+            ],
+            [
+              "Liquefaction",
+              "Combo Howling Fist Raging Fists",
+              "Spinning Attack"
+            ],
+            [
+              "Reverberation",
+              "Howling Fist",
+              "Shoulder Tackle"
+            ],
+            [
+              "Transfixion",
+              "One Inch Punch",
+              "Howling Fist"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Prishe_(Dissidia_012)"
+      ]
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Prishe_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|Adamant Chains=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Damage, ex absorption and adamant chains for safer air dodges.",
+        "|-|Build #2=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9972"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "917"
+            ],
+            [
+              "ATK",
+              "178"
+            ],
+            [
+              "DEF",
+              "183"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x1.3"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Adamant Chains",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Aerith"
+            ],
+            [
+              "Weapon <img></img>",
+              "Cleaver"
+            ],
+            [
+              "Hand <img></img>",
+              "Adamant Shield <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Adamant Helm <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Adamant Vest"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> White Drop"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> White Drop"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> White Drop"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> White Gem"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Glutton"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Prishe_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [
+        "Prishe works well with Kuja and Aerith assists."
+      ],
+      "tables": [],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Prishe_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Prishe_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Prishe_(Dissidia_012)"
+  ]
+}

@@ -1,0 +1,722 @@
+{
+  "slug": "laguna-loire",
+  "name": "Laguna Loire",
+  "page": "Laguna_Loire_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Laguna_Loire_(Dissidia_012)",
+  "origin": "Final Fantasy VIII",
+  "icon": "laguna",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-laguna.png",
+  "infobox": {
+    "Name": "Laguna Loire (ラグナ・レウァール)",
+    "Original game": "Final Fantasy VIII",
+    "Base ATK (LV100)": "111 (High)",
+    "Base DEF (LV100)": "110 (Low)",
+    "Run Speed": "9 (Slow)",
+    "Dash Speed": "81 (Below Average)",
+    "Fall Speed": "75 (Above Average)",
+    "Fall Speed Ratio After Dodge": "35 (Above Average)",
+    "Fastest BRV": "13F (Pummel)",
+    "Fastest HP": "~38F (Split Laser)",
+    "1-Hit HP": "Yes (Ragnarok Blade, Split Laser)",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "No",
+    "Weapon": "Daggers Greatswords Guns Swords",
+    "Armor": "Bangles Chestplates Clothing Hats Helms Light Armor Shields",
+    "Exclusive weapons": "Machine Gun, High-Power Machine Gun,Ragnarok Pistol",
+    "Unlock": "Default",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Hiroaki Hirata",
+    "Voice Actor (ENG)": "Armando Valdes-Kennedy"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Laguna is a midrange zoner with a balance between keepaway and rushdown tools. His strengths lie in his wide range of pokes to chip away at the opponents bravery and unique move properties, which allow him to have some unconventional strategies to play around his opponent.",
+        "His variety of ranges to work at gives Laguna the potential to always be able to threaten with something, wether its long range with Homing Bazooka, midrange with Ricochet Shot, or close range with Pummel and Electroshield.",
+        "However his biggest weakness lies in his long recovery on alot of key moves, making him easy to whiff punish on a mistake. Mixing up your options to throw off the opponent constantly is key to staying on defense with him, and watching the opponents resources to decide risk-reward accordingly.",
+        "If you like midrange play, poking away and cashing out huge with the right hit, and playing keepaway neutral, Laguna is your Man with the Machine Gun."
+      ],
+      "tables": [],
+      "sources": [
+        "https://dissidia.wiki/Laguna_Loire_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "description": "1 x 32 (32)",
+              "name": "Machine Gun",
+              "notes": "[Mid] Fire machine gun. Move with analog stick while holding button.\nRun'n'Gun, literally. After startup Laguna can move while firing but and slightly track opponent while firing.\nIt has relatively low range but good EX Force gain, and alot of characters can't swing right through it if they come at you headfirst. Combined with Electroshield you can punish ground dash attempts or force the opponent away into a more favorable position for you to Ricochet Shot from.\nIt's possible to assist convert from aswell, but its finnicky and has very little hitstun to work with."
+            },
+            {
+              "variants": [
+                "Main Bullet",
+                "Split Bullet"
+              ],
+              "damage": [
+                "35",
+                "5 each"
+              ],
+              "startup": [
+                "37F, 1F after release54F Half / 70F (Full Charge)",
+                "??"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Ranged Mid",
+                "Ranged Low"
+              ],
+              "exForce": [
+                "60",
+                "3?"
+              ],
+              "effects": [
+                "-",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Fire shots that break into smaller pieces after hitting stage.",
+              "name": "Ricochet Shot",
+              "notes": "Fire a shot that ricochets off the ground and walls.\nYour grounded main tool with alot of applications in neutral. A swiss army knife for his mid- to longrange pressure.\nThe main shot is Mid priority while the ricochet bullet is Low priority.\nThe move can be charged for more ricochet bullets while all hit seperately. Half Charge is 3 split shots, Full Charge 5. Only the main shot tracks the opponent after ricocheting, making it excellent for dodge punish, shooting past projectiles or behind them, and firing right above him.\nBlocking this move can still reflect the ricochet, something to be mindful of. Same happens if it clashes and gets reflected by a move.\nThe chase effect will cancel out if hitting someone with a full charge and only a single split bullet\nSolid move, a staple of grounded zoning, keepaway and mixups to pressure the opponent. Paired with Electroshield can be hard to contest and punish for the opponent. Don't overuse it, but do use it as much as you can."
+            },
+            {
+              "variants": [
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "description": "15 (15)",
+              "name": "Grenade Bomb",
+              "notes": "[Long] Throw grenade at foe. Change distance with button presses.\nProbably the lowest recovery move he has. Slow to come out but can be cancelled into block/dodge very quickly after the throw for mixups. Low recovery also makes it less committal to build assist meter with.\nIt can intercept moves with long startup aswell to force them to engage you, and you can combo off of it if you assume its gonna hit, or hitconfirm with an assist if you don't want to commit to an HP/Ricochet prior.\nCan also be used to add a nice little bit of damage at the end of an assist combo when available."
+            },
+            {
+              "variants": [
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "description": "6, 14 (20)",
+              "name": "Pummel (ground)",
+              "notes": "[Close] Strike with machine gun hilt. Low power, quick strike.\nClose range melee low to round out his all-range playstyle.\nMakes for a fast poke, as defense after dodges, great EX Force gain and decently low recovery after. Can be cancelled into itself faster than into block or dodge.\nHas some vertical tracking but mostly horizontal move. Ground version makes Laguna go airborne after.\nA staple move in his moveset to have since it rounds out his close range game and helps out in a pinch. Few assist can combo off of it, but its still an important part of his moveset in many matchups. Learn to love this move."
+            },
+            {
+              "variants": [
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "description": "4 each, max 6",
+              "name": "Missile Barrage (ground)",
+              "notes": "[Long] Fire multiple missiles. Charge to fire six missiles.\nLaguna pulls out a rocket launcher and fires up to 6 missiles, hold down to fire more.\nThe missiles themselves are very small, fire one after another and have terrible tracking. While they do home in on the opponent, they first stray off in different directions and have an awkward turn radius.\nCan be dashed through and blocked aswell, making them not very useful to stop setups or threaten dashes. Although they do halt and limit movement due to the scattered tracking. Low hitstun with low damage however makes it hard to convert into more.\nLikely his worst move and far too niche for how good some of the rest of his moves are. There might be some scenarios worth trying it out, but a ranged low property and horrible homing make it hard to consistently capitalize on."
+            },
+            {
+              "variants": [
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "description": "10 (10)",
+              "name": "Electro Shield (ground)",
+              "notes": "[Close] Deploy electromagnetic shield. Can deflect weak attacks.\nThrows out a shield infront of Laguna that stays out for a while as a lingering Mid priority projectile. On contact launches them away and wallrushes.\nLaguna can be barely fully covered when staying right inside, very consistent on the ground. Some moves may still hit him due to hitboxes however. Space accordingly for the matchup.\nDue to being a projectile, blocking it makes it act as if reflected, so they can walk through it after. Mid Projectiles also don't get reflected but redirected.\nIf hit by a High priority Melee the shield is destroyed.\nLaguna goes airborne during the ground version which is convenient for positioning right after with backdodge.\nBread and Butter move for keepaway, slowing down approaches and as a mixup tool. Hard to assist punish too, good for assist meter building."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Normal",
+                "Charged"
+              ],
+              "damage": [
+                "30 (1 x 6, 1 x 6, 3 x 6)",
+                "30 (1 x 6, 1 x 6, 3 x 6)"
+              ],
+              "startup": [
+                "21F",
+                "55F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Ranged Mid"
+              ],
+              "exForce": [
+                "Max 36",
+                "Max 36"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Fire shotgun. Charge to change its strength.",
+              "name": "Shotgun",
+              "notes": "It's a shotgun! It fires like one! (except when charged)\nTakes 55F to be charged and turned into a ranged mid priority. Slow and ranged low otherwise, but it has good range and can be dodge cancelled fairly early. Can't be dodge cancelled while charging.\nCan be shot up to 3 times, helping conversions into assists. The last shot also wallrushes.\nIt's tracking is limited as it only follows the opponent around you with limited vertical tracking. After the first shot it will also not track aswell anymore.\nNot a very well-rounded tool, but it can have it's use in some matchups. It's very niche properties and slow startup are a crux without shield up though, make sure to use with care."
+            },
+            {
+              "variants": null,
+              "damage": "36",
+              "startup": "41F",
+              "type": "Physical",
+              "priority": "Ranged Mid",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Homing Bazooka",
+              "notes": "[Long] Blast foe with bazooka. Press button to change strength.\nBig Missile.Tapping it up to 2 times makes the missile accelerate later and increases its range.\nit has amazing tracking horizontally up until the initial shot and can be aimed slightly away from the opponent. The missile starts homing in with a huge turn radius once it accelerates.\nUniquely, the explosion on contact is the actual Mid Priority projectile, so it goes through other projectiles until it hits something or gets blocked.\nThe explosion hitbox still appears when it hits a wall and knocks away.\nThe knockback is directly related to the angle its hitting from. If it hits them from behind, it will always send them straight towards you. Crucial to know for wallrush confirms.\nGreat anti-zoning tool and to disrupt the opponents own neutral setups. However it is fairly easy to get a hang for an assist punish on it, so use carefully considered and with meter behind it. Despite its risk, it's effective at what it does and shouldn't be used for reckless zoning on a savvy opponent."
+            },
+            {
+              "variants": null,
+              "damage": "20 (hits twice if explodes at max range without latching)",
+              "startup": "29F / 42F / 62F (charge), 9F (release)",
+              "type": "Physical",
+              "priority": "Ranged Low (bomb), Unblockable (explosion)",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Sticky Bomb",
+              "notes": "[Long] Throw a sticking time bomb at foe. Charge to increase distance.\nA bomb that sticks to the opponent on hit and explodes after 186F (roughly 3 seconds).\nFully charged it will blink and can be held a little while after. Charge time affects both the speed and range thrown.\nThe thrown bomb is a ranged low, but the explosion triggered after max distance and after sticking time is unblockable and can be converted off of with a variety of assists.\nIf the explosion hits at max distance without sticking to something it will also hit twice for double damage.\nThe sticking time can be used effectively for mindgames and it also makes for a somewhat fast and safe horizontal midrange check against neutral setups. Overall a fantastic tool to round out midrange presence in the air."
+            },
+            {
+              "variants": [
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "description": "6, 14 (20)",
+              "name": "Pummel (midair)",
+              "notes": "[Close] Strike with machine gun hilt. Low power, quick strike.\nClose range melee low to round out his all-range playstyle.\nMakes for a fast poke, as defense after dodges, great EX Force gain and decently low recovery after. Can be cancelled into itself faster than into block or dodge.\nHas some vertical tracking but mostly horizontal move. Ground version makes Laguna go airborne after.\nA staple move in his moveset to have since it rounds out his close range game and helps out in a pinch. Few assist can combo off of it, but its still an important part of his moveset in many matchups. Learn to love this move."
+            },
+            {
+              "variants": [
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "description": "4 each, max 6",
+              "name": "Missile Barrage (midair)",
+              "notes": "[Long] Fire multiple missiles. Charge to fire six missiles.\nLaguna pulls out a rocket launcher and fires up to 6 missiles, hold down to fire more.\nThe missiles themselves are very small, fire one after another and have terrible tracking. While they do home in on the opponent, they first stray off in different directions and have an awkward turn radius.\nCan be dashed through and blocked aswell, making them not very useful to stop setups or threaten dashes. Although they do halt and limit movement due to the scattered tracking. Low hitstun with low damage however makes it hard to convert into more.\nLikely his worst move and far too niche for how good some of the rest of his moves are. There might be some scenarios worth trying it out, but a ranged low property and horrible homing make it hard to consistently capitalize on."
+            },
+            {
+              "variants": [
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "description": "10 (10)",
+              "name": "Electro Shield (midair)",
+              "notes": "[Close] Deploy electromagnetic shield. Can deflect weak attacks.\nThrows out a shield infront of Laguna that stays out for a while as a lingering Mid priority projectile. On contact launches them away and wallrushes.\nLaguna can be barely fully covered when staying right inside, very consistent on the ground. Some moves may still hit him due to hitboxes however. Space accordingly for the matchup.\nDue to being a projectile, blocking it makes it act as if reflected, so they can walk through it after. Mid Projectiles also don't get reflected but redirected.\nIf hit by a High priority Melee the shield is destroyed.\nLaguna goes airborne during the ground version which is convenient for positioning right after with backdodge.\nBread and Butter move for keepaway, slowing down approaches and as a mixup tool. Hard to assist punish too, good for assist meter building."
+            }
+          ]
+        }
+      },
+      "moveCount": 12,
+      "sources": [
+        "https://dissidia.wiki/Laguna_Loire_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "damage": "1 x 7 (7)",
+              "startup": "53F~172F (charge), 3F (release)",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "21",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "40 (20)",
+              "name": "Ragnarok Buster",
+              "notes": "[Mid] Bombard with lasers. Charge to adjust timing.\nA huge laser cannon with big range.\nA great HP to intercept committal moves in midrange. Can be delayed to throw off punish attempts aswell and mix up characters with fast fall speed.\nDelaying it to intentionally clash with HPs and assist punish staggers can also be tricky to handle.\nNotable one of the easiest ways to clash with Maelstrom/Holy to protect against them.\nA great combo ender after assists too to keep distance and wallrush."
+            },
+            {
+              "variants": null,
+              "damage": "2 x 6 (12)",
+              "startup": "83F",
+              "type": "Physical",
+              "priority": "Ranged High",
+              "exForce": "36",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Satellite Laser",
+              "notes": "[Long] Fire laser from orbiting satellite. Stopped by terrain.\nHuge startup, infinite vertical range and huge tracking range.\nAs a raw HP can be thrown out as a read to directly punish slow startup moves in return. It has huge horizontal tracking and the infinite vertical range makes it able to catch them from any height.\nAlot of characters can horizontally dash through it, something to be aware of when throwing it out.\nBe aware of assist punishes aswell, as calling an assist right before it hits is a guaranteed bravery break for them. A\nAs a combo ender it does the most damage and will always ground rush them, making it the ideal choice whenever possible.\nA niche HP but with amazing properties to round out his long range pressure."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "damage": "-",
+              "startup": "43F",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Ragnarok Blade",
+              "notes": "[Long] Chop with energy blade. Effective against any height.\nAn absolute staple of Laguna's midrange presence. Although on the riskier side, it is a rather fast HP, has huge range up and horizontally, fantastic tracking and huge wallrush range.\nWhere the move really shines is in his assist change and punish game, allowing Laguna to punish alot of slower moves on reaction with it and really put down neutral pressure in midrange.\nThe knockback angle is decided based directly on where Laguna hits from, which can be amazing to control wallrush angle whenever possible and hitconfirm with assists.\nOne of the drawbacks however is that its one of the easier assist punishes, and timing an assist punish while getting hit for a guaranteed break is very easy to land. Making note of the opponents resources before considering recommended."
+            },
+            {
+              "variants": null,
+              "damage": "-",
+              "startup": "35F~117F (charge), 3F (release)",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "60 per hit",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "40 (20)",
+              "name": "Split Laser",
+              "notes": "[Long] Fire high-pressure energy bullet. Hold button to continue fire, release to split laser.\nLaguna shoots an energy ball that splits into projectiles after detonating.\nIt's his fastest HP at 35F, suprisingly fast for an HP. Although it is easily assist punished on reaction, it should not be dismissed in neutral as it covers an angle right below Laguna and gives him ways to punish slower setup moves. He can also assist confirm off of this move, making it a fantastic HP poke to throw out in moderation.\nThe move also has fantastic use in assist change punishes, allowing Laguna to punish alot of long HPs like Quick Hit with assist change.\nNotable the move also has top tier EX Force generation and multihit, and with the right spacing setup is able to hit 2-3 times for massive depletion or EX Force generation"
+            }
+          ]
+        }
+      },
+      "moveCount": 4,
+      "sources": [
+        "https://dissidia.wiki/Laguna_Loire_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Look, the faeries are here!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nA Faerie's Miracle"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "A Faerie's Miracle",
+          "text": [
+            "[Always active while in EX Mode] The recovery time after bravery attacks can be cancelled by performing any attack."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Desperado",
+          "text": [
+            "A furious bombardment of bullets. Take aim and press R to shoot or hold down the button for rapid fire.",
+            "A shooting exercise minigame, hold down the R button to fire. Every hit you will drift off of them based on the center. The best way to deal with it is to stick to the edges and fire away. Land 40 hits to fill the gauge and unleash THE GREATEST ATTACK EVER.",
+            "This is actually a notable EX Burst. While the max damage with 100 is average as usual, the 32 base at the start before defense multiplier is the second highest in the game, tied with Lightning. Extremely useful for bravery breaks and subsequently tacking on extra damage."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "7 x 3, 11 (32)",
+                  "1 x 40, 2 x 14 (68) (100 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Laguna_Loire_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Laguna_Loire_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|Side by Side=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "|-|Build #2=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9377"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "956"
+            ],
+            [
+              "ATK",
+              "180"
+            ],
+            [
+              "DEF",
+              "184"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x6.9"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Judgment of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja / Jecht"
+            ],
+            [
+              "Weapon <img></img>",
+              "Lufenian Axe <img></img>"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Shield"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Helm"
+            ],
+            [
+              "Body <img></img>",
+              "Auto Crossbow <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Sniper Eye"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Empty EX Gauge"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Grounded"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Opponent Summon Unused"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Side By Side"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Laguna_Loire_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [
+        "Yuna, Jecht, Aerith."
+      ],
+      "tables": [],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Laguna_Loire_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Laguna_Loire_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Laguna_Loire_(Dissidia_012)"
+  ]
+}

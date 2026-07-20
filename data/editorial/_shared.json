@@ -1,0 +1,118 @@
+{
+  "techniques": [
+    {
+      "id": "blodge",
+      "name": "Blodge",
+      "summary": [
+        "Le blodge est une technique de Dissidia 012 qui permet de bloquer puis d'esquiver immédiatement après. Comme le dash feint, elle exploite une fenêtre d'input très précoce pendant le block pour l'annuler en dodge. C'est une technique universelle : tous les personnages peuvent l'exécuter dès lors qu'ils ont un block et une esquive équipés.",
+        "Le blodge s'emploie avant tout défensivement, comme une forme d'option select : une même séquence d'inputs couvre plusieurs options offensives de l'adversaire dans un laps de temps très court, ce qui est précieux à haut niveau. Il permet d'esquiver des attaques, de stagger l'adversaire et même de détruire certains projectiles à haute priorité sans subir de dégâts. Exdeath en tire un profit particulier : le blodge lui permet d'enchaîner ses attaques HP et de remplir sa jauge d'assist plus vite que quiconque.",
+        "Attention à ses limites : le blodge ne fonctionne que contre les attaques à basse priorité et certains projectiles HP. Il ne bloque ni les attaques Mid (Melee ou Ranged), ni la plupart des attaques HP — dans ces cas, le résultat est un stagger ou un Guard Crush classique. Contre certains projectiles Ranged High en revanche (les Flare de The Emperor, le Meltdown de Terra, le Tidal Flame de Zidane), un blodge bien exécuté les détruit avec le message « Guard Crush » pendant l'esquive. Le timing est exigeant et demande de l'entraînement."
+      ],
+      "howTo": [
+        "Équipez un block et une esquive (par exemple Ground Block et Ground Evasion).",
+        "Appuyez sur R et maintenez-le.",
+        "Appuyez sur Croix juste après R — en séquence, jamais simultanément. La fenêtre est de 2 frames à 30 FPS (la fréquence d'images du jeu), ce qui rend l'input délicat à réussir.",
+        "Si la manipulation est correcte, le son (ou la voix) du block se déclenche pendant que le personnage esquive."
+      ],
+      "source": "https://dissidia.wiki/Blodge"
+    },
+    {
+      "id": "dash-feint",
+      "name": "Dash feint",
+      "summary": [
+        "Le dash feint (aussi appelé spot dashing) est une technique de Dissidia 012 qui exploite une fenêtre d'input précoce pendant le block pour l'annuler en dash. La manipulation peut être répétée très rapidement, avant ou après un dash.",
+        "Ses usages compétitifs sont nombreux. Pour la jauge d'assist : combiné à l'aptitude « Assist Gauge Up Dash », le dash feint remplit la jauge tout en restant sur place — l'une des manières les plus sûres de la charger à haut niveau (il faut toutefois attaquer de temps en temps, car le dash ne compte pas comme une attaque et n'empêche pas la jauge de se vider). En pression offensive : il permet de se réaligner avec le Free Air Dash contre les esquives aériennes et de menacer d'un dodge punish ; sa nature répétable et ambiguë sert aussi à retarder les approches et à dérouter l'adversaire. En défense : chaque dash feint bloque au moins 1 frame, ce qui rend les attaques adverses plus risquées. Enfin, comme un dash ralentit en fin de course, l'enchaîner via dash feint permet de relancer un nouveau dash plus tôt et de profiter du pic de vitesse.",
+        "À noter : avec Omni Ground Dash ou Omni Air Dash, le dash feint fait dasher le personnage vers l'avant à hauteur constante, mais ne remplit pas la jauge d'assist."
+      ],
+      "howTo": [
+        "Équipez un block sol/air et un dash manuel (par exemple Ground Block, Midair Block et Free Air Dash).",
+        "Appuyez sur R et maintenez-le.",
+        "Appuyez sur Triangle juste après R — en séquence, pas en même temps. La fenêtre est de 2 frames à 30 FPS.",
+        "Le block est alors annulé en dash. Répétez autant que nécessaire."
+      ],
+      "source": "https://dissidia.wiki/Dash_feint"
+    },
+    {
+      "id": "lock-off",
+      "name": "Lock Off",
+      "summary": [
+        "Le Lock Off est une technique de Dissidia (PSP) et Dissidia 012 : le joueur désactive son Lock On en appuyant sur L alors qu'il est verrouillé sur l'adversaire. S'il n'y a ni assist ni EX Core à cibler, le personnage passe en état de Lock Off, dans lequel il ne peut plus utiliser les attaques Bravery ou HP assignées à un input directionnel.",
+        "En revanche, les attaques assignées à Rond ou Carré sans direction restent utilisables : elles partent alors dans la direction du déplacement plutôt que vers l'adversaire. Cela permet de générer de la jauge d'assist en attaquant dans le vide (whiff) sans risquer d'être bloqué — c'est de loin l'usage le plus courant du Lock Off en match, notamment pour Squall.",
+        "Autres applications documentées : Golbez peut utiliser le Lock Off pour faire apparaître le Ranged High de son HP Nightglow directement sous lui plutôt que sous l'adversaire, afin de contrer les tentatives de dash vers lui pendant l'attaque. Les autres usages sont rares, comme employer le Jecht Block pour parer le second coup du Snatch Blow de Kuja, qui frappe dans le dos."
+      ],
+      "howTo": [
+        "Appuyez sur L pendant que vous êtes verrouillé sur l'adversaire pour désactiver le Lock On (il ne doit rester ni assist ni EX Core à cibler)."
+      ],
+      "source": "https://dissidia.wiki/Lock_Off"
+    },
+    {
+      "id": "dodge-punishment",
+      "name": "Dodge punishment",
+      "summary": [
+        "Le dodge punishment consiste à frapper un personnage après son esquive, avant qu'il ne puisse se défendre à nouveau. C'est un aspect essentiel du jeu compétitif dès le niveau intermédiaire : le fall speed ratio après esquive, les timings de dodge et les attaques à propriétés défensives dessinent un rapport risque/récompense pour chaque joueur.",
+        "Avec l'invincibilité ajoutée par l'aptitude Evasion Boost et la fenêtre de cancel précoce des attaques pendant l'esquive, beaucoup de personnages peuvent agir en sortie de dodge alors qu'ils sont encore invulnérables. Comme l'esquive crée rapidement de la distance et que le punish exige d'être à portée, la pression repose sur l'attaquant, qui doit frapper avec un timing très précis."
+      ],
+      "howTo": [
+        "Côté offensif : assurez-vous d'abord de pouvoir atteindre l'adversaire, généralement grâce au tracking du Free Air Dash combiné aux dash feints pour s'ajuster à son timing d'esquive ; certaines attaques (Snatching Blow de Kuja, Straightarrow de Firion, Blasting Zone de Squall) portent d'elles-mêmes si l'on est assez proche.",
+        "Frappez au moment de l'esquive (ou juste avant) avec l'attaque appropriée ; près d'un mur ou dans un coin, l'adversaire crée moins de distance et le punish est plus facile.",
+        "Avec Free Air Dash ou Ground Dash, le dash doit avoir fini son start-up et être en mouvement quand l'esquive survient ; confirmez visuellement le dodge puis enchaînez avec une attaque rapide en fin d'esquive (Beat Fang de Squall, Swift Attack de Zidane).",
+        "Observez quand l'adversaire peut esquiver et quand il le fait volontiers (ex. : un Cloud qui dodge systématiquement après un Double Cut raté s'expose) ; la viabilité du punish varie selon le stage, la position et le match-up.",
+        "Méfiez-vous des attaques défensives (Particle Beam [Wrath] de Cloud of Darkness, Jecht Block) : évitez de dasher dans une garde en annulant en saut, en dodge ou en attaque à haute priorité qui guard break.",
+        "Côté défensif : couvrez votre esquive avec une attaque à propriétés défensives (Shield of Light du Warrior of Light, Scintilla de Sephiroth, Sword and Shield de Vaan) ou évasives (Cut & Run de Tidus, Rifle de Vaan, parfois appelées « double dodges »).",
+        "Jouez la direction d'esquive : dodger là où l'adversaire ne peut pas atteindre (ex. : esquive avant au sol contre le Cross Slash de Cloud) ; en l'air, une esquive avant qui passe derrière l'adversaire peut désorienter le tracking de son Free Air Dash.",
+        "En dernier recours, une attaque Melee Low rapide peut clasher avec la tentative de punish, ou un assist peut interrompre l'attaque adverse si le timing est bon.",
+        "Tenez compte du fall speed ratio après esquive : plus un personnage retombe tôt après un air dodge, plus ses esquives arrière deviennent difficiles à punir (Onion Knight, Kain, Prishe, Kefka et Tidus en profitent particulièrement)."
+      ],
+      "source": "https://dissidia.wiki/Dodge_(Dissidia_012)"
+    }
+  ],
+  "glitches": [
+    {
+      "id": "equip-glitch",
+      "name": "Equip Glitch",
+      "summary": [
+        "L'Equip Glitch permet à un personnage de porter un équipement (arme, armure) normalement inaccessible, sans conserver l'Extra Ability requise. Par exemple, Peltast's Gear autorise n'importe qui à équiper des katanas : Zidane peut continuer d'utiliser Piggy's Stick, une arme de type katana, même après avoir retiré Peltast's Gear.",
+        "Concrètement, cela économise jusqu'à 40 Capacity Points par build (10 points par pièce d'équipement). Beaucoup de builds l'utilisent pour un ou deux objets, certains pour la totalité de l'équipement. Le glitch est accessible à tout personnage sans aucune modification tierce.",
+        "La manipulation (découverte par ujhbn) : débloquez l'Extra Ability voulue à la boutique, retirez toutes les Extra Abilities du personnage, équipez uniquement celle qui vous intéresse (ex. Peltast's Gear), équipez l'objet souhaité, retournez au menu des aptitudes, triez les Extra Abilities avec Triangle en choisissant « Equipped », puis retirez l'aptitude. Tant qu'une seule Extra Ability est équipée, le jeu la retire sans exiger de retirer les objets liés. La manipulation doit être refaite pour chaque personnage et chaque set d'équipement, et de nouveau si l'équipement est retiré plus tard."
+      ],
+      "competitiveUse": "Malgré son avantage évident (jusqu'à 40 CP économisés par build), le glitch n'a pas causé de déséquilibre majeur en compétition : il a été déclaré légal en tournoi.",
+      "source": "https://dissidia.wiki/Equip_Glitch_(Dissidia_012)"
+    },
+    {
+      "id": "assist-storage-glitch",
+      "name": "Assist Storage Glitch",
+      "summary": [
+        "L'Assist Storage Glitch désigne un comportement anormal du système d'assist dans des circonstances précises : une fois activé, le prochain assist attaque bien plus tôt que la normale, et les assists HP comme le LV2 Assist Change ne coûtent qu'une barre de jauge au lieu de deux. Le principe étant lié à une mécanique universelle, tous les personnages et tous les assists peuvent en profiter.",
+        "Pour l'activer, il faut interrompre le ralenti d'un appel d'assist — via EX Revenge ou EX Burst — pendant que la sphère d'assist est visible mais avant que le personnage d'assist n'agisse. Le joueur dont l'appel a été interrompu verra son prochain assist affecté par le glitch. L'effet est à usage unique : une fois consommé, il faut refaire toute la mise en place. Le glitch est annulé si le joueur concerné utilise son assist pour annuler l'EX Revenge adverse (LV1 Assist Change).",
+        "Ses effets couvrent plusieurs volets : appel d'assist rapide (l'assist attaque immédiatement au lieu d'attendre la disparition de la sphère, pour les attaques Bravery comme HP), attaques HP d'assist à une seule barre, LV1 Assist Change qui se termine plus tôt, et LV2 Assist Change à une barre au lieu de deux — rendant une mécanique défensive déjà puissante encore plus redoutable.",
+        "Contreparties : le glitch exige de consommer l'une des deux mécaniques EX, donc les personnages équipés de Side by Side ne peuvent pas l'activer via EX Burst, et subir un combo complet d'EX Revenge (surtout contre Garland) peut coûter cher. Le délai parfois long entre la mise en place et l'appel suivant peut aussi désorienter au début."
+      ],
+      "competitiveUse": "Rarement vu en compétition à cause de ses prérequis situationnels, mais le bénéfice est réel : whiff punishment à la réaction plus fiable (y compris avec des assists lents comme Kuja), combos d'assist normalement impossibles (ex. : Solid Barrel de Squall combote dans le BRV aérien de Kuja sans mur), et contres au LV2 Assist Change à coût réduit — le stagger du LV2 Change peut alors être suivi d'un appel d'assist pour un combo fiable, ce dont profitent des personnages comme Yuna, Prishe et Ultimecia.",
+      "source": "https://dissidia.wiki/Assist_Storage_Glitch"
+    }
+  ],
+  "onlineSetup": {
+    "summary": [
+      "Dissidia 012 se joue en ligne via l'émulateur PPSSPP, sur PC Windows comme sur Android. Le principe : les joueurs partagent une adresse IP fournie par un programme de connectivité (Radmin, Hamachi ou ZeroTier One) et se retrouvent sur le même réseau virtuel. Il faut un build de PPSSPP compatible avec le jeu en ligne (à partir de la version 1.1.1), un client de connectivité, et surtout la même version régionale du jeu pour tous les joueurs — une copie européenne (ULES01505) ne peut pas se connecter à une copie américaine (ULUS10566) ; la communauté Discord utilise la version nord-américaine.",
+      "Plusieurs préparatifs conditionnent la stabilité : même version d'émulateur pour tous (et même architecture, 32 ou 64 bits — les mélanger est une cause fréquente de désynchronisation), pare-feu désactivé ou exception ajoutée pour l'émulateur, port offset réglé sur 5000 dans les paramètres réseau, adresse MAC rafraîchie, un seul VPN actif à la fois, même bouton de confirmation pour tous (X pour les joueurs anglophones, afin d'éviter les déconnexions pendant les EX Bursts) et un nom renseigné sur la friend card du jeu.",
+      "Côté réseau, un seul joueur fait office d'hôte : il active le serveur PRO ad hoc intégré de PPSSPP et renseigne sa propre IP Radmin, puis entre dans un lobby en ligne ou crée un salon de group battle. Les autres joueurs saisissent l'IP de l'hôte dans le champ « Change PRO ad hoc server IP address » et attendent que l'hôte soit en lobby avant de rejoindre. ZeroTier One est l'alternative privilégiée sur Android (et une solution de repli sur PC), et le crossplay PC/Android est possible depuis PPSSPP 1.15.4.",
+      "PPSSPP permet aussi le jeu « en ligne » local : en lançant deux instances de l'émulateur sur la même machine (serveur ad hoc intégré activé, IP réglée sur « localhost »), deux joueurs peuvent s'affronter sur un seul ordinateur, sans Radmin, Hamachi ni ZeroTier One. La page du wiki propose enfin une section de dépannage (lenteurs, écran blanc, échec de connexion au serveur ad hoc, désynchronisation, lag en ligne...)."
+    ],
+    "source": "https://dissidia.wiki/Online_Setup_(PPSSPP)"
+  },
+  "attackPriority": {
+    "summary": [
+      "Dissidia 012 repose sur un système de priorités qui détermine quelle action l'emporte quand deux actions interagissent. C'est lui qui structure le triangle de base du jeu : attaquer avec des attaques Bravery rapides, les bloquer avec un Block, et percer les gardes avec des attaques HP. Règle générale : la priorité la plus haute gagne, deux priorités Melee identiques clashent, et Melee bat Ranged à priorité égale.",
+      "La plupart des attaques sont classées Melee ou Ranged — à ne pas confondre avec le type de dégâts (physique/magique), qui ne concerne que les calculs d'équipement. Une attaque Melee fait stagger l'attaquant quand elle est bloquée, mais gagne contre une attaque Ranged de même niveau ; une attaque Ranged ne fait pas stagger l'attaquant quand elle est bloquée, mais perd contre une Melee de même niveau. Ce sont typiquement les coups au corps à corps d'un côté et les projectiles ou sorts de l'autre, avec des exceptions.",
+      "Melee et Ranged se déclinent chacun en trois niveaux : Low, Mid et High. Low regroupe la majorité des attaques Bravery, qui perdent contre le block. Mid est le niveau du Block de base : il bat les Bravery Low, et les quelques attaques Mid battent à leur tour le block normal ainsi que les attaques Ranged Low et Ranged Mid. High est le niveau de toutes les attaques HP : il l'emporte sur tout ce qui est de priorité inférieure, blocks compris (Guard Crush sur un block normal).",
+      "S'y ajoutent des priorités particulières : Block Highest (aucune attaque n'atteint ce niveau — le LV2 Assist Change en tire sa réputation, ne perdant que contre Special et Unblockable) ; Dash (tout dash bloque les attaques Ranged Low et Special pendant sa durée) ; Special (imblocable mais perd contre Melee, Dash et Ranged Mid/High, ex. le Remote Flare de Kuja) ; Unblockable (n'interagit avec rien hormis l'esquive et traverse donc toutes les attaques et tous les blocks, y compris Block Highest, ex. le Graviga de Terra) ; et le cas unique du Jecht Block, un command block qui bat Dash, Low, Mid et Ranged High, provoque un double stagger contre Melee High, et perd contre Special et Unblockable."
+    ],
+    "source": "https://dissidia.wiki/Attack_Priority_(Dissidia_012)"
+  },
+  "glossaryNote": {
+    "summary": [
+      "Le wiki dissidia.wiki tient un glossaire complet du vocabulaire de Dissidia 012 : plus d'une cinquantaine d'entrées couvrant aussi bien les statistiques et mécaniques officielles (Bravery, Ability Points, Capacity Points, EX Mode, Battlegen...) que le jargon compétitif forgé par la communauté — blodge, dash feint, dodge punish, Wall Rush, Free Air Dash, cross-up, stagger, poke et bien d'autres. Chaque terme y est défini en quelques lignes, souvent avec un lien vers la page détaillée correspondante. C'est la référence à consulter quand un terme anglais utilisé dans nos guides ne vous est pas familier."
+    ],
+    "source": "https://dissidia.wiki/Glossary_(Dissidia_012)"
+  }
+}

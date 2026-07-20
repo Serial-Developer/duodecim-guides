@@ -1,0 +1,1148 @@
+{
+  "slug": "gilgamesh",
+  "name": "Gilgamesh",
+  "page": "Gilgamesh_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Gilgamesh_(Dissidia_012)",
+  "origin": "Final Fantasy V",
+  "icon": "gilgamesh",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-gilgamesh.png",
+  "infobox": {
+    "Name": "Gilgamesh (ギルガメッシュ)",
+    "Original game": "Final Fantasy V",
+    "Base ATK (LV100)": "111 (High)",
+    "Base DEF (LV100)": "111 (Average)",
+    "Run Speed": "10.5 (Very Slow)",
+    "Dash Speed": "77 (Average / Good)",
+    "Fall Speed": "67 (Fast)",
+    "Fall Speed Ratio After Dodge": "22 (Very Fast)",
+    "Fastest BRV": "11F (Dual Thrust, Double Trouble)",
+    "Fastest HP": "13F (Hurricane)",
+    "1-Hit HP": "Yes (Rocket Punch, Missile)",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "No",
+    "Weapon": "Axes, Daggers, Greatswords, Katanas,Parrying Weapons, Spears, Swords, Thrown Weapons",
+    "Armor": "Chestplates, Gauntlets, Heavy Armor, Helms,Large Shields, Light Armor, Shields",
+    "Exclusive weapons": "Osafune, Kotetsu, Yoshiyuki",
+    "Alignment": "Chaos",
+    "Voice Actor (JP)": "Kazuya Nakai",
+    "Voice Actor (ENG)": "Keith Szarabajka"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Gilgamesh is a swordsman who operates in close range and midrange. He draws a random weapon with every sword attack, which come with various effects. Weapon length, damage and EX Force generation all change depending on the weapon. Even Iai Strike (Bravery Break) is possible! All this is backed up by a well rounded air repertoire: Double Trouble is the quintessential fast poke |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        "for safe plays, Electrocute controls space from afar and Whirlwind Slash closes gaps and starts various combos. Hurricane rounds out combos and catches off guard with its blindingly fast startup |",
+        "The time it takes before an attack can do damage.",
+        ".",
+        "Gilgamesh’s strengths are characterized by his synergy with system mechanics and aerial attacks. He can fill assist and EX gauges at a steady rate with defensive play and Whirlwind Slash combos. While the reward varies with different weapons, Gilgamesh always benefits from EX; His damage potential skyrockets in EX mode thanks to his high base ATK, Octo Break and EX Burst, which is arguably the strongest in the game.",
+        "Historically Gilgamesh has been ranked somewhere in mid tier. This has more to do with competitive representation than anything else. He’s not omnipotent though; His ground combat is comparatively slower and riskier. Random weapon draws could cause lots of damage or 1 damage per hit, with no way to guarantee an effect in most cases. Gilgamesh has very fast close-range attacks, but far slower, telegraphed midrange attacks. Gilgamesh picks between those two, and has nothing in between without sacrifices to his consistent air bravery loadout. If Gilgamesh is cornered, he has little upset potential outside of random weapon effects, high risk reads |",
+        "A read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".",
+        "and long-term defensive play. Overall Gilgamesh is generally well rounded in most important areas of the game, making him a competent character in competitive play."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Aerial combat - Solo combos, quick poke, gap closer, lightning fast HP attack and ranged tools, Gilgamesh performs well in the most common area of the game.\nMid range anti-zoning - Electrocute is great at checking opponents at a distance, rewarding combos on hit.\nRandom weapons - Extraordinary effects such as instant bravery break, weapon length and increased EX generation are applied the moment Gilgamesh draws one of his 8 swords, which can turn the tides in his favor on a moment's notice.\nEX Mode - One of the strongest EX Bursts in the game, along with 8 wielded swords can exponentially increase Gilgamesh's reward on hit.\nFast faller - Whenever Gilgamesh air dodges, he is more difficult to hit out of it on average.",
+              "Ground combat - Slow running speed, average HP attacks and lackluster bravery attacks pale in comparison to Gilgamesh's fundamentally solid aerial moves.\nRandom weapons - Gilgamesh cannot control which sword comes out, and may have to fight with suboptimal effects when he wants it the least.\nEX Revenge checkmates - With aerial Missile HP being slow on startup and the other single hit HPs being ground only, overcoming EX Revenge checkmates can be difficult."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Gilgamesh_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Default",
+                "Masamune / Genji Blade"
+              ],
+              "image": "https://dissidia.wiki/images/5/5d/Brv_gilgamesh_dual_thrust_1.jpeg",
+              "damage": [
+                "20 (3, 3, 7, 7)",
+                "14 (2, 2, 5, 5)"
+              ],
+              "startup": [
+                "11F",
+                "11F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "90",
+                "162 (Masamune)"
+              ],
+              "effects": [
+                "Chase",
+                "Chase"
+              ],
+              "cancels": [
+                "Attack, Block, Dodge",
+                "Attack, Block, Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Lunge and stab. Short reach, but quick strike.",
+              "name": "Dual Thrust"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/33/Brv_gilgamesh_wind_slash.jpeg",
+              "damage": "10",
+              "startup": "31F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Launch wind projectiles. Slow speed, long range.",
+              "name": "Wind Slash"
+            },
+            {
+              "variants": [
+                "Default",
+                "Masamune / Genji Blade"
+              ],
+              "image": "https://dissidia.wiki/images/b/b6/Brv_gilgamesh_cross_slash_1.jpeg",
+              "damage": [
+                "30 (3, 3, 4, 4, 8, 8)",
+                "22 (2, 2, 3, 3, 6, 6)"
+              ],
+              "startup": [
+                "21F",
+                "21F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "30",
+                "138 (Masamune)"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Slash foe in a cross pattern.",
+              "name": "Cross Slash"
+            },
+            {
+              "variants": [
+                "Default",
+                "Masamune / Genji Blade"
+              ],
+              "image": "https://dissidia.wiki/images/1/15/Brv_gilgamesh_whirlwind_slash_g_1.jpeg",
+              "damage": [
+                "35 (6, 6, 11, 12)",
+                "25 (4, 4, 8, 9)"
+              ],
+              "startup": [
+                "28F",
+                "28F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "90",
+                "162 (Masamune)"
+              ],
+              "effects": [
+                "Chase",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Charge at foe while spinning weapon. Vertically limited.",
+              "name": "Whirlwind Slash"
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/24/Brv_gilgamesh_electrocute.jpeg",
+              "damage": "10 (4, 6)",
+              "startup": "39F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Call down lightning strike on foe. Single strike, but long range & effective vs any height.",
+              "name": "Electrocute"
+            },
+            {
+              "variants": [
+                "Default",
+                "Masamune / Genji Blade"
+              ],
+              "image": "https://dissidia.wiki/images/a/a0/Brv_gilgamesh_double_trouble_1.jpeg",
+              "damage": [
+                "20 (3, 3, 7, 7)",
+                "14 (2, 2, 5, 5)"
+              ],
+              "startup": [
+                "11F",
+                "11F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "30",
+                "102 (Masamune)"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Attack, Block, Dodge",
+                "Attack, Block, Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Slash in a wide sweep. Short reach, but quick strike.",
+              "name": "Double Trouble"
+            },
+            {
+              "variants": [
+                "Default",
+                "Masamune / Genji Blade"
+              ],
+              "image": "https://dissidia.wiki/images/f/fe/Brv_gilgamesh_tsubamegaeshi_1.jpeg",
+              "damage": [
+                "30 (4, 4, 4, 6, 12)",
+                "22 (3, 3, 3, 4, 9)"
+              ],
+              "startup": [
+                "21F",
+                "21F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "30",
+                "120 (Masamune)"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Forward roll and slash. Effective against any height.",
+              "name": "Tsubamegaeshi"
+            },
+            {
+              "variants": [
+                "Default",
+                "Masamune / Genji Blade"
+              ],
+              "image": "https://dissidia.wiki/images/8/87/Brv_gilgamesh_whirlwind_slash_a_1.jpeg",
+              "damage": [
+                "35 (6, 6, 11, 12)",
+                "25 (4, 4, 8, 9)"
+              ],
+              "startup": [
+                "28F",
+                "28F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "90",
+                "162"
+              ],
+              "effects": [
+                "Chase",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Charge at foe while spinning weapon. Vertically limited.",
+              "name": "Whirlwind Slash (midair)"
+            }
+          ]
+        }
+      },
+      "moveCount": 8,
+      "sources": [
+        "https://dissidia.wiki/Gilgamesh_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/1c/Hp_gilgamesh_rocket_punch.jpeg",
+              "damage": "-",
+              "startup": "53F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shoot off a rocket punch at high speed.",
+              "name": "Rocket Punch"
+            },
+            {
+              "variants": [
+                "Default",
+                "Masamune / Genji Blade"
+              ],
+              "image": "https://dissidia.wiki/images/3/38/Hp_gilgamesh_death_claw.jpeg",
+              "damage": [
+                "10 (5, 5)",
+                "6 (3, 3)"
+              ],
+              "startup": [
+                "41F",
+                "41F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee High",
+                "Melee High"
+              ],
+              "exForce": [
+                "30",
+                "66 (Masamune)"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Charge at and slice foe. Vertically limited, very accurate.",
+              "name": "Death Claw"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/36/Hp_gilgamesh_jump_2.jpeg",
+              "damage": "-",
+              "startup": "41F (peak) ~ 58F (land)",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "60 each hit",
+              "effects": "Dodge",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dodge] Jump and pounce foe. Move with the analog stick.",
+              "name": "Jump"
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/fd/Hp_gilgamesh_missile_1.jpeg",
+              "damage": "-",
+              "startup": "45F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Launch missile. Causes explosion on impact.",
+              "name": "Missile"
+            },
+            {
+              "variants": [
+                "Default",
+                "Masamune / Genji Blade"
+              ],
+              "image": "https://dissidia.wiki/images/d/d5/Hp_gilgamesh_hurricane.jpeg",
+              "damage": [
+                "12 (2 x 6)",
+                "6 (1 x 6)"
+              ],
+              "startup": [
+                "13F",
+                "13F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee High",
+                "Melee High"
+              ],
+              "exForce": [
+                "96",
+                "180 (Masamune)"
+              ],
+              "effects": [
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "",
+                ""
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Create a cyclone by spinning rapidly.",
+              "name": "Hurricane"
+            },
+            {
+              "variants": [
+                "Default",
+                "Masamune / Genji Blade"
+              ],
+              "image": "https://dissidia.wiki/images/b/b7/Hp_gilgamesh_sword_dance.jpeg",
+              "damage": [
+                "10 (1, 1, 2 x 4)",
+                "6 (1 x 6)"
+              ],
+              "startup": [
+                "45F",
+                "45F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee High",
+                "Melee High"
+              ],
+              "exForce": [
+                "30",
+                "138 (Masamune)"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] High-speed slashes. Slow, effective vs. any height.",
+              "name": "Sword Dance"
+            }
+          ]
+        }
+      },
+      "moveCount": 6,
+      "sources": [
+        "https://dissidia.wiki/Gilgamesh_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Gilgamesh Morphing Time!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nOcto Break"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Octo Break",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Always active while in EX Mode]\nWields a weapon in each of his eight arms. Which weapons he wields is unknown until entering EX Mode."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: The Greatest Sword",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "A flurry of attacks using the greatest sword ever known. Select Excalibur to deal great damage. Select Excalipoor to..."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "40 (10 x 4)",
+                  "60 (15 x 4 hits, done twice due to Excalibur)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Gilgamesh_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": true,
+      "title": "Unique Mechanic: Weapon Draw",
+      "text": [
+        "Excalibur. Double damage!\nExcalibur. Double damage!\nExcalipoor. 1 damage...\nExcalipoor. 1 damage...",
+        "Gilgamesh draws one of eight weapons with a melee attack. Each weapon has unique traits, such as weapon length, EX gauge depletion or different base damage |",
+        "The attack's baseline damage value before equipment and stats are considered.",
+        ". All weapons are drawn at random with a set probability. Weapon is not drawn when using Wind Slash, Electrocute, Rocket Punch or Missile.",
+        "The weapons' base damage affects the attack's base damage, not the final damage. This is one of the few mechanics that affect an attack's base damage, which means everything scales with builds (higher ATK etc.)."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Weapon",
+              "Drawing probability",
+              "Reach",
+              "Damage multiplier",
+              "Effect"
+            ],
+            [
+              "Excalibur",
+              "10 %",
+              "1.0",
+              "x1.0",
+              "Double damage with each hit."
+            ],
+            [
+              "Excalipoor",
+              "10 %",
+              "1.0",
+              "x1.0",
+              "1 damage with each hit."
+            ],
+            [
+              "Genji Blade",
+              "10 %",
+              "1.0",
+              "x0.75, round down to nearest integer, minimum = 1.",
+              "EX gauge depletion, weaker damage."
+            ],
+            [
+              "Zantetsuken",
+              "10 %",
+              "0.7 %",
+              "x1.0",
+              "2 % chance to inflict bravery break. Won't gain stage bravery with break. Normal damage."
+            ],
+            [
+              "Naginata",
+              "15 %",
+              "1.5",
+              "x1.0",
+              "Longest reach. Normal damage."
+            ],
+            [
+              "Masamune",
+              "15 %",
+              "1.3",
+              "x0.75, round down to nearest integer, minimum = 1.",
+              "Long reach. Produce more EX force on hit, weaker damage."
+            ],
+            [
+              "Battle Axe",
+              "15 %",
+              "0.7",
+              "Random (x0.25 OR x1.75. Round down, min=1.)",
+              "Short reach, random damage on each hit."
+            ],
+            [
+              "Chicken Knife",
+              "15 %",
+              "0.7",
+              "x1.0 - x2.77 (Scales with health. See table below.)",
+              "Short reach, increased damage at lower health."
+            ]
+          ]
+        },
+        {
+          "caption": "The attack's baseline damage value before equipment and stats are considered.\nMultiplier",
+          "rows": [
+            [
+              "Remaining Health",
+              "Multiplier"
+            ],
+            [
+              "100 - 91 %",
+              "x1.0"
+            ],
+            [
+              "90 - 81 %",
+              "x1.12"
+            ],
+            [
+              "80 - 71 %",
+              "x1.25"
+            ],
+            [
+              "70 - 61 %",
+              "x1.40"
+            ],
+            [
+              "60 - 51 %",
+              "x1.57"
+            ],
+            [
+              "50 - 41 %",
+              "x1.76"
+            ],
+            [
+              "40 - 31 %",
+              "x1.97"
+            ],
+            [
+              "30 - 21 %",
+              "x2.21"
+            ],
+            [
+              "20 - 11 %",
+              "x2.48"
+            ],
+            [
+              "10 % and below",
+              "x2.77"
+            ]
+          ]
+        }
+      ],
+      "subs": [
+        {
+          "title": "Weapon Retention",
+          "text": [
+            "Weapon disappears if Gilgamesh dodges, blocks, gets hit, or Chase ends.\nWeapon stays if Gilgamesh initiates Chase or chains a missed attack into another attack (e.g. Double Trouble > Double Trouble)\nIn EX Revenge, Gilgamesh can chain attacks into each other. The weapon stays or disappears depending on which move he chains into.",
+            "Double Trouble (hit) > Hurricane is notable, because it is a combo at the ceiling."
+          ],
+          "tables": [
+            {
+              "caption": "Weapon Draw Sequences",
+              "rows": [
+                [
+                  "Weapon Remains",
+                  "Weapon Vanishes, New Weapon Draw"
+                ],
+                [
+                  "Whirlwind Slash (ground or midair) > Chase\nDouble Trouble (miss / hit) > Hurricane\nDouble Trouble (miss) > Double Trouble\nDouble Trouble (miss) > Whirlwind Slash\nDouble Trouble (miss / hit) > Sword Dance\nDual Thrust (miss) > Dual Thrust\nDual Thrust (miss) > Whirlwind Slash\nDual Thrust (miss) > Jump",
+                  "Double Trouble (miss) > Tsubamegaeshi\nDual Thrust (miss) > Cross Slash\nDual Thrust (miss) > Death Claw"
+                ],
+                [
+                  "During EX Revenge"
+                ],
+                [
+                  "Whirlwind Slash (ground / midair, finish) > Whirlwind Slash\nWhirlwind Slash (finish) > Double Trouble\nWhirlwind Slash (finish) > Hurricane / Sword Dance\nDouble Trouble (finish) > Double Trouble\nDouble Trouble (finish) > Whirlwind Slash\nDouble Trouble (finish) > Hurricane / Sword Dance\nDual Thrust (finish) > Dual Thrust\nDual Thrust (finish) > Whirlwind Slash\nDual Thrust (finish) > Jump",
+                  "Dual Thrust (finish) > Cross Slash\nDual Thrust (finish) > Death Claw\nCross Slash (finish) > Cross Slash\nTsubamegaeshi (finish) > Tsubamegaeshi"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Gilgamesh_(Dissidia_012)"
+      ]
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Gilgamesh_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "|-|Hybrid (EX)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "|-|build 2=\nadd build here",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10299"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "996"
+            ],
+            [
+              "ATK",
+              "179"
+            ],
+            [
+              "DEF",
+              "182"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x3.5"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Heaven's Cloud"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Dirk"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Headband <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Vest"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Aerial"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> White Gem"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Glutton"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": "Substitutes",
+          "rows": [
+            [
+              "Equipment",
+              "Replacement",
+              "Notes"
+            ],
+            [
+              "<img></img> Muscle Belt",
+              "<img></img> Battle Hammer / <img></img> Large Gap in HP",
+              "If you're not using Gilgamesh's solo combos, these are good replacements."
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Gilgamesh_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Gilgamesh Assist Data",
+          "text": [
+            "When used as an assist, Gilgamesh only draws Excalibur or Excalipoor. 50 % chance for either sword. Excalibur doubles the damage multiplier of the attacks as normal in addition to enhanced EX meter drain. Excalipoor applies 1 damage to all hits and generates EX for the opponent."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Cross Slash",
+                  "21F",
+                  "Ground",
+                  "Opponent",
+                  "6, 6, 8, 8, 16, 16 (30) / 1, 1, 1, 1, 1, 1 (6)",
+                  "Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Tsubamegaeshi",
+                  "21F",
+                  "Air",
+                  "Opponent",
+                  "8, 8, 12, 12, 24 (60) / 1, 1, 1, 1, 1 (5)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Death Claw",
+                  "41F",
+                  "Ground",
+                  "Opponent",
+                  "10, 10 (20) / 1, 1 (2)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Hurricane",
+                  "13F",
+                  "Air",
+                  "Opponent",
+                  "4 x 6 (24) / 1 x 6 (6)",
+                  "Chase"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "Gilgamesh works well with most tournament viable assists."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Gilgamesh_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Gilgamesh_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Gilgamesh_(Dissidia_012)"
+  ]
+}

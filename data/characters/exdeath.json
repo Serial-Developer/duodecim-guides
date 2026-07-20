@@ -1,0 +1,863 @@
+{
+  "slug": "exdeath",
+  "name": "Exdeath",
+  "page": "Exdeath_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Exdeath_(Dissidia_012)",
+  "origin": "Final Fantasy V",
+  "icon": "exd",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-exd.png",
+  "infobox": {
+    "Name": "Exdeath (エクスデス)",
+    "Original game": "Final Fantasy V",
+    "Base ATK (LV100)": "110 (Average)",
+    "Base DEF (LV100)": "113 (Very High)",
+    "Run Speed": "?? (Slowest)",
+    "Dash Speed": "89 (Slowest)",
+    "Fall Speed": "111 (Very Slow)",
+    "Fall Speed Ratio After Dodge": "44 (Slow)",
+    "Fastest BRV": "~6F (Reverse Polarity)",
+    "Fastest HP": "17F (Counter Gr. Cross)51F (Delta Attack)",
+    "1-Hit HP": "Yes (Delta Attack, Almagest)",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "Yes",
+    "Weapon": "Greatswords, Rods, Staves, Swords",
+    "Armor": "Gauntlets, Heavy Armor, Helms,Large Shields, Light Armor, Shields",
+    "Exclusive weapons": "Ghido's Blade, Moore Branch, Enuo's Scourge",
+    "Alignment": "Chaos",
+    "Voice Actor (JP)": "Tarō Ishida",
+    "Voice Actor (ENG)": "Gerald C. Rivers"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Exdeath is a defensive fighter who guards attacks and counters with his own. Block melee attacks or magic with Protect Guard and Shell Guard, or use the slightly slower Omni Block to repel most attacks in the game.",
+        "Exdeath's defense is top class. He is the only character in the game who can cancel |",
+        "An action that is interrupted early by doing another action.",
+        "attacks into regular blocks during startup |",
+        "The time it takes before an attack can do damage.",
+        ". With the dash feint technique, he can fill assist gauge faster than anyone else. This also gives him superior mobility, because he can dodge attacks with the blodge technique. Anyone looking to approach has to answer to Reverse Polarity, which staggers most pokes |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        "and teleports large distances. This makes Exdeath very mobile and challenging to interact with. Even if he gets hit, he can restart the runaway game with LV2 Assist Change. If left alone, Exdeath can also cast Maelstrom which is an unavoidable HP attack.",
+        "Exdeath's counter playstyle works with high base bravery and Side by Side builds. He relies on EX Cores for EX, but his slow dash speed encourages preemptive positioning and using Aerith assist to pressure opponents.",
+        "Exdeath's weaknesses stem from his lackluster offense and the reliance on counters. Most of his offensive options are slow or need specific interactions to win; Ceiling wall rushes, staggers, assist punishes |",
+        "Using assist to hit the opponent who missed an attack, before they can defend.",
+        "or successful blocks against attacks. Maelstrom strategies falter against characters who can safely deflect it and stall for meter. Coupled with the demand for executing guard cancels, Exdeath is a challenging character to play consistently. Anything that throws off his timing (assists, unreactable mixups |",
+        "A situation where a player has several ways to attack, which require different actions from the defending player.",
+        ") is a serious threat.",
+        "In competitive play, Exdeath is regarded as one of the strongest characters in the game. He exploits system mechanics very well, but he is vulnerable to defensive strategies that nullify his stage presence. Despite his flaws, Exdeath has earned a reputation as a top 3 contender. He is an advanced, technical character who rewards players greatly for their efforts."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Ultimate Defense - Various blocks allow Exdeath to counter almost any attack in the game.\nFastest at Filling Assist Gauge - Cancelling attacks and regular blocks into each other lets Exdeath fill assist gauge faster than anyone else.\nAssist King - Due to his assist gain, Exdeath has access to assist more often than anyone else. Assist punishes and LV2 Assist Change are more accessible and less costly overall.\nTurtling - Frame 1 command blocks and mobility. Once Exdeath gets started, he can move long distances rapidly with Reverse Polarity or dodge faster with blodges. Exdeath can also escape with LV2 Assist Change more often, which reduces risk and lets him get back to neutral again.\nMaelstrom Pressure - Exdeath can provoke opponents with Maelstrom, a slow unavoidable HP attack which ignores Assist Change.\nHighest base DEF without EX Mode mitigates bravery damage on top of everything else.",
+              "Offense - Exdeath's offensive options are slow or have short reach. Exdeath has does not have many ways to open up opponents on his own. He thrives when he acts as the defender, but not as much if the opponent can ignore him. EX Mode Regen can be difficult to overcome.\nAnti-Maelstrom - An extension of the previous point, Exdeath may have to take more risks against characters who can deflect Maelstrom reliably with melee HP attacks (e.g. Squall & Firion).\nHuman Error - Exdeath demands consistent execution, patience and good understanding of the opponent's attacks. He relies on countering what the opponent does, and failing at this brings him down much sooner than what his potential implies."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Exdeath_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "main": {
+          "intro": "All bravery attacks have a ground and a midair version. Attack data is identical unless stated otherwise.\nExdeath has unique guard counters. If he blocks an attack with Turn Guard, Shell Guard, Protect Guard or Omni Block, he can counter with enhanced BRV or HP attacks.\nCircle (<img></img>) - Hurricane\nCircle (<img></img>) - Hurricane\nUp + Circle, Circle (↑+<img></img>, <img></img>) - Sword Dance\nUp + Circle, Circle (↑+<img></img>, <img></img>) - Sword Dance\nDown + Circle, Circle (↓+<img></img>, <img></img>) - Vacuum Wave\nDown + Circle, Circle (↓+<img></img>, <img></img>) - Vacuum Wave\nSquare (<img></img>) - Almagest\nSquare (<img></img>) - Almagest\nDown + Square (↓+<img></img>) - Grand Cross\nDown + Square (↓+<img></img>) - Grand Cross\nThese counterattacks are built-in, so they don't need to be equipped separately. They come out faster, and often do more damage as well.",
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/ec/Brv_exdeath_black_hole_1.jpeg",
+              "damage": "1 x 18, 18 (36)",
+              "startup": "73F",
+              "type": "Magical",
+              "priority": "Unblockable",
+              "exForce": "114",
+              "effects": "Absorb",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Create black hole that attracts all around it for a time.",
+              "name": "Black Hole"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/48/Brv_exdeath_reverse_polarity_1.jpeg",
+              "damage": "5",
+              "startup": "5F after release",
+              "type": "Physical",
+              "priority": "Melee Mid",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Special warp movement attack. Hold button, release to warp.",
+              "name": "Reverse Polarity"
+            },
+            {
+              "variants": [
+                "CP (Mastered)",
+                "Cancels",
+                "Assist Gain (Attack)",
+                "Assist Gain (Hit)"
+              ],
+              "image": "https://dissidia.wiki/images/3/32/Brv_exdeath_shell_guard_1.jpeg",
+              "description": "30 (15)",
+              "name": "Shell Guard",
+              "notes": "[Block] Call a protective wind that protects against magic attacks.\nCan only block Ranged Low and Ranged Mid priority attacks successfully. Reflects Ranged Low attacks directly back to opponent."
+            },
+            {
+              "variants": [
+                "CP (Mastered)",
+                "Cancels",
+                "Assist Gain (Attack)",
+                "Assist Gain (Hit)"
+              ],
+              "image": "https://dissidia.wiki/images/0/0c/Brv_exdeath_protect_guard.jpeg",
+              "description": "30 (15)",
+              "name": "Protect Guard",
+              "notes": "[Block] Create cerulean wall that defends against physical attacks.\nCan only block Melee Low and Melee Mid priority attacks successfully."
+            },
+            {
+              "variants": [
+                "CP (Mastered)",
+                "Cancels",
+                "Assist Gain (Attack)",
+                "Assist Gain (Hit)"
+              ],
+              "image": "https://dissidia.wiki/images/7/7a/Brv_exdeath_turn_guard_1.jpeg",
+              "description": "30 (15)",
+              "name": "Turn Guard",
+              "notes": "[Block] Call a crimson crest. Maintain block with button hold.\nIf Turn Guard is held for over a second, Exdeath goes through a noticeable recovery period before dodge cancel becomes possible."
+            },
+            {
+              "variants": [
+                "CP (Mastered)",
+                "Cancels",
+                "Assist Gain (Attack)",
+                "Assist Gain (Hit)"
+              ],
+              "image": "https://dissidia.wiki/images/1/1c/Brv_exdeath_omni_block.jpeg",
+              "description": "30 (15)",
+              "name": "Omni Block",
+              "notes": "[Block] Blocks any blow. Deploys on button release.\nDoes not work against attacks with Unblockable priority, such as The Emperor's Thunder Crest."
+            },
+            {
+              "variants": [
+                "Normal",
+                "Counter"
+              ],
+              "image": "https://dissidia.wiki/images/a/a3/Brv_exdeath_sword_dance_1.jpeg",
+              "damage": [
+                "30",
+                "50 (25 x 2) 80 (20 x 4. EX Mode)"
+              ],
+              "startup": [
+                "65F",
+                "11F"
+              ],
+              "type": [
+                "Physical",
+                "Physical"
+              ],
+              "priority": [
+                "Melee Mid",
+                "Melee Mid"
+              ],
+              "exForce": [
+                "0",
+                "30"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Block (startup), Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Swing blade in broad arc. Can cancel attack with any block.",
+              "name": "Sword Dance"
+            },
+            {
+              "variants": [
+                "Normal",
+                "Counter"
+              ],
+              "image": "https://dissidia.wiki/images/8/83/Brv_exdeath_vacuum_wave_1.jpeg",
+              "damage": [
+                "20",
+                "40 (20, 20) 60 (15 x 4. EX Mode)"
+              ],
+              "startup": [
+                "69F",
+                "5F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Ranged Mid"
+              ],
+              "exForce": [
+                "0",
+                "60"
+              ],
+              "effects": [
+                "Chase",
+                "Chase"
+              ],
+              "cancels": [
+                "Block (startup), Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Fire vacuum shockwave. Can cancel attack with any block.",
+              "name": "Vacuum Wave"
+            },
+            {
+              "variants": [
+                "Normal",
+                "Counter"
+              ],
+              "image": "https://dissidia.wiki/images/d/d3/Brv_exdeath_hurricane.jpeg",
+              "damage": [
+                "32 (2 x 6, 20)",
+                "55 (3 x 11, 22)90 (11, 2, 3 x 11, 22. EX Mode)"
+              ],
+              "startup": [
+                "43F",
+                "13F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Mid"
+              ],
+              "exForce": [
+                "60",
+                "60"
+              ],
+              "effects": [
+                "Absorb",
+                "Absorb"
+              ],
+              "cancels": [
+                "Block (startup), Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Summon tornados to self. Can cancel attack with any block.",
+              "name": "Hurricane"
+            }
+          ]
+        }
+      },
+      "moveCount": 9,
+      "sources": [
+        "https://dissidia.wiki/Exdeath_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "main": {
+          "intro": "Every Exdeath's bravery attack has a ground and air version. Attack data is shared with both versions unless stated otherwise.",
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/1f/Hp_exdeath_delta_attack.jpeg",
+              "damage": "-",
+              "startup": "51F, 1-51F (Block)",
+              "type": "-",
+              "priority": "Block Mid, Melee High",
+              "exForce": "0",
+              "effects": "Block, Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Fire beam from array. Sends foe flying while defending.",
+              "name": "Delta Attack"
+            },
+            {
+              "variants": [
+                "Regular",
+                "Counter"
+              ],
+              "image": "https://dissidia.wiki/images/5/5f/Hp_exdeath_almagest_1.jpeg",
+              "damage": [
+                "-",
+                "-"
+              ],
+              "startup": [
+                "93F",
+                "23F"
+              ],
+              "type": [
+                "-",
+                "-"
+              ],
+              "priority": [
+                "Block Ranged Low Melee High",
+                "Block Ranged Low, Melee High Block Highest (from Omni Block)"
+              ],
+              "exForce": [
+                "0",
+                "0"
+              ],
+              "effects": [
+                "Magic Block, Wall Rush",
+                "Magic Block, Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Fill an area with the Void. Can cancel attack with any block.",
+              "name": "Almagest"
+            },
+            {
+              "variants": [
+                "Regular",
+                "Counter"
+              ],
+              "image": "https://dissidia.wiki/images/1/12/Hp_exdeath_grand_cross.jpeg",
+              "damage": [
+                "10 (2 x 5)",
+                "24 (4 x 6)"
+              ],
+              "startup": [
+                "93F",
+                "17F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Unblockable",
+                "Unblockable"
+              ],
+              "exForce": [
+                "90",
+                "96"
+              ],
+              "effects": [
+                "Absorb",
+                "Absorb"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Focus then detonate Void power. Cancels with any block.",
+              "name": "Grand Cross"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c8/Hp_exdeath_maelstrom_1.jpeg",
+              "damage": "27 (3 x 9)",
+              "startup": "391F (6.5 sec, ground) 451F (7.5 sec, midair)",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "87",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Creates large cyclone. Can aim with the analog stick.",
+              "name": "Maelstrom"
+            }
+          ]
+        },
+        "Maelstrom Counterstrategy": {
+          "intro": "Because Maelstrom cannot be avoided with a dodge, it must be deflected with a Melee High priority attack that can power through the second hitbox that spawns upon deflecting the first hitbox. Only a few characters cannot do this at all: Kuja, Yuna and Shantotto. These characters have to diffuse the situation differently, such as interrupting the startup |\nThe time it takes before an attack can do damage.\n, using Aerith's Planet Protector or using EX Revenge upon getting hit.\nEvery other attack is either unproven to work or known to lose / only deflect one Maelstrom hitbox.",
+          "moves": [
+            {
+              "variants": [
+                "Character",
+                "Attack"
+              ],
+              "description": "Quo Vadis",
+              "name": null
+            }
+          ]
+        }
+      },
+      "moveCount": 5,
+      "sources": [
+        "https://dissidia.wiki/Exdeath_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Power of the Void!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nSpeed Guard",
+        "Exdeath's EX mode has serviceable perks, but he may struggle to take advantage of them. This is due to the relatively sparse EX opportunities and Speed Guard boosting command block |",
+        "An attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.",
+        "recovery |",
+        "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+        "and BRV guard counters specifically. Exdeath often resorts to HP guard counters, which only get the added critical hit rate from Critical Boost. If he does get a full EX gauge, it's typically used to finish matches (EX mode) or stay alive (EX Revenge). This leaves little room to take advantage of his EX mode abilities, but they can still be beneficial if the opportunity presents itself. For example, Sword Dance guard counters lead to more hits and stronger wall carry |",
+        "The distance travelled when a combo is happening. Longer distance means a combo pushes the opponent closer to the wall. In Dissidia 012, longer distance is better for getting a Wall Rush.",
+        ", resulting in much higher damage potential."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Speed Guard",
+          "text": [
+            "[Always active while in EX Mode] Time necessary to block an attack decreases.",
+            "All Blocks can be attack-cancelled in their dodge cancel frames, BRV counter attacks x2.",
+            "The maximum limit for bravery counter attacks is doubled.\nHurricane can be done 2 times instead of 1 (<img></img> > <img></img>)\nSword Dance can be done 4 times instead of 2 (↑ + <img></img> > ↑ + <img></img> > ↑ + <img></img> > ↑ + <img></img>).\nVacuum Wave can be done 4 times instead of 2 (↓ + <img></img> > ↓ + <img></img> > ↓ + <img></img> > ↓ + <img></img>)",
+            "After missing Turn Guard, Omni Block etc., Exdeath can chain into other attacks\nNormally when one of the command blocks |",
+            "An attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.",
+            "miss, the recovery |",
+            "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+            "can only be shortened with a dodge. Speed Guard allows him to use other attacks and chain them together, such as Turn Guard > Omni Block > Sword Dance.",
+            "Exdeath already has strong mobility and ambiguity with the regular block cancels |",
+            "An action that is interrupted early by doing another action.",
+            ", so he rarely needs to rely on this. It can work as a surprise tool if the opponent tries to attack after a command block misses. For example, if Omni Block misses, Exdeath could activate EX mode and chain into Turn Guard to stop Free Air Dash / quick bravery attacks."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Power of the Void",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "At his command, all is absorbed by the darkness and returned to the Void.\nPress circle to deplete the gauge. Release it when it reaches 0.",
+            "Exdeath's EX Burst is performed similarly to Cloud of Darkness's EX Burst. Hold Circle <img></img>, then release it when the number reaches 0. The number counts down to 0 very quickly at first, but then slows down considerably towards the end. This lets Exdeath prepare for the button release consistently. It's not the weakest EX Burst in terms of damage, but slightly below average compared to other EX Bursts. It is still effective for closing out matches after an assist combo."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "16",
+                  "12 x 7 (84) (100 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Exdeath_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Exdeath_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|Hybrid (Seal of Lufenia)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Equip Master Guardsman extra ability for +1000 HP.",
+        "|-|Build #2=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "11826"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1296"
+            ],
+            [
+              "ATK",
+              "177"
+            ],
+            [
+              "DEF",
+              "184"
+            ],
+            [
+              "LUK",
+              "61"
+            ],
+            [
+              "Max Booster",
+              "x2.5"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Yuna"
+            ],
+            [
+              "Weapon <img></img>",
+              "Piggy's Stick <img></img>"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Bangle <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Headband <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Vest"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> BRV = 0"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Blue Gem"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Glutton"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Great Gospel"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Back-Breaking Straw"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Miracle Shoes"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Exdeath_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Synergies",
+          "text": [
+            "Exdeath works well with Aerith, Kuja and Yuna."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Exdeath Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Sword Dance",
+                  "65F",
+                  "Ground",
+                  "Opponent",
+                  "30",
+                  "Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Hurricane",
+                  "43F",
+                  "Air",
+                  "Opponent",
+                  "2 x 6, 20 (32)",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Grand Cross",
+                  "93F",
+                  "Ground",
+                  "Opponent",
+                  "2 x 5 (10)",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Delta Attack",
+                  "51F",
+                  "Air",
+                  "Opponent",
+                  "--",
+                  "Block, Wall Rush"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Exdeath_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Exdeath_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Exdeath_(Dissidia_012)"
+  ]
+}

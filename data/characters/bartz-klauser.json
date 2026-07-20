@@ -1,0 +1,751 @@
+{
+  "slug": "bartz-klauser",
+  "name": "Bartz Klauser",
+  "page": "Bartz_Klauser_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)",
+  "origin": "Final Fantasy V",
+  "icon": "bartz",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-bartz.png",
+  "infobox": {
+    "Name": "Bartz Klauser (バッツ・クラウザー)",
+    "Original game": "Final Fantasy V",
+    "Base ATK (LV100)": "110 (Average)",
+    "Base DEF (LV100)": "111 (Average)",
+    "Run Speed": "6 (Average / Good)",
+    "Dash Speed": "77F (Average / Good)",
+    "Fall Speed": "89F (Below Average)",
+    "Fall Speed Ratio After Dodge": "39F (Average)",
+    "Fastest BRV": "13F (Solid Ascension)",
+    "Fastest HP": "15F (Goblin Punch, EX)39F (Hellfire)",
+    "1-Hit HP": "Yes (Multiple)",
+    "HP Links": "Yes",
+    "Command Block": "No",
+    "Weapon": "All",
+    "Armor": "All",
+    "Exclusive weapons": "Chocoblade, Dayspring, Dorgann's Blade",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Sōichirō Hoshi",
+    "Voice Actor (ENG)": "Jason Spisak"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Bartz Klauser is the carefree protagonist of Final Fantasy V. In Dissidia 012, he is representing the Mime Class from his original game. This is evident in the fact that is moveset is borrowed from other Warriors of Cosmos."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Solid ground game, with fast pokes and HPs that can cover good space above him\nCan utilize the boosts gained from his copied moves to run creative builds",
+              "Aerial game, while average on it's own, is often outclassed by many other characters\nLackluster pokes. Slow, punishable air pokes makes it more difficult to generate assist meter safely\nWeak zoning. Holy, while deals heavy damage alongside a great BRV to HP Link, can easily backfire due to it's Ranged Low priority\nWeak EX Force Generation"
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/83/Brv_bartz_blade_crash_1.jpeg",
+              "damage": "8, 7, 6, 1 x 4, 15 (40)",
+              "startup": "23",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase, Minor Speed Boost",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Slash with two swords. Minor Speed Boost effect.",
+              "name": "Blade Crash",
+              "notes": "Speed Boost increases running speed by 8% with each equipped Blade Crash.\nSwing Blazefire Saber twice to knock them into the air, then dash through with katana to hit multiple times and slash them away. Copied from Lightning and Vaan.\nOne of Bartz's slower moves, the advantage that this move brings is that, just like Lightning's version, it moves Bartz slightly forward whenever he does it, making it good to catch opponents whiffing a move in range. However, this slowness also means that you need to think before throwing out this move, as it is easily blockable and punishable. The EX Force generation is good, but it is your choice to run either Blade Crash or Hazard Raid."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c0/Brv_bartz_reel_impulse_1.jpeg",
+              "damage": "7, 7, 3 x 3, 4, 16 (43)",
+              "startup": "47",
+              "type": "Physical",
+              "priority": "Ranged High (Axe), Melee Low (Dagger)",
+              "exForce": "27",
+              "effects": "Wall Rush, EX Intake Range +1m",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "35 (15)",
+              "description": "[Long] Throw axe forwards. EX Intake range +1m.",
+              "name": "Reel Impulse",
+              "notes": "Throw an axe that rebounds to pull the opponent closer, then leap and slash with twin swords multiple times and knock them away. Copied from Firion and Zidane.\nAlthough very slow, the axe throw has the longest range of all of Bartz's grounded attacks, making it viable for punishes in long range. In addition to that, it has high priority, meaning it cannot be guarded with normal blocks and must be dodged, allowing Bartz to get an assist dodge punish if the opponent didn't perfect dodge the axe.\nAnother advantage this move offers is its additional effect, which increases the EX Intake Range by 1 meter. This additional effect is stackable, so that you can equip two Reel Impulses to get +2m EX Intake Range, which is almost equal to equipping a Heaven's Cloud. An EX build could forgo equipping both Blade Crash and Hazard Raid and just equip another Reel Impulse to strengthen Bartz's EX Game.\nDespite these advantages, you rarely want to throw this move, as the recovery of this move is extremely long, making it easily punishable by a variety of ways. After throwing the axe, Bartz is vulnerable to assist punishes as well, so one should only throw this move out when Bartz has at least one bar of assist gauge.\nThe EX Intake Effect is useless on a Side by Side Build, but an SBS Bartz would still rather prefer running Reel Impulse due to the advantages stated above that none of his other grounded moves can offer.\nWith the help of landing lag, connecting Reel Impulse at point blank range lets Bartz dodge cancel into Blade Crash bravery for a solo combo."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/24/Brv_bartz_hazard_raid_1.jpeg",
+              "damage": "3 x 4, 5, 8, 10 (35)",
+              "startup": "27",
+              "type": "Physical",
+              "priority": "Melee low",
+              "exForce": "90",
+              "effects": "Chase, Chase bravery damage +10 %",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Charge and pummel foe. Chase bravery damage +10 %.",
+              "name": "Hazard Raid",
+              "notes": "Charge forward impaling the opponent with Buster Sword, then punch them three times to launch them into the air. Copied from Cloud and Tifa.\nA really good distance closer thanks to the first part of Cloud's Climhazzard. However, the same problems that Climhazzard has also applies to this move, with it arguabily being worse than it, since instead of the Wall Rush Climhazzard has, the second and the third part of this move is replaced by Tifa's Beat Rush, which leads into Chase. Due to this, it doesn't offer much advantage in SBS Builds that Reel Impluse cannot provide.\nAn EX Build can try to utilise this move to take advantage of it's EX Force Generation, but since it's a slow grounded BRV Attack, it will be rarely utilized, while the side effect of it doesn't provide much benefit to it. You can safely ignore this move in most EX Builds, or you can choose between Hazard Raid and Blade Crash in SBS Builds."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/a/a4/Brv_bartz_solid_ascension_1.jpeg",
+              "damage": "4, 5, 6, 7, 5, 7, 16 (50)",
+              "startup": "13",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "96",
+              "effects": "Chase, Wall Rush, Minor Physical Shield",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Repeated slashes. Minor Physical Shield effect.",
+              "name": "Solid Ascension",
+              "notes": "Physical Shield effect activates at near death for a 10 % boost with each equipped Solid Ascension.\nSlash the opponent four times from close-range with four quick slashes, then perform a sword combo to knock them into the air. Copied from Squall and the Warrior of Light.\nHis best grounded BRV Move. The start up is extremely quick, and can punish slower moves in range quite easily. It also deals the best damage on the ground with generating almost 1/10th of a Full EX Bar. It's quick start up also allows Bartz to build up assist quickly on the ground, which means that he can reliably get at least one assist bar to keep him safe from assist punishes or use an assist himself.\nOne glaring disadvantage of this move is that it has very poor range. Bartz must be very close to standing next to his opponent to make the move connect. In addition to that, it also suffers from poor vertical range, making it a very poor choice to punish air approaches or any whiffed attack in the air.\nDespite the disadvantages, it is a very good move that does all of the important things (Being fast, dealing great damage, generating great EX Force) at the cost of poor range, which can be mitigated by his great anti-air HP attacks."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/75/Brv_bartz_holy.jpeg",
+              "damage": "each (8)",
+              "startup": "37",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Chase, Minor Jump Boost",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Emit light projectiles. Minor Jump Boost effect.",
+              "name": "Holy",
+              "notes": "Conjure five balls of light that home in on the opponent. Copied from Terra.\nAlmost an iconic move for Bartz, his de facto zoning tool. If it doesn't work, it's the most useless tool Bartz can have. When it works however, it is one of the best moves he has. The orbs track down the opponent for some good distance, and is effective if the opponent is way below or way above you. Each orb also has solid base damage, so if all 5 orbs connect with the opponent it will deal solid damage. The range also allows for long distance punishes, although rare since the orbs don't travel fast enough for some punishes. It also punishes over dodging in the air, and poor dodges on the ground if the opponent forgoes blocking. Even while blocking, one must block each individual orb, allowing a misblock to be deadly. These advantages come in handy, as it can link into Flare, which is a good move in its own right.\nOne major positive of this move is that it is susceptible to the Link Glitch. What it means for Holy is that you can use Holy at a distance and then use another set of Holy before the first set hits the opponent. The first set of Holy won't disappear when you use Holy again, and if the first set hits the opponent, it will count as the second set of Holy hitting the opponent, allowing Bartz to link it into Flare. This glitch makes his confirms much easier and allows Bartz to deal much more damage than he is normally supposed to.\nUnfortunately, despite all of these advantages, the disadvantages this move provides almost equals out, making it just an average move. It is easily deflected by the opponent Free Air Dashing at Bartz. In the previous game, this wasn't that much of a problem, since everyone ran Omni Air Dash. However, Free Air Dashing shuts down Holy spamming without much effort. This wouldn't be as bad if for the fact that the orbs don't disappear on hitting the opponent, allowing them to hit you even if you have connected an attack. This messes up most of Bartz's attacks, since they don't cover his vertical hurtbox. In addition to that, the orbs also have longer hitstun than most projectiles, making it easy for an opponent to capitalize off of a reflected Holy. The start up of this move is also extremely long, allowing the opponent to punish the move easily even before it goes off. It is also susceptible to getting Assist punished, meaning that it shouldn't be spammed if the opponent has one bar of assist gauge filled up.\nWith these advantages and disadvantages, Holy is in the middle of the road for how unreliable it is. If it works, it brings your damage, punishes and HP hits in quite easily. If it doesn't work, you will wonder why you even decided on using the move."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/83/Brv_bartz_rush_impact_1.jpeg",
+              "damage": "6, 8, 16 (30)",
+              "startup": "19",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush, Jump Times Boost",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Wield spear and sword. Jump Times Boost effect.",
+              "name": "Rush Impact",
+              "notes": "Swing Kain's lance to hit the opponent twice, then swing Blazefire Saber to slam them down. Copied from Kain and Lightning.\nUnfortunately slower than most air pokes, it is almost as slow as Cloud's Slashing Blow, which is a big deal when considering Rush Impact is Bartz's fastest move in the air. It has some range and it is easily comboable to an assist, but it is also predictable and not that good at approaching or whiffing. Not much to say about this move, since you have to run this move, but not having a better faster option than this move makes Bartz's air game miserable, as a dodge cancel window is not available very early."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/0d/Brv_bartz_slide_shooter_1.jpeg",
+              "damage": "1 x 6, 5, 6, 3, 3, 5, 12 (40)",
+              "startup": "25",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush, Wall Rush Bravery damage +30 %",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Charge repeatedly. Wall rush bravery damage +10 %.",
+              "name": "Slide Shooter",
+              "notes": "The 10 % damage boost is a typo in the North American version of the game. It should be +30 %.\nSlide through the opponent twice, then hit them multiple times with Kain's lance and knock them upwards. Copied from Tidus and Kain.\nA gap closer and a supplementary assist generation tool. The generous input windows and hit stun make it fairly easy to confirm an assist combo, even without a wall rush at the ceiling. If the player has set this move to a neutral+circle input, they can attempt to utilise Lock Off to generate assist meter safely for a bit longer.\nMuch like Tidus' Full Slide, Bartz can take advantage of the slowdown that occurs during an assist call to greatly increase Slide Shooter's vertical tracking. This utility is primarily applied in punish situations or other confrontations where the Bartz player is confident in their approach.\nUnfortunately the assist synergy for this strategy is similiarly restricted as it is with Tidus. Kuja and Jecht are more commonly used with Bartz for their fast start-up (assist follow-ups) and damage potential (Holy -> Flare setups), but this particular strategy relies on Aerith assist. Losing out on early conversions from Bartz's other aerial moves can hurt and ground-oriented playstyles may suffer even more. Please take that into consideration before relying on this."
+            }
+          ]
+        }
+      },
+      "moveCount": 7,
+      "sources": [
+        "https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7f/Hp_bartz_hellfire.jpeg",
+              "damage": "10 (10)",
+              "startup": "39",
+              "type": "Physical",
+              "priority": "Melee (Claw) / Ranged High (Pillars)",
+              "exForce": "60~150",
+              "effects": "Wall",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Summon Ifrit. Assist Gauge time +10 %.",
+              "name": "Hellfire",
+              "notes": "Summon Ifrit to attack with pillars of fire. EX generation increases if more flame pillars hit."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/37/Hp_bartz_dark_flame.jpeg",
+              "damage": "-",
+              "startup": "53",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Wall Rush, Minor Ground Evasion Boost",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Summon dark fire. Minor Ground Evasion Boost.",
+              "name": "Dark Flame",
+              "notes": "Stab the ground to summon bursts of black fire. Tracks the opponent into the air and through walls."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/60/Hp_bartz_ragnarok_blade.jpeg",
+              "damage": "-",
+              "startup": "45",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush, Wall Rush HP damage +5%",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Chop with energy blade. Wall rush HP damage +5%.",
+              "name": "Ragnarok Blade",
+              "notes": "Create a long-range beam of energy and slice it like a sword."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/4d/Hp_bartz_luminous_shard.jpeg",
+              "damage": "-",
+              "startup": "61",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "60",
+              "effects": "Minor Midair Evasion Boost",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shoot light projectiles. Minor Midair Evasion Boost.",
+              "name": "Luminous Shard",
+              "notes": "Quickly swing sword to send a blade of light energy towards the opponent."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/92/Hp_bartz_flare.jpeg",
+              "damage": "1 x 12 (12)",
+              "startup": "?",
+              "type": "Magical",
+              "priority": "Unblockable (?)",
+              "exForce": "96",
+              "effects": "Minor Magic Shield",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Holy. Minor Magic Shield effect.",
+              "name": "Flare",
+              "notes": "An HP link. Summon three beams of fire that converge to trap the opponent and then explode."
+            }
+          ]
+        }
+      },
+      "moveCount": 5,
+      "sources": [
+        "https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Job Mastered!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nGoblin Punch",
+        "Bartz's EX mode is a generic EX Mode, with the added benefit of granting him the HP Move Goblin Punch."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Goblin Punch",
+          "text": [
+            "Goblin Punch is an incredible melee move that has a very quick start up, while dealing solid damage if the target is the same level as Bartz. However, this move also has poor range, so one should be careful before throwing it out, unless they want to get punished."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "<img src=\"\" style=\"width:250px; height:270px; object-fit: none; object-position: ; border:3px solid RGB(105,86,160); inline-table;\"></img>"
+                ],
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.",
+                  "(same LV) 8 x 5 (40)"
+                ],
+                [
+                  "The time it takes for this attack to do damage. Currently this is measured at 60 frames per second (30F would be 0.5 seconds).",
+                  "15"
+                ],
+                [
+                  "Damage Type",
+                  "Magical"
+                ],
+                [
+                  "Priority",
+                  "Unblockable"
+                ],
+                [
+                  "The amount of EX that can be gained from EX Force. 1000 = Full EX gauge.",
+                  "75"
+                ],
+                [
+                  "Effects",
+                  "Wall Rush"
+                ],
+                [
+                  "What this move can be cancelled into.",
+                  ""
+                ],
+                [
+                  "Assist Gain (Hit)",
+                  ""
+                ],
+                [
+                  "CP (Mastered)"
+                ],
+                [
+                  "[Activate with R + Square] Attack bravery, then perform an HP attack. If you are the same level as the foe, your power massively increases.",
+                  "Unlocked at level",
+                  "Mastered at AP"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "EX Burst: Master Mime",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "Adds the strength of his allies to his own job abilities for a series of masterful blows. Up, down, left, right - each directional button corresponds to 1 hit."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "3x4, 8 (20",
+                  "6, 8, 11, 4, 9, 10, 7, 5, 20",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|Side by Side=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "|-|Build #2=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10299"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "916"
+            ],
+            [
+              "ATK",
+              "180"
+            ],
+            [
+              "DEF",
+              "184"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x5.9"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Judgment of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Lufenian Axe"
+            ],
+            [
+              "Hand <img></img>",
+              "Blurry Moon"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Helm"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Armor"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Earring"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> BRV > Base Value"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Empty EX Gauge"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Opponent Summon Unused"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Side by Side"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Synergies",
+          "text": [
+            "Bartz works well with Kuja and Jecht."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Bartz Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Blade Crash",
+                  "23F",
+                  "Ground",
+                  "Opponent",
+                  "8, 7, 6, 1 x 4, 15 (40)",
+                  "Chase"
+                ],
+                [
+                  "BRV",
+                  "Slide Shooter",
+                  "25F",
+                  "Air",
+                  "Opponent",
+                  "1x6, 5, 6, 3, 3, 5, 12 (40)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Dark Flame",
+                  "53F",
+                  "Ground",
+                  "Player",
+                  "-",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Ragnarok Blade",
+                  "45F",
+                  "Air",
+                  "Opponent",
+                  "-",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Bartz_Klauser_(Dissidia_012)"
+  ]
+}

@@ -1,0 +1,867 @@
+{
+  "slug": "cecil-harvey",
+  "name": "Cecil Harvey",
+  "page": "Cecil_Harvey_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)",
+  "origin": "Final Fantasy IV",
+  "icon": "cecil",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-cecil.png",
+  "infobox": {
+    "Name": "Cecil Harvey (セシル・ハーヴィ)",
+    "Original game": "Final Fantasy IV",
+    "Base ATK (LV100)": "109 (Low / +2 as Dark Knight, High)",
+    "Base DEF (LV100)": "111 (Average / +2 as Paladin, Very High)",
+    "Run Speed": "9 (Dark Knight, Slow) 5 (Paladin, Above Average)",
+    "Dash Speed": "81 (Dark Knight, Below Average)77 (Paladin, Average / Good)",
+    "Fall Speed": "81 (Dark Knight, Average) 89 (Paladin, Below Average)",
+    "Fall Speed Ratio After Dodge": "39 (Dark Knight, Average) 40 (Paladin, Average)",
+    "Fastest BRV": "15F (Valiant Blow)",
+    "Fastest HP": "13F (Shadow Bringer)",
+    "1-Hit HP": "Dark Flame Luminous Shard",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "No",
+    "Weapon": "Axes, Greatswords, Swords",
+    "Armor": "Gauntlets, Heavy Armor, Helms, Light Armor, Shields",
+    "Exclusive weapons": "Dark Sword, Mythgraven Blade, Lustrous SwordLightbringer, Cimmerian Edge",
+    "Unlock": "Default",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Shizuma Hodoshima",
+    "Voice Actor (ENG)": "Yuri Lowenthal"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Cecil Harvey is a close / mid-range character who functions with two different jobs - Dark Knight and Paladin. Dark Knight focuses on ground combat and wall rush, while Paladin focuses on air combat and a more balanced moveset. Cecil is practically two characters in one, and he can switch between jobs at will. This requires performing certain HP attacks, which is a double-edged sword; Cecil has decent HP attacks for neutral |",
+        "The stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.",
+        "and punishes |",
+        "Attacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.",
+        ", but they're mostly telegraphed attacks with long recovery |",
+        "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+        ". As such, Cecil can adapt to different situations, but he carries an inherent risk every time he wants access to a specific job.",
+        "Cecil is not explicitly built for offense, or rock-solid defense. Instead, he works well as a punisher. Many of his moves have good reach, either vertically or laterally. He can punish opponents' whiffs |",
+        "A missed attack that doesn't make any contact.",
+        "effectively with both jobs, given the right matchup |",
+        "Two specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.",
+        ". Cecil has various solo combo routes, which he can setup with assist to suit his needs for damage or EX.",
+        "Cecil struggles in a few ways. His frame data |",
+        "A list of a fighting game character's every move that details startup speed, frame advantage and much more.",
+        "is below average, with long startup |",
+        "The time it takes before an attack can do damage.",
+        ", animations and late cancel |",
+        "An action that is interrupted early by doing another action.",
+        "windows. Building assist gauge safely with whiffs is dangerous for Cecil as a result, which is a fundamental weakness in competitive play. This makes him vulnerable to both whiff punishes and assist punishes |",
+        "Using assist to hit the opponent who missed an attack, before they can defend.",
+        "alike. His tracking |",
+        "Tracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".",
+        "is also a bit finicky, which can lead to inconsistencies when punishing dodges or even hitting moving opponents at all. While Cecil has projectiles, their low priority and / or slow speed overall limit their effectiveness as zoning |",
+        "The act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\ntools.",
+        "In competitive play, Cecil has been commonly ranked at bottom / low tier. The nature of his job system restricts him in ways that other characters rarely have to deal with. He has good grounded pokes |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        ", but lacks a strong air poke. He cannot enforce ground combat to offset that weakness. Despite specializing in either ground or aerial combat, Cecil is not considered the strongest in either aspect. Cecil often takes relatively high risks for lower reward, which makes him less consistent for tournaments. However, he can still capitalize on clean hits effectively with assist if an opportunity arises."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Good poking and burst damage as Dark Knight\nGood EX generation as Paladin\nWhiff punishment - Cecil has various moves fit for punishing missed attacks from different angles, such as Valiant Blow, Shadow Bringer and Sacred Cross.\nSolo combos can deal high bravery damage and combo into HP attacks.",
+              "No safe air pokes make Cecil more vulnerable to whiff punishment on average. He struggles to build assist gauge safely and effectively as a result.\nSituational solo combo starters limit Cecil's opportunities to take advantage of his combo routes\nLackluster zoning - Cecil often uses telegraphed projectiles which have decent reward on hit, but are difficult to connect in the neutral\nJob change usually requires using telegraphed attacks that leave Cecil vulnerable to punishes\nJob dilemma - Cecil can specialize in either job, but it always comes with notable trade-offs. He cannot rely exclusively on one job in large stages."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/91/Brv_cecil_slash_%281%29.jpeg",
+              "damage": "20 (10, 10)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "A missed attack that doesn't make any contact.\n)Attack or Dash (On Hit)",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Close] Hit foe upwards. Slow, but very accurate strike.",
+              "name": "Slash",
+              "notes": "Slash is a two-hit Paladin bravery with high combo potential on hit. It has decent base damage (20), but generates a good 90 EX. What really stand out are the cancel |\nAn action that is interrupted early by doing another action.\noptions on hit; Cecil can cancel Slash into an attack or a dash, which lets him follow up with his air melee braveries consistently. Dash cancels are rare outside of dash feints and EX Revenge, so Cecil having one is a great benefit. If opponent is at a wall, Cecil can even combo into Paladin Force for HP damage.\nSlash is used for its reward on hit. It provides some of the most practical, high damage combos for Paladin Cecil on the ground. He can combo into his most relevant Paladin moves, including Radiant Wings, Sacred Cross and even Paladin Force (wall only). This lets Cecil increase his damage or EX gain depending on what he wants. Because of this, Slash works as a combo starter and assist combo extension. The dash cancel (with Free Air Dash) fills assist gauge for Cecil as well with Assist Gauge Up Dash.\nCecil can connect Slash reliably after block staggers or by whiff punishing |\nHitting an opponent who missed (whiffed) their attack.\nslower attacks on the ground. This may run in opposition to the normal Dark Knight-Paladin dynamic, but it pays off well if Cecil succeeds.\nHowever, Slash has shortcomings as a poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nand a snap reaction punish tool. The 23-frame startup |\nThe time it takes before an attack can do damage.\nisn't the worst in the game (same as Firion's Rope Knife). However, Slash doesn't move Cecil far and it has no tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nonce Cecil is moving. He moves upward at a diagonal angle and then stops. The hitbox isn't too small, but the movement limits Slash's reach and accuracy. It can even miss in close-range in dodge punish situations. Cecil becomes airborne when he uses this move, so he cannot use Slash repeatedly as a mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\n."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/d/df/Brv_cecil_lightning_rise.jpeg",
+              "damage": "30 (3, 3, 5, 4, 4, 11)",
+              "startup": "43F",
+              "type": "Physical",
+              "priority": "Melee Mid (first half) Melee Low (second half)",
+              "exForce": "90",
+              "effects": "Chase, Block (Ranged Low)",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Charge, then leap. Good start for midair attacks.",
+              "name": "Lightning Rise",
+              "notes": "Cecil charges forward with a series of attacks. As this move is mid priority for the first half, it can work as a somewhat telegraphed mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nagainst block with a hard read |\nA read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".\n. If Cecil succeeds with this, he can use chase to convert into HP damage with Aerith assist. Lightning Rise can block Ranged Low attacks, such as Squall's Thunder Barret. The blocking lasts until the move becomes active |\nThe period of time when an attack is capable of doing damage.\n, and Cecil can still deflect with the attack itself, though this isn't very reliable in the long-term.\nLightning Rise has long startup |\nThe time it takes before an attack can do damage.\nand relatively long animation overall. In this regard, Lightning Rise is not recommended as a central tool for mixups or defending against Ranged Low attacks. It has good base damage and fairly short dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nwindow at the end. However, its utility as a punisher and a gap closer are outclassed by other moves. Cecil's forward movement is stronger compared to Slash, but the lack of solo combo routes makes it weaker by comparison.\nCecil becomes airborne when using this move."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/98/Brv_cecil_dark_step_1.jpeg",
+              "damage": "27 (5, 10, 1 x 2, 10)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase, Job Change",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Close] Change job to Dark Knight during combo.",
+              "name": "Dark Step",
+              "notes": "Dark Step is a two-stage attack, that changes Cecil's job to Dark Knight. The initial animation is the same as Slash, but the dash cancel property is missing. Cecil will change to Dark Knight as soon as the follow-up is confirmed with Circle <img></img>.\nThe base damage is decent and it generates 90 EX, which is good. However, Cecil has relatively good HP attacks on the ground that can be used for job change, such as Shadow Bringer and Dark Flame. Dark Step has similarly low accuracy as with Slash, so it doesn't have many uses in the neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. Cecil can finish Dark Step even if it misses, which can hit opponents as a situational gimmick."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c5/Brv_cecil_radiant_wings.jpeg",
+              "damage": "40 (3, 3, 7, 6, 6, 6, 9)",
+              "startup": "19F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Close] Splendid swordplay. Long reach, fast strike speed.",
+              "name": "Radiant Wings",
+              "notes": "Radiant Wings is one of Paladin Cecil's main braveries. It is the closest to an air poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nfor Cecil. It is also one of his highest damaging moves with assist thanks to wall rush and high base damage. Cecil can use this as an assist combo starter with or without the wall rush. Radiant Wings is also good for punishing whiffs |\nA missed attack that doesn't make any contact.\nand block staggers, as Cecil moves forward before striking.\nThe 19-frame startup |\nThe time it takes before an attack can do damage.\nis great for Cecil in theory. However, Cecil will not track |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nthe opponent once he starts moving. His movement is linear and he performs the motion even if he is in point blank |\nThe closest possible distance two characters can be from each other.\nrange. This means he can have a hard time hitting moving opponents, even with more apparent openings. Furthermore, Cecil will perform three spinning slashes before he can dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nout of Radiant Wings. That makes Cecil vulnerable to whiff punishes |\nHitting an opponent who missed (whiffed) their attack.\n, which hurts his safety and assist gauge building a lot.\nIf Cecil uses Radiant Wings while locked off, he will move in the direction he is facing. This can be done to build assist gauge a bit more safely, since opponents cannot dash into Cecil and block him as reliably."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/4d/Brv_cecil_sacred_cross_1.jpeg",
+              "damage": "30 (3 x 5, 5, 10)",
+              "startup": "21F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "Vertical charge. Direction depends on position.",
+              "name": "Sacred Cross",
+              "notes": "Sacred Cross is Paladin Cecil's vertical punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ntool. It's relatively fast at 21 frames with good base damage. Cecil moves toward opponent before attacking. If he is above opponent, he will attack down. If he is below opponent, he will attack up. This gives Cecil plenty of utility for punishing opponents at different heights, and it's pretty consistent at that. The built-in movement lets Cecil close gaps vertically, but it also has some evasion to it as well. If opponents try to dodge punish Cecil, Sacred Cross can potentially evade an incoming attack.\nSacred Cross generates 90 EX which is good, but it's low reward without Aerith assist or ground wall rush. The hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nis short, which makes it less effective in empty chase |\nA chase sequence where the initiator does nothing.\nand EX Core scenarios.\nCecil follows through with the whole attack even if it misses. Therefore it doesn't function safely as a primary air poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. Cecil can be assist punished |\nfor using Sacred Cross, and the long active |\nThe period of time when an attack is capable of doing damage.\nframes make it easier for opponents to block it from a distance. The finishing hit doesn't have a large hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nin front of Cecil, so it can miss if Cecil misjudged his position. And despite the evasive movement, Cecil is not actually invincible during it."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/82/Brv_cecil_searchlight.jpeg",
+              "damage": "15 (3 x 5)",
+              "startup": "95F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Long] Launch magic orb. Orb fires projectiles. Effective vs. any height, good diversion.",
+              "name": "Searchlight",
+              "notes": "Searchlight is Cecil's long-range projectile |\nA type of attack that travels independently from any character. Beams, fireballs and magic spells are often like this. Many projectiles are Ranged priority in Dissidia 012, and they can be reflected back.\nwhich opens up solo combos and checks opponents poorly placed dodges and whiffs |\nA missed attack that doesn't make any contact.\n. Cecil summons a magic orb, which moves to opponent's position, stops and fires. A total of three projectiles are fired, and they have decent hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n. Since the projectiles hit relatively late, Cecil can use Searchlight to combo into his other attacks like Radiant Wings or Sacred Cross. This can be good against opponents who overextended their approach. Searchlight can also activate hit glitch for Radiant Wings and Paladin Force. Because of this, Searchlight can be used to apply pressure from a distance, as it enables follow-ups outside of Cecil's common ranges.\nCecil uses Searchlight as a long-range tool, but it's far from being safe. The startup |\nThe time it takes before an attack can do damage.\nis slow and very telegraphed with distinct audiovisual cues. Cecil is completely vulnerable to attacks during the entire animation, so he can get hit or even assist punished |\nUsing assist to hit the opponent who missed an attack, before they can defend.\nfrom afar. Searchlight also won't adjust its position once the magic orb is in motion, which makes it weak against fast movement in general. Despite this, Searchlight is a staple move for Paladin Cecil due to its reward on hit and occasional safety at long distances. It is his most common way to occupy space in the air without risking a huge whiff in close-range.\nCaution is advised when Cecil is near walls or ceilings. The magic orb and projectiles can vanish if they collide with physical objects, such as World of Darkness' pillars or walls in most stages."
+            }
+          ]
+        }
+      },
+      "moveCount": 6,
+      "sources": [
+        "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/4e/Hp_cecil_soul_eater.jpeg",
+              "damage": "20 (4, 2 x 5, 6)",
+              "startup": "39F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Stab fore and devour his soul. Limited height, quick strike.",
+              "name": "Soul Eater",
+              "notes": "Soul Eater functions as a grounded punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ntool against dodges and block staggers. It has good lateral knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\non hit, which can wall rush for assist combos. Soul Eater can also power through low priority moves, since Cecil transitions to the follow-up when he makes contact with opponent.\nThis is a decent move for Dark Knight Cecil. It's reactable |\nAn attack that has slow enough startup that a human can react to it and defend correctly.\nlike many other HP attacks, but it provides good reward on hit. It doesn't hit above Cecil at all, so similar to Valiant Blow, Cecil cannot auto pilot |\nActing without thinking, usually in a predictable manner.\nwith this. Unfortunately Soul Eater is generally outclassed by Shadow Bringer, so it won't see much use if that's also equipped."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/2f/Hp_cecil_dark_flame.jpeg",
+              "damage": "-",
+              "startup": "53F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Summon dark fire. Slow speed, strong homing.",
+              "name": "Dark Flame",
+              "notes": "Dark Flame is Dark Knight Cecil's zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\ntool. It occupies space for a couple seconds and it tracks |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nabove Cecil well. It's commonly used to apply pressure in close / midrange, and calling out air dodges. In a way, it functions as an anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nagainst airborne opponents looking to approach Cecil. If opponents try to assist punish |\nUsing assist to hit the opponent who missed an attack, before they can defend.\nCecil, he can automatically protect himself with Auto Assist Lock On against slower assists. Dark Flame is composed of multiple high priority projectiles, so even if the opponent deflects the first one, they can still get hit by another one.\nOn hit, Dark Flame sends opponents upwards, helping Cecil keep his position. This can also wall rush, but it is only feasible in stages with low ceiling, such as Pandaemonium - Top Floor and M.S. Prima Vista. Dark Knight Cecil operates more consistently in those stages, so this a great boost in damage for Cecil there.\nDark Flame is slow, both in startup |\nThe time it takes before an attack can do damage.\nand traversal. While this isn't a big problem as an anti-air, it struggles to keep up against backwards movement. Cecil stays in place for a moment after the projectiles have become active |\nThe period of time when an attack is capable of doing damage.\n. That presents a small gap of vulnerability against fast ground assists, such as Jecht Rush. Dark Flame is good at preventing close-range characters approaching from above, but it cannot stop zoning from a distance. The speed is too slow for that in large stages, and the flames won't stay near Cecil to protect him either."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/ee/Hp_cecil_shadow_bringer.jpeg",
+              "damage": "20 (10, 10)",
+              "startup": "13F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush Dark Knight BRV damage +3% Paladin BRV damage -3%",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Ultra-close] Dark sword slash. Dark Knight BRV damage +3%, Paladin BRV damage -3%.",
+              "name": "Shadow Bringer",
+              "notes": "Shadow Bringer is one of Dark Knight Cecil's strongest moves. It comes out blindingly fast at 13 frames, it can anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nand it has very high diagonal knockback for wall rush. This move can be dodge cancelled |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nfast enough, to the point it can serve as an honorary poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n.\nShadow Bringer outclasses Soul Eater in a few key ways. The unreactable startup |\nThe time it takes before an attack can do damage.\nis a major difference, as well as the vertical reach. It has the same base damage, but it has far more knockback and safety in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\nand assist combos. Its Dark Knight BRV damage passive also adds damage slightly.\nJust like Soul Eater, Cecil commits to follow-up hits if Shadow Bringer connects. This is good when clashing with low priority pokes, due to Shadow Bringer's vertical angle with each hit. Soul Eater has a much harder time doing that. Shadow Bringer differs from Soul Eater in a couple subtle ways as well; Cecil can dodge cancel out of Shadow Bringer on hit slightly later than Soul Eater. Cecil needs to use a ground dash to increase Shadow Bringer's range, whereas Soul Eater can move forward by itself. Both of these factors aren't very detrimental to Shadow Bringer though, considering the overall benefits.\nAlthough Shadow Bringer is very fast, Cecil is still vulnerable to attacks during recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n.\nEquipping Shadow Bringer will disable Luminous Shard for Paladin."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/46/Hp_cecil_saints_fall.jpeg",
+              "damage": "10 (1 x 3, 2, 1 x 2, 3)",
+              "startup": "53F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Focus light and charge. From afar, good vs. any height.",
+              "name": "Saint's Fall",
+              "notes": "Saint's Fall is a committal gap closer, that works as a hard callout against whiffs |\nA missed attack that doesn't make any contact.\nand blocks from a distance. Cecil travels forward and then ascends before striking his opponent down. Saint's Fall has low base damage, but it wall rushes on the ground, which enables assist combos. Saint's Fall has active |\nThe period of time when an attack is capable of doing damage.\nframes during the movement, so it can challenge whiffs and side ground dodges during the initial charge.\nSaint's Fall is rather risky to use in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. It has slow startup |\nThe time it takes before an attack can do damage.\nand long recovery. Cecil travels in a fixed arc, and won't move very far. He completes the attack even if it misses, so Cecil is left wide open if he is not careful with this move. Its applications in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\npresent more risk than reward on average, so it's outclassed by Paladin Force."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/0c/Hp_cecil_paladin_force_1.jpeg",
+              "damage": "15 (2 x 5, 5)",
+              "startup": "43F",
+              "type": "Both",
+              "priority": "Ranged High (first hit) Melee High (other hits)",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Holy sword magic. Effective against any height.",
+              "name": "Paladin Force",
+              "notes": "Paladin Force is Cecil's primary midair HP for punishes |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nand assist combos. A single projectile is fired and if it connects, Cecil transitions into a swift, homing air combo. Paladin Force ends with a ground wall rush, which can set up damaging assist combos. Paladin Force's initial range is short, but it has good homing overall. Cecil can aim at opponents vertically during startup |\nThe time it takes before an attack can do damage.\n, which is good for calling out dodges that go above Cecil. And if Cecil lands Searchlight, he can use Paladin Force to activate hit glitch and quickly attack the opponent from long distances. Cecil is one of the few characters who can use the hit glitch well to his advantage, and it directly improves his Paladin gameplay. Using Paladin Force in this manner can be relatively safe, as Cecil does not move initially with the HP.\nOnce Paladin Force connects, Cecil cannot cancel |\nAn action that is interrupted early by doing another action.\nthe air combo early. This makes him briefly vulnerable to punishes if opponent escapes with LV1 Assist Change and dodges afterwards. Furthermore, Cecil always finishes with a dive from above. LV2 Assist Change can stagger Cecil from below, which makes him more susceptible to high damage punishes afterwards. Ceilings are the primary exception, as using Assist Change there causes the opponent to move down instead of up.\nThe projectile has plenty of hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n, which is normally overrun by the follow-up attacks. However, if Cecil can trade |\nWhen two opposing attacks hit each other at the same time, dealing damage. In Dissidia 012, this is usually in the context of assist character hitting their target while player character takes damage.\nwith just the projectile, there is potential to follow up with a different attack. Cecil is not invincible during Paladin Force though, so this requires specialized matchup |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\nknowledge to be effective."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/46/Hp_cecil_luminous_shard.jpeg",
+              "damage": "-",
+              "startup": "63F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "60",
+              "effects": "Paladin BRV damage +3% Dark Knight BRV damage -3%",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shoot light projectiles. Paladin BRV damage +3%. Dark Knight BRV damage -3%.",
+              "name": "Luminous Shard",
+              "notes": "Luminous Shard is Paladin Cecil's only 1-hit HP and midair HP projectile. It functions as a secondary zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\ntool and as a safer combo ender against LV2 Assist Change staggers. It generates a nice 60 EX, but otherwise it doesn't provide much reward without assist setups. Luminous Shard travels a long distance and it can change its vertical trajectory after it is out.\nLuminous Shard is recommended for Paladin-oriented playstyles. Cecil can use Paladin Force or Luminous Shard to quickly change into Paladin at the start of a match, but Luminous Shard doesn't provide explicit benefits in that regard. Compared to Shadow Bringer which greatly complements Dark Knight, Luminous Shard provides more subdued benefits. Paladin Cecil can use Aerith assist to good effect, which also combos into Luminous Shard. Being able to avoid LV2 Assist Change staggers even in long matches helps Cecil stay afloat. As a 1-hit HP, Luminous Shard can also bypass EX Revenge checkmates |\nA situation where a player has no options to avoid losing a situation or a match. For example, hitting an opponent who has a full EX gauge and killing bravery can activate EX Revenge and guarantee a win.\nanywhere if Cecil can stagger his opponent. However, its slow frame data |\nA list of a fighting game character's every move that details startup speed, frame advantage and much more.\nand low average damage potential limit its potential\nEquipping Luminous Shard will disable Shadow Bringer for Dark Knight. Because of this, Cecil needs to carefully assess whether he values ground combat more compared to relative midair safety in combos."
+            }
+          ]
+        }
+      },
+      "moveCount": 6,
+      "sources": [
+        "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Job Augment!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nProteus\nInner Strength",
+        "Cecil's EX mode increases his damage output across the board with critical hits and Inner Strength. Proteus lets him change jobs without attacking, which makes it significantly safer for Cecil to access different bravery attacks on demand. This also contributes to Cecil's damage potential, as he can combo into Paladin Arts in Dark Knight whenever he is not in an attack state. Overall, the EX mode benefits Cecil in meaningful ways and acts as a long-term reward for Paladin combos and EX cores."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Proteus",
+          "text": [
+            "File:Ex mode cecil proteus 1.jpeg\nFile:Ex mode cecil proteus 2.jpeg",
+            "[Activate with R + Square] Bridles light and darkness to instantly change jobs without attacking.",
+            "Proteus lets Cecil change jobs whenever he is not in an attack state. That means it is possible while running, dashing or dodging. This is a huge benefit for Cecil, as he does not have to commit to telegraphed HP attacks to access different job. The job change can be done repeatedly in quick succession with no cooldown. Cecil's stats still differ between jobs, including run speed, so he must be careful when positioning for his next attack.",
+            "Proteus also plays a crucial role in looping Paladin Arts in combos."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Inner Strength",
+          "text": [
+            "[Always active while in EX Mode] Each attack is 1.5 times as powerful."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Face Shift",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "A chain of attacks combining the power of light and darkness. Enter the commands that appear on both sides of the screen at the same time.",
+            "Face Shift requires players inputting simultaneous inputs three times in a row. This is always a combination of d-pad + face button, though the exact button sequences may differ each time. The button inputs are read from left to right on both sides, and they must be pressed at the same time. Holding one button (e.g. Triangle <img></img>) and then pressing up on d-pad does not work.",
+            "Cecil has roughly 3.5 seconds to do the inputs. Once the simultaneous inputs have been performed, EX Burst is considered complete. If Cecil fails a button combination, he has to try it again. Failing to complete all three button combos within the allotted time results in a low damage \"Darkness\" finisher, which leaves Cecil in Dark Knight job.",
+            "Face Shift is an EX Burst with average damage output. It's not the weakest in the game, but the damage output fluctuates due to job changes and Dark Knight's passive ATK boost."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "6, 9 (15, DK)",
+                  "15 (PA), 25 (DK), 7 x 2 (DK), 30 (PA) (99 total)",
+                  "Both"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": true,
+      "title": "Unique Mechanic: Job System",
+      "text": [
+        "Dark Knight (Ground)\nDark Knight (Ground)\nPaladin (Midair)\nPaladin (Midair)",
+        "Cecil has two jobs, which have vastly different moves. Dark Knight is focused on ground combat, while Paladin is focused on aerial combat. Both jobs have their own set of ground and aerial moves, while HP attacks are universal. Cecil can only have one job active at a time. The job can be changed by using specific attacks. Cecil turns to Dark Knight with ground HP attacks or Dark Step (during Paladin). Similarly, Cecil turns to Paladin with midair HP attacks or Paladin Arts (during Dark Knight). Each attack must be equipped, or Cecil cannot perform them to change jobs.",
+        "Cecil will always start each fight as a Dark Knight. Therefore, Cecil must commit to specific attacks in order to access Paladin moves. This can be a risky proposition for Cecil due to his long whiffs |",
+        "A missed attack that doesn't make any contact.",
+        ", but it is a risk he has to deal with. If Cecil is in EX Mode, he can change jobs freely without attacking by pressing R + Square <img></img> + <img></img>.",
+        "Certain equipment also affect Cecil's stats when he is in a specific job, such as Cimmerian Edge <img></img> (ATK +1 in Dark Knight) and Lightbringer <img></img> (DEF +1 in Paladin). In Dissidia 012, Cecil also has two new HP attacks; Shadow Bringer for Dark Knight and Luminous Shard for Paladin. Equipping one of these HP attacks prevents the other HP attack from being available. As a result, Cecil can only equip Shadow Bringer or Luminous Shard, but not both.",
+        "Cecil usually specializes in one job in competitive play."
+      ],
+      "tables": [],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
+      ]
+    },
+    "combos": {
+      "text": [
+        "Main article: Cecil (Combos)",
+        "Cecil has a couple solo combo starters with both jobs, which can lead to bravery and HP follow-ups alike. Most of his attacks can be used as follow-ups, so Cecil has rather flexible combo routing. Cecil's most reliable starters (Dark Cannon & Searchlight) are telegraphed low priority projectiles, so he may need assist to do these combos more consistently. With assists, Cecil can get damage from unfinished attacks and wall rushes as well."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo Combos (Dark Knight)",
+          "text": [
+            "Dark Knight can combo with either Dark Cannon or Paladin Arts. Dark Cannon leads to other Dark Knight melee attacks, while Paladin Arts leads to Paladin attacks. Cecil gets decent damage with Dark Cannon starters, but its low damage can vary due to how projectiles move. On average, Dark Cannon can deal four hits (3x3, 3 / 9 total)."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Projectile starterGround\nDark Cannon > Valiant Blow\n49 + WR\n42+\nBase Damage (Breakdown): 9 > 40 + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 3, 3, 3, 3 > 30\nBasic bravery combo with high damaging wall rush ender."
+                ],
+                [
+                  "Projectile starterGround\nDark Cannon > Shadow Bringer / Soul Eater\n29 + HP WR\n42\nBase Damage (Breakdown): 9 > 20 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 3, 3, 3, 3 > 30\nBasic HP combo with wall rush potential. Shadow Bringer ender is prioritized over Soul Eater since it has higher knockback."
+                ],
+                [
+                  "Projectile starterAir\nPaladin Arts > Paladin Force\n45 + HP WR\n30\nBase Damage (Breakdown): 30 > 15 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 30\nSolo HP combo that also wall rushes on the ground. Good for ground assist combos. Paladin Force has slightly higher bravery damage output compared to Saint's Fall, and it also has better vertical tracking in close range, making this combo easier to land."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Solo Combos (Paladin)",
+          "text": [
+            "Cecil's combos expand considerably with Slash and Searchlight. Slash provides a few good Paladin combos on the ground. Searchlight also supports both jobs (and in EX Mode), and Cecil can do more if the opponent is on the ground. With Searchlight, Cecil can also go for the hit glitch with Paladin Force as means to do HP damage in the neutral."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Punish starterGround\nSlash > Free Air Dash > Radiant Wings\n60 + WR\n120\nBase Damage (Breakdown): 20 > 40 + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 30\nGround combo into a wall rush. Cancel Slash's recovery into Free Air Dash and close the gap to follow up with Radiant Wings."
+                ],
+                [
+                  "Punish starterGround\nSlash > Free Air Dash > Sacred Cross\n50\n180\nBase Damage (Breakdown): 20 > 30\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 90\nGround combo with higher EX generation."
+                ],
+                [
+                  "Projectile starter\nSearchlight > Paladin Force\n30 + HP WR\n30\nBase Damage (Breakdown): 15 > 15 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 30\nSolo HP combo that also wall rushes on the ground. Good for ground assist combos. Paladin Force has slightly higher bravery damage output compared to Saint's Fall, but it also has far superior tracking after Searchlight connects. Naturally, the bravery damage is slightly reduced if Cecil has to close the distance with the attack first."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist Combos (Dark Knight)",
+          "text": [
+            "Dark Knight Cecil can convert off of wall rush or with first part of Valiant Blow. Jecht assist is good for damage and Dark Cannon setups, and Cecil can stay on ground."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Poke starterGroundMidscreen staple\nValiant Blow (1st part) > AST BRV > Dash toward opponent > Dark Cannon > Shadow Bringer\n89 + HP WR\n42+\nBase Damage (Breakdown): 20 > 40 + WR (Assist) > 9+ (Dark Cannon) > 20 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): ?? > 12+ > 30"
+                ],
+                [
+                  "HP starterGround, Wall RushWall HP combo\nShadow Bringer > WR > AST BRV > Dash toward opponent > Dark Cannon > Shadow Bringer\n89 + HP WR\n72+\nBase Damage (Breakdown): 20 + HP WR > 40 + WR (Assist) > 9+ (Dark Cannon) > 20 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 30 > 12+ > 30"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist Combos (Paladin)",
+          "text": [
+            "Main article: Cecil Combos (Aerith Assist)",
+            "Paladin Cecil uses wall rush and chase to set up HP damage with Aerith assist. If Cecil gets a ground wall rush, he can go for Slash combos to get even more bravery with Searchlight routes or EX with Sacred Cross."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Punish StarterAir, Near GroundHP Combo\nRadiant Wings > AST BRV > WR > Searchlight > Paladin Force\n70 + HP WR\n60\nBase Damage (Breakdown): 40 + WR > 15 > 15 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 30 > 0 > 30\nWall Rush, straightforward assist combo into HP. Call Aerith after last hit, but before wall rush happens."
+                ],
+                [
+                  "Punish StarterAirMidscreen HP Setup\nSacred Cross > AST BRV > Chase HP > HP dodged > AST BRV (HIT) > Searchlight > Paladin Force\n60 + HP WR\n135\nBase Damage (Breakdown): 30 > 15 > 15 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 15 (Chase) > 0 > 30\nAir chase setup into a solo HP combo. Aerith must be called quickly after Sacred Cross' last hit, because of the early chase prompt. If Cecil staggers opponent with LV2 Assist Change when Assist Storage Glitch is set up, he can go for this combo after the LV2 Assist Change."
+                ],
+                [
+                  "Punish StarterGroundBRV Damage\nSlash > Free Air Dash > Radiant Wings > AST BRV > WR > Searchlight (right before landing) > Land > Searchlight (hit) > Slash > Free Air Dash > Radiant Wings\n135 + WR\n240\nBase Damage (Breakdown): 20 > 40 + WR > 15 > 20 > 40 + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 30 > 0 > 90 > 30"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "|-|Side by Side (Dark Knight)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Blue Gem and Miracle Shoes can be substituted with Together as One, Hero's Seal or Back-Breaking Straw (to offset Thornlet penalties).",
+        "Boosters \"Grounded\" and \"BRV = 0\" can enhance HP wall rush damage with a higher multiplier at the cost of lower base bravery.",
+        "|-|Hybrid (Paladin)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "\"Muscle Belt\" <img></img> basic accessory and \"Opponent Summon Unused\" booster can be substituted with what the player wants more.",
+        "Tenacious Attacker is not essential if Aerith assist is used. Hero's Essence can be used for additional Extra Abilities (critical hit rate). Winged Boots is good for banish trap stages."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9883"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1623"
+            ],
+            [
+              "ATK",
+              "176"
+            ],
+            [
+              "DEF",
+              "182"
+            ],
+            [
+              "LUK",
+              "61"
+            ],
+            [
+              "Max Booster",
+              "x3.8"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: None",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Jecht / Sephiroth / Yuna"
+            ],
+            [
+              "Weapon <img></img>",
+              "Piggy's Stick"
+            ],
+            [
+              "Hand <img></img>",
+              "Chainsaw <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Thornlet <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Maximillian"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Sniper Eye"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> BRV = 0"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Empty EX Gauge"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Blue Gem"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Miracle Shoes"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Side by Side"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10299"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "956 (1147 with First to Victory)"
+            ],
+            [
+              "ATK",
+              "178"
+            ],
+            [
+              "DEF",
+              "183"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x3.0"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Judgment of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja / Aerith"
+            ],
+            [
+              "Weapon <img></img>",
+              "Cleaver <img></img>"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Shield"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Helm"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Armor"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Opponent Summon Unused"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> White Gem"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Cecil Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Shadow Lance",
+                  "35F",
+                  "Ground",
+                  "Opponent",
+                  "8, 7 x 6 (up to 50)",
+                  "Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Radiant Wings",
+                  "19F",
+                  "Air",
+                  "Opponent",
+                  "3, 3, 7, 6, 6, 9",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Soul Eater",
+                  "39F",
+                  "Ground",
+                  "Opponent",
+                  "4, 2 x 5, 6 (20)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Saint's Fall",
+                  "53F",
+                  "Air",
+                  "Opponent",
+                  "1 x 3, 2, 1 x 2, 3 (10)",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Synergies (Dark Knight)",
+          "text": [
+            "|-|Jecht=\nFast whiff punishes, converts off of Cecil's key moves and wall rush, sets up solo combos and lets him transition into Dark Knight from Paladin on hit as part of a combo.",
+            "|-|Sephiroth=\nWhiff punishes and more notably, easy knockback cancels. With assist meter, Cecil won't have to rely on wall rushes for assist conversions.",
+            "|-|Yuna=\nRanged Low priority that isn't staggered by LV2 Assist Change, converts off of key moves, wall rush and often works within Cecil's effective range in smaller stages."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Assists (Paladin)",
+          "text": [
+            "|-|Aerith=\nLets Cecil combo Sacred Cross into an HP by initiating a chase at the cost of no EX depletion on hit. As such, can set up solo combos anywhere. Combos safely into Luminous Shard without being staggered by LV2 Assist Change.",
+            "|-|Tidus=\nFastest whiff punisher in the air with less air combo potential, but ground assist can wall rush on the ground for extended solo combos.",
+            "|-|Yuna=\nAir conversions have restrictions, but doesn't stagger from LV2 Assist Change. Works well when playing near the ground."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
+  ]
+}

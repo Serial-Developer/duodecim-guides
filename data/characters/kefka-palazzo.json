@@ -1,0 +1,884 @@
+{
+  "slug": "kefka-palazzo",
+  "name": "Kefka Palazzo",
+  "page": "Kefka_Palazzo_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Kefka_Palazzo_(Dissidia_012)",
+  "origin": "Final Fantasy VI",
+  "icon": "kefka",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-kefka.png",
+  "infobox": {
+    "Name": "Kefka Palazzo (ケフカ・パラッツォ)",
+    "Original game": "Final Fantasy VI",
+    "Base ATK (LV100)": "111 (High)",
+    "Base DEF (LV100)": "110 (Low)",
+    "Run Speed": "11.5 (Very Slow)",
+    "Dash Speed": "81 (Below Average)",
+    "Fall Speed": "67 (Fast)",
+    "Fall Speed Ratio After Dodge": "13 (Fastest)",
+    "Fastest BRV": "13F (Scatter-Spray Blizzaga)1F (EX Mode Ultima)",
+    "Fastest HP": "51F (Havoc Wing)",
+    "1-Hit HP": "Yes (All)",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "No",
+    "Weapon": "Instruments, Poles, Rods, Staves",
+    "Armor": "Bangles, Clothing, Hats, Hairpins,Headbands, Ribbons, Robes",
+    "Exclusive weapons": "Lamia's Flute, Nephilim Flute, Dancing Mad",
+    "Alignment": "Chaos",
+    "Voice Actor (JP)": "Shigeru Chiba",
+    "Voice Actor (ENG)": "Dave Wittenberg"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Kefka is a defensive zoner |",
+        "The act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\nwho primarily operates at midrange and long-range to deal damage. His usual strategy revolves around creating space with reverse dashes and Precision Jumps and then casting his signature Waggly-Wobbly Firaga. This is a homing a projectile that fluctuates between Ranged Low and Ranged Mid priorities, and starts combos on hit. That creates an incentive for opponents to engage with Kefka, which sets up his bigger plays. In close range he can threaten with a mid priority Scatter-Spray Blizzaga, or harass distant opponents with Extra-Crispy Firaga, Lickety-Split Thundaga, Hyperdrive or Trine.",
+        "Kefka's strengths are characterized by his space control, good defensive mobility and great damage potential. His high base ATK and base damage on braveries cause a lot of damage in assist combos. Both EX Mode and Assist increase Kefka's damage greatly with EX Doublecast and midscreen |",
+        "Any space in the stage where neither player is in a corner or at a wall. Basically means no walls or ceilings nearby.",
+        "Chase HP setups, respectively. Kefka's dash speed is serviceable for self-defense, and his vertical movement is top class; Precision Jump lets Kefka create distance quickly and his fast fall speed makes his air dodge one of the safest in the game.",
+        "Kefka also has well pronounced weaknesses. His EX generation is low and thus relies on EX Cores, which limits his potential to use his powerful EX Mode. Kefka can struggle against projectiles that spawn at his location and fast rushdown |",
+        "An offensive playstyle that focuses on getting close to the opponent and attacking them relentlessly.",
+        "playstyles, like with Lightning or Onion Knight. He takes big risks due to his attacks having Ranged Low priority, telegraphed startup |",
+        "The time it takes before an attack can do damage.",
+        "or long recovery |",
+        "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+        ". This also puts him at risk in Assist gauge economy. He cannot generate one of the most important resources with a quick poke |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        "without moderate risk. Kefka is a proficient user of Side by Side builds, so he can establish big momentum if he gets a good hit.",
+        "In competitive play, Kefka has been rated at high tier and mid tier. He thrives with momentum, but can also struggle a lot when it's not in his favor. His space control is good, even in small stages. While Kefka has answers to situations with fast attacks and single hit HPs, everything he does is committal as he has nothing with both fast startup and low recovery. Despite that, his defensive playstyle stands out in the roster and can reward dedicated players greatly."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Damage - High attack stat, synergy with Side by Side <img></img>, good base damage on his staple braveries and combos ensure Kefka's damage output shines regardless of build.\nRange - If left unattended, Kefka can create presence anywhere in a stage, whether it's the gradually homing Waggly-Wobbly Firaga or Trine with infinite range.\nMobility - One of the strongest Precision Jump users with it's speed and height. Fast fall speed makes air dodges significantly harder to punish. While dash speed is below average, it's more than enough to keep aggressive opponents occupied.\nDefensive play - Having ways to quickly create distance that is in service of his braveries, Kefka can dictate the pace of a match with reverse ground / air dashes.\nMomentum - In addition to damage, Kefka is in a great position to take advantage of any hits he gets by casting another Waggly-Wobbly Firaga, making it more difficult to challenge his defense. With Side by Side and LV2 Assist Change, Kefka can also retaliate with Havoc Wing, further cementing his advantage in meter economy.\nEX Mode - Casting two spells at once greatly amplifies his space control and damage output. Ultima comes out instantly.",
+              "Vulnerable to whiff punishment - Many of Kefka's bravery attacks have a long startup that can be punished with assist on reaction, or contested with a Free Air Dash. Despite having a great close range threat with the Scatter-Spray Blizzaga bravery, Kefka is still susceptible to counter attacks if it's dodged.\nAssist meter generation on whiff - Because Kefka does not have quick low commitment pokes, generating assist meter safely can be very difficult.\nEX generation on hit - Two of his staple braveries do not produce EX Force, often limiting his EX intake to EX cores, Extra-Crispy Firaga enders and occasional whiff punishes with Lickety-Split Thundagas.\nReversing momentum - If the opponent is consistently intercepting Kefka's braveries with assist or offensive approaches, Kefka has to take big risks to stay alive.\nSmall stages - By the same token, smaller stages like M.S. Prima Vista leave less room for Kefka to create space and cast spells safely."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kefka_Palazzo_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "main": {
+          "intro": "All of Kefka's bravery attacks have a ground and a midair version. Attack data is shared between both versions.",
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/97/Brv_kefka_twisty_turny_blizzaga_1.jpeg",
+              "damage": "30+ (5 x N, 25)",
+              "startup": "21F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "each 15 > 0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Drop ground-hugging ice. Ice quickly spins while homing.",
+              "name": "Twisty-Turny Blizzaga",
+              "notes": "A single ice sphere flies in a fixed, upward arc over the opponent that tracks |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nthem after landing on the ground. This is one of Kefka's faster attacks in terms of startup |\nThe time it takes before an attack can do damage.\nand recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nframes, with long active |\nThe period of time when an attack is capable of doing damage.\nduration. Twisty-Turny Blizzaga is primarily used in ground-to-ground interactions, because the projectile's homing follow-up will not activate if it doesn't reach solid ground. As such, its use cases are limited.\nIts main application is during match start as a way to try and force the opponent to move in order to buy time for Kefka's other spells. The projectile's movement is fast enough that it can hit a dashing opponent from behind. The initial shot can hit airborne opponents and it causes a decent amount of hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n, but the damage output is low without the homing follow-up that can wall rush.\nWhen used during EX Mode, Twisty-Turny Blizzaga has an additional hit upon landing that holds the opponent in place before following up with a dash. Even if it doesn't hit, the projectile will stay in place for a moment before moving towards opponent."
+            },
+            {
+              "variants": [
+                "Normal",
+                "EX Mode"
+              ],
+              "image": "https://dissidia.wiki/images/6/62/Brv_kefka_scatter_spray_blizzaga_1.jpeg",
+              "damage": [
+                "41 (5, 6 x 6)",
+                "77 (5, 6 x 6, 6 x 6)"
+              ],
+              "startup": [
+                "13F (1st) > 71F (spray)",
+                "13F (1st) > 71F (1st spray) > ?? (2nd spray)"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Mid (1st) Ranged Low (spray)",
+                "Ranged Mid (1st) Ranged Low (spray)"
+              ],
+              "exForce": [
+                "0",
+                "0"
+              ],
+              "effects": [
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Fire large ice chunks that stop in midair and break into smaller pieces.",
+              "name": "Scatter-Spray Blizzaga",
+              "notes": "This is one of Kefka's strongest bravery attacks. It is commonly used in close range to fend off nearby opponents and convert |\nTurning a hit (unlikely or otherwise) into a combo through situational awareness.\ninto an assist combo (from Waggle-Wobbly Firaga). Because of its 13-frame startup |\nThe time it takes before an attack can do damage.\nand mid priority, it is effective as an unreactable mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nagainst aggressive opponents. It can stagger regular blocks, which leads to assist combos. [1]. If the opponent makes a good read |\nA read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".\non Kefka's timing, he is left wide open for a whiff punish |\nHitting an opponent who missed (whiffed) their attack.\n. Assist can be used to intercept these punish attempts, but the mileage will vary depending on matchup and the situation.\nThe projectile stays for over a second, and then sends out several ice shards at opponent. The mid priority remains active |\nThe period of time when an attack is capable of doing damage.\nuntil the ice shards come out, but blocking it can cause this projectile to send ice shards towards Kefka instead [2].\nBoth parts of Scatter-Spray Blizzaga inflict a fixed amount of hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n. This can influence how the following ice shards can hit the opponent. Hitting with Scatter-Spray Blizzaga from its mid / max range combos lets shards connect more consistently. Hitting in point blank |\nThe closest possible distance two characters can be from each other.\nrange can result in multiple shards missing more frequently, but all of them rarely miss. That means Kefka can start assist combos reliably even with shallow hits.\nWhen used during EX Mode, the broken ice shards will pursue the opponent a second time. The later the shards connect at first, the easier it becomes for them to combo into itself again. Just like with the regular version, if the Ranged Mid projectile is blocked, the repeated ice shards may pursue Kefka instead [3]"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/98/Brv_kefka_extra_crispy_firaga_a1.jpeg",
+              "damage": "15 each (up to 45)",
+              "startup": "49F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "each 30",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Shoot speedy fireball. Splits into 3 parts after firing.",
+              "name": "Extra-Crispy Firaga",
+              "notes": "A staple bravery for Kefka. The long startup |\nThe time it takes before an attack can do damage.\nand low priority make it poor for long range combat. However, it has decent reward on hit and synergizes well with Scatter-Spray Blizzaga and Waggle-Wobbly Firaga. Extra-Crispy Firaga is often used during assist combos to add damage and create chase loop scenarios to enforce HP damage or continue with an air combo.\nExtra-Crispy Firaga has faster startup |\nThe time it takes before an attack can do damage.\nand different recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\ncompared to Waggly-Wobbly Firaga. While both Firagas can be punished early by dashing through the fireball, Extra-Crispy Firaga has a later cancel |\nAn action that is interrupted early by doing another action.\nwindow after the initial projectile comes out. However, the faster startup means Kefka can use Extra-Crispy Firaga as a mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nagainst assist punish |\nUsing assist to hit the opponent who missed an attack, before they can defend.\nattempts with Auto Assist Lock On. This is because Kefka is often expected to cast Waggly-Wobbly Firaga or Scatter-Spray Blizzaga. As such, this move has value in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n, though it should be used sparingly to keep the opponents on their toes.\nExtra-Crispy Firaga inflicts two different hit stuns |\nThe period of time when a character cannot do an action after getting hit by an attack.\ndepending on which part of the projectile hits. If the initial projectile connects, it only causes brief hit stun that sends the opponent back. [4] Once the projectiles have split into the three homing projectiles, each projectile can send the opponent upwards and it has enough hit stun to dodge cancel and follow up with an assist. [5] After calling the assist, Kefka has enough time to cast another Waggle-Wobbly Firaga for a chase loop.\nAt point blank |\nThe closest possible distance two characters can be from each other.\nin corner or right above opponent, Extra-Crispy Firaga can do double damage due to all three projectiles hitting twice instead of once.[6] [7] [8] This is great for Kefka in small stages with low ceiling such as Pandaemonium and Kefka's Tower, and it scales very well with damage builds.\nThe exact cause of this behavior is unclear, but it has been speculated that it has to do with the transitional period that occurs when the single projectile splits into three different projectiles."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/98/Brv_kefka_waggly_wobbly_firaga_1.jpeg",
+              "damage": "21 (3 x 7)",
+              "startup": "59F",
+              "type": "Magical",
+              "priority": "Ranged Low (small) Ranged Mid (big)",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shoot slow fireball. Tenacious homing.",
+              "name": "Waggle-Wobbly Firaga",
+              "notes": "Waggly-Wobbly Firaga is a slow, homing projectile that changes priorities while it is active |\nThe period of time when an attack is capable of doing damage.\n. It starts out as a Ranged Low priority, and then alternates between Ranged Mid and Ranged Low every other second. This is a cornerstone of Kefka's zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\n. In most matchups |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\nagainst close-range characters, this is what Kefka should try to cast or set up after attacks. Because of its Ranged Mid priority and the ability to blindside opponents with zig-zag movement, this projectile can greatly interfere with their approach. The mid priority means opponents cannot dash through or block it without getting staggered.\nWhen Waggle-Wobbly Firaga hits, it will hold the opponent in place for a second before it stops causing damage. Kefka can combo into other moves or assist during this time. Solo HP conversions |\nTurning a hit (unlikely or otherwise) into a combo through situational awareness.\nare very practical without walls, as long as Kefka is near opponent (Havoc Wing) and reacts quickly (Trine). No knockback occurs at the end, so Kefka has a brief window for combos on hit. It also causes landing lag, which can start an infinite combo with subsequent Waggly-Wobbly Firagas.\nBy default, two Waggle-Wobbly Firagas can pursue the opponent on the stage simultaneously. If a third one is cast, the first one usually vanishes due to reaching it's maximum duration. However, if one Waggle-Wobbly Firaga hits the opponent, a third Firaga can be casted, and the first one that hit the opponent will operate without interference. If another Waggle-Wobbly Firaga connects while the first one is still inflicting damage to the opponent, the hit effect is not invalidated.\nDue to mid priority's slow startup |\nThe time it takes before an attack can do damage.\n, Kefka must ensure he can cast this attack without being interrupted. A classic strategy is to use multiple air jumps in with Precision Jump to reach a high ceiling within a couple seconds. Reverse Free Air Dash is a great general purpose movement option against anyone who has to approach Kefka, such as Vaan, Cloud and Prishe. The safest moments to use Waggle-Wobbly Firaga are usually after an assist, HP attack or opponent's whiff |\nA missed attack that doesn't make any contact.\n.\nBecause the defensive movement (jumps moreso) puts Kefka well above the opponent and out of their sight for in-game camera, it is possible to take advantage of it. Waggle-Wobbly Firaga doesn't have a distinct audio cue to signal its startup. It is possible to mask it a little by performing a dash first and then quickly inputting the attack while Kefka's yell from dash still plays.\nDuring EX Mode, one Waggle-Wobbly Firaga will cast two projectiles instead. In addition to this, the maximum amount of Waggle-Wobbly Firagas that can exist simultaneously is increased to 4. The attack data remains the same, but the existence of additional projectiles creates stronger screen presence and reward on hit. These can control space very effectively, and are a big reason why Kefka's EX mode is one of the strongest in the game."
+            },
+            {
+              "variants": [
+                "Normal",
+                "EX Mode"
+              ],
+              "image": "https://dissidia.wiki/images/5/54/Brv_kefka_lickety_split_thundaga.jpeg",
+              "damage": [
+                "15 each",
+                "10 each"
+              ],
+              "startup": [
+                "35F",
+                "35F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Ranged Low"
+              ],
+              "exForce": [
+                "30 each",
+                "21 each"
+              ],
+              "effects": [
+                "Chase",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Call down lightning bolts. Farther away, the larger the bolt.",
+              "name": "Lickety-Split Thundaga",
+              "notes": "A series of advancing lightning bolts in a mostly straight line. A relatively fast long-range punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nmove, useful for whiff punishment |\nHitting an opponent who missed (whiffed) their attack.\n. The vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nis very lackluster, but it is a serviceable move on the ground.\nLickety-Split Thundaga has enough hit stun to combo into assist after a dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n[9] or an instant empty chase. [10] This requires a bit of practice and anticipation, but it is a consistent combo starter regardless.\nDuring EX Mode, Kefka will fire two series of bolts in a row. The second one goes even further. It is possible to dodge cancel after the first set of projectiles, but it does not cancel the second series of bolts. This makes potential assist conversions a bit easier to visually confirm.\nThere is actually a gap between lightning bolts when used in close range where Lickety-Split Thundaga can miss entirely. [11] Given that Kefka does not operate in this range for long, it likely won't happen often for most players."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/fc/Brv_kefka_zap_trap_thundaga.jpeg",
+              "damage": "each (10)",
+              "startup": "65F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "each 15",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Surround foe w/lightning. Press button to call more bolts.",
+              "name": "Zap-Trap Thundaga",
+              "notes": "Kefka gradually spawns lightning bolts at opponent's location. The bolts have relatively poor accuracy, but they can combo into assist with instant empty chase |\nA chase sequence where the initiator does nothing.\n[12] or dodge cancel [13]. If multiple lightning bolts hit in succession, Zap-Trap Thundaga has potential to provide some of the most frame advantage |\nFighting game term that describes who is able to act first. Player who can act first is considered \"plus\", while a player who acts second is considered \"minus\" in a given situation.\noff of empty chase in the game.\nZap-Trap Thundaga's recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis fairly low; Kefka can dodge cancel after the first bolts have been summoned, enabling solo follow-ups with Scatter-Spray Blizzaga and Havoc Wing. [14] Even Waggle-Wobbly Firaga may work at point blank range. Being mindful of positioning is key, as all bolts of Zap-Trap Thundaga send the opponent upwards.\nZap-Trap Thundaga's low priority, slow startup |\nThe time it takes before an attack can do damage.\nand lack of threatening screen presence in the neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\nmake it difficult to justify over other braveries. This is especially true in the air, where Kefka has a consistent synergy in Scatter-Spray, Waggle-Wobbly and Extra-Crispy."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/46/Brv_kefka_meteor_1.jpeg",
+              "damage": "15 each (up to 75)",
+              "startup": "35F (first appearance)",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "each 30",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Rain fire from the skies that ricochets and flies at foe.",
+              "name": "Meteor",
+              "notes": "Five fireballs descend, surrounding the opponent before homing in at them. If all fireballs connect, Meteor is one of Kefka's strongest braveries in terms of damage and EX Force generation. Due to its long startup, low priority, lackluster area of effect midair and low reward on hit without assist, Meteor is often outclassed by his other braveries. While it occupies a decent amount of space, it does not represent a consistent threat against dashes or dodges. It does not protect Kefka from afar either.\nIf performed in the air, the fireballs will descend for a long time until they reach the ground. This further limits Meteor's viability and is often better used in small stages or near the ground.\nEach homing projectile sends the opponent upwards and they can combo into assist and other attacks on hit. [15] This is easier said than done however, as the slow startup and low priority make it difficult to connect with Meteor against moving opponents. Visually confirming Meteor on hit can be difficult in neutral situations, but assist combos provide much needed leeway for additional follow-ups. Both Waggle-Wobbly Firaga and being positioned above the opponent are a big help.\nDuring EX Mode, Meteor can be used midair with no reliance on ground at all as the projectiles will halt their descent after a moment before pursuing the opponent. In a way, it functions as if it is performed in the ground."
+            },
+            {
+              "variants": [
+                "Normal",
+                "EX Mode"
+              ],
+              "image": "https://dissidia.wiki/images/2/25/Brv_kefka_ultima_1.jpeg",
+              "damage": [
+                "40 (15, 25)",
+                "40 (15, 25)"
+              ],
+              "startup": [
+                "33F (orb) > 89F (explosion)",
+                "1F (orb) > 33F (explosion)"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Mid",
+                "Ranged Mid"
+              ],
+              "exForce": [
+                "30 > 0",
+                "30 > 0"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Cast the ultimate(?) spell. Causes huge blast...eventually.",
+              "name": "Ultima",
+              "notes": "Ultima covers space in front of Kefka with a small projectile, and then a wide area-of-effect blast that wall rushes. It is not used often due to its low reward on hit without walls. His other braveries perform similar roles more efficiently, and with almost equally long startup |\nThe time it takes before an attack can do damage.\n.\nThat being said, Ultima can perform more consistently in small stages such as in M.S. Prima Vista and Phantom Train. It can occupy more space there with more chances for wall rush. Ultima's multiple explosions can also deal a lot of damage with multi-hitting assists, though this is usually relevant in Phantom Train.\nWhen used during EX Mode, Ultima becomes active on frame 1, making this the fastest bravery attack in the game. It is on par with block's startup, and because of the Ranged Mid priority, it quickly staggers opponents trying to guard against it."
+            }
+          ]
+        }
+      },
+      "moveCount": 8,
+      "sources": [
+        "https://dissidia.wiki/Kefka_Palazzo_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "main": {
+          "intro": "All of Kefka's HP attacks have a ground and a midair version, except Hyperdrive. Attack data is shared between both versions. Hyperdrive is only available on the ground.",
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/e1/Hp_kefka_havoc_wing.jpeg",
+              "damage": "-",
+              "startup": "51F",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Attack with wings. Quick approach, useful vs. any height.",
+              "name": "Havoc Wing",
+              "notes": "Kefka moves towards opponents vertically before dealing HP damage with the wings. This is a staple move for Kefka. It's a consistent 1-hit HP with strong vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nand long active |\nThe period of time when an attack is capable of doing damage.\nframes. It is commonly used as an assist combo starter after Waggle-Wobbly Firaga, an assist combo ender or after blocking. Havoc Wing's tracking also makes it reliable for HP damage after staggering opponent with LV2 Assist Change. This is great for Side by Side <img></img> builds, and checkmates |\nA situation where a player has no options to avoid losing a situation or a match. For example, hitting an opponent who has a full EX gauge and killing bravery can activate EX Revenge and guarantee a win.\nwith enough bravery to end a match.\nThe active frames can make Kefka harder to whiff punish |\nHitting an opponent who missed (whiffed) their attack.\nfrom the front, but the recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis still quite long.\nHavoc Wing has no known effects during EX Mode."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7e/Hp_kefka_hyperdrive.jpeg",
+              "damage": "-",
+              "startup": "63F (LV1) 91F (LV2) 143F (LV3) Hitbox 3F after button release",
+              "type": "-",
+              "priority": "Unblockable",
+              "exForce": "60",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Launch a column of flame along ground. Range depends on length of button hold.",
+              "name": "Hyperdrive",
+              "notes": "Ground only.\nA homing wave projectile. Holding Square <img></img> increases Hyperdrive's hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nand range to travel across large distances. When charged, Kefka can combo into assist on hit. Once Hyperdrive goes off, it travels very quickly, making it good for dodge punishes. Kefka can release Square <img></img> at any time while charging, so he can control space by threatening with an early release.\nWhile Hyperdrive has good tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n, a blind spot exists right above Kefka's head. Furthermore, it is not very effective against characters who can fight comfortably high above the ground, such as Sephiroth and Gilgamesh.\nWhen used during EX Mode, Hyperdrive will stop during traversal to realign its tracking against the opponent. This can cover Kefka's vertical blind spot. The realignment can happen earlier if Hyperdrive has only been charged a little bit. Activating EX Mode during the startup will automatically change Hyperdrive to EX Mode version. That can be useful in matchups |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\nlike Jecht, who tries to get close to Kefka."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/0b/Hp_kefka_trine_1.jpeg",
+              "damage": "-",
+              "startup": "73F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "each 21",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Triangular spell appears in the air and attacks from 3 directions.",
+              "name": "Trine",
+              "notes": "Kefka spawns three homing projectiles around the opponent. It can combo into assists and dodge cancelled Scatter-Spray Blizzaga on hit, but one of its greatest strengths is the infinite range. Because of this, Trine can convert from stray Waggle-Wobbly Firagas. It can also harass opponents going for an EX Core, even when used behind walls or across the stage. Opponents must pay attention to when Kefka performs this HP attack, because dashing towards an EX Core can result in making contact with the spell instead.\nDuring EX Mode, Kefka will cast Trine twice in quick succession. The dodge cancel window remains the same, but dodging early will cancel the second Trine altogether. Kefka must delay the dodge cancel a little bit in order for both Trines to come out."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/63/Hp_kefka_forsaken_null_1.jpeg",
+              "damage": "-",
+              "startup": "89F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Mobile sigil fires on foe. Hold button for homing.",
+              "name": "Forsaken Null",
+              "notes": "A sigil slowly homes in the opponent and rains singular spheres below the opponent. Forsaken Null is often outclassed by Kefka's other HP attacks because of the egregiously slow startup |\nThe time it takes before an attack can do damage.\n, homing and firing rate with no standout traits. It does not cover range as effectively as Trine, nor does it support his close range interactions like Havoc Wing does. If it hits however, it can wall rush. Hitting a grounded opponent can wall rush on the ground even if they have Auto Recovery equipped.\nDuring EX Mode, Forsaken Null will fire an additional projectile upwards, increasing its potential range. Unfortunately it still remains fairly easy to dodge."
+            }
+          ]
+        }
+      },
+      "moveCount": 4,
+      "sources": [
+        "https://dissidia.wiki/Kefka_Palazzo_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Power of Destruction!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nGlide\nExhilarating Magic"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Glide",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Activate by holding X in midair]\nIncreases the magus power within to move freely through the air."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Exhilarating Magic",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Always active while in EX Mode] All spells become more chaotic - multiple projectiles, magic rebounds, and other unpredictable effects."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Light of Judgment",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "A light comes from the heavens, cleansing all in its wake. Memorize the commands that display then enter them in order."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "8, 4, 4, 4 (20)",
+                  "10 x 8 (80) (100 total)",
+                  "Magical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kefka_Palazzo_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [
+        "Many of Kefka's attacks can function as combo starters. Most function as assist combo starters, but few allow Kefka to combo by himself.",
+        "Scatter-Spray Blizzaga (SSB), Waggle-Wobbly Firaga (WWF), Extra-Crispy Firaga (ECF), Zap-Trap Thundaga (ZTT), Lickety-Split Thundaga (LST), Trine."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [
+            "Waggle-Wobbly Firaga > SSB / ECF / LST / Meteor / Havoc Wing / Trine\nTrine > Scatter-Spray Blizzaga\nLickety-Split Thundaga > DC > SSB / Trine"
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kefka_Palazzo_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "Kefka usually runs with Waggly-Wobbly Firaga, Scatter-Spray Blizzaga and Extra-Crispy Firaga braveries in the air.",
+        "|-|Hybrid=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "A standard fare damage oriented build with EX intake enabled.",
+        "|-|High Initial EX=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Starts the match with 90 % of the EX meter filled."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10299"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "917"
+            ],
+            [
+              "ATK",
+              "180"
+            ],
+            [
+              "DEF",
+              "183"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x7.4"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Dancing Mad"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Dirk <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Headband"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Vest <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Earring"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Large Gap in HP"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> BRV > Base Value"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Aerial"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Opponent HP < 50 %"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10299"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "956"
+            ],
+            [
+              "ATK",
+              "179"
+            ],
+            [
+              "DEF",
+              "185"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "None"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Judgment of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Jecht"
+            ],
+            [
+              "Weapon <img></img>",
+              "Dancing Mad"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Shield <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Helm <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Armor <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Earring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Cyan Drop"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Cyan Drop"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Cyan Drop"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Cyan Gem"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Glutton"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Kefka_Palazzo_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Kefka's assist data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Meteor",
+                  "35F",
+                  "Ground",
+                  "Player",
+                  "15 each (up to 75)",
+                  "Chase"
+                ],
+                [
+                  "BRV",
+                  "Extra-Crispy Firaga",
+                  "49F",
+                  "Air",
+                  "Opponent",
+                  "15 each (up to 45)",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Hyperdrive",
+                  "143F",
+                  "Ground",
+                  "Opponent",
+                  "-",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Havoc Wing",
+                  "51F",
+                  "Air",
+                  "Opponent",
+                  "-",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "Kefka does not have strong synergy with most tournament viable assists. Instead much of his performance can be attributed to the Kuja assist and to a lesser extent, Jecht assist.",
+            "Being able to convert off stray hits even from a distance is pretty important for Kefka. Other assists such as Sephiroth, Yuna and Exdeath make compromises in startup speed and follow-ups. Both Kuja and Jecht offer most in terms of conversion ability, damage output and setup potential.",
+            "|-|Kuja=\nKefka's strongest assist with highest consistency. Air BRV assist Strike Energy has great synergy with Kefka's staple braveries anywhere in the stage. Easiest to setup Kefka's Waggly-Wobbly Firaga > Extra-Crispy Firaga chase loop off of any hit, but can also create more space and setup an additional Waggly-Wobbly Firaga with Trine. It even sets up double damage for Extra-Crispy Firaga in a corner.",
+            "If Kefka is in close range, he can Trine after Kuja assist and go for Scatter-Spray Blizzaga for guaranteed critical hits to really shred through bravery.",
+            "|-|Jecht=\nFaster ground assist and good holding potential overall, but often requires ground to optimise air BRV assist combos. What Jecht assist loses in consistent damage regardless of position, he makes up for it with setups. Comboing a Meteor into Waggly-Wobbly Firaga is one such example.",
+            "He works well after Hyperdrive HP as well and of course, can setup other ground adjacent follow-ups afterwards.",
+            "The Waggly-Wobbly Firaga > Extra-Crispy Firaga chase loop is possible with Jecht assist as well, but is known to be more difficult as it requires positioning pretty close to the opponent."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kefka_Palazzo_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": true,
+      "links": [
+        {
+          "text": "Blocked Scatter-Spray Blizzaga assist conversion.",
+          "url": "https://www.youtube.com/watch?v=66QtcOnaWos&t=51s"
+        },
+        {
+          "text": "Scatter-Spray Blizzaga shards sent towards Kefka when blocked.",
+          "url": "https://www.youtube.com/watch?v=66QtcOnaWos&t=16s"
+        },
+        {
+          "text": "Blocked Scatter-Spray Blizzaga EX mode ice shards reflected.",
+          "url": "https://www.youtube.com/watch?v=66QtcOnaWos&t=59s"
+        },
+        {
+          "text": "Extra-Crispy Firaga weak hit example.",
+          "url": "https://www.youtube.com/watch?v=LaMMvK8bmnU"
+        },
+        {
+          "text": "Extra-Crispy Firaga stronger hit into assist.",
+          "url": "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=12s"
+        },
+        {
+          "text": "Example of Extra-Crispy Firaga double hit above the opponent.",
+          "url": "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=45s"
+        },
+        {
+          "text": "Example of double hitting Extra-Crispy Firaga.",
+          "url": "https://www.youtube.com/watch?v=1zOrrOI4WvE&t=236s"
+        },
+        {
+          "text": "Example of Extra-Crispy Firaga double hit (2).",
+          "url": "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=50s"
+        },
+        {
+          "text": "Lickety-Split Thundaga dodge cancel assist combo.",
+          "url": "https://www.youtube.com/watch?v=iUK7ak7mKag"
+        },
+        {
+          "text": "Lickety-Split Thundaga empty chase assist combo.",
+          "url": "https://www.youtube.com/watch?v=iUK7ak7mKag&t=35s"
+        },
+        {
+          "text": "Lickety-Split Thundaga close range hitbox.",
+          "url": "https://www.youtube.com/watch?v=iUK7ak7mKag&t=29s"
+        },
+        {
+          "text": "Zap-Trap Thundaga empty chase assist example.",
+          "url": "https://www.youtube.com/watch?v=WQaW9dZop-A&t=36s"
+        },
+        {
+          "text": "Zap-Trap Thundaga dodge cancel example.",
+          "url": "https://www.youtube.com/watch?v=WQaW9dZop-A&t=16s"
+        },
+        {
+          "text": "Zap-Trap Thundaga solo combo examples.",
+          "url": "https://www.youtube.com/watch?v=WQaW9dZop-A"
+        },
+        {
+          "text": "Meteor dodge cancel assist example.",
+          "url": "https://www.youtube.com/watch?v=sfztRLFzEF4"
+        }
+      ]
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Kefka_Palazzo_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Kefka_Palazzo_(Dissidia_012)",
+    "https://www.youtube.com/watch?v=66QtcOnaWos&t=51s",
+    "https://www.youtube.com/watch?v=66QtcOnaWos&t=16s",
+    "https://www.youtube.com/watch?v=66QtcOnaWos&t=59s",
+    "https://www.youtube.com/watch?v=LaMMvK8bmnU",
+    "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=12s",
+    "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=45s",
+    "https://www.youtube.com/watch?v=1zOrrOI4WvE&t=236s",
+    "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=50s",
+    "https://www.youtube.com/watch?v=iUK7ak7mKag",
+    "https://www.youtube.com/watch?v=iUK7ak7mKag&t=35s",
+    "https://www.youtube.com/watch?v=iUK7ak7mKag&t=29s",
+    "https://www.youtube.com/watch?v=WQaW9dZop-A&t=36s",
+    "https://www.youtube.com/watch?v=WQaW9dZop-A&t=16s",
+    "https://www.youtube.com/watch?v=WQaW9dZop-A",
+    "https://www.youtube.com/watch?v=sfztRLFzEF4"
+  ]
+}

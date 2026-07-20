@@ -1,0 +1,871 @@
+{
+  "slug": "gabranth",
+  "name": "Gabranth",
+  "page": "Gabranth_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Gabranth_(Dissidia_012)",
+  "origin": "Final Fantasy XII",
+  "icon": "gab",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-gab.png",
+  "infobox": {
+    "Name": "Gabranth (ガブラス)",
+    "Original game": "Final Fantasy XII",
+    "Base ATK (LV100)": "108 (Normal, Very Low) 112 (+4 in EX, Very High)",
+    "Base DEF (LV100)": "109 (Normal, Lowest) 112 (+3 in EX, High)",
+    "Run Speed": "12 (Normal, Very Slow)4 (EX, Fast)",
+    "Dash Speed": "85 (Normal, Slow) 73 (EX, Fast)",
+    "Fall Speed": "81 (Normal, Average) 67 (EX, Fast)",
+    "Fall Speed Ratio After Dodge": "34 (Normal, Above Avg.) 16 (EX, Very Fast)",
+    "Fastest BRV": "19F (Sentence, Rupture)15F (EX, Dual Rend & Enrage)",
+    "Fastest HP": "35F (EX, Hatred)",
+    "1-Hit HP": "Hatred, Innocence",
+    "HP Links": "No",
+    "Command Block": "EX Attack Magic Block",
+    "Weapon": "Swords, Daggers, Greatswords, Axes, Guns",
+    "Armor": "Shields, Gauntlets, Helms, Light Armor, Heavy Armor, Large Shields",
+    "Exclusive weapons": "Demonsbane, Deathbringer, Chaos Blade",
+    "Alignment": "Chaos",
+    "Voice Actor (JP)": "Akio Ōtsuka",
+    "Voice Actor (ENG)": "Keith Ferguson"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Gabranth is a unique character who fills EX Gauge to quickly enter EX Mode. He is one of the weakest characters in the game outside EX Mode with slow movement and below average frame data. He is the only character in the game to have HP attacks that cannot deal HP damage. This forms the crux of his strategy: Build EX gauge with the distinct EX Charge HP attack while fending off the opponent, then unleash EX Mode at will.",
+        "Once in EX Mode, Gabranth becomes much stronger. High movement speed, bravery damage and mid priority are all more prominent. The universal benefits of EX have a causative effect too; Gabranth reaps the benefits of added critical hits, health regen and assist gauge depletion more frequently over the course of a match. One of Gabranth's distinct strengths is his ability to survive significantly longer than most characters thanks to the health regen.",
+        "Gabranth's reliance on EX demands time and strong defensive fundamentals. He can struggle against effective rushdown |",
+        "An offensive playstyle that focuses on getting close to the opponent and attacking them relentlessly.",
+        "due to his floaty air dodges and relatively slow EX gain between interactions. His HP attacks aren't very effective neutral |",
+        "The stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.",
+        "tools against high movement, and mixups |",
+        "A situation where a player has several ways to attack, which require different actions from the defending player.",
+        "aren't best in class even in EX Mode. HP conversions require assist (and often wall rush), which he cannot build very quickly. The relatively short uptime with EX mode also means Gabranth has a small window of opportunity to do what many characters can do without his constraints.",
+        "In competitive play, Gabranth has been ranked as a high tier and a mid tier character. Gabranth's matchups are rather volatile; His frequent access to EX mechanics is powerful against some of the best-in-class defense, which makes him very difficult to defeat over time. But he also struggles a lot against best-in-class offense, which can dismantle him quickly. Players who can stand their ground will find a rewarding character with a unique twist on the game's meter economy."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "EX Generation is fastest in the game whenever Gabranth can stay still for a few seconds\nHigh survivability against defensive characters thanks to EX mode's health regeneration\nHigh burst damage with EX mode's critical hits, assist and EX Burst\nBanish traps help Gabranth charge EX without suffering huge setbacks\nOnly character who is immune to EX Break's bravery effect",
+              "Slow, weak mixups and low damage without EX mode. No offensive HP attacks outside of EX mode or Chase.\nStruggles against rushdown without EX mode. Gabranth builds EX slowly when under constant pressure\nReliance on EX mode limits Gabranth's ability to apply pressure and get results\nAverage HP attacks and mixup potential even in EX mode\nAverage assist building rate, even in EX mode"
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Gabranth_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/29/Brv_gabranth_enrage.jpeg",
+              "damage": "40 (3 x 8, 16)",
+              "startup": "15F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "24",
+              "effects": "Wall Rush",
+              "cancels": "Dodge, Attack (follow-ups)",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Quick slash w/shortsword. Slash with each button press.",
+              "name": "Enrage",
+              "notes": "A lengthy, grounded combo with a quick startup. |\nThe time it takes before an attack can do damage.\nEnrage is used as a punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ntool and occasionally to approach grounded opponents. Dodge punishment, punishing blocks and whiffs |\nA missed attack that doesn't make any contact.\nare all feasible thanks to its reach and fast startup. Enrage is fast enough to be unreactable on startup, which lets Gabranth attempt mixups |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nwith Relentless Lunge if the opponent is trying to fight in close-range.\nEnrage has the highest base damage out of Gabranth's braveries. Each follow-up must be done manually with Circle <img></img>. Up to four follow-ups can be done, even if Gabranth misses. This makes Enrage safer to use in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n, and it also makes hit confirming |\nThe act of performing an attack, reacting to it hitting and following up appropriately. Ergo, \"confirming\" it.\nassist combos more consistent. Enrage also has high knockback, which can wall rush for assist combos as well.\nThe first slashes move Gabranth forward, which has good reach. Afterwards Gabranth moves very little with subsequent follow-ups. If Gabranth is almost out of EX gauge, he can delay Enrage follow-ups to extend his EX mode and regenerate more health.\nGabranth usually fights in the air, so Enrage may not see much use in large stages. However, he can still end combos with it by using assists that knock down in the air, such as Jecht and Yuna."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/ba/Brv_gabranth_aero_g.jpeg",
+              "damage": "15",
+              "startup": "31F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "60",
+              "effects": "Chase, Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Long] Generate tornado. Slow speed, long duration.",
+              "name": "Aero (ground)",
+              "notes": "Aero is lingering projectile that moves towards opponent for ~5.5 seconds on average. The grounded version is not used often, but it shares traits with the aerial version. Gabranth becomes airborne when using Aero. It can be dodge cancelled |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nrelatively early and it usually leads to chase on hit. If Aero connects, it will vanish.\nDue to its Ranged Low priority, Aero does not occupy space effectively, since it loses to blocks, dashes and melee attacks. It also has fairly low reward on hit. As a result, Aero takes a more niche role as a passive defensive tool for building assist gauge. It is weak to rushdown |\nAn offensive playstyle that focuses on getting close to the opponent and attacking them relentlessly.\n, but it's also safe against assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\ndue to its short recovery and coverage in front of Gabranth.\nGenerally speaking, Aero cannot pass through physical walls. If Gabranth uses Aero right in front of a wall, the projectile will not appear. If Aero is active |\nThe period of time when an attack is capable of doing damage.\nand bumps into a wall, it may attempt to move along the wall. Whenever Aero is in the air, it will attempt to move towards opponent, including off the ledge. Aero can clip into Crystal World's platforms this way. Aero can also destroy weaker stage elements, like World of Darkness pillars or Ultimecia Castle's wooden platforms."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/32/Brv_gabranth_relentless_lunge.jpeg",
+              "damage": "35 (6, 9, 20)",
+              "startup": "21F",
+              "type": "Physical",
+              "priority": "Melee Mid",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Charge up to 3 times by pressing button.",
+              "name": "Relentless Lunge",
+              "notes": "Relentless Lunge is a mid priority gap closer. Gabranth will lunge towards opponent, and follow up with two more lunges to knock opponents away. Both follow-ups must be done manually with Circle <img></img>, and they can be done even if Gabranth misses with each hit. This move has a decent horizontal hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\n, and Gabranth will automatically aim towards opponent with each subsequent lunge. As a melee mid priority move, Relentless Lunge can stagger regular blocks and beat low priority pokes |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. Therefore it can be used to threaten space on the ground and punish grounded dodges.\nOn hit, Gabranth can use the first two lunges to do an assist combo. The third lunge leads to chase, where Gabranth can quickly grab the 90 EX he generated and go for another mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\n. Relentless Lunge does not anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nwell, and keeps Gabranth on the ground for the whole attack. If Gabranth does this move against a ledge, he cannot move in that direction. Gabranth often fights in the air, so Relentless Lunge won't always see use in competitive play. It is serviceable as a mixup option along with Enrage, but Gabranth won't get many opportunities to enforce this.\nIf Gabranth uses Relentless Lunge while locked off, he will move in the direction he is facing."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7d/Brv_gabranth_gaia_breach.jpeg",
+              "damage": "20 (10, 10)",
+              "startup": "31F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Long] Send column of flame along ground. Homes in on foe.",
+              "name": "Gaia Breach",
+              "notes": "Gaia Breach is Gabranth's midrange projectile. It comes out fairly fast for a projectile, and it travels quickly as well. It is useful for punishing landing lag and dodges on the ground. On hit, Gabranth can go for chase mixups |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nor dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nto do an assist combo.\nThe projectile is low priority, so it can blocked or dashed through. Gabranth has decent horizontal tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nduring startup |\nThe time it takes before an attack can do damage.\n, and the projectile tracks very slightly while its moving. Its relatively tall hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\ncan anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nopponents.\nGabranth's strategy typically revolves around close-range attacks instead of zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\n. Opponents often choose to retreat when Gabranth is in EX mode, so Gabranth may not get many opportunities to use this move offensively either. Therefore Gaia Breach can function as a secondary grounded poke, if the matchup |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\nallows it."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3a/Brv_gabranth_dual_rend.jpeg",
+              "damage": "30 (10, 10, 10)",
+              "startup": "15F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Quick slash w/shortsword. Cut long distance in one bound.",
+              "name": "Dual Rend",
+              "notes": "Dual Rend is Gabranth's main air poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. It's fast, recovers |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nquickly and deals good damage on hit. This is a good move as a general-purpose tool for approaching, and punishing |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nblocks, whiffs |\nA missed attack that doesn't make any contact.\nor even dodges. It has decent vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nwith both hits, moreso the first.\nDual Rend's actionable recovery isn't long for a poke, but Gabranth always performs both slashes. That makes it a bit more committal compared to Warrior of Light's Dayflash or Tidus's Hop Step. Dual Rend can wall rush, but this is the primary way Gabranth can convert |\nTurning a hit (unlikely or otherwise) into a combo through situational awareness.\nthis to HP damage."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/fe/Brv_gabranth_rupture_2.jpeg",
+              "damage": "30 (3, 3, 3, 5, 16)",
+              "startup": "19F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Rise][Dive] Pierce opponent. Direction depends on position.",
+              "name": "Rupture",
+              "notes": "Rupture is a vertical lunging move. Its fast, travels at a diagonal angle and wall rushes. The dive's direction depends on where the opponent is in relation to Gabranth; If opponent is above Gabranth, he will go up. If opponent is below Gabranth, he will go down.\nSimilar to Cecil's Sacred Cross, Gabranth moves forward slightly before performing the dive. The longer animation makes it more dangerous to whiff |\nA missed attack that doesn't make any contact.\n, but it's quite strong as an air-to-ground |\nAttacking a grounded opponent while being in the air. The attacker may land on the ground as well.\npunish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ntool. Just like Dual Rend, Gabranth always finishes the whole attack, and he needs wall rush and assist to get HP damage out of it.\nIf Gabranth uses Rupture while locked off, he will move in the direction he is facing. The vertical direction still depends on opponent's height as it normally would."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/ed/Brv_gabranth_aero_a.jpeg",
+              "damage": "15",
+              "startup": "31F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "60",
+              "effects": "Chase, Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Long] Generate tornado. Slow speed, long duration.",
+              "name": "Aero (midair)",
+              "notes": "Aero's midair version is functionally very similar to the ground version. It follows the opponent for roughly 5.5 seconds and leads to chase. As an aerial move, Gabranth has more opportunities to use this as a passive defensive tool for building assist gauge. The recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis relatively short and spawns quickly in front of Gabranth. That makes it pretty safe to use in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\nat midrange, since it cannot be assist punished. It is still ranged low priority though, so Gabranth can make himself vulnerable to offense if used predictably.\nGabranth usually equips Vortex of Judgment and Dual Rend for close-range. The problem with Aero is that its lackluster space control against rushdown |\nAn offensive playstyle that focuses on getting close to the opponent and attacking them relentlessly.\nand strict requirements for follow-ups make it less consistent in competitive play. It has decent hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n, but Gabranth cannot make use of it without walls and assist. As a result, Aero is not a clear cut recommendation for Gabranth's third midair EX mode bravery.\nAero knocks back vertically upwards and horizontally away from Gabranth. It will attempt to do this regardless of camera angle. The knockback direction can be influenced by resetting the camera to point in a different direction. This can be used in assist combos to keep opponents at a wall / corner with Aero, instead of pushing them away. [1] It's Gabranth's only aerial solo combo route."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7f/Brv_gabranth_vortex_of_judgment.jpeg",
+              "damage": "30 (3 x 3, 3 x 3, 3, 3, 6)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Mid Block (Ranged Low)",
+              "exForce": "84",
+              "effects": "Magic Block, Chase, Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Create 3 vacuum waves. Can aim with the analog stick.",
+              "name": "Vortex of Judgment",
+              "notes": "Vortex of Judgment is one of Gabranth's most important braveries. It's a three-stage spinning attack with good base damage, EX gain and melee mid priority. That means Gabranth can punish opponents for blocking, and contest lower priority pokes. This is Gabranth's primary mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nin the air in conjunction with Dual Rend and HP attacks. Gabranth can complete this attack with Circle <img></img> inputs even if it misses. The follow-ups can be delayed for pressure, and hit confirmed |\nThe act of performing an attack, reacting to it hitting and following up appropriately. Ergo, \"confirming\" it.\nfor assist combos. Similar to Circle of Judgment, this move can pull in nearby opponents, increasing its reach. The last hit leads to chase, which Gabranth can use to enforce more mixups. Since initiating chase grabs all EX force on the field, Gabranth can also extend his EX mode duration whenever this hits. Gabranth relies heavily on his EX mode, so he is more inclined to go for chase compared to other characters.\nThis move occupies a decent amount of space around Gabranth, but it won't do much against opponents who are playing passively at a distance. It is only when the opponent chooses to engage with Gabranth in close-range where Vortex of Judgment becomes more powerful. That being said, the threat of follow-ups lets Gabranth build assist gauge more safely. Gabranth doesn't move very far even with the manual movement, so it has short lateral reach against dodges.\nVortex of Judgment can block Ranged Low attacks for majority of the animation. [2]"
+            }
+          ]
+        }
+      },
+      "moveCount": 8,
+      "sources": [
+        "https://dissidia.wiki/Gabranth_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/75/Hp_gabranth_execution.jpeg",
+              "damage": "20",
+              "startup": "41F",
+              "type": "Physical",
+              "priority": "Melee High Block (Ranged Low)",
+              "exForce": "90",
+              "effects": "Magic Block, Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Thrust sword; set off large explosion at sword tip.",
+              "name": "Execution",
+              "notes": "Execution is a close-range sword thrust, which leads to an explosion on hit. Gabranth moves forward after readying himself, but it's a short distance. It cannot punish neutral ground dodges reliably (with Ground Evasion Boost ability). It works well enough as an assist combo ender on the ground with Jecht and Yuna assists. Execution is Gabranth's only HP that deals bravery damage. And since it's done in EX mode where attacks have a higher critical hit rate, 20 base damage can also rack up some damage before EX Burst.\nExecution can block Ranged Low attacks when the blades have been fused. [3]"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/80/Hp_gabranth_innocence_g.jpeg",
+              "damage": "-",
+              "startup": "81F",
+              "type": "-",
+              "priority": "Ranged High Block (Ranged Low)",
+              "exForce": "15",
+              "effects": "Magic Block, Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] 4 sword shockwaves fly toward foe at high speed.",
+              "name": "Innocence (ground)",
+              "notes": "Innocence is a long-range barrage of projectiles. It's not used as often as the midair version, but it can occupy a lot of space in front of Gabranth. A common use for Innocence is as a last-ditch effort to occupy space and get HP damage in. It has long active |\nThe period of time when an attack is capable of doing damage.\nframes and deals HP damage immediately on hit.\nUnlike the aerial version, Gabranth cannot move during startup |\nThe time it takes before an attack can do damage.\n. He is entirely stationary for the whole attack, and is vulnerable to attacks from above. The projectiles have a decent hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\n, but they won't track |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nthe opponent once fired. If opponent is moving, Gabranth will attempt to fire the next projectile in their direction. The aim is not very accurate though, and the projectiles move at relatively slow speed. While Innocence can anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nwith a diagonal angle, it has a low maximum limit. Opponents can dodge above Gabranth, and then the projectiles will miss altogether. In addition to that, the projectiles themselves can be shaped in a different angle, which alters their hitbox further.\nInnocence (ground) can block Ranged Low attacks when the blades have been fused. [4]"
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/02/Hp_gabranth_hatred_1.jpeg",
+              "damage": "-",
+              "startup": "35F 15F after release (Charged)",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush, Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Emit shockwave. Can aim with the analog stick.",
+              "name": "Hatred",
+              "notes": "Hatred is Gabranth's close-range 1-hit HP. It's often used after blocking an opponent and as an assist combo ender. The shockwave surrounds Gabranth, which is good for angling wall rush during assist, but the reach is short otherwise. Gabranth can delay Hatred by holding Square <img></img>. He can move during this time and take advantage of absorb effect, which pulls nearby opponents in. Gabranth will fall gradually, so it's more effective near ground and walls. Holding Hatred does not increase its damage or hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\n.\nThis is a staple HP attack for Gabranth. It has short active frames and it can punished |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nif it misses. Hatred works reliably after assists and can wall rush in any direction. That's a good damage increase for Gabranth, as his critical hits often do lots of bravery damage beforehand."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/10/Hp_gabranth_innocence_a.jpeg",
+              "damage": "-",
+              "startup": "75F",
+              "type": "-",
+              "priority": "Ranged High Block (Ranged Low)",
+              "exForce": "15",
+              "effects": "Magic Block, Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] 4 sword shockwaves fly toward foe at high speed.",
+              "name": "Innocence (midair)",
+              "notes": "The midair Innocence works differently from the ground version, with one key difference; Gabranth fires projectiles at a downward angle. The projectiles start with an upward curve and quickly start moving downwards. They will travel roughly one air dash's distance, so it won't go as far as the ground version.\nInnocence has big enough hitboxes |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nto hit in front of Gabranth and above him. Due to Innocence's trajectory and active |\nThe period of time when an attack is capable of doing damage.\nduration, it is well suited to threaten nearby air dodges and ground dodges. This move has long enough recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nto be vulnerable to attacks, so it can be risky to whiff |\nA missed attack that doesn't make any contact.\nentirely though.\nInnocence cannot anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nvery high at midrange, so it's usually reserved for close-range and small stages in general. It can cover a lot of space when used near corners, but the projectiles will vanish if they hit the ceiling. It is sometimes used as a last-ditch effort to get HP damage in before EX mode runs out. Gabranth can also go for Innocence during assist combos to stack meter depletion |\nAn equipment effect which empties the opponent's Assist or EX gauge by a certain amount.\n, but its uses in combos are pretty limited otherwise.\nGabranth can move with analog stick <img></img> during startup |\nThe time it takes before an attack can do damage.\n. Much like the ground version, Innocence can block Ranged Low attacks when the blades have been fused. [5]"
+            }
+          ]
+        }
+      },
+      "moveCount": 4,
+      "sources": [
+        "https://dissidia.wiki/Gabranth_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Mist",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nStray's Tenacity\nJamming"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Stray's Tenacity",
+          "text": [
+            "[Always active while in EX Mode] Boosts stats and abilities, and greatly strengthens attacks.",
+            "ATK +4\nDEF +3"
+          ],
+          "tables": []
+        },
+        {
+          "title": "Jamming",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Activates after EX Break] Prevents opponent from gaining stage bravery.",
+            "This is unique to Gabranth. Even if he gets hit by assist during EX mode, the opponent won't get stage bravery from EX Break. This is great for Gabranth, as he is expected to be in EX mode often. It's a consistent safety net in cases where opponent gets a full assist gauge during Gabranth's EX mode."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Quickening",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "Blows embodying wrath itself. Shuffle options with R. Press X to select moves to use.",
+            "Quickening is a series of three Mist techniques; Fulminating Oblivion, Ruin Unflinching and Frost Purge. Gabranth must shuffle his options with R <img></img> and select an available move with Cross <img></img>. If Gabranth fails to do this within the allotted time, EX Burst ends. Gabranth only needs to do this for the first two quickenings, Fulminating Oblivion and Ruin Unflinching. He will deal bravery damage during each sequence, so this is important for doing maximum damage.",
+            "The shuffling may appear random at first, but Gabranth can always guarantee the next Quickening. This is done by pressing R <img></img>, then pressing Cross <img></img> repeatedly a few times. This can be repeated two more times at a steady pace, and it will always succeed by the last repetition.",
+            "Quickening is not especially damaging as an EX Burst. However, because Gabranth will ideally access EX mode multiple times, he also gets more chances to do this. It contributes to his overall burst damage potential, and often deals enough bravery damage to break if opponent is at low bravery after an assist combo.",
+            "Gabranth's finisher depends on how many Quickenings he performed. This has no effect on the damage dealt, as it only does HP damage. One Quickening results in Inferno, two Quickenings result in Ark Blast and all three Quickenings result in Black Hole."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "10",
+                  "6 x 5, 8 x 2, 14, 2 x 12, 6 (90) (100 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Gabranth_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": true,
+      "title": "Unique Mechanic - EX Charge",
+      "text": [
+        "Gabranth cannot normally deal HP damage without EX mode. Instead, he can fill EX gauge on demand with a unique EX Charge HP attack. This does not generate EX Force on the field, so opponents cannot grab it and fill their EX gauge. Gabranth's EX gauge fills up whenever he is using this move. Gabranth needs EX mode to unlock his full potential, so using EX Charge is very important to him.",
+        "EX Charge has ground and midair versions. The main difference between them is that ground EX Charge takes 5.5 seconds (334F) to fill EX gauge entirely, while aerial EX Charge takes 8.3 seconds (500F).",
+        "|-|EX Charge (ground)=",
+        "This is the core of base Gabranth. He stands still while gradually filling EX gauge. Ground version of EX Charge fills the gauge in 5.5 seconds (334 frames). Using this move is the fastest way to reach max EX gauge without EX Cores, so Gabranth should use it whenever possible.",
+        "Gabranth is vulnerable to attacks during this state, but the recovery is short. He can cancel it into a dodge, block or another attack, be it EX Charge or bravery. Block and dodge are the fastest options, but both present their own risks to Gabranth. That being said, Gabranth can chain EX Charge (tap input) and dodge together to create more movement without waiting through the recovery animation.",
+        "Using EX Charge does not fill assist gauge, but it still prevents it from depleting on its own.",
+        "|-|EX Charge (midair)=",
+        "Aerial version of EX Charge shares some traits with the grounded version, but few things are also different.",
+        "Aerial EX Charge fills EX gauge slower. Reaching full gauge from empty takes 8.3 seconds (500 frames).\nGabranth descends slowly during this state.\nAerial EX Charge stops if Gabranth touches the ground. The recovery is the same as releasing the button.",
+        "If Gabranth activates EX Mode during this move, he will descend much faster, as per his EX Mode stats.",
+        "Just like the ground version, Gabranth can chain EX Charge (tap input) and dodge together to create more movement without waiting through the recovery animation. It doesn't build much EX gauge, but it can make it more difficult for opponents to hit Gabranth when used carefully.",
+        "Like the grounded version, EX Charge does not fill assist gauge, but it still prevents it from depleting on its own."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "<img src=\"\" style=\"width:250px; height:270px; object-fit: none; object-position: ; border:3px solid RGB(105,86,160); inline-table;\"></img>"
+            ],
+            [
+              "The attack's baseline damage value before equipment and stats are considered.",
+              "-"
+            ],
+            [
+              "The time it takes for this attack to do damage. Currently this is measured at 60 frames per second (30F would be 0.5 seconds).",
+              "?"
+            ],
+            [
+              "Damage Type",
+              "-"
+            ],
+            [
+              "Priority",
+              "-"
+            ],
+            [
+              "The amount of EX that can be gained from EX Force. 1000 = Full EX gauge.",
+              "?"
+            ],
+            [
+              "Effects",
+              "-"
+            ],
+            [
+              "What this move can be cancelled into.",
+              "Dodge, Block, Attack"
+            ],
+            [
+              "Assist Gain (Hit)",
+              "0"
+            ],
+            [
+              "CP (Mastered)",
+              "30 (15)"
+            ],
+            [
+              "Charge EX Gauge by holding button.",
+              "Unlocked at level 1",
+              "Mastered at 150 AP"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "<img src=\"\" style=\"width:250px; height:270px; object-fit: none; object-position: ; border:3px solid RGB(105,86,160); inline-table;\"></img>"
+            ],
+            [
+              "The attack's baseline damage value before equipment and stats are considered.",
+              "-"
+            ],
+            [
+              "The time it takes for this attack to do damage. Currently this is measured at 60 frames per second (30F would be 0.5 seconds).",
+              "?"
+            ],
+            [
+              "Damage Type",
+              "-"
+            ],
+            [
+              "Priority",
+              "-"
+            ],
+            [
+              "The amount of EX that can be gained from EX Force. 1000 = Full EX gauge.",
+              "?"
+            ],
+            [
+              "Effects",
+              "-"
+            ],
+            [
+              "What this move can be cancelled into.",
+              "Dodge, Block, Attack"
+            ],
+            [
+              "Assist Gain (Hit)",
+              "0"
+            ],
+            [
+              "CP (Mastered)",
+              "30 (15)"
+            ],
+            [
+              "Charge EX Gauge by holding button. Cancelled when you touch the ground.",
+              "Unlocked at level 1",
+              "Mastered at 150 AP"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Gabranth_(Dissidia_012)"
+      ]
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Gabranth_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|Hybrid (Soul of Yamato)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "A general all-rounder build for Gabranth.",
+        "Equip Master Guardsman extra ability for +1000 HP.",
+        "|-|Build #2=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "11299"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "996"
+            ],
+            [
+              "ATK",
+              "176"
+            ],
+            [
+              "DEF",
+              "183"
+            ],
+            [
+              "LUK",
+              "63"
+            ],
+            [
+              "Max Booster",
+              "x2.1"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Soul of Yamato",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Jecht"
+            ],
+            [
+              "Weapon <img></img>",
+              "Chaos Blade"
+            ],
+            [
+              "Hand <img></img>",
+              "Genji Shield"
+            ],
+            [
+              "Head <img></img>",
+              "Genji Helm"
+            ],
+            [
+              "Body <img></img>",
+              "Genji Armor"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Silver Hourglass"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Angel's Bell"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> EX Mode"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Opponent Summon Unused"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Spider Web"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Spider's Bane"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Gabranth_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Gabranth Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Enrage",
+                  "15F",
+                  "Ground",
+                  "Opponent",
+                  "3 x 8, 16 (40)",
+                  "Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Aero",
+                  "31F",
+                  "Air",
+                  "Opponent",
+                  "15",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Execution",
+                  "41F",
+                  "Ground",
+                  "Opponent",
+                  "20",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Hatred",
+                  "35F",
+                  "Air",
+                  "Opponent",
+                  "-",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "Gabranth works well with Kuja and Jecht assists."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Gabranth_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": true,
+      "links": [
+        {
+          "text": "Aero knockback influenced with camera reset.",
+          "url": "https://www.youtube.com/watch?v=qUjhcyM5FwY"
+        },
+        {
+          "text": "Vortex of Judgment blocks Ranged Low attacks",
+          "url": "https://www.youtube.com/watch?v=VzeDzz2oIiE?feature=shared&t=39"
+        },
+        {
+          "text": "Execution blocks Ranged Low attacks",
+          "url": "https://www.youtube.com/watch?v=VzeDzz2oIiEVzeDzz2oIiE?feature=shared&t=7"
+        },
+        {
+          "text": "Innocence (ground) blocks Ranged Low attacks",
+          "url": "https://www.youtube.com/watch?v=VzeDzz2oIiE"
+        },
+        {
+          "text": "Gabranth's Innocence (midair) ranged low block",
+          "url": "https://www.youtube.com/watch?v=VzeDzz2oIiE&t=91"
+        }
+      ]
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Gabranth_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Gabranth_(Dissidia_012)",
+    "https://www.youtube.com/watch?v=qUjhcyM5FwY",
+    "https://www.youtube.com/watch?v=VzeDzz2oIiE?feature=shared&t=39",
+    "https://www.youtube.com/watch?v=VzeDzz2oIiEVzeDzz2oIiE?feature=shared&t=7",
+    "https://www.youtube.com/watch?v=VzeDzz2oIiE",
+    "https://www.youtube.com/watch?v=VzeDzz2oIiE&t=91"
+  ]
+}

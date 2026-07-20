@@ -1,0 +1,23 @@
+{
+  "name": "dissidia012-guides",
+  "version": "1.0.0",
+  "description": "Guides competitifs francais pour Dissidia 012 [duodecim] Final Fantasy (PSP)",
+  "main": "index.js",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "parse": "node scripts/parse.mjs && node scripts/parse-meta.mjs",
+    "images": "node scripts/fetch-images.mjs",
+    "build": "node scripts/build.mjs",
+    "qa": "node scripts/qa.mjs",
+    "qa:links": "node scripts/qa.mjs --links",
+    "coverage": "node scripts/coverage.mjs",
+    "serve": "npx serve dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  },
+  "type": "module"
+}

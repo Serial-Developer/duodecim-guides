@@ -1,0 +1,2112 @@
+{
+  "slug": "tidus",
+  "name": "Tidus",
+  "page": "Tidus_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Tidus_(Dissidia_012)",
+  "origin": "Final Fantasy X",
+  "icon": "tidus",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-tidus.png",
+  "infobox": {
+    "Name": "Tidus (ティーダ）",
+    "Original game": "Final Fantasy X",
+    "Base ATK (LV100)": "110 (Average)",
+    "Base DEF (LV100)": "111 (Average)",
+    "Run Speed": "4 (Normal, Fast),1.5 (EX Mode, Very Fast)",
+    "Dash Speed": "73 (Normal, Fast)65 (EX Mode, Fastest)",
+    "Fall Speed": "73 (Above Average)65 (EX Mode, Fastest)",
+    "Fall Speed Ratio After Dodge": "20 (Normal, Very Fast), 14 (EX Mode, Very Fast)",
+    "Fastest BRV": "11F (Hop Step)",
+    "Fastest HP": "39F (Spiral Cut)",
+    "1-Hit HP": "No",
+    "HP Links": "Yes",
+    "Command Block": "No",
+    "Weapon": "Daggers Grappling Weapons Swords Thrown Weapons",
+    "Armor": "Bangles Chestplates Clothing Hats Headbands Helms Light Armor Shields",
+    "Exclusive weapons": "Official Ball, Striker, Grand Slam,World Champion",
+    "Alignment": "Chaos (012),Cosmos (013)",
+    "Voice Actor (JP)": "Masakazu Morita",
+    "Voice Actor (ENG)": "James Arnold Taylor"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Tidus' EX mode supports his long term gameplan and comes with few good supporting perks. The big cherry on top is his Caladbolg (ATK) that scales bravery base damage up to 2x at full health. This applies to all of his attacks that deal bravery damage, including EX Burst. That alone makes it great for closing out matches with a good lead. EX Burst is one of the weakest in the game when Tidus is at low health, but because EX mode adds critical hit rate and depletes the opponent's assist gauge upon activation, this is still good for securing a win."
+      ],
+      "tables": [],
+      "sources": [
+        "https://dissidia.wiki/Tidus_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/6e/Brv_tidus_hop_step_g.jpeg",
+              "damage": "7, 13 (20)",
+              "startup": "11F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge, Attack (1st hit), Block (1st hit)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Distance self from foe. Weak but fast.",
+              "name": "Hop Step (ground)",
+              "notes": "A swift sword strike followed by a flying kick that pushes back both Tidus and the opponent. Hop Step is Tidus' key poke with fastest startup out of all his moves, low recovery and good EX gain at 90. On hit, the second attack can be confirmed with a lenient input window which leads to Chase, but it also works as an assist combo starter with Aerith assist. The initial sword slash has short hit stun, but it is enough to combo into other assists as well.\nThe spinning motion during Hop Step's first hit causes Tidus to cover his vicinity with an active hitbox around him. This, along with the low recovery can make it difficult to whiff punish Hop Step without clashing.\nThe ground version puts Tidus in an airborne state and the first hit will keep grounded opponents standing, which is important to note for Kuja and Jecht assist conversions."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/94/Brv_tidus_sonic_buster.jpeg",
+              "damage": "2 x 5, 6, 8, 16 (40)",
+              "startup": "25F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "27",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Charging tackle. Deal more damage when close.",
+              "name": "Sonic Buster",
+              "notes": "A forward tackle that goes through the opponent twice before striking them down for a wall rush. Sonic Buster is tied with Full Slide for highest base damage with Tidus' bravery attacks at 40 and it works well as a post-block punisher in close range. The lenient input windows for the two followup strikes can be confirmed with ease and they work well as assist combo starters.\nSonic Buster is one of Tidus' many multi-hit attacks that can deal more or less damage to the opponent depending how close he is at the time of performing it. This applies to the initial tackle and getting the maximum amount of hits is most reliable at point-blank range. Using Sonic Buster from further distance will cause less hits to connect and subsequently reduce the attack's overall damage output slightly.\nThe startup is slow enough to be reactable and it even has a distinct sound cue. However, this sound effect is shared with Tidus' blocking state, so adept players can mask it with spot dashes to opponents who rely on audio off-guard. Even so, using this move recklessly in the neutral is not advised and because Tidus commonly fights in the air, there may not be many opportunities to even apply it. The whiff recovery is fairly low though.\nSonic Buster's vertical tracking is not stellar, but it can increase exponentially during assist calls. [1]"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/0a/Brv_-_sphere_shot_(4).jpeg",
+              "damage": "4 x 8 (32)",
+              "startup": "41F",
+              "type": "Physical",
+              "priority": "Ranged Mid",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Hurl ball blazingly fast. Deal more damage when close.",
+              "name": "Sphere Shot",
+              "notes": "A stationary blitzball throw. Sphere Shot is one of Tidus' three projectiles, but it is not well suited for frequent zoning or building assist meter. The startup is quite slow, the dodge cancel recovery window is average and the vertical tracking covers roughly an average ground jump's height.\nSphere Shot does have strengths however. The animation isn't short, but it is not long enough to be reliably assist punishable by Kuja or Aerith assists who are two of the most powerful and commonly used assists in the game. Thanks to the Ranged Mid priority, it performs well against non-high speed HP attacks in a counterpoking exchange and it can disrupt The Emperor inside a trap when in reach.\nThe mid priority also means blocking Sphere Shot causes the opponent to stagger and as such, it is serviceable for calling out blocks or low priority pokes outside of Hop Step range. Tidus actually gets enough frame advantage to guarantee a Hop Step with a dodge cancel, but the caveat here is distance; Normally Tidus moves too far from the opponent with a dodge to realistically hit the opponent, but if his back is against the wall, he can land Hop Step reliably. [2] Assists that aren't Aerith can convert staggers into a combo and on hit, wall rush is also available for followups if close enough.\nSphere Shot can do a maximum amount of 8 hits for 32 base damage which is not bad and it scales with physical damage that is already a good investment for Tidus. But getting all hits is only possible at point-blank range, much like Sonic Buster. If done at the same when the opponent blocks, this move will hit after the active guard frames have passed and it can put a dent in their bravery. If done at max range, the amount of hits can be reduced to as low as 2 which naturally decreases Sphere Shot's overall damage output.\nSphere Shot occupies a fairly unique spot in Tidus' repertoire. It won't necessarily see much use in aerial fights or as a dedicated anti-air, but when used as a counterpoke or to call out blocks sparingly, it can support his mid range play. When used in conjunction with Sonic Buster, it can occasionally mix up the opponent as they require different responses from similiar ranges."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/5b/Brv_tidus_stick_g.jpeg",
+              "damage": "2 x 6, 10 (22)",
+              "startup": "53F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "~90",
+              "effects": "Chase, Dodge",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dodge] Turn, then throw sword. Evade foe's attack on start.",
+              "name": "Stick & Move (ground)",
+              "notes": "A dodge attack with horizontal movement. The direction can be controlled during startup, but Tidus can only move left or right when locked on. Tidus is briefly invincible when the attack begins (20 frames at 60 FPS) and will throw a disjointed sword hitbox forward once the startup is over. The sword throw generates as much EX on hit as Hop Step, it has enough hit stun for assist combos and the Quick Hit HP link.\nStick & Move is something of a matchup specific attack, but it can be quite strong. Turning around the opponent can be effective, since there are a lot of attacks in the game that hit in a straight line from the front, including HP attacks. Tidus doesn't create much distance between the opponent and tries to maintain a fixed distance if possible even when they approach him. The relatively long lateral range of the sword can work against neutral dodges, upward dodges from beneath Tidus (the elevation is matched) and side dodges if Tidus moves in the correct direction.\nThe long startup and recovery make it susceptible to blocks and Assist punishes. Because the sword is not considered a separate projectile, Stick & Move can also poke through solid objects like walls and stage props. [3] This does mean that Tidus can be staggered by mid priority attacks and regular blocks in places where this move can make contact, but the severity of a punish can vary depending on position.\nStick & Move's dodge cancel window on hit is quite late into the animation. However, the sword is capable of damaging the opponent even when it returns back to Tidus which provides just enough time to dodge cancel and combo into Hop Step. [4] This can be difficult to replicate against another human opponent, but it is worth noting as a solo dodge cancel combo starter regardless; It still generates additional meter and combos into commonly used assists.\nSimiliar to Full Slide, Stick & Move's vertical tracking is heavily influenced by assist calls. [5] Stick & Move's increased tracking during assist call. That improves the attack's utility as a mid range whiff punisher against long recovery moves.\nOverall, Stick & Move has a lot going for it even if it is not a one-size-fits-all dodge attack. Using it on the ground can be a good way to defend against Feral Chaos's Via Dolorosa HP or Squall's Blasting Zone, but be wary of the opponent's assist. The base damage can vary slightly depending on when it hits, but the damage output is not particularly high either way."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/21/Brv_tidus_dart_g.jpeg",
+              "damage": "1 x 6, 14 (20)",
+              "startup": "51F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "75",
+              "effects": "Chase, Dodge",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dodge] Leap, then dive at high speed. Evade attack on start.",
+              "name": "Dart & Weave (ground)",
+              "notes": "A forward overhead leap into a downward multi-hit spin. The direction cannot be controlled during startup, making the traversed distance fixed and linear. Just like Stick & Move, Tidus is briefly invincible when the attack begins (20 frames at 60 FPS).\nDart & Weave's main strength is two-fold: It is the fastest out of his dodge attacks that always moves Tidus towards the opponent when locked on, to the point where he can cross-up blocking opponents and hit behind their back. Defending against Tidus in this way requires a delayed block, which punishes trigger happy reflexes. The movement also helps avoid concurrent attacks and works against moves with low upward tracking and short active frames, which is fairly common. Being able to double cross-up with very precise spacing, that is; Go behind the opponent and hit back in front before reaching the opponent on the way down, is another noteworthy strength.\nOn hit, Tidus can dodge cancel combo into Hop Step for respectable 165 EX and a chunk of assist meter. Aerith assist can combo with Chase and Jecht assist can combo after an early dodge cancel. Quick Hit HP is also available, so there are few avenues for routing combos.\nWith all that being said, Dart & Weave does not work well against attacks that recover quickly. Bypassing a simultaneous block with this is also risky as startup is 51 frames while a regular block ends after 52 frames. Dart & Weave is not affected by assist call tracking and to top it off, it is arguably most vulnerable on whiff out of Tidus' dodge attacks."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/cd/Brv_tidus_cut_g.jpeg",
+              "damage": "2 x 5, 14 (24)",
+              "startup": "51F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "~90",
+              "effects": "Chase, Dodge",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dodge] Retreat, then quickly charge. Evade attack on start.",
+              "name": "Cut & Run (ground)",
+              "notes": "A backward dodge followed up a forward mutli-hit charge. The direction cannot be controlled during startup, making the traversed distance fixed. Just like other dodge braveries, Tidus is briefly invincible when the attack begins (20 frames at 60 FPS).\nCut & Run has the highest base damage out of all dodge braveries, along with shortest whiff recovery and the backwards evasion is fast enough to avoid a lot of moves with a bit of forward tracking. On hit, Tidus can link the Quick Hit HP or go for a difficult dodge cancel followup with Hop Step for extra bravery damage and meter. The combos are perhaps a bit more situational than Dart & Weave's in this way, but they can provide slightly more damage. As far as three-slot bravery dilemmas go, the aerial Cut & Run version has an edge due to an increased base damage multiplier.\nIn a sense, Cut & Run shares many traits with Dart & Weave. Both have the same startup, allow dodge cancel combos and avoid attacks with below average tracking. Both also lose to low recovery pokes due to long startup. It is worth noting that Cut & Run becomes active after the initial retreat, which technically makes it slower to hit in practice. That makes it more vulnerable to blocks, moreso than his other dodge attacks. It does not cross up or go through walls. But the high speed movement allows Tidus to go through certain projectiles that have very brief gaps in active hitboxes, such as Warrior of Light's Shining Wave HP. [6]"
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/41/Brv_tidus_hop_step_a2.jpeg",
+              "damage": "7, 13 (20)",
+              "startup": "11F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge, Block (1st hit), Attack (1st hit)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Distance self from foe. Weak but fast.",
+              "name": "Hop Step (midair)",
+              "notes": "Tidus' key poke becomes even more prominent in aerial combat. Most traits are shared with the ground version, including the generous active frames that cover Tidus' body, lenient input window for the followup and frame data. Unlike the ground version, Hop Step floats standing opponents on hit.\nHop Step's importance cannot be understated. It allows Tidus to build assist meter reliably, harass opponents and convert to Aerith assist who is arguably his strongest assist. Combined with Full Slide, fast post-air dodge fall speed and overall good movement, Hop Step is a textbook competent poke in the context of competitive Dissidia 012 and a staple part of Tidus' kit.\nThe low priority and base damage can increase risk against command blocks, but the low amount of hits also means critical hits are more likely to occur for the more damaging second hit. Landing Hop Step consistently is a recipe for success if not for (mental) damage, then for meter as the aerial version also generates 90 EX on hit. Finding ways to land this move will go a long way, though delaying Hop Step is one of the most common mixups for it."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/24/Brv_tidus_full_slide.jpeg",
+              "damage": "2 x 6, 5, 8, 15 (40)",
+              "startup": "25F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Midair charge. Deal more damage when close.",
+              "name": "Full Slide",
+              "notes": "Full Slide can be likened to an aerial variant of Sonic Buster. A 25-frame forward charge with two hit confirmable followup strikes, variable damage output and wall rush potential. Unlike Sonic Buster, Full Slide does not have a block sound effect telegraphing its impact, but it still benefits from the assist call tracking [7].\nBecause Full Slide is an aerial move, Tidus will inherently have more opportunities to use it. The vertical tracking is not strong, but assist can be used to enhance it and scoop aerial dodges or clash with Melee Low priority attacks as part of dodge punishment. Similiar to Sonic Buster, the hit stun and lax input windows for the followup attacks also allow assist combos even without walls.\nThis is a good move to have as a secondary tool for punishment and occasional mixups. When locked off, Tidus can move in any direction the analog stick / d-pad allows which further complements it as a defensive meter building tool as well."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/57/Brv_tidus_wither_shot.jpeg",
+              "damage": "10",
+              "startup": "41F",
+              "type": "Physical",
+              "priority": "Ranged Low",
+              "exForce": "3",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Throw blitzball; ricochets off environment.",
+              "name": "Wither Shot",
+              "notes": "A low priority blitzball throw. Wither Shot is something of an inverse to Sphere Shot. Low priority, single hit and stronger vertical tracking. It does not wall rush, but it is possible to combo into Kuja assist on hit [8]. Theoretically there is enough hit stun for a solo combo, but this is usually not possible due to late cancel windows and positioning issues caused by knockback.\nGenerally speaking there isn't much going on with this move. While the ball's travel speed is decent, the startup does it no favors. And the low base damage and EX output reduce Wither Shot's overall threat even if hits. And just like with Sphere Shot, Tidus is stationary for the duration of this move. All these factors make it difficult to justify equipping Wither Shot over his dodge attacks that help him stay safe and land more damage in the process."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f4/Brv_tidus_stick_a.jpeg",
+              "damage": "2 x 6, 10 (22)",
+              "startup": "53F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "~90",
+              "effects": "Chase, Dodge",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dodge] Turn, then throw sword. Evade foe's attack on start.",
+              "name": "Stick & Move (midair)",
+              "notes": "Stick & Move's aerial version works like the ground version. That includes the disjoint as well as the abnormal vertical tracking during assist calls, which can be useful against Firion who has adequate reach against Cut & Run. Still a matchup specific move much like other dodge attacks, but far from being useless."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/55/Brv_tidus_dart_a.jpeg",
+              "damage": "1 x 6, 14 (20)",
+              "startup": "51F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "75",
+              "effects": "Chase, Dodge",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "50",
+              "description": "[Dodge] Leap, then dive at high speed. Evade attack on start.",
+              "name": "Dart & Weave (midair)",
+              "notes": "The aerial version of Dart & Weave functions like the ground version. Comboing into Hop Step is still possible, as is crossing up opponent's block.\nBe wary of the ceiling though; Dart & Weave's defensive traits are mostly nullified there due to the ceiling cutting off movement and the attack covering least distance overall. Tidus still has invincibility at the beginning, but if he is not physically moving much, it won't evade attacks as effectively."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3a/Brv_tidus_cut_a.jpeg",
+              "damage": "2 x 5, 24 (34)",
+              "startup": "51F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "~90",
+              "effects": "Chase, Dodge",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dodge] Retreat, then quickly charge. Evade attack on start.",
+              "name": "Cut & Run (midair)",
+              "notes": "Cut & Run gets a midair version in Dissidia 012 and it has been given an increase in damage for the last hit. This is noteworthy when considering EX Mode's overall damage, though the traits are otherwise similiar, if not identical with the ground version. That does not make it bad, as it's a big help in many matchups. And due to the nature of being an aerial move, it also lets Tidus capitalise on two assist bars in one combo with Aerith to seal the deal. Highest average reward on hit compared to other dodge moves."
+            }
+          ]
+        }
+      },
+      "moveCount": 12,
+      "sources": [
+        "https://dissidia.wiki/Tidus_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3a/Hp_tidus_spiral.jpeg",
+              "damage": "1 x 4, 6 (10)",
+              "startup": "39F",
+              "type": "Physical",
+              "priority": "Melee High, Block (Ranged Low)",
+              "exForce": "90",
+              "effects": "Magic Block",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Spinning approach. Breaks down foe's defenses.",
+              "name": "Spiral Cut",
+              "notes": "An advancing multi-hit combination of strikes. The startup is average for HPs, but Tidus follows through with the whole animation even if it misses. Tidus can only pursue opponents while on the ground, but the tracking is good enough to catch back and side dodges if it's done really close to the opponent. If Spiral Cut is done against a ledge, Tidus will simply keep attacking in place until it ends but it can still inflict HP damage to opponents under him.\nAside from EX, the reward on hit is not particularly outstanding due to low base damage and no wall rush, but fast aerial assists can combo off of this at the wall. Players using Aerith assist should be mindful of not using her Cure to avoid using meter unintentionally for something they did not try to do. Tidus is also at frame disadvantage on hit against recovery attacks.\nSpiral Cut does not anti-air well and it has a long animation, so not only is whiffing it risky, Tidus also becomes very vulnerable to counter attacks after Assist Change. Spiral Cut can function as a sparsely used surprise attack or an assist combo ender, but often times his other HP attacks can do more. For example, dashing and using the aerial Slice & Dice HP covers Spiral Cut's lateral range and is less vulnerable on recovery when reflecting high priority projectiles.\nThe ranged low block property does what dashes already achieve for Tidus, but it does activate instantly and covers until the first bravery strike if it's needed in a pinch. [9] Just be careful not to cartwheel into traps along the way."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/fc/Hp_tidus_energy_g.jpeg",
+              "damage": "4, 1 x 6 (10)",
+              "startup": "53F",
+              "type": "Physical, Magical",
+              "priority": "Melee High (kick), Ranged High (projectiles)",
+              "exForce": "90",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Kick foe, then fire magic. Slow, effective vs. any height.",
+              "name": "Energy Rain (ground)",
+              "notes": "An aerial downward kick followed by homing Ranged High shots. It shares base damage and EX Force output with Spiral Cut, but the lateral range is significantly worse. The downward travel speed and distance during the attack itself are not good and the upward tracking is mediocre. The downward tracking is serviceable though. The initial ascent can be used to evade attacks with little to no anti-air capability, but it is too slow to consistently beat simultaneous blocks.\nThings are looking up on hit, however. Once the kick connects, Tidus launches homing high priority projectiles which have strong tracking, long active duration and explode at the end. These explosion happen even if the projectiles miss, so they can be very difficult to avoid without increased invincibility. If an opponent wants to evade the following explosions, they must Assist Change near the end (unless Tidus Auto Assist Lock On), utilize Precision Evasion or nullify them with high priority blocks such as Jecht Block.\nBecause Energy Rain leaves Tidus airborne, Aerith assist combos are possible without walls. Frame advantage on hit is quite good as well. Dodge cancel Hop Step can beat most Recovery Attack attempts except characters with frame 1 command blocks.\nBoth ground and aerial version function pretty much identically. However, the ground version can be used as a high risk high reward counterpoke against grounded attacks due to the upward evasion."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/86/Hp_tidus_quick_a.jpeg",
+              "damage": "1 x 4, 3 (+7)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Stick & Move (ground) [Combo] All-out flurry of attacks.",
+              "name": "Quick Hit A",
+              "notes": "An aerial combo that can HP Wall Rush. Quick Hit is Tidus' only HP link in Dissidia 012, which is exclusive to all of his dodge braveries. Tidus' HP attacks stay out for a good moment whenever they hit and Quick Hit deviates from this exception slightly; He does not have to connect with this move to transition to the full animation.\nAs such, Assist Change leaves Tidus vulnerable to counter attacks. Characters with good air-to-ground attacks typically pose the biggest threat here, but Quick Hit's nature as an HP link has one benefit - When used outside of combos, Tidus does not commit to spending an assist bar to get this move. That means if the situation allows and the player wills it, assist can be utilised to interrupt punish attempts or even trade (e.g. against Squall's Aerial Circle). Also worth noting in this context, the last strike of Quick Hit has a decent amount of active frames. Players looking to whiff punish with a melee priority HP attack can clash if they pull the trigger early.\nWith Aerith, it is possible to cancel Quick Hit's knockback with precise timing and follow up without wall rush. This obviously forgoes additional damage that comes from wall rushes, but it is a good alternative in large stages where walls are not immediately available."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/86/Hp_tidus_quick_a.jpeg",
+              "damage": "1 x 4, 3 (+7)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Dart & Weave (ground)[Combo] All-out flurry of attacks.",
+              "name": "Quick Hit B",
+              "notes": "Quick Hit from Dart & Weave. Same as other Quick Hits."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/86/Hp_tidus_quick_a.jpeg",
+              "damage": "1 x 4, 3 (+7)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Cut & Run (ground) [Combo] All-out flurry of attacks.",
+              "name": "Quick Hit C",
+              "notes": "Quick Hit from Cut & Run. Same as other Quick Hits."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": "All versions of Quick Hit share the same attack data.",
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/94/Hp_tidus_jecht_shot.jpeg",
+              "damage": "5 or 10 (moogle), 10 (15 / 20)",
+              "startup": "61F",
+              "type": "Physical",
+              "priority": "Ranged High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Powerful triple kick. Long opening, but great range.",
+              "name": "Jecht Shot",
+              "context": "About Moogle: 10 % chance of getting a Moogle ball on any of the three shots. If Moogle appears on the first kick, the damage multiplier becomes 10 instead of 5. The rest are purely audiovisual changes.",
+              "notes": "Three blitzball shots with considerable wall rush knockback. The startup is too slow to punish simultaneous blocks and dodges or hit them before they can dodge again. Even so, this is his strongest HP in terms of base damage, wall rush potential and safety against LV2 Assist Change on hit. This safety comes from a few factors; Both Aerith's assist and Jecht Shot are Ranged priority which don't stagger Tidus when blocked with LV2 Assist Change. Jecht Shot also has enough reach to connect from a dodge's distance and the vertical tracking is adequate for the job.\nOn hit, the followup shots have extended range and tracking, easily extending twice as far as the first shot. After escaping with Assist Change, these shots will come out even if they don't hit afterwards. They can also be dodged and there is a large gap between the second and third shots; They usually cannot catch the opponent before they are out of reach (or invincibility), but Feral Chaos has to be mindful of his large frame when lining up a punish against this move.\nWhat Tidus has to look out for is opponent's assist. Jecht Shot is slow enough to be assist punishable on reaction. And even when it hits, Tidus remains stationary for the first two shots, which is bad news if the opponent calls the assist right before taking damage. While Jecht Shot's tracking for the followup shots are great, they lose to high priority blocks, which is something Jecht is known for taking advantage of after escaping from this move. Mitigating damage taken from either situation usually involves spending assist gauge.\nDespite that, Jecht Shot works well enough. It is decent at punishing long recovery moves at a distance where other attacks won't reach (or be available). The huge knockback and verticality are great securing wall rush damage at the ceiling which his other HPs cannot do, and it increases the chances of winning an EX Core if Jecht Shot pushes the opponent away from it at all."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/0d/Hp_tidus_energy_a.jpeg",
+              "damage": "4, 1 x 6 (10)",
+              "startup": "53F",
+              "type": "Physical, Magical",
+              "priority": "Melee High (kick), Ranged High (projectiles)",
+              "exForce": "90",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Kick foe, then fire magic. Slow, effective vs. any height.",
+              "name": "Energy Rain (midair)",
+              "notes": "Aerial version, but basically identical with ground version. Both versions leave him airborne, fire homing projectiles, do the same amount of damage and generate the same amount of EX. It is still not his strongest HP and it shares a similiar weakness with Jecht Shot of losing to Jecht's high priority block after Assist Change."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/ef/Hp_tidus_slice.jpeg",
+              "damage": "2 x 5 (10)",
+              "startup": "53F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "90",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Rush forward with swimming movement. Vertically limited, but charges a long way.",
+              "name": "Slice & Dice",
+              "notes": "A forward charge followed by a series of slices all around the opponent. A handful of attributes are shared with Energy Rain, including assist combo starters, but Slice & Dice has utility of its own. For one, it has glide before the initial charge happens, which gives it more horizontal reach or evasion than Energy Rain. Generally speaking Assist Changes are a bit of a pain point for Tidus when it comes to safety on hit. However, not only does Slice & Dice have excellent post-hit tracking, it is also very likely to hit the assist during the escape period, enabling an early dodge cancel were he to get hit afterwards. The general cancel window on hit is not very late either, given the overall length.\nThe first hit has a fair amount of active frames on the sword and just like Sonic Buster and Full Slide, Slice & Dice's vertical tracking is greatly enhanced with assist calls. [10] That makes Slice & Dice good for occasionally clashing favorably with high priority attacks and punishing long-winded attacks in general. The positioning during glide can also help with reflecting higher priority projectiles.\nSlice & Dice is one of the better HP attacks for Tidus. Its damage is average, the utility, frame data and EX output are not overshadowed by his other air HPs. Well worth consideration for most, if not all matchups."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/63/Hp_tidus_quick_d.jpeg",
+              "damage": "1 x 4, 3 (+7)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Stick & Move (midair) [Combo] All-out flurry of attacks.",
+              "name": "Quick Hit D",
+              "notes": "Quick Hit from aerial Stick & Move. Same as other Quick Hits."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/63/Hp_tidus_quick_d.jpeg",
+              "damage": "1 x 4, 3 (+7)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Dart & Weave (midair) [Combo] All-out flurry of attacks.",
+              "name": "Quick Hit E",
+              "notes": "Quick Hit from aerial Dart & Weave. Same as other Quick Hits."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/63/Hp_tidus_quick_d.jpeg",
+              "damage": "1 x 4, 3 (+7)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Cut & Run (midair) [Combo] All-out flurry of attacks.",
+              "name": "Quick Hit F",
+              "notes": "Quick Hit from aerial Cut & Run. Same as other Quick Hits."
+            }
+          ]
+        }
+      },
+      "moveCount": 11,
+      "sources": [
+        "https://dissidia.wiki/Tidus_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Equipped Caladbolg!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nMirror Dash\nCaladbolg (ATK)\nCaladbolg (DODGE)"
+      ],
+      "tables": [],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Tidus_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [
+            "Main article: Tidus Combos (Solo)",
+            "Tidus' solo combos all revolve around his dodge attacks and dodge cancelling it into Hop Step. They're good for getting EX and starting assist combos, but the dodge attacks often work better as a defensive counterattack. As such, landing them in an online match can be difficult."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Punish starter\nDart & Weave > DC (up, down) > Hop Step\n53-54\n165\nVideo\nBase Damage (Breakdown): 33-34 > 20\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 75 > 90\nSomewhat practical solo combo, though there may not be many opportunities to land this. Timing is not very lenient and the dodge cancel arc may change depending on the camera angle. The idea here is to move up and connect Hop Step as soon as possible."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Tidus_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "|-|Hybrid (Damage)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10299"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "917"
+            ],
+            [
+              "ATK",
+              "181"
+            ],
+            [
+              "DEF",
+              "182"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x8.2"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Aerith"
+            ],
+            [
+              "Weapon <img></img>",
+              "World Champion"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Dirk <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Headband"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Vest"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Large Gap in HP"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Aerial"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> After 30 Seconds"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Opponent Summon Unused"
+            ],
+            [
+              "Summon <img></img>",
+              "Scarmiglione"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "<img></img> Hop Step",
+              "<img></img> Full Slide"
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "",
+              "↑+<img></img> Hop Step"
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "",
+              "↓+<img></img> Cut & Run (midair)"
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "",
+              "<img></img> Branch: Quick Hit F"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "",
+              "<img></img> Slice & Dice"
+            ],
+            [
+              "",
+              "↑+<img></img> Energy Rain"
+            ],
+            [
+              "",
+              "↓+<img></img> Jecht Shot"
+            ]
+          ]
+        }
+      ],
+      "subs": [
+        {
+          "title": "Basic Abilities",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Actions"
+                ],
+                [
+                  "Ground Evasion"
+                ],
+                [
+                  "Midair Evasion"
+                ],
+                [
+                  "Ground Block"
+                ],
+                [
+                  "Midair Block"
+                ],
+                [
+                  "Aerial Recovery"
+                ],
+                [
+                  "Recovery Attack"
+                ],
+                [
+                  "Controlled Recovery"
+                ],
+                [
+                  "Wall Jump"
+                ],
+                [
+                  "Free Air Dash"
+                ],
+                [
+                  "Reverse Ground Dash"
+                ],
+                [
+                  "Multi Air Slide"
+                ],
+                [
+                  "Free Air Dash Boost"
+                ],
+                [
+                  "Assist Gauge Up Dash"
+                ],
+                [
+                  "Speed Boost++"
+                ],
+                [
+                  "Jump Boost+"
+                ],
+                [
+                  "Jump Times Boost++"
+                ],
+                [
+                  "Ground Evasion Boost"
+                ],
+                [
+                  "Midair Evasion Boost"
+                ],
+                [
+                  "Evasion Boost"
+                ],
+                [
+                  "Descent Speed Boost"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Support"
+                ],
+                [
+                  "Always Target Indicator"
+                ],
+                [
+                  "EX Core Lock On"
+                ],
+                [
+                  "Assist Lock On"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Extra"
+                ],
+                [
+                  "Precision Jump"
+                ],
+                [
+                  "Precision Evasion"
+                ],
+                [
+                  "Sneak Attack"
+                ],
+                [
+                  "Disable Counterattack"
+                ],
+                [
+                  "EXP to HP"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "CP"
+                ],
+                [
+                  "420 / 450"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Basic Abilities"
+                ],
+                [
+                  "Actions",
+                  "Support",
+                  "Extra"
+                ],
+                [
+                  "Ground Evasion",
+                  "Always Target Indicator",
+                  "Precision Jump"
+                ],
+                [
+                  "Midair Evasion",
+                  "EX Core Lock On",
+                  "Precision Evasion"
+                ],
+                [
+                  "Ground Block",
+                  "Assist Lock On",
+                  "Sneak Attack"
+                ],
+                [
+                  "Midair Block",
+                  "Disable Counterattack"
+                ],
+                [
+                  "Aerial Recovery",
+                  "EXP to HP"
+                ],
+                [
+                  "Recovery Attack"
+                ],
+                [
+                  "Controlled Recovery"
+                ],
+                [
+                  "Wall Jump"
+                ],
+                [
+                  "Free Air Dash"
+                ],
+                [
+                  "Reverse Ground Dash"
+                ],
+                [
+                  "Multi Air Slide"
+                ],
+                [
+                  "Free Air Dash Boost"
+                ],
+                [
+                  "Assist Gauge Up Dash"
+                ],
+                [
+                  "Speed Boost++"
+                ],
+                [
+                  "Jump Boost+"
+                ],
+                [
+                  "Jump Times Boost++"
+                ],
+                [
+                  "Ground Evasion Boost"
+                ],
+                [
+                  "Midair Evasion Boost"
+                ],
+                [
+                  "Evasion Boost"
+                ],
+                [
+                  "Descent Speed Boost"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Build Overview",
+          "text": [
+            "A general purpose damage build. The high maximum booster multiplier provides consistent value for majority of the match. Reverse Ground Dash is an effective way to defend and build assist gauge at the same time for Tidus, but might take a moment to get used to. Lufenian Dirk requires doing the CP equip glitch with Thief's Gear extra ability. Be sure to take advantage of Tidus' fast running speed, multiple air jumps and Sneak Attack critical hits."
+          ],
+          "tables": []
+        },
+        {
+          "title": "CP Allocation",
+          "text": [
+            "30 CP is available for two more grounded bravery attacks, one ground dodge bravery + Quick Hit or extra abilities. Any abilities that exceed 30CP such as extra ability Riposte will require raising the maximum CP via Hero's Essence special accessory <img></img>."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Substitutes",
+          "text": [],
+          "tables": [
+            {
+              "caption": "Substitutes",
+              "rows": [
+                [
+                  "Equipment / Ability",
+                  "Substitute",
+                  "Notes"
+                ],
+                [
+                  "After 30 Seconds <img></img>",
+                  "BRV > Base Value <img></img> Battle Hammer <img></img> Winged Boots <img></img>",
+                  "Bravery damage increase. Alternatively, can be used for assist gauge depletion or banish trap bravery reduction."
+                ],
+                [
+                  "Dismay Shock <img></img> After 30 Seconds <img></img>",
+                  "BRV > Base Value <img></img> Opponent Empty EX Gauge <img></img>",
+                  "Against opponents who use Side by Side <img></img>, this is an even bigger bravery damage increase."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Attacks",
+          "text": [
+            "Tidus' core loadout is somewhat compact and aerial focused, which he then expands appropriately with dodge attacks and ground attacks."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Staple",
+          "text": [
+            "These attacks are recommended regardless of matchup, stage or player preference.",
+            "Hop Step: Key poke, punishment (dodge, block, whiff).",
+            "Full Slide: Midair conversions with Aerith assist, primary punisher move after a successful blodge and occasionally used as a dodge punisher with Aerith.",
+            "Slice & Dice: One of the safer attacks against LV1 Assist Change, can setup clashes or mid range punishes with Aerith assist.",
+            "Jecht Shot: Avoids stagger against LV2 Assist Change, usually an assist combo ender with high wall rush potential."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Hop Step",
+                  "Hop Step"
+                ],
+                [
+                  "Full Slide"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "--",
+                  "Slice & Dice"
+                ],
+                [
+                  "Jecht Shot"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Flexible",
+          "text": [
+            "These attacks are great to have, but can be swapped or removed depending on matchup, stage or player preference.",
+            "Tidus has a handful of useful attacks for situational use, particularly on the ground. Cut & Run is one of Tidus' more consistent dodge attacks, but other dodge attacks work well in specific matchups. Here are some recommendations:",
+            "Stick & Move: Firion, Laguna, Terra, Ultimecia and The Emperor.",
+            "Dart & Weave: Sephiroth",
+            "Cut & Run: Other characters.",
+            "Sonic Buster: A mixup for Sphere Shot and Reverse Ground Dash (when used with spot dashes), combos into Aerith.",
+            "Sphere Shot: Poke through The Emperor's traps and contest blocks and slower attacks from a dodge's distance.",
+            "[Dodge Attack], Quick Hit: As per matchup recommendations. If you equip a dodge attack, it is also recommended to equip Quick Hit for solo HP damage.",
+            "Energy Rain: Same speed as Slice & Dice, but with slight upward movement on startup. If the opponent doesn't stagger the initial kick with LV2 Assist Change, this can be harder to punish afterwards."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Sonic Buster",
+                  "Cut & Run"
+                ],
+                [
+                  "Sphere Shot",
+                  "Stick & Move"
+                ],
+                [
+                  "Stick & Move"
+                ],
+                [
+                  "Dart & Weave"
+                ],
+                [
+                  "Cut & Run"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Energy Rain",
+                  "Energy Rain"
+                ],
+                [
+                  "Quick Hit (from dodge attack)",
+                  "Quick Hit (from dodge attack)"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Avoid",
+          "text": [
+            "Generally not recommended due to being outclassed by other attacks or having little to no distinct utility.",
+            "Wither Shot: Low priority, low threat, low reward on hit and requires a different assist from Aerith for more substantial reward.",
+            "Spiral Cut: Tidus is stuck on the ground in a long animation with disproportionate risk / reward.",
+            "|-|Bravery Boost on Dodge=",
+            "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "--",
+                  "Wither Shot"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Spiral Cut",
+                  "--"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Stats"
+                ],
+                [
+                  "HP",
+                  "9972"
+                ],
+                [
+                  "CP",
+                  "450"
+                ],
+                [
+                  "BRV",
+                  "917"
+                ],
+                [
+                  "ATK",
+                  "180"
+                ],
+                [
+                  "DEF",
+                  "184"
+                ],
+                [
+                  "LUK",
+                  "60"
+                ],
+                [
+                  "Max Booster",
+                  "x13.9"
+                ]
+              ]
+            },
+            {
+              "caption": "Special Effect: Adamant Chains",
+              "rows": [
+                [
+                  "Equipment"
+                ],
+                [
+                  "Assist",
+                  "Aerith"
+                ],
+                [
+                  "Weapon <img></img>",
+                  "World Champion"
+                ],
+                [
+                  "Hand <img></img>",
+                  "Adamant Shield"
+                ],
+                [
+                  "Head <img></img>",
+                  "Adamant Helm"
+                ],
+                [
+                  "Body <img></img>",
+                  "Adamant Vest"
+                ],
+                [
+                  "Accessory 1",
+                  "<img></img> Zephyr Cloak"
+                ],
+                [
+                  "Accessory 2",
+                  "<img></img> BRV > Base Value"
+                ],
+                [
+                  "Accessory 3",
+                  "<img></img> Large Gap in BRV"
+                ],
+                [
+                  "Accessory 4",
+                  "<img></img> Summon Unused"
+                ],
+                [
+                  "Accessory 5",
+                  "<img></img> Pre-EX Mode"
+                ],
+                [
+                  "Accessory 6",
+                  "<img></img> Pre-EX Revenge"
+                ],
+                [
+                  "Accessory 7",
+                  "<img></img> Aerial"
+                ],
+                [
+                  "Accessory 8",
+                  "<img></img> After 30 Seconds"
+                ],
+                [
+                  "Accessory 9",
+                  "<img></img> Opponent Empty EX Gauge"
+                ],
+                [
+                  "Accessory 10",
+                  "<img></img> Opponent Summon Unused"
+                ],
+                [
+                  "Summon <img></img>",
+                  "Rubicante"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Hop Step",
+                  "Full Slide"
+                ],
+                [
+                  "Sphere Shot",
+                  "Hop Step"
+                ],
+                [
+                  "Stick & Move (midair)"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "--",
+                  "Slice & Dice"
+                ],
+                [
+                  "Jecht Shot"
+                ],
+                [
+                  "Quick Hit E (from Stick & Move)"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Basic Abilities"
+                ],
+                [
+                  "Actions",
+                  "Support",
+                  "Extra"
+                ],
+                [
+                  "Ground Evasion",
+                  "Always Target Indicator",
+                  "Precision Jump"
+                ],
+                [
+                  "Midair Evasion",
+                  "EX Core Lock On",
+                  "Precision Evasion"
+                ],
+                [
+                  "Ground Block",
+                  "Assist Lock On",
+                  "Sneak Attack"
+                ],
+                [
+                  "Midair Block",
+                  "Disable Counterattack"
+                ],
+                [
+                  "Aerial Recovery",
+                  "EXP to HP"
+                ],
+                [
+                  "Recovery Attack"
+                ],
+                [
+                  "Controlled Recovery"
+                ],
+                [
+                  "Wall Jump"
+                ],
+                [
+                  "Free Air Dash"
+                ],
+                [
+                  "Reverse Ground Dash"
+                ],
+                [
+                  "Multi Air Slide"
+                ],
+                [
+                  "Free Air Dash Boost"
+                ],
+                [
+                  "Assist Gauge Up Dash"
+                ],
+                [
+                  "Jump Boost+"
+                ],
+                [
+                  "Jump Times Boost++"
+                ],
+                [
+                  "Ground Evasion Boost"
+                ],
+                [
+                  "Midair Evasion Boost"
+                ],
+                [
+                  "Evasion Boost"
+                ],
+                [
+                  "Descent Speed Boost"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Build Overview",
+          "text": [
+            "Dedicated bravery boost on dodge, this is recommended against The Emperor. The idea with this build is to dodge through projectiles (and close range attacks) and then eventually land an HP with Aerith assist (Holy or trading favorably otherwise with Seal Evil or Planet Protector) for a decisive one-hit kill. This build assumes the opponent utilises Side by Side <img></img>, which provides a consistent 1.3x booster in Opponent Empty EX Gauge. If Aerial booster is not active, max booster value is x9.3.",
+            "Sphere Shot is equipped to disrupt Emperor's actions inside traps (usually Thunder Crest).",
+            "A hybrid variant of this build adjusts accessories for raw damage and EX depletion."
+          ],
+          "tables": []
+        },
+        {
+          "title": "CP Allocation",
+          "text": [
+            "60 CP is available extra abilities or a grounded dodge attack. Extra abilities Achy+, Counterattack and Back to the Wall are decent, but may not yield much return on investment as this build relies on Tidus avoiding damage for bravery. Master Guardsman for +1000 max HP increases survivability for 35 CP."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Substitutes",
+          "text": [],
+          "tables": [
+            {
+              "caption": "Substitutes",
+              "rows": [
+                [
+                  "Equipment",
+                  "Replacement",
+                  "Notes"
+                ],
+                [
+                  "Opponent Empty EX Gauge <img></img>",
+                  "Large Gap in HP <img></img>",
+                  "If the player believes the opponent will not lock their EX gauge with Side by Side, this is a good alternative. A powerful 1.5x booster for when either player is leading by at least 3000 HP. Good if Tidus is falling behind or getting an early lead."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Attacks",
+          "text": [
+            "Tidus' core loadout is very similiar to the hybrid one, with the addition of Sphere Shot. If he is not fighting The Emperor or Ultimecia, it is still recommended to adjust appropriately with other attacks."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Staple",
+          "text": [
+            "These attacks are recommended regardless of matchup, stage or player preference.",
+            "Hop Step: Key poke, punishment (dodge, block, whiff). Can avoid Dreary Cell on hit, but assist followups are inconsistent.",
+            "Full Slide: Midair conversions with Aerith assist, primary punisher move after a successful blodge and occasionally used as a dodge punisher with Aerith.",
+            "Slice & Dice: One of the safer attacks against LV1 Assist Change, can setup clashes or mid range punishes with Aerith assist. Also reflects Emperor's Flares.",
+            "Jecht Shot: A hard callout tool. Avoids stagger against LV2 Assist Change, usually an assist combo ender with high wall rush potential."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Hop Step",
+                  "Hop Step"
+                ],
+                [
+                  "Sphere Shot",
+                  "Full Slide"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "--",
+                  "Slice & Dice"
+                ],
+                [
+                  "Jecht Shot"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Flexible",
+          "text": [
+            "These attacks are great to have, but can be swapped or removed depending on matchup, stage or player preference.",
+            "Tidus doesn't have as much flexibility in the context of the mage matchups, but Sephiroth may warrant Dart & Weave instead.",
+            "Sonic Buster: A mixup for Sphere Shot and Reverse Ground Dash (when used with spot dashes), combos into Aerith.",
+            "Sphere Shot: Poke through The Emperor's traps and contest blocks and slower attacks from a dodge's distance.",
+            "[Dodge Attack], Quick Hit: As per matchup recommendations. If you equip a dodge attack, it is also recommended to equip Quick Hit for solo HP damage. Note that for Dart & Weave, Tidus can do the dodge cancel Hop Step combo and call an assist instead. If D&W is equipped on the ground, equipping Quick Hit for it is not a necessity.",
+            "Energy Rain: Same speed as Slice & Dice, shorter range overall. Can be used to reflect Emperor's Flares. If the opponent doesn't stagger the initial kick with LV2 Assist Change, this can be harder to punish afterwards."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Sonic Buster",
+                  "Dart & Weave"
+                ],
+                [
+                  "Dart & Weave"
+                ],
+                [
+                  "Cut & Run"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Energy Rain",
+                  "Energy Rain"
+                ],
+                [
+                  "Quick Hit (from dodge attack)",
+                  "Quick Hit (from dodge attack)"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Avoid",
+          "text": [
+            "Generally not recommended due to being outclassed by other attacks or having little to no distinct utility.",
+            "Wither Shot: Low priority, low threat, low reward on hit and requires a different assist from Aerith for more substantial reward.",
+            "Spiral Cut: Tidus is stuck on the ground in a long animation with disproportionate risk / reward. Against The Emperor he is more likely to flip his way into Thunder Crest with this move, which is ill-advised. And against Ultimecia or Sephiroth, this might not connect at all when they're airborne.",
+            "|-|Bravery Boost on Dodge (Hybrid)=",
+            "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "--",
+                  "Wither Shot"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Spiral Cut",
+                  "--"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Stats"
+                ],
+                [
+                  "HP",
+                  "9972"
+                ],
+                [
+                  "CP",
+                  "450"
+                ],
+                [
+                  "BRV",
+                  "917"
+                ],
+                [
+                  "ATK",
+                  "180"
+                ],
+                [
+                  "DEF",
+                  "184"
+                ],
+                [
+                  "LUK",
+                  "60"
+                ],
+                [
+                  "Max Booster",
+                  "x8.9"
+                ]
+              ]
+            },
+            {
+              "caption": "Special Effect: Adamant Chains",
+              "rows": [
+                [
+                  "Equipment"
+                ],
+                [
+                  "Assist",
+                  "Aerith"
+                ],
+                [
+                  "Weapon <img></img>",
+                  "World Champion"
+                ],
+                [
+                  "Hand <img></img>",
+                  "Adamant Shield"
+                ],
+                [
+                  "Head <img></img>",
+                  "Adamant Helm"
+                ],
+                [
+                  "Body <img></img>",
+                  "Adamant Vest"
+                ],
+                [
+                  "Accessory 1",
+                  "<img></img> Muscle Belt"
+                ],
+                [
+                  "Accessory 2",
+                  "<img></img> Zephyr Cloak"
+                ],
+                [
+                  "Accessory 3",
+                  "<img></img> Dismay Shock"
+                ],
+                [
+                  "Accessory 4",
+                  "<img></img> Large Gap in HP"
+                ],
+                [
+                  "Accessory 5",
+                  "<img></img> BRV > Base Value"
+                ],
+                [
+                  "Accessory 6",
+                  "<img></img> Summon Unused"
+                ],
+                [
+                  "Accessory 7",
+                  "<img></img> Pre-EX Mode"
+                ],
+                [
+                  "Accessory 8",
+                  "<img></img> Pre-EX Revenge"
+                ],
+                [
+                  "Accessory 9",
+                  "<img></img> Aerial"
+                ],
+                [
+                  "Accessory 10",
+                  "<img></img> Opponent Summon Unused"
+                ],
+                [
+                  "Summon <img></img>",
+                  "Rubicante"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Hop Step",
+                  "Full Slide"
+                ],
+                [
+                  "Hop Step"
+                ],
+                [
+                  "Dart & Weave (midair)"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "--",
+                  "Slice & Dice"
+                ],
+                [
+                  "Jecht Shot"
+                ],
+                [
+                  "Quick Hit E (from Dart & Weave)"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Basic Abilities"
+                ],
+                [
+                  "Actions",
+                  "Support",
+                  "Extra"
+                ],
+                [
+                  "Ground Evasion",
+                  "Always Target Indicator",
+                  "Precision Jump"
+                ],
+                [
+                  "Midair Evasion",
+                  "EX Core Lock On",
+                  "Precision Evasion"
+                ],
+                [
+                  "Ground Block",
+                  "Assist Lock On",
+                  "Sneak Attack"
+                ],
+                [
+                  "Midair Block",
+                  "Disable Counterattack"
+                ],
+                [
+                  "Aerial Recovery",
+                  "EXP to HP"
+                ],
+                [
+                  "Recovery Attack"
+                ],
+                [
+                  "Controlled Recovery"
+                ],
+                [
+                  "Wall Jump"
+                ],
+                [
+                  "Free Air Dash"
+                ],
+                [
+                  "Reverse Ground Dash"
+                ],
+                [
+                  "Multi Air Slide"
+                ],
+                [
+                  "Free Air Dash Boost"
+                ],
+                [
+                  "Assist Gauge Up Dash"
+                ],
+                [
+                  "Jump Boost+"
+                ],
+                [
+                  "Jump Times Boost++"
+                ],
+                [
+                  "Ground Evasion Boost"
+                ],
+                [
+                  "Midair Evasion Boost"
+                ],
+                [
+                  "Evasion Boost"
+                ],
+                [
+                  "Descent Speed Boost"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Build Overview",
+          "text": [
+            "This is a slightly modified Bravery Boost on Dodge build. The bravery boost is lowered in exchange for higher physical damage and EX depletion. Against Sephiroth this can be a good alternative as this disincentivizes Shadow Flare use and subsequently create opportunities to close the gap and chip away at him directly.",
+            "Without Aerial, max booster value is x5.9. Without Large Gap in HP and Aerial, max booster value is x3.9. Both Sephiroth and Tidus can fight comfortably in the air though."
+          ],
+          "tables": []
+        },
+        {
+          "title": "CP Allocation",
+          "text": [
+            "75 CP is available extra abilities or a grounded dodge attack. Extra abilities Achy+, Counterattack and Back to the Wall are decent, but as this build generates bravery from successful dodges, your mileage may vary. Master Guardsman for +1000 max HP increases survivability for 35 CP and can be a serviceable, general purpose CP investment."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Substitutes",
+          "text": [],
+          "tables": [
+            {
+              "caption": "Substitutes",
+              "rows": [
+                [
+                  "Equipment",
+                  "Replacement",
+                  "Notes"
+                ],
+                [
+                  "Opponent Summon Unused <img></img>",
+                  "Battle Hammer <img></img>\nAfter 30 Seconds <img></img>",
+                  "If the player believes the opponent will not equip a summon, they can treat it as an expendable slot for another booster accessory, assist depletion or whatever else strikes their fancy."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Attacks",
+          "text": [
+            "Not much changes compared to the other builds. Hop Step, Full Slide and Slice & Dice are all present an accounted for as usual."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Staple",
+          "text": [
+            "These attacks are recommended regardless of matchup, stage or player preference.",
+            "Hop Step: Key poke, punishment (dodge, block, whiff).",
+            "Full Slide: Midair conversions with Aerith assist, primary punisher move after a successful blodge and occasionally used as a dodge punisher with Aerith.",
+            "Slice & Dice: One of the safer attacks against LV1 Assist Change, can setup clashes or mid range punishes with Aerith assist.",
+            "Jecht Shot: A hard callout tool. Avoids stagger against LV2 Assist Change, usually an assist combo ender with high wall rush potential."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Hop Step",
+                  "Hop Step"
+                ],
+                [
+                  "Full Slide"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "--",
+                  "Slice & Dice"
+                ],
+                [
+                  "Jecht Shot"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Flexible",
+          "text": [
+            "These attacks are great to have, but can be swapped or removed depending on matchup, stage or player preference.",
+            "Sphere Shot isn't a must-have. But if Sephiroth is pursuing a reverse ground dashing Tidus, it can be a useful mixup tool or even as a hard-read for staggering his whiffed Sudden Cruelty from a distance.",
+            "Sonic Buster: A mixup for Sphere Shot and Reverse Ground Dash (when used with spot dashes), combos into Aerith.",
+            "Sphere Shot: Contest blocks and slower attacks from a dodge's distance for a stagger or some bravery damage.",
+            "[Dodge Attack], Quick Hit: As per matchup recommendations. If you equip a dodge attack, it is also recommended to equip Quick Hit for solo HP damage. Note that for Dart & Weave, Tidus can do the dodge cancel Hop Step combo and call an assist instead. If D&W is equipped on the ground, equipping Quick Hit for it is not a necessity.",
+            "Energy Rain: Same speed as Slice & Dice, shorter range overall. If the opponent doesn't stagger the initial kick with LV2 Assist Change, this can be harder to punish afterwards."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Sphere Shot",
+                  "Cut & Run"
+                ],
+                [
+                  "Sonic Buster"
+                ],
+                [
+                  "Dart & Weave"
+                ],
+                [
+                  "Cut & Run"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Energy Rain",
+                  "Energy Rain"
+                ],
+                [
+                  "Quick Hit (from dodge attack)",
+                  "Quick Hit (from dodge attack)"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Avoid",
+          "text": [
+            "Generally not recommended due to being outclassed by other attacks or having little to no distinct utility.",
+            "Wither Shot: Low priority, low threat, low reward on hit and requires a different assist from Aerith for more substantial reward.",
+            "Spiral Cut: Tidus is stuck on the ground in a long animation with disproportionate risk / reward. Once again, not recommended."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "--",
+                  "Wither Shot"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "Spiral Cut",
+                  "--"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Tidus_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Tidus' Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Sonic Buster",
+                  "25F",
+                  "Ground",
+                  "Opponent",
+                  "2 x 5, 6, 8, 16",
+                  "Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Hop Step",
+                  "11F",
+                  "Air",
+                  "Opponent",
+                  "7, 13 (20)",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Spiral Cut",
+                  "39F",
+                  "Ground",
+                  "Opponent",
+                  "1 x 4, 6 (10)",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Slice and Dice",
+                  "53F",
+                  "Air",
+                  "Opponent",
+                  "2 x 5 (10)",
+                  "Chase"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Tidus Assist Overview",
+          "text": [
+            "Tidus is one of the established viable assists in competitive play. He is not a universally effective assist like Kuja, but what he brings to the table is good in its own right. Bravery assists provide a combination of easier whiff punishes in terms of frame data and extended ground combos, while his air HP can be used in chase sequences to set up inescapable damage. Ground HP can harass for a good few seconds if the opponent doesn't jump out of the way, but your mileage may vary.",
+            "Tidus assist excels in many important areas, but his damage potential pales in comparison to other competitive assists. He also doesn't have Ranged priority moves, but that's a common detriment for assists. That being said, Assist Chase is surprisingly rare among air BRV assists, which helps keep Tidus assist afloat in the competition. He is at his best when he gets to do air BRV often or utilize both braveries.",
+            "Further reading: Tidus overview in assist tier list"
+          ],
+          "tables": []
+        },
+        {
+          "title": "Sonic Buster",
+          "text": [
+            "Sonic Buster is slow not unlike Kuja's Snatch Blow, but it is one of the two grounded BRV assists in the game that can end with a ground wall rush. That's great news for Jecht, but also anyone else with an elaborate combo game like Cecil, Cloud and Squall. Its tracking and holding potential is weaker compared to Kuja though. The first two charges lift on hit and the knockback from the finishing kick is of good distance and high speed. The lack of tracking isn't a huge issue, but filler hits aren't feasible like with Kuja and Sephiroth assists. Instead, all the additional damage is often back-loaded to the wall rush. That is where the character's combo potential determines the mileage they'll get out of this move. Positioning with dashes and Multi Air Slide may be necessary to make the most of it."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Hop Step",
+          "text": [
+            "Hop Step is a great move all on its own and the same is true for the assist. It retains the lightning fast startup which is great for whiff punishes in general. The movement and overall short duration leave very little time to Assist Change and lock him. Hop Step also provides Assist Chase on hit for reliable follow-ups. However, the bravery damage is pretty low and the time opponent spends in hit stun is brief. This means that interim hits are not possible during Hop Step either. Shorter hit stun also means Tidus assist won't always trade favorably if both players get hit by assists. Follow-ups may not be possible or worse, the player character gets combo'd anyway.",
+            "Another detail worth mentioning is Hop Step's range - When Tidus performs Hop Step, he does not exert much forward movement during startup. The hitbox is not large either. Kuja, Sephiroth and Jecht assists all exhibit these qualities to some extent which give them an advantage in conversions and whiff punishes. So when it comes to timing Tidus assist, calling him slightly later than usual can make a difference, as that lets him spawn closer to the opponent. The reach is still shorter than the aforementioned assists though. At the end of the day, Hop Step is a reliable assist move, though it is not necessarily optimal for a lot of characters."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Spiral Cut",
+          "text": [
+            "Spiral Cut is a grounded homing combo attack that ends with Assist Chase. Tidus is stuck on the ground the whole time. This is not usually worth the assist gauge, but players who are willing to bet on a misjudged reaction or capitalise on a dodge may find success at times."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Slice and Dice",
+          "text": [
+            "Slice and Dice is significantly slower to start than Spiral Cut and does not stay on the field nearly as long (on whiff), but it is not entirely without merit either. Slice & Dice has more tracking than Hop Step to help with interruptions and charge has enough reach to catch opponents during Chase. As long as the preceding attack does not have obscenely high knockback, it is possible to initiate Chase, perform an HP attack and have Tidus do the rest if the opponent dodged the first HP. On the off chance that both HPs connect and send the opponent flying, Slice & Dice homes in on the opponent very aggressively for long distances. And because this also yields Assist Chase, it pretty much guarantees a followup of some sort."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "|-|Aerith=\nAerith is one of the strongest assists in the game and provides great synergy for Tidus. Reliable wall-less combos without omitting finishers and the ability to create favorable clash interactions are great assets to him. Aerith's Seal Evil BRV assist is most commonly used here, especially off of Hop Step chase setups which let him collect all EX Force on the field. This is good news for EX builds and does not necessitate Tenacious Attacker <img></img> in them.",
+            "Seal Evil is Ranged priority, which means Tidus can initiate an assist combo consistently even when the opponent has two assist bars. The followups may not be as safe in these situations though, but that's not Aerith's fault. Majority of Tidus' attacks leave him airborne, which is a key requirement for even using Seal Evil, and this is a big reason why Aerith works so well here - Most of Tidus' key pokes, dodge punish tools and even most HPs can be augmented or followed up with Seal Evil. Full Slide conversions and clashes, post-HP followups, Quick Hit knockback cancels and of course, the enhanced tracking during certain attacks enable punishes from longer distance. All of this come together really nicely for Tidus and the utility from Aerith's other moves are still good to have.",
+            "The weaknesses aren't exclusive to Tidus-Aerith synergy for the most part, but they're worth mentioning. Aerith cannot deplete the opponent's EX gauge without Holy HP, which limits Tidus' EX depletion capability to build investments and high cost assist meter usage. Seal Evil's long startup compared to other assists hurts long distance whiff punishes. Tidus also loses a combo starter in Sphere Shot and Wither Shot essentially becomes a commital pre-hit assist combo starter. Tidus can spend both assist bars to extend combos, but the important thing to note is that all damage usually comes from Tidus himself. That means the matchup, Tidus' build and positioning alike can all influence damage output a good amount.",
+            "Overall, Aerith is a great assist for Tidus. A tried and true combination in competitive play that works consistently in most areas Tidus has to play around.",
+            "|-|Kuja=\nKuja assist is a staple pick in competitive Dissidia 012, with consistent followups, fast air bravery, good holding potential on the ground and just overall solid bravery damage and meter depletion on hit. Compared to Aerith, Kuja can whiff punish more reliably with Strike Energy BRV while still enabling followups for Tidus' HPs and dodge attacks. The long hit stun also helps him in situations where assists trade blows on player characters. The upward knockback on Strike Energy also helps facilitate ceiling wall rushes with Jecht Shot. And if Sphere Shot manages to stagger the opponent, Kuja can be called for an assist combo. This is easier to do on reaction if the opponent is airborne, as Kuja's Snatch Blow is significantly slower to come out. EX Revenge checkmates can also be circumvented this way, but only if opponent commits to blocking or whiffing at a bad time. It goes without saying that wall rush conversions are also practical.",
+            "Hot Step conversions become more difficult to perform on average, as Kuja must be called during the first hit instead of completing the attack first. This is true of most assists in the game, but it does mean that Tidus players have to be much more vigilant about timing the assist and finishing Hop Step. With walls, Tidus can push the opponent into them, call Kuja and initiate Chase to collect EX Force and follow up similiar to Aerith. But this is usually only possible when near a wall. Outside of that, Kuja makes it more difficult to grab all the EX effectively from Hop Step without increased EX intake range and Tenacious Attacker <img></img>.",
+            "When using assist to boost Tidus' vertical tracking during certain attacks, Kuja will spawn near the opponent and attempt to attack with a flurry of blows. Connecting Stick & Move, Cut & Run or Slice & Dice in this way will usually cause Kuja to whiff (before or on hit), but Full Slide -a staple air bravery- can still work favorably. And if Tidus clashes, Kuja is in good position to follow up. The lack of ranged priority on Kuja's bravery assists means he is vulnerable to LV2 Assist Change staggers, but if the player is willing to spend both assist bars, Kuja's Force Symphony assist can help brute force HP damage during Hop Step chase sequences.",
+            "|-|Jecht=",
+            "Jecht assist has fast braveries on both ground and midair and provides ample time to line up another attack. However, since Tidus commonly starts assist combos with aerial assists, Jecht occupies a different niche from Kuja. Jecht Stream is of same startup as Kuja's Strike Energy, but wall rushes downwards instead of pushing upwards. This means Tidus will have more opportunities to tack on damage via combo fillers and apply grounded attacks, such as a dodge attack the player has only equipped for a ground input.",
+            "Jecht Rush can also pick up standing, staggered opponents after Sphere Shot on reaction. A wall rush with this move also lets Tidus set up a combo with a bit more flexibility. Unlike Kuja assist, Jecht has no ranged priority attacks at all and thus remains consistently vulnerable to Assist Changes, whether they stagger him or threaten hitting him after escaping from his combo.",
+            "|-|Onion Knight=\nOnion Knight assist works as an alternative to Kuja assist. Hop Step conversions that still Chase are possible, albeit the enders are weaker compared to Aerith assist. At the ceiling he offers more consistent filler hits for higher damage. The Comet HP assist occupies space for a period of time, which also works after going into chase from Hop Step. Its ranged priority naturally avoids LV2 Assist Change staggers, and it's true for Blizzard BRV assist as well. Tidus does not have many attacks that wall rush on the ground, namely Sonic Buster, chase attacks and Sphere Shot if the opponent does not air recover in time. So there may not be many opportunities to use Blizzard assist.",
+            "Onion Knight's braveries have slightly worse range than Kuja assist. Blizzard's range and shorter combo duration make assist combo confirms and whiff punishes a bit harder, and it cannot be used as a dodge punish. Much like Kuja's Strike Energy assist, Turbo-Hit is vulnerable to post-Assist Change punishes. Onion Knight aggressively pursues the opponent on hit, so when timed appropriately, Onion Knight is left much closer to the opponent for an Assist Lock.",
+            "Tidus can convert off of Turbo-Hit with Jecht Shot without walls, but this is lower damage than Kuja conversions without a wall rush and more difficult to do. The timing is strict, but the idea is to do Jecht Shot in the middle of Onion Knight's attacks and have him knockback cancel the 2nd shot."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Tidus_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": true,
+      "links": [
+        {
+          "text": "Sonic Buster increased tracking during assist.",
+          "url": "https://www.youtube.com/watch?v=KowbxKm8-DQ&t=140"
+        },
+        {
+          "text": "Tidus Sphere Shot stagger dodge cancel Hop Step example.",
+          "url": "https://www.youtube.com/watch?v=PApmGwJaK64"
+        },
+        {
+          "text": "Stick & Move disjoint through wall.",
+          "url": "https://www.youtube.com/watch?v=n7pLWp2p6D8"
+        },
+        {
+          "text": "Stick & Move return hit combo.",
+          "url": "https://www.youtube.com/watch?v=oDOs-TVaqYg&t=18"
+        },
+        {
+          "text": "Stick & Move vertical tracking during assist call.",
+          "url": "https://www.youtube.com/watch?v=KowbxKm8-DQ&t=101"
+        },
+        {
+          "text": "Cut & Run goes through projectiles.",
+          "url": "https://www.youtube.com/watch?v=cDI-tsnyJbM"
+        },
+        {
+          "text": "Full Slide increased tracking during assist.",
+          "url": "https://www.youtube.com/watch?v=KowbxKm8-DQ"
+        },
+        {
+          "text": "Wither Shot into Kuja assist.",
+          "url": "https://www.youtube.com/watch?v=MlkZGuX0J90"
+        },
+        {
+          "text": "https://www.youtube.com/watch?v=goSpmw1oY8U",
+          "url": "https://www.youtube.com/watch?v=goSpmw1oY8U"
+        },
+        {
+          "text": "https://www.youtube.com/watch?v=KowbxKm8-DQ&t=67",
+          "url": "https://www.youtube.com/watch?v=KowbxKm8-DQ&t=67"
+        }
+      ]
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Tidus_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Tidus_(Dissidia_012)",
+    "https://www.youtube.com/watch?v=KowbxKm8-DQ&t=140",
+    "https://www.youtube.com/watch?v=PApmGwJaK64",
+    "https://www.youtube.com/watch?v=n7pLWp2p6D8",
+    "https://www.youtube.com/watch?v=oDOs-TVaqYg&t=18",
+    "https://www.youtube.com/watch?v=KowbxKm8-DQ&t=101",
+    "https://www.youtube.com/watch?v=cDI-tsnyJbM",
+    "https://www.youtube.com/watch?v=KowbxKm8-DQ",
+    "https://www.youtube.com/watch?v=MlkZGuX0J90",
+    "https://www.youtube.com/watch?v=goSpmw1oY8U",
+    "https://www.youtube.com/watch?v=KowbxKm8-DQ&t=67"
+  ]
+}

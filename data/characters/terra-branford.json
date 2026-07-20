@@ -1,0 +1,842 @@
+{
+  "slug": "terra-branford",
+  "name": "Terra Branford",
+  "page": "Terra_Branford_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Terra_Branford_(Dissidia_012)",
+  "origin": "Final Fantasy VI",
+  "icon": "terra",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-terra.png",
+  "infobox": {
+    "Name": "Terra Branford (ティナ・ブランフォード)",
+    "Original game": "Final Fantasy VI",
+    "Base ATK (LV100)": "111 (High)",
+    "Base DEF (LV100)": "110 (Low)",
+    "Run Speed": "10.5 (Very Slow)",
+    "Dash Speed": "81 (Below Average)",
+    "Fall Speed": "85 (Average)",
+    "Fall Speed Ratio After Dodge": "43 (Slow)",
+    "Fastest BRV": "17F (Blizzard Combo)",
+    "Fastest HP": "43F (Tornado)",
+    "1-Hit HP": "Yes (Multiple)",
+    "HP Links": "Yes",
+    "Command Block": "No",
+    "Weapon": "Daggers, Instruments, Rods, Staves",
+    "Armor": "Bangles, Clothing, Hairpins, Hats,Headbands, Ribbons, Robes",
+    "Exclusive weapons": "Chain Flail, Morning Star, Maduin's Horn",
+    "Alignment": "Chaos (012) Cosmos (013)",
+    "Voice Actor (JP)": "Yukari Fukui",
+    "Voice Actor (ENG)": "Natalie Lander"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Terra is a defensive spell caster who fights with projectiles from longer distances.\nHer main strategy involves sniping with Thundara, charging Meltdown to harass opponents, and casting Holy Combo. If the opponent gets too close, Terra can poke |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        "with Blizzard Combo to keep them out. Terra is also an effective user of Reverse Free Air Dash, as it creates distance for using magic and fills Assist gauge more safely.",
+        "Terra can do HP damage in neutral |",
+        "The stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.",
+        "via Meltdown, HP links |",
+        "An HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.",
+        "or various hit glitch setups from her other moves. She benefits a lot from Side by Side and high base bravery builds as a result. Terra struggles to fill EX gauge, but her EX Mode is one of the strongest in the game; Chainspell duplicates all projectiles for stronger space control and damage output. Terra is also one of the few characters who can safely Empty Chase |",
+        "A chase sequence where the initiator does nothing.",
+        "anywhere without getting punished by Recovery Attacks, due to Thundara’s generous hit stun |",
+        "The period of time when a character cannot do an action after getting hit by an attack.",
+        ".",
+        "Terra has glaring weaknesses mostly due to her defense; The most notable issue is being weak against aggressive opponents. Most attacks are telegraphed, slow to come out and Ranged Low priority, which lose to Free Air Dash. Terra’s close-range poke Blizzard Combo is slower and less rewarding on average. Other options involve mixing up timing with Meltdown and blocks, which are also risky. Furthermore, Terra’s air dodges leave her stationary for longer than most characters, which make her vulnerable to attacks. Combined with below average mobility and low base DEF, Terra takes big risks to compete and suffers a lot if she fails.",
+        "Over the years Terra has been considered one of the weakest characters in the game. Her defense suffers against rushdown |",
+        "An offensive playstyle that focuses on getting close to the opponent and attacking them relentlessly.",
+        ", but getting momentum with assist can offset some of her shortcomings. Her long-range abilities make it easier to fight Ultimecia, who is challenging for many close-range characters. Terra presents an uphill battle for aspiring competitors, but provides a distinct play style that only few characters have."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Range – Terra can attack from long distances with Thundara, Meteor, Holy Combo and Meltdown. They complement each other and lead to assist combos on hit.\nDamage – Synergy with high base BRV builds and various hit glitch setups into Ultima allow Terra to do plenty of HP damage.\nEX Mode – One of the strongest EX Modes in the game. Chainspell duplicates projectiles, which occupy more space and further increase Terra’s damage output. Holy (Combo) also becomes much faster, which also helps with space control.\nSafe Empty Chase – Thundara is one of the few moves in the game that allow Chase without getting punished by Recovery Attacks anywhere. Effective for getting EX and denying opponent’s current position.",
+              "Defense – Terra can struggle to keep opponents away due to below average close-range moves and long-range moves that are slow and low priority. Air dodging is riskier due to slow fall speed and low defense stat increases bravery damage Terra takes.\nRisky Zoning – Terra relies on telegraphed projectiles that have long startup. They often lose to Free Air Dash, and leave Terra vulnerable to assist attacks as well.\nReversing momentum – By the same token, Terra has to take big risks with blocks and other moves to make comebacks.\nEX Generation – Most of her key moves produce little to no EX Force, which limits her EX intake to EX Cores and Fire on the ground."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Terra_Branford_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/51/Brv_terra_blizzard_combo_g.jpeg",
+              "damage": "4, 3, 3, 10 (20) / 4, 3, 3, 14, 2 x 3 (30)",
+              "startup": "17F",
+              "type": "Magical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Shoot ice shards. Change combo with analog stick.",
+              "name": "Blizzard Combo (ground)",
+              "notes": "This attack has an upward version. Base damage is the same. It can only wall rush on the side and not at the ceiling."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c6/Brv_terra_blizzard_combo_a_up.jpeg",
+              "damage": "4, 6, 10 (20) / 4, 6, 14, 2 x 3 (30)",
+              "startup": "17F",
+              "type": "Magical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "",
+              "cancels": "",
+              "assistGain": "",
+              "name": null
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/5d/Brv_terra_blizzara_g.jpeg",
+              "damage": "20, 5 x 3 (35)",
+              "startup": "27F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "30",
+              "effects": "Magic Block, Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Fire large ice block. On hit, add ice shard attack.",
+              "name": "Blizzara (ground)"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8e/Brv_terra_fire.jpeg",
+              "damage": "40",
+              "startup": "25F",
+              "type": "Magical",
+              "priority": "Ranged Low, Unblockable (explosion)",
+              "exForce": "60",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Shoot low fireballs that home in on foe and explode.",
+              "name": "Fire"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3a/Brv_terra_graviga.jpeg",
+              "damage": "2 x N, 40 (40+)",
+              "startup": "183F",
+              "type": "Magical",
+              "priority": "Unblockable",
+              "exForce": "each 6",
+              "effects": "Absorb, Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Drop gravity sphere. Can aim with the analog stick.",
+              "name": "Graviga"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/e3/Brv_terra_meteor.jpeg",
+              "damage": "each (15)",
+              "startup": "65F (3rd), 133F (7th)",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Rain down fire on foe. Powerful, not very accurate.",
+              "name": "Meteor",
+              "notes": "Contains 7 hits. The 3rd and 7th hits always spawn right above the opponent's head. Others spawn randomly."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Normal",
+                "EX Mode"
+              ],
+              "image": "https://dissidia.wiki/images/6/64/Brv_terra_blizzard_combo_a.jpeg",
+              "damage": [
+                "20 (4, 3, 3, 10) 20 (Upward. 4, 6, 10)",
+                "30 (4, 3, 3, 14, 2 x 3) 30 (Upward. 4, 6, 14, 2 x 3)"
+              ],
+              "startup": [
+                "17F",
+                "17F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low"
+              ],
+              "exForce": [
+                "30",
+                "30"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush (Side only)"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Shoot ice shards. Change combo with analog stick.",
+              "name": "Blizzard Combo (midair)",
+              "notes": "Press Circle <img></img> once for two follow-up hits. Aim the analog stick <img></img> up to send the opponent flying upwards.\nBlizzard Combo is a close-range poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nand one of Terra's most important moves. It's a fast close-range keepout |\nThe act of keeping the opponent at a distance from you. Keepout is synonymous with zoning, but it can also refer to close-range attacks that push opponents away to create distance for other strategies.\ntool with melee priority. Terra can use this defensively to whiff punish |\nHitting an opponent who missed (whiffed) their attack.\n, interrupt approaches and dashes. The first hit can combo into assists for HP damage. As such, Blizzard Combo represents a threat in close-range, where Terra is not usually at her strongest.\nBlizzard Combo has the fastest startup |\nThe time it takes before an attack can do damage.\nout of Terra's moves at 17 frames, so she won't always get blocked on reaction. The relatively short animation and dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nwindow makes Blizzard Combo decent for filling assist gauge on whiff |\nA missed attack that doesn't make any contact.\noccasionally. Terra needs to be wary of dodge punish attempts that may follow, however.\nThis is an important move for Terra, but it's not without flaws. Blizzard Combo may be fast, but it's on the slower end compared to similar pokes like Cloud's Double Cut (13F) or Squall's Beat Fang (15F). Terra can only combo into assists with the first hit which has a short window, or wall rush which isn't consistent in most positions. The base damage for first hit is one of the lowest in the game, which limits Blizzard Combo's damage potential. This is a reliable move for generating EX Force, but 30 EX is pretty low for a poke. The knockback is relatively weak for creating space, which is what Terra usually aims for. Furthermore, this is Terra's only melee low priority move. That means Terra has to take risks with delayed timing and HPs, or risk getting staggered from blocks."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f7/Brv_terra_blizzara_a.jpeg",
+              "damage": "20, 5 x 3 (35)",
+              "startup": "27F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "30",
+              "effects": "Magic Block, Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Fire large ice block. On hit, add ice shard attack.",
+              "name": "Blizzara (midair)"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/0d/Brv_terra_holy_combo_1.jpeg",
+              "damage": "each (6), 7 x 4 (34+) / 7 x 9 (69+)",
+              "startup": "37F / 13F (EX mode)",
+              "type": "Magical",
+              "priority": "Ranged Low (Holy), Mid (Flare)",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shoot light projectiles. If Holy hits, follow with Flare.",
+              "name": "Holy Combo"
+            },
+            {
+              "variants": null,
+              "damage": "each (4)",
+              "startup": "19F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "each 9",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Surround foe with contracting ring of lightning.",
+              "name": "Thundara"
+            },
+            {
+              "variants": null,
+              "damage": "each (6)",
+              "startup": "37F / 13F (EX mode)",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "description": "[Long] Shoot light projectiles. Normal speed, strong homing.",
+              "name": "Holy"
+            }
+          ]
+        }
+      },
+      "moveCount": 11,
+      "sources": [
+        "https://dissidia.wiki/Terra_Branford_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/33/Hp_terra_flood.jpeg",
+              "damage": "-",
+              "startup": "71F",
+              "type": "-",
+              "priority": "Unblockable",
+              "exForce": "60",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Generate three water pillars at opponent's position",
+              "name": "Flood",
+              "notes": "Flood is a secondary ground HP for Terra. Its main application is interrupting attacks with long startup |\nThe time it takes before an attack can do damage.\n(e.g. Cloud Meteorain, Garland Cyclone etc.) or punishing air dodges with short movement. Terra conjures two water pillars at opponent's position, which explode in rapid succession. These pillars are true unblockable priority, so they cannot be reflected or blocked.\nAs such, Flood encourages opponents to move. The second pillar spawns at opponent's position once it goes off, so it can catch landing lag if opponent dodges near the ground. Flood knocks straight up on hit with a lot of hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n, which can start assist combos.\nFlood is not often used due to its slow speed and low coverage against movement or halo camping |\nA strategy which involves a character staying above the opponent, often at a safe distance.\n. Terra is vulnerable to attacks while casting and the pillars can be dodged consistently with Evasion Boost.\nIn EX Mode, Terra casts Flood two times, for a total of 6 water pillars. This can be harder to dodge, as the pillars cover more space."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/b2/Hp_terra_tornado_g.jpeg",
+              "damage": "1 x 10 (10)",
+              "startup": "43F",
+              "type": "Magical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Absorb, Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Summon tornado around self. Can be moved.",
+              "name": "Tornado (ground)"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/ff/Hp_terra_firaga.jpeg",
+              "damage": "20 (EX mode only)",
+              "startup": "?",
+              "type": "-",
+              "priority": "?",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Fire. [Combo] Ignite explosions on foe.",
+              "name": "Firaga"
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/91/Hp_terra_tornado_a.jpeg",
+              "damage": "10 (1 x 10)",
+              "startup": "43F",
+              "type": "Magical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Absorb, Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Summon tornado around self. Can be moved.",
+              "name": "Tornado (midair)"
+            },
+            {
+              "variants": null,
+              "damage": "-",
+              "startup": "55F (LV1) / 91F (LV2) / 145F (LV3)",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shoot fireball at foe. Charge to change its strength.",
+              "name": "Meltdown",
+              "notes": "LV1 Meltdown travels a short distance quickly, and explodes\nLV2 Meltdown appears in front of Terra, and then starts slowly accelerating towards opponent.\nLV3 Meltdown travels a short distance quickly, and then starts slowly accelerating towards opponent.\nMeltdown is Terra's only 1-hit HP attack in the air and one of her main self-defense tools. It is used to occupy space and threaten air dodges. Meltdown is a key move for pressuring opponents, as long as Terra can cast it safely.\nMeltdown has two versions: Uncharged and charged. Uncharged Meltdown is a close-range fire blast, which is useful after block staggers or as a mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nto her charged versions. Uncharged Meltdown travels very quickly once fired, and it has limited maximum distance. If opponent is expecting a charged version, uncharged Meltdown can catch them. Both versions can wall rush.\nMeltdown's charged versions are done by holding Square <img></img>. LV2 must be released before 145 frames and LV3 happens at max charge. This is a large homing fireball with long active |\nThe period of time when an attack is capable of doing damage.\nduration and maximum travel distance. Both versions, especially LV3 can be used to harass opponents from afar and force them to approach Terra. Since charged Meltdown stays active for a while, Terra can act alongside the projectile. This can provide a lot of screen presence and force close-range characters into making a mistake, such as dodging into Terra's next move. Charged Meltdown can also hit off-camera from behind, as it bounces off of solid ground and walls.\nThis move has long startup |\nThe time it takes before an attack can do damage.\nand recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n. Terra's reliance on Meltdown makes her more vulnerable to whiff punishes |\nHitting an opponent who missed (whiffed) their attack.\nand assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\nwhenever it misses. Furthermore, opponents can use assist in close-range to take HP damage from Meltdown and then Bravery Break Terra. Due to Ranged High priority, charged Meltdowns can be reflected back by high priority attacks, such as Cloud's Braver, Squall's Blasting Zone and Jecht Block. Charged Meltdown will also vanish if Terra gets hit, so it cannot protect her in those cases. Charged Meltdown also has medium max speed, so opponents can attempt to blodge it, or activate Precision Evasion against it."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f9/Hp_terra_ultima.jpeg",
+              "damage": "7 (1 x 7)",
+              "startup": "?",
+              "type": "Magical",
+              "priority": "Unblockable",
+              "exForce": "0",
+              "effects": "Absorb, Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Holy Combo. [Combo] Cast the ultimate spell.",
+              "name": "Ultima"
+            }
+          ]
+        }
+      },
+      "moveCount": 6,
+      "sources": [
+        "https://dissidia.wiki/Terra_Branford_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Trance!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nGlide\nChainspell"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Glide",
+          "text": [
+            "[Activate by holding X in midair]] Uses the esper power hidden within to move freely through the air."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Chainspell",
+          "text": [
+            "[Cast, then press circle or square to activate]\nEmbraces the spirit of a magus to raise magical poower and cast the same spell again."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Riot Blade",
+          "text": [
+            "Power is focused in both hands and fired as countless blades. Repeatedly press left and circle to raise the gauges on the left and righht."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "10x3 (30)",
+                  "14x5 (70) (100 total)",
+                  "Magical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Terra_Branford_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Terra_Branford_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|High Initial EX=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "This build has Terra start the fight at 90 % EX bar filled. Terra's EX generation is one of her weaker aspects, so this is a good way to guarantee access to her powerful EX Mode with just a few successful interactions. Meteor > Fire > Chase is enough to fill the EX meter on hit. A single EX Core also fills the rest of the EX meter if Terra does not generate enough EX Force before then.",
+        "Extra abilities First Strike, EX Critical Boost and Precision Evasion are recommended for this build."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9971"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1075 (1827 with Hero's Seal)"
+            ],
+            [
+              "ATK",
+              "177"
+            ],
+            [
+              "DEF",
+              "182"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x1.5"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Jecht / Aerith"
+            ],
+            [
+              "Weapon <img></img>",
+              "Zwill Crossblade"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Bangle"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Hairpin"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Jacket"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Earring"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Large Gap in HP"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Cyan Drop"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Cyan Drop"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Cyan Drop"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Red Gem"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Cyan Gem"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Hero's Seal"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": "Substitutes",
+          "rows": [
+            [
+              "Equipment",
+              "Replacement",
+              "Notes"
+            ],
+            [
+              "<img></img> Red Gem",
+              "Free choice",
+              "While Red Gem's +5% damage increase works for this build, it can be swapped out for whatever the player may want in a match-up or a stage."
+            ]
+          ]
+        }
+      ],
+      "subs": [
+        {
+          "title": "Combo",
+          "text": [
+            "Once Terra confirms an assist combo with Jecht (or Aerith), the goal is to inflict enough damage to bravery break, reset to base bravery and wall rush for extra damage. Prepare an EX Mode Meltdown which casts two HP projectiles instead of one. As long as one Meltdown connects, Terra can chain Holy Combo into Ultima which is plenty of damage as it is, but the second Meltdown will reset base bravery recovery on hit.",
+            "After using Holy Combo, be sure to delay the first Ultima to unlock your assist bar and catch the opponent's dodge. Without Evasion Boost and Precision Evasion, Ultima is basically guaranteed and can lead to another wall rush assist combo if Terra has more assist meter to spend. Depending on the circumstances and the opponent's build, this can outright finish the opponent.",
+            "If the opponent is at the wall, it is possible to throw a quick Meltdown during Jecht assist before using Holy Combo.",
+            "|-|Side by Side=",
+            "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Stats"
+                ],
+                [
+                  "HP",
+                  "9683"
+                ],
+                [
+                  "CP",
+                  "450"
+                ],
+                [
+                  "BRV",
+                  "1284"
+                ],
+                [
+                  "ATK",
+                  "178"
+                ],
+                [
+                  "DEF",
+                  "183"
+                ],
+                [
+                  "LUK",
+                  "60"
+                ],
+                [
+                  "Max Booster",
+                  "x4.6"
+                ]
+              ]
+            },
+            {
+              "caption": "Special Effect: Judgment of Lufenia",
+              "rows": [
+                [
+                  "Equipment"
+                ],
+                [
+                  "Assist",
+                  "Jecht / Aerith / Sephiroth"
+                ],
+                [
+                  "Weapon <img></img>",
+                  "Lufenian Claw <img></img>"
+                ],
+                [
+                  "Hand <img></img>",
+                  "Lufenian Shield <img></img>"
+                ],
+                [
+                  "Head <img></img>",
+                  "Thornlet"
+                ],
+                [
+                  "Body <img></img>",
+                  "Lufenian Armor <img></img>"
+                ],
+                [
+                  "Accessory 1",
+                  "<img></img> Protect Stud"
+                ],
+                [
+                  "Accessory 2",
+                  "<img></img> Dismay Shock"
+                ],
+                [
+                  "Accessory 3",
+                  "<img></img> Battle Hammer"
+                ],
+                [
+                  "Accessory 4",
+                  "<img></img> Empty EX Gauge"
+                ],
+                [
+                  "Accessory 5",
+                  "<img></img> Summon Unused"
+                ],
+                [
+                  "Accessory 6",
+                  "<img></img> Pre-EX Mode"
+                ],
+                [
+                  "Accessory 7",
+                  "<img></img> Pre-EX Revenge"
+                ],
+                [
+                  "Accessory 8",
+                  "<img></img> Opponent Summon Unused"
+                ],
+                [
+                  "Accessory 9",
+                  "<img></img> Together As One"
+                ],
+                [
+                  "Accessory 10",
+                  "<img></img> Side By Side"
+                ],
+                [
+                  "Summon <img></img>",
+                  "Rubicante"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Terra_Branford_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Terra's Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Graviga",
+                  "183F",
+                  "Ground",
+                  "Player",
+                  "2 x N, 40 (40+)",
+                  "Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Blizzara",
+                  "27F",
+                  "Air",
+                  "Opponent",
+                  "20, 5 x 3 (35)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Flood",
+                  "71F",
+                  "Ground",
+                  "Player",
+                  "-",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Meltdown",
+                  "145F",
+                  "Air",
+                  "Player",
+                  "-",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "Terra works well with Aerith, Kuja and Jecht.",
+            "|-|Jecht=",
+            "|-|Aerith=",
+            "|-|Kuja="
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Terra_Branford_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Terra_Branford_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Terra_Branford_(Dissidia_012)"
+  ]
+}

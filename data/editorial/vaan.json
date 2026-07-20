@@ -1,0 +1,100 @@
+{
+  "slug": "vaan",
+  "tagline": "Touche-à-tout du corps à corps et de la mi-distance, bâti sur le Switch",
+  "archetype": "Polyvalent à arsenal commutable (Switch)",
+  "overview": [
+    "Vaan est un personnage de courte à moyenne portée disposant d'une grande variété de braveries. Grâce à sa mécanique unique de « Switch », chaque bravery existe en deux versions : la version Switch (SW), exécutée quand l'attaque n'a pas été utilisée précédemment, et la version On-hand (OH), exécutée quand il réutilise la même attaque ensuite.",
+    "C'est une arme à double tranchant : Vaan accède à des attaques aux propriétés souvent au-dessus de la moyenne, mais il doit s'engager à attaquer s'il veut disposer d'une bravery précise plus tard. Beaucoup de ses attaques ont un long startup ou une longue recovery et sont conçues pour des distances et des angles spécifiques ; la nécessité de whiffer découle donc autant de l'accessibilité de son répertoire que de la mécanique d'assist.",
+    "Cette nature de gameplay convient pourtant bien aux joueurs débutants et intermédiaires : sa diversité mécanique expose à de nombreux aspects de la prise de décision et des interactions de jeu. Peu de loadouts standards existent — chaque matchup peut exiger des combinaisons spécifiques — ce qui en fait un personnage stimulant à expérimenter. Il peut écraser les blocks, engager à mi-distance, contourner les projectiles, et possède même des combos infinis ; ses combos solo sont rares, mais les assists étendent nettement son potentiel. Malgré des multiplicateurs de dégâts relativement élevés, sa base ATK sous la moyenne limite ses dégâts sans gros investissement ; il scale bien avec l'investissement, sa mobilité est bonne dans l'ensemble et sa base DEF est au-dessus de la moyenne. Son EX intake est légèrement au-dessus de la moyenne, mais son EX Mode est l'un des plus décevants du jeu.",
+    "Historiquement classé mid et low tier en compétition, Vaan n'est pas réputé comme personnage de counterpick efficace, et optimiser son jeu demande un effort de spécialiste. Même à son meilleur, son gameplay n'est pas polarisant : il souffre d'un dilemme de trois slots de bravery, de frame data et de tracking souvent sous la moyenne, construit mal sa jauge d'assist et peine contre les command blocks conçus autour des attaques de priorité moyenne et haute. Les joueurs doivent faire des compromis et exploiter chaque mécanique, bizarrerie et stratégie disponibles — Vaan illustre peut-être vraiment l'adage « bon à tout, maître en rien »."
+  ],
+  "tierNote": "Classé 25e (tier B, dernier de ce tier) dans la tier list compétitive 2017. L'overview le décrit comme classé mid et low tier tout au long de l'histoire compétitive du jeu.",
+  "strengths": [
+    "Arsenal très varié via le Switch : des braveries aux propriétés souvent au-dessus de la moyenne pour la plupart des distances et des angles.",
+    "Boîte à outils complète : il peut écraser les blocks, engager à mi-distance, contourner les projectiles, et possède même des combos infinis ; les assists étendent encore son potentiel de combo.",
+    "Bonne mobilité globale et base DEF au-dessus de la moyenne.",
+    "Scale bien avec l'investissement : multiplicateurs de dégâts relativement élevés et EX intake légèrement au-dessus de la moyenne.",
+    "Diversité mécanique formatrice : un personnage pertinent pour les joueurs débutants et intermédiaires, compelling à expérimenter."
+  ],
+  "weaknesses": [
+    "Le Switch force l'engagement : pour disposer d'une attaque précise plus tard, il faut attaquer (ou whiffer) maintenant.",
+    "Beaucoup d'attaques à long startup ou longue recovery, avec des frame data et un tracking souvent sous la moyenne.",
+    "Base ATK sous la moyenne : dégâts seulement moyens sans gros investissement.",
+    "Dilemme des trois slots de bravery et peu de loadouts standards : chaque matchup peut exiger des combinaisons spécifiques.",
+    "Construit mal la jauge d'assist et peine contre les command blocks conçus autour des priorités moyennes et hautes.",
+    "L'un des EX Modes les plus décevants du jeu."
+  ],
+  "moveNotes": {
+    "Sword & Shield": "Attaque à l'épée et au bouclier de courte portée qui bloque pendant le Switch (Block 1~30F sur la version SW) : c'est le command block de Vaan. En EX Mode, la priorité de block passe de Block Mid à Block High, au même niveau que le Wrath de Cloud of Darkness ou le Protect Guard d'Exdeath : il fait stagger les attaques Melee Mid, mais Vaan stagger lui-même contre les attaques de haute priorité (HP attacks). La version OH est à égalité sa bravery la plus rapide (19 frames).",
+    "Axe & Shield": "Coup de hache de courte portée qui brise la garde adverse pendant le Switch : la version SW est Melee High avec Wall Rush, la version OH une Melee Low rapide (19 frames, à égalité sa bravery la plus rapide). En EX Mode, la version gagne un follow-up supplémentaire.",
+    "Greatsword": "L'une de ses braveries les plus fortes, à cheval entre courte et moyenne portée : initiateur rapproché, extension de combo, gap closer et punish d'esquive engagé (SW chargée). La version SW est son attaque la plus rapide (11 frames) ; chargée à fond, elle gagne en tracking, passe Melee Mid, et son multiplicateur dépasse celui du Bardiche de Garland — la hitbox initiale reste active pendant la majorité du déplacement, très bonne contre les esquives dans sa trajectoire, mais l'attaque tourne mal après la charge initiale. La version OH est un poke avançant correct, rapide à whiffer, dont le premier hit se confirme facilement en assist sans mur, avec un tracking rapproché trompeusement bon ; elle ne produit ni son ni effet visuel au démarrage, difficile à réagir visuellement. La version EX réduit seulement le temps de charge maximale. SW Greatsword sert aussi de follow-up en dodge cancel après SW Katana, SW Staff, SW Crossbow et Windburst. Populaire dans de nombreux matchups, comme Cecil, Cloud et Squall.",
+    "Katana": "Taillade au katana à mi-distance : la version SW (Melee Mid, Chase) monte en puissance avec un combo lent pendant le Switch et culmine à un multiplicateur de 50 ; la version OH est une Melee Low plus rapide (23 frames). Bon générateur d'EX Force (jusqu'à 90). En EX Mode, le timing du finisher est allongé.",
+    "Spear": "Coup de lance à mi-distance qui attire l'adversaire pendant le Switch (effet Absorb sur la version SW, Melee Mid) ; les deux versions provoquent un Wall Rush. En EX Mode, la version gagne une seconde salve de hits (multiplicateur 55).",
+    "Staff": "Coup de bâton à mi-distance qui génère énormément d'EX Force (108 à 150 selon la version, le record de son kit) avec effet Chase ; la version SW, magique, laisse Vaan libre de se déplacer.",
+    "Crossbow": "Tir de bowgun à longue portée (Ranged Low, Chase) : maintenir le bouton sur la version SW déclenche un tir en rafale, jusqu'à 105 d'EX Force. La version OH est nettement plus faible (12 de multiplicateur, aucune EX Force). En EX Mode, la portée augmente. SW Crossbow fait partie des attaques annulables en dodge cancel vers SW Greatsword.",
+    "Rifle": "Tir de fusil à longue portée avec Wall Rush : la version SW comporte une esquive pendant le Switch (Dodge 1~20F), la version OH sort en 29 frames. En EX Mode, une seconde salve double le multiplicateur.",
+    "Torrent": "HP attack au sol à longue portée : des torrents d'eau tirés depuis un cercle magique, Ranged High avec Wall Rush. Sa composante « up » sort en 21 frames — la HP attack la plus rapide de son kit — contre 69 frames pour la version descendante.",
+    "Cataclysm": "HP attack au sol à mi-distance : invoque plusieurs rochers qui chargent l'adversaire, Melee High de près et Ranged High sur les rochers. C'est l'une de ses 1-hit HP (avec le projectile de Windburst).",
+    "Inferno": "HP attack aérienne à mi-distance : Vaan concentre des flammes puis charge, avec un fort homing, Melee High et Wall Rush.",
+    "Windburst": "HP attack aérienne à longue portée : génère une tornade qui aspire l'adversaire pendant un temps donné (effet Absorb), Melee High sur le pas d'ouverture et Ranged High sur le vent — le projectile sert de 1-hit HP. Annulable en dodge cancel vers SW Greatsword."
+  },
+  "exMode": {
+    "summary": [
+      "L'EX Mode « Obtained all Licenses! » confère Regen, Critical Boost, Free Switch et Zodiak. Free Switch (activable avec R + carré) permet de revenir aux attaques désarmées à tout moment : démarre à 1 frame, se termine à 31, annulable en esquive ou en attaque à 21 frames — c'est ce qui laisse Vaan réutiliser ses versions SW plus souvent et avec moins de risque. Zodiak, actif en permanence, augmente stats et capacités et renforce fortement les attaques : chaque version Switch d'une bravery gagne un bonus (portée accrue, invincibilité, charge plus courte ou follow-up supplémentaire).",
+      "L'overview tempère néanmoins : malgré ces effets, l'EX Mode de Vaan est considéré comme l'un des plus décevants du jeu."
+    ],
+    "burst": "« Quickening » : attaque imprégnée de Mist où l'on fait défiler les options avec R et où l'on valide avec X. Une méthode consistante : appuyer sur R, puis marteler X quelques fois, et répéter cette boucle trois fois par Quickening."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Le jeu de Vaan s'organise autour du Switch : chaque bravery utilisée bascule vers sa version On-hand, et il faut « consommer » (souvent en whiffant) une attaque pour recharger sa version Switch, plus puissante. Le plan consiste donc à séquencer son arsenal : ouvrir avec les versions SW aux propriétés fortes (Sword & Shield qui bloque, Axe & Shield qui brise la garde, Greatsword 11 frames, Rifle avec esquive intégrée), puis exploiter les versions OH plus rapides — dont plusieurs, comme OH Greatsword, ne produisent aucun signal sonore ou visuel au démarrage et sont difficiles à réagir.",
+    "En neutral, Greatsword est le pivot : initiateur rapproché, gap closer, extension de combo et punish d'esquive en version SW chargée, avec un premier hit OH facilement confirmable en assist sans mur — précieux pour un personnage par ailleurs médiocre à construire la jauge d'assist. Katana, Spear et Staff couvrent la mi-distance (Staff générant énormément d'EX Force), Crossbow et Rifle la longue portée. Côté HP attacks, Torrent (21 frames sur la composante montante) et Cataclysm sont ses plus rapides ; Cataclysm et le projectile de Windburst servent de 1-hit HP.",
+    "Le build documenté illustre la répartition type : au sol Spear, Axe & Shield et Sword & Shield ; en l'air Katana, Greatsword et Rifle. Le dilemme des trois slots impose des compromis, et chaque matchup peut exiger des combinaisons spécifiques : peu de loadouts standards existent. En EX Mode, Free Switch lève temporairement la contrainte principale du personnage en redonnant accès aux versions SW à la demande, et Zodiak renforce toutes les versions Switch."
+  ],
+  "advancedTech": [
+    {
+      "name": "Dodge cancel > SW Greatsword",
+      "desc": "SW Greatsword peut être utilisée comme follow-up en dodge cancel après SW Katana, SW Staff, SW Crossbow et Windburst, ce qui relie ses outils de mi-distance et de zone à son attaque la plus rapide et la plus rentable."
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "La page matchups du wiki est un stub, mais les sources donnent quelques repères : Vaan n'est pas réputé comme counterpick efficace, et chaque matchup peut exiger des combinaisons d'attaques spécifiques plutôt qu'un loadout standard. Greatsword est citée comme choix populaire dans de nombreux matchups, notamment Cecil, Cloud et Squall. À l'inverse, il peine structurellement contre les command blocks conçus autour des attaques de priorité moyenne et haute."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Le build documenté, « Damage (Seal of Lufenia) », mise sur l'effet spécial Seal of Lufenia avec un Max Booster de x4.4 : arme exclusive Zodiac Blade et set Lufenian (Dirk, Headband, Vest), accessoires orientés boosters conditionnels (Muscle Belt, Battle Hammer, Summon Unused, Pre-EX Mode, Pre-EX Revenge, deux After 30 Seconds, Opponent Summon Unused, Glutton, First to Victory), assist Kuja et Rubicante en summon. Il s'appuie sur l'Equip Glitch (le coût total en CP le suppose réalisé) et recommande l'extra ability Master Guardsman pour +1000 HP.",
+      "Le loadout d'attaques associé : Spear, Axe & Shield et Sword & Shield au sol ; Katana, Greatsword et Rifle en l'air."
+    ],
+    "notes": "Le second build (« Build #2 ») est un gabarit vide dans les données sources."
+  },
+  "assist": {
+    "asAssist": [
+      "En tant qu'assist, Vaan est classé dans le tier Mid de la tier list assist de Muggshotter. Les sources de sa page ne détaillent pas son usage en assist au-delà de ce classement."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "Cité par la page parmi les assists qui fonctionnent bien avec Vaan ; c'est aussi l'assist retenue dans le build Seal of Lufenia documenté, et OH Greatsword se confirme facilement en assist sans mur."
+      },
+      {
+        "name": "Aerith",
+        "why": "Citée par la page parmi les assists qui fonctionnent bien avec Vaan, sans plus de détail dans les sources."
+      },
+      {
+        "name": "Jecht",
+        "why": "Cité par la page parmi les assists qui fonctionnent bien avec Vaan, sans plus de détail dans les sources."
+      }
+    ]
+  },
+  "communityTech": [],
+  "limits": [
+    "La page matchups du wiki est un stub : seuls les repères de l'overview et de la note de Greatsword (Cecil, Cloud, Squall) ont pu être repris.",
+    "Aucune section combos renseignée (sous-section Solo vide) : les « combos infinis » mentionnés dans l'overview ne sont détaillés nulle part.",
+    "Pas de section « Unique Mechanics » documentée : le Switch n'est décrit que dans l'overview et l'intro des braveries, d'où uniqueMechanics laissé à null et la mécanique traitée dans overview et gameplan.",
+    "Notes d'usage détaillées absentes pour la plupart des coups : seuls Sword & Shield (version EX) et Greatsword ont de vraies notes ; le reste se limite aux descriptions du jeu et aux frame data.",
+    "Le second build (« Build #2 ») est un gabarit vide ; valeurs d'assist gain absentes des tableaux de coups.",
+    "Section References vide et aucune mention communautaire datée : communityTech laissé vide."
+  ]
+}

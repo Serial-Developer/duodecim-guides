@@ -1,0 +1,48 @@
+# Guides Dissidia 012 [duodecim] Final Fantasy
+
+Site statique de guides compétitifs français pour les 31 personnages jouables de *Dissidia 012 [duodecim] Final Fantasy* (PSP, 2011), plus une fiche assist pour Aerith. Données extraites de [dissidia.wiki](https://dissidia.wiki) (CC BY 4.0).
+
+## Lancer le site
+
+```
+npx serve dist
+```
+
+ou ouvrir directement `dist/index.html` dans un navigateur.
+
+## Re-générer
+
+```
+npm install          # une seule fois (cheerio)
+npm run scrape       # récupère les pages wiki -> cache/ (jamais re-fetché si présent ; --force pour forcer)
+npm run parse        # cache/ -> data/characters/*.json + data/meta.json
+npm run images       # portraits + icônes via la Wayback Machine -> assets/
+npm run build        # data/ + src/ -> dist/
+npm run qa           # vérifications : ressources locales, ancres, contrôle anti-invention
+npm run qa:links     # idem + vérification réseau des liens externes
+npm run coverage     # reports/coverage.md
+```
+
+## Ajouter / corriger un personnage
+
+1. Vérifier son entrée dans `scripts/characters.mjs` (nom de page wiki, slug, icône).
+2. `npm run scrape` puis `node scripts/parse.mjs <slug>`.
+3. Rédiger/corriger `data/editorial/<slug>.json` (prose française — schéma dans `docs/editorial-guidelines.md`). Règle d'or : ne rien écrire qui ne soit adossé à `data/characters/<slug>.json` ou `data/meta.json`.
+4. `npm run build && npm run qa`.
+
+## Architecture
+
+```
+cache/            HTML bruts du wiki (non versionnés)
+data/characters/  extraction structurée par perso (stats, coups, frames…)
+data/editorial/   prose française (rédigée, un JSON par perso + _shared.json)
+data/meta.json    tier lists, vitesses, techniques universelles
+scripts/          scrape / parse / parse-meta / fetch-images / build / qa / coverage
+src/templates/    templates JS (landing « écran de sélection », guide, techniques)
+src/styles/       design system (nuit violette, Cinzel/Inter)
+assets/           portraits + icônes (copiés dans dist/ au build)
+dist/             site final
+reports/          couverture, logs de scrape/parse
+```
+
+Les images officielles proviennent des fichiers du wiki via la Wayback Machine (le CDN `resources.dissidia.wiki` est en panne depuis ~2026). Attribution complète en pied de page du site.

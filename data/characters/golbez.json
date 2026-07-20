@@ -1,0 +1,904 @@
+{
+  "slug": "golbez",
+  "name": "Golbez",
+  "page": "Golbez_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Golbez_(Dissidia_012)",
+  "origin": "Final Fantasy IV",
+  "icon": "golbez",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-golbez.png",
+  "infobox": {
+    "Name": "Golbez (ゴルベーザ)",
+    "Original game": "Final Fantasy IV",
+    "Base ATK (LV100)": "110 (Average)",
+    "Base DEF (LV100)": "112 (High)",
+    "Run Speed": "7 (Average)",
+    "Dash Speed": "77 (Average / Good)",
+    "Fall Speed": "??",
+    "Fall Speed Ratio After Dodge": "40 (Average)",
+    "Fastest BRV": "17F (Glare Hand close)",
+    "Fastest HP": "15F (Nightglow close)",
+    "1-Hit HP": "Yes (Nightglow & Genesis Rock from afar)",
+    "HP Links": "Yes",
+    "Command Block": "No",
+    "Weapon": "Axes, Greatswords, Rods, Spears",
+    "Armor": "Gauntlets, Heavy Armor, Helms, Light Armor, Shields",
+    "Exclusive weapons": "Lilith Rod, Asura's Rod, Zeromus Shard",
+    "Alignment": "Chaos",
+    "Voice Actor (JP)": "Takeshi Kaga",
+    "Voice Actor (ENG)": "Peter Beckman"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Golbez is a defensive ground-oriented fighter, who executes strikes and projectiles simultaneously. His strategy revolves around controlling space between close-range and midrange. Rising Wave and Glare Hand form the foundation here, with each hit leading to the Cosmic Ray HP link |",
+        "An HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.",
+        ". If the opponent tries to approach head-on, Nightglow HP attack protects Golbez from immediate danger and leads to ceiling assist combos in many stages. Due to the ground attack speed, the abundance of HP links and strong synergy with Side by Side builds, Golbez commands respect in grounded fights.",
+        "Historically Golbez has been ranked around mid tier in competitive play. His ground game and high momentum from each hit has earned him a reputation as an explosive character who rewards patience. Patience is important, because Golbez has to contend with risky air combat. The air HP links may come out quickly, but his aerial attacks all suffer from long recovery |",
+        "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+        "frames. This makes him more vulnerable to whiff punishes |",
+        "Hitting an opponent who missed (whiffed) their attack.",
+        "overall. His midrange tools are weaker by comparison, whether it’s in speed, tracking |",
+        "Tracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".",
+        "or priority. Because Golbez cannot enforce ground combat with just his ground attacks, his success hinges on turtling |",
+        "An extremely defensive playstyle.",
+        "with Ground Dash for assist gauge, making good reads |",
+        "A read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".",
+        "and punishing mistakes as they come up. Golbez does not fill assist gauge that quickly with whiffs |",
+        "A missed attack that doesn't make any contact.",
+        "due to medium-to-long dodge cancel |",
+        "Dodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.",
+        "recovery, and his EX generation is severely outclassed by Side by Side builds. Despite these shortcomings, Golbez is capable of fighting plenty of characters in the roster, even if it takes time to reap the rewards."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Ground Space Control - Rising Wave and Glare Hand cover Golbez's lateral range quickly compared to other characters. Effective for both reactive and preemptive play.\nNightglow - A fast HP attack that protects Golbez with high priority hitboxes and leads to ceiling assist combos in many stages. A strong self-defense tool.\nSide by Side <img></img> - As an HP linker , Golbez gets assist gauge quickly with every HP link or Nightglow he connects. This, along with high base bravery builds greatly amplify his reward on hit.\nInvincible Air Jumps - Golbez is briefly invincible whenever he jumps in the air, creating safer movement against melee characters.",
+              "Committal Air Combat - All air attacks are either telegraphed or have long recovery , regardless of startup speed.\nForcing Ground Combat - Golbez has to deal with halo camping , which he cannot stop safely or consistently. Black Fang forces a Bravery Break, but it's only during EX mode, which compromises his Side by Side synergy.\nSlow Meter Gain - Outside of Side by Side, Golbez fills assist and EX gauges rather slowly. Attacks have medium / long recovery , so repeating them for gauge is slower on average. Most attacks have low EX generation, and are outclassed by reward from HP links and Side by Side."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Golbez_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Close",
+                "Far"
+              ],
+              "image": "https://dissidia.wiki/images/5/55/Brv_golbez_rising_wave_1.jpeg",
+              "damage": [
+                "~35 (6, 3 x 3, 6 x 3, 2 x N)",
+                "~26 (2 x N, 6 x 3)"
+              ],
+              "startup": [
+                "23F",
+                "43F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Melee Low, Ranged Low (2nd part)",
+                "Unblockable, Ranged Low (2nd part)"
+              ],
+              "exForce": [
+                "~30",
+                "each 3"
+              ],
+              "effects": [
+                "Wall Rush (2nd part)",
+                "Wall Rush (2nd part)"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close~Mid] Uppercut & magic. Change combo with button hold.",
+              "name": "Rising Wave",
+              "notes": "Rising Wave is used for its unblockable priority projectile. It can stop dashes and break through all blocks, and combos into Cosmic Ray HP link even from afar. If Rising Wave hits from afar, Golbez has to hold Square <img></img> and release to close the gap. When used together as a mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nwith Glare Hand, Golbez can control the pace of grounded fights pretty effectively. It can even catch opponents grabbing EX Cores if they're not careful.\nThe Rising Wave projectile's spawn location depends on range. If the opponent is close enough to get hit by the close-range strike, the projectile appears at longer distance. This lets Golbez push the opponent into the projectile with follow-up attacks (see pictures). If the opponent is at a longer distance, the projectile appears at their location instead. This has a maximum range limit, roughly 1/4th of Order's Sanctuary."
+            },
+            {
+              "variants": [
+                "Close",
+                "Far"
+              ],
+              "image": "https://dissidia.wiki/images/4/49/Brv_golbez_glare_hand_1.jpeg",
+              "damage": [
+                "37 (19, 6 x 3)",
+                "~26 (8xN, 6x3)"
+              ],
+              "startup": [
+                "17F",
+                "23F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Melee Low, Ranged Low (2nd part)",
+                "Ranged Low"
+              ],
+              "exForce": [
+                "30",
+                "each 30"
+              ],
+              "effects": [
+                "Chase, Wall Rush (2nd part)",
+                "Wall Rush (2nd part)"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close~Mid] Swipe and magic. Change combo with button hold.",
+              "name": "Glare Hand",
+              "notes": "Glare Hand is Golbez's main poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nagainst grounded opponents and low-altitude aerial opponents. Its overall speed, reach and HP link to Cosmic Ray forms the core of grounded Golbez play.\nGlare Hand's magic swipe can punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ndodges, whiffs |\nA missed attack that doesn't make any contact.\nand dash startups |\nThe time it takes before an attack can do damage.\nif they're above Golbez. Because it pulls opponents in, it effectively gives Golbez an HP link regardless of where it hits. If Glare Hand hits in close-range, Golbez has to hold Square <img></img> and release to close the gap for Cosmic Ray.\nDespite being noted as a poke here, it should not be used recklessly or repeatedly without reason. The recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis not as short as other pokes. Watch out for opponents moving around Glare Hand's max range. They can dash past (or through) the magic projectile and force Golbez into a defensive mixup situation in the blink of an eye, if their timing is on point."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/fb/Brv_golbez_attack_system_g_1.jpeg",
+              "damage": "4, each 2",
+              "startup": "23F (slap), 83F (laser)",
+              "type": "Magical",
+              "priority": "Melee Low (slap), Ranged Low (laser)",
+              "exForce": "30",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close~Long] Direct strike while magic bit fires on foe.",
+              "name": "Attack System (ground)",
+              "notes": "Golbez is in a grounded state during this attack\nAttack System is used as a secondary ranged tool. If the match's pace is slow, it can be mixed in with Glare Hand against grounded opponents. This lets Golbez fill assist gauge a bit faster (since it's often a fresh move).\nThe magic shots have enough hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nto start assist combos, or even solo combos if the position allows it. The problem is that their tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nis inconsistent, and completely linear once fired. This issue is slightly alleviated against big bodies, such as Garland and Feral Chaos. If the opponent dodges early, the shots can find their mark that way. Unfortunately the close-range strike does not guarantee magic shot combos, though.\nWatch out for fast ground assists, such as Jecht and Sephiroth. Golbez has no protection beyond the initial close-range strike, so the long animation leaves him vulnerable to counterattacks."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Close",
+                "Far"
+              ],
+              "image": "https://dissidia.wiki/images/f/f8/Brv_golbez_gravity_force_0.jpeg",
+              "damage": [
+                "53 (15, 3 x 9, 11)",
+                "40 (5, 3 x 8, 11)"
+              ],
+              "startup": [
+                "61F (sphere), 113F (after warp)",
+                "61F (sphere), 113F (after warp)"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Mid, Ranged High (sphere)",
+                "Melee Mid, Ranged High (sphere)"
+              ],
+              "exForce": [
+                "30",
+                "27"
+              ],
+              "effects": [
+                "Absorb, Wall Rush",
+                "Absorb, Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close~Long] Warp & attack with gravity sphere. Can be aimed.",
+              "name": "Gravity Force",
+              "notes": "(1) Golbez takes aim. \"No escape!\"\n(1) Golbez takes aim. \"No escape!\"\n(2) The sphere is fired. Move behind in close range. Knocks towards sphere afterwards.\n(2) The sphere is fired. Move behind in close range.Knocks towards sphere afterwards.\n(3) The sphere inflicts multiple hits, then sends down.\n(3) The sphere inflicts multiple hits, then sends down.\nGolbez can move with analog stick <img></img> during startup |\nThe time it takes before an attack can do damage.\nGravity Force is a high commitment attack, typically used in combos. It is Golbez's highest damaging bravery attack, particularly if it hits in close-range. This is useful for block stagger critical hits, and Kuja assist combos at the ceiling. The downward Wall Rush can start assist combos, too. Golbez warps towards the opponent after firing the sphere, which has medium travel distance regardless of angle. The warp attack knocks opponents into the sphere, which can create solo combos at a very specific angle. [1] With Adamant Chains air dodge distance boost, Golbez can even use Gravity Force's initial movement as a budget double dodge. This should be reserved for emergencies though...\n... because Gravity Force is a telegraphed attack with long startup |\nThe time it takes before an attack can do damage.\n, long animation lock and the sphere's lackluster vertical reach. Although Gravity Forces beats blocks, it is too slow to be used as an effective mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nagainst them. Golbez is briefly vulnerable to attacks after he finishes warping, and he cannot cancel |\nAn action that is interrupted early by doing another action.\nthe warp to stay safe. Gravity Force looks complicated at first glance, but as opponents learn to create distance and dodge through the warp attack, it becomes much less threatening."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8f/Brv_golbez_gravity_system_1.jpeg",
+              "damage": "30 (5, 1 x 7, 10, 8)",
+              "startup": "21F (slap), 43F (laser)",
+              "type": "Magical",
+              "priority": "Melee Low (slap), Ranged Low (laser)",
+              "exForce": "30",
+              "effects": "Chase, Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close~Mid] Direct strike plus laser. Strong downwards homing.",
+              "name": "Gravity System",
+              "notes": "Gravity System is one of Golbez's main air braveries. It's used as an anti-ground attack, and after LV2 Assist Change staggers for guaranteed damage. Golbez can use jumps and Gravity System in tandem to confuse grounded opponents and attack when they least expect it, or if they make a mistake. If the opponent is trying to block the close strike, Golbez can attack early from a short distance, and try to catch the block recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nwith the laser.\nGravity System comes out quickly and tracks |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\ndownward well. Its whiff |\nA missed attack that doesn't make any contact.\nrecovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis quite long though, so Golbez is vulnerable to attacks if he misses."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/91/Brv_golbez_float_system_1.jpeg",
+              "damage": "30 (5, 1 x 7, 10, 8)",
+              "startup": "21F (slap), 43F (laser)",
+              "type": "Magical",
+              "priority": "Melee Low (slap), Ranged Low (laser)",
+              "exForce": "30",
+              "effects": "Chase, Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close~Mid] Direct strike plus laser. Strong upwards homing.",
+              "name": "Float System",
+              "notes": "Float System is another important bravery for Golbez. Its upward tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nis useful for contesting aerial characters, and punishing nearby air dodges from ground level after jumping first. If the opponent is trying to block the close strike, Golbez can attack early from a short distance, and try to catch the block recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nwith the laser.\nSimilar to Gravity System, Float System comes out quickly and has long recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n. Missing it leaves Golbez vulnerable to counterattacks, but it's a risk he may have to take eventually. Opponents often retreat to the air if their assist gauge is depleted or locked. Eventually Golbez may find himself with full assist gauge and nothing else to do. That's where Float System can help with creating offense, even if it is risky to do."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/5c/Brv_golbez_attack_system_a_1.jpeg",
+              "damage": "4 (slap), each 2 (laser)",
+              "startup": "23F (slap), 83F (laser)",
+              "type": "Magical",
+              "priority": "Melee Low (slap), Ranged Low (laser)",
+              "exForce": "30",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close~Long] Direct strike while magic bit fires on foe.",
+              "name": "Attack System (midair)",
+              "notes": "Attack System's air version functions similarly to the ground version. The long recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nmakes Golbez vulnerable to whiff punishes |\nHitting an opponent who missed (whiffed) their attack.\nall around, including air assists. Because of the long animation, lackluster projectile tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nand inconsistent reward, aerial Attack System is not used often. If the opponent is not punishing Golbez for using it though, it can be used occasionally, similar to the ground version."
+            }
+          ]
+        }
+      },
+      "moveCount": 7,
+      "sources": [
+        "https://dissidia.wiki/Golbez_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3f/Hp_golbez_nightglow_1.jpeg",
+              "damage": "11 (1 x 3, 4, 4)",
+              "startup": "15F (close), 91F (far)",
+              "type": "Magical",
+              "priority": "Melee High (close), Ranged High (far)",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close~Mid] A darkness attack, unleashing magic from the earth.",
+              "name": "Nightglow",
+              "notes": "Golbez surrounds himself with high priority dark magic, active |\nThe period of time when an attack is capable of doing damage.\non frame 15.\nGolbez also summons a dark circle at the opponent's location, but it remains on ground. It detonates for HP damage, active on frame 91.\nNightglow completes Golbez's ground game. It is why opponents want to avoid Golbez on the ground. Nightglow is primarily used for self-defense, either to counter approaching pokes, or protect Golbez after a ground dodge. It can punish landing lag as well. Nightglow surrounds Golbez in high priority melee hitboxes |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nvery fast, so nearby opponents cannot react to it before it is too late. The attack also pulls opponents in if they are close, which works even if they are above Golbez.\nNightglow's actual HP hit has very high vertical knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\n, which guarantees ceiling Wall Rush in Order's Sanctuary. With Side by Side builds, this usually leads to an assist combo if Golbez has had time to fill the assist gauge. As a result, the reward is often high.\nNightglow starts fast, but takes a long time to finish. Golbez is briefly vulnerable to attacks after the dark magic ends, but before the dark circle detonates. Nightglow is fast, but not instant; If Golbez ground dodges and does Nightglow, he is briefly vulnerable before he surrounds himself with dark magic. The risk / reward is usually in Golbez's favor, but it's worth noting regardless. Watch out for fast ground assists and attacks from midrange. If Nightglow misses, Golbez can dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nwhile the explosion is still active |\nThe period of time when an attack is capable of doing damage.\n, making it safer. While Golbez can instill fear in opponents by dashing to them and using Nightglow, it still carries risk if it misses. Exercise caution if they are in Near Death state, as they can get full Assist Charge.\nThe dark circle has a slightly longer max reach than Rising Wave's projectile.\nWhen Locked Off, the dark circle spawns on Golbez instead. This can make it more ambiguous for opponents if Golbez is still facing towards them. It is mainly used for defensive purposes, because it can easily miss even if the opponent is next to Golbez. Lock Off Nightglow can mess up the opponent's dash timing if they are expecting the dark circle to spawn at their location. It can also affect the opponent's assist punish |\nUsing assist to hit the opponent who missed an attack, before they can defend.\ntiming, or catch air approaches in niche situations. This does not destroy stage elements Golbez is standing on, such as World of Darkness' pillars, Ultimecia Castle's wooden platforms or Pandaemonium - Top Floor's platforms."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/81/Hp_golbez_sector_ray_g.jpeg",
+              "damage": "~12 (1x ~12)",
+              "startup": "61F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "~36",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close~Mid] Deploy multiple orbs. Orbs fire at foe with lasers.",
+              "name": "Sector Ray (ground)"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7d/Hp_golbez_cosmic_ray_1.jpeg",
+              "damage": "6 (1 x 6)",
+              "startup": "??",
+              "type": "Magical",
+              "priority": "Melee High",
+              "exForce": "36",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Rising Wave. [Combo] Cast lightning attack.",
+              "name": "Cosmic Ray A",
+              "notes": "Cosmic Ray is Golbez's HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\n. It lets Golbez capitalize on most of his braveries to do HP damage and start assist combos with Wall Rush.\nGolbez can hold Square <img></img> to warp towards opponent, which increases Cosmic Ray's reach. Hold Square <img></img> for a moment, then release to warp. This is important for converting |\nTurning a hit (unlikely or otherwise) into a combo through situational awareness.\nRising Wave projectile or Glare Hand strike to HP damage.\nWatch out if opponent uses Assist Change, as Golbez is briefly vulnerable to aerial attacks after Cosmic Ray ends. Since this is a Melee priority move, LV2 Assist Change can also stagger Golbez consistently. This can cause some issues if the opponent can retaliate with HP attacks, such as Squall and Sephiroth.\nIf Golbez has assist gauge, he can call assist just before the HP hit and keep the opponent in place. Cosmic Ray still does HP damage this way, and the assist can follow up without issues. This works if Golbez does not warp to the opponent first. It is a bit different from a conventional knockback cancel |\nAn attack's knockback that is interrupted with assist. Keeps the opponent in place.\nthough; The assist slowdown is what keeps the opponent in place, instead of assist attack colliding simultaneously with another attack."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7d/Hp_golbez_cosmic_ray_1.jpeg",
+              "damage": "6 (1 x 6)",
+              "startup": "??",
+              "type": "Magical",
+              "priority": "Melee High",
+              "exForce": "36",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Glare Hand. [Combo] Cast lightning attack.",
+              "name": "Cosmic Ray B",
+              "notes": "Same as Cosmic Ray A."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/28/Hp_golbez_genesis_rock_1.jpeg",
+              "damage": "~13 (1 x ~13)",
+              "startup": "51F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "~36",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close~Long] Summon rubble, spin it, then hurl it far away.",
+              "name": "Genesis Rock",
+              "notes": "Golbez can move with analog stick <img></img> after the rocks have appeared.\nGenesis Rock is a slow area denial move. It can be used in small stages for pressure and if it hits, the Wall Rush enables assist combos. Generally speaking Genesis Rock is more trouble than it's worth due to slow speed, long animation lock and lack of stage presence in large stages. After the rocks are fired, Golbez is vulnerable to attacks for a moment. Golbez moves vertically towards the opponent before hurling the rocks, but the rocks fly at Golbez's height. That limits its overall reach.\nGenesis Rock does have a quirk, where it drags the opponent up to Golbez from high altitude. Golbez should position in front of the opponent, while being high above them to do this. This may be useful for niche punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nsituations, but is otherwise something of a gimmick."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/6e/Hp_golbez_sector_ray_a.jpeg",
+              "damage": "~12 (1 x ~12)",
+              "startup": "61F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "~36",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close~Mid] Deploy multiple bits. Bits fire at foe with lasers.",
+              "name": "Sector Ray (midair)",
+              "notes": "Sector Ray is a midrange attack, recommended for catching floaty air dodges (e.g. Cloud, Yuna) and protecting Golbez's assist if needed. The lasers have sharp vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nonce they become active |\nThe period of time when an attack is capable of doing damage.\n, but they stay static afterwards. The hitboxes |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nare not very large, so Sector Ray can occasionally drop the opponent if only one of the lasers connect at an awkward angle. The spheres cannot pass through solid walls, but the lasers can. Unfortunately the hitbox does not necessarily match the visuals in that case, reducing its effective range.\nIf Sector Ray hits, it can start assist combos with the Wall Rush. This can reward good reads |\nA read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".\non the opponent in cramped areas."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7d/Hp_golbez_cosmic_ray_1.jpeg",
+              "damage": "6 (1 x 6)",
+              "startup": "??",
+              "type": "Magical",
+              "priority": "Melee High",
+              "exForce": "36",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Gravity System. [Combo] Cast lightning attack.",
+              "name": "Cosmic Ray C",
+              "notes": "Same as Cosmic Ray A."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7d/Hp_golbez_cosmic_ray_1.jpeg",
+              "damage": "6 (1 x 6)",
+              "startup": "??",
+              "type": "Magical",
+              "priority": "Melee High",
+              "exForce": "36",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Float System. [Combo] Cast lightning attack.",
+              "name": "Cosmic Ray D",
+              "notes": "Same as Cosmic Ray A."
+            }
+          ]
+        }
+      },
+      "moveCount": 8,
+      "sources": [
+        "https://dissidia.wiki/Golbez_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Summon Shadow Dragon!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nBlack Fang"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Black Fang",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "<img src=\"\" style=\"width:250px; height:270px; object-fit: none; object-position: 10%; border:3px solid RGB(105,86,160); inline-table;\"></img>"
+                ],
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.",
+                  "-"
+                ],
+                [
+                  "The time it takes for this attack to do damage. Currently this is measured at 60 frames per second (30F would be 0.5 seconds).",
+                  "400F (~6.5 seconds)"
+                ],
+                [
+                  "Damage Type",
+                  "-"
+                ],
+                [
+                  "Priority",
+                  "-"
+                ],
+                [
+                  "The amount of EX that can be gained from EX Force. 1000 = Full EX gauge.",
+                  "-"
+                ],
+                [
+                  "Effects",
+                  "Bravery Break"
+                ],
+                [
+                  "What this move can be cancelled into.",
+                  ""
+                ],
+                [
+                  "Assist Gain (Hit)",
+                  ""
+                ],
+                [
+                  "CP (Mastered)"
+                ],
+                [
+                  "[Activate with R + Square] Breaks opponent in one hit. Can only gain stage bravery.",
+                  "Unlocked at level",
+                  "Mastered at AP"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "EX Burst: Twin Moon",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "Casts a powerful spell along with a Shadow Dragon. Enter the commands that appear on both sides of the screen at the same time."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "5 x 4 (20)",
+                  "20, 30 x 2 (100 total)",
+                  "Magical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Golbez_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Golbez_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|Side by Side (Seal of Lufenia)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "|-|Build #2=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9623"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1205"
+            ],
+            [
+              "ATK",
+              "180"
+            ],
+            [
+              "DEF",
+              "182"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Jecht"
+            ],
+            [
+              "Weapon <img></img>",
+              "Lufenian Lance"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Dirk <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Thornlet <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Jacket <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Sniper Eye"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> BRV = 0"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Empty EX Gauge"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> After 30 Seconds"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Opponent Summon Unused"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Side by Side"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Golbez_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Synergies",
+          "text": [
+            "Golbez works well with Kuja and Jecht."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Golbez Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Glare Hand",
+                  "23F",
+                  "Ground",
+                  "Opponent",
+                  "8 x N, 6 x 3 (up to 26)",
+                  "Chase (1st hit), Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Attack System",
+                  "23F (slap) / 83F (laser)",
+                  "Air",
+                  "Opponent",
+                  "4, 2 x N",
+                  "Chase (slap)"
+                ],
+                [
+                  "HP",
+                  "Nightglow",
+                  "15F (close) / 91F (projectile)",
+                  "Ground",
+                  "Player",
+                  "1 x 3, 4, 4 (11)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Genesis Rock",
+                  "51F",
+                  "Air",
+                  "Player",
+                  "1 x 13 (up to 13)",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist Overview",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Golbez_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": true,
+      "links": [
+        {
+          "text": "Golbez Gravity Force solo combo example (with Yuna assist setup)",
+          "url": "https://www.youtube.com/watch?v=vA3cZSRWYEU&t=210s"
+        }
+      ]
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Golbez_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Golbez_(Dissidia_012)",
+    "https://www.youtube.com/watch?v=vA3cZSRWYEU&t=210s"
+  ]
+}

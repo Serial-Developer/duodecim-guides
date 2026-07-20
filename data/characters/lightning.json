@@ -1,0 +1,846 @@
+{
+  "slug": "lightning",
+  "name": "Lightning",
+  "page": "Lightning_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Lightning_(Dissidia_012)",
+  "origin": "Final Fantasy XIII",
+  "icon": "light",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-light.png",
+  "infobox": {
+    "Name": "Lightning (ライトニング)",
+    "Original game": "Final Fantasy XIII",
+    "Base ATK (LV100)": "109 (Low / +1 in Commando, Average)",
+    "Base DEF (LV100)": "111 (Average)",
+    "Run Speed": "6 (Average / Good)",
+    "Dash Speed": "73 (Fast)",
+    "Fall Speed": "75 (Above Average)",
+    "Fall Speed Ratio After Dodge": "28 (Above Average)",
+    "Fastest BRV": "13F (Thunder)",
+    "Fastest HP": "47F (Lightning Strike, Crushing Blow)",
+    "1-Hit HP": "Yes (Crushing Blow, Razor Gale)",
+    "HP Links": "Yes",
+    "Command Block": "No",
+    "Weapon": "Swords, Daggers, Greatswords, Katanas, Guns, Parrying Weapons",
+    "Armor": "Shields, Bangles, Gauntlets, Hats, Helms, Headbands, Ribbons, Clothing, Light Armor, Chestplates",
+    "Exclusive weapons": "Blazefire Saber, Axis Blade, Flamberge, Enkindler, Omega Weapon, Barrage Blade, Zantetsuken, Odin Blade",
+    "Unlock": "Default",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Maaya Sakamoto",
+    "Voice Actor (ENG)": "Ali Hillis"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Lightning is the protagonist of Final Fantasy XIII. In Dissidia 012 she utilises her unique Paradigm Shift to adapt to a variety of different situations. Commando for close / mid range fighting, Ravager for zoning, poking and rushdown (Thunder) and Medic for generating bravery.",
+        "While she has some standout tools, her true potential lies in her well rounded kit and being able to cover alot of fundamental aspects in the game."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Easy, versatile gameplay: She has good pokes, good zoning tools, good rushdown and mixups on dodge / block. Lightning has a bit of everything to cover a lot of common options and matchups.\nPowerful meter economy: Lightning's EX gain synergises perfectly with her kit. All of her common confirms, assist combos and advanced combos lead into decent to high EX Force generation. On top of that, she has good dash speed and zoning to win EX Core races frequently. Thunder, along with other attacks also makes her assist gain above average. Lightning is one of the few characters who can reliably fill the EX gauge twice in a (long-winded) single match.\nAggressive zoning: Many tools to keep away, send projectiles after the opponent, or punish setups from midrange, Light makes it difficult for some characters to start effective offense while being able to start her own with it\nGreat combo potential: A lot of moves have high hitstun, lead into chase or cause wall rush, enabling Lightning to confirm most hits into assists and occasionally HPs. With the right hit she can land some impressively long combos too.\nFantastic EX usage: Good combos out of EX Revenge, good EX Mode, and Omega Weapon as a bravery break kill confirm makes Lightning one of the more potent users of EX gauge.",
+              "Low damage: Even with her most optimal combos, Lightning has a hard time pumping out high damage numbers consistently.\nWeak to Glutton: Glutton <img></img> paired with boosted EX intake range can take away much of her EX if she doesn't invest in EX intake range herself.\nWatera can work against her: While good, Watera can frequently ruin combos if reflected or not paid attention to."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Lightning_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "damage": "12, 10, 18 (40)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Commando",
+              "context": "Launch=",
+              "notes": "[Close] Sword slash sending foe flying vertically upward.\nYour fastest grounded move but still reactable. It has decent tracking and range, so it's great for a quick whiff punish or punishing back / side dodges when playing on the ground.\nPrimarily though, you will use this for following up assist combos into Flourish of Steel as your most damaging HP combo ender in terms of bravery damage."
+            },
+            {
+              "variants": null,
+              "damage": "2 x 7, 4, 17 (35)",
+              "startup": "29F",
+              "type": "Physical",
+              "priority": "Melee Mid",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Blitz",
+              "notes": "[Mid] Spinning slash and gun shot. Boost hit times when close.\nVery active, huge and far going spinning slash. Due to it's active frames and Melee Mid priority it can be used to bash through attacks like Squall Thunder Barret, and comboed off of with assist from both the first hit and the wallrush. Lightning can convert into a combo on guard break with assist or a very late guard break, though the wall rush shot won't come out when it does and it has to be dodge cancelled.\nThough it has fairly long recovery, it can be hard to punish so often times you could end up safe to dodge cancel out and return to neutral. Use with caution."
+            },
+            {
+              "variants": null,
+              "damage": "10, 15 (25)",
+              "startup": "37F",
+              "type": "Magical",
+              "priority": "Ranged Low (orb), Ranged Mid (explosion)",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Ruinga",
+              "notes": "[Mid] Shoot forth pearls of light. Deal damage on hit and explosion.\nA long range orb with limited vertical tracking that upon hit wall rushes. The somewhat more useful version of Ruin, it can be used for long range whiff punishes into assist to combo off of, but you might rarely get the chance for that. Still an option that can be considered every now and then."
+            },
+            {
+              "variants": null,
+              "damage": "each (10)",
+              "startup": "27F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "each 21",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Ravager",
+              "context": "Thundaga=\nThe first bolt appears at 27 frames. After that, bolts appear every 8 frames and stay on field for 12 frames. The last bolt appears at ~4 seconds (235F) for a total of 27 bolts.\nLightning regains control at about 100F and can dodge cancel at about 56F.",
+              "notes": "[Close] Call down lightning bolts. Long duration, keeps foe at bay.\nCalls down lightning bolts in a small area around her. All Ranged Low priority, but because they spawn frequently and stay if she gets hit, most characters can't punish her staying within them. This gives Lightning time to breathe and generate bravery in Medic role, cast another Ravager spell or build assist meter with other attacks.\nThe bolts have enough hit stun to follow up with an assist during chase, but it is difficult to confirm it in the moment; The chase prompt comes out as soon as a bolt hits."
+            },
+            {
+              "variants": null,
+              "damage": "each 4 (up to 12)",
+              "startup": "25F, 11F, 11F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Fire",
+              "notes": "[Long] Flame projectile. Eventual speed increase.\nLightning spawns up to 3 small projectiles in front of her, which after a short time go after the opponent at decent speed. Has very generous hit stun so if it does hit, it's easy to follow up. When used in conjunction with Thundaga and / or Watera, they can halt approaches and put the opponent on the defensive for a moment.\nCommonly sees use in some advanced ground combos, such as after wall rushing with Aerith on the ground. Similiarly, Jecht assist gives enough time and distance to set up Fire and combo afterwards. Fire > Launch is a nice extension when it's available."
+            },
+            {
+              "variants": null,
+              "damage": "1 x 5, 6 (11)",
+              "startup": "43F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Aerora",
+              "notes": "[Mid] Launch wind projectiles. Paralyzes foe with multiple hits.\nLaunches a small projectile with slow vertical tracking at them. It's not a strong projectile in neutral, but can hit glitch into Lightning Strike. However, it is harder to land than some of the more practical link glitch combos."
+            },
+            {
+              "variants": null,
+              "damage": "3 x 6, 12 (30)",
+              "startup": "43F",
+              "type": "Physical",
+              "priority": "Melee Mid",
+              "exForce": "120",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Army of One (ground)",
+              "notes": "[Close] Barrage of attacks. Generates extra EX Force.\nA tracking dash attack that leads into Chase on hit. The range is much longer than you'd expect and it can dodge punish consistently upclose. A good mixup to call out block and dodge, even if the animation is on the slower side. On hit it builds an insane amount of EX and with Chase combos even more, making this a rewarding tool when it connects.\nThe ground version sees less use due to Lightning having other moves on the ground that cover similiar situations."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "damage": "7 x 3, 14 (35)",
+              "startup": "29F",
+              "type": "Physical",
+              "priority": "Ranged Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Commando",
+              "context": "Blaze Rush=",
+              "notes": "[Mid] Gun shot & charge slash. Effective against any height."
+            },
+            {
+              "variants": null,
+              "damage": "12, 10, 18 (40)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Smite",
+              "notes": "[Close] Sword slash knocking foe downwards."
+            },
+            {
+              "variants": null,
+              "damage": "each (10)",
+              "startup": "33F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Ruin",
+              "notes": "[Long] Shoot forth pearls of light. Can aim with the analog stick.\nA long range projectile that can be done up to 3 times, all hits leading to Chase. Not the greatest move to use due to being outclassed in utility by Blizzara / Watera often, but it's faster than Blizzara and can be used for a rare long range whiff punish."
+            },
+            {
+              "variants": null,
+              "damage": "2, 3, 5 (10)",
+              "startup": "13F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Ravager",
+              "context": "Thunder=",
+              "notes": "[Close] Call down lightning bolts. Short range, quick execution.\nA character defining move. Lightning's fastest move and an incredibly oppressive tool. Deceptive range, anti airs, very fast and spammable due to having low recovery and confirmable followup opportunities. Due to it's insanely low recovery you can use this to cancel it into a neutral state and keep using it in rhythm to build assist meter quickly.\nBecause of the Ranged Low priority, Lightning can use this move without the fear of getting blocked. Even when the opponent can act immediately after a successful block, the low recovery on Thunder means many characters will struggle to retaliate consistently. This means that guarding against this move does not guarantee your turn. The low recovery time of Thunder also enables Lightning to block, dodge or do it again. Players looking to counterattack may have to guess correctly again to put her at a disadvantage.\nThe Ranged Low priority does mean however, that melee priority attacks can attack through Thunder. Dashes and attacks with magic block property such as Squall's Heel Crush can also power through this move. This risk may not be in player's favor, but they can be used to call out Lightning's timing on using it.\nThe low damage output on Thunder itself means Lightning has to land this attack multiple times before it begins to amount to anything noteworthy. However, bypassing LV2 Assist Change is possible before or after the third hit depending on the assist which can shift the momentum in Lightning's favor.\nThunder also generates 90 EX Force when completed, which is on par with other quick, high EX Force generating attacks.\nThis is a move that excels at multiple aspects of competitive gameplay. Ease of use, meter management and favorable risk / reward ratio...\nAll that is to say, yes - Thunder is really good."
+            },
+            {
+              "variants": null,
+              "damage": "2, 10 (12)",
+              "startup": "63F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "60",
+              "effects": "Absorb",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Blizzara",
+              "notes": "[Mid] Launch shards of ice after drawing in foe.\nLightning's anti-zoning tool. Extremely slow for a bravery and just as punishable on reaction, but works well when used to counter setups of other characters.\nAs soon as the ice spawns at around half of its startup, it has a strong vacuum effect around it to draw in even from slightly out of its range. As it can be dashed through it works well in tandem with Watera to stay safe.\nLightning can start moving again at around the same time it hits, and with its long floaty hit stun makes her able to combo off of it solo when close, or with any common assist."
+            },
+            {
+              "variants": null,
+              "damage": "15",
+              "startup": "43F",
+              "type": "Magical",
+              "priority": "Ranged Mid",
+              "exForce": "90",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Watera",
+              "notes": "[Long] Launch waterballs. Slowly tracks opponent.\nA staple projectile. Stays out incredibly long, but also very slow. The slow speed makes it great for occupying space.\nSince it has to be reflected to disarm it, characters without a fast, safe mid / high priority have limited strategies to utilise against it. And if they do block it, Lightning can punish the stagger with HPs, or just throw out another Watera and reflect back the other with Army of One.\nWatera stays out even if she gets hit, so it can intercept low priority combos / assist calls when nearby. The EX Force generation is great, and it has ample hit stun for solo or assist combos. Assists are more practical regardless of positioning, solo combos often require being near / above the opponent or actively moving towards them as Watera makes contact.\nCertain assists can whiff punish it consistently when timed well, although its a tricky timing that requires the assist to attack after the ball has launched.\nA strong tool in many ways."
+            },
+            {
+              "variants": null,
+              "damage": "3 x 6, 12 (30)",
+              "startup": "43F",
+              "type": "Physical",
+              "priority": "Melee Mid",
+              "exForce": "120",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Army of One (midair)",
+              "notes": "[Close] Barrage of attacks. Generates extra EX Force.\nAir version of an already good attack.\nThis version becomes even more useful than the grounded due to it's good vertical tracking chasing down, reflecting Watera with it, and using it in tandem with Thunder for amazing block / dodge mixup to keep the opponent guessing at all times."
+            }
+          ]
+        },
+        "Medic": {
+          "intro": "Medic has two bravery attacks, both of which have a ground and an aerial version. These are passive, non-attacking abilities that exclusively generate bravery for Lightning when used.\nAs using either Cure or Cura leaves Lightning vulnerable to damage, some common strategies include mitigating losses from EX core races (too far to get the core first), provoking an approach in a stalemate situation or stacking bravery in between interactions at a safe distance.\nNot equipping a bravery in Medic role removes it altogether from the Paradigm Shift rotation. This streamlines the process of changing between her other two roles, which brings a certain level of comfort to the execution. Ultimately it's a matter of player's preference and skill. Medic braveries are not a high priority for learning the basics with Lightning, but can provide further optimization for dedicated players.",
+          "moves": [
+            {
+              "variants": null,
+              "damage": "1 to 6 % of raw BRV (21 %)",
+              "startup": "~33F",
+              "type": "Magical",
+              "priority": "-",
+              "exForce": "-",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Cure",
+              "context": "At level 100, Lightning gains 138 total bravery (6 + 13 + 20 + 26 + 33 + 40). The process takes about 3 seconds (~180F).",
+              "notes": "Increase bravery. Continue combo for boost.\nGenerate bravery with a passive animation. No specific input timing required to complete this move. The ending lag of Cure isn't too long, although the total animation takes a few seconds to finish. When used sparingly in between projectiles and during lost EX core situations, this is a nice way to regain lost bravery or further stack it."
+            },
+            {
+              "variants": null,
+              "damage": "1, 1, 23 % of raw BRV (25 %)",
+              "startup": "~55F",
+              "type": "Magical",
+              "priority": "-",
+              "exForce": "-",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "name": "Cura",
+              "context": "At level 100, Lightning gains 165 total bravery (6 + 6 + 153). The process takes about 2.5 seconds (~160F).",
+              "notes": "Increase bravery. Successful combo provides greater boost.\nSame as Cure except it starts up slower, is faster to complete by 20F and generates more bravery, while needing more precision to finish. You can't mash it and have to time two more inputs after. Failing either input leaves you with even less bravery than with Cure, so the risk / reward ratio goes up noticeably.\nIf your timing is consistent, it is the better choice out of the two Medic braveries."
+            }
+          ]
+        }
+      },
+      "moveCount": 16,
+      "sources": [
+        "https://dissidia.wiki/Lightning_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "damage": "each (7)",
+              "startup": "47F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "60 + 12 x N",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Lightning Strike",
+              "notes": "[Close] Call down lightning bolts. Great against flank attacks."
+            },
+            {
+              "variants": null,
+              "damage": "10",
+              "startup": "59F",
+              "type": "Physical",
+              "priority": "Melee High (blade), Ranged High (projectile)",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Razor Gale",
+              "notes": "[Long] Shockwave from sword. Slow speed, strong homing."
+            },
+            {
+              "variants": null,
+              "damage": "3, 3, 4 (10) / +Launch = (32)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "90",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Flourish of Steel",
+              "context": "Commando only.",
+              "notes": "Branching from Launch [Combo] Swing large sword."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "damage": "-",
+              "startup": "47F",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "60",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Crushing Blow",
+              "notes": "[Mid] Slashing charge sending foe flying upward."
+            },
+            {
+              "variants": null,
+              "damage": "1 x 8 (blade), 2 x 6 (thunder) (8 + 12)",
+              "startup": "55F",
+              "type": "Physical (blade) / Magical (thunder)",
+              "priority": "Melee High (blade) / Ranged High (thunder) / Block (Ranged Low)",
+              "exForce": "18",
+              "effects": "Wall Rush, Magic Block",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "40 (20)",
+              "name": "Thunderfall",
+              "notes": "[Long] Drop lightning on foe. Can hit with spinning sword.\nThe magic block occurs at the end of the attack when the blades are spinning above Lightning's head. (Video)"
+            }
+          ]
+        }
+      },
+      "moveCount": 5,
+      "sources": [
+        "https://dissidia.wiki/Lightning_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Omega Weapon equipped!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nOmega Weapon\nGrav-con Unit"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Omega Weapon",
+          "text": [
+            "[Activates with bravery attack] Instantly causes a Bravery Break if an opponent is near Break status.",
+            "An attack will break if the opponent is under 30 % of their base bravery (200 BRV at level 100). Very potent for increasing damage with an EX Burst."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Grav-con Unit",
+          "text": [
+            "[Always active while in EX Mode] The Grav-con Unit activates to automatically avoid Wall Rush damage."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Gestalt Drive",
+          "text": [
+            "A chain of attacks imbued with the powers of Odin. Enter the commands as shown on the screen to initiate an attack.",
+            "Even if your movement controls are set to utilise directional buttons, the directional commands must be done with an analog stick.",
+            "Remember that Lightning has +1 ATK while in Commando role. This applies to her EX Burst as well."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "12, 4 x 5 (32)",
+                  "13 x 4, 4 x 5 (72) (104 total)",
+                  "Physical (except Lightning Strike & Thunderfall)"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Lightning's mechanic (Paradigm Shift)",
+          "text": [
+            "Lightning has three different sets of bravery attacks through the Commando, Ravager and Medic roles. Press L + R (<img></img> + <img></img>) to change to a different role.",
+            "Default rotation for roles is: Commando > Ravager > Medic",
+            "If Reverse Paradigm extra ability is used, the rotation becomes: Ravager > Commando > Medic",
+            "If no attacks under a specific role are equipped such as Medic, the role will not be available in battle. This can serve as convenience to a player who wishes to streamline paradigm shift rotations.",
+            "The Commando role has a passive +1 ATK stat boost when using it in battle, which is often used to increase EX Burst damage."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Lightning_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [
+            "Ravager braveries enable several solo combos for Lightning."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Combo",
+                  "Approximate damage (multipliers)",
+                  "Approximate EX Force",
+                  "Notes",
+                  "Video"
+                ],
+                [
+                  "Blaze Rush (1st part) > DC > LL > Smite",
+                  "61 + WR (7x3, 12, 10, 18 + WR)",
+                  "30+",
+                  "-",
+                  "video"
+                ],
+                [
+                  "Fire (set) > Fire (hit) > Anything",
+                  "4~12 + followup",
+                  "0 + followup",
+                  "Commonly used during assist combos or from afar in the neutral, each projectile has enough hit stun to combo into other attacks if Lightning is able to act before they connect.",
+                  "video"
+                ],
+                [
+                  "Fire (set all 3) > Fire 1 & 2 (hit) > Crushing Blow > Fire 3 (hit) > Blaze Rush (1st part) > DC > LL > Smite",
+                  "73 + WR (4, 4, --, 4, 7x3, 12, 10, 18 +WR)",
+                  "90+ (0, 0, 60, 0, ??, 30)",
+                  "Opponent must be grounded or near ground to enable Blaze Rush's landing lag followup.",
+                  "video"
+                ],
+                [
+                  "Aerora > Lightning Strike",
+                  "18+ (11, 7 for each bolt)",
+                  "72+ (0, 60+12xN",
+                  "Works consistently against grounded opponents. May be used after staggering with a block.",
+                  "video"
+                ],
+                [
+                  "Watera > Smite / Thunder / Army of One / Thunderfall",
+                  "15 + 10~40+WR (15, 40 / 10 / 30 / 12 + WR)",
+                  "90+ (90 + 30 / 90 / 120 / 18)",
+                  "Similiar to Fire, Watera causes enough hit stun to enable followups if it connects after Lightning is capable of moving again. The upward knockback mostly limits combo opportunities to attacking after dashing closer, but Thunderfall works well as an HP followup from further distance.",
+                  "video"
+                ],
+                [
+                  "Army of One > DC > Thunder",
+                  "40 (3x6, 12, 2, 3, 5)",
+                  "210 (120, 90)",
+                  "Requires Adamant Chains equipment's special effect to work without walls. Near walls, ceiling and corners the knockback distance is reduced enough for regular air dodge distance to suffice. Exceptionally high EX Force generation.",
+                  "video"
+                ],
+                [
+                  "Blizzara > Army of One (DC) > Thunder",
+                  "52 (2, 10, 3x6, 12, 2, 3, 5)",
+                  "270 (60, 120, 90)",
+                  "Blizzara can also combo into other attacks which results in one of the highest EX generating solo combos in the game. Just like Watera, the later Blizzara hits, the easier it becomes to connect with. Army of One > Thunder still requires Adamant Chains if done without a wall.",
+                  "video"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Lightning_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|Adamant Chains + EX=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Equip Master Guardsman for +1000 HP.",
+        "|-|Hybrid=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "A hybrid build with high base bravery.",
+        "Equip Best Dresser extra ability for +100 base bravery."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10972"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "957"
+            ],
+            [
+              "ATK",
+              "177"
+            ],
+            [
+              "DEF",
+              "185"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x1.4"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Adamant Chains",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Aerith"
+            ],
+            [
+              "Weapon <img></img>",
+              "Zantetsuken"
+            ],
+            [
+              "Hand <img></img>",
+              "Adamant Shield"
+            ],
+            [
+              "Head <img></img>",
+              "Adamant Helm"
+            ],
+            [
+              "Body <img></img>",
+              "Adamant Vest"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> BRV = 0"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> White Drop"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> White Drop"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> White Drop"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> White Gem"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Glutton"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Great Gospel"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante / None"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9971"
+            ],
+            [
+              "CP",
+              "480"
+            ],
+            [
+              "BRV",
+              "1414"
+            ],
+            [
+              "ATK",
+              "176"
+            ],
+            [
+              "DEF",
+              "183"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x3.5"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: None",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Tidus / Player Choice"
+            ],
+            [
+              "Weapon <img></img>",
+              "Piggy's Stick"
+            ],
+            [
+              "Hand <img></img>",
+              "Hero's Shield"
+            ],
+            [
+              "Head <img></img>",
+              "Royal Crown <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Maximillian <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Large Gap in HP"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Hero's Essence"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Glutton"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Lightning_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [
+        "Lightning works well with most tournament viable assists."
+      ],
+      "tables": [],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Lightning_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Lightning_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Lightning_(Dissidia_012)"
+  ]
+}

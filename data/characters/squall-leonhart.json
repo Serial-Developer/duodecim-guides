@@ -1,0 +1,1198 @@
+{
+  "slug": "squall-leonhart",
+  "name": "Squall Leonhart",
+  "page": "Squall_Leonhart_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Squall_Leonhart_(Dissidia_012)",
+  "origin": "Final Fantasy VIII",
+  "icon": "squall",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-squall.png",
+  "infobox": {
+    "Name": "Squall Leonhart (スコール・レオンハート)",
+    "Original game": "Final Fantasy VIII",
+    "Base ATK (LV100)": "109 (Low)",
+    "Base DEF (LV100)": "111 (Average)",
+    "Run Speed": "5 (Above Average)",
+    "Dash Speed": "77 (Average / Good)",
+    "Fall Speed": "81 (Average)",
+    "Fall Speed Ratio After Dodge": "38 (Average)",
+    "Fastest BRV": "13F (Upper Blues, Solid Barrel)",
+    "Fastest HP": "41F (Blasting Zone)",
+    "1-Hit HP": "Yes (Multiple)",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "No",
+    "Weapon": "Daggers Guns Katanas Swords",
+    "Armor": "Bangles Chestplates Clothing Hats Helms Large Shields Light Armor Shields",
+    "Exclusive weapons": "Revolver, Twin Lance, Punishment, Lionheart",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Hideo Ishikawa",
+    "Voice Actor (ENG)": "Doug Erholtz"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Squall is a close-range all-rounder |",
+        "A character who can do a bit of everything well.",
+        ", who takes advantage of his mobility and various pokes |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        "to succeed.",
+        "Let's start on the ground: Solid Barrel and Upper Blues are fast pokes with low recovery |",
+        "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+        ", which are great for filling assist gauge and starting offense. Thunder Barret pulls opponents in for a combo, and Blasting Zone's strong tracking |",
+        "Tracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".",
+        "and tall hitbox |",
+        "An invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.",
+        "punish careless dodges. In the air, Heel Crush and Aerial Circle go through low priority magic. Fire Barret supplements Squall's offense. And lastly, Beat Fang is a textbook example of a strong poke; A 15-frame move with notable tracking, low recovery and plenty of combo potential.",
+        "Squall works well with system mechanics, so hybrid builds are commonly used. His delayable combo attacks are great for various assists. Ground combos with Revolver Drive generate lots of EX as well. Squall is one of the strongest users of meter depletion builds with Yuna assist, as well. Even Side by Side builds aren't wasted on him since his HP attacks (Blasting Zone, Aerial Circle) work well enough in neutral |",
+        "The stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.",
+        ". LV2 Assist Change counters with Aerial Circle are also reliable...",
+        "Squall has a few issues though; He has low EX gain without EX Cores and ground combos. He struggles to hit fast fallers who air dodge (e.g. Prishe). Most of his moves miss against high speed characters, such as Onion Knight and Tidus. This is a problem, because Squall relies on dodges to stay safe, but they leave him open to attacks with little recourse. Adamant Chains build helps, but cuts into his damage and meter depletion. Furthermore, Squall's air assist combo routes are limited and cannot always capitalize on Bravery Breaks because of this. He cannot easily punish blocks or whiffs |",
+        "A missed attack that doesn't make any contact.",
+        "outside Beat Fang's range, either.",
+        "In competitive play, Squall has a long history of being high tier. He has a low skill floor and reliable tools for many situations. This makes him a good recommendation for new and experienced players alike, even if some characters can run circles around him."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Flexible, straightforward moveset helps Squall onboard new and experienced players to compete.\nDefensive punishment is relatively easy and effective thanks to Beat Fang, Blasting Zone and Aerial Circle.\nCombo potential is great, particularly close to the ground. A variety of solo combos and assist conversions are available and he can combo into HPs reliably on the ground as well.\nAssist synergy is strong and diverse thanks to multi-part attacks and wall rush.\nEX Mode increases Squall's gunblade's range and damage exponentially.\nMeter depletion, particularly with Yuna assist is among the strongest in the game.\nVersatile builds can support Squall with a variety of different playstyles and matchups.",
+              "Average post-dodge defense. To cover for his floaty air dodges, Squall has to clash with Beat Fang or compromise reward on hit with Adamant Chains build.\nLackluster EX generation in the air can lead Squall to rely on EX Cores to keep up with EX gauge.\nProne to whiffing against fast movement - Squall takes bigger risks against fast fallers (Tidus, Prishe) and fast runners (Onion Knight, Tifa).\nBelow average air combo extensions. With limited ways to extend aerial assist combos without wall rush, Squall's bravery damage output can suffer in air-centric fights."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Squall_Leonhart_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/bd/Brv_squall_upper_blues.jpeg",
+              "damage": "[3, 3, 5],9 (20) [31]",
+              "startup": "13F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Leap into the air. Quick launch, easy wall rush.",
+              "name": "Upper Blues",
+              "notes": "A quick forward slash with combo potential. Upper Blues is commonly used as a poke, whiff punisher, in combos and to fill assist meter faster with dodge cancels. Due to the forward movement, it is more reliable in catching moving opponents than his other ground braveries. And while it's not his strongest anti-air attack, it can still serve as one against opponents who are barely hovering off the ground.\nOn hit, Upper Blues can reliably wall rush on the floor for pressure or assist combos. Delaying the second hit allows comboing into Beat Fang with a dodge cancel for a higher damaging combo with more assist meter gain.\nA good bravery to have in most match-ups and builds."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c8/Brv_squall_solid_barrel.jpeg",
+              "damage": "[5, 6, 8, 10, 5, 5, 16] (55) (110)",
+              "startup": "13F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Repeated slashes. Short range; quick and powerful.",
+              "name": "Solid Barrel",
+              "notes": "Another fast bravery with shorter reach than Upper Blues, but better EX generation. Much like Upper Blues, this can be dodge cancelled quickly to generate assist meter and cancelling the third hit even enables the well known \"golden combo\" that capitalises on landing lag.\nThe knockback on the last hit does not lend well to assist combos, but because each attack can be pressed within a generous input window, assist conversions can be confirmed reliably.\nDue to Solid Barrel's short range, it is not often used to punish whiffs or poke moving opponents. Dashing helps in applying Solid Barrel in it's effective range, but it works more consistently as a block punisher against grounded opponents and as a combo starter / extender after Thunder Barret. Having higher damage and EX Force output than Upper Blues, along with good frame data are enough to justify this attack as a staple for Squall."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/a/ad/Brv_squall_blizzard_barret.jpeg",
+              "damage": "10 (10)",
+              "startup": "33F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire one ice bullet. Long range, strong homing.",
+              "name": "Blizzard Barret",
+              "notes": "A slow single hit projectile with low priority. The tracking is deceptively good and the hit stun is serviceable for combo purposes. At particular spacings, it can enable combo extensions with Thunder Barret or even act as a combo starter.\nOverall though, Blizzard Barret is rarely prioritized in competitive play. Outside of the homing and hit stun, it is an underwhelming low priority projectile with unfavorable risk / reward ratio. Squall's other ground braveries are more competitive compared to Blizzard Barret, so it is often neglected altogether."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/88/Brv_squall_thunder_barret.jpeg",
+              "damage": "each (3)",
+              "startup": "33F (furthest bolt appears first)",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "each 9",
+              "effects": "",
+              "cancels": "Dodge, Attack (Hit)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Lightning that draws foes. Good start for combos.",
+              "name": "Thunder Barret",
+              "notes": "A signature Squall combo starter. Four vertical lightning bolts are cast in front of Squall. Thunder Barret works as a longer range disjointed poke, anti-air, dodge punisher and as a combo starter. Squall can cancel the recovery on whiff into attacks, dodges and blocks. But on hit this can be cancelled much earlier to perform solo combos, including his staple HP attacks.\nThunder Barret is a great move for Squall in most match-ups as it can control a decent amount of space with good reward on hit.\nIt is not without weaknesses however. The Ranged Low priority and the relatively slow startup make it easier for the opponent to react and power through bolts with a dash or an attack, creating an opening for hitting Squall when he is vulnerable. Furthermore, the lightning bolts do not have enough tracking to hit high speed lateral movement. Even though Thunder Barret's recovery can be cancelled into other actions, Squall is completely stationary and has no protection beyond the active lightning bolts. As such, using this move predictably can quickly backfire against vigilant opponents."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7b/Brv_squall_fusillade.jpeg",
+              "damage": "6, 6, 6, 6 each 6 (24+)",
+              "startup": "33F",
+              "type": "Magical",
+              "priority": "Ranged Low Ranged Mid (thunder)",
+              "exForce": "60~90",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Magic barrage. Can combo without hitting.",
+              "name": "Fusillade",
+              "notes": "A combination of magic projectiles with good EX generation. The startup, low priority and lack of dodge cancel windows do not lend to fighting at a range. However, the first two projectiles can be reasonably safe to throw out at a distance and they can be confirmed into an assist combo on hit. Each projectile can be input with a bit of delay to help with this. In addition, the mid priority thunder bolt can be used as an effective -albeit predictable- method to force a dodge from the opponent. Depending on the opponent, punishing a dodge or what comes after it is possible with an assist, creating a more favorable situation for Squall if he performs this move uninterrupted.\nFusillade can also work in situations where Solid Barrel would normally be used. That is, after staggering with a block or starting a combo with Thunder Barret. Much like Solid Barrel, the holding potential is great for assist conversions and the EX generation can be exceeded depending on the assist.\nDue to functional overlap with Solid Barrel with few standout traits elsewhere, Fusillade is not often prioritized in competitive play."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/b9/Brv_squall_heel_crush.jpeg",
+              "damage": "20 (20)",
+              "startup": "41F",
+              "type": "Physical",
+              "priority": "Melee Mid",
+              "exForce": "0",
+              "effects": "Block Low (Ranged), Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Unleash heel drop. Slow start, fast movement.",
+              "name": "Heel Crush",
+              "notes": "An advancing mid priority attack. Squall can block Ranged Low priority attacks during the startup animation, such as Lightning's Thunder or Yuna's Heavenly Strike. Heel Crush works as a callout against these kinds of attacks and because of the mid priority, it will also stagger opponents looking to block Beat Fang. This move can be dodge cancelled somewhat early during the recovery animation, but the lengthy startup gives the opponent time to prepare for a counter attack.\nHeel Crush is often used in conjunction with Beat Fang and Fire Barret to create mixups and otherwise create meaningful interactions at close range. It is not mandatory for all matchups."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/b8/Brv_squall_beat_fang.jpeg",
+              "damage": "[3, 5], 7, [2 x 6, 13] (40) [73]",
+              "startup": "15F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Float, then strike down foe. Short reach, but fast.",
+              "name": "Beat Fang",
+              "notes": "The defacto Squall bravery. Press Circle <img></img> 4 times in total to complete the attack. A poke, a great whiff punisher, a flexible combo starter with an occasional guard cross-up. Beat Fang shares many characteristics with Squall's ground braveries, such as it's speed, multi-hit attacks with lenient input window and combo potential. Because this is Squall's only quick melee bravery, it is at the heart of his aerial combat.\nBeat Fang has a lot of utility. Its fast startup and early dodge cancel window make it great for building assist gauge on whiff. The homing movement during startup lets him punish missed attacks with ease. It even has a hitbox that can hit behind a blocking opponent in close range seemingly at random, ignoring the guard attempt altogether.\nOnce Beat Fang connects, the second upward slash can evade incoming attacks, namely The Emperor's Dreary Cell or assists that were called in an attempt to interrupt Beat Fang. Wall rushing near the ground not only enables a variety of assist followups, but also allows Squall to impose defensive decision making on the opponent and potentially repeat the situation, akin to the okizeme concept in other fighting games. Because of the way camera works, the knocked down opponent may also have to deal with crossed up directional attack inputs 1-2 times depending on how Squall moves afterwards, further confusing his prey.\nThere are a few things Squall players should be wary of. For one, Squall can only cancel Beat Fang's recovery into an air dodge, which reduces ambiguity for the opponent. Despite the tracking during startup, Beat Fang has no hitbox below Squall. This means it can miss against dashes, air dodges with fast fall speed and fast runners on the ground such as Tidus and Tifa. And if Squall commits to the finishing series of blows, he can be easily staggered with a LV2 Assist Change for a punish. Considering how much Squall relies on this move, these factors can greatly reduce his hit rate and bravery damage output. Since critical hits are not distributed in a binary \"all or nothing\" fashion, the damage increase from critical hits can fluctuate greatly.\nRegardless, Beat Fang is one of Squall's most important and effective moves. Anything Solid Barrel and Upper Blues could achieve is relegated to it in the air. Much of Squall's success hinges on how he well he uses Beat Fang."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3f/Brv_squall_mystic_flurry.jpeg",
+              "damage": "each 1 x 8, 7 (15)",
+              "startup": "33F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "each 30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Magic barrage. Can combo without hitting.",
+              "name": "Mystic Flurry",
+              "notes": "A barrage of multi hitting low priority projectiles that stay in place after traversing a short distance. Mystic Flurry is not commonly prioritized in competitive play.\nOn paper, it has good potential for damage and generating EX Force. However, each projectile is fired somewhat erratically in front of Squall and they do not combo into each other consistently at the end of their duration. Because of this, the projectiles are often positioned unfavorably and not necessarily right in front of Squall. And if one projectile wall rushes on the ground, the remaining projectiles cannot inflict damage without assist.\nAll that creates complications for punishes and combos alike, but Squall's safety is also at risk - He is completely stationary for Mystic Flurry's duration whether he fires all projectiles or not. Dodge cancelling the recovery is the same speed as Mystic Flurry's natural recovery, further cementing Squall's commitment when using this move. Coupled with the fact that Ranged Low projectiles lose to attacks, blocks and dashes, Mystic Flurry provides very little reward in proportion to the risk it presents for using it.\nMystic Flurry's projectiles stay on the field even if Squall gets hit. This isn't often useful, but any projectile that does connect on the opponent causes downward knockback on their last hit, which can wall rush. That can be used to combo into assists or reassess the situation, but setting up Mystic Flurry can be just as worthwhile for daring players - Squall can pick up opponents stuck in a barrage of hits with Beat Fang or Aerial Circle, but due to Mystic Flurry's inconsistent behavior and required spacing, this can be difficult to perform or justify."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/d/dc/Brv_squall_fire_barret.jpeg",
+              "damage": "each (5)",
+              "startup": "33F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Launch multiple fireballs. Normal speed, strong homing.",
+              "name": "Fire Barret",
+              "notes": "Three homing fireballs pursue the opponent for a period of time. Fire Barret is often used in conjunction with Beat Fang to build assist meter more efficiently in the air. The range is good for occupying space and creating a potential combo conversion later. Each projectile inflicts a decent amount of hit stun which is difficult to spontaneously react to, but it does allow Squall to combo into other attacks if the player has a good read on the situation. And even if Fire Barret is used up close, the recovery can be cancelled into an attack -usually Beat Fang- for additional damage on hit.\nSquall remains stationary for a moment after firing and cannot dodge cancel until the split projectiles begin pursuing in earnest. This can make Squall vulnerable to whiff punishes with an assist when done with a precise timing even if he has Auto Assist Lock On extra ability equipped.\nFire Barret is a staple air bravery for Squall due to its consistency and relatively low commitment in many situations. It complements his ability to interact in close and mid ranges and can provide opportunities for additional damage from time to time. In a way, it's usage could be likened to a conventional projectile in a traditional 2D fighting game."
+            }
+          ]
+        }
+      },
+      "moveCount": 9,
+      "sources": [
+        "https://dissidia.wiki/Squall_Leonhart_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/49/Hp_squall_fated_circle.jpeg",
+              "damage": "-",
+              "startup": "43F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Block Low (Ranged) Wall Rush, Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Surround self with explosions. Block foe's spells.",
+              "name": "Fated Circle",
+              "notes": "A circular explosion surrounds Squall, pulling in nearby opponents and blowing them away. Fated Circle is a good secondary ground HP for Squall thanks to it's utility. The Ranged High priority cannot be staggered with blocks or LV2 Assist Change. It can wall rush for additional HP damage, bypass EX Revenge checkmates thanks to the lack of bravery damage, it can even block Ranged Low attacks similiar to Heel Crush! The animation is fairly quick with a slightly above average recovery for an HP, making it harder to whiff punish after escaping with an assist change. The absorb effect works well against guarding opponents from a short distance. Each explosion has it's own hitbox which won't necessarily hit often due to surrounding Squall. But they do contribute to the overall active duration when an opponent can be damaged.\nIf Fated Circle hits a grounded opponent, the knockback often causes a wall rush even on the floor which can be used to follow up with an assist. Your mileage may vary depending on positioning and assist, however.\nSquall's grounded HP attacks are great for the most part and that may be Fated Circle's greatest shortcoming. While great in it's own right, two of his other HPs are often stronger or more applicable in practical situations. In any build that has 3 grounded HP attacks however, Fated Circle rounds out Squall's repertoire really well."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/92/Hp_squall_revolver_drive.jpeg",
+              "damage": "1 x N (max 50)",
+              "startup": "43F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "each 3",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Rage-filled charge. Can aim with the analog stick.",
+              "name": "Revolver Drive",
+              "notes": "Squall starts revolver driving. A staple HP, this is an advancing multi hitting attack that can be freely steered with no regard for lock on. The HP attack button must be held to extend this attack's duration, or Squall will transition to the ending of the move immediately upon button release and inflict HP damage.\nRevolver Drive is often used as a block punisher, an assist combo starter / ender or stalling briefly. Landing this attack can be very beneficial - Squall can generate up to 50 hits worth of 3 EX Force (total 150) and freely manipulate his trajectory to best facilitate wall rush or advantegous positioning with EX Cores. Squall's ability to collect the EX by himself is somewhat unreliable however - Without increasing EX intake range he tends to only get roughly half (40~50 %) of the generated EX.\nIf done against a ledge, Squall will simply remain stationary while continuing to inflict bravery damage. This is far from ideal against characters who have Glutton <img></img> equipped as both characters remain close to the generated EX Force, but it is a good alternative for racking up damage in stages like Lunar Subterrane.\nWhile Revolver Drive performs well once it hits, using it by itself in neutral situations is less effective overall. Aside from the startup and lack of absorb effect, Revolver Drive has little anti air capability despite having a hitbox above him. It can only move along solid surface and the traversal speed is only good, if not average. Sharp turns will greatly slow down momentum and it takes a good second to reach top speed again.\nEven though Revolver Drive can be stopped at almost any time, it does have a maximum duration. Opponents can stay airborne and close to Squall, preparing for a counter attack once Squall stops moving. This is where players must remain wary of their timing and releasing earlier than what the opponent anticipates can go a long way in avoiding punishment. Furthermore, moves with unblockable priority such as The Emperor's Thunder Crest and Exdeath's Black Hole can pierce through Revolver Drive. This is on par with how the attack priority system behaves, but Revolver Drive suffers from it more on average compared to other attacks.\nRevolver Drive also exhibits notably altered behavior during assist call / change slowdowns - Whenever an assist is called or when assist change is used, Revolver Drive's movement speed increases drastically. This can help Squall close a distance for a surprise attack or create distance while the opponent is escaping from it. Steering is also influenced by this and could be used to convert into an assist without a wall by moving past the opponent and letting the assist pick up from that spot.\nIf a bravery break is inflicted during Revolver Drive, releasing the HP button causes the HP damage to be inflicted immediately before the additional bravery is added."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/24/Hp_squall_blasting_zone.jpeg",
+              "damage": "6, 1 x 4 (10)",
+              "startup": "41F",
+              "type": "Magical",
+              "priority": "Melee High",
+              "exForce": "90",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Chop with massive blade of light that flies forward.",
+              "name": "Blasting Zone",
+              "notes": "One of Squall's strongest and fastest HP attacks. Great reach and horizontal tracking make Blasting Zone effective for controlling space against dodges and missed attacks. Assists can follow up on hit without a wall and good EX Force output ensure consistent reward.\nBlasting Zone's range cannot be understated. It is long and tall enough to hit airborne characters outside of Thunder Barret's reach. What really complements it is the tracking - Blasting Zone will home in the opponent right until the blade is slammed to the ground and it's very fast.\nThe recovery is quite short for a move as potent as this. It's vulnerable to Omni Ground Dash and air dodge invincibility, but it's borderline unpunishable without them or assist.\nWhenever a player thinks an opponent will dodge, Blasting Zone is fantastic and easy to use to capitalise on that opportunity. The hitboxes are active from the 41 frame startup until the HP damage portion. That can be used to disrupt opponents inside traps such as The Emperor and reflect lingering high priority projectiles like Vaan's Windburst.\nOverall, Blasting Zone is a staple in competitive Squall gameplay. It can be used effectively with ease to retaliate and chip away health. Great for calling out predictable behavior."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/ef/Hp_squall_rough_divide_g.jpeg",
+              "damage": "-",
+              "startup": "59F",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Leap into a charge. Slow start, but very fast charge.",
+              "name": "Rough Divide",
+              "notes": "A long distance aerial charging attack. While good for whiff punishing long recovery attacks from a great distance, Rough Divide is usually outclassed by his other ground HP attacks. As such, its midair version is often used instead."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/89/Hp_squall_aerial_circle.jpeg",
+              "damage": "-",
+              "startup": "43F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Block Low (Ranged) Wall Rush, Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Surround self with explosions. Blocks foe's spells.",
+              "name": "Aerial Circle",
+              "notes": "Midair variant of Fated Circle, Aerial Circle is Squall's go-to HP attack while airborne. The surrounding explosions are formed vertically instead of horizontally, which leaves Squall vulnerable to attacks from his sides. This isn't as much of a weakness as it may seem at first, because Aerial Circle shares many traits with the grounded Fated Circle. The startup, absorb effect, Ranged Low block, single hit Ranged High priority and wall rush are all here.\nAerial Circle thrives partly due to lack of Revolver Drive and Blasting Zone. Because of how prominent aerial combat is in Dissidia 012, Squall has many opportunities to use Aerial Circle during assist combos and pre-emptively as a high risk approach against regular blocks and neutral air dodges. The absorb effect pulls in stationary opponents within it's range, letting Squall inflict HP damage consistently after blodging or using LV2 Assist Change.\nA notable strength that Aerial Circle has is meter depletion. Due to the active frames provided by the surrounding explosions, Aerial Circle can hit multiple times with the help of Yuna assist, which requires no wall. The additional hits inflict no HP damage, but meter depletion will activate for each successful hit. This is more difficult to replicate with other assists or Fated Circle, as they require wall rush to go along with the subsequent hits.\nOne thing to look out for when using Aerial Circle in the neutral is the opponent's assist - If they call an assist right before Aerial Circle hits, Squall will be hit during the recovery and suffer a bravery break."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/a/ae/Hp_squall_rough_divide_a.jpeg",
+              "damage": "-",
+              "startup": "59F",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Leap into a charge. Slow start, but very fast charge.",
+              "name": "Rough Divide",
+              "notes": "Aerial version of Rough Divide. A common, albeit secondary HP attack for Squall. Rough Divide starts with a minor jump before charging towards the opponent at high speed. This is a single hit HP attack that will travel a set distance unless it hits the ground. Rough Divide does not have freeform vertical homing, but it can connect after confirming a Kuja air bravery assist for example.\nRough Divide can be used as a long range whiff punisher (after LV1 Assist Change or otherwise) or to pre-emptively call out dodges and Fire Barret hits from a distance. It can also wall rush, though the knockback isn't particularly large. If the opponent is positioned in the middle of Rough Divide's maximum distance, using assist to interrupt it is often ill-advised. It is Melee High priority however, so high priority blocks such as Exdeath's Omni Block and Jecht's Jecht Block can stagger Squall.\nCompared to Aerial Circle, Rough Divide sees much less use overall. It is useful for the aforementioned cases as well as squeezing in HP damage after whiff punishing with an assist from afar. Generally it is outclassed by Aerial Circle, whether it's reward on hit, assist combo conversions or just plain frame data. The distance Squall can create when used near an opponent who escaped with Assist Change is far superior to Aerial Circle however, and thus can be significantly harder to punish afterwards."
+            }
+          ]
+        }
+      },
+      "moveCount": 6,
+      "sources": [
+        "https://dissidia.wiki/Squall_Leonhart_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Lionheart equipped!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nLionheart (RANGE)\nLionheart (HIT)",
+        "Squall's EX Mode increases his bravery damage output with critical hits and additional gunblade hits. His melee braveries also get a range increase, which can help with whiff punishment and combos. Squall's EX Burst is on the weaker side, but his combo braveries can quickly decimate opponent's bravery. Therefore setting up an assist combo with an EX mode bravery can be good for comebacks and bravery breaks in general."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Lionheart (RANGE)",
+          "text": [
+            "[Always active while in EX Mode] Transfers the heart of a lion to the weapon, increasing it's range.",
+            "During EX Mode, Squall has longer range on his gunblade. This can help connect the \"Golden Combo\" more consistently."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Lionheart (HIT)",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Always active while in EX Mode] Pushes the weapon's specs to the limit, increasing the force of each blast.",
+            "Upper Blues, Solid Barrel and Beat Fang get double hits for most of their hits. That means their base damage go up considerably, of which Solid Barrel benefits the most (2x increase). These extra hits can also become critical hits, which can boost Squall's bravery damage exponentially."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Renzokuken",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "A flurry of attacks ending in one shattering blow. Watch your timing and press R <img></img> when the cursor is in the frame.",
+            "Renzokuken requires pressing R <img></img> eight times in a row, whenever a cursor is in the \"Trigger\" frame. The timing for a successful input is relatively generous, and every subsequent input comes at a consistent speed. That means once Squall gets the timing for the first couple triggers, the rest can be done with the exact same timing.",
+            "Regardless of player input, Squall will follow through with the entire EX Burst sequence. If Squall misses a trigger, he will simply do less damage for that hit."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "2,2 (4)",
+                  "9x7, 13, 20 (96) (100 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Squall_Leonhart_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [
+        "Main article: Squall (Combos)"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [
+            "Squall can do various combos alone. Almost anything works after Thunder Barret, while landing lag opens up even more elaborate and rewarding combo routes."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Punish StarterGroundBRV Damage\nThunder Barret > Solid Barrel\n67\n126\nVideo\nBase Damage (Breakdown): 12 > 55\nOpponent Assist (Comrade's Vow): 100\nEX Force (Breakdown): 36 > 90\nA staple combo and great for beginners. Solid Barrel can be pressed repeatedly after Thunder Barret, and it will generate a good amount of EX. It knocks the opponent far away, which lets Squall get some of the EX Force he generated. This also sets up various other combos, so it's a good idea to get comfortable with this."
+                ],
+                [
+                  "Punish StarterGroundHP Combo, EX Force\nThunder Barret > Blasting Zone\n16 + HP\n108\nVideo\nBase Damage (Breakdown): 6 > 10 + HP\nOpponent Assist (Comrade's Vow): 24\nEX Force (Breakdown): 18 > 90\nThis HP combo (barely) has the most lenient timing. It is Squall's second highest option for EX and it still allows assist combos as well. Since Blasting Zone is Squall's fastest HP on the ground, players can attempt to repeatedly press Blasting Zone to increase their success rate. The closer Thunder Barret hits, the easier the HP timing can become."
+                ],
+                [
+                  "Poke StarterGround, Landing LagBRV Damage, Assist Gauge\nSolid Barrel (3 hits) > DC > LL > Upper Blues (2 hits) > DC > LL > Beat Fang\n65 + WR\n66\nVideo\nBase Damage (Breakdown): 19 > 6 > 40 + WR\nOpponent Assist (Comrade's Vow): 117\nEX Force (Breakdown): 18 > 18 > 30\nThis has been historically known as a \"Golden Combo\" in an English speaking community. A combination of three braveries make this a rewarding combo for bravery, and especially assist gauge. Since Squall exits an attack state with the two dodges, both Upper Blues and Beat Fang also get a fresh move bonus for filling assist gauge.\nTry to delay Solid Barrel's hits as much as possible to maximize landing lag chance. After Solid Barrel (3), dodge (backstep) and attack as soon as possible. Remember to delay Upper Blues second hit as well. The opponent can technically dodge all landing lag here, but it requires very precise timing. That means this combo is more practical against human players specifically.\nSquall can also perform this with 2 hits from Solid Barrel, if opponent misses their air dodge. Same thing with 4 hits from Solid Barrel; Squall's back must be against a wall. That reduces dodge distance enough for the combo to work. Even unequipping Ground Evasion Boost basic ability is not enough, so this kind of positioning makes the combo more situational.\nThis combo works on Shantotto as well, despite her small size. And of course, EX Mode amplifies the damage output a lot with critical hits and increased base damage."
+                ],
+                [
+                  "EX Revenge, MidairFull EX GaugeBravery into HP Damage\nHeel Crush > Heel Crush > Heel Crush > Aerial Circle\n60 + HP & WR\n0\nVideo\nBase Damage (Breakdown): 20 + WR > 20 + WR > 20 + WR > HP + WR\nOpponent Assist (Comrade's Vow): 90\nEX Force (Breakdown): 0 > 0 > 0 > 0\nA staple combo that works pretty much anywhere. This can do more damage with Wall Rushes if opponent is near ground. This is a pretty lenient combo to perform, as Heel Crush and Aerial Circle can be pressed repeatedly with little concern for timing."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist (Kuja)",
+          "text": [
+            "Main article: Squall Combos (Kuja Assist)"
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Poke StarterGroundMidscreen BRV to HP\nSolid Barrel (4 hits) > AST BRV > AC > Aerial Circle\n79 + HP & WR\n24\nVideo\nBase Damage (Breakdown): 5, 6, 8, 10 > 50 AST > HP + WR\nOpponent Assist (Comrade's Vow): 118\nEX Force (Breakdown): 24 > 0\nGround combo, no wall needed. Squall has plenty of time to confirm an assist combo here. The fourth hit is the last part before the opponent is sent away, so assist should be called by then. If Squall is having trouble calling assist, try holding Circle <img></img> on the fourth hit and then pressing L <img></img>.\nThis combo can be done after Thunder Barret as well."
+                ],
+                [
+                  "Poke StarterAir, Wall Rush (Ground)BRV to HP Damage\nBeat Fang > WR > AST BRV > AC > Aerial Circle\n86 + HP & WR\n30\nVideo\nBase Damage (Breakdown): 40 + WR > 46 AST > HP & WR\nOpponent Assist (Comrade's Vow): 148\nEX Force (Breakdown): 30 > 0\nA standard Wall Rush combo. Call assist as soon as Wall Rush happens, then teleport a moment after the Assist Chase <img></img> prompt shows up, so Aerial Circle does not miss. Note, that Beat Fang will not Wall Rush from all heights, so it's not guaranteed everywhere.\nNote: If Squall cannot Wall Rush, assist can still be called after Beat Fang's third hit. Kuja assist will do his air attack instead, but HP damage is still possible afterwards."
+                ],
+                [
+                  "HP StarterGround, Wall RushHP into BRV Damage\nFated Circle > WR > AST BRV > AC > Beat Fang\n90 + HP & WR\n30\nVideo\nBase Damage (Breakdown): HP + WR > 50 AST > 40 + WR\nOpponent Assist (Comrade's Vow): 138\nEX Force (Breakdown): 0 > 30\nHP Attack Wall Rush combo. Call assist after Wall Rush happens, then follow up with Beat Fang. Two reasons for this; Squall's base bravery does not recover fast enough for another HP to do as much damage. Also, the critical hit rate increases momentarily after HP damage. It may not raise Squall's bravery by much, but the opponent's bravery may drop a lot more instead. This is a common theme when comboing with Kuja assist, so brace yourself for it.\nOther HP attacks that Wall Rush also work here. Revolver Drive, Rough Divide and Aerial Circle are all OK.\nIf Squall's build has increased Bravery recovery, this issue of lower damage for second HP can be solved. Royal Crown <img></img> or Bravery Orb <img></img> are a good starting point for builds."
+                ],
+                [
+                  "Poke StarterAir, Wall Rush (Ground)HP Damage & Critical Hits\nStaple Combo!\nBeat Fang > WR > AST BRV > DC > Aerial Circle > WR > DC > AC > Beat Fang\n124 + HP & WR\n60\nVideo\nBase Damage (Breakdown): 40 + WR > 44 AST + HP & WR> 40 + WR\nOpponent Assist (Comrade's Vow): 225\nEX Force (Breakdown): 30 > 0 > 30\nBeat Fang with Aerial Circle filler . Press Aerial Circle as Kuja pulls the opponent to himself. The goal here is to knock the opponent towards ground with Aerial Circle and then quickly follow up with Beat Fang for critical hits. Again, the critical hit rate goes up momentarily after connecting an HP attack, which improves Beat Fang's damage.\nSquall must be at certain height to ensure Aerial Circle pushes the opponent downwards. Upper Blues is a good reference point for this. If Squall gets a ground Wall Rush from higher up in the air, he may have to measure the distance manually to do this combo. Being too high can pull opponent out of Kuja assist due to Aerial Circle's absorb effect. Conversely, being too low can push the opponent away with no guarantee for finishing the combo. Squall's position makes a big difference here. He can also push the opponent diagonally down, and Kuja may still be able to finish his attack. This does mean that Kuja may do slightly less damage, or that Squall may even lose HP Wall Rush damage entirely.\nSquall can also do Fire Barret into Beat Fang (no dodge cancel) after Assist Chase. This depends more on the Assist Chase timing, but try not to teleport too late so the fireballs can hit. And even then, Beat Fang might barely miss if the angle is a little off. Please see the linked video for an example."
+                ],
+                [
+                  "HP StarterGround (Squall)HP & BRV Damage\nBlasting Zone > AST BRV > DC (↑) > AC > Beat Fang\n96 + HP & WR\n120\nVideo\nBase Damage (Breakdown): 10 + HP > 46 AST > 40 + WR\nOpponent Assist (Comrade's Vow): 144\nEX Force (Breakdown): 90 > 30\nBlasting Zone combo, no wall needed. Call Kuja assist a moment after HP damage is dealt. The opponent will gradually slow down while flying in the air, which makes it possible for Kuja assist to combo.\nThis is mostly to add bravery damage and EX depletion from assist. If Squall needs the damage for Bravery Break, a well placed Blasting Zone can turn the match in his favor. Be sure to dodge forward after Blasting Zone to get some of the EX Force floating around."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Squall_Leonhart_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "|-|Hybrid=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "A general all-rounder build.",
+        "|-|Adamant Chains=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Weapon can be changed according to match-up or player preference.",
+        "This set primarily takes advantage of the added air dodge distance that the set bonus provides. Squall's air dodges leave him vulnerable with no strong options to cover them, so the additional dodge distance helps him stay safe and whiff punish.",
+        "Against Onion Knight, Jecht or Cloud, you may need to adjust the accessories to suit Side by Side special accessory for assist meter. Tenacious Attacker is not a necessity, but good to have. Hero's Essence for more CP, Winged Boots for banish traps, Glutton for characters with strong EX generation (e.g. Lightning, Shantotto).",
+        "|-|EX Core=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Enhanced EX intake through EX cores.",
+        "Substitutes: Sniper Eye, Dragonfly Orb, Aerial and special accessories can be substituted according to player preference. First to Victory can be replaced with Dismay Shock. Previously mentioned substitutes are decent picks, such as Muscle Belt. With EX cores being your primary source for the meter, Together as One and Platinum Hourglass are not completely unviable.",
+        "|-|Side by Side=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Recommended for small stages or even / favorable match-ups. With Together as One, Squall can whiff twice and already have one assist bar ready. Every time you stagger the opponent with LV2 Assist Change and hit them with Aerial Circle, you are also couple whiffs away from an assist bar. Meter lead can be easy to maintain to an extent.",
+        "Substitutes:",
+        "Basic - Hyper Ring, Muscle Belt, Bravery Orb\nBooster - Large Gap in HP, Summon Unused, Grounded, Aerial, Assist\nSpecial - Blue Gem, Growth Egg, Great Gospel, Winged Boots, Hero's Essence, Badge of Trust.",
+        "|-|Meter Depletion=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Yuna's air bravery assist with Aerial Circle for maximum effect. Press Aerial Circle as the second brv hit lands to ensure a maximum amount of hits from Aerial Circle. Even though no additional damage occurs (aside from wall rush), each HP hit depletes meter."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10299"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "996"
+            ],
+            [
+              "ATK",
+              "177"
+            ],
+            [
+              "DEF",
+              "185"
+            ],
+            [
+              "LUK",
+              "--"
+            ],
+            [
+              "Max Booster",
+              "x3.5"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Judgment of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Lionheart"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Shield"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Helm"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Armor <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Zephyr Cloak"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Large Gap in HP"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Glutton"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9972"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "877 (1052 with First to Victory)"
+            ],
+            [
+              "ATK",
+              "178"
+            ],
+            [
+              "DEF",
+              "185"
+            ],
+            [
+              "LUK",
+              "--"
+            ],
+            [
+              "Max Booster",
+              "x3.5"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Adamant Chains",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Earthbreaker <img></img>"
+            ],
+            [
+              "Hand <img></img>",
+              "Adamant Shield"
+            ],
+            [
+              "Head <img></img>",
+              "Adamant Helm"
+            ],
+            [
+              "Body <img></img>",
+              "Adamant Vest"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 6",
+              "<img></img>Pre-EX Revenge"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Aerial"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Back-Breaking Straw"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10299"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "996"
+            ],
+            [
+              "ATK",
+              "177"
+            ],
+            [
+              "DEF",
+              "185"
+            ],
+            [
+              "LUK",
+              "--"
+            ],
+            [
+              "Max Booster",
+              "x5.3"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Soul of Yamato",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Lionheart"
+            ],
+            [
+              "Hand <img></img>",
+              "Genji Shield"
+            ],
+            [
+              "Head <img></img>",
+              "Genji Helm"
+            ],
+            [
+              "Body <img></img>",
+              "Genji Armor <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Sniper Eye"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Dragonfly Orb"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> EX Core Present"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Aerial"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9971"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1453 (2179 with Hero's Seal)"
+            ],
+            [
+              "ATK",
+              "176"
+            ],
+            [
+              "DEF",
+              "182"
+            ],
+            [
+              "LUK",
+              "--"
+            ],
+            [
+              "Max Booster",
+              "x3.8"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: None",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Piggy's Stick"
+            ],
+            [
+              "Hand <img></img>",
+              "Hero's Shield"
+            ],
+            [
+              "Head <img></img>",
+              "Royal Crown <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Maximillian <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Sniper Eye"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> BRV = 0"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Empty EX Gauge"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Hero's Seal"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Together as One"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Side by Side"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10298"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "996"
+            ],
+            [
+              "ATK",
+              "179"
+            ],
+            [
+              "DEF",
+              "182"
+            ],
+            [
+              "LUK",
+              "--"
+            ],
+            [
+              "Max Booster",
+              "x6.9"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Yuna"
+            ],
+            [
+              "Weapon <img></img>",
+              "Lufenian Lance <img></img>"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Dirk <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Headband <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Maximillian <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> BRV = 0"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Assist"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Aerial"
+            ],
+            [
+              "Accessory 9",
+              "Free choice"
+            ],
+            [
+              "Accessory 10",
+              "Free choice"
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Squall_Leonhart_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [
+        "All meta assists can work, with Kuja being the strongest. Because of Squall's holding potential, conversion ability during a combo and wall rush potential on Upper Blues and Beat Fang, he synergises with a myriad of assists.",
+        "|-|Kuja=\nHigh damage and reliable conversions, but also quite vulnerable if the opponent escapes with Assist Change. Converts off of wall rushes and bravery attacks with ease. When using air BRV assist, delaying the teleport for a moment before using Aerial Circle will make it much more reliable.",
+        "This assist also has safety against LV2 Change thanks to the Flare Star HP's Ranged High priority, which works well off of Beat Fang and Upper Blues.",
+        "|-|Yuna=\nStrongest meter depletion anywhere on the stage with air BRV assist. By timing Aerial Circle to hit simultaneously with Yuna air BRV's third hit, the knockback will be cancelled briefly by the assist and enable the HP to hit multiple times, applying depletion each time.",
+        "Other assist moves have far more limited application and diminishing returns on investment. Ranged Low priority on air BRV assist means LV2 Assist Change will not stagger Yuna, making this very applicable.",
+        "Be careful however - If the opponent Assist Changes after Yuna has connected the second hit, you will not be able to protect her during Aerial Circle...",
+        "|-|Jecht=\nA good all-rounder assist. Fast start-up can convert off of any (traded) hit with relative ease and holding potential ensures an HP at varying positions.",
+        "Both bravery assists allow Thunder Barret follow-ups as long as ground is available. This means an abundance of Revolver Drive enders for a lot of EX, but it also means you may have to protect Jecht sometimes to avoid being locked out of using him.",
+        "|-|Tidus=\nFast air bravery assist for whiff punishes and low damage output, slower ground bravery assist for trades and higher damage via Thunder Barret.",
+        "A serviceable assist, but he doesn't provide Squall any distinct advantages beyond air assist start-up and it's relative safety.",
+        "|-|Sephiroth=\nFaster ground BRV assist than Kuja with similiar holding potential for Aerial Circle or Thunder Barret. However, the knockback on both BRV assists restricts combo structure. Not a terrible assist, but practical follow-ups often commit to all BRV or an early HP.",
+        "Sephiroth also stays on the field for a fairly long time, so protecting him can result in diminishing returns.",
+        "|-|Aerith=\nSquall's holding potential lets him convert to the relatively slow Seal Evil attack even without ground. With wall rush on the ground however, Squall can generate some of the spent assist meter back thanks to Ground Dash + Assist Gauge Up Dash abilities while the opponent is stuck in Seal Evil.",
+        "All ground conversions are compromised due to Aerith's Cure not having any hitstun. Coupled with the weakest meter depletion overall, Aerith assist can be difficult to justify for Squall specifically.",
+        "A viable assist, but arguably one of the weaker meta options for Squall.",
+        "|-|The Emperor=\nNiche, empowered ground play and very damaging mines through Beat Fang wall rushes. With Squall's liberal combo sequences on the ground, he can also combo into the Thunder Crest assist with ease.",
+        "LV2 Assist Change does not stagger The Emperor and the opponent's assist will be locked upon use thanks to the trap's Unblockable priority. Thunder Crest's holding potential allows an HP of your choice and of course, you can cover yourself by being inside the trap itself.",
+        "In addition, if The Emperor is called just as the Beat Fang wall rushes, the Ranged Low air BRV assist Mine can connect for a lot of bravery damage.",
+        "Other wall rush conversions and whiff punishment are weakened or compromised, but this assist is definitely not without merit!",
+        "|-|Onion Knight=\nA serviceable assist. Similiar to The Emperor, grounded wall rushes provide utility in the form of Blizzard's Ranged Low priority and holding potential. Turbo-Hit does not require a wall for an HP, but converting off of an opponent's whiffed attack can be difficult if you're far away. Blizzard can also intercept attacks from further away, which may prove to be helpful during grounded interactions.",
+        "|-|Gilgamesh=\nFunctionally similiar to Yuna assist. Longer range compared to Yuna, but no Ranged Low priority, meaning he will lose to LV2 Assist Change. Does exhibit highest raw bravery damage with Excalibur however, worth considering if you're going for extended combos.",
+        "|-|Cecil=\nCecil assist can be likened to a slower version of Yuna / Gilgamesh assist with middle-of-the-pack damage and longer holding potential. If you have ground available, Cecil works off of most combo starters just fine.",
+        "Outside of this combo-centric appeal, Cecil does not provide any distinct advantages over other assists.",
+        "|-|Terra=\nLimited air conversions and punish opportunities, but more extravagant ground combos with Graviga assist and Fusillade. As Fusillade is not an essential move for Squall, this is something of a flamboyant combination. With two assist bars, it's possible to combo into Fusillade twice in a row for a minimum of 60 base damage multiplier and 120 ex!",
+        "Graviga could act as an instigator due to it's tracking, but do note it can still be dodged and that Terra is vulnerable while casting."
+      ],
+      "tables": [],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Squall_Leonhart_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Squall_Leonhart_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Squall_Leonhart_(Dissidia_012)"
+  ]
+}

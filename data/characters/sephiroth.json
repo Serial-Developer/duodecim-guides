@@ -1,0 +1,891 @@
+{
+  "slug": "sephiroth",
+  "name": "Sephiroth",
+  "page": "Sephiroth_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Sephiroth_(Dissidia_012)",
+  "origin": "Final Fantasy VII",
+  "icon": "sephi",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-sephi.png",
+  "infobox": {
+    "Name": "Sephiroth (セフィロス)",
+    "Original game": "Final Fantasy VII",
+    "Base ATK (LV100)": "111 (High)",
+    "Base DEF (LV100)": "111 (Average)",
+    "Run Speed": "9 (Slow)",
+    "Dash Speed": "81 (Below Average)",
+    "Fall Speed": "85 (Average)",
+    "Fall Speed Ratio After Dodge": "41 (Below Average)",
+    "Fastest BRV": "15F (Transience)",
+    "Fastest HP": "43F (Octaslash, Heaven's Light)",
+    "1-Hit HP": "Yes (Multiple)",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "Yes (Scintilla)",
+    "Weapon": "Greatswords, Katanas",
+    "Armor": "Chestplates, Gauntlets, Heavy Armor,Helms, Light Armor, Shields",
+    "Exclusive weapons": "Masamune Blade, Masamune, One-Winged Angel",
+    "Alignment": "Chaos",
+    "Voice Actor (JP)": "Toshiyuki Morikawa",
+    "Voice Actor (ENG)": "George Newbern"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Sephiroth is a defensive air fighter who can fight close and from afar. His main strategy revolves around zoning |",
+        "The act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\nwith Shadow Flare, with the goal of forcing mistakes. Dodge cancelling |",
+        "Dodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.",
+        "lets Sephiroth cast Shadow Flares quickly, which makes it hard for his opponents to move. This encourages them to approach, and in turn, lets Sephiroth utilize his other moves.",
+        "Sephiroth is versatile; He synergizes well with system mechanics and thrives when the opponent has to approach him. Shadow Flare pressures both melee fighters and spell casters, and it also fills assist gauge at a steady pace. Sudden Cruelty complements the projectiles in close-range with a disjointed |",
+        "A part of an attack that isn't close to the character's hurtbox. If this part of an attack gets hit by opponent's attack, the character using it will not take damage.",
+        "hitbox |",
+        "An invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.",
+        "and high potential for damage and EX. His combos are well-rounded due to his assist synergy (Kuja & Aerith). Sephiroth works with many builds, with bravery damage and EX being his bread-and-butter. His defensive options after air dodging are also powerful; Heaven's Light and Hell's Gate are evasive, vertical HP attacks. Scintilla blocks attacks instantly on frame 1, staggering dashes and low priority melee attacks. And if Sephiroth needs to escape with LV2 Assist Change, Heaven's Light also guarantees HP damage for him.",
+        "Sephiroth is not without weaknesses, though. Bravery Boost on Dodge builds discourage repeated Shadow Flare use. Many of his attacks are telegraphed (HPs, Oblivion) or linear (Godspeed, Sudden Cruelty). Sephiroth has braveries with fast startup |",
+        "The time it takes before an attack can do damage.",
+        "speed, but he takes longer to recover from them on average. His mobility is below average. Although Sephiroth can defend after dodging, he still takes a risk on picking the right move. Sephiroth also needs to watch out for vertical tracking, Precision Evasion and command blocks |",
+        "An attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.",
+        ", so he doesn't overextend himself.",
+        "In competitive play, Sephiroth has been consistently ranked at high tier. He is great for new and experienced players alike thanks to his low skill floor and reliable air combat. He can be particularly challenging to beat at low and intermediate levels of play. His action-heavy play style helps him more than it hurts him, but players should be careful not to fall victim to their own habits. A strong character all around."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Zoning. Shadow Flare can pressure the opponent and dictate the pace of a match.\nAerial combat lets Sephiroth fight comfortably without ground, or relying on it.\nStrong damage output with high attack stat, base damage and HP wall rushes. Sephiroth can shred bravery with a single assist combo.\nMeter generation, Sephiroth builds both EX and Assist meter reliably.\nBuilds provide ample room to optimize and adjust Sephiroth's strengths.\nFlexible post-dodge defense with three midair HPs providing evasion or instant guard.\nEX Mode amplifies Sephiroth's damage and unlocks Heartless Angel, which drops opponent's bravery to 1.\nEasy and reliable at all levels of play.",
+              "Anti-Zoning. Bravery Boost on Dodge and long range counters such as Firion's Shield Bash and Exdeath's block followups can limit the effectiveness of Sephiroth's zoning.\nLinearity. Many of Sephiroth's attacks are either telegraphed or have average to poor tracking.\nNo quick air pokes. Sephiroth has attacks with early dodge cancel recovery and fast startup, but not both on a single move. The only exception is Transience which is only on ground.\nMobility is slightly worse on average overall, encouraging actions instead of less committal movement to remain competitive."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Sephiroth_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8f/Brv_sephiroth_reaper.jpeg",
+              "damage": "45 (2, 1 x 5, 10 > 2, 1 x 6, 10 > 3, 1 x 5, 2)",
+              "startup": "21F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "93",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Katana slash. Delay combo to boost hit times.",
+              "name": "Reaper",
+              "notes": "Reaper is a three-stage combo attack, and Sephiroth's high damaging ground punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nmove. It starts up quickly and has decent active |\nThe period of time when an attack is capable of doing damage.\nframes on the first part, but Sephiroth can only transition into the two follow-ups on hit. Sephiroth transitions into the next follow-up whenever Circle <img></img> is pressed. Pressing the button early reduces the number of hits and thus, the damage dealt. To ensure Sephiroth gets the maximum number of hits, it's recommended to press Circle <img></img> after a barrage of hits ends. The input window for a maximum delay is not very long, but can be done consistently with a bit of practice.\nReaper leads to assist combos when stopped at the second part. Sephiroth can also use walls to reduce Reaper's knockback when finished for an assist combo. Although Reaper is fairly fast, Sephiroth has to dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nit to make it safer on whiff |\nA missed attack that doesn't make any contact.\n. Sephiroth is stationary during this move, but the hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nreaches its maximum range quickly once active.\nIn practice, Reaper is a serviceable close-range punish move with decent reward, and it may work occasionally as an offensive poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. Sephiroth fights in the air most of the time, so Reaper may not see much use purely for that reason."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/ff/Brv_sephiroth_fervent_blow.jpeg",
+              "damage": "35 (5, 4 x 5 > 1 x 3, 7)",
+              "startup": "27F",
+              "type": "Physical",
+              "priority": "Melee Low, Ranged Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shockwaves from sword. Delay combo to boost hit times.",
+              "name": "Fervent Blow",
+              "notes": "A linear stream of projectiles. Fervent Blow can be used sparingly as a mid-range whiff punish |\nHitting an opponent who missed (whiffed) their attack.\ntool, whether its reactively or as a callout. Its active |\nThe period of time when an attack is capable of doing damage.\nduration covers attacks that have gaps between their hits, such as Prishe's Raging Fists. Fervent Blow can start an assist combo with the projectiles or after confirming a wall rush, which is good for a punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nmove.\nHowever, Sephiroth may not get many opportunities to capitalize on this move because he fights in the air often. Also, Fervent Blow's long recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, Ranged Low priority and lack of tracking make it vulnerable to sideways movement, Ground Dash and Free Air Dash. Only the close-range sword swing has melee priority, but it has a tendency to cross-up when blocked very close. If the opponent faces away from Sephiroth and blocks it, Sephiroth can get staggered from it. Due to the nature of lock on, this is not easily replicated in an online match. That means Sephiroth could potentially use Fervent Blow as a mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nagainst guarding opponents.\nGenerally speaking, Fervent Blow is not known to be very effective as a poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nor as a close-range attack. Sephiroth has a functionally similar move in the air, which is Godspeed. It may see more use just because of its nature as an aerial attack."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/92/Brv_sephiroth_shadow_flare_g.jpeg",
+              "damage": "each (3)",
+              "startup": "45F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge, Block, Attack",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Generate 4 spheres of darkness surrounding opponent.",
+              "name": "Shadow Flare (ground)",
+              "notes": "Shadow Flare is one of Sephiroth's character-defining braveries for its zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\ncapabilities. However, its grounded version is flawed in a few ways the aerial version is not; This version leaves Sephiroth airborne, so it cannot be repeated ad nauseam to harass opponents and build assist gauge. That creates a niche for the Pre-Jump booster <img></img> (x1.5 multiplier), because Sephiroth can safely leave the ground without deactivating it.\nGrounded Shadow Flare shares many of its traits with the midair variant, including the early cancel |\nAn action that is interrupted early by doing another action.\nwindow for various actions. A ground Shadow Flare can be cancelled into an aerial Shadow Flare, while aerial Shadow Flare cannot be cancelled into itself. It's a small footnote in Sephiroth's overall strategy, but worth noting regardless.\nOverall, this version of Shadow Flare is not used often, but it's great for builds with a Pre-Jump booster <img></img>."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/12/Brv_sephiroth_transience.jpeg",
+              "damage": "20 (1 x 7, 13)",
+              "startup": "15F",
+              "type": "Physical (1st hit) Magical (other hits)",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge (hit / whiff) Block & Attack (whiff only)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Quick upward sword slash. Short reach, but fast.",
+              "name": "Transience",
+              "notes": "Transience acts as a close-range poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nfor Sephiroth. It has the hallmarks of a conventional, effective poke in Dissidia 012; Fast startup, decent base damage and short recovery that can be cancelled |\nAn action that is interrupted early by doing another action.\nquickly. This is great for Sephiroth in theory, because these kinds of moves form the basis for offense and defense alike, including filling assist gauge safely.\nHowever, Sephiroth's air-centric gameplay means that Transience is often unavailable. His other moves usually work better just outside Transience's range, so Sephiroth may struggle to find opportunities to use Transience specifically. Transience also has low reward on hit, but it can be converted into an assist combo |\nA combo involving an assist character.\nif it wall rushes. It has decent knockback, so it could theoretically work as a physical keepout move.\nIf Sephiroth is on the ground, Transience can be whiffed |\nA missed attack that doesn't make any contact.\nrepeatedly to build assist gauge faster. Sephiroth doesn't have two fast pokes he can quickly rotate to keep assist gain fresh, but having one move for this purpose is better than nothing."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/d/d2/Brv_sephiroth_sudden_cruelty.jpeg",
+              "damage": "40 (2 x 8, 9, 4, 1 x 5, 6)",
+              "startup": "17F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "87",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Nigh-instant slices. Delay combo to boost hit times.",
+              "name": "Sudden Cruelty",
+              "notes": "Sudden Cruelty is a two-stage combo attack, and Sephiroth's high damaging aerial punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nmove. It's similar to Reaper in a few ways, including the delayable follow-up and the disjointed |\nA part of an attack that isn't close to the character's hurtbox. If this part of an attack gets hit by opponent's attack, the character using it will not take damage.\nhitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nquickly extending to its max reach. This is Sephiroth's go-to offensive poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nin close-range, and it's good for starting assist combos and racking up damage during them. He can even poke through high priority projectiles, given the right positioning. If the opponent gets hit by Shadow Flare, Sudden Cruelty is a consistent way to convert that into a combo in close-range.\nThe startup is fast enough to be unreactable, but Sephiroth remains stationary for a moment before he can dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nthe move. The hitbox also stays active during this time, which can make it difficult to punish him without moving into it and using a command block |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\n. This is generally good for Sephiroth, since command blocks are not very common in the roster. But it also has a weakness, which is the tracking; Sephiroth does not move much towards the opponent during start-up |\nThe time it takes before an attack can do damage.\n, and completely stops when the move is out. As a result, Sudden Cruelty is not very consistent at catching evasive movement, namely Ground Dashes. But if opponents attack or dodge into Sephiroth with no coverage, Sudden Cruelty can punish them for doing so."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/a/a2/Brv_sephiroth_godspeed.jpeg",
+              "damage": "35 (5, 4 x 5, 1, 2, 7)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low, Ranged Low",
+              "exForce": "33",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Shockwaves from sword. Delay combo to boost hit times.",
+              "name": "Godspeed",
+              "notes": "A linear stream of projectiles. To maximize damage, Sephiroth can delay the follow-up by pressing Circle <img></img> after all projectiles have connected. Just like Fervent Blow, Godspeed can be used as a mid-range whiff punish |\nHitting an opponent who missed (whiffed) their attack.\ntool, whether its reactively or as a callout. This works because of Godspeed's startup speed and active |\nThe period of time when an attack is capable of doing damage.\nframes. It can contest moves with gaps in them, such as Tifa's feints, but this must be done from a distance. Once Godspeed hits, Sephiroth can wall rush on the ground and start an assist combo.\nGodspeed is also linear like Fervent Blow. When Sephiroth performs this move, it has no horizontal or vertical tracking whatsoever. The projectiles will continue to go in a straight line whether they hit or miss. That makes Sephiroth vulnerable to assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\n, but this is not a huge concern when Sephiroth often builds assist gauge reliably with Shadow Flare. Furthermore, Godspeed competes with Oblivion for the third bravery slot, which boils down to the matchup |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\nand player preference. Oblivion has better vertical range and lower damage, whereas Godspeed has better lateral range and more damage.\nThe close-range sword swing is melee priority, while the projectiles are ranged low priority. These can be dashed through and it cannot be cancelled early, so it's not as effective for zoning as Shadow Flare is. However, if the projectiles hit from a distance on a grounded opponent, Sephiroth can attempt to combo with landing lag by dodge cancelling |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\ninto Sudden Cruelty. The dodge cancel timing is much later into the animation on hit though, which can make it difficult to use without practice."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/46/Brv_sephiroth_oblivion.jpeg",
+              "damage": "25 (6, 1 x 9, 10)",
+              "startup": "27F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Light-speed movement continuously damaging foe.",
+              "name": "Oblivion",
+              "notes": "Sephiroth passes through the opponent and inflicts a series of blows afterwards. This move wall rushes the opponent downwards, which is good for assist combos on the ground, but the reward on hit isn't outstanding otherwise. Oblivion is Sephiroth's melee bravery with longest vertical reach, as it moves him closer to the opponent during its startup. This is good for punishing careless opponents below or above Sephiroth, and poorly placed assists, but it is reactable otherwise.\nIf the opponent gets hit by Shadow Flare, Oblivion has an easier time following up compared to other braveries. In that sense, Oblivion supports Sephiroth's gameplan, but it doesn't serve as the endpoint. When used appropriately, Sephiroth can get more damage in situations that required a bigger risk or where he could've missed the extra damage entirely. Due to its slow start-up |\nThe time it takes before an attack can do damage.\nand average reward without wall rush, it is not well suited for starting offense. The audio cue is somewhat subtle, but the move can be easier to see if Oblivion is done from a distance due to its movement. If Sephiroth is already at equal height when using Oblivion, he won't move nearly as much during startup.\nIf Sephiroth is locked off and Oblivion is set to Circle <img></img>, he can use Oblivion to move in any direction he faces. This can be done to build assist gauge more safely."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/67/Brv_sephiroth_shadow_flare_a.jpeg",
+              "damage": "each (3)",
+              "startup": "45F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge, Block, Attack",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Generate 4 spheres of darknesssurrounding opponent.",
+              "name": "Shadow Flare (midair)",
+              "notes": "Sephiroth's character-defining projectile. Shadow Flare comprises of four long-range projectiles that surround the opponent and then hit at the center. It has good reach, it can be quickly cancelled |\nAn action that is interrupted early by doing another action.\ninto other actions and it can even start combos. This move is at the core of Sephiroth's zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\n, where it represents a threat and encourages the opponent to approach and stop it. Sephiroth has excellent HP attacks and whiff punish tools to work with afterwards, which round out his core defensive strategy.\nBecause of Shadow Flare's short recovery and cancel options, Sephiroth can repeatedly use this move to quickly harass opponents from a distance. It can be effectively used to hinder characters who need time to set up their gameplan, like Kefka and Ultimecia. As an attack, Shadow Flare also builds assist gauge faster. If the opponent cannot respond to Shadow Flare on a moment's notice, it can overwhelm them in no time. The projectiles have a bit of tracking before they start closing on the opponent, so poorly timed dodges can create more trouble for them instead. Each projectile's damage is low and the hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nis short, but it's just enough for Sephiroth to follow up on a combo if he knows Shadow Flare will hit. That makes Shadow Flare a relatively dangerous move to get hit by, as the situation can escalate depending on Sephiroth's positioning.\nShadow Flare has a few weaknesses. For one, it is a Ranged Low priority move, which means opponents can dash through it. Even though the projectiles have tracking, it stops once the projectiles become active |\nThe period of time when an attack is capable of doing damage.\n. The travel speed during its active period is not instant either, so opponents can move vertically with jumps and fall speed to avoid it. Furthermore, Shadow Flare does not protect Sephiroth's body, so it is not well suited for close-range keepout. And lastly, Shadow Flare is a telegraphed projectile, which makes certain counter moves (Firion's Shield Bash, Exdeath's Omni Block) easier to use against Sephiroth. Bravery Boost on Dodge builds can greatly impact Shadow Flare's effectiveness, as using it frequently gives the opponent bravery without risk.\nOverall, Shadow Flare is a staple move for Sephiroth that synergizes well with his other moves and the game's mechanics in general."
+            }
+          ]
+        }
+      },
+      "moveCount": 8,
+      "sources": [
+        "https://dissidia.wiki/Sephiroth_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Level 1",
+                "Level 2",
+                "Level 3"
+              ],
+              "image": "https://dissidia.wiki/images/9/9e/Hp_sephiroth_black_materia_lv1.jpeg",
+              "damage": [
+                "-",
+                "-",
+                "3 x N"
+              ],
+              "startup": [
+                "63F",
+                "90F (Min. charge) 101F (Release)",
+                "178F (Min. charge) 201F (Release)"
+              ],
+              "type": [
+                "-",
+                "-",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged High",
+                "Ranged High",
+                "Ranged High"
+              ],
+              "exForce": [
+                "0",
+                "0",
+                "6"
+              ],
+              "effects": [
+                "-",
+                "-",
+                "Wall Rush, Absorb"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Summon meteors. Hold button to increase size.",
+              "name": "Black Materia",
+              "notes": "Black Materia is a projectile that can be charged to increase some of its properties. At level 1, Black Materia is a small sized meteor that comes down at a diagonal angle from above Sephiroth. Level 2 is similar, except much larger. Level 3 comes straight down from above the opponent, and it is the only one to deal bravery damage and wall rush. Sephiroth can also move while the LV3 meteor is falling down, which let's Sephiroth reposition closer to the opponent. LV3 can even enable a solo follow-up with Reaper or Octaslash, though this is impractical and it has no consistent setups for it without EX Revenge.\nThis is not a move that is commonly used in competitive play. Aside from the slow start-up |\nThe time it takes before an attack can do damage.\n, Sephiroth is completely stationary when using Black Materia. He has no innate protection around him during this move either; The angle at which projectiles come from leave him open to dashes and interruptions at close range or long range. If the opponent is above Sephiroth, the LV1 / LV2 meteors can protect him the moment it is fired. The long startup for any version of Black Materia provides diminishing returns at best for the risk Sephiroth takes. If he is at a long distance, he can try to charge this move to temporarily stall the next interaction. Lower levels of Black Materia do not occupy much space for long, and even the max charged version has a height limit on its spawn position.\nOverall, Black Materia is a move that can be easily avoided, interrupted and does not provide notable benefits to Sephiroth's neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\ngame. Sephiroth's playstyle revoles more around air combat, so Black Materia can be difficult to justify for that alone."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/64/Hp_sephiroth_octaslash_g.jpeg",
+              "damage": "2 x 6, 4 (16)",
+              "startup": "43F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "21",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] 8 violent slicing attacks. Strike foe with long reach.",
+              "name": "Octaslash (ground)",
+              "notes": "An advancing multi-hit combo. Octaslash works as a callout tool against grounded whiffs |\nA missed attack that doesn't make any contact.\nand dodges. It has decent horizontal coverage and plenty of lateral tracking compared to his other melee HP Scintilla. Octaslash occupies space for a good moment, which can make it effective in enclosed spaces, such as corners or stages like Pandaemonium. It has weak vertical tracking though, so opponents who dodge above Sephiroth can avoid it easily. Sephiroth follows through the whole animation even if it misses, which makes it riskier to use Octaslash in the neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n.\nOctaslash is Sephiroth's highest damaging HP attack in terms of bravery damage. It can start assist combos with a wall rush, so Sephiroth gets good reward for using this move well. Sephiroth will be considered airborne after Octaslash ends."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/b9/Hp_sephiroth_scintilla_g.jpeg",
+              "damage": "4, 1 x 6 (10)",
+              "startup": "45F, 1F-42F (block)",
+              "type": "Physical",
+              "priority": "Block Mid, Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush, Block",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Block] Defends, then attacks. Attack even if block fails.",
+              "name": "Scintilla (ground)",
+              "notes": "Scintilla is a command block |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\n, that guards instantly and then attacks afterwards. It's a strong move due to its defensive applications, but high risk for Sephiroth if it doesn't stagger the opponent. Sephiroth moves forward a little bit with the first hit. Scintilla is best used after a ground dodge to protect Sephiroth from incoming attacks (or dashes), but it can also be used aggressively with a good read. It doesn't have high knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\n, but it can wall rush and lead to an assist combo afterwards.\nSephiroth can block low priority attacks and dashes with Scintilla. If Scintilla blocks a mid priority attack, Sephiroth will be staggered.\nScintilla's aerial version is used more often in competitive play, which works like the ground version. Sephiroth will be considered airborne after Scintilla ends."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/79/Hp_sephiroth_hells_gate_hold.jpeg",
+              "damage": "2 x N",
+              "startup": "55F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "60 + 3 x N",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dive] Freefall lunge. Hold button to keep falling. Aim with the analog stick.",
+              "name": "Hell's Gate",
+              "notes": "Hell's Gate is a flexible diving attack that Sephiroth can use to threaten space on the ground, defend after air dodging, or to finish assist combos.\nBy default, Sephiroth will stop and do 1 HP hit. If Square <img></img> is held, Hell's Gate turns into a diving multi-hit attack that drags the opponent down. If Square <img></img> is released at any point, Sephiroth will transition into the single hit HP hit that he would do by just pressing the button. If the button is held and Sephiroth lands on the ground, he will finish the move and cause earth to shatter around him which also have an HP hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\n.\nHell's Gate is a good secondary HP for Sephiroth. It has some evasion to it thanks to the ascension on start-up, but he can also move manually during the entire attack, including its start-up. This works well as a defensive post-dodge action against some attacks. Sephiroth can convert any version of Hell's Gate into an assist combo, and he can even extend it further with Aerith assist.\nA held Hell's Gate can also be an infinite combo in Phantom Train by moving Sephiroth towards one of the windows while hitting the opponent.\nFurther reading: Hell's Gate Infinite Combo"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/6d/Hp_sephiroth_octaslash_a.jpeg",
+              "damage": "2 x 6, 4 (16)",
+              "startup": "43F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "21",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] 8 violent slicing attacks. Strike foe with long reach.",
+              "name": "Octaslash (midair)",
+              "notes": "Octaslash's aerial version functions similarly to its ground version, lateral tracking, multi-hits and all. What makes it less appealing here is due to Sephiroth's other aerial HPs having more utility in combos and in the neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. Even so, Octaslash is one of Sephiroth's strongest assist combo enders in terms of bravery damage."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/d/d3/Hp_sephiroth_scintilla_a.jpeg",
+              "damage": "4, 1 x 6 (10)",
+              "startup": "45F, 1F-42F (block)",
+              "type": "Physical",
+              "priority": "Block Mid, Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush, Block",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Block] Defends, then attacks. Attack even if block fails.",
+              "name": "Scintilla (midair)",
+              "notes": "Scintilla's aerial version works like the grounded version. Short forward movement, it guards and it wall rushes. But because it can be done in the air, it serves an important role in Sephiroth's defense; As a frame 1 command block |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\n, Scintilla can stop many dodge punish attempts dead in their tracks, especially Free Air Dash. Since Evasion Boost doubles the invincibility for all dodges, Sephiroth can block with Scintilla without any gaps between it and the dodge. This is powerful against close-range characters who rely on melee low moves, but if it's avoided, Sephiroth is left wide open. Sephiroth always completes this attack even if it misses, so careful usage of Scintilla is advised.\nThis is a staple move for Sephiroth, as it supports his defensive gameplay. It deals less bravery damage compared to Octaslash, but its value as a defensive move is worth the inclusion."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/a/a3/Hp_sephiroth_heavens_light.jpeg",
+              "damage": "-",
+              "startup": "43F",
+              "type": "-",
+              "priority": "Melee High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Powerful rising lunge. Effective when below foe.",
+              "name": "Heaven's Light",
+              "notes": "Heaven's Light is an evasive 1-hit HP attack with good knockback for ceiling wall rushes. Sephiroth will attempt to position below the opponent and then quickly move upwards with a rising slash. This is a good move for punishes |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\n, ending assist combos, protecting Sephiroth after air dodging or simply calling out whiffs. |\nA missed attack that doesn't make any contact.\nThe downward movement is strong enough to make many attacks miss, but this should not be confused with invincibility. Sephiroth can still be hit out of Heaven's Light's start-up |\nThe time it takes before an attack can do damage.\n, but it usually requires a move with good tracking. If Heaven's Light is done near the ground, Sephiroth cannot take advantage of its movement as much, and he has a hard time hitting a grounded opponent.\nHeaven's Light's effective range is quite good. It can be used reliably after a LV2 Assist Change stagger to secure HP damage. It's also difficult to punish because of its relatively long travel distance and short recovery for an HP. Assists can still punish Sephiroth, but not many characters have reliable anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nmoves they could use for this purpose. Sephiroth can make Heaven's Light safer by making sure the opponent is not positioned at the end of the rising lunge.\nThis is a staple move for Sephiroth. It has good range, utility as a defensive move, and the wall rush damage complements his damage output well. As a wall rush move, it is also good for HP damage and meter depletion."
+            }
+          ]
+        }
+      },
+      "moveCount": 7,
+      "sources": [
+        "https://dissidia.wiki/Sephiroth_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Reunion!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nGlide\nHeartless Angel",
+        "Sephiroth has a good EX mode, with Heartless Angel being the notable threat. If Sephiroth has full assist and EX gauges, he can create huge momentum with a single assist combo and EX mode activation. His bravery damage output is already good, so he naturally benefits from the critical hits and any Heartless Angel setups he can pull off."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Glide",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Activate by holding Cross in midair.] Draws spiritual energy within to move freely through the air."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Heartless Angel",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Activate with R + Square]\nBravery cannot be gained, but opponent's bravery falls to 1.",
+            "Charge time = 5 seconds (297 frames).\nEarly release cooldown time = 40 frames (roughly 0.6 seconds).",
+            "Sephiroth charges up an unblockable attack that reduces opponent's bravery to 1. This puts the opponent at great risk of being broken. Assists can follow up after Heartless Angel, which usually guarantees a bravery break. Its main downside is the long charge time, but assists that hold |",
+            "Holding an opponent in place with an attack, usually to set up an assist combo. In Dissidia NT, other players can follow up instead of assists.",
+            "for a long time such as Jecht and Kuja can get around this. Even if Sephiroth does not have time to fully charge Heartless Angel, using it can encourage his opponent to approach in case he actually casts it.",
+            "If the opponent's bravery is already at 1, it won't be reduced further."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Super Nova",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "A blast of such despair that it can send destruction even into other dimensions. Repeatedly press Circle to raise the gauge.",
+            "Super Nova requires filling a gauge by repeatedly pressing Circle <img></img>. Once the gauge is filled, Sephiroth follows through with the complete attack. Fairly simple execution and one of the higher damaging EX Bursts in the game."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "5 x 5 (25)",
+                  "5 x 6, 9 x 5 (75) (100 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Sephiroth_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [
+        "Main article: Sephiroth (Combos)",
+        "Sephiroth has a plethora of solo combos, most of which revolve around Shadow Flare. He works well with assists both in close-range and in midrange, and he even has an infinite in Phantom Train. [1]"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Projectile starterAirborne, below opponent\nShadow Flare > DC > Sudden Cruelty\n43~52\n87\nVideo\nBase Damage (Breakdown): 3~12 > 40\nOpponent Assist (Comrade's Vow): 78\nEX Force (Breakdown): 0 > 87"
+                ],
+                [
+                  "Projectile starterAirborne, below or above opponent\nShadow Flare > DC > Oblivion\n~28~37 + WR\n30\nVideo\nBase Damage (Breakdown): 3~12 > 25\nOpponent Assist (Comrade's Vow): 55\nEX Force (Breakdown): 0 > 30\nIf Sephiroth is close to opponent, but doesn't want to risk dropping dodge cancel > Sudden Cruelty, he can cancel Shadow Flare into Oblivion instead. Can start assist combos near ground."
+                ],
+                [
+                  "Projectile starter, HP combo\nShadow Flare > Heaven's Light\n3~12 + HP WR\n0\nVideo\nBase Damage (Breakdown): 3~12 > HP\nOpponent Assist (Comrade's Vow): 18 (all projectiles)\nEX Force (Breakdown): 0 > 0\nThis is one of the more consistent combos for Sephiroth, especially after assist. It can work even when Sephiroth is above the opponent thanks to Heaven's Light's automatic movement.\nCancel Shadow Flare into Heaven's Light, a dodge cancel is not necessary."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "EX Revenge",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "EX Revenge, midairFull EX gauge\nShadow Flare (x5) > Heaven's Light\n~54 + HP WR\n0\nVideo\nBase Damage (Breakdown): 3~12 x5 > HP + WR\nOpponent Assist (Comrade's Vow): 81\nEX Force (Breakdown): 0 > 0\nA staple for Sephiroth. Repeatedly press Shadow Flare until five of them have been cast, and then finish with Heaven's Light. Works anywhere, as long as opponent is within range for Shadow Flare.\nIf Sephiroth doesn't start casting Shadow Flare immediately, or his cancel timing is slightly off, the fifth Shadow Flare may miss some of its projectiles. The damage loss is usually negligible, but worth noting. If the opponent is at a ceiling, that can guarantee all five Shadow Flares don't miss."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist (Kuja)",
+          "text": [
+            "Main article: Sephiroth Combos (Kuja Assist)"
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Air poke starterWorks anywhere\nSudden Cruelty (1st part) > AST BRV > AC > Heaven's Light\n75 + HP WR\n27\nVideo\nBase Damage (Breakdown): 25 > 50 (Assist) > HP + WR\nOpponent Assist (Comrade's Vow): 112\nEX Force (Breakdown): 27 > 0\nA basic assist combo that can wall rush near the ceiling. Heaven's Light is a low-execution combo ender that works consistently. Sephiroth can add more damage during Kuja assist, but new players don't need to worry about that."
+                ],
+                [
+                  "Ground poke / punish starterWorks anywhere.\nReaper (2 hits) > AST BRV > AC > Shadow Flare > Heaven's Light\n88-97 + HP & WR\n33\nVideo\nBase Damage (Breakdown): 35 > 50 (Assist) > 3~12 > HP + WR\nOpponent Assist (Comrade's Vow): 132\nEX Force (Breakdown): 33 > 0 > 0\nBasic combo off of Sephiroth's ground bravery. Delay the second part to increase Sephiroth's damage, then call the assist. The Shadow Flare extension is extra damage, but not essential for new players."
+                ],
+                [
+                  "Air punish starterNear ground\nOblivion > WR > AST BRV > Free Air Dash > Sudden Cruelty (1) > DC > AC > Scintilla\n107 + HP & WR\n87\nVideo\nBase Damage (Breakdown): 25 + WR > 47 (Assist) > 25 > 10 + HP WR\nOpponent Assist (Comrade's Vow): 156\nEX Force (Breakdown): 30 > 27 > 30\nOblivion may have a telegraphed animation, but it leads to a good assist combo with a ground wall rush. Plenty of time to fit in a Sudden Cruelty (1) before dodge cancelling into another follow-up with assist chase. The combo works without it too, but obviously deals less damage."
+                ],
+                [
+                  "Air HP starter, Wall Rush\nOctaslash > WR > AST BRV > AC > Octaslash\n82 + HP WR (x2)\n42\nVideo\nBase Damage (Breakdown): 16 + HP WR > 50 (Assist) > 16 + HP WR\nOpponent Assist (Comrade's Vow): 120\nEX Force (Breakdown): 21 > 21\nBasic wall rush combo with only 1 HP move. Octaslash holds long enough for base BRV to recover, while dealing more damage than Scintilla."
+                ],
+                [
+                  "Midair HP starter, Wall RushNear wall / ceiling\nHeaven's Light > WR > AST BRV > AC > Shadow Flare > Heaven's Light\n53-62 + HP WR (x2)\n0\nVideo\nBase Damage (Breakdown): HP + WR > 50 (Assist) > 3~12 > HP + WR\nOpponent Assist (Comrade's Vow): 93\nEX Force (Breakdown): 0 > 0 > 0\nNo EX with this combo, but Heaven's Light can evade moves, so it's good to have a combo ready. Shadow Flare adds damage, but all projectiles hit consistently if the opponent is at the ceiling. Not necessary when learning the game at first, but will be used for more damage later on."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Sephiroth_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|Hybrid (Seal of Lufenia)=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Equip the Best Dresser extra ability.",
+        "|-|Build #2=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9644"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1175"
+            ],
+            [
+              "ATK",
+              "180"
+            ],
+            [
+              "DEF",
+              "182"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x3.5"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "One-Winged Angel"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Dirk <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Hairpin <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Vest"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Muscle Belt"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Sniper Eye"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Aerial"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Opponent Summon Unused"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Glutton"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Sephiroth_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Sephiroth's assist data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Reaper",
+                  "21F",
+                  "Ground",
+                  "Opponent",
+                  "2, 1 x 5, 10, 2, 1 x 6, 10, 3, 1 x 5, 2 (45)",
+                  "Chase"
+                ],
+                [
+                  "BRV",
+                  "Sudden Cruelty",
+                  "17F",
+                  "Air",
+                  "Opponent",
+                  "2 x 8, 9, 4, 1 x 5, 6 (40)",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Octaslash",
+                  "43F",
+                  "Ground",
+                  "Opponent",
+                  "2 x 6, 4 (16)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Hell's Gate",
+                  "55F",
+                  "Air",
+                  "Opponent",
+                  "2 x N",
+                  "Chase"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "Sephiroth works well with most tournament viable assists."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Sephiroth_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": true,
+      "links": [
+        {
+          "text": "https://www.youtube.com/watch?v=doDji0EBSjI&t=72",
+          "url": "https://www.youtube.com/watch?v=doDji0EBSjI&t=72"
+        }
+      ]
+    },
+    "matchups": {
+      "documented": true,
+      "stub": false,
+      "text": "Sephiroth\nMatchups Prishe\nPrishe\nEven\n[Character Page] [Match Videos] [Recommended Build: EX or Damage]\nIntro\nBoth characters fight for position and EX gauge; Sephiroth wants to harass with Shadow Flare from afar before approaching, while Prishe wants to get close. The biggest plays happen in close quarters, where each action has a counter. Sephiroth's Godspeed is exceptionally effective for stopping charged One Inch Punch (OIP) from a distance, while other moves work in close-range. Mixing up all available options is important to stay ahead, as none of Sephiroth's options are risk free. This is not an easy matchup for Sephiroth at first glance, as it requires a good understanding of positioning, meter management and attack timing, but he has the necessary tools to succeed.\nNeutral\nFill assist gauge with Shadow Flare and then use the gauge for assist combos.\nFinish assist combos with Sudden Cruelty for EX, or Heaven's Light for HP damage.\nUse Godspeed / Fervent Blow from midrange to stop charged One Inch Punch\nUse Sudden Cruelty to punish air dodges that leave Prishe close to Sephiroth\nUse Sudden Cruelty as a surprise attack, whiff punisher for HPs or filling assist gauge occasionally.\nAir dodge above Prishe to disorient her dash. Verticality is one of her weaker points.\nHeaven's Light can go under Raging Fists if Sephiroth is not above Prishe at the beginning\nHeaven's Light staggers Prishe for clashing with uncharged OIP. Follow up with assist.\nHell's Gate from above works as a mixup for Sephiroth's neutral. Vary the release timing to stay safe.\nSpot dash to fill assist gauge and create ambiguity for the next approach\nNeutral (In-Depth)\nSephiroth's neutral game starts with Shadow Flare. Use it from a distance to fill assist gauge and convert to a combo if possible. Don't expect to rely on it for damage, though. Once Prishe gets close, dodge above her. The goal is to exploit lackluster vertical tracking on her moves and make it harder to get hit by them. Sephiroth's vertical options are decent, but telegraphed. He won't have access to Oblivion either, so vertical movement is used to buy time for filling assist gauge. Prishe relies on Free Air Dash to approach Sephiroth from below, so it is important to remain mindful of your patterns.\nWhy not Oblivion? Godspeed. It's not typically used, but it stops Prishe from recklessly rotating between Raging Fists and uncharged OIP. Whenever Prishe charges OIP, Godspeed's barrage of projectiles can interrupt it. [1] [2] This is great, because it creates consequences for Prishe in a situation where she's normally safe. Godspeed's active frames have high coverage; They can hit Prishe out of OIP during the charge or after she releases it. Sephiroth can do this in response to OIP, but make sure to be at the same height with Prishe for this. Otherwise it can miss. [3] Sephiroth can do an assist combo from the projectiles, though Kuja assist is prone to missing. Tidus and Yuna assists are more consistent, but don't provide high damaging routes for Sephiroth. That's ok because Prishe's base defense stat is low, so even a simple combo with Sudden Cruelty finisher hurts a lot. If Sephiroth finishes Godspeed, the wall rush can also lead to assist combos. Tidus ground BRV leads to Shadow Flare > Heaven's Light, which is reliable. Dodge towards opponent twice before doing Shadow Flare, though. Yuna ground BRV needs a wall nearby, but otherwise works fine if needed.\nGetting hits matters more in the end, and Godspeed is a good space control tool for doing that. This can cause Prishe to play more cautiously, or even more aggressively if she is trying to dash through Godspeed's projectiles. If Sephiroth reacts too late with Godspeed, Prishe can dodge next to Sephiroth and whiff punish with Raging Fists or OIP, the usual combo starters. Stay sharp when using Godspeed, so that Sephiroth has more control in the neutral.\nThen there is Sudden Cruelty. It works as a general purpose defensive attack. It stops Prishe from running in, punishes her for using HPs too early and most importantly, it catches her air dodges. Mainly, any air dodge that leaves Prishe close to Sephiroth. Dodging to make OIP and Raging Fists safe is a core Prishe strategy, but this is where Sudden Cruelty shines; The large hitbox ensures that Prishe gets caught if Sephiroth predicts her dodge. [4] Pay attention to Prishe's position: If Prishe is at Sephiroth's height or slightly above after an air dodge, that's a good chance to use Sudden Cruelty. It rewards Sephiroth well with BRV damage, EX and assist combos if available. On that note, be careful about whiff punishing charged OIP with Sudden Cruelty. If Sephiroth attacks first, OIP staggers Sephiroth and leads to a combo.\nWhat about the HP attacks, then? Scintilla, Heaven's Light and Hell's Gate all have merit (Hell's Gate moreso for EX), so they're recommended here. Scintilla stops Prishe from dashing into Sephiroth, as well as any Raging Fists or uncharged OIP. [5] Scintilla is risky to use due to its long recovery, but it's necessary to establish that Prishe cannot just run in and start swinging. It's a great answer to her instant attack timing, assuming Sephiroth has the read on her.\nHeaven's Light and Hell's Gate serve a different role. They can be used to occasionally mix up Sephiroth's actions, something akin to a surprise attack or a call out for Prishe's next action. [6] Of course, they also fill assist gauge and since they're not often used, they get the fresh move bonus. Heaven's Light can go under Raging Fists and hit Prishe, but this only works under two conditions: Sephiroth must not be hit out of Heaven's Light immediately, and he cannot be high above Prishe before doing this. The reason is simple, Heaven's Light always moves Sephiroth downwards and towards his opponent before lunging upwards. It has no invincibility, so he relies on the physical movement to evade attacks. Prishe may be tempted to attack often with Raging Fists or uncharged OIP, and Heaven's Light can stagger Prishe if it clashes with them. [7] Most assists can combo from this, except Aerith assist. She would require a pre-emptive call, which can feel like a gamble in practice.\nHell's Gate has some evasion to it, but it's slower than Heaven's Light (55 frames instead of 43). If Prishe is auto piloting with Raging Fists, Hell's Gate can also hit Prishe. [8] Hell's Gate works against a block as well. If Prishe charges OIP, both her and Sephiroth can get staggered. A BRV assist can follow up afterwards, but it must be used before the clash happens. This can be done by holding Square <img></img>, then also holding Circle <img></img> and pressing L <img></img>. It can be awkward to input with a thumb and a left index finger, but it ensures that Hell's Gate doesn't stop early. Hell's Gate can also call out an air dodge near the ground; The idea is to fall to the ground so the crags surrounding Sephiroth hit Prishe during her descent. [9] If Prishe moves out of the way, Sephiroth can also stop Hell's Gate early by releasing Square <img></img>. This is good for Sephiroth, but it is important to vary the timing so that Prishe doesn't get a free opening afterwards. Dive past her, stop immediately or move away from her before stopping. This degree of ambiguity is what lets Sephiroth get away with it, especially since Prishe is expected to use Aerith assist, who cannot whiff punish it on reaction. [10] [11]\nDefense (or Neutral Part 2)\nUse Scintilla to block Free Air Dash or overextended Raging Fists. Recommended after dodging.\nBlodge after Shadow Flare to stop Prishe from dashing. Follow up with Heaven's Light if close to Prishe.\nGround Dash under Prishe (who is midair) to reposition and fill assist gauge.\nGround / short air dodges can lose to Banishga and charged One Inch Punch, watch out for them\nDragon Kick + Aerith assist setups hurt, especially with assist depletion. Sephiroth can use Assist Change in a few ways:\nvs. Auroral Uppercut: LV1 Change > Heaven's Light\nvs. Banishga: LV1 Change as soon as Banishga starts > Free Air Dash > Sudden Cruelty [12]\nvs. One Inch Punch, Dragon Kick or Auroral Uppercut: LV2 Change > Heaven's Light\nDefense (In-Depth)\nSephiroth's defense is more or less tied to his neutral, but they're divided for educational purposes. This matchup is largely a mixture of neutral and defensive interactions, with Sephiroth being the defender in many situations.\nWhenever Sephiroth uses Shadow Flare, he can blodge during the recovery . This isn't recommended for new players just starting out, but it's a great asset at intermediate and high levels of play. The idea is to stagger Prishe for dashing in, and respond appropriately. If Sephiroth did not air dodge too far away, Heaven's Light does consistent HP damage (and meter depletion). Braveries also work if Sephiroth remains close [13], but note that staying close opens up Sephiroth to charged OIP. Assists can also combo from the stagger, but make sure LV2 Assist Change does not block the assist. If Prishe is blocked during a dash, the natural meter decay can activate and increase the chance of avoiding LV2 Assist Change if her assist gauges were full before.\nScintilla was already mentioned in the Neutral (In-Depth) section, but it bears repeating here: It counters Prishe's dashes and low priority braveries (instant timing, particularly). [14] [15] Prishe is encouraged to do both of these, since Sephiroth is running away with Shadow Flares and air dodges. She wants to stop him from doing that, so Scintilla establishes that Prishe cannot do it for free. Usually the best time to use Scintilla is after an air dodge, when Prishe is lining up her next attack. Even if Prishe escapes with Assist Change afterwards, only BRV damage is guaranteed. [16] The only way for Prishe to guarantee HP damage here is with Assist Storage Glitch, which is very rare.\nUnfortunately Scintilla also takes a long time to finish, which means a misplaced Scintilla opens up Sephiroth to attacks. [17] Scintilla does not protect against charged One Inch Punch (OIP) or Banishga, so be careful Prishe does not see it coming. [18] [19]\nBanishga can call out Sephiroth's ground dodges and air dodges that keep Sephiroth at the same altitude. Do not use Scintilla for protection there. Calling an assist like Tidus or Kuja early won't do any good either, since the surrounding blasts hits both Sephiroth and assist. This only works for Prishe if Sephiroth is caught dodging at the exact same time when Banishga comes out. Sephiroth can neutral dodge when it's about to hit and whiff punish with Sudden Cruelty / Reaper or assist. [20] Interrupting it with Sudden Cruelty or Reaper are also good options, if Sephiroth anticipates Banishga. Vertical air dodges evade Banishga consistently, so use them if Prishe is almost at same height. This also buys time for Sephiroth to fill assist gauge with Shadow Flare if it's needed.\nWhat to do if Sephiroth gets hit? Prishe is expected to have assist gauge depletion on her build, so it's often a good idea to use Assist Change to mitigate the damage. If Sephiroth only has 1 assist gauge, it's recommended to Assist Change after Prishe has used her assist first. LV1 Assist Change (<img></img> + <img></img>) gives Sephiroth a counter opportunity against Prishe's HP attacks; Auroral Uppercut loses to Heaven's Light. Prishe usually goes for Banishga since it's safer, but if Sephiroth escapes as soon as Banishga starts, Free Air Dash > Sudden Cruelty works. LV2 Assist Change staggers lead to Heaven's Light, which is a staple for Sephiroth. In that case it is better to stagger Prishe early, since her common braveries are all vulnerable to it.\nIf Sephiroth suffers from Assist Lock, it's a good time to slow down the pace and focus on moving around. Quickmoves, Multi Air Slide and even air jumps can buy time for Sephiroth. Just like when playing neutral, dodging above Prishe can shake her off here. Ground Dash is also effective for going under Prishe, as long as Sephiroth doesn't get blocked along the way. He can still engage if he wants, but naturally the risk / reward is not in his favor. Meter depletion is useful, but depleting Prishe's gauges is not the main goal during Assist Lock. Take an opportunity to do damage if possible, but try not to force it every time. This is where Sephiroth is most vulnerable, and Prishe will try to capitalize on any mistakes he does.\nOffense\nSephiroth rarely acts as the attacker, and most of what he can do on the offense can already be done in neutral. Any interaction from Neutral and Defense sections can be applied if the Prishe player is expected to respond. A full EX gauge can be used to guarantee an assist combo and even attempt Heartless Angel, it's recommended to have 2 assist gauges for that. [21]\nHP attacks work against block. Use them as a mixup after a dash, but condition with braveries first.\nSudden Cruelty can hit Prishe out of Free Air Dash startup\nFree Air Dash > Sudden Cruelty works against ground dodges and some short air dodges\nHell's Gate (landing) works against ground dodges [22]\nEX Revenge checkmate allows Sephiroth to Free Air Dash constantly and react with EX Revenge on hit.\nWatch out for block > Nullifying Dropkick on the ground.\nMeter Management\nSephiroth can fill assist gauge in the neutral thanks to Shadow Flare, but he has to stop it eventually and interact with Prishe.\nShadow Flare, Ground Dash and spot dashing are some of the safest ways to fill assist gauge. Just be careful to not get attacked when doing them. Many of Sephiroth's moves cannot be cancelled quickly, so there's no specific rotation of moves that always pulls ahead. Start with Shadow Flare, keep using it until Prishe gets close and work from there. Ground Dash into Transience or Shadow Flare (ground) is also ok if the match is going slow.\nIt's recommended to use assist gauge for Assist Change whenever Sephiroth gets hit. Prishe is expected to have meter depletion, so a Banishga wall rush combo makes it harder to keep up.\nIf you want to fill EX gauge faster, it's recommended to end assist combos with Sudden Cruelty or Hell's Gate. Sudden Cruelty is practical with most assists, while Hell's Gate has more requirements depending on assist.\nAbout Builds\nSephiroth benefits from EX and BRV damage builds, but he has to make choices with them. He can increase the reward he gets from each hit, or invest into other things outside of combos.\nEX build with Cleaver <img></img>, White Gem <img></img> and Aerith assist\n+ Stronger EX gain\n+ High ATK means more BRV damage and easier BRV breaks against Prishe\n+ Can bypass Assist Lock against LV2 Assist Change\n- Requires Aerith assist chase setups to get all EX reliably. Makes it harder to get EX outside of Chase.\n- Assist combo from Godspeed projectiles requires earlier timing than usual\n- Cannot whiff punish HP attacks with Aerith assist\nEX build with Heaven's Cloud <img></img> and other assists\n+ Easier to get EX from Sudden Cruelty without relying on Chase (Tenacious Attacker <img></img> recommended!)\n+ Assist combo from Godspeed projectiles can be reacted to later\n+ Can whiff punish HP attacks with assists\n- Less BRV damage, especially with Tidus or Yuna assists\n- Tenacious Attacker <img></img> takes up one accessory slot, leaves slightly less room for damage, meter depletion and EX gain\n- Assists can still miss after Godspeed projectiles if called too late\nYuna air BRV assist can also bypass LV2 Assist Change block, but her combo routes aren't as flexible.",
+      "sources": [
+        "https://dissidia.wiki/Sephiroth_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Sephiroth_(Dissidia_012)",
+    "https://www.youtube.com/watch?v=doDji0EBSjI&t=72"
+  ]
+}

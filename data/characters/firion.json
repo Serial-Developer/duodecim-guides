@@ -1,0 +1,1132 @@
+{
+  "slug": "firion",
+  "name": "Firion",
+  "page": "Firion_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Firion_(Dissidia_012)",
+  "origin": "Final Fantasy II",
+  "icon": "firion",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-firion.png",
+  "infobox": {
+    "Name": "Firion (フリオニール)",
+    "Original game": "Final Fantasy II",
+    "Base ATK (LV100)": "111 (High)",
+    "Base DEF (LV100)": "112 (High)",
+    "Run Speed": "8 (Below Average)",
+    "Dash Speed": "81 (Below Average)",
+    "Fall Speed": "81 (Average)",
+    "Fall Speed Ratio After Dodge": "38 (Average)",
+    "Fastest BRV": "9F (Swordslash)",
+    "Fastest HP": "33F / 49F (Lord of Arms)",
+    "1-Hit HP": "Yes (Straightarrow)",
+    "HP Links": "Yes",
+    "Command Block": "Yes (Shield Bash)",
+    "Weapon": "All normal weapons, Parrying Weapons, Guns, Poles",
+    "Armor": "Bangles, Chestplates, Clothing, Hats,Headbands, Helms, Light Armor, Shields",
+    "Exclusive weapons": "Rebellion Army, Longinus, Wild Rose",
+    "Unlock": "Default",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Hikaru Midorikawa",
+    "Voice Actor (ENG)": "Johnny Yong Bosch"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Firion is a defensive ground-oriented fighter. His main strategy revolves around controlling space with Straightarrow and punishing |",
+        "Attacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.",
+        "approaches with HP links |",
+        "An HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.",
+        "or Shield Bash counters. With quick Swordslash pokes |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        "and Magic Arts projectiles |",
+        "A type of attack that travels independently from any character. Beams, fireballs and magic spells are often like this. Many projectiles are Ranged priority in Dissidia 012, and they can be reflected back.",
+        ", Firion has tools for almost any range. Poke with Swordslash, defend with Shield Bash, pressure with Straightarrow, or retaliate with Rope Knife or Reel Axe.",
+        "Firion’s defense is backed up by his damage output; His Double Trouble HP link wall rushes on the ground, which sets up assist combos consistently. With high base bravery and Side by Side, Firion can quickly fill assist gauge and get big momentum with one HP hit. Firion’s HP attacks are also strong in neutral |",
+        "The stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.",
+        ", so stray hits and callouts are rewarding as well.",
+        "As a ground fighter, Firion is more vulnerable in the air. Aggressive opponents can overwhelm him there due to his short range and telegraphed low priority projectiles. His mobility is also below average, and his floaty air dodges leave him open to dodge punishment. Firion also cannot force opponents to fight near ground, unless he commits to slower EX gain, which is outclassed by Side by Side. In addition, his Straightarrow pressure suffers against fast movement and whiff punishes |",
+        "Hitting an opponent who missed (whiffed) their attack.",
+        "once opponents have assist.",
+        "In competitive play, Firion has been consistently ranked at high tier. He is good at controlling space and capitalizing on mistakes at mid-range. He cannot fight as effectively in the air, or prevent all opponents from staying there. He performs well against close-range characters such as Cloud, Zidane and Prishe, and small stages such as Pandaemonium - Top Floor make it harder to run away from him. Despite the weak EX generation and air combat, Firion’s high damage and straightforward gameplan have made him a consistent tournament threat."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Defensive ground combat - Firion can stand toe-to-toe in close-range combat with Swordslash & Rope Knife BRVs and Shield Bash HP for protection after a dodge.\nAnti-zoning - Shield Bash's long range counter is fast, long reach, difficult to avoid and leads to assist combos. Good for shutting down low priority projectiles.\nDamage - High base bravery, high base ATK, synergy with Side by Side <img></img> and consistent HP link wall rushes reward Firion greatly with just one combo.\nSide by Side <img></img> - Firion builds assist gauge and momentum quickly with well placed HP links and strong HP attacks in neutral .\nRanged combat - Magic Arts: Bolt and more notably Straightarrow can force opponents to disengage and punish mistimed dodges even from long distances.\nEX Mode's Blood Weapon - Rare, but regenerating health equal to HP damage dealt is strong at creating comebacks.",
+              "Air combat - Floaty air dodges, low combo potential, lack of effective post-dodge defense and quick approaching close-range attacks can create a lot of risk for Firion.\nEnforcing defenders in his effective range - Firion's arsenal is not designed to easily enforce opponents hanging at a large stage's ceiling to engage with him. These situations often involve long-term strategies with EX and appropriate builds.\nPunishable HP links - As a frequent HP link user, Double Trouble's long HP attack animation leave him vulnerable to counter attacks after Assist Change."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Firion_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/83/Brv_firion_lance_combo.jpeg",
+              "damage": "20+ (8, 12)",
+              "startup": "19F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "15",
+              "effects": "Absorb",
+              "cancels": "Dodge, Follow-up (Away)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Quick upward swing with lance. Slightly draws foe near.",
+              "name": "Lance Combo",
+              "notes": "Lance Combo is Firion's fastest move for HP links |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\n, but it also has shortest reach despite it pulling in enemies. It has long active |\nThe period of time when an attack is capable of doing damage.\nframes, so it can still hit opponents who are trying to whiff punish |\nHitting an opponent who missed (whiffed) their attack.\nFirion too early. The animation is quick, which lets Firion quickly transition into his follow-ups or the Double Trouble HP link.\nAs a poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n, Lance Combo can be dodge cancelled |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nrelatively early, though it's still slower than Swordslash. And even if Lance Combo misses, Firion still has the mid priority lance follow-up to protect himself. That's not exclusive to this move, but it's safer in this regard than Reel Axe, one of his other braveries."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/ed/Brv_firion_swordslash_g.jpeg",
+              "damage": "20",
+              "startup": "9F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "60",
+              "effects": "Chase",
+              "cancels": "Dodge, Block, Attack",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Quick sword slash. Short reach, but quick strike.",
+              "name": "Swordslash (ground)",
+              "notes": "Swordslash is Firion's main close-range poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. It can build assist gauge on whiff |\nA missed attack that doesn't make any contact.\nand push enemies away who are getting too comfortable near Firion. The reach is short, so it's not effective as a whiff punish |\nHitting an opponent who missed (whiffed) their attack.\ntool. However, its startup |\nThe time it takes before an attack can do damage.\nis one of the fastest in the whole game. Firion can cancel |\nAn action that is interrupted early by doing another action.\nthis move into a block or other attacks (including HP), which helps him stay ambiguous against reactive opponents. [1] [2]\nUsing Swordslash well in conjunction with other moves lets Firion establish the defensive ground combat where he excels at. If Swordslash hits, Firion can even convert into a Kuja assist combo. [3]"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c0/Brv_firion_rope_knife.jpeg",
+              "damage": "20+ (2 x 10)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "-",
+              "cancels": "Dodge, Follow-up (Away)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Throw lightning knife. Good versus any height, long duration.",
+              "name": "Rope Knife",
+              "notes": "Rope Knife is Firion's primary whiff punish |\nHitting an opponent who missed (whiffed) their attack.\ntool on the ground. Similar to Lance Combo and Reel Axe, Rope Knife pulls in enemies for follow-ups, including Double Trouble HP link. [4] It has enough reach and active |\nThe period of time when an attack is capable of doing damage.\nframes to catch ground dodges and landing lag. [5] [6] [7] Rope Knife has some vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nas well. [8] The startup speed is slower than Lance Combo, but it's fast enough to punish plenty of moves on reaction if Firion is within range. [9]\nFirion can use Rope Knife as a threat against close-range characters. It has longer reach than most pokes |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n, so it can punish opponents for poking near Firion. [10] Rope Knife can also go through projectiles and pull the opponent in, functioning as a disjoint |\nA part of an attack that isn't close to the character's hurtbox. If this part of an attack gets hit by opponent's attack, the character using it will not take damage.\n. [11]\nRope Knife has a glaring weakness; It's rather telegraphed. The bright yellow visual effect around the knife and Firion's distinct audio cue make it easier to react to this move. And if it's used from its maximum range, Firion doesn't have many low risk options to use as a mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\n. It also generates more EX than other ground combo moves, though that's negligible when using Side by Side <img></img>. Most of Rope Knife's hits don't pull the opponent towards Firion, so a \"shallow\" hit can cause the opponent to drop out of the move if it hits at an awkward angle. [12] The long active frames can also backfire on Firion (though not often), as higher priority moves cause Firion to stagger. [13] [14]\nDespite its weaknesses, Rope Knife is commonly used in competitive play. It plays an important role in Firion's defense as a distinct punisher and spacing tool. With Rope Knife, Firion's range is not limited to point blank (Swordslash) and long-range (Reel Axe, Magic Arts, Straightarrow). And it's safer to use than Lord of Arms as a punisher. And of course, Rope Knife enables high damaging assist combos with Double Trouble."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/d/d5/Brv_firion_reel_axe.jpeg",
+              "damage": "20+ (10, 10)",
+              "startup": "47F",
+              "type": "Physical",
+              "priority": "Ranged High",
+              "exForce": "15",
+              "effects": "-",
+              "cancels": "Dodge, Follow-up (Away)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Throw axe straight ahead at high speed.",
+              "name": "Reel Axe",
+              "notes": "Reel Axe is a high priority projectile that pulls opponents to Firion. It has the longest lateral reach out of Firion's ground braveries. This is mainly used to break through blocks from long range. It complements Rope Knife, making it an effective mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nwhen used sparingly.\nWhile the projectile travels quickly, it takes a long time to come out. Once Firion has thrown the axe, it travels in a straight line with no tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n. Any character with average run speed can evade this attack by moving sideways. Firion is also vulnerable to assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\nduring this move. All this means is that Reel Axe is rather risky to use, especially when its average damage output remains on par with Rope Knife and Lance Combo. If it guard breaks, Firion can do any of his follow-ups, and the critical hits can also deal more damage. However, this attack is not essential for increasing Firion's damage in competitive play."
+            }
+          ]
+        },
+        "Follow-ups": {
+          "intro": "Rope Knife, Lance Combo and Reel Axe can be followed up with one of three attacks. Because the bravery starters have identical base damage, the total base damage will be shown in parenthesis.\nCircle <img></img> (Neutral) for Punch\nUp+Circle ↑+<img></img> (Towards) for Slash & Arrow\nDown+Circle ↓+<img></img> (Away) for Lance",
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/9c/Brv_firion_followup_neutral.jpeg",
+              "damage": "+25 (45 Total)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "name": "Neutral (Punch)",
+              "notes": "Neutral follow-up (Punch) is Firion's highest damaging ender for bravery damage. It's a very fast attack with long knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nfor wall rushes. Since Firion often goes for Double Trouble, the punch can make Firion safer against early Assist Changes. Firion can use this to sneak in bravery damage right before the opponent escapes reflexively.\nPunch sees less use than Double Trouble and Lance follow-ups due to its weaker combo routes and reliance on wall rush. Its base damage is quite good, and more worthwhile with physical damage builds. However, Firion benefits more from HP links and assist combos on average."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f8/Brv_firion_followup_towards.jpeg",
+              "damage": "+10 (5, 5) (30 Total)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee Low (slash) Ranged Low (arrow)",
+              "exForce": "75",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "name": "Towards (Slash and arrow)",
+              "notes": "Towards follow-up (Slash & Arrow) is a two-stage attack that leads to Chase. This is mainly used with EX builds, and it is outclassed by Firion's other options most of the time. Firion can combo into assist after the first sword swing, but it's not a high damage starter.\nThe main issue lies in the Slash & Arrow's return on investment; Firion's damage comes from HP wall rushes with assist, and his other attacks don't generate much EX on average. Slash & Arrow may generate the most EX out of his braveries, but majority of it comes from the long-range arrow shot. Getting all of the EX requires dodging towards opponent and staying airborne for a moment. This means Firion gives up HP damage and ground moves for EX gauge, which he already struggles to fill."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/46/Brv_firion_followup_away.jpeg",
+              "damage": "+8 (1 x 5, 3) (28 Total)",
+              "startup": "11F",
+              "type": "Physical",
+              "priority": "Melee Mid",
+              "exForce": "15",
+              "effects": "Wall Rush, Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "name": "Away (Lance)",
+              "notes": "Away follow-up (Lance) is a combo attack that wall rushes on the ground. Its base damage may be low, but it has utility thanks to melee mid priority and consistent wall rushes. The wall rush opens up assist combos, and the mid priority protects Firion from hasty retaliations. It can be done even if the ground combo braveries (Rope Knife etc.) miss, which is good against greedy opponents. [15]\nFirion swings the weapon around him, which has good coverage around his body, so Lance doesn't have an explicit \"blind spot\". Lance also pulls nearby opponents in, so they cannot just wait for Firion to finish the attack before punishing it. It does have decent recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nbefore it can be dodge cancelled |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nthough, so Firion should not always use this. [16] [17] Since it stays out for a while, Firion can also lose to advancing high priority moves. [18]"
+            }
+          ]
+        },
+        "aerial": {
+          "intro": "Similar to ground moves like Lance Combo, Firion's Magic Arts have built-in follow-ups. Two follow-ups can be done, and the corresponding Magic Arts braveries do not have to be equipped to do them.\nCircle <img></img> for Magic Arts: Frost\nUp+Circle ↑+<img></img> for Magic Arts: Flame\nDown+Circle ↓+<img></img> for Magic Arts: Bolt",
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f9/Brv_firion_magic_arts_flame.jpeg",
+              "damage": "each 10",
+              "startup": "25F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "--",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Magic combo starting with Fire. Can swap spell from second shot.",
+              "name": "Magic Arts: Flame",
+              "notes": "Magic Arts: Flame is a slow, homing projectile |\nA type of attack that travels independently from any character. Beams, fireballs and magic spells are often like this. Many projectiles are Ranged priority in Dissidia 012, and they can be reflected back.\n. Its main use is setting up Shield Bash counters if it is reflected. Firion uses this to supplement his combat, even though it has a low hit rate.\nFlame has low damage, but it has just enough hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nto be used in combos if Firion is ever ready for it.\nAs mentioned earlier, Flame is not used to control space conventionally. Its low priority loses to almost everything, but this is a blessing in disguise; If Flame is reflected, Firion can block it with Shield Bash and activate the barrage of long-range projectiles that have very strong tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n. Flame's slow travel speed makes this fairly easy to notice by most intermediate and advanced players. However, Firion can cast at least one Flame rather safely without getting assist punished |\nUsing assist to hit the opponent who missed an attack, before they can defend.\nfor it. So if Firion has time to cast this at all, he can at least attempt to pressure opponents over time this way."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/38/Brv_firion_magic_arts_freeze.jpeg",
+              "damage": "each 12",
+              "startup": "25F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Magic combo starting w/Blizzard. Can swap spell from second shot.",
+              "name": "Magic Arts: Frost",
+              "notes": "Magic Arts: Frost is a single projectile that moves towards opponent in a straight line. It is the only air bravery that hits reliably after blocking an opponent due to its speed, but the reward is pretty low. It does low damage and generates no EX.\nFrost is not always prioritized in competitive play, but it can lead to an elaborate chase setup if two of them are cast during an assist combo."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8a/Brv_firion_magic_arts_bolt.jpeg",
+              "damage": "each 15 (4, 4, 7)",
+              "startup": "53F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Magic combo starting w/Thunder. Can swap spell from second shot.",
+              "name": "Magic Arts: Bolt",
+              "notes": "Magic Arts: Bolt spawns a projectile at the opponent's location and wall rushes them on the ground. This is great for harassing opponents from a distance thanks to its active |\nThe period of time when an attack is capable of doing damage.\nduration, decent hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nand the repeated casts. Most of Firion's projectiles don't go through solid obstacles, like walls. This does not apply to Bolt, so Firion can use it against opponents who are trying to stay behind cover. [19] [20] Despite its low priority, Bolt encourages opponents to move as getting hit by this can lead to an assist combo or more Bolt pressure.\nBolt takes almost a second to come out and it won't track |\nthe opponent once it's been casted. Therefore it is not recommended to be used as a general zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\ntool when opponents are rapidly approaching Firion."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/61/Brv_firion_swordslash_a.jpeg",
+              "damage": "20",
+              "startup": "9F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge, Block, Attack",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Slash in midair. Short reach, but quick strike.",
+              "name": "Swordslash (midair)",
+              "notes": "Midair Swordslash is similar to the grounded version, and is often equipped at all times. It is used similarly as a poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nthat can push opponents away. The sheer speed also lets Firion protect himself after air dodge as well.\nThe main difference is that aerial Swordslash can wall rush on the ground. This is good for assist combos, and it's practically higher reward for Firion compared to the grounded Swordslash. However, it's important to remember that Firion is not a very strong aerial fighter; His other air attacks are slow and he falls slowly after an air dodge. Aerial Swordslash's range is very short, so it can easily miss even if Firion blocks a melee attack successfully. [21] It can be cancelled |\nAn action that is interrupted early by doing another action.\nquickly to build assist gauge, but this is not a preferred situation for Firion.\nAerial Swordslash is also used as a combo filler |\nAn attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.\nduring ground Kuja assist combos, usually after ground wall rush. [22] [23]\nIf Firion does not cancel midair Swordslash, he will fall down until the animation finishes."
+            }
+          ]
+        }
+      },
+      "moveCount": 11,
+      "sources": [
+        "https://dissidia.wiki/Firion_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Close",
+                "Far"
+              ],
+              "image": "https://dissidia.wiki/images/1/1e/Hp_firion_shield_bash.jpeg",
+              "damage": [
+                "16 (4 x 4)",
+                "10 (3, 7)"
+              ],
+              "startup": [
+                "Block frame 1F~26F, end 49F",
+                "Block frame 1F~26F, end 49F"
+              ],
+              "type": [
+                "Physical",
+                "Magical"
+              ],
+              "priority": [
+                "Block Mid > Melee High",
+                "Block Mid > Ranged High"
+              ],
+              "exForce": [
+                "96",
+                "60"
+              ],
+              "effects": [
+                "Block",
+                "Block"
+              ],
+              "cancels": [
+                "",
+                ""
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Block] Create shield of light. HP attack on successful block.",
+              "name": "Shield Bash",
+              "notes": "Shield Bash is Firion's command block |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\n. It complements his ground combat and protects Firion after ground dodges. When Firion blocks an attack with this, he will respond with a counterattack. There are two counters, near and far. The type of counter depends on how far the opponent is from Firion at that moment.\nNear version\nA barrage of close-range knife throws.\nActivates if Shield Bash blocked an attack while opponent was very close.\nThe \"close\" threshold is approximately at Firion's head and 1,1 World of Darkness' tiles.\nThe attack can be Melee or Ranged priority, even from assist. Near version still activates based on distance to opponent.\nFirion tracks |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nthe opponent, turning around if necessary. Has a low vertical angle.\nFar version\nThree long-range homing spells based on Flame, Frost and Bolt magic arts.\nActivates if Shield Bash blocked an attack while opponent was out of \"close\" threshold.\nBlocks Ranged Low attacks for majority of the counter.\nShield Bash has multiple use cases. It can counter long-range projectiles and discourage zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\n. It can be used after a ground dodge to protect against dodge punish attempts. Firion can even set up a Shield Bash by having his Magic Arts: Flame reflected back at him. It's a powerful defensive tool, partly because it can make opponents think twice before attacking Firion.\nMuch of Shield Bash's strengths can be attributed to its blocking duration and the potency of the far version. Shield Bash blocks instantly on frame 1, which gives Firion gapless defense after dodging with Evasion Boost ability. The homing spells also travel very far and very quickly; Dodging all of them requires Precision Evasion or very specific positioning and dodge timing. [24] This is because the projectiles are huge, active |\nThe period of time when an attack is capable of doing damage.\nfor a long time, and they leave very few gaps in between them. If either first or second projectile hits, the rest is guaranteed.\nThe third projectile (bolt) is a 1-hit HP that generates 60 EX and knocks opponent upward for an assist combo |\nA combo involving an assist character.\n. If the bolt hits from below, it can trigger the HP hit multiple times. That means multiple meter depletion |\nAn equipment effect which empties the opponent's Assist or EX gauge by a certain amount.\nticks and an excessive amount of EX Force on the field. Since Firion is a prominent Side by Side <img></img> user, Shield Bash can also fill both assist gauges effectively in this manner.\nAs for downsides, Shield Bash can only block low priority attacks. Any mid or high priority attack, such as Garland's Lance Charge or Zidane's Free Energy cause Firion to get staggered or guard crushed. [25] In that sense it is not much different from a regular block. Shield Bash also struggles against halo camping |\nA strategy which involves a character staying above the opponent, often at a safe distance.\nin large stages; Firion cannot block attacks if his opponent insists on staying away from him. The far version can also be interrupted with assist, but Auto Assist Lock On extra ability helps with that. Shield Bash (far) automatically interrupts assists with this ability, as long as more projectiles can come out. Firion will keep aiming at the assist even after opponent's assist disappears, which makes Firion more vulnerable to punishes |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\n."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/11/Hp_firion_straightarrow_g.jpeg",
+              "damage": "-",
+              "startup": "61F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire arrow of light. Charge to adjust timiing.",
+              "name": "Straightarrow (ground)",
+              "notes": "Straightarrow is Firion's primary zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\ntool. It is a single projectile that travels at high speed when fired. What makes this move really effective is Firion's ability to hold it. As long as Square <img></img> is held, Firion continues to aim at the opponent regardless of where they move. Firion adjusts his aim fairly quickly, so he can snipe slow movement, whiffs |\nA missed attack that doesn't make any contact.\nand dodges [26] with relative ease by releasing Square <img></img>.\nThe ground version of Straightarrow is not used as often as the midair version. However, it can be occasionally useful to Firion as a slightly faster version of the move. This is because Firion does not have to jump in order to use it. Firion is considered airborne when using Straightarrow on the ground, so fast air assists can punish him.\nStraightarrow has a maximum charge time of roughly 1 second (from startup, ~2 seconds in total). After that, Firion will fire Straightarrow automatically. This applies to midair version as well."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8d/Hp_firion_lord_of_arms.jpeg",
+              "damage": "20 (4 x 5)",
+              "startup": "33F (above Firion), 49F (1st), 99F (2nd)",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Use all weapons. Extremely accurate.",
+              "name": "Lord of Arms",
+              "notes": "Firion uses weapons to fire two energy waves in quick succession. Lord of Arms tracks |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\naround Firion, which can force a dodge in close-range. This is great, because the second wave can punish regular dodges and still wall rush. Lord of Arms can be effective as a high priority mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nagainst fidgety opponents. It has enough lateral reach to punish landing lag as well. [27] It wall rushes on the ground, which leads to damaging assist combos. Lord of Arms has a hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nabove Firion, which comes out the fastest, so it does work as an anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nif Firion needs it. Firion is considered grounded during this move, so he won't always get punished by slow assists (Kuja ground BRV, Aerith air BRV). Also, Lord of Arms can cause multiple HP hits with the second wave. This greatly increases assist gauge filled with Side by Side <img></img> and meter depletion.\nAlthough Lord of Arms is powerful, it can still be dangerous to use recklessly. It has long recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, which can be punished |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\n. [28] It may have good tracking, but it's not omnipotent; The waves don't reach high up into the air, and they can be avoided by dashing sideways with Omni Ground Dash or Multi Air Slide. The invincibility from Evasion Boost and / or Precision Evasion can also evade Lord of Arms with proper timing. Firion also needs to look out for bravery breaks from assists; Firion always fires both energy waves even if they miss. That means if the opponent cannot evade the second wave after dodging, they can call assist and hit Firion after taking HP damage. Auto Assist Lock On support ability won't do much in this case.\nOverall Lord of Arms has high upset potential, but it still leaves Firion vulnerable if it misses. A strong move when used carefully."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/25/Hp_firion_double_trouble.jpeg",
+              "damage": "+10 (2, 1 x 6, 2) (30 Total)",
+              "startup": "??",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Lance Combo. [Combo] Multi-weapon attack.",
+              "name": "Double Trouble A",
+              "notes": "Double Trouble is Firion's HP link |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\n, which causes solo HP damage and devastating assist combos with Side by Side <img></img>. It is available with three of Firion's ground braveries, and Firion is expected to have it in most matchups |\nTwo specific characters matched against each other. Also refers to the strategy and knowledge surrounding it.\n. Double Trouble knocks at a downward diagonal angle, and it wall rushes on the ground in most stages. [29] This creates consistent damage output for Firion whenever he gets a good hit on the opponent.\nIf opponent escapes from Double Trouble with Assist Change, Firion will keep doing this move even when it misses. That makes Firion vulnerable to punish attempts. [30] [31] However, Firion can quickly cancel |\nAn action that is interrupted early by doing another action.\nthe recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\ninto a dodge after the final hit. [32] This makes Double Trouble a bit safer to use, and puts the onus on the opponent to punish properly. [33]"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/25/Hp_firion_double_trouble.jpeg",
+              "damage": "+10 (2, 1 x 6, 2) (30 Total)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Rope Knife. [Combo] Multi-weapon attack.",
+              "name": "Double Trouble B",
+              "notes": "Identical with Double Trouble A."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/25/Hp_firion_double_trouble.jpeg",
+              "damage": "+10 (2, 1 x 6, 2) (30 Total)",
+              "startup": "??",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Reel Axe. [Combo] Multi-weapon attack.",
+              "name": "Double Trouble C",
+              "notes": "Identical with Double Trouble A."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/44/Hp_firion_straightarrow_a.jpeg",
+              "damage": "-",
+              "startup": "61F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire arrow of light. Charge to adjust timing.",
+              "name": "Straightarrow (midair)",
+              "notes": "Firion's primary zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\ntool, but in the air. This is identical with the ground version. The main difference boils down to this being usable in the air; Whenever Firion is in the air, he can apply pressure with Straightarrow. Hold Square <img></img> to aim, release to fire. Its fast travel speed makes it good for punishing |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nmoves from a distance. [34] It can still miss against fast movement, [35] [36], but it's great at capitalizing on opponent's mistakes otherwise.\nStraightarrow can quickly rack up damage, because it forces opponents to stop and respond in specific ways, and punishes them if they fail. [37] [38] [39] It can Wall Rush, which is great for assist follow-ups. [40] With Side by Side <img></img>, Firion also gets a chunk of assist gauge whenever Straightarrow hits. [41] All these factors contribute greatly to Straightarrow's staying power. It can slow down the pace of a match and yields good reward on hit without demanding conditions. Straightarrow is a character-defining move in several aspects.\nFirion is vulnerable in a few ways during Straightarrow (both ground and midair). For one, he cannot quickly turn his aim behind him, so he needs to make sure opponents cannot dodge behind his back. [42] Firion can still hit behind his back if he can reorient himself in time, [43] but he needs to be aware when his maximum charge time ends.\nThe second vulnerability has to do with assists; Once Firion fires the projectile, his recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis long enough for quick air assists to punish him. [44] Furthermore, if Firion gets predictable, the opponent can call assist before taking damage from Straightarrow. [45] This can be exploited further; When Firion deals HP damage, the assist can bravery break him immediately afterwards. [46] That can have a devastating effect on Firion's momentum just for a single Straightarrow. Being mindful of resources, Straightarrow release timings and maximum charge time will help a lot in long matches. And lastly, Firion cannot fire Straightarrow in under a second, so he can always take damage before then. [47]\nWith Auto Assist Lock On, Firion can automatically aim at assists that are called when Straightarrow is being held. [48] This makes it much safer to use in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. [49] This can give Firion more assist gauge with Side by Side <img></img>, but it can also set himself up for a pincer attack from his opponent. [50] Auto Assist Lock On also makes it harder to protect Firion's own assist if opponent escapes with Assist Change; Auto Assist Lock On forces Firion to aim at the assist even when they disappear after Assist Change. [51]"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c1/Hp_firion_weaponsmaster.jpeg",
+              "damage": "22 (2 x 11)",
+              "startup": "53F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "~30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Use all weapons. Steals bravery, then HP attack.",
+              "name": "Weaponsmaster",
+              "notes": "Weaponsmaster is Firion's primary aerial HP for bravery damage. It is commonly used to end assist combos after Kuja assist. It also works as a no-frills counter after blocking an opponent. [52] It has good lateral range and it stays active |\nThe period of time when an attack is capable of doing damage.\nfor majority of the attack once it's out. Firion can use this to challenge dodges in smaller spaces, and if it hits, it can wall rush for an assist combo.\nFirion will automatically turn towards opponent during startup |\nThe time it takes before an attack can do damage.\n. Even if an opponent goes under him, Firion will quickly adjust his aim. Afterwards, Firion's direction is fixed, and he will move slowly towards opponent. This slightly increases Weaponsmaster's maximum range. The long animation makes Firion susceptible to counterattacks. [53] As a result, it carries high risk for controlling space compared to Straightarrow and Lord of Arms. Many competitive assists have faster air braveries than ground braveries, so in terms of assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\n, Weaponsmaster is not afforded the same degree of safety as Lord of Arms. Firion should also be careful if opponent can escape with Assist Change, since he can be punished afterwards. [54]"
+            }
+          ]
+        }
+      },
+      "moveCount": 8,
+      "sources": [
+        "https://dissidia.wiki/Firion_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Blood Weapon equipped!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nBlood Weapon",
+        "Firion has a strong EX mode due to the health regeneration from Blood Weapon. The major downside is that Firion's EX generation is weak overall, and is outclassed by high base bravery and Side by Side <img></img> builds. Firion may not get access to EX mode often, but if he does, he can benefit greatly from it."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Blood Weapon",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Activates when HP attack hits] Absorbs HP equivalent to damage dealt.",
+            "Blood Weapon heals Firion whenever he lands an HP attack during EX mode. It will heal as much health as Firion had bravery at the time. Even though it heals with HP damage, it does not work with Wall Rush HP damage. Therefore this effect is strictly more powerful at higher bravery.",
+            "Blood Weapon is very powerful for making comebacks, or establishing an exceptionally good health lead. The healing effect also applies to EX Burst as well, so Firion can guarantee at least two heals if he lands an HP attack. If Firion is already in a winning position, Blood Weapon allows him to secure a win even more decisively compared to most characters."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Fervid Blazer",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "A chain of attacks releasing the power of his weapons. Damage dealt adds to his own HP. Enter the commands that display before the attack.",
+            "Fervid Blazer demands five button inputs in order, shown from left to right. Firion has roughly two seconds to complete the button sequence. The button sequence may change each time, but the common structure is three directional inputs, then two face button inputs. The d-pad must always be used, even if d-pad is used to move the character.",
+            "Each wrong button press locks one input from the sequence. That means Firion will do one attack less during the EX Burst. If there are no successful inputs, Firion will transition straight into the last barrage of arrow shots."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "3 x 3 (9)",
+                  "4 x 3, 5 x 2, 13, 6 x 2, 12, 4 x 8 (100 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Firion_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [
+        "Main article: Firion (Combos)",
+        "Firion's practical combos are mostly limited to assist combos. As an HP linker, he benefits a lot from any Wall Rush he gets from Double Trouble, Lord of Arms and Straightarrow. He works with a few competitive assists, of which Kuja is most reliable."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [
+            "Firion's solo combos are situational at best, either requiring wall or setting up Magic Arts: Fire beforehand."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Projectile StarterSet Up ProjectileStray Hit Combo\nMagic Arts: Flame > Rope Knife > Double Trouble\n40 + HP & WR\n60\nBase Damage (Breakdown): 10 > 20 > 10 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 30 > 30\nIf Flame hits, it has just enough hit stun for solo combos. The challenge here is hitting the opponent with Flame while being actionable. Assists can help with that, but in a neutral situation this may not be as practical. Rope Knife, Straightarrow and Lord of Arms are all serviceable followups, assuming Firion is close enough to land them."
+                ],
+                [
+                  "Poke StarterGround, Near WallBRV Damage & Assist Gain\nLance Combo > Followup (↑) > DC > Rope Knife > Double Trouble\n55 + HP & Wall Rush\n90\nBase Damage (Breakdown): 20 > 5 > 20 > 10 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 15 > 15 > 30 > 30\nFollowup (↑) has just enough hit stun for Firion to dodge and combo into Rope Knife. This requires being very close to wall, as this relies on reducing opponent's knockback and keeping Firion close. The dodge cancel and the following Rope Knife must be done as soon as humanly possible, so the timing is strict.\nLance Combo and Reel Axe are more reliable combo starters here, but Rope Knife can start this combo as well. It is a niche solo combo in most stages, but Firion does get more assist gauge for using different attacks. Naturally, it also deals more BRV damage."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist (Kuja)",
+          "text": [
+            "Main article: Firion Combos (Kuja Assist)",
+            "Firion has a straightforward and effective synergy with Kuja. He can Wall Rush off of his key moves, and then have Kuja follow up. Firion typically ends his combos with Weaponsmaster or Straightarrow (midair). Whenever Firion gets a ground Wall Rush (e.g. Double Trouble), he can also increase the reward on hit with fillers |",
+            "An attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.",
+            "."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Punish StarterGround, Wall Rush (Floor)BRV Damage, Beginner Combo\nRope Knife > Followup (↓) > WR > AST BRV > AC > Weaponsmaster\n89 + HP & Wall Rush\n~75\nVideo\nBase Damage (Breakdown): 20 > 8 > 43 (Assist) > 18 + HP & WR\nOpponent Assist (Comrade's Vow): 142\nEX Force (Breakdown): 45 > ~30\nNot particularly strong, but suitable for beginners.\nFollowup (↓) can also catch aggressive opponents with mid priority if Rope Knife misses. Firion players should keep an eye out for this if they use this move."
+                ],
+                [
+                  "Punish StarterGround, Wall RushHP Link, Multipurpose\nRope Knife > Double Trouble > WR > AST BRV > Straightarrow > AC > Weaponsmaster\n92 + HP & Wall Rush\n~90\nVideo\nBase Damage (Breakdown): 20 > 10 + HP & WR > 46 (Assist) > HP > 16 + HP & WR\nOpponent Assist (Comrade's Vow): 141\nEX Force (Breakdown): 30 > ~30 > 0 > ~30\nA Firion classic. Recommended for high base bravery builds. Straightarrow filler serves a few purposes; It adds meter depletion, resets base BRV recovery to normal and increases critical hit rate for Weaponmaster during base BRV recovery. Straightarrow can be fired whenever during Kuja's multi-hits, and if it Wall Rushes, it's even better for Firion."
+                ],
+                [
+                  "Counter StarterGround, MidrangeAnti-Zoning\nShield Bash (far) > AST BRV > AC > Weaponsmaster\n68 + HP & WR\n~90\nVideo\nBase Damage (Breakdown): 10 + HP > 4,16,20 (40 total, Assist) > 18 + HP & WR\nOpponent Assist (Comrade's Vow): 102\nEX Force (Breakdown): 60 > ~30\nShield Bash's long range counter controls a lot of space, and leads to assist combo on hit. Firion should be careful about his positioning, however; Normally the thunder bolt knocks opponent upward once. If the thunder bolt hits from below, it can knock opponent up multiple times.\nThis generates lots of EX Force (and assist gauge with Side by Side <img></img>), but it also delays Kuja assist timing a lot. The exact timing can be difficult to measure at first, but roughly 1 second after the first bolt hit can work. If in doubt, please watch the example video linked here."
+                ],
+                [
+                  "HP Projectile StarterWall Rush (Ground)Zoning Reward, Multipurpose\nStraightarrow > WR > AST BRV > Straightarrow > AC > Weaponsmaster\n65 + HP & Wall Rush\n~30\nVideo\nBase Damage (Breakdown): HP + WR > 47 (Assist) + HP (& WR) > 18 + HP & WR\nOpponent Assist (Comrade's Vow): 94\nEX Force (Breakdown): 0 > 0 > ~30\nStraightarrow combo against grounded opponents. Matchup dependent, but still recommended for high base BRV builds. The Straightarrow filler serves the same role as with prior core combos; Resets base BRV recovery, adds meter depletion and increases critical hit rate for Weaponsmaster."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Firion_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "Main article: Firion (012) Builds",
+        "Firion mainly uses Side by Side <img></img> builds to capitalize on his strengths as an HP linker |",
+        "Characters with prominent BRV-to-HP links, such as Firion, Cloud and Zidane.",
+        ". Most of his attacks don't generate much EX (or none), so the competitive multiplayer builds tend to focus on assist, high base bravery and HP Wall Rush damage instead.",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "This is a Side by Side damage build centered around high base bravery |",
+        "The baseline bravery that can be modified with equipment. Bravery recovers to this after bravery break.",
+        ". Side by Side gives a chunk of assist gauge for doing HP damage, which lets Firion use Kuja assist more often. Whenever Firion gets an HP Wall Rush with Straightarrow or Double Trouble, he can deal over 2000 HP damage. A single Double Trouble Kuja assist combo ranges between 4,130 - 4,712 HP damage. This depends on Firion's combo route, but three assist combos are often enough to win. Since Firion gets HP attacks from his ground braveries and any Straightarrow that hits, he can deal lots of damage quickly. This is true for any character that uses this build such as Golbez, but Firion benefits from it regardless.",
+        "Base bravery ignores opponent's DEF stat, so the damage output is pretty consistent, assuming Firion does not get hit often. Thornlet <img></img> also reduces bravery slightly whenever Firion successfully dodges or blocks an attack. This can be offset with Back-Breaking Straw <img></img>, or punishing |",
+        "Attacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.",
+        "the opponent if their attack has long recovery |",
+        "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+        ".",
+        "The booster accessory multiplier is at x4.6 with Opponent Summon Unused <img></img>. If opponent does not have a summon equipped, the maximum multiplier is x3.5."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "9683"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1623"
+            ],
+            [
+              "ATK",
+              "178"
+            ],
+            [
+              "DEF",
+              "184"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              "x4.6"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: -",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Piggy's Stick"
+            ],
+            [
+              "Hand <img></img>",
+              "Chainsaw <img></img> (Equip Machines)"
+            ],
+            [
+              "Head <img></img>",
+              "Thornlet <img></img> (Bard's Gear)"
+            ],
+            [
+              "Body <img></img>",
+              "Maximillian <img></img> (Cavalier's Gear)"
+            ],
+            [
+              "Accessory 1",
+              "Sniper Eye <img></img>"
+            ],
+            [
+              "Accessory 2",
+              "Bravery Orb <img></img>"
+            ],
+            [
+              "Accessory 3",
+              "Dismay Shock <img></img>"
+            ],
+            [
+              "Accessory 4",
+              "Battle Hammer <img></img>"
+            ],
+            [
+              "Accessory 5",
+              "Empty EX Gauge <img></img>"
+            ],
+            [
+              "Accessory 6",
+              "Summon Unused <img></img>"
+            ],
+            [
+              "Accessory 7",
+              "Pre-EX Mode <img></img>"
+            ],
+            [
+              "Accessory 8",
+              "Pre-EX Revenge <img></img>"
+            ],
+            [
+              "Accessory 9",
+              "Opponent Summon Unused <img></img>"
+            ],
+            [
+              "Accessory 10",
+              "Side by Side <img></img>"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "<img></img> Swordslash",
+              "<img></img> Swordslash"
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "↑+<img></img> Rope Knife",
+              "↑+<img></img> Magic Arts: Flame"
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "<img></img> Branch: Double Trouble",
+              ""
+            ],
+            [
+              "↓+<img></img> Lance Combo",
+              "↓+<img></img> Magic Arts: Bolt"
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "<img></img> Branch: Double Trouble",
+              ""
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "<img></img> Lord of Arms",
+              "<img></img> Straightarrow"
+            ],
+            [
+              "↑+<img></img> Shield Bash",
+              "↑+<img></img> Weaponsmaster"
+            ],
+            [
+              "↓+<img></img> Straightarrow",
+              ""
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Firion_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Firion Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Rope Knife",
+                  "23F",
+                  "Ground",
+                  "Opponent",
+                  "2 x 10, 25 (45)",
+                  "Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Magic Arts: Flame",
+                  "25F",
+                  "Air",
+                  "Opponent",
+                  "10 each (up to 30)",
+                  "-"
+                ],
+                [
+                  "HP",
+                  "Straightarrow",
+                  "61F",
+                  "Ground",
+                  "Opponent",
+                  "-",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Weaponmaster",
+                  "52F",
+                  "Air",
+                  "Opponent",
+                  "2 x 11 (22)",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist Overview",
+          "text": [
+            "Firion assist is one of the weakest assists in the game. Very limited combo potential and high requirements for notable reward make it difficult to justify him for any character. He enables loops with Magic Arts: Fire [55], but setting them up requires ground or ceiling, as well as characters who can hold long enough for Fire to hit. Unfortunately Firion assist does not excel in any other area. Whiff punishment, damage and meter depletion alike are all diminished due to BRV assists' reward and steep requirements. For example, Rope Knife pushes opponents away quickly and depends on Wall Rush to make combos easier at all.",
+            "HP assists are also expensive to use and too slow to use for Wall Rush combos. Straightarrow is often charged, which makes it impractical for combos, but can add pressure in volatile situations. Weaponsmaster is similarly slow, but at least it occupies space for a moment once it's out. It might be useful in small stages on an occasion, especially Phantom Train."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Synergies",
+          "text": [
+            "Firion works with various competitive assists, though very few of them amplify Firion's strengths.",
+            "Kuja\nThe most common and powerful synergy. BRV assists combo from every Wall Rush, which Firion can do consistently. They also hold the opponent for Straightarrow fillers |",
+            "An attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.",
+            ", which adds more meter depletion (with equipment) and critical hits for combo finishers. Kuja pushes Firion's damage potential far, while still having some whiff punish |",
+            "Hitting an opponent who missed (whiffed) their attack.",
+            "capability. A strong assist all around and great for anyone learning Firion.",
+            "Sephiroth\nSephiroth has a faster ground BRV assist than Kuja, but shorter holds |",
+            "Holding an opponent in place with an attack, usually to set up an assist combo. In Dissidia NT, other players can follow up instead of assists.",
+            ", hit stun |",
+            "The period of time when a character cannot do an action after getting hit by an attack.",
+            "and harsher knockback angles make it harder to do anything extraordinary. 1 Swordslash filler can be done during Reaper, but Weaponsmaster barely connects after Reaper and Sudden Cruelty Assist Chases. It's far from the worst synergy in the game, but Kuja assist eclipses Sephiroth here in terms of performance and consistency.",
+            "Aerith\nLess common for Firion. Aerith enables even more HP damage than Kuja at the cost of whiff punishes and reduced meter depletion. The main strategy here involves high base bravery builds and double assist combos; With Double Trouble and Straightarrows, Firion can spend two assist gauges to do three HP attacks in a single combo."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Firion_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": true,
+      "links": [
+        {
+          "text": "Swordslash into Rope Knife (attack cancel)",
+          "url": "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=322"
+        },
+        {
+          "text": "Swordslash into Lance Combo (attack cancel)",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=219"
+        },
+        {
+          "text": "Swordslash conversion into Kuja assist combo.",
+          "url": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=107"
+        },
+        {
+          "text": "Rope Knife pulls opponent to Firion",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=102"
+        },
+        {
+          "text": "Rope Knife has long active frames",
+          "url": "https://www.youtube.com/watch?v=ra6pKVI6gno&t=360"
+        },
+        {
+          "text": "Rope Knife has long active frames (and extends beyond visuals?)",
+          "url": "https://www.youtube.com/watch?v=W2KoophyA6w&t=62"
+        },
+        {
+          "text": "Rope Knife catches landing lag",
+          "url": "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=718"
+        },
+        {
+          "text": "Rope Knife vertical tracking",
+          "url": "https://www.youtube.com/watch?v=rU9esevjw50&t=202"
+        },
+        {
+          "text": "Rope Knife whiff punish (Zidane Tempest)",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=334"
+        },
+        {
+          "text": "Rope Knife whiff punish (Squall Beat Fang)",
+          "url": "https://www.youtube.com/watch?v=W2KoophyA6w&t=94"
+        },
+        {
+          "text": "Rope Knife pokes through projectile (Bartz Dark Flame)",
+          "url": "https://www.youtube.com/watch?v=ra6pKVI6gno&t=311"
+        },
+        {
+          "text": "Rope Knife pull misses",
+          "url": "https://www.youtube.com/watch?v=ra6pKVI6gno&t=43"
+        },
+        {
+          "text": "Rope Knife gets staggered by high priority move (Jecht LV3 Jecht Stream",
+          "url": "https://www.youtube.com/watch?v=Dl1G_ZhtdpY&t=30"
+        },
+        {
+          "text": "Rope Knife gets staggered by high priority move (Tifa Burning Arrow)",
+          "url": "https://www.youtube.com/watch?v=1N1IeTT0Uu0&t=18s"
+        },
+        {
+          "text": "Lance follow-up protects Firion against low priority attack",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=141"
+        },
+        {
+          "text": "Lance follow-up gets whiff punished, it's not always safe to use",
+          "url": "https://www.youtube.com/watch?v=rU9esevjw50&t=272"
+        },
+        {
+          "text": "Lance follow-up gets assist punished",
+          "url": "https://www.youtube.com/watch?v=1N1IeTT0Uu0&t=283"
+        },
+        {
+          "text": "Lance Follow-up loses to HP attack",
+          "url": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=81"
+        },
+        {
+          "text": "Magic Arts: Bolt can hit behind solid obstacles (Crystal Tower)",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=235"
+        },
+        {
+          "text": "Magic Arts: Bolt can hit behind obstacles (Pandaemonium, opponent POV)",
+          "url": "https://www.youtube.com/watch?v=rU9esevjw50&t=164"
+        },
+        {
+          "text": "Swordslash (midair) short range after blocking",
+          "url": "https://www.youtube.com/watch?v=Dl1G_ZhtdpY&t=261"
+        },
+        {
+          "text": "Swordslash (midair) as assist combo filler (Lord of Arms)",
+          "url": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=379"
+        },
+        {
+          "text": "Swordslash (midair) as assist combo filler (Straightarrow)",
+          "url": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=397"
+        },
+        {
+          "text": "Shield Bash far counter evaded (Precision Evasion)",
+          "url": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=302"
+        },
+        {
+          "text": "Shield Bash cannot block high priority attack (Zidane Free Energy)",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=188"
+        },
+        {
+          "text": "Straightarrow can punish air dodge",
+          "url": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=23"
+        },
+        {
+          "text": "Lord of Arms punishes landing lag from max range",
+          "url": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=377"
+        },
+        {
+          "text": "Lord of Arms' long recovery, vulnerable to punishes",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=195"
+        },
+        {
+          "text": "Double Trouble wall rushes on the ground",
+          "url": "https://www.youtube.com/watch?v=1N1IeTT0Uu0&t=230"
+        },
+        {
+          "text": "Double Trouble punished after Assist Change",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=380"
+        },
+        {
+          "text": "Double Trouble punished after Assist Change (Squall Aerial Circle)",
+          "url": "https://www.youtube.com/watch?v=W2KoophyA6w&t=148"
+        },
+        {
+          "text": "Double Trouble has short recovery when it is dodge cancelled",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=17"
+        },
+        {
+          "text": "Straightarrow can whiff punish from a distance",
+          "url": "https://www.youtube.com/watch?v=i0wVA8eKICo&t=714"
+        },
+        {
+          "text": "Straightarrow tracking against fast run speed (misses)",
+          "url": "https://www.youtube.com/watch?v=Dl1G_ZhtdpY&t=175"
+        },
+        {
+          "text": "Straightarrow no vertical tracking once fired",
+          "url": "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=708"
+        },
+        {
+          "text": "Firion forces a Straightarrow mixup after LV2 Assist Change.",
+          "url": "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=628"
+        },
+        {
+          "text": "Firion forces Straightarrow in small space and punishes air dodge",
+          "url": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=248"
+        },
+        {
+          "text": "Firion delays Straightarrow's timing to apply pressure.",
+          "url": "https://www.youtube.com/watch?v=Dl1G_ZhtdpY&t=268"
+        },
+        {
+          "text": "Straightarrow Wall Rush, great for assist combos",
+          "url": "https://www.youtube.com/watch?v=i0wVA8eKICo&t=1053"
+        },
+        {
+          "text": "Straightarrow fills assist gauge with Side by Side",
+          "url": "https://www.youtube.com/watch?v=i0wVA8eKICo&t=1004"
+        },
+        {
+          "text": "Firion turns Straightarrow aim slowly behind hims",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=81"
+        },
+        {
+          "text": "Straightarrow aims behind Firion (Squall air dodge, near wall)",
+          "url": "https://www.youtube.com/watch?v=W2KoophyA6w&t=110"
+        },
+        {
+          "text": "Straightarrow gets assist punished after firing.",
+          "url": "https://www.youtube.com/watch?v=ra6pKVI6gno&t=284"
+        },
+        {
+          "text": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=292",
+          "url": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=292"
+        },
+        {
+          "text": "Firion hits Straightarrow, gets broken by assist afterwards.",
+          "url": "https://www.youtube.com/watch?v=ra6pKVI6gno&t=99"
+        },
+        {
+          "text": "Straightarrow gets hit during startup",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=351"
+        },
+        {
+          "text": "Straightarrow automatically aims at assist (Auto Assist Lock On)",
+          "url": "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=312"
+        },
+        {
+          "text": "Straightarrow with Auto Assist Lock On, Firion avoids punishment",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=442"
+        },
+        {
+          "text": "Straightarrow with Auto Assist Lock On, Firion gets punished by opponent's point character",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=406"
+        },
+        {
+          "text": "Straightarrow keeps aiming at assist after they're gone (Auto Assist Lock On)",
+          "url": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=309"
+        },
+        {
+          "text": "Weaponsmaster as a no-frills counter after blocking opponent",
+          "url": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=67"
+        },
+        {
+          "text": "Weaponsmaster long recovery is punishable",
+          "url": "https://www.youtube.com/watch?v=ra6pKVI6gno&t=271"
+        },
+        {
+          "text": "Weaponsmaster gets punished with opponent Firion's Straightarrow after LV1 Assist Change",
+          "url": "https://www.youtube.com/watch?v=ra6pKVI6gno&t=187"
+        },
+        {
+          "text": "Firion assist Magic Arts: Fire loops",
+          "url": "https://www.youtube.com/watch?v=vA3cZSRWYEU&t=333s"
+        }
+      ]
+    },
+    "matchups": {
+      "documented": true,
+      "stub": false,
+      "text": "Firion\nMatchups Warrior of Light\nWarrior of Light\nEven\n[Character Page] [Match Videos] [Recommended Build: Side by Side + High Base BRV]\nIntro\nFirion has stronger zoning tools, so it's recommended to take advantage of them. Start by defending and firing Straightarrows. This will show how Warrior of Light (WoL) reacts. If WoL evades Straightarrows consistently, he will eventually want to approach. Form your strategies around Straightarrow first, then focus on what WoL does in close-range. Both WoL and Firion can use Side by Side builds effectively thanks to HP links , Shield of Light (WoL) and Straightarrow (Firion), so a single hit can build a lot of momentum.\nNeutral\nFirst, let's cover long-range. If WoL starts using projectiles, use Straightarrow to pierce through them. Don't forget about Shield Bash! WoL's BRV projectiles Red Fang, Blue Fang and White Fang all activate Shield Bash's long-range counter, which is difficult to evade and leads to assist combos. WoL often uses White Fang to cover his approach, so Firion can counter it with Shield Bash or power through with Rope Knife or Lord of Arms with a good read . Against White Fang, Firion will want to be closer to WoL so Shield Bash counter activates before WoL gets started on his offense.\nIt is important to establish space control early. Straightarrow is great for keeping WoL in check. It can stop WoL from using Shining Wave, Radiant Sword, Shield Strike and Crossover recklessly. This reduces WoL's moves a lot; He can whiff Dayflash to fill assist gauge, but Firion can slow him down with Straightarrows. Firion doesn't need to hit WoL during Dayflash, but it's something WoL has to watch out for. When used from midrange, Straightarrow is quite difficult to react to when fired. This puts pressure on WoL to dodge at the right time, so try to hold Straightarrow for a moment to see if WoL dodges early, then release if he does. If done properly, Firion hits WoL who is stationary at the end of his air dodge. Otherwise WoL can use dashes and quickmoves to evade Straightarrow with little risk.\nDefense\nLet's talk about close-range now. Firion controls space with Rope Knife, and pokes with Swordslash to fill assist gauge and measure WoL's reactions. The idea is to see if WoL reacts to Rope Knife, or takes action on his own. Rope Knife can hit from midrange, but WoL has a few answers to it; On the ground, he can try to react with block or Shield of Light. In the air he can also dodge and use Shield Strike, so be careful if WoL is approaching from above. If WoL is on the ground, forward dodge into Shield Strike isn't as reliable. It's slower and more prone to clashing with Rope Knife. Don't rely on the ↓ + <img></img> lance follow-up against air dodges though, WoL can interrupt it with Shield Strike or wait before taking his turn.\nThe threat of Rope Knife HP links and overall speed of the move means WoL has an incentive to look out for it. However, WoL cannot rely on blocking Rope Knife to do damage. If WoL uses Shield of Light or blocks early, Firion can respond with Rope Knife HP links that do a lot of damage. That means WoL has to take risks in close range, where most of Firion's moves can reach.\nIf WoL gets too close, use Swordslash to push him away. Use other ground braveries if Firion gets a bigger opening for a counterattack. If Firion has to dodge on the ground, remember that Shield Bash acts as the last line of defense. It's good against Dayflash, Ascension, Crossover and Shield Strike. Also, WoL doesn't use Sword Thrust often, but it's a grounded Melee Mid priority gap closer. It breaks through Shield Bash and Rope Knife. Be careful he doesn't catch Firion off-guard.\nAs for aerial approaches, watch out for Shield Strike when WoL is above Firion. Shield Strike and Free Air Dash > Dayflash are the most common moves WoL will try to use. Firion can anti-air with Lord of Arms as a high commitment, high reward move. If it is set to Square <img></img>, it can also avoid camera cross-ups , making it more reliable to use. Most of Firion's attacks miss at sharp vertical angles, so don't rely too much on Lord of Arms. If it misses, Firion becomes vulnerable to assist attacks or worse, Shield Strike HP links. Move around with (Omni) Ground Dash to avoid getting blindsided.\nIf Firion is knocked into the air, try to get to the ground as soon as possible. WoL can dash through Magic Arts and Straightarrow may become more predictable when Wol doesn't have to worry about other midrange moves. Basic abilities Multi Air Slide and Descent Speed Boost can help here, as well as Quickmoves.\nOffense\nFirion is not an offensive powerhouse, but he can use Ground Dash to get close and gamble with Swordslash, Rope Knife or Lord of Arms. This is risky to do without assist gauge though, so exercise caution when going in. Straightarrow mixups still apply if Firion has established he can threaten with other moves. If WoL wants to dodge Swordslash or Rope Knife, Straightarrow or Lord of Arms can catch him.\nFirion often has to contend with halo camping . If WoL is doing this with Dayflash, Firion may have to follow him into the air with Free Air Dash eventually. Magic Arts are slow and low reward on hit, but safe to use if WoL is not dashing towards Firion. Otherwise it's a matter of using Straightarrow, or getting close to block bravery attacks or use Swordslash. This is not where Firion thrives, and without an EX build, he cannot play the long game with EX Cores either. WoL may be tempted to halo camp until he has 2 assist gauges, after which he gets diminishing returns from it. Be ready to strike after that.\nAbout Meter Management\nBoth characters will likely use Side by Side <img></img> to leverage assist meter more consistently. The damage output from assist combos and high base bravery builds is enough to swing the match in one's favor. One assist combo can do 3000+ HP damage, which Firion cannot afford to lose more than 2-3 times. Therefore it's recommended to escape with Assist Change at least once if Firion gets hit.\nSide by Side fills assist gauge even when it is locked. So even if Firion needs to avoid damage with Assist Change, he is not forced on his back foot so to speak. If WoL has assist available, be careful he doesn't call assist to coincide with a Straightarrow hit; This will do HP damage to WoL, but his assist (usually Sephiroth) will Bravery Break Firion afterwards.\nFirion and WoL are vulnerable to attacks after LV1 Assist Change; Firion can escape from WoL's Bitter End and use Straightarrow to get HP damage and assist meter. Conversely, WoL can escape from Firion's Double Trouble and use Shield Strike / Crossover. The good thing about that is if Firion hits first, WoL will lose this sequence of Assist Changes in the end. For example: Rope Knife > Double Trouble > WoL escapes (Assist Locked) > Shield Strike into Bitter End > Firion escapes (Assist Locked) > Straightarrow.\nNeither character gets consistent HP damage from LV2 Assist Change staggers in most situations. However, with Firion's Double Trouble, WoL can attempt to use LV2 Change early to block Double Trouble late. This gives him more time to dash and line up Shield Strike. Something to keep in mind.\nAbout Wall Rush\nFirion's usual combo starters guarantee HP Wall Rush consistently in most stages, whereas WoL's does not. WoL's HP links featuring Bitter End send forward, and its knockback is not especially long.\nHis Rune Saber HP links are a different story however; WoL can extend a Rune Saber combo with Sephiroth assist, follow up with Crossover and have a realistic chance at reaching ceiling on Order's Sanctuary. Low ceiling stages such as Pandaemonium - Top Floor and M. S. Prima Vista make this even easier, so try to avoid getting hit by Ascension on the ground and Crossover in the air. It is recommended to avoid the ceiling for long periods of time; WoL can dodge punish Firion's air dodges with Free Air Dash > Dayflash and challenge his zoning with Rising Buckler or even Crossover.\nGarland\nGarland\nEven\n[Character Page] [Match Videos] [Recommended Build: Side by Side + High Base BRV]\nIntro\nFirion's goal is to pressure Garland with Straightarrow and prevent him from getting a full EX gauge and causing a checkmate situation. Firion has more control over the match at medium / long distances thanks to Straightarrow piercing Cyclone and forcing Garland to dash. In close-range both characters have more options; Firion can punish with Rope Knife, and Garland can power through with Lance Charge. Both can use HP attacks to punish dodges and build momentum with combos. Firion gets more reward in fewer interactions, but falls behind if Garland keeps him airborne with Twist Drill and gets a full EX gauge. Both characters use Kuja assist. Investing into EX gauge depletion is a good idea.\nNeutral\nMost of the time is spent harassing Garland from afar with Straightarrow. He will try to move around it with (Omni) Ground Dash and whiff Deathblow to fill assist gauge along the way. Sometimes he can be hit during dash startup . If Garland is already dashing, a charged Straightarrow may force him to dodge eventually. Keep an eye out for that when firing arrows.\nClose-range is where things escalate. Now Firion can use Rope Knife as a general purpose move. It interrupts Bardiche and Tsunami from above. It whiff punishes Lance Charge and even Deathblow with a good read . Garland can bulldoze through Rope Knife with Lance Charge's Melee Mid priority, so try to stay unpredictable when using it. If Garland does Lance Charge first and he's close to Firion, Firion can dodge, and then attempt a Straightarrow mixup against Garland's dodge timing. Lord of Arms can also work if Garland doesn't dodge upwards. On that note, if Garland air dodges sideways or away, he can land on the ground and experience landing lag. Use Ground Dash and hit him with Rope Knife during that moment.\nIf the fight is going slow at midrange, Firion can use Magic Arts: Fire to passively pressure Garland, or set up a long-range Shield Bash counter if it's reflected.\nDefense\nSince Garland can threaten Rope Knife with Lance Charge, it's not always a good idea to attack first. Move around to avoid getting cornered. Use Swordslash to fill assist gauge and keep Garland guessing. Line up a Straightarrow if you're willing to take the risk of getting interrupted. Eventually he will be in range to use Deathblow. Block counters it of course, but leaves Firion wide open if Garland doesn't strike first. Use Ground Dash or jump and Multi Air Slide near ground to reposition. Just be careful Garland doesn't block Firion's dash or hit him during landing lag with Lance Charge.\nIf Firion has to dodge on the ground, side dodge is recommended. It evades Lance Charge and doesn't put Firion in a more vulnerable position against Deathblow. Neutral dodge (the backstep) leaves Firion closer to Garland if he does Deathblow or Lance Charge. Forward dodge avoids Lance Charge and Tsunami if done late enough, but loses to Earthquake. Tsunami works against all ground dodges, so Firion's timing is more important than the dodge direction. Jumping and then air dodging to be directly above Garland makes it harder for him to use Twist Drill, but it's not a position Firion wants to hold for long, even with Straightarrow pressure. Avoiding Deathblow and Twist Drill reduce Garland's EX gain, which is crucial to success here.\nIf Firion gets hit by Deathblow or an assist combo in general, he will be knocked into the air. Use Multi Air Slide / Descent Speed Boost to reposition and get to the ground as quickly as possible. After Twist Drill empty chase , Firion is not in range to strike back with Swordslash. Air recover and move away instead. Firion's other moves are too slow to contest here, so using them allows Garland to do Twist Drill and chase Firion again. The one exception to this is the ceiling, in a corner; The corner won't push Firion further, while Garland moves much closer to Firion. This is where Swordslash can actually hit him if Garland tries to push his advantage.\nShield Bash won't see much use due to Garland's options against blocks and dodges. Shield Bash loses to Tsunami and Lance Charge, moves that also beat some of Firion's other options. Tsunami beats dodges, Lance Charge beats Rope Knife and block. Even Swordslash isn't safe from Lance Charge if Firion auto pilots . But if Garland is trying to catch Rope Knife from above with Chain Cast (or even Thundaga), Shield Bash gives Firion the long range counter for assist gauge and combos.\nOffense\nFirion's offense revolves around Straightarrow, so there isn't much to add to that. Straightarrow and Lord of Arms can catch air dodges near ground, but they should be used with caution. If Garland is getting too comfortable expecting Swordslash and Rope Knife, add Reel Axe into the mix and break through his guard. Also, exercise caution when using Double Trouble. If Garland has assist available, he can escape from Double Trouble with Assist Change and get a Chain Cast combo out of it for a lot of EX. Firion can use Kuja assist to interrupt Chain Cast as it comes out, but this requires having assist gauge already.\nAbout Meter Management\nFirion has a few good ways to use assist gauge.\nUse assist gauge for assist combos (Double Trouble, wall rushes in general)\nIf Tsunami is about to hit, interrupt it with Kuja assist just before Tsunami connects.\nIf Chain Cast is about to hit while Firion is in the air, interrupt it with Kuja assist just before Chain Cast connects.\nIf Garland does Blaze, Kuja assist can whiff punish it.\nIf Garland uses Kuja Flare Star HP assist to ignore LV2 Assist Change staggers, it's ok to escape. Firion can still get assist even when his gauge is locked thanks to Side by Side.\nPlease note, that sometimes it may be better to preserve assist gauge instead of using it. This becomes especially important if Garland has full EX gauge. More info in the About EX Revenge Checkmates section.\nAbout EX Revenge Checkmates\nIf Garland has a full EX gauge, assist gauge becomes Firion's lifeline. If possible, avoid using assist until 2 gauges are filled. This gives Firion coverage against EX Revenge if he gets an assist combo, and EX mode combos if he takes damage himself.\nIf Firion has to spend assist gauge to avoid damage, it has certain ramifications. It means Garland go on the offensive and severely restrict Firion's options. Only Straightarrow can deplete EX gauge instantly if it hits (and EX depletion is in Firion's build). That makes it more predictable as well. Multi Air Slide, (Omni) Ground Dash and Quickmoves allow Firion to run away, but they won't necessarily resolve the situation. Remember that you can block Garland's dash and that banish traps disrupt Garland's combos entirely.\nThere really isn't much that Firion can do to easily escape this situation. Getting a block stagger is risky and makes his situation worse if he misses. Reverse Ground Dash can work if he has it equipped, but certain stages limit its effectiveness. It's one of the safest options for filling assist gauge, although it's a notable trade-off in other situations, since Firion could only ground dash away from Garland. If Firion gets repeatedly hit by Twist Drill with no assist gauge, Garland can use chase HP attacks without consequences until he has assist gauge to finish the match. Retaliating with Recovery Attack or chase bravery is futile with no assist gauge to back up the interaction. Try to avoid this situation at all costs.\nAfter Assist Change...\nIf Garland can still use LV1 Assist Change during the combo, be wary of using Straightarrow filler . Auto Assist Lock On is great for countering assist punish attempts when pressuring from afar, but it ruins Firion's aim if Garland escapes afterwards. That means Garland is free to hit Kuja assist and lock Firion's gauge.\nHowever, Firion can also use his assist gauge to escape combos and lock Garland's assist. Lance Charge > ground Kuja BRV assist + 2x Bardiche is a classic high damaging route for Garland. But he can't do two Bardiches, because Firion can escape with LV1 Assist Change (<img></img> + <img></img>) and use Magic Arts: Bolt to hit Kuja for free. The same is true if Kuja air BRV assist hits, but watch out for Garland's Blaze.\nThis is where assist protection interactions come into play. Let's look at some of the options for Lance Charge > ground Kuja BRV assist. This assumes that Firion escapes after Kuja assist hits.\nLV1 Assist Change > Magic Arts: Bolt locks Kuja if Garland commits to Bardiche.\nLV1 Assist Change > Magic Arts: Bolt loses to Garland's Free Air Dash > Twist Drill. Does not lock Kuja.\nLV1 Assist Change > Air Dodge avoids Garland's Free Air Dash > Twist Drill. Can lock Kuja with Swordslash if Garland attacked early.\nLV1 Assist Change > Air Dodge loses to Garland's Free Air Dash > Twist Drill if Garland anticipates the dodge.\nThere are even more options, such as blocking Garland's Twist Drill. But the general idea is hitting Kuja immediately or bypassing Garland's interception.\nSince Firion also uses Kuja assist in this match-up, Garland can create a similar situation with LV1 Assist Change. If he escapes, he can lock Kuja with Chain Cast, Thundaga or dodge > Flare. Here, Firion can use Straightarrow to force HP damage, or a dodge mixup at minimum. This is generally low risk for Firion even if Straightarrow barely misses.\nCan Garland use Side by Side <img></img> builds?\nUsually no. However, it's a slightly better idea against Firion, since Garland can contest Firion with Tsunami (and Earthquake). One good read can swing the match in his favor, so dodge with caution. If you see Side by Side in the battle briefing, that's your cue that Garland may attempt to use Tsunami more frequently.\nFirion\nFirion\nEven\n[Character Page] [Match Videos] [Recommended Build: Side by Side + High Base BRV]\nBoth players pick the same character for a match.\nis about using Swordslash to build assist, firing Straightarrows and punishing with your own assist just right without getting Assist Locked. Straightarrow can catch air dodges, but it also stops the other Firion from finishing Straightarrow if they start firing a split second later. It's strong both as a pre-emptive attack and a sort of \"pacemaker\", but be careful if the opponent has assist gauge; A well placed Kuja assist can divert Firion's aim (with Auto Assist Lock On), or even Bravery Break if the arrow hits at the same time. Having assist gauge is important, but if both Firions don't have it filled, there is room for upsets HPs, Shield Bash counters and daring braveries.\nIf you are far away, Magic Arts: Fire can be used to bait the opponent into using Shield Bash. And if that happens, Straightarrow can hit through the long range Shield Bash counter before it can hit you.\nIf you get hit by an HP link while having assist gauge, it's possible to escape from Double Trouble with LV1 Assist Change and retaliate with Straightarrow. Firion doesn't stay still for long during Double Trouble, so there isn't a huge opening without risking a deflected Straightarrow. Side by Side fills assist gauge even when assist gauge is locked, which mitigates the cost though.\nThe Emperor\nThe Emperor\nSlightly Firion Favor\n[Character Page] [Match Videos] [Recommended Build: Side by Side or EX]\nIntro\nThe Emperor relies on activating Starfall and people running into his traps. Firion can avoid traps and prevent worst case scenarios, but it can take some time to establish momentum. Use assist (or EX) gauge to your advantage if possible.\nNeutral\nFirion's neutral and offense are somewhat intertwined. The Emperor's goal is to create traps to protect himself while he casts Starfall. Magic Arts: Bolt is good for slowing down The Emperor while he's laying down the traps. It's less rewarding in the air, but near the ground the Wall Rush can combo into assists. This is difficult for The Emperor to stop without assist or brief Starfall blocks, so use Magic Arts: Bolt early to establish that setting up traps is not a free action.\nEven so, expect to see Thunder Crest and Dreary Cell a lot, though. Stay out of their range, then use Rope Knife and Reel Axe to poke through them. Reel Axe and Straightarrow can force The Emperor to dodge. Once again Straightarrow's aiming and delayed shots form a backbone of Firion's strategy. If The Emperor dodges early, hold and release Straightarrow after he has dodged. If The Emperor has assist gauge, be careful he doesn't call assist and Bravery Break you in exchange for HP damage.\nIf Firion is not engaging with The Emperor, try to fill assist gauge with Swordslash whiffs and Ground Dash / Free Air Dash with Assist Gauge Up Dash ability equipped. Having assist gauge makes it safer to prevent Starfall from activating. If Firion gets hit by Thunder Crest (e.g. after assist), do not use LV2 Assist Change to escape, as the assist gets locked anyway.\nIf The Emperor uses Landmine or Mine without support from Thunder Crest, use Shield Bash to fish for HP damage. Don't expect to rely on this, but do it if the opportunity presents itself.\nOffense (Stopping Starfall)\nWhy stop Starfall? It's a strong win condition for The Emperor with Jecht assist loops and Unblockable priority. Once it goes off, it's difficult to fight back. Stopping Starfall takes time and a good understanding of the opponent's patterns. A fight can quickly stagnate, because Straightarrow interrupts Starfall, but doesn't stop The Emperor from doing it again. This is why the match-up is considered even and challenging to win quickly. Small stages like Pandaemonium and M.S Prima Vista can help, since The Emperor cannot create as much distance for Starfall.\nIf The Emperor creates distance, it is important to not leave him alone. Pursue him with Free Air Dash. If The Emperor has not set up any traps (Flare, Dreary Cell), Firion can afford to move closer to The Emperor and attempt to use Swordslash. The Emperor may use Dreary Cell to stop Firion from doing this, so be careful about using Swordslash as soon as Firion is in range. Tidus air BRV assist (<img></img> + <img></img>) is a universal counter to midair Dreary Cell, so use it if possible. If The Emperor uses midair Flare, dodge it. Tidus assist also works, but do it after the projectile has come out. Use Straightarrow to catch The Emperor's air dodges if he is trying to get away. Firion cannot use Magic Arts to interrupt Starfall, because Starfall blocks them (Ranged Low priority).\nWhat if The Emperor has his traps set up? Firion must use an HP attack to stop Starfall. Straightarrow is the safer option here with Auto Assist Lock On and delayable timing. If The Emperor is at the ceiling, Weaponsmaster can work as a high risk mixup option. Firion usually relies on Straightarrow, though. It forces The Emperor to dodge, but he doesn't have to move away from traps to do Starfall again. It's also important to note, that if Firion is far away, The Emperor can evade Straightarrow by moving during Starfall.\nThis is where assist gauge comes into play. By the time The Emperor casts Starfall, he can probably call assist to interrupt Straightarrow. If The Emperor calls assist right before Straightarrow hits, he gets a bravery break. If Firion fires Straightarrow with maximum delay, this may become easier for The Emperor to anticipate. This is why having assist gauge is important; Firion can escape interceptions with Assist Change. It lets him stay closer to The Emperor, which is also important. If LV2 Assist Change is used, it can also block Jecht assist and lock The Emperor's assist gauge. This gives Firion some much needed momentum to go on the offensive. If The Emperor uses Yuna assist to avoid LV2 Assist Change blocks, he also sacrifices consistency for Starfall loops.\nDefense\nUsually The Emperor's defense is his offense. However, if The Emperor approaches first and uses Flare, Firion can use Lord of Arms or Weaponsmaster in response. This is best done with some distance from The Emperor, so Flare won't hit Firion first. Omni Ground Dash and Multi Air Slide can help. Note, that Firion's HP attacks have long recovery , so they're not recommended purely for reflecting Flares. The Emperor can use assist to hit whiff punish after Firion uses an HP attack, so make sure this doesn't cause huge setbacks for Firion. Firion can also use assist to punish Flares, most notably BRV assists when The Emperor is in the air.\nSide by Side <img></img> or EX build?\nFirion is not expected to trade with traps or stray projectiles often, but his attacks are also somewhat telegraphed if used in response to The Emperor. Here are some benefits and downsides for both Side by Side and EX builds.\nSide by Side\n+ Assist gauge is more readily available after any HP attack connects. More damage can be done in bursts with assist combos.\n+ Reads with HP attacks are rewarded more in small stages on average.\n- If Firion doesn't land HP attacks often, Side by Side provides diminishing returns.\nEX\n+ Assist gauge is less readily available, but can be filled safely with Swordslash\n+ If Firion doesn't land HP attacks often, he can still fill EX gauge for long term benefits.\n+ EX mode depletes The Emperor's assist gauge, and Blood Weapon can cause huge health leads or comebacks.\n- Filling EX gauge requires multiple EX Cores, and which take time.\n- The Emperor can charge Starfall while Firion goes for EX Cores, causing a dilemma for Firion. The Emperor can also get EX Cores.\nOnion Knight\nOnion Knight\nOnion Knight Favor\n[Character Page] [Match Videos] [Recommended Build: Side by Side + High Base BRV]\nIntro\nFirion and Onion Knight are both HP linkers with high damage output, albeit different in other areas. Firion is slower, but has longer reach. Onion Knight has shorter reach, but he can move around Firion's attacks and hit him afterwards. This creates a lot of risk for Firion, which makes it hard to gain advantage or make comebacks. Ultimately both characters try to outsmart each other in close-range, and whoever has assist gauge can offset any risk they will take. Both characters are expected to use Side by Side <img></img> builds, so each hit can swing the momentum greatly.\nNeutral\nOnion Knight can run sideways to evade most attacks, including Straightarrow, Rope Knife, Lord of Arms and Weaponsmaster. This makes the match-up difficult for Firion, because he usually cannot force Onion Knight to do something unsafe. If Firion misses, he is vulnerable to dash > Multi-Hit and Turbo-Hit whether he dodges or not. If those moves miss, use Rope Knife to whiff punish him. Firion cannot outrun Onion Knight, so he has to dash to reposition safely. All this means Firion relies more on reading the Onion Knight player rather than forcing them to play his game. As such, his options aren't often definitive answers.\nClose-range\nSwordslash to push Onion Knight away, and to fill assist gauge\nRope Knife and Lance Combo can hit in this range, but they're still prone to missing.\nReposition with (Omni) Ground Dash to avoid getting cornered. Be wary of blocks, though.\nUse Lord of Arms to anti-air Onion Knight if he is jumping above Firion\nBlock / Shield Bash Onion Knight's dash or Multi-Hit / Turbo-Hit\nOnion Knight's mixups involve delayed attack timing (air jumps) and raw HP attacks. The threat of fast braveries makes it difficult to account for all options, so use ground dashes and other forms of movement to at least encourage Onion Knight to act. If Firion blocks early, Onion Knight can wait it out and attack on reaction.\nMidrange (Rope Knife max distance)\nRun on the ground and gauge Onion Knight's reaction. Be willing to leave gaps between your actions.\nUse Swordslash to fill assist gauge.\nUse Rope Knife sparingly, it's reactable from this distance.\nIf Onion Knight is expected to block Rope Knife, mix up with Lord of Arms or Reel Axe.\nSpot dash with Ground Dash to fill assist gauge without attacking.\nLong range\nUse Swordslash + dodge to fill assist gauge (ground or midair)\nUse Straightarrow at the beginning of a match, it's usually the one safe Straightarrow attempt for Firion.\nUse Magic Arts: Fire as a secondary, passive space control tool. If you see it hitting Onion Knight from behind, prepare Rope Knife or Straightarrow to combo afterwards.\nIf Magic Arts: Fire is reflected, Firion can use it for long range Shield Bash counters. Note, that Onion Knight can use Wind Shear to power through the projectiles. Firion can use this to his advantage and not do Shield Bash, so reading the Onion Knight player is the key here.\nDefense\nIf Firion has to run away, (Omni) Ground Dash and Multi Air Slide are recommended options. Onion Knight can hit Firion out of Multi Air Slide with Turbo-Hit, so try not to move too close to him with it. If Firion gets knocked into the air, Quickmoves and Descent Speed Boost can help as well. Onion Knight is fast and Firion's air dodges leave him floating in the air for a moment, so it's important to pick a good time to dodge instead of doing it as soon as possible. Midair Swordslash can help as a self-defense tool thanks to its speed, but the risk of air dodges remain. Of course, Firion can also block Onion Knight's dash if he is confident in it.\nShield Bash protects Firion after ground dodges. It works against dashes, Multi-Hit and Turbo-Hit. Onion Knight may have to adjust his timing to get around this, so try to stay unpredictable with Shield Bash timing. That can make Onion Knight hesitate to approach, which gives Firion more time to reposition or retaliate. If Onion Knight is specifically waiting for Shield Bash, not doing it lets Firion get away with a dodge that was otherwise dangerous to do.\nShield Bash also works against Blizzard or Thunder. React with Shield Bash to discourage ranged combat from afar. It's safer for Onion Knight to use Blizzard or Thunder if he has assist gauge, but Auto Assist Lock On can stop his assist interceptions during Shield Bash counter. Do not expect to get damage this way often, unless Onion Knight insists on it. If Onion Knight is directly above Firion, Thunder can cross-up Firion and bypass Shield Bash. Try to move away from Onion Knight, so that Shield Bash blocks Thunder from the front.\nOffense\nFirion's offensive options are somewhat limited or risky. Most of his moves hit in close-range, but Onion Knight can strike first there. Rope Knife and Straightarrow can catch landing lag if Onion Knight lands on the ground, but it relies on his timing instead of Firion's. Straightarrow can also catch Onion Knight's air dodges from below or above, but it's best used after Onion Knight misses an attack. If Firion is above him at this time, Straightarrow can catch the next air dodge that moves towards him. Onion Knight's fast fall speed after air dodge makes it harder to use Straightarrow from other angles.\nEven if Firion gets a hit, his advantage isn't outstanding compared to Onion Knight. Straightarrow and Magic Arts: Bolt still miss easily after Double Trouble wall rush. Swordslash gives Firion time to fill assist gauge with Ground Dash or another Swordslash, but doesn't give notable advantages otherwise. If Lord of Arms hits in neutral , Onion Knight can escape with Assist Change and force a mixup against Firion's next dodge. Blocking and using Straightarrow doesn't guarantee a hit against Assist Change either, and once again Firion must answer to Onion Knight who dashes towards him. Kuja assist combo into Weaponsmaster is one of the strongest things Firion can do, but doesn't leave much wiggle room for other things.\nIf Onion Knight is jumping around Firion, midair Swordslash and Lord of Arms are relatively high risk options. Both put Firion in a weaker position if he misses, but they also give something for Onion Knight to think about.\nIf Onion Knight is far from Firion, it's safe to use Magic Arts: Bolt at least once. Don't expect to hit with this often, but use them occasionally to fill assist gauge and represent ranged combat against Onion Knight's Booster BRVs.\nAbout Assist Gauge Management\nThis match-up hinges a lot on how assist gauge is used. The following notes assume that Firion is using Side by Side <img></img>.\nBattle Hammer <img></img> depletes Onion Knight's gauge, great for setting momentum with assist combos.\nTry to have at least 1 assist gauge available at all times.\nUse BRV Assist (<img></img> + <img></img>) for combos if Firion has 2 assist gauges.\nTogether as One <img></img> and Badge of Trust <img></img> make early interactions safer.\nUse Assist Change to escape from HP links.\nUse LV2 Assist Change against last hit of Guiding Swipe / Swordshower / Flare to avoid Assist Lock.\nTime LV2 Assist Change early, so it blocks Guiding Swipe / Swordshower late. This gives time to counter with Free Air Dash > Swordslash.\nIt is very important that Firion has at least 1 assist gauge available. It lets him escape from combos and whiff punish Thunder or HP attacks. Most importantly, it gets him much closer to 2 full gauges with any HP hit. Having 2 assist gauges is ideal for Firion, since it lets him escape HP links without the 20-second Assist Lock penalty. And if he uses BRV Assist, he still has another gauge as a backup. If Onion Knight escapes from Kuja assist with LV1 Assist Change, he will try to hit Kuja and cause Assist Lock. Use Straightarrow to potentially recoup some assist gauge.\nSince both characters are trying to outsmart each other, filling assist gauge can be tricky outside of combos. Firion wants to fill it with Swordslash, but he also wants to avoid getting hit. Meanwhile Onion Knight doesn't want to miss his braveries, since they leave him open to Rope Knife and other moves. Spot dashing is the safest way for both characters, but they have to attack eventually to stop the gauge from depleting on its own. Onion Knight has Strength / Magic Booster and Firion has Swordslash / Shield Bash, but making reads in this situation is riskier for Firion.\nIf Firion has 2 assist gauges and Onion Knight has none, it is much safer to do anything in neutral. If the situation is reversed, Firion has to take bigger risks just to make Onion Knight spend assist gauge. This is one of the worst situations Firion can find himself in, so doing anything that throws Onion Knight off helps. Similarly, it's recommended to defend more passively during Assist Lock. Onion Knight is looking to punish any move Firion makes, so moving around and not flailing recklessly buys him time. If the stage allows it, Quickmoves can help Firion stall for time. Remember, that Side by Side and assist gauge depletion work even during Assist Lock, so every hit has future ramifications.\nCloud of Darkness\nCloud of Darkness\nSlightly Firion Favor?\n[Character Page] [Match Videos] [Recommended Build: ]\n(REVISION COMING SOON)\nThis is a matchup where Firion can counter Cloud of Darkness' (CoD) moves with his own attacks. Since CoD's attacks have long uptime and / or relatively long recovery, Firion can power through them with Straightarrow, Reel Axe or even Lord of Arms. Reel Axe can stop CoD's bravery attacks, particularly if it commits to a followup. Alternatively, Firion can attempt to dodge punish afterwards with Straightarrow, Lord of Arms or Straightarrow. Just be careful not to get pushed back first in case CoD is close. If Firion is out of CoD's immediate range, most of Firion's HP attacks come out fast enough to hit CoD during an HP attack. Straightarrow is once again a reliable option here.\nCoD has to whiff at least occasionally to build assist gauge. Firion can try to use this to his advantage. Since CoD often fights at midrange, it can reflect Fire back at Firion without actually hitting him. This can be a good opportunity to counter the reflected fire with Shield Bash. Firion should be aware of CoD's Wrath Particle Beam though; If it counters a low priority projectile, it spawns an HP projectile at Firion's location. Firion should dodge the beam whenever possible, because it can lead to an assist combo on hit. If CoD counters a projectile in this way, Firion can assist punish during Wrath's recovery. It's a situation that resolves quickly, so there isn't much time to do other things, aside from getting hit.\nOverall, Firion does not have a lot of trouble fighting in this matchup.\nCecil\nCecil\n[Character Page] [Match Videos] [Recommended Build: ]\n(REVISION COMING SOON)\nFirion has some notable advantages against Cecil. Shield Bash works against Cecil's ranged bravery attacks, which are all reactable . This shuts down much of Cecil's zoning game, aside from occasional Dark Flame and assist call from long range. Cecil also struggles to fill assist gauge as quickly as Firion, or do it safely with attacks. That means Firion has high potential to establish a lead in wide, flat stages such as Order's Sanctuary and Pandaemonium - Top Floor.\nDark Knight Cecil primarily works with Valiant Blow, Shadow Bringer, Dark Flame and occasional Shadow Lance. These can realistically become a threat in dodge punish situations, but otherwise Firion can comfortably move around with Omni Ground Dash. Firion can look for whiff punishes (Rope Knife) or apply a dodge punish mixup (HPs, dash > Rope Knife) if Cecil attacks first. Dark Knight Cecil's braveries don't have high reward on hit without assist, except Dark Cannon, which is reactable at 41 frames.\nPaladin Cecil has poor tracking on the ground, so his approaches are limited to the air. Just like in Dark Knight form, Paladin Cecil needs to get close to hit Firion. Cecil can call out blocks and dodges with Paladin Force or Radiant Wings, but all of them can be assist punished during recovery . If Firion is close enough, he can also whiff punish with Rope Knife. Cecil's Sacred Cross can hit from above, but if Firion used Rope Knife or Lance Combo beforehand, he can cover himself with the Lance Followup. It is recommended to move away from Cecil, as it makes it harder for him to apply mixups .\nIn small stages, Dark Knight Cecil can use Side by Side builds more effectively. This increases his damage potential, but it won't necessarily make his neutral much stronger overall.\nGolbez\nGolbez\nSlightly Golbez Favor?\n[Character Page] [Match Videos] [Recommended Build: ]\n(REVISION COMING SOON)\nFirion has to be careful in this matchup, as Golbez has a competent midrange game and explosive damage output with Side by Side. Golbez's Nightglow can stop Swordslash, Rope Knife and Lance Combo in their tracks if they're close to Golbez. His Glare Hand and Rising Wave can interrupt Firion's Straightarrow, so it's recommended to pick a high angle relative to Golbez, or fire Straightarrows from long range just to be safe.\nBoth Firion and Golbez are known to be proficient ground fighters, but Firion may not always have to luxury of controlling the pace here. If Golbez has a good read on Firion's attack timing, he can shut down many of Firion's options as they come up. Firion does not have exceptional tools for point blank range, so it's important to understand what he can do in midrange. Glare Hand's wave projectile is Ranged Low, so using Shield Bash can put some pressure on Golbez. Glare Wave projectile is unblockable, but it cannot catch Firion if he dashes towards Golbez right when it is cast within range. If Firion gets close enough for Golbez to dodge, Rope Knife is one of his better moves for a dodge punish. Golbez often protects himself with Nightglow after a ground dodge, but it only becomes active after 15 frames. That's where Rope Knife's long reach and active frames can shine.\nIf all else fails, Firion can try halo camping for assist gauge before approaching. This is more practical in large stages such as Crystal World and Order's Sanctuary, but doesn't necessarily serve as an endpoint for Firion's strategy; Golbez with 2 assist gauges has to lose an interaction twice in a row to take guaranteed HP damage.\nSephiroth\nSephiroth\nEven\n[Character Page] [Match Videos] [Recommended Build: Side by Side + High Base BRV]\nIntro\nSephiroth wants to use Shadow Flare. Firion can counter it with Shield Bash and discourage further Shadow Flares. This match-up is about navigating the desire to harass with projectiles and making plays in close quarters and midrange. Watch out for Hell's Gate dives, Sudden Cruelty and Oblivion when Sephiroth is close. They lead to assist combos and additional pressure in the air, where Firion has lackluster defensive options.\nNeutral\nLet's start with the Shield Bash counter. Normally Sephiroth pressures with Shadow Flare, but the long range Shield Bash counter has strong tracking and three projectiles that are difficult to avoid sequentially. This slows down Sephiroth considerably and lets Firion dictate the pace. When using Shield Bash against Shadow Flare, make sure to block the projectile that's in front of Firion. The projectiles coming from other sides can bypass Shield Bash.\nSephiroth can bypass the Shield Bash counter by using Shadow Flare and coming down with Hell's Gate. It beats all the projectiles with Melee High priority. Pay attention to Sephiroth's positioning before doing this; If Sephiroth is high enough (Shadow Flare's max range) or if Shadow Flare is blocked late (after projectiles intersect), Shield Bash counter can lose. Other positions are more favorable for Firion. If Sephiroth is close to Firion, or not vertically positioned, don't be afraid to use Shield Bash!\nSephiroth can also use Hell's Gate from above as a pre-emptive attack to power through some of Firion's attacks. Rope Knife, Straightarrow and even Reel Axe can lose to this move if they're done after Sephiroth has started Hell's Gate. Mix up your attack timing and move around with (Omni) Ground Dash to stay safe. If Sephiroth stops Hell's Gate early, Firion can attempt a Straightarrow mixup against Sephiroth's next air dodge. If Sephiroth comes down to the ground, Rope Knife can whiff punish it.\nThe idea of Straightarrow pressure remains similar as in match-ups like WoL and Garland. Firion wants to catch Sephiroth swinging or dodging at a bad time. Sephiroth can move after air dodges with Hell's Gate and Heaven's Light, but they're not very evasive in midrange. That being said, using Straightarrow makes Firion vulnerable to Shadow Flares. This can lead to a combo at worst if Sephiroth is close enough, but at bare minimum, it gives him more time to fill assist gauge before approaching. In large stages Sephiroth can actually halo camp with Shadow Flare far out of Firion's reach. This can prove to be challenging against patient Sephiroths, particularly with Side by Side builds that don't provide long term benefits outside of full assist gauge. Regardless of the build, Straightarrow remains Firion's most important move for threatening Sephiroth in the air.\nDefense\nIn short, Firion's defense is a mixture of dodging, Shield Bash and moving with Ground Dash to position for Rope Knife, Lord of Arms or Straightarrow. The threat of long-range Shield Bash counter is still relevant, but if Firion gets hit, things can get much harder for him.\nSephiroth will eventually try to do something in close-range to open up Firion. Expect Sudden Cruelty and Oblivion, they are Sephiroth's key moves in the air. Blocking works, but Firion can also do neutral dodge (backstep) and use Shield Bash as cover against the bravery attacks. Sudden Cruelty has enough reach to activate Shield Bash's close range counter, which can miss. Make sure Sephiroth is close to Firion when using Shield Bash. Watch out for Octaslash, as it has enough reach to catch ground dodges in any direction. Ground Dash is also useful for getting away from walls when below Sephiroth, and it fills assist gauge as well.\nIf Firion gets hit by Hell's Gate, do not focus on retaliating with Magic Arts: Bolt. Sephiroth can dodge towards Firion, hit him with Sudden Cruelty and get Assist Charge from it. Air recover instead and move away from him.\nIf Firion gets hit by Sudden Cruelty, prioritize getting to the ground as soon as possible. Here, Sephiroth can do empty Chase and get all EX for little risk. Similar to Garland's Twist Drill chase scenario, the pushback is too much for Firion to retaliate consistently. If Firion tries to use Recovery Attack with Swordslash (too short), Straightarrow or Weaponsmaster, Sephiroth can hit him with another Sudden Cruelty and Chase again. The one exception to this is Magic Arts: Frost, which requires a swift input with Recovery Attack ability enabled. And even when it works, it does little damage and barely pushes Sephiroth back at all. It's better than nothing, but may not be easy to justify for all Firion players. If you choose to do Recovery Attack, be careful about dodging as Sephiroth has HP attacks to call them out.\nOffense\nFirion's offense revolves more around punishing dodges and applying what little pressure he can in the air. Use Rope Knife to hit Sephiroth after he dodges, but watch out for Scintilla if he is close. If used at max range, Rope Knife can actually make Scintilla miss. If Firion is confident Scintilla comes out, Lord of Arms is a great option for crushing Scintilla's block property.\nAs mentioned in the neutral section, Firion has few options against Sephiroth's Shadow Flare halo camping . Bravery Boost on Dodge build can discourage Shadow Flare abuse to an extent in large stages. It's not exactly an offensive solution, though.\nThe most prominent option is to Free Air Dash and get within Straightarrow's range. This lets Firion snipe poorly timed air dodges, but it should be used sparingly so Sephiroth doesn't get comfortable with Firion's attack patterns. Using Straightarrow opens up Firion to Shadow Flares, which doesn't benefit him. Another option is being brave and using Free Air Dash to fight with Swordslash. This is far more dangerous and doesn't yield as much reward even if Firion succeeds. It doesn't guarantee wall rush assist combos, and the damage is not usually outstanding. Patience is paramount to success regardless of Firion's build.\nAfter Assist Change...\nSephiroth often uses Kuja or Aerith assist. Due to Aerith assist chase setups, Firion is not often in a position to hit Aerith after escaping with Assist Change. Whether it's Kuja or Aerith assist, Magic Arts: Bolt is Firion's go-to option. Look out for Sephiroth's Oblivion though, it has enough vertical tracking to hit Firion if he anticipates Firion will do something.",
+      "sources": [
+        "https://dissidia.wiki/Firion_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Firion_(Dissidia_012)",
+    "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=322",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=219",
+    "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=107",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=102",
+    "https://www.youtube.com/watch?v=ra6pKVI6gno&t=360",
+    "https://www.youtube.com/watch?v=W2KoophyA6w&t=62",
+    "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=718",
+    "https://www.youtube.com/watch?v=rU9esevjw50&t=202",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=334",
+    "https://www.youtube.com/watch?v=W2KoophyA6w&t=94",
+    "https://www.youtube.com/watch?v=ra6pKVI6gno&t=311",
+    "https://www.youtube.com/watch?v=ra6pKVI6gno&t=43",
+    "https://www.youtube.com/watch?v=Dl1G_ZhtdpY&t=30",
+    "https://www.youtube.com/watch?v=1N1IeTT0Uu0&t=18s",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=141",
+    "https://www.youtube.com/watch?v=rU9esevjw50&t=272",
+    "https://www.youtube.com/watch?v=1N1IeTT0Uu0&t=283",
+    "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=81",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=235",
+    "https://www.youtube.com/watch?v=rU9esevjw50&t=164",
+    "https://www.youtube.com/watch?v=Dl1G_ZhtdpY&t=261",
+    "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=379",
+    "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=397",
+    "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=302",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=188",
+    "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=23",
+    "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=377",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=195",
+    "https://www.youtube.com/watch?v=1N1IeTT0Uu0&t=230",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=380",
+    "https://www.youtube.com/watch?v=W2KoophyA6w&t=148",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=17",
+    "https://www.youtube.com/watch?v=i0wVA8eKICo&t=714",
+    "https://www.youtube.com/watch?v=Dl1G_ZhtdpY&t=175",
+    "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=708",
+    "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=628",
+    "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=248",
+    "https://www.youtube.com/watch?v=Dl1G_ZhtdpY&t=268",
+    "https://www.youtube.com/watch?v=i0wVA8eKICo&t=1053",
+    "https://www.youtube.com/watch?v=i0wVA8eKICo&t=1004",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=81",
+    "https://www.youtube.com/watch?v=W2KoophyA6w&t=110",
+    "https://www.youtube.com/watch?v=ra6pKVI6gno&t=284",
+    "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=292",
+    "https://www.youtube.com/watch?v=ra6pKVI6gno&t=99",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=351",
+    "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=312",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=442",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=406",
+    "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=309",
+    "https://www.youtube.com/watch?v=EhazH4c2TJs&t=67",
+    "https://www.youtube.com/watch?v=ra6pKVI6gno&t=271",
+    "https://www.youtube.com/watch?v=ra6pKVI6gno&t=187",
+    "https://www.youtube.com/watch?v=vA3cZSRWYEU&t=333s"
+  ]
+}

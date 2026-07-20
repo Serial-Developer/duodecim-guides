@@ -1,0 +1,163 @@
+{
+  "slug": "cloud-strife",
+  "tagline": "Polyvalent corps à corps : HP links dévastateurs et gros dégâts avec assist",
+  "archetype": "Polyvalent corps à corps (HP linker)",
+  "overview": [
+    "Cloud est un personnage polyvalent, capable de tout faire correctement, avec un accent sur le combat rapproché et les dégâts. Il comble la distance avec son dash et impose des mixups grâce à Double Cut, ses multiples options de cancel et ses braveries lentes mais puissantes. Ses HP links infligent d'énormes dégâts, surtout avec un assist, et sur un bon read ou un dodge punish, Cloud convertit rapidement en jauge EX ou en momentum.",
+    "Cloud doit se rapprocher pour sortir ses meilleures actions : ses outils de mi-distance sont lents ou peu rentables. Il ne se spécialise pas dans le zoning, mais ses nombreux projectiles au sol perturbent les déplacements adverses et gonflent ses combos. Ses pokes remplissent efficacement les jauges EX et assist. Son offense n'est toutefois pas infaillible : ses HP links sont vulnérables à l'Assist Change, le dodge punish contre les personnages à chute rapide (Kain, Kefka) ou dotés d'un command block (Jecht) peut poser problème, et Cloud retombe lentement après ses esquives aériennes.",
+    "Cloud s'accommode de styles de build variés : dégâts bruts, EX Core ou Side by Side. Sa synergie d'assist est très diverse grâce à son potentiel de Wall Rush et aux confirmations sur Double Cut. Et avec une jauge EX pleine, son EX Mode qui traverse les blocks peut paralyser l'adversaire.",
+    "En compétitif, Cloud est classé haut dans la hiérarchie : bonnes stats de base, gros dégâts et couverture de nombreuses situations. Ses points faibles restent la verticalité, la menace à mi-distance, la défense après esquive, les command blocks adverses et les Assist Changes réguliers. Il n'en demeure pas moins un excellent personnage pour débutants comme joueurs confirmés, capable de rivaliser avec une grande partie du cast."
+  ],
+  "tierNote": "Cloud est 10e du classement 2017, en tier A. L'overview le décrit comme un personnage de haut niveau porté par ses stats de base solides, ses dégâts et sa polyvalence.",
+  "strengths": [
+    "Gameplay solide, simple et direct, avec un moveset intuitif et une mobilité standard.",
+    "Combat au sol complet : pokes, conversions en HP et attaques à distance.",
+    "Dégâts élevés : Wall Rush puissants, assists et longs combos au sol convertissent une seule ouverture en gros dégâts.",
+    "Génération de jauge : whiffs réguliers pour l'assist, Double Cut et HP links pour l'EX.",
+    "Grande variété de builds éprouvés en compétitif.",
+    "Synergie d'assist flexible grâce au potentiel de Wall Rush et aux confirmations sur Double Cut.",
+    "EX Mode qui rend ses braveries Melee High (perce les blocks) et EX Burst parmi les plus destructeurs du jeu à pleine santé ; défense de base de 112 au niveau 100, supérieure à la majorité du cast."
+  ],
+  "weaknesses": [
+    "HP links vulnérables : l'Assist Change adverse limite ses opportunités de dégâts HP.",
+    "Esquives aériennes flottantes et absence d'outil défensif instantané, punissables à haut niveau.",
+    "Relative linéarité : blocks bien placés, pièges et positionnement vertical le gênent — risque accru au whiff, échanges défavorables ou dashes à exécuter avec précision.",
+    "Sans projectiles au sol, son jeu terrestre demande de solides fondamentaux et des micro-optimisations pour compenser."
+  ],
+  "moveNotes": {
+    "Double Cut (ground)": "Poke principal de Cloud au corps à corps : attaque en deux temps, startup rapide (13F), recovery courte et nombreux cancels sur le premier coup pour les mind games. Excellente pour remplir la jauge assist et généreuse en EX (90) à l'impact. Le second coup mène au Chase, peut lancer un combo d'assist près d'un mur, et le premier coup sert même d'anti-air proche du sol avec conversion en Cross-slash.",
+    "Sonic Break": "Poke secondaire plus lent en trois coups, avec fort potentiel de Wall Rush et un HP link dédié après le deuxième coup. La propriété Absorb attire l'adversaire (portée effective d'environ 1,8 case dans World of Darkness), ce qui en fait un whiff punisher fiable et parfois un gap closer. Attention : les effets visuels et sonores de vent pendant la startup rendent le coup plus facile à anticiper.",
+    "Climhazzard": "La bravery de mêlée au sol la plus lente de Cloud, utilisée en punish ou en combo. Le deuxième coup enchaîne naturellement dans ses braveries aériennes pour plus de dégâts et de jauge assist, ce qui en fait un pilier des combos au sol avec Fire et les assists. Sans lock-on, Climhazzard déplace Cloud dans la direction où il regarde — un moyen détourné de battre en retraite ou de se replacer.",
+    "Blade Beam": "Projectile basse priorité rapide et linéaire, composé d'un coup d'épée Melee Mid et du projectile lui-même, dont l'explosion crée un prompt de Chase et génère l'essentiel des 90 EX. Peu utilisé en compétitif mais utile pour sniper les esquives aériennes près du sol ; le coup d'épée peut refléter des projectiles Ranged Mid comme Watera de Lightning, sans que ce soit vraiment pratique ou sûr.",
+    "Firaga": "Poke de mi-distance en Ranged Mid avec un tracking vertical de 80~90 degrés : il fait chanceler les blocks (ouvrant un combo d'assist), stoppe les dashes et les braveries imprudentes. Chaque boule peut toucher deux fois (17 de dégâts de base par boule, jusqu'à 51 en combo d'assist à bout portant). Hit stun court, Cloud immobile pendant toute l'animation, fenêtre de cancel tardive : l'usage répété est risqué et le coup reste cantonné au zoning occasionnel et au rôle de filler.",
+    "Fira": "La boule de feu la plus rapide en vol des trois sorts de Feu, à coups multiples et faible knockback, mais sans les atouts de Fire : tracking vertical faible, priorité basse, aucune utilité de combo sans assist ni mur proche. Difficile à justifier en compétitif, elle est surclassée dans une économie de slots de braveries au sol déjà très disputée.",
+    "Fire": "Projectile à un coup qui avance lentement (environ 5 secondes de présence, 2 exemplaires maximum sur le terrain) avec le meilleur tracking vertical des projectiles de Cloud. Son vrai atout est le combo : Fire force un landing lag à l'impact, idéal pour les combos solo au sol et pour pousser les combos d'assist à leur maximum, notamment avec Climhazzard.",
+    "Slashing Blow": "Combo avançant en trois coups, l'une des braveries les plus importantes de Cloud : gap closer, whiff punisher, contre fiable après un block stagger et filler en combo d'assist, avec de gros dégâts de base et le HP link Omnislash Version 5. Le tracking latéral est bon à hauteur égale mais quasi nul si l'adversaire est nettement au-dessus ou en dessous. En maintenant le stick vers le haut, le finisher devient un coup montant, pratique pour confirmer un Wall Rush au plafond ; le HP link sort même si seul le deuxième coup touche.",
+    "Aerial Fang": "Plongeon qui projette l'adversaire en diagonale vers le haut, taillé pour punir les attaques sous Cloud, surtout en air-to-ground. Knockback modeste et récompense limitée sans Wall Rush ni assist, mais la recovery assez courte pardonne les whiffs. Interchangeable avec Rising Fang selon le matchup.",
+    "Rising Fang": "Montée air-to-air, souvent la troisième bravery aérienne de Cloud pour sa couverture verticale, utilisable aussi comme mouvement évasif. À l'impact, elle enchaîne sur une rafale qui Wall Rush vers le haut (capable de détruire la plateforme d'Old Chaos Shrine) et reste active pendant la majorité de l'ascension. Aucun tracking une fois la montée lancée, et pas de transition si le coup touche un personnage d'assist.",
+    "Double Cut (midair)": "Version aérienne essentielle : poke le plus rapide de Cloud en l'air (13F), parfait pour whiffer sans risque et remplir la jauge assist, avec 90 EX par touche. Punisseur fiable là où les autres braveries sont trop lentes : après un Free Air Dash sur esquive aérienne, ou après un stagger de LV2 Assist Change. Le premier coup se convertit en assist, et comme Cloud est considéré en l'air, appeler Aerith garantit un setup ; attention, un second coup trop retardé peut manquer sa cible.",
+    "Cross-slash": "Combo HP en trois coups à fort knockback : Cloud avance à chaque entaille, avec une longue distance de déplacement et un bon tracking horizontal, très efficace contre les adversaires au sol et la plupart des esquives terrestres. Sert de suivi solo après un anti-air Double Cut et son Wall Rush à distance lance des combos d'assist. En revanche, la couverture verticale est quasi nulle après la première entaille et le coup ne peut pas être annulé une fois lancé : un move globalement risqué.",
+    "Meteorain (ground)": "Seul HP à priorité Ranged de Cloud, mais sa longue startup (81F pour la descente) bride son usage en projectile. Les météores tirés en barrage ont un tracking horizontal en descente, attrapent les esquives latérales au sol et laissent assez de hit stun pour un combo d'assist près d'un mur ; la montée possède une hitbox bravery qui peut combotter dans la descente. Recovery longue et aucune protection : un dash pendant la startup suffit à écarter Cloud de ses projectiles pour le punir.",
+    "Finishing Touch": "HP link issu de Sonic Break : rafale ascendante conclue par un slam descendant en diagonale, dont le Wall Rush ouvre de nombreux combos d'assist. Près d'un rebord, l'adversaire peut être expulsé de la plateforme — anodin sur Lunar Subterrane, coûteux sur Orphan's Cradle et ses banish traps qui suppriment le Wall Rush ; Kuja ou Tidus convertissent malgré tout sans mur. La fenêtre d'évasion par LV1 Assist Change est courte, en toute fin d'animation.",
+    "Braver": "Charge aérienne à tracking tous azimuts qui enchaîne sur un piqué à l'impact (jusqu'à 8 touches, 135 EX maximum sur les 9 coups avec Force to Courage). Ses longues frames actives reflètent les projectiles mid et high comme Windburst de Vaan, mais la portée courte, la startup télégraphiée et la recovery le rendent risqué au whiff. Un HP incontournable malgré tout : finisher de combo d'assist plus rapide et plus sûr, et seul mixup haute priorité de Cloud contre les blocks immédiats en l'air.",
+    "Meteorain (midair)": "Identique à la version au sol à une différence près : les météores descendants n'ont aucun tracking horizontal, d'où un usage centré sur les cibles statiques — éviter les staggers de LV2 Assist Change en combo, ou générer énormément d'EX dans un coin avec le bon setup. Cibler un personnage d'assist resté sur le terrain rapporte aussi beaucoup d'EX Force. Le hit stun autorise des combos, y compris sous EX Revenge, avec assist près d'un mur ou via l'assist storage glitch.",
+    "Omnislash Version 5": "HP link aérien de Slashing Blow et sans doute l'un des coups qui définissent Cloud : Wall Rush HP à très fort knockback descendant, moteur de combos d'assist dévastateurs depuis de nombreuses positions et pierre angulaire de son archétype de HP linker, magnifié par Side by Side. La longue animation laisse le temps de récupérer sa bravery de base après un départ de combo en HP, mais expose Cloud si l'adversaire s'échappe en LV1 Assist Change. S'il ne touche pas le sol en fin de coup, Cloud reste en l'air avec un net frame advantage pour les EX Cores, les fillers ou la pression."
+  },
+  "exMode": {
+    "summary": [
+      "L'EX Mode « Equipped Ultima Weapon! » confère Regen, Critical Boost et les deux effets Ultima Weapon. CRUSH : toutes les attaques de priorité mêlée passent en Melee High, la même priorité que les HP attacks — bloquer Cloud devient très dangereux, seuls les command blocks haute priorité comme Jecht Block ou l'Omni Block d'Exdeath le font encore chanceler. L'effet s'active dès l'activation de l'EX Mode, y compris en pleine bravery pour surprendre un block ; seuls Fire, Fira, Firaga et le projectile de Blade Beam ne sont pas concernés.",
+      "ATK : les dégâts de base sont multipliés de x1 à x2 selon le pourcentage de HP restant (arrondi à l'entier inférieur). Plus Cloud a de vie, plus ses braveries frappent fort, ce qui rend les échanges rapprochés très favorables une fois l'EX Mode actif.",
+      "À noter : activé sous l'apparence Alt 1, l'EX Mode s'appelle « The power of mako! », sans aucun changement fonctionnel."
+    ],
+    "burst": "L'EX Burst Omnislash hérite du scaling de vie : à pleine santé (x2), les deux premiers coups représentent à eux seuls plus de 50 % des dégâts d'un EX Burst moyen, ce qui en fait l'un des bursts les plus puissants du jeu — et l'un des plus faibles à basse vie. L'input est simple : marteler cercle jusqu'à remplir la jauge."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "La boucle de jeu de Cloud tourne autour du rapproché : avancer au dash, occuper l'espace avec Double Cut (sol et air) pour remplir la jauge assist en toute sécurité, puis convertir la moindre ouverture — read, dodge punish ou block stagger — en combo à base de Wall Rush et de HP links (Sonic Break > Finishing Touch, Slashing Blow > Omnislash Version 5).",
+    "Au sol, Cloud dispose de vrais combos solo grâce à la recovery naturelle du deuxième coup de Climhazzard et au landing lag de Fire : Climhazzard (2) > Double Cut est la valeur sûre (et peut toujours se convertir en assist), Fire permet d'enchaîner sur la plupart des braveries au sol. Ces départs étant réactables, ils s'utilisent après un block stagger ou derrière un assist.",
+    "Les Wall Rush de Cloud font de presque toutes ses attaques de bons départs de combo d'assist ; le premier coup de Double Cut aérien est l'un des starters les plus importants. On termine en Omnislash Version 5 pour les dégâts, ou en Braver pour l'EX — en gardant à l'esprit que Braver, plus court, laisse moins de temps à la bravery de récupérer si le combo a commencé par un HP.",
+    "Côté jauges, Double Cut génère 90 EX par touche et les HP links entretiennent la pression sur la jauge adverse ; en EX Revenge, l'enchaînement Double Cut x4 > Slashing Blow (1) > Omnislash Ver. 5 est le combo rapproché de référence. Une jauge EX pleine transforme Cloud : son EX Mode perce les blocks et son EX Burst est maximal à pleine vie — préserver ses HP avant de l'utiliser est donc doublement payant.",
+    "Défensivement, restez conscient des limites du personnage : chute lente après esquive aérienne, HP links exposés à l'Assist Change, difficultés contre les command blocks et les adversaires en hauteur. Contre ces profils, privilégiez Double Cut et les punishes courts plutôt que les longs HP links."
+  ],
+  "advancedTech": [
+    {
+      "name": "Fire landing lag combos",
+      "desc": "Fire force un landing lag à l'impact : utilisé après un block stagger ou un assist, il ouvre des combos solo au sol et étend les combos d'assist au maximum. Si Fire touche tard, alors que Cloud a déjà retrouvé le contrôle, il peut enchaîner sur presque n'importe quel coup."
+    },
+    {
+      "name": "Climhazzard lock-off movement",
+      "desc": "Sans lock-on, Climhazzard déplace Cloud dans la direction où il fait face : un moyen détourné de battre en retraite ou de passer dans le dos de l'adversaire. Si le coup touche sans lock-on, la séquence peut quand même être terminée."
+    },
+    {
+      "name": "Meteorain EX farming",
+      "desc": "Si un personnage d'assist adverse reste sur le terrain, le cibler avec Meteorain aérien génère énormément d'EX Force (une partie reste au sol à ramasser). Faisable après une échappée en LV1 Assist Change ou en esquivant l'attaque de l'assist ; avec le bon setup dans un coin, Meteorain produit une quantité d'EX considérable."
+    },
+    {
+      "name": "Double Cut anti-air > Cross-slash",
+      "desc": "Le premier coup de Double Cut au sol peut anti-air un adversaire proche du sol et se convertir en Cross-slash pour des dégâts HP solo. Le timing est assez strict — ce n'est pas un fake combo, mais l'erreur humaine est possible, et Precision Evasion adverse peut y échapper."
+    },
+    {
+      "name": "Blade Beam dodge cancel",
+      "desc": "L'explosion de Blade Beam crée un prompt de Chase et peut même se convertir en assist Kuja après un dodge cancel. L'essentiel de l'EX (60) est généré par l'explosion : après une touche à distance, dasher vers l'adversaire permet de récupérer la majorité de l'EX Force."
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "La page matchups du wiki n'est qu'une ébauche ; seuls quelques éléments épars sont documentés. Les HP links de Cloud sont vulnérables à l'Assist Change, et deux profils lui compliquent la vie : les personnages à chute rapide qui dodge punishent bien (Kain, Kefka) et ceux dotés d'un command block (Jecht). Cloud doit aussi surveiller les esquives aériennes adverses, car il retombe lentement après les siennes.",
+      "Côté choix d'assist selon l'adversaire : Tidus est cité comme très utile contre The Emperor, et Aerith brille dans les matchups aériens comme Sephiroth, où Cloud s'appuie davantage sur Double Cut que sur ses HP links."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Cloud jouit d'une grande flexibilité de build : dégâts bruts (attaque, bravery de base élevée, Wall Rush), ou orientations EX Core et assist avec Side by Side. Le build documenté est un hybride « EX Intake + Seal of Lufenia » exploitant l'Equip Glitch : absorption d'EX via White Drops et White Gem (+20 % au total), portée d'absorption accrue de Heaven's Cloud, et Tenacious Attacker pour absorber l'EX même en attaquant — chaque Double Cut accélère le remplissage de la jauge sans avoir à courir après l'EX Force.",
+      "L'effet spécial Seal of Lufenia ajoute une bonne dose de dépletion d'EX adverse, déclenchée deux fois par HP Wall Rush — ce qui s'accumule vite dans les combos d'assist ouverts par un HP link comme Omnislash Version 5. Lufenian Dirk sacrifie 1 point de DEF pour un gain d'ATK bienvenu. Jump Times Boost+ ajoute deux sauts pour se déplacer sûrement en l'air ; Counterattack et Sneak Attack montent le taux de critique, Precision Evasion sort Cloud des situations serrées.",
+      "Côté attaques : Double Cut (sol et air) et le couple Slashing Blow + Omnislash Version 5 sont incontournables quel que soit le matchup. Blade Beam (seul projectile BRV avec bonne génération d'EX) et Firaga (keepout mid et filler à gros dégâts sur Kuja au sol, mais zéro EX) sont flexibles selon le matchup, la stage et les préférences. Fira est à éviter, sans utilité distincte face aux autres projectiles."
+    ],
+    "notes": "Le build affiché atteint 435 / 450 CP (Equip Glitch supposé réalisé) ; 15 points restent disponibles pour des capacités d'action (jump boost, speed boost), de support (Auto Assist Lock On) ou extra (Precision Jump, Achy, First Strike)."
+  },
+  "assist": {
+    "asAssist": [
+      "Cloud est l'un des assists les plus faibles du jeu — il figure d'ailleurs en tier Low de la tier list assist. Ses braveries d'assist (Sonic Break au sol, Slashing Blow en l'air, 21F chacune) sont rapides et puissantes, mais il ne retient pas l'adversaire longtemps et conclut vite avec un énorme knockback. Toutes ses attaques Wall Rush, ce qui est difficile à exploiter en terrain ouvert : Cloud assist fonctionne mieux sur les petites stages comme Pandaemonium - Top Floor et Edge of Madness, sans pour autant exceller en whiff punish ou en conversion.",
+      "Ses HP d'assist (Cross-slash, Braver) poursuivent l'adversaire — Cross-slash surtout — mais c'est un prix élevé pour une brève présence sur le terrain. Ajoutée à la faiblesse classique contre le LV2 Assist Change (les attaques de mêlée se font stagger), son utilité ne rivalise pas avec les meilleurs assists du jeu."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "Dégâts élevés, conversions fiables sur tous les coups clés avec ou sans Wall Rush, et utilité additionnelle des HP assists. Les Wall Rush de Cloud ouvrent des combos destructeurs, le Wall Rush au sol sécurise le Flare Star de Kuja contre le LV2 Assist Change, et Force Symphony force un HP près des murs après un Chase sur Double Cut."
+      },
+      {
+        "name": "Aerith",
+        "why": "Seal Evil met en place des HP attacks n'importe où sur la stage après un Double Cut suivi d'un Chase, complète le gain d'EX de Cloud (le Chase attire toute l'EX Force vers l'attaquant) et libère un slot d'accessoire en rendant Tenacious Attacker facultatif. Précieuse dans les matchups aériens comme Sephiroth, et son maintien au sol autorise les combos à base de Fire et Climhazzard."
+      },
+      {
+        "name": "Jecht",
+        "why": "Convertit de façon fiable sur les Wall Rush et le premier coup de Double Cut, et laisse le temps de poser deux Fire près du sol pour maximiser les dégâts. Moins de dégâts que Kuja sur Wall Rush au sol, mais Slashing Blow > Omnislash Ver. 5 reste toujours accessible."
+      },
+      {
+        "name": "Tidus",
+        "why": "Moins de dégâts en moyenne, mais sa bravery aérienne est un excellent whiff punisher : l'assist chase permet d'enchaîner Slashing Blow de manière constante (ou Braver de près). Peu courant, mais très utile contre The Emperor."
+      },
+      {
+        "name": "Sephiroth",
+        "why": "Un Kuja « économique » avec un meilleur whiff punish, plus dépendant des finishers en Slashing Blow (qui peut partiellement manquer selon l'angle du chase). L'assist Hell's Gate dépanne dans les scrambles, malgré un coût parfois dur à justifier."
+      },
+      {
+        "name": "Ultimecia",
+        "why": "Niche mais redoutable près des murs : appelée avant le Chase, elle force des dégâts HP ou un gros Wall Rush BRV via Knight's Axe, et un Wall Rush infligé pendant le chase adverse se convertit en Slashing Blow pour des dégâts HP."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Meteorain (midair) : génération massive d'EX dans le coin",
+      "desc": "Avec le bon setup dans un coin, Meteorain aérien génère une quantité d'EX démesurée ; la même logique s'applique en ciblant un personnage d'assist resté sur le terrain.",
+      "source": "https://www.youtube.com/watch?v=kgabDr3brWc&t=141s",
+      "date": null
+    },
+    {
+      "title": "Double Cut dodge cancel en assist Kuja (assist storage glitch)",
+      "desc": "Conversion situationnelle : dodge cancel de Double Cut vers l'assist Kuja grâce à l'assist storage glitch, documentée parmi les synergies Kuja de Cloud.",
+      "source": "https://www.youtube.com/watch?v=kgabDr3brWc&t=596",
+      "date": null
+    },
+    {
+      "title": "Rising Fang détruit la plateforme d'Old Chaos Shrine",
+      "desc": "Le coup de Wall Rush ascendant de Rising Fang peut détruire la plateforme d'Old Chaos Shrine, interaction de stage documentée en vidéo.",
+      "source": "https://www.youtube.com/watch?v=UecsiwzFPfY&t=650s",
+      "date": null
+    },
+    {
+      "title": "Synergie Cloud + assist Ultimecia près des murs",
+      "desc": "Démonstration vidéo de la synergie niche Cloud / Ultimecia : appel avant le Chase pour forcer des dégâts HP ou un Wall Rush BRV de Knight's Axe, avec suivi en Slashing Blow.",
+      "source": "https://www.youtube.com/watch?v=YYg2cF_CgLY",
+      "date": null
+    }
+  ],
+  "limits": [
+    "La page matchups dédiée est une ébauche (stub) : aucune analyse détaillée par personnage n'est documentée, seuls quelques éléments de l'overview et des synergies d'assist sont exploitables.",
+    "Aucune mécanique unique n'est documentée pour Cloud (section absente du wiki).",
+    "La startup de Finishing Touch et d'Omnislash Version 5 n'est pas renseignée (« ? » dans les données), tout comme la priorité d'Omnislash Version 5.",
+    "Les valeurs de gain de jauge assist (assistGain) sont vides pour tous les coups.",
+    "Les références vidéo du wiki ne comportent ni auteur ni date."
+  ]
+}

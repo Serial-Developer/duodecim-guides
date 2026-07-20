@@ -1,0 +1,134 @@
+{
+  "slug": "tifa-lockhart",
+  "tagline": "Mêlée mobile à feintes invincibles, dépendante des assists pour les dégâts",
+  "archetype": "Rushdown mêlée à feintes",
+  "overview": [
+    "Tifa est une combattante de corps-à-corps dotée d'une vitesse de déplacement élevée (course rapide, dash très rapide) et de la capacité unique de feinter ses attaques. Son jeu au sol s'appuie sur des projectiles de priorité moyenne et sur un HP link (Waterkick vers Somersault), tandis que son jeu aérien est soutenu par des coups à tracking vertical.",
+    "Sa génération d'EX est correcte et son EX Burst compte parmi les plus dévastateurs du jeu lorsqu'il reste beaucoup de jauge EX. Son potentiel de dégâts avec les HP attacks est élevé grâce à une bravery de base importante et à l'assist Aerith en particulier.",
+    "En revanche, ses dégâts de bravery moyens restent faibles, l'utilité de ses feintes est limitée et ses capacités verticales en l'air sont en dessous de la moyenne, ce qui bride son efficacité globale. Les sources la décrivent comme un personnage low tier."
+  ],
+  "tierNote": "Tifa est classée 22e, en tier B, sur la tier list compétitive de 2017. L'overview la qualifie de personnage low tier, freinée par ses dégâts de bravery moyens et son jeu aérien vertical limité.",
+  "strengths": [
+    "Mobilité élevée : course rapide et dash très rapide.",
+    "Feintes invincibles sur la plupart de ses attaques, une des rares sources d'invincibilité du jeu.",
+    "HP link Somersault depuis Waterkick, qui lance des combos d'assist n'importe où.",
+    "Potentiel de dégâts HP très élevé avec une bravery de base haute et l'assist Aerith (double assist combo à plus de 3000 HP).",
+    "EX Burst parmi les plus puissants du jeu à jauge EX pleine.",
+    "Jeu au sol solide, capable de rivaliser avec la plupart des stratégies de mêlée conventionnelles."
+  ],
+  "weaknesses": [
+    "Dégâts de bravery moyens faibles (ATK de base très basse), momentum difficile à établir même sur hit.",
+    "Utilité des feintes limitée : direction non contrôlable, pas de mixup vers une autre attaque, vulnérable après le teleport.",
+    "Capacités verticales en l'air en dessous de la moyenne.",
+    "Forte dépendance aux assists et aux Wall Rush pour convertir en dégâts significatifs.",
+    "Difficultés d'approche contre les projectiles persistants, les pièges et le zoning (Garland, The Emperor, Ultimecia)."
+  ],
+  "moveNotes": {
+    "Beat Rush": "Combo de trois coups servant de punish au sol, d'option défensive grâce à sa feinte (la protection la plus rapide de Tifa après une esquive au sol) et de poke occasionnel. Chaque coup peut être retardé pour hit confirm un combo d'assist, avec une bonne génération d'EX (90). Un knockback cancel du troisième coup avec l'assist optimise ses 35 de dégâts de base.",
+    "Blizzard": "Projectile basse priorité « low risk, low reward » : il construit la jauge d'assist sur whiff et poke à mi-distance, avec un bon tracking vertical. La récompense sur hit est négligeable (dégâts, hit stun et knockback faibles) ; sa recovery courte évite toutefois les assist punishes réactifs.",
+    "Blizzara": "Projectile avançant qui Wall Rush au sol, puis devient une explosion Ranged Mid persistante en fin de course. Il occupe l'espace à mi-distance, punit les esquives sur read et prépare des combos d'assist sans s'exposer aux mixups rapprochés. Attention : Ranged Low au départ et recovery plus longue que Blizzard.",
+    "Blizzaga": "Le sort de glace le plus lent mais le plus rémunérateur (30 de base, Wall Rush au sol). Il apparaît au-dessus de l'adversaire et frappe assez tard pour que Tifa redevienne actionnable, ce qui ouvre un des rares combos solo (vers Waterkick ou Meteor Strike). Recovery la plus longue de ses Blizzard : gare aux assist punishes.",
+    "Waterkick": "Poke et punish principal au sol, très rapide (11F), qui mène au HP link Somersault et donc aux combos d'assist. Ses nombreuses frames actives permettent un option select en martelant Carré puis en esquivant. Feinte possible sur le second coup pour changer de côté.",
+    "Elbow Smash": "Poke aérien principal (11F, imblocable en réaction) : démarrage d'offense, construction de jauge, whiff punish et punition d'air dodge après Free Air Dash. C'est une de ses voies principales de conversion HP avec assist en l'air, mais ses dégâts de base faibles et ses 30 EX seulement en font un outil peu rémunérateur qu'elle est pourtant obligée d'utiliser souvent.",
+    "Falcon's Dive": "Divekick servant de poke aérien secondaire et de punish air-sol, avec une recovery courte annulable rapidement. Ses 26 de base et son Wall Rush quasi instantané en font une de ses braveries aériennes les plus dommageables, et le meilleur filler de combo avec l'assist Kuja.",
+    "Moonsault Kick": "Attaque avançante en deux temps au startup réactable mais aux plus gros dégâts de base de son moveset (40), avec feinte instantanée et 90 EX. Elle démarre des combos d'assist sans mur, ce qui la rend précieuse avec Aerith. Deux feintes enchaînables (avant chaque partie) augmentent les critiques via Sneak Attack.",
+    "Dolphin Blow": "Uppercut multi-hit montant qui whiff punit les adversaires au-dessus de Tifa, deuxième bravery aérienne la plus dommageable. Dépend des Wall Rush au plafond pour vraiment rentabiliser, ce qui le rend situationnel (inutilisable par exemple contre le Knight's Lance chargé d'Ultimecia au plafond).",
+    "Meteodrive": "HP de courte portée avec Wall Rush au sol, utilisable en block punish, avec une feinte couvrant une bonne distance. Ses autres HP au sol couvrent plus de situations avec un meilleur potentiel : rarement prioritaire en compétitif.",
+    "Meteor Strike": "HP avançant chargeable aux plus gros dégâts de base de ses HP au sol, excellent starter et ender de combos d'assist (Wall Rush au sol, synergie avec la bravery de base haute et Side by Side). Sa posture basse esquive certaines attaques air-sol, et la feinte pendant les frames actives permet de re-charger, d'annuler un whiff ou de refléter des projectiles haute priorité.",
+    "Burning Arrow": "Seul HP mono-coup de Tifa : punish de mi-distance (surtout contre les esquives au sol), reflet fiable des projectiles haute priorité et réponse aux checkmates EX Revenge. Wall Rush sur les murs uniquement, ce qui limite ses routes de combo ; la feinte juste avant le coup sert de frein d'urgence.",
+    "Rolling Blaze": "Coup essentiel dans ses deux versions : anti-air principal au sol, menace air-sol en l'air, avec hitbox haute priorité constante et Wall Rush au sol pour de gros dégâts avec assist. La feinte pendant la ruée initiale, suivie d'un second Rolling Blaze, étend énormément sa portée en ne laissant qu'une fenêtre de punition très courte. Faible portée latérale ; avec deux jauges et Aerith, c'est une de ses routes les plus dévastatrices.",
+    "Somersault": "Son unique HP link (depuis Waterkick), très rapide, qui lance des combos d'assist n'importe où et remplit la jauge avec Side by Side. Impunissable même si l'adversaire s'échappe avec l'Assist Change LV1 : c'est ce coup qui rend Waterkick aussi menaçant.",
+    "Meteor Crusher": "HP aérien chargeable, block punisher et ender de combo d'assist courant grâce à sa vitesse et à sa portée une fois chargé (à égalité de startup avec Meteor Strike non chargé). La charge augmente nettement la portée et autorise une feinte pendant l'approche. Pas de Wall Rush (récompense moindre en mid-screen) et multi-hit, donc inutilisable contre les checkmates EX Revenge."
+  },
+  "exMode": {
+    "summary": [
+      "EX Mode « Equipped Premium Heart! » : Tifa gagne Regen, Critical Boost et l'effet Premium Heart, actif en permanence, qui augmente les dégâts infligés à mesure que la jauge EX est pleine."
+    ],
+    "burst": "Final Heaven est un EX Burst à sept rouleaux à arrêter sur le symbole « Yeah! » (rythme régulier d'environ 1 à 1,5 s entre les pressions, ou Auto EX Command Ω pour 20 CP). Ses dégâts dépendant de la jauge EX restante, il faut l'utiliser dès l'activation de l'EX Mode : à jauge pleine, c'est l'un des EX Bursts les plus puissants du jeu."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "Tifa peut annuler la plupart de ses attaques en une feinte : un dash invincible qui traverse les adversaires, déclenché en pressant Croix pendant le startup (ex. Beat Rush > Croix > Beat Rush). Après la feinte, elle peut poursuivre l'attaque précédente ou attendre la fin de la feinte, avec environ une seconde de délai possible avant d'être verrouillée en recovery.",
+      "La feinte étend la portée d'une attaque et rend son timing ambigu (Rolling Blaze en est l'exemple le plus célèbre), notamment en attendant que le block adverse expire. Tifa avance toujours vers l'avant et ne passe derrière l'adversaire que si elle est assez proche : la direction n'est pas contrôlable et aucun mixup vers une autre attaque n'est possible après la feinte.",
+      "L'invincibilité en fait une excellente option défensive contre les tentatives de dodge punish, mais Tifa reste vulnérable après le teleport et pendant la recovery. Garder de la jauge d'assist pour couvrir ce moment aide ; il est conseillé d'utiliser les feintes avec parcimonie en début de match pour jauger la réaction adverse."
+    ],
+    "details": [
+      "Fenêtres de feinte : Beat Rush (avant le 1er coup), Waterkick (avant le 2e coup), Moonsault Kick (avant chaque partie), Falcon's Dive, Dolphin Blow, Meteodrive et Burning Arrow (avant le 1er coup), Meteor Strike (avant ou pendant le 1er coup, rechargeable après feinte), Rolling Blaze sol et air (pendant la première partie), Meteor Crusher (avant l'impact, non rechargeable après feinte).",
+      "Contre-stratégies documentées : sortir de portée en courant ou en sautant, interrompre avec des attaques rapides (Beat Fang de Squall, Diamond Dust de Yuna), poursuivre avec une attaque à homing (Braver de Cloud, Inferno de Vaan), ou réagir avec un assist pour la prendre en tenaille."
+    ]
+  },
+  "gameplan": [
+    "Le cœur du jeu de Tifa est au sol : Waterkick comme poke principal menant au HP link Somersault, Beat Rush en punish et en défense post-esquive, Rolling Blaze pour menacer l'espace aérien proche et punir les esquives. Les combos Somersault avec assist infligent des dégâts considérables avec une bravery de base haute, au point d'inciter l'adversaire à abandonner le sol.",
+    "En l'air, Elbow Smash est le poke de référence pour démarrer l'offense et remplir la jauge, complété par Moonsault Kick en mixup plus dommageable et Falcon's Dive en angle descendant sécurisé. Les sorts Blizzard permettent de garder la distance, de bâtir la jauge d'assist et d'interrompre l'adversaire sans s'engager dans les mixups rapprochés.",
+    "Presque toute la conversion en HP passe par les Wall Rush et l'assist : Rolling Blaze, Meteor Strike et Falcon's Dive en starters, Meteor Crusher et Rolling Blaze aérien en enders. Avec Kuja, Falcon's Dive doublé est son filler le plus dommageable ; avec Aerith, un HP garantit un enchaînement Seal Evil et le double assist combo peut dépasser 3000 HP de dégâts.",
+    "Les feintes servent d'abord défensivement (invincibilité après une esquive au sol) et pour repositionner derrière l'adversaire, mais à doser : une fois lues, elles s'interrompent avec des attaques rapides ou un assist. En build Side by Side, la jauge EX est gelée : il faut ramasser les EX Cores pour ne pas laisser à l'adversaire l'EX Force générée."
+  ],
+  "advancedTech": [
+    {
+      "name": "Waterkick option select",
+      "desc": "En martelant Carré pendant les frames actives de Waterkick puis en esquivant pendant la recovery du premier kick, Tifa couvre à la fois le hit (Somersault) et le whiff, ce qui la rend difficile à whiff punir en réaction."
+    },
+    {
+      "name": "Rolling Blaze feint extension",
+      "desc": "Feinter Rolling Blaze pendant la ruée initiale puis enchaîner un second Rolling Blaze étend énormément sa portée maximale, avec une fenêtre de vulnérabilité si brève que la punition exige un timing précis."
+    },
+    {
+      "name": "Double assist combo (Aerith)",
+      "desc": "Avec deux jauges d'assist : HP avec Wall Rush, Seal Evil d'Aerith, nouveau Wall Rush pendant le Seal Evil, second appel d'Aerith puis Rolling Blaze. Un seul combo peut dépasser 3000 HP de dégâts avec un build à haute bravery de base."
+    },
+    {
+      "name": "Knockback cancel (Beat Rush)",
+      "desc": "Annuler le knockback du troisième coup de Beat Rush avec un appel d'assist garde l'adversaire en place et rentabilise ses 35 de dégâts de base ; difficile à exécuter mais très rémunérateur, surtout avec l'extra ability Sneak Attack."
+    },
+    {
+      "name": "Blizzaga hit glitch (Meteor Strike)",
+      "desc": "Blizzaga peut provoquer un hit glitch sur Meteor Strike, envoyant les adversaires inattentifs dans un combo d'assist dommageable."
+    },
+    {
+      "name": "Moonsault Kick lock-off / knockback negation",
+      "desc": "Utilisé en lock off, Moonsault Kick se dirige librement pour bâtir la jauge en sécurité dans les grandes arènes. Un appel d'assist à un timing très précis pendant la ruée finale annule par ailleurs son knockback."
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "De manière générale, Tifa rivalise avec les personnages aux stratégies de mêlée conventionnelles près du sol. Elle peine en revanche à approcher les projectiles persistants (Garland) et les pièges (The Emperor) ; Ultimecia combine les deux avec un bon zoning. Contre Garland, elle n'a aucun moyen simple de contourner le HP Cyclone, mais l'assist BRV Seal Evil d'Aerith le contourne facilement.",
+      "Les matchups aériens peuvent aussi être difficiles (Sephiroth par exemple), entre pokes moyens et récompense sur hit décevante. Tifa n'a pas beaucoup de matchups gagnants, mais elle se bat bien au sol : quand elle peut s'y appuyer ou alterner sol et air, comme contre Firion, Jecht et Cecil, elle est bien placée pour faire de grosses actions."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Trois builds sont documentés, tous à 450 CP en supposant l'Equip Glitch. Le premier, Side by Side « all-rounder » (assist Kuja, Seventh Heaven, booster x2.7 constant), vise l'équilibre attaque/défense : équipement défensif (Hero's Shield contre les dégâts de Wall Rush HP), accessoires orientés depletion de meter et bravery boost sur block/dodge, bravery de base haute et Assist Critical Boost pour compenser ses dégâts moyens. Kuja convertit les Wall Rush, staggers et séquences de bravery inachevées.",
+      "Le deuxième, Side by Side à haute bravery de base (1623 BRV, assist Aerith, booster x3.5), maximise les dégâts : un HP, Seal Evil d'Aerith, puis un second HP une fois la bravery de base récupérée, pour plus de 3000 HP en un combo. Aerith est le seul assist compétitif qui convertit un Moonsault Kick complet sans mur, et le double assist combo est la signature du build. Side by Side gèle la jauge EX : il faut ramasser les EX Cores.",
+      "Le troisième, BRV Boost on Dodge (set Adamant Chains, booster x5.5, 146 BRV par esquive à plein régime), est réservé aux matchups où Tifa subit beaucoup de projectiles : il décourage le Shadow Flare de Sephiroth et aide contre The Emperor et Ultimecia, trois matchups qui restent difficiles même ainsi. La bravery supplémentaire justifie la prise de risque pour placer un HP."
+    ],
+    "notes": "Le build all-rounder n'a aucun CP libre (remplacer un accessoire par Hero's Essence au besoin) ; le build haute bravery laisse 15 à 25 CP libres selon les abilities retirées ; le build BRV Boost on Dodge laisse 25 CP libres. Des tables de substituts sont documentées (Muscle Belt, Back-Breaking Straw, Best Dresser/Master Guardsman, etc.)."
+  },
+  "assist": {
+    "asAssist": [
+      "En tant qu'assist, Tifa dispose de Beat Rush (BRV sol, 21F, Chase), Falcon's Dive (BRV air, 23F, Wall Rush), Meteodrive (HP sol, 39F, Wall Rush) et Rolling Blaze (HP air, 45F, Wall Rush), tous apparaissant sur l'adversaire.",
+      "Elle est classée Low sur la tier list assist de Muggshotter."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "Conversions sur poke et Wall Rush avec de gros dégâts de bravery, au prix d'un risque élevé de le voir verrouillé quand il est utilisé."
+      },
+      {
+        "name": "Tidus",
+        "why": "Mêmes conversions que Kuja avec moins de dégâts, mais un startup plus rapide et une animation d'assist BRV aérien plus courte, ce qui le rend plus sûr même si l'adversaire s'échappe avec l'Assist Change LV1."
+      },
+      {
+        "name": "Aerith",
+        "why": "Booste les dégâts près du sol avec des triples combos HP et convertit de manière fiable le chase de Moonsault Kick ; recommandée pour les builds Side by Side et/ou à haute bravery de base."
+      }
+    ]
+  },
+  "communityTech": [],
+  "limits": [
+    "La section Combos du wiki est vide (documented: false) : aucun combo détaillé chiffré n'est fourni, seules les indications des notes de coups et de builds ont été utilisées.",
+    "Aucune référence externe (section References vide) : pas de communityTech attribuable.",
+    "Le tableau Forces/Faiblesses de l'overview est vide dans les données ; forces et faiblesses ont été déduites du texte de l'overview, des notes de coups et des matchups.",
+    "Les gains de jauge d'assist (assistGain) ne sont renseignés pour aucun coup.",
+    "Le startup de Somersault est inconnu dans les données (« ? »), et le type de dégâts de l'EX Burst est noté « ?? »."
+  ]
+}

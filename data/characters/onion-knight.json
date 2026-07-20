@@ -1,0 +1,867 @@
+{
+  "slug": "onion-knight",
+  "name": "Onion Knight",
+  "page": "Onion_Knight_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Onion_Knight_(Dissidia_012)",
+  "origin": "Final Fantasy III",
+  "icon": "ok",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-ok.png",
+  "infobox": {
+    "Name": "Onion Knight (オニオンナイト)",
+    "Original game": "Final Fantasy III",
+    "Base ATK (LV100)": "107 (Lowest)",
+    "Base DEF (LV100)": "111 (Average)",
+    "Run Speed": "2.5 (Fast)",
+    "Dash Speed": "69 (Very Fast)",
+    "Fall Speed": "85 (Average)",
+    "Fall Speed Ratio After Dodge": "14 (Very Fast)",
+    "Fastest BRV": "11F (Multi-Hit)",
+    "Fastest HP": "41F (Blade Torrent, Windshear)",
+    "1-Hit HP": "Yes (Firaga)",
+    "HP Links": "Yes",
+    "Command Block": "No",
+    "Weapon": "Daggers, Parrying Weapons, Rods,Staves, Swords, Thrown Weapons",
+    "Armor": "Bangles, Chestplates, Clothing, Gauntlets,Hats, Hairpins, Headbands, Light Armor",
+    "Exclusive weapons": "Tyrfing, Royal Sword, Onion Sword",
+    "Unlock": "Default",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Jun Fukyama",
+    "Voice Actor (ENG)": "Aaron Spann"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Onion Knight is a close-range character with great movement, fast melee bravery attacks and a few ranged attacks to punish careless defensive play. One of his character defining traits is the abundance of HP links - All of Onion Knight's bravery attacks can branch out into an HP attack. With lightning fast melee braveries, this makes HP damage output consistent and enables burst damage with high base bravery builds, whenever assist is available.",
+        "Onion Knight is an agile character all around, with some of the fastest dash and run speeds in the game. It's a great asset when playing either offensively or defensively. He can pursue retreating characters such as Kefka and punish them for air dodging. EX Cores are no problem either, which Onion Knight can consistently hunt down to deny valuable EX for his opponent. High calibre running speed also helps Onion Knight avoid attacks by simply running, which can complicate matters even for characters with good tracking such as Firion and Squall. To top it all off, his fall speed ratio after a dodge makes him difficult to hit after an air dodge.",
+        "Both EX and Assist build styles work well, with assist pulling ahead in overall consistency and damage output thanks to high base bravery and Side by Side. EX generation, while good, often falls behind in comparison to HP damage as it is backloaded into HP attacks and magic bravery enders. On the flipside, his above average base defense at 111 also lets him invest into base bravery and HP with less risk.",
+        "These are all great qualities, but they're not without caveats. While Onion Knight's melee braveries are unreactable on startup and stay active for a good moment, they make him vulnerable to whiff punishes, moreso against attacks with higher priority or tracking. His ranged projectiles are too slow for occupying space and are better suited as punishers instead. Generating assist meter safely with whiffs is also difficult due to prolonged attacks or telegraphed low priority projectiles. And with his stationary attack motions and only fast Melee High attack being on the ground, Onion Knight struggles against lingering high priority projectiles and traps. Characters like Ultimecia and The Emperor can consistently skew Onion Knight's risk-reward ratio in their favor, as he has very few ways to bypass such projectiles safely once they're out.",
+        "Historically Onion Knight has been ranked as high tier or mid tier in competitive play. His straightforward gameplan, ease of use and consistency make him a comfortable pick at many levels of play. Meter generation is largely geared towards spot dashing, HP hits and EX Cores, but sustaining resources is much easier. While he performs a lot better with assist, investing into EX is still a viable strategy if it's required. Although his utility and gameplay diversity fall a bit short, Onion Knight is more than capable of standing toe to toe with much of the cast, such as Warrior of Light, Golbez and Zidane."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Threatening close-range combat - All braveries, including his lightning fast melee bravery attacks can be linked into an HP attack for consistent damage output.\nSide by Side <img></img> - As a dedicated HP linker, Onion Knight benefits greatly from the accessory's assist meter gain and increases consistency for high base bravery damage builds.\nMovement - Fast running speed, very high dash speed and quick to fall after an air dodge allow Onion Knight to approach, punish dodges, grab EX Cores and evade attacks with relative ease.\nWhiff punishment - All bravery attacks are suitable for punishing missed attacks at different ranges.\nRelatively safe HP links - Even when escaped with Assist Change with Precision Evasion ability equipped, Onion Knight can be difficult to punish.\nSafe assist gauge decay reset - With Strength Booster and Magic Booster braveries, Onion Knight can sustain assist meter without putting himself at great risk.\nEX Mode bravery damage - Damage multipliers are greatly increased across the board, allowing Onion Knight to shred through bravery.",
+              "High commitment whiffs - Whiffed melee braveries have high duration and thus make Onion Knight vulnerable to whiff punishment\nAssist meter generation on whiff - Outside of the Side by Side influx, EXP to Assist and EXP accessories, Onion Knight can struggle to build assist meter with whiffs and dashes to offset setbacks in meter economy.\nRanged combat - Ranged Low braveries and Ranged High HP attacks are ill-fit for occupying screen safely, on top of being vulnerable to whiff punishment from assists.\nLacks utility against traps - Because the only fast Melee HP is ground exclusive and air HP projectiles are slow to start, lingering projectiles and traps such as Garland's Cyclone and The Emperor's Flare and Thunder Crest can prove very difficult for Onion Knight to break through without risk.\nRelatively low bravery damage output - While EX Mode increases damage multipliers, lowest base attack stat and reliance on HP links often compromise Onion Knight's bravery damage potential throughout the match."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Onion_Knight_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": "Most bravery attacks have separate, higher damage multipliers during EX mode. These multipliers are highlighted in bold.",
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/62/Brv_onion_knight_multi_hit.jpeg",
+              "damage": "1 x 7, 2 (9+) / 1 x 15, 2 (17+)",
+              "startup": "11F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "21",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Close] Launch flurry of slashes. Weak, but quick to execute.",
+              "name": "Multi-Hit"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/5a/Brv_onion_knight_extra_slice.jpeg",
+              "damage": "3 x 7, 10 (+31) / 5 x 3 (59+)",
+              "startup": "??",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "21",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "10 (5)",
+              "description": "Branching from Multi-Hit. [Combo] Additional slice.",
+              "name": "Extra Slice"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f8/Brv_onion_knight_blizzard.jpeg",
+              "damage": "4 x 3 (12+) / 5 x 3 (15+)",
+              "startup": "35F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "12",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Long] Shoot frost projectiles. Limited height, but high speed.",
+              "name": "Blizzard"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/71/Brv_onion_knight_blizzaga.jpeg",
+              "damage": "7, 7, 18 (+32) / 10 x 4, 18 (+58)",
+              "startup": "??",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "78",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "10 (5)",
+              "description": "Branching from Blizzard. [Combo] Drop ice shards.",
+              "name": "Blizzaga"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/87/Brv_onion_knight_strength_booster_g.jpeg",
+              "damage": "-",
+              "startup": "40F (casting)",
+              "type": "-",
+              "priority": "-",
+              "exForce": "0",
+              "effects": "Physical DMG +10 %, Physical DEF +10 %, Crit Rate +5 %",
+              "cancels": "Dodge, Block, Attack (after 20F)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Boosts stats temporarily. Physical attack, damage, and critical attack rate increased.",
+              "name": "Strength Booster (ground)",
+              "notes": "Effect lasts for 10 seconds (600F)."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/14/Brv_onion_knight_magic_booster_g.jpeg",
+              "damage": "-",
+              "startup": "40F (casting)",
+              "type": "-",
+              "priority": "-",
+              "exForce": "0",
+              "effects": "Magical DMG +10 %, Magical DEF +10 %, Crit Rate +5 %",
+              "cancels": "Dodge, Block, Attack (after 20F)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Boosts stats temporarily. Magic attack, defense, and critical attack rate increased.",
+              "name": "Magic Booster (ground)",
+              "notes": "Effect lasts for 10 seconds (600F)."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/bb/Brv_onion_knight_turbo_hit.jpeg",
+              "damage": "1 x 7, 2 (9+) / 1 x 15, 2 (17+)",
+              "startup": "13F / 11F (EX Mode)",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "21",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Close] High-speed slash. Weak, but effective against any height.",
+              "name": "Turbo-Hit"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/0b/Brv_onion_knight_extra_lunge.jpeg",
+              "damage": "3 x 7, 10 (+31) / 3 x 15, 14 (+59)",
+              "startup": "??",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "21",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "10 (5)",
+              "description": "Branching from Turbo-Hit. [Combo] Additional lunges.",
+              "name": "Extra Lunge"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c9/Brv_onion_knight_thunder.jpeg",
+              "damage": "each (3) / each (4)",
+              "startup": "31F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "each 3",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Long] Trio of thunder balls that curve to track foe. Effective against any height.",
+              "name": "Thunder"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/45/Brv_onion_knight_thundaga.jpeg",
+              "damage": "13, 18 (+31) / 11x2, 17x2 (+56)",
+              "startup": "??",
+              "type": "Magical",
+              "priority": "??",
+              "exForce": "78",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "10 (5)",
+              "description": "Branching from Thunder. [Combo] Fire two lightning bolts.",
+              "name": "Thundaga"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c2/Brv_onion_knight_strength_booster_a.jpeg",
+              "damage": "-",
+              "startup": "40F (casting)",
+              "type": "-",
+              "priority": "-",
+              "exForce": "0",
+              "effects": "Physical DMG +10 %, Physical DEF +10 %, Crit Rate +5 %",
+              "cancels": "Dodge, Block, Attack (after 20F)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Boosts stats temporarily. Physical attack, damage, and critical attack rate increased.",
+              "name": "Strength Booster (midair)",
+              "notes": "Effect lasts for 10 seconds (600F)."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/fb/Brv_onion_knight_magic_booster_a.jpeg",
+              "damage": "-",
+              "startup": "40F (casting)",
+              "type": "-",
+              "priority": "-",
+              "exForce": "0",
+              "effects": "Magical DMG +10 %, Magical DEF +10 %, Crit Rate +5 %",
+              "cancels": "Dodge, Block, Attack (after 20F)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Boosts stats temporarily. Magic attack, defense, and critical attack rate increased.",
+              "name": "Magic Booster (midair)",
+              "notes": "Attack / dodge / block cancelable at 20F. Effect lasts for 10 seconds (600F)."
+            }
+          ]
+        }
+      },
+      "moveCount": 12,
+      "sources": [
+        "https://dissidia.wiki/Onion_Knight_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": "Most HP attacks have separate, higher damage multipliers during EX mode. These multipliers are highlighted in bold.",
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/ce/Hp_onion_knight_blade_torrent.jpeg",
+              "damage": "1x15 (15) / 1x31 (31)",
+              "startup": "41F / 39F (EX mode)",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "45",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Ultra high-speed slice. Can be done in midair.",
+              "name": "Blade Torrent"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8f/Hp_onion_knight_firaga.jpeg",
+              "damage": "--",
+              "startup": "43F",
+              "type": "--",
+              "priority": "Ranged High",
+              "exForce": "60",
+              "effects": "--",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Launch fireballs. Wide-range explosion on impact.",
+              "name": "Firaga"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/76/Hp_onion_knight_swordshower.jpeg",
+              "damage": "1x15 (+15) / 1x31 (+31)",
+              "startup": "??",
+              "type": "Physical",
+              "priority": "??",
+              "exForce": "45",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Multi-Hit. [Combo] Rain blades of light.",
+              "name": "Swordshower"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/4a/Brv_onion_knight_quake.jpeg",
+              "damage": "2x7 (+14) / 4x7 (+28)",
+              "startup": "??",
+              "type": "Magical",
+              "priority": "??",
+              "exForce": "81",
+              "effects": "--",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Blizzard. [Combo] Cause earthquake.",
+              "name": "Quake"
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/b/b0/Hp_onion_knight_wind_shear.jpeg",
+              "damage": "1x15 (15) / 1x31 (31)",
+              "startup": "41F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "45",
+              "effects": "Absorb, Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Spin at high speed. Move with the analog stick.",
+              "name": "Wind Shear"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/fe/Hp_onion_knight_comet.jpeg",
+              "damage": "1x15 (15) / 1x31 (31)",
+              "startup": "81F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "105",
+              "effects": "--",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire off tiny meteors. Aim with the analog stick.",
+              "name": "Comet"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/99/Hp_onion_knight_guiding_swipe.jpeg",
+              "damage": "1x15 (+15) / 1x31 (+31)",
+              "startup": "??",
+              "type": "Physical",
+              "priority": "??",
+              "exForce": "45",
+              "effects": "",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Turbo-Hit. [Combo] Fire speedy light blades.",
+              "name": "Guiding Swipe"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/6e/HP_onion_knight_flare.jpeg",
+              "damage": "1x12 (+12) / 2x12 (+24)",
+              "startup": "??",
+              "type": "Magical",
+              "priority": "??",
+              "exForce": "96",
+              "effects": "--",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Thunder. [Combo] Create huge explosions.",
+              "name": "Flare"
+            }
+          ]
+        }
+      },
+      "moveCount": 8,
+      "sources": [
+        "https://dissidia.wiki/Onion_Knight_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Job Change!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nDual Wield\nSage's Wisdom"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Dual Wield",
+          "text": [
+            "[Job changes to Ninja when performing a physical attack.] Attacks move faster than the eye can see to snatch a greater amount of bravery."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Sage's Wisdom",
+          "text": [
+            "[Job changes to Sage when performing a magic attack] Releases sealed mystic power, making spells stronger."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Ninjutsu",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "Throw the ninja's strongest weapon - the shuriken. Find and select \"Shuriken\" from the menu that displays."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "10, 10 (20)",
+                  "5x12, 20 (100 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "EX Burst: Spellbook",
+          "text": [
+            "Cast the sage's strongest spell - Holy. Find and select \"Holy\" from the menu that displays.\""
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "10, 10 (20)",
+                  "60, 20 (100 total)",
+                  "Magical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Onion_Knight_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Onion_Knight_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "|-|Side by Side=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Equip Best Dresser extra ability.",
+        "|-|EX Core=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "Equip Master Protector extra ability for higher base BRV |",
+        "The baseline bravery that can be modified with equipment. Bravery recovers to this after bravery break.",
+        "."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10478"
+            ],
+            [
+              "CP",
+              "480"
+            ],
+            [
+              "BRV",
+              "1683"
+            ],
+            [
+              "ATK",
+              "173"
+            ],
+            [
+              "DEF",
+              "183"
+            ],
+            [
+              "LUK",
+              "61"
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: None",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Sephiroth"
+            ],
+            [
+              "Weapon <img></img>",
+              "Piggy's Stick <img></img>"
+            ],
+            [
+              "Hand <img></img>",
+              "Aegis Shield <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Thornlet"
+            ],
+            [
+              "Body <img></img>",
+              "Maximillian"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> BRV = 0"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Blue Gem"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Hero's Essence"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> First to Victory"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Hero's Seal"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Miracle Shoes"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Together as One"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Side by Side"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10299"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1096"
+            ],
+            [
+              "ATK",
+              "175"
+            ],
+            [
+              "DEF",
+              "185"
+            ],
+            [
+              "LUK",
+              "63"
+            ],
+            [
+              "Max Booster",
+              "x13.4"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Soul of Yamato",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Sephiroth"
+            ],
+            [
+              "Weapon <img></img>",
+              "Onion Sword"
+            ],
+            [
+              "Hand <img></img>",
+              "Genji Shield <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Genji Helm <img></img>"
+            ],
+            [
+              "Body <img></img>",
+              "Genji Armor <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Dragonfly Orb"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Large Gap in HP"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> BRV > Base Value"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> EX Core Present"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Aerial"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Opponent Summon Unused"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Onion_Knight_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Synergies",
+          "text": [
+            "Onion Knight works well with most tournament viable assists."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Onion Knight Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Blizzard",
+                  "35F",
+                  "Ground",
+                  "Opponent",
+                  "4 x 3, 7, 7, 18 (44)",
+                  "Chase"
+                ],
+                [
+                  "BRV",
+                  "Turbo-Hit",
+                  "13F",
+                  "Air",
+                  "Opponent",
+                  "1 x 7, 2, 3 x 7, 10 (40)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Blade Torrent",
+                  "41F",
+                  "Ground",
+                  "Opponent",
+                  "1 x 15",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Comet",
+                  "81F",
+                  "Air",
+                  "Opponent",
+                  "1 x 15",
+                  "Chase"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Onion Knight Assist Overview",
+          "text": [
+            "Onion is one of the stronger assists in competitive play. He is not strictly stronger than Kuja or Jecht assist, but his utility in other areas stand out.",
+            "Blizzard is a ranged priority combo attack that won't get staggered from LV2 Assist Change. It's good for ground wall rush combos and interrupting grounded opponents from a distance. The slow startup |",
+            "The time it takes before an attack can do damage.",
+            "makes it very difficult to use as a dodge punisher though.",
+            "Turbo-Hit is a fast melee priority combo attack, which pushes opponents towards a wall. It holds opponents long enough for combo fillers at ceilings and corners. This move can also be used in Chase conversions |",
+            "Turning a hit (unlikely or otherwise) into a combo through situational awareness.",
+            "; Connect the first part, then chase and have Onion Knight pursue the opponent for a follow-up. The main issue here is the reliance on wall rush. Onion Knight depends on reaching the wall once he is following the opponent, but his wall rush knockback is not very strong. And of course, if Onion Knight misses this move, he is very vulnerable to getting Assist Locked.",
+            "Blade Torrent is one of the few ground HP assists that can cover all four major ground dodge angles somewhat reliably. It can be used to close out matches with a proper read |",
+            "A read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".",
+            ".",
+            "Comet is quite good for checkmates |",
+            ". It has long duration, long range, high hit count and Ranged priority, which is immune to LV2 Assist Change staggers. Onion Knight will also move towards opponent, which is good for setting up checkmates with Chase."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Onion_Knight_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Onion_Knight_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Onion_Knight_(Dissidia_012)"
+  ]
+}

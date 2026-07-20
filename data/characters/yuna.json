@@ -1,0 +1,1119 @@
+{
+  "slug": "yuna",
+  "name": "Yuna",
+  "page": "Yuna_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Yuna_(Dissidia_012)",
+  "origin": "Final Fantasy X",
+  "icon": "yuna",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-yuna.png",
+  "infobox": {
+    "Name": "Yuna (ユウナ)",
+    "Original game": "Final Fantasy X",
+    "Base ATK (LV100)": "110 (Average)",
+    "Base DEF (LV100)": "110 (Low)",
+    "Run Speed": "7 (Average)",
+    "Dash Speed": "85 (Slow)",
+    "Fall Speed": "89 (Below Avg.)",
+    "Fall Speed Ratio After Dodge": "40 (Average)",
+    "Fastest BRV": "11F (Heavenly Strike)",
+    "Fastest HP": "21F (Diamond Dust)",
+    "1-Hit HP": "Energy Ray",
+    "HP Links": "No",
+    "Command Block": "No",
+    "Weapon": "Guns Poles Rods Staves",
+    "Armor": "Bangles Clothing Hairpins Hats Headbands Ribbons Robes",
+    "Exclusive weapons": "Yevon's Will Yunalesca's Staff Spira's Hope",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Mayuko Aoki",
+    "Voice Actor (ENG)": "Hedy Burress"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Yuna is a unique character that excels with disjointed attacks at close and mid range. With each attack, Yuna summons an aeon to attack in her stead. These range from quick pokes to long-range projectiles, but the most prominent aspect lies in the aeons themselves; They extend beyond Yuna's reach while not moving her forward or having any hurtbox |",
+        "of their own. This is great for poking |",
+        "and whiff punishment |",
+        "purposes, but also for hitting through higher priority Ranged attacks where others would struggle. She has a handful of attacks for most distances, which help her apply pressure regardless of where the opponent is.",
+        "With this varied arsenal, Yuna can also build assist gauge safely by whiffing braveries, most notably Heavenly Strike which is a fast Ranged Low priority move. Many of her HPs aren't as high commitment compared to other characters and they are effective in neutral |",
+        "for punishing poor movement or controlling space.",
+        "Like many other characters, Yuna relies on assist and reads with raw |",
+        "HPs to deal HP damage. Although most of her HP attacks are lower commitment on average, she lacks practical ways to combo into them; Her only solo HP combo requires EX Mode, which is situational. Fortunately Yuna builds an above average amount of EX Force with almost all of her attacks, so given enough hits, she gets a chance to capitalize on her distinct EX Mode. Her EX Mode adds extra hits to all her braveries, increasing damage significantly and becoming better at catching dodges. However it also adds melee priority hits to Heavenly Strike, which becomes vulnerable to being staggered.",
+        "Yuna works with a variety of builds, including hybrid builds emphasizing EX gain. Her exclusive (LV100) weapon has a very valuable +3m EX Intake Range effect, but due to her attacks' disjoints she can struggle to accumulate EX effectively without it. Yuna has average assist conversion capability with most competitive assists and doesn't rely on walls for combos, though they can still help. Yuna's large mid-range attacks can also let her capitalize on additional movement abilities such as Multi Air Slide.",
+        "As for weaknesses, there are plenty. Low base stats and low base damage on braveries affect Yuna's damage output across the board, while also taking slightly more damage herself. Her aerial tools are also more vulnerable to disjointed or high priority melee attacks as a result of being more projectile based despite being faster on average. While she has long range projectiles, they're quite simple and easily dispatched with universal defensive options. Combined with her slow movement, bringing a defensive opponent to Yuna's optimal range can be difficult.",
+        "In addition, her other fall speed attributes negatively impact her safety against dodge punishes; Yuna’s air dodges are often more vulnerable than most characters as a result of average fall speed, slow acceleration and lack of effective defensive options for guarding melee priority attacks or clashing with them. Her fastest midair cancels being Ranged priority is usually a blessing, but detrimental in this context. Adamant Chains set makes her air dodges safer, but also takes away from other aspects of her build, which is not ideal in Yuna's case.",
+        "Yuna has been typically ranked in mid tier or low tier in competitive play. She excels in small and average sized stages (e.g. M.S. Prima Vista, Top Floor) with good disjoints, EX generation and HP attacks that control more space in them. Even though she benefits from stage elements, they’re not a requirement for playing to her key strengths. While she works really well just outside of opponent’s poking range, her below average damage output, mixed dodge punishment strengths and modest conversion ability limit her potential. Despite this, Yuna has enough utility to stand out in the roster and compete in a variety of matchups."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Mid-range\nVariety of attacks that can poke and apply mixups outside of opponent's poking range or through lingering projectiles.\nFlexibility\nYuna's well-rounded and reliable attacks give her the ability to run a large amount of different builds to suit the matchup.\nMeter Generation\nAssist building tools are good. EX is above average and very consistently accessible from all her moves with EX Intake Range bonuses.\nAbnormal attacks\nYuna has access to a fast Ranged Low bravery and very fast anti-approach HP attacks.\nUser-friendly\nAtypical, yet relatively straightforward kit and offense make her a decent pick for new players.",
+              "Anti-Zoning\nYuna's options are fairly limited and she cannot easily force opponents into her effective range.\nMobility\nSlow dash speed can make chasing a fleeing opponent or grabbing EX cores difficult. Yuna's air dodges are also riskier due to slow fall speed, fastest air attacks being ranged, and not having a very fast ground attack.\nLow base stats\nYuna's below average base power, dependency on EX Intake Range boosting weapons, and slightly below average base stats often lead to her damage being a bit lower relative to the rest of the cast."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Yuna_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Version",
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "name": "Meteor Strike",
+              "notes": "Normal="
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f3/Brv_yuna_meteor_strike.jpeg",
+              "damage": "10, 20 (30)",
+              "startup": "19F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30 (30, 0)",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 800 Fresh: 1050",
+              "cp": "30 (15)",
+              "description": "[Close] Summon Ifrit. Sends foe flying.",
+              "name": null,
+              "notes": "Ifrit claw swipe. Good vertical tracking with a large hitbox, average damage and slightly poor knockback. The first claw swipe can be confirmed into an assist like Kuja with a generous input window. Slow startup for a melee low priority makes it poor defensively and somewhat vulnerable to blocks."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/81/Brv_yuna_meteor_strike_ex.jpeg",
+              "damage": "10, [5, 10], 20 (45)",
+              "startup": "19F",
+              "type": "Physical [Magical]",
+              "priority": "Melee Low [Ranged Low]",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 950 Fresh: 1300",
+              "name": "EX Mode",
+              "notes": "EX Mode adds two Shiva hits in between the claw swipes while keeping the lengthy input window intact. The first one comes out during the first part of the attack, and pressing circle will cause Shiva to slam the opponent into the second Ifrit claw attack. As such, the overall behavior remains very similar to the normal version, but the addition of Shiva attacks could make it easier for a player to react with a follow-up."
+            },
+            {
+              "variants": [
+                "Version",
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "name": "Aerospark",
+              "notes": "Normal="
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/09/Brv_yuna_aerospark.jpeg",
+              "damage": "3 x 4, 5 x 6 (42)",
+              "startup": "27F",
+              "type": "Physical (strike) Magical (projectiles)",
+              "priority": "Melee Mid (strike) Ranged Low (projectiles)",
+              "exForce": "90 (36, 53~54)",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 920 Fresh:1170",
+              "cp": "30 (15)",
+              "description": "[Mid] Summon Ixion. Delay combo to boost hit times.",
+              "name": null,
+              "notes": "Rush forward with Ixion. On launching opponent, Ixion’s horn will glow twice. Pressing Circle (<img></img>) again will fire discs, and pressing as late as possible on the second flash will fire the maximum amount of 6 discs. The max amount of discs provide a safe empty chase against recovery attack and is one of the handful of attacks in the game to do so.\nThis is a Melee Mid so it will stagger regular blocks, making it a relatively safe tool for ground-to-ground, anti-air poking and area denial while the enemy is slightly above ground.\nThis attack is pretty fast on both startup and recovery for its range. As a niche technique, Ixion can spawn on the opposite side of thin obstacles that Yuna is pressed against as an extra-safe poking option."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/6e/Brv_yuna_aerospark_ex.jpeg",
+              "damage": "3 x 4, [10, 10], 5 x 6 (62)",
+              "startup": "27F",
+              "type": "Physical (strike) Magical (projectiles)",
+              "priority": "Melee Mid (strike) Ranged Low (projectiles)",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 1120 Fresh: 1370",
+              "cp": "",
+              "name": "EX Mode",
+              "notes": "EX mode Aerospark puts Yuna in the air. In adds more hits and extends the input window for a maximum amount of disc projectiles.\nThe hit stun from the projectiles remains largely the same. But because Yuna is now airborne, she can dodge cancel towards her opponent and link EX mode Heavenly Strike without walls or even Diamond Dust when done near a wall. This is the only way to combo into her own HP by herself, which improves Aerospark's damage potential considerably, even though it is difficult to do."
+            },
+            {
+              "variants": [
+                "Version",
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "name": "Energy Blast",
+              "notes": "Normal="
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/5b/Brv_yuna_energy_blast.jpeg",
+              "damage": "each 7",
+              "startup": "39F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 570 Fresh: 820",
+              "cp": "30 (15)",
+              "description": "[Long] Summon Valefor. Fire five lasers in wave pattern.",
+              "name": null,
+              "notes": "Multiple projectiles fired in a cone shape formation. Low commitment and low reward, it can be easily countered with universal defensive options. Energy Blast can rarely be used for filler hits during ground assists, but it is not essential for Yuna to have."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/2b/Brv_yuna_energy_blast_ex.jpeg",
+              "damage": "[20], 7 each (27+)",
+              "startup": "45F [15F]",
+              "type": "Magical [Physical]",
+              "priority": "Ranged Low [Melee Low]",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 851 Fresh:1020",
+              "name": "EX Mode",
+              "notes": "EX Energy Blast adds a fast melee low priority Ifrit swipe that can beat dash attempts, but is otherwise not outstanding. Being able to combo into projectiles with Ifrit is nice, but the reward on hit remains similiarly underwhelming for the requirements and risk associated with it."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Version",
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "name": "Sonic Wings",
+              "notes": "Normal="
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8e/Brv_yuna_sonic_wings.jpeg",
+              "damage": "5 x 4, 15 (35)",
+              "startup": "27F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90 (30, 60)",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 850 Fresh: 1175",
+              "cp": "30 (15)",
+              "description": "[Mid] Summon Valefor. Great for attacking from below.",
+              "name": null,
+              "notes": "Yuna calls Valefor who spins at the enemy. If it hits, Yuna can press circle again to send the enemy away, initiating chase.\nSonic Wings is Yuna’s primary melee priority poke. Huge hitbox, strong straight-vertical tracking and entirely disjointed, but also slower startup, and thus somewhat vulnerable to reactionary blocks at certain ranges. After the first hits, Yuna can call an assist like Kuja to combo. Valefor being so displaced from Yuna’s position means that if she doesn’t have Spira’s Hope (her exclusive weapon) or doesn’t chase, the opponent will get most of the EX Force instead via Glutton. Its disjoint can be used to go through some higher priority projectiles, mainly The Emperor’s Flares and Ultimecia’s charged Knight’s Lances, making it a very good tool in those matchups."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/a/a6/Brv_yuna_sonic_wings_ex.jpeg",
+              "damage": "5 x 4, [2 x 4, 10], 10 (48)",
+              "startup": "27F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 860 Fresh:1290",
+              "cp": "30 (15)",
+              "name": "EX Mode",
+              "notes": "The EX version’s final hit trades chase for wall rush."
+            },
+            {
+              "variants": [
+                "Version",
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "name": "Heavenly Strike",
+              "notes": "Normal="
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/68/Brv_yuna_heavenly_strike.jpeg",
+              "damage": "4, 6, 12 (22)",
+              "startup": "11F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "30 (15, 15)",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 720 Fresh: 970",
+              "cp": "30 (15)",
+              "description": "[Close] Summon Shiva. Short range, quick strike.",
+              "name": null,
+              "notes": "Slightly remote icicle strike attack. This is Yuna’s defining air poke for building assist meter and poking in general. If it hits, press circle to add another hit, press circle again to slam your opponent to the ground for a wall rush. Each hit has a long confirm window if they hit the opponent.\nHeavenly Strike will spawn on top of the opponent when possible; It has deceptively long upwards and forwards range, but also slight backwards and downwards range. The hit spawning directly on the opponent can allow this move to hit opponents through attacks it would otherwise lose to through priority. The high hit stun on the strikes can sometimes allow it to trade-combo. 11 frame startup ties for the fastest speed bracket of pokes.\nThe knockback distance is a bit on the lower side at about 2/5th the height of Order’s Sanctuary. If Yuna is positioned too high, confirming an assist combo off of the second hit is still possible.\nBeing Ranged Low priority offers Heavenly Strike a lot of unique advantages and disadvantages. Perhaps the biggest upside is that Yuna does not stagger when this move is blocked, which allows her to avoid damage in most situations against blocking HP attacks. On the flipside however, Heavenly Strike completely loses to dash, which can allow the opponent to use certain option selects with it; Sonic Wings is comparatively slow and Heavenly Strike loses cleanly to Melee Low attacks. This can prevent Yuna from defending herself by clashing in situations where she is at frame disadvantage, such as after air dodges."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3f/Ex_mode_yuna_heavenly_strike.jpeg",
+              "damage": "4, [4], 6, [4, 4], 12 (34)",
+              "startup": "11F [19F]",
+              "type": "Magical [Physical]",
+              "priority": "Ranged Low [Melee Low]",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 840 Fresh: 1090",
+              "name": "EX Mode",
+              "notes": "EX Heavenly Strike adds Ixion melee hits between the Shiva ice strikes. This adds a vulnerability to blocks, but offers Yuna extra attack range and a better option against dash option selects when whiffing Diamond Dust is dangerous."
+            },
+            {
+              "variants": [
+                "Version",
+                "Damage multiplier",
+                "Startup frame",
+                "Type",
+                "Priority",
+                "EX Force",
+                "Effects",
+                "CP (Mastered)"
+              ],
+              "name": "Impulse",
+              "context": "Charge time 58 frames. Projectile comes out 11 frames after button release.",
+              "notes": "Normal="
+            },
+            {
+              "variants": [
+                "Uncharged",
+                "Charged"
+              ],
+              "image": "https://dissidia.wiki/images/c/cd/Brv_yuna_impulse_%28normal%29.jpeg",
+              "damage": [
+                "10",
+                "Each 5"
+              ],
+              "startup": [
+                "39F",
+                "39F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Ranged Low"
+              ],
+              "exForce": [
+                "0",
+                "0"
+              ],
+              "effects": [
+                "-",
+                "-"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "Stale: 600 Fresh: 850",
+                "Stale: 700 (all hits) Fresh: 950 (all hits)"
+              ],
+              "cp": "30 (15)",
+              "description": "[Long] Summon Bahamut. Charge to change strength.",
+              "name": null,
+              "notes": "Long-range fireball attack, can be charged to fire 4 smaller fireballs in a slight spread. Low reward on hit, easily dispatched by dash or block. The moderate startup, semi-decent vertical tracking and surprisingly fast projectile travel speed can make the single shot an effective poke for fishing for Assist Charge counter hits. The maximum range is a little lacking, however. The low reward on hit, along with it being Yuna’s only attacking option at its range reduces its usefulness, especially in bringing the opponent back into Yuna’s effective range.\nCharged Impulse is unfortunately worse than the normal version for the most part. The charge time is quite long, and the max range is slightly shorter. The projectile spread isn’t quite enough to make a big difference in catching the opponent and if only one of the projectiles connect, it actually does less damage. Charging Impulse is also very telegraphed to the opponent and easily assist punished as Yuna cannot usually turn around fast enough to hit the assist before getting hit herself.\nHowever, if Yuna connects multiple projectiles with the charged version, the hits can trigger a hit glitch and combo into Heavenly Strike follow-ups for a potential confirm into assist or knockdown."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/e/e8/Brv_yuna_impulse_ex.jpeg",
+              "damage": "10 / [10] each 5",
+              "startup": "39F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "name": "EX Mode",
+              "notes": "EX Impulse adds a low priority Valefor projectile, but practically offers no notable utility. In addition to the EX mode requirement, Impulse must be charged for this version of the attack to come out."
+            }
+          ]
+        }
+      },
+      "moveCount": 18,
+      "sources": [
+        "https://dissidia.wiki/Yuna_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/ce/Hp_yuna_hellfire.jpeg",
+              "damage": "10",
+              "startup": "37F",
+              "type": "Physical",
+              "priority": "Melee High (claw) Ranged High (pillars)",
+              "exForce": "60~150",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 600 (claw) Fresh: 850 (claw)",
+              "cp": "30 (15)",
+              "description": "[Close] Summon Ifrit. Short range, good vertical range.",
+              "name": "Hellfire",
+              "notes": "Massively active, tall and wide anti-approach fire pillar attack. Use this when the opponent is trying to approach Yuna from the air or ground. It does not hit opponents directly above Yuna, however.\nHellfire is a very fast HP attack for its power with great anti-air capabilities. Great horizontal tracking around Yuna when she casts it. Combined with extremely high active frames on the pillars, Hellfire is very good at catching dodges near Yuna. The opponent can get hit by multiple flame pillars, which generates a lot of EX Force and multiple meter depletion and Side by Side triggers.\nIfrit’s claw is melee high priority, and Yuna’s fastest and safest at that; It is her go-to option for reflecting ranged high attacks when necessary. Do note that Ifrit’s claw does not cover Yuna’s body.\nThe pillars can be used as a 1-hit HP if the opponent is sitting with a full EX gauge. The knockback from the pillars can be converted into a combo by precisely timing Kuja assist. Fire pillars remain on the field if the claw clashes partially through the attack, which can lead to favorable trades with opponent’s short-range melee high attacks."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7d/Ddff_yuna_hp_energy_ray_%286%29.jpeg",
+              "damage": "-",
+              "startup": "59F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "60",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "-",
+              "cp": "30 (15)",
+              "description": "[Long] Summon Valefor. Invokes vertically long columns of fire.",
+              "name": "Energy Ray",
+              "notes": "Yuna’s long-range HP attack. Valefor draws a glowing line on the ground that explodes straight upwards after a short delay. Valefor has a slight curving tracking when casting the ray. This is just enough to force slower walking characters to dodge to the side, but not enough to actually catch dodges most of the time.\nEnergy Ray is one of the longest ranged attacks Yuna has, and one that reaches the end of its travel distance very quickly. It can be useful to force a side dodge when backed by assist or to punish a long whiffed animation. The explosion also has surprisingly high vertical reach. This attack is super vulnerable to assist punishes on reaction, but sometimes difficult to punish in close range. Use with caution."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/63/Hp_Yuna_thor_hammer.jpeg",
+              "damage": "2 x 5 (10)",
+              "startup": "49F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "90",
+              "effects": "Absorb",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 600 Fresh: 850",
+              "cp": "30 (15)",
+              "description": "[Mid] Summon Ixion. Effective against any height.",
+              "name": "Thor's Hammer",
+              "notes": "Yuna summons Ixion to create a vacuuming lightning orb at mid range after a short delay. Ixion can place the orb almost anywhere within a 360-degree range, but the maximum distance from Yuna and the orb’s size are a little lacking. The main application of this move is to be used at semi-close range when the opponent is in big frame disadvantage and will probably dodge in any one direction.\nThor’s Hammer leaves Yuna wide open where she is not attacking, making it vulnerable to assist punishes and fast mid-range attacks. This move builds decent EX Force on hit, but due to its distance from Yuna, the opponent will often get more of it with Glutton <img></img>. Diamond Dust is generally safer and more reliable check to blocks in neutral."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/99/Ddff_yuna_hp_diamond_dust_%282%29.jpeg",
+              "damage": "2 x 5 (10)",
+              "startup": "21F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "90",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 600 Fresh: 850",
+              "cp": "30 (15)",
+              "description": "[Close] Summon Shiva. Short range, quick execution.",
+              "name": "Diamond Dust",
+              "notes": "Yuna summons Shiva to create a lingering ice cloud in one spot, that deals small bravery damage and an HP hit when touched. Very potent and a fast anti-approach and mixup move, especially against advancing melee attacks.\nThis move has surprisingly strong vertical tracking, even allowing it to combo off of EX Mode Aerospark. The final hit will launch the opponent straight up, allowing for easy conversions into assists. Diamond Dust stays active for a while; If the opponent triggers the hits near the end of active frames, Yuna will be actionable before hit stun ends. This allows a true combo off of Diamond Dust into different attacks depending on the amount of frame advantage, with Heavenly Strike being most practical."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/1e/Hp_yuna_mega_flare.jpeg",
+              "damage": "2 x 8 (16)",
+              "startup": "63F",
+              "type": "Magical",
+              "priority": "Melee High",
+              "exForce": "24",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "Stale: 660 Fresh: 910",
+              "cp": "30 (15)",
+              "description": "[Long] Summon Bahamut. Very accurate and powerful.",
+              "name": "Mega Flare",
+              "notes": "Yuna summons Bahamut under her, who fires a big laser at mid range. The laser deals a good amount of damage and it is Yuna’s only HP attack that can wall rush. Before firing the laser, Bahamut has excellent horizontal tracking on the opponent. During the attack, it also has decent downwards tracking and serviceable sideways tracking during the attack. All this makes Mega Flare good for catching most dodges close, if not directly below Yuna.\nThe laser is Yuna’s only aerial melee high attack. But similar to Hellfire, it does not cover Yuna’s body well. Same as Thor’s Hammer, Mega Flare leaves Yuna completely exposed to punishes, even moreso because of its longer duration. This move is generally used in a couple other ways as well; A very strong okizeme option near or on the ground, often near a wall to restrict opponent’s mobility further. It also works as a last resort for reflecting opponent’s ranged high projectiles."
+            }
+          ]
+        }
+      },
+      "moveCount": 5,
+      "sources": [
+        "https://dissidia.wiki/Yuna_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Grand Summon!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nDouble Summons"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Double Summons",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Always active while in EX Mode]\nTwo Aeons are simultaneously summoned with one BRV attack.",
+            "Double Summons alters properties of Yuna's braveries. All braveries get additional hits with their own base damage, increasing overall damage of an attack. In addition, the braveries get:",
+            "Meteor Strike gets additional hits with Shiva, while retaining lenient input window for follow-up.\nAerospark makes Yuna airborne and has more hit stun that enables a dodge cancel > Diamond Dust combo.\nEnergy Blast adds a melee low priority hitbox that precedes the projectiles.\nHeavenly Strike becomes melee low priority, which can stagger Yuna when blocked.\nSonic Wings causes wall rush instead of chase.\nImpulse gets an additional Valefor projectile, which only activates when the move is used at max charge.",
+            "This is generally speaking a power increase for Yuna, but players have to be mindful about getting Heavenly Strike blocked and adjusting their assist timing to accomodate the additional hits or wall rush in Sonic Wings' case.",
+            "Please refer to the bravery attack section for a more in-depth look at how Double Summons affects Yuna."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: To the Farplane",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "Sends foe to another dimension after attacking with the summoned Aeon. Enter the commands that appear to summon another Aeon.",
+            "The player must press a button in time with an enclosing white circle multiple times in a row to complete this EX Burst perfectly. Press the button that is shown on the screen when the white circle overlaps with the button icon's white outline. Repeat the process until the EX Burst ends.",
+            "To the Farplane is typically on the above average spectrum in terms of EX Burst damage, partly due to the initial hits that are not affected by player's EX defense. A solid EX Burst with good damage and relatively low execution barrier."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "3, 4, 5, 6, 7 (25)",
+                  "5, 10, 7, 9, 4, 12, 6, 11, 3, 8 (75) (100 total)",
+                  "??"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Yuna_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [
+        "Main article: Yuna (Combos)"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [
+            "Yuna has a handful of solo combos. Most of them are situational, if not impractical. But they are good for Yuna when they do hit."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "Long range, no wall required.Hit Glitch only.\nImpulse (Charged) > Impulse HIT > Heavenly Strike\n23~38 + WR\n15\nVideo\nBase Damage (Breakdown): 5~20 > 6, 12 + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 15\nThis utilizes the hit glitch, which requires Yuna doing Heavenly Strike when the charged Impulse hits the opponent. Because Yuna cannot cancel Impulse into Heavenly Strike, the projectiles must hit much later than when they were first shot. That limits the practicality of this combo, but it still provides Yuna a long range wall rush conversion into assist if it hits."
+                ],
+                [
+                  "Ground only, near wall / corner / ceiling.EX mode only.\nEX Aerospark > DC (forward) > Diamond Dust\n62~72\n180\nVideo\nBase Damage (Breakdown): Minimum: 3x4, 10, 5x6 (52) > 2x5 (10). Highest: 3x4, [10, 10], 5x6 > 2x5 (62)\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 + 90\nThis is Yuna's only solo combo into an HP attack. The requirements are high and situational, but the reward is noteworthy. Diamond Dust has less vertical reach than Heavenly Strike, so a wall etc. is needed to reduce the opponent's knockback. That will shorten the distance Yuna has to travel. Mapping Diamond Dust to up + square (↑+<img></img>) can make this combo easier to do."
+                ],
+                [
+                  "HP starter, no wall required.Starter must hit late.\nDiamond Dust (late hit) > Heavenly Strike\n24\n93\nVideo\nBase Damage (Breakdown): 2 > 4, 6, 12\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 63 + 30\nWhen Diamond Dust hits late, Yuna has enough frame advantage to go for a solo follow-up. Heavenly Strike's vertical reach is a consistent follow-up, and quite rewarding if it wall rushes for an assist combo. Using assist to set this up helps Yuna keep the opponent on the ground as well."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Yuna_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "|-|Hybrid=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10171"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "1314"
+            ],
+            [
+              "ATK",
+              "177"
+            ],
+            [
+              "DEF",
+              "183"
+            ],
+            [
+              "LUK",
+              "61"
+            ],
+            [
+              "Max Booster",
+              "x1.8"
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: None",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Kuja"
+            ],
+            [
+              "Weapon <img></img>",
+              "Spira's Hope"
+            ],
+            [
+              "Hand <img></img>",
+              "Hero's Shield <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Royal Crown"
+            ],
+            [
+              "Body <img></img>",
+              "Maximillian <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Dismay Shock"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Pre-EX Mode"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Blue Gem"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> White Gem"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> Tenacious Attacker"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> Glutton"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> Great Gospel"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Miracle Shoes"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "<img></img> Meteor Strike",
+              "<img></img> Heavenly Strike"
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "↑+<img></img> Aerospark",
+              "↑+<img></img> Sonic Wings"
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "",
+              "↓+<img></img> Impulse"
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "",
+              ""
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "<img></img> Hellfire",
+              "<img></img> Thor's Hammer"
+            ],
+            [
+              "",
+              "↑+<img></img> Diamond Dust"
+            ],
+            [
+              "",
+              "↓+<img></img> Mega Flare"
+            ]
+          ]
+        }
+      ],
+      "subs": [
+        {
+          "title": "Basic Abilities",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Actions"
+                ],
+                [
+                  "Ground Evasion"
+                ],
+                [
+                  "Midair Evasion"
+                ],
+                [
+                  "Ground Block"
+                ],
+                [
+                  "Midair Block"
+                ],
+                [
+                  "Aerial Recovery"
+                ],
+                [
+                  "Recovery Attack"
+                ],
+                [
+                  "Controlled Recovery"
+                ],
+                [
+                  "Wall Jump"
+                ],
+                [
+                  "Air Dash"
+                ],
+                [
+                  "Free Air Dash"
+                ],
+                [
+                  "Omni Ground Dash"
+                ],
+                [
+                  "Multi Air Slide"
+                ],
+                [
+                  "Free Air Dash Boost"
+                ],
+                [
+                  "Assist Gauge Up Dash"
+                ],
+                [
+                  "Jump Times Boost+"
+                ],
+                [
+                  "Ground Evasion Boost"
+                ],
+                [
+                  "Midair Evasion Boost"
+                ],
+                [
+                  "Evasion Boost"
+                ],
+                [
+                  "Descent Speed Boost"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Support"
+                ],
+                [
+                  "Always Target Indicator"
+                ],
+                [
+                  "EX Core Lock On"
+                ],
+                [
+                  "Assist Lock On"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Extra"
+                ],
+                [
+                  "Precision Jump"
+                ],
+                [
+                  "Assist Critical Boost"
+                ],
+                [
+                  "Disable Counterattack"
+                ],
+                [
+                  "EXP to HP"
+                ],
+                [
+                  "Best Dresser"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "CP"
+                ],
+                [
+                  "425 / 450"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Build Overview",
+          "text": [
+            "This is a general use all-rounder build. Constant EX absorption, long EX intake range with Yuna's exclusive weapon and high base bravery are key aspects of this build.",
+            "The damage comes from the base bravery and the fact it recovers much faster with Royal Crown <img></img>and Great Gospel <img></img> equipped. If Yuna lands an HP attack by herself while at base bravery, Kuja assist usually provides enough time for it to recover. The Best Dresser extra ability is required for higher base bravery. The meter depletion is not high, but it is still good to have."
+          ],
+          "tables": []
+        },
+        {
+          "title": "CP Allocation",
+          "text": [
+            "25 CP is available for Energy Blast, Energy Ray, the Counterattack extra ability and other basic abilities."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Substitutes",
+          "text": [],
+          "tables": [
+            {
+              "caption": "Substitutes",
+              "rows": [
+                [
+                  "Equipment / Ability",
+                  "Substitute",
+                  "Notes"
+                ],
+                [
+                  "<img></img> Blue Gem",
+                  "<img></img> First to Victory <img></img> Winged Boots",
+                  "Blue Gem contributes to damage with higher base bravery. But if that is not important, First to Victory provides a small initial boost in meter and bravery.\nWinged Boots reduces bravery depletion from banish traps, but this is only relevant in stages that have them."
+                ],
+                [
+                  "Omni Ground Dash",
+                  "Ground Dash Reverse Ground Dash",
+                  "If lateral movement is not important, equipping one of these dashes will move Yuna in one direction while building assist gauge."
+                ],
+                [
+                  "Assist Critical Boost",
+                  "Counterattack",
+                  "Counterattack activates whenever the opponent is hit out of their attack, which is good for Yuna's pokes. But it is also commonly nullified with \"Disable Counterattack\"."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Attacks (Staple)",
+          "text": [
+            "These attacks are recommended regardless of matchup, stage or player preference.",
+            "Yuna does not switch out attacks often. Her core moves remain largely the same.",
+            "Meteor Strike (BRV): Occasional ground poke, defensive melee low priority",
+            "Aerospark (BRV): Mid priority gap closer, occasional anti-air and ground threat",
+            "Heavenly Strike (BRV): Main aerial poke, combo starter, assist gauge builder",
+            "Sonic Wings (BRV): Yuna's aerial melee poke, ranged disjoint",
+            "Hellfire (HP): Defensive single hit HP, anti-air",
+            "Diamond Dust (HP): Very fast HP, good EX, consistent assist combo starter and combo ender",
+            "Thor's Hammer (HP): Catch dodges around Yuna",
+            "Mega Flare (HP): Yuna's only HP wall rush, reflect HP projectiles, grounded wake-up pressure"
+          ],
+          "tables": []
+        },
+        {
+          "title": "Attacks (Flexible)",
+          "text": [
+            "These attacks are great to have, but can be swapped or removed depending on matchup, stage or player preference.",
+            "Impulse (BRV): Occasional long range poke for assist gauge. Can hit glitch if charged",
+            "Energy Ray (HP): Linear, but long range single hit HP for calling out whiffs and dodges. Can anti-air."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Attacks (Avoid)",
+          "text": [
+            "Generally not recommended due to being outclassed by other attacks or having little to no distinct utility.",
+            "Energy Blast (BRV): Low priority, low damage, mediocre space control. If the opponent's ground assist is slow, this can be safer to use without getting assist punished.",
+            "|-|Build #2=",
+            "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Stats"
+                ],
+                [
+                  "HP",
+                  ""
+                ],
+                [
+                  "CP",
+                  ""
+                ],
+                [
+                  "BRV",
+                  ""
+                ],
+                [
+                  "ATK",
+                  ""
+                ],
+                [
+                  "DEF",
+                  ""
+                ],
+                [
+                  "LUK",
+                  ""
+                ],
+                [
+                  "Max Booster",
+                  ""
+                ]
+              ]
+            },
+            {
+              "caption": "Special Effect:",
+              "rows": [
+                [
+                  "Equipment"
+                ],
+                [
+                  "Assist",
+                  ""
+                ],
+                [
+                  "Weapon <img></img>",
+                  ""
+                ],
+                [
+                  "Hand <img></img>",
+                  ""
+                ],
+                [
+                  "Head <img></img>",
+                  ""
+                ],
+                [
+                  "Body <img></img>",
+                  ""
+                ],
+                [
+                  "Accessory 1",
+                  ""
+                ],
+                [
+                  "Accessory 2",
+                  ""
+                ],
+                [
+                  "Accessory 3",
+                  ""
+                ],
+                [
+                  "Accessory 4",
+                  ""
+                ],
+                [
+                  "Accessory 5",
+                  ""
+                ],
+                [
+                  "Accessory 6",
+                  ""
+                ],
+                [
+                  "Accessory 7",
+                  ""
+                ],
+                [
+                  "Accessory 8",
+                  ""
+                ],
+                [
+                  "Accessory 9",
+                  ""
+                ],
+                [
+                  "Accessory 10",
+                  ""
+                ],
+                [
+                  "Summon <img></img>",
+                  ""
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Yuna_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [
+        "|-|Kuja=\nMost builds use Kuja as the assist for both high damage and consistent confirms from most of her attacks. Heavenly Strike (with or without ground wall rush), Sonic Wings (1st part) and even Hellfire.",
+        "Heavenly Strike can ground wall rush in many situations, which combos into Kuja ground assist for plenty of damage and time for followups.",
+        "|-|Tidus=",
+        "|-|Jecht=",
+        "|-|Sephiroth="
+      ],
+      "tables": [],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Yuna_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Yuna_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Yuna_(Dissidia_012)"
+  ]
+}

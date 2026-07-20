@@ -1,0 +1,1020 @@
+{
+  "slug": "cloud-of-darkness",
+  "name": "Cloud of Darkness",
+  "page": "Cloud_of_Darkness_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)",
+  "origin": "Final Fantasy III",
+  "icon": "cod",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-cod.png",
+  "infobox": {
+    "Name": "Cloud of Darkness (暗闇の雲)",
+    "Original game": "Final Fantasy III",
+    "Base ATK (LV100)": "109 (Low)",
+    "Base DEF (LV100)": "111 (Average)",
+    "Run Speed": "9 (Slow)",
+    "Dash Speed": "85 (Slow)",
+    "Fall Speed": "109 (Very Slow)",
+    "Fall Speed Ratio After Dodge": "45 (Slowest)",
+    "Fastest BRV": "13F (Tentacle starters)",
+    "Fastest HP": "39F (Anti-Air P. Beam)",
+    "1-Hit HP": "Yes (Multiple)",
+    "HP Links": "Yes (Combos only)",
+    "Command Block": "Yes (Wrath P. Beam)",
+    "Weapon": "Poles, Rods, Staves, Thrown Weapons",
+    "Armor": "Bangles, Clothing, Hats, Hairpins, Robes",
+    "Exclusive weapons": "Calcite Staff, Bizarre Staff, Everdark",
+    "Alignment": "Chaos",
+    "Voice Actor (JP)": "Masako Ikeda",
+    "Voice Actor (ENG)": "Laura Bailey"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Cloud of Darkness is defensive fighter who operates between close range and midrange. Each bravery attack serves as a moving stance, with 3 different attacks depending on the input timing. This lets Cloud of Darkness play a reactive play style. It can occupy space with mid priority attacks on the ground, or deliver a flurry of blows. Various HP attacks are available for combos and neutral situations. Anti-Air Particle Beam for solo HP combos, Aura Ball for stalling, and the distinct Wrath Particle Beam command block for stopping aggressive opponents.",
+        "Despite low base ATK stat, Cloud of Darkness benefits from damage builds and Side by Side builds alike. It also has a unique synergy with a Mindbreak build for ludicrous amounts of bravery, even if it’s a bit gimmicky.",
+        "Historically Cloud of Darkness has been considered one of the weakest characters in competitive play. The main reason stems from bravery attacks; Cloud of Darkness must complete the 3-step stance before it can dodge. That means each bravery attack is an exceptionally long commitment, which makes it difficult to apply pressure and fill assist gauge quickly. Slower assist gain via whiffs is a notable issue for momentum (see Cecil and Kefka). Most third-stage bravery followups don’t offer notable properties to offset their startup |",
+        "The time it takes before an attack can do damage.",
+        "time, either. Air braveries in particular offer little protection against rushdown |",
+        "An offensive playstyle that focuses on getting close to the opponent and attacking them relentlessly.",
+        ", while being blockable. Getting high reward in punish |",
+        "Attacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.",
+        "situations often requires assist, wall and / or ground, which Cloud of Darkness cannot enforce very easily, quickly or safely. Slow mobility also means Cloud of Darkness fights an uphill battle against defensive opponents, who outpace it for EX Cores and assist gauge.",
+        "Cloud of Darkness can thrive just outside poking |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        "range as the defender, but it doesn't have many notable strengths to compensate for its drawbacks. Minimizing risk and staying ahead in competition can prove very challenging at higher levels of play."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "Command Block - Wrath Particle Beam is one of the safer command blocks in the game, very useful for self defense after air dodges and stopping aggressive opponents.\nGlide - Cloud of Darkness can move during bravery attacks, which make it a little safer to whiff and respond to situations.",
+              "High Commitment Bravery Attacks - Bravery attack animations are long, which causes several drawbacks. They are more telegraphed, vulnerable to (advancing) blocks, cause more risk due to long recovery , have inconsistent combo opportunities despite the long startup , and more.\nAssist Gain on Whiff - Assist gauge cannot be filled quickly by just throwing out attacks. This makes it much harder to utilize an important resource for damage, and create comebacks.\nAnti-Air Issues - Cloud of Darkness has incentive to fight on the ground, but it is difficult to stop opponents from hovering above it. Slow startup, high commitment, blind spots and unreliable hitboxes contribute to this. Tentacle of Pain (1) also has lackluster assist conversions despite being the fastest option.\nAnti-Turtling - Opponents can run away and outpace Cloud of Darkness for EX Cores and assist gauge over time. Relatively slow mobility, telegraphed HP attacks with long recovery and lackluster long range provocation tools make it difficult to open up defensive players first.\nRange Dilemma - Cloud of Darkness can fight more safely just outside close range, when opponents are trying to attack. However, the fastest bravery punish tools require being in close range. This can make it harder for Cloud of Darkness to act as an attacker or do abare ; Small initial hitboxes on BRV stances, limited mixup potential and the risk associated with long whiff recovery afterwards.\nHigh Capacity Point Cost - A full attack loadout has a higher baseline cost, which makes it harder to fit all extra abilities."
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "main": {
+          "intro": "All bravery attack starters share the following properties:",
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/2c/Brv_cloud_of_darkness_tentacle_of_pain_1st.jpeg",
+              "damage": "21 (7, 7, 7)",
+              "startup": "13F / 33F / 53F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "each 9",
+              "effects": "--",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "",
+              "name": null,
+              "notes": "Cloud of Darkness' bravery attacks start with a 3-step stance. Three tentacle swipes are performed during this stance. The followup changes depending on when Circle <img></img> was pressed. For example, press Circle after the first swipe for Followup 1, or after third swipe for Followup 3. Cloud of Darkness can move in different directions during this stance, which can create distance or increase the effective range.\nSwipe 1\nSwipe 1\nSwipe 2\nSwipe 2\nSwipe 3\nSwipe 3\nThe attack ends automatically after the third swipe. Cloud of Darkness can only dodge at this point in the attack animation. This applies to all of Cloud of Darkness' bravery attacks. Also, all three swipes combo into each other if Cloud of Darkness moves towards the opponent during the swipes."
+            }
+          ]
+        },
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Followup 1",
+                "Followup 2",
+                "Followup 3"
+              ],
+              "image": "https://dissidia.wiki/images/2/2c/Brv_cloud_of_darkness_tentacle_of_pain_1st.jpeg",
+              "damage": [
+                "30 (8, 8, 14)",
+                "48 (12 x 4)",
+                "12 (4 x 3)"
+              ],
+              "startup": [
+                "+4F",
+                "+4F",
+                "+34F"
+              ],
+              "type": [
+                "Physical",
+                "Physical",
+                "Magical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low",
+                "Ranged Low"
+              ],
+              "exForce": [
+                "90",
+                "0",
+                "0"
+              ],
+              "effects": [
+                "Chase",
+                "Wall Rush",
+                "--"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "?? (30)",
+              "description": "Omni-range tentacle attack. Change combo with input timing.",
+              "name": "Tentacle of Pain",
+              "notes": "Followup 1 (3 Bites) \"Devour!\"\nFollowup 1 (3 Bites) \"Devour!\"\nFollowup 2 (Push) \"Attack!\"\nFollowup 2 (Push) \"Attack!\"\nFollowup 3 (Bolt) \"Bite!\"\nFollowup 3 (Bolt) \"Bite!\"\nPain 1 (3 Bites)\nThis serves the role of a quick combo string if Cloud of Darkness cannot afford to wait for anything else. It has plenty of hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nand nice 90 EX, but assist combos are not practical without walls or preemptive assist calls.\nPain 2 (Push)\nA midrange attack. If the opponent is pushing for offense (e.g. looking for Pain 3 Bolt), this can blow them away. It's low priority so it can be blocked, but the range and speed is enough to catch opponents off guard occasionally. The base damage is quite high, and the Wall Rush leads to assist combos.\nPain 3 (Bolt)\nBolt is used as a combo starter and occasionally as a midrange punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ntool. The initial swipes combo into the bolts, which leads to either air braveries or Anti-Air Particle Beam. Pain 3 has enough hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nto combo into assists as well, so if the opponent misses or dodges at a bad time, Cloud of Darkness can still get notable reward from this. Keep an eye on when the opponent dodges near the ground, as landing lag could leave them vulnerable to this attack."
+            },
+            {
+              "variants": [
+                "Followup 1",
+                "Followup 2",
+                "Followup 3"
+              ],
+              "image": "https://dissidia.wiki/images/e/eb/Brv_cloud_of_darkness_tentacle_of_spite_1st.jpeg",
+              "damage": [
+                "28",
+                "40 (3 x 8, 16)",
+                "18 (3 x 6)"
+              ],
+              "startup": [
+                "+4F",
+                "+8F",
+                "+12F"
+              ],
+              "type": [
+                "Physical",
+                "Physical",
+                "Magical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Mid",
+                "Ranged Mid"
+              ],
+              "exForce": [
+                "0",
+                "84",
+                "0"
+              ],
+              "effects": [
+                "Wall Rush",
+                "--",
+                "--"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "60 (30)",
+              "description": "Omni-range tentacle attack. Change combo with input timing.",
+              "name": "Tentacle of Spite",
+              "notes": "Followup 1 (Sweep) \"Go!\"\nFollowup 1 (Sweep) \"Go!\"\nFollowup 2 (Spin) \"Surrender!\"\nFollowup 2 (Spin) \"Surrender!\"\nFollowup 3 (Orb) \"Repent!\"\nFollowup 3 (Orb) \"Repent!\"\nTentacle of Spite has some of the more useful mid priority moves, which can be used in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. Mix this up with Tentacle of Pain to make it harder for opponents to approach when they go for it.\nSpite 1\nWide sweep, a quick \"get off me\" attack. Wall Rush leads to assist combos. The neat thing here is that even if the opponent has Auto Recovery support ability equipped, Spite 1 can force a ground Wall Rush reaction. That means assist combos are possible on flat ground even if walls are far away.\nSpite 2\nA useful mid priority self defense tool, and assist combo starter. If the opponent is getting too comfortable blocking or attacking into Cloud of Darkness, this can keep them in check. Cloud of Darkness can call assist for a combo, but it should move away from opponent, so they don't get knocked away.\nAfter Spite 2 sends flying, it will enter a recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nperiod. The red electric visuals stay on, but Cloud of Darkness is vulnerable during this time. Since this attack stays active |\nThe period of time when an attack is capable of doing damage.\nfor a moment, opponents can prepare for a counterattack if it misses. Watch out for that.\nSpite 2 also has a moderate strength vacuum effect. This is both a good and a bad thing; It increases its effective range and it becomes harder for opponents to whiff punish |\nHitting an opponent who missed (whiffed) their attack.\n. However, it's also harder to make the last hit miss for assist combos (compared to Suffering 2). The last hit can also miss unintentionally if the opponent is being hit at the top of Spite 2's hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\n.\nSpite 3\nThis is one of Cloud of Darkness' stronger ground braveries. Spite 3 is a homing orb that drags the opponent upwards on hit. The Ranged Mid priority and medium travel speed make it useful for occupying space and supporting offensive approaches. It staggers regular blocks, which leaves opponents wide open to attacks. On hit, it holds the opponent long enough for assist combos as well.\nSpite 3 has a notable blind spot above Cloud of Darkness, because it always moves forward first, before realigning rather slowly. Watch out for opponents hovering in front Cloud of Darkness, as Spite 3 cannot anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nat a 45° degree angle immediately. The projectile can also miss if the opponent is moving at a high enough speed.\nDespite being capable of inflicting 6 hits, the upward knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nand relative travel speed often results in 4-5 hits instead. Spite 3 is also prone to dropping the opponent if it hits extended limbs."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Followup 1",
+                "Followup 2",
+                "Followup 3"
+              ],
+              "image": "https://dissidia.wiki/images/2/2d/Brv_cloud_of_darkness_tentacle_of_suffering_1st.jpeg",
+              "damage": [
+                "30",
+                "40 (3 x 10, 10)",
+                "each (8)"
+              ],
+              "startup": [
+                "+2F",
+                "+4F",
+                "+12F"
+              ],
+              "type": [
+                "Physical",
+                "Physical",
+                "Magical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low",
+                "Ranged Low"
+              ],
+              "exForce": [
+                "60",
+                "90",
+                "0"
+              ],
+              "effects": [
+                "Chase",
+                "--",
+                "--"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "60 (30)",
+              "description": "Omni-range tentacle attack. Change combo with input timing.",
+              "name": "Tentacle of Suffering",
+              "notes": "Followup 1 (Thrust) \"Go!\"\nFollowup 1 (Thrust) \"Go!\"\nFollowup 2 (360°) \"Thrash about!\"\nFollowup 2 (360°) \"Thrash about!\"\nFollowup 3 (2 Balls) \"Assault!\"\nFollowup 3 (2 Balls) \"Assault!\"\nSuffering 1 (Thrust)\nA quick thrust with high vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n. Recommended for creating distance and punishing |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nopponents near walls. It has enough hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nto combo into Aerith assist anywhere with Chase. However, other assists (Kuja, Jecht) usually require ceiling / corner, which have more situational and demanding requirements. Suffering 1 also works as a damaging combo filler |\nAn attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.\nmove during Exdeath air BRV assist.\nSuffering 2 (360°)\nNotorious for its surrounding reach, telegraphed animation and vulnerability to blocks. Works as a punish tool in close range (e.g. after block staggers), and occasionally as a surprise attack against players misjudging their positioning in the front or above. Suffering 2 holds long enough for midscreen |\nAny space in the stage where neither player is in a corner or at a wall. Basically means no walls or ceilings nearby.\nassist combos. Just make sure to move away from the opponent after using assist, so Cloud of Darkness does not push the opponent away.\nSuffering 3 (2 Balls)\nA relatively safe option against blocks at mid range. The projectiles don't have much tracking or hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n, but if both connect at mid range, they can combo into assists. Long range snipes are difficult, but can be attempted once in a while to catch reckless opponents. Against characters such as The Emperor and Ultimecia, Suffering 3 can be fired against walls, reflected back and thus use as a tool for activating Wrath Particle Beam.\nGliding with analog stick <img></img> is worth noting here: Aggressive opponents may attempt to approach and block early. The glide's movement allows Cloud of Darkness to avoid the block and potentially hit the projectiles while they're stuck in recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n. It's the kind of move that can play off of Cloud of Darkness' weakness as a high commitment attacker. Be careful against opponents who are willing to Free Air Dash deeper though, as the projectiles lose to dashes and may put Cloud of Darkness in a high pressure situation afterwards."
+            },
+            {
+              "variants": [
+                "Followup 1",
+                "Followup 2",
+                "Followup 3"
+              ],
+              "image": "https://dissidia.wiki/images/b/ba/Brv_cloud_of_darkness_tentacle_of_scorn_1st.jpeg",
+              "damage": [
+                "30 (10, 20)",
+                "28",
+                "each (3)"
+              ],
+              "startup": [
+                "+10F",
+                "+10F",
+                "+10F"
+              ],
+              "type": [
+                "Physical",
+                "Physical",
+                "Magical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low",
+                "Ranged Low"
+              ],
+              "exForce": [
+                "30",
+                "0",
+                "0"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Wall Rush",
+                "--"
+              ],
+              "cancels": [
+                "",
+                "",
+                ""
+              ],
+              "assistGain": [
+                "",
+                "",
+                ""
+              ],
+              "cp": "60 (30)",
+              "description": "Omni-range tentacle attack. Change combo with input timing.",
+              "name": "Tentacle of Scorn",
+              "notes": "Followup 1 (2 Hits) \"Devour!\"\nFollowup 1 (2 Hits) \"Devour!\"\nFollowup 2 (Vertical) \"Attack!\"\nFollowup 2 (Vertical) \"Attack!\"\nFollowup 3 (Projectiles) \"Assault!\"\nFollowup 3 (Projectiles) \"Assault!\"\nScorn 1 (2 Hits)\nA quick 2-hit jab. Recommended for pushing opponents away, whiff punishing |\nHitting an opponent who missed (whiffed) their attack.\nreckless attacks. The Wall Rush can lead to assist combos, making it useful near walls. The hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nand knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nare fairly short, though (roughly 2.5 World of Darkness tiles).\nScorn 2 (Vertical)\nLong reaching attack that goes up or down depending on the opponent's position. For example, if the opponent is above Cloud of Darkness, Scorn 2 goes up. This is useful for catching the opponent's blind spots and punishing grounded attacks with longer recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, such as Cloud's Cross-slash. Scorn 2 Wall Rushes whether it hits up or down, which can lead to assist combos.\nThe further Cloud of Darkness is, the easier it is to react and block this attack specifically. Cloud of Darkness does not have an aerial mid priority move to use as a mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\n, so exercise caution when using this.\nAlthough Scorn 2 moves Cloud of Darkness forward, it does not move much up or downward. The attack also has a deadzone in front of Cloud of Darkness. This can make Scorn 2 miss sometimes, particularly when aiming up at an opponent at equal heights\nScorn 3 (Projectiles)\nThis is occasionally used to pressure opponents below Cloud of Darkness. If multiple projectiles hit, Cloud of Darkness can attempt to Free Air Dash, and combo into other attacks afterwards. It can be challenging to block all the projectiles, but they do lose to dashes, so be careful. Similar to Suffering 3, when used sparingly, Scorn 3 can be a relatively low risk option."
+            }
+          ]
+        }
+      },
+      "moveCount": 5,
+      "sources": [
+        "https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/1c/Hp_cloud_of_darkness_anti_air_1.jpeg",
+              "damage": "9 (1 x 9)",
+              "startup": "39F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "87",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Fire columns of darkness around self. Short range, fast deployment.",
+              "name": "[Anti-air] Particle Beam",
+              "notes": "Anti-Air is used in solo combos after Pain 3 (Bolts), after block staggers, and to occasionally threaten airborne opponents. The beams stay active |\nThe period of time when an attack is capable of doing damage.\nfor a moment, which can also catch nearby air dodges. Cloud of Darkness does not move far, which makes it harder to hit this move even after blocking attacks. However, on hit it leads to consistent assist combos anywhere. Because of this, it's also pretty rewarding as a solo combo ender with Side by Side builds.\nCloud of Darkness is considered grounded while using Anti-Air. It has enough recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nthat even Kuja BRV assist can punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nafterwards, so exercise caution when using Anti-Air Particle Beam. If Anti-Air beam connects at the very top or outside of the attack, opponents tend to fall out before the last hits."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/2/2b/Hp_cloud_of_darkness_wide_angle.jpeg",
+              "damage": "-",
+              "startup": "61F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire wall of force straight ahead. Great vs. flank attacks.",
+              "name": "[Wide-Angle] Particle Beam",
+              "notes": "Wide-Angle Particle Beam is a 1-hit HP that has few different functions: The wide hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nmakes it lenient for finishing assist combos from various positions. The startup |\nThe time it takes before an attack can do damage.\nis quite slow, but Wide-Angle can also catch ground dodges if the opponent is auto piloting |\nActing without thinking, usually in a predictable manner.\nthem.\nWide-Angle also has unique synergy with Mindbreak builds; The long travel distance makes it effective for destroying stage elements in World of Darkness and Pandaemonium - Top Floor. That means Cloud of Darkness can accumulate bravery quickly just by hitting pillars etc. with Wide-Angle Particle Beam.\nThis attack has fairly long recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nafter firing, so Cloud of Darkness is vulnerable to dodge > counter attacks and assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\n.\nA common mid level strategy is pairing Wide-Angle with Spite 3 / assist to force a dodge, and create a checkmate |\nA situation where a player has no options to avoid losing a situation or a match. For example, hitting an opponent who has a full EX gauge and killing bravery can activate EX Revenge and guarantee a win.\ninteraction. This is boosted further with EX Mode's Null Particle Beam effect, but note, that this is still vulnerable to assists.\nThe hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nis not quite as high as the visual."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c8/Hp_cloud_of_darkness_long_range_1.jpeg",
+              "damage": "-",
+              "startup": "83F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "each 30",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire force bursts at foe. Slow start, homes for long time.",
+              "name": "[Long-Range] Particle Beam",
+              "notes": "Long-Range Particle Beam is used as a secondary zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\ntool in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. It leads consistent assist combos on hit. The startup |\nThe time it takes before an attack can do damage.\nis quite slow, but gliding with analog stick <img></img> can make it safer against ground assist attacks. Once Long-Range Particle Beam is fired, it stays active |\nThe period of time when an attack is capable of doing damage.\nfor a long time. It has tall hitboxes |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nand medium tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n, so opponents must dodge through all the beams to be safe. All of the beams can hit separately, but facilitating even a second HP hit is not seen often.\nLong-Range Particle Beam has enough recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nto be vulnerable to counterattacks. However, it's just short enough to avoid slower ground BRV assists such as Kuja and Tidus. That means Long-Range Particle Beam is safer to use on average if assists don't interrupt it early, or if the opponent is not close enough to dodge through and retaliate.\nThis is also one of the best attacks to use with Cloud of Darkness' landing cancel bug, which makes it safer and a solo combo starter. Anti-Air Particle Beam and air braveries can follow up afterwards this way."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/a/ad/Hp_cloud_of_darkness_feint_1.jpeg",
+              "damage": "-",
+              "startup": "61F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Wall Rush, Dodge",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Dodge] Hide, then fire beam cannon. Evades on start.",
+              "name": "[Feint] Particle Beam",
+              "notes": "Feint Particle Beam is used to avoid enemy attacks. Feint is also Cloud of Darkness' strongest HP damage combo filler |\nAn attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.\nwhen applicable with air BRV Jecht / ground BRV Kuja assist. It's a 1-hit HP and the explosion stays active |\nThe period of time when an attack is capable of doing damage.\nfor quite a long time.\nUnfortunately the invincibility period is deceptively short, and ends before Cloud of Darkness reappears. Combined with the slow travel speed, it is somewhat unreliable at avoiding attacks. That being said, having it is still valuable, especially since the movement direction can be controlled freely."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/7f/Hp_cloud_of_darkness_wrath_g_1.jpeg",
+              "damage": "9 (1 x 9)",
+              "startup": "1F~13F (Block) ~56F (missed block recovery) 45F (counter attack)",
+              "type": "Magical",
+              "priority": "Block High / Ranged High",
+              "exForce": "87",
+              "effects": "Block",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Block] Create force shield. If block succeeds, attacks HP.",
+              "name": "[Wrath] Particle Beam (ground)",
+              "notes": "Wrath Particle Beam is Cloud of Darkness' signature command block |\nAn attack that has block properties. Most of them block instantly and attack after a moment, e.g. Sephiroth's Scintilla.\n. It is used to for self-defense after dodging or in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\nagainst aggressive opponents. Wrath staggers dashes, as well as melee bravery attacks with low AND mid priority (e.g. Squall Heel Crush).\nAfter a successful counter, Cloud of Darkness becomes airborne and spawns a beam at the opponent's location. The beam deals HP damage at the end, and it has enough hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\nto start assist combos afterwards. The instant block timing out of dodges and the threat of solo HP damage make it effective for instilling respect in close-range characters. When the counter activates, Cloud of Darkness is briefly invincible. It's pretty much instant, and lasts until the counter beam appears. If Cloud of Darkness is hit before the beams finish, they disappear without dealing HP damage.\nWrath can counter projectiles as well (e.g. Squall Fire Barret), but it is not as effective by comparison. Countering a projectile does not stagger the opponent, so they can often dodge the delayed beam spawn on reaction. If the opponent is in close-range, they can get a solo punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nafterwards. Cloud of Darkness is also briefly vulnerable to assists after firing the beam, so it's not very effective as an anti-zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\ntool.\nThe block duration is fairly short, so proper timing (and confidence) is required to defend successfully with this. If the opponent catches on to Cloud of Darkness' timing, it can lead to setbacks and even full Assist Charge if this is used at low health."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/97/Hp_cloud_of_darkness_aura_ball_1.jpeg",
+              "damage": "-",
+              "startup": "63F / 73F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "each 60",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Detonated force sphere. Charge to create multiple balls; can aim with the analog stick.",
+              "name": "Aura Ball",
+              "notes": "When charging, hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nappears in 3 frames after button release.\nAura Ball is typically used as a passive self-defense tool. It can fill assist gauge more safely (not quickly) thanks to the coverage it provides. Aura Ball is quite slow to start, but Cloud of Darkness can move towards them (<img></img>) as they are fired. The HP explosions activate quickly on button release, so if things look bad, Cloud of Darkness can react in the blink of an eye. Even if Cloud of Darkness gets hit during this move, Aura Ball still explodes.\nAura Ball explosions have a large enough hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nand long active |\nThe period of time when an attack is capable of doing damage.\nframes to stop assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\n. Cloud of Darkness' dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nrecovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nis also relatively short. That means opponents are hard pressed to punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nCloud of Darkness by the time it would be safe to do so. All these properties make Aura Ball a relatively safe attack to use, but it relies on opponents approaching Cloud of Darkness.\nWhen casting multiple Aura Balls, watch out for projectiles such as Sephiroth's Shadow Flare Gilgamesh's Electrocute. Aura Ball cannot hurt opponents who are not close to them. Disjointed |\nA part of an attack that isn't close to the character's hurtbox. If this part of an attack gets hit by opponent's attack, the character using it will not take damage.\nmid range attacks, such as Garland's Chain Cast can also blow through, so prepare to dodge or use assist if necessary.\nThe long active frames and relatively early dodge window are also notable for okizeme |\nJapanese term for attacking an opponent who is getting up.\n. Bravery Wall Rush or Fusillade can give time to set up a late Aura Ball hit, which can lead to solo combos in best cases. This is not common or practical in open spaces, but it may see success occasionally in cramped spaces and corners."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/72/Hp_cloud_of_darkness_0_form.jpeg",
+              "damage": "2 x 8 (16)",
+              "startup": "63F",
+              "type": "Magical",
+              "priority": "Melee High",
+              "exForce": "24",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Fire huge particle beam. Very accurate and powerful.",
+              "name": "[0-form] Particle Beam",
+              "notes": "0-form is one of Cloud of Darkness' staple air HP attacks. It's useful as an assist combo ender and block stagger counter. It tracks |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nhorizontally and diagonally, and stays active |\nThe period of time when an attack is capable of doing damage.\nlong enough to even catch air dodges within range. 0-form has very high knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\n, which makes it more likely to Wall Rush for extra damage (or assist combos if possible).\n0-form is relatively high reward on hit, but also high risk; It is quite slow to start, so it's not as effective for catching blocks as it could be. 0-form has decent range, but it is too short to catch Adamant Chains boosted air dodges even from up close. This is also Cloud of Darkness' only Melee High priority attack, which means reflecting Ranged High projectiles with it leaves it wide open for counter attacks. The recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\non 0-form is pretty long."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3c/Hp_cloud_of_darkness_fusillade_1.jpeg",
+              "damage": "-",
+              "startup": "83F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Salvo of force bursts. Ends if they hit the ground.",
+              "name": "[Fusillade] Particle Beam",
+              "notes": "Projectiles can hit early in front of Cloud of Darkness\nCan move around with analog stick <img></img> until projectiles come out\nFusillade Particle Beam is similar to Long-Range Particle Beam in that it's used as a secondary pressure tool in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n. It's generally pretty slow, but it can force a dodge (or other defensive actions) against passive opponents in midrange.\nThe projectiles become active |\nThe period of time when an attack is capable of doing damage.\nas soon as they're fired, protecting Cloud of Darkness from the front. Then they move a certain distance away from it before they start homing in on the opponent. The exact dodge timing can appear vague to opponents, as the projectiles hit at slightly different timings, and from different angles. After Cloud of Darkness dodges, the projectiles can still inflict damage for a short period of time. So if the opponent fails to interrupt Fusillade in time, it can make it harder to survive unscathed.\nCloud of Darkness can move until the projectiles have been fired, which can make it marginally safer against approaching opponents. It is generally unsafe to use if the opponent is willing to interrupt with assist, though. Watch out for aggressive opponents who may try to dash and interrupt Fusillade before the projectiles even come out.\nFusillade can also apply further long distance pressure after Jecht air BRV assist. By taking advantage of Jecht's long knockdown |\ntime, Cloud of Darkness can fire another Fusillade, which can be difficult to avoid or punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\n."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/4a/Hp_cloud_of_darkness_wrath_A_1.jpeg",
+              "damage": "1 x 9 (9)",
+              "startup": "1F~13F (Block) ~56F (missed block recovery) 45F (counter attack)",
+              "type": "Magical",
+              "priority": "Block High / Ranged High",
+              "exForce": "87",
+              "effects": "Block",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Block] Create force of shield. If block succeeds, attacks HP.",
+              "name": "[Wrath] Particle Beam (midair)",
+              "notes": "Wrath's aerial version is highly recommended for its defensive capabilities. It acts the same way as the ground version; Instant guard, short duration, spawns a beam at the opponent's location if it blocks something. Since competitive Dissidia 012 is often focused on aerial combat, this version of Wrath is a very valuable self-defense tool against aggressive opponents.\nWrath blocks instantly, so it can be used after air dodges to make dodging much safer than normally possible. This can cause hesitation in melee characters, since they can get punished for trying to dash in and push their attack. Aerial Wrath still leads to assist combos, but it also does not yield consistent reward against projectiles. Cloud of Darkness is briefly vulnerable to assist attacks after firing the beam, so be careful when countering projectiles."
+            }
+          ]
+        }
+      },
+      "moveCount": 9,
+      "sources": [
+        "https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Flood of Darkness!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nNull Particle Beam",
+        "Cloud of Darkness' EX Mode has a couple notable traits for neutral |",
+        "The stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.",
+        "and niche combo purposes. EX Modes are often reserved for guaranteeing victory with an assist combo, so Cloud of Darkness may not benefit from the unique ability much on average.",
+        "To make matters worse, Cloud of Darkness is not efficient at filling EX gauge. Most of its attacks don't provide EX, and EX Core races are often challenging due to slower dash speed and commitment to long attack animations. That's not to say Cloud of Darkness' EX Mode is useless, but it is certainly held back by a number of factors from reaching its full potential."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Null Particle Beam",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Always active while in EX Mode] The recovery time after all attacks can be cancelled by performing an HP attack.",
+            "Null Particle Beam has some utility in neutral |",
+            "The stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.",
+            ". Instead of dodging after an attack, an HP attack can be done instead. This has a couple use cases. The most notable one is safer whiffs |",
+            "A missed attack that doesn't make any contact.",
+            ": Attacks are safer to throw out in neutral |",
+            "The stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.",
+            ", because Wrath Particle Beam can be used quickly to guard against incoming attacks. This works for both bravery attacks and HP attacks alike.",
+            "This ability also affects Cloud of Darkness' combo potential in a few ways. Pain 3 (Bolts) > Anti-Air Particle Beam solo combo becomes a bit more lenient to do, since Anti-Air comes out earlier. There's an even stronger option though; Pain 3 > Wide-Angle / Feint becomes a reliable midscreen |",
+            "Any space in the stage where neither player is in a corner or at a wall. Basically means no walls or ceilings nearby.",
+            "combo that also does HP Wall Rush damage.",
+            "There are situational (and difficult) combos too: Suffering 1 can combo into 0-form Particle Beam at the wall. Hit Suffering 1 near the end of its range, and from above the opponent, then press 0-form Particle Beam with perfect 1 frame timing. Pain 1 (3 Bites) into Anti-Air Particle Beam also works if the opponent is at a corner. [1]",
+            "Null Particle Beam also allows more frequent use of other HP attacks to fill the stage, such as Wide-Angle and Aura Ball. Even Wrath can be used more frequently within a short period of time.",
+            "There is no apparent upper limit for chaining HP attacks after an attack's recovery |",
+            "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".",
+            ". As long as EX Mode is active, Cloud of Darkness can cancel |",
+            "An action that is interrupted early by doing another action.",
+            "into another HP attack. Please note that if an HP attack hits, repeated Square <img></img> inputs can accidentally activate EX Burst early."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Ultra Particle Beam",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "A particle beam that leaves only dust in its wake. Fill the gauge by pressing circle. Release when it reaches 120%.",
+            "Ultra Particle Beam requires holding Circle <img></img> until the gauge reaches 120 %. The gauge fills more slowly as it reaches maximum value, so prepare to release Circle quickly once it does. The execution is similar to Exdeath's EX Burst.",
+            "The bravery damage is not that high due to low base damage on the initial hits. Even so, it is effective for finishing a match if a Wall Rush assist combo left at low health / bravery."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "2 x 4 (8)",
+                  "7 x 14 (106 total)",
+                  "Magical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [
+        "Cloud of Darkness has a handful of combo routes both solo and with assist. Solo combos get more situational and difficult pretty quickly, but assists can help set them up.",
+        "This section does not show all combos right now. They will be listed more thoroughly on a separate combo page in the future."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [
+            "The most practical solo combo route usually involves Tentacle of Pain 3 (Bolts), followed by Spite 3 (Orb).",
+            "The damage values assume that any preceding tentacle hits connected."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "BRV StarterGroundSolo BRV to HP Combo Recommended!\nTentacle of Pain 3 (Bolts) > Anti-Air Particle Beam\n42 + HP\n114\nBase Damage (Breakdown): 7, 7, 7 > 12 (Bolts) > 9 + HP\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 9, 9, 9 > 0 > 87\nThis is the most common solo combo Cloud of Darkness can do in competitive matches. There is just enough hit stun to connect Anti-Air Particle Beam after the bolts. Occasionally it may miss with repeated button presses, because there is no input buffer to help with Anti-Air. However, if Cloud of Darkness is slightly late, the opponent still has to dodge with precise timing to escape. This can give a little of bit of leniency against human opponents.\nAfter Anti-Air connects, assists can also follow up. Jecht BRV assist can even set up this combo again."
+                ],
+                [
+                  "Projectile StarterGround, Midrange / Long rangeBRV Damage\nTentacle of Spite 3 (Orb) > Jump > Free Air Dash > Spite 3 HIT > Tentacle of Suffering 2 (360°)\n60-94\n108\nBase Damage (Breakdown): 6-40 > 7, 7 > 40\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 9, 9 > 90\nThis must be done from long range, so Cloud of Darkness has enough time to become actionable. Spite 3 drags the opponent upwards with multiple hits, which gives enough time to Free Air Dash and use air braveries. Then if Spite 3 hits, Cloud of Darkness is in good position to combo afterwards.\nBoth Tentacle of Suffering and Tentacle of Scorn work here, but mileage will vary depending on the followup. Be sure to jump and Free Air Dash quickly, and dash as far as possible to get the bravery follow-up."
+                ],
+                [
+                  "BRV StarterGround, Corner, EX ModeEX Mode BRV to HP\nTentacle of Spite 1 (3 Hits) > Anti-Air Particle Beam\n46 + HP\n186\nVideo\nBase Damage (Breakdown): 7 > 30 > 9 + HP\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 9 > 90 > 87\nThis combo is not that practical for its steep requirements, but it's a combo that Cloud of Darkness could not do otherwise. Corner cuts the knockback , and the EX mode ability lets Cloud of Darkness chain into an HP attack during recovery , making this combo possible.\nThe base damage is not much higher than Pain 3 > Anti-Air Particle Beam, but EX mode's higher critical hit rate can increase the damage. It also produce more EX Force than usual."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist (Jecht)",
+          "text": [
+            "Practical assist combos usually start with any wall rush, Spite 2 (Spin), Spite 3 (Orb), Suffering 2 (360°) and Scorn 2 (Vertical)."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Condition\nCombo\nBase Damage\nEX\nNotes"
+                ],
+                [
+                  "BRV StarterGround, Wall\nTentacle of Spite 1 (Sweep) > WR > AST BRV > Wide Angle Particle Beam\n???\n???"
+                ],
+                [
+                  "BRV StarterAir, Wall Rush (Ground)Air-to-Ground BRV to HP\nTentacle of Scorn 2 (Vertical) > WR > AST BRV > Free Air Dash > 0-form Particle Beam\n???\n???"
+                ],
+                [
+                  "Projectile StarterProjectile Conversion\nTentacle of Spite 3 (Orb) > AST BRV > Tentacle of Pain 3 (Bolts) > Anti-Air Particle Beam\n???\n???"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "builds": {
+      "text": [
+        "Main article: Cloud of Darkness (012) Builds",
+        "Cloud of Darkness can be built for damage either via high base bravery or high ATK and HP Wall Rush. The following build can be used either for long-term EX gauge, or burst damage with Side by Side and assist combos."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Damage (High Base BRV)",
+          "text": [
+            "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Stats"
+                ],
+                [
+                  "HP",
+                  "9883"
+                ],
+                [
+                  "CP",
+                  "450"
+                ],
+                [
+                  "BRV",
+                  "1523"
+                ],
+                [
+                  "ATK",
+                  "176"
+                ],
+                [
+                  "DEF",
+                  "184"
+                ],
+                [
+                  "LUK",
+                  "61"
+                ],
+                [
+                  "Max Booster",
+                  "x3.3"
+                ]
+              ]
+            },
+            {
+              "caption": "Special Effect: None",
+              "rows": [
+                [
+                  "Equipment"
+                ],
+                [
+                  "Assist",
+                  "Kuja"
+                ],
+                [
+                  "Weapon <img></img>",
+                  "Everdark"
+                ],
+                [
+                  "Hand <img></img>",
+                  "Chainsaw"
+                ],
+                [
+                  "Head <img></img>",
+                  "Thornlet"
+                ],
+                [
+                  "Body <img></img>",
+                  "Maximillian"
+                ],
+                [
+                  "Accessory 1",
+                  "Sniper Eye <img></img>"
+                ],
+                [
+                  "Accessory 2",
+                  "Dismay Shock <img></img>"
+                ],
+                [
+                  "Accessory 3",
+                  "Battle Hammer <img></img>"
+                ],
+                [
+                  "Accessory 4",
+                  "BRV = 0 <img></img>"
+                ],
+                [
+                  "Accessory 5",
+                  "Summon Unused <img></img>"
+                ],
+                [
+                  "Accessory 6",
+                  "Pre-EX Mode <img></img>"
+                ],
+                [
+                  "Accessory 7",
+                  "Pre-EX Revenge <img></img>"
+                ],
+                [
+                  "Accessory 8",
+                  "Blue Gem <img></img>"
+                ],
+                [
+                  "Accessory 9",
+                  "First to Victory <img></img>"
+                ],
+                [
+                  "Accessory 10",
+                  "Miracle Shoes <img></img>"
+                ],
+                [
+                  "Summon <img></img>",
+                  "Rubicante"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "<img></img> Tentacle of Pain",
+                  "<img></img> Tentacle of Suffering"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "↑+<img></img> Tentacle of Spite",
+                  "↑+<img></img> Tentacle of Scorn"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "<img></img> Anti-air Particle Beam",
+                  "<img></img> 0-form Particle Beam"
+                ],
+                [
+                  "↑+<img></img> Long-Range Particle Beam",
+                  "↑+<img></img> Fusillade Particle Beam"
+                ],
+                [
+                  "↓+<img></img> Feint Particle Beam",
+                  "↓+<img></img> Wrath Particle Beam"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Actions"
+                ],
+                [
+                  "Ground Evasion"
+                ],
+                [
+                  "Midair Evasion"
+                ],
+                [
+                  "Ground Block"
+                ],
+                [
+                  "Midair Block"
+                ],
+                [
+                  "Aerial Recovery"
+                ],
+                [
+                  "Recovery Attack"
+                ],
+                [
+                  "Controlled Recovery"
+                ],
+                [
+                  "Wall Jump"
+                ],
+                [
+                  "Free Air Dash"
+                ],
+                [
+                  "Omni Ground Dash+"
+                ],
+                [
+                  "Multi Air Slide"
+                ],
+                [
+                  "Free Air Dash Boost"
+                ],
+                [
+                  "Assist Gauge Up Dash"
+                ],
+                [
+                  "Ground Evasion Boost"
+                ],
+                [
+                  "Midair Evasion Boost"
+                ],
+                [
+                  "Evasion Boost"
+                ],
+                [
+                  "Descent Speed Boost"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Support"
+                ],
+                [
+                  "Always Target Indicator"
+                ],
+                [
+                  "EX Core Lock On"
+                ],
+                [
+                  "Auto Assist Lock On"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Extra"
+                ],
+                [
+                  "Precision Evasion"
+                ],
+                [
+                  "EXP to HP"
+                ],
+                [
+                  "Machinery"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "CP"
+                ],
+                [
+                  "440 / 450"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Build Overview",
+          "text": [
+            "The booster multiplier is x2.3 by default. x3.3 with BRV = 0 <img></img> active.",
+            "This is a damage build that focuses on high HP damage with Wall Rush. If Cloud of Darkness starts an assist combo with an HP attack, it can easily do 3000+ HP damage in total. And because the damage comes from naturally high bravery, there is no need to worry about the opponent's DEF stat reducing damage that much.",
+            "This build makes use of Cloud of Darkness' (CoD) unique LV100 weapon Everdark for its bravery recovery. This creates room for other options, notably base bravery, HP Wall Rush damage and meter depletion. The booster accessories lean into this, with BRV = 0 <img></img> being a standout pick; It affects both Sniper Eye and Dismay Shock whenever an HP attack Wall Rushes (e.g 0-form Particle Beam). Miracle Shoes <img></img> and Maximillian <img></img> make up for the max HP reduction from Chainsaw <img></img> and Thornlet <img></img>.",
+            "This build is recommended against Side by Side <img></img> users who don't contest for EX, such as Firion, Onion Knight and Golbez.",
+            "Skilled opponents often defend and build resources before approaching CoD. Although it is risky, getting damage early as an attacker can prove beneficial.",
+            "For a Side by Side <img></img> variant, replace First to Victory <img></img> with Side by Side. That makes reads |",
+            "A read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".",
+            "with HP attacks more rewarding, but disables EX gauge and EX absorption entirely. Empty EX Gauge <img></img> booster becomes available with this, and may be used to replace any booster accessory at player's discretion, such as Summon Unused <img></img>."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Synergies",
+          "text": [
+            "Kuja, Jecht and Exdeath assists are good."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Cloud of Darkness Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Tentacle of Pain",
+                  "37F",
+                  "Ground",
+                  "Opponent",
+                  "7, 7, 12 x 4 (62)",
+                  "Wall Rush"
+                ],
+                [
+                  "BRV",
+                  "Tentacle of Suffering",
+                  "37F",
+                  "Air",
+                  "Opponent",
+                  "3 x 10, 10 (40)",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "[Anti-air] Particle Beam",
+                  "39F",
+                  "Ground",
+                  "Opponent",
+                  "1 x 9 (9)",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "[Fusillade] Particle Beam",
+                  "83F",
+                  "Air",
+                  "Opponent",
+                  "-",
+                  "Wall Rush"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist Overview",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": true,
+      "links": [
+        {
+          "text": "EX Mode Pain 3 > Anti-Air Particle Beam Corner Combo",
+          "url": "https://www.youtube.com/watch?v=4Ij0gudeuzE&feature=youtu.be"
+        }
+      ]
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)",
+    "https://www.youtube.com/watch?v=4Ij0gudeuzE&feature=youtu.be"
+  ]
+}

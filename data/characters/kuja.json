@@ -1,0 +1,832 @@
+{
+  "slug": "kuja",
+  "name": "Kuja",
+  "page": "Kuja_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Kuja_(Dissidia_012)",
+  "origin": "Final Fantasy IX",
+  "icon": "kuja",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-kuja.png",
+  "infobox": {
+    "Name": "Kuja (クジャ)",
+    "Original game": "Final Fantasy IX",
+    "Base ATK (LV100)": "109 (Low)",
+    "Base DEF (LV100)": "111 (Average)",
+    "Run Speed": "7 (Average)",
+    "Dash Speed": "77 (Average / Good)",
+    "Fall Speed": "89 (Below Average)",
+    "Fall Speed Ratio After Dodge": "41 (Below Average)",
+    "Fastest BRV": "15F (Burst Energy)",
+    "Fastest HP": "33F (Force Symphony)",
+    "1-Hit HP": "Yes (Force Symphony)",
+    "Command Block": "No",
+    "Weapon": "Daggers, Rods, Staves, Poles",
+    "Armor": "Bangles, Hats, Hairpins, Clothing, Robes, Headbands, Chestplates",
+    "Exclusive weapons": "Punisher, Whale Whisker, Terra's Legacy",
+    "Alignment": "Chaos",
+    "Voice Actor (JP)": "Akira Ishida",
+    "Voice Actor (ENG)": "JD Cullum"
+  },
+  "sections": {
+    "overview": {
+      "documented": false,
+      "text": [],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kuja_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "main": {
+          "intro": "All of Kuja's bravery attacks have a ground an aerial version. Attack data is shared between both versions. Barring Remote Flare and Ring Holy, Kuja's bravery attacks have different followups depending on how close he is to his opponent.\nWith Burst Energy (far), Snatch Blow, Strike Energy (close) and Snatch Shot (close), the number of hits listed is the one players commonly get when they have a good positioning and timing. It is possible to get less or more hits depending on position. When the opponent is cornered, it is possible to get as many as 16 hits. It is unclear if and what the maximum limit of hits is.",
+          "moves": [
+            {
+              "variants": [
+                "Close",
+                "Far"
+              ],
+              "damage": [
+                "50 (15, 5 x 4, 15)",
+                "35 (15, 1 x 10, 10)"
+              ],
+              "startup": [
+                "15F",
+                "15F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Ranged Low (start), Melee Low (followup?)"
+              ],
+              "exForce": [
+                "36",
+                "~90"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Close] Start attack with Flare. Distance from foe alters combo.",
+              "name": "Burst Energy"
+            },
+            {
+              "variants": [
+                "Close",
+                "Far"
+              ],
+              "damage": [
+                "32 (8, 1 x 4, 2 x 4, 12)",
+                "47 (8, 1 x 4, 2 x 10, 15)"
+              ],
+              "startup": [
+                "35F",
+                "35F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Melee Low (start), Ranged Low (follow-up?)",
+                "Melee Low"
+              ],
+              "exForce": [
+                "36",
+                "~90"
+              ],
+              "effects": [
+                "Wall Rush",
+                "Chase"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Launch attack with Holy. Distance from foe alters combo.",
+              "name": "Snatch Blow"
+            },
+            {
+              "variants": null,
+              "damage": "each 5",
+              "startup": "33F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Ring Holy",
+              "notes": "[Long] Fire off 3 homing spells. Can aim with the analog stick."
+            },
+            {
+              "variants": [
+                "Close",
+                "Far"
+              ],
+              "damage": [
+                "50 (4 x 4, 2 x 7, 20)",
+                "35 (4 x 4, 1 x 7, 13)"
+              ],
+              "startup": [
+                "17F",
+                "17F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Melee Low",
+                "Melee Low (start), Ranged Low (follow-up?)"
+              ],
+              "exForce": [
+                "~90",
+                "30"
+              ],
+              "effects": [
+                "Chase",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "",
+              "description": "[Close] Launch attack from Holy. Distance from foe alters combo.",
+              "name": "Strike Energy"
+            },
+            {
+              "variants": [
+                "Close",
+                "Far"
+              ],
+              "damage": [
+                "35 (7, 8, 1 x 7, 13)",
+                "50 (7, 8, 9, 11, 15)"
+              ],
+              "startup": [
+                "31F",
+                "31F"
+              ],
+              "type": [
+                "Magical",
+                "Magical"
+              ],
+              "priority": [
+                "Ranged Low",
+                "Ranged Low"
+              ],
+              "exForce": [
+                "~90",
+                "30"
+              ],
+              "effects": [
+                "Chase",
+                "Wall Rush"
+              ],
+              "cancels": [
+                "Dodge",
+                "Dodge"
+              ],
+              "assistGain": [
+                "",
+                ""
+              ],
+              "cp": "30 (15)",
+              "description": "[Mid] Launch attack with Flare. Distance from foe alters combo.",
+              "name": "Snatch Shot"
+            },
+            {
+              "variants": null,
+              "damage": "each 5",
+              "startup": "63F",
+              "type": "Magical",
+              "priority": "Special",
+              "exForce": "0",
+              "effects": "Wall Rush, Absorb",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Surround foe w/blasts. Can aim with the analog stick.",
+              "name": "Remote Flare"
+            }
+          ]
+        }
+      },
+      "moveCount": 6,
+      "sources": [
+        "https://dissidia.wiki/Kuja_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "main": {
+          "intro": "All of Kuja's HP attacks have a ground and an aerial version, except Force Symphony. Force Symphony is only available while midair.",
+          "moves": [
+            {
+              "variants": null,
+              "damage": "10, 1 x 5 (15)",
+              "startup": "39F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Flare Star",
+              "notes": "[Close] Set off 2 large blasts. Can aim with the analog stick."
+            },
+            {
+              "variants": null,
+              "damage": "1 x 9 (9)",
+              "startup": "49F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "87",
+              "effects": "Absorb",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Seraphic Star",
+              "notes": "[Mid] Toss spell causing massive explosion of energy."
+            },
+            {
+              "variants": null,
+              "damage": "1 x 23 (23)",
+              "startup": "33F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "30",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Ultima",
+              "notes": "[Long] Rain down countless magic projectiles. Can aim with the analog stick."
+            },
+            {
+              "variants": null,
+              "damage": "-",
+              "startup": "33F",
+              "type": "Magical",
+              "priority": "Ranged High",
+              "exForce": "30",
+              "effects": "-",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "name": "Force Symphony",
+              "context": "Midair only.\nAfter the first orb, one orb appears every 0.5 seconds for a maximum of 6 orbs.",
+              "notes": "[Long] Rain down magic on foe. Hold button for continued fire. Can aim with the analog stick."
+            }
+          ]
+        }
+      },
+      "moveCount": 4,
+      "sources": [
+        "https://dissidia.wiki/Kuja_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Trance!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nHyper Glide\nAuto Magic"
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Hyper Glide",
+          "text": [
+            "[Activate by holding x in midair] Maintains altitude longer than the normal Glide."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Auto Magic",
+          "text": [
+            "[Always active while in EX Mode] Casts Holy and Flare while jumping, falling, touching down, or gliding.",
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>"
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "EX Mode Auto Magic"
+                ],
+                [
+                  "Attack",
+                  "The attack's baseline damage value before equipment and stats are considered.\n!! Type !! Priority"
+                ],
+                [
+                  "Holy while jumping / falling (light orbs spin around Kuja)",
+                  "1",
+                  "Magical",
+                  "Melee Low"
+                ],
+                [
+                  "Holy while gliding (light orbs spin in front of Kuja)",
+                  "1",
+                  "Magical",
+                  "Melee Low"
+                ],
+                [
+                  "Flare while air jump (dark red orbs)",
+                  "1",
+                  "Magical",
+                  "Ranged Low"
+                ],
+                [
+                  "Flare at touchdown (explosion)",
+                  "3",
+                  "Magical",
+                  "Ranged Low"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "EX Burst: Final Requiem",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "A chain of attacks that grows stronger with each blow. Repeatedly press circle to increase the strength of each hit."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "1 x 5, 2 (7)",
+                  "3 x 16, 2 x 5, 5 x 7 (93) (100 total)",
+                  "Magical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kuja_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kuja_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Builds here.",
+        "|-|EX=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done.",
+        "|-|Build #2=",
+        "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              "10626"
+            ],
+            [
+              "CP",
+              "450"
+            ],
+            [
+              "BRV",
+              "877"
+            ],
+            [
+              "ATK",
+              "178"
+            ],
+            [
+              "DEF",
+              "184"
+            ],
+            [
+              "LUK",
+              "60"
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect: Seal of Lufenia",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              "Zidane"
+            ],
+            [
+              "Weapon <img></img>",
+              "Terra's Legacy"
+            ],
+            [
+              "Hand <img></img>",
+              "Lufenian Dirk <img></img>"
+            ],
+            [
+              "Head <img></img>",
+              "Lufenian Headband"
+            ],
+            [
+              "Body <img></img>",
+              "Lufenian Vest <img></img>"
+            ],
+            [
+              "Accessory 1",
+              "<img></img> Hyper Ring"
+            ],
+            [
+              "Accessory 2",
+              "<img></img> Earring"
+            ],
+            [
+              "Accessory 3",
+              "<img></img> Battle Hammer"
+            ],
+            [
+              "Accessory 4",
+              "<img></img> Summon Unused"
+            ],
+            [
+              "Accessory 5",
+              "<img></img> Pre-EX Revenge"
+            ],
+            [
+              "Accessory 6",
+              "<img></img> White Drop"
+            ],
+            [
+              "Accessory 7",
+              "<img></img> White Drop"
+            ],
+            [
+              "Accessory 8",
+              "<img></img> White Drop"
+            ],
+            [
+              "Accessory 9",
+              "<img></img> White Gem"
+            ],
+            [
+              "Accessory 10",
+              "<img></img> Glutton"
+            ],
+            [
+              "Summon <img></img>",
+              "Rubicante"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Stats"
+            ],
+            [
+              "HP",
+              ""
+            ],
+            [
+              "CP",
+              ""
+            ],
+            [
+              "BRV",
+              ""
+            ],
+            [
+              "ATK",
+              ""
+            ],
+            [
+              "DEF",
+              ""
+            ],
+            [
+              "LUK",
+              ""
+            ],
+            [
+              "Max Booster",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": "Special Effect:",
+          "rows": [
+            [
+              "Equipment"
+            ],
+            [
+              "Assist",
+              ""
+            ],
+            [
+              "Weapon <img></img>",
+              ""
+            ],
+            [
+              "Hand <img></img>",
+              ""
+            ],
+            [
+              "Head <img></img>",
+              ""
+            ],
+            [
+              "Body <img></img>",
+              ""
+            ],
+            [
+              "Accessory 1",
+              ""
+            ],
+            [
+              "Accessory 2",
+              ""
+            ],
+            [
+              "Accessory 3",
+              ""
+            ],
+            [
+              "Accessory 4",
+              ""
+            ],
+            [
+              "Accessory 5",
+              ""
+            ],
+            [
+              "Accessory 6",
+              ""
+            ],
+            [
+              "Accessory 7",
+              ""
+            ],
+            [
+              "Accessory 8",
+              ""
+            ],
+            [
+              "Accessory 9",
+              ""
+            ],
+            [
+              "Accessory 10",
+              ""
+            ],
+            [
+              "Summon <img></img>",
+              ""
+            ]
+          ]
+        },
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Bravery attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ],
+            [
+              "HP attacks"
+            ],
+            [
+              "Ground",
+              "Aerial"
+            ]
+          ]
+        }
+      ],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Kuja_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Synergies",
+          "text": [
+            "Kuja works well Aerith, Kefka and Zidane assist."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Kuja Assist Data",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Type",
+                  "Attack",
+                  "The time it takes before an attack can do damage.\n!! Position !! Spawn !! Base Damage !! Effects"
+                ],
+                [
+                  "BRV",
+                  "Snatch Blow",
+                  "35F",
+                  "Ground",
+                  "Opponent",
+                  "8, 1 x 4, 2 x 10, 15 (47)",
+                  "Chase"
+                ],
+                [
+                  "BRV",
+                  "Strike Energy",
+                  "17F",
+                  "Air",
+                  "Opponent",
+                  "4 x 4, 2 x 7, 20 (50)",
+                  "Chase"
+                ],
+                [
+                  "HP",
+                  "Flare Star",
+                  "39F",
+                  "Ground",
+                  "Opponent",
+                  "10, 1 x 5 (15)",
+                  "Wall Rush"
+                ],
+                [
+                  "HP",
+                  "Force Symphony",
+                  "33F",
+                  "Air",
+                  "Opponent",
+                  "-",
+                  "Chase"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Assist Overview",
+          "text": [
+            "Kuja is one of the best assists in the game and has remained consistent throughout the competitive lifespan of the game. His braveries work reliably in combos and his HPs provide utility in scrambles and against LV2 Assist Change. Because his braveries hold well and have good hit stun with Assist Chase enders, he synergizes well with most characters on a fundamental level. The base damage on braveries is great, which also applies to EX gauge depletion on hit and he can whiff punish aerial attacks effectively.",
+            "Kuja has flaws with safety on hit against both Assist Change levels; He relies on melee priority attacks which lose to LV2 Change, and his animations have average-to-long duration, which make him vulnerable to Assist Lock attempts. These are not unique weaknesses when compared to other assists, but players must contend with them regardless. The upward knockback on his moves limits grounded combos and setup opportunities, so players looking to optimize them won't always find Kuja their best choice. For Kefka and Ultimecia Kuja is one of, if not the only viable assists in competitive play.",
+            "Generally speaking Kuja works with so many characters that he can be used as a starting point for learning the assist system.",
+            "Further reading: Kuja overview in assist tier list"
+          ],
+          "tables": []
+        },
+        {
+          "title": "Snatch Blow",
+          "text": [
+            "Snatch Blow is a multi-hit combo that holds the opponent in place and sends them upwards at the end. The duration on hit is pretty long, which is great for adding damage with filler hits. Garland's Bardiche, Cloud's Firaga and single hit wall rush HPs such as Firion's Straightarrow and Squall's Aerial Circle are all well known examples that greatly increase their total damage output. The startup on it is rather slow at 35 frames, so Kuja must be called early during the wall rush to hit it. Because of this, Snatch Blow also doesn't work effectively as a whiff punisher, but it does have a hitbox on the returning blow which can hit behind the opponent's back. If that connects, the rest of the attack plays out as normal. Neutral dodging against Snatch Blow early on the ground can guarantee a combo this way.",
+            "Snatch Blow's reach is longer on average, but so is the total duration. Kuja remains somewhat stationary while inflicting damage, so it is important to find ways to protect him in case the opponent escapes with LV1 Assist Change. Sometimes this means sacrificing filler hits or delaying them to cover opponent's actions. The damage potential and Kuja's overall reliability make him worth protecting though."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Strike Energy",
+          "text": [
+            "Strike Energy is the tried and true aerial multi-hit bravery with upward Assist Chase finisher. It is fast, has a little bit of vertical tracking and solid lateral reach. This is a reliable whiff punisher and a combo extender for wall rush and many moves in the game. The window for fillers is not as large as with Snatch Blow, but they are commonly utilized for additional damage. The generous hit stun at the end makes setting up projectile or HP follow-ups more practical, and leaves at better frame advantage if both players' assists trade hits on primary characters. The base damage is great at 50 as well.",
+            "Something worth noting is that Strike Energy's hitbox does not hit very low. This can be detrimental to conversions with a move like Vaan's on-hand Greatsword (1st hit). In addition, if Strike Energy only hits at the very tip, Kuja may not do the follow-up. This is more of a problem with the way assist attacks work than anything else, and it's not a severe issue with Kuja, but it's good to be aware of.",
+            "Strike Energy is part of why Kuja assist works so well. Aerial combat is very common in Dissidia 012, and conversions and whiff punishes happen frequently in that space. Kuja is good in both areas."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Flare Star",
+          "text": [
+            "Flare Star is Kuja's grounded HP attack. The bravery damage is low and the high knockback without Assist Chase leaves less room for combos. Its main utility lies in the Ranged High priority, functioning as a safe assist combo starter against LV2 Assist Change. It is only slightly slower than Snatch Blow, but the overall duration is a bit shorter by comparison. The high priority can also be difficult for the opponent to contest when used as a ground dodge punish. Well worth using in situations where both players are stuck with two full assist bars, especially at killing bravery."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Force Symphony",
+          "text": [
+            "Force Symphony is a Ranged High HP which has Kuja firing projectiles from above in a straight line downwards. It can be used situationally as a checkmate in Chase sequences, but it is also great at disengaging the opponent during a scramble situation. The first projectile tends to miss its target on the spot, but Kuja will continue to move towards it while firing off more projectiles at a steady rate. Each projectile is a single-hit HP with small area-of-effect, Assist Chase and somewhat low hit stun, which leaves less time for conversions. It is worth noting that sometimes Kuja may not follow through with all projectiles before leaving.",
+            "Overall, Kuja assist has power and flexibility in areas where assists need it most. Conversions, punishment, interruptions and occasional safety against LV2 Assist Change. His strengths are enough to outweigh his (general) weaknesses in the long run and he remains a competitive assist in tournaments and casual play alike."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Kuja_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Kuja_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Kuja_(Dissidia_012)"
+  ]
+}

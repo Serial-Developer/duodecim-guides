@@ -1,0 +1,862 @@
+{
+  "slug": "zidane-tribal",
+  "name": "Zidane Tribal",
+  "page": "Zidane_Tribal_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Zidane_Tribal_(Dissidia_012)",
+  "origin": "Final Fantasy IX",
+  "icon": "zidane",
+  "portraitUrl": "https://resources.dissidia.wiki/ddff/portraits/ddff-port-zidane.png",
+  "infobox": {
+    "Name": "Zidane Tribal (ジタン・トライバル)",
+    "Original game": "Final Fantasy IX",
+    "Base ATK (LV100)": "108 (Very Low)",
+    "Base DEF (LV100)": "110 (Low)",
+    "Run Speed": "4 (Fast)",
+    "Dash Speed": "73 (Fast)",
+    "Fall Speed": "81 (Average)",
+    "Fall Speed Ratio After Dodge": "18 (Very Fast)",
+    "Fastest BRV": "13F (Swift Attack)",
+    "Fastest HP": "25F (Free Energy)",
+    "1-Hit HP": "Yes (Free Energy, Tidal Flame projectile)",
+    "HP Links": "Yes",
+    "Command Block": "No",
+    "Weapon": "Daggers, Thrown Weapons, Parrying Weapons, Swords, Poles",
+    "Armor": "Bangles, Gauntlets, Hats, Hairpins, Clothing,Light Armor, Headbands, and Chestplates",
+    "Exclusive weapons": "Sargatanas, The Tower, Ozma's Splinter",
+    "Unlock": "Default",
+    "Alignment": "Cosmos",
+    "Voice Actor (JP)": "Romi Park",
+    "Voice Actor (ENG)": "Bryce Papenbrook"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Zidane is an agile close-range fighter who mainly fights in the air. His main strategy revolves around getting close to the opponent and hitting them with one of his HP links |",
+        "An HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.",
+        "for assist combos. Zidane has high mobility with his dash and air jumps, which he can use comfortably to poke |",
+        "A fast attack that is used to occupy space, start offense and fill assist gauge.",
+        "with Swift Attack and Scoop Art. He can also start offense from vertical angles that can be difficult to contest.",
+        "What really makes Zidane stand out is his synergy with high base bravery Side by Side builds and Aerith assist; Thanks to his Meo Twister HP link and Shift Break setups, Zidane can quickly build assist gauge with one good read and spend it all on high damaging combos. With two assist gauges and a proper build, Zidane can inflict over 6000 HP damage with a single combo. This is notable, because Zidane can perform this consistently in the air whenever he is near walls or ceilings. This is supported by his above average wall carry |",
+        "The distance travelled when a combo is happening. Longer distance means a combo pushes the opponent closer to the wall. In Dissidia 012, longer distance is better for getting a Wall Rush.",
+        "with HP links. Zidane makes his biggest plays in close-range, but he can take his time while on the defensive, and strike back with a clear opening.",
+        "Zidane has some drawbacks to offset his safe and explosive gameplan. Low base DEF means damage builds destroy his bravery. While his run speed is high, he misses a fast safe poke on the ground. As a result, his ground combat is higher commitment with limited potential; Tidal Flame provides space control and Booster 8 can call out opponents with its Melee Mid priority. Both have relatively long startup |",
+        "The time it takes before an attack can do damage.",
+        ", though. His base damage |",
+        "The attack's baseline damage value before equipment and stats are considered.",
+        "and base ATK are low, resulting in weak bravery damage. He does not have many reliable attacks for Wall Rush, which further cuts into his damage. The EX generation is also low for his most important moves, and on hit, he is often out of reach for EX as well. Because of this, Zidane's assist combos rapidly outpace his EX gain. Both Swift Attack and Tempest go through a lengthy follow-up attack to set up Meo Twister HP links, which is vulnerable to Assist Change counters. This problem is more prominent at high level play, though. Since Zidane relies on these attacks, he can sometimes struggle against opponents who often have assist gauge to spare.",
+        "Historically Zidane has been consistently ranked at high tier. His gameplan is known to be consistent and effective in tournaments, and his moveset is fairly straightforward for intermediate players to pick up. His effective range is at point blank |",
+        "The closest possible distance two characters can be from each other.",
+        "(Swift Attack) or long-range (Scoop Art, Shift Break), but he has some trouble applying mixups against blocks from a distance. While Zidane can be difficult to whiff punish |",
+        "Hitting an opponent who missed (whiffed) their attack.",
+        ", he can struggle to create offense against characters with strong area denial, such as The Emperor. Overall, Zidane is less of an all-rounder |",
+        "A character who can do a bit of everything well.",
+        "and more like a glass cannon |",
+        "A character who has low health, but exceptional tools for damage, resources or other things. Characters can be built this way in Dissidia 012.",
+        "- He thrives when he succeeds, but suffers greatly if he doesn't."
+      ],
+      "tables": [
+        {
+          "caption": null,
+          "rows": [
+            [
+              "Strengths",
+              "Weaknesses"
+            ],
+            [
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Zidane_Tribal_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3e/Brv_zidane_rumble_rush.jpeg",
+              "damage": "30 (2, 3, 4, 6, 2 x 3, 9)",
+              "startup": "19F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Slice, then kick foe. Approach foe during attack.",
+              "name": "Rumble Rush",
+              "notes": "Rumble Rush is Zidane's proper BRV-to-HP link on the ground. Its main application is in punishing |\nnearby opponents for their mistake. It can also be used to start assist combos, most commonly with the Meo Twister HP link. The base damage is above average for Zidane as well.\nZidane should be careful with Rumble Rush, however; It may have fast startup, but the full animation is much longer. Zidane performs the flurry of hits even when it misses. That makes it vulnerable to whiff punishes |\nHitting an opponent who missed (whiffed) their attack.\nand blocks. Zidane also does not travel far with Rumble Rush and always becomes airborne at the end. Its tracking is weak as a result.\nOverall, Rumble Rush doesn't serve as a safe poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. Its long animation makes it risky to use in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\n, and the 30 base damage does not ultimately offset the risk. Zidane mostly thrives in the air, so it can be difficult to take advantage of Rumble Rush in competitive play."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/00/Brv_zidane_scoop_art_g.jpeg",
+              "damage": "each 5",
+              "startup": "37F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire energy projectile. Perform repeatedly to fire multiple shots at once.",
+              "name": "Scoop Art (ground)",
+              "notes": "Scoop Art is a passive zoning |\nThe act of using long-range attacks to try and prevent the opponent from approaching. Usually achieved with projectiles, such as Sephiroth's Shadow Flare.\ntool. It's commonly used from long distances to look for combo opportunities. Zidane can fire two additional shots by pressing Circle <img></img> each time. Each projectile travels a long distance with adequate vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n. The projectiles have decent hit stun |\nThe period of time when a character cannot do an action after getting hit by an attack.\n, but Zidane often fires two shots to confirm combos with dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nor assist. Zidane can delay the two additional shots to confirm combos or simply add a little bit more stage presence. And if Zidane needs to dodge away, the short recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nhelps with that. Zidane must be careful with dodges to not get caught in landing lag or opponent's attacks. Scoop Art makes him airborne, but he is still very close to the ground.\nScoop Art is not explicitly used to keep opponents away. Rather, it's something Zidane can use in neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\nif there is downtime. At long distances it functions as a low risk, low reward move. Its bravery damage is low and it does not lead to combos often. All three shots lose to dash and melee attacks because of the Ranged Low priority. Combined with slow speed, Scoop Art is not effective against rushdown |\nAn offensive playstyle that focuses on getting close to the opponent and attacking them relentlessly.\neither.\nThe ground version specifically is not used often due to Zidane being stronger in the air. The midair version works similarly and has stronger synergy with Zidane's attacks."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8d/Brv_zidane_booster_8.jpeg",
+              "damage": "17 (3 x 4, 5)",
+              "startup": "31F",
+              "type": "Physical",
+              "priority": "Melee Mid",
+              "exForce": "30",
+              "effects": "-",
+              "cancels": "Dodge, Attack (On Hit)",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Charge at opponent. If it hits, can quickly combo with another attack.",
+              "name": "Booster 8",
+              "notes": "Booster 8 is Zidane's primary ground bravery. It functions as a gap closer and a combo starter. The melee mid priority wins against blocks, so opponents have to respect it a little. Zidane becomes airborne when using this move. If Booster 8 hits, Zidane can cancel |\nAn action that is interrupted early by doing another action.\nthe recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\ninto any air attack he has equipped. That means Zidane can combo into HPs or HP links |\nAn HP attack that branches from a bravery attack. e.g. Cloud's Slashing Blow into Omnislash Version 5.\npretty reliably. Swift Attack and Free Energy are both consistent follow-ups after Booster 8.\nBooster 8 has a few downsides. The startup is slow enough to be reactable. It has very weak vertical tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\n, and it's pretty linear once Zidane starts moving. As a result, it cannot catch fast horizontal movement reliably. Since Zidane's other ground braveries are not particularly strong, Booster 8's utility as a mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\ntool suffers as well. If Booster 8 only staggers an opponent (block or clashing with attack), Zidane cannot cancel into air attacks.\nIf Zidane has full EX gauge, Zidane can kara cancel |\nThe ability to quickly chain a move into another move, before the first move even completes its startup. In Dissidia 012, a regular block can be kara cancelled into a dodge or a dash, which allows the techniques \"blodge\" and \"dash feint\" respectively.\nBooster 8 into EX Mode on hit. This lets him jump and combo into Tempest for more bravery damage."
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/47/Brv_zidane_storm_impulse.jpeg",
+              "damage": "40 (4 x 3, 8, 1 x 5, 15)",
+              "startup": "19F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Spinning approach. Limited height; fast approach.",
+              "name": "Storm Impulse",
+              "notes": "Storm Impulse is a secondary bravery that is used as a punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nmove. It has the longest lateral range out of Zidane's aerial melee attacks. It is also one of two Zidane's braveries that can wall rush. Zidane can even combo into assists with the initial lunge at midscreen |\nAny space in the stage where neither player is in a corner or at a wall. Basically means no walls or ceilings nearby.\n.\nDespite that, Storm Impulse is not considered a staple move for Zidane in competition. Zidane already gets HP damage from two HP links in the air, and Storm Impulse provides diminishing returns for the risk. Its startup |\nThe time it takes before an attack can do damage.\nis fast, but only at point blank range |\nThe closest possible distance two characters can be from each other.\n. Storm Impulse becomes much easier to block on reaction if used from further away, because Zidane spins towards opponent even if he misses. That makes it risky to use as a gap closer. Although it has the highest base damage out of Zidane's braveries, it needs wall rush to truly shine.\nStorm Impulse's lateral range is at odds with its low priority, attack speed and reward on hit. It may work occasionally, but Zidane often prioritizes movement, Swift Attack pokes |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nand other vertical attacks to compete. They are generally considered safer and more effective."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8f/Brv_zidane_vortex.jpeg",
+              "damage": "35 (2 x 3, 9, 1 x 5, 15)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Vertical spinning approach. Great for attacking from below.",
+              "name": "Vortex",
+              "notes": "Vortex is Zidane's secondary bravery that's used for whiff punishing |\nHitting an opponent who missed (whiffed) their attack.\nopponents from below. If Zidane dodges an attack with long recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, he can use Vortex to retaliate from a relatively safe angle. This utility makes it more appealing compared to Storm Impulse, even though its damage and startup |\nThe time it takes before an attack can do damage.\nare lower. Zidane can start assist combos with Vortex as well, though wall rush is needed if Zidane completes the attack.\nVortex is the main melee bravery that moves Zidane upwards. That, along with slower startup make it easier for opponents to react to. Zidane can be blocked during the spins, similar to Storm Impulse. It cannot easily hit opponents in front of Zidane either due to the angle. When used sparingly, Vortex provides damage from an otherwise difficult angle. The movement can also be used to fill assist gauge on whiff |\nA missed attack that doesn't make any contact.\nwhen playing passively. Otherwise it's a somewhat telegraphed attack with low reward without assist."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/cf/Brv_zidane_tempest.jpeg",
+              "damage": "35 (2 x 6, 8, 2 x 3, 9)",
+              "startup": "19F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Gracefully toss knife downwards. Useful for attacking from above.",
+              "name": "Tempest"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c8/Brv_zidane_scoop_art_a.jpeg",
+              "damage": "each 5",
+              "startup": "37F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire energy projectile. Perform repeatedly to fire multiple shots at once.",
+              "name": "Scoop Art (midair)"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/94/Brv_zidane_solution_9.jpeg",
+              "damage": "each 7",
+              "startup": "53F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Launch multiple energy projectiles. Low accuracy, many projectiles.",
+              "name": "Solution 9"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/1f/Brv_zidane_swift_attack.jpeg",
+              "damage": "20 (2, 3, 2 x 3, 9)",
+              "startup": "13F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Quick slices. Low power, fast launch.",
+              "name": "Swift Attack"
+            }
+          ]
+        }
+      },
+      "moveCount": 9,
+      "sources": [
+        "https://dissidia.wiki/Zidane_Tribal_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "ground": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/01/Hp_zidane_tidal_flame.jpeg",
+              "damage": "15 (close)",
+              "startup": "49F",
+              "type": "Physical",
+              "priority": "Melee High (close) Ranged High (projectile)",
+              "exForce": "30 + 60",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Fire low-flying flame projectile that homes in on foe at high speed.",
+              "name": "Tidal Flame"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f2/Hp_zidane_stellar_circle_5.jpeg",
+              "damage": "9 (1 x 9)",
+              "startup": "43F",
+              "type": "Magical",
+              "priority": "Melee High",
+              "exForce": "87",
+              "effects": "Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Create cyclone. Short range, but offers cover.",
+              "name": "Stellar Circle 5"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/60/Hp_zidane_meo_twister.jpeg",
+              "damage": "+10 (1 x 10)",
+              "startup": "?",
+              "type": "Magical",
+              "priority": "Unblockable (?)",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Rumble Rush. [Combo] Fire laser from blade.",
+              "name": "Meo Twister A"
+            }
+          ]
+        },
+        "aerial": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/8/8e/Hp_zidane_shift_break.jpeg",
+              "damage": "each 5",
+              "startup": "27F (first thunder) 87F (water)",
+              "type": "Magical",
+              "priority": "Ranged High (thunder) Unblockable (water)",
+              "exForce": "60 + 9 x N",
+              "effects": "Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Long] Keep foe off balance with water columns and lightning.",
+              "name": "Shift Break"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/0/0d/Hp_zidane_grand_lethal.jpeg",
+              "damage": "21 (7 x 3)",
+              "startup": "53F",
+              "type": "Physical",
+              "priority": "Melee High",
+              "exForce": "27",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Mid] Charge filled with energy. Vertically limited, long duration.",
+              "name": "Grand Lethal"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/c9/Hp_zidane_free_energy.jpeg",
+              "damage": "-",
+              "startup": "25F",
+              "type": "-",
+              "priority": "Ranged High",
+              "exForce": "60",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "[Close] Fire energy wave. Short range, quick execution.",
+              "name": "Free Energy"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/60/Hp_zidane_meo_twister.jpeg",
+              "damage": "+10 (1 x 10)",
+              "startup": "?",
+              "type": "Magical",
+              "priority": "Unblockable (?)",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Tempest. [Combo] Fire laser from blade.",
+              "name": "Meo Twister B",
+              "notes": "Identical with Meo Twister A."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/6/60/Hp_zidane_meo_twister.jpeg",
+              "damage": "+10 (1 x 10)",
+              "startup": "?",
+              "type": "Magical",
+              "priority": "Unblockable (?)",
+              "exForce": "0",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "30 (15)",
+              "description": "Branching from Swift Attack. [Combo] Fire laser from blade.",
+              "name": "Meo Twister C",
+              "notes": "Identical with Meo Twister A."
+            }
+          ]
+        }
+      },
+      "moveCount": 8,
+      "sources": [
+        "https://dissidia.wiki/Zidane_Tribal_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": true,
+      "title": "EX Mode: Trance!",
+      "text": [
+        "Effects:",
+        "Regen\nCritical Boost\nAerial Jump\nDodge Jump",
+        "Zidane's EX mode enhances his aerial jumps. Aside from the universal benefits, it is not especially effective for Zidane in competitive play for a few reasons: The first is that Zidane's EX generation is only average and heavily outclassed by his Side by Side <img></img> builds. Zidane is often positioned far from EX when using his key moves. His air jumps already work well for him in footsies |",
+        "A nebulous fighting game term, commonly refers to two players moving around and trying to each other.",
+        ", and he doesn't explicitly benefit from the partial air jump invincibility. Furthermore, EX modes are often activated to secure an assist combo or a win outright. Air jumps are not frequently relevant in these situations.",
+        "As a result, Zidane sees diminishing returns from his EX mode despite its strong universal benefits. It can still cause checkmate |",
+        "A situation where a player has no options to avoid losing a situation or a match. For example, hitting an opponent who has a full EX gauge and killing bravery can activate EX Revenge and guarantee a win.",
+        "scenarios, but Zidane needs to fight long enough to get a full EX gauge, which is antithesis to his usual Side by Side damage builds."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Aerial Jump",
+          "text": [
+            "[Always active while in EX Mode] Dormant potential is unlocked, enabling nimble leaps to be performed while in midair.",
+            "Air Jump Times +10. Reset jump counts after a dodge."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Double Jump",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "[Always active while in EX Mode] Grants invincibility for the period between touching the ground and leaping into the air.",
+            "Gives invincibility during the \"rising curve\" of a jump. This does not work with Bravery Boost on Dodge effect as it is not counted as a dodge."
+          ],
+          "tables": []
+        },
+        {
+          "title": "EX Burst: Reverse Gaia",
+          "text": [
+            "<img src=\"\" style=\"object-fit: none; object-position: 0% 0%; border:3px solid RGB(105,86,160);></img>",
+            "A chain of attacks that grows faster with each blow. Repeatedly press circle to increase the number of hits.",
+            "Reverse Gaia requires pressing Circle <img></img> repeatedly to fill four sections of a gauge. Zidane will perform a number of attacks during each section. If the gauge is filled when he finishes attacking, the next section will open up. If the gauge is not filled at the end of each \"section\", Zidane will transition into the finishing move immediately.",
+            "Zidane performs a certain number of attacks during each section: 2, 3, 3 and finally 4. These attacks happen quickly, so there isn't much time to fill the gauge. A moderate pace for pressing Circle <img></img> is required.",
+            "Reverse Gaia ends up being one of the lower damage EX Bursts in the game because of its relatively low base damage and Zidane's low base ATK stat."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                ],
+                [
+                  "18 (3 x 4, 6)",
+                  "79 (3, 3, 2, 3, 2, 3, 2, 3, 2, 3 x 3, 8 x 6) (97 total)",
+                  "Physical"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Zidane_Tribal_(Dissidia_012)"
+      ]
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "text": [],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Solo",
+          "text": [],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Zidane_Tribal_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "builds": {
+      "text": [
+        "Main article: Zidane (012) Builds",
+        "Zidane is an HP linker who relies on assist combos for high damage. While his primary damage builds require high base bravery, Zidane is capable of outputting over 6000 HP damage with two assist bars, no wall rush needed. Because of his comparatively weaker EX game, low base damage and lack of consistent wall rush moves, Zidane builds often revolve around Side by Side <img></img> and raising base bravery."
+      ],
+      "tables": [],
+      "subs": [
+        {
+          "title": "Side by Side (High Base BRV)",
+          "text": [
+            "<img></img> indicates a \"Gear\" extra ability or the use of Equip Glitch. The total Capacity Point cost assumes the equip glitch is done."
+          ],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Stats"
+                ],
+                [
+                  "HP",
+                  "8454"
+                ],
+                [
+                  "CP",
+                  "450"
+                ],
+                [
+                  "BRV",
+                  "1533"
+                ],
+                [
+                  "ATK",
+                  "175"
+                ],
+                [
+                  "DEF",
+                  "182"
+                ],
+                [
+                  "LUK",
+                  "60"
+                ],
+                [
+                  "Max Booster",
+                  "x3.5"
+                ]
+              ]
+            },
+            {
+              "caption": "Special Effect: -",
+              "rows": [
+                [
+                  "Equipment"
+                ],
+                [
+                  "Assist",
+                  "Aerith"
+                ],
+                [
+                  "Weapon <img></img>",
+                  "Piggy's Stick <img></img>"
+                ],
+                [
+                  "Hand <img></img>",
+                  "Chainsaw"
+                ],
+                [
+                  "Head <img></img>",
+                  "Royal Crown <img></img>"
+                ],
+                [
+                  "Body <img></img>",
+                  "Auto Crossbow <img></img>"
+                ],
+                [
+                  "Accessory 1",
+                  "<img></img> Bravery Orb"
+                ],
+                [
+                  "Accessory 2",
+                  "<img></img> Dismay Shock"
+                ],
+                [
+                  "Accessory 3",
+                  "<img></img> Battle Hammer"
+                ],
+                [
+                  "Accessory 4",
+                  "<img></img> Empty EX Gauge"
+                ],
+                [
+                  "Accessory 5",
+                  "<img></img> Summon Unused"
+                ],
+                [
+                  "Accessory 6",
+                  "<img></img> Pre-EX Mode"
+                ],
+                [
+                  "Accessory 7",
+                  "<img></img> Pre-EX Revenge"
+                ],
+                [
+                  "Accessory 8",
+                  "<img></img> Hero's Seal"
+                ],
+                [
+                  "Accessory 9",
+                  "<img></img> Together As One"
+                ],
+                [
+                  "Accessory 10",
+                  "<img></img> Side by Side"
+                ],
+                [
+                  "Summon <img></img>",
+                  "Rubicante"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Bravery attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "<img></img> Booster 8",
+                  "<img></img> Swift Attack"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "<img></img> Branch: Meo Twister C"
+                ],
+                [
+                  "",
+                  "↑+<img></img> Scoop Art"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "↓+<img></img> Tempest"
+                ],
+                [
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "<img></img> Branch: Meo Twister B"
+                ],
+                [
+                  "HP attacks"
+                ],
+                [
+                  "Ground",
+                  "Aerial"
+                ],
+                [
+                  "<img></img> Tidal Flame",
+                  "<img></img> Free Energy"
+                ],
+                [
+                  "",
+                  "↑+<img></img> Grand Lethal"
+                ],
+                [
+                  "",
+                  "↓+<img></img> Shift Break"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Build Overview",
+          "text": [
+            "A staple damage build for Zidane. Everything revolves around high base bravery and Side by Side <img></img>. The goal is simple; Land a hit with Swift Attack > Meo Twister or Shift Break and extend the assist combos as much as possible. Together As One <img></img> provides a good amount of assist gauge right from the beginning and Hero's Seal <img></img> increases Zidane's starting bravery to over 2000. Meter depletion is accounted for with accessories and Bravery Orb <img></img> helps Zidane reach base bravery faster during assist combos. Since Zidane relies on base bravery, his damage output is not affected by lack of critical hits or low ATK stat.",
+            "Zidane has low max health with this build, so this could be considered a type of \"glass cannon\" build. However, a single Aerith assist combo can do over 3000 HP damage at base bravery... and even more if Zidane gets the combo extensions with double Aerith and Shift Break."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Basic Abilities",
+          "text": [],
+          "tables": [
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Actions"
+                ],
+                [
+                  "Ground Evasion"
+                ],
+                [
+                  "Midair Evasion"
+                ],
+                [
+                  "Ground Block"
+                ],
+                [
+                  "Midair Block"
+                ],
+                [
+                  "Aerial Recovery"
+                ],
+                [
+                  "Recovery Attack"
+                ],
+                [
+                  "Controlled Recovery"
+                ],
+                [
+                  "Wall Jump"
+                ],
+                [
+                  "Air Dash"
+                ],
+                [
+                  "Free Air Dash"
+                ],
+                [
+                  "Free Air Dash Boost"
+                ],
+                [
+                  "Assist Gauge Up Dash"
+                ],
+                [
+                  "Jump Boost++"
+                ],
+                [
+                  "Jump Times Boost++"
+                ],
+                [
+                  "Ground Evasion Boost"
+                ],
+                [
+                  "Midair Evasion Boost"
+                ],
+                [
+                  "Evasion Boost"
+                ],
+                [
+                  "Descent Speed Boost"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Support"
+                ],
+                [
+                  "Always Target Indicator"
+                ],
+                [
+                  "EX Core Lock On"
+                ],
+                [
+                  "Assist Lock On"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "Extra"
+                ],
+                [
+                  "Precision Jump"
+                ],
+                [
+                  "Precision Evasion"
+                ],
+                [
+                  "Disable Sneak Attack"
+                ],
+                [
+                  "EXP to Assist"
+                ],
+                [
+                  "Best Dresser"
+                ]
+              ]
+            },
+            {
+              "caption": null,
+              "rows": [
+                [
+                  "CP"
+                ],
+                [
+                  "425 / 450"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Point Allocation",
+          "text": [
+            "25 points are available. They can be used for Speed Boost+, Ground Dash and Auto Assist Lock On."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Substitutes",
+          "text": [],
+          "tables": [
+            {
+              "caption": "Substitutes",
+              "rows": [
+                [
+                  "Equipment / Ability",
+                  "Substitute",
+                  "Notes"
+                ],
+                [
+                  "Summon Unused <img></img>",
+                  "Aerial <img></img>",
+                  "A stronger x1.5 booster if ground is not available or deemed necessary."
+                ],
+                [
+                  "Tidal Flame",
+                  "Speed Boost++",
+                  "Speed Boost++ helps Zidane move faster on the ground and in the air. If Tidal Flame is not deemed necessary, this can help in footsies."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Attacks (Staple)",
+          "text": [
+            "These attacks are recommended regardless of matchup, stage or player preference.",
+            "Booster 8",
+            "Mid priority gap closer that combos into air moves on hit. Zidane's ground braveries are notably weaker compared to his air braveries, so there aren't many must-have braveries on the ground.",
+            "Swift Attack + Meo Twister",
+            "A staple air poke, Zidane's primary HP link and high damage assist combo starter.",
+            "Tempest + Meo Twister",
+            "Zidane's downward HP link. High damage assist combo starter, and higher base damage than Swift Attack. Good as an aerial punish move."
+          ],
+          "tables": []
+        },
+        {
+          "title": "Attacks (Flexible)",
+          "text": [
+            "These attacks are great to have, but can be swapped or removed depending on matchup, stage or player preference.",
+            "Scoop Art (midair)",
+            "Long range projectile, can convert into an assist combo on reaction if two or more shots connect. Commonly used to build assist gauge, but frequent use makes Zidane vulnerable to dash > poke."
+          ],
+          "tables": []
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Zidane_Tribal_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    "assist": {
+      "text": [
+        "Zidane does well with Aerith, Kuja and Sephiroth."
+      ],
+      "tables": [],
+      "subs": [],
+      "sources": [
+        "https://dissidia.wiki/Zidane_Tribal_(Dissidia_012)"
+      ],
+      "documented": false
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true,
+      "text": null,
+      "sources": [
+        "https://dissidia.wiki/Zidane_Tribal_(Dissidia_012)/Matchups"
+      ]
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Zidane_Tribal_(Dissidia_012)"
+  ]
+}

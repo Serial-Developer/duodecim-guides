@@ -1,0 +1,81 @@
+{
+  "slug": "shantotto",
+  "tagline": "Mage à distance : presque chaque touche se convertit en dégâts HP",
+  "archetype": "Mage à conversion (Spirit Magic)",
+  "overview": null,
+  "tierNote": "Classée 23e (tier B) dans la tier list compétitive 2017. La page du wiki ne fournit pas de texte d'overview permettant de contextualiser ce classement.",
+  "strengths": [
+    "Excellente conversion : Shantotto transforme presque n'importe quel hit en dégâts HP avec un peu d'exécution, et prolonge de manière fiable avec les assists.",
+    "Forte génération d'EX Force : toutes ses HP attacks et Retribution génèrent beaucoup d'EX, encore davantage avec des combos bien exécutés.",
+    "Déni des HP attacks adverses : un adversaire empoisonné par Bio est instantanément break s'il touche Shantotto avec une HP attack ; loin de la défaite, cela le prive de fait de ses HP attacks pendant un temps.",
+    "Bon jeu de whiff punish : bonne mobilité et startup de Stun pour comboter en HP attack ; quelques outils peu conventionnels rendent les whiffs imprudents dangereux face à elle."
+  ],
+  "weaknesses": [
+    "Aucune HP attack à Wall Rush : cela ampute fortement les dégâts de combo potentiels et le rendement des sets à haute bravery de base qu'elle utilise habituellement.",
+    "Vulnérabilité extrême à Glutton : toutes les HP attacks qu'elle utilise touchent à moyenne distance, donc l'adversaire est prioritaire pour absorber l'EX la plupart du temps, réduisant fortement son intake sans investissement de build.",
+    "Vulnérabilité aux punish d'assist : Retribution couvre mal ses flancs et toutes ses autres attaques sont Ranged ; en pratique, presque chacune de ses attaques est punissable par une assist brute.",
+    "Pas d'attaque melee aérienne rapide : elle est vulnérable à un grand nombre d'attaques et à la pression après une esquive.",
+    "Recovery énorme : l'end lag de ses attaques est au-dessus de la moyenne du cast, et c'est particulièrement mauvais sur la plupart de ses HP attacks."
+  ],
+  "moveNotes": {
+    "A Couple Attacks": "Combo simple de trois coups de sceptre, Melee Low en 19 frames, avec un bond en avant sur le premier hit. Le troisième hit provoque un Wall Rush et projette l'adversaire loin à l'horizontale et à faible hauteur, l'empêchant d'utiliser l'aerial recovery.",
+    "Stun": "Coup spécial Ranged Low instantané (13 frames, sa bravery la plus rapide) sans dégâts : il annule l'attaque adverse. Une attaque différente libère l'adversaire. Existe au sol et en l'air, cancelable en esquive ou en attaque sur hit — c'est l'outil de whiff punish cité dans ses forces, qui combote en HP attack.",
+    "Bind": "Coup spécial Ranged Low lent (65 frames) qui immobilise l'adversaire ; celui-ci est libéré dès qu'un autre coup le touche. Versions sol et air.",
+    "Bio": "Projectile Ranged Low (33 frames) : les ténèbres rongent l'adversaire et volent sa bravery en continu pendant une durée déterminée (4 x 11). Un adversaire empoisonné qui touche Shantotto avec une HP attack est instantanément break, ce qui permet de le dissuader d'en utiliser.",
+    "Retribution": "Coup tournoyant à deux mains, Melee Mid en 41 frames, effet Chase et 90 d'EX Force — sa seule attaque melee aérienne et l'un de ses gros générateurs d'EX. Attention : elle couvre mal les flancs de Shantotto.",
+    "Spirit Magic: Earth": "HP attack au sol à longue portée (49 frames, à égalité la plus rapide de ses HP attacks) : projette des rochers. La puissance dépend de la bravery — Stone (Ranged Mid), Stonega puis Quake (Ranged High), du plus faible au plus fort.",
+    "Spirit Magic: Fire": "HP attack au sol à longue portée (57 à 61 frames) : sphère de flammes projetée vers l'avant. Trois paliers selon la bravery : Fire (Ranged Mid), Firaga et Flare (Ranged High).",
+    "Spirit Magic: Thunder": "HP attack au sol à mi-distance (67 à 71 frames) : foudre qui s'abat sur l'adversaire. Trois paliers selon la bravery : Thunder (Ranged Mid), Thundaga et Burst (Ranged High).",
+    "Spirit Magic: Water": "HP attack aérienne à longue portée (59 frames) : submerge l'adversaire. Trois paliers selon la bravery : Water (Ranged Mid), Waterga et Flood (Ranged High).",
+    "Spirit Magic: Air": "HP attack aérienne à longue portée (49 frames, sa HP attack aérienne la plus rapide) : vents violents. Trois paliers selon la bravery : Aero (Ranged Mid), Aeroga et Tornado (Ranged High).",
+    "Spirit Magic: Ice": "HP attack aérienne à longue portée (69 frames, la plus lente) : éclats de glace projetés vers l'avant. Trois paliers selon la bravery : Blizzard (Ranged Mid), Blizzaga et Freeze (Ranged High)."
+  },
+  "exMode": {
+    "summary": [
+      "L'EX Mode « Two-Hour Ability! » confère Regen, Critical Boost et Manafont : tant que l'EX Mode est actif, la bravery de Shantotto est instantanément reconstituée après chaque HP attack réussie."
+    ],
+    "burst": "« Play Rough » : sélectionner les sorts dans un menu dédié, dans l'ordre Flare > Flood > Burst > Quake > Tornado > Freeze (chaque sort demande deux appuis de croix, environ 5 secondes au total ; seule la position de Flare est mélangée, la suite est toujours sort > bas > sort > bas). Bons dégâts, voire au-dessus de la moyenne — sans scaling sur la santé comme Cloud ou Tidus, mais loin du burst le plus faible du jeu. Auto EX Command Ω trivialise la saisie."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Les sources ne fournissent pas d'overview rédigée, mais le tableau forces/faiblesses dessine le plan de jeu : convertir presque n'importe quel hit en dégâts HP avec un peu d'exécution, puis prolonger avec les assists. Stun, instantanée à 13 frames, sert de pivot au whiff punish en combotant vers les Spirit Magic ; toutes ses HP attacks et Retribution génèrent beaucoup d'EX Force, qui s'accumule d'autant plus que les combos sont bien exécutés.",
+    "Bio ajoute un levier de contrôle unique : un adversaire empoisonné est instantanément break s'il touche Shantotto avec une HP attack, ce qui permet, hors situation de match point, de le priver de ses HP attacks pendant une période. En contrepartie, il faut composer avec l'absence de Wall Rush sur ses HP attacks, une recovery énorme, la vulnérabilité de presque toutes ses attaques aux punish d'assist et une forte exposition à Glutton sur l'absorption d'EX à moyenne distance."
+  ],
+  "advancedTech": null,
+  "matchups": null,
+  "builds": {
+    "philosophy": [
+      "Le build hybride documenté s'appuie sur l'Equip Glitch (le coût total en CP le suppose réalisé) et sur l'extra ability Best Dresser pour +100 de bravery de base — cohérent avec les sets à haute bravery de base qu'elle utilise habituellement (1444 BRV ici). Il associe l'assist Yuna, l'arme Heaven's Cloud, Hero's Shield, Thornlet et Maximillian, avec des accessoires orientés boosters (Dismay Shock, Battle Hammer, BRV = 0, Summon Unused, Blue Gem, Tenacious Attacker, Glutton, First to Victory, Hero's Seal, Miracle Shoes) et Rubicante en summon."
+    ],
+    "notes": "Les emplacements de braveries et de HP attacks du build ne sont pas renseignés dans les données, et le second build (« Build #2 ») est un gabarit vide."
+  },
+  "assist": {
+    "asAssist": [
+      "En tant qu'assist, Shantotto est classée seule dans le tier Bottom de la tier list assist de Muggshotter — le pire classement du roster. Les sources de sa page ne détaillent pas davantage son usage en assist."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "La page indique simplement que Shantotto fonctionne bien avec les assists Kuja, Yuna et Jecht, sans détailler."
+      },
+      {
+        "name": "Yuna",
+        "why": "Citée parmi les assists qui fonctionnent bien avec elle ; c'est aussi l'assist retenue dans le build hybride documenté."
+      },
+      {
+        "name": "Jecht",
+        "why": "Cité parmi les assists qui fonctionnent bien avec elle, sans plus de détail dans les sources."
+      }
+    ]
+  },
+  "communityTech": [],
+  "limits": [
+    "Pas de texte d'overview sur la page (seul le tableau forces/faiblesses est renseigné) : champ overview laissé à null et gameplan reconstruit uniquement depuis ce tableau.",
+    "La page matchups du wiki est un stub et aucune information de matchup n'apparaît ailleurs : champ matchups laissé à null.",
+    "Aucune section combos renseignée (sous-section Solo vide) malgré la conversion présentée comme sa force principale.",
+    "Notes d'usage détaillées absentes pour la plupart des coups (Stun, Bind, Bio, Retribution et les six Spirit Magic n'ont que la description du jeu et les frame data) ; la note d'A Couple Attacks est tronquée dans les données sources.",
+    "Aucune technique avancée spécifique nommée dans les sources : advancedTech laissé à null.",
+    "Pas de section « Unique Mechanics » documentée : champ laissé à null.",
+    "Section assist non documentée au-delà d'une phrase ; valeurs d'assist gain absentes des tableaux de coups ; section References vide : communityTech laissé vide."
+  ]
+}

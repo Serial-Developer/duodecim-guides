@@ -1,0 +1,155 @@
+{
+  "slug": "aerith",
+  "name": "Aerith Gainsborough",
+  "page": "Aerith_Gainsborough_(Dissidia_012)",
+  "url": "https://dissidia.wiki/Aerith_Gainsborough_(Dissidia_012)",
+  "origin": "Final Fantasy VII",
+  "icon": null,
+  "portraitUrl": null,
+  "infobox": {
+    "Name": "Aerith Gainsborough (エアリス・ゲインズブール)",
+    "Original game": "Final Fantasy VII",
+    "Base ATK (LV100)": "-",
+    "Base DEF (LV100)": "-",
+    "Run Speed": "-",
+    "Dash Speed": "-",
+    "Fall Speed": "-",
+    "Fall Speed Ratio After Dodge": "-",
+    "Weapon": "-",
+    "Armor": "-",
+    "Exclusive weapons": "-"
+  },
+  "sections": {
+    "overview": {
+      "documented": true,
+      "text": [
+        "Cloud:",
+        "Slashing Blow - wall rush - Seal Evil - Fire [1] - dash - Fire [2] - Fire [1] hits - Fire [2] hits - Climhazzard (2 hits) - Double Cut (midair)",
+        "Video demo"
+      ],
+      "tables": [],
+      "sources": [
+        "https://dissidia.wiki/Aerith_Gainsborough_(Dissidia_012)"
+      ]
+    },
+    "bravery": {
+      "documented": true,
+      "groups": {
+        "Cure": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Startup",
+                "Position",
+                "Spawn",
+                "Effect"
+              ],
+              "description": "?",
+              "name": null,
+              "notes": "Curative skill increasing ally's bravery.\nAerith spawns near the player to give them 60 % of their raw bravery. At LV100 this is always 400 bravery.\nWhile not used frequently, Cure has a similiar benefit compared to Lightning's Cure braveries - If both players have two assist bars and neither player is getting a hit, Aerith can be used to make up for missing damage or come back from a bravery deficit. It is also possible to attempt finishing a match by staggering the opponent, calling Aerith to add 400 to your bravery and then letting the HP attack deliver the final blow with the added bravery. Utilising the slowdown during assist call still prevents the use of Assist Change for the opponent as well.\nSince Aerith is vulnerable during Cure, she can be locked by hitting her. This can create a situation where the opponent chooses to engage in order to discourage stacking bravery with her. Aerith spawns next to the player character when called, but due diligence is recommended when protecting her. The fact"
+            }
+          ]
+        },
+        "Seal Evil": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Startup",
+                "Position",
+                "Spawn",
+                "Effect",
+                "Priority"
+              ],
+              "description": "?",
+              "name": null,
+              "notes": "[Special] Make opponent unable to move. Foe is freed when hit by another attack.\nThe bread and butter. Ranged Low priority and notable start-up compared to other conventional assists' aerial braveries, but landing this will keep the opponent in place for three seconds. Pre-emptive timing or elaborate setup are often required to connect with this move."
+            }
+          ]
+        },
+        "Seal Evil setups": {
+          "intro": "The most common set up is to call Aerith right before a Chase prompt appears, then initiate chase, perform an HP attack and if the opponent dodges it, Seal Evil will hit them. If the opponent dodges right away, the HP attack will connect, guaranteeing HP damage off of a move while absorbing all EX on the field due to Chase activation.\nThere are a few transmutations of this setup that both players should be aware of. Once the player has initiated Chase:\nPlayer performs an HP attack and the opponent dodges immediately, receiving the HP attack near a wall\nIf the players are near a wall and Aerith was called late enough, the wall rush caused by the chase HP attack can also chain into Seal Evil.\nPlayer performs a bravery attack\nThis is typically performed near a wall as well as means to tack on extra damage. If the opponent dodges the bravery, Seal Evil will still connect. If the opponent does not dodge the bravery, they will sustain both the bravery damage as well as Seal Evil's binding effect.\nIf the wall rush is not possible, getting hit by the bravery attack will move the opponent out of Seal Evil's range. Be aware of your surroundings if you opt for this option.\nThe opponent is caught in Seal Evil before the player has performed an attack during Chase\nMoves such as Vaan's (SW) Katana that have a short enough knockback, but long enough Chase prompt window to delay the chase timing for Seal Evil to connect by just performing the initial Chase prompt. If the player performs a bravery attack or an HP attack after this happens, the opponent can still attempt to evade it as if Seal Evil never happened.\nThe timings can vary greatly depending on the character. For example, Paladin form Cecil has to commit to an HP attack during chase after using Sacred Cross and calling Aerith due to the chase window and hit stun being too short. Cloud and his aerial Double Cut suffer from a similiar problem.\nAerith can also be chained from wall rushes by calling her a bit earlier than the wall rush would occur. In chase situations where the player scores a wall rush, Seal Evil can still connect if Aerith is called as soon as the chase sequence is considered over.",
+          "moves": []
+        },
+        "Seal Evil combos": {
+          "intro": null,
+          "moves": []
+        }
+      },
+      "moveCount": 2,
+      "sources": [
+        "https://dissidia.wiki/Aerith_Gainsborough_(Dissidia_012)"
+      ]
+    },
+    "hp": {
+      "documented": true,
+      "groups": {
+        "Planet Protector": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Startup",
+                "Position",
+                "Spawn",
+                "Effect"
+              ],
+              "description": "?",
+              "name": null,
+              "notes": "Give all allies temporary invincibility.\nIndicated by a golden flash around her and the player character, Planet Protector will nullify any damage caused to the player or any hit reaction caused to Aerith herself for five seconds (or 300 frames). In that sense, \"invincibility\" is an accurate term because nothing the opponent does can hurt or kill the player character while under this effect.\nAs this is not a combo attack, it cannot be used to chain a sequence of attacks together. However, due to the continuous invincibility it can allow other strategies.\nThe opponent can still attempt to attack the player and upon making contact the attack will act as it normally would. All bravery damage will do 0 damage and upon inflicting HP damage the damage is not only 0, but also resets the opponent's bravery back to 0 as if the HP attack connected conventionally. This can be used as a countermeasure to reset a high amount of bravery the opponent may have accumulated by running into it on purpose or to otherwise nullify an incoming attack pre-emptively.\nThis does mean that any sustained chase attacks will have no effect and as a result, Planet Protector can enable immediate counter attacks following the lack of damage reaction.\nExdeath can notoriously exploit Planet Protector to a good effect thanks to his grounded Maelstrom HP. By charging up this move and then calling Aerith to cast Planet Protector in the middle of the animation, the opponent is left with no choice but to deflect Maelstrom. The difficulty of this task varies by character, but a select few cannot do this at all, them being Kuja, Shantotto and Yuna. This results them in sustaining unavoidable damage which can greatly reduce their chances of winning against Exdeath in larger stages."
+            }
+          ]
+        },
+        "Holy": {
+          "intro": null,
+          "moves": [
+            {
+              "variants": [
+                "Damage multiplier",
+                "Startup",
+                "Position",
+                "Spawn",
+                "Effect",
+                "Priority"
+              ],
+              "description": "0",
+              "name": null,
+              "notes": "[Long] Cast a legendary white magic spell. Long cast time.\nHoly is the single assist attack that allows Aerith to inflict HP damage on her own. It's casting time is 8 seconds (or 480 frames) and the HP hit connects at 524 frames, roughly 0.73 seconds later.\nOnce the casting has finished between frames 480 and 524, the opponent is still free to do anything. They could even attack Aerith to cause an Assist Lock to the player who used it, but they will still get hit by Holy in the end. Think of this as Starfall, the meteor (Holy) appears at 480 frames, and needs 44 frames to \"reach\" its target.\nDuring this move Aerith has Block Mid priority, which means you will need guard staggering moves like Squall's Heel Crush or high priority moves such as HP attacks or LV3 Jecht Stream to intercept it.\nAs Holy is still a Ranged High, it can also be deflected by high priority Melee attacks or blocks that Jecht and Exdeath possess. Even Precision Block works! Needless to say the timing is quite strict, and the opponent can still pursue the opponent while Holy is taking place.\nHere is a video demonstrating some of these countermeasures."
+            }
+          ]
+        }
+      },
+      "moveCount": 2,
+      "sources": [
+        "https://dissidia.wiki/Aerith_Gainsborough_(Dissidia_012)"
+      ]
+    },
+    "exMode": {
+      "documented": false
+    },
+    "uniqueMechanics": {
+      "documented": false
+    },
+    "combos": {
+      "documented": false
+    },
+    "builds": {
+      "documented": false
+    },
+    "assist": {
+      "documented": false
+    },
+    "references": {
+      "documented": false,
+      "links": []
+    },
+    "matchups": {
+      "documented": false,
+      "stub": true
+    }
+  },
+  "sources": [
+    "https://dissidia.wiki/Aerith_Gainsborough_(Dissidia_012)"
+  ]
+}

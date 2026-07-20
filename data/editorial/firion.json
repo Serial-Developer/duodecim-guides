@@ -1,0 +1,167 @@
+{
+  "slug": "firion",
+  "tagline": "Zoneur défensif au sol : Straightarrow, contres Shield Bash et gros HP links",
+  "archetype": "Défensif orienté sol",
+  "overview": [
+    "Firion est un combattant défensif orienté sol. Sa stratégie tourne autour du contrôle d'espace avec Straightarrow et de la punition des approches via ses HP links ou les contres de Shield Bash. Entre les pokes rapides de Swordslash et les projectiles Magic Arts, il dispose d'outils pour presque toutes les distances : poker avec Swordslash, défendre avec Shield Bash, presser avec Straightarrow, riposter avec Rope Knife ou Reel Axe.",
+    "Sa défense est adossée à son output de dégâts : le HP link Double Trouble Wall Rush au sol et pose des combos d'assist avec constance. Avec une bravery de base élevée et Side by Side, Firion remplit vite sa jauge d'assist et prend un énorme momentum sur un seul HP. Ses attaques HP sont en outre fortes en neutral, donc les touches isolées et les call-outs paient aussi.",
+    "Combattant de sol, il est plus vulnérable en l'air : portée courte, projectiles télégraphés à basse priorité, mobilité sous la moyenne et air dodges flottants exposés au dodge punish. Il ne peut pas forcer l'adversaire à combattre près du sol, sauf à s'engager dans une génération d'EX lente, surclassée par Side by Side ; et sa pression Straightarrow souffre des déplacements rapides et des whiff punishes dès que l'adversaire a de l'assist.",
+    "En compétitif, Firion est régulièrement classé high tier : excellent pour contrôler l'espace et capitaliser sur les erreurs à mi-distance, moins efficace en l'air et incapable d'empêcher tout le monde d'y rester. Il performe bien contre les personnages de corps à corps comme Cloud, Zidane et Prishe, et les petits stages comme Pandaemonium - Top Floor compliquent la fuite. Malgré sa faible génération d'EX et son combat aérien limité, ses gros dégâts et son plan de jeu direct en font une menace de tournoi constante."
+  ],
+  "tierNote": "Classé 12e (tier A) de la tier list 2017, en cohérence avec l'overview qui le décrit comme régulièrement classé high tier et menace constante en tournoi.",
+  "strengths": [
+    "Combat au sol défensif : tient tête au corps à corps avec les braveries Swordslash et Rope Knife, et Shield Bash pour se protéger après un dodge.",
+    "Anti-zoning : le contre longue portée de Shield Bash est rapide, à longue portée, difficile à éviter et mène aux combos d'assist — idéal contre les projectiles à basse priorité.",
+    "Dégâts : haute bravery de base, haute ATK de base, synergie avec Side by Side et Wall Rush constants sur HP links récompensent énormément un seul combo.",
+    "Side by Side : jauge d'assist et momentum montent vite grâce aux HP links bien placés et à des HP forts en neutral.",
+    "Combat à distance : Magic Arts: Bolt et surtout Straightarrow forcent le désengagement et punissent les dodges mal timés même de très loin.",
+    "Blood Weapon en EX Mode : rare, mais régénérer autant de vie que les dégâts HP infligés est très fort pour les comebacks."
+  ],
+  "weaknesses": [
+    "Combat aérien : air dodges flottants, faible potentiel de combo, pas de vraie défense post-dodge — les attaques rapprochées rapides créent beaucoup de risque pour lui.",
+    "Forcer l'engagement dans sa zone : son arsenal n'est pas conçu pour contraindre un adversaire campé au plafond d'un grand stage ; ces situations exigent des stratégies à long terme avec EX et builds adaptés.",
+    "HP links punissables : utilisateur fréquent de HP links, il reste vulnérable aux contres après Assist Change pendant la longue animation de Double Trouble."
+  ],
+  "moveNotes": {
+    "Lance Combo": "Son move le plus rapide pour lancer les HP links, mais aussi le plus court en portée malgré son effet d'aspiration. Frames actives longues capables d'attraper les whiff punishes trop précoces, animation courte qui enchaîne vite sur les follow-ups ou Double Trouble. Se dodge cancel relativement tôt, et le follow-up lance mid priority couvre même un miss.",
+    "Swordslash (ground)": "Son poke rapproché principal : l'un des startups les plus rapides du jeu (9F), remplit la jauge d'assist sur whiff et repousse les adversaires trop entreprenants. Portée courte, donc mauvais whiff punisher, mais annulable en block ou en d'autres attaques (HP compris) pour rester illisible ; sur hit, conversion possible en combo d'assist Kuja.",
+    "Rope Knife": "Son whiff punisher principal au sol : aspire l'adversaire pour les follow-ups dont Double Trouble, avec assez de portée, de frames actives et de tracking vertical pour attraper ground dodges et landing lag. Il traverse aussi les projectiles comme un disjoint et menace les pokes adverses grâce à sa portée supérieure. Télégraphé (effet jaune vif, cue audio), EX supérieur mais négligeable avec Side by Side ; un hit « superficiel » peut laisser l'adversaire s'échapper et les priorités hautes le staggerent. Pilier de sa défense malgré tout.",
+    "Reel Axe": "Projectile haute priorité qui tire l'adversaire vers Firion, la plus longue portée latérale de ses braveries au sol : sert surtout à casser les blocks de loin, en mixup complémentaire de Rope Knife utilisé avec parcimonie. Startup long, trajectoire rectiligne sans tracking évitable en marchant de côté, et vulnérabilité aux assist punishes : risqué, et non essentiel aux dégâts compétitifs.",
+    "Neutral (Punch)": "Le finisher le plus dommageable en bravery, très rapide, au long knockback pour Wall Rush. Peut glisser des dégâts de bravery juste avant un Assist Change réflexe. Moins utilisé que Double Trouble et le finisher lance : routes de combo plus faibles et dépendance au Wall Rush ; plus rentable dans les builds physiques.",
+    "Towards (Slash and arrow)": "Follow-up en deux temps menant au Chase, surtout pour les builds EX et généralement surclassé. Le gros de son EX (le meilleur de ses braveries) vient de la flèche longue portée, ce qui oblige à esquiver vers l'adversaire et rester en l'air — Firion sacrifie donc dégâts HP et jeu au sol pour une jauge EX qu'il peine déjà à remplir.",
+    "Away (Lance)": "Finisher combo qui Wall Rush au sol : dégâts de base faibles mais mid priority et Wall Rush constants, ouvrant les combos d'assist tout en couvrant Firion des ripostes hâtives. Sortable même si la bravery de départ rate — bon contre les adversaires avides. Balayage couvrant tout le corps sans angle mort, avec aspiration ; recovery correcte avant dodge cancel et vulnérable aux moves haute priorité avançants : à ne pas systématiser.",
+    "Magic Arts: Flame": "Projectile lent à tête chercheuse dont l'usage principal est... de se faire réfléchir pour déclencher le contre de Shield Bash. Faibles dégâts mais hit stun suffisant pour des combos opportunistes. Sa basse priorité perd contre presque tout, mais un Flame peut se lancer sans risque d'assist punish : une pression passive à long terme.",
+    "Magic Arts: Frost": "Projectile unique en ligne droite : la seule bravery aérienne qui touche de façon fiable après un block grâce à sa vitesse, pour une récompense faible (peu de dégâts, 0 EX). Peut monter un setup de chase élaboré si deux Frost sont lancés pendant un combo d'assist.",
+    "Magic Arts: Bolt": "Fait apparaître un projectile sur la position de l'adversaire et Wall Rush au sol. Excellent harcèlement à distance (durée active, bonne hitbox, casts répétés) et, contrairement au reste de son arsenal, il traverse les obstacles solides — parfait contre les adversaires à couvert. Près d'une seconde de startup et aucun tracking une fois lancé : à proscrire comme zoning face à une approche rapide.",
+    "Swordslash (midair)": "Semblable à la version sol et presque toujours équipé : poke, protection après air dodge grâce à sa vitesse pure, et surtout Wall Rush au sol — récompense supérieure à la version terrestre. Portée très courte qui peut rater même après un block réussi ; sert aussi de filler pendant les combos d'assist Kuja au sol après Wall Rush. Sans cancel, Firion tombe jusqu'à la fin de l'animation.",
+    "Shield Bash": "Son command block, cœur de sa défense au sol et après les ground dodges : block instantané de la frame 1 (défense sans faille après dodge avec Evasion Boost), suivi d'un contre dépendant de la distance. Version proche : rafale de couteaux à faible angle vertical, avec tracking. Version lointaine : trois sorts à très fort homing (Flame, Frost, Bolt), quasi inévitables sans Precision Evasion — si l'un des deux premiers touche, le reste est garanti ; le bolt final est un HP 1-hit à 60 EX qui lance les combos d'assist, et il peut toucher plusieurs fois par en dessous (meter depletion multiple, EX massif, jauges Side by Side). Ne bloque que les priorités basses (Lance Charge de Garland ou Free Energy de Zidane le staggerent/guard crushent), impuissant contre le halo camping, et Auto Assist Lock On le fait viser l'assist même disparu, exposant Firion.",
+    "Straightarrow (ground)": "Version sol de son outil de zoning principal, un peu plus rapide puisqu'il n'a pas à sauter, mais moins utilisée que la version aérienne. Firion est considéré aéroporté pendant le move : les assists aériens rapides peuvent le punir. Charge maximale d'environ 1 seconde (2 au total) avant tir automatique.",
+    "Lord of Arms": "Deux vagues d'énergie successives à fort tracking autour de lui : force le dodge au corps à corps, la seconde vague punissant les dodges normaux avec Wall Rush au sol vers les combos d'assist. Hitbox au-dessus de lui la plus rapide (33F), utile en anti-air ; considéré au sol pendant le move, il échappe aux assists lents. Les HP multiples de la seconde vague gonflent jauge Side by Side et meter depletion. Longue recovery punissable, vagues évitables en dashant de côté ou avec l'invincibilité d'Evasion Boost/Precision Evasion ; les deux vagues sortent même sur miss, exposant à un bravery break d'assist après le HP.",
+    "Double Trouble A": "Son HP link, disponible depuis trois braveries au sol et attendu dans la plupart des matchups : dégâts HP solo et combos d'assist dévastateurs avec Side by Side. Knockback en diagonale basse, Wall Rush au sol dans la plupart des stages : un output constant dès qu'une bonne touche passe. Si l'adversaire s'échappe en Assist Change, le move continue dans le vide — mais la recovery s'annule vite en dodge après le dernier hit, reportant sur l'adversaire la charge de punir proprement.",
+    "Double Trouble B": "Identique à Double Trouble A, en branche de Rope Knife.",
+    "Double Trouble C": "Identique à Double Trouble A, en branche de Reel Axe.",
+    "Straightarrow (midair)": "Le move qui définit le personnage : tant que Square est maintenu, Firion suit l'adversaire à la visée et tire à la relâche — sniper les déplacements lents, les whiffs et les dodges devient facile. Ralentit le rythme du match, récompense bien sans conditions exigeantes, Wall Rush pour les follow-ups d'assist et un morceau de jauge Side by Side à chaque hit. Vulnérabilités : visée lente derrière lui, recovery punissable par les assists aériens rapides après le tir, bravery break possible si l'adversaire appelle son assist en même temps que la flèche touche, et près d'une seconde incompressible avant de tirer. Auto Assist Lock On vise automatiquement les assists appelés pendant la charge — plus sûr en neutral, mais gare aux prises en tenaille et à la visée gâchée après Assist Change.",
+    "Weaponsmaster": "Son HP aérien principal pour les dégâts de bravery, finisher classique des combos d'assist Kuja et contre simple après un block. Bonne portée latérale, longtemps actif une fois sorti, se réoriente automatiquement au startup puis avance lentement vers l'adversaire. Longue animation exposée aux contres : bien moins sûr que Straightarrow ou Lord of Arms pour contrôler l'espace, notamment face aux assists aériens rapides et après un Assist Change adverse."
+  },
+  "exMode": {
+    "summary": [
+      "EX Mode « Blood Weapon equipped! » — effets : Regen, Critical Boost et Blood Weapon. Un EX Mode fort grâce à la régénération de Blood Weapon : chaque attaque HP réussie pendant l'EX Mode soigne Firion à hauteur de sa bravery au moment du coup. Le soin ne fonctionne pas avec les dégâts HP de Wall Rush — l'effet est donc strictement meilleur à haute bravery — et s'applique aussi à l'EX Burst, garantissant au moins deux soins si un HP touche. Très puissant pour renverser un match ou creuser une avance de vie décisive.",
+      "Le bémol : la génération d'EX de Firion est globalement faible et surclassée par les builds à haute bravery de base et Side by Side. Il n'accède donc pas souvent à son EX Mode, mais en tire un grand bénéfice quand il l'obtient."
+    ],
+    "burst": "Fervid Blazer demande cinq entrées dans l'ordre affiché (généralement trois directions puis deux boutons d'action), en environ deux secondes, obligatoirement à la croix directionnelle. Chaque erreur verrouille une entrée et retire une attaque ; sans aucune entrée réussie, Firion passe directement à la rafale de flèches finale."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Le plan de jeu est direct : contrôler l'espace à distance avec Straightarrow (viser en maintenant Square, relâcher pour sniper un dodge, un whiff ou un mouvement lent), tenir la mi-distance avec Rope Knife et Magic Arts, et punir tout ce qui approche. Au sol, Swordslash remplit la jauge d'assist sur whiff et repousse ; Shield Bash constitue la dernière ligne de défense après un ground dodge, et son contre longue portée transforme le zoning adverse en combo d'assist. Vous pouvez même provoquer ce contre en faisant réfléchir un Magic Arts: Flame.",
+    "Les dégâts passent par les HP links : Rope Knife, Lance Combo ou Reel Axe > Double Trouble, dont le Wall Rush au sol lance le combo d'assist Kuja. Le combo classique — Rope Knife > Double Trouble > Wall Rush > assist BRV > filler Straightarrow > Assist Chase > Weaponsmaster — est recommandé avec les builds à haute bravery de base ; d'après la section builds, un seul combo Double Trouble + Kuja inflige 4 130 à 4 712 dégâts HP, et trois combos d'assist suffisent souvent à gagner. Le contre lointain de Shield Bash et Straightarrow lui-même démarrent aussi des combos.",
+    "Side by Side est le moteur de la boucle : chaque dégât HP (Straightarrow, Shield Bash, HP links, Lord of Arms multi-hits) rend de la jauge d'assist, y compris quand elle est verrouillée. Ses combos solo sont situationnels au mieux (mur ou setup Flame requis) : l'assist est le vrai canal de dégâts.",
+    "Restez au sol autant que possible. En l'air, Firion est en danger : Swordslash aérien et sa vitesse pure servent d'auto-défense, mais les autres options sont lentes. Attention aux moments à risque : Double Trouble continue sur un Assist Change adverse (annulez en dodge après le dernier hit), Straightarrow expose à un bravery break d'assist synchronisé, et les adversaires campant hors de portée imposent un jeu long que Side by Side ne finance pas — d'où l'arbitrage documenté entre builds Side by Side et EX selon le matchup."
+  ],
+  "advancedTech": [
+    {
+      "name": "Swordslash attack cancel",
+      "desc": "Swordslash s'annule en block ou en n'importe quelle autre attaque, HP compris (Rope Knife, Lance Combo...). Cela rend Firion illisible face aux adversaires réactifs et convertit un poke anodin en ouverture, jusqu'au combo d'assist Kuja."
+    },
+    {
+      "name": "Straightarrow filler",
+      "desc": "Pendant les multi-hits de l'assist Kuja, tirer un Straightarrow dans le combo : il ajoute de la meter depletion, remet la récupération de bravery de base à la normale et augmente le taux de critique du Weaponsmaster final. S'il Wall Rush, c'est encore mieux. Attention si l'adversaire peut encore utiliser LV1 Assist Change : avec Auto Assist Lock On, la visée se perd sur l'assist et expose Kuja à un Assist Lock."
+    },
+    {
+      "name": "Setup Shield Bash sur Flame réfléchi",
+      "desc": "Lancer Magic Arts: Flame pour qu'il soit réfléchi, puis bloquer le retour avec Shield Bash : le contre lointain à trois sorts au homing très fort part gratuitement. La lenteur de Flame rend le setup lisible pour les bons joueurs, mais la menace reste rentable."
+    },
+    {
+      "name": "Bolt de Shield Bash par en dessous",
+      "desc": "Si le troisième projectile (bolt) du contre lointain touche par en dessous, le hit HP peut se déclencher plusieurs fois : ticks multiples de meter depletion, énorme quantité d'EX Force au sol et remplissage des deux jauges avec Side by Side. Cela retarde en revanche beaucoup le timing de l'assist Kuja (environ 1 seconde après le premier bolt)."
+    },
+    {
+      "name": "Double Trouble dodge cancel",
+      "desc": "Après le dernier hit de Double Trouble, la recovery s'annule rapidement en dodge : le HP link devient nettement plus sûr face aux tentatives de punish post-Assist Change, l'adversaire devant punir avec un timing précis."
+    },
+    {
+      "name": "Swordslash filler aérien",
+      "desc": "Pendant les combos d'assist Kuja au sol (après ground Wall Rush), le Swordslash aérien s'insère comme filler avant Lord of Arms ou Straightarrow pour des dégâts supplémentaires."
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "La page matchups de Firion est l'une des plus fournies des données : Warrior of Light (égal), Garland (égal), le miroir Firion (égal), Sephiroth (égal), The Emperor (léger avantage Firion), Cloud of Darkness (léger avantage Firion, en révision), Onion Knight (avantage Onion Knight) et Golbez (léger avantage Golbez, en révision) ; la fiche Cecil, favorable dans l'esprit, n'a pas de verdict chiffré. Le build recommandé presque partout : Side by Side + haute bravery de base.",
+      "Contre Warrior of Light, Shield Bash contre tous ses projectiles de bravery (Red/Blue/White Fang) et Straightarrow bride Shining Wave, Radiant Sword et ses verticales ; gare à Sword Thrust, gap closer Melee Mid qui traverse Shield Bash et Rope Knife. La gestion des Assist Changes est centrale : si Firion touche en premier, il gagne l'échange de changes (Rope Knife > Double Trouble > échappatoire WoL > Shield Strike > Bitter End > échappatoire Firion > Straightarrow).",
+      "Contre Garland, l'enjeu est de l'empêcher d'atteindre la jauge EX pleine : Straightarrow perce Cyclone et le force à dasher, mais Lance Charge écrase Rope Knife et le block, et Tsunami bat tous les ground dodges — préférez le side dodge. Contre The Emperor, tout tourne autour de l'interruption de Starfall (Straightarrow, Magic Arts: Bolt qui traverse les obstacles, assist Tidus contre les Dreary Cells aériens). Onion Knight est son matchup défavorable documenté : il contourne latéralement Straightarrow, Rope Knife, Lord of Arms et Weaponsmaster, forçant Firion à jouer la lecture plutôt que d'imposer son jeu. Contre Sephiroth, Shield Bash répond à Shadow Flare mais Hell's Gate perce le contre en Melee High ; patience obligatoire face au halo camping."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Firion joue principalement des builds Side by Side pour capitaliser sur son statut de HP linker : la plupart de ses attaques génèrent peu ou pas d'EX, donc les builds compétitifs multijoueur privilégient l'assist, la haute bravery de base et les dégâts de HP Wall Rush plutôt que l'EX.",
+      "Le build documenté (450 CP avec Equip Glitch) est un build de dégâts Side by Side centré sur la bravery de base : 1623 BRV, 178 ATK, 184 DEF, 9683 HP, assist Kuja, summon Rubicante, arme Piggy's Stick avec Chainsaw, Thornlet et Maximillian. Side by Side rend un morceau de jauge d'assist à chaque dégât HP, permettant d'appeler Kuja plus souvent ; chaque HP Wall Rush de Straightarrow ou Double Trouble dépasse 2 000 dégâts HP, et un combo Double Trouble + Kuja va de 4 130 à 4 712 — trois combos d'assist suffisent souvent à gagner. La bravery de base ignorant la DEF adverse, l'output reste constant tant que Firion ne se fait pas toucher.",
+      "Détails : Thornlet réduit légèrement la bravery à chaque dodge ou block réussi, compensable avec Back-Breaking Straw ou en punissant les recovery longues ; le multiplicateur Booster atteint x4.6 avec Opponent Summon Unused (x3.5 si l'adversaire n'a pas de summon équipé)."
+    ],
+    "notes": "Coups équipés du build : Swordslash, Rope Knife et Lance Combo (avec branches Double Trouble) au sol, Swordslash, Magic Arts: Flame et Bolt en l'air ; Lord of Arms, Shield Bash et Straightarrow en HP au sol, Straightarrow et Weaponsmaster en l'air. L'article builds dédié n'est pas inclus dans les données."
+  },
+  "assist": {
+    "asAssist": [
+      "Firion est l'un des assists les plus faibles du jeu (tier Low de la tier list assist) : potentiel de combo très limité et exigences élevées pour une récompense notable, difficile à justifier pour qui que ce soit. Rope Knife repousse vite l'adversaire et dépend du Wall Rush ; les HP assists sont chers et trop lents pour les combos Wall Rush — Straightarrow se charge souvent (impraticable en combo, mais ajoute de la pression dans les situations volatiles) et Weaponsmaster occupe au moins l'espace un moment, avec une niche possible dans les petits stages comme Phantom Train.",
+      "Sa seule spécificité : les loops à base de Magic Arts: Fire, qui exigent le sol ou le plafond et des personnages capables de tenir l'adversaire assez longtemps pour que Fire touche."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "La synergie la plus courante et la plus puissante : ses BRV assists combotent depuis chaque Wall Rush, que Firion obtient avec constance, et tiennent l'adversaire pour les fillers Straightarrow (meter depletion, critiques sur les finishers). Pousse loin le potentiel de dégâts tout en conservant du whiff punish — idéal aussi pour apprendre le personnage."
+      },
+      {
+        "name": "Sephiroth",
+        "why": "Ground BRV plus rapide que Kuja, mais holds plus courts, hit stun moindre et angles de knockback plus durs : un seul filler Swordslash pendant Reaper, et Weaponsmaster connecte à peine après les Assist Chases. Loin d'être la pire synergie, mais Kuja l'éclipse en performance et en constance."
+      },
+      {
+        "name": "Aerith",
+        "why": "Moins courante : encore plus de dégâts HP que Kuja au prix du whiff punish et d'une meter depletion réduite. La stratégie repose sur haute bravery de base et doubles assists — avec Double Trouble et les Straightarrows, deux jauges permettent trois attaques HP dans un seul combo."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Swordslash annulé en Rope Knife / Lance Combo (attack cancel)",
+      "desc": "Démonstrations vidéo du cancel de Swordslash en d'autres attaques, base de son jeu ambigu au corps à corps.",
+      "source": "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=322",
+      "date": null
+    },
+    {
+      "title": "Conversion de Swordslash en combo d'assist Kuja",
+      "desc": "Exemple en match d'un Swordslash confirmé jusqu'au combo d'assist Kuja complet.",
+      "source": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=107",
+      "date": null
+    },
+    {
+      "title": "Magic Arts: Bolt touche derrière les obstacles solides",
+      "desc": "Bolt frappe des adversaires à couvert derrière les décors (Crystal Tower, Pandaemonium), là où le reste de son arsenal est bloqué.",
+      "source": "https://www.youtube.com/watch?v=EhazH4c2TJs&t=235",
+      "date": null
+    },
+    {
+      "title": "Contre lointain de Shield Bash esquivé via Precision Evasion",
+      "desc": "L'une des rares réponses documentées aux trois sorts à homing du contre lointain de Shield Bash.",
+      "source": "https://www.youtube.com/watch?v=bxDZ9N6HYL4&t=302",
+      "date": null
+    },
+    {
+      "title": "Straightarrow et Auto Assist Lock On",
+      "desc": "Série d'exemples : visée automatique sur l'assist appelé pendant la charge, punition évitée, mais aussi visée gâchée quand l'assist disparaît après Assist Change.",
+      "source": "https://www.youtube.com/watch?v=SGv4ADXqhCw&t=312",
+      "date": null
+    },
+    {
+      "title": "Loops d'assist Magic Arts: Fire",
+      "desc": "Démonstration des loops que l'assist Firion permet avec Magic Arts: Fire, sa seule niche en tant qu'assist.",
+      "source": "https://www.youtube.com/watch?v=vA3cZSRWYEU&t=333s",
+      "date": null
+    }
+  ],
+  "limits": [
+    "Aucune mécanique unique documentée (section absente des sources).",
+    "Article combos dédié (« Firion (Combos) » et « Firion Combos (Kuja Assist) ») non inclus : seuls deux combos solo et quatre combos Kuja sont détaillés.",
+    "Valeurs d'assist gain des coups non renseignées ; startup des follow-ups et de Double Trouble inconnu (« ? »/« ?? »), certains décomptes EX/Comrade's Vow des combos incomplets (« ??? » ou approximations).",
+    "Matchups documentés pour 9 adversaires seulement (sur 30) ; les fiches Cloud of Darkness, Cecil et Golbez sont marquées « REVISION COMING SOON » et Cecil n'a pas de verdict.",
+    "Article builds dédié (« Firion (012) Builds ») non inclus : un seul build Side by Side est détaillé.",
+    "Les références YouTube ne sont pas datées (champ date à null) et l'une d'elles n'a pas de libellé exploitable (URL brute)."
+  ]
+}

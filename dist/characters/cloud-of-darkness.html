@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloud of Darkness — Guide Dissidia 012 [duodecim]</title>
+<meta name="description" content="Guide compétitif français de Cloud of Darkness dans Dissidia 012 [duodecim] Final Fantasy : frame data, plan de jeu, builds, assists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/main.css">
+
+</head>
+<body>
+<nav class="guide-top" aria-label="Sections du guide"><div class="chips-nav">
+<a href="../index.html">← Sélection</a>
+<a href="#overview">Vue d'ensemble</a><a href="#moves">Coups</a><a href="#unique">Mécanique unique</a><a href="#gameplan">Plan de jeu</a><a href="#matchups">Matchups</a><a href="#builds">Builds</a><a href="#assist">Assists</a><a href="#community">Tech communautaire</a><a href="#sources">Sources</a>
+</div></nav>
+<div class="guide-layout">
+<nav class="guide-toc" aria-label="Sommaire"><ol>
+<li><a href="../index.html" class="backlink">← Sélection</a></li>
+<li><a href="#overview">Vue d'ensemble</a></li><li><a href="#moves">Coups</a></li><li><a href="#unique">Mécanique unique</a></li><li><a href="#gameplan">Plan de jeu</a></li><li><a href="#matchups">Matchups</a></li><li><a href="#builds">Builds</a></li><li><a href="#assist">Assists</a></li><li><a href="#community">Tech communautaire</a></li><li><a href="#sources">Sources</a></li>
+</ol></nav>
+<main class="guide-main">
+<section class="hero" id="hero">
+<img class="portrait" src="../assets/portraits/cloud-of-darkness.png" alt="Portrait officiel de Cloud of Darkness dans Dissidia 012 [duodecim]">
+<div class="hero-id">
+<p class="origin">Final Fantasy III</p>
+<h1>Cloud of Darkness</h1>
+<p class="tagline">Défenseure à stances tentaculaires et command block, entre close et midrange</p>
+<div class="chips"><span class="chip ">BRV la + rapide <b>13F (Tentacle starters)</b></span><span class="chip ">HP la + rapide <b>39F (Anti-Air P. Beam)</b></span><span class="chip ">Dash <b>85 (Slow)</b></span><span class="chip ">ATK <b>109</b></span><span class="chip ">DEF <b>111</b></span><span class="chip ok">HP 1 coup <b>Oui</b></span><span class="chip ok">HP links <b>Oui</b></span></div>
+</div>
+</section>
+<section id="overview"><h2>Vue d'ensemble</h2>
+<p>Cloud of Darkness est une combattante défensive qui opère entre le close-range et le midrange. Chaque bravery attack est une stance mobile en trois temps, avec trois followups différents selon le timing d'input, ce qui permet un style de jeu réactif : occuper l'espace au sol avec des attaques à priorité mid, ou délivrer un déluge de coups. Ses nombreux HP attacks couvrent combos et neutral : Anti-Air Particle Beam pour les combos HP solo, Aura Ball pour temporiser, et le singulier command block Wrath Particle Beam pour stopper les adversaires agressifs.</p>
+<p>Malgré une ATK de base faible, elle tire parti aussi bien des builds de dégâts que des builds Side by Side, et possède même une synergie unique, un peu gimmick, avec un build Mindbreak pour des quantités démesurées de bravery.</p>
+<p>Historiquement, elle est considérée comme l'un des personnages les plus faibles du jeu compétitif. La raison principale tient à ses bravery attacks : la stance en trois temps doit être terminée avant de pouvoir dodge, si bien que chaque bravery est un engagement exceptionnellement long. Difficile dès lors de mettre la pression et de remplir la jauge d'assist rapidement — le gain d'assist lent sur whiff est un vrai problème de momentum. La plupart des followups de troisième temps n'offrent pas de propriétés justifiant leur startup, et les braveries aériennes protègent peu contre le rushdown tout en restant blockables. Obtenir une grosse récompense en situation de punish exige souvent assist, mur et/ou sol, qu'elle ne peut pas imposer facilement, et sa mobilité lente lui fait perdre la course aux EX Cores et à la jauge face aux adversaires défensifs.</p>
+<p>Elle peut prospérer juste en dehors de la range de poke en position de défenseure, mais elle manque de forces notables pour compenser ses défauts : minimiser le risque et rester dans la course devient très exigeant à haut niveau.</p>
+<p><strong>Tier list 2017 (tournoi, dissidia.wiki)</strong> : <span class="badge prio-melee-high">C</span> — 28ᵉ sur 30. Classée 28e, en tier C, dans la tier list 2017 ; l'overview la décrit historiquement comme l'un des personnages les plus faibles du jeu compétitif.</p>
+<div class="two-col">
+<div class="card strengths"><h3>Forces</h3><ul><li>Command block : Wrath Particle Beam est l'un des command blocks les plus sûrs du jeu, précieux en self-defense après un air dodge et pour stopper les adversaires agressifs.</li><li>Glide : possibilité de se déplacer pendant les bravery attacks, ce qui rend les whiffs un peu plus sûrs et permet de s'adapter à la situation.</li></ul></div>
+<div class="card weaknesses"><h3>Faiblesses</h3><ul><li>Bravery attacks à très fort engagement : animations longues, donc télégraphées, vulnérables aux blocks (avançants), risquées par leur long recovery et aux opportunités de combo inconstantes malgré le long startup.</li><li>Gain d'assist sur whiff : impossible de remplir la jauge rapidement en lançant des attaques, ce qui prive d'une ressource clé pour les dégâts et les comebacks.</li><li>Anti-air défaillant : difficile d'empêcher l'adversaire de planer au-dessus d'elle (startup lent, engagement élevé, angles morts, hitboxes peu fiables) ; Tentacle of Pain 1, l'option la plus rapide, convertit mal avec assist.</li><li>Anti-turtling : les adversaires peuvent fuir et la distancer sur les EX Cores et la jauge d'assist ; mobilité lente, HP télégraphés à long recovery et outils de provocation longue distance médiocres.</li><li>Dilemme de range : elle est plus en sécurité juste hors du close-range, mais ses punishes bravery les plus rapides exigent d'être au contact ; petites hitboxes initiales des stances, mixups limités et whiffs longs à assumer.</li><li>Coût en Capacity Points élevé : un loadout d'attaques complet coûte cher et laisse peu de place aux extra abilities.</li></ul></div>
+</div>
+<h3>Stats &amp; vitesses</h3>
+<div class="table-scroll"><table class="stats"><tr><th>Nom</th><td>Cloud of Darkness (暗闇の雲)</td></tr><tr><th>Jeu d'origine</th><td>Final Fantasy III</td></tr><tr><th>ATK de base (LV100)</th><td>109 (Low)</td></tr><tr><th>DEF de base (LV100)</th><td>111 (Average)</td></tr><tr><th>Vitesse de course</th><td>9 (Slow)</td></tr><tr><th>Vitesse de dash</th><td>85 (Slow)</td></tr><tr><th>Vitesse de chute</th><td>109 (Very Slow)</td></tr><tr><th>Chute après esquive</th><td>45 (Slowest)</td></tr><tr><th>BRV la plus rapide</th><td>13F (Tentacle starters)</td></tr><tr><th>HP la plus rapide</th><td>39F (Anti-Air P. Beam)</td></tr><tr><th>HP en 1 coup</th><td>Yes (Multiple)</td></tr><tr><th>HP links</th><td>Yes (Combos only)</td></tr><tr><th>Command block</th><td>Yes (Wrath P. Beam)</td></tr><tr><th>Armes</th><td>Poles, Rods, Staves, Thrown Weapons</td></tr><tr><th>Armures</th><td>Bangles, Clothing, Hats, Hairpins, Robes</td></tr><tr><th>Armes exclusives</th><td>Calcite Staff, Bizarre Staff, Everdark</td></tr><tr><th>Camp</th><td>Chaos</td></tr><tr><th>Doubleur (JP)</th><td>Masako Ikeda</td></tr><tr><th>Doubleur (ENG)</th><td>Laura Bailey</td></tr></table></div>
+<figure class="diagram" role="img" aria-label="Profil de mobilité comparé à la moyenne du cast">
+<figcaption>Profil de mobilité (mode normal)</figcaption>
+<div class="table-scroll"><svg viewBox="0 0 720 174" xmlns="http://www.w3.org/2000/svg" style="min-width:480px">
+<title>Profil de mobilité : valeurs du personnage (barres) contre moyenne du cast (trait or)</title>
+<text x="142" y="29" fill="var(--text)" font-size="12" text-anchor="end">Course</text><rect x="150" y="18" width="36.617471080973274" height="18" rx="3" fill="var(--violet)"><title>Course : 9 (moyenne du cast : 7.3)</title></rect><line x1="179.63302752293578" y1="14" x2="179.63302752293578" y2="38" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 7.3</title></line><text x="192.61747108097327" y="29" fill="var(--muted)" font-size="11">9</text><text x="142" y="63" fill="var(--text)" font-size="12" text-anchor="end">Dash</text><rect x="150" y="52" width="345.83167132030314" height="18" rx="3" fill="var(--violet)"><title>Dash : 85 (moyenne du cast : 78.5)</title></rect><line x1="469.58258810813595" y1="48" x2="469.58258810813595" y2="72" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 78.5</title></line><text x="501.83167132030314" y="63" fill="var(--muted)" font-size="11">85</text><text x="142" y="97" fill="var(--text)" font-size="12" text-anchor="end">Chute</text><rect x="150" y="86" width="443.47826086956525" height="18" rx="3" fill="var(--violet)"><title>Chute : 109 (moyenne du cast : 83.5)</title></rect><line x1="489.5931392102114" y1="82" x2="489.5931392102114" y2="106" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 83.5</title></line><text x="599.4782608695652" y="97" fill="var(--muted)" font-size="11">109</text><text x="142" y="131" fill="var(--text)" font-size="12" text-anchor="end">Chute post-esquive</text><rect x="150" y="120" width="183.08735540486637" height="18" rx="3" fill="var(--violet)"><title>Chute post-esquive : 45 (moyenne du cast : 33.5)</title></rect><line x1="286.2327418711479" y1="116" x2="286.2327418711479" y2="140" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : 33.5</title></line><text x="339.08735540486634" y="131" fill="var(--muted)" font-size="11">45</text>
+</svg></div>
+<p class="mv-desc">Valeurs brutes du wiki (page personnage) — <strong>plus la valeur est basse, plus le personnage est rapide</strong>. Trait pointillé or : moyenne des 31 personnages.</p>
+</figure>
+</section>
+<section id="moves"><h2>Coups</h2>
+<figure class="diagram" role="img" aria-label="Startup des coups de Cloud of Darkness">
+<figcaption>Startup des coups de Cloud of Darkness</figcaption>
+<div class="table-scroll"><svg viewBox="0 0 760 394" xmlns="http://www.w3.org/2000/svg" style="min-width:560px">
+<title>Startup des coups de Cloud of Darkness</title>
+<line x1="331.4457831325301" y1="20" x2="331.4457831325301" y2="368" stroke="var(--surface-2)" stroke-width="1"/><text x="331.4457831325301" y="382" fill="var(--muted)" font-size="11" text-anchor="middle">20F</text><line x1="452.89156626506025" y1="20" x2="452.89156626506025" y2="368" stroke="var(--surface-2)" stroke-width="1"/><text x="452.89156626506025" y="382" fill="var(--muted)" font-size="11" text-anchor="middle">40F</text><line x1="574.3373493975903" y1="20" x2="574.3373493975903" y2="368" stroke="var(--surface-2)" stroke-width="1"/><text x="574.3373493975903" y="382" fill="var(--muted)" font-size="11" text-anchor="middle">60F</text><line x1="695.7831325301205" y1="20" x2="695.7831325301205" y2="368" stroke="var(--surface-2)" stroke-width="1"/><text x="695.7831325301205" y="382" fill="var(--muted)" font-size="11" text-anchor="middle">80F</text><text x="202" y="41" fill="var(--text)" font-size="12" text-anchor="end">[Wrath] Particle Beam (ground)</text><rect x="210" y="30" width="6.072289156626506" height="16" rx="3" fill="var(--success)"><title>[Wrath] Particle Beam (ground) : 1F (Block High / Ranged High)</title></rect><text x="222.0722891566265" y="41" fill="var(--muted)" font-size="11">1F</text><text x="202" y="67" fill="var(--text)" font-size="12" text-anchor="end">[Wrath] Particle Beam (midair)</text><rect x="210" y="56" width="6.072289156626506" height="16" rx="3" fill="var(--success)"><title>[Wrath] Particle Beam (midair) : 1F (Block High / Ranged High)</title></rect><text x="222.0722891566265" y="67" fill="var(--muted)" font-size="11">1F</text><text x="202" y="93" fill="var(--text)" font-size="12" text-anchor="end">Tentacle of Suffering</text><rect x="210" y="82" width="12.144578313253012" height="16" rx="3" fill="var(--muted)"><title>Tentacle of Suffering : 2F (Melee Low)</title></rect><text x="228.14457831325302" y="93" fill="var(--muted)" font-size="11">2F</text><text x="202" y="119" fill="var(--text)" font-size="12" text-anchor="end">Tentacle of Pain</text><rect x="210" y="108" width="24.289156626506024" height="16" rx="3" fill="var(--muted)"><title>Tentacle of Pain : 4F (Melee Low)</title></rect><text x="240.289156626506" y="119" fill="var(--muted)" font-size="11">4F</text><text x="202" y="145" fill="var(--text)" font-size="12" text-anchor="end">Tentacle of Spite</text><rect x="210" y="134" width="24.289156626506024" height="16" rx="3" fill="var(--muted)"><title>Tentacle of Spite : 4F (Melee Low)</title></rect><text x="240.289156626506" y="145" fill="var(--muted)" font-size="11">4F</text><text x="202" y="171" fill="var(--text)" font-size="12" text-anchor="end">Tentacle of Scorn</text><rect x="210" y="160" width="60.72289156626506" height="16" rx="3" fill="var(--muted)"><title>Tentacle of Scorn : 10F (Melee Low)</title></rect><text x="276.72289156626505" y="171" fill="var(--muted)" font-size="11">10F</text><text x="202" y="197" fill="var(--text)" font-size="12" text-anchor="end">[Anti-air] Particle Beam</text><rect x="210" y="186" width="236.81927710843374" height="16" rx="3" fill="var(--success)"><title>[Anti-air] Particle Beam : 39F (Ranged High)</title></rect><text x="452.81927710843377" y="197" fill="var(--muted)" font-size="11">39F</text><text x="202" y="223" fill="var(--text)" font-size="12" text-anchor="end">[Wide-Angle] Particle Beam</text><rect x="210" y="212" width="370.4096385542169" height="16" rx="3" fill="var(--success)"><title>[Wide-Angle] Particle Beam : 61F (Ranged High)</title></rect><text x="586.4096385542168" y="223" fill="var(--muted)" font-size="11">61F</text><text x="202" y="249" fill="var(--text)" font-size="12" text-anchor="end">[Feint] Particle Beam</text><rect x="210" y="238" width="370.4096385542169" height="16" rx="3" fill="var(--success)"><title>[Feint] Particle Beam : 61F (Ranged High)</title></rect><text x="586.4096385542168" y="249" fill="var(--muted)" font-size="11">61F</text><text x="202" y="275" fill="var(--text)" font-size="12" text-anchor="end">Aura Ball</text><rect x="210" y="264" width="382.5542168674699" height="16" rx="3" fill="var(--success)"><title>Aura Ball : 63F (Ranged High)</title></rect><text x="598.5542168674699" y="275" fill="var(--muted)" font-size="11">63F</text><text x="202" y="301" fill="var(--text)" font-size="12" text-anchor="end">[0-form] Particle Beam</text><rect x="210" y="290" width="382.5542168674699" height="16" rx="3" fill="var(--gold)"><title>[0-form] Particle Beam : 63F (Melee High)</title></rect><text x="598.5542168674699" y="301" fill="var(--muted)" font-size="11">63F</text><text x="202" y="327" fill="var(--text)" font-size="12" text-anchor="end">[Long-Range] Particle Beam</text><rect x="210" y="316" width="504" height="16" rx="3" fill="var(--success)"><title>[Long-Range] Particle Beam : 83F (Ranged High)</title></rect><text x="720" y="327" fill="var(--muted)" font-size="11">83F</text><text x="202" y="353" fill="var(--text)" font-size="12" text-anchor="end">[Fusillade] Particle Beam</text><rect x="210" y="342" width="504" height="16" rx="3" fill="var(--success)"><title>[Fusillade] Particle Beam : 83F (Ranged High)</title></rect><text x="720" y="353" fill="var(--muted)" font-size="11">83F</text>
+</svg></div>
+<p class="mv-desc">Startup en frames (60 i/s, données dissidia.wiki). Couleur : <span style="color:var(--muted)">Melee Low</span> · <span style="color:var(--violet)">Melee Mid</span> · <span style="color:var(--gold)">Melee High</span> · <span style="color:var(--success)">Ranged</span>.</p>
+</figure>
+<h3 style="color:var(--gold)">Braveries</h3>
+<h3>Liste</h3>
+<p class="mv-desc">All bravery attack starters share the following properties:</p>
+<details class="move">
+<summary><span class="mv-name">Coup sans nom</span>
+<span class="mv-meta">13F / 33F / 53F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">21 (7, 7, 7)</span></td></tr><tr><th>Startup</th><td><span class="mono">13F / 33F / 53F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">each 9</span></td></tr><tr><th>Effets</th><td>--</td></tr></table></div>
+</div>
+</details>
+<h3>Au sol</h3>
+
+<details class="move">
+<summary><span class="mv-name">Tentacle of Pain</span>
+<span class="mv-meta">+4F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Stance au sol en trois followups. Pain 1 (3 morsures) : string rapide avec beaucoup de hit stun et 90 EX, mais combos assist peu pratiques sans mur ni appel d'assist anticipé. Pain 2 (poussée) : attaque de midrange qui repousse les assauts, base damage élevée et Wall Rush vers combos assist. Pain 3 (bolts) : starter de combo et punish de midrange — les swipes combotent dans les bolts, qui mènent aux braveries aériennes ou à Anti-Air Particle Beam, avec assez de hit stun pour comboter en assist.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Followup 1</th><th>Followup 2</th><th>Followup 3</th></tr><tr><th>Dégâts de base</th><td><span class="mono">30 (8, 8, 14)</span></td><td><span class="mono">48 (12 x 4)</span></td><td><span class="mono">12 (4 x 3)</span></td></tr><tr><th>Startup</th><td><span class="mono">+4F</span></td><td><span class="mono">+4F</span></td><td><span class="mono">+34F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">90</span></td><td><span class="mono">0</span></td><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Chase</td><td>Wall Rush</td><td>--</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">?? (30)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Tentacle of Spite</span>
+<span class="mv-meta">+4F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Stance au sol aux followups mid priority utiles en neutral, à mixer avec Tentacle of Pain. Spite 1 (balayage) : « get off me » rapide dont le Wall Rush mène aux combos assist, et qui force une réaction de ground Wall Rush même contre Auto Recovery. Spite 2 (toupie) : self-defense mid priority et starter de combo assist, avec effet d'aspiration, mais période de recovery vulnérable après l'envoi. Spite 3 (orbe) : l'une de ses meilleures braveries au sol — orbe à tête chercheuse Ranged Mid qui stagger les blocks, tire l'adversaire vers le haut et tient assez pour les combos assist ; angle mort au-dessus d'elle et hits qui peuvent dropper sur membres étendus.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Followup 1</th><th>Followup 2</th><th>Followup 3</th></tr><tr><th>Dégâts de base</th><td><span class="mono">28</span></td><td><span class="mono">40 (3 x 8, 16)</span></td><td><span class="mono">18 (3 x 6)</span></td></tr><tr><th>Startup</th><td><span class="mono">+4F</span></td><td><span class="mono">+8F</span></td><td><span class="mono">+12F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-mid">Melee Mid</span></td><td><span class="badge prio-ranged">Ranged Mid</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td><td><span class="mono">84</span></td><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush</td><td>--</td><td>--</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">60 (30)</span></td></tr></table></div>
+</div>
+</details>
+<h3>En l’air</h3>
+
+<details class="move">
+<summary><span class="mv-name">Tentacle of Suffering</span>
+<span class="mv-meta">+2F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Stance aérienne. Suffering 1 (estoc) : rapide, fort tracking vertical, crée de la distance et punit près des murs ; combote dans Aerith assist n'importe où via Chase (Kuja/Jecht exigent plafond ou corner) et sert de combo filler pendant l'assist BRV air d'Exdeath. Suffering 2 (360°) : portée tout autour mais télégraphée et vulnérable aux blocks ; punish en close-range qui tient assez pour les combos assist en midscreen. Suffering 3 (2 boules) : option plutôt sûre contre les blocks à mi-distance ; les deux projectiles qui connectent combotent en assist, et contre The Emperor ou Ultimecia on peut les tirer contre les murs pour les faire réfléchir et activer Wrath Particle Beam.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Followup 1</th><th>Followup 2</th><th>Followup 3</th></tr><tr><th>Dégâts de base</th><td><span class="mono">30</span></td><td><span class="mono">40 (3 x 10, 10)</span></td><td><span class="mono">each (8)</span></td></tr><tr><th>Startup</th><td><span class="mono">+2F</span></td><td><span class="mono">+4F</span></td><td><span class="mono">+12F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">60</span></td><td><span class="mono">90</span></td><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Chase</td><td>--</td><td>--</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">60 (30)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">Tentacle of Scorn</span>
+<span class="mv-meta">+10F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Stance aérienne. Scorn 1 (2 hits) : jab rapide pour repousser et whiff punir, Wall Rush utile près des murs mais hit stun et knockback courts. Scorn 2 (vertical) : longue allonge vers le haut ou le bas selon la position adverse, Wall Rush dans les deux sens ; d'autant plus facile à bloquer que la distance est grande, avec une deadzone devant elle. Scorn 3 (projectiles) : pression occasionnelle vers le bas — si plusieurs projectiles touchent, un Free Air Dash permet de comboter derrière ; perd contre les dashes, à utiliser avec parcimonie.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th></th><th>Followup 1</th><th>Followup 2</th><th>Followup 3</th></tr><tr><th>Dégâts de base</th><td><span class="mono">30 (10, 20)</span></td><td><span class="mono">28</span></td><td><span class="mono">each (3)</span></td></tr><tr><th>Startup</th><td><span class="mono">+10F</span></td><td><span class="mono">+10F</span></td><td><span class="mono">+10F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td><td><span class="mono">0</span></td><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush</td><td>Wall Rush</td><td>--</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">60 (30)</span></td></tr></table></div>
+</div>
+</details>
+
+<h3 style="color:var(--gold)">Attaques HP</h3>
+<h3>Au sol</h3>
+
+<details class="move">
+<summary><span class="mv-name">[Anti-air] Particle Beam</span>
+<span class="mv-meta">39F</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Close, 39F] Colonnes de ténèbres autour d'elle, utilisées en combo solo après Pain 3, après un block stagger et pour menacer les adversaires aériens. Mène à des combos assist constants n'importe où, d'où sa valeur d'ender de combo solo avec Side by Side ; recovery assez long pour être puni (même par Kuja BRV assist), et l'adversaire peut tomber du haut du faisceau.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">9 (1 x 9)</span></td></tr><tr><th>Startup</th><td><span class="mono">39F</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">87</span></td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">[Wide-Angle] Particle Beam</span>
+<span class="mv-meta">61F</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Long, 61F] HP en un coup à hitbox très large : ender de combo assist tolérant, capable d'attraper les ground dodges joués en auto pilot. Synergie unique avec les builds Mindbreak (détruit les éléments de décor de World of Darkness et Pandaemonium - Top Floor pour accumuler la bravery). Long recovery après le tir : vulnérable aux dodge &gt; contre-attaques et assist punishes ; la hitbox est moins haute que le visuel.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">61F</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">[Long-Range] Particle Beam</span>
+<span class="mv-meta">83F</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Long, 83F] Zoning secondaire en neutral menant à des combos assist constants sur hit. Une fois tiré, il reste actif longtemps avec de hautes hitboxes et un tracking moyen : il faut dodge à travers tous les faisceaux. Recovery punissable mais juste assez court pour éviter les assists BRV sol lents (Kuja, Tidus). C'est aussi l'une des meilleures attaques à associer au landing cancel bug, qui la rend plus sûre et en fait un starter de combo solo.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">83F</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">each 30</span></td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">[Feint] Particle Beam</span>
+<span class="mv-meta">61F</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Dodge, 61F] Esquive au départ puis tir de canon : sert à éviter les attaques adverses et c'est son meilleur combo filler HP avec Jecht BRV air ou Kuja BRV sol. HP en un coup à l'explosion longtemps active, mais l'invincibilité est trompeusement courte et finit avant sa réapparition ; la direction du déplacement est contrôlable librement.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">61F</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush, Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">[Wrath] Particle Beam (ground)</span>
+<span class="mv-meta">1F~13F (Block) ~56F (missed block recovery) 45F (counter attack)</span><span class="badge prio-ranged">Block High / Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Command block signature (block instantané 1F~13F, contre à 45F) : self-defense après dodge et outil anti-agression. Stagger les dashes et les braveries mêlée low ET mid ; sur contre réussi, un faisceau à dégâts HP apparaît sur l'adversaire avec assez de hit stun pour lancer un combo assist, avec une brève invincibilité à l'activation. Contre les projectiles, pas de stagger : l'adversaire peut dodge le faisceau à réaction et elle reste brièvement vulnérable aux assists ; la durée de block courte exige un vrai timing.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">9 (1 x 9)</span></td></tr><tr><th>Startup</th><td><span class="mono">1F~13F (Block) ~56F (missed block recovery) 45F (counter attack)</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Block High / Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">87</span></td></tr><tr><th>Effets</th><td>Block</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3>En l’air</h3>
+
+<details class="move">
+<summary><span class="mv-name">Aura Ball</span>
+<span class="mv-meta">63F / 73F</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Close, 63F/73F] Outil de self-defense passif : sphères détonantes (charge pour en créer plusieurs, orientables au stick) qui permettent de remplir la jauge d'assist plus sereinement. Les explosions, larges et longtemps actives, stoppent les assist punishes, et le dodge cancel est relativement court ; la boule explose même si elle se fait toucher. Attention aux projectiles (Shadow Flare de Sephiroth, Electrocute de Gilgamesh) et aux attaques disjointed comme Chain Cast de Garland ; les longues frames actives permettent aussi un peu d'okizeme en espaces exigus.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">63F / 73F</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">each 60</span></td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">[0-form] Particle Beam</span>
+<span class="mv-meta">63F</span><span class="badge prio-melee-high">Melee High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Mid, 63F] HP aérien de base : ender de combo assist et punition de block stagger, avec tracking horizontal/diagonal, longues frames actives et très fort knockback propice au Wall Rush. Haut risque toutefois : startup lent, portée trop courte contre les air dodges boostés Adamant Chains, long recovery, et c'est sa seule attaque Melee High — réfléchir un projectile Ranged High avec la laisse grande ouverte.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">2 x 8 (16)</span></td></tr><tr><th>Startup</th><td><span class="mono">63F</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">24</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">[Fusillade] Particle Beam</span>
+<span class="mv-meta">83F</span><span class="badge prio-ranged">Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>[Long, 83F] Pression secondaire en neutral, proche de Long-Range : force un dodge ou une réaction défensive des adversaires passifs en midrange. Les projectiles sont actifs dès le tir et protègent l'avant, puis timing de dodge ambigu (angles et timings différents) ; ils continuent de frapper même après son propre dodge. Déplaçable au stick jusqu'au tir, mais dangereux si l'adversaire interrompt avec assist ou dash ; permet aussi une pression longue distance supplémentaire après Jecht BRV air.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Startup</th><td><span class="mono">83F</span></td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<details class="move">
+<summary><span class="mv-name">[Wrath] Particle Beam (midair)</span>
+<span class="mv-meta">1F~13F (Block) ~56F (missed block recovery) 45F (counter attack)</span><span class="badge prio-ranged">Block High / Ranged High</span></summary>
+<div class="mv-body">
+<div class="mv-note"><p>Version aérienne du command block, fortement recommandée : même fonctionnement (guard instantané, courte durée, faisceau sur l'adversaire en cas de block réussi). Le compétitif se jouant beaucoup en l'air, c'est un outil de self-defense précieux, notamment juste après un air dodge pour rendre l'esquive bien plus sûre ; récompense inconstante contre les projectiles et brève vulnérabilité aux assists après le faisceau.</p></div>
+<div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">1 x 9 (9)</span></td></tr><tr><th>Startup</th><td><span class="mono">1F~13F (Block) ~56F (missed block recovery) 45F (counter attack)</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Block High / Ranged High</span></td></tr><tr><th>EX Force</th><td><span class="mono">87</span></td></tr><tr><th>Effets</th><td>Block</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (15)</span></td></tr></table></div>
+</div>
+</details>
+<h3 style="color:var(--gold)">EX Mode: Flood of Darkness! &amp; EX Burst</h3>
+<p>EX Mode « Flood of Darkness! » : Regen, Critical Boost et Null Particle Beam. Null Particle Beam permet d'annuler le recovery de n'importe quelle attaque en effectuant un HP attack : whiffs plus sûrs (enchaîner sur Wrath pour se protéger), combo Pain 3 &gt; Anti-Air plus tolérant, et surtout Pain 3 &gt; Wide-Angle / Feint qui devient un combo midscreen fiable avec dégâts HP Wall Rush. Il n'y a pas de limite apparente au chaînage de HP attacks tant que l'EX Mode est actif, ce qui permet aussi de saturer la scène (Wide-Angle, Aura Ball, Wrath répétés).</p>
+<p>L'EX Mode reste toutefois bridé : les EX Modes servent souvent à garantir la victoire sur un combo assist, dont elle profite peu, et Cloud of Darkness remplit mal sa jauge EX — la plupart de ses attaques ne génèrent pas d'EX et les courses aux EX Cores sont difficiles avec son dash lent et ses longues animations.</p>
+<p><strong>EX Burst :</strong> Ultra Particle Beam : maintenir Circle pour remplir la jauge jusqu'à 120 % puis relâcher rapidement (exécution proche de l'EX Burst d'Exdeath). Dégâts bravery modestes (faible base damage initiale), mais suffisants pour conclure un match après un combo assist en Wall Rush.</p>
+
+</section>
+<section id="unique"><h2>Mécanique unique</h2>
+<div class="banner" data-undocumented="1"><strong>Section non documentée sur dissidia.wiki à ce jour — à compléter.</strong> <a href="https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)" rel="external noopener">Page wiki du personnage</a> — pas de section « Unique Mechanics » dédiée ; le cas échéant, la mécanique du personnage est couverte dans la vue d'ensemble et les coups.</div>
+</section>
+<section id="gameplan"><h2>Plan de jeu &amp; techniques avancées</h2>
+<p>Jouez la défenseure juste en dehors de la range de poke adverse : c'est là qu'elle prospère. Au sol, mixez Tentacle of Pain et Tentacle of Spite (les followups mid priority de Spite tiennent le neutral, Spite 3 stagger les blocks et soutient les approches) ; en l'air, appuyez-vous sur Wrath Particle Beam après vos air dodges pour faire hésiter les personnages de mêlée, et sur Aura Ball pour temporiser et remplir la jauge d'assist plus sereinement, à défaut de rapidement.</p>
+<p>Le combo solo de référence est Tentacle of Pain 3 (bolts) &gt; Anti-Air Particle Beam, prolongeable en assist derrière ; à longue distance, Spite 3 &gt; saut &gt; Free Air Dash permet une conversion bravery. Les combos assist pratiques partent d'un Wall Rush, de Spite 2, Spite 3, Suffering 2 ou Scorn 2. Pensez à vous écarter de l'adversaire après l'appel d'assist sur Spite 2 / Suffering 2 pour ne pas le repousser hors du combo.</p>
+<p>Gérez l'engagement : chaque bravery est une stance complète qu'on ne peut dodge qu'après le troisième swipe — utilisez le glide au stick pour créer de la distance, augmenter la range effective ou esquiver un block avançant. Contre les adversaires défensifs, acceptez que la course aux EX Cores et à la jauge soit défavorable : les récompenses viennent des reads, de Wrath et des HP attacks qui forcent le dodge (Wide-Angle + Spite 3 / assist pour créer des situations de checkmate, encore renforcées en EX Mode par Null Particle Beam).</p>
+<h3>Techniques spécifiques</h3><div class="card"><h3 style="margin-top:0">Landing cancel bug</h3><p>Bug d'annulation à l'atterrissage, à exploiter en priorité avec Long-Range Particle Beam : il rend l'attaque plus sûre et la transforme en starter de combo solo, avec Anti-Air Particle Beam ou des braveries aériennes en suite.</p></div><div class="card"><h3 style="margin-top:0">Aura Ball okizeme</h3><p>Grâce aux longues frames actives et à la fenêtre de dodge relativement précoce d'Aura Ball, un Wall Rush bravery ou un Fusillade laisse le temps de poser une explosion retardée : peu pratique en espace ouvert, mais peut réussir dans les recoins et corners et déboucher sur des combos solo.</p></div><div class="card"><h3 style="margin-top:0">Reflect Suffering 3 pour activer Wrath</h3><p>Contre des personnages comme The Emperor et Ultimecia, tirez Suffering 3 contre les murs pour que les projectiles soient réfléchis vers vous : ils servent alors de déclencheur au command block Wrath Particle Beam.</p></div>
+<details class="move"><summary><span class="mv-name">Combos documentés (notation d'origine, dissidia.wiki)</span></summary><div class="mv-body"><p class="mono">Cloud of Darkness has a handful of combo routes both solo and with assist. Solo combos get more situational and difficult pretty quickly, but assists can help set them up.</p><p class="mono">This section does not show all combos right now. They will be listed more thoroughly on a separate combo page in the future.</p><p class="mono">The most practical solo combo route usually involves Tentacle of Pain 3 (Bolts), followed by Spite 3 (Orb).</p><p class="mono">The damage values assume that any preceding tentacle hits connected.</p><p class="mono">Practical assist combos usually start with any wall rush, Spite 2 (Spin), Spite 3 (Orb), Suffering 2 (360°) and Scorn 2 (Vertical).</p></div></details>
+<p class="mv-desc">Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href="../techniques.html">Techniques &amp; glitches</a>.</p>
+</section>
+<section id="matchups"><h2>Matchups</h2>
+<p>Les sources n'offrent pas d'analyse par matchup (page stub), mais dessinent des tendances : les adversaires défensifs et fuyards sont son pire scénario — ils la distancent sur les EX Cores et la jauge d'assist, et ses outils de provocation à longue distance sont médiocres. À l'inverse, Wrath Particle Beam impose le respect aux personnages agressifs de mêlée, dont il stagger dashes et braveries low/mid.</p>
+<p>Quelques repères nommés : contre The Emperor et Ultimecia, Suffering 3 réfléchie par les murs peut activer Wrath ; attention aux projectiles de Sephiroth (Shadow Flare) et Gilgamesh (Electrocute) ainsi qu'au Chain Cast disjointed de Garland qui traversent la défense d'Aura Ball. Enfin, le build dégâts documenté est recommandé contre les utilisateurs de Side by Side qui ne contestent pas l'EX, tels que Firion, Onion Knight et Golbez.</p>
+<p>Vidéos de matchs : <a href="https://replaytheater.app/?game=d012&amp;c1=Cloud%20of%20Darkness" rel="external noopener">Replay Theater — matchs de Cloud of Darkness</a>.</p>
+</section>
+<section id="builds"><h2>Builds</h2>
+<p>Le wiki documente un build « Damage (High Base BRV) » : 1523 BRV de base, assist Kuja, invocation Rubicante, Everdark / Chainsaw / Thornlet / Maximillian et boosters (Sniper Eye, Dismay Shock, Battle Hammer, BRV = 0, etc.), Equip Glitch assumé pour le coût CP (440/450). L'idée : de gros dégâts HP via Wall Rush — un combo assist démarré sur un HP attack peut dépasser 3000 HP de dégâts, et comme ils viennent d'une bravery naturellement haute, la DEF adverse les réduit peu.</p>
+<p>Le build exploite l'arme exclusive LV100 Everdark pour sa récupération de bravery, ce qui libère de la place pour la base bravery, les dégâts HP Wall Rush et la déplétion de ressources. BRV = 0 est le booster vedette : il active Sniper Eye et Dismay Shock à chaque Wall Rush d'un HP attack (par exemple 0-form Particle Beam), portant le multiplicateur de x2.3 à x3.3. Miracle Shoes et Maximillian compensent la perte de HP max de Chainsaw et Thornlet.</p>
+<p>Une variante Side by Side remplace First to Victory par Side by Side : les reads en HP attack deviennent plus payants, au prix de la désactivation totale de la jauge EX et de l'absorption d'EX ; le booster Empty EX Gauge devient alors disponible en remplacement d'un autre booster au choix (Summon Unused par exemple). Plus largement, le personnage se prête aux builds de dégâts comme aux builds Side by Side, avec en marge la synergie Mindbreak (bravery accumulée en détruisant le décor avec Wide-Angle Particle Beam).</p>
+
+<h3>Damage (High Base BRV)</h3><div class="table-scroll"><table class="data">
+
+<tr><th>Stats</th></tr>
+<tr><td>HP</td><td>9883</td></tr>
+<tr><td>CP</td><td>450</td></tr>
+<tr><td>BRV</td><td>1523</td></tr>
+<tr><td>ATK</td><td>176</td></tr>
+<tr><td>DEF</td><td>184</td></tr>
+<tr><td>LUK</td><td>61</td></tr>
+<tr><td>Max Booster</td><td>x3.3</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+<caption>Special Effect: None</caption>
+<tr><th>Equipment</th></tr>
+<tr><td>Assist</td><td>Kuja</td></tr>
+<tr><td>Weapon &lt;img&gt;&lt;/img&gt;</td><td>Everdark</td></tr>
+<tr><td>Hand &lt;img&gt;&lt;/img&gt;</td><td>Chainsaw</td></tr>
+<tr><td>Head &lt;img&gt;&lt;/img&gt;</td><td>Thornlet</td></tr>
+<tr><td>Body &lt;img&gt;&lt;/img&gt;</td><td>Maximillian</td></tr>
+<tr><td>Accessory 1</td><td>Sniper Eye &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 2</td><td>Dismay Shock &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 3</td><td>Battle Hammer &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 4</td><td>BRV = 0 &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 5</td><td>Summon Unused &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 6</td><td>Pre-EX Mode &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 7</td><td>Pre-EX Revenge &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 8</td><td>Blue Gem &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 9</td><td>First to Victory &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Accessory 10</td><td>Miracle Shoes &lt;img&gt;&lt;/img&gt;</td></tr>
+<tr><td>Summon &lt;img&gt;&lt;/img&gt;</td><td>Rubicante</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Bravery attacks</th></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+<tr><td>&lt;img&gt;&lt;/img&gt; Tentacle of Pain</td><td>&lt;img&gt;&lt;/img&gt; Tentacle of Suffering</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>↑+&lt;img&gt;&lt;/img&gt; Tentacle of Spite</td><td>↑+&lt;img&gt;&lt;/img&gt; Tentacle of Scorn</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>HP attacks</td></tr>
+<tr><td>Ground</td><td>Aerial</td></tr>
+<tr><td>&lt;img&gt;&lt;/img&gt; Anti-air Particle Beam</td><td>&lt;img&gt;&lt;/img&gt; 0-form Particle Beam</td></tr>
+<tr><td>↑+&lt;img&gt;&lt;/img&gt; Long-Range Particle Beam</td><td>↑+&lt;img&gt;&lt;/img&gt; Fusillade Particle Beam</td></tr>
+<tr><td>↓+&lt;img&gt;&lt;/img&gt; Feint Particle Beam</td><td>↓+&lt;img&gt;&lt;/img&gt; Wrath Particle Beam</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Actions</th></tr>
+<tr><td>Ground Evasion</td></tr>
+<tr><td>Midair Evasion</td></tr>
+<tr><td>Ground Block</td></tr>
+<tr><td>Midair Block</td></tr>
+<tr><td>Aerial Recovery</td></tr>
+<tr><td>Recovery Attack</td></tr>
+<tr><td>Controlled Recovery</td></tr>
+<tr><td>Wall Jump</td></tr>
+<tr><td>Free Air Dash</td></tr>
+<tr><td>Omni Ground Dash+</td></tr>
+<tr><td>Multi Air Slide</td></tr>
+<tr><td>Free Air Dash Boost</td></tr>
+<tr><td>Assist Gauge Up Dash</td></tr>
+<tr><td>Ground Evasion Boost</td></tr>
+<tr><td>Midair Evasion Boost</td></tr>
+<tr><td>Evasion Boost</td></tr>
+<tr><td>Descent Speed Boost</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Support</th></tr>
+<tr><td>Always Target Indicator</td></tr>
+<tr><td>EX Core Lock On</td></tr>
+<tr><td>Auto Assist Lock On</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>Extra</th></tr>
+<tr><td>Precision Evasion</td></tr>
+<tr><td>EXP to HP</td></tr>
+<tr><td>Machinery</td></tr>
+</table></div>
+<div class="table-scroll"><table class="data">
+
+<tr><th>CP</th></tr>
+<tr><td>440 / 450</td></tr>
+</table></div>
+<h3>Build Overview</h3>
+<p class="mv-desc">Le build dégâts est recommandé contre les utilisateurs de Side by Side qui ne contestent pas l'EX (Firion, Onion Knight, Golbez) ; obtenir des dégâts tôt en attaquante, bien que risqué, y est jugé profitable car les adversaires expérimentés temporisent avant d'approcher.</p>
+</section>
+<section id="assist"><h2>Synergies d'assist</h2>
+<h3>Cloud of Darkness en tant qu'assist</h3><p>Cloud of Darkness est classée Low dans la tier list assist (Muggshotter) et le wiki ne propose aucune évaluation rédigée de son rôle d'assist (section « Assist Overview » vide).</p>
+<p>Ses données d'assist : Tentacle of Pain (BRV sol, 37F, Wall Rush, jusqu'à 62 de base), Tentacle of Suffering (BRV air, 37F, Chase, 40 de base), [Anti-air] Particle Beam (HP sol, 39F, Chase) et [Fusillade] Particle Beam (HP air, 83F, Wall Rush).</p>
+
+<h3>Assists recommandées</h3><ul><li><strong>Kuja</strong> — Cité comme bon assist dans la section Synergies ; c'est l'assist du build documenté, et Feint Particle Beam sert de combo filler HP avec son BRV sol.</li><li><strong>Jecht</strong> — Cité comme bon assist ; les combos assist documentés l'utilisent, Feint sert de filler avec son BRV air, et Fusillade prolonge la pression à longue distance en profitant de son long knockdown.</li><li><strong>Exdeath</strong> — Cité comme bon assist ; Suffering 1 fait office de combo filler pendant son assist BRV aérien.</li><li><strong>Aerith</strong> — Suffering 1 combote dans Aerith assist n'importe où grâce au Chase, là où Kuja et Jecht exigent plafond ou corner.</li></ul>
+
+</section>
+<section id="community"><h2>Tech communautaire</h2>
+<div class="card"><h3 style="margin-top:0">EX Mode Pain 3 &gt; Anti-Air Particle Beam Corner Combo</h3><p>Vidéo de démonstration du combo en corner rendu possible par Null Particle Beam : Tentacle of Pain 3 enchaîné dans Anti-Air Particle Beam pendant l'EX Mode.</p><p class="sources-list"><a href="https://www.youtube.com/watch?v=4Ij0gudeuzE&amp;feature=youtu.be" rel="external noopener">https://www.youtube.com/watch?v=4Ij0gudeuzE&amp;feature=youtu.be</a></p></div>
+</section>
+<section id="sources"><h2>Sources</h2>
+<ul class="sources-list"><li><a href="https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Cloud_of_Darkness_(Dissidia_012)</a></li><li><a href="https://www.youtube.com/watch?v=4Ij0gudeuzE&amp;feature=youtu.be" rel="external noopener">https://www.youtube.com/watch?v=4Ij0gudeuzE&amp;feature=youtu.be</a></li><li><a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Tier_List_(Dissidia_012)</a></li><li><a href="https://dissidia.wiki/Tier_List_(Assist)" rel="external noopener">https://dissidia.wiki/Tier_List_(Assist)</a></li></ul><h3>Limites connues</h3><ul class="sources-list"><li>La page Matchups du wiki est une ébauche (stub) : aucune analyse détaillée par matchup.</li><li>Aucune mécanique unique documentée (section absente du wiki) — les stances en trois temps sont décrites dans les notes de coups, pas dans une section dédiée.</li><li>Aucune évaluation rédigée du personnage en tant qu'assist (section « Assist Overview » vide) : seuls la table de données et le classement Low de la meta sont disponibles.</li><li>Combos incomplets de l'aveu même du wiki (« This section does not show all combos right now ») ; les dégâts et gains d'EX des combos assist Jecht sont notés « ??? ».</li><li>Le coût CP de Tentacle of Pain est partiellement inconnu (« ?? (30) ») et le gain de jauge d'assist par coup n'est pas renseigné.</li></ul>
+</section>
+</main>
+</div>
+<footer class="site"><div class="wrap">
+<p>Site de fans non commercial. Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011).</p>
+<p>Contenu textuel adapté et traduit de <a href="https://dissidia.wiki" rel="external noopener">dissidia.wiki</a> (licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="external noopener">CC BY 4.0</a>). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+</div></footer>
+
+</body>
+</html>
