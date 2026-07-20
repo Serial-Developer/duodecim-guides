@@ -271,6 +271,18 @@ details.move summary::-webkit-details-marker { display: none; }
 details.move summary::before { content: "▸"; color: var(--gold); transition: transform 120ms; }
 details.move[open] summary::before { transform: rotate(90deg); }
 details.move summary .mv-name { font-family: var(--font-display); font-weight: 600; color: var(--text); }
+/* Variante d'un coup : indentée sous son parent, liseré violet */
+details.move.variant {
+  margin-left: 1.8rem;
+  border-left: 3px solid var(--violet);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+details.move.variant summary .mv-name { font-size: 0.94em; color: var(--muted); }
+details.move.variant summary::before { color: var(--violet); }
+@media (max-width: 599px) {
+  details.move.variant { margin-left: 1rem; }
+}
 details.move summary .mv-meta { color: var(--muted); font-family: var(--font-mono); font-size: 0.8rem; }
 details.move .mv-body { padding: 0 1rem 1rem; }
 .badge {

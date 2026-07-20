@@ -36,7 +36,7 @@ function moveRows(m) {
   return variantHeader + rows;
 }
 
-function moveAccordion(m, noteFr, ctx) {
+function moveAccordion(m, noteFr, ctx, asChild = false) {
   const startup = Array.isArray(m.startup) ? m.startup[0] : m.startup;
   const prio = Array.isArray(m.priority) ? m.priority[0] : m.priority;
   let shot = '';
@@ -46,8 +46,11 @@ function moveAccordion(m, noteFr, ctx) {
       shot = `<img class="mv-shot" src="../assets/moves/${ctx.slug}/${encodeURIComponent(fn)}" alt="Capture in-game : ${esc(m.name || 'coup')}" loading="lazy">`;
     }
   }
-  return `<details class="move">
-<summary><span class="mv-name">${esc(m.name || 'Coup sans nom')}</span>
+  // Variante (« X — Normal ») rendue en enfant indenté : seul le nom de la
+  // variante est affiché, le nom complet reste accessible.
+  const displayName = asChild ? m.name.split(' — ').slice(1).join(' — ') : (m.name || 'Coup sans nom');
+  return `<details class="move${asChild ? ' variant' : ''}"${asChild ? ` aria-label="${esc(m.name)}"` : ''}>
+<summary><span class="mv-name">${esc(displayName)}</span>
 <span class="mv-meta">${esc(startup || '')}</span>${priorityBadge(prio)}</summary>
 <div class="mv-body">
 ${shot}
@@ -68,10 +71,19 @@ function movesGroup(groupKey, flow, ed, ctx) {
   const chainRef = groupKey === 'followups'
     ? `<p class="mv-desc">Ces followups se greffent sur les braveries « (One) » — le <a href="#chaines">diagramme des chaînes</a> ci-dessous résume les embranchements.</p>`
     : '';
+  // Une variante (« X — Normal ») est indentée sous son parent quand le coup
+  // qui la précède partage la même base.
+  const accordions = flow.moves.map((m, i) => {
+    const base = (m.name || '').split(' — ')[0];
+    const isVariant = (m.name || '').includes(' — ');
+    const prevBase = i > 0 ? (flow.moves[i - 1].name || '').split(' — ')[0] : null;
+    const asChild = isVariant && prevBase === base;
+    return moveAccordion(m, ed?.moveNotes?.[m.name], ctx, asChild);
+  });
   return `<h3>${esc(label)}</h3>
 ${flow.intro ? `<p class="mv-desc">${esc(flow.intro.split('\n')[0])}</p>` : ''}
 ${chainRef}
-${flow.moves.map((m) => moveAccordion(m, ed?.moveNotes?.[m.name], ctx)).join('\n')}`;
+${accordions.join('\n')}`;
 }
 
 function chainDiagram(braveryGroups) {
