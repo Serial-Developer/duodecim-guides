@@ -35,6 +35,10 @@
     "bravery": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "Like other assist characters, Aerith has only two bravery attacks: One ground and one midair.",
+          "moves": []
+        },
         "Cure": {
           "intro": null,
           "moves": [
@@ -97,14 +101,6 @@
               "notes": "[Special] Make opponent unable to move. Foe is freed when hit by another attack.\nThe bread and butter. Ranged Low priority and notable start-up compared to other conventional assists' aerial braveries, but landing this will keep the opponent in place for three seconds. Pre-emptive timing or elaborate setup are often required to connect with this move."
             }
           ]
-        },
-        "Seal Evil setups": {
-          "intro": "The most common set up is to call Aerith right before a Chase prompt appears, then initiate chase, perform an HP attack and if the opponent dodges it, Seal Evil will hit them. If the opponent dodges right away, the HP attack will connect, guaranteeing HP damage off of a move while absorbing all EX on the field due to Chase activation.\nThere are a few transmutations of this setup that both players should be aware of. Once the player has initiated Chase:\nPlayer performs an HP attack and the opponent dodges immediately, receiving the HP attack near a wall\nIf the players are near a wall and Aerith was called late enough, the wall rush caused by the chase HP attack can also chain into Seal Evil.\nPlayer performs a bravery attack\nThis is typically performed near a wall as well as means to tack on extra damage. If the opponent dodges the bravery, Seal Evil will still connect. If the opponent does not dodge the bravery, they will sustain both the bravery damage as well as Seal Evil's binding effect.\nIf the wall rush is not possible, getting hit by the bravery attack will move the opponent out of Seal Evil's range. Be aware of your surroundings if you opt for this option.\nThe opponent is caught in Seal Evil before the player has performed an attack during Chase\nMoves such as Vaan's (SW) Katana that have a short enough knockback, but long enough Chase prompt window to delay the chase timing for Seal Evil to connect by just performing the initial Chase prompt. If the player performs a bravery attack or an HP attack after this happens, the opponent can still attempt to evade it as if Seal Evil never happened.\nThe timings can vary greatly depending on the character. For example, Paladin form Cecil has to commit to an HP attack during chase after using Sacred Cross and calling Aerith due to the chase window and hit stun being too short. Cloud and his aerial Double Cut suffer from a similiar problem.\nAerith can also be chained from wall rushes by calling her a bit earlier than the wall rush would occur. In chase situations where the player scores a wall rush, Seal Evil can still connect if Aerith is called as soon as the chase sequence is considered over.",
-          "moves": []
-        },
-        "Seal Evil combos": {
-          "intro": null,
-          "moves": []
         }
       },
       "moveCount": 2,
@@ -115,6 +111,10 @@
     "hp": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "Like with other assist characters, Aerith only has two HP attacks: One ground and one midair.",
+          "moves": []
+        },
         "Planet Protector": {
           "intro": null,
           "moves": [

@@ -69,6 +69,10 @@
     "bravery": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "Some of Sephiroth's melee bravery attacks require two bravery inputs to complete them. The second input is a finisher which can be done early. Delaying this button press until all preceding hits have connected maximizes the damage dealt. This is what attack descriptions refer to when they say \"delay combo to boost hit times.\"",
+          "moves": []
+        },
         "ground": {
           "intro": null,
           "moves": [

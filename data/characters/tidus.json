@@ -41,6 +41,10 @@
     "bravery": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "Tidus' evasive bravery attacks Stick & Move, Dart & Weave and Cut & Run have built-in invincibility. 1-20 frames of invincibility normally, and then 1-40 frames of invincibility when used during EX mode (the same as normal dodge and a dodge with Evasion Boost respectively).",
+          "moves": []
+        },
         "ground": {
           "intro": null,
           "moves": [

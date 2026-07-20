@@ -87,6 +87,54 @@
           "moves": [
             {
               "variants": null,
+              "image": "https://dissidia.wiki/images/6/61/Brv_cecil_valiant_blow.jpeg",
+              "damage": "40 (10, 10, 20)",
+              "startup": "15F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "30",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Close] Jab foe with blade. Can send foe flying.",
+              "name": "Valiant Blow",
+              "notes": "Valiant Blow is Cecil's ground poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n. It has fast startup |\nThe time it takes before an attack can do damage.\nand moves Cecil towards opponent, which is good for punishing |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nmissed attacks or dodges. On hit, Cecil can finish the attack for a wall rush, or stop halfway for an assist combo. A staple for Dark Knight Cecil.\nValiant Blow cannot be aimed upwards, so it can struggle to hit airborne opponents that were blocked. This is not great for auto piloting |\nActing without thinking, usually in a predictable manner.\n, but Cecil has other moves he can use in those situations instead, such as Shadow Lance and Shadow Bringer"
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/1/1a/Brv_cecil_dark_cannon.jpeg",
+              "damage": "15 (1 x 4, 2 x 4, 3)",
+              "startup": "41F",
+              "type": "Magical",
+              "priority": "Ranged Low (forward) Ranged Mid (backward)",
+              "exForce": "each 3",
+              "effects": "Block (Ranged Low)",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Long] Draw foe with projectile. Good start for other combos.",
+              "name": "Dark Cannon",
+              "notes": "Cecil fires projectiles and draws them back to him. This is Dark Knight Cecil's only ground combo starter, but it can combo into most of his other moves. It provides decent reward on hit as a result, though its damage and EX generation is fairly low in practice. Dark Cannon can punish neutral ground dodges with a good read |\nA read is an educated guess informed by some knowledge or context in a match. An extremely risky move that works in this manner is considered a \"hard read\".\n, so when used sparingly, Cecil can establish some momentum with this.\nHitting Dark Cannon may not be very easy though. Dark Cannon has limited vertical reach and all projectiles are ranged low priority when moving forward. That makes Cecil a sitting duck against opponents who dash towards him. In addition to that, the projectiles don't protect Cecil's front constantly when they travel. Because of this, Dark Cannon has a blind spot in front of Cecil before the projectiles return to him."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/7/74/Brv_cecil_shadow_lance.jpeg",
+              "damage": "50 (8, 7 x 6)",
+              "startup": "35F",
+              "type": "Physical",
+              "priority": "Melee High (close) Ranged Low (far)",
+              "exForce": "~20",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Throw weapon. Major damage if lands near opponent.",
+              "name": "Shadow Lance",
+              "notes": "Shadow Lance is Cecil's secondary Dark Knight bravery. It functions as a projectile which can combo into assists with wall rush. It has decent horizontal tracking |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\non the ground and it can anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nat a low diagonal angle. Shadow Lance can work as a secondary poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n, both in close-range and midrange.\nThis is also a strong move in close-range; It has highest base damage out of Dark Knight braveries, and it has a melee high priority hitbox in point blank |\nThe closest possible distance two characters can be from each other.\nrange. This is on par with HP attacks, so it can be used as a mixup |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nagainst blocks. Shadow Lance can lose most of its multi-hits this way, however. The range for the melee high is quite short, but it can also reflect HP projectiles, such as Vaan's Windburst and The Emperor's Flares. It's relatively low commitment when done properly. Cecil can dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nthis move rather early, so it can be difficult to whiff punish |\nHitting an opponent who missed (whiffed) their attack.\n.\nShadow Lance is generally low reward without assist and its close-range base damage. It's thrown at a low vertical angle, so it cannot function as an anti-air |\nAttacking an airborne opponent from below, usually on the ground.\nin a way that Dark Flame can."
+            },
+            {
+              "variants": null,
               "image": "https://dissidia.wiki/images/9/91/Brv_cecil_slash_%281%29.jpeg",
               "damage": "20 (10, 10)",
               "startup": "23F",
@@ -140,6 +188,54 @@
           "moves": [
             {
               "variants": null,
+              "image": "https://dissidia.wiki/images/0/02/Brv_cecil_gravity_ball.jpeg",
+              "damage": "15 (7, 2 x 4)",
+              "startup": "37F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Fire off gravity ball. Good start for ground attacks.",
+              "name": "Gravity Ball",
+              "notes": "Gravity Ball is a medium speed homing projectile. It stays on the field for a decent amount of time. It will drag opponent downwards if it hits, which can wall rush on the ground. Cecil can use this to start assist combos afterwards.\nDue to its low priority, Cecil's long startup |\nThe time it takes before an attack can do damage.\nand recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n, Gravity Ball is not very effective for controlling space |\nAn area in a stage. Often talked in relation to a character or their strategy.\n. Dark Knight has very few ways to fight effectively in the air, so Gravity Ball is not recommended as a primary air bravery for Cecil."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/32/Brv_cecil_nightfall.jpeg",
+              "damage": "25+ (1 each hit, 24 finish)",
+              "startup": "37F",
+              "type": "Physical",
+              "priority": "Melee Low (falling) Ranged Mid (landing)",
+              "exForce": "60+",
+              "effects": "Chase",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Close] High-speed dive. Useful for quick descents.",
+              "name": "Nightfall",
+              "notes": "Cecil dives down in a straight line. Nightfall is Cecil's air-to-ground |\nAttacking a grounded opponent while being in the air. The attacker may land on the ground as well.\nbravery, which is typically used to get to ground faster or mix up landings. It has decent damage and EX gain, but hitting this can be difficult due to its predictable angle. Cecil moves forward a little before diving, which increases its overall range.\nNightfall has a maximum travel distance. Cecil will remain airborne if he doesn't reach the ground. The attack ends with a mid priority explosion, which happens both on the ground and in the air. At max range the explosion can sometimes work as a surprise attack against slow punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\nattempts. Cecil moves quickly during the dive and it can be dodge cancelled |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nat the end. That makes it safe against assist punishes |\nUsing assist to hit the opponent who missed an attack, before they can defend.\nduring the recovery. However, it is not as safe during the slow startup |\nThe time it takes before an attack can do damage.\n. So if Cecil air dodges at a bad time, he can still get interrupted with an assist punish. And due to the slow startup and low priority, it can be easily blocked during the dive as well."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/3/3b/Brv_cecil_paladin_arts.jpeg",
+              "damage": "30 (7, 2 x 4, 3 x 5)",
+              "startup": "37F",
+              "type": "Magical",
+              "priority": "Ranged Low",
+              "exForce": "0",
+              "effects": "Job Change",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Change job to Paladin during combo.",
+              "name": "Paladin Arts",
+              "notes": "Paladin Arts is a two-stage attack, that changes Cecil's job to Paladin. The initial animation is the same as Gravity Ball, but the projectile has upward knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\non hit instead of downward. Cecil will change to Paladin as soon as the follow-up is confirmed with Circle <img></img>.\nThis move is good for it's reward on hit. It enables solo and assist combos, and it's part of Cecil's optimized EX mode combos as well. The Dark Knight projectile's upward knockback lets Cecil combo into assist or the job change. The follow-up is functionally the same as Paladin Cecil's Searchlight, so Cecil can get a guaranteed Paladin Force for HP damage.\nPaladin Arts' neutral |\nThe stage of a fight where neither player is blocking or getting hit by anything. Both players are trying to figure out how to approach, or trying to hit each other.\napplications aren't very prominent. It doesn't protect Cecil from offensive approaches, because all projectiles are low priority and relatively slow, which can be dashed through. The whole animation is very telegraphed, with no ways to mix it up other than doing nothing. It may look the same as Gravity Ball initially, but both moves are slow, ranged low moves that leave Cecil open for rushdown |\nAn offensive playstyle that focuses on getting close to the opponent and attacking them relentlessly.\n.\nIt is recommended to use Paladin Arts from afar or during assist combos.\nCaution is advised when Cecil is near walls or ceilings. The Paladin magic orb and projectiles can vanish if they collide with physical objects, such as World of Darkness' pillars or walls in most stages."
+            },
+            {
+              "variants": null,
               "image": "https://dissidia.wiki/images/c/c5/Brv_cecil_radiant_wings.jpeg",
               "damage": "40 (3, 3, 7, 6, 6, 6, 9)",
               "startup": "19F",
@@ -189,7 +285,7 @@
           ]
         }
       },
-      "moveCount": 6,
+      "moveCount": 12,
       "sources": [
         "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
       ]

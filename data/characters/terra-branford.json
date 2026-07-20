@@ -70,6 +70,10 @@
     "bravery": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "Blizzard Combo and Holy Combo have separate damage multipliers when used during EX mode. These values are outlined after the regular damage multipliers and highlighted in bold.",
+          "moves": []
+        },
         "ground": {
           "intro": null,
           "moves": [
@@ -100,7 +104,7 @@
               "effects": "",
               "cancels": "",
               "assistGain": "",
-              "name": null
+              "name": "Blizzard Combo A Up"
             },
             {
               "variants": null,

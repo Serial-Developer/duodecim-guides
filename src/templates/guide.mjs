@@ -55,6 +55,7 @@ ${noteFr ? `<div class="mv-note"><p>${esc(noteFr)}</p></div>` : ''}
 ${m.rawRows?.length
     ? `<div class="table-scroll"><table class="data"><tr>${m.rawRows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr>${m.rawRows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`
     : `<div class="table-scroll"><table class="stats">${moveRows(m)}</table></div>`}
+${(m.extraTables || []).map((t) => `<div class="table-scroll"><table class="data"><tr>${t.rows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr>${t.rows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`).join('')}
 </div>
 </details>`;
 }

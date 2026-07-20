@@ -72,6 +72,10 @@
     "bravery": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "Golbez's attacks have two parts. The close-range attack and a projectile with longer reach. The hit reaction and damage output can change depending on which part of the attack hits first. Generally speaking hitting the close-range attack leads to most damage and various follow-ups, but blocking them staggers Golbez.",
+          "moves": []
+        },
         "ground": {
           "intro": null,
           "moves": [
@@ -284,6 +288,10 @@
     "hp": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "All Cosmic Ray HP attacks share the same attack data despite branching from different bravery attacks.",
+          "moves": []
+        },
         "ground": {
           "intro": null,
           "moves": [

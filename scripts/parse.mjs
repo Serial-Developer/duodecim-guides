@@ -88,18 +88,52 @@ function parseMoveTable($, table) {
 }
 const FIELD_KEYS = ['damage', 'startup', 'type', 'priority', 'exForce', 'effects', 'cancels', 'assistGain', 'cp'];
 
-// Découpe un flux d'éléments (p, table, div...) en coups, via les marqueurs "|-|Nom="
-function parseMovesFlow($, elems) {
+// Découpe un flux d'éléments (p, table, div...) en coups. Marqueurs de nom :
+// "|-|Nom=" (tabber standard) et "Nom=" seul en fin de ligne (tabber alternatif,
+// ex. Jecht "Level 1="). Les variantes "Level N" sont qualifiées par le dernier
+// nom de coup complet ("Jecht Rush — Level 2").
+// Dernier recours pour nommer un coup : le nom de fichier de son screenshot
+// (ex. Brv_cloud_of_darkness_tentacle_of_pain_1st.jpeg -> "Tentacle Of Pain 1st")
+function nameFromImage(url, charWords) {
+  const base = decodeURIComponent(url.split('/').pop() || '').replace(/\.\w+$/, '');
+  const tokens = base.split('_').filter((t) => t && !/^(brv|hp|ex)$/i.test(t) && !charWords.has(t.toLowerCase()));
+  if (!tokens.length) return null;
+  return tokens.map((t) => t[0].toUpperCase() + t.slice(1)).join(' ');
+}
+
+function parseMovesFlow($, elems, charWords = new Set()) {
   const moves = [];
   const intro = [];
   let pendingName = null;
   let pendingNotes = [];
   let lastMove = null;
+  let lastBaseName = null;
+
+  const setPending = (rawName, rest) => {
+    let name = rawName.trim();
+    if (/^(level|phase|stage)\s*\d/i.test(name)) {
+      if (lastBaseName) name = `${lastBaseName} — ${name}`;
+    } else {
+      lastBaseName = name;
+    }
+    pendingName = name;
+    pendingNotes = rest && rest.trim() ? [rest.trim()] : [];
+    lastMove = null;
+  };
+
   for (const el of elems) {
     const tag = el.tagName?.toLowerCase();
     if (tag === 'table' && $(el).hasClass('wikitable')) {
       const move = parseMoveTable($, el);
-      move.name = pendingName || cleanText($(el).find('caption').first().text()) || null;
+      // Table annexe (comparatif, interactions...) sans nom en attente : c'est un
+      // complément du coup précédent, pas un coup autonome.
+      if (move.rawRows && !pendingName && lastMove) {
+        lastMove.extraTables = [...(lastMove.extraTables || []), { caption: null, rows: move.rawRows }];
+        continue;
+      }
+      move.name = pendingName
+        || cleanText($(el).find('caption').first().text())
+        || (move.image ? nameFromImage(move.image, charWords) : null);
       if (pendingNotes.length) move.context = pendingNotes.join('\n');
       moves.push(move);
       lastMove = move;
@@ -110,21 +144,26 @@ function parseMovesFlow($, elems) {
     if (tag === 'p' || tag === 'ul' || tag === 'dl' || tag === 'ol') {
       const text = cleanText($(el).text());
       if (!text) continue;
-      // un <p> peut contenir du texte + un ou plusieurs marqueurs |-|Nom=
-      const parts = text.split(/\|-\|/);
-      // parts[0] : texte avant tout marqueur
-      if (parts[0].trim()) {
-        const t = parts[0].trim();
-        if (pendingName) pendingNotes.push(t);
-        else if (lastMove) lastMove.notes = ((lastMove.notes || '') + '\n' + t).trim();
-        else intro.push(t);
-      }
-      for (let i = 1; i < parts.length; i++) {
-        const m = parts[i].match(/^([^=]+)=\s*([\s\S]*)$/);
-        if (m) {
-          pendingName = m[1].trim();
-          pendingNotes = m[2].trim() ? [m[2].trim()] : [];
-          lastMove = null;
+      for (const line of text.split('\n')) {
+        // un même segment peut contenir du texte + un ou plusieurs marqueurs |-|Nom=
+        const parts = line.split(/\|-\|/);
+        const head = parts[0].trim();
+        if (head) {
+          // marqueur tabber alternatif : « Nom= » seul (le = termine la ligne)
+          const alt = head.match(/^([A-Za-z][^=]{0,44})=$/);
+          if (alt) {
+            setPending(alt[1], '');
+          } else if (pendingName) {
+            pendingNotes.push(head);
+          } else if (lastMove) {
+            lastMove.notes = ((lastMove.notes || '') + '\n' + head).trim();
+          } else {
+            intro.push(head);
+          }
+        }
+        for (let i = 1; i < parts.length; i++) {
+          const m = parts[i].match(/^([^=]+)=\s*([\s\S]*)$/);
+          if (m) setPending(m[1], m[2]);
         }
       }
     }
@@ -308,20 +347,40 @@ function parseCharacter(char) {
       data.sections[key] = { documented: false };
       continue;
     }
-    const groups = {};
-    const direct = parseMovesFlow($, sec.elems);
-    if (direct.moves.length) groups.main = direct;
-    for (const sub of sec.subs) {
-      const flow = parseMovesFlow($, sub.elems);
-      const k = sub.title.toLowerCase().includes('ground') ? 'ground'
-        : sub.title.toLowerCase().includes('aerial') ? 'aerial'
-        : sub.title.toLowerCase().includes('followup') ? 'followups'
-        : sub.title;
-      // Sous-section nommée d'après le coup lui-même (pages assist : h2 « Cure »…)
-      if (!['ground', 'aerial', 'followups'].includes(k) && flow.moves.length === 1 && !flow.moves[0].name) {
-        flow.moves[0].name = sub.title;
+    // Les segments (contenu direct + sous-sections) sont parcourus dans l'ordre :
+    // ground/aerial/followups changent de groupe ; les autres titres (« Data
+    // comparison », « X's frame data »…) sont des continuations du groupe courant.
+    // Exception : une sous-section au nom propre contenant exactement une table
+    // sans nom est un coup nommé d'après son titre (pages assist : h2 « Cure »).
+    const GENERIC_SUB = /data comparison|frame data|^notes?$/i;
+    const segs = [{ title: null, elems: sec.elems }, ...sec.subs.map((s) => ({ title: s.title, elems: s.elems }))];
+    const order = [];
+    const merged = {};
+    let cur = 'main';
+    const standalone = [];
+    for (const seg of segs) {
+      const t = (seg.title || '').toLowerCase();
+      if (t.includes('ground')) cur = 'ground';
+      else if (t.includes('aerial') || t.includes('midair')) cur = 'aerial';
+      else if (t.includes('followup')) cur = 'followups';
+      else if (seg.title && !GENERIC_SUB.test(seg.title)) {
+        // titre spécifique : peut être un coup nommé isolé (à vérifier après parse)
+        standalone.push(seg);
+        continue;
       }
-      groups[k] = flow;
+      if (!merged[cur]) { merged[cur] = []; order.push(cur); }
+      merged[cur].push(...seg.elems);
+    }
+    const charWords = new Set(char.page.replace(/_\(Dissidia_012\)$/, '').toLowerCase().split('_'));
+    const groups = {};
+    for (const k of order) {
+      const flow = parseMovesFlow($, merged[k], charWords);
+      if (flow.moves.length || flow.intro) groups[k] = flow;
+    }
+    for (const seg of standalone) {
+      const flow = parseMovesFlow($, seg.elems, charWords);
+      if (flow.moves.length === 1 && !flow.moves[0].name) flow.moves[0].name = seg.title;
+      if (flow.moves.length) groups[seg.title] = flow;
     }
     const count = Object.values(groups).reduce((n, g) => n + g.moves.length, 0);
     data.sections[key] = { documented: count > 0, groups, moveCount: count, sources: [data.url] };

@@ -85,7 +85,7 @@
   },
   {
     "slug": "cecil-harvey",
-    "braveryMoves": 6,
+    "braveryMoves": 12,
     "hpMoves": 6,
     "overview": true,
     "exMode": true,
@@ -114,7 +114,7 @@
   {
     "slug": "kain-highwind",
     "braveryMoves": 7,
-    "hpMoves": 7,
+    "hpMoves": 6,
     "overview": true,
     "exMode": true,
     "unique": true,
@@ -323,8 +323,8 @@
   },
   {
     "slug": "jecht",
-    "braveryMoves": 4,
-    "hpMoves": 5,
+    "braveryMoves": 17,
+    "hpMoves": 18,
     "overview": true,
     "exMode": true,
     "unique": true,
@@ -393,7 +393,7 @@
   },
   {
     "slug": "gabranth",
-    "braveryMoves": 8,
+    "braveryMoves": 12,
     "hpMoves": 4,
     "overview": true,
     "exMode": true,

@@ -65,6 +65,10 @@
     "bravery": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "Many of Prishe's bravery attacks can be chained into a separate, equippable bravery followup. The starting bravery is noted as \"(One)\" and the followup is noted as \"(Two)\" in the game.\nThe list of followups remain the same for every bravery attack starter and thus, will be listed separately.",
+          "moves": []
+        },
         "ground": {
           "intro": null,
           "moves": [

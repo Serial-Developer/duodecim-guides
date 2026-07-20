@@ -53,6 +53,10 @@
     "bravery": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "Most of Shantotto's bravery attacks have a ground and an aerial version. A Couple Attacks is only available on the ground and Retribution is only available midair.",
+          "moves": []
+        },
         "ground": {
           "intro": null,
           "moves": [
@@ -193,6 +197,10 @@
     "hp": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "Shantotto's HP attacks become stronger with higher bravery. The Spirit Magic HP attacks have three tiers. Higher tier spells have bigger hitboxes |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nand deal more bravery damage.\nExample with Spirit Magic Earth\nTier 1 HP (Stone): 0-1999 BRV\nTier 2 HP (Stonega): 2000-3999 BRV\nTier 3 HP (Quake): 4000 BRV, or higher\nSo if Shantotto has 2000 BRV, Spirit Magic: Earth will result in Stonega.",
+          "moves": []
+        },
         "ground": {
           "intro": null,
           "moves": [

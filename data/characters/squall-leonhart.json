@@ -73,6 +73,10 @@
     "bravery": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "During EX Mode, damage multipliers inside brackets [ ] hit twice instead of once.",
+          "moves": []
+        },
         "ground": {
           "intro": null,
           "moves": [

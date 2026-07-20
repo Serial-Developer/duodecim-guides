@@ -140,53 +140,6 @@
             }
           ]
         },
-        "Follow-ups": {
-          "intro": "Rope Knife, Lance Combo and Reel Axe can be followed up with one of three attacks. Because the bravery starters have identical base damage, the total base damage will be shown in parenthesis.\nCircle <img></img> (Neutral) for Punch\nUp+Circle ↑+<img></img> (Towards) for Slash & Arrow\nDown+Circle ↓+<img></img> (Away) for Lance",
-          "moves": [
-            {
-              "variants": null,
-              "image": "https://dissidia.wiki/images/9/9c/Brv_firion_followup_neutral.jpeg",
-              "damage": "+25 (45 Total)",
-              "startup": "?",
-              "type": "Physical",
-              "priority": "Melee Low",
-              "exForce": "0",
-              "effects": "Wall Rush",
-              "cancels": "Dodge",
-              "assistGain": "",
-              "name": "Neutral (Punch)",
-              "notes": "Neutral follow-up (Punch) is Firion's highest damaging ender for bravery damage. It's a very fast attack with long knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nfor wall rushes. Since Firion often goes for Double Trouble, the punch can make Firion safer against early Assist Changes. Firion can use this to sneak in bravery damage right before the opponent escapes reflexively.\nPunch sees less use than Double Trouble and Lance follow-ups due to its weaker combo routes and reliance on wall rush. Its base damage is quite good, and more worthwhile with physical damage builds. However, Firion benefits more from HP links and assist combos on average."
-            },
-            {
-              "variants": null,
-              "image": "https://dissidia.wiki/images/f/f8/Brv_firion_followup_towards.jpeg",
-              "damage": "+10 (5, 5) (30 Total)",
-              "startup": "?",
-              "type": "Physical",
-              "priority": "Melee Low (slash) Ranged Low (arrow)",
-              "exForce": "75",
-              "effects": "Chase",
-              "cancels": "",
-              "assistGain": "",
-              "name": "Towards (Slash and arrow)",
-              "notes": "Towards follow-up (Slash & Arrow) is a two-stage attack that leads to Chase. This is mainly used with EX builds, and it is outclassed by Firion's other options most of the time. Firion can combo into assist after the first sword swing, but it's not a high damage starter.\nThe main issue lies in the Slash & Arrow's return on investment; Firion's damage comes from HP wall rushes with assist, and his other attacks don't generate much EX on average. Slash & Arrow may generate the most EX out of his braveries, but majority of it comes from the long-range arrow shot. Getting all of the EX requires dodging towards opponent and staying airborne for a moment. This means Firion gives up HP damage and ground moves for EX gauge, which he already struggles to fill."
-            },
-            {
-              "variants": null,
-              "image": "https://dissidia.wiki/images/4/46/Brv_firion_followup_away.jpeg",
-              "damage": "+8 (1 x 5, 3) (28 Total)",
-              "startup": "11F",
-              "type": "Physical",
-              "priority": "Melee Mid",
-              "exForce": "15",
-              "effects": "Wall Rush, Absorb",
-              "cancels": "Dodge",
-              "assistGain": "",
-              "name": "Away (Lance)",
-              "notes": "Away follow-up (Lance) is a combo attack that wall rushes on the ground. Its base damage may be low, but it has utility thanks to melee mid priority and consistent wall rushes. The wall rush opens up assist combos, and the mid priority protects Firion from hasty retaliations. It can be done even if the ground combo braveries (Rope Knife etc.) miss, which is good against greedy opponents. [15]\nFirion swings the weapon around him, which has good coverage around his body, so Lance doesn't have an explicit \"blind spot\". Lance also pulls nearby opponents in, so they cannot just wait for Firion to finish the attack before punishing it. It does have decent recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nbefore it can be dodge cancelled |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nthough, so Firion should not always use this. [16] [17] Since it stays out for a while, Firion can also lose to advancing high priority moves. [18]"
-            }
-          ]
-        },
         "aerial": {
           "intro": "Similar to ground moves like Lance Combo, Firion's Magic Arts have built-in follow-ups. Two follow-ups can be done, and the corresponding Magic Arts braveries do not have to be equipped to do them.\nCircle <img></img> for Magic Arts: Frost\nUp+Circle ↑+<img></img> for Magic Arts: Flame\nDown+Circle ↓+<img></img> for Magic Arts: Bolt",
           "moves": [
@@ -253,6 +206,53 @@
               "description": "[Close] Slash in midair. Short reach, but quick strike.",
               "name": "Swordslash (midair)",
               "notes": "Midair Swordslash is similar to the grounded version, and is often equipped at all times. It is used similarly as a poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\nthat can push opponents away. The sheer speed also lets Firion protect himself after air dodge as well.\nThe main difference is that aerial Swordslash can wall rush on the ground. This is good for assist combos, and it's practically higher reward for Firion compared to the grounded Swordslash. However, it's important to remember that Firion is not a very strong aerial fighter; His other air attacks are slow and he falls slowly after an air dodge. Aerial Swordslash's range is very short, so it can easily miss even if Firion blocks a melee attack successfully. [21] It can be cancelled |\nAn action that is interrupted early by doing another action.\nquickly to build assist gauge, but this is not a preferred situation for Firion.\nAerial Swordslash is also used as a combo filler |\nAn attack that is done during an assist's attack. This adds damage, and the combo continues afterwards.\nduring ground Kuja assist combos, usually after ground wall rush. [22] [23]\nIf Firion does not cancel midair Swordslash, he will fall down until the animation finishes."
+            }
+          ]
+        },
+        "Follow-ups": {
+          "intro": "Rope Knife, Lance Combo and Reel Axe can be followed up with one of three attacks. Because the bravery starters have identical base damage, the total base damage will be shown in parenthesis.\nCircle <img></img> (Neutral) for Punch\nUp+Circle ↑+<img></img> (Towards) for Slash & Arrow\nDown+Circle ↓+<img></img> (Away) for Lance",
+          "moves": [
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/9/9c/Brv_firion_followup_neutral.jpeg",
+              "damage": "+25 (45 Total)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "0",
+              "effects": "Wall Rush",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "name": "Neutral (Punch)",
+              "notes": "Neutral follow-up (Punch) is Firion's highest damaging ender for bravery damage. It's a very fast attack with long knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\nfor wall rushes. Since Firion often goes for Double Trouble, the punch can make Firion safer against early Assist Changes. Firion can use this to sneak in bravery damage right before the opponent escapes reflexively.\nPunch sees less use than Double Trouble and Lance follow-ups due to its weaker combo routes and reliance on wall rush. Its base damage is quite good, and more worthwhile with physical damage builds. However, Firion benefits more from HP links and assist combos on average."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/f/f8/Brv_firion_followup_towards.jpeg",
+              "damage": "+10 (5, 5) (30 Total)",
+              "startup": "?",
+              "type": "Physical",
+              "priority": "Melee Low (slash) Ranged Low (arrow)",
+              "exForce": "75",
+              "effects": "Chase",
+              "cancels": "",
+              "assistGain": "",
+              "name": "Towards (Slash and arrow)",
+              "notes": "Towards follow-up (Slash & Arrow) is a two-stage attack that leads to Chase. This is mainly used with EX builds, and it is outclassed by Firion's other options most of the time. Firion can combo into assist after the first sword swing, but it's not a high damage starter.\nThe main issue lies in the Slash & Arrow's return on investment; Firion's damage comes from HP wall rushes with assist, and his other attacks don't generate much EX on average. Slash & Arrow may generate the most EX out of his braveries, but majority of it comes from the long-range arrow shot. Getting all of the EX requires dodging towards opponent and staying airborne for a moment. This means Firion gives up HP damage and ground moves for EX gauge, which he already struggles to fill."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/4/46/Brv_firion_followup_away.jpeg",
+              "damage": "+8 (1 x 5, 3) (28 Total)",
+              "startup": "11F",
+              "type": "Physical",
+              "priority": "Melee Mid",
+              "exForce": "15",
+              "effects": "Wall Rush, Absorb",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "name": "Away (Lance)",
+              "notes": "Away follow-up (Lance) is a combo attack that wall rushes on the ground. Its base damage may be low, but it has utility thanks to melee mid priority and consistent wall rushes. The wall rush opens up assist combos, and the mid priority protects Firion from hasty retaliations. It can be done even if the ground combo braveries (Rope Knife etc.) miss, which is good against greedy opponents. [15]\nFirion swings the weapon around him, which has good coverage around his body, so Lance doesn't have an explicit \"blind spot\". Lance also pulls nearby opponents in, so they cannot just wait for Firion to finish the attack before punishing it. It does have decent recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nbefore it can be dodge cancelled |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nthough, so Firion should not always use this. [16] [17] Since it stays out for a while, Firion can also lose to advancing high priority moves. [18]"
             }
           ]
         }

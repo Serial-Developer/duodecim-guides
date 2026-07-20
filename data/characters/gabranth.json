@@ -69,6 +69,38 @@
           "moves": [
             {
               "variants": null,
+              "image": "https://dissidia.wiki/images/4/43/Brv_gabranth_sentence_g.jpeg",
+              "damage": "14 (5, 2, 2, 6)",
+              "startup": "19F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "87",
+              "effects": "-",
+              "cancels": "Dodge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Swift slicing with linked weapons. Can close in on foe. Cancel attack with EX Charge.",
+              "name": "Sentence (ground)",
+              "notes": "Sentence is a two-stage combo attack with decent knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\n. It's intended to keep opponents away, and it's fast enough to be barely unreactable by itself. Unfortunately Gabranth relies on attack timing as his primary mixups |\nA situation where a player has several ways to attack, which require different actions from the defending player.\n, so Sentence may not always hit against vigilant opponents. If Gabranth connects Sentence, he can call assist after the first part. This can buy time for EX Charge or let Gabranth confirm an assist combo into EX mode with a full EX gauge.\nIf Gabranth finishes Sentence, he can cancel the recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\ninto EX Charge to fill EX gauge faster.\nThe grounded version makes Gabranth airborne. It can be used more reliably as a post-block punish |\nAttacking someone when they are recovering from a move and are unable to defend. This is typically guaranteed damage when done right.\ncompared to Lunge, but it also doesn't create as much space for Gabranth, which he needs in base form. Sentence can be dodge cancelled |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\nif it misses, but it has enough recovery to make Gabranth vulnerable to whiff punishes |\nHitting an opponent who missed (whiffed) their attack.\nand dodge punish situations."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/5/5f/Brv_gabranth_lunge.jpeg",
+              "damage": "20",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "60",
+              "effects": "-",
+              "cancels": "Dodge, EX Charge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Charging attack. Charge follows opponent. Cancel attack with EX Charge.",
+              "name": "Lunge",
+              "notes": "Lunge is Gabranth's slower grounded keepout tool. It is commonly used after staggering opponent with a block, but the active |\nThe period of time when an attack is capable of doing damage.\nframes can power through Ranged Low priority attacks as well. Lunge has higher knockback |\nThe distance travelled after getting hit by an attack. The exact distance varies depending on the attack.\ncompared to Sentence, which can be cancelled |\nAn action that is interrupted early by doing another action.\ninto EX Charge. This means Lunge provides better advantage for Gabranth's EX Charge, as it creates more distance for his opponent on hit.\nThe slower startup |\nThe time it takes before an attack can do damage.\nis easier for opponents to react to, so Gabranth has to be careful when using Lunge. Gabranth cannot confirm |\nan assist combo with Lunge in the same way as Sentence, so this move has less damage potential overall. And lastly, Lunge keeps Gabranth on the ground, and it cannot hit airborne opponents well. When blocking an opponent and countering with Lunge, Gabranth needs to make sure his opponent is on the ground as well.\nIf Gabranth uses Lunge while locked off, he will move in the direction he is facing."
+            },
+            {
+              "variants": null,
               "image": "https://dissidia.wiki/images/2/29/Brv_gabranth_enrage.jpeg",
               "damage": "40 (3 x 8, 16)",
               "startup": "15F",
@@ -138,6 +170,38 @@
           "moves": [
             {
               "variants": null,
+              "image": "https://dissidia.wiki/images/c/c4/Brv_gabranth_sentence_a.jpeg",
+              "damage": "14 (5, 2, 2, 6)",
+              "startup": "19F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "87",
+              "effects": "-",
+              "cancels": "Dodge EX Charge (On Hit)",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Swift slicing with linked weapons. Can close in on foe. Cancel attack with EX Charge.",
+              "name": "Sentence (midair)",
+              "notes": "Midair Sentence is practically identical with the ground version. But since it's an aerial attack, Gabranth can use this move more freely while defending in base form. It's the closest base Gabranth has to an aerial poke |\nA fast attack that is used to occupy space, start offense and fill assist gauge.\n, but it's relatively slow. This version can still combo into assists and it has rather short knockback. If Gabranth finishes Sentence, he can cancel |\nAn action that is interrupted early by doing another action.\nit into EX Charge.\nAs this is Gabranth's faster air bravery, he can catch opponents trying to react to his other bravery Circle of Judgment. Attack timing is key, because Gabranth has no offensive mixups |\nA situation where a player has several ways to attack, which require different actions from the defending player.\nin base form outside of delayed timing."
+            },
+            {
+              "variants": null,
+              "image": "https://dissidia.wiki/images/c/cf/Brv_gabranth_circle_of_judgment.jpeg",
+              "damage": "20 (1, 1, 18)",
+              "startup": "23F",
+              "type": "Physical",
+              "priority": "Melee Low",
+              "exForce": "90",
+              "effects": "Absorb",
+              "cancels": "Dodge, EX Charge",
+              "assistGain": "",
+              "cp": "20 (10)",
+              "description": "[Mid] Spin; create vacuum wave. Cancel attack with EX Charge.",
+              "name": "Circle of Judgment",
+              "notes": "Circle of Judgment is the midair equivalent of Lunge. It has long active |\nThe period of time when an attack is capable of doing damage.\nframes and slower startup |\nThe time it takes before an attack can do damage.\n, but pushes opponents much further on hit. Therefore it is more advantageous for Gabranth as a keepout move, but it is also easier to react to. Circle of Judgment still has a decent amount of recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\nbefore it can be dodge cancelled |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n, so caution is still advised.\nCircle of Judgment pulls nearby opponents in, which increases its overall range. Gabranth can also move with analog stick <img></img> during the spinning motion. All these factors help Gabranth whiff punish |\nHitting an opponent who missed (whiffed) their attack.\nin the air. Because of manual movement and short lateral hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\n, Circle of Judgment can hit shallow. That can result in missing early hits, or the last hit with pushback. This is both a good thing and a bad thing; A shallow hit lets Gabranth combo into Jecht assist for more EX charging. But it also means Gabranth can lose a bit of damage if used from a distance, though the base damage is not particularly high.\nIf the opponent is near a wall, Circle of Judgment can start an assist combo. The wall reduces the move's knockback, which lets assists follow up. This is not a common position for Gabranth in base form due to his usual strategy of defending for EX gauge, but it can work as a situational combo for more EX."
+            },
+            {
+              "variants": null,
               "image": "https://dissidia.wiki/images/3/3a/Brv_gabranth_dual_rend.jpeg",
               "damage": "30 (10, 10, 10)",
               "startup": "15F",
@@ -203,7 +267,7 @@
           ]
         }
       },
-      "moveCount": 8,
+      "moveCount": 12,
       "sources": [
         "https://dissidia.wiki/Gabranth_(Dissidia_012)"
       ]

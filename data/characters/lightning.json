@@ -71,8 +71,7 @@
               "cancels": "",
               "assistGain": "",
               "cp": "20 (10)",
-              "name": "Commando",
-              "context": "Launch=",
+              "name": "Launch",
               "notes": "[Close] Sword slash sending foe flying vertically upward.\nYour fastest grounded move but still reactable. It has decent tracking and range, so it's great for a quick whiff punish or punishing back / side dodges when playing on the ground.\nPrimarily though, you will use this for following up assist combos into Flourish of Steel as your most damaging HP combo ender in terms of bravery damage."
             },
             {
@@ -114,8 +113,8 @@
               "cancels": "",
               "assistGain": "",
               "cp": "20 (10)",
-              "name": "Ravager",
-              "context": "Thundaga=\nThe first bolt appears at 27 frames. After that, bolts appear every 8 frames and stay on field for 12 frames. The last bolt appears at ~4 seconds (235F) for a total of 27 bolts.\nLightning regains control at about 100F and can dodge cancel at about 56F.",
+              "name": "Thundaga",
+              "context": "The first bolt appears at 27 frames. After that, bolts appear every 8 frames and stay on field for 12 frames. The last bolt appears at ~4 seconds (235F) for a total of 27 bolts.\nLightning regains control at about 100F and can dodge cancel at about 56F.",
               "notes": "[Close] Call down lightning bolts. Long duration, keeps foe at bay.\nCalls down lightning bolts in a small area around her. All Ranged Low priority, but because they spawn frequently and stay if she gets hit, most characters can't punish her staying within them. This gives Lightning time to breathe and generate bravery in Medic role, cast another Ravager spell or build assist meter with other attacks.\nThe bolts have enough hit stun to follow up with an assist during chase, but it is difficult to confirm it in the moment; The chase prompt comes out as soon as a bolt hits."
             },
             {
@@ -176,8 +175,7 @@
               "cancels": "",
               "assistGain": "",
               "cp": "20 (10)",
-              "name": "Commando",
-              "context": "Blaze Rush=",
+              "name": "Blaze Rush",
               "notes": "[Mid] Gun shot & charge slash. Effective against any height."
             },
             {
@@ -219,8 +217,7 @@
               "cancels": "",
               "assistGain": "",
               "cp": "20 (10)",
-              "name": "Ravager",
-              "context": "Thunder=",
+              "name": "Thunder",
               "notes": "[Close] Call down lightning bolts. Short range, quick execution.\nA character defining move. Lightning's fastest move and an incredibly oppressive tool. Deceptive range, anti airs, very fast and spammable due to having low recovery and confirmable followup opportunities. Due to it's insanely low recovery you can use this to cancel it into a neutral state and keep using it in rhythm to build assist meter quickly.\nBecause of the Ranged Low priority, Lightning can use this move without the fear of getting blocked. Even when the opponent can act immediately after a successful block, the low recovery on Thunder means many characters will struggle to retaliate consistently. This means that guarding against this move does not guarantee your turn. The low recovery time of Thunder also enables Lightning to block, dodge or do it again. Players looking to counterattack may have to guess correctly again to put her at a disadvantage.\nThe Ranged Low priority does mean however, that melee priority attacks can attack through Thunder. Dashes and attacks with magic block property such as Squall's Heel Crush can also power through this move. This risk may not be in player's favor, but they can be used to call out Lightning's timing on using it.\nThe low damage output on Thunder itself means Lightning has to land this attack multiple times before it begins to amount to anything noteworthy. However, bypassing LV2 Assist Change is possible before or after the third hit depending on the assist which can shift the momentum in Lightning's favor.\nThunder also generates 90 EX Force when completed, which is on par with other quick, high EX Force generating attacks.\nThis is a move that excels at multiple aspects of competitive gameplay. Ease of use, meter management and favorable risk / reward ratio...\nAll that is to say, yes - Thunder is really good."
             },
             {

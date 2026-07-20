@@ -66,6 +66,10 @@
     "bravery": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "Yuna bravery attacks uses summons. Yuna is stationnary as she is \"casting\" the summon. The summon is a disjointed attack that cover a good range in front of her\nDuring EX mode, double summons adds another summon to the attack, improving damage and changing effects.\nAttack data within brackets indicate Double Summons during EX Mode.",
+          "moves": []
+        },
         "ground": {
           "intro": null,
           "moves": [
@@ -112,8 +116,7 @@
                   "-"
                 ]
               ],
-              "name": "Meteor Strike",
-              "notes": "Normal="
+              "name": "Meteor Strike"
             },
             {
               "variants": null,
@@ -128,7 +131,7 @@
               "assistGain": "Stale: 800 Fresh: 1050",
               "cp": "30 (15)",
               "description": "[Close] Summon Ifrit. Sends foe flying.",
-              "name": null,
+              "name": "Normal",
               "notes": "Ifrit claw swipe. Good vertical tracking with a large hitbox, average damage and slightly poor knockback. The first claw swipe can be confirmed into an assist like Kuja with a generous input window. Slow startup for a melee low priority makes it poor defensively and somewhat vulnerable to blocks."
             },
             {
@@ -188,8 +191,7 @@
                   "-"
                 ]
               ],
-              "name": "Aerospark",
-              "notes": "Normal="
+              "name": "Aerospark"
             },
             {
               "variants": null,
@@ -204,7 +206,7 @@
               "assistGain": "Stale: 920 Fresh:1170",
               "cp": "30 (15)",
               "description": "[Mid] Summon Ixion. Delay combo to boost hit times.",
-              "name": null,
+              "name": "Normal",
               "notes": "Rush forward with Ixion. On launching opponent, Ixion’s horn will glow twice. Pressing Circle (<img></img>) again will fire discs, and pressing as late as possible on the second flash will fire the maximum amount of 6 discs. The max amount of discs provide a safe empty chase against recovery attack and is one of the handful of attacks in the game to do so.\nThis is a Melee Mid so it will stagger regular blocks, making it a relatively safe tool for ground-to-ground, anti-air poking and area denial while the enemy is slightly above ground.\nThis attack is pretty fast on both startup and recovery for its range. As a niche technique, Ixion can spawn on the opposite side of thin obstacles that Yuna is pressed against as an extra-safe poking option."
             },
             {
@@ -265,8 +267,7 @@
                   "-"
                 ]
               ],
-              "name": "Energy Blast",
-              "notes": "Normal="
+              "name": "Energy Blast"
             },
             {
               "variants": null,
@@ -281,7 +282,7 @@
               "assistGain": "Stale: 570 Fresh: 820",
               "cp": "30 (15)",
               "description": "[Long] Summon Valefor. Fire five lasers in wave pattern.",
-              "name": null,
+              "name": "Normal",
               "notes": "Multiple projectiles fired in a cone shape formation. Low commitment and low reward, it can be easily countered with universal defensive options. Energy Blast can rarely be used for filler hits during ground assists, but it is not essential for Yuna to have."
             },
             {
@@ -346,8 +347,7 @@
                   "30 (15)"
                 ]
               ],
-              "name": "Sonic Wings",
-              "notes": "Normal="
+              "name": "Sonic Wings"
             },
             {
               "variants": null,
@@ -362,7 +362,7 @@
               "assistGain": "Stale: 850 Fresh: 1175",
               "cp": "30 (15)",
               "description": "[Mid] Summon Valefor. Great for attacking from below.",
-              "name": null,
+              "name": "Normal",
               "notes": "Yuna calls Valefor who spins at the enemy. If it hits, Yuna can press circle again to send the enemy away, initiating chase.\nSonic Wings is Yuna’s primary melee priority poke. Huge hitbox, strong straight-vertical tracking and entirely disjointed, but also slower startup, and thus somewhat vulnerable to reactionary blocks at certain ranges. After the first hits, Yuna can call an assist like Kuja to combo. Valefor being so displaced from Yuna’s position means that if she doesn’t have Spira’s Hope (her exclusive weapon) or doesn’t chase, the opponent will get most of the EX Force instead via Glutton. Its disjoint can be used to go through some higher priority projectiles, mainly The Emperor’s Flares and Ultimecia’s charged Knight’s Lances, making it a very good tool in those matchups."
             },
             {
@@ -423,8 +423,7 @@
                   "-"
                 ]
               ],
-              "name": "Heavenly Strike",
-              "notes": "Normal="
+              "name": "Heavenly Strike"
             },
             {
               "variants": null,
@@ -439,7 +438,7 @@
               "assistGain": "Stale: 720 Fresh: 970",
               "cp": "30 (15)",
               "description": "[Close] Summon Shiva. Short range, quick strike.",
-              "name": null,
+              "name": "Normal",
               "notes": "Slightly remote icicle strike attack. This is Yuna’s defining air poke for building assist meter and poking in general. If it hits, press circle to add another hit, press circle again to slam your opponent to the ground for a wall rush. Each hit has a long confirm window if they hit the opponent.\nHeavenly Strike will spawn on top of the opponent when possible; It has deceptively long upwards and forwards range, but also slight backwards and downwards range. The hit spawning directly on the opponent can allow this move to hit opponents through attacks it would otherwise lose to through priority. The high hit stun on the strikes can sometimes allow it to trade-combo. 11 frame startup ties for the fastest speed bracket of pokes.\nThe knockback distance is a bit on the lower side at about 2/5th the height of Order’s Sanctuary. If Yuna is positioned too high, confirming an assist combo off of the second hit is still possible.\nBeing Ranged Low priority offers Heavenly Strike a lot of unique advantages and disadvantages. Perhaps the biggest upside is that Yuna does not stagger when this move is blocked, which allows her to avoid damage in most situations against blocking HP attacks. On the flipside however, Heavenly Strike completely loses to dash, which can allow the opponent to use certain option selects with it; Sonic Wings is comparatively slow and Heavenly Strike loses cleanly to Melee Low attacks. This can prevent Yuna from defending herself by clashing in situations where she is at frame disadvantage, such as after air dodges."
             },
             {
@@ -500,8 +499,7 @@
                 ]
               ],
               "name": "Impulse",
-              "context": "Charge time 58 frames. Projectile comes out 11 frames after button release.",
-              "notes": "Normal="
+              "context": "Charge time 58 frames. Projectile comes out 11 frames after button release."
             },
             {
               "variants": [
@@ -543,7 +541,7 @@
               ],
               "cp": "30 (15)",
               "description": "[Long] Summon Bahamut. Charge to change strength.",
-              "name": null,
+              "name": "Normal",
               "notes": "Long-range fireball attack, can be charged to fire 4 smaller fireballs in a slight spread. Low reward on hit, easily dispatched by dash or block. The moderate startup, semi-decent vertical tracking and surprisingly fast projectile travel speed can make the single shot an effective poke for fishing for Assist Charge counter hits. The maximum range is a little lacking, however. The low reward on hit, along with it being Yuna’s only attacking option at its range reduces its usefulness, especially in bringing the opponent back into Yuna’s effective range.\nCharged Impulse is unfortunately worse than the normal version for the most part. The charge time is quite long, and the max range is slightly shorter. The projectile spread isn’t quite enough to make a big difference in catching the opponent and if only one of the projectiles connect, it actually does less damage. Charging Impulse is also very telegraphed to the opponent and easily assist punished as Yuna cannot usually turn around fast enough to hit the assist before getting hit herself.\nHowever, if Yuna connects multiple projectiles with the charged version, the hits can trigger a hit glitch and combo into Heavenly Strike follow-ups for a potential confirm into assist or knockdown."
             },
             {

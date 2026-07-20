@@ -63,6 +63,10 @@
     "bravery": {
       "documented": true,
       "groups": {
+        "main": {
+          "intro": "When Masamune is drawn, attacks generate more EX Force. This value is listed for all sword attacks, after the default EX Force value.\nWhen Masamune or Genji Blade is drawn, base damage is x0.75. Round down to nearest integer, minimum = 1. Genji Blade depletes EX gauge on hit.\nFurther reading: Unique Mechanic: Weapon Draw",
+          "moves": []
+        },
         "ground": {
           "intro": null,
           "moves": [
