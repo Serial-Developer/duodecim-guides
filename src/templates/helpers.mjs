@@ -47,6 +47,10 @@ export function speedValues(s) {
 // Barre plus courte = coup plus rapide (meilleur) ; les coups les plus rapides
 // sont mis en avant (★ + pleine couleur), BRV et HP distingués par couleur.
 export function startupChartSvg(moves, title) {
+  // Les variantes d'un même coup (« X — Normal », « X — EX Mode »…) sont
+  // fusionnées si leur startup est identique ; sinon la variante reste affichée
+  // entre parenthèses. Lisibilité : une barre par donnée réellement distincte.
+  const seen = new Set();
   const items = moves
     .map((m) => ({
       name: m.name,
@@ -55,6 +59,22 @@ export function startupChartSvg(moves, title) {
       prio: String(Array.isArray(m.priority) ? m.priority[0] : m.priority || ''),
     }))
     .filter((m) => m.f !== null && m.name)
+    .map((m) => {
+      const parts = m.name.split(' — ');
+      const base = parts[0];
+      const variant = parts[1] || null;
+      return { ...m, base, variant };
+    })
+    .filter((m) => {
+      const key = `${m.base}|${m.f}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .map((m) => ({
+      ...m,
+      label: m.variant && !/^normal$/i.test(m.variant) ? `${m.base} (${m.variant})` : m.base,
+    }))
     .sort((a, b) => a.f - b.f);
   if (items.length < 2) return '';
   const minF = items[0].f;
@@ -76,7 +96,7 @@ export function startupChartSvg(moves, title) {
     const y = padT + i * rowH;
     const bw = Math.max(3, (it.f / maxF) * chartW);
     const top = isTop(it);
-    const label = it.name.length > 26 ? it.name.slice(0, 25) + '…' : it.name;
+    const label = it.label.length > 26 ? it.label.slice(0, 25) + '…' : it.label;
     return `<text x="${padL - 8}" y="${y + 15}" fill="${top ? 'var(--gold)' : 'var(--text)'}" font-size="12" font-weight="${top ? '700' : '400'}" text-anchor="end">${top ? '★ ' : ''}${esc(label)}</text>` +
       `<rect x="${padL}" y="${y + 4}" width="${bw}" height="${rowH - 10}" rx="3" fill="${color(it)}" opacity="${top ? 1 : 0.5}"><title>${esc(it.name)} (${it.cat}) : ${it.f}F — priorité ${esc(it.prio || 'n.c.')}</title></rect>` +
       `<text x="${padL + bw + 6}" y="${y + 15}" fill="${top ? 'var(--text)' : 'var(--muted)'}" font-size="11" font-weight="${top ? '700' : '400'}">${it.f}F${it.prio ? ` · ${esc(it.prio)}` : ''}</text>`;

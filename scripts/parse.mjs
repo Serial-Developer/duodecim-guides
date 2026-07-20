@@ -109,9 +109,11 @@ function parseMovesFlow($, elems, charWords = new Set()) {
   let lastMove = null;
   let lastBaseName = null;
 
+  // Marqueur de VARIANTE (et non de coup) : qualifié par le dernier nom complet
+  const VARIANT = /^((level|phase|stage)\s*\d+|normal|ex mode|charged|uncharged|max(\s*charge)?|grounded|midair)$/i;
   const setPending = (rawName, rest) => {
     let name = rawName.trim();
-    if (/^(level|phase|stage)\s*\d/i.test(name)) {
+    if (VARIANT.test(name)) {
       if (lastBaseName) name = `${lastBaseName} — ${name}`;
     } else {
       lastBaseName = name;
