@@ -58,7 +58,7 @@
               "Weaknesses"
             ],
             [
-              "Defensive ground combat - Firion can stand toe-to-toe in close-range combat with Swordslash & Rope Knife BRVs and Shield Bash HP for protection after a dodge.\nAnti-zoning - Shield Bash's long range counter is fast, long reach, difficult to avoid and leads to assist combos. Good for shutting down low priority projectiles.\nDamage - High base bravery, high base ATK, synergy with Side by Side <img></img> and consistent HP link wall rushes reward Firion greatly with just one combo.\nSide by Side <img></img> - Firion builds assist gauge and momentum quickly with well placed HP links and strong HP attacks in neutral .\nRanged combat - Magic Arts: Bolt and more notably Straightarrow can force opponents to disengage and punish mistimed dodges even from long distances.\nEX Mode's Blood Weapon - Rare, but regenerating health equal to HP damage dealt is strong at creating comebacks.",
+              "Defensive ground combat - Firion can stand toe-to-toe in close-range combat with Swordslash & Rope Knife BRVs and Shield Bash HP for protection after a dodge.\nAnti-zoning - Shield Bash's long range counter is fast, long reach, difficult to avoid and leads to assist combos. Good for shutting down low priority projectiles.\nDamage - High base bravery, high base ATK, synergy with Side by Side  and consistent HP link wall rushes reward Firion greatly with just one combo.\nSide by Side  - Firion builds assist gauge and momentum quickly with well placed HP links and strong HP attacks in neutral .\nRanged combat - Magic Arts: Bolt and more notably Straightarrow can force opponents to disengage and punish mistimed dodges even from long distances.\nEX Mode's Blood Weapon - Rare, but regenerating health equal to HP damage dealt is strong at creating comebacks.",
               "Air combat - Floaty air dodges, low combo potential, lack of effective post-dodge defense and quick approaching close-range attacks can create a lot of risk for Firion.\nEnforcing defenders in his effective range - Firion's arsenal is not designed to easily enforce opponents hanging at a large stage's ceiling to engage with him. These situations often involve long-term strategies with EX and appropriate builds.\nPunishable HP links - As a frequent HP link user, Double Trouble's long HP attack animation leave him vulnerable to counter attacks after Assist Change."
             ]
           ]
@@ -469,7 +469,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "3 x 3 (9)",
@@ -508,10 +508,10 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Projectile StarterSet Up ProjectileStray Hit Combo\nMagic Arts: Flame > Rope Knife > Double Trouble\n40 + HP & WR\n60\nBase Damage (Breakdown): 10 > 20 > 10 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 30 > 30\nIf Flame hits, it has just enough hit stun for solo combos. The challenge here is hitting the opponent with Flame while being actionable. Assists can help with that, but in a neutral situation this may not be as practical. Rope Knife, Straightarrow and Lord of Arms are all serviceable followups, assuming Firion is close enough to land them."
+                  "EX Force"
                 ],
                 [
-                  "Poke StarterGround, Near WallBRV Damage & Assist Gain\nLance Combo > Followup (↑) > DC > Rope Knife > Double Trouble\n55 + HP & Wall Rush\n90\nBase Damage (Breakdown): 20 > 5 > 20 > 10 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 15 > 15 > 30 > 30\nFollowup (↑) has just enough hit stun for Firion to dodge and combo into Rope Knife. This requires being very close to wall, as this relies on reducing opponent's knockback and keeping Firion close. The dodge cancel and the following Rope Knife must be done as soon as humanly possible, so the timing is strict.\nLance Combo and Reel Axe are more reliable combo starters here, but Rope Knife can start this combo as well. It is a niche solo combo in most stages, but Firion does get more assist gauge for using different attacks. Naturally, it also deals more BRV damage."
+                  "EX Force"
                 ]
               ]
             }
@@ -533,16 +533,16 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Punish StarterGround, Wall Rush (Floor)BRV Damage, Beginner Combo\nRope Knife > Followup (↓) > WR > AST BRV > AC > Weaponsmaster\n89 + HP & Wall Rush\n~75\nVideo\nBase Damage (Breakdown): 20 > 8 > 43 (Assist) > 18 + HP & WR\nOpponent Assist (Comrade's Vow): 142\nEX Force (Breakdown): 45 > ~30\nNot particularly strong, but suitable for beginners.\nFollowup (↓) can also catch aggressive opponents with mid priority if Rope Knife misses. Firion players should keep an eye out for this if they use this move."
+                  "EX Force"
                 ],
                 [
-                  "Punish StarterGround, Wall RushHP Link, Multipurpose\nRope Knife > Double Trouble > WR > AST BRV > Straightarrow > AC > Weaponsmaster\n92 + HP & Wall Rush\n~90\nVideo\nBase Damage (Breakdown): 20 > 10 + HP & WR > 46 (Assist) > HP > 16 + HP & WR\nOpponent Assist (Comrade's Vow): 141\nEX Force (Breakdown): 30 > ~30 > 0 > ~30\nA Firion classic. Recommended for high base bravery builds. Straightarrow filler serves a few purposes; It adds meter depletion, resets base BRV recovery to normal and increases critical hit rate for Weaponmaster during base BRV recovery. Straightarrow can be fired whenever during Kuja's multi-hits, and if it Wall Rushes, it's even better for Firion."
+                  "EX Force"
                 ],
                 [
-                  "Counter StarterGround, MidrangeAnti-Zoning\nShield Bash (far) > AST BRV > AC > Weaponsmaster\n68 + HP & WR\n~90\nVideo\nBase Damage (Breakdown): 10 + HP > 4,16,20 (40 total, Assist) > 18 + HP & WR\nOpponent Assist (Comrade's Vow): 102\nEX Force (Breakdown): 60 > ~30\nShield Bash's long range counter controls a lot of space, and leads to assist combo on hit. Firion should be careful about his positioning, however; Normally the thunder bolt knocks opponent upward once. If the thunder bolt hits from below, it can knock opponent up multiple times.\nThis generates lots of EX Force (and assist gauge with Side by Side <img></img>), but it also delays Kuja assist timing a lot. The exact timing can be difficult to measure at first, but roughly 1 second after the first bolt hit can work. If in doubt, please watch the example video linked here."
+                  "EX Force"
                 ],
                 [
-                  "HP Projectile StarterWall Rush (Ground)Zoning Reward, Multipurpose\nStraightarrow > WR > AST BRV > Straightarrow > AC > Weaponsmaster\n65 + HP & Wall Rush\n~30\nVideo\nBase Damage (Breakdown): HP + WR > 47 (Assist) + HP (& WR) > 18 + HP & WR\nOpponent Assist (Comrade's Vow): 94\nEX Force (Breakdown): 0 > 0 > ~30\nStraightarrow combo against grounded opponents. Matchup dependent, but still recommended for high base BRV builds. The Straightarrow filler serves the same role as with prior core combos; Resets base BRV recovery, adds meter depletion and increases critical hit rate for Weaponsmaster."
+                  "EX Force"
                 ]
               ]
             }
@@ -619,63 +619,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Piggy's Stick"
             ],
             [
-              "Hand <img></img>",
-              "Chainsaw <img></img> (Equip Machines)"
+              "Hand",
+              "Chainsaw  (Equip Machines)"
             ],
             [
-              "Head <img></img>",
-              "Thornlet <img></img> (Bard's Gear)"
+              "Head",
+              "Thornlet  (Bard's Gear)"
             ],
             [
-              "Body <img></img>",
-              "Maximillian <img></img> (Cavalier's Gear)"
+              "Body",
+              "Maximillian  (Cavalier's Gear)"
             ],
             [
               "Accessory 1",
-              "Sniper Eye <img></img>"
+              "Sniper Eye"
             ],
             [
               "Accessory 2",
-              "Bravery Orb <img></img>"
+              "Bravery Orb"
             ],
             [
               "Accessory 3",
-              "Dismay Shock <img></img>"
+              "Dismay Shock"
             ],
             [
               "Accessory 4",
-              "Battle Hammer <img></img>"
+              "Battle Hammer"
             ],
             [
               "Accessory 5",
-              "Empty EX Gauge <img></img>"
+              "Empty EX Gauge"
             ],
             [
               "Accessory 6",
-              "Summon Unused <img></img>"
+              "Summon Unused"
             ],
             [
               "Accessory 7",
-              "Pre-EX Mode <img></img>"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 8",
-              "Pre-EX Revenge <img></img>"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 9",
-              "Opponent Summon Unused <img></img>"
+              "Opponent Summon Unused"
             ],
             [
               "Accessory 10",
-              "Side by Side <img></img>"
+              "Side by Side"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -691,40 +691,16 @@
               "Aerial"
             ],
             [
-              "<img></img> Swordslash",
-              "<img></img> Swordslash"
+              "Swordslash",
+              "Swordslash"
             ],
             [
-              "",
-              ""
+              "↑+ Rope Knife",
+              "↑+ Magic Arts: Flame"
             ],
             [
-              "",
-              ""
-            ],
-            [
-              "↑+<img></img> Rope Knife",
-              "↑+<img></img> Magic Arts: Flame"
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "<img></img> Branch: Double Trouble",
-              ""
-            ],
-            [
-              "↓+<img></img> Lance Combo",
-              "↓+<img></img> Magic Arts: Bolt"
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "<img></img> Branch: Double Trouble",
-              ""
+              "↓+ Lance Combo",
+              "↓+ Magic Arts: Bolt"
             ],
             [
               "HP attacks"
@@ -734,16 +710,12 @@
               "Aerial"
             ],
             [
-              "<img></img> Lord of Arms",
-              "<img></img> Straightarrow"
+              "Lord of Arms",
+              "Straightarrow"
             ],
             [
-              "↑+<img></img> Shield Bash",
-              "↑+<img></img> Weaponsmaster"
-            ],
-            [
-              "↓+<img></img> Straightarrow",
-              ""
+              "↑+ Shield Bash",
+              "↑+ Weaponsmaster"
             ]
           ]
         }

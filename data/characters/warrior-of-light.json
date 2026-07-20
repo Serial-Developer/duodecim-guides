@@ -62,7 +62,7 @@
               "Weaknesses"
             ],
             [
-              "All-rounder - Average to good stats, HP links and a fundamentally good moveset with an answer to many sitations.\nUser-friendly - Great for beginners and experienced players alike. Good for learning the game and honing fundamentals.\nCommand block - Shield of Light is an advancing single hit HP attack. It blocks instantly throughout its startup , and works both offensively and defensively after dodges.\nGround combat - Projectiles and empty chase assist combo starters allow Warrior of Light to adapt to a match's pace and improve his combo potential.\nBuild synergy - Works well with all common build styles, including EX, bravery boost on dodge and Side by Side <img></img>.\nEX generation - Most bravery attacks produce 30 to 90 EX Force. His most common poke Dayflash produces 90 EX, which supports long-term survivability with EX gauge.\nEX Mode - Boasts highest defense stat, automatically blocks Ranged Low projectiles and increases damage output of melee bravery attacks.",
+              "EX Force",
               "Struggles against traps - Despite having projectiles and disjoints, Warrior of Light cannot easily punish characters hiding inside lingering projectiles and traps without resources or considerable risk.\nCommital vertical attacks - Rising Buckler and Shield Strike braveries are serviceable, but are reactable and cannot be cancelled early on whiff.\n4-slot bravery dilemma - Warrior of Light benefits from all of his air braveries, but he cannot equip all of them\nFloaty air dodge, risky dodge protection - While Shield of Light is great at covering his air dodges, it is also high risk and doesn't work against high priority attacks. Outside of clashing with Dayflash bravery, air dodges make Warrior of Light vulnerable."
             ]
           ]
@@ -652,7 +652,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "5x3 (15)",
@@ -688,10 +688,10 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Projectile StarterGroundProjectile to HP Damage\nWhite Fang > Ascension > Rune Saber\n56 minimum + HP & WR\n90\nBase Damage (Breakdown): 6 min > 40 > 10 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 90 > 0\nWhite Fang combos into most of WoL's moves, Ascension is his staple high damage follow-up. This combo works in close range. If the opponent is further away, Warrior of Light may have to dash to combo afterwards."
+                  "EX Force"
                 ],
                 [
-                  "Projectile StarterGroundProjectile, Safe Chase for EX\nWhite Fang > Dayflash > Delayed Empty Chase\n28 minimum\n90\nBase Damage (Breakdown): 6 min > 22\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 90\nLess damage than Ascension, but this combo does two things: It lets WoL chase safely without getting countered and get all EX in the stage. Delay Dayflash's Chase as much as possible, then do it just before the opponent reaches the ground. This forces a wall rush reaction.\nThe second thing is it enables assist combos, and the chase also resets assist gauge if it was already used previously. This doesn't have much merit in the solo combo context, but it does leave WoL close to the opponent for pressure.\nIn a neutral situation, Dayflash can be easier to react with if White Fang hits a moving opponent. Other than that, Ascension is the stronger follow-up."
+                  "EX Force"
                 ]
               ]
             }
@@ -713,19 +713,19 @@
                 ],
                 [
                   "AC",
-                  "Assist Chase <img></img>"
+                  "Assist Chase"
                 ],
                 [
                   "AST BRV",
-                  "Assist (Bravery) <img></img> + <img></img>"
+                  "Assist (Bravery)  +"
                 ],
                 [
                   "AST HP",
-                  "Assist (HP) <img></img> + <img></img>"
+                  "Assist (HP)  +"
                 ],
                 [
                   "Chase",
-                  "Chase <img></img>"
+                  "Chase"
                 ],
                 [
                   "Empty Chase",
@@ -733,7 +733,7 @@
                 ],
                 [
                   "DC",
-                  "Dodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n<img></img> + <img></img>"
+                  "Dodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n +"
                 ],
                 [
                   "LL",
@@ -752,13 +752,13 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Poke StarterGround / Air OKStaple Midscreen Combo\nDayflash (2 hits) > AST BRV > AC > Shield Strike > Bitter End\n76 + HP & WR\n???\nBase Damage (Breakdown): 3, 4 > 40 AST > 14 > 15 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): ???\nStandard combo from a safe poke. Confirm the second Dayflash hit visually, then press assist and follow up. This is an important combo to get right, as it lets WoL do HP damage without using the more telegraphed bravery attacks first."
+                  "EX Force"
                 ],
                 [
-                  "Punish StarterCeiling HP Wall RushHP Damage\nCrossover / Ascension > Rune Saber > WR > AST BRV > AC > Shield Strike > Bitter End\n119 + HP & WR\n???\nBase Damage (Breakdown): 40 > 10 + HP & WR > 40 AST > 14 > 15 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 0 > ?? > 30\nA standard Wall Rush combo. Make sure to do Rune Saber as soon as possible before Crossover Wall Rushes at the ceiling. This is not very practical for low ceiling stages, such as Pandaemonium - Top Floor and M. S. Prima Vista. In those stages, Crossover's BRV Wall Rush has to suffice."
+                  "EX Force"
                 ],
                 [
-                  "Punish StarterKnockback Cancel Midscreen HP Damage\nShield Strike / Rising Buckler > Bitter End > AST BRV > Bitter End + Assist HIT > DC > AC > Shield Strike > Bitter End\n98 + HP & WR\n???\nBase Damage (Breakdown): 14 > 15 + HP > 40 AST > 14 > 15 + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): ???\nThis combo works anywhere, but Sephiroth must be timed to hit when Bitter End finishes. Press assist just as Bitter End's last bravery slash connects. WoL should be winding up his sword during the assist slowdown if done properly."
+                  "EX Force"
                 ]
               ]
             }
@@ -818,10 +818,6 @@
                 [
                   "LUK",
                   "60"
-                ],
-                [
-                  "Max Booster",
-                  ""
                 ]
               ]
             },
@@ -836,63 +832,63 @@
                   "Sephiroth"
                 ],
                 [
-                  "Weapon <img></img>",
+                  "Weapon",
                   "Heaven's Cloud"
                 ],
                 [
-                  "Hand <img></img>",
-                  "Lufenian Dirk <img></img>"
+                  "Hand",
+                  "Lufenian Dirk"
                 ],
                 [
-                  "Head <img></img>",
-                  "Lufenian Headband <img></img>"
+                  "Head",
+                  "Lufenian Headband"
                 ],
                 [
-                  "Body <img></img>",
+                  "Body",
                   "Lufenian Vest"
                 ],
                 [
                   "Accessory 1",
-                  "Muscle Belt <img></img>"
+                  "Muscle Belt"
                 ],
                 [
                   "Accessory 2",
-                  "Dismay Shock <img></img>"
+                  "Dismay Shock"
                 ],
                 [
                   "Accessory 3",
-                  "Battle Hammer <img></img>"
+                  "Battle Hammer"
                 ],
                 [
                   "Accessory 4",
-                  "Summon Unused <img></img>"
+                  "Summon Unused"
                 ],
                 [
                   "Accessory 5",
-                  "Pre-EX Mode <img></img>"
+                  "Pre-EX Mode"
                 ],
                 [
                   "Accessory 6",
-                  "Pre-EX Revenge <img></img>"
+                  "Pre-EX Revenge"
                 ],
                 [
                   "Accessory 7",
-                  "Opponent Summon Unused <img></img>"
+                  "Opponent Summon Unused"
                 ],
                 [
                   "Accessory 8",
-                  "White Gem <img></img>"
+                  "White Gem"
                 ],
                 [
                   "Accessory 9",
-                  "Tenacious Attacker <img></img>"
+                  "Tenacious Attacker"
                 ],
                 [
                   "Accessory 10",
-                  "Glutton <img></img>"
+                  "Glutton"
                 ],
                 [
-                  "Summon <img></img>",
+                  "Summon",
                   "Rubicante"
                 ]
               ]
@@ -908,40 +904,24 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Dayflash",
-                  "<img></img> Dayflash"
+                  "Dayflash",
+                  "Dayflash"
+                ],
+                [
+                  "↑+ Ascension",
+                  "↑+ Crossover"
+                ],
+                [
+                  "Branch: Rune Saber",
+                  "Branch: Rune Saber"
+                ],
+                [
+                  "↓+ White Fang",
+                  "↓+ Shield Strike"
                 ],
                 [
                   "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "↑+<img></img> Ascension",
-                  "↑+<img></img> Crossover"
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "<img></img> Branch: Rune Saber",
-                  "<img></img> Branch: Rune Saber"
-                ],
-                [
-                  "↓+<img></img> White Fang",
-                  "↓+<img></img> Shield Strike"
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  "<img></img> Branch: Bitter End"
+                  "Branch: Bitter End"
                 ],
                 [
                   "HP attacks"
@@ -951,16 +931,12 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Shield of Light",
-                  "<img></img> Shield of Light"
+                  "Shield of Light",
+                  "Shield of Light"
                 ],
                 [
-                  "↑+<img></img> Ultimate Shield",
-                  ""
-                ],
-                [
-                  "↓+<img></img> Shining Wave",
-                  "↓+<img></img> Radiant Sword"
+                  "↓+ Shining Wave",
+                  "↓+ Radiant Sword"
                 ]
               ]
             }

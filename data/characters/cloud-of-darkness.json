@@ -524,7 +524,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "2 x 4 (8)",
@@ -564,13 +564,13 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "BRV StarterGroundSolo BRV to HP Combo Recommended!\nTentacle of Pain 3 (Bolts) > Anti-Air Particle Beam\n42 + HP\n114\nBase Damage (Breakdown): 7, 7, 7 > 12 (Bolts) > 9 + HP\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 9, 9, 9 > 0 > 87\nThis is the most common solo combo Cloud of Darkness can do in competitive matches. There is just enough hit stun to connect Anti-Air Particle Beam after the bolts. Occasionally it may miss with repeated button presses, because there is no input buffer to help with Anti-Air. However, if Cloud of Darkness is slightly late, the opponent still has to dodge with precise timing to escape. This can give a little of bit of leniency against human opponents.\nAfter Anti-Air connects, assists can also follow up. Jecht BRV assist can even set up this combo again."
+                  "EX Force"
                 ],
                 [
-                  "Projectile StarterGround, Midrange / Long rangeBRV Damage\nTentacle of Spite 3 (Orb) > Jump > Free Air Dash > Spite 3 HIT > Tentacle of Suffering 2 (360°)\n60-94\n108\nBase Damage (Breakdown): 6-40 > 7, 7 > 40\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 9, 9 > 90\nThis must be done from long range, so Cloud of Darkness has enough time to become actionable. Spite 3 drags the opponent upwards with multiple hits, which gives enough time to Free Air Dash and use air braveries. Then if Spite 3 hits, Cloud of Darkness is in good position to combo afterwards.\nBoth Tentacle of Suffering and Tentacle of Scorn work here, but mileage will vary depending on the followup. Be sure to jump and Free Air Dash quickly, and dash as far as possible to get the bravery follow-up."
+                  "EX Force"
                 ],
                 [
-                  "BRV StarterGround, Corner, EX ModeEX Mode BRV to HP\nTentacle of Spite 1 (3 Hits) > Anti-Air Particle Beam\n46 + HP\n186\nVideo\nBase Damage (Breakdown): 7 > 30 > 9 + HP\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 9 > 90 > 87\nThis combo is not that practical for its steep requirements, but it's a combo that Cloud of Darkness could not do otherwise. Corner cuts the knockback , and the EX mode ability lets Cloud of Darkness chain into an HP attack during recovery , making this combo possible.\nThe base damage is not much higher than Pain 3 > Anti-Air Particle Beam, but EX mode's higher critical hit rate can increase the damage. It also produce more EX Force than usual."
+                  "EX Force"
                 ]
               ]
             }
@@ -667,63 +667,63 @@
                   "Kuja"
                 ],
                 [
-                  "Weapon <img></img>",
+                  "Weapon",
                   "Everdark"
                 ],
                 [
-                  "Hand <img></img>",
+                  "Hand",
                   "Chainsaw"
                 ],
                 [
-                  "Head <img></img>",
+                  "Head",
                   "Thornlet"
                 ],
                 [
-                  "Body <img></img>",
+                  "Body",
                   "Maximillian"
                 ],
                 [
                   "Accessory 1",
-                  "Sniper Eye <img></img>"
+                  "Sniper Eye"
                 ],
                 [
                   "Accessory 2",
-                  "Dismay Shock <img></img>"
+                  "Dismay Shock"
                 ],
                 [
                   "Accessory 3",
-                  "Battle Hammer <img></img>"
+                  "Battle Hammer"
                 ],
                 [
                   "Accessory 4",
-                  "BRV = 0 <img></img>"
+                  "BRV = 0"
                 ],
                 [
                   "Accessory 5",
-                  "Summon Unused <img></img>"
+                  "Summon Unused"
                 ],
                 [
                   "Accessory 6",
-                  "Pre-EX Mode <img></img>"
+                  "Pre-EX Mode"
                 ],
                 [
                   "Accessory 7",
-                  "Pre-EX Revenge <img></img>"
+                  "Pre-EX Revenge"
                 ],
                 [
                   "Accessory 8",
-                  "Blue Gem <img></img>"
+                  "Blue Gem"
                 ],
                 [
                   "Accessory 9",
-                  "First to Victory <img></img>"
+                  "First to Victory"
                 ],
                 [
                   "Accessory 10",
-                  "Miracle Shoes <img></img>"
+                  "Miracle Shoes"
                 ],
                 [
-                  "Summon <img></img>",
+                  "Summon",
                   "Rubicante"
                 ]
               ]
@@ -739,40 +739,12 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Tentacle of Pain",
-                  "<img></img> Tentacle of Suffering"
+                  "Tentacle of Pain",
+                  "Tentacle of Suffering"
                 ],
                 [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "↑+<img></img> Tentacle of Spite",
-                  "↑+<img></img> Tentacle of Scorn"
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
+                  "↑+ Tentacle of Spite",
+                  "↑+ Tentacle of Scorn"
                 ],
                 [
                   "HP attacks"
@@ -782,16 +754,16 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Anti-air Particle Beam",
-                  "<img></img> 0-form Particle Beam"
+                  "Anti-air Particle Beam",
+                  "0-form Particle Beam"
                 ],
                 [
-                  "↑+<img></img> Long-Range Particle Beam",
-                  "↑+<img></img> Fusillade Particle Beam"
+                  "↑+ Long-Range Particle Beam",
+                  "↑+ Fusillade Particle Beam"
                 ],
                 [
-                  "↓+<img></img> Feint Particle Beam",
-                  "↓+<img></img> Wrath Particle Beam"
+                  "↓+ Feint Particle Beam",
+                  "↓+ Wrath Particle Beam"
                 ]
               ]
             },

@@ -548,7 +548,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "7 x 3, 11 (32)",
@@ -638,63 +638,63 @@
               "Kuja / Jecht"
             ],
             [
-              "Weapon <img></img>",
-              "Lufenian Axe <img></img>"
+              "Weapon",
+              "Lufenian Axe"
             ],
             [
-              "Hand <img></img>",
+              "Hand",
               "Lufenian Shield"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Lufenian Helm"
             ],
             [
-              "Body <img></img>",
-              "Auto Crossbow <img></img>"
+              "Body",
+              "Auto Crossbow"
             ],
             [
               "Accessory 1",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 2",
-              "<img></img> Sniper Eye"
+              "Sniper Eye"
             ],
             [
               "Accessory 3",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 4",
-              "<img></img> Empty EX Gauge"
+              "Empty EX Gauge"
             ],
             [
               "Accessory 5",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Grounded"
+              "Grounded"
             ],
             [
               "Accessory 9",
-              "<img></img> Opponent Summon Unused"
+              "Opponent Summon Unused"
             ],
             [
               "Accessory 10",
-              "<img></img> Side By Side"
+              "Side By Side"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -723,34 +723,6 @@
           "rows": [
             [
               "Stats"
-            ],
-            [
-              "HP",
-              ""
-            ],
-            [
-              "CP",
-              ""
-            ],
-            [
-              "BRV",
-              ""
-            ],
-            [
-              "ATK",
-              ""
-            ],
-            [
-              "DEF",
-              ""
-            ],
-            [
-              "LUK",
-              ""
-            ],
-            [
-              "Max Booster",
-              ""
             ]
           ]
         },
@@ -759,70 +731,6 @@
           "rows": [
             [
               "Equipment"
-            ],
-            [
-              "Assist",
-              ""
-            ],
-            [
-              "Weapon <img></img>",
-              ""
-            ],
-            [
-              "Hand <img></img>",
-              ""
-            ],
-            [
-              "Head <img></img>",
-              ""
-            ],
-            [
-              "Body <img></img>",
-              ""
-            ],
-            [
-              "Accessory 1",
-              ""
-            ],
-            [
-              "Accessory 2",
-              ""
-            ],
-            [
-              "Accessory 3",
-              ""
-            ],
-            [
-              "Accessory 4",
-              ""
-            ],
-            [
-              "Accessory 5",
-              ""
-            ],
-            [
-              "Accessory 6",
-              ""
-            ],
-            [
-              "Accessory 7",
-              ""
-            ],
-            [
-              "Accessory 8",
-              ""
-            ],
-            [
-              "Accessory 9",
-              ""
-            ],
-            [
-              "Accessory 10",
-              ""
-            ],
-            [
-              "Summon <img></img>",
-              ""
             ]
           ]
         },

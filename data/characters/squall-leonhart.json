@@ -388,7 +388,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "2,2 (4)",
@@ -426,16 +426,16 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Punish StarterGroundBRV Damage\nThunder Barret > Solid Barrel\n67\n126\nVideo\nBase Damage (Breakdown): 12 > 55\nOpponent Assist (Comrade's Vow): 100\nEX Force (Breakdown): 36 > 90\nA staple combo and great for beginners. Solid Barrel can be pressed repeatedly after Thunder Barret, and it will generate a good amount of EX. It knocks the opponent far away, which lets Squall get some of the EX Force he generated. This also sets up various other combos, so it's a good idea to get comfortable with this."
+                  "EX Force"
                 ],
                 [
-                  "Punish StarterGroundHP Combo, EX Force\nThunder Barret > Blasting Zone\n16 + HP\n108\nVideo\nBase Damage (Breakdown): 6 > 10 + HP\nOpponent Assist (Comrade's Vow): 24\nEX Force (Breakdown): 18 > 90\nThis HP combo (barely) has the most lenient timing. It is Squall's second highest option for EX and it still allows assist combos as well. Since Blasting Zone is Squall's fastest HP on the ground, players can attempt to repeatedly press Blasting Zone to increase their success rate. The closer Thunder Barret hits, the easier the HP timing can become."
+                  "EX Force"
                 ],
                 [
-                  "Poke StarterGround, Landing LagBRV Damage, Assist Gauge\nSolid Barrel (3 hits) > DC > LL > Upper Blues (2 hits) > DC > LL > Beat Fang\n65 + WR\n66\nVideo\nBase Damage (Breakdown): 19 > 6 > 40 + WR\nOpponent Assist (Comrade's Vow): 117\nEX Force (Breakdown): 18 > 18 > 30\nThis has been historically known as a \"Golden Combo\" in an English speaking community. A combination of three braveries make this a rewarding combo for bravery, and especially assist gauge. Since Squall exits an attack state with the two dodges, both Upper Blues and Beat Fang also get a fresh move bonus for filling assist gauge.\nTry to delay Solid Barrel's hits as much as possible to maximize landing lag chance. After Solid Barrel (3), dodge (backstep) and attack as soon as possible. Remember to delay Upper Blues second hit as well. The opponent can technically dodge all landing lag here, but it requires very precise timing. That means this combo is more practical against human players specifically.\nSquall can also perform this with 2 hits from Solid Barrel, if opponent misses their air dodge. Same thing with 4 hits from Solid Barrel; Squall's back must be against a wall. That reduces dodge distance enough for the combo to work. Even unequipping Ground Evasion Boost basic ability is not enough, so this kind of positioning makes the combo more situational.\nThis combo works on Shantotto as well, despite her small size. And of course, EX Mode amplifies the damage output a lot with critical hits and increased base damage."
+                  "EX Force"
                 ],
                 [
-                  "EX Revenge, MidairFull EX GaugeBravery into HP Damage\nHeel Crush > Heel Crush > Heel Crush > Aerial Circle\n60 + HP & WR\n0\nVideo\nBase Damage (Breakdown): 20 + WR > 20 + WR > 20 + WR > HP + WR\nOpponent Assist (Comrade's Vow): 90\nEX Force (Breakdown): 0 > 0 > 0 > 0\nA staple combo that works pretty much anywhere. This can do more damage with Wall Rushes if opponent is near ground. This is a pretty lenient combo to perform, as Heel Crush and Aerial Circle can be pressed repeatedly with little concern for timing."
+                  "EX Force"
                 ]
               ]
             }
@@ -454,19 +454,19 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Poke StarterGroundMidscreen BRV to HP\nSolid Barrel (4 hits) > AST BRV > AC > Aerial Circle\n79 + HP & WR\n24\nVideo\nBase Damage (Breakdown): 5, 6, 8, 10 > 50 AST > HP + WR\nOpponent Assist (Comrade's Vow): 118\nEX Force (Breakdown): 24 > 0\nGround combo, no wall needed. Squall has plenty of time to confirm an assist combo here. The fourth hit is the last part before the opponent is sent away, so assist should be called by then. If Squall is having trouble calling assist, try holding Circle <img></img> on the fourth hit and then pressing L <img></img>.\nThis combo can be done after Thunder Barret as well."
+                  "EX Force"
                 ],
                 [
-                  "Poke StarterAir, Wall Rush (Ground)BRV to HP Damage\nBeat Fang > WR > AST BRV > AC > Aerial Circle\n86 + HP & WR\n30\nVideo\nBase Damage (Breakdown): 40 + WR > 46 AST > HP & WR\nOpponent Assist (Comrade's Vow): 148\nEX Force (Breakdown): 30 > 0\nA standard Wall Rush combo. Call assist as soon as Wall Rush happens, then teleport a moment after the Assist Chase <img></img> prompt shows up, so Aerial Circle does not miss. Note, that Beat Fang will not Wall Rush from all heights, so it's not guaranteed everywhere.\nNote: If Squall cannot Wall Rush, assist can still be called after Beat Fang's third hit. Kuja assist will do his air attack instead, but HP damage is still possible afterwards."
+                  "EX Force"
                 ],
                 [
-                  "HP StarterGround, Wall RushHP into BRV Damage\nFated Circle > WR > AST BRV > AC > Beat Fang\n90 + HP & WR\n30\nVideo\nBase Damage (Breakdown): HP + WR > 50 AST > 40 + WR\nOpponent Assist (Comrade's Vow): 138\nEX Force (Breakdown): 0 > 30\nHP Attack Wall Rush combo. Call assist after Wall Rush happens, then follow up with Beat Fang. Two reasons for this; Squall's base bravery does not recover fast enough for another HP to do as much damage. Also, the critical hit rate increases momentarily after HP damage. It may not raise Squall's bravery by much, but the opponent's bravery may drop a lot more instead. This is a common theme when comboing with Kuja assist, so brace yourself for it.\nOther HP attacks that Wall Rush also work here. Revolver Drive, Rough Divide and Aerial Circle are all OK.\nIf Squall's build has increased Bravery recovery, this issue of lower damage for second HP can be solved. Royal Crown <img></img> or Bravery Orb <img></img> are a good starting point for builds."
+                  "EX Force"
                 ],
                 [
-                  "Poke StarterAir, Wall Rush (Ground)HP Damage & Critical Hits\nStaple Combo!\nBeat Fang > WR > AST BRV > DC > Aerial Circle > WR > DC > AC > Beat Fang\n124 + HP & WR\n60\nVideo\nBase Damage (Breakdown): 40 + WR > 44 AST + HP & WR> 40 + WR\nOpponent Assist (Comrade's Vow): 225\nEX Force (Breakdown): 30 > 0 > 30\nBeat Fang with Aerial Circle filler . Press Aerial Circle as Kuja pulls the opponent to himself. The goal here is to knock the opponent towards ground with Aerial Circle and then quickly follow up with Beat Fang for critical hits. Again, the critical hit rate goes up momentarily after connecting an HP attack, which improves Beat Fang's damage.\nSquall must be at certain height to ensure Aerial Circle pushes the opponent downwards. Upper Blues is a good reference point for this. If Squall gets a ground Wall Rush from higher up in the air, he may have to measure the distance manually to do this combo. Being too high can pull opponent out of Kuja assist due to Aerial Circle's absorb effect. Conversely, being too low can push the opponent away with no guarantee for finishing the combo. Squall's position makes a big difference here. He can also push the opponent diagonally down, and Kuja may still be able to finish his attack. This does mean that Kuja may do slightly less damage, or that Squall may even lose HP Wall Rush damage entirely.\nSquall can also do Fire Barret into Beat Fang (no dodge cancel) after Assist Chase. This depends more on the Assist Chase timing, but try not to teleport too late so the fireballs can hit. And even then, Beat Fang might barely miss if the angle is a little off. Please see the linked video for an example."
+                  "EX Force"
                 ],
                 [
-                  "HP StarterGround (Squall)HP & BRV Damage\nBlasting Zone > AST BRV > DC (↑) > AC > Beat Fang\n96 + HP & WR\n120\nVideo\nBase Damage (Breakdown): 10 + HP > 46 AST > 40 + WR\nOpponent Assist (Comrade's Vow): 144\nEX Force (Breakdown): 90 > 30\nBlasting Zone combo, no wall needed. Call Kuja assist a moment after HP damage is dealt. The opponent will gradually slow down while flying in the air, which makes it possible for Kuja assist to combo.\nThis is mostly to add bravery damage and EX depletion from assist. If Squall needs the damage for Bravery Break, a well placed Blasting Zone can turn the match in his favor. Be sure to dodge forward after Blasting Zone to get some of the EX Force floating around."
+                  "EX Force"
                 ]
               ]
             }
@@ -549,63 +549,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Lionheart"
             ],
             [
-              "Hand <img></img>",
+              "Hand",
               "Lufenian Shield"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Lufenian Helm"
             ],
             [
-              "Body <img></img>",
-              "Lufenian Armor <img></img>"
+              "Body",
+              "Lufenian Armor"
             ],
             [
               "Accessory 1",
-              "<img></img> Hyper Ring"
+              "Hyper Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Zephyr Cloak"
+              "Zephyr Cloak"
             ],
             [
               "Accessory 3",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 4",
-              "<img></img> Large Gap in HP"
+              "Large Gap in HP"
             ],
             [
               "Accessory 5",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 9",
-              "<img></img> Glutton"
+              "Glutton"
             ],
             [
               "Accessory 10",
-              "<img></img> First to Victory"
+              "First to Victory"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -676,63 +676,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
-              "Earthbreaker <img></img>"
+              "Weapon",
+              "Earthbreaker"
             ],
             [
-              "Hand <img></img>",
+              "Hand",
               "Adamant Shield"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Adamant Helm"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Adamant Vest"
             ],
             [
               "Accessory 1",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 2",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 3",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 4",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 5",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 6",
-              "<img></img>Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 7",
-              "<img></img> Aerial"
+              "Aerial"
             ],
             [
               "Accessory 8",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 9",
-              "<img></img> First to Victory"
+              "First to Victory"
             ],
             [
               "Accessory 10",
-              "<img></img> Back-Breaking Straw"
+              "Back-Breaking Straw"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -803,63 +803,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Lionheart"
             ],
             [
-              "Hand <img></img>",
+              "Hand",
               "Genji Shield"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Genji Helm"
             ],
             [
-              "Body <img></img>",
-              "Genji Armor <img></img>"
+              "Body",
+              "Genji Armor"
             ],
             [
               "Accessory 1",
-              "<img></img> Sniper Eye"
+              "Sniper Eye"
             ],
             [
               "Accessory 2",
-              "<img></img> Dragonfly Orb"
+              "Dragonfly Orb"
             ],
             [
               "Accessory 3",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 4",
-              "<img></img> EX Core Present"
+              "EX Core Present"
             ],
             [
               "Accessory 5",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Aerial"
+              "Aerial"
             ],
             [
               "Accessory 9",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 10",
-              "<img></img> First to Victory"
+              "First to Victory"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -930,63 +930,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Piggy's Stick"
             ],
             [
-              "Hand <img></img>",
+              "Hand",
               "Hero's Shield"
             ],
             [
-              "Head <img></img>",
-              "Royal Crown <img></img>"
+              "Head",
+              "Royal Crown"
             ],
             [
-              "Body <img></img>",
-              "Maximillian <img></img>"
+              "Body",
+              "Maximillian"
             ],
             [
               "Accessory 1",
-              "<img></img> Sniper Eye"
+              "Sniper Eye"
             ],
             [
               "Accessory 2",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 3",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 4",
-              "<img></img> BRV = 0"
+              "BRV = 0"
             ],
             [
               "Accessory 5",
-              "<img></img> Empty EX Gauge"
+              "Empty EX Gauge"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Hero's Seal"
+              "Hero's Seal"
             ],
             [
               "Accessory 9",
-              "<img></img> Together as One"
+              "Together as One"
             ],
             [
               "Accessory 10",
-              "<img></img> Side by Side"
+              "Side by Side"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -1057,52 +1057,52 @@
               "Yuna"
             ],
             [
-              "Weapon <img></img>",
-              "Lufenian Lance <img></img>"
+              "Weapon",
+              "Lufenian Lance"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Dirk <img></img>"
+              "Hand",
+              "Lufenian Dirk"
             ],
             [
-              "Head <img></img>",
-              "Lufenian Headband <img></img>"
+              "Head",
+              "Lufenian Headband"
             ],
             [
-              "Body <img></img>",
-              "Maximillian <img></img>"
+              "Body",
+              "Maximillian"
             ],
             [
               "Accessory 1",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 2",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 3",
-              "<img></img> BRV = 0"
+              "BRV = 0"
             ],
             [
               "Accessory 4",
-              "<img></img> Assist"
+              "Assist"
             ],
             [
               "Accessory 5",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Aerial"
+              "Aerial"
             ],
             [
               "Accessory 9",
@@ -1111,10 +1111,6 @@
             [
               "Accessory 10",
               "Free choice"
-            ],
-            [
-              "Summon <img></img>",
-              ""
             ]
           ]
         },

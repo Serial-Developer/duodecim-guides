@@ -40,7 +40,7 @@
               "Weaknesses"
             ],
             [
-              "Excellent conversion ability: Shantotto is able to turn almost any hit into HP damage with some execution, and further extend reliably with assists.\nHigh EX Force generation: All of Shantotto's HPs and Retribution build a high amount of EX Force, that further escalates with well executed combos.\nCan deny HP attack usage: An opponent being poisoned by Bio means they'll be instantly broken if they hit Shantotto with an HP attack. When not near loss, this can be used to effectively lock the opponent out of using them for a period of time.\nGood whiff punish game: Good mobility and startup on Stun to combo into HPs. A couple unconventional tools can make it scary to recklessly whiff attacks against her.",
+              "EX Force",
               "No wall rush HP: A lack of wall rush on any of Shantotto's HP attacks significantly cuts into the potential combo damage and how much she gets out of the high base brave sets she usually runs.\nExtreme Glutton vulnerability: Because all of the HP attacks Shantotto uses hit from a medium distance, the opponent will get priority when absorbing EX from her majority of the time, greatly reducing EX intake without build investment.\nAssist punish vulnerability: Because Retribution doesn't cover Shantotto's sides well, and every single one of her other attacks is Ranged, in practice almost every single attack Shantotto can use is vulnerable to raw assist.\nNo fast midair melee attack: This makes her both vulnerable to a large amount of attacks and pressure after a dodge'\nHuge recovery: In general the end lag on Shantotto's attacks is above average relative to the rest of the cast, this is especially bad on most of her HP Attacks."
             ]
           ]
@@ -547,7 +547,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "4, 3, 3, 10 (20)",
@@ -638,63 +638,63 @@
               "Yuna"
             ],
             [
-              "Weapon <img></img>",
-              "Heaven's Cloud <img></img>"
+              "Weapon",
+              "Heaven's Cloud"
             ],
             [
-              "Hand <img></img>",
-              "Hero's Shield <img></img>"
+              "Hand",
+              "Hero's Shield"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Thornlet"
             ],
             [
-              "Body <img></img>",
-              "Maximillian <img></img>"
+              "Body",
+              "Maximillian"
             ],
             [
               "Accessory 1",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 2",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 3",
-              "<img></img> BRV = 0"
+              "BRV = 0"
             ],
             [
               "Accessory 4",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 5",
-              "<img></img> Blue Gem"
+              "Blue Gem"
             ],
             [
               "Accessory 6",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 7",
-              "<img></img> Glutton"
+              "Glutton"
             ],
             [
               "Accessory 8",
-              "<img></img> First to Victory"
+              "First to Victory"
             ],
             [
               "Accessory 9",
-              "<img></img> Hero's Seal"
+              "Hero's Seal"
             ],
             [
               "Accessory 10",
-              "<img></img> Miracle Shoes"
+              "Miracle Shoes"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -723,34 +723,6 @@
           "rows": [
             [
               "Stats"
-            ],
-            [
-              "HP",
-              ""
-            ],
-            [
-              "CP",
-              ""
-            ],
-            [
-              "BRV",
-              ""
-            ],
-            [
-              "ATK",
-              ""
-            ],
-            [
-              "DEF",
-              ""
-            ],
-            [
-              "LUK",
-              ""
-            ],
-            [
-              "Max Booster",
-              ""
             ]
           ]
         },
@@ -759,70 +731,6 @@
           "rows": [
             [
               "Equipment"
-            ],
-            [
-              "Assist",
-              ""
-            ],
-            [
-              "Weapon <img></img>",
-              ""
-            ],
-            [
-              "Hand <img></img>",
-              ""
-            ],
-            [
-              "Head <img></img>",
-              ""
-            ],
-            [
-              "Body <img></img>",
-              ""
-            ],
-            [
-              "Accessory 1",
-              ""
-            ],
-            [
-              "Accessory 2",
-              ""
-            ],
-            [
-              "Accessory 3",
-              ""
-            ],
-            [
-              "Accessory 4",
-              ""
-            ],
-            [
-              "Accessory 5",
-              ""
-            ],
-            [
-              "Accessory 6",
-              ""
-            ],
-            [
-              "Accessory 7",
-              ""
-            ],
-            [
-              "Accessory 8",
-              ""
-            ],
-            [
-              "Accessory 9",
-              ""
-            ],
-            [
-              "Accessory 10",
-              ""
-            ],
-            [
-              "Summon <img></img>",
-              ""
             ]
           ]
         },

@@ -325,48 +325,17 @@
               "caption": null,
               "rows": [
                 [
-                  "<img src=\"\" style=\"width:250px; height:270px; object-fit: none; object-position: 20%; border:3px solid RGB(105,86,160); inline-table;\"></img>"
-                ],
-                [
-                  "The attack's baseline damage value before equipment and stats are considered.",
-                  ""
-                ],
-                [
-                  "The time it takes for this attack to do damage. Currently this is measured at 60 frames per second (30F would be 0.5 seconds).",
+                  "Startup",
                   "The period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n: ~34F after button release."
-                ],
-                [
-                  "Damage Type",
-                  ""
-                ],
-                [
-                  "Priority",
-                  ""
-                ],
-                [
-                  "The amount of EX that can be gained from EX Force. 1000 = Full EX gauge.",
-                  ""
                 ],
                 [
                   "Effects",
                   "Freeze (330F / 5,5 sec)"
                 ],
                 [
-                  "What this move can be cancelled into.",
-                  ""
-                ],
-                [
-                  "Assist Gain (Hit)",
-                  ""
-                ],
-                [
-                  "CP (Mastered)",
-                  ""
-                ],
-                [
                   "[Activate with R + Square] Opponent's movements are completely frozen for a set time. However, this has a long casting time.",
-                  "Unlocked at level",
-                  "Mastered at AP"
+                  "Débloqué au niveau",
+                  "Maîtrisé à AP"
                 ]
               ]
             }
@@ -383,7 +352,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "10",
@@ -474,63 +443,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Shooting Star"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Shield <img></img>"
+              "Hand",
+              "Lufenian Shield"
             ],
             [
-              "Head <img></img>",
-              "Lufenian Helm <img></img>"
+              "Head",
+              "Lufenian Helm"
             ],
             [
-              "Body <img></img>",
-              "Lufenian Armor <img></img>"
+              "Body",
+              "Lufenian Armor"
             ],
             [
               "Accessory 1",
-              "<img></img> Hyper Ring"
+              "Hyper Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Earring"
+              "Earring"
             ],
             [
               "Accessory 3",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 4",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 5",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Aerial"
+              "Aerial"
             ],
             [
               "Accessory 9",
-              "<img></img> Opponent Summon Unused"
+              "Opponent Summon Unused"
             ],
             [
               "Accessory 10",
-              "<img></img> Glutton"
+              "Glutton"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -559,34 +528,6 @@
           "rows": [
             [
               "Stats"
-            ],
-            [
-              "HP",
-              ""
-            ],
-            [
-              "CP",
-              ""
-            ],
-            [
-              "BRV",
-              ""
-            ],
-            [
-              "ATK",
-              ""
-            ],
-            [
-              "DEF",
-              ""
-            ],
-            [
-              "LUK",
-              ""
-            ],
-            [
-              "Max Booster",
-              ""
             ]
           ]
         },
@@ -595,70 +536,6 @@
           "rows": [
             [
               "Equipment"
-            ],
-            [
-              "Assist",
-              ""
-            ],
-            [
-              "Weapon <img></img>",
-              ""
-            ],
-            [
-              "Hand <img></img>",
-              ""
-            ],
-            [
-              "Head <img></img>",
-              ""
-            ],
-            [
-              "Body <img></img>",
-              ""
-            ],
-            [
-              "Accessory 1",
-              ""
-            ],
-            [
-              "Accessory 2",
-              ""
-            ],
-            [
-              "Accessory 3",
-              ""
-            ],
-            [
-              "Accessory 4",
-              ""
-            ],
-            [
-              "Accessory 5",
-              ""
-            ],
-            [
-              "Accessory 6",
-              ""
-            ],
-            [
-              "Accessory 7",
-              ""
-            ],
-            [
-              "Accessory 8",
-              ""
-            ],
-            [
-              "Accessory 9",
-              ""
-            ],
-            [
-              "Accessory 10",
-              ""
-            ],
-            [
-              "Summon <img></img>",
-              ""
             ]
           ]
         },

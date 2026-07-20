@@ -423,7 +423,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "5 x 5 (25)",
@@ -460,13 +460,13 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Projectile starterAirborne, below opponent\nShadow Flare > DC > Sudden Cruelty\n43~52\n87\nVideo\nBase Damage (Breakdown): 3~12 > 40\nOpponent Assist (Comrade's Vow): 78\nEX Force (Breakdown): 0 > 87"
+                  "EX Force"
                 ],
                 [
-                  "Projectile starterAirborne, below or above opponent\nShadow Flare > DC > Oblivion\n~28~37 + WR\n30\nVideo\nBase Damage (Breakdown): 3~12 > 25\nOpponent Assist (Comrade's Vow): 55\nEX Force (Breakdown): 0 > 30\nIf Sephiroth is close to opponent, but doesn't want to risk dropping dodge cancel > Sudden Cruelty, he can cancel Shadow Flare into Oblivion instead. Can start assist combos near ground."
+                  "EX Force"
                 ],
                 [
-                  "Projectile starter, HP combo\nShadow Flare > Heaven's Light\n3~12 + HP WR\n0\nVideo\nBase Damage (Breakdown): 3~12 > HP\nOpponent Assist (Comrade's Vow): 18 (all projectiles)\nEX Force (Breakdown): 0 > 0\nThis is one of the more consistent combos for Sephiroth, especially after assist. It can work even when Sephiroth is above the opponent thanks to Heaven's Light's automatic movement.\nCancel Shadow Flare into Heaven's Light, a dodge cancel is not necessary."
+                  "EX Force"
                 ]
               ]
             }
@@ -483,7 +483,7 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "EX Revenge, midairFull EX gauge\nShadow Flare (x5) > Heaven's Light\n~54 + HP WR\n0\nVideo\nBase Damage (Breakdown): 3~12 x5 > HP + WR\nOpponent Assist (Comrade's Vow): 81\nEX Force (Breakdown): 0 > 0\nA staple for Sephiroth. Repeatedly press Shadow Flare until five of them have been cast, and then finish with Heaven's Light. Works anywhere, as long as opponent is within range for Shadow Flare.\nIf Sephiroth doesn't start casting Shadow Flare immediately, or his cancel timing is slightly off, the fifth Shadow Flare may miss some of its projectiles. The damage loss is usually negligible, but worth noting. If the opponent is at a ceiling, that can guarantee all five Shadow Flares don't miss."
+                  "EX Force"
                 ]
               ]
             }
@@ -502,19 +502,19 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Air poke starterWorks anywhere\nSudden Cruelty (1st part) > AST BRV > AC > Heaven's Light\n75 + HP WR\n27\nVideo\nBase Damage (Breakdown): 25 > 50 (Assist) > HP + WR\nOpponent Assist (Comrade's Vow): 112\nEX Force (Breakdown): 27 > 0\nA basic assist combo that can wall rush near the ceiling. Heaven's Light is a low-execution combo ender that works consistently. Sephiroth can add more damage during Kuja assist, but new players don't need to worry about that."
+                  "EX Force"
                 ],
                 [
-                  "Ground poke / punish starterWorks anywhere.\nReaper (2 hits) > AST BRV > AC > Shadow Flare > Heaven's Light\n88-97 + HP & WR\n33\nVideo\nBase Damage (Breakdown): 35 > 50 (Assist) > 3~12 > HP + WR\nOpponent Assist (Comrade's Vow): 132\nEX Force (Breakdown): 33 > 0 > 0\nBasic combo off of Sephiroth's ground bravery. Delay the second part to increase Sephiroth's damage, then call the assist. The Shadow Flare extension is extra damage, but not essential for new players."
+                  "EX Force"
                 ],
                 [
-                  "Air punish starterNear ground\nOblivion > WR > AST BRV > Free Air Dash > Sudden Cruelty (1) > DC > AC > Scintilla\n107 + HP & WR\n87\nVideo\nBase Damage (Breakdown): 25 + WR > 47 (Assist) > 25 > 10 + HP WR\nOpponent Assist (Comrade's Vow): 156\nEX Force (Breakdown): 30 > 27 > 30\nOblivion may have a telegraphed animation, but it leads to a good assist combo with a ground wall rush. Plenty of time to fit in a Sudden Cruelty (1) before dodge cancelling into another follow-up with assist chase. The combo works without it too, but obviously deals less damage."
+                  "EX Force"
                 ],
                 [
-                  "Air HP starter, Wall Rush\nOctaslash > WR > AST BRV > AC > Octaslash\n82 + HP WR (x2)\n42\nVideo\nBase Damage (Breakdown): 16 + HP WR > 50 (Assist) > 16 + HP WR\nOpponent Assist (Comrade's Vow): 120\nEX Force (Breakdown): 21 > 21\nBasic wall rush combo with only 1 HP move. Octaslash holds long enough for base BRV to recover, while dealing more damage than Scintilla."
+                  "EX Force"
                 ],
                 [
-                  "Midair HP starter, Wall RushNear wall / ceiling\nHeaven's Light > WR > AST BRV > AC > Shadow Flare > Heaven's Light\n53-62 + HP WR (x2)\n0\nVideo\nBase Damage (Breakdown): HP + WR > 50 (Assist) > 3~12 > HP + WR\nOpponent Assist (Comrade's Vow): 93\nEX Force (Breakdown): 0 > 0 > 0\nNo EX with this combo, but Heaven's Light can evade moves, so it's good to have a combo ready. Shadow Flare adds damage, but all projectiles hit consistently if the opponent is at the ceiling. Not necessary when learning the game at first, but will be used for more damage later on."
+                  "EX Force"
                 ]
               ]
             }
@@ -583,63 +583,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "One-Winged Angel"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Dirk <img></img>"
+              "Hand",
+              "Lufenian Dirk"
             ],
             [
-              "Head <img></img>",
-              "Lufenian Hairpin <img></img>"
+              "Head",
+              "Lufenian Hairpin"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Lufenian Vest"
             ],
             [
               "Accessory 1",
-              "<img></img> Hyper Ring"
+              "Hyper Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 3",
-              "<img></img> Sniper Eye"
+              "Sniper Eye"
             ],
             [
               "Accessory 4",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 5",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Aerial"
+              "Aerial"
             ],
             [
               "Accessory 8",
-              "<img></img> Opponent Summon Unused"
+              "Opponent Summon Unused"
             ],
             [
               "Accessory 9",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 10",
-              "<img></img> Glutton"
+              "Glutton"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -668,34 +668,6 @@
           "rows": [
             [
               "Stats"
-            ],
-            [
-              "HP",
-              ""
-            ],
-            [
-              "CP",
-              ""
-            ],
-            [
-              "BRV",
-              ""
-            ],
-            [
-              "ATK",
-              ""
-            ],
-            [
-              "DEF",
-              ""
-            ],
-            [
-              "LUK",
-              ""
-            ],
-            [
-              "Max Booster",
-              ""
             ]
           ]
         },
@@ -704,70 +676,6 @@
           "rows": [
             [
               "Equipment"
-            ],
-            [
-              "Assist",
-              ""
-            ],
-            [
-              "Weapon <img></img>",
-              ""
-            ],
-            [
-              "Hand <img></img>",
-              ""
-            ],
-            [
-              "Head <img></img>",
-              ""
-            ],
-            [
-              "Body <img></img>",
-              ""
-            ],
-            [
-              "Accessory 1",
-              ""
-            ],
-            [
-              "Accessory 2",
-              ""
-            ],
-            [
-              "Accessory 3",
-              ""
-            ],
-            [
-              "Accessory 4",
-              ""
-            ],
-            [
-              "Accessory 5",
-              ""
-            ],
-            [
-              "Accessory 6",
-              ""
-            ],
-            [
-              "Accessory 7",
-              ""
-            ],
-            [
-              "Accessory 8",
-              ""
-            ],
-            [
-              "Accessory 9",
-              ""
-            ],
-            [
-              "Accessory 10",
-              ""
-            ],
-            [
-              "Summon <img></img>",
-              ""
             ]
           ]
         },

@@ -350,7 +350,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "6, 9 (15, DK)",
@@ -404,13 +404,13 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Projectile starterGround\nDark Cannon > Valiant Blow\n49 + WR\n42+\nBase Damage (Breakdown): 9 > 40 + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 3, 3, 3, 3 > 30\nBasic bravery combo with high damaging wall rush ender."
+                  "EX Force"
                 ],
                 [
-                  "Projectile starterGround\nDark Cannon > Shadow Bringer / Soul Eater\n29 + HP WR\n42\nBase Damage (Breakdown): 9 > 20 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 3, 3, 3, 3 > 30\nBasic HP combo with wall rush potential. Shadow Bringer ender is prioritized over Soul Eater since it has higher knockback."
+                  "EX Force"
                 ],
                 [
-                  "Projectile starterAir\nPaladin Arts > Paladin Force\n45 + HP WR\n30\nBase Damage (Breakdown): 30 > 15 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 30\nSolo HP combo that also wall rushes on the ground. Good for ground assist combos. Paladin Force has slightly higher bravery damage output compared to Saint's Fall, and it also has better vertical tracking in close range, making this combo easier to land."
+                  "EX Force"
                 ]
               ]
             }
@@ -429,13 +429,13 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Punish starterGround\nSlash > Free Air Dash > Radiant Wings\n60 + WR\n120\nBase Damage (Breakdown): 20 > 40 + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 30\nGround combo into a wall rush. Cancel Slash's recovery into Free Air Dash and close the gap to follow up with Radiant Wings."
+                  "EX Force"
                 ],
                 [
-                  "Punish starterGround\nSlash > Free Air Dash > Sacred Cross\n50\n180\nBase Damage (Breakdown): 20 > 30\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 90\nGround combo with higher EX generation."
+                  "EX Force"
                 ],
                 [
-                  "Projectile starter\nSearchlight > Paladin Force\n30 + HP WR\n30\nBase Damage (Breakdown): 15 > 15 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 30\nSolo HP combo that also wall rushes on the ground. Good for ground assist combos. Paladin Force has slightly higher bravery damage output compared to Saint's Fall, but it also has far superior tracking after Searchlight connects. Naturally, the bravery damage is slightly reduced if Cecil has to close the distance with the attack first."
+                  "EX Force"
                 ]
               ]
             }
@@ -454,10 +454,10 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Poke starterGroundMidscreen staple\nValiant Blow (1st part) > AST BRV > Dash toward opponent > Dark Cannon > Shadow Bringer\n89 + HP WR\n42+\nBase Damage (Breakdown): 20 > 40 + WR (Assist) > 9+ (Dark Cannon) > 20 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): ?? > 12+ > 30"
+                  "EX Force"
                 ],
                 [
-                  "HP starterGround, Wall RushWall HP combo\nShadow Bringer > WR > AST BRV > Dash toward opponent > Dark Cannon > Shadow Bringer\n89 + HP WR\n72+\nBase Damage (Breakdown): 20 + HP WR > 40 + WR (Assist) > 9+ (Dark Cannon) > 20 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 30 > 12+ > 30"
+                  "EX Force"
                 ]
               ]
             }
@@ -477,13 +477,13 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Punish StarterAir, Near GroundHP Combo\nRadiant Wings > AST BRV > WR > Searchlight > Paladin Force\n70 + HP WR\n60\nBase Damage (Breakdown): 40 + WR > 15 > 15 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 30 > 0 > 30\nWall Rush, straightforward assist combo into HP. Call Aerith after last hit, but before wall rush happens."
+                  "EX Force"
                 ],
                 [
-                  "Punish StarterAirMidscreen HP Setup\nSacred Cross > AST BRV > Chase HP > HP dodged > AST BRV (HIT) > Searchlight > Paladin Force\n60 + HP WR\n135\nBase Damage (Breakdown): 30 > 15 > 15 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 15 (Chase) > 0 > 30\nAir chase setup into a solo HP combo. Aerith must be called quickly after Sacred Cross' last hit, because of the early chase prompt. If Cecil staggers opponent with LV2 Assist Change when Assist Storage Glitch is set up, he can go for this combo after the LV2 Assist Change."
+                  "EX Force"
                 ],
                 [
-                  "Punish StarterGroundBRV Damage\nSlash > Free Air Dash > Radiant Wings > AST BRV > WR > Searchlight (right before landing) > Land > Searchlight (hit) > Slash > Free Air Dash > Radiant Wings\n135 + WR\n240\nBase Damage (Breakdown): 20 > 40 + WR > 15 > 20 > 40 + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 30 > 0 > 90 > 30"
+                  "EX Force"
                 ]
               ]
             }
@@ -554,63 +554,63 @@
               "Jecht / Sephiroth / Yuna"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Piggy's Stick"
             ],
             [
-              "Hand <img></img>",
-              "Chainsaw <img></img>"
+              "Hand",
+              "Chainsaw"
             ],
             [
-              "Head <img></img>",
-              "Thornlet <img></img>"
+              "Head",
+              "Thornlet"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Maximillian"
             ],
             [
               "Accessory 1",
-              "<img></img> Sniper Eye"
+              "Sniper Eye"
             ],
             [
               "Accessory 2",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 3",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 4",
-              "<img></img> BRV = 0"
+              "BRV = 0"
             ],
             [
               "Accessory 5",
-              "<img></img> Empty EX Gauge"
+              "Empty EX Gauge"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Blue Gem"
+              "Blue Gem"
             ],
             [
               "Accessory 9",
-              "<img></img> Miracle Shoes"
+              "Miracle Shoes"
             ],
             [
               "Accessory 10",
-              "<img></img> Side by Side"
+              "Side by Side"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -681,63 +681,63 @@
               "Kuja / Aerith"
             ],
             [
-              "Weapon <img></img>",
-              "Cleaver <img></img>"
+              "Weapon",
+              "Cleaver"
             ],
             [
-              "Hand <img></img>",
+              "Hand",
               "Lufenian Shield"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Lufenian Helm"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Lufenian Armor"
             ],
             [
               "Accessory 1",
-              "<img></img> Hyper Ring"
+              "Hyper Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 3",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 4",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 5",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 7",
-              "<img></img> Opponent Summon Unused"
+              "Opponent Summon Unused"
             ],
             [
               "Accessory 8",
-              "<img></img> White Gem"
+              "White Gem"
             ],
             [
               "Accessory 9",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 10",
-              "<img></img> First to Victory"
+              "First to Victory"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]

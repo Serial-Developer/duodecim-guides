@@ -701,7 +701,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "3, 4, 5, 6, 7 (25)",
@@ -739,13 +739,13 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Long range, no wall required.Hit Glitch only.\nImpulse (Charged) > Impulse HIT > Heavenly Strike\n23~38 + WR\n15\nVideo\nBase Damage (Breakdown): 5~20 > 6, 12 + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 15\nThis utilizes the hit glitch, which requires Yuna doing Heavenly Strike when the charged Impulse hits the opponent. Because Yuna cannot cancel Impulse into Heavenly Strike, the projectiles must hit much later than when they were first shot. That limits the practicality of this combo, but it still provides Yuna a long range wall rush conversion into assist if it hits."
+                  "EX Force"
                 ],
                 [
-                  "Ground only, near wall / corner / ceiling.EX mode only.\nEX Aerospark > DC (forward) > Diamond Dust\n62~72\n180\nVideo\nBase Damage (Breakdown): Minimum: 3x4, 10, 5x6 (52) > 2x5 (10). Highest: 3x4, [10, 10], 5x6 > 2x5 (62)\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 + 90\nThis is Yuna's only solo combo into an HP attack. The requirements are high and situational, but the reward is noteworthy. Diamond Dust has less vertical reach than Heavenly Strike, so a wall etc. is needed to reduce the opponent's knockback. That will shorten the distance Yuna has to travel. Mapping Diamond Dust to up + square (↑+<img></img>) can make this combo easier to do."
+                  "EX Force"
                 ],
                 [
-                  "HP starter, no wall required.Starter must hit late.\nDiamond Dust (late hit) > Heavenly Strike\n24\n93\nVideo\nBase Damage (Breakdown): 2 > 4, 6, 12\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 63 + 30\nWhen Diamond Dust hits late, Yuna has enough frame advantage to go for a solo follow-up. Heavenly Strike's vertical reach is a consistent follow-up, and quite rewarding if it wall rushes for an assist combo. Using assist to set this up helps Yuna keep the opponent on the ground as well."
+                  "EX Force"
                 ]
               ]
             }
@@ -810,63 +810,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Spira's Hope"
             ],
             [
-              "Hand <img></img>",
-              "Hero's Shield <img></img>"
+              "Hand",
+              "Hero's Shield"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Royal Crown"
             ],
             [
-              "Body <img></img>",
-              "Maximillian <img></img>"
+              "Body",
+              "Maximillian"
             ],
             [
               "Accessory 1",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 2",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 3",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 4",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 5",
-              "<img></img> Blue Gem"
+              "Blue Gem"
             ],
             [
               "Accessory 6",
-              "<img></img> White Gem"
+              "White Gem"
             ],
             [
               "Accessory 7",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 8",
-              "<img></img> Glutton"
+              "Glutton"
             ],
             [
               "Accessory 9",
-              "<img></img> Great Gospel"
+              "Great Gospel"
             ],
             [
               "Accessory 10",
-              "<img></img> Miracle Shoes"
+              "Miracle Shoes"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -882,40 +882,16 @@
               "Aerial"
             ],
             [
-              "<img></img> Meteor Strike",
-              "<img></img> Heavenly Strike"
+              "Meteor Strike",
+              "Heavenly Strike"
+            ],
+            [
+              "↑+ Aerospark",
+              "↑+ Sonic Wings"
             ],
             [
               "",
-              ""
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "↑+<img></img> Aerospark",
-              "↑+<img></img> Sonic Wings"
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "",
-              "↓+<img></img> Impulse"
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "",
-              ""
+              "↓+ Impulse"
             ],
             [
               "HP attacks"
@@ -925,16 +901,16 @@
               "Aerial"
             ],
             [
-              "<img></img> Hellfire",
-              "<img></img> Thor's Hammer"
+              "Hellfire",
+              "Thor's Hammer"
             ],
             [
               "",
-              "↑+<img></img> Diamond Dust"
+              "↑+ Diamond Dust"
             ],
             [
               "",
-              "↓+<img></img> Mega Flare"
+              "↓+ Mega Flare"
             ]
           ]
         }
@@ -1090,8 +1066,8 @@
                   "Notes"
                 ],
                 [
-                  "<img></img> Blue Gem",
-                  "<img></img> First to Victory <img></img> Winged Boots",
+                  "Blue Gem",
+                  "First to Victory  Winged Boots",
                   "Blue Gem contributes to damage with higher base bravery. But if that is not important, First to Victory provides a small initial boost in meter and bravery.\nWinged Boots reduces bravery depletion from banish traps, but this is only relevant in stages that have them."
                 ],
                 [
@@ -1147,34 +1123,6 @@
               "rows": [
                 [
                   "Stats"
-                ],
-                [
-                  "HP",
-                  ""
-                ],
-                [
-                  "CP",
-                  ""
-                ],
-                [
-                  "BRV",
-                  ""
-                ],
-                [
-                  "ATK",
-                  ""
-                ],
-                [
-                  "DEF",
-                  ""
-                ],
-                [
-                  "LUK",
-                  ""
-                ],
-                [
-                  "Max Booster",
-                  ""
                 ]
               ]
             },
@@ -1183,70 +1131,6 @@
               "rows": [
                 [
                   "Equipment"
-                ],
-                [
-                  "Assist",
-                  ""
-                ],
-                [
-                  "Weapon <img></img>",
-                  ""
-                ],
-                [
-                  "Hand <img></img>",
-                  ""
-                ],
-                [
-                  "Head <img></img>",
-                  ""
-                ],
-                [
-                  "Body <img></img>",
-                  ""
-                ],
-                [
-                  "Accessory 1",
-                  ""
-                ],
-                [
-                  "Accessory 2",
-                  ""
-                ],
-                [
-                  "Accessory 3",
-                  ""
-                ],
-                [
-                  "Accessory 4",
-                  ""
-                ],
-                [
-                  "Accessory 5",
-                  ""
-                ],
-                [
-                  "Accessory 6",
-                  ""
-                ],
-                [
-                  "Accessory 7",
-                  ""
-                ],
-                [
-                  "Accessory 8",
-                  ""
-                ],
-                [
-                  "Accessory 9",
-                  ""
-                ],
-                [
-                  "Accessory 10",
-                  ""
-                ],
-                [
-                  "Summon <img></img>",
-                  ""
                 ]
               ]
             },

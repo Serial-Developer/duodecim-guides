@@ -34,6 +34,12 @@ ${tier ? `<span class="tier-badge" aria-hidden="true">${esc(tier)}</span>` : ''}
 <header class="vs-header">
 <span class="vs-plate">Sélection du personnage</span>
 <h1>Dissidia 012 <span class="gold">[duodecim]</span> Final Fantasy — guides compétitifs</h1>
+<nav class="vs-nav" aria-label="Navigation du site">
+<a href="techniques.html">Techniques &amp; glitches</a>
+<a href="characters/aerith.html">Assist : Aerith</a>
+<a href="characters/chaos.html">Boss : Chaos</a>
+<a href="https://replaytheater.app/?game=d012" rel="external noopener">Vidéos de matchs</a>
+</nav>
 </header>
 <div class="vs-body">
 <div class="vs-left">
@@ -45,13 +51,7 @@ ${tier ? `<span class="tier-badge" aria-hidden="true">${esc(tier)}</span>` : ''}
 <ul class="char-grid" id="char-grid" aria-label="Grille de sélection des personnages">
 ${rows}
 </ul>
-<p class="select-extras">
-<a href="characters/aerith.html">Fiche assist : Aerith</a> ·
-<a href="characters/chaos.html">Fiche boss : Chaos</a> ·
-<a href="techniques.html">Techniques universelles &amp; glitches</a> ·
-<a href="https://replaytheater.app/?game=d012" rel="external noopener">Vidéos de matchs</a>
-</p>
-<p class="select-extras" style="padding-top:0">Badge de coin : tier tournoi 2017 (dissidia.wiki). Navigation clavier : flèches + Entrée.</p>
+<p class="select-extras">Badge de coin : tier tournoi 2017 (dissidia.wiki) · navigation clavier : flèches + Entrée</p>
 </div>
 <div class="vs-portrait" aria-hidden="true">
 <img id="np-portrait" src="assets/portraits/${first.slug}.png" alt="">

@@ -58,7 +58,7 @@
             ],
             [
               "Range – Terra can attack from long distances with Thundara, Meteor, Holy Combo and Meltdown. They complement each other and lead to assist combos on hit.\nDamage – Synergy with high base BRV builds and various hit glitch setups into Ultima allow Terra to do plenty of HP damage.\nEX Mode – One of the strongest EX Modes in the game. Chainspell duplicates projectiles, which occupy more space and further increase Terra’s damage output. Holy (Combo) also becomes much faster, which also helps with space control.\nSafe Empty Chase – Thundara is one of the few moves in the game that allow Chase without getting punished by Recovery Attacks anywhere. Effective for getting EX and denying opponent’s current position.",
-              "Defense – Terra can struggle to keep opponents away due to below average close-range moves and long-range moves that are slow and low priority. Air dodging is riskier due to slow fall speed and low defense stat increases bravery damage Terra takes.\nRisky Zoning – Terra relies on telegraphed projectiles that have long startup. They often lose to Free Air Dash, and leave Terra vulnerable to assist attacks as well.\nReversing momentum – By the same token, Terra has to take big risks with blocks and other moves to make comebacks.\nEX Generation – Most of her key moves produce little to no EX Force, which limits her EX intake to EX Cores and Fire on the ground."
+              "EX Force"
             ]
           ]
         }
@@ -419,7 +419,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "10x3 (30)",
@@ -509,63 +509,63 @@
               "Jecht / Aerith"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Zwill Crossblade"
             ],
             [
-              "Hand <img></img>",
+              "Hand",
               "Lufenian Bangle"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Lufenian Hairpin"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Lufenian Jacket"
             ],
             [
               "Accessory 1",
-              "<img></img> Hyper Ring"
+              "Hyper Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Earring"
+              "Earring"
             ],
             [
               "Accessory 3",
-              "<img></img> Large Gap in HP"
+              "Large Gap in HP"
             ],
             [
               "Accessory 4",
-              "<img></img> Cyan Drop"
+              "Cyan Drop"
             ],
             [
               "Accessory 5",
-              "<img></img> Cyan Drop"
+              "Cyan Drop"
             ],
             [
               "Accessory 6",
-              "<img></img> Cyan Drop"
+              "Cyan Drop"
             ],
             [
               "Accessory 7",
-              "<img></img> Red Gem"
+              "Red Gem"
             ],
             [
               "Accessory 8",
-              "<img></img> Cyan Gem"
+              "Cyan Gem"
             ],
             [
               "Accessory 9",
-              "<img></img> First to Victory"
+              "First to Victory"
             ],
             [
               "Accessory 10",
-              "<img></img> Hero's Seal"
+              "Hero's Seal"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -598,7 +598,7 @@
               "Notes"
             ],
             [
-              "<img></img> Red Gem",
+              "Red Gem",
               "Free choice",
               "While Red Gem's +5% damage increase works for this build, it can be swapped out for whatever the player may want in a match-up or a stage."
             ]
@@ -663,63 +663,63 @@
                   "Jecht / Aerith / Sephiroth"
                 ],
                 [
-                  "Weapon <img></img>",
-                  "Lufenian Claw <img></img>"
+                  "Weapon",
+                  "Lufenian Claw"
                 ],
                 [
-                  "Hand <img></img>",
-                  "Lufenian Shield <img></img>"
+                  "Hand",
+                  "Lufenian Shield"
                 ],
                 [
-                  "Head <img></img>",
+                  "Head",
                   "Thornlet"
                 ],
                 [
-                  "Body <img></img>",
-                  "Lufenian Armor <img></img>"
+                  "Body",
+                  "Lufenian Armor"
                 ],
                 [
                   "Accessory 1",
-                  "<img></img> Protect Stud"
+                  "Protect Stud"
                 ],
                 [
                   "Accessory 2",
-                  "<img></img> Dismay Shock"
+                  "Dismay Shock"
                 ],
                 [
                   "Accessory 3",
-                  "<img></img> Battle Hammer"
+                  "Battle Hammer"
                 ],
                 [
                   "Accessory 4",
-                  "<img></img> Empty EX Gauge"
+                  "Empty EX Gauge"
                 ],
                 [
                   "Accessory 5",
-                  "<img></img> Summon Unused"
+                  "Summon Unused"
                 ],
                 [
                   "Accessory 6",
-                  "<img></img> Pre-EX Mode"
+                  "Pre-EX Mode"
                 ],
                 [
                   "Accessory 7",
-                  "<img></img> Pre-EX Revenge"
+                  "Pre-EX Revenge"
                 ],
                 [
                   "Accessory 8",
-                  "<img></img> Opponent Summon Unused"
+                  "Opponent Summon Unused"
                 ],
                 [
                   "Accessory 9",
-                  "<img></img> Together As One"
+                  "Together As One"
                 ],
                 [
                   "Accessory 10",
-                  "<img></img> Side By Side"
+                  "Side By Side"
                 ],
                 [
-                  "Summon <img></img>",
+                  "Summon",
                   "Rubicante"
                 ]
               ]

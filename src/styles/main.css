@@ -56,6 +56,18 @@ a:hover { color: var(--gold); }
 }
 .vs-header h1 { margin: 0; font-size: clamp(1.2rem, 2.6vw, 1.9rem); color: var(--text); }
 .vs-header h1 .gold { color: var(--gold); }
+.vs-nav { margin-left: auto; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+.vs-nav a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid var(--surface-2);
+  border-radius: 999px;
+  padding: 0.22rem 0.8rem;
+  font-size: 0.84rem;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.vs-nav a:hover, .vs-nav a:focus-visible { color: var(--gold); border-color: var(--gold); }
 .vs-plate {
   font-family: var(--font-display);
   background: linear-gradient(90deg, var(--violet), var(--surface-2));
@@ -316,6 +328,16 @@ details.move .mv-body::after { content: ""; display: block; clear: both; }
 .chain .arrow { color: var(--gold); font-weight: bold; }
 
 /* Sources / footer */
+.video-link a {
+  display: inline-block;
+  color: var(--gold);
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.88rem;
+}
+.video-link a:hover, .video-link a:focus-visible { background: rgba(240, 192, 90, 0.12); }
 .sources-list { font-size: 0.88rem; color: var(--muted); }
 .sources-list li { margin: 0.3rem 0; overflow-wrap: anywhere; }
 footer.site {

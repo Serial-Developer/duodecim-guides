@@ -449,7 +449,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "12, 12 (24)",
@@ -487,10 +487,10 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Poke starterGround\nDeathblow > move > jump > Twist Drill\n45\n150\nVideo\nBase Damage (Breakdown): 15 > 30\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60 > 90\nStaple combo. High EX and leads to damaging Kuja assist combos for even more EX. Move and jump as quickly as possible. The later Deathblow hits, the more time Garland has to combo into Twist Drill."
+                  "EX Force"
                 ],
                 [
-                  "Punish starterAir, above opponent\nChain Cast > DC > Twist Drill\n45\n180\nVideo\nBase Damage (Breakdown): 15 > 30\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 90 > 90\nStaple air combo, commonly used as a punish or an assist combo ender. 180 EX is great, which Garland can get by empty chasing immediately. If Garland has assist, he can also start an assist combo by dodge cancelling, or after empty chase ends.\nIf opponent is far after Chain Cast, Twist Drill may not land all initial hits. This combo does not require wall, but it can be easier to do near walls and corners due to reduced knockback. Garland should remain cautious when empty chasing at a corner, because being closer to the opponent makes him a bit more vulnerable to recovery attack attempts.\nWhen wall is not nearby, Garland can dodge cancel towards opponent more reliably by moving camera sideways after Assist Chase, and then moving with a quarter-circle motion. For example, the camera is tilted to the right so Garland faces to the left. The quarter-circle motion would then be left > left/up > up. The initial left should be held for almost a split second."
+                  "EX Force"
                 ]
               ]
             }
@@ -509,7 +509,7 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Air starter, close to opponentFull EX Gauge, near ground\nBardiche > WR > Bardiche > WR > Bardiche > WR > Bardiche > WR > Bardiche > Flare\n165 + HP & WR (x5)\n0\nBase Damage (Breakdown): 30 + WR > 30 + WR > 30 + WR > 30 + WR > 30 + WR > 15 + HP WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 0 > 0 > 0 > 0 > 0\nGarland's EX Revenge combo is infamous for its insane damage output. It is one of, if not THE strongest EX Revenge combo in the game without assist. As long as Garland is close to the opponent, he can repeatedly use Bardiche up to five times. Each Bardiche can also wall rush, which adds even more damage near ground. This combo requires little adjustment for Garland and it should be fairly easy to execute, as long as pressing Circle <img></img> repeatedly is not an issue.\nThis combo is the reason a full EX gauge is so beneficial for Garland. It practically guarantees a bravery break for Garland. And even if it doesn't, the wall rush still lets assists follow up. As a result, this combo can do far more damage than just the listed 165 + HP WR. 4,000 HP is practically killing range for Garland, while having more health usually means being put into Near Death state.\nIt is important to note, that wall rush contributes a lot to this combo's damage output. Therefore, if Garland cannot wall rush with Bardiche or especially Flare, he won't do nearly as much damage. Furthermore, if Garland needs to approach opponent from a distance, he has less time to do Bardiches. In order to ensure maximum damage, Garland should consider activating EX Revenge close to opponent, while being near ground. Garland can also consider dodging behind the opponent at the beginning to get more critical hits from Sneak Attack extra ability."
+                  "EX Force"
                 ]
               ]
             }
@@ -581,63 +581,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Gigant Axe"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Dirk <img></img>"
+              "Hand",
+              "Lufenian Dirk"
             ],
             [
-              "Head <img></img>",
-              "Lufenian Hairpin <img></img>"
+              "Head",
+              "Lufenian Hairpin"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Lufenian Vest"
             ],
             [
               "Accessory 1",
-              "<img></img> Hyper Ring"
+              "Hyper Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 3",
-              "<img></img> Booster"
+              "Booster"
             ],
             [
               "Accessory 4",
-              "<img></img> Large Gap in HP"
+              "Large Gap in HP"
             ],
             [
               "Accessory 5",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> White Gem"
+              "White Gem"
             ],
             [
               "Accessory 9",
-              "<img></img> Glutton"
+              "Glutton"
             ],
             [
               "Accessory 10",
-              "<img></img> First to Victory"
+              "First to Victory"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -708,63 +708,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Rhongomiant"
             ],
             [
-              "Hand <img></img>",
+              "Hand",
               "Prytwen"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Dragon Sallet"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Wygar"
             ],
             [
               "Accessory 1",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 2",
-              "<img></img> Booster"
+              "Booster"
             ],
             [
               "Accessory 3",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 4",
-              "<img></img> Large Gap in BRV"
+              "Large Gap in BRV"
             ],
             [
               "Accessory 5",
-              "<img></img> EX Revenge"
+              "EX Revenge"
             ],
             [
               "Accessory 6",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 7",
-              "<img></img> Spider Web"
+              "Spider Web"
             ],
             [
               "Accessory 8",
-              "<img></img> Spider's Bane"
+              "Spider's Bane"
             ],
             [
               "Accessory 9",
-              "<img></img> Avenger"
+              "Avenger"
             ],
             [
               "Accessory 10",
-              "<img></img> First to Victory"
+              "First to Victory"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]

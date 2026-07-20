@@ -724,7 +724,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "16",
@@ -815,63 +815,63 @@
               "Yuna"
             ],
             [
-              "Weapon <img></img>",
-              "Piggy's Stick <img></img>"
+              "Weapon",
+              "Piggy's Stick"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Bangle <img></img>"
+              "Hand",
+              "Lufenian Bangle"
             ],
             [
-              "Head <img></img>",
-              "Lufenian Headband <img></img>"
+              "Head",
+              "Lufenian Headband"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Lufenian Vest"
             ],
             [
               "Accessory 1",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 2",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 3",
-              "<img></img> BRV = 0"
+              "BRV = 0"
             ],
             [
               "Accessory 4",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 5",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 6",
-              "<img></img> Blue Gem"
+              "Blue Gem"
             ],
             [
               "Accessory 7",
-              "<img></img> Glutton"
+              "Glutton"
             ],
             [
               "Accessory 8",
-              "<img></img> Great Gospel"
+              "Great Gospel"
             ],
             [
               "Accessory 9",
-              "<img></img> Back-Breaking Straw"
+              "Back-Breaking Straw"
             ],
             [
               "Accessory 10",
-              "<img></img> Miracle Shoes"
+              "Miracle Shoes"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -900,34 +900,6 @@
           "rows": [
             [
               "Stats"
-            ],
-            [
-              "HP",
-              ""
-            ],
-            [
-              "CP",
-              ""
-            ],
-            [
-              "BRV",
-              ""
-            ],
-            [
-              "ATK",
-              ""
-            ],
-            [
-              "DEF",
-              ""
-            ],
-            [
-              "LUK",
-              ""
-            ],
-            [
-              "Max Booster",
-              ""
             ]
           ]
         },
@@ -936,70 +908,6 @@
           "rows": [
             [
               "Equipment"
-            ],
-            [
-              "Assist",
-              ""
-            ],
-            [
-              "Weapon <img></img>",
-              ""
-            ],
-            [
-              "Hand <img></img>",
-              ""
-            ],
-            [
-              "Head <img></img>",
-              ""
-            ],
-            [
-              "Body <img></img>",
-              ""
-            ],
-            [
-              "Accessory 1",
-              ""
-            ],
-            [
-              "Accessory 2",
-              ""
-            ],
-            [
-              "Accessory 3",
-              ""
-            ],
-            [
-              "Accessory 4",
-              ""
-            ],
-            [
-              "Accessory 5",
-              ""
-            ],
-            [
-              "Accessory 6",
-              ""
-            ],
-            [
-              "Accessory 7",
-              ""
-            ],
-            [
-              "Accessory 8",
-              ""
-            ],
-            [
-              "Accessory 9",
-              ""
-            ],
-            [
-              "Accessory 10",
-              ""
-            ],
-            [
-              "Summon <img></img>",
-              ""
             ]
           ]
         },

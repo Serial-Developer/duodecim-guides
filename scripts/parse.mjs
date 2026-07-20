@@ -193,16 +193,44 @@ function textOf($, elems) {
   return out;
 }
 
-// Tables génériques -> matrice de cellules texte
+// Les templates {{#tooltip}} du wiki remplacent certains libellés par leur texte
+// d'infobulle : on les remappe vers des libellés courts (français).
+const LABEL_MAP = [
+  [/baseline damage/i, 'Dégâts de base'],
+  [/time it takes for this attack/i, 'Startup'],
+  [/^damage type/i, 'Type'],
+  [/^priority/i, 'Priorité'],
+  [/ex that can be gained|ex force/i, 'EX Force'],
+  [/cancelled into/i, 'Cancels'],
+  [/assist gauge filled/i, "Gain d'assist"],
+  [/^cp \(mastered\)/i, 'CP (maîtrisé)'],
+];
+
+function cleanCell(s) {
+  let t = cleanText(s)
+    .replace(/<\/?img[^>]*>/gi, '')  // fragments <img …> littéraux des templates cassés
+    .replace(/^Unlocked at\s*level/i, 'Débloqué au niveau')
+    .replace(/^Mastered at\s*(.*)$/i, 'Maîtrisé à $1')
+    .trim();
+  for (const [re, label] of LABEL_MAP) {
+    if (re.test(t)) return label;
+  }
+  return t;
+}
+
+// Tables génériques -> matrice de cellules texte (nettoyées)
 function tablesOf($, elems) {
   const out = [];
   for (const el of elems) {
     if (el.tagName?.toLowerCase() === 'table') {
-      const caption = cleanText($(el).find('caption').first().text()) || null;
+      const caption = cleanCell($(el).find('caption').first().text()) || null;
       const rows = $(el)
         .find('> tbody > tr')
         .toArray()
-        .map((tr) => $(tr).find('> th, > td').toArray().map((c) => cleanText($(c).text())));
+        .map((tr) => $(tr).find('> th, > td').toArray().map((c) => cleanCell($(c).text())))
+        // lignes sans aucune valeur utile (vides ou « - ») : bruit des templates
+        .filter((cells) => cells.some((c) => c && c !== '-'))
+        .filter((cells) => !(cells.length > 1 && cells.slice(1).every((c) => c === '' || c === '-')));
       if (rows.length) out.push({ caption, rows });
     }
   }

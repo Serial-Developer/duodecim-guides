@@ -46,7 +46,7 @@
               "Weaknesses"
             ],
             [
-              "Highest base stats in the game.\nOutstanding braveries with fast startup, low recovery, space control, mid priority, assist combo and wall rush potential.\nDestructive HP attacks with variable timing, good tracking and range.\nEX generation, many attacks generate a minimum of 60 and up to 96.\nOverwhelming EX Burst with high priority for all attacks, immunity to EX Break, the ability to bypass EX Burst defense and interrupt any attack.\nFast falling speed makes air dodges more difficult to punish.\nSimultaneous EX Core and Side by Side <img></img> synergy with exclusive meter unlock abilities allow Feral Chaos to utilise both EX and Assist without the usual restrictions between them.",
+              "Highest base stats in the game.\nOutstanding braveries with fast startup, low recovery, space control, mid priority, assist combo and wall rush potential.\nDestructive HP attacks with variable timing, good tracking and range.\nEX generation, many attacks generate a minimum of 60 and up to 96.\nOverwhelming EX Burst with high priority for all attacks, immunity to EX Break, the ability to bypass EX Burst defense and interrupt any attack.\nFast falling speed makes air dodges more difficult to punish.\nSimultaneous EX Core and Side by Side  synergy with exclusive meter unlock abilities allow Feral Chaos to utilise both EX and Assist without the usual restrictions between them.",
               "High CP cost. Feral Chaos cannot equip as many abilities as every other character, notably restricting his available actions and builds.\nLarge body size makes it easier to get hit by attacks, obstructs the player's view in front of Feral Chaos and above him.\nNo assist is a common restriction in community rulesets and tournaments where Feral Chaos is allowed to offset his other strengths."
             ]
           ]
@@ -328,7 +328,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "4,5,8,1 (18)",
@@ -425,63 +425,63 @@
               "None"
             ],
             [
-              "Weapon <img></img>",
-              "Cleaver <img></img>"
+              "Weapon",
+              "Cleaver"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Dirk <img></img>"
+              "Hand",
+              "Lufenian Dirk"
             ],
             [
-              "Head <img></img>",
-              "Lufenian Headband <img></img>"
+              "Head",
+              "Lufenian Headband"
             ],
             [
-              "Body <img></img>",
-              "Lufenian Vest <img></img>"
+              "Body",
+              "Lufenian Vest"
             ],
             [
               "Accessory 1",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 2",
-              "<img></img> Pearl Necklace"
+              "Pearl Necklace"
             ],
             [
               "Accessory 3",
-              "<img></img> Large Gap in HP"
+              "Large Gap in HP"
             ],
             [
               "Accessory 4",
-              "<img></img> Empty Assist Gauge"
+              "Empty Assist Gauge"
             ],
             [
               "Accessory 5",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-Assist"
+              "Pre-Assist"
             ],
             [
               "Accessory 7",
-              "<img></img> Hero's Spirit"
+              "Hero's Spirit"
             ],
             [
               "Accessory 8",
-              "<img></img> Hero's Essence"
+              "Hero's Essence"
             ],
             [
               "Accessory 9",
-              "<img></img> Close to You"
+              "Close to You"
             ],
             [
               "Accessory 10",
-              "<img></img> Center of the World"
+              "Center of the World"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "None"
             ]
           ]
@@ -629,63 +629,63 @@
               "Sephiroth / Aerith"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Lufenian Axe"
             ],
             [
-              "Hand <img></img>",
-              "Chainsaw <img></img>"
+              "Hand",
+              "Chainsaw"
             ],
             [
-              "Head <img></img>",
-              "Lufenian Cap <img></img>"
+              "Head",
+              "Lufenian Cap"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Lufenian Armor"
             ],
             [
               "Accessory 1",
-              "<img></img> Sniper Eye"
+              "Sniper Eye"
             ],
             [
               "Accessory 2",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 3",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 4",
-              "<img></img> BRV = 0"
+              "BRV = 0"
             ],
             [
               "Accessory 5",
-              "<img></img> Green Gem"
+              "Green Gem"
             ],
             [
               "Accessory 6",
-              "<img></img> Hero's Spirit"
+              "Hero's Spirit"
             ],
             [
               "Accessory 7",
-              "<img></img> Hero's Spirit"
+              "Hero's Spirit"
             ],
             [
               "Accessory 8",
-              "<img></img> Hero's Essence"
+              "Hero's Essence"
             ],
             [
               "Accessory 9",
-              "<img></img> Miracle Shoes"
+              "Miracle Shoes"
             ],
             [
               "Accessory 10",
-              "<img></img> Side By Side"
+              "Side By Side"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "None"
             ]
           ]
@@ -714,34 +714,6 @@
           "rows": [
             [
               "Stats"
-            ],
-            [
-              "HP",
-              ""
-            ],
-            [
-              "CP",
-              ""
-            ],
-            [
-              "BRV",
-              ""
-            ],
-            [
-              "ATK",
-              ""
-            ],
-            [
-              "DEF",
-              ""
-            ],
-            [
-              "LUK",
-              ""
-            ],
-            [
-              "Max Booster",
-              ""
             ]
           ]
         },
@@ -750,70 +722,6 @@
           "rows": [
             [
               "Equipment"
-            ],
-            [
-              "Assist",
-              ""
-            ],
-            [
-              "Weapon <img></img>",
-              ""
-            ],
-            [
-              "Hand <img></img>",
-              ""
-            ],
-            [
-              "Head <img></img>",
-              ""
-            ],
-            [
-              "Body <img></img>",
-              ""
-            ],
-            [
-              "Accessory 1",
-              ""
-            ],
-            [
-              "Accessory 2",
-              ""
-            ],
-            [
-              "Accessory 3",
-              ""
-            ],
-            [
-              "Accessory 4",
-              ""
-            ],
-            [
-              "Accessory 5",
-              ""
-            ],
-            [
-              "Accessory 6",
-              ""
-            ],
-            [
-              "Accessory 7",
-              ""
-            ],
-            [
-              "Accessory 8",
-              ""
-            ],
-            [
-              "Accessory 9",
-              ""
-            ],
-            [
-              "Accessory 10",
-              ""
-            ],
-            [
-              "Summon <img></img>",
-              ""
             ]
           ]
         },

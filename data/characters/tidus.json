@@ -479,7 +479,7 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Punish starter\nDart & Weave > DC (up, down) > Hop Step\n53-54\n165\nVideo\nBase Damage (Breakdown): 33-34 > 20\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 75 > 90\nSomewhat practical solo combo, though there may not be many opportunities to land this. Timing is not very lenient and the dodge cancel arc may change depending on the camera angle. The idea here is to move up and connect Hop Step as soon as possible."
+                  "EX Force"
                 ]
               ]
             }
@@ -544,63 +544,63 @@
               "Aerith"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "World Champion"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Dirk <img></img>"
+              "Hand",
+              "Lufenian Dirk"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Lufenian Headband"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Lufenian Vest"
             ],
             [
               "Accessory 1",
-              "<img></img> Hyper Ring"
+              "Hyper Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 3",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 4",
-              "<img></img> Large Gap in HP"
+              "Large Gap in HP"
             ],
             [
               "Accessory 5",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Aerial"
+              "Aerial"
             ],
             [
               "Accessory 9",
-              "<img></img> After 30 Seconds"
+              "After 30 Seconds"
             ],
             [
               "Accessory 10",
-              "<img></img> Opponent Summon Unused"
+              "Opponent Summon Unused"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Scarmiglione"
             ]
           ]
@@ -616,40 +616,20 @@
               "Aerial"
             ],
             [
-              "<img></img> Hop Step",
-              "<img></img> Full Slide"
+              "Hop Step",
+              "Full Slide"
             ],
             [
               "",
-              ""
+              "↑+ Hop Step"
             ],
             [
               "",
-              ""
+              "↓+ Cut & Run (midair)"
             ],
             [
               "",
-              "↑+<img></img> Hop Step"
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "",
-              "↓+<img></img> Cut & Run (midair)"
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "",
-              "<img></img> Branch: Quick Hit F"
+              "Branch: Quick Hit F"
             ],
             [
               "HP attacks"
@@ -660,15 +640,15 @@
             ],
             [
               "",
-              "<img></img> Slice & Dice"
+              "Slice & Dice"
             ],
             [
               "",
-              "↑+<img></img> Energy Rain"
+              "↑+ Energy Rain"
             ],
             [
               "",
-              "↓+<img></img> Jecht Shot"
+              "↓+ Jecht Shot"
             ]
           ]
         }
@@ -907,14 +887,14 @@
                   "Notes"
                 ],
                 [
-                  "After 30 Seconds <img></img>",
-                  "BRV > Base Value <img></img> Battle Hammer <img></img> Winged Boots <img></img>",
+                  "After 30 Seconds",
+                  "BRV > Base Value  Battle Hammer  Winged Boots",
                   "Bravery damage increase. Alternatively, can be used for assist gauge depletion or banish trap bravery reduction."
                 ],
                 [
-                  "Dismay Shock <img></img> After 30 Seconds <img></img>",
-                  "BRV > Base Value <img></img> Opponent Empty EX Gauge <img></img>",
-                  "Against opponents who use Side by Side <img></img>, this is an even bigger bravery damage increase."
+                  "Dismay Shock  After 30 Seconds",
+                  "BRV > Base Value  Opponent Empty EX Gauge",
+                  "Against opponents who use Side by Side , this is an even bigger bravery damage increase."
                 ]
               ]
             }
@@ -1116,63 +1096,63 @@
                   "Aerith"
                 ],
                 [
-                  "Weapon <img></img>",
+                  "Weapon",
                   "World Champion"
                 ],
                 [
-                  "Hand <img></img>",
+                  "Hand",
                   "Adamant Shield"
                 ],
                 [
-                  "Head <img></img>",
+                  "Head",
                   "Adamant Helm"
                 ],
                 [
-                  "Body <img></img>",
+                  "Body",
                   "Adamant Vest"
                 ],
                 [
                   "Accessory 1",
-                  "<img></img> Zephyr Cloak"
+                  "Zephyr Cloak"
                 ],
                 [
                   "Accessory 2",
-                  "<img></img> BRV > Base Value"
+                  "BRV > Base Value"
                 ],
                 [
                   "Accessory 3",
-                  "<img></img> Large Gap in BRV"
+                  "Large Gap in BRV"
                 ],
                 [
                   "Accessory 4",
-                  "<img></img> Summon Unused"
+                  "Summon Unused"
                 ],
                 [
                   "Accessory 5",
-                  "<img></img> Pre-EX Mode"
+                  "Pre-EX Mode"
                 ],
                 [
                   "Accessory 6",
-                  "<img></img> Pre-EX Revenge"
+                  "Pre-EX Revenge"
                 ],
                 [
                   "Accessory 7",
-                  "<img></img> Aerial"
+                  "Aerial"
                 ],
                 [
                   "Accessory 8",
-                  "<img></img> After 30 Seconds"
+                  "After 30 Seconds"
                 ],
                 [
                   "Accessory 9",
-                  "<img></img> Opponent Empty EX Gauge"
+                  "Opponent Empty EX Gauge"
                 ],
                 [
                   "Accessory 10",
-                  "<img></img> Opponent Summon Unused"
+                  "Opponent Summon Unused"
                 ],
                 [
-                  "Summon <img></img>",
+                  "Summon",
                   "Rubicante"
                 ]
               ]
@@ -1345,8 +1325,8 @@
                   "Notes"
                 ],
                 [
-                  "Opponent Empty EX Gauge <img></img>",
-                  "Large Gap in HP <img></img>",
+                  "Opponent Empty EX Gauge",
+                  "Large Gap in HP",
                   "If the player believes the opponent will not lock their EX gauge with Side by Side, this is a good alternative. A powerful 1.5x booster for when either player is leading by at least 3000 HP. Good if Tidus is falling behind or getting an early lead."
                 ]
               ]
@@ -1540,63 +1520,63 @@
                   "Aerith"
                 ],
                 [
-                  "Weapon <img></img>",
+                  "Weapon",
                   "World Champion"
                 ],
                 [
-                  "Hand <img></img>",
+                  "Hand",
                   "Adamant Shield"
                 ],
                 [
-                  "Head <img></img>",
+                  "Head",
                   "Adamant Helm"
                 ],
                 [
-                  "Body <img></img>",
+                  "Body",
                   "Adamant Vest"
                 ],
                 [
                   "Accessory 1",
-                  "<img></img> Muscle Belt"
+                  "Muscle Belt"
                 ],
                 [
                   "Accessory 2",
-                  "<img></img> Zephyr Cloak"
+                  "Zephyr Cloak"
                 ],
                 [
                   "Accessory 3",
-                  "<img></img> Dismay Shock"
+                  "Dismay Shock"
                 ],
                 [
                   "Accessory 4",
-                  "<img></img> Large Gap in HP"
+                  "Large Gap in HP"
                 ],
                 [
                   "Accessory 5",
-                  "<img></img> BRV > Base Value"
+                  "BRV > Base Value"
                 ],
                 [
                   "Accessory 6",
-                  "<img></img> Summon Unused"
+                  "Summon Unused"
                 ],
                 [
                   "Accessory 7",
-                  "<img></img> Pre-EX Mode"
+                  "Pre-EX Mode"
                 ],
                 [
                   "Accessory 8",
-                  "<img></img> Pre-EX Revenge"
+                  "Pre-EX Revenge"
                 ],
                 [
                   "Accessory 9",
-                  "<img></img> Aerial"
+                  "Aerial"
                 ],
                 [
                   "Accessory 10",
-                  "<img></img> Opponent Summon Unused"
+                  "Opponent Summon Unused"
                 ],
                 [
-                  "Summon <img></img>",
+                  "Summon",
                   "Rubicante"
                 ]
               ]
@@ -1767,8 +1747,8 @@
                   "Notes"
                 ],
                 [
-                  "Opponent Summon Unused <img></img>",
-                  "Battle Hammer <img></img>\nAfter 30 Seconds <img></img>",
+                  "Opponent Summon Unused",
+                  "Battle Hammer \nAfter 30 Seconds",
                   "If the player believes the opponent will not equip a summon, they can treat it as an expendable slot for another booster accessory, assist depletion or whatever else strikes their fancy."
                 ]
               ]

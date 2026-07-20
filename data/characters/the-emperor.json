@@ -47,7 +47,7 @@
               "Weaknesses"
             ],
             [
-              "Area-Denial: Traps fill space and deny the opponent's options, which can create rewarding chain reactions.\nUnique Win Condition: Starfall takes time to cast, but it is unavoidable once it starts. It forces opponents to approach and interact with his traps, or expend resources to avoid HP damage.\nDefensive Mixups : The Emperor can adjust his attack and dodge timing even against adept opponents thanks to low full recovery on most of his moves and trade potential with projectiles.\nAssist Gain: Rotating low recovery moves, such as Starfall, Mine and Dreary Cell fill the assist gauge quickly. Every trap and Flare can lead to HP damage, which fill the assist gauge even faster with Side by Side <img></img> builds.\nHigh Damage Punishes : Thunder Crest and Dynamite enable high damage combos, which can be greatly boosted with Mines. Assists that knock downwards (e.g. Jecht and Yuna) can practically double the damage with repeated combos. A Thunder Crest combo can secure a Bravery Break break from 2000 bravery.\nActionable Recovery : The Emperor has shorter recovery on his attacks than most characters. This lets him attack and block afterwards faster than majority of the roster.",
+              "Area-Denial: Traps fill space and deny the opponent's options, which can create rewarding chain reactions.\nUnique Win Condition: Starfall takes time to cast, but it is unavoidable once it starts. It forces opponents to approach and interact with his traps, or expend resources to avoid HP damage.\nDefensive Mixups : The Emperor can adjust his attack and dodge timing even against adept opponents thanks to low full recovery on most of his moves and trade potential with projectiles.\nAssist Gain: Rotating low recovery moves, such as Starfall, Mine and Dreary Cell fill the assist gauge quickly. Every trap and Flare can lead to HP damage, which fill the assist gauge even faster with Side by Side  builds.\nHigh Damage Punishes : Thunder Crest and Dynamite enable high damage combos, which can be greatly boosted with Mines. Assists that knock downwards (e.g. Jecht and Yuna) can practically double the damage with repeated combos. A Thunder Crest combo can secure a Bravery Break break from 2000 bravery.\nActionable Recovery : The Emperor has shorter recovery on his attacks than most characters. This lets him attack and block afterwards faster than majority of the roster.",
               "Lack of Air Melee Abare : The lack of Melee moves in the air is a huge downside when there are no traps around him. Although emergency Mine and Dreary Cell can still trade with certain moves, they are unreliable, and a major flaw in his game plan.\nPolarizing Matchups : Both a good and a bad thing. With all his upsides, The Emperor lacks severely in offense, giving him the most polarizing matchup spread in the entire game. Some characters are outright denied with the right conditions, while others can neglect the traps and eventually force offense that The Emperor is not well suited for.\nPolarizing Stage Strengths: Stages affect his game plan harder than most other characters, requiring him to sometimes learn new effective strategies for some of the more unorthodox / smaller stages."
             ]
           ]
@@ -422,7 +422,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "6, 13 (19)",
@@ -461,19 +461,19 @@
                 ],
                 [
                   "AC",
-                  "Assist Chase <img></img>"
+                  "Assist Chase"
                 ],
                 [
                   "AST BRV",
-                  "Assist (Bravery) <img></img> + <img></img>"
+                  "Assist (Bravery)  +"
                 ],
                 [
                   "AST HP",
-                  "Assist (HP) <img></img> + <img></img>"
+                  "Assist (HP)  +"
                 ],
                 [
                   "Chase",
-                  "Chase <img></img>"
+                  "Chase"
                 ],
                 [
                   "Empty Chase",
@@ -481,7 +481,7 @@
                 ],
                 [
                   "DC",
-                  "Dodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n<img></img> + <img></img>"
+                  "Dodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n +"
                 ],
                 [
                   "LL",
@@ -500,13 +500,13 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Punish / Trap StarterGroundStaple BRV > HP Combo\nThunder Crest > Flare\n~40 + HP\n120\nBase Damage (Breakdown): 2 x 17, 6 + HP\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60 > 60\nThe Emperor's staple solo combo for HP damage. A bread-and-butter , so to speak. This can be done whenever Thunder Crest connects and The Emperor is close to opponent. Block staggers, trades or just stray hits are all ok. If Thunder Crest connects before The Emperor can move afterwards, the grounded blue Flare can be pressed repeatedly and it works consistently."
+                  "EX Force"
                 ],
                 [
-                  "Punish / Trap StarterGroundHigher HP Damage\nThunder Crest > DC (↑) > Flare (Midair)\n17~ + HP & WR\n120~\nBase Damage (Breakdown): 2 x 17 > HP + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60? > 60\nIn close range, The Emperor can also dodge upwards and combo into the red midair Flare for more HP damage with Wall Rush. The dodge cancel can be pressed repeatedly and the Flare has enough time to connect afterwards. Since red Flare forces ground Wall Rush, an early hit can take away max damage from Thunder Crest. This is often negligible, as The Emperor benefits a lot from assist combos and Side by Side's <img></img> assist gain.\nFor assist combos, it is best to call assist right before red Flare Wall Rushes. This is to ensure The Emperor can do another Thunder Crest as a follow-up."
+                  "EX Force"
                 ],
                 [
-                  "Punish / Trap StarterGroundBRV Damage\nThunder Crest > Move Closer <img></img> > Landmine\n110\n60\nBase Damage (Breakdown): 2 x 17 > 35 + 35\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60 > 0 + 0\nThis combo capitalizes on Landmine's high damage for Bravery. To ensure both Landmines connect, move closer to the opponent for a split-second before using the attack. This can be made slightly easier if Landmines are set to up ↑ + Circle <img></img>. That makes it so that The Emperor only has to hold up and press Circle <img></img> when appropriate."
+                  "EX Force"
                 ]
               ]
             }
@@ -526,19 +526,19 @@
                 ],
                 [
                   "AC",
-                  "Assist Chase <img></img>"
+                  "Assist Chase"
                 ],
                 [
                   "AST BRV",
-                  "Assist (Bravery) <img></img> + <img></img>"
+                  "Assist (Bravery)  +"
                 ],
                 [
                   "AST HP",
-                  "Assist (HP) <img></img> + <img></img>"
+                  "Assist (HP)  +"
                 ],
                 [
                   "Chase",
-                  "Chase <img></img>"
+                  "Chase"
                 ],
                 [
                   "Empty Chase",
@@ -546,7 +546,7 @@
                 ],
                 [
                   "DC",
-                  "Dodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n<img></img> + <img></img>"
+                  "Dodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n +"
                 ],
                 [
                   "LL",
@@ -565,13 +565,13 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Punish / Trap StarterGroundBRV Damage, HP\nThunder Crest > Move Closer <img></img> > Landmine > AST BRV > Move Closer <img></img> > Thunder Crest > Jump > Flare (Midair)\n190 + HP & WR\n180~\nBase Damage (Breakdown): 40 > 35 + 35 (Landmine) > 40 (AST) > 40 > HP + WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60 > 0 + 0 > 60~ > 60\nA fairly standard mid level Thunder Crest combo with Landmine fillers and HP Wall Rush. The following notes assume that Thunder Crest is done close to opponent.\nAfter Thunder Crest, The Emperor must move closer to connect both Landmines consistently. The BRV damage is high enough to outclass several combo fillers in the game, so it's recommended to practice this. Call assist immediately after doing Landmine, but before they connect. When done correctly, Landmines should hit and Jecht assist still picks up successfully.\nAfter Jecht assist connects, move towards opponent with basic movement <img></img> or a Ground Dash. Then use Thunder Crest after Jecht assist has done two downward hits (he says \"I'll give it to you!\" during this). If done correctly, Jecht slams the opponent down and Thunder Crest connects smoothly afterwards. If Thunder Crest hits a bit later, The Emperor has more time to jump and midair Flare more easily."
+                  "EX Force"
                 ],
                 [
-                  "Punish / Trap StarterGroundCombo After Side by Side <img></img> Assist Gain\nThunder Crest > Flare > AST BRV > Move Closer <img></img> > Thunder Crest > Jump > Flare (Midair)\n114~ + HP & WR\n180~\nBase Damage (Breakdown): 40 + HP > 40 (AST) > 34~ + HP & WR\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 60 + 60 > 60~ + 0\nIf The Emperor needs assist gauge from HP attacks (EXP to Assist or Side by Side <img></img>), this is a useful route for air BRV assist. The timing is a bit strict though; Call assist almost immediately after blue Flare does HP damage. If done correctly, Jecht assist should pick up before Thunder Crest knocks the opponent too far. Afterwards the execution is fairly straightforward. Move closer to opponent and use Thunder Crest again. If Thunder Crest hits a bit later, The Emperor has more time to jump and midair Flare more easily."
+                  "EX Force"
                 ],
                 [
-                  "HP StarterStarfall, 1 Assist Gauge, Side by Side <img></img>Starfall Loop\n1st Starfall > DC > 2nd Starfall (Hold <img></img>, Move Away <img></img>) > 1st Starfall WR > AST BRV > 2nd Starfall OK > DC > Repeat...\n69+ HP & WR\n0\nVideo\nBase Damage (Breakdown): ~9 x 3 + HP & WR > 42 + WR (AST) > Repeat...\nOpponent Assist (Comrade's Vow): ???\nEX Force (Breakdown): 0 > 0...\nThe infamous Starfall loop. This is what The Emperor works towards in any given match, so if he gets this far, victory is pretty much guaranteed. If Starfall activates, The Emperor can use Jecht assist to buy himself enough time to cast another Starfall before the opponent can interrupt it. Side by Side <img></img> causes subsequent Starfalls to fill assist gauge even with the initial bravery hits, which guarantees assist for each repetition. This may not be intended by developers, but it is a very strong side effect for The Emperor.\nThe mileage of Starfall loop can vary greatly depending on the matchup and the stage, but the general rule is longer distance means higher chance of Starfall activation. If the opponent has no long-range attacks to stop The Emperor, that is even better. This is best done in large stages such as Order's Sanctuary or Old Chaos Shrine, where Jecht assist can create larger gaps while The Emperor is running away.\nThe Emperor must start casting the second Starfall while the first one is raining down. Assist must be called after the Wall Rush, while still casting Starfall. To ensure only BRV assist is used, hold Square <img></img> and Circle <img></img>, then press L <img></img>. This can be tricky to perform with the face buttons, but it is the most consistent way to do it with 2 full assist gauges. Remember to move away from the opponent <img></img> while casting Starfall as well.\nOnce Starfall has activated, the only thing opponent can do is use Assist or EX to escape. If they mistime Assist Change early (see video example), they can still get hit by Starfall and suffer the loop regardless. Without Side by Side <img></img>, The Emperor cannot guarantee nearly as many Starfalls even with 2 assist gauges. This is still unavoidable HP damage, but naturally it gets cut off much earlier, while relying on existing resources. This is one reason to use Side by Side builds over others."
+                  "EX Force"
                 ]
               ]
             }
@@ -644,63 +644,63 @@
                   "Jecht / Yuna"
                 ],
                 [
-                  "Weapon <img></img>",
-                  "Piggy's Stick <img></img> (Peltast's Gear)"
+                  "Weapon",
+                  "Piggy's Stick  (Peltast's Gear)"
                 ],
                 [
-                  "Hand <img></img>",
-                  "Chainsaw <img></img> (Equip Machines)"
+                  "Hand",
+                  "Chainsaw  (Equip Machines)"
                 ],
                 [
-                  "Head <img></img>",
+                  "Head",
                   "Thornlet"
                 ],
                 [
-                  "Body <img></img>",
-                  "Maximillian <img></img> (Cavalier's Gear)"
+                  "Body",
+                  "Maximillian  (Cavalier's Gear)"
                 ],
                 [
                   "Accessory 1",
-                  "Bravery Orb <img></img>"
+                  "Bravery Orb"
                 ],
                 [
                   "Accessory 2",
-                  "Dismay Shock <img></img>"
+                  "Dismay Shock"
                 ],
                 [
                   "Accessory 3",
-                  "Battle Hammer <img></img>"
+                  "Battle Hammer"
                 ],
                 [
                   "Accessory 4",
-                  "Empty EX Gauge <img></img>"
+                  "Empty EX Gauge"
                 ],
                 [
                   "Accessory 5",
-                  "Summon Unused <img></img>"
+                  "Summon Unused"
                 ],
                 [
                   "Accessory 6",
-                  "Pre-EX Mode <img></img>"
+                  "Pre-EX Mode"
                 ],
                 [
                   "Accessory 7",
-                  "Pre-EX Revenge <img></img>"
+                  "Pre-EX Revenge"
                 ],
                 [
                   "Accessory 8",
-                  "Blue Gem <img></img>"
+                  "Blue Gem"
                 ],
                 [
                   "Accessory 9",
-                  "Hero's Seal <img></img>"
+                  "Hero's Seal"
                 ],
                 [
                   "Accessory 10",
-                  "Side by Side <img></img>"
+                  "Side by Side"
                 ],
                 [
-                  "Summon <img></img>",
+                  "Summon",
                   "Rubicante"
                 ]
               ]
@@ -716,40 +716,16 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Landmine",
-                  "<img></img> Mine"
+                  "Landmine",
+                  "Mine"
                 ],
                 [
-                  "",
-                  ""
+                  "↑+ Bombard",
+                  "↑+ Dynamite"
                 ],
                 [
-                  "",
-                  ""
-                ],
-                [
-                  "↑+<img></img> Bombard",
-                  "↑+<img></img> Dynamite"
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "↓+<img></img> Thunder Crest",
-                  "↓+<img></img> Light Crest"
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
+                  "↓+ Thunder Crest",
+                  "↓+ Light Crest"
                 ],
                 [
                   "HP attacks"
@@ -759,16 +735,16 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Flare",
-                  "<img></img> Flare"
+                  "Flare",
+                  "Flare"
                 ],
                 [
                   "",
-                  "↑+<img></img> Starfall"
+                  "↑+ Starfall"
                 ],
                 [
-                  "↓+<img></img> Dreary Cell",
-                  "↓+<img></img> Dreary Cell"
+                  "↓+ Dreary Cell",
+                  "↓+ Dreary Cell"
                 ]
               ]
             },

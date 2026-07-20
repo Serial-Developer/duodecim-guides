@@ -47,7 +47,7 @@
               "Weaknesses"
             ],
             [
-              "Threatening close-range combat - All braveries, including his lightning fast melee bravery attacks can be linked into an HP attack for consistent damage output.\nSide by Side <img></img> - As a dedicated HP linker, Onion Knight benefits greatly from the accessory's assist meter gain and increases consistency for high base bravery damage builds.\nMovement - Fast running speed, very high dash speed and quick to fall after an air dodge allow Onion Knight to approach, punish dodges, grab EX Cores and evade attacks with relative ease.\nWhiff punishment - All bravery attacks are suitable for punishing missed attacks at different ranges.\nRelatively safe HP links - Even when escaped with Assist Change with Precision Evasion ability equipped, Onion Knight can be difficult to punish.\nSafe assist gauge decay reset - With Strength Booster and Magic Booster braveries, Onion Knight can sustain assist meter without putting himself at great risk.\nEX Mode bravery damage - Damage multipliers are greatly increased across the board, allowing Onion Knight to shred through bravery.",
+              "Threatening close-range combat - All braveries, including his lightning fast melee bravery attacks can be linked into an HP attack for consistent damage output.\nSide by Side  - As a dedicated HP linker, Onion Knight benefits greatly from the accessory's assist meter gain and increases consistency for high base bravery damage builds.\nMovement - Fast running speed, very high dash speed and quick to fall after an air dodge allow Onion Knight to approach, punish dodges, grab EX Cores and evade attacks with relative ease.\nWhiff punishment - All bravery attacks are suitable for punishing missed attacks at different ranges.\nRelatively safe HP links - Even when escaped with Assist Change with Precision Evasion ability equipped, Onion Knight can be difficult to punish.\nSafe assist gauge decay reset - With Strength Booster and Magic Booster braveries, Onion Knight can sustain assist meter without putting himself at great risk.\nEX Mode bravery damage - Damage multipliers are greatly increased across the board, allowing Onion Knight to shred through bravery.",
               "High commitment whiffs - Whiffed melee braveries have high duration and thus make Onion Knight vulnerable to whiff punishment\nAssist meter generation on whiff - Outside of the Side by Side influx, EXP to Assist and EXP accessories, Onion Knight can struggle to build assist meter with whiffs and dashes to offset setbacks in meter economy.\nRanged combat - Ranged Low braveries and Ranged High HP attacks are ill-fit for occupying screen safely, on top of being vulnerable to whiff punishment from assists.\nLacks utility against traps - Because the only fast Melee HP is ground exclusive and air HP projectiles are slow to start, lingering projectiles and traps such as Garland's Cyclone and The Emperor's Flare and Thunder Crest can prove very difficult for Onion Knight to break through without risk.\nRelatively low bravery damage output - While EX Mode increases damage multipliers, lowest base attack stat and reliance on HP links often compromise Onion Knight's bravery damage potential throughout the match."
             ]
           ]
@@ -433,7 +433,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "10, 10 (20)",
@@ -454,7 +454,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "10, 10 (20)",
@@ -529,10 +529,6 @@
             [
               "LUK",
               "61"
-            ],
-            [
-              "Max Booster",
-              ""
             ]
           ]
         },
@@ -547,63 +543,63 @@
               "Sephiroth"
             ],
             [
-              "Weapon <img></img>",
-              "Piggy's Stick <img></img>"
+              "Weapon",
+              "Piggy's Stick"
             ],
             [
-              "Hand <img></img>",
-              "Aegis Shield <img></img>"
+              "Hand",
+              "Aegis Shield"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Thornlet"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Maximillian"
             ],
             [
               "Accessory 1",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 2",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 3",
-              "<img></img> BRV = 0"
+              "BRV = 0"
             ],
             [
               "Accessory 4",
-              "<img></img> Blue Gem"
+              "Blue Gem"
             ],
             [
               "Accessory 5",
-              "<img></img> Hero's Essence"
+              "Hero's Essence"
             ],
             [
               "Accessory 6",
-              "<img></img> First to Victory"
+              "First to Victory"
             ],
             [
               "Accessory 7",
-              "<img></img> Hero's Seal"
+              "Hero's Seal"
             ],
             [
               "Accessory 8",
-              "<img></img> Miracle Shoes"
+              "Miracle Shoes"
             ],
             [
               "Accessory 9",
-              "<img></img> Together as One"
+              "Together as One"
             ],
             [
               "Accessory 10",
-              "<img></img> Side by Side"
+              "Side by Side"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -674,63 +670,63 @@
               "Sephiroth"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Onion Sword"
             ],
             [
-              "Hand <img></img>",
-              "Genji Shield <img></img>"
+              "Hand",
+              "Genji Shield"
             ],
             [
-              "Head <img></img>",
-              "Genji Helm <img></img>"
+              "Head",
+              "Genji Helm"
             ],
             [
-              "Body <img></img>",
-              "Genji Armor <img></img>"
+              "Body",
+              "Genji Armor"
             ],
             [
               "Accessory 1",
-              "<img></img> Dragonfly Orb"
+              "Dragonfly Orb"
             ],
             [
               "Accessory 2",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 3",
-              "<img></img> Large Gap in HP"
+              "Large Gap in HP"
             ],
             [
               "Accessory 4",
-              "<img></img> BRV > Base Value"
+              "BRV > Base Value"
             ],
             [
               "Accessory 5",
-              "<img></img> EX Core Present"
+              "EX Core Present"
             ],
             [
               "Accessory 6",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 8",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 9",
-              "<img></img> Aerial"
+              "Aerial"
             ],
             [
               "Accessory 10",
-              "<img></img> Opponent Summon Unused"
+              "Opponent Summon Unused"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]

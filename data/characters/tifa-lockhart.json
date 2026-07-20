@@ -42,10 +42,6 @@
             [
               "Strengths",
               "Weaknesses"
-            ],
-            [
-              "",
-              ""
             ]
           ]
         }
@@ -431,12 +427,12 @@
                   "Minimum EX"
                 ],
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.",
+                  "Dégâts de base",
                   "15, 25 (40)",
                   "8, 13 (21)"
                 ],
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.",
+                  "Dégâts de base",
                   "13 x 7 (91) (131 total)",
                   "7 x 7 (49) (70 total)"
                 ],
@@ -613,63 +609,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Seventh Heaven"
             ],
             [
-              "Hand <img></img>",
-              "Hero's Shield <img></img>"
+              "Hand",
+              "Hero's Shield"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Dueling Mask"
             ],
             [
-              "Body <img></img>",
-              "Heavy Armor <img></img>"
+              "Body",
+              "Heavy Armor"
             ],
             [
               "Accessory 1",
-              "<img></img> Block Ring"
+              "Block Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Zephyr Cloak"
+              "Zephyr Cloak"
             ],
             [
               "Accessory 3",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 4",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 5",
-              "<img></img> Empty EX Gauge"
+              "Empty EX Gauge"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Blue Gem"
+              "Blue Gem"
             ],
             [
               "Accessory 9",
-              "<img></img> Miracle Shoes"
+              "Miracle Shoes"
             ],
             [
               "Accessory 10",
-              "<img></img> Side by Side"
+              "Side by Side"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "None"
             ]
           ]
@@ -1023,63 +1019,63 @@
                   "Aerith"
                 ],
                 [
-                  "Weapon <img></img>",
-                  "Piggy's Stick <img></img>"
+                  "Weapon",
+                  "Piggy's Stick"
                 ],
                 [
-                  "Hand <img></img>",
-                  "Chainsaw <img></img>"
+                  "Hand",
+                  "Chainsaw"
                 ],
                 [
-                  "Head <img></img>",
+                  "Head",
                   "Thornlet"
                 ],
                 [
-                  "Body <img></img>",
-                  "Maximillian <img></img>"
+                  "Body",
+                  "Maximillian"
                 ],
                 [
                   "Accessory 1",
-                  "<img></img> Muscle Belt"
+                  "Muscle Belt"
                 ],
                 [
                   "Accessory 2",
-                  "<img></img> Sniper Eye"
+                  "Sniper Eye"
                 ],
                 [
                   "Accessory 3",
-                  "<img></img> Bravery Orb"
+                  "Bravery Orb"
                 ],
                 [
                   "Accessory 4",
-                  "<img></img> Dismay Shock"
+                  "Dismay Shock"
                 ],
                 [
                   "Accessory 5",
-                  "<img></img> Empty EX Gauge"
+                  "Empty EX Gauge"
                 ],
                 [
                   "Accessory 6",
-                  "<img></img> Summon Unused"
+                  "Summon Unused"
                 ],
                 [
                   "Accessory 7",
-                  "<img></img> Pre-EX Mode"
+                  "Pre-EX Mode"
                 ],
                 [
                   "Accessory 8",
-                  "<img></img> Pre-EX Revenge"
+                  "Pre-EX Revenge"
                 ],
                 [
                   "Accessory 9",
-                  "<img></img> Back-Breaking Straw"
+                  "Back-Breaking Straw"
                 ],
                 [
                   "Accessory 10",
-                  "<img></img> Side by Side"
+                  "Side by Side"
                 ],
                 [
-                  "Summon <img></img>",
+                  "Summon",
                   "Rubicante"
                 ]
               ]
@@ -1259,18 +1255,18 @@
                   "Notes"
                 ],
                 [
-                  "Muscle Belt <img></img>",
-                  "Zephyr Cloak <img></img> / BRV = 0 <img></img> / Hero's Essence <img></img> / Great Gospel <img></img> / Hero's Seal <img></img> / Winged Boots <img></img>",
+                  "Muscle Belt",
+                  "Zephyr Cloak  / BRV = 0  / Hero's Essence  / Great Gospel  / Hero's Seal  / Winged Boots",
                   "Muscle Belt isn't crucial for damage output, so it can be replaced with one of the listed accessories for increased survivability, Capacity Points (extra abilities for increased crit rate, base HP or BRV) or bravery recovery."
                 ],
                 [
-                  "Back-Breaking Straw <img></img>",
-                  "Together as One <img></img> / accessory of your choice",
+                  "Back-Breaking Straw",
+                  "Together as One  / accessory of your choice",
                   "Back-Breaking Straw negates Thornlet's bravery boost penalty on dodge and block. The damage output is still high even with the penalties, so if it doesn't feel deterring, it can be replaced with Together as One for more assist meter at the start which is good for stability. Otherwise this can be exchanged to suit the player preference or match-up."
                 ],
                 [
-                  "Muscle Belt <img></img> and Summon Unused <img></img>",
-                  "Battle Hammer <img></img> and BRV = 0 <img></img>",
+                  "Muscle Belt  and Summon Unused",
+                  "Battle Hammer  and BRV = 0",
                   "This is for adding assist depletion to the build. Muscle Belt doesn't benefit from BRV = 0 booster, whereas Battle Hammer does, so the booster is swapped out for something stronger and more consistent.BRV = 0 applies to wall rush damage and meter depletion."
                 ],
                 [
@@ -1477,63 +1473,63 @@
                   "Aerith / Tidus"
                 ],
                 [
-                  "Weapon <img></img>",
-                  "Adamant Knife <img></img>"
+                  "Weapon",
+                  "Adamant Knife"
                 ],
                 [
-                  "Hand <img></img>",
-                  "Adamant Shield <img></img>"
+                  "Hand",
+                  "Adamant Shield"
                 ],
                 [
-                  "Head <img></img>",
+                  "Head",
                   "Dueling Mask"
                 ],
                 [
-                  "Body <img></img>",
-                  "Adamant Vest <img></img>"
+                  "Body",
+                  "Adamant Vest"
                 ],
                 [
                   "Accessory 1",
-                  "<img></img> Zephyr Cloak"
+                  "Zephyr Cloak"
                 ],
                 [
                   "Accessory 2",
-                  "<img></img> Dismay Shock"
+                  "Dismay Shock"
                 ],
                 [
                   "Accessory 3",
-                  "<img></img> Battle Hammer"
+                  "Battle Hammer"
                 ],
                 [
                   "Accessory 4",
-                  "<img></img> BRV > Base Value"
+                  "BRV > Base Value"
                 ],
                 [
                   "Accessory 5",
-                  "<img></img> Summon Unused"
+                  "Summon Unused"
                 ],
                 [
                   "Accessory 6",
-                  "<img></img> Pre-EX Mode"
+                  "Pre-EX Mode"
                 ],
                 [
                   "Accessory 7",
-                  "<img></img> Pre-EX Revenge"
+                  "Pre-EX Revenge"
                 ],
                 [
                   "Accessory 8",
-                  "<img></img> Aerial"
+                  "Aerial"
                 ],
                 [
                   "Accessory 9",
-                  "<img></img> After 30 Seconds"
+                  "After 30 Seconds"
                 ],
                 [
                   "Accessory 10",
-                  "<img></img> Tenacious Attacker"
+                  "Tenacious Attacker"
                 ],
                 [
-                  "Summon <img></img>",
+                  "Summon",
                   "Rubicante"
                 ]
               ]
@@ -1685,17 +1681,17 @@
                   "Notes"
                 ],
                 [
-                  "<img></img> After 30 Seconds",
-                  "<img></img> Opponent Summon Unused",
+                  "After 30 Seconds",
+                  "Opponent Summon Unused",
                   "1.2 booster to 1.3 booster, a slight increase. The opponent does not have to equip a summon, so if they don't have a summon for the fight, this booster is useless."
                 ],
                 [
-                  "<img></img> Dismay Shock",
-                  "<img></img> Opponent Empty EX Gauge",
-                  "If the opponent has Side by Side <img></img> equipped, this is another good 1.3 booster with consistent uptime."
+                  "Dismay Shock",
+                  "Opponent Empty EX Gauge",
+                  "If the opponent has Side by Side  equipped, this is another good 1.3 booster with consistent uptime."
                 ],
                 [
-                  "<img></img> Tenacious Attacker",
+                  "Tenacious Attacker",
                   "Free choice",
                   "--"
                 ]

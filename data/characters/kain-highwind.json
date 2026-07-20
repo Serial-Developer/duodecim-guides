@@ -63,10 +63,6 @@
             [
               "Strengths",
               "Weaknesses"
-            ],
-            [
-              "",
-              ""
             ]
           ]
         }
@@ -465,26 +461,15 @@
               "caption": null,
               "rows": [
                 [
-                  "<img src=\"\" style=\"width:250px; height:270px; object-fit: none; object-position: 36%; border:3px solid RGB(105,86,160); inline-table;\"></img>"
-                ],
-                [
-                  "The attack's baseline damage value before equipment and stats are considered.",
-                  "-"
-                ],
-                [
-                  "The time it takes for this attack to do damage. Currently this is measured at 60 frames per second (30F would be 0.5 seconds).",
+                  "Startup",
                   "51F"
                 ],
                 [
-                  "Damage Type",
-                  "-"
-                ],
-                [
-                  "Priority",
+                  "Priorité",
                   "Ranged High"
                 ],
                 [
-                  "The amount of EX that can be gained from EX Force. 1000 = Full EX gauge.",
+                  "EX Force",
                   "60"
                 ],
                 [
@@ -492,20 +477,16 @@
                   "EX Burst"
                 ],
                 [
-                  "What this move can be cancelled into.",
+                  "Cancels",
                   "Dodge, Air Dash"
                 ],
                 [
-                  "Assist Gain (Hit)",
-                  "-"
-                ],
-                [
-                  "CP (Mastered)"
+                  "CP (maîtrisé)"
                 ],
                 [
                   "[Activate with R + Square] Damage dealt absorbed as HP and immediately recovers spent BRV. Cancel action with Air Dash.",
-                  "Unlocked at level 1",
-                  "Mastered at - AP"
+                  "Débloqué au niveau 1",
+                  "Maîtrisé à - AP"
                 ]
               ]
             }
@@ -522,7 +503,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "20, 10 (30)",
@@ -633,63 +614,63 @@
               "Player Choice"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Highwind"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Dirk <img></img>"
+              "Hand",
+              "Lufenian Dirk"
             ],
             [
-              "Head <img></img>",
-              "Lufenian Headband <img></img>"
+              "Head",
+              "Lufenian Headband"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Lufenian Vest"
             ],
             [
               "Accessory 1",
-              "<img></img> Hyper Ring"
+              "Hyper Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 3",
-              "<img></img> Sniper Eye"
+              "Sniper Eye"
             ],
             [
               "Accessory 4",
-              "<img></img> Large Gap in HP"
+              "Large Gap in HP"
             ],
             [
               "Accessory 5",
-              "<img></img> BRV = 0"
+              "BRV = 0"
             ],
             [
               "Accessory 6",
-              "<img></img> Empty EX Gauge"
+              "Empty EX Gauge"
             ],
             [
               "Accessory 7",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 8",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 9",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 10",
-              "<img></img> Side by Side"
+              "Side by Side"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -760,63 +741,63 @@
               "Player Choice"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Heaven's Cloud"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Dirk <img></img>"
+              "Hand",
+              "Lufenian Dirk"
             ],
             [
-              "Head <img></img>",
-              "Lufenian Hairpin <img></img>"
+              "Head",
+              "Lufenian Hairpin"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Lufenian Vest"
             ],
             [
               "Accessory 1",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 2",
-              "<img></img> Sniper Eye"
+              "Sniper Eye"
             ],
             [
               "Accessory 3",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 4",
-              "<img></img> Large Gap in HP"
+              "Large Gap in HP"
             ],
             [
               "Accessory 5",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 9",
-              "<img></img> Glutton"
+              "Glutton"
             ],
             [
               "Accessory 10",
-              "<img></img> First to Victory"
+              "First to Victory"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]

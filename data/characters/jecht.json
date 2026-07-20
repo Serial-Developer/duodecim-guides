@@ -47,7 +47,7 @@
               "Weaknesses"
             ],
             [
-              "Strong close-range combat thanks to mobility and braveries with high priority and utility to twist interactions.\nDamage - Thanks to high attack stat, brv combo damage multipliers and HP enders, Jecht can inflict a lot of damage with just one combo starter.\nJecht Block guards high priority attacks on frame 1 and is a rare, excellent post-dodge defensive option for it's frame data and reward on stagger.\nJecht's dodge punishment benefits greatly from the above. It makes dodges safer on average. Good hitbox / startup on other braveries and added tracking during assist call help punish dodges.\nSolo HP combos allow Jecht to carry the opponent to the wall for a lot of damage and space control in small stages.\nFlexible assist synergy with wall rush potential and quick bravery followups. Few can salvage dropped combos for him too.\nBuilds - Jecht works with a variety of builds, including the niche Center of the World. But he is most notably a strong user of Side by Side <img></img>.\nBecause of all the above, Jecht can establish good momentum with a good hit early on. LV2 Assist Change staggers provide a full combo and with Jecht Beam and Jecht Block, bypassing final EX Revenge is also possible.",
+              "Strong close-range combat thanks to mobility and braveries with high priority and utility to twist interactions.\nDamage - Thanks to high attack stat, brv combo damage multipliers and HP enders, Jecht can inflict a lot of damage with just one combo starter.\nJecht Block guards high priority attacks on frame 1 and is a rare, excellent post-dodge defensive option for it's frame data and reward on stagger.\nJecht's dodge punishment benefits greatly from the above. It makes dodges safer on average. Good hitbox / startup on other braveries and added tracking during assist call help punish dodges.\nSolo HP combos allow Jecht to carry the opponent to the wall for a lot of damage and space control in small stages.\nFlexible assist synergy with wall rush potential and quick bravery followups. Few can salvage dropped combos for him too.\nBuilds - Jecht works with a variety of builds, including the niche Center of the World. But he is most notably a strong user of Side by Side .\nBecause of all the above, Jecht can establish good momentum with a good hit early on. LV2 Assist Change staggers provide a full combo and with Jecht Beam and Jecht Block, bypassing final EX Revenge is also possible.",
               "Limited moveset - While powerful and capable of disorienting opponents, Jecht's gameplan and effective range can make him predictable. His primary air bravery poke Jecht Stream also has considerable recovery on whiff, which poses certain risk for Jecht against characters with safer pokes.\nInput precision - Jecht's solo combos demand multiple 3-frame timings to inflict HP damage at all, which is susceptible to human error and greatly compromised in lag.\nGenerating meter on whiff is difficult due to diminishing gains with just one offensive bravery attack on the ground and midair. Jecht's highest meter gain comes from HP combo finishers.\nEX meter economy is weaker on average compared to other characters due to reliance on Jecht Beam and EX Cores. EX Burst damage is slightly below average and while his \"Full Combo\" EX Mode perk is unique, its benefits are often situational.\nWeakened presence without assist - Jecht's threat is considerably lower when he is at long range and / or without assist. He works best when he can leverage assist meter before or after hitting the opponent and struggles when he has to catch up in resources.\nArea denial with unblockables - Moves like Black Hole can bypass Jecht Block and prevent Jecht from approaching from a distance. And more notably, The Emperor's traps limit approaches, trade unfavorably and limit poking options to telegraphed HP attacks and assist."
             ]
           ]
@@ -357,7 +357,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "5 (5)",
@@ -455,63 +455,63 @@
               "Kuja / Aerith"
             ],
             [
-              "Weapon <img></img>",
-              "Piggy's Stick <img></img>"
+              "Weapon",
+              "Piggy's Stick"
             ],
             [
-              "Hand <img></img>",
-              "Chainsaw <img></img>"
+              "Hand",
+              "Chainsaw"
             ],
             [
-              "Head <img></img>",
-              "Royal Crown <img></img>"
+              "Head",
+              "Royal Crown"
             ],
             [
-              "Body <img></img>",
-              "Maximillian <img></img>"
+              "Body",
+              "Maximillian"
             ],
             [
               "Accessory 1",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 2",
-              "<img></img> Sniper Eye"
+              "Sniper Eye"
             ],
             [
               "Accessory 3",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 4",
-              "<img></img> BRV = 0"
+              "BRV = 0"
             ],
             [
               "Accessory 5",
-              "<img></img> Empty EX Gauge"
+              "Empty EX Gauge"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Hero's Seal"
+              "Hero's Seal"
             ],
             [
               "Accessory 9",
-              "<img></img> Together as One"
+              "Together as One"
             ],
             [
               "Accessory 10",
-              "<img></img> Side by Side"
+              "Side by Side"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -527,40 +527,12 @@
               "Aerial"
             ],
             [
-              "<img></img> Jecht Block",
-              "<img></img> Jecht Block"
+              "Jecht Block",
+              "Jecht Block"
             ],
             [
-              "",
-              ""
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "↑+<img></img> Jecht Rush",
-              "↑+<img></img> Jecht Stream"
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "",
-              ""
-            ],
-            [
-              "",
-              ""
+              "↑+ Jecht Rush",
+              "↑+ Jecht Stream"
             ],
             [
               "HP attacks"
@@ -570,16 +542,16 @@
               "Aerial"
             ],
             [
-              "<img></img> Ultimate Jecht Shot",
-              "<img></img> Jecht Beam"
+              "Ultimate Jecht Shot",
+              "Jecht Beam"
             ],
             [
-              "↑+<img></img> Jecht Beam",
-              "↑+<img></img> Jecht Blade"
+              "↑+ Jecht Beam",
+              "↑+ Jecht Blade"
             ],
             [
               "",
-              "↓+<img></img> Triumphant Grasp"
+              "↓+ Triumphant Grasp"
             ]
           ]
         }
@@ -744,14 +716,14 @@
                   "Notes"
                 ],
                 [
-                  "Hero's Seal <img></img>",
-                  "Badge of Trust <img></img>",
+                  "Hero's Seal",
+                  "Badge of Trust",
                   "Trades higher initial bravery for practically 2 assist bars at the beginning of a match. Useful in small stages or against opponents who can quickly establish momentum as well."
                 ],
                 [
-                  "BRV = 0 <img></img>",
-                  "Large Gap in HP <img></img>",
-                  "BRV = 0 has consistent uptime thanks to Jecht's combos, but it doesn't affect Muscle Belt <img></img>. Use Large Gap in HP if you're looking for a small boost to all three basic accessories."
+                  "BRV = 0",
+                  "Large Gap in HP",
+                  "BRV = 0 has consistent uptime thanks to Jecht's combos, but it doesn't affect Muscle Belt . Use Large Gap in HP if you're looking for a small boost to all three basic accessories."
                 ],
                 [
                   "Counterattack & Precision Jump",
@@ -842,63 +814,63 @@
                   "Kuja / Tidus"
                 ],
                 [
-                  "Weapon <img></img>",
+                  "Weapon",
                   "Piggy's Stick"
                 ],
                 [
-                  "Hand <img></img>",
+                  "Hand",
                   "Lufenian Dirk"
                 ],
                 [
-                  "Head <img></img>",
+                  "Head",
                   "Lufenian Hairpin"
                 ],
                 [
-                  "Body <img></img>",
+                  "Body",
                   "Lufenian Jacket"
                 ],
                 [
                   "Accessory 1",
-                  "<img></img> Sniper Eye"
+                  "Sniper Eye"
                 ],
                 [
                   "Accessory 2",
-                  "<img></img> Bravery Orb"
+                  "Bravery Orb"
                 ],
                 [
                   "Accessory 3",
-                  "<img></img> Battle Hammer"
+                  "Battle Hammer"
                 ],
                 [
                   "Accessory 4",
-                  "<img></img> BRV = 0"
+                  "BRV = 0"
                 ],
                 [
                   "Accessory 5",
-                  "<img></img> Summon Unused"
+                  "Summon Unused"
                 ],
                 [
                   "Accessory 6",
-                  "<img></img> Pre-EX Mode"
+                  "Pre-EX Mode"
                 ],
                 [
                   "Accessory 7",
-                  "<img></img> Pre-EX Revenge"
+                  "Pre-EX Revenge"
                 ],
                 [
                   "Accessory 8",
-                  "<img></img> Hero's Essence"
+                  "Hero's Essence"
                 ],
                 [
                   "Accessory 9",
-                  "<img></img> Tenacious Attacker"
+                  "Tenacious Attacker"
                 ],
                 [
                   "Accessory 10",
-                  "<img></img> First to Victory"
+                  "First to Victory"
                 ],
                 [
-                  "Summon <img></img>",
+                  "Summon",
                   "Rubicante"
                 ]
               ]
@@ -914,40 +886,12 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Jecht Block",
-                  "<img></img> Jecht Block"
+                  "Jecht Block",
+                  "Jecht Block"
                 ],
                 [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "↑+<img></img> Jecht Rush",
-                  "↑+<img></img> Jecht Stream"
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
+                  "↑+ Jecht Rush",
+                  "↑+ Jecht Stream"
                 ],
                 [
                   "HP attacks"
@@ -957,16 +901,16 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Ultimate Jecht Shot",
-                  "<img></img> Jecht Beam"
+                  "Ultimate Jecht Shot",
+                  "Jecht Beam"
                 ],
                 [
-                  "↑+<img></img> Jecht Beam",
-                  "↑+<img></img> Jecht Blade"
+                  "↑+ Jecht Beam",
+                  "↑+ Jecht Blade"
                 ],
                 [
                   "",
-                  "↓+<img></img> Triumphant Grasp"
+                  "↓+ Triumphant Grasp"
                 ]
               ]
             }
@@ -1005,14 +949,14 @@
                   "Notes"
                 ],
                 [
-                  "First to Victory <img></img>",
-                  "Muscle Belt <img></img> Glutton <img></img>",
+                  "First to Victory",
+                  "Muscle Belt  Glutton",
                   "If the initial boost is not needed, Muscle Belt can add damage.\nGlutton lets Jecht absorb EX all the time."
                 ],
                 [
-                  "Hero's Essence <img></img>",
-                  "BRV = 0 <img></img> Winged Boots <img></img> Dismay Shock <img></img>",
-                  "BRV = 0 <img></img> for stronger meter depletion, wall rush and base bravery recovery. The BRV recovery is least affected.\nWinged Boots <img></img> if Jecht needs to deal with Banish Traps.\nDismay Shock <img></img> to double down on EX depletion."
+                  "Hero's Essence",
+                  "BRV = 0  Winged Boots  Dismay Shock",
+                  "BRV = 0  for stronger meter depletion, wall rush and base bravery recovery. The BRV recovery is least affected.\nWinged Boots  if Jecht needs to deal with Banish Traps.\nDismay Shock  to double down on EX depletion."
                 ]
               ]
             }

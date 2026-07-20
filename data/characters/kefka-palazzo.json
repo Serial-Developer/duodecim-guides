@@ -56,8 +56,8 @@
               "Weaknesses"
             ],
             [
-              "Damage - High attack stat, synergy with Side by Side <img></img>, good base damage on his staple braveries and combos ensure Kefka's damage output shines regardless of build.\nRange - If left unattended, Kefka can create presence anywhere in a stage, whether it's the gradually homing Waggly-Wobbly Firaga or Trine with infinite range.\nMobility - One of the strongest Precision Jump users with it's speed and height. Fast fall speed makes air dodges significantly harder to punish. While dash speed is below average, it's more than enough to keep aggressive opponents occupied.\nDefensive play - Having ways to quickly create distance that is in service of his braveries, Kefka can dictate the pace of a match with reverse ground / air dashes.\nMomentum - In addition to damage, Kefka is in a great position to take advantage of any hits he gets by casting another Waggly-Wobbly Firaga, making it more difficult to challenge his defense. With Side by Side and LV2 Assist Change, Kefka can also retaliate with Havoc Wing, further cementing his advantage in meter economy.\nEX Mode - Casting two spells at once greatly amplifies his space control and damage output. Ultima comes out instantly.",
-              "Vulnerable to whiff punishment - Many of Kefka's bravery attacks have a long startup that can be punished with assist on reaction, or contested with a Free Air Dash. Despite having a great close range threat with the Scatter-Spray Blizzaga bravery, Kefka is still susceptible to counter attacks if it's dodged.\nAssist meter generation on whiff - Because Kefka does not have quick low commitment pokes, generating assist meter safely can be very difficult.\nEX generation on hit - Two of his staple braveries do not produce EX Force, often limiting his EX intake to EX cores, Extra-Crispy Firaga enders and occasional whiff punishes with Lickety-Split Thundagas.\nReversing momentum - If the opponent is consistently intercepting Kefka's braveries with assist or offensive approaches, Kefka has to take big risks to stay alive.\nSmall stages - By the same token, smaller stages like M.S. Prima Vista leave less room for Kefka to create space and cast spells safely."
+              "Damage - High attack stat, synergy with Side by Side , good base damage on his staple braveries and combos ensure Kefka's damage output shines regardless of build.\nRange - If left unattended, Kefka can create presence anywhere in a stage, whether it's the gradually homing Waggly-Wobbly Firaga or Trine with infinite range.\nMobility - One of the strongest Precision Jump users with it's speed and height. Fast fall speed makes air dodges significantly harder to punish. While dash speed is below average, it's more than enough to keep aggressive opponents occupied.\nDefensive play - Having ways to quickly create distance that is in service of his braveries, Kefka can dictate the pace of a match with reverse ground / air dashes.\nMomentum - In addition to damage, Kefka is in a great position to take advantage of any hits he gets by casting another Waggly-Wobbly Firaga, making it more difficult to challenge his defense. With Side by Side and LV2 Assist Change, Kefka can also retaliate with Havoc Wing, further cementing his advantage in meter economy.\nEX Mode - Casting two spells at once greatly amplifies his space control and damage output. Ultima comes out instantly.",
+              "EX Force"
             ]
           ]
         }
@@ -403,7 +403,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "8, 4, 4, 4 (20)",
@@ -500,63 +500,63 @@
               "Kuja"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Dancing Mad"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Dirk <img></img>"
+              "Hand",
+              "Lufenian Dirk"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Lufenian Headband"
             ],
             [
-              "Body <img></img>",
-              "Lufenian Vest <img></img>"
+              "Body",
+              "Lufenian Vest"
             ],
             [
               "Accessory 1",
-              "<img></img> Hyper Ring"
+              "Hyper Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Earring"
+              "Earring"
             ],
             [
               "Accessory 3",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 4",
-              "<img></img> Large Gap in HP"
+              "Large Gap in HP"
             ],
             [
               "Accessory 5",
-              "<img></img> BRV > Base Value"
+              "BRV > Base Value"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Aerial"
+              "Aerial"
             ],
             [
               "Accessory 9",
-              "<img></img> Opponent HP < 50 %"
+              "Opponent HP < 50 %"
             ],
             [
               "Accessory 10",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -627,64 +627,60 @@
               "Jecht"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Dancing Mad"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Shield <img></img>"
+              "Hand",
+              "Lufenian Shield"
             ],
             [
-              "Head <img></img>",
-              "Lufenian Helm <img></img>"
+              "Head",
+              "Lufenian Helm"
             ],
             [
-              "Body <img></img>",
-              "Lufenian Armor <img></img>"
+              "Body",
+              "Lufenian Armor"
             ],
             [
               "Accessory 1",
-              "<img></img> Earring"
+              "Earring"
             ],
             [
               "Accessory 2",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 3",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 4",
-              "<img></img> Cyan Drop"
+              "Cyan Drop"
             ],
             [
               "Accessory 5",
-              "<img></img> Cyan Drop"
+              "Cyan Drop"
             ],
             [
               "Accessory 6",
-              "<img></img> Cyan Drop"
+              "Cyan Drop"
             ],
             [
               "Accessory 7",
-              "<img></img> Cyan Gem"
+              "Cyan Gem"
             ],
             [
               "Accessory 8",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 9",
-              "<img></img> Glutton"
+              "Glutton"
             ],
             [
               "Accessory 10",
-              "<img></img> First to Victory"
-            ],
-            [
-              "Summon <img></img>",
-              ""
+              "First to Victory"
             ]
           ]
         },

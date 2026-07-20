@@ -62,10 +62,6 @@
             [
               "Strengths",
               "Weaknesses"
-            ],
-            [
-              "",
-              ""
             ]
           ]
         }
@@ -420,7 +416,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "18 (3 x 4, 6)",
@@ -514,63 +510,63 @@
                   "Aerith"
                 ],
                 [
-                  "Weapon <img></img>",
-                  "Piggy's Stick <img></img>"
+                  "Weapon",
+                  "Piggy's Stick"
                 ],
                 [
-                  "Hand <img></img>",
+                  "Hand",
                   "Chainsaw"
                 ],
                 [
-                  "Head <img></img>",
-                  "Royal Crown <img></img>"
+                  "Head",
+                  "Royal Crown"
                 ],
                 [
-                  "Body <img></img>",
-                  "Auto Crossbow <img></img>"
+                  "Body",
+                  "Auto Crossbow"
                 ],
                 [
                   "Accessory 1",
-                  "<img></img> Bravery Orb"
+                  "Bravery Orb"
                 ],
                 [
                   "Accessory 2",
-                  "<img></img> Dismay Shock"
+                  "Dismay Shock"
                 ],
                 [
                   "Accessory 3",
-                  "<img></img> Battle Hammer"
+                  "Battle Hammer"
                 ],
                 [
                   "Accessory 4",
-                  "<img></img> Empty EX Gauge"
+                  "Empty EX Gauge"
                 ],
                 [
                   "Accessory 5",
-                  "<img></img> Summon Unused"
+                  "Summon Unused"
                 ],
                 [
                   "Accessory 6",
-                  "<img></img> Pre-EX Mode"
+                  "Pre-EX Mode"
                 ],
                 [
                   "Accessory 7",
-                  "<img></img> Pre-EX Revenge"
+                  "Pre-EX Revenge"
                 ],
                 [
                   "Accessory 8",
-                  "<img></img> Hero's Seal"
+                  "Hero's Seal"
                 ],
                 [
                   "Accessory 9",
-                  "<img></img> Together As One"
+                  "Together As One"
                 ],
                 [
                   "Accessory 10",
-                  "<img></img> Side by Side"
+                  "Side by Side"
                 ],
                 [
-                  "Summon <img></img>",
+                  "Summon",
                   "Rubicante"
                 ]
               ]
@@ -586,40 +582,24 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Booster 8",
-                  "<img></img> Swift Attack"
+                  "Booster 8",
+                  "Swift Attack"
                 ],
                 [
                   "",
-                  ""
+                  "Branch: Meo Twister C"
                 ],
                 [
                   "",
-                  "<img></img> Branch: Meo Twister C"
+                  "↑+ Scoop Art"
                 ],
                 [
                   "",
-                  "↑+<img></img> Scoop Art"
+                  "↓+ Tempest"
                 ],
                 [
                   "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  "↓+<img></img> Tempest"
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  "<img></img> Branch: Meo Twister B"
+                  "Branch: Meo Twister B"
                 ],
                 [
                   "HP attacks"
@@ -629,16 +609,16 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Tidal Flame",
-                  "<img></img> Free Energy"
+                  "Tidal Flame",
+                  "Free Energy"
                 ],
                 [
                   "",
-                  "↑+<img></img> Grand Lethal"
+                  "↑+ Grand Lethal"
                 ],
                 [
                   "",
-                  "↓+<img></img> Shift Break"
+                  "↓+ Shift Break"
                 ]
               ]
             }
@@ -791,8 +771,8 @@
                   "Notes"
                 ],
                 [
-                  "Summon Unused <img></img>",
-                  "Aerial <img></img>",
+                  "Summon Unused",
+                  "Aerial",
                   "A stronger x1.5 booster if ground is not available or deemed necessary."
                 ],
                 [

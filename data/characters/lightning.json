@@ -44,8 +44,8 @@
               "Weaknesses"
             ],
             [
-              "Easy, versatile gameplay: She has good pokes, good zoning tools, good rushdown and mixups on dodge / block. Lightning has a bit of everything to cover a lot of common options and matchups.\nPowerful meter economy: Lightning's EX gain synergises perfectly with her kit. All of her common confirms, assist combos and advanced combos lead into decent to high EX Force generation. On top of that, she has good dash speed and zoning to win EX Core races frequently. Thunder, along with other attacks also makes her assist gain above average. Lightning is one of the few characters who can reliably fill the EX gauge twice in a (long-winded) single match.\nAggressive zoning: Many tools to keep away, send projectiles after the opponent, or punish setups from midrange, Light makes it difficult for some characters to start effective offense while being able to start her own with it\nGreat combo potential: A lot of moves have high hitstun, lead into chase or cause wall rush, enabling Lightning to confirm most hits into assists and occasionally HPs. With the right hit she can land some impressively long combos too.\nFantastic EX usage: Good combos out of EX Revenge, good EX Mode, and Omega Weapon as a bravery break kill confirm makes Lightning one of the more potent users of EX gauge.",
-              "Low damage: Even with her most optimal combos, Lightning has a hard time pumping out high damage numbers consistently.\nWeak to Glutton: Glutton <img></img> paired with boosted EX intake range can take away much of her EX if she doesn't invest in EX intake range herself.\nWatera can work against her: While good, Watera can frequently ruin combos if reflected or not paid attention to."
+              "EX Force",
+              "Low damage: Even with her most optimal combos, Lightning has a hard time pumping out high damage numbers consistently.\nWeak to Glutton: Glutton  paired with boosted EX intake range can take away much of her EX if she doesn't invest in EX intake range herself.\nWatera can work against her: While good, Watera can frequently ruin combos if reflected or not paid attention to."
             ]
           ]
         }
@@ -434,7 +434,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "12, 4 x 5 (32)",
@@ -480,7 +480,7 @@
                 [
                   "Combo",
                   "Approximate damage (multipliers)",
-                  "Approximate EX Force",
+                  "EX Force",
                   "Notes",
                   "Video"
                 ],
@@ -523,7 +523,7 @@
                   "Army of One > DC > Thunder",
                   "40 (3x6, 12, 2, 3, 5)",
                   "210 (120, 90)",
-                  "Requires Adamant Chains equipment's special effect to work without walls. Near walls, ceiling and corners the knockback distance is reduced enough for regular air dodge distance to suffice. Exceptionally high EX Force generation.",
+                  "EX Force",
                   "video"
                 ],
                 [
@@ -602,63 +602,63 @@
               "Aerith"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Zantetsuken"
             ],
             [
-              "Hand <img></img>",
+              "Hand",
               "Adamant Shield"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Adamant Helm"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Adamant Vest"
             ],
             [
               "Accessory 1",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 2",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 3",
-              "<img></img> BRV = 0"
+              "BRV = 0"
             ],
             [
               "Accessory 4",
-              "<img></img> White Drop"
+              "White Drop"
             ],
             [
               "Accessory 5",
-              "<img></img> White Drop"
+              "White Drop"
             ],
             [
               "Accessory 6",
-              "<img></img> White Drop"
+              "White Drop"
             ],
             [
               "Accessory 7",
-              "<img></img> White Gem"
+              "White Gem"
             ],
             [
               "Accessory 8",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 9",
-              "<img></img> Glutton"
+              "Glutton"
             ],
             [
               "Accessory 10",
-              "<img></img> Great Gospel"
+              "Great Gospel"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante / None"
             ]
           ]
@@ -729,63 +729,63 @@
               "Tidus / Player Choice"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Piggy's Stick"
             ],
             [
-              "Hand <img></img>",
+              "Hand",
               "Hero's Shield"
             ],
             [
-              "Head <img></img>",
-              "Royal Crown <img></img>"
+              "Head",
+              "Royal Crown"
             ],
             [
-              "Body <img></img>",
-              "Maximillian <img></img>"
+              "Body",
+              "Maximillian"
             ],
             [
               "Accessory 1",
-              "<img></img> Hyper Ring"
+              "Hyper Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Dismay Shock"
+              "Dismay Shock"
             ],
             [
               "Accessory 3",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 4",
-              "<img></img> Large Gap in HP"
+              "Large Gap in HP"
             ],
             [
               "Accessory 5",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> Hero's Essence"
+              "Hero's Essence"
             ],
             [
               "Accessory 9",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 10",
-              "<img></img> Glutton"
+              "Glutton"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]

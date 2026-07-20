@@ -126,39 +126,53 @@ ${out}
 </svg>`;
 }
 
-// Profil de mobilité : valeurs brutes du perso vs moyenne du cast (plus bas = plus rapide)
-export function mobilityChartSvg(char, castAvg) {
+// Profil de mobilité : pour chaque vitesse, position du perso sur l'étendue du
+// cast (piste min→max, tous les persos en points discrets, moyenne, rang).
+// L'axe est orienté « rapide à gauche » (valeur basse = rapide).
+export function mobilityChartSvg(char, castStats) {
   const rows = [
     ['Course', 'Run Speed'],
     ['Dash', 'Dash Speed'],
     ['Chute', 'Fall Speed'],
     ['Chute post-esquive', 'Fall Speed Ratio After Dodge'],
-  ].map(([label, key]) => ({
-    label,
-    me: speedValues(char.infobox?.[key]).normal,
-    avg: castAvg[key],
-  })).filter((r) => r.me !== null && r.avg);
+  ].map(([label, key]) => {
+    const stats = castStats?.[key];
+    const me = speedValues(char.infobox?.[key]).normal;
+    if (!stats || me === null) return null;
+    const rank = stats.values.filter((v) => v < me).length + 1;
+    return { label, me, ...stats, rank, n: stats.values.length };
+  }).filter(Boolean);
   if (!rows.length) return '';
-  const rowH = 34, padL = 150, padR = 60, padT = 12, padB = 26, w = 720;
-  const maxV = Math.max(...rows.flatMap((r) => [r.me, r.avg])) * 1.15;
+  const rowH = 46, padL = 150, padR = 170, padT = 24, padB = 26, w = 800;
   const chartW = w - padL - padR;
   const h = padT + rows.length * rowH + padB;
-  const bars = rows.map((r, i) => {
-    const y = padT + i * rowH;
-    const bw = Math.max(3, (r.me / maxV) * chartW);
-    const ax = padL + (r.avg / maxV) * chartW;
-    return `<text x="${padL - 8}" y="${y + 17}" fill="var(--text)" font-size="12" text-anchor="end">${r.label}</text>` +
-      `<rect x="${padL}" y="${y + 6}" width="${bw}" height="${rowH - 16}" rx="3" fill="var(--violet)"><title>${r.label} : ${r.me} (moyenne du cast : ${r.avg.toFixed(1)})</title></rect>` +
-      `<line x1="${ax}" y1="${y + 2}" x2="${ax}" y2="${y + rowH - 8}" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : ${r.avg.toFixed(1)}</title></line>` +
-      `<text x="${padL + bw + 6}" y="${y + 17}" fill="var(--muted)" font-size="11">${r.me}</text>`;
+  const items = rows.map((r, i) => {
+    const y = padT + i * rowH + rowH / 2;
+    const span = Math.max(r.max - r.min, 0.001);
+    const x = (v) => padL + ((v - r.min) / span) * chartW;
+    const rankTxt = r.rank <= Math.ceil(r.n / 3) ? 'var(--success)' : r.rank > r.n - Math.ceil(r.n / 3) ? 'var(--danger)' : 'var(--muted)';
+    return (
+      // piste min -> max
+      `<line x1="${padL}" y1="${y}" x2="${padL + chartW}" y2="${y}" stroke="var(--surface-2)" stroke-width="6" stroke-linecap="round"/>` +
+      // points du cast
+      r.values.map((v) => `<circle cx="${x(v)}" cy="${y}" r="2.6" fill="var(--muted)" opacity="0.45"/>`).join('') +
+      // moyenne
+      `<line x1="${x(r.avg)}" y1="${y - 11}" x2="${x(r.avg)}" y2="${y + 11}" stroke="var(--violet)" stroke-width="2" stroke-dasharray="3 2"><title>Moyenne du cast : ${r.avg.toFixed(1)}</title></line>` +
+      // le personnage
+      `<circle cx="${x(r.me)}" cy="${y}" r="7" fill="var(--gold)" stroke="var(--bg)" stroke-width="2"><title>${r.label} : ${r.me} — ${r.rank}ᵉ plus rapide sur ${r.n}</title></circle>` +
+      `<text x="${padL - 10}" y="${y + 4}" fill="var(--text)" font-size="12.5" text-anchor="end">${r.label}</text>` +
+      `<text x="${padL + chartW + 12}" y="${y + 4}" fill="${rankTxt}" font-size="12" font-weight="600">${r.rank}ᵉ/${r.n} plus rapide</text>`
+    );
   }).join('');
-  return `<figure class="diagram" role="img" aria-label="Profil de mobilité comparé à la moyenne du cast">
-<figcaption>Profil de mobilité (mode normal)</figcaption>
-<div class="table-scroll"><svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="min-width:480px">
-<title>Profil de mobilité : valeurs du personnage (barres) contre moyenne du cast (trait or)</title>
-${bars}
+  const axis = `<text x="${padL}" y="${padT - 8}" fill="var(--success)" font-size="11">◀ plus rapide</text>` +
+    `<text x="${padL + chartW}" y="${padT - 8}" fill="var(--danger)" font-size="11" text-anchor="end">plus lent ▶</text>`;
+  return `<figure class="diagram" role="img" aria-label="Profil de mobilité : position du personnage dans le cast pour chaque vitesse">
+<figcaption>Profil de mobilité (mode normal) — position dans le cast</figcaption>
+<div class="table-scroll"><svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="min-width:560px">
+<title>Pour chaque vitesse : point or = ce personnage, petits points = les 31 personnages, trait violet = moyenne. Plus à gauche = plus rapide.</title>
+${axis}${items}
 </svg></div>
-<p class="mv-desc">Valeurs brutes du wiki (page personnage) — <strong>plus la valeur est basse, plus le personnage est rapide</strong>. Trait pointillé or : moyenne des 31 personnages.</p>
+<p class="mv-desc">Point <span style="color:var(--gold)">or</span> : ce personnage · petits points : le reste du cast · trait <span style="color:var(--violet)">violet</span> : moyenne. Valeurs du wiki, <strong>plus bas = plus rapide</strong> ; le rang à droite se lit directement (1ᵉʳ = le plus rapide).</p>
 </figure>`;
 }
 

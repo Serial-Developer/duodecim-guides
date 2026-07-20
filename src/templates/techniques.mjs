@@ -8,6 +8,7 @@ function block(item) {
 ${paras(item.summary)}
 ${item.howTo?.length ? `<h3>En pratique</h3><ul>${item.howTo.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
 ${item.competitiveUse ? `<p><strong>Usage compétitif :</strong> ${esc(item.competitiveUse)}</p>` : ''}
+${item.video?.url ? `<p class="video-link"><a href="${esc(item.video.url)}" rel="external noopener">▶ ${esc(item.video.title || 'Vidéo de démonstration')}</a>${item.video.author ? ` — ${esc(item.video.author)}` : ''}${item.video.date ? ` (${esc(String(item.video.date))})` : ''}</p>` : ''}
 ${item.source ? `<p class="sources-list"><a href="${esc(item.source)}" rel="external noopener">${esc(item.source)}</a></p>` : ''}
 </article>`;
 }

@@ -127,12 +127,12 @@ function heroChips(info) {
 }
 
 const SECTIONS_NAV = [
-  ['overview', "Vue d'ensemble"], ['meta', 'Méta'], ['moves', 'Coups'], ['unique', 'Mécanique unique'],
+  ['meta', 'Méta'], ['overview', "Vue d'ensemble"], ['moves', 'Coups'], ['unique', 'Mécanique unique'],
   ['gameplan', 'Plan de jeu'], ['matchups', 'Matchups'], ['builds', 'Builds'],
   ['assist', 'Assists'], ['community', 'Tech communautaire'], ['sources', 'Sources'],
 ];
 
-export function renderGuide({ char, ed, tierEntry, castAvg, hasPortrait, moveImages }) {
+export function renderGuide({ char, ed, tierEntry, castStats, hasPortrait, moveImages }) {
   const ctx = { slug: char.slug, moveImages };
   const s = char.sections;
   const noEd = !ed;
@@ -177,7 +177,7 @@ ${ed?.overview?.length ? paras(ed.overview) : (s.overview?.documented ? edBanner
 ${forces}
 <h3>Stats &amp; vitesses</h3>
 ${statsTable}
-${mobilityChartSvg(char, castAvg)}
+${mobilityChartSvg(char, castStats)}
 </section>`;
 
   // --- 3. Coups ---
@@ -226,7 +226,7 @@ ${(s.uniqueMechanics.subs || []).map((sub) => genericTables(sub.tables)).join('\
     : [];
   const gameplan = `<section id="gameplan"><h2>Plan de jeu &amp; techniques avancées</h2>
 ${ed?.gameplan?.length ? paras(ed.gameplan) : edBanner || banner()}
-${ed?.advancedTech?.length ? `<h3>Techniques spécifiques</h3>${ed.advancedTech.map((t) => `<div class="card"><h3 style="margin-top:0">${esc(t.name)}</h3><p>${esc(t.desc)}</p></div>`).join('')}` : ''}
+${ed?.advancedTech?.length ? `<h3>Techniques spécifiques</h3>${ed.advancedTech.map((t) => `<div class="card"><h3 style="margin-top:0">${esc(t.name)}</h3><p>${esc(t.desc)}</p>${t.video?.url ? `<p class="video-link"><a href="${esc(t.video.url)}" rel="external noopener">▶ ${esc(t.video.title || 'Vidéo de démonstration')}</a>${t.video.author ? ` — ${esc(t.video.author)}` : ''}${t.video.date ? ` (${esc(String(t.video.date))})` : ''}</p>` : ''}</div>`).join('')}` : ''}
 ${combosRaw.length ? `<details class="move"><summary><span class="mv-name">Combos documentés (notation d'origine, dissidia.wiki)</span></summary><div class="mv-body">${combosRaw.map((c) => `<p class="mono">${esc(c)}</p>`).join('')}</div></details>` : ''}
 <p class="mv-desc">Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href="../techniques.html">Techniques &amp; glitches</a>.</p>
 </section>`;
@@ -296,8 +296,8 @@ ${tocLinks}
 </ol></nav>
 <main class="guide-main">
 ${hero}
-${overview}
 ${metaSection}
+${overview}
 ${moves}
 ${unique}
 ${gameplan}

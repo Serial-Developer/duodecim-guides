@@ -428,7 +428,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "14, 14 (28)",
@@ -471,13 +471,13 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Ground starter\nClimhazzard (2) > Double Cut\n40\n120\nVideo\nBase Damage (Breakdown): 8, 12 > 20\nOpponent Assist (Comrade's Vow): 60\nEX Force (Breakdown): 30 > 90\nMore EX compared to Slashing Blow, and has easier timing. If in doubt, do this, because Cloud can still combo into an assist with Double Cut. Repeatedly pressing Double Cut is fairly reliable."
+                  "EX Force"
                 ],
                 [
-                  "Projectile starter\nFire > LL > Sonic Break (2) > Finishing Touch\n44 + HP WR\n57\nVideo\nBase Damage (Breakdown): 10 > 8, 12 > 14\nOpponent Assist (Comrade's Vow): 66\nEX Force (Breakdown): 0 > 30 > 27"
+                  "EX Force"
                 ],
                 [
-                  "Ground starter, must hit airborne opponent\nDouble Cut (1) > Cross-slash\n17 + HP WR\n60\nVideo\nBase Damage (Breakdown): 7 > 5, 5 + HP WR\nOpponent Assist (Comrade's Vow): 25\nEX Force (Breakdown): 30 > 30\nIf the opponent misses their dodge after landing, or performs a neutral dodge, Cross-slash can have an even easier time connecting... assuming the opponent doesn't have Precision Evasion equipped. Please do not confuse this for being a fake combo; The timing is relatively strict, so there is room for human error."
+                  "EX Force"
                 ]
               ]
             }
@@ -494,7 +494,7 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Air starter, close to opponentFull EX Gauge\nDouble Cut > Double Cut > Double Cut > Double Cut > Slashing Blow (1) > Omnislash Ver. 5\n115 + HP WR\n~36+\nVideo\nBase Damage (Breakdown): 20 > 20 > 20 > 20 > 35 + HP WR\nOpponent Assist (Comrade's Vow): 172\nEX Force (Breakdown): 0-30 + ~36\nA staple close-range EX Revenge combo. Easy to do, good damage and works in most areas. Cloud must be close to the opponent to land all four Double Cuts. If he activates EX Revenge from further distance, he has to settle for three or even two Double Cuts before doing Slashing Blow.\nCloud generates no EX with Double Cuts during EX Revenge, and he has to land Slashing Blow before Double Cut's pushback pushes the opponent away. Therefore it is likely that Cloud may not get as much EX from Slashing Blow as he normally would."
+                  "EX Force"
                 ]
               ]
             }
@@ -515,19 +515,19 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "Punish starter, no Wall Rush\nClimhazzard (2) > AST BRV > AC > Slashing Blow (1) > Omnislash 5\n105 + HP WR\n96\nVideo\nBase Damage (Breakdown): 20 > 50 (Kuja) > 35 + HP WR\nOpponent Assist (Comrade's Vow): 157\nEX Force (Breakdown): 30 > 30 + 36\nIf Climhazzard's last hit were to send the opponent into a banish trap, Kuja can be called earlier to avoid it."
+                  "EX Force"
                 ],
                 [
-                  "Poke / Punish starter, Wall Rush\nSonic Break > WR > AST BRV > AC > Slashing Blow (1) > Omnislash Ver. 5\n130 + WR + HP WR\n96\nVideo\nBase Damage (Breakdown): 45 + WR > 50 > 35 + HP WR\nOpponent Assist (Comrade's Vow): 232\nEX Force (Breakdown): 30 > 30 + 36\nBasic wall rush combo. Good damage and relatively easy to do."
+                  "EX Force"
                 ],
                 [
-                  "HP starter, Wall Rush\nCross-slash > WR > AST BRV > AC > Slashing Blow (1) > Omnislash 5\n95 + HP WR x2\n96\nVideo\nBase Damage (Breakdown): 10 + HP WR > 50 (Kuja) > 35 + HP WR\nOpponent Assist (Comrade's Vow): 145\nEX Force (Breakdown): 30 > 30 + 36\nBasic wall rush combo. Cross-slash is good at pursuing grounded opponents and the reward is decent, even though the move itself is risky to use."
+                  "EX Force"
                 ],
                 [
-                  "Poke starter, no wall\nDouble Cut (1) > AST BRV > AC > Slashing Blow (1) > Omnislash 5\n92\n96\nVideo\nBase Damage (Breakdown): 7 > 50 > 35 + HP WR\nOpponent Assist (Comrade's Vow): 138\nEX Force (Breakdown): 30 > 30 + 36\nOne of Cloud's primary air combo starters. The first hit has just enough hit stun for an assist conversion, but there isn't much time to react. A basic, but valuable combo at all levels of play."
+                  "EX Force"
                 ],
                 [
-                  "Gap closer / Punish starter, Wall Rush\nSlashing Blow (1) > Omnislash 5 > WR > AST BRV > Firaga > AC > S. Blow (1) > Omnislash 5\n~168 + HP WR x2\n132\nVideo\nBase Damage (Breakdown): 35 + HP WR > 47 (Kuja) + 51 > 35 + HP WR\nOpponent Assist (Comrade's Vow): 255\nEX Force (Breakdown): 30 + 36 > 0 > 30 + 36\nOne of the highest damaging staple combos for Cloud. Cloud is positioned very well to do a Firaga filler during Kuja's multi-hits for a lot of damage. Firaga should hit as Kuja's multi-hits begin and subsequently shred through opponent's bravery."
+                  "EX Force"
                 ]
               ]
             }
@@ -602,63 +602,63 @@
                   "Kuja"
                 ],
                 [
-                  "Weapon <img></img>",
+                  "Weapon",
                   "Heaven's Cloud"
                 ],
                 [
-                  "Hand <img></img>",
-                  "Lufenian Dirk <img></img>"
+                  "Hand",
+                  "Lufenian Dirk"
                 ],
                 [
-                  "Head <img></img>",
-                  "Lufenian Headband <img></img>"
+                  "Head",
+                  "Lufenian Headband"
                 ],
                 [
-                  "Body <img></img>",
+                  "Body",
                   "Lufenian Vest"
                 ],
                 [
                   "Accessory 1",
-                  "<img></img> Muscle Belt"
+                  "Muscle Belt"
                 ],
                 [
                   "Accessory 2",
-                  "<img></img> Battle Hammer"
+                  "Battle Hammer"
                 ],
                 [
                   "Accessory 3",
-                  "<img></img> Large Gap in HP"
+                  "Large Gap in HP"
                 ],
                 [
                   "Accessory 4",
-                  "<img></img> Summon Unused"
+                  "Summon Unused"
                 ],
                 [
                   "Accessory 5",
-                  "<img></img> Pre-EX Mode"
+                  "Pre-EX Mode"
                 ],
                 [
                   "Accessory 6",
-                  "<img></img> Pre-EX Revenge"
+                  "Pre-EX Revenge"
                 ],
                 [
                   "Accessory 7",
-                  "<img></img> White Drop"
+                  "White Drop"
                 ],
                 [
                   "Accessory 8",
-                  "<img></img> White Drop"
+                  "White Drop"
                 ],
                 [
                   "Accessory 9",
-                  "<img></img> White Gem"
+                  "White Gem"
                 ],
                 [
                   "Accessory 10",
-                  "<img></img> Tenacious Attacker"
+                  "Tenacious Attacker"
                 ],
                 [
-                  "Summon <img></img>",
+                  "Summon",
                   "Rubicante"
                 ]
               ]
@@ -674,40 +674,20 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Sonic Break",
-                  "<img></img> Slashing Blow"
+                  "Sonic Break",
+                  "Slashing Blow"
                 ],
                 [
-                  "",
-                  ""
+                  "Branch: Finishing Touch",
+                  "Branch: Omnislash Version 5"
                 ],
                 [
-                  "<img></img> Branch: Finishing Touch",
-                  "<img></img> Branch: Omnislash Version 5"
+                  "↑+ Double Cut",
+                  "↑+ Double Cut"
                 ],
                 [
-                  "↑+<img></img> Double Cut",
-                  "↑+<img></img> Double Cut"
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "↓+<img></img> Firaga",
-                  "↓+<img></img> Rising Fang"
-                ],
-                [
-                  "",
-                  ""
-                ],
-                [
-                  "",
-                  ""
+                  "↓+ Firaga",
+                  "↓+ Rising Fang"
                 ],
                 [
                   "HP attacks"
@@ -717,16 +697,12 @@
                   "Aerial"
                 ],
                 [
-                  "<img></img> Cross-slash",
-                  "<img></img> Braver"
+                  "Cross-slash",
+                  "Braver"
                 ],
                 [
                   "",
-                  ""
-                ],
-                [
-                  "",
-                  "↓+<img></img> Meteorain"
+                  "↓+ Meteorain"
                 ]
               ]
             },

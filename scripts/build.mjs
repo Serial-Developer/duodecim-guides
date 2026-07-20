@@ -51,15 +51,24 @@ for (const c of [...CHARACTERS, ...SPECIAL]) {
   chars.push({ def: c, data, ed });
 }
 
-// Moyennes du cast (31 jouables) pour le profil de mobilité
+// Statistiques du cast (31 jouables) pour le profil de mobilité :
+// valeurs triées (plus bas = plus rapide), min/max/moyenne et rang par perso
 const SPEED_KEYS = ['Run Speed', 'Dash Speed', 'Fall Speed', 'Fall Speed Ratio After Dodge'];
-const castAvg = {};
+const castStats = {};
 for (const key of SPEED_KEYS) {
   const vals = chars
     .filter((c) => CHARACTERS.some((k) => k.slug === c.def.slug))
     .map((c) => speedValues(c.data.infobox?.[key]).normal)
-    .filter((v) => v !== null && !Number.isNaN(v));
-  if (vals.length) castAvg[key] = vals.reduce((a, b) => a + b, 0) / vals.length;
+    .filter((v) => v !== null && !Number.isNaN(v))
+    .sort((a, b) => a - b);
+  if (vals.length) {
+    castStats[key] = {
+      values: vals,
+      min: vals[0],
+      max: vals[vals.length - 1],
+      avg: vals.reduce((a, b) => a + b, 0) / vals.length,
+    };
+  }
 }
 
 // --- Génération ---
@@ -100,7 +109,7 @@ for (const { def, data, ed } of chars) {
     char: data,
     ed,
     tierEntry: tierEntryBySlug[def.slug] || null,
-    castAvg,
+    castStats,
     hasPortrait: existsSync(join(ROOT, 'assets', 'portraits', `${def.slug}.png`)),
     moveImages,
   });

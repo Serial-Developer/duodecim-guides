@@ -59,7 +59,7 @@
               "Weaknesses"
             ],
             [
-              "Ground Space Control - Rising Wave and Glare Hand cover Golbez's lateral range quickly compared to other characters. Effective for both reactive and preemptive play.\nNightglow - A fast HP attack that protects Golbez with high priority hitboxes and leads to ceiling assist combos in many stages. A strong self-defense tool.\nSide by Side <img></img> - As an HP linker , Golbez gets assist gauge quickly with every HP link or Nightglow he connects. This, along with high base bravery builds greatly amplify his reward on hit.\nInvincible Air Jumps - Golbez is briefly invincible whenever he jumps in the air, creating safer movement against melee characters.",
+              "Ground Space Control - Rising Wave and Glare Hand cover Golbez's lateral range quickly compared to other characters. Effective for both reactive and preemptive play.\nNightglow - A fast HP attack that protects Golbez with high priority hitboxes and leads to ceiling assist combos in many stages. A strong self-defense tool.\nSide by Side  - As an HP linker , Golbez gets assist gauge quickly with every HP link or Nightglow he connects. This, along with high base bravery builds greatly amplify his reward on hit.\nInvincible Air Jumps - Golbez is briefly invincible whenever he jumps in the air, creating safer movement against melee characters.",
               "Committal Air Combat - All air attacks are either telegraphed or have long recovery , regardless of startup speed.\nForcing Ground Combat - Golbez has to deal with halo camping , which he cannot stop safely or consistently. Black Fang forces a Bravery Break, but it's only during EX mode, which compromises his Side by Side synergy.\nSlow Meter Gain - Outside of Side by Side, Golbez fills assist and EX gauges rather slowly. Attacks have medium / long recovery , so repeating them for gauge is slower on average. Most attacks have low EX generation, and are outclassed by reward from HP links and Side by Side."
             ]
           ]
@@ -444,47 +444,20 @@
               "caption": null,
               "rows": [
                 [
-                  "<img src=\"\" style=\"width:250px; height:270px; object-fit: none; object-position: 10%; border:3px solid RGB(105,86,160); inline-table;\"></img>"
-                ],
-                [
-                  "The attack's baseline damage value before equipment and stats are considered.",
-                  "-"
-                ],
-                [
-                  "The time it takes for this attack to do damage. Currently this is measured at 60 frames per second (30F would be 0.5 seconds).",
+                  "Startup",
                   "400F (~6.5 seconds)"
-                ],
-                [
-                  "Damage Type",
-                  "-"
-                ],
-                [
-                  "Priority",
-                  "-"
-                ],
-                [
-                  "The amount of EX that can be gained from EX Force. 1000 = Full EX gauge.",
-                  "-"
                 ],
                 [
                   "Effects",
                   "Bravery Break"
                 ],
                 [
-                  "What this move can be cancelled into.",
-                  ""
-                ],
-                [
-                  "Assist Gain (Hit)",
-                  ""
-                ],
-                [
-                  "CP (Mastered)"
+                  "CP (maîtrisé)"
                 ],
                 [
                   "[Activate with R + Square] Breaks opponent in one hit. Can only gain stage bravery.",
-                  "Unlocked at level",
-                  "Mastered at AP"
+                  "Débloqué au niveau",
+                  "Maîtrisé à AP"
                 ]
               ]
             }
@@ -501,7 +474,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "5 x 4 (20)",
@@ -573,10 +546,6 @@
             [
               "LUK",
               "60"
-            ],
-            [
-              "Max Booster",
-              ""
             ]
           ]
         },
@@ -591,63 +560,63 @@
               "Jecht"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Lufenian Lance"
             ],
             [
-              "Hand <img></img>",
-              "Lufenian Dirk <img></img>"
+              "Hand",
+              "Lufenian Dirk"
             ],
             [
-              "Head <img></img>",
-              "Thornlet <img></img>"
+              "Head",
+              "Thornlet"
             ],
             [
-              "Body <img></img>",
-              "Lufenian Jacket <img></img>"
+              "Body",
+              "Lufenian Jacket"
             ],
             [
               "Accessory 1",
-              "<img></img> Sniper Eye"
+              "Sniper Eye"
             ],
             [
               "Accessory 2",
-              "<img></img> Battle Hammer"
+              "Battle Hammer"
             ],
             [
               "Accessory 3",
-              "<img></img> BRV = 0"
+              "BRV = 0"
             ],
             [
               "Accessory 4",
-              "<img></img> Empty EX Gauge"
+              "Empty EX Gauge"
             ],
             [
               "Accessory 5",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 6",
-              "<img></img> Pre-EX Mode"
+              "Pre-EX Mode"
             ],
             [
               "Accessory 7",
-              "<img></img> Pre-EX Revenge"
+              "Pre-EX Revenge"
             ],
             [
               "Accessory 8",
-              "<img></img> After 30 Seconds"
+              "After 30 Seconds"
             ],
             [
               "Accessory 9",
-              "<img></img> Opponent Summon Unused"
+              "Opponent Summon Unused"
             ],
             [
               "Accessory 10",
-              "<img></img> Side by Side"
+              "Side by Side"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -676,34 +645,6 @@
           "rows": [
             [
               "Stats"
-            ],
-            [
-              "HP",
-              ""
-            ],
-            [
-              "CP",
-              ""
-            ],
-            [
-              "BRV",
-              ""
-            ],
-            [
-              "ATK",
-              ""
-            ],
-            [
-              "DEF",
-              ""
-            ],
-            [
-              "LUK",
-              ""
-            ],
-            [
-              "Max Booster",
-              ""
             ]
           ]
         },
@@ -712,70 +653,6 @@
           "rows": [
             [
               "Equipment"
-            ],
-            [
-              "Assist",
-              ""
-            ],
-            [
-              "Weapon <img></img>",
-              ""
-            ],
-            [
-              "Hand <img></img>",
-              ""
-            ],
-            [
-              "Head <img></img>",
-              ""
-            ],
-            [
-              "Body <img></img>",
-              ""
-            ],
-            [
-              "Accessory 1",
-              ""
-            ],
-            [
-              "Accessory 2",
-              ""
-            ],
-            [
-              "Accessory 3",
-              ""
-            ],
-            [
-              "Accessory 4",
-              ""
-            ],
-            [
-              "Accessory 5",
-              ""
-            ],
-            [
-              "Accessory 6",
-              ""
-            ],
-            [
-              "Accessory 7",
-              ""
-            ],
-            [
-              "Accessory 8",
-              ""
-            ],
-            [
-              "Accessory 9",
-              ""
-            ],
-            [
-              "Accessory 10",
-              ""
-            ],
-            [
-              "Summon <img></img>",
-              ""
             ]
           ]
         },

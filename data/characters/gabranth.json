@@ -332,7 +332,7 @@
               "caption": null,
               "rows": [
                 [
-                  "The attack's baseline damage value before equipment and stats are considered.\n(Initial) !! Base Damage (Remainder) !! Type"
+                  "Dégâts de base"
                 ],
                 [
                   "10",
@@ -370,34 +370,15 @@
           "caption": null,
           "rows": [
             [
-              "<img src=\"\" style=\"width:250px; height:270px; object-fit: none; object-position: ; border:3px solid RGB(105,86,160); inline-table;\"></img>"
-            ],
-            [
-              "The attack's baseline damage value before equipment and stats are considered.",
-              "-"
-            ],
-            [
-              "The time it takes for this attack to do damage. Currently this is measured at 60 frames per second (30F would be 0.5 seconds).",
+              "Startup",
               "?"
             ],
             [
-              "Damage Type",
-              "-"
-            ],
-            [
-              "Priority",
-              "-"
-            ],
-            [
-              "The amount of EX that can be gained from EX Force. 1000 = Full EX gauge.",
+              "EX Force",
               "?"
             ],
             [
-              "Effects",
-              "-"
-            ],
-            [
-              "What this move can be cancelled into.",
+              "Cancels",
               "Dodge, Block, Attack"
             ],
             [
@@ -405,13 +386,13 @@
               "0"
             ],
             [
-              "CP (Mastered)",
+              "CP (maîtrisé)",
               "30 (15)"
             ],
             [
               "Charge EX Gauge by holding button.",
-              "Unlocked at level 1",
-              "Mastered at 150 AP"
+              "Débloqué au niveau 1",
+              "Maîtrisé à 150 AP"
             ]
           ]
         },
@@ -419,34 +400,15 @@
           "caption": null,
           "rows": [
             [
-              "<img src=\"\" style=\"width:250px; height:270px; object-fit: none; object-position: ; border:3px solid RGB(105,86,160); inline-table;\"></img>"
-            ],
-            [
-              "The attack's baseline damage value before equipment and stats are considered.",
-              "-"
-            ],
-            [
-              "The time it takes for this attack to do damage. Currently this is measured at 60 frames per second (30F would be 0.5 seconds).",
+              "Startup",
               "?"
             ],
             [
-              "Damage Type",
-              "-"
-            ],
-            [
-              "Priority",
-              "-"
-            ],
-            [
-              "The amount of EX that can be gained from EX Force. 1000 = Full EX gauge.",
+              "EX Force",
               "?"
             ],
             [
-              "Effects",
-              "-"
-            ],
-            [
-              "What this move can be cancelled into.",
+              "Cancels",
               "Dodge, Block, Attack"
             ],
             [
@@ -454,13 +416,13 @@
               "0"
             ],
             [
-              "CP (Mastered)",
+              "CP (maîtrisé)",
               "30 (15)"
             ],
             [
               "Charge EX Gauge by holding button. Cancelled when you touch the ground.",
-              "Unlocked at level 1",
-              "Mastered at 150 AP"
+              "Débloqué au niveau 1",
+              "Maîtrisé à 150 AP"
             ]
           ]
         }
@@ -543,63 +505,63 @@
               "Jecht"
             ],
             [
-              "Weapon <img></img>",
+              "Weapon",
               "Chaos Blade"
             ],
             [
-              "Hand <img></img>",
+              "Hand",
               "Genji Shield"
             ],
             [
-              "Head <img></img>",
+              "Head",
               "Genji Helm"
             ],
             [
-              "Body <img></img>",
+              "Body",
               "Genji Armor"
             ],
             [
               "Accessory 1",
-              "<img></img> Hyper Ring"
+              "Hyper Ring"
             ],
             [
               "Accessory 2",
-              "<img></img> Muscle Belt"
+              "Muscle Belt"
             ],
             [
               "Accessory 3",
-              "<img></img> Silver Hourglass"
+              "Silver Hourglass"
             ],
             [
               "Accessory 4",
-              "<img></img> Angel's Bell"
+              "Angel's Bell"
             ],
             [
               "Accessory 5",
-              "<img></img> EX Mode"
+              "EX Mode"
             ],
             [
               "Accessory 6",
-              "<img></img> Summon Unused"
+              "Summon Unused"
             ],
             [
               "Accessory 7",
-              "<img></img> Opponent Summon Unused"
+              "Opponent Summon Unused"
             ],
             [
               "Accessory 8",
-              "<img></img> Tenacious Attacker"
+              "Tenacious Attacker"
             ],
             [
               "Accessory 9",
-              "<img></img> Spider Web"
+              "Spider Web"
             ],
             [
               "Accessory 10",
-              "<img></img> Spider's Bane"
+              "Spider's Bane"
             ],
             [
-              "Summon <img></img>",
+              "Summon",
               "Rubicante"
             ]
           ]
@@ -628,34 +590,6 @@
           "rows": [
             [
               "Stats"
-            ],
-            [
-              "HP",
-              ""
-            ],
-            [
-              "CP",
-              ""
-            ],
-            [
-              "BRV",
-              ""
-            ],
-            [
-              "ATK",
-              ""
-            ],
-            [
-              "DEF",
-              ""
-            ],
-            [
-              "LUK",
-              ""
-            ],
-            [
-              "Max Booster",
-              ""
             ]
           ]
         },
@@ -664,70 +598,6 @@
           "rows": [
             [
               "Equipment"
-            ],
-            [
-              "Assist",
-              ""
-            ],
-            [
-              "Weapon <img></img>",
-              ""
-            ],
-            [
-              "Hand <img></img>",
-              ""
-            ],
-            [
-              "Head <img></img>",
-              ""
-            ],
-            [
-              "Body <img></img>",
-              ""
-            ],
-            [
-              "Accessory 1",
-              ""
-            ],
-            [
-              "Accessory 2",
-              ""
-            ],
-            [
-              "Accessory 3",
-              ""
-            ],
-            [
-              "Accessory 4",
-              ""
-            ],
-            [
-              "Accessory 5",
-              ""
-            ],
-            [
-              "Accessory 6",
-              ""
-            ],
-            [
-              "Accessory 7",
-              ""
-            ],
-            [
-              "Accessory 8",
-              ""
-            ],
-            [
-              "Accessory 9",
-              ""
-            ],
-            [
-              "Accessory 10",
-              ""
-            ],
-            [
-              "Summon <img></img>",
-              ""
             ]
           ]
         },
