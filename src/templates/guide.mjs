@@ -101,16 +101,38 @@ function chainDiagram(braveryGroups) {
 </figure>`;
 }
 
+const escBr = (s) => esc(s).replace(/\n/g, '<br>');
+
 function genericTables(tables) {
   return (tables || []).map((t) => {
     if (!t.rows?.length) return '';
     const [head, ...rest] = t.rows;
     return `<div class="table-scroll"><table class="data">
 ${t.caption ? `<caption>${esc(t.caption)}</caption>` : ''}
-<tr>${head.map((c) => `<th>${esc(c)}</th>`).join('')}</tr>
-${rest.map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('\n')}
+<tr>${head.map((c) => `<th>${escBr(c)}</th>`).join('')}</tr>
+${rest.map((r) => `<tr>${r.map((c) => `<td>${escBr(c)}</td>`).join('')}</tr>`).join('\n')}
 </table></div>`;
   }).join('\n');
+}
+
+// Diagramme des Skillchains (Prishe) : starter(s) --nom--> finisher(s)
+function isSkillchainTable(t) {
+  const head = (t.rows?.[0] || []).map((c) => c.toLowerCase());
+  return head.includes('skillchain') && head.includes('starter') && head.includes('finisher');
+}
+
+function skillchainDiagram(t) {
+  const pills = (cell) => cell.split('\n').map((n) => n.trim()).filter(Boolean)
+    .map((n) => `<span class="pill">${esc(n)}</span>`).join('');
+  const rows = t.rows.slice(1).map(([name, starter, finisher]) => `<div class="sc-row">
+<span class="sc-name">${esc(name)}</span>
+<div class="chain">${pills(starter)}<span class="arrow" aria-label="enchaîne vers">→</span>${pills(finisher)}</div>
+</div>`).join('\n');
+  return `<figure class="diagram" id="skillchains">
+<figcaption>Diagramme des Skillchains</figcaption>
+${rows}
+<p class="mv-desc">Un Skillchain se déclenche en enchaînant un coup de la colonne de gauche (starter) sur un coup de la colonne de droite (finisher) — quand plusieurs pilules sont listées, n'importe laquelle convient.</p>
+</figure>`;
 }
 
 const STAT_LABELS = {
@@ -226,11 +248,15 @@ ${exHtml}
 </section>`;
 
   // --- 4. Mécanique unique ---
+  const uniqTables = s.uniqueMechanics?.tables || [];
+  const scTables = uniqTables.filter(isSkillchainTable);
+  const otherUniqTables = uniqTables.filter((t) => !isSkillchainTable(t));
   const unique = `<section id="unique"><h2>Mécanique unique</h2>
 ${s.uniqueMechanics?.documented
     ? `${ed?.uniqueMechanics?.intro?.length ? paras(ed.uniqueMechanics.intro) : edBanner || banner()}
 ${ed?.uniqueMechanics?.details?.length ? `<ul>${ed.uniqueMechanics.details.map((d) => `<li>${esc(d)}</li>`).join('')}</ul>` : ''}
-${genericTables(s.uniqueMechanics.tables)}
+${scTables.map(skillchainDiagram).join('\n')}
+${genericTables(otherUniqTables)}
 ${(s.uniqueMechanics.subs || []).map((sub) => genericTables(sub.tables)).join('\n')}`
     : banner(`<a href="${esc(char.url)}" rel="external noopener">Page wiki du personnage</a> — pas de section « Unique Mechanics » dédiée ; le cas échéant, la mécanique du personnage est couverte dans la vue d'ensemble et les coups.`)}
 </section>`;

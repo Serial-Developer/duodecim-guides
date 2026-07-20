@@ -129,11 +129,11 @@
               "image": "https://dissidia.wiki/images/1/12/Brv_sephiroth_transience.jpeg",
               "damage": "20 (1 x 7, 13)",
               "startup": "15F",
-              "type": "Physical (1st hit) Magical (other hits)",
+              "type": "Physical (1st hit)\nMagical (other hits)",
               "priority": "Melee Low",
               "exForce": "30",
               "effects": "Wall Rush",
-              "cancels": "Dodge (hit / whiff) Block & Attack (whiff only)",
+              "cancels": "Dodge (hit / whiff)\nBlock & Attack (whiff only)",
               "assistGain": "",
               "cp": "30 (15)",
               "description": "[Close] Quick upward sword slash. Short reach, but fast.",
@@ -237,8 +237,8 @@
               ],
               "startup": [
                 "63F",
-                "90F (Min. charge) 101F (Release)",
-                "178F (Min. charge) 201F (Release)"
+                "90F (Min. charge)\n101F (Release)",
+                "178F (Min. charge)\n201F (Release)"
               ],
               "type": [
                 "-",

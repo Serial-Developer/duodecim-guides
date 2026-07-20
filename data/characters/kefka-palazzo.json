@@ -107,8 +107,8 @@
                 "Magical"
               ],
               "priority": [
-                "Ranged Mid (1st) Ranged Low (spray)",
-                "Ranged Mid (1st) Ranged Low (spray)"
+                "Ranged Mid (1st)\nRanged Low (spray)",
+                "Ranged Mid (1st)\nRanged Low (spray)"
               ],
               "exForce": [
                 "0",
@@ -153,7 +153,7 @@
               "damage": "21 (3 x 7)",
               "startup": "59F",
               "type": "Magical",
-              "priority": "Ranged Low (small) Ranged Mid (big)",
+              "priority": "Ranged Low (small)\nRanged Mid (big)",
               "exForce": "0",
               "effects": "-",
               "cancels": "Dodge",
@@ -315,7 +315,7 @@
               "variants": null,
               "image": "https://dissidia.wiki/images/7/7e/Hp_kefka_hyperdrive.jpeg",
               "damage": "-",
-              "startup": "63F (LV1) 91F (LV2) 143F (LV3) Hitbox 3F after button release",
+              "startup": "63F (LV1)\n91F (LV2)\n143F (LV3)\nHitbox 3F after button release",
               "type": "-",
               "priority": "Unblockable",
               "exForce": "60",

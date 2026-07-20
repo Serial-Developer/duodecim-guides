@@ -282,7 +282,7 @@
               "image": "https://dissidia.wiki/images/a/a3/Brv_exdeath_sword_dance_1.jpeg",
               "damage": [
                 "30",
-                "50 (25 x 2) 80 (20 x 4. EX Mode)"
+                "50 (25 x 2)\n80 (20 x 4. EX Mode)"
               ],
               "startup": [
                 "65F",
@@ -324,7 +324,7 @@
               "image": "https://dissidia.wiki/images/8/83/Brv_exdeath_vacuum_wave_1.jpeg",
               "damage": [
                 "20",
-                "40 (20, 20) 60 (15 x 4. EX Mode)"
+                "40 (20, 20)\n60 (15 x 4. EX Mode)"
               ],
               "startup": [
                 "69F",
@@ -366,7 +366,7 @@
               "image": "https://dissidia.wiki/images/d/d3/Brv_exdeath_hurricane.jpeg",
               "damage": [
                 "32 (2 x 6, 20)",
-                "55 (3 x 11, 22)90 (11, 2, 3 x 11, 22. EX Mode)"
+                "55 (3 x 11, 22)\n90 (11, 2, 3 x 11, 22. EX Mode)"
               ],
               "startup": [
                 "43F",
@@ -448,8 +448,8 @@
                 "-"
               ],
               "priority": [
-                "Block Ranged Low Melee High",
-                "Block Ranged Low, Melee High Block Highest (from Omni Block)"
+                "Block Ranged Low\nMelee High",
+                "Block Ranged Low, Melee High\nBlock Highest (from Omni Block)"
               ],
               "exForce": [
                 "0",
@@ -517,7 +517,7 @@
               "variants": null,
               "image": "https://dissidia.wiki/images/c/c8/Hp_exdeath_maelstrom_1.jpeg",
               "damage": "27 (3 x 9)",
-              "startup": "391F (6.5 sec, ground) 451F (7.5 sec, midair)",
+              "startup": "391F (6.5 sec, ground)\n451F (7.5 sec, midair)",
               "type": "Magical",
               "priority": "Ranged High",
               "exForce": "87",

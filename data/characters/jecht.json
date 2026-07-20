@@ -661,7 +661,7 @@
             {
               "variants": null,
               "damage": "1 x 24 (24)",
-              "startup": "48F (charge),1F (release)",
+              "startup": "48F (charge),\n1F (release)",
               "type": "Physical",
               "priority": "Melee High",
               "exForce": "30",
@@ -675,7 +675,7 @@
             {
               "variants": null,
               "damage": "1 x 34 (34)",
-              "startup": "64F (charge),1F (release)",
+              "startup": "64F (charge),\n1F (release)",
               "type": "Physical",
               "priority": "Melee High",
               "exForce": "30",
@@ -759,7 +759,7 @@
             {
               "variants": null,
               "damage": "1 x 6, 2, 2, 3, 3 (16)",
-              "startup": "48F (charge),11F (release)",
+              "startup": "48F (charge),\n11F (release)",
               "type": "Physical",
               "priority": "Melee High",
               "exForce": "30",
@@ -774,7 +774,7 @@
             {
               "variants": null,
               "damage": "1 x 9, 2 x 6 (21)",
-              "startup": "64F (charge),11F (release)",
+              "startup": "64F (charge),\n11F (release)",
               "type": "Physical",
               "priority": "Melee High",
               "exForce": "36",
@@ -880,7 +880,7 @@
             {
               "variants": null,
               "damage": "2 x 7, 1 (15)",
-              "startup": "48F (charge),11F (release)",
+              "startup": "48F (charge),\n11F (release)",
               "type": "Physical",
               "priority": "Melee High",
               "exForce": "30",
@@ -977,7 +977,7 @@
             {
               "variants": null,
               "damage": "1 x 6, 2, 2, 3, 3 (16)",
-              "startup": "48F (charge),11F (release)",
+              "startup": "48F (charge),\n11F (release)",
               "type": "Physical",
               "priority": "Melee High",
               "exForce": "30",
@@ -992,7 +992,7 @@
             {
               "variants": null,
               "damage": "1 x 9, 2 x 6 (21)",
-              "startup": "64F (charge),11F (release)",
+              "startup": "64F (charge),\n11F (release)",
               "type": "Physical",
               "priority": "Melee High",
               "exForce": "36",
@@ -1656,12 +1656,12 @@
                 ],
                 [
                   "First to Victory",
-                  "Muscle Belt  Glutton",
+                  "Muscle Belt \nGlutton",
                   "If the initial boost is not needed, Muscle Belt can add damage.\nGlutton lets Jecht absorb EX all the time."
                 ],
                 [
                   "Hero's Essence",
-                  "BRV = 0  Winged Boots  Dismay Shock",
+                  "BRV = 0 \nWinged Boots \nDismay Shock",
                   "BRV = 0  for stronger meter depletion, wall rush and base bravery recovery. The BRV recovery is least affected.\nWinged Boots  if Jecht needs to deal with Banish Traps.\nDismay Shock  to double down on EX depletion."
                 ]
               ]

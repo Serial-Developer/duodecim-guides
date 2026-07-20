@@ -179,8 +179,8 @@
               ],
               "image": "https://dissidia.wiki/images/6/64/Brv_terra_blizzard_combo_a.jpeg",
               "damage": [
-                "20 (4, 3, 3, 10) 20 (Upward. 4, 6, 10)",
-                "30 (4, 3, 3, 14, 2 x 3) 30 (Upward. 4, 6, 14, 2 x 3)"
+                "20 (4, 3, 3, 10)\n20 (Upward. 4, 6, 10)",
+                "30 (4, 3, 3, 14, 2 x 3)\n30 (Upward. 4, 6, 14, 2 x 3)"
               ],
               "startup": [
                 "17F",

@@ -106,7 +106,7 @@
               ],
               "effects": [
                 "Chase, Wall Rush",
-                "Chase, Wall Rush, Block (Ranged Low)"
+                "Chase, Wall Rush,\nBlock (Ranged Low)"
               ],
               "cancels": [
                 "Dodge",
@@ -140,8 +140,8 @@
                 "Physical"
               ],
               "priority": [
-                "Melee Mid (1st hit)Melee Low (others)",
-                "Melee Mid (1st hit)Melee Low (others)"
+                "Melee Mid (1st hit)\nMelee Low (others)",
+                "Melee Mid (1st hit)\nMelee Low (others)"
               ],
               "exForce": [
                 "30",
@@ -149,7 +149,7 @@
               ],
               "effects": [
                 "Wall Rush",
-                "Wall RushBlock (Ranged Low)"
+                "Wall Rush\nBlock (Ranged Low)"
               ],
               "cancels": [
                 "Dodge",
@@ -172,7 +172,7 @@
               "type": "Magical",
               "priority": "Ranged Low",
               "exForce": "0",
-              "effects": "Block (Ranged Low, EX Mode)",
+              "effects": "Block\n(Ranged Low, EX Mode)",
               "cancels": "Dodge",
               "assistGain": "",
               "cp": "30 (15)",
@@ -188,7 +188,7 @@
               "type": "Magical",
               "priority": "Ranged Low",
               "exForce": "0",
-              "effects": "Block (Ranged Low, EX Mode)",
+              "effects": "Block\n(Ranged Low, EX Mode)",
               "cancels": "Dodge",
               "assistGain": "",
               "cp": "30 (15)",
@@ -204,7 +204,7 @@
               "type": "Magical",
               "priority": "Ranged Low",
               "exForce": "0",
-              "effects": "Block (Ranged Low, EX Mode)",
+              "effects": "Block\n(Ranged Low, EX Mode)",
               "cancels": "Dodge",
               "assistGain": "",
               "cp": "30 (15)",
@@ -240,9 +240,9 @@
               ],
               "effects": [
                 "Chase",
-                "Chase Block (Ranged Low)"
+                "Chase\nBlock (Ranged Low)"
               ],
-              "cancels": "A missed attack that doesn't make any contact.\n) || Dodge, Block & Attack (Whiff )",
+              "cancels": "A missed attack that doesn't make any contact.\n) || Dodge,\nBlock & Attack (Whiff )",
               "assistGain": [
                 "",
                 ""
@@ -285,7 +285,7 @@
               ],
               "effects": [
                 "Chase, Wall Rush",
-                "Chase, Wall Rush Block (Ranged Low)"
+                "Chase, Wall Rush\nBlock (Ranged Low)"
               ],
               "cancels": [
                 "Dodge",
@@ -328,7 +328,7 @@
               ],
               "effects": [
                 "Wall Rush",
-                "Wall Rush Block (Ranged Low)"
+                "Wall Rush\nBlock (Ranged Low)"
               ],
               "cancels": [
                 "Dodge",
@@ -371,7 +371,7 @@
               ],
               "effects": [
                 "Wall Rush",
-                "Wall Rush Block (Ranged Low)"
+                "Wall Rush\nBlock (Ranged Low)"
               ],
               "cancels": [
                 "Dodge",
@@ -414,9 +414,9 @@
               ],
               "effects": [
                 "Chase",
-                "Chase Block (Ranged Low)"
+                "Chase\nBlock (Ranged Low)"
               ],
-              "cancels": "A missed attack that doesn't make any contact.\n) || Dodge, Block & Attack (Whiff )",
+              "cancels": "A missed attack that doesn't make any contact.\n) || Dodge,\nBlock & Attack (Whiff )",
               "assistGain": [
                 "",
                 ""
@@ -462,7 +462,7 @@
               "damage": "-",
               "startup": "51F",
               "type": "-",
-              "priority": "Melee High (blade) Ranged High (light pillar)",
+              "priority": "Melee High (blade)\nRanged High (light pillar)",
               "exForce": "each 60",
               "effects": "-",
               "cancels": "Dodge",

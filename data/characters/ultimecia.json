@@ -196,7 +196,7 @@
               ],
               "startup": [
                 "13F",
-                "33F, 15F (release). 11-19F (Block, after release)"
+                "33F, 15F (release).\n11-19F (Block, after release)"
               ],
               "type": [
                 "Magical",
@@ -204,7 +204,7 @@
               ],
               "priority": [
                 "Ranged Low",
-                "Block Highest, Ranged High"
+                "Block Highest,\nRanged High"
               ],
               "exForce": [
                 "each 18",
@@ -333,7 +333,7 @@
                   "Freeze (330F / 5,5 sec)"
                 ],
                 [
-                  "[Activate with R + Square] Opponent's movements are completely frozen for a set time. However, this has a long casting time.",
+                  "[Activate with R + Square]\nOpponent's movements are completely frozen for a set time.\nHowever, this has a long casting time.",
                   "Débloqué au niveau",
                   "Maîtrisé à AP"
                 ]

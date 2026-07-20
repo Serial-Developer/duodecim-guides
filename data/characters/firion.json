@@ -232,7 +232,7 @@
               "damage": "+10 (5, 5) (30 Total)",
               "startup": "?",
               "type": "Physical",
-              "priority": "Melee Low (slash) Ranged Low (arrow)",
+              "priority": "Melee Low (slash)\nRanged Low (arrow)",
               "exForce": "75",
               "effects": "Chase",
               "cancels": "",
@@ -624,15 +624,15 @@
             ],
             [
               "Hand",
-              "Chainsaw  (Equip Machines)"
+              "Chainsaw \n(Equip Machines)"
             ],
             [
               "Head",
-              "Thornlet  (Bard's Gear)"
+              "Thornlet \n(Bard's Gear)"
             ],
             [
               "Body",
-              "Maximillian  (Cavalier's Gear)"
+              "Maximillian \n(Cavalier's Gear)"
             ],
             [
               "Accessory 1",

@@ -125,8 +125,8 @@
               ],
               "startup": [
                 "43F",
-                "80F (charge) 3F (hitbox after shot)",
-                "120F (charge) 3F (hitbox after shot)"
+                "80F (charge)\n3F (hitbox after shot)",
+                "120F (charge)\n3F (hitbox after shot)"
               ],
               "type": [
                 "Magical",
@@ -134,9 +134,9 @@
                 "Magical"
               ],
               "priority": [
-                "Ranged Low (Special when sticked)",
-                "Ranged Mid (Special when sticked)",
-                "Ranged High (Special when sticked)"
+                "Ranged Low\n(Special when sticked)",
+                "Ranged Mid\n(Special when sticked)",
+                "Ranged High\n(Special when sticked)"
               ],
               "exForce": [
                 "60+",
@@ -230,8 +230,8 @@
               ],
               "startup": [
                 "43F",
-                "80F (charge) 3F (hitbox after shot)",
-                "120F (charge) 3F (hitbox after shot)"
+                "80F (charge)\n3F (hitbox after shot)",
+                "120F (charge)\n3F (hitbox after shot)"
               ],
               "type": [
                 "Magical",
@@ -645,11 +645,11 @@
                 ],
                 [
                   "Weapon",
-                  "Piggy's Stick  (Peltast's Gear)"
+                  "Piggy's Stick \n(Peltast's Gear)"
                 ],
                 [
                   "Hand",
-                  "Chainsaw  (Equip Machines)"
+                  "Chainsaw \n(Equip Machines)"
                 ],
                 [
                   "Head",
@@ -657,7 +657,7 @@
                 ],
                 [
                   "Body",
-                  "Maximillian  (Cavalier's Gear)"
+                  "Maximillian \n(Cavalier's Gear)"
                 ],
                 [
                   "Accessory 1",

@@ -171,9 +171,9 @@
                 "Physical"
               ],
               "priority": [
-                "Melee Low Melee Mid (3rd hit / max charge)",
+                "Melee Low\nMelee Mid (3rd hit / max charge)",
                 "Melee Low",
-                "Melee Low Melee Mid (3rd hit / max charge)"
+                "Melee Low\nMelee Mid (3rd hit / max charge)"
               ],
               "exForce": [
                 "30",

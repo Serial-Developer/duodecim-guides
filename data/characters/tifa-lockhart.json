@@ -84,7 +84,7 @@
               "damage": "24 (1, 2 x 10, 3)",
               "startup": "31F",
               "type": "Magical",
-              "priority": "Ranged Low Ranged Mid (Explosion)",
+              "priority": "Ranged Low\nRanged Mid (Explosion)",
               "exForce": "0",
               "effects": "Wall Rush",
               "cancels": "Dodge",
@@ -119,7 +119,7 @@
               "priority": "Melee Low",
               "exForce": "30",
               "effects": "Wall Rush, Feint",
-              "cancels": "Dodge, Attack (Kick) Feint (Second Hit)",
+              "cancels": "Dodge, Attack (Kick)\nFeint (Second Hit)",
               "assistGain": "",
               "cp": "30 (15)",
               "description": "[Close] A low-to-high kick combo. Can combo without hitting.",
@@ -869,7 +869,7 @@
                   "Meteor Crusher"
                 ],
                 [
-                  "Somersault(from Waterkick)",
+                  "Somersault\n(from Waterkick)",
                   "Rolling Blaze"
                 ]
               ]
@@ -1252,12 +1252,12 @@
                 [
                   "Back-Breaking Straw",
                   "Together as One  / accessory of your choice",
-                  "Back-Breaking Straw negates Thornlet's bravery boost penalty on dodge and block. The damage output is still high even with the penalties, so if it doesn't feel deterring, it can be replaced with Together as One for more assist meter at the start which is good for stability. Otherwise this can be exchanged to suit the player preference or match-up."
+                  "Back-Breaking Straw negates Thornlet's bravery boost penalty on dodge and block. The damage output is still high even with the penalties, so if it doesn't feel deterring, it can be replaced with Together as One for more assist meter at the start which is good for stability.\nOtherwise this can be exchanged to suit the player preference or match-up."
                 ],
                 [
                   "Muscle Belt  and Summon Unused",
                   "Battle Hammer  and BRV = 0",
-                  "This is for adding assist depletion to the build. Muscle Belt doesn't benefit from BRV = 0 booster, whereas Battle Hammer does, so the booster is swapped out for something stronger and more consistent.BRV = 0 applies to wall rush damage and meter depletion."
+                  "This is for adding assist depletion to the build. Muscle Belt doesn't benefit from BRV = 0 booster, whereas Battle Hammer does, so the booster is swapped out for something stronger and more consistent.\nBRV = 0 applies to wall rush damage and meter depletion."
                 ],
                 [
                   "Best Dresser (extra ability)",
@@ -1319,7 +1319,7 @@
                   "Meteor Crusher"
                 ],
                 [
-                  "Somersault(from Waterkick)",
+                  "Somersault\n(from Waterkick)",
                   "Rolling Blaze"
                 ]
               ]

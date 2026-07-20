@@ -384,7 +384,7 @@
               "variants": null,
               "image": "https://dissidia.wiki/images/7/7f/Hp_cloud_of_darkness_wrath_g_1.jpeg",
               "damage": "9 (1 x 9)",
-              "startup": "1F~13F (Block) ~56F (missed block recovery) 45F (counter attack)",
+              "startup": "1F~13F (Block)\n~56F (missed block recovery)\n45F (counter attack)",
               "type": "Magical",
               "priority": "Block High / Ranged High",
               "exForce": "87",
@@ -453,7 +453,7 @@
               "variants": null,
               "image": "https://dissidia.wiki/images/4/4a/Hp_cloud_of_darkness_wrath_A_1.jpeg",
               "damage": "1 x 9 (9)",
-              "startup": "1F~13F (Block) ~56F (missed block recovery) 45F (counter attack)",
+              "startup": "1F~13F (Block)\n~56F (missed block recovery)\n45F (counter attack)",
               "type": "Magical",
               "priority": "Block High / Ranged High",
               "exForce": "87",
@@ -589,13 +589,13 @@
                   "Condition\nCombo\nBase Damage\nEX\nNotes"
                 ],
                 [
-                  "BRV StarterGround, Wall\nTentacle of Spite 1 (Sweep) > WR > AST BRV > Wide Angle Particle Beam\n???\n???"
+                  "BRV Starter\nGround, Wall\nTentacle of Spite 1 (Sweep) > WR > AST BRV > Wide Angle Particle Beam\n???\n???"
                 ],
                 [
-                  "BRV StarterAir, Wall Rush (Ground)Air-to-Ground BRV to HP\nTentacle of Scorn 2 (Vertical) > WR > AST BRV > Free Air Dash > 0-form Particle Beam\n???\n???"
+                  "BRV Starter\nAir, Wall Rush (Ground)\nAir-to-Ground BRV to HP\nTentacle of Scorn 2 (Vertical) > WR > AST BRV > Free Air Dash > 0-form Particle Beam\n???\n???"
                 ],
                 [
-                  "Projectile StarterProjectile Conversion\nTentacle of Spite 3 (Orb) > AST BRV > Tentacle of Pain 3 (Bolts) > Anti-Air Particle Beam\n???\n???"
+                  "Projectile Starter\nProjectile Conversion\nTentacle of Spite 3 (Orb) > AST BRV > Tentacle of Pain 3 (Bolts) > Anti-Air Particle Beam\n???\n???"
                 ]
               ]
             }

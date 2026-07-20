@@ -93,8 +93,8 @@
                 "Physical"
               ],
               "priority": [
-                "Melee Low Melee Mid (2nd hit)",
-                "Melee Low, Melee Mid (2nd hit) Melee High (3rd hit)"
+                "Melee Low\nMelee Mid (2nd hit)",
+                "Melee Low, Melee Mid (2nd hit)\nMelee High (3rd hit)"
               ],
               "exForce": [
                 "30",
@@ -312,8 +312,8 @@
               "image": "https://dissidia.wiki/images/2/28/Hp_garland_earthquake.jpeg",
               "damage": "18 (8, 2 x 5)",
               "startup": "39F",
-              "type": "Physical (axe) Magical (rocks)",
-              "priority": "Melee High (axe) Unblockable (rocks)",
+              "type": "Physical (axe)\nMagical (rocks)",
+              "priority": "Melee High (axe)\nUnblockable (rocks)",
               "exForce": "36",
               "effects": "Wall Rush",
               "cancels": "Dodge",

@@ -892,12 +892,12 @@
                 ],
                 [
                   "After 30 Seconds",
-                  "BRV > Base Value  Battle Hammer  Winged Boots",
+                  "BRV > Base Value \nBattle Hammer \nWinged Boots",
                   "Bravery damage increase. Alternatively, can be used for assist gauge depletion or banish trap bravery reduction."
                 ],
                 [
-                  "Dismay Shock  After 30 Seconds",
-                  "BRV > Base Value  Opponent Empty EX Gauge",
+                  "Dismay Shock \nAfter 30 Seconds",
+                  "BRV > Base Value \nOpponent Empty EX Gauge",
                   "Against opponents who use Side by Side , this is an even bigger bravery damage increase."
                 ]
               ]

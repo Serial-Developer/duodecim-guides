@@ -27,6 +27,14 @@ function cleanText(s) {
     .trim();
 }
 
+// Texte d'un élément avec les <br> convertis en sauts de ligne (sinon cheerio
+// colle les segments : « Combo<br>Howling Fist » -> « ComboHowling Fist »)
+function brText($, el) {
+  const $c = $(el).clone();
+  $c.find('br').replaceWith('\n');
+  return $c.text();
+}
+
 // Libellés des lignes de table de coups : le rendu cassé de {{#tooltip}} remplace
 // certains labels par leur texte d'infobulle -> mapping par mots-clés.
 function rowKey(label) {
@@ -76,7 +84,7 @@ function parseMoveTable($, table) {
     if (ths.length === 1 && tds.length >= 1) {
       const key = rowKey(cleanText($(ths[0]).text()));
       if (!key) continue;
-      const vals = tds.map((td) => cleanText($(td).text()));
+      const vals = tds.map((td) => cleanText(brText($, td)));
       move[key] = vals.length === 1 ? vals[0] : vals;
     }
   }
@@ -268,7 +276,7 @@ function tablesOf($, elems) {
       const rows = $(el)
         .find('> tbody > tr')
         .toArray()
-        .map((tr) => $(tr).find('> th, > td').toArray().map((c) => cleanCell($(c).text())))
+        .map((tr) => $(tr).find('> th, > td').toArray().map((c) => cleanCell(brText($, c))))
         // lignes sans aucune valeur utile (vides ou « - ») : bruit des templates
         .filter((cells) => cells.some((c) => c && c !== '-'))
         .filter((cells) => !(cells.length > 1 && cells.slice(1).every((c) => c === '' || c === '-')));

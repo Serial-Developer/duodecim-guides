@@ -339,6 +339,28 @@ details.move .mv-body::after { content: ""; display: block; clear: both; }
 .chain .pill.hp { border-color: var(--gold); color: var(--gold); }
 .chain .arrow { color: var(--gold); font-weight: bold; }
 
+/* Diagramme Skillchain : une rangée par chaîne, nom en badge or */
+.sc-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--surface-2);
+  flex-wrap: wrap;
+}
+.sc-row:last-of-type { border-bottom: none; }
+.sc-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--gold);
+  min-width: 9.5rem;
+  font-size: 0.95rem;
+}
+.sc-row .chain { margin: 0; flex: 1; min-width: 0; }
+@media (max-width: 599px) {
+  .sc-name { min-width: 100%; }
+}
+
 /* Sources / footer */
 .video-link a {
   display: inline-block;
