@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dissidia-guides",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "3210",
+        "--directory",
+        "C:/Users/jonat/Desktop/Projets/dissidia012-guides/dist"
+      ],
+      "port": 3210
+    }
+  ]
+}
