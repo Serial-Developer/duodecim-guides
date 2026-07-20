@@ -56,11 +56,13 @@ for (const c of [...CHARACTERS, ...SPECIAL]) {
   const s = data.sections;
 
   const checks = [
-    ['overview', (s.overview?.documented && ed?.overview?.length)],
+    // passe d'enrichissement : l'overview/les builds peuvent être remplis depuis des
+    // sources externes (sourcesBySection) même si le wiki ne documente pas la section.
+    ['overview', !!ed?.overview?.length],
     ['unique', s.uniqueMechanics?.documented && (ed?.uniqueMechanics?.intro?.length || false)],
     ['gameplan', !!ed?.gameplan?.length],
     ['matchups', !!(ed?.matchups?.summary?.length)],
-    ['builds', s.builds?.documented && !!ed?.builds?.philosophy?.length],
+    ['builds', !!ed?.builds?.philosophy?.length],
     ['community', !!ed?.communityTech?.length],
   ];
   for (const [id, hasContent] of checks) {

@@ -65,6 +65,11 @@
     {
       "name": "Scoop Art double shot confirm",
       "desc": "Tirer deux projectiles de Scoop Art pour confirmer un combo via dodge cancel ou appel d'assist ; les tirs supplémentaires peuvent être retardés pour confirmer ou simplement ajouter de la présence sur le terrain."
+    },
+    {
+      "name": "Timing du combo Aerith double Shift Break",
+      "desc": "Dans le combo Aerith de LXD92 (Swift Attack > Meo Twister > Aerith > Shift Break > Aerith > Shift Break > Swift Attack > Meo Twister, 4000+ dégâts HP sur petit stage), l'appel d'Aerith pendant Shift Break ne doit pas être trop précoce : sinon l'adversaire sort du gel de Seal Evil et esquive. Il faut appeler l'assist juste avant que la partie HP de Shift Break ne touche.",
+      "source": "https://web.archive.org/web/20131114044756/http://dissidiaforums.com/showthread.php?11981-Zidane-Video-A-Small-Guide"
     }
   ],
   "matchups": {
@@ -76,9 +81,11 @@
     "philosophy": [
       "Zidane est un HP linker qui s'appuie sur les combos assist pour ses gros dégâts. Sa génération d'EX comparativement faible, ses dégâts de base bas et son manque de coups Wall Rush fiables orientent ses builds vers Side by Side et la montée de la bravery de base : avec deux barres d'assist, il dépasse les 6000 dégâts HP sans Wall Rush.",
       "Le build de référence « Side by Side (High Base BRV) » (450 CP, avec Equip Glitch) tourne autour de l'assist Aerith : Piggy's Stick, Chainsaw, Royal Crown, Auto Crossbow, et une batterie d'accessoires (Together As One pour démarrer avec de la jauge d'assist, Hero's Seal qui porte la bravery initiale au-dessus de 2000, Bravery Orb pour remonter plus vite à la bravery de base pendant les combos, plus les boosters Empty EX Gauge, Summon Unused, Pre-EX Mode, Pre-EX Revenge, Dismay Shock, Battle Hammer, invocation Rubicante). Comme Zidane s'appuie sur la bravery de base, l'absence de coups critiques et son faible ATK n'affectent pas ses dégâts. Les PV max sont bas (8454) : c'est un build de type glass cannon, mais un seul combo assist Aerith dépasse 3000 dégâts HP à bravery de base, et plus encore avec les extensions double Aerith et Shift Break. Les 25 points de capacité restants peuvent aller dans Speed Boost+, Ground Dash ou Auto Assist Lock On.",
-      "Côté attaques, les staples recommandés quel que soit le matchup sont Booster 8 (gap closer Melee Mid qui combote en coups aériens), Swift Attack + Meo Twister (poke aérien de référence, HP link principal, démarreur de combo assist) et Tempest + Meo Twister (HP link descendant, plus de dégâts de base que Swift Attack, bon punish aérien). Scoop Art (midair) est classé flexible : projectile longue portée qui convertit en combo assist si deux tirs ou plus touchent, mais dont l'abus expose au dash > poke."
+      "Côté attaques, les staples recommandés quel que soit le matchup sont Booster 8 (gap closer Melee Mid qui combote en coups aériens), Swift Attack + Meo Twister (poke aérien de référence, HP link principal, démarreur de combo assist) et Tempest + Meo Twister (HP link descendant, plus de dégâts de base que Swift Attack, bon punish aérien). Scoop Art (midair) est classé flexible : projectile longue portée qui convertit en combo assist si deux tirs ou plus touchent, mais dont l'abus expose au dash > poke.",
+      "Le guide de LXD92 (dissidiaforums, décembre 2011, via la Wayback Machine), présenté sur le forum comme « probablement le meilleur Zidane » de l'époque, documentait déjà deux builds. Son « High Base BRV Setup » recoupe le build de référence du wiki, formulé indépendamment dès 2011 : environ 1450 de bravery de base, Side by Side, récupération de bravery rapide, Together as One par préférence personnelle (une barre d'assist quasi disponible dès le départ) et Best Dresser requis, au prix d'une défense basse (181) et d'un abandon complet de l'EX ; sur petit stage, son combo Aerith — Swift Attack > Meo Twister > Aerith > Shift Break > Aerith > Shift Break > Swift Attack > Meo Twister — dépasse les 4000 dégâts HP. Sa seconde configuration, « High Base BRV / déplétion extrême assist-EX », remplace Side by Side par une batterie de déplétion au booster maximal d'environ x8 : moins de combos assist garantis, mais un Zidane qui ronge les jauges adverses et peut lui-même exploiter l'EX — avec la possibilité documentée de repasser sur Side by Side en cours de match via les boosters conditionnels.",
+      "Sur le choix des coups, le thread « What ability setup do you use for Zidane? » (dissidiaforums, 2011) montre un consensus proche des staples du wiki — Booster 8 souvent seul au sol, plusieurs joueurs n'équipant aucune HP au sol, Swift Attack jugée indispensable en l'air — mais des désaccords assumés sur le reste : resident waterfowl joue Storm Impulse / Tempest / Swift Attack avec tous les HP links et qualifie Rumble Rush de « block bait » à réserver au punish, Alice préfère Vortex contre Sephiroth, Spike fait tourner Solution 9 et Vortex selon les matchups à longue portée. Côté GameFAQs, le thread « Recommended Zidane and Golbez build » (2015) confirme l'observation de la scène : haute bravery de base + Side by Side pour les combos assist multi-HP, un build de déplétion (Dismay Shock, Battle Hammer) restant l'alternative citée."
     ],
-    "notes": "Substitutions documentées : Summon Unused peut céder sa place à Aerial (booster x1.5 plus fort si le sol n'est pas nécessaire), et Tidal Flame peut être remplacé par Speed Boost++ pour accélérer Zidane au sol et en l'air si le contrôle d'espace n'est pas jugé indispensable."
+    "notes": "Substitutions documentées : Summon Unused peut céder sa place à Aerial (booster x1.5 plus fort si le sol n'est pas nécessaire), et Tidal Flame peut être remplacé par Speed Boost++ pour accélérer Zidane au sol et en l'air si le contrôle d'espace n'est pas jugé indispensable. Les builds et débats de loadout décrits en fin de philosophy proviennent de sources communautaires externes vérifiées (threads dissidiaforums archivés, GameFAQs)."
   },
   "assist": {
     "asAssist": [
@@ -113,6 +120,13 @@
       "date": "2011"
     }
   ],
+  "sourcesBySection": {
+    "builds": [
+      "https://web.archive.org/web/20131114044756/http://dissidiaforums.com/showthread.php?11981-Zidane-Video-A-Small-Guide",
+      "https://web.archive.org/web/20131020104305/http://dissidiaforums.com/showthread.php?10598-What-ability-setup-do-you-use-for-Zidane",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/69751106"
+    ]
+  },
   "limits": [
     "Page matchups du wiki à l'état de stub : aucune analyse par personnage.",
     "Section combos vide dans les sources : aucune route de combo documentée.",
@@ -120,6 +134,7 @@
     "Section assist quasi vide : une seule phrase de synergies, et aucune donnée sur les coups de Zidane en tant qu'assist.",
     "Aucune référence communautaire (vidéos, liens datés) listée dans les sources.",
     "Pas de mécanique unique documentée pour ce personnage.",
-    "Le tableau Forces/Faiblesses du wiki est vide et le champ assist gain des coups n'est pas renseigné."
+    "Le tableau Forces/Faiblesses du wiki est vide et le champ assist gain des coups n'est pas renseigné.",
+    "Les listes d'équipement exactes des deux builds de LXD92 (dissidiaforums) étaient dans des spoilers/images non capturés par la Wayback Machine : seuls les principes rédigés et les stats citées subsistent."
   ]
 }

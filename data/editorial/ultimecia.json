@@ -60,14 +60,30 @@
     {
       "name": "Charged Lance reflector",
       "desc": "La Knight's Lance chargée est un projectile High Priority (Highest Priority à l'apparition) capable de stagger les HP attacks et de renvoyer les projectiles haute priorité — un roadblock qui peut décider du match à lui seul."
+    },
+    {
+      "name": "Time Crush combo loops",
+      "desc": "Le guide « Fallen Chronomancer » documente des boucles propres à l'EX Mode : Charged Knight's Axe > EX Mode + assist > Time Crush > assist > Time Crush > Hell's Judgement, ou Time Crush > Charged Knight's Axe x2 > Time Crush. La boucle axe/Time Crush a été affaiblie par rapport au premier Dissidia mais reste réalisable ; l'activation d'EX Mode vidant la jauge d'assist adverse, Time Crush ne craint pas l'assist punish.",
+      "source": "https://web.archive.org/web/20130121110044/http://dissidiaforums.com/showthread.php?11070-Fallen-Chronomancer-Ultimecia-Guide"
+    },
+    {
+      "name": "Charged Lance ceiling lock",
+      "desc": "Près du plafond, un Wall Rush vers le haut à la Charged Knight's Lance colle l'adversaire entre le plafond et la lance : à la sortie du Wall Rush, il retouche la lance encore active et reprend des dégâts — un quasi-verrouillage documenté par le guide « Fallen Chronomancer ».",
+      "source": "https://web.archive.org/web/20130121110044/http://dissidiaforums.com/showthread.php?11070-Fallen-Chronomancer-Ultimecia-Guide"
     }
   ],
-  "matchups": null,
+  "matchups": {
+    "summary": [
+      "Le guide « Fallen Chronomancer » de SilvaKairi (dissidiaforums, 2011-2012, retrouvé via la Wayback Machine) documente le matchup d'Ultimecia contre la quasi-totalité du cast, et le verdict global est sans appel : la majorité du roster se fait verrouiller par son zoning. La mêlée pure est dominée — Cloud « ne peut tout simplement pas la toucher », Onion Knight et Zidane s'éteignent devant une Charged Knight's Lance laissée en permanence sur le terrain, Kain n'a plus grand-chose dès qu'elle est posée (seul Gungnir la traverse), et The Emperor est qualifié de matchup « risible » : des charged axes en continu l'empêchent de caster Starfall et de se cacher dans ses Flares. Contre Squall (favorable), gare à Aerial Circle, dont l'effet d'absorption l'aspire pendant ses casts ; contre Tifa et Gilgamesh, la consigne s'inverse : ne pas abuser des esquives, que Meteor Crush et Electrocute punissent — Electrocute frappe même à travers les lances chargées.",
+      "Ses matchups sérieux se comptent sur une main d'après le même guide. Kuja est décrit comme le plus dur : ses attaques traversent les charged lances et le recoil de Snatch Blow attrape les esquives — il faut dasher énormément et tenir la pression charged axe/arrow. Sephiroth est « le plus pénible » : face au spam de Shadow Flare, avancer en dash au travers en tirant blades ou charged axe, qui cassent les flares. Garland et Kefka imposent d'équiper Precision Dodge à cause de leurs sorts de foudre, et Exdeath, ancien counter-pick, devient gérable avec le bon set : Great Attractor à la place de Shockwave Pulsar pour contourner Reverse Polarity (une charge complète guard crush même un RP en téléportation), charged arrows et axes en permanence, et surtout jamais d'Auto Assist Lock-On. Dans ces matchs difficiles, le guide recommande un build EX plutôt que Side by Side — vitesse de dash et Time Crush font la différence. Le miroir est un 5-5 « à qui remplit sa jauge EX en premier ».",
+      "Le thread d'époque « Match-up Discussion: Ultimecia » nuance quelques cas. Jecht est débattu : certains la voient le « détruire » à coups de Charged Lance, mais Veysey (côté Jecht) rappelle que Jecht Block traverse la lance chargée, que Beam bien spacé la punit pendant la pose et que l'angle mort sous elle reste exploitable — pour lui, la clé du matchup est la pression constante de Knight's Arrow, la paire Lance/Blade ne reprenant la main que pour recréer l'espace une fois Jecht au contact. Yuna est donnée 6-4, voire 7-3 Ultimecia : la lance bloque Bahamut et lui interdit Shiva à bout portant, seul Valefor passe au travers. Vu du camp adverse (thread « How to Counter Ultimecia »), les réponses citées d'époque sont le Shadow Flare de Sephiroth, les personnages à block dédié (Jecht, Exdeath) et Kuja ; le guide Steam Exdeath de Solde Starlight Serenity (2020) la classe d'ailleurs toujours counter-pick d'Exdeath, grâce à son contrôle de l'espace vertical, ses charged arrows imblocables une fois posées et la menace de Time Crush."
+    ]
+  },
   "builds": {
     "philosophy": [
       "Le build documenté est un hybride « Judgment of Lufenia » avec Equip Glitch (coût CP total supposant le glitch réalisé) : Shooting Star en arme, panoplie Lufenian (Shield, Helm, Armor), assist Kuja, invocation Rubicante et des accessoires boosters (Hyper Ring, Earring, Dismay Shock, Battle Hammer, conditions Summon Unused / Pre-EX Mode / Pre-EX Revenge / Aerial / Opponent Summon Unused, Glutton) pour un multiplicateur maximal de x4,6 — 11626 HP, 916 BRV, 179 ATK, 184 DEF. L'extra ability Master Guardsman est à équiper pour +1000 HP."
     ],
-    "notes": "Un second build est prévu dans les données mais entièrement vide, et les sélections d'attaques des builds ne sont pas renseignées dans les tables."
+    "notes": "Un second build est prévu dans les données mais entièrement vide, et les sélections d'attaques des builds ne sont pas renseignées dans les tables. Le guide « Fallen Chronomancer » de SilvaKairi (dissidiaforums, 2011-2012) documente en revanche un arbitrage de build par matchup : build EX recommandé contre Exdeath, Kuja, Kefka et Sephiroth (vitesse de dash et Time Crush), là où un build Side by Side reste jouable ailleurs, avec des movesets ajustés par adversaire (par exemple Great Attractor à la place de Shockwave Pulsar contre Exdeath)."
   },
   "assist": {
     "asAssist": [
@@ -94,12 +110,24 @@
       "date": "2011"
     }
   ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://web.archive.org/web/20130121110044/http://dissidiaforums.com/showthread.php?11070-Fallen-Chronomancer-Ultimecia-Guide",
+      "https://web.archive.org/web/20120324214716/http://dissidiaforums.com/showthread.php?9542-Match-up-Discussion-Ultimecia",
+      "https://web.archive.org/web/20131106005523/http://dissidiaforums.com/showthread.php?9542-Match-up-Discussion-Ultimecia/page16",
+      "https://web.archive.org/web/20130121105811/http://dissidiaforums.com/showthread.php?10936-How-to-Counter-Ultimecia",
+      "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
+    ],
+    "builds": [
+      "https://web.archive.org/web/20130121110044/http://dissidiaforums.com/showthread.php?11070-Fallen-Chronomancer-Ultimecia-Guide"
+    ]
+  },
   "limits": [
     "Aucun combo n'est documenté (section combos vide, documented: false) : le gameplan repose uniquement sur l'overview et les notes de coups.",
-    "La page matchups est une ébauche (stub) et l'overview ne cite aucun personnage adverse : la section matchups est donc laissée à null.",
+    "La page matchups du wiki est une ébauche : la section matchups est reconstruite depuis les sources compétitives d'époque listées dans sourcesBySection (guide « Fallen Chronomancer » et threads dissidiaforums via la Wayback Machine, guide Steam Exdeath) ; les matchups Lightning, Shantotto et Gabranth y restent non traités (« needs more testing »).",
     "La section assist est marquée non documentée : seules la table de données brutes et la mention « Kuja » en synergie existent, sans évaluation rédigée.",
     "Knight's Axe et Knight's Arrow n'ont aucune note d'usage ; Shockwave Pulsar et Hell's Judgement n'ont que leur description d'une ligne ; les dégâts de Shockwave Pulsar et d'Apocalypse ne sont pas chiffrés (« - »).",
     "Aucune mécanique unique n'est documentée ; le second build est entièrement vide et les sélections d'attaques des builds manquent ; la table Time Crush est en grande partie vide (dégâts, priorité, type non renseignés).",
-    "Aucune référence externe (section references vide) : communityTech est donc un tableau vide ; les valeurs assistGain sont vides pour tous les coups."
+    "La section references du wiki est vide : les entrées communityTech et les sources de sourcesBySection proviennent de recherches externes ; les valeurs assistGain sont vides pour tous les coups."
   ]
 }

@@ -2,7 +2,11 @@
   "slug": "shantotto",
   "tagline": "Mage à distance : presque chaque touche se convertit en dégâts HP",
   "archetype": "Mage à conversion (Spirit Magic)",
-  "overview": null,
+  "overview": [
+    "Shantotto est un mage de conversion et de patience : presque n'importe quelle touche se transforme en dégâts HP, et son jeu entier pivote sur Stun — instantané à 13 frames, sans dégâts, qui annule l'attaque adverse et se cancel en attaque sur hit. Les joueurs d'époque résumaient le personnage d'une formule : « Stun > n'importe quoi » — Stun > Stone au sol, Stun > Aero en l'air, Stun > Bio ou une bravery selon la situation. Ses Spirit Magic gagnent un palier de puissance et de hitbox à 2000 puis 4000 de bravery, d'où l'intérêt de sets à haute bravery de base pour rester au palier supérieur.",
+    "Le passage à Duodecim l'a profondément relue, et les threads d'époque en dressent le bilan. Côté buffs : Stun enchaîne désormais dans ses attaques, Retribution traverse les gardes actives (le Delta Attack d'Exdeath, par exemple), A Couple Attacks est devenue nettement plus rapide, et toucher avec un sort accélère l'incantation des suivants — ce qui rend les chaînes complètes réalisables. Côté nerfs : le Manafont de son EX Mode a été fortement affaibli (il ne fait plus que reconstituer la bravery après une HP attack réussie, loin de l'abus permanent du premier Dissidia), Bio se réfléchit au block et Bind ne stagge plus un adversaire en pleine attaque.",
+    "Son niveau divisait la communauté d'époque : les uns la jugeaient « nerfée, mauvaise », les autres « l'un des personnages les plus redoutables » — ces derniers soulignant qu'elle était enfin utile hors EX Mode. Tous s'accordaient sur le fond : c'est le personnage de la patience par excellence, qui punit les erreurs adverses plutôt qu'il n'impose son rythme, et qui récompense l'exécution par de gros sorts mérités."
+  ],
   "tierNote": "Classée 23e (tier B) dans la tier list compétitive 2017. La page du wiki ne fournit pas de texte d'overview permettant de contextualiser ce classement.",
   "strengths": [
     "Excellente conversion : Shantotto transforme presque n'importe quel hit en dégâts HP avec un peu d'exécution, et prolonge de manière fiable avec les assists.",
@@ -41,8 +45,44 @@
     "Les sources ne fournissent pas d'overview rédigée, mais le tableau forces/faiblesses dessine le plan de jeu : convertir presque n'importe quel hit en dégâts HP avec un peu d'exécution, puis prolonger avec les assists. Stun, instantanée à 13 frames, sert de pivot au whiff punish en combotant vers les Spirit Magic ; toutes ses HP attacks et Retribution génèrent beaucoup d'EX Force, qui s'accumule d'autant plus que les combos sont bien exécutés.",
     "Bio ajoute un levier de contrôle unique : un adversaire empoisonné est instantanément break s'il touche Shantotto avec une HP attack, ce qui permet, hors situation de match point, de le priver de ses HP attacks pendant une période. En contrepartie, il faut composer avec l'absence de Wall Rush sur ses HP attacks, une recovery énorme, la vulnérabilité de presque toutes ses attaques aux punish d'assist et une forte exposition à Glutton sur l'absorption d'EX à moyenne distance."
   ],
-  "advancedTech": null,
-  "matchups": null,
+  "advancedTech": [
+    {
+      "name": "Stun > Stone, le seul enchaînement garanti",
+      "desc": "Les joueurs d'époque ne considéraient qu'une seule chaîne de Stun comme garantie : Stun > Stone, à condition que l'adversaire soit au sol ou tout près. Stun > Aero, souvent présenté comme la valeur sûre aérienne, ne l'est pas : le landing lag peut laisser l'adversaire sortir — constat confirmé en LAN, pas seulement contre l'IA.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "Chute induite par Stun",
+      "desc": "Stun réactive immédiatement la gravité de la cible : un adversaire touché en l'air tombe comme une pierre. Conséquence : Retribution ou Bio ratent si la cible est trop basse — les chaînes de Stun se planifient au sol ou à hauteur contrôlée, d'autant que les sols à Banish trap (stage FFX, Ultimecia's Castle, la fosse de Pandaemonium) durcissent encore le timing.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "Accélération des sorts sur hit",
+      "desc": "Toucher avec un sort accélère l'incantation des suivants de l'enchaînement : c'est ce qui rend les chaînes complètes de Spirit Magic réalisables — d'où le conseil d'époque de toujours dérouler la chaîne entière une fois le premier sort connecté.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "A Couple Attacks retardée sur Bio",
+      "desc": "Si Bio court vers l'adversaire pendant qu'A Couple Attacks est engagée, retarder chaque coup du combo laisse les ticks de Bio voler de la bravery entre les hits — du vol de bravery inséré gratuitement dans la pression.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "Relais d'assist sur Stun",
+      "desc": "Les routes d'assist d'époque pivotent sur Stun : Stun > assist Kain > Retribution/Aero ; Stun > assist Kuja > Assist Chase > Stun > Retribution/Aero ; au sol, Stun > Kuja > A Couple Attacks (jusqu'au 2e hit) > Assist Chase > Stun > finisher. Les mêmes joueurs reconnaissaient qu'aucun assist ne lui va parfaitement, ses coups étant peu assist-friendly.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "Retribution anti-garde + Seal Evil",
+      "desc": "Retribution traverse les gardes actives type Delta Attack. Avec l'assist Aerith, appeler Seal Evil avant le coup de retour du sceptre fige l'adversaire — fenêtre pour caser Bio puis Retribution ou une HP attack pendant l'entrave.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "Aucun chart de matchups n'a survécu pour Shantotto (la page du wiki est un stub) : les threads d'époque raisonnent par profils d'adversaires. Contre les rushdowns qui collent (« up-in-your-face fighters »), A Couple Attacks sert de coup de dégagement — son troisième hit projette loin et bas, sans aerial recovery possible — et Stun, placé sur le startup d'une attaque adverse, retourne l'agression : c'est son meilleur argument défensif. Contre les personnages à garde active, Retribution est l'outil : elle traverse les blocks du type Delta Attack d'Exdeath.",
+      "Ses matchups difficiles découlent de ses faiblesses structurelles plus que d'adversaires nommés : tout personnage capable de punir à l'assist brute exploite le fait que presque toutes ses attaques y sont vulnérables, et quiconque la presse après une esquive profite de son absence de melee aérien rapide. Bio reste un levier à double tranchant : il dissuade les HP attacks adverses (break instantané si l'adversaire empoisonné la touche en HP), mais se réfléchit au block — les joueurs d'époque le réservaient à l'après-block ou aux hits garantis en combo."
+    ]
+  },
   "builds": {
     "philosophy": [
       "Le build hybride documenté s'appuie sur l'Equip Glitch (le coût total en CP le suppose réalisé) et sur l'extra ability Best Dresser pour +100 de bravery de base — cohérent avec les sets à haute bravery de base qu'elle utilise habituellement (1444 BRV ici). Il associe l'assist Yuna, l'arme Heaven's Cloud, Hero's Shield, Thornlet et Maximillian, avec des accessoires orientés boosters (Dismay Shock, Battle Hammer, BRV = 0, Summon Unused, Blue Gem, Tenacious Attacker, Glutton, First to Victory, Hero's Seal, Miracle Shoes) et Rubicante en summon."
@@ -82,13 +122,22 @@
       "date": "2011"
     }
   ],
+  "sourcesBySection": {
+    "overview": [
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58696836"
+    ],
+    "matchups": [
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666",
+      "https://dissidia.wiki/Shantotto_(Dissidia_012)"
+    ]
+  },
   "limits": [
-    "Pas de texte d'overview sur la page (seul le tableau forces/faiblesses est renseigné) : champ overview laissé à null et gameplan reconstruit uniquement depuis ce tableau.",
-    "La page matchups du wiki est un stub et aucune information de matchup n'apparaît ailleurs : champ matchups laissé à null.",
-    "Aucune section combos renseignée (sous-section Solo vide) malgré la conversion présentée comme sa force principale.",
+    "Pas de texte d'overview sur la page du wiki (seul le tableau forces/faiblesses est renseigné) : l'overview est reconstruit depuis les threads GameFAQs d'époque (2011, listés dans sourcesBySection) et le gameplan uniquement depuis le tableau du wiki.",
+    "Aucun chart de matchups par personnage : la page du wiki est un stub, le résumé matchups repose sur les repères archétypaux des threads d'époque croisés avec les faiblesses documentées par le wiki.",
+    "Aucune section combos renseignée côté wiki (sous-section Solo vide) malgré la conversion présentée comme sa force principale ; les techniques avancées proviennent d'un unique thread GameFAQs (2011).",
     "Notes d'usage détaillées absentes pour la plupart des coups (Stun, Bind, Bio, Retribution et les six Spirit Magic n'ont que la description du jeu et les frame data) ; la note d'A Couple Attacks est tronquée dans les données sources.",
-    "Aucune technique avancée spécifique nommée dans les sources : advancedTech laissé à null.",
     "Pas de section « Unique Mechanics » documentée : champ laissé à null.",
-    "Section assist non documentée au-delà d'une phrase ; valeurs d'assist gain absentes des tableaux de coups ; section References vide : communityTech laissé vide."
+    "Section assist non documentée au-delà d'une phrase ; valeurs d'assist gain absentes des tableaux de coups ; section References du wiki vide."
   ]
 }

@@ -74,15 +74,26 @@
     {
       "name": "Army of One > DC > Thunder (Adamant Chains)",
       "desc": "Loin des murs, ce combo exige l'effet spécial de l'équipement Adamant Chains pour que la distance d'air dodge normale suffise ; près des murs, plafonds et coins, le knockback réduit s'en passe. Génération d'EX exceptionnelle : 210, et jusqu'à 270 en partant de Blizzara — l'un des combos solo les plus générateurs d'EX du jeu."
+    },
+    {
+      "name": "Aerora > Army of One (link garanti)",
+      "desc": "D'après le guide de Suih (GameFAQs, 2012), un hit d'Aerora permet d'enchaîner l'intégralité d'Army of One au sol : contrairement au hit glitch vers Lightning Strike (qui laisse une petite fenêtre d'esquive), ce suivi sort à 100 % tant que la portée le permet. Le guide suggère de couvrir la manœuvre d'un assist que l'adversaire sera forcé d'esquiver.",
+      "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/62070"
     }
   ],
-  "matchups": null,
+  "matchups": {
+    "summary": [
+      "Aucune chart consolidée n'a survécu pour Lightning, mais les threads d'époque de dissidiaforums (retrouvés via la Wayback Machine) dégagent un consensus net sur son pire matchup : Sephiroth, évalué autour de 6-4 en sa défaveur. Shadow Flare punit les startups de Watera et Blizzara, interdit Cure/Cura à portée et couvre Sephiroth pendant qu'il construit sa jauge ; Thunder est à peu près la seule réponse qui passe — ce qui n'est pas rien, puisqu'il remplit vite assist et EX. Les contre-mesures documentées dans les threads : camper le sol sous Thundaga, que Sephiroth ne peut pas punir proprement, jouer un keepaway à base d'Omni Air Dash+ et de BRV Boost on Dodge en grattant de la bravery avec Cure (Cura est déconseillé à portée de Shadow Flare, son startup se fait toucher), et punir à l'assist les dodge cancels qui suivent chaque flare.",
+      "The Emperor est l'autre matchup pénible d'après le thread « Lightning's Toughest Opponent » : le Magic Block de Starfall neutralise la quasi-totalité de ses sorts Ravager (Fire, Blizzara, Thunder, Thundaga, Aerora, Ruin, Ruinga, jusqu'à Blaze Rush), la forçant vers des HP punissables par assist ; le conseil récurrent est de ne jamais le laisser installer ses traps, de lui rester collée aux basques — quitte à sortir Medic de la rotation le temps du match. Exdeath est cité par plusieurs joueurs comme son adversaire le plus ingrat (l'omniblock répond à tout), et Golbez revient sans cesse : « une Lightning au sol est une Lightning morte » — rester au-dessus de lui réduit le problème à Sector Ray et Nightglow, mais presque chaque bravery de Golbez convertit en Cosmic Ray. Ponctuellement, Jecht Block est signalé comme neutralisant Watera, et côté Firion, LonelyGaruga décrit (début 2012) un matchup confortable pour Firion : Straightarrow et Thunder punissent Watera, Shield Bash bloque Blizzara, et Fire/Thunder/Straightarrow couvrent le camping Cure/Cura.",
+      "En face de ça, plusieurs mainers du forum estiment qu'elle n'a aucun matchup ingagnable, sa polyvalence de Paradigm lui laissant toujours une réponse. Cloud est donné légèrement en sa faveur : il n'a pas de réponse sûre à Watera et elle le domine dans les airs, où elle a tout intérêt à l'attirer à coups de Blizzara/Watera. Le guide Steam Exdeath de Solde Starlight Serenity (2020) décrit de son côté un match « fun and heated » où Thunderfall, sa principale menace, s'échappe en assist-cancel suivi d'un block du segment HP — signe que même ses meilleurs outils demandent d'être variés pour passer."
+    ]
+  },
   "builds": {
     "philosophy": [
       "Deux builds sont documentés, tous deux avec l'Equip Glitch supposé pour le coût total en CP et le summon Rubicante. Le build « Adamant Chains + EX » (450 CP, booster x1.4, 10972 HP) monte le set Adamant complet avec Zantetsuken pour l'effet spécial Adamant Chains — celui qui débloque Army of One > DC > Thunder sans mur — avec l'assist Aerith et des accessoires orientés EX (BRV = 0, White Drop x3, White Gem, Tenacious Attacker, Glutton, Great Gospel, Dismay Shock, Battle Hammer). Master Guardsman peut s'équiper pour +1000 HP.",
       "Le build « Hybrid » (480 CP, booster x3.5) mise sur une base bravery élevée (1414) : Piggy's Stick, Hero's Shield, Royal Crown et Maximillian, assist Tidus (ou au choix du joueur), et des boosters conditionnels (Hyper Ring, Large Gap in HP, Summon Unused, Pre-EX Mode, Pre-EX Revenge, Hero's Essence, Tenacious Attacker, Glutton). L'extra ability Best Dresser ajoute +100 de base bravery."
     ],
-    "notes": "Les tableaux « Bravery attacks / HP attacks » des deux builds sont vides dans les données extraites : les loadouts de coups recommandés par build ne sont pas connus."
+    "notes": "Les tableaux « Bravery attacks / HP attacks » des deux builds sont vides dans les données extraites : les loadouts de coups recommandés par build ne sont pas connus. Le FAQ d'époque de TWOxACROSS (« Invoke my name — I am Spark », dissidiaforums, 2011) argumente en revanche le choix des types d'équipement : dagues (bonus Initial EX Force+) pour les builds EX « one-shot », katanas (base bravery élevée et EX Intake Range+ en fin de progression) pour le chipping HP agressif au prix de la DEF, Heaven's Cloud plutôt que Zwill Crossblade pour un EX Rush constant, et sets Super Rocket (glass cannon) ou Genji (Soul of Yamato) selon le plan EX retenu."
   },
   "assist": {
     "asAssist": [
@@ -117,11 +128,22 @@
       "date": "2011"
     }
   ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://web.archive.org/web/20120109220333/http://dissidiaforums.com/showthread.php?9535-Match-up-Discussion-Lightning",
+      "https://web.archive.org/web/20120521184354/http://dissidiaforums.com/showthread.php?9535-Match-up-Discussion-Lightning/page3",
+      "https://web.archive.org/web/20120108193315/http://dissidiaforums.com/showthread.php?8722-Lightning-s-Toughest-Opponent",
+      "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
+    ],
+    "builds": [
+      "https://web.archive.org/web/20120110170330/http://dissidiaforums.com/showthread.php?7184-quot-Invoke-my-name-I-am-Spark-quot-Lightning-FAQ"
+    ]
+  },
   "limits": [
-    "La page matchups du wiki est un stub sans contenu, et l'overview ne détaille aucun matchup nommé : matchups à null.",
+    "La page matchups du wiki est un stub : la section matchups est reconstruite depuis les threads d'époque de dissidiaforums (via la Wayback Machine) et le guide Steam Exdeath listés dans sourcesBySection ; aucune chart complète n'a survécu, seuls les matchups réellement discutés (Sephiroth, Emperor, Exdeath, Golbez, Cloud, Firion, Jecht) sont couverts.",
     "La section « mécaniques uniques » est marquée non documentée sur le wiki : le Paradigm Shift n'est décrit que dans l'overview et la partie EX Mode de la page (repris ici dans overview, exMode et gameplan), d'où uniqueMechanics à null.",
     "La section assist est marquée non documentée (une seule phrase générique) : l'évaluation de Lightning en tant qu'assist repose uniquement sur la tier list assist de meta-lite.json.",
-    "Aucune référence externe (section References vide) : communityTech vide.",
+    "La section References du wiki est vide : les entrées communityTech et les sources de sourcesBySection proviennent de recherches externes.",
     "Frame data incomplète : startup de Flourish of Steel inconnu (« ? »), dégâts de Crushing Blow non renseignés (« - »), champs cancels et assistGain vides pour tous les coups.",
     "Les vidéos de combos et la vidéo du magic block de Thunderfall sont mentionnées sans URL exploitable."
   ]

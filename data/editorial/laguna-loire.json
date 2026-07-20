@@ -73,14 +73,30 @@
     {
       "name": "Electro Shield repositioning",
       "desc": "La version au sol d'Electro Shield met Laguna en état aérien pendant l'animation, ce qui permet de se replacer immédiatement d'un backdodge après la pose du bouclier."
+    },
+    {
+      "name": "Sticky Bomb break trade",
+      "desc": "Application documentée par le guide de Balguna (dissidiaforums, 2011) : coller une Sticky Bomb puis laisser volontairement l'adversaire placer son HP — l'explosion pendant son attaque garantit quasiment le Bravery Break en retour (seule une Shantotto en EX Mode y échappe).",
+      "source": "https://web.archive.org/web/20120306072914/http://dissidiaforums.com/showthread.php?9619-The-Man-with-More-Than-a-Machine-Gun-a-Laguna-Loire-guide"
+    },
+    {
+      "name": "Ricochet Shot aimed shots",
+      "desc": "Le tir principal se vise avant de partir : tiré dans ses propres pieds, il ricoche à la verticale et sert d'anti-air ; banké sur un mur proche, il frappe l'adversaire de flanc ou de dos — de quoi contourner un block, voire déclencher Sneak Attack (guide de Balguna, 2011).",
+      "source": "https://web.archive.org/web/20120306072914/http://dissidiaforums.com/showthread.php?9619-The-Man-with-More-Than-a-Machine-Gun-a-Laguna-Loire-guide"
     }
   ],
-  "matchups": null,
+  "matchups": {
+    "summary": [
+      "Le thread « Match-up Discussion: Laguna » de dissidiaforums (retrouvé via la Wayback Machine) contient une vraie chart rédigée par Erourk, mainer du personnage (octobre 2011, volontairement hors assists), puis discutée et amendée par les habitués du forum. Ses rares avantages : Onion Knight 7-3, « sans doute son matchup le plus facile » — l'Electroshield éteint toutes les braveries d'OK et chacun de ses HP (Blade Torrent, Comet, Wind Shear) se punit par Ricochet Shot, Satellite Laser ou Split Laser ; et Cecil 6-4, dont le kit Paladin rebondit sur le bouclier, ne laissant que la forme Dark Knight pour espérer mieux. Garland est son 5-5 « le plus fun » (deux personnages au double plan sol/air qui se punissent mutuellement), Kain tourne autour du 5-5, et The Emperor est un 4.5-5.5 très dépendant du stage : au sol Laguna domine (Ragnarok Buster annule les Flares), en l'air Starfall le déborde, et un petit stage lui permet de rester au sol à menacer de Satellite Laser.",
+      "Le reste du tableau penche de l'autre côté. WoL 3-7 : ses hitbox disjointes traversent l'Electroshield (qui ne renvoie que les corps, pas les armes), Shield of Light annule le punish au Ricochet et Shining Wave le force à découvert. Golbez 3-7 : Glarehand et Rising Wave déchirent tous ses cooldowns et Nightglow reflète Ricochet Shot. Firion 3.5-6.5 : ses sorts non reflétables passent au travers du bouclier et Shield Bash annule là aussi le punish Ricochet. Sephiroth est le pire de tous (jusqu'à 2.5-7.5 dans la discussion) : rien contre le spam de Shadow Flare, et Hell's Gate ignore Satellite Laser comme Split Laser. S'y ajoutent Kuja (Remote Flare éteint ses options à distance, « quasiment aucune chance d'entrer contre un Kuja intelligent »), Yuna (les aeons traversent l'Electroshield « comme du beurre »), Cloud of Darkness 4-6 à 3.5-6.5, Gabranth 3.5-6.5 selon le stage, et Kefka comme Exdeath très ingrats — un Exdeath à deux barres le verrouille, même si un Shotgun bien spacé le sort de Reverse Polarity. Le fil rouge de toutes ces analyses : chaque erreur coûte bien plus cher à Laguna qu'à l'adversaire, et il reste un « sitting duck » pour les assists.",
+      "Deux matchups plus disputés méritent le détail. Ultimecia : jugé « futile » par certains, mais ramené à 4-6, voire 3.5-6.5, par un mainer — Laguna fait partie des personnages qui craignent le moins Knight's Lance ; posté dans son Electroshield à distance et à hauteur égales, il répond au spam d'arrows par Homing Bazooka (au homing bien supérieur aux axes qu'elle peut lui opposer), et peut même agresser par en dessous (Ragnarok Blade sur esquive, Pummel hors couverture des lances) ; ce sont les assists, pas le neutral, qui font pencher le match, Ultimecia étant bien plus dure à punir que lui. Cloud : 55-45 à 6-4 Laguna pour les uns — en théorie Cloud ne peut pas le toucher, et le Cloud d'un match commenté du thread confirme la difficulté — mais un bon Cloud collé à ses talons, Rising Fang pour couvrir ses esquives et Double Cut pour interrompre les poses de bouclier, renverse le rapport. Le guide Steam Exdeath de Solde Starlight Serenity (2020) considère de son côté le matchup favorable à Exdeath, la faute au faible jeu de bravery de Laguna."
+    ]
+  },
   "builds": {
     "philosophy": [
       "Le build documenté est un build « Side by Side » avec effet spécial Judgment of Lufenia et Equip Glitch (coût CP total supposant le glitch réalisé) : Lufenian Axe, Lufenian Shield, Lufenian Helm et Auto Crossbow, assist Kuja ou Jecht, invocation Rubicante, et des accessoires boosters (Muscle Belt, Sniper Eye, Battle Hammer, conditions Empty EX Gauge / Summon Unused / Pre-EX Mode / Pre-EX Revenge / Grounded / Opponent Summon Unused, Side By Side) culminant à un multiplicateur maximal de x6,9 — 9377 HP, 956 BRV, 180 ATK, 184 DEF."
     ],
-    "notes": "Un second build est prévu dans les données mais entièrement vide, et les sélections d'attaques des builds ne sont pas renseignées dans les tables."
+    "notes": "Un second build est prévu dans les données mais entièrement vide, et les sélections d'attaques des builds ne sont pas renseignées dans les tables. Les sélections d'attaques compétitives sont en revanche documentées ailleurs : le guide de Balguna (dissidiaforums, 2011) impose Ricochet Shot (« à toujours équiper ») avec Electroshield et/ou Pummel au sol, et Pummel/Homing Bazooka/Sticky Bomb comme staples aériens (Shotgun en option pour le Wall Rush et les liens d'assist) ; le guide Steam Exdeath (2020) décrit les loadouts des Laguna compétitifs comme Pummel/Ricochet Shot/Electroshield au sol et Pummel/Shotgun/Sticky Bomb en l'air, « tout autre loadout se bloquant facilement »."
   },
   "assist": {
     "asAssist": [
@@ -125,12 +141,25 @@
       "date": "2011"
     }
   ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://web.archive.org/web/20120521160123/http://dissidiaforums.com/showthread.php?9543-Match-up-Discussion-Laguna/page2",
+      "https://web.archive.org/web/20120521173218/http://dissidiaforums.com/showthread.php?9543-Match-up-Discussion-Laguna/page3",
+      "https://web.archive.org/web/20120521143521/http://dissidiaforums.com/showthread.php?9543-Match-up-Discussion-Laguna/page5",
+      "https://web.archive.org/web/20120521175002/http://dissidiaforums.com/showthread.php?9543-Match-up-Discussion-Laguna",
+      "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
+    ],
+    "builds": [
+      "https://web.archive.org/web/20120306072914/http://dissidiaforums.com/showthread.php?9619-The-Man-with-More-Than-a-Machine-Gun-a-Laguna-Loire-guide",
+      "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
+    ]
+  },
   "limits": [
     "Pas de table forces/faiblesses sur la page wiki : les listes ci-dessus sont dérivées de la prose de l'overview et des notes de coups.",
     "Frame data très incomplète : Machine Gun, Grenade Bomb, Pummel, Missile Barrage et Electro Shield n'ont ni startup, ni priorité, ni EX Force chiffrés dans les données (seuls les multiplicateurs de dégâts sont présents) ; les dégâts de Ragnarok Blade et Split Laser ne sont pas chiffrés (« - »).",
     "Aucun combo n'est documenté (section combos vide, documented: false).",
-    "La page matchups est une ébauche (stub) et l'overview ne cite aucun adversaire : matchups laissé à null. Seules mentions ponctuelles dans les notes de coups : clash de Ragnarok Buster avec Maelstrom/Holy, punish de Quick Hit au Split Laser.",
+    "La page matchups du wiki est une ébauche : la section matchups est reconstruite depuis la chart d'Erourk et les discussions du thread d'époque de dissidiaforums (via la Wayback Machine, chart établie hors assists) plus le guide Steam Exdeath ; certains matchups n'y sont pas couverts (Terra, Tifa, Squall, Zidane, Bartz, Prishe, Vaan, Tidus, Lightning). Les notes de coups gardent leurs mentions ponctuelles (clash de Ragnarok Buster avec Maelstrom/Holy, punish de Quick Hit au Split Laser).",
     "La section assist se réduit à trois noms (« Yuna, Jecht, Aerith. ») sans aucune justification, et aucune donnée de Laguna en tant qu'assist n'existe : les recommandations sont livrées telles quelles.",
-    "Aucune mécanique unique documentée ; aucune référence externe (communityTech vide) ; second build vide et sélections d'attaques manquantes ; valeurs assistGain vides."
+    "Aucune mécanique unique documentée ; second build vide et sélections d'attaques absentes des tables du wiki (les staples compétitifs sont désormais documentés dans builds.notes via des sources externes) ; valeurs assistGain vides."
   ]
 }

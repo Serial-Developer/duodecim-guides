@@ -106,7 +106,13 @@
       "desc": "Le cue sonore de Sonic Buster est le même que celui du block de Tidus : des spot dashes permettent de le masquer et de piéger les adversaires qui jouent à l'oreille."
     }
   ],
-  "matchups": null,
+  "matchups": {
+    "summary": [
+      "Le thread matchup d'époque de dissidiaforums (retrouvé via la Wayback Machine) fixe le cadre, et le diagnostic d'axeeeeL y a fait consensus : Tidus n'a pas de matchup largement favorable — presque tout son tableau tient en 5-5, 6-4 ou 4-6, avec Sephiroth et Exdeath comme exceptions franchement défavorables. Ses meilleurs matchs cités : The Emperor, « impuissant contre son dodge game » ; Tifa, donnée 6-4 (le lag de ses feints incomplètes nourrit ses contres, et le faible cooldown de Hop Step lui permet de re-esquiver avant que les feints ne touchent) ; et Vaan, favorable d'après l'analyse la plus détaillée du thread : les dodge attacks punissent les switchs Greatsword et Spear à la relâche, tous les coups on-hand se bloquent, et Slice & Dice reflète Windburst en plaçant Tidus à l'abri de l'assist punish.",
+      "Contre Sephiroth, le plan qui revient est de lui rester collé : Hop Step en spam pour la jauge (son faible cooldown passe sous le Shadow Flare), mindgames au corps à corps, et Dart & Weave comme seule dodge attack encore capable de punir Sudden Cruelty depuis la réduction de son cooldown dans Duodecim. Contre Exdeath, l'omniblock mange Jecht Shot et les esquives ; les avis du thread convergent vers un noyau Hop Step/Full Slide avec Energy Rain ou Jecht Shot en mixup, et des assists utilisés en diversion plus qu'en combo. Squall est un 5-5 de mindgames, plutôt au sol, où Sphere Shot sert d'appât sans être spammé ; Terra divise le thread, d'« aucun match contre Tidus » (ses sorts basse priorité se traversent au dash, Charge & Assault reflète Meltdown) à « avantage Terra » (elle le tient à distance avec Holy/Blizzara et exploite son manque d'options longues).",
+      "Deux points noirs signalés dès 2011 : l'Ultimecia campeuse derrière Knight's Lance, très dure à approcher pour lui, et Jecht, qualifié d'« enfer » par un mainer aux côtés de Sephiroth. Ces adaptations passent d'abord par le choix de la dodge attack et du reste du set selon l'adversaire — la logique de sets par matchup plutôt que de moveset unique, confirmée par le thread « Tidus matchup builds » et déjà reflétée dans la section builds. Vu du camp adverse, le guide Steam Exdeath de Solde Starlight Serenity (2020) confirme la parade à ses HP : assist-out immédiat sur Jecht Shot ou Energy Rain, puis omniblock au plus tôt sur les segments bravery."
+    ]
+  },
   "builds": {
     "philosophy": [
       "Le build principal documenté est un hybride orienté dégâts : World Champion, pièces Lufenian (effet Seal of Lufenia, Lufenian Dirk obtenu via l'Equip Glitch avec Thief's Gear), assist Aerith, invocation Scarmiglione et un multiplicateur de booster maximal de x8,2 qui fournit de la valeur constante pendant la majorité du match. Reverse Ground Dash y est mis en avant comme moyen de défendre tout en construisant la jauge d'assist, et le build capitalise sur la course rapide de Tidus, ses sauts aériens multiples et les critiques de Sneak Attack. 30 CP restent disponibles pour des braveries au sol supplémentaires, une dodge attack + Quick Hit ou des extra abilities.",
@@ -201,9 +207,17 @@
       "date": null
     }
   ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://web.archive.org/web/20130129195247/http://dissidiaforums.com/showthread.php?9440-Tidus-matchup-discussion",
+      "https://web.archive.org/web/20130129195149/http://dissidiaforums.com/showthread.php?9440-Tidus-matchup-discussion/page2",
+      "https://web.archive.org/web/20130129195818/http://dissidiaforums.com/showthread.php?10167-Tidus-matchup-builds-Dodge-moves",
+      "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
+    ]
+  },
   "limits": [
     "L'overview extrait du wiki est presque exclusivement consacré à l'EX Mode : aucune synthèse générale d'archétype, de neutral ou d'historique compétitif n'y figure — l'accroche et l'archétype sont déduits des notes de coups et de la section builds.",
-    "Page matchups à l'état de stub et overview sans contenu matchup — matchups à null ; les adaptations par adversaire ne sont documentées qu'à travers les builds (anti-Emperor, anti-Sephiroth) et les recommandations d'attaques.",
+    "La page matchups du wiki est un stub : la section matchups est reconstruite depuis le thread matchup d'époque de dissidiaforums (via la Wayback Machine) et le guide Steam Exdeath listés dans sourcesBySection ; les avis y sont parfois contradictoires (Terra notamment) et aucune chart chiffrée complète n'existe — les adaptations par adversaire restent aussi documentées via les builds (anti-Emperor, anti-Sephiroth) et les recommandations d'attaques.",
     "Pas de mécanique unique documentée — uniqueMechanics à null.",
     "Aucune fiche chiffrée de l'EX Burst (nom, dégâts, déroulé) dans les données ; seuls les effets de l'EX Mode sont listés, et Mirror Dash comme Caladbolg (DODGE) ne sont pas expliqués.",
     "Un seul combo solo documenté (Dart & Weave > DC > Hop Step) ; la page combos dédiée n'est pas extraite.",

@@ -68,7 +68,33 @@
     "Ses braveries s'enchaînent : les versions (One) démarrent la chaîne, les follow-ups (Two) décident de la suite — Chase et gros gains d'EX (Combo, Raging Fists, Dragon Kick) ou Wall Rush pour poser l'assist (Backhand Blow, One Inch Punch, Spinning Attack, Shoulder Tackle). Les finishers Backhand Blow préparent particulièrement bien les combos avec l'assist Kuja, et les Skillchains ajoutent des dégâts bonus sur certains sets. Attention au dilemme des slots : une seule chaîne par slot de bravery, donc pas de couverture complète.",
     "Ses HP attacks au tracking médiocre restent le maillon faible : Asuran Fists et Auroral Uppercut sont ses plus rapides (43 frames, Wall Rush), Nullifying Dropkick et Banishga à portée maximale servent de 1-hit HP situationnelles pour les checkmates en EX Revenge — sinon, déplacement et assist font le travail. En EX Mode, Hundred Fists permet de chaîner jusqu'à trois weapon skills et accélère encore sa mobilité, et les combos EX Mode infligent de gros dégâts de bravery, surtout après un guard break."
   ],
-  "advancedTech": null,
+  "advancedTech": [
+    {
+      "name": "One Inch Punch chargé en finisher universel",
+      "desc": "Quelle que soit la situation (EX Mode, Skillchain ou non), One Inch Punch chargé reste son attaque la plus puissante : les joueurs d'époque conseillaient de terminer un maximum de chaînes dessus, en équilibrant les slots entre finishers One Inch Punch (dégâts, Wall Rush) et Dragon Kick (EX Force).",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58732928"
+    },
+    {
+      "name": "Combo > Dragon Kick chargé, la chaîne à EX",
+      "desc": "Toute chaîne démarrée par Combo rapporte environ 10 % d'EX Force en plus, et Dragon Kick chargé est son plus gros générateur d'EX en finisher : la chaîne Combo > Dragon Kick chargé culmine autour de 125 d'EX Force avec Chase — le meilleur rendement EX du personnage, sans aucune Skillchain.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58732928"
+    },
+    {
+      "name": "Double Skillchain en EX Mode",
+      "desc": "Hundred Fists autorise trois weapon skills à la suite : en gardant Spinning Attack en finisher d'un slot, une chaîne devient starter > Spinning Attack (Skillchain) > Spinning Attack (seconde Skillchain) — deux explosions bonus sur un seul engagement.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58732928"
+    },
+    {
+      "name": "Hitbox de Spinning Attack en starter aérien",
+      "desc": "Sa hitbox atypique de ruée ascendante attrape les adversaires pris assez bas, jusque derrière leur garde — un angle d'ouverture peu commun contre un adversaire qui bloque.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58732928"
+    },
+    {
+      "name": "Dragon Kick, l'exception hors Skillchain",
+      "desc": "Dragon Kick ne déclenche aucune Skillchain, ni en starter ni en finisher, mais chargé c'est son attaque au sol la plus forte. Sur l'enchaînement Dragon Kick chargé > One Inch Punch chargé, les sources d'époque divergent : donné comme son combo au sol le plus puissant à égalité par un joueur, jugé quasi inliable (timing extrême) par un autre.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58732928"
+    }
+  ],
   "matchups": {
     "summary": [
       "La page matchups du wiki est un stub, mais l'overview donne des repères : la stratégie de Prishe est constante et relativement simple à exécuter dans la plupart des matchups, ce qui en fait un choix notable en blind pick — elle reste solide même sans avantage net. Ses points de friction documentés : les longs disjoints actifs comme le Thunder Crest de The Emperor ou le Godspeed de Sephiroth, contre lesquels ses attaques au tracking vertical médiocre souffrent."
@@ -108,7 +134,7 @@
     "La page matchups du wiki est un stub : aucune analyse détaillée par personnage (seuls les exemples cités dans l'overview ont pu être repris).",
     "Aucune section combos renseignée (sous-section Solo vide) : pas de routes de combo détaillées au-delà des mentions de l'overview et de la section Skillchain.",
     "Le timing exact de la charge raccourcie de One Inch Punch (Two) en finisher est explicitement non documenté dans les sources.",
-    "Aucune technique avancée spécifique nommée en dehors des Skillchains (traitées dans uniqueMechanics) : advancedTech laissé à null.",
+    "Le wiki ne nomme aucune technique avancée en dehors des Skillchains (traitées dans uniqueMechanics) : les entrées advancedTech proviennent d'un thread GameFAQs d'époque (2011), avec un point de désaccord signalé (liaison Dragon Kick chargé > One Inch Punch chargé).",
     "Le second build (« Build #2 ») est un gabarit vide et les slots d'attaques du build principal ne sont pas renseignés.",
     "Valeurs d'assist gain absentes des tableaux de coups ; section References vide : communityTech laissé vide."
   ]

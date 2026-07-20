@@ -76,6 +76,16 @@
     {
       "name": "Setups à aspiration (Mine / Dreary Cell)",
       "desc": "L'effet d'aspiration des Mines et Dreary Cells sur un adversaire en hit stun crée des réactions en chaîne vers d'autres pièges et des conversions d'assist ; Bombard peut y comboter avec un positionnement précis pour des setups déroutants. Gare toutefois aux assists à Wall Rush au sol gâchés si l'adversaire tombe dans les mines avant Thunder Crest."
+    },
+    {
+      "name": "Riposte / Counterattack sur Thunder Crest",
+      "desc": "Recommandation du guide « Absolute Dominion » de LuckySeven : équiper Riposte pour les blocks précisément timés pendant que Thunder Crest stoppe l'attaque adverse — les dégâts critiques du contre sont jugés trop rentables pour s'en passer. Counterattack joue le même rôle dans les matchups au sol, par exemple quand Thunder Crest interrompt le Blasting Zone de Squall.",
+      "source": "https://web.archive.org/web/20131030022659/http://dissidiaforums.com/showthread.php?14313-Absolute-Dominion-Emperor-Mateus-Guide&p=418967&viewfull=1"
+    },
+    {
+      "name": "Precision Block sur Flare réfléchi",
+      "desc": "Toujours d'après LuckySeven, Precision Block (à équiper sur tous les sets) permet de re-réfléchir le Flare bleu en l'air, comme d'autres projectiles persistants (Watera) : The Emperor récupère ainsi la pression de son Flare face aux personnages capables de le décoller du sol après l'avoir renvoyé.",
+      "source": "https://web.archive.org/web/20131030022659/http://dissidiaforums.com/showthread.php?14313-Absolute-Dominion-Emperor-Mateus-Guide&p=418967&viewfull=1"
     }
   ],
   "matchups": {
@@ -88,9 +98,11 @@
   "builds": {
     "philosophy": [
       "The Emperor fonctionne avec des builds variés : l'EX comme facteur inévitable, ou l'investissement dans les dégâts de bravery. Mais Side by Side est particulièrement efficace pour deux raisons documentées : il touche couramment ses HP attacks sans assist (le gain de jauge s'active à chaque fois), et il récupère de la jauge sur les Starfalls successifs une fois le premier lancé — ce qui mène au fameux Starfall loop avec l'assist Jecht. Les builds Side by Side sont donc très puissants pour lui, sa synergie avec les autres styles laissant néanmoins de la place à l'expression du joueur.",
-      "Le build documenté (450 CP, Equip Glitch supposé) est un Side by Side + haute bravery de base, dans la même veine que ceux de Zidane, Firion et Golbez : 9683 HP, 1683 BRV, 177 ATK, 184 DEF, booster max x3.5 ; assist Jecht ou Yuna, summon Rubicante ; Piggy's Stick (Peltast's Gear), Chainsaw (Equip Machines), Thornlet, Maximillian (Cavalier's Gear), avec Side by Side, Blue Gem et Hero's Seal parmi les accessoires. L'idée : de gros burst damage sur chaque HP attack et le combo d'assist qui suit, énormément de momentum contre les personnages de corps à corps bloqués par les pièges (Jecht, Zidane), et des matchs conclus très vite si un Starfall passe."
+      "Le build documenté (450 CP, Equip Glitch supposé) est un Side by Side + haute bravery de base, dans la même veine que ceux de Zidane, Firion et Golbez : 9683 HP, 1683 BRV, 177 ATK, 184 DEF, booster max x3.5 ; assist Jecht ou Yuna, summon Rubicante ; Piggy's Stick (Peltast's Gear), Chainsaw (Equip Machines), Thornlet, Maximillian (Cavalier's Gear), avec Side by Side, Blue Gem et Hero's Seal parmi les accessoires. L'idée : de gros burst damage sur chaque HP attack et le combo d'assist qui suit, énormément de momentum contre les personnages de corps à corps bloqués par les pièges (Jecht, Zidane), et des matchs conclus très vite si un Starfall passe.",
+      "Le guide « Absolute Dominion » de LuckySeven (dissidiaforums, 2013, via la Wayback Machine) documente quatre builds. Son set principal associe Side by Side au set Succubus : le set rend des HP à un personnage qui touche fiablement ses HP attacks et, avec le glitch de Thunder Crest, un seul combo Thunder Crest > Blue Flare recharge deux barres d'assist complètes. Son build EX s'articule autour de Mateus' Malice, l'arme exclusive de niveau 100 (EX Intake Range +3 m et léger effet anti-EX), qui rapporte trois quarts de barre par Thunder Crest > Blue Flare confirmé. Son build EX Cores est réservé aux matchups de camping où ni Thunder Crest ni Blue Flare ne touchent — Exdeath en tête, Cloud of Darkness aussi. Enfin son build Regen — double Growth Egg avec EXP to HP, set Succubus, Blood Weapon et Angel's Bell — récupère environ 2000 HP sur un combo Thunder Crest > Blue Flare > assist Yuna > Thunder Crest > Blue Flare en EX Mode : il le destine à ses mauvais matchups, où The Emperor encaissera forcément des HP.",
+      "Les threads GameFAQs d'époque confirment cette pluralité d'approches. Sur « best setup for emperor » (2011), Mad_Cartoonist joue un set équilibré EX/assist — l'EX servant uniquement au soin de Blood Magic — avec l'assist Jecht qui plaque l'adversaire au sol pour Thunder Crest ; YonKitoTaoshibe y décrit un set défensif à base de Lore : Heavy Armor, extra +1000 HP et Thornlet dont le malus est neutralisé par Back-Breaking Straw, pour environ 11000 HP et 1225 BRV. Dans « How does one build The Emperor properly? » (2013), le même YonKitoTaoshibe détaille le raisonnement ressources : Earring indispensable, génération d'EX trop basse pour rentabiliser White Gem (un build EX passe par les cores ou par Battle Hammer, Dismay Shock et Judgment of Lufenia boostés), et déplétion d'assist justifiée par le chip naturel de Mateus et sa vitesse de dash médiocre qui limite la course aux cores ; Shihali y ajoute que tout build EX commence par l'arme exclusive et son EX Intake +3 m, suffisante en combat au sol pour remplir la jauge sans chasser les cores."
     ],
-    "notes": "Coups équipés du build : Landmine, Bombard et Thunder Crest au sol, Mine, Dynamite et Light Crest en l'air ; Flare et Dreary Cell en HP au sol, Flare, Starfall et Dreary Cell en l'air. Extras : Perseverance, Disable Counterattack, EXP to HP, Machinery. La page builds dédiée (« The Emperor (012) Builds ») n'est pas incluse dans les données."
+    "notes": "Coups équipés du build : Landmine, Bombard et Thunder Crest au sol, Mine, Dynamite et Light Crest en l'air ; Flare et Dreary Cell en HP au sol, Flare, Starfall et Dreary Cell en l'air. Extras : Perseverance, Disable Counterattack, EXP to HP, Machinery. La page builds dédiée (« The Emperor (012) Builds ») n'est pas incluse dans les données ; les builds alternatifs décrits ci-dessus proviennent de sources communautaires externes vérifiées (guide dissidiaforums archivé, threads GameFAQs)."
   },
   "assist": {
     "asAssist": [
@@ -142,12 +154,19 @@
       "date": "2011"
     }
   ],
+  "sourcesBySection": {
+    "builds": [
+      "https://web.archive.org/web/20131030022659/http://dissidiaforums.com/showthread.php?14313-Absolute-Dominion-Emperor-Mateus-Guide&p=418967&viewfull=1",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/60309094",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/66037556"
+    ]
+  },
   "limits": [
     "Page matchups dédiée non documentée (stub) : la synthèse matchups repose uniquement sur l'overview et les notes de coups.",
     "Aucune mécanique unique documentée (section absente des sources).",
     "Aucune référence externe (section References vide) : pas de communityTech attribuable ; le combo Starfall loop mentionne une vidéo sans URL exploitable.",
     "Article combos dédié (« The Emperor (Combos) ») non inclus : seuls trois combos solo et trois combos Jecht sont détaillés.",
-    "Page builds dédiée (« The Emperor (012) Builds ») non incluse : un seul build Side by Side + haute bravery est détaillé.",
+    "Page builds dédiée (« The Emperor (012) Builds ») non incluse dans le wiki : un seul build Side by Side + haute bravery y est détaillé ; comblé partiellement par des builds communautaires externes (dissidiaforums, GameFAQs) lors de la passe d'enrichissement. Les listes d'accessoires exactes des quatre builds de LuckySeven étaient dans des images aujourd'hui perdues : seuls leurs principes rédigés subsistent.",
     "Valeurs d'assist gain des coups non renseignées dans les données, et décomptes « Opponent Assist (Comrade's Vow) » des combos marqués « ??? »."
   ]
 }

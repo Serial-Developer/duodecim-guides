@@ -71,9 +71,25 @@
     {
       "name": "Lock off Radiant Wings",
       "desc": "Utilisé en lock off, Radiant Wings part dans la direction du regard de Cecil : un moyen de construire la jauge d'assist un peu plus sûrement, l'adversaire ne pouvant plus dash dans Cecil et bloquer aussi facilement."
+    },
+    {
+      "name": "Sacred Cross en esquive-contre (pseudo double dodge)",
+      "desc": "D'après le Competitive Cecil Guide de Hollowed (2011), Sacred Cross bien timé passe sous les attaques mono-hit (Hopstep, Rough Divide) et contre dans la foulée, esquive même des assists, et donne en pratique un double dodge à la Tidus contre certaines attaques. Le guide recommande aussi de s'en servir en feinte / tech trap : présenter une ouverture (block, dodge ou Searchlight/Paladin Force) que Sacred Cross couvre en réalité, et contrer l'adversaire qui mord. Réglé sur Cercle neutre (lock off), il attaque toujours vers le bas et devient un moyen sûr de contrer vite et de construire la jauge d'assist.",
+      "source": "https://web.archive.org/web/20120107184432/http://dissidiaforums.com/showthread.php?10165-Competitive-Cecil-Guide"
+    },
+    {
+      "name": "Link glitch Gravity Ball",
+      "desc": "Le Competitive Cecil Guide note que Gravity Ball, normalement incapable de combo HP hors setup, peut en obtenir un via le link glitch — de préférence lancé depuis dessous l'adversaire, où le glitch passe plus facilement. Risqué, mais cela ajoute une conversion HP à un coup autrement cantonné au harcèlement ; sa trajectoire courbe permet en outre de toucher derrière les blocks depuis au-dessus ou en dessous.",
+      "source": "https://web.archive.org/web/20120107184432/http://dissidiaforums.com/showthread.php?10165-Competitive-Cecil-Guide"
     }
   ],
-  "matchups": null,
+  "matchups": {
+    "summary": [
+      "Vu du côté adverse, Cecil passe pour un adversaire « dangereux » : le guide Golbez de tehdr4g0n (GameFAQs, 2012) décrit deux jeux d'outils entre lesquels il bascule, et détaille ce que craignent les zoners au sol — Dark Cannon mange leurs pokes magiques avec plus de portée (un échange laisse les deux joueurs au corps à corps, où « les options de Cecil sont plus rapides ») et Nightfall combine chute très rapide et stagger sur block, qui ouvre un Soul Eater « ou ce qu'il veut ». Les contre-mesures adverses documentées donnent en creux le plan anti-Cecil : esquiver Dark Cannon au lieu de trader, anticiper Nightfall d'un dodge précoce puis punir d'un jump. Le Paladin est jugé plus menaçant encore : avec Speed Boost++, « presque aussi rapide qu'Onion Knight », et Searchlight éteint le zoning adverse — une touche de Searchlight, « c'est un gros combo garanti, à éviter à tout prix » ; ses options physiques, elles, se bloquent et se punissent. À Cecil d'exploiter cette asymétrie : ses projectiles font peur, ses coups physiques non.",
+      "Côté Cecil, le Competitive Cecil Guide de Hollowed (dissidiaforums, 2011) documente des outils explicitement pensés par matchup : Sacred Cross, bien timé, passe sous les attaques mono-hit et contre — les exemples nommés sont Hopstep de Tidus et Rough Divide de Squall — au point de donner à Cecil « l'équivalent d'un double dodge à la Tidus » contre certaines attaques, assists compris. Lightning Rise est « à réserver comme contre dans des matchups précis » : son magic block répond aux sorts au sol du type Thunder Barret de Squall et protège des dodge punishes en Ranged Low. Contre les mages, Luminous Shard reflète les Ranged Low (l'adversaire doit esquiver son propre sort en plus de la lame) et Saint's Fall coupe à travers Cyclone, Flare, Windburst ou Watera. Autant de réponses ponctuelles qui compensent, matchup par matchup, son absence de poke aérien sûr.",
+      "La vue Firion (guide de b0untyhunter270, GameFAQs, 2012) recoupe le profil risque/récompense de l'overview : « les attaques de Cecil sont très faciles à esquiver » — Dark Cannon, Valiant Blow et Shadow Lance se voient venir et se bloquent ou se Shield Bashent, Radiant Wings et Sacred Cross s'esquivent — mais la seule vraie alerte est Searchlight : s'il touche et que Cecil enchaîne Paladin Force, « il peut vous frapper quelle que soit la distance ». Même les adversaires qui dominent l'échange neutre doivent donc respecter ses starters à projectile, et l'EX Mode (Proteus + Inner Strength) qui lève la contrainte des jobs."
+    ]
+  },
   "builds": {
     "philosophy": [
       "Deux builds sont documentés, Equip Glitch assumé pour le coût CP. Le build « Side by Side (Dark Knight) » : base bravery élevée (1623 BRV), assist Jecht / Sephiroth / Yuna, invocation Rubicante, Piggy's Stick / Chainsaw / Thornlet / Maximillian, boosters (Sniper Eye, Dismay Shock, Battle Hammer, BRV = 0, Empty EX Gauge, Pre-EX Mode, Pre-EX Revenge) plus Blue Gem, Miracle Shoes et Side by Side, pour un Max Booster x3.8.",
@@ -122,8 +138,15 @@
       "date": "2012"
     }
   ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/63562",
+      "https://web.archive.org/web/20120107184432/http://dissidiaforums.com/showthread.php?10165-Competitive-Cecil-Guide",
+      "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/65018"
+    ]
+  },
   "limits": [
-    "La page Matchups du wiki est une ébauche (stub) et l'overview ne contient pas d'analyse exploitable par matchup : section matchups laissée à null.",
+    "La page Matchups du wiki est une ébauche (stub) : la section matchups est sourcée hors wiki (guide Golbez de tehdr4g0n et guide Firion de b0untyhunter270 pour la vue adverse, Competitive Cecil Guide de Hollowed pour les outils par matchup) ; aucune analyse matchup par matchup du point de vue de Cecil n'a été retrouvée.",
     "Le moveset bravery documenté est incomplet (6 coups détaillés seulement) : Valiant Blow, Dark Cannon, Paladin Arts et Shadow Lance apparaissent dans l'infobox, les combos ou les données d'assist sans fiche de coup détaillée.",
     "Aucune évaluation rédigée de Cecil en tant qu'assist : seuls la table de données et le classement Mid de la meta sont disponibles.",
     "Dans les tables de combos, les valeurs « Opponent Assist (Comrade's Vow) » sont notées « ??? » et certains gains d'EX sont partiels.",

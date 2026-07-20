@@ -67,15 +67,26 @@
     {
       "name": "Reel Impulse dodge cancel",
       "desc": "En connectant Reel Impulse à bout portant, le landing lag autorise un dodge cancel vers Blade Crash pour un combo solo."
+    },
+    {
+      "name": "Reset loop Holy -> Flare (Side by Side)",
+      "desc": "Documenté par Djungelkorv sur dissidiaforums (2011) : combo d'assist dans Holy, second Holy immédiat (Link Glitch), puis activer Flare le plus tard possible — l'adversaire doit faire son aerial recovery entre Holy et Flare. La jauge d'assist redevient alors active, Side by Side + EXP to Assist la remplissent, et le tracking de Flare garantit la touche HP (testé : impossible d'y échapper même sans recovery, hors double dodge ou Precision Dodge) — on rappelle l'assist sur Flare et on boucle. Kuja permet la longue portée via le chase et se contente d'une seule vague de Holy ; Jecht inflige le plus de dégâts mais exige un timing et une distance plus stricts ; Aerith facilite le réglage de distance mais n'ajoute aucun dégât.",
+      "source": "https://web.archive.org/web/20131020093302/http://dissidiaforums.com/showthread.php?10794-Bartz-Reset-Combos"
     }
   ],
-  "matchups": null,
+  "matchups": {
+    "summary": [
+      "Le tableau d'ensemble vient de la scène d'époque : à la sortie de la tier list communautaire 2012, les joueurs de dissidiaforums (thread « Bartz Klauser, the second worst character in the game », août 2012) actaient que Bartz n'était 2e pire du jeu que grâce à « son léger avantage sur Laguna » — le seul matchup favorable documenté. Le diagnostic de Starwave résume la logique des matchups : « dans n'importe quel matchup, l'adversaire a typiquement un coup qui fait mieux ce que Bartz voudrait faire » — jack of all trades, master of nothing. kewldude475 en tire les cas concrets : contre Firion il faut « devenir créatif avec les assists », et contre Sephiroth ou Ultimecia « c'est un combat en montée, tout simplement ». Les stages exigus, qui valorisent son jeu au sol et rapprochent les plafonds, sont cités comme son meilleur terrain.",
+      "Le matchup le mieux documenté est Golbez, vu du côté adverse (guide de tehdr4g0n, GameFAQs, 2012) : au sol, Bartz perd l'échange de zoning — son seul outil qui traverse Glare Hand et Attack System est Hazard Raid, que Golbez punit d'un jump suivi d'un Gravity System dans le dos (avec Sneak Attack et Counterattack à la clé) ; Holy se gère en airdash, qui renvoie les orbes, et le block est jugé peu fiable parce que les cinq orbes voyagent à des vitesses différentes. En l'air en revanche, tehdr4g0n concède à Bartz « un léger avantage » : Slide Shooter bat toutes les options aériennes de Golbez, inflige un gros morceau de bravery et débouche sur un chase. La leçon côté Bartz : contre les zoners au sol de ce profil, c'est l'air qu'il faut imposer, pas le duel de projectiles.",
+      "Deux avertissements transverses ressortent des guides adverses : b0untyhunter270 (guide Firion, 2012) juge Bartz « très facile à battre » hors EX Mode mais consacre son entrée à Goblin Punch, décrit — avec l'exagération d'époque — comme démarrant quasi instantanément : même les adversaires qui dominent le matchup respectent la menace de punish en EX Mode. À l'inverse, le guide Bartz de Balguna (dissidiaforums, 2011) rappelle que les fast fallers comme Kain ou Gilgamesh plongent sous Luminous Shard et dashent sur Bartz pour l'éviter complètement : ses HP lents à longue portée se désamorcent d'autant plus vite que l'adversaire tombe vite."
+    ]
+  },
   "builds": {
     "philosophy": [
       "Un seul build est réellement documenté : un « Side by Side » avec l'assist Kuja (Lufenian Axe, Blurry Moon, set Lufenian, effet spécial Judgment of Lufenia, invocation Rubicante), 450 CP avec Equip Glitch, pour un booster maximal de x5.9.",
       "Les notes de coups esquissent la philosophie générale : en Side by Side, l'effet EX Intake est inutile mais Reel Impulse reste préféré pour sa portée et sa priorité, et on arbitre entre Blade Crash et Hazard Raid ; en build EX, on peut équiper deux Reel Impulse (+2m d'EX Intake, presque l'équivalent d'une Heaven's Cloud) en renonçant à Blade Crash et Hazard Raid."
     ],
-    "notes": "Le second emplacement (« Build #2 ») est vide dans les sources : aucune donnée."
+    "notes": "Le second emplacement (« Build #2 ») est vide dans les sources : aucune donnée. Pour le reset loop Holy -> Flare, Djungelkorv (dissidiaforums, 2011) documente un équipement dédié : Excalibur II, l'accessoire Side by Side et EXP to Assist — les deux derniers étant indispensables à la boucle — complétés de Growth Egg(s), Bravery Orb et Earrings."
   },
   "assist": {
     "asAssist": [
@@ -104,9 +115,20 @@
       "date": "2012"
     }
   ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://web.archive.org/web/20131027082557/http://dissidiaforums.com/showthread.php?13515-Bartz-Klauser-the-second-worst-character-in-the-game",
+      "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/63562",
+      "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/65018",
+      "https://web.archive.org/web/20130815135120/http://dissidiaforums.com/showthread.php?10240-It-s-time-to-return-the-wind-to-the-world!-A-Bartz-Klauser-Guide"
+    ],
+    "builds": [
+      "https://web.archive.org/web/20131020093302/http://dissidiaforums.com/showthread.php?10794-Bartz-Reset-Combos"
+    ]
+  },
   "limits": [
     "Overview très courte (trois phrases descriptives) : la synthèse repose surtout sur le tableau forces/faiblesses et les notes de coups.",
-    "Page matchups à l'état d'ébauche (stub) : aucun contenu.",
+    "La page matchups du wiki reste une ébauche (stub) : la section matchups est sourcée hors wiki (thread de tier list dissidiaforums 2012 et guides GameFAQs adverses) ; un seul matchup est analysé en profondeur (Golbez, du point de vue adverse).",
     "Section combos vide (sous-section « Solo » sans texte ni tableau).",
     "Aucune mécanique unique documentée (documented: false).",
     "Aucune référence communautaire dans les sources.",

@@ -72,7 +72,12 @@
       "desc": "Enchaînement notable car il combote au plafond sur hit, tout en conservant l'arme dégainée (il fonctionne aussi sur un miss pour garder l'arme)."
     }
   ],
-  "matchups": null,
+  "matchups": {
+    "summary": [
+      "Le seul matchup analysé en détail dans les sources d'époque est Gilgamesh vu par Golbez (guide de tehdr4g0n, GameFAQs, 2012), et il éclaire les deux faces du personnage. Côté pile : la variance de portée des armes — « sa plus longue portée vaut à peu près le Reaper de Sephiroth, sa plus courte celle de Tifa » — rend ses attaques difficiles à esquiver, au point que l'adversaire préfère bloquer plutôt que dodge ; et parmi ses HP, Rocket Punch est jugé « constamment effrayant » : un peu de startup mais une vitesse fulgurante, une portée qui dépasse Glare Hand, et la capacité d'attraper le cooldown d'un dodge — Sword Dance (selon l'arme tirée) et Missile complètent les menaces, même si Missile se dodge vers l'avant sans se retourner et que Jump se punit d'un dodge précoce.",
+      "Côté face : sa marche lente et l'absence d'invincibilité de startup sur ses charges font qu'il se laisse zoner à mi-distance au sol, et tenir à l'écart en l'air par les projectiles d'occupation (Sector Ray / Genesis Rock chez Golbez). Le verdict adverse — un matchup « relativement simple, mais où on ne peut pas se relâcher parce qu'il peut renverser un match » — recoupe l'overview : Gilgamesh vit de ses touches converties et de la menace EX, pas du contrôle du neutral à distance. Autre trait exploitable en matchup, relevé cette fois dans le guide Bartz de Balguna (dissidiaforums, 2011) : en tant que fast faller, Gilgamesh (comme Kain) peut plonger sous les HP lents à longue portée du type Luminous Shard et dasher sous l'attaque pour l'éviter complètement — un outil de rapprochement gratuit contre les zoners aériens."
+    ]
+  },
   "builds": {
     "philosophy": [
       "Les données ne contiennent qu'un build détaillé, « Hybrid (EX) », cohérent avec l'overview : Gilgamesh profite toujours de l'EX, son potentiel de dégâts explosant en EX Mode. Le build (450 CP, Equip Glitch supposé) : 10299 HP, 996 BRV, 179 ATK, 182 DEF, 60 LUK, booster max x3.5 ; assist Kuja, summon Rubicante ; Heaven's Cloud, Lufenian Dirk, Lufenian Headband et Lufenian Vest pour l'effet spécial Seal of Lufenia ; accessoires : Muscle Belt, Dismay Shock, Summon Unused, Pre-EX Mode, Pre-EX Revenge, Aerial, White Gem, Tenacious Attacker, Glutton, First to Victory.",
@@ -100,9 +105,15 @@
       "date": "2011"
     }
   ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/63562",
+      "https://web.archive.org/web/20130815135120/http://dissidiaforums.com/showthread.php?10240-It-s-time-to-return-the-wind-to-the-world!-A-Bartz-Klauser-Guide"
+    ]
+  },
   "limits": [
     "Aucune note d'usage par coup dans les sources : moveNotes est synthétisé à partir des descriptions officielles, des données de frames et des mentions de l'overview et de la mécanique unique.",
-    "Page matchups dédiée non documentée (stub) et aucun matchup nommé dans l'overview : champ matchups à null.",
+    "La page matchups du wiki reste une ébauche (stub) : la section matchups repose uniquement sur des vues adverses (guide Golbez de tehdr4g0n, guide Bartz de Balguna). Aucune source dédiée côté Gilgamesh n'a pu être lue : le guide dissidiaforums « The Man with Many Arms — A Guide to Gilgamesh » n'est archivé par la Wayback Machine qu'en erreurs 500, et la seule « FAQ Gilgamesh » du board GameFAQs 605802 est une parodie sans contenu compétitif.",
     "Section combos non documentée : aucun combo détaillé (seul l'enchaînement Double Trouble > Hurricane au plafond est mentionné via la rétention d'armes).",
     "Builds : un seul build (Hybrid (EX)) sans philosophie rédigée ni coups équipés ; le second emplacement de build est vide.",
     "Synergies d'assist réduites à une phrase générique (aucun assist recommandé nommément hors le Kuja du build).",

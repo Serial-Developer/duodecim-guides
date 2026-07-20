@@ -2,10 +2,26 @@
   "slug": "kuja",
   "tagline": "Mage dont les enchaînements changent selon la distance, assist d'élite",
   "archetype": "Mage à combos variables selon la distance",
-  "overview": null,
+  "overview": [
+    "Kuja est un zoner mage aérien : ses braveries partagent leurs données entre versions sol et air, et leurs enchaînements changent selon la distance à l'adversaire. Les joueurs d'époque du board GameFAQs le décrivaient comme l'un des personnages les plus difficiles à prendre en main mais aussi l'un des meilleurs — « il va atterrir en High Tier une fois une tier list officielle publiée », prédisait xoAxelox dès 2011 —, un pronostic confirmé depuis par la tier list compétitive.",
+    "Son jeu repose sur des pokes sûrs et le harcèlement : Snatch Shot à mi-distance, Remote Flare (imblocable) à longue portée, Seraphic Star comme poke sûr à fort Absorb, et Strike Energy comme punish rapide au corps à corps. Kuja attaque en se déplaçant, et son flottement (glide) alimente les mindgames sur le moment et l'angle d'engagement. La distance détermine la suite de chaque bravery (Wall Rush ou Chase) : la maîtriser, avec les conversions sur assist, fait la différence entre un Kuja inoffensif et un Kuja étouffant.",
+    "En contrepartie, son tracking vertical est médiocre — les joueurs d'époque le disaient « vertically challenged » : il faut rester au même niveau que l'adversaire, ou l'y forcer. Son EX Mode, nerfé depuis le premier Dissidia (Auto Magic moins fiable), était jugé si faible que les sets d'époque privilégiaient l'assist ; et plusieurs de ses coups sont punissables au block : les enchaînements Holy le staggent quand ils sont bloqués, Snatch Shot peut lui être renvoyé."
+  ],
   "tierNote": "Kuja est classé 9e (tier A) de la tier list 2017. L'overview du wiki n'étant pas rédigé, les sources ne fournissent aucun commentaire qualitatif sur ce classement côté joueur.",
-  "strengths": null,
-  "weaknesses": null,
+  "strengths": [
+    "Pokes sûrs à toutes les distances : Snatch Shot à mi-portée, Remote Flare imblocable à longue portée et Seraphic Star, poke sûr à fort Absorb dans lequel les adversaires finissent par courir — une pression constante pour un risque faible.",
+    "Mobilité offensive : Kuja attaque en se déplaçant, et son glide entretient les mindgames sur le moment et l'angle d'engagement.",
+    "Set identique au sol et en l'air : les braveries partagent leurs données entre versions, ce qui simplifie l'apprentissage et libère les slots au profit de l'aérien.",
+    "Excellentes conversions sur assist : appeler l'assist sur le premier hit d'une bravery (Strike Energy en tête) convertit en Assist Chase puis Flare Star ou Ultima — la manière la plus fiable de placer ses HP.",
+    "Remote Flare remplit la jauge d'assist en sécurité et attrape les adversaires en pleine HP attack."
+  ],
+  "weaknesses": [
+    "Tracking vertical médiocre (« vertically challenged ») : il souffre dès que l'adversaire joue au-dessus ou en dessous de lui et doit constamment recréer un plan horizontal.",
+    "EX Mode jugé très faible par les joueurs d'époque après le nerf d'Auto Magic : les builds hybrides passaient pour peu adaptés et Side by Side était mis en doute — l'assist était préférée.",
+    "Punissable au block : Strike Energy et Snatch Blow (attaques Holy) staggent Kuja quand elles sont bloquées, Snatch Shot se réfléchit sur un block réussi et Burst Energy se fait traverser par les attaques physiques.",
+    "Ring Holy se fait facilement réfléchir d'un simple dash au travers — les projectiles éparpillés reviennent alors sur Kuja depuis plusieurs directions.",
+    "Courbe d'apprentissage raide : gestion de la distance, des variantes d'enchaînement et du placement — un personnage à ne pas juger sur les premières heures."
+  ],
   "moveNotes": {
     "Burst Energy": "Ouvre l'attaque avec Flare à courte portée ; la distance avec l'adversaire modifie l'enchaînement (variantes Close et Far aux dégâts, priorités et effets distincts : Wall Rush de près, Chase de loin). C'est la bravery la plus rapide de Kuja (15F). Comme pour ses autres braveries à variantes, le nombre de coups dépend du positionnement et peut monter jusqu'à 16 sur un adversaire acculé dans un coin.",
     "Snatch Blow": "Lance l'attaque avec Holy à moyenne portée ; la distance modifie l'enchaînement (Wall Rush de près, Chase de loin). Startup de 35F. Toutes les braveries de Kuja existent en version sol et aérienne avec des données partagées.",
@@ -26,9 +42,49 @@
     "burst": "Final Requiem est une chaîne d'attaques qui gagne en puissance à chaque coup : marteler Cercle augmente la force de chaque frappe (7 de dégâts de base initiaux, 100 au total, type Magical)."
   },
   "uniqueMechanics": null,
-  "gameplan": null,
-  "advancedTech": null,
-  "matchups": null,
+  "gameplan": [
+    "Le plan de jeu dégagé par les threads GameFAQs d'époque (2011-2012) : jouer safe et poker sans s'exposer — Snatch Shot à mi-distance, Remote Flare à longue portée, Strike Energy en punish rapide quand l'adversaire colle. Rester au même niveau vertical que l'adversaire et, plutôt que d'aller le chercher, le forcer à venir : Force Symphony posée depuis au-dessus fait quitter le sol, et Ultima se lance puis se contourne (reset caméra au Select) pour attirer les impatients dedans ou se créer de l'espace.",
+    "Les conversions passent par l'assist et le block : appeler l'assist sur le premier hit d'une bravery (Strike Energy en tête) puis convertir l'Assist Chase en Flare Star — ou en Ultima avec un assist qui renvoie au sol comme Jecht. Flare Star se place aussi sur le stagger d'un block contre les adversaires qui air-dashent dans Kuja. Le combo solo de référence lie Snatch Shot à Strike Energy par un RDC au moment où le second tir touche. Assists citées à l'époque : Sephiroth et Aerith en tête, Jecht pour le renvoi au sol.",
+    "Les slots se concentrent en l'air : les sets types d'époque alignent Strike Energy, Snatch Shot et Remote Flare en braveries aériennes, avec Flare Star, Seraphic Star et Ultima ou Force Symphony en HP, et un sol quasi vide — Kuja fonctionne même sans aucune attaque au sol équipée. Apprendre par cœur la distance de Seraphic Star pour le placer à chaque fois, et n'utiliser Force Symphony que sur son premier orbe : s'acharner à bombarder expose inutilement."
+  ],
+  "advancedTech": [
+    {
+      "name": "Contrôle de l'enchaînement au stick",
+      "desc": "Les braveries à variantes se pilotent : incliner le stick analogique vers l'adversaire ou à l'opposé au moment du premier hit choisit la suite (Chase ou Wall Rush) au lieu de la subir. Demande de l'habitude — la caméra peut fausser la lecture de distance, d'où le réflexe de la recentrer au Select.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58883450"
+    },
+    {
+      "name": "Snatch Shot > RDC > Strike Energy",
+      "desc": "Le combo solo principal d'époque : zoner avec Snatch Shot puis, au moment où le second tir touche, un RDC (rapid dodge cancel) lie dans Strike Energy pour de gros dégâts de bravery.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58911969"
+    },
+    {
+      "name": "Assist confirm sur premier hit",
+      "desc": "Toucher avec le premier hit de Snatch Shot, Snatch Blow, Burst Energy ou Strike Energy, appeler l'assist sans finir l'enchaînement, puis convertir : Assist Chase vers Flare Star avec un assist Chase type Sephiroth, ou Ultima/Flare Star pendant que Jecht plaque l'adversaire au sol.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63105855"
+    },
+    {
+      "name": "Flare Star sur block",
+      "desc": "Contre un adversaire qui air-dash dans Kuja : bloquer, puis lancer Flare Star pendant son stagger pour des dégâts HP rapides — son principal usage hors assist, avec la conversion post-Assist Chase.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58911969"
+    },
+    {
+      "name": "Ultima en zone de contrôle",
+      "desc": "Lancer Ultima puis tourner autour du sort pendant qu'il est actif : les adversaires persistants se font attirer dedans, et le nuage crée de l'espace pour respirer. Hors de ce rôle, Ultima reste la conversion préférée à longue distance après un assist.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58911969"
+    },
+    {
+      "name": "Force Symphony : set & drop",
+      "desc": "N'utiliser que le premier orbe : le poser au-dessus de l'adversaire pour le forcer à quitter le sol ou à réagir, puis enchaîner. Prolonger le tir en maintenant le bouton multiplie surtout la vulnérabilité de Kuja.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63105855"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "Aucune analyse par personnage n'a survécu pour Kuja — la page matchups du wiki est un stub et les threads d'époque raisonnent par profils. Contre les spécialistes de la garde comme Firion ou Exdeath, Remote Flare est l'outil clé : l'attaque ne peut tout simplement pas être bloquée, ce qui neutralise leur plan défensif. Snatch Blow traverse certains projectiles (Flare, par exemple) et brille dans les couloirs étroits comme les salles de Pandaemonium, en punish d'esquive — mais il se bloque facilement.",
+      "À l'inverse, tout ce qui impose un jeu vertical le gêne : son tracking vertical médiocre l'oblige à rester au niveau de l'adversaire ou à l'y ramener (Force Symphony depuis au-dessus ; Burst Energy rejoint instantanément le plan vertical adverse, au prix d'une portée et d'une priorité faibles). Face aux bons bloqueurs, gare au revers de ses propres coups : les enchaînements Holy le staggent s'ils sont bloqués et Snatch Shot peut lui être renvoyé — les attaques Flare ne staggent pas, mais se font traverser par les attaques physiques."
+    ]
+  },
   "builds": {
     "philosophy": [
       "La section builds du wiki n'est pas rédigée : elle ne contient que des tableaux bruts. Un seul build complet y figure, construit autour de l'effet spécial Seal of Lufenia : Terra's Legacy en arme, pièces Lufenian (Lufenian Dirk, Lufenian Headband, Lufenian Vest), assist Zidane, invocation Rubicante, et des accessoires mêlant Hyper Ring, Earring, Battle Hammer, Summon Unused, Pre-EX Revenge, trois White Drop, White Gem et Glutton, pour 10626 HP, 877 BRV, 178 ATK et 184 DEF à 450 CP. Le wiki précise que le coût total en points de capacité suppose l'utilisation de l'Equip Glitch (abilités « Gear »)."
@@ -71,14 +127,28 @@
       "date": "2012"
     }
   ],
+  "sourcesBySection": {
+    "overview": [
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58911969",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58883450",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63105855"
+    ],
+    "gameplan": [
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58883450",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63105855",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58911969",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/59064462"
+    ],
+    "matchups": [
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58883450",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63105855"
+    ]
+  },
   "limits": [
-    "Overview du wiki non rédigé : aucune synthèse d'archétype, aucune liste de forces/faiblesses, aucun historique compétitif côté joueur — d'où les champs overview, strengths et weaknesses à null.",
-    "Aucun gameplan joueur documenté (overview vide, section combos vide, notes de coups limitées aux descriptions du jeu) — gameplan à null.",
-    "Page matchups à l'état de stub, sans contenu exploitable dans l'overview — matchups à null.",
+    "Le wiki ne documente ni overview, ni gameplan, ni forces/faiblesses, ni matchups pour Kuja : ces sections sont reconstruites depuis des threads GameFAQs d'époque (2011-2012, listés dans sourcesBySection) — aucun guide dédié complet ni chart de matchups par personnage n'a été retrouvé.",
     "Pas de mécanique unique documentée — uniqueMechanics à null.",
-    "Aucune technique avancée spécifique à Kuja joueur dans les sources — advancedTech à null.",
-    "Notes de coups joueur limitées aux descriptions officielles et aux intros de sections (variantes de distance, plafond de 16 coups en coin) : aucune analyse d'usage compétitif coup par coup.",
-    "Section builds sans texte : un seul build en tableaux bruts, second onglet vide, aucune recommandation d'attaques.",
-    "Aucune référence communautaire listée ; champ assist gain des coups non renseigné."
+    "Notes de coups joueur limitées aux descriptions officielles et aux intros de sections côté wiki (variantes de distance, plafond de 16 coups en coin) : aucune analyse d'usage compétitif coup par coup sur la page du personnage.",
+    "Section builds du wiki sans texte : un seul build en tableaux bruts, second onglet vide, aucune recommandation d'attaques.",
+    "Champ assist gain des coups non renseigné dans les tableaux du wiki."
   ]
 }

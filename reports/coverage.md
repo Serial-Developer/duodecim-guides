@@ -14,30 +14,30 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 | The Emperor | 8+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
 | Onion Knight | 12+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
 | Cloud of Darkness | 5+9 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
-| Cecil Harvey | 6+6 | ✅ | ✅ | ❌ | ✅ | ✅ | 2 | ✅ |
-| Golbez | 7+8 | ✅ | ❌ | ❌ | ✅ | ✅ | 2 | ✅ |
-| Kain Highwind | 7+7 | ✅ | ✅ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Bartz Klauser | 7+5 | ✅ | ❌ | ❌ | ✅ | ✅ | 1 | ✅ |
+| Cecil Harvey | 12+6 | ✅ | ✅ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Golbez | 7+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Kain Highwind | 7+6 | ✅ | ✅ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Bartz Klauser | 7+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
 | Exdeath | 9+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Gilgamesh | 8+6 | ✅ | ✅ | ❌ | ✅ | ✅ | 1 | ✅ |
+| Gilgamesh | 8+6 | ✅ | ✅ | ✅ | ✅ | ✅ | 1 | ✅ |
 | Terra Branford | 11+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
 | Kefka Palazzo | 8+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 16 | ✅ |
 | Cloud Strife | 11+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 6 | ✅ |
 | Sephiroth | 8+7 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
 | Tifa Lockhart | 10+7 | ✅ | ✅ | ✅ | ✅ | ✅ | 3 | ✅ |
 | Squall Leonhart | 9+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Ultimecia | 4+4 | ✅ | ❌ | ❌ | ✅ | ✅ | 2 | ✅ |
-| Laguna Loire | 12+4 | ✅ | ❌ | ❌ | ✅ | ✅ | 3 | ✅ |
+| Ultimecia | 4+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Laguna Loire | 12+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
 | Zidane Tribal | 9+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Kuja | 6+4 | ❌ | ❌ | ❌ | ✅ | ✅ | 2 | ✅ |
-| Tidus | 12+11 | ✅ | ❌ | ❌ | ✅ | ✅ | 10 | ✅ |
-| Jecht | 4+5 | ✅ | ✅ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Kuja | 6+4 | ❌ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Tidus | 12+11 | ✅ | ❌ | ✅ | ✅ | ✅ | 10 | ✅ |
+| Jecht | 17+18 | ✅ | ✅ | ✅ | ✅ | ✅ | 3 | ✅ |
 | Yuna | 18+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Shantotto | 8+6 | ❌ | ❌ | ❌ | ✅ | ✅ | 2 | ✅ |
+| Shantotto | 8+6 | ❌ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
 | Prishe | 18+4 | ✅ | ✅ | ✅ | ✅ | ✅ | 1 | ✅ |
 | Vaan | 8+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Gabranth | 8+4 | ✅ | ✅ | ✅ | ✅ | ✅ | 5 | ✅ |
-| Lightning | 16+5 | ✅ | ❌ | ❌ | ✅ | ✅ | 2 | ✅ |
+| Gabranth | 12+4 | ✅ | ✅ | ✅ | ✅ | ✅ | 5 | ✅ |
+| Lightning | 16+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
 | Feral Chaos | 8+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
 | Aerith Gainsborough | 2+2 | ✅ | ❌ | ❌ | ❌ | ✅ | 3 | ✅ |
 
@@ -91,7 +91,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Aucune mécanique unique documentée (section absente des sources).
 - Aucune référence externe (section References vide) : pas de communityTech attribuable ; le combo Starfall loop mentionne une vidéo sans URL exploitable.
 - Article combos dédié (« The Emperor (Combos) ») non inclus : seuls trois combos solo et trois combos Jecht sont détaillés.
-- Page builds dédiée (« The Emperor (012) Builds ») non incluse : un seul build Side by Side + haute bravery est détaillé.
+- Page builds dédiée (« The Emperor (012) Builds ») non incluse dans le wiki : un seul build Side by Side + haute bravery y est détaillé ; comblé partiellement par des builds communautaires externes (dissidiaforums, GameFAQs) lors de la passe d'enrichissement. Les listes d'accessoires exactes des quatre builds de LuckySeven étaient dans des images aujourd'hui perdues : seuls leurs principes rédigés subsistent.
 - Valeurs d'assist gain des coups non renseignées dans les données, et décomptes « Opponent Assist (Comrade's Vow) » des combos marqués « ??? ».
 
 ### Onion Knight
@@ -110,7 +110,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Le coût CP de Tentacle of Pain est partiellement inconnu (« ?? (30) ») et le gain de jauge d'assist par coup n'est pas renseigné.
 
 ### Cecil Harvey
-- La page Matchups du wiki est une ébauche (stub) et l'overview ne contient pas d'analyse exploitable par matchup : section matchups laissée à null.
+- La page Matchups du wiki est une ébauche (stub) : la section matchups est sourcée hors wiki (guide Golbez de tehdr4g0n et guide Firion de b0untyhunter270 pour la vue adverse, Competitive Cecil Guide de Hollowed pour les outils par matchup) ; aucune analyse matchup par matchup du point de vue de Cecil n'a été retrouvée.
 - Le moveset bravery documenté est incomplet (6 coups détaillés seulement) : Valiant Blow, Dark Cannon, Paladin Arts et Shadow Lance apparaissent dans l'infobox, les combos ou les données d'assist sans fiche de coup détaillée.
 - Aucune évaluation rédigée de Cecil en tant qu'assist : seuls la table de données et le classement Mid de la meta sont disponibles.
 - Dans les tables de combos, les valeurs « Opponent Assist (Comrade's Vow) » sont notées « ??? » et certains gains d'EX sont partiels.
@@ -118,7 +118,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - La section References est vide : aucune tech communautaire attribuable ou datée.
 
 ### Golbez
-- Page matchups dédiée non documentée (stub) et aucun matchup nommé dans l'overview : champ matchups à null.
+- La page matchups du wiki reste une ébauche (stub) : la section matchups est entièrement sourcée hors wiki, sur le guide GameFAQs de tehdr4g0n (2012) — un point de vue d'auteur unique, complété par le guide Firion de b0untyhunter270 pour la vue adverse.
 - Aucune mécanique unique documentée (section absente des sources).
 - Section combos non documentée : aucun combo détaillé dans les données.
 - Sector Ray (ground) sans notes d'usage : seul le tableau de données existe, la clé est omise de moveNotes.
@@ -137,7 +137,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 
 ### Bartz Klauser
 - Overview très courte (trois phrases descriptives) : la synthèse repose surtout sur le tableau forces/faiblesses et les notes de coups.
-- Page matchups à l'état d'ébauche (stub) : aucun contenu.
+- La page matchups du wiki reste une ébauche (stub) : la section matchups est sourcée hors wiki (thread de tier list dissidiaforums 2012 et guides GameFAQs adverses) ; un seul matchup est analysé en profondeur (Golbez, du point de vue adverse).
 - Section combos vide (sous-section « Solo » sans texte ni tableau).
 - Aucune mécanique unique documentée (documented: false).
 - Aucune référence communautaire dans les sources.
@@ -150,13 +150,13 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Aucune mécanique unique marquée comme documentée (documented: false) : les guard counters et block cancels sont décrits dans l'intro de la section bravery, pas dans une section dédiée.
 - Pas de notes d'usage individuelles pour les coups : les moveNotes s'appuient sur les descriptions, les données de frames et l'overview.
 - Table de contre-stratégie Maelstrom incomplète dans l'extraction : une seule entrée (« Quo Vadis ») sans personnage lisible, la liste des attaques capables de dévier n'est donc pas exploitable.
-- Second build (« Build #2 ») entièrement vide.
+- Second build (« Build #2 ») entièrement vide dans le wiki ; comblé partiellement par des builds communautaires externes (guide Steam, dissidiaforums) lors de la passe d'enrichissement.
 - Aucune référence communautaire dans les sources.
 - Données partielles : dégâts non chiffrés (« - ») sur Delta Attack et Almagest, vitesse de course « ?? » dans l'infobox.
 
 ### Gilgamesh
 - Aucune note d'usage par coup dans les sources : moveNotes est synthétisé à partir des descriptions officielles, des données de frames et des mentions de l'overview et de la mécanique unique.
-- Page matchups dédiée non documentée (stub) et aucun matchup nommé dans l'overview : champ matchups à null.
+- La page matchups du wiki reste une ébauche (stub) : la section matchups repose uniquement sur des vues adverses (guide Golbez de tehdr4g0n, guide Bartz de Balguna). Aucune source dédiée côté Gilgamesh n'a pu être lue : le guide dissidiaforums « The Man with Many Arms — A Guide to Gilgamesh » n'est archivé par la Wayback Machine qu'en erreurs 500, et la seule « FAQ Gilgamesh » du board GameFAQs 605802 est une parodie sans contenu compétitif.
 - Section combos non documentée : aucun combo détaillé (seul l'enchaînement Double Trouble > Hurricane au plafond est mentionné via la rétention d'armes).
 - Builds : un seul build (Hybrid (EX)) sans philosophie rédigée ni coups équipés ; le second emplacement de build est vide.
 - Synergies d'assist réduites à une phrase générique (aucun assist recommandé nommément hors le Kuja du build).
@@ -211,19 +211,19 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 
 ### Ultimecia
 - Aucun combo n'est documenté (section combos vide, documented: false) : le gameplan repose uniquement sur l'overview et les notes de coups.
-- La page matchups est une ébauche (stub) et l'overview ne cite aucun personnage adverse : la section matchups est donc laissée à null.
+- La page matchups du wiki est une ébauche : la section matchups est reconstruite depuis les sources compétitives d'époque listées dans sourcesBySection (guide « Fallen Chronomancer » et threads dissidiaforums via la Wayback Machine, guide Steam Exdeath) ; les matchups Lightning, Shantotto et Gabranth y restent non traités (« needs more testing »).
 - La section assist est marquée non documentée : seules la table de données brutes et la mention « Kuja » en synergie existent, sans évaluation rédigée.
 - Knight's Axe et Knight's Arrow n'ont aucune note d'usage ; Shockwave Pulsar et Hell's Judgement n'ont que leur description d'une ligne ; les dégâts de Shockwave Pulsar et d'Apocalypse ne sont pas chiffrés (« - »).
 - Aucune mécanique unique n'est documentée ; le second build est entièrement vide et les sélections d'attaques des builds manquent ; la table Time Crush est en grande partie vide (dégâts, priorité, type non renseignés).
-- Aucune référence externe (section references vide) : communityTech est donc un tableau vide ; les valeurs assistGain sont vides pour tous les coups.
+- La section references du wiki est vide : les entrées communityTech et les sources de sourcesBySection proviennent de recherches externes ; les valeurs assistGain sont vides pour tous les coups.
 
 ### Laguna Loire
 - Pas de table forces/faiblesses sur la page wiki : les listes ci-dessus sont dérivées de la prose de l'overview et des notes de coups.
 - Frame data très incomplète : Machine Gun, Grenade Bomb, Pummel, Missile Barrage et Electro Shield n'ont ni startup, ni priorité, ni EX Force chiffrés dans les données (seuls les multiplicateurs de dégâts sont présents) ; les dégâts de Ragnarok Blade et Split Laser ne sont pas chiffrés (« - »).
 - Aucun combo n'est documenté (section combos vide, documented: false).
-- La page matchups est une ébauche (stub) et l'overview ne cite aucun adversaire : matchups laissé à null. Seules mentions ponctuelles dans les notes de coups : clash de Ragnarok Buster avec Maelstrom/Holy, punish de Quick Hit au Split Laser.
+- La page matchups du wiki est une ébauche : la section matchups est reconstruite depuis la chart d'Erourk et les discussions du thread d'époque de dissidiaforums (via la Wayback Machine, chart établie hors assists) plus le guide Steam Exdeath ; certains matchups n'y sont pas couverts (Terra, Tifa, Squall, Zidane, Bartz, Prishe, Vaan, Tidus, Lightning). Les notes de coups gardent leurs mentions ponctuelles (clash de Ragnarok Buster avec Maelstrom/Holy, punish de Quick Hit au Split Laser).
 - La section assist se réduit à trois noms (« Yuna, Jecht, Aerith. ») sans aucune justification, et aucune donnée de Laguna en tant qu'assist n'existe : les recommandations sont livrées telles quelles.
-- Aucune mécanique unique documentée ; aucune référence externe (communityTech vide) ; second build vide et sélections d'attaques manquantes ; valeurs assistGain vides.
+- Aucune mécanique unique documentée ; second build vide et sélections d'attaques absentes des tables du wiki (les staples compétitifs sont désormais documentés dans builds.notes via des sources externes) ; valeurs assistGain vides.
 
 ### Zidane Tribal
 - Page matchups du wiki à l'état de stub : aucune analyse par personnage.
@@ -233,20 +233,18 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Aucune référence communautaire (vidéos, liens datés) listée dans les sources.
 - Pas de mécanique unique documentée pour ce personnage.
 - Le tableau Forces/Faiblesses du wiki est vide et le champ assist gain des coups n'est pas renseigné.
+- Les listes d'équipement exactes des deux builds de LXD92 (dissidiaforums) étaient dans des spoilers/images non capturés par la Wayback Machine : seuls les principes rédigés et les stats citées subsistent.
 
 ### Kuja
-- Overview du wiki non rédigé : aucune synthèse d'archétype, aucune liste de forces/faiblesses, aucun historique compétitif côté joueur — d'où les champs overview, strengths et weaknesses à null.
-- Aucun gameplan joueur documenté (overview vide, section combos vide, notes de coups limitées aux descriptions du jeu) — gameplan à null.
-- Page matchups à l'état de stub, sans contenu exploitable dans l'overview — matchups à null.
+- Le wiki ne documente ni overview, ni gameplan, ni forces/faiblesses, ni matchups pour Kuja : ces sections sont reconstruites depuis des threads GameFAQs d'époque (2011-2012, listés dans sourcesBySection) — aucun guide dédié complet ni chart de matchups par personnage n'a été retrouvé.
 - Pas de mécanique unique documentée — uniqueMechanics à null.
-- Aucune technique avancée spécifique à Kuja joueur dans les sources — advancedTech à null.
-- Notes de coups joueur limitées aux descriptions officielles et aux intros de sections (variantes de distance, plafond de 16 coups en coin) : aucune analyse d'usage compétitif coup par coup.
-- Section builds sans texte : un seul build en tableaux bruts, second onglet vide, aucune recommandation d'attaques.
-- Aucune référence communautaire listée ; champ assist gain des coups non renseigné.
+- Notes de coups joueur limitées aux descriptions officielles et aux intros de sections côté wiki (variantes de distance, plafond de 16 coups en coin) : aucune analyse d'usage compétitif coup par coup sur la page du personnage.
+- Section builds du wiki sans texte : un seul build en tableaux bruts, second onglet vide, aucune recommandation d'attaques.
+- Champ assist gain des coups non renseigné dans les tableaux du wiki.
 
 ### Tidus
 - L'overview extrait du wiki est presque exclusivement consacré à l'EX Mode : aucune synthèse générale d'archétype, de neutral ou d'historique compétitif n'y figure — l'accroche et l'archétype sont déduits des notes de coups et de la section builds.
-- Page matchups à l'état de stub et overview sans contenu matchup — matchups à null ; les adaptations par adversaire ne sont documentées qu'à travers les builds (anti-Emperor, anti-Sephiroth) et les recommandations d'attaques.
+- La page matchups du wiki est un stub : la section matchups est reconstruite depuis le thread matchup d'époque de dissidiaforums (via la Wayback Machine) et le guide Steam Exdeath listés dans sourcesBySection ; les avis y sont parfois contradictoires (Terra notamment) et aucune chart chiffrée complète n'existe — les adaptations par adversaire restent aussi documentées via les builds (anti-Emperor, anti-Sephiroth) et les recommandations d'attaques.
 - Pas de mécanique unique documentée — uniqueMechanics à null.
 - Aucune fiche chiffrée de l'EX Burst (nom, dégâts, déroulé) dans les données ; seuls les effets de l'EX Mode sont listés, et Mirror Dash comme Caladbolg (DODGE) ne sont pas expliqués.
 - Un seul combo solo documenté (Dart & Weave > DC > Hop Step) ; la page combos dédiée n'est pas extraite.
@@ -258,7 +256,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Matchups : seul The Emperor est rédigé ; le reste de la page n'est qu'une liste de noms sans analyse.
 - Builds : la page principale « Jecht (012) Builds » n'est pas extraite ; seuls deux builds (Side by Side et Hybrid Seal of Lufenia) figurent dans les données, et certaines sous-sections (Basic Abilities et CP Allocation du build Lufenia) sont vides.
 - Champ assist gain des coups non renseigné ; startups absents sur les chaînes de combo extraites.
-- Le build Center of the World est cité mais jamais détaillé dans les sources.
+- Le build Center of the World est cité mais jamais détaillé dans les sources wiki ; un build Pure EX communautaire complet (dissidiaforums, 2011) comble partiellement ce manque via la passe d'enrichissement.
 
 ### Yuna
 - La page matchups du wiki est un stub : aucune analyse détaillée par personnage.
@@ -268,19 +266,18 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Pas de section « Unique Mechanics » documentée pour Yuna : champ laissé à null.
 
 ### Shantotto
-- Pas de texte d'overview sur la page (seul le tableau forces/faiblesses est renseigné) : champ overview laissé à null et gameplan reconstruit uniquement depuis ce tableau.
-- La page matchups du wiki est un stub et aucune information de matchup n'apparaît ailleurs : champ matchups laissé à null.
-- Aucune section combos renseignée (sous-section Solo vide) malgré la conversion présentée comme sa force principale.
+- Pas de texte d'overview sur la page du wiki (seul le tableau forces/faiblesses est renseigné) : l'overview est reconstruit depuis les threads GameFAQs d'époque (2011, listés dans sourcesBySection) et le gameplan uniquement depuis le tableau du wiki.
+- Aucun chart de matchups par personnage : la page du wiki est un stub, le résumé matchups repose sur les repères archétypaux des threads d'époque croisés avec les faiblesses documentées par le wiki.
+- Aucune section combos renseignée côté wiki (sous-section Solo vide) malgré la conversion présentée comme sa force principale ; les techniques avancées proviennent d'un unique thread GameFAQs (2011).
 - Notes d'usage détaillées absentes pour la plupart des coups (Stun, Bind, Bio, Retribution et les six Spirit Magic n'ont que la description du jeu et les frame data) ; la note d'A Couple Attacks est tronquée dans les données sources.
-- Aucune technique avancée spécifique nommée dans les sources : advancedTech laissé à null.
 - Pas de section « Unique Mechanics » documentée : champ laissé à null.
-- Section assist non documentée au-delà d'une phrase ; valeurs d'assist gain absentes des tableaux de coups ; section References vide : communityTech laissé vide.
+- Section assist non documentée au-delà d'une phrase ; valeurs d'assist gain absentes des tableaux de coups ; section References du wiki vide.
 
 ### Prishe
 - La page matchups du wiki est un stub : aucune analyse détaillée par personnage (seuls les exemples cités dans l'overview ont pu être repris).
 - Aucune section combos renseignée (sous-section Solo vide) : pas de routes de combo détaillées au-delà des mentions de l'overview et de la section Skillchain.
 - Le timing exact de la charge raccourcie de One Inch Punch (Two) en finisher est explicitement non documenté dans les sources.
-- Aucune technique avancée spécifique nommée en dehors des Skillchains (traitées dans uniqueMechanics) : advancedTech laissé à null.
+- Le wiki ne nomme aucune technique avancée en dehors des Skillchains (traitées dans uniqueMechanics) : les entrées advancedTech proviennent d'un thread GameFAQs d'époque (2011), avec un point de désaccord signalé (liaison Dragon Kick chargé > One Inch Punch chargé).
 - Le second build (« Build #2 ») est un gabarit vide et les slots d'attaques du build principal ne sont pas renseignés.
 - Valeurs d'assist gain absentes des tableaux de coups ; section References vide : communityTech laissé vide.
 
@@ -300,10 +297,10 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Valeurs manquantes dans les tables : gain d'assist des coups non renseigné, dégâts et EX Force d'EX Charge notés « ? ».
 
 ### Lightning
-- La page matchups du wiki est un stub sans contenu, et l'overview ne détaille aucun matchup nommé : matchups à null.
+- La page matchups du wiki est un stub : la section matchups est reconstruite depuis les threads d'époque de dissidiaforums (via la Wayback Machine) et le guide Steam Exdeath listés dans sourcesBySection ; aucune chart complète n'a survécu, seuls les matchups réellement discutés (Sephiroth, Emperor, Exdeath, Golbez, Cloud, Firion, Jecht) sont couverts.
 - La section « mécaniques uniques » est marquée non documentée sur le wiki : le Paradigm Shift n'est décrit que dans l'overview et la partie EX Mode de la page (repris ici dans overview, exMode et gameplan), d'où uniqueMechanics à null.
 - La section assist est marquée non documentée (une seule phrase générique) : l'évaluation de Lightning en tant qu'assist repose uniquement sur la tier list assist de meta-lite.json.
-- Aucune référence externe (section References vide) : communityTech vide.
+- La section References du wiki est vide : les entrées communityTech et les sources de sourcesBySection proviennent de recherches externes.
 - Frame data incomplète : startup de Flourish of Steel inconnu (« ? »), dégâts de Crushing Blow non renseignés (« - »), champs cancels et assistGain vides pour tous les coups.
 - Les vidéos de combos et la vidéo du magic block de Thunderfall sont mentionnées sans URL exploitable.
 
@@ -318,12 +315,12 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Champs cancels et assistGain vides pour tous les coups ; dégâts de Flagro Maximus non renseignés (« - »).
 
 ### Aerith Gainsborough
-- Personnage assist uniquement : aucune donnée joueur — statistiques d'infobox toutes à « - », sections EX Mode, mécaniques uniques, combos, builds et assist marquées non documentées. Les champs joueur (exMode, uniqueMechanics, builds) sont donc à null.
+- Personnage assist uniquement : aucune donnée joueur — statistiques d'infobox toutes à « - », sections EX Mode, mécaniques uniques, combos, builds et assist marquées non documentées. Les champs joueur (exMode, uniqueMechanics) sont donc à null ; builds ne décrit que les sets que les joueurs construisent autour de son assist, aucun build propre n'étant possible.
 - Non classée dans la tier list joueur 2017 (assist uniquement) : tierNote à null.
 - La section overview extraite ne contient aucune présentation rédigée — uniquement un combo de Cloud et une mention de vidéo : l'overview ci-dessus est synthétisé à partir des notes de ses quatre coups d'assist et de meta-lite.json.
 - Le champ « name » des coups est vide dans les données : les intitulés de groupes (Cure, Seal Evil, Planet Protector, Holy) servent de clés dans moveNotes.
 - Frame data incomplète : startup, position, spawn, effets et priorités listés comme variantes sans valeurs (« ? »), et la sous-section « Seal Evil combos » est vide.
-- Page matchups en stub et aucune référence externe : matchups à null et communityTech vide.
+- Un tableau de matchups par adversaire n'a pas de sens pour un personnage assist uniquement (la page matchups du wiki est d'ailleurs un stub) : matchups laissé à null, délibérément.
 
 ## Questions ouvertes
 

@@ -66,6 +66,11 @@
     {
       "name": "Dash feint et blodge",
       "desc": "Techniques universelles, mais décisives chez Exdeath spécifiquement : grâce à ses annulations, le dash feint lui permet de remplir la jauge d'assist plus vite que n'importe quel personnage, et le blodge lui donne des esquives plus rapides — les deux piliers de sa mobilité et de son turtling."
+    },
+    {
+      "name": "Delta Attack en lock-off + Seal Evil (Aerith)",
+      "desc": "Tech du guide Steam de Solde : près d'un plafond sans mur exploitable, lier Delta Attack au Carré neutre, descendre sous l'adversaire et la poser en lock-off sous lui pour le forcer vers le plafond, où un second HP conclut. Un glitch de Seal Evil complète le setup : relancé sur une cible déjà piégée sans la toucher assez tôt, il lui donne une vitesse de chute très élevée — anticipable pour la faire retomber dans une Delta Attack déjà active.",
+      "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
     }
   ],
   "matchups": {
@@ -76,9 +81,12 @@
   "builds": {
     "philosophy": [
       "L'overview fixe le cap : le style de contre d'Exdeath fonctionne avec une haute bravery de base et des builds Side by Side, en comptant sur les EX Cores pour l'EX.",
-      "Le build documenté, « Hybrid (Seal of Lufenia) », suit cette logique : assist Yuna, Piggy's Stick et set Lufenian (Bangle, Headband, Vest), accessoires de drain (Dismay Shock, Battle Hammer) et boosters conditionnels (BRV = 0, Pre-EX Mode, Pre-EX Revenge…), invocation Rubicante, 450 CP avec Equip Glitch, pour 11826 HP, 1296 BRV et un booster maximal de x2.5. L'extra ability Master Guardsman ajoute +1000 HP."
+      "Le build documenté, « Hybrid (Seal of Lufenia) », suit cette logique : assist Yuna, Piggy's Stick et set Lufenian (Bangle, Headband, Vest), accessoires de drain (Dismay Shock, Battle Hammer) et boosters conditionnels (BRV = 0, Pre-EX Mode, Pre-EX Revenge…), invocation Rubicante, 450 CP avec Equip Glitch, pour 11826 HP, 1296 BRV et un booster maximal de x2.5. L'extra ability Master Guardsman ajoute +1000 HP.",
+      "Le guide Steam de Solde Starlight Serenity (2020) documente en captures d'écran deux équipements alternatifs au set Lufenian. Le premier monte Enuo's Scourge, l'arme exclusive de niveau 100 (BRV +39, ATK +67, BRV Boost on Block +10 % et effet Riposte), avec le set Adamant complet (Adamant Shield, Helm, Vest) dont le bonus « Adamant Chains » ajoute BRV Boost on Dodge +8 % et un léger Midair Evasion Boost : un équipement de contre pur, qui convertit chaque block et chaque esquive en bravery (10972 HP, 996 BRV, 177 ATK, 187 DEF à 450 CP). Le second reprend la base à haute bravery Piggy's Stick / Chainsaw / Royal Crown, complétée par des Rainbow Robes, pour 1393 de bravery de base et 9721 HP. Côté accessoires, le guide montre une batterie proche du build du wiki : Muscle Belt, Sniper Eye, Dragonfly Orb et Bravery Orb, avec les boosters BRV = 0, Summon Unused (des deux côtés), Aerial, plus Great Gospel et Back-Breaking Straw.",
+      "Le même guide insiste sur l'adaptation du loadout au matchup, jusqu'au choix des inputs : Grand Cross lié à l'input arrière pour ne pas avancer vers l'adversaire en cancel-blodge défensif (ou au contraire Almagest en avant, plus optimal pour le happer dans le blodge), Almagest en neutre avec Omni Air Dash+ contre le spam de Straightarrow de Firion, Shell Guard au sol et Black Hole en l'air contre Kefka, Turn Guard contre Golbez, Protect Guard contre les coups Melee Mid de Gabranth.",
+      "Sur dissidiaforums (thread « Exdeath Builds », avril 2011, via la Wayback Machine), Zero_Ruzai décrivait un build full assist pour un Exdeath « chipper » (Black Hole > Almagest, dash cancels de Grand Cross, Maelstrom + Planet Protector d'Aerith) : Rebellious Soul, Final Decision, Badge of Trust, First to Victory, Hero's Seal, Together as One, Side by Side, Endless Despair, Soul of Thamasa et Back-Breaking Straw — tout pour la jauge d'assist. Le même thread évoque les Adamant Chains pour le style esquive-punition, le set Ancient (+40 % de dégâts) pour maximiser les contres, Succubus's Soul (20 % des dégâts HP drainés) couplé à EXP to HP pour le jeu de chip, et King of Tragedy (+50 % de dégâts en EX Revenge) pour le spam de Reverse Polarity conclu en Delta Attack."
     ],
-    "notes": "Le second emplacement (« Build #2 ») est vide dans les sources : aucune donnée."
+    "notes": "Le second emplacement (« Build #2 ») est vide dans les sources wiki : aucune donnée. Les builds alternatifs décrits ci-dessus (guide Steam de Solde Starlight Serenity, thread « Exdeath Builds » de dissidiaforums) proviennent de sources communautaires externes vérifiées."
   },
   "assist": {
     "asAssist": [
@@ -113,13 +121,19 @@
       "date": "2012"
     }
   ],
+  "sourcesBySection": {
+    "builds": [
+      "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279",
+      "https://web.archive.org/web/20131022034826/http://dissidiaforums.com/showthread.php?8287-Exdeath-Builds"
+    ]
+  },
   "limits": [
     "Page matchups à l'état d'ébauche (stub) : aucun contenu dédié, la synthèse matchups repose sur l'overview et la contre-stratégie Maelstrom.",
     "Section combos vide (sous-section « Solo » sans texte ni tableau).",
     "Aucune mécanique unique marquée comme documentée (documented: false) : les guard counters et block cancels sont décrits dans l'intro de la section bravery, pas dans une section dédiée.",
     "Pas de notes d'usage individuelles pour les coups : les moveNotes s'appuient sur les descriptions, les données de frames et l'overview.",
     "Table de contre-stratégie Maelstrom incomplète dans l'extraction : une seule entrée (« Quo Vadis ») sans personnage lisible, la liste des attaques capables de dévier n'est donc pas exploitable.",
-    "Second build (« Build #2 ») entièrement vide.",
+    "Second build (« Build #2 ») entièrement vide dans le wiki ; comblé partiellement par des builds communautaires externes (guide Steam, dissidiaforums) lors de la passe d'enrichissement.",
     "Aucune référence communautaire dans les sources.",
     "Données partielles : dégâts non chiffrés (« - ») sur Delta Attack et Almagest, vitesse de course « ?? » dans l'infobox."
   ]

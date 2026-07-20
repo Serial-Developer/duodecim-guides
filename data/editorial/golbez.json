@@ -73,15 +73,32 @@
     {
       "name": "Aspiration en altitude de Genesis Rock",
       "desc": "Genesis Rock peut tirer l'adversaire vers Golbez depuis une haute altitude : se placer devant l'adversaire en étant bien au-dessus de lui. Un punish de niche, sinon un gimmick."
+    },
+    {
+      "name": "Mixups après ground rush de Gravity Force",
+      "desc": "D'après le guide de tehdr4g0n (2012), le ground rush de Gravity Force ouvre une situation de mixup redoutable sans dépenser d'assist : la menace de Sector Ray force le réveil en dodge (il bat block et dash), Genesis Rock attrape les dodges avant/latéraux, et un dodge cancel en dash — ou une simple attente vers Glare Hand / Rising Wave -> Cosmic Ray — bat le dodge arrière. Le ground rush vers Sector Ray fonctionne particulièrement bien dans un coin ou au bord d'une plateforme.",
+      "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/63562"
+    },
+    {
+      "name": "Glare Hand -> Cosmic Ray à travers les murs",
+      "desc": "La portion « glare » de Glare Hand tire l'adversaire vers Golbez et ses frames actives durent plus longtemps que l'animation ne le suggère : en bufferisant Carré pendant et juste après l'animation, le link Cosmic Ray sort de façon fiable — et l'ensemble fonctionne à travers les murs, ce que le guide de tehdr4g0n exploite notamment dans Pandaemonium.",
+      "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/63562"
     }
   ],
-  "matchups": null,
+  "matchups": {
+    "summary": [
+      "La seule analyse de matchups exhaustive vient du guide Golbez de tehdr4g0n (GameFAQs, v1.4, 2012), qui passe les 30 adversaires en revue. Sa grille de lecture : le jeu au sol de Golbez domine la mêlée pure et les zoners médiocres, et ses ennuis commencent quand l'adversaire éteint le duo Glare Hand / Attack System ou l'emmène en l'air. Côté favorable : Firion — un très bon Firion coupe tout le zoning au sol au Shield Bash, mais Rising Wave punit facilement Rope Knife et Reel Axe, et il suffit de monter en l'air où Firion est « bien pire » que Golbez ; Tifa, incapable d'agir hors du corps à corps, se tient à distance du bout de Glare Hand ; Laguna, Jecht, Shantotto et Onion Knight se gèrent en dodge-punissant patiemment (forward dodge puis Gravity/Float System -> Cosmic Ray revient en boucle dans le guide).",
+      "Les mauvais matchups documentés : Squall — « en l'air, vous perdez purement et simplement », et au sol la portée max de Thunder Barret dépasse celle de Glare Hand, ce qui ampute son jeu ; tehdr4g0n conseille de camper hors de portée de Thunder Barret, de poser Attack System avant d'avancer, et surtout de garder une barre d'assist pour punir les whiffs, sans quoi « Squall peut vous presser toute la journée ». Kuja punit tous les outils de zoning au sol d'un Ultima et force Golbez à monter — un très bon Kuja est « vraiment très dur à battre ». Exdeath est « incroyablement difficile » : l'Omni-block bloque tout, y compris les HP attacks ; les deux plans proposés sont de ne toucher ni Cercle ni Carré (ne rien lui donner à bloquer), ou de presser à Gravity Force, dont la sphère crush la défense et dont la suite stagger. L'Emperor, faute de pouvoir refléter ses Flares, se joue patiemment — Rising Wave punit presque toutes ses options.",
+      "Le mirror match impose de changer complètement de plan : Golbez possède tous les outils pour éteindre son propre zoning (Rising Wave punit Glare Hand et Attack System), donc on prend l'initiative en l'air à Gravity/Float System — le guide souligne au passage que Float System démarre plus vite que Gravity System et fait le punisher le plus fiable. Contre Cecil, adversaire « dangereux » : Dark Cannon mange Glare Hand avec plus de portée, Nightfall stagger sur block et un Paladin équipé Speed Boost++ approche la vitesse d'Onion Knight ; il faut esquiver Dark Cannon plutôt que d'échanger, et fuir Searchlight à tout prix. Contre Bartz, garder le combat au sol (seul Hazard Raid traverse le zoning, et se punit d'un jump puis Gravity System dans le dos) — en l'air, Slide Shooter donne à Bartz un léger avantage. Gilgamesh reste « relativement simple » : sa marche lente se zone, mais Rocket Punch, très rapide et plus long que Glare Hand, interdit tout relâchement.",
+      "Vu du côté adverse, le guide Firion de b0untyhunter270 (GameFAQs, 2012) confirme la menace perçue : Golbez est « pénible » parce que presque tout son close/mid-range enchaîne dans Cosmic Ray (Rising Wave, Glare Hand, Gravity System, Float System), Sector Ray attrape les dodges trop précoces, Genesis Rock sanctionne l'excès de proximité, et Black Fang plane comme un break instantané en EX Mode."
+    ]
+  },
   "builds": {
     "philosophy": [
       "Les données ne contiennent qu'un build détaillé, « Side by Side (Seal of Lufenia) », cohérent avec le statut de HP linker décrit dans l'overview : Golbez récupère de la jauge d'assist sur chaque HP link et Nightglow connectés, et les builds à haute bravery de base amplifient fortement sa récompense sur hit, tandis que sa génération d'EX est décrite comme sévèrement surclassée par Side by Side.",
       "Le build (450 CP, Equip Glitch supposé) : 9623 HP, 1205 BRV, 180 ATK, 182 DEF, 60 LUK ; assist Jecht, summon Rubicante ; set Lufenian (Lufenian Lance, Lufenian Dirk, Lufenian Jacket) avec Thornlet, pour l'effet spécial Seal of Lufenia ; accessoires incluant Sniper Eye, Battle Hammer, BRV = 0, Empty EX Gauge, Summon Unused, Pre-EX Mode, Pre-EX Revenge, After 30 Seconds, Opponent Summon Unused et Side by Side."
     ],
-    "notes": "Un second emplacement de build (« Build #2 ») figure dans les données mais est entièrement vide, et les coups équipés du build Lufenian ne sont pas renseignés. Aucune prose de philosophie de build n'accompagne les tableaux."
+    "notes": "Un second emplacement de build (« Build #2 ») figure dans les données mais est entièrement vide, et les coups équipés du build Lufenian ne sont pas renseignés. Aucune prose de philosophie de build n'accompagne les tableaux. Le guide Golbez de tehdr4g0n (GameFAQs, 2012) documente en revanche des builds alternatifs argumentés : son set principal combine Zeromus Shard (dégâts +10 %) et l'équipement Lufenian (effet Judgement of Lufenia, déplétion d'assist +15 %) avec Sniper Eye/Ring, Battle Ring, Dismay Shock, les boosters Large Gap in HP / Pre-EX Mode / Pre-EX Revenge / Empty EX Gauge, Great Gospel, Rebellious Soul et Force to Courage, invocation Carbuncle — la logique assumée : Golbez « grignote » les HP à chaque touche (tout mène au Wall Rush), la déplétion d'assist/EX garde l'adversaire sur la défensive, Great Gospel refait la bravery entre deux HP, Carbuncle exploite la bravery à zéro post-HP, et l'EX Mode jugé quelconque est sacrifié au profit de Force to Courage. Une variante proposée par YonKitoTaoshibe empile les HP (Master Mage +1000 HP, Heavy Armour, Green Gem pour 11699 HP, avec EXP to HP) afin d'activer Large Gap in HP et HP > 10000, complétés de Back to the Wall, Achy+ et Rebellious Soul en police d'assurance."
   },
   "assist": {
     "asAssist": [
@@ -112,8 +129,17 @@
       "date": "2012"
     }
   ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/63562",
+      "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/65018"
+    ],
+    "builds": [
+      "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/63562"
+    ]
+  },
   "limits": [
-    "Page matchups dédiée non documentée (stub) et aucun matchup nommé dans l'overview : champ matchups à null.",
+    "La page matchups du wiki reste une ébauche (stub) : la section matchups est entièrement sourcée hors wiki, sur le guide GameFAQs de tehdr4g0n (2012) — un point de vue d'auteur unique, complété par le guide Firion de b0untyhunter270 pour la vue adverse.",
     "Aucune mécanique unique documentée (section absente des sources).",
     "Section combos non documentée : aucun combo détaillé dans les données.",
     "Sector Ray (ground) sans notes d'usage : seul le tableau de données existe, la clé est omise de moveNotes.",
