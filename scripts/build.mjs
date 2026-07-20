@@ -4,8 +4,9 @@ import { CHARACTERS, SPECIAL } from './characters.mjs';
 import { renderLanding } from '../src/templates/landing.mjs';
 import { renderGuide } from '../src/templates/guide.mjs';
 import { renderTechniques } from '../src/templates/techniques.mjs';
+import { renderChaos } from '../src/templates/chaos.mjs';
 import { speedValues } from '../src/templates/helpers.mjs';
-import { readFileSync, writeFileSync, existsSync, mkdirSync, cpSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, cpSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -66,16 +67,34 @@ mkdirSync(join(DIST, 'characters'), { recursive: true });
 mkdirSync(join(DIST, 'styles'), { recursive: true });
 mkdirSync(join(DIST, 'scripts'), { recursive: true });
 
-// Landing (31 jouables uniquement, ordre roster)
+// Screenshots de coups disponibles en local (couverture Wayback partielle)
+const moveImages = new Set();
+const movesDir = join(ROOT, 'assets', 'moves');
+if (existsSync(movesDir)) {
+  for (const slug of readdirSync(movesDir)) {
+    for (const f of readdirSync(join(movesDir, slug))) moveImages.add(`${slug}/${f}`);
+  }
+}
+
+// Landing (31 jouables uniquement, rangées façon écran du jeu)
+const taglineBySlug = Object.fromEntries(chars.filter((c) => c.ed?.tagline).map((c) => [c.def.slug, c.ed.tagline]));
 writeFileSync(join(DIST, 'index.html'), renderLanding({
   characters: CHARACTERS,
   tierBySlug,
+  taglineBySlug,
 }));
 
-// Guides
+// Guides + fiche courte Chaos
 let missingEd = 0;
 for (const { def, data, ed } of chars) {
-  if (def.slug === 'chaos') continue; // boss hors périmètre versus — pas de guide (choix documenté)
+  if (def.slug === 'chaos') {
+    writeFileSync(join(DIST, 'characters', 'chaos.html'), renderChaos({
+      char: data,
+      ed,
+      hasPortrait: existsSync(join(ROOT, 'assets', 'portraits', 'chaos.png')),
+    }));
+    continue;
+  }
   if (!ed) missingEd++;
   const html = renderGuide({
     char: data,
@@ -83,6 +102,7 @@ for (const { def, data, ed } of chars) {
     tierEntry: tierEntryBySlug[def.slug] || null,
     castAvg,
     hasPortrait: existsSync(join(ROOT, 'assets', 'portraits', `${def.slug}.png`)),
+    moveImages,
   });
   writeFileSync(join(DIST, 'characters', `${def.slug}.html`), html);
 }

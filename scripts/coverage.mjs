@@ -37,8 +37,8 @@ ${rows.join('\n')}
 
 1. **Images via Wayback Machine.** Le CDN d'images du wiki (\`resources.dissidia.wiki\` ET \`dissidia.wiki/images/\`) est en panne totale (301 → 404, vérifié aussi dans un navigateur réel). Les portraits et icônes sont les fichiers officiels du wiki récupérés depuis web.archive.org (snapshots ~janvier 2026, signature PNG vérifiée) et copiés en local. Le pattern d'URL du cahier des charges était le bon — c'est le serveur qui est HS. Mention ajoutée au footer.
 2. **Guide Prishe de référence absent.** Le fichier \`guide-prishe-dissidia012.html\` n'était pas dans le repo ; la structure §7 et le design system §8 du cahier des charges ont servi d'étalon à la place.
-3. **Screenshots de coups non intégrés** (hébergés sur le CDN cassé ; récupérables un à un via Wayback si souhaité — ~250 fichiers).
-4. **Chaos : aucune page générée** (boss hors sélection versus ; la fiche courte optionnelle reste possible, données parsées disponibles).
+3. **Screenshots de coups : couverture partielle** — 195 des 360 captures référencées par le wiki ont pu être récupérées via la Wayback (les 165 autres n'ont jamais été archivées, détail dans \`reports/move-images-log.json\`). Les accordéons n'affichent la capture que lorsqu'elle existe.
+4. **Chaos : fiche courte** générée (\`characters/chaos.html\`) — validé par Jonath ; la page wiki ne contient qu'une phrase, la fiche est minimale et renvoie vers Feral Chaos.
 5. **Aerith sans portrait** : aucun \`ddff-port-aerith.png\` n'a jamais existé sur le CDN (vérifié via l'index CDX de la Wayback) ; sa page wiki ne contient aucune image.
 6. **Descriptions anglaises des coups non affichées** (règle « jamais de copie verbatim ») : remplacées par les notes d'usage françaises ; les combos documentés sont rendus en notation d'origine (traités comme données).
 7. **Emplacement du projet** : \`Projets/dissidia012-guides\` (la session Claude Code était ouverte sur un autre projet).
@@ -57,10 +57,8 @@ ${allLimits.join('\n\n')}
 
 ## Questions ouvertes
 
-1. Faut-il récupérer les ~250 screenshots de coups via la Wayback (alourdit le repo, complète les accordéons) ?
-2. Lancer une passe « tech communautaire » sur GameFAQs/Steam/YouTube pour étoffer la section 9 des guides les plus joués ?
-3. Fiche courte Chaos : oui ou non ?
-4. Hébergement final (GitHub Pages / Netlify) et nom du projet ?
+1. Passe « tech communautaire » GameFAQs/Steam/YouTube pour étoffer la section 9 : validée par Jonath, **en attente de son go**.
+2. Hébergement : local pour le moment (décision Jonath) ; GitHub Pages/Netlify possibles sans modification.
 `;
 
 writeFileSync(join(ROOT, 'reports', 'coverage.md'), md);

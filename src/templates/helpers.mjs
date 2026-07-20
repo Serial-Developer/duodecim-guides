@@ -43,20 +43,28 @@ export function speedValues(s) {
   };
 }
 
-// Diagramme SVG : barres de startup triées (code couleur priorité)
+// Diagramme SVG : barres de startup triées de la plus rapide à la plus lente.
+// Barre plus courte = coup plus rapide (meilleur) ; les coups les plus rapides
+// sont mis en avant (★ + pleine couleur), BRV et HP distingués par couleur.
 export function startupChartSvg(moves, title) {
   const items = moves
-    .map((m) => ({ name: m.name, f: startupFrames(Array.isArray(m.startup) ? m.startup[0] : m.startup), prio: String(Array.isArray(m.priority) ? m.priority[0] : m.priority || '') }))
+    .map((m) => ({
+      name: m.name,
+      cat: m.cat || 'BRV',
+      f: startupFrames(Array.isArray(m.startup) ? m.startup[0] : m.startup),
+      prio: String(Array.isArray(m.priority) ? m.priority[0] : m.priority || ''),
+    }))
     .filter((m) => m.f !== null && m.name)
     .sort((a, b) => a.f - b.f);
   if (items.length < 2) return '';
-  const rowH = 26, padL = 210, padR = 46, padT = 26, padB = 30;
-  const w = 760;
+  const minF = items[0].f;
+  const isTop = (it) => it.f <= minF + 4; // coups quasi aussi rapides que le meilleur
+  const rowH = 27, padL = 230, padR = 130, padT = 30, padB = 32;
+  const w = 800;
   const maxF = Math.max(...items.map((i) => i.f));
   const chartW = w - padL - padR;
   const h = padT + items.length * rowH + padB;
-  const color = (p) => /ranged/i.test(p) ? 'var(--success)' : /high/i.test(p) ? 'var(--gold)' : /mid/i.test(p) ? 'var(--violet)' : 'var(--muted)';
-  // graduations ~ tous les 10F
+  const color = (it) => (it.cat === 'HP' ? 'var(--gold)' : 'var(--violet)');
   const step = maxF > 60 ? 20 : 10;
   let grid = '';
   for (let f = step; f <= maxF; f += step) {
@@ -67,18 +75,55 @@ export function startupChartSvg(moves, title) {
   const bars = items.map((it, i) => {
     const y = padT + i * rowH;
     const bw = Math.max(3, (it.f / maxF) * chartW);
-    return `<text x="${padL - 8}" y="${y + 15}" fill="var(--text)" font-size="12" text-anchor="end">${esc(it.name.length > 30 ? it.name.slice(0, 29) + '…' : it.name)}</text>` +
-      `<rect x="${padL}" y="${y + 4}" width="${bw}" height="${rowH - 10}" rx="3" fill="${color(it.prio)}"><title>${esc(it.name)} : ${it.f}F (${esc(it.prio || 'priorité n.c.')})</title></rect>` +
-      `<text x="${padL + bw + 6}" y="${y + 15}" fill="var(--muted)" font-size="11">${it.f}F</text>`;
+    const top = isTop(it);
+    const label = it.name.length > 26 ? it.name.slice(0, 25) + '…' : it.name;
+    return `<text x="${padL - 8}" y="${y + 15}" fill="${top ? 'var(--gold)' : 'var(--text)'}" font-size="12" font-weight="${top ? '700' : '400'}" text-anchor="end">${top ? '★ ' : ''}${esc(label)}</text>` +
+      `<rect x="${padL}" y="${y + 4}" width="${bw}" height="${rowH - 10}" rx="3" fill="${color(it)}" opacity="${top ? 1 : 0.5}"><title>${esc(it.name)} (${it.cat}) : ${it.f}F — priorité ${esc(it.prio || 'n.c.')}</title></rect>` +
+      `<text x="${padL + bw + 6}" y="${y + 15}" fill="${top ? 'var(--text)' : 'var(--muted)'}" font-size="11" font-weight="${top ? '700' : '400'}">${it.f}F${it.prio ? ` · ${esc(it.prio)}` : ''}</text>`;
   }).join('');
+  const legendY = 16;
+  const legend = `<rect x="${padL}" y="${legendY - 9}" width="11" height="11" rx="2" fill="var(--violet)"/><text x="${padL + 16}" y="${legendY + 1}" fill="var(--muted)" font-size="11">Bravery</text>` +
+    `<rect x="${padL + 78}" y="${legendY - 9}" width="11" height="11" rx="2" fill="var(--gold)"/><text x="${padL + 94}" y="${legendY + 1}" fill="var(--muted)" font-size="11">Attaque HP</text>` +
+    `<text x="${padL + 190}" y="${legendY + 1}" fill="var(--gold)" font-size="11">★ = parmi les plus rapides du kit</text>`;
   return `<figure class="diagram" role="img" aria-label="${esc(title)}">
 <figcaption>${esc(title)}</figcaption>
-<div class="table-scroll"><svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="min-width:560px">
-<title>${esc(title)}</title>
-${grid}${bars}
+<div class="table-scroll"><svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="min-width:620px">
+<title>${esc(title)} — barre plus courte = coup plus rapide</title>
+${grid}${legend}${bars}
 </svg></div>
-<p class="mv-desc">Startup en frames (60 i/s, données dissidia.wiki). Couleur : <span style="color:var(--muted)">Melee Low</span> · <span style="color:var(--violet)">Melee Mid</span> · <span style="color:var(--gold)">Melee High</span> · <span style="color:var(--success)">Ranged</span>.</p>
+<p class="mv-desc"><strong>Barre plus courte = coup plus rapide.</strong> Startup en frames (60 i/s, données dissidia.wiki), priorité indiquée après la valeur. Les coups marqués ★ sont les plus rapides du kit — ce sont en général vos meilleurs outils de punish et de pression.</p>
 </figure>`;
+}
+
+// Diagramme SVG de chaînes : starters (One) -> bus central -> followups (Two)
+export function chainSvg(starters, followups) {
+  if (!starters.length || !followups.length) return '';
+  const rowH = 34, pillW = 205, pillH = 26, gap = 90;
+  const rows = Math.max(starters.length, followups.length);
+  const w = pillW * 2 + gap * 2 + 20;
+  const h = Math.max(rows * rowH + 20, 80);
+  const busX = pillW + gap + 10;
+  const midY = h / 2;
+  const pill = (name, x, y, cls) =>
+    `<rect x="${x}" y="${y}" width="${pillW}" height="${pillH}" rx="13" fill="var(--surface-2)" stroke="${cls === 'hp' ? 'var(--gold)' : 'var(--violet)'}" stroke-width="1.5"/>` +
+    `<text x="${x + pillW / 2}" y="${y + 17}" fill="var(--text)" font-size="11.5" text-anchor="middle">${esc(name.length > 32 ? name.slice(0, 31) + '…' : name)}</text>`;
+  let out = '';
+  starters.forEach((n, i) => {
+    const y = 10 + i * rowH + (rows - starters.length) * rowH / 2;
+    out += pill(n, 10, y, 'brv');
+    out += `<path d="M ${10 + pillW} ${y + pillH / 2} C ${10 + pillW + gap * 0.6} ${y + pillH / 2}, ${busX - gap * 0.4} ${midY}, ${busX} ${midY}" fill="none" stroke="var(--violet)" stroke-width="1.5" opacity="0.7"/>`;
+  });
+  out += `<circle cx="${busX}" cy="${midY}" r="5" fill="var(--gold)"/>`;
+  followups.forEach((n, i) => {
+    const y = 10 + i * rowH + (rows - followups.length) * rowH / 2;
+    out += `<path d="M ${busX} ${midY} C ${busX + gap * 0.4} ${midY}, ${busX + gap * 0.6} ${y + pillH / 2}, ${busX + gap} ${y + pillH / 2}" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.8" marker-end="url(#arrow)"/>`;
+    out += pill(n, busX + gap, y, 'hp');
+  });
+  return `<svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" style="min-width:520px" role="img">
+<title>Diagramme des chaînes : chaque bravery « One » peut enchaîner sur n'importe quel followup « Two » équipé</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--gold)"/></marker></defs>
+${out}
+</svg>`;
 }
 
 // Profil de mobilité : valeurs brutes du perso vs moyenne du cast (plus bas = plus rapide)

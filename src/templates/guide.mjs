@@ -1,7 +1,7 @@
 // Template d'un guide personnage — structure imposée §7 du cahier des charges
 import {
   esc, banner, infoBanner, paras, priorityBadge, startupChartSvg, mobilityChartSvg,
-  sourcesSection, pageShell, siteFooter,
+  chainSvg, sourcesSection, pageShell, siteFooter,
 } from './helpers.mjs';
 
 const FIELDS = [
@@ -36,13 +36,21 @@ function moveRows(m) {
   return variantHeader + rows;
 }
 
-function moveAccordion(m, noteFr) {
+function moveAccordion(m, noteFr, ctx) {
   const startup = Array.isArray(m.startup) ? m.startup[0] : m.startup;
   const prio = Array.isArray(m.priority) ? m.priority[0] : m.priority;
+  let shot = '';
+  if (m.image && ctx?.moveImages) {
+    const fn = decodeURIComponent(m.image.split('/').pop());
+    if (ctx.moveImages.has(`${ctx.slug}/${fn}`)) {
+      shot = `<img class="mv-shot" src="../assets/moves/${ctx.slug}/${encodeURIComponent(fn)}" alt="Capture in-game : ${esc(m.name || 'coup')}" loading="lazy">`;
+    }
+  }
   return `<details class="move">
 <summary><span class="mv-name">${esc(m.name || 'Coup sans nom')}</span>
 <span class="mv-meta">${esc(startup || '')}</span>${priorityBadge(prio)}</summary>
 <div class="mv-body">
+${shot}
 ${noteFr ? `<div class="mv-note"><p>${esc(noteFr)}</p></div>` : ''}
 ${m.rawRows?.length
     ? `<div class="table-scroll"><table class="data"><tr>${m.rawRows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr>${m.rawRows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`
@@ -53,12 +61,16 @@ ${m.rawRows?.length
 
 const GROUP_LABELS = { ground: 'Au sol', aerial: 'En l’air', followups: 'Followups', main: 'Liste' };
 
-function movesGroup(groupKey, flow, ed) {
+function movesGroup(groupKey, flow, ed, ctx) {
   if (!flow || !flow.moves.length) return '';
   const label = GROUP_LABELS[groupKey] || groupKey;
+  const chainRef = groupKey === 'followups'
+    ? `<p class="mv-desc">Ces followups se greffent sur les braveries « (One) » — le <a href="#chaines">diagramme des chaînes</a> ci-dessous résume les embranchements.</p>`
+    : '';
   return `<h3>${esc(label)}</h3>
 ${flow.intro ? `<p class="mv-desc">${esc(flow.intro.split('\n')[0])}</p>` : ''}
-${flow.moves.map((m) => moveAccordion(m, ed?.moveNotes?.[m.name])).join('\n')}`;
+${chainRef}
+${flow.moves.map((m) => moveAccordion(m, ed?.moveNotes?.[m.name], ctx)).join('\n')}`;
 }
 
 function chainDiagram(braveryGroups) {
@@ -69,13 +81,11 @@ function chainDiagram(braveryGroups) {
     .flatMap(([, g]) => g.moves.map((m) => m.name))
     .filter((n) => n && /\(One\)/i.test(n));
   if (!starters.length) return '';
-  const pills = (arr, cls = '') => arr.map((n) => `<span class="pill ${cls}">${esc(n)}</span>`).join('');
-  return `<div class="card">
-<h3>Chaînes One → Two</h3>
-<p>Chaque bravery « (One) » peut enchaîner sur un followup « (Two) » équipable :</p>
-<div class="chain">${pills(starters)}</div>
-<div class="chain"><span class="arrow" aria-label="enchaîne vers">→</span>${pills(fu.moves.map((m) => m.name).filter(Boolean))}</div>
-</div>`;
+  return `<figure class="diagram" id="chaines">
+<figcaption>Diagramme des chaînes One → Two</figcaption>
+<div class="table-scroll">${chainSvg(starters, fu.moves.map((m) => m.name).filter(Boolean))}</div>
+<p class="mv-desc">Chaque bravery « (One) » (à gauche) peut enchaîner sur n'importe quel followup « (Two) » équipé (à droite) — le followup est choisi à l'équipement, pas pendant le combo. Détail de chaque coup dans les accordéons ci-dessus.</p>
+</figure>`;
 }
 
 function genericTables(tables) {
@@ -117,12 +127,13 @@ function heroChips(info) {
 }
 
 const SECTIONS_NAV = [
-  ['overview', "Vue d'ensemble"], ['moves', 'Coups'], ['unique', 'Mécanique unique'],
+  ['overview', "Vue d'ensemble"], ['meta', 'Méta'], ['moves', 'Coups'], ['unique', 'Mécanique unique'],
   ['gameplan', 'Plan de jeu'], ['matchups', 'Matchups'], ['builds', 'Builds'],
   ['assist', 'Assists'], ['community', 'Tech communautaire'], ['sources', 'Sources'],
 ];
 
-export function renderGuide({ char, ed, tierEntry, castAvg, hasPortrait }) {
+export function renderGuide({ char, ed, tierEntry, castAvg, hasPortrait, moveImages }) {
+  const ctx = { slug: char.slug, moveImages };
   const s = char.sections;
   const noEd = !ed;
   const edBanner = noEd ? infoBanner('Contenu éditorial français en cours de rédaction — données brutes ci-dessous.') : '';
@@ -138,10 +149,20 @@ ${heroChips(char.infobox)}
 </div>
 </section>`;
 
+  // --- 2b. Position dans la méta (section dédiée) ---
+  // La tierNote éditoriale répète souvent le rang : on retire cette redite.
+  const tierNoteClean = (ed?.tierNote || '')
+    .replace(/^Class[ée]e?\s[^.]*tier list[^.]*\.\s*/iu, '')
+    .replace(/^\d+ᵉ?e?\s+sur\s+30[^.]*\.\s*/iu, '')
+    .trim();
+  const metaSection = `<section id="meta"><h2>Position dans la méta</h2>
+${tierEntry
+    ? `<p><span class="badge prio-melee-high">Tier ${esc(tierEntry.tier)}</span> <strong>${tierEntry.rank}ᵉ sur 30</strong> — tier list tournoi 2017 de <a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" rel="external noopener">dissidia.wiki</a> (moitié valeurs de matchups, moitié avis de joueurs experts).</p>`
+    : `<p class="mv-desc">Non classé dans la tier list tournoi 2017.</p>`}
+${tierNoteClean ? `<p>${esc(tierNoteClean)}</p>` : ''}
+</section>`;
+
   // --- 2. Vue d'ensemble ---
-  const tierHtml = tierEntry
-    ? `<p><strong>Tier list 2017 (tournoi, dissidia.wiki)</strong> : <span class="badge prio-melee-high">${esc(tierEntry.tier)}</span> — ${tierEntry.rank}ᵉ sur 30.${ed?.tierNote ? ' ' + esc(ed.tierNote) : ''}</p>`
-    : (ed?.tierNote ? `<p>${esc(ed.tierNote)}</p>` : `<p class="mv-desc">Non classé dans la tier list tournoi 2017.</p>`);
   const statsTable = char.infobox
     ? `<div class="table-scroll"><table class="stats">${Object.entries(char.infobox)
         .map(([k, v]) => `<tr><th>${esc(STAT_LABELS[k] || k)}</th><td>${esc(v)}</td></tr>`).join('')}</table></div>`
@@ -153,7 +174,6 @@ ${heroChips(char.infobox)}
 </div>` : '';
   const overview = `<section id="overview"><h2>Vue d'ensemble</h2>
 ${ed?.overview?.length ? paras(ed.overview) : (s.overview?.documented ? edBanner || banner() : banner())}
-${tierHtml}
 ${forces}
 <h3>Stats &amp; vitesses</h3>
 ${statsTable}
@@ -164,13 +184,15 @@ ${mobilityChartSvg(char, castAvg)}
   const allMoves = [];
   for (const key of ['bravery', 'hp']) {
     const groups = s[key]?.groups || {};
-    for (const g of Object.values(groups)) allMoves.push(...g.moves);
+    for (const g of Object.values(groups)) {
+      allMoves.push(...g.moves.map((m) => ({ ...m, cat: key === 'hp' ? 'HP' : 'BRV' })));
+    }
   }
   const braveryHtml = s.bravery?.documented
-    ? Object.entries(s.bravery.groups).map(([k, g]) => movesGroup(k, g, ed)).join('\n')
+    ? Object.entries(s.bravery.groups).map(([k, g]) => movesGroup(k, g, ed, ctx)).join('\n')
     : banner();
   const hpHtml = s.hp?.documented
-    ? Object.entries(s.hp.groups).map(([k, g]) => movesGroup(k, g, ed)).join('\n')
+    ? Object.entries(s.hp.groups).map(([k, g]) => movesGroup(k, g, ed, ctx)).join('\n')
     : banner();
   const exHtml = s.exMode?.documented
     ? `${ed?.exMode?.summary?.length ? paras(ed.exMode.summary) : edBanner || ''}
@@ -275,6 +297,7 @@ ${tocLinks}
 <main class="guide-main">
 ${hero}
 ${overview}
+${metaSection}
 ${moves}
 ${unique}
 ${gameplan}
