@@ -1,0 +1,194 @@
+{
+  "slug": "tidus",
+  "tagline": "Poke aérien, contres sur esquive et finish à la Caladbolg",
+  "archetype": "Poke aérien et contre-attaque sur esquive",
+  "overview": [
+    "L'extrait d'overview disponible se concentre sur l'EX Mode de Tidus, présenté comme un soutien de son plan de jeu à long terme assorti de quelques bons bonus. La pièce maîtresse est Caladbolg (ATK), qui augmente les dégâts de base bravery jusqu'à x2 quand Tidus est à pleine santé — et ce sur toutes ses attaques infligeant des dégâts bravery, EX Burst compris. Cela en fait un excellent outil pour conclure un match avec une bonne avance.",
+    "Son EX Burst est à l'inverse l'un des plus faibles du jeu quand Tidus est à faible santé ; mais comme l'EX Mode ajoute du taux de coup critique et vide la jauge d'assist adverse à l'activation, il reste un bon moyen de sécuriser une victoire."
+  ],
+  "tierNote": "Tidus est classé 18e (tier B) de la tier list 2017. L'extrait d'overview du wiki ne commente pas ce classement ; il vante surtout la capacité de son EX Mode à conclure les matchs.",
+  "strengths": [
+    "Hop Step, poke de référence à 11F : le plus rapide de son kit, actif tout autour de lui, faible recovery, 90 d'EX sur hit et conversions fiables en assist.",
+    "Trois attaques d'esquive (Stick & Move, Dart & Weave, Cut & Run) avec 20 frames d'invincibilité au démarrage, qui servent de contre-attaques défensives et débouchent sur le HP link Quick Hit.",
+    "Excellente mobilité : course rapide, sauts aériens multiples, chute rapide après esquive aérienne, et Reverse Ground Dash pour défendre en construisant de la jauge d'assist.",
+    "Très forte synergie avec l'assist Aerith : combos sans mur, clashs favorables et suivis après la plupart de ses pokes et HP.",
+    "Tracking vertical fortement accru pendant les appels d'assist sur Sonic Buster, Full Slide, Slice & Dice et Stick & Move, ce qui étend ses punishs à mi-distance.",
+    "EX Mode Caladbolg : dégâts de base doublés à pleine santé, coup critique accru et jauge d'assist adverse vidée à l'activation — un vrai outil de fin de match.",
+    "Jecht Shot évite le stagger contre le LV2 Assist Change et offre un gros potentiel de Wall Rush, y compris au plafond."
+  ],
+  "weaknesses": [
+    "Ses combos solo reposent sur des dodge cancels au timing serré, difficiles à placer en ligne.",
+    "Ses attaques d'esquive ont 51-53F de startup : elles perdent contre les coups à recovery rapide et restent vulnérables aux blocks et aux punishs d'assist.",
+    "La sécurité sur hit face aux Assist Changes est un point faible récurrent (Spiral Cut, Quick Hit, Jecht Shot, Energy Rain y sont tous exposés d'une façon ou d'une autre).",
+    "Wither Shot et Spiral Cut sont jugés à éviter : risque disproportionné, faible menace ou faible récompense.",
+    "Son EX Burst est l'un des plus faibles du jeu quand il est à faible santé, la faute au scaling de Caladbolg."
+  ],
+  "moveNotes": {
+    "Hop Step (ground)": "Coup d'épée vif suivi d'un coup de pied qui repousse les deux combattants : le poke clé de Tidus, le plus rapide de son kit (11F), avec faible recovery et 90 d'EX sur hit. Le second coup se confirme avec une fenêtre laxiste vers Chase, et le premier coup combote dans les assists (Aerith en tête). La rotation initiale couvre les alentours de Tidus, ce qui le rend difficile à whiff punir sans clash ; la version sol rend Tidus aérien et laisse l'adversaire debout au sol, détail important pour les conversions avec les assists Kuja et Jecht.",
+    "Sonic Buster": "Tacle traversant à 25F, à égalité avec Full Slide pour les plus gros dégâts de base de ses braveries (40), bon punisseur post-block à courte portée et démarreur de combos assist grâce à ses suivis confirmables. Le nombre de coups diminue avec la distance (maximum à bout portant). Startup réactable avec un cue sonore distinct — partagé toutefois avec l'animation de block de Tidus, ce que les bons joueurs masquent avec des spot dashes. Son tracking vertical, moyen de base, augmente énormément pendant un appel d'assist.",
+    "Sphere Shot": "Lancer de blitzball stationnaire en Ranged Mid : trop lent (41F) pour du zoning fréquent, mais son animation échappe en général aux punishs des assists Kuja et Aerith, il tient tête aux HP non high-speed en counterpoke et perturbe The Emperor dans ses traps. Un block adverse subit un stagger : dos au mur, Tidus peut garantir un Hop Step après dodge cancel, et les assists autres qu'Aerith convertissent le stagger en combo. Jusqu'à 8 coups pour 32 de dégâts à bout portant, beaucoup moins à distance max.",
+    "Stick & Move (ground)": "Attaque d'esquive (20F d'invincibilité au départ) avec déplacement latéral contrôlable, qui projette une épée disjointe vers l'avant : autant d'EX que Hop Step sur hit, assez de hit stun pour les combos assist et le HP link Quick Hit. Arme de matchup : contourner l'adversaire punit les nombreuses attaques qui frappent en ligne droite, et l'épée traverse murs et décors car elle n'est pas un vrai projectile. Long startup et longue recovery : vulnérable aux blocks et aux punishs d'assist ; l'épée touche encore au retour, ce qui autorise un dodge cancel > Hop Step en solo.",
+    "Dart & Weave (ground)": "Attaque d'esquive (20F d'invincibilité) en bond par-dessus l'adversaire suivi d'une vrille descendante : la plus rapide de ses dodge attacks à toujours avancer vers la cible, capable de cross-up sur block (voire de double cross-up avec un espacement précis). Sur hit : dodge cancel en Hop Step pour 165 d'EX et de la jauge d'assist, combos Aerith via Chase, Jecht après un dodge cancel précoce, et le HP link Quick Hit. Perd contre les coups à recovery rapide, risquée contre un block simultané (51F de startup contre 52F de block), non affectée par le tracking d'assist et la plus vulnérable de ses dodge attacks sur whiff.",
+    "Cut & Run (ground)": "Attaque d'esquive (20F d'invincibilité) : repli rapide puis charge multi-coups. Meilleurs dégâts de base et whiff recovery la plus courte de ses dodge attacks ; l'esquive arrière évite beaucoup de coups à léger tracking avant. Sur hit : HP link Quick Hit, ou un dodge cancel > Hop Step difficile pour plus de dégâts et de jauge. Active seulement après le repli, donc plus lente en pratique et plus vulnérable aux blocks ; la charge traverse certains projectiles aux hitbox intermittentes, comme le HP Shining Wave du Warrior of Light.",
+    "Hop Step (midair)": "Le poke clé devient encore plus central en l'air : mêmes qualités que la version sol (frames actives généreuses, suivi confirmable, 90 d'EX), mais fait flotter les adversaires debout sur hit. Il permet de construire la jauge d'assist de façon fiable, de harceler et de convertir vers Aerith, sans doute son assist le plus fort. Le délai du second coup est l'un de ses mixups les plus courants ; la faible priorité et les petits dégâts augmentent le risque face aux command blocks.",
+    "Full Slide": "Variante aérienne de Sonic Buster : charge à 25F, deux suivis confirmables, dégâts variables selon la distance et potentiel de Wall Rush, sans le cue sonore de block. Le tracking vertical se renforce pendant les appels d'assist pour ramasser les esquives aériennes ou clash avec les Melee Low en punish d'esquive ; le hit stun autorise les combos assist même sans mur. Bon outil secondaire de punish et de mixup, et un moyen défensif de construire de la jauge en lock-off.",
+    "Wither Shot": "Lancer de blitzball en Ranged Low, inverse de Sphere Shot : un seul coup, meilleur tracking vertical, pas de Wall Rush. Un combo dans l'assist Kuja est possible sur hit, mais startup lent, faibles dégâts, faible EX et immobilité de Tidus rendent ce coup difficile à justifier face aux dodge attacks.",
+    "Stick & Move (midair)": "Fonctionne comme la version sol, disjoint compris, avec le même tracking vertical anormalement élevé pendant les appels d'assist — utile contre Firion, qui dispose d'une allonge correcte contre Cut & Run. Coup de matchup, mais loin d'être inutile.",
+    "Dart & Weave (midair)": "Fonctionne comme la version sol : combo en Hop Step et cross-up sur block toujours possibles. Attention au plafond, qui coupe le déplacement et neutralise l'essentiel de ses qualités défensives — l'invincibilité initiale ne suffit plus si Tidus ne bouge pas.",
+    "Cut & Run (midair)": "Version aérienne avec un dernier coup renforcé (34 de dégâts de base), notable pour les dégâts globaux en EX Mode. La meilleure récompense moyenne sur hit de ses dodge attacks : elle lui permet notamment de dépenser deux barres d'assist en un combo avec Aerith pour conclure. Un gros atout dans beaucoup de matchups.",
+    "Spiral Cut": "HP avançant au sol à 39F, dont l'animation va au bout même sur whiff : récompense modeste (10 de base, pas de Wall Rush) hormis les 90 d'EX, mauvais anti-air, très vulnérable après Assist Change et en désavantage de frames contre les recovery attacks. Sa propriété de block Ranged Low s'active instantanément et couvre jusqu'à la première frappe. Utilisable en attaque surprise ponctuelle ou en fin de combo assist, mais ses autres HP font souvent mieux.",
+    "Energy Rain (ground)": "Coup de pied descendant suivi de projectiles Ranged High à fort homing, longues frames actives et explosions finales qui se déclenchent même sur miss — très difficiles à éviter sans invincibilité accrue, Assist Change tardif, Precision Evasion ou block haute priorité (Jecht Block). Laisse Tidus aérien, donc combos Aerith sans mur, avec un bon avantage de frames ; le dodge cancel Hop Step bat la plupart des Recovery Attacks. La version sol peut servir de counterpoke risqué grâce à l'ascension initiale.",
+    "Quick Hit A": "Le seul HP link de Tidus, branché sur toutes ses attaques d'esquive : combo aérien avec Wall Rush qui part même sans toucher, ce qui l'expose aux contres après Assist Change. Utilisé hors combo, il ne consomme pas de barre d'assist, laquelle reste disponible pour interrompre ou échanger avec un punisseur ; le dernier coup a de bonnes frames actives et peut clash avec les whiff punishs mêlée pressés. Avec Aerith, le knockback s'annule au timing précis pour poursuivre sans Wall Rush dans les grands stages.",
+    "Quick Hit B": "Quick Hit depuis Dart & Weave : identique aux autres Quick Hits.",
+    "Quick Hit C": "Quick Hit depuis Cut & Run : identique aux autres Quick Hits.",
+    "Jecht Shot": "Trois tirs de blitzball à très fort knockback de Wall Rush : son HP le plus puissant en dégâts de base, avec la meilleure sécurité sur hit contre le LV2 Assist Change (priorité Ranged, allonge suffisante depuis une distance d'esquive). Les tirs de suivi ont portée et tracking étendus mais perdent contre les blocks haute priorité — spécialité de Jecht après s'être échappé. Trop lent (61F) pour punir blocks et esquives simultanés, assist-punissable à la réaction, et Tidus reste immobile sur les deux premiers tirs. Excellent pour sécuriser du Wall Rush au plafond et disputer les EX Cores ; 10 % de chance d'obtenir une balle Moogle (multiplicateur doublé si elle sort au premier tir).",
+    "Energy Rain (midair)": "Quasi identique à la version sol : mêmes dégâts, même EX, Tidus reste aérien et tire les projectiles autoguidés. Pas son HP le plus fort, et il partage avec Jecht Shot la faiblesse de perdre contre le block haute priorité de Jecht après Assist Change.",
+    "Slice & Dice": "Charge en glide suivie de frappes tout autour de la cible : plus d'allonge horizontale qu'Energy Rain, excellent tracking post-hit et forte probabilité de toucher l'assist adverse pendant l'échappée, ce qui autorise un dodge cancel précoce en cas de riposte. Le premier coup a de bonnes frames actives et le tracking vertical explose pendant les appels d'assist : bon pour clash favorablement avec les hautes priorités et punir les attaques interminables ; le glide aide aussi à réfléchir les projectiles haute priorité. L'un de ses meilleurs HP, pertinent dans presque tous les matchups.",
+    "Quick Hit D": "Quick Hit depuis Stick & Move aérien : identique aux autres Quick Hits.",
+    "Quick Hit E": "Quick Hit depuis Dart & Weave aérien : identique aux autres Quick Hits.",
+    "Quick Hit F": "Quick Hit depuis Cut & Run aérien : identique aux autres Quick Hits."
+  },
+  "exMode": {
+    "summary": [
+      "L'EX Mode de Tidus, « Equipped Caladbolg! », confère Regen, Critical Boost, Mirror Dash, Caladbolg (ATK) et Caladbolg (DODGE). Il accélère aussi ses vitesses de course, de dash et de chute (valeurs EX Mode distinctes dans l'infobox, dont un dash classé le plus rapide du jeu).",
+      "D'après l'overview, cet EX Mode soutient son plan de jeu à long terme : Caladbolg (ATK) fait monter les dégâts de base bravery jusqu'à x2 à pleine santé, sur toutes les attaques infligeant des dégâts bravery, EX Burst compris — idéal pour conclure un match avec une avance. L'activation ajoute par ailleurs du taux de critique et vide la jauge d'assist adverse, ce qui aide à sécuriser une victoire même quand le Burst lui-même est affaibli."
+    ],
+    "burst": "Les données n'incluent pas de fiche détaillée de l'EX Burst ; l'overview indique qu'il est l'un des plus faibles du jeu lorsque Tidus est à faible santé, en raison du scaling de Caladbolg."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Le cœur du jeu de Tidus est aérien et compact : Hop Step comme poke central pour harceler, construire la jauge d'assist et punir (esquive, block, whiff) ; Full Slide pour les conversions en l'air avec Aerith et comme punisseur principal après un blodge réussi ; Slice & Dice comme HP le plus sûr contre le LV1 Assist Change et outil de clash/punish à mi-distance ; Jecht Shot comme finisher de combo assist à gros Wall Rush qui évite le stagger du LV2 Assist Change. Ce noyau se complète ensuite selon le matchup avec les attaques d'esquive et les coups au sol.",
+    "Les attaques d'esquive sont sa carte défensive : 20 frames d'invincibilité au démarrage, contre-attaques qui débouchent sur Quick Hit (son seul HP link) ou sur un dodge cancel > Hop Step pour l'EX et la jauge. Le wiki recommande de choisir la dodge attack selon l'adversaire : Stick & Move contre Firion, Laguna, Terra, Ultimecia et The Emperor ; Dart & Weave contre Sephiroth ; Cut & Run contre le reste du roster. Ses combos solo tournent tous autour de ces coups (par exemple Dart & Weave > dodge cancel > Hop Step, 53-54 de dégâts de base et 165 d'EX), mais ils sont durs à placer en ligne.",
+    "Aerith est le pivot de son plan offensif : Seal Evil, en priorité Ranged, démarre un combo même quand l'adversaire garde deux barres d'assist, et la plupart des coups de Tidus le laissant aérien, presque tout son kit peut être prolongé ou couvert par elle (conversions Full Slide, suivis post-HP, annulation du knockback de Quick Hit, punishs allongés par le tracking d'assist). Kuja, Jecht et Onion Knight offrent des alternatives documentées avec leurs propres routes. En défense, Reverse Ground Dash lui permet de reculer en générant de la jauge, et Sphere Shot ou Sonic Buster servent de mixups à mi-distance pour contester blocks et pokes lents.",
+    "Enfin, l'EX Mode sert de plan de fin de match : à pleine santé, Caladbolg double les dégâts de base bravery, et l'activation vide la jauge d'assist adverse tout en ajoutant du critique — de quoi transformer une avance en victoire."
+  ],
+  "advancedTech": [
+    {
+      "name": "Dodge cancel Hop Step",
+      "desc": "Combo solo documenté : Dart & Weave > dodge cancel (haut, bas) > Hop Step, pour 53-54 de dégâts de base et 165 d'EX. Timing peu permissif et arc du dodge cancel dépendant de l'angle caméra ; le même principe s'applique aux autres dodge attacks."
+    },
+    {
+      "name": "Assist call tracking",
+      "desc": "Le tracking vertical de Sonic Buster, Full Slide, Slice & Dice et Stick & Move augmente fortement pendant un appel d'assist, ce qui en fait des whiff punishers à mi-distance contre les coups à longue recovery."
+    },
+    {
+      "name": "Stick & Move disjoint",
+      "desc": "L'épée lancée n'est pas considérée comme un projectile séparé : elle peut poke à travers les murs et les éléments de décor, et touche encore au retour, ce qui laisse le temps de dodge cancel et de combotter en Hop Step."
+    },
+    {
+      "name": "Sphere Shot stagger > Hop Step",
+      "desc": "Un block adverse sur Sphere Shot provoque un stagger ; dos au mur, Tidus obtient assez d'avantage de frames pour garantir un Hop Step après dodge cancel. Les assists autres qu'Aerith convertissent aussi le stagger en combo."
+    },
+    {
+      "name": "Quick Hit knockback cancel (Aerith)",
+      "desc": "Avec Aerith, le knockback de Quick Hit s'annule au timing précis pour poursuivre le combo sans Wall Rush — une alternative précieuse dans les grands stages sans mur à proximité."
+    },
+    {
+      "name": "Sound cue masking",
+      "desc": "Le cue sonore de Sonic Buster est le même que celui du block de Tidus : des spot dashes permettent de le masquer et de piéger les adversaires qui jouent à l'oreille."
+    }
+  ],
+  "matchups": null,
+  "builds": {
+    "philosophy": [
+      "Le build principal documenté est un hybride orienté dégâts : World Champion, pièces Lufenian (effet Seal of Lufenia, Lufenian Dirk obtenu via l'Equip Glitch avec Thief's Gear), assist Aerith, invocation Scarmiglione et un multiplicateur de booster maximal de x8,2 qui fournit de la valeur constante pendant la majorité du match. Reverse Ground Dash y est mis en avant comme moyen de défendre tout en construisant la jauge d'assist, et le build capitalise sur la course rapide de Tidus, ses sauts aériens multiples et les critiques de Sneak Attack. 30 CP restent disponibles pour des braveries au sol supplémentaires, une dodge attack + Quick Hit ou des extra abilities.",
+      "Deux builds Bravery Boost on Dodge complètent l'arsenal. Le premier (Adamant Chains, booster jusqu'à x13,9 avec Opponent Empty EX Gauge face à un adversaire en Side by Side) est recommandé contre The Emperor : esquiver à travers les projectiles pour gonfler la bravery, puis conclure d'un HP avec l'assist Aerith (Holy, ou échange favorable via Seal Evil / Planet Protector) pour un one-hit kill ; Sphere Shot y est équipé pour perturber les actions de l'Emperor dans ses traps. Le second, un hybride du même concept, échange une partie du boost contre plus de dégâts physiques et de déplétion d'EX : bonne alternative contre Sephiroth, car il dissuade l'abus de Shadow Flare et ouvre des occasions de le chipper directement.",
+      "Quel que soit le build, les staples sont les mêmes : Hop Step, Full Slide, Slice & Dice et Jecht Shot. Les flexibles se choisissent par matchup (dodge attacks + Quick Hit associé, Sonic Buster en mixup, Sphere Shot contre les traps et les blocks à distance, Energy Rain comme variante de Slice & Dice plus dure à punir si le coup de pied initial n'est pas staggé par le LV2 Assist Change). Wither Shot et Spiral Cut sont explicitement classés à éviter."
+    ],
+    "notes": "Substitutions documentées : After 30 Seconds peut céder sa place à BRV > Base Value, Battle Hammer ou Winged Boots ; contre les adversaires en Side by Side, Dismay Shock + After 30 Seconds se remplacent par BRV > Base Value + Opponent Empty EX Gauge ; Opponent Empty EX Gauge peut devenir Large Gap in HP, et Opponent Summon Unused se traite en slot libre si l'adversaire ne joue pas d'invocation. Selon le build, 30 à 75 CP restent à allouer ; Master Guardsman (+1000 HP max, 35 CP) est cité comme investissement de survie polyvalent, et les extra abilities Achy+, Counterattack et Back to the Wall comme options au rendement variable."
+  },
+  "assist": {
+    "asAssist": [
+      "Tidus est classé High tier de la tier list assist (Muggshotter) et fait partie des assists viables établis en compétition. Il n'est pas universel comme Kuja, mais ses braveries combinent whiff punishs facilités (frame data) et combos au sol étendus, son HP aérien s'utilise en séquence de Chase pour installer des dégâts inéluctables, et son HP au sol peut harceler quelques secondes. Son atout distinctif : l'Assist Chase sur bravery aérienne est étonnamment rare, ce qui le maintient dans la course. Ses limites : un potentiel de dégâts en retrait par rapport aux autres assists compétitifs et aucune priorité Ranged.",
+      "Dans le détail : Sonic Buster (sol, 25F) est l'une des deux seules braveries d'assist au sol du jeu à finir en Wall Rush au sol — une aubaine pour Jecht et pour les personnages à gros jeu de combo (Cecil, Cloud, Squall) — mais sans coups de remplissage possibles, les dégâts additionnels étant reportés sur le Wall Rush. Hop Step (air, 11F) est ultra rapide pour le whiff punish et laisse très peu de temps pour l'Assist Change, avec Assist Chase sur hit ; en contrepartie, dégâts faibles, hit stun bref, allonge courte — l'appeler légèrement plus tard que d'habitude le fait apparaître plus près de la cible. Spiral Cut vaut rarement sa jauge ; Slice and Dice, plus lent, poursuit agressivement sur de longues distances, attrape les adversaires en Chase et garantit pratiquement un suivi grâce à son Assist Chase."
+    ],
+    "recommended": [
+      {
+        "name": "Aerith",
+        "why": "Sa synergie la plus documentée : Seal Evil (priorité Ranged) démarre des combos même contre deux barres adverses, la plupart des coups de Tidus le laissent aérien — condition d'usage de Seal Evil — et elle permet conversions Full Slide, suivis post-HP et annulations de knockback de Quick Hit. Combinaison éprouvée en compétition."
+      },
+      {
+        "name": "Kuja",
+        "why": "Whiff punishs plus fiables avec Strike Energy tout en conservant les suivis sur HP et dodge attacks ; long hit stun, knockback montant qui facilite les Wall Rush au plafond avec Jecht Shot, conversion des staggers de Sphere Shot et Force Symphony pour forcer des dégâts HP en séquence de Chase."
+      },
+      {
+        "name": "Jecht",
+        "why": "Braveries rapides au sol et en l'air ; Jecht Stream wall rush vers le bas (plus de fillers et d'attaques au sol), Jecht Rush ramasse les adversaires staggés après Sphere Shot. Aucune priorité Ranged en revanche : vulnérable en permanence aux Assist Changes."
+      },
+      {
+        "name": "Onion Knight",
+        "why": "Alternative à Kuja : conversions Hop Step avec Chase conservé, fillers plus consistants au plafond, HP Comet en priorité Ranged qui occupe l'espace et évite les staggers du LV2 Assist Change. Portée un peu inférieure et confirmations plus difficiles."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Sonic Buster : tracking accru pendant l'assist",
+      "desc": "Démonstration vidéo de l'augmentation du tracking vertical de Sonic Buster pendant un appel d'assist.",
+      "source": "https://www.youtube.com/watch?v=KowbxKm8-DQ&t=140",
+      "date": null
+    },
+    {
+      "title": "Sphere Shot stagger > dodge cancel Hop Step",
+      "desc": "Exemple vidéo du Hop Step garanti après un stagger de Sphere Shot suivi d'un dodge cancel.",
+      "source": "https://www.youtube.com/watch?v=PApmGwJaK64",
+      "date": null
+    },
+    {
+      "title": "Stick & Move : disjoint à travers un mur",
+      "desc": "Démonstration vidéo de l'épée de Stick & Move qui touche à travers un mur.",
+      "source": "https://www.youtube.com/watch?v=n7pLWp2p6D8",
+      "date": null
+    },
+    {
+      "title": "Stick & Move : combo sur le coup de retour",
+      "desc": "Démonstration vidéo du combo rendu possible par la hitbox de l'épée sur son trajet de retour.",
+      "source": "https://www.youtube.com/watch?v=oDOs-TVaqYg&t=18",
+      "date": null
+    },
+    {
+      "title": "Stick & Move : tracking vertical pendant l'assist",
+      "desc": "Démonstration vidéo du tracking vertical accru de Stick & Move pendant un appel d'assist.",
+      "source": "https://www.youtube.com/watch?v=KowbxKm8-DQ&t=101",
+      "date": null
+    },
+    {
+      "title": "Cut & Run traverse des projectiles",
+      "desc": "Démonstration vidéo de Cut & Run passant à travers des projectiles aux hitbox intermittentes.",
+      "source": "https://www.youtube.com/watch?v=cDI-tsnyJbM",
+      "date": null
+    },
+    {
+      "title": "Full Slide : tracking accru pendant l'assist",
+      "desc": "Démonstration vidéo de l'augmentation du tracking de Full Slide pendant un appel d'assist.",
+      "source": "https://www.youtube.com/watch?v=KowbxKm8-DQ",
+      "date": null
+    },
+    {
+      "title": "Wither Shot dans l'assist Kuja",
+      "desc": "Démonstration vidéo du combo Wither Shot vers l'assist Kuja sur hit.",
+      "source": "https://www.youtube.com/watch?v=MlkZGuX0J90",
+      "date": null
+    },
+    {
+      "title": "Référence vidéo (Spiral Cut, propriété de block Ranged Low)",
+      "desc": "Lien de référence du wiki, cité dans les notes de Spiral Cut au sujet de sa propriété de block Ranged Low ; le wiki ne fournit pas de titre pour cette vidéo.",
+      "source": "https://www.youtube.com/watch?v=goSpmw1oY8U",
+      "date": null
+    },
+    {
+      "title": "Référence vidéo (Slice & Dice, tracking pendant l'assist)",
+      "desc": "Lien de référence du wiki, cité dans les notes de Slice & Dice au sujet du tracking vertical accru pendant l'assist ; le wiki ne fournit pas de titre pour cette vidéo.",
+      "source": "https://www.youtube.com/watch?v=KowbxKm8-DQ&t=67",
+      "date": null
+    }
+  ],
+  "limits": [
+    "L'overview extrait du wiki est presque exclusivement consacré à l'EX Mode : aucune synthèse générale d'archétype, de neutral ou d'historique compétitif n'y figure — l'accroche et l'archétype sont déduits des notes de coups et de la section builds.",
+    "Page matchups à l'état de stub et overview sans contenu matchup — matchups à null ; les adaptations par adversaire ne sont documentées qu'à travers les builds (anti-Emperor, anti-Sephiroth) et les recommandations d'attaques.",
+    "Pas de mécanique unique documentée — uniqueMechanics à null.",
+    "Aucune fiche chiffrée de l'EX Burst (nom, dégâts, déroulé) dans les données ; seuls les effets de l'EX Mode sont listés, et Mirror Dash comme Caladbolg (DODGE) ne sont pas expliqués.",
+    "Un seul combo solo documenté (Dart & Weave > DC > Hop Step) ; la page combos dédiée n'est pas extraite.",
+    "Champ assist gain des coups non renseigné ; deux références vidéo du wiki sont listées sans titre (URL brute)."
+  ]
+}

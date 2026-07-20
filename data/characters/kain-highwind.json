@@ -322,6 +322,40 @@
                 "Peak",
                 "Landing"
               ],
+              "rawRows": [
+                [
+                  "Version",
+                  "Startup / charge time",
+                  "Max charge time = 180F",
+                  "Liftoff",
+                  "Peak",
+                  "Landing"
+                ],
+                [
+                  "LV1",
+                  "8F",
+                  "After button release",
+                  "7F",
+                  "23F~41F",
+                  "51F"
+                ],
+                [
+                  "LV2",
+                  "32F",
+                  "After button release",
+                  "9F",
+                  "27F~49F",
+                  "67F"
+                ],
+                [
+                  "LV3",
+                  "62F",
+                  "After button release",
+                  "9F",
+                  "31F~57F",
+                  "79F"
+                ]
+              ],
               "name": null,
               "notes": "LV1: A quick jump that always comes down. Has some invincibility while ascending.\nLV2: Jump with longer travel distance. Attacks while ascending, can dodge at the apex.\nLV3: Similar to LV2, but travels even further.\nJump is a flexible defensive tool, a must-have for Kain. It's an emergency evasive attack after ground dodges due to its invincibility |\nA state where a character cannot be hit, fully impervious to damage.\n. Charged versions can control space and slow down the pace on demand. Jump also strikes quickly with a downward wall rush, which is effective for assist combos and interim hits during them.\nKain can hold Square <img></img> to increase Jump's level and change its properties. This is an effective space control tool for several reasons; Jump gets a rising hitbox |\nAn invisible predefined area that determines how an attack can come into contact with a character. If this makes contact with a character, the attack connects. Bigger hitbox means it's easier to land the attack.\nthat crushes guards and guarantees the HP hit if it connects. Kain can hold the charge for a few seconds and assess the situation. Charged Jump comes out quickly once Square <img></img> is released, and it remains active |\nThe period of time when an attack is capable of doing damage.\nuntil Kain reaches the max height. It can also track |\nTracking refers to how effectively a move can follow the opponent once it is performed. Similar to \"homing\".\nopponents for medium distances.\nThe crowning glory is the dodge cancel |\nDodge cancel refers to an action that is interrupted with a dodge. Abbreviated as DC.\n. If Kain charges Jump, he can air dodge at the jump's apex. This allows Kain to charge Jump and react to the situation accordingly with little risk. Only LV2 and LV3 Jumps can be dodge cancelled, but Kain can charge them quickly and threaten on a moment's notice. Dodging out of Jump also lets Kain do solo combos, but only if opponent is at Jump's max height.\nJump excels in defense and assist combos, but the uncharged (LV1) version forces Kain to land on the ground. This leaves Kain vulnerable to counterattacks, and he needs assist to make it safer if it misses. It is also prone to missing against fast attacks with short recovery |\nThe period of time that occurs after an action has finished, but before gaining full control of the character again. For example, many HP attacks in Dissidia 012 have long recovery. This may be occasionally referred to as \"endlag\".\n. It's better than not having emergency options at all, but caution is advised.\nA charged Jump usually cannot force opponents to approach. If anything, opponents can stay far away and fill assist gauge while Kain charges Jump. This can put Kain behind in the assist gauge race, even if it's safe to do. Jump also loses effectiveness against opponents who halo camp |\nA strategy which involves a character staying above the opponent, often at a safe distance.\n. All Jumps have a maximum height, which cannot reach the ceiling in most large stages. However, few low ceiling stages work to Kain's advantage, such as Pandaemonium - Top Floor and M. S. Prima Vista.\nJump deals bravery damage during descent. This happens very quickly, but it does mean Jump is technically vulnerable to EX Revenge checkmates |\nA situation where a player has no options to avoid losing a situation or a match. For example, hitting an opponent who has a full EX gauge and killing bravery can activate EX Revenge and guarantee a win.\n."
             },

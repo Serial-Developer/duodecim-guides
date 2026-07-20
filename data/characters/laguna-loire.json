@@ -59,6 +59,26 @@
                 "CP (Mastered)"
               ],
               "description": "1 x 32 (32)",
+              "rawRows": [
+                [
+                  "Damage multiplier",
+                  "Startup frame",
+                  "Type",
+                  "Priority",
+                  "EX Force",
+                  "Effects",
+                  "CP (Mastered)"
+                ],
+                [
+                  "1 x 32 (32)",
+                  "31",
+                  "Physical",
+                  "Ranged Low",
+                  "3x32 (96)",
+                  "None",
+                  "30 (15)"
+                ]
+              ],
               "name": "Machine Gun",
               "notes": "[Mid] Fire machine gun. Move with analog stick while holding button.\nRun'n'Gun, literally. After startup Laguna can move while firing but and slightly track opponent while firing.\nIt has relatively low range but good EX Force gain, and alot of characters can't swing right through it if they come at you headfirst. Combined with Electroshield you can punish ground dash attempts or force the opponent away into a more favorable position for you to Ricochet Shot from.\nIt's possible to assist convert from aswell, but its finnicky and has very little hitstun to work with."
             },
@@ -115,6 +135,26 @@
                 "CP (Mastered)"
               ],
               "description": "15 (15)",
+              "rawRows": [
+                [
+                  "Damage multiplier",
+                  "Startup frame",
+                  "Type",
+                  "Priority",
+                  "EX Force",
+                  "Effects",
+                  "CP (Mastered)"
+                ],
+                [
+                  "15 (15)",
+                  "81F / 91F / 99F",
+                  "Physical",
+                  "Ranged Low",
+                  "0",
+                  "None",
+                  "30 (15)"
+                ]
+              ],
               "name": "Grenade Bomb",
               "notes": "[Long] Throw grenade at foe. Change distance with button presses.\nProbably the lowest recovery move he has. Slow to come out but can be cancelled into block/dodge very quickly after the throw for mixups. Low recovery also makes it less committal to build assist meter with.\nIt can intercept moves with long startup aswell to force them to engage you, and you can combo off of it if you assume its gonna hit, or hitconfirm with an assist if you don't want to commit to an HP/Ricochet prior.\nCan also be used to add a nice little bit of damage at the end of an assist combo when available."
             },
@@ -129,6 +169,26 @@
                 "CP (Mastered)"
               ],
               "description": "6, 14 (20)",
+              "rawRows": [
+                [
+                  "Damage multiplier",
+                  "Startup frame",
+                  "Type",
+                  "Priority",
+                  "EX Force",
+                  "Effects",
+                  "CP (Mastered)"
+                ],
+                [
+                  "6, 14 (20)",
+                  "13F",
+                  "Physical",
+                  "Melee Low",
+                  "90",
+                  "Chase",
+                  "30 (15)"
+                ]
+              ],
               "name": "Pummel (ground)",
               "notes": "[Close] Strike with machine gun hilt. Low power, quick strike.\nClose range melee low to round out his all-range playstyle.\nMakes for a fast poke, as defense after dodges, great EX Force gain and decently low recovery after. Can be cancelled into itself faster than into block or dodge.\nHas some vertical tracking but mostly horizontal move. Ground version makes Laguna go airborne after.\nA staple move in his moveset to have since it rounds out his close range game and helps out in a pinch. Few assist can combo off of it, but its still an important part of his moveset in many matchups. Learn to love this move."
             },
@@ -143,6 +203,26 @@
                 "CP (Mastered)"
               ],
               "description": "4 each, max 6",
+              "rawRows": [
+                [
+                  "Damage multiplier",
+                  "Startup frame",
+                  "Type",
+                  "Priority",
+                  "EX Force",
+                  "Effects",
+                  "CP (Mastered)"
+                ],
+                [
+                  "4 each, max 6",
+                  "23F",
+                  "Physical",
+                  "Ranged Low",
+                  "2 (36)",
+                  "None",
+                  "30 (15)"
+                ]
+              ],
               "name": "Missile Barrage (ground)",
               "notes": "[Long] Fire multiple missiles. Charge to fire six missiles.\nLaguna pulls out a rocket launcher and fires up to 6 missiles, hold down to fire more.\nThe missiles themselves are very small, fire one after another and have terrible tracking. While they do home in on the opponent, they first stray off in different directions and have an awkward turn radius.\nCan be dashed through and blocked aswell, making them not very useful to stop setups or threaten dashes. Although they do halt and limit movement due to the scattered tracking. Low hitstun with low damage however makes it hard to convert into more.\nLikely his worst move and far too niche for how good some of the rest of his moves are. There might be some scenarios worth trying it out, but a ranged low property and horrible homing make it hard to consistently capitalize on."
             },
@@ -157,6 +237,26 @@
                 "CP (Mastered)"
               ],
               "description": "10 (10)",
+              "rawRows": [
+                [
+                  "Damage multiplier",
+                  "Startup frame",
+                  "Type",
+                  "Priority",
+                  "EX Force",
+                  "Effects",
+                  "CP (Mastered)"
+                ],
+                [
+                  "10 (10)",
+                  "37F",
+                  "Physical",
+                  "Ranged Mid",
+                  "0",
+                  "Wall rush",
+                  "30 (15)"
+                ]
+              ],
               "name": "Electro Shield (ground)",
               "notes": "[Close] Deploy electromagnetic shield. Can deflect weak attacks.\nThrows out a shield infront of Laguna that stays out for a while as a lingering Mid priority projectile. On contact launches them away and wallrushes.\nLaguna can be barely fully covered when staying right inside, very consistent on the ground. Some moves may still hit him due to hitboxes however. Space accordingly for the matchup.\nDue to being a projectile, blocking it makes it act as if reflected, so they can walk through it after. Mid Projectiles also don't get reflected but redirected.\nIf hit by a High priority Melee the shield is destroyed.\nLaguna goes airborne during the ground version which is convenient for positioning right after with backdodge.\nBread and Butter move for keepaway, slowing down approaches and as a mixup tool. Hard to assist punish too, good for assist meter building."
             }
@@ -246,6 +346,26 @@
                 "CP (Mastered)"
               ],
               "description": "6, 14 (20)",
+              "rawRows": [
+                [
+                  "Damage multiplier",
+                  "Startup frame",
+                  "Type",
+                  "Priority",
+                  "EX Force",
+                  "Effects",
+                  "CP (Mastered)"
+                ],
+                [
+                  "6, 14 (20)",
+                  "13",
+                  "Physical",
+                  "Melee Low",
+                  "90",
+                  "Chase",
+                  "30 (15)"
+                ]
+              ],
               "name": "Pummel (midair)",
               "notes": "[Close] Strike with machine gun hilt. Low power, quick strike.\nClose range melee low to round out his all-range playstyle.\nMakes for a fast poke, as defense after dodges, great EX Force gain and decently low recovery after. Can be cancelled into itself faster than into block or dodge.\nHas some vertical tracking but mostly horizontal move. Ground version makes Laguna go airborne after.\nA staple move in his moveset to have since it rounds out his close range game and helps out in a pinch. Few assist can combo off of it, but its still an important part of his moveset in many matchups. Learn to love this move."
             },
@@ -260,6 +380,26 @@
                 "CP (Mastered)"
               ],
               "description": "4 each, max 6",
+              "rawRows": [
+                [
+                  "Damage multiplier",
+                  "Startup frame",
+                  "Type",
+                  "Priority",
+                  "EX Force",
+                  "Effects",
+                  "CP (Mastered)"
+                ],
+                [
+                  "4 each, max 6",
+                  "23",
+                  "Physical",
+                  "Ranged Low",
+                  "2 (36)",
+                  "None",
+                  "30 (15)"
+                ]
+              ],
               "name": "Missile Barrage (midair)",
               "notes": "[Long] Fire multiple missiles. Charge to fire six missiles.\nLaguna pulls out a rocket launcher and fires up to 6 missiles, hold down to fire more.\nThe missiles themselves are very small, fire one after another and have terrible tracking. While they do home in on the opponent, they first stray off in different directions and have an awkward turn radius.\nCan be dashed through and blocked aswell, making them not very useful to stop setups or threaten dashes. Although they do halt and limit movement due to the scattered tracking. Low hitstun with low damage however makes it hard to convert into more.\nLikely his worst move and far too niche for how good some of the rest of his moves are. There might be some scenarios worth trying it out, but a ranged low property and horrible homing make it hard to consistently capitalize on."
             },
@@ -274,6 +414,26 @@
                 "CP (Mastered)"
               ],
               "description": "10 (10)",
+              "rawRows": [
+                [
+                  "Damage multiplier",
+                  "Startup frame",
+                  "Type",
+                  "Priority",
+                  "EX Force",
+                  "Effects",
+                  "CP (Mastered)"
+                ],
+                [
+                  "10 (10)",
+                  "37",
+                  "Physical",
+                  "Ranged Mid",
+                  "0",
+                  "Wall rush",
+                  "30 (15)"
+                ]
+              ],
               "name": "Electro Shield (midair)",
               "notes": "[Close] Deploy electromagnetic shield. Can deflect weak attacks.\nThrows out a shield infront of Laguna that stays out for a while as a lingering Mid priority projectile. On contact launches them away and wallrushes.\nLaguna can be barely fully covered when staying right inside, very consistent on the ground. Some moves may still hit him due to hitboxes however. Space accordingly for the matchup.\nDue to being a projectile, blocking it makes it act as if reflected, so they can walk through it after. Mid Projectiles also don't get reflected but redirected.\nIf hit by a High priority Melee the shield is destroyed.\nLaguna goes airborne during the ground version which is convenient for positioning right after with backdodge.\nBread and Butter move for keepaway, slowing down approaches and as a mixup tool. Hard to assist punish too, good for assist meter building."
             }

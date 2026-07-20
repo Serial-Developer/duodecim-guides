@@ -46,7 +46,11 @@ function rowKey(label) {
 
 function parseMoveTable($, table) {
   const move = { variants: null };
+  const matrix = [];
   const rows = $(table).find('> tbody > tr').toArray();
+  for (const tr of rows) {
+    matrix.push($(tr).find('> th, > td').toArray().map((c) => cleanText($(c).text())));
+  }
   for (const tr of rows) {
     const ths = $(tr).find('> th').toArray();
     const tds = $(tr).find('> td').toArray();
@@ -76,8 +80,13 @@ function parseMoveTable($, table) {
       move[key] = vals.length === 1 ? vals[0] : vals;
     }
   }
+  // Table au format non standard (ex. assists : Startup/Position/Spawn/Effect en
+  // en-têtes de colonnes) : aucune ligne-champ reconnue -> garder la matrice brute.
+  const hasFields = FIELD_KEYS.some((k) => k in move);
+  if (!hasFields && matrix.length) move.rawRows = matrix.filter((r) => r.length > 1);
   return move;
 }
+const FIELD_KEYS = ['damage', 'startup', 'type', 'priority', 'exForce', 'effects', 'cancels', 'assistGain', 'cp'];
 
 // Découpe un flux d'éléments (p, table, div...) en coups, via les marqueurs "|-|Nom="
 function parseMovesFlow($, elems) {
@@ -280,6 +289,10 @@ function parseCharacter(char) {
         : sub.title.toLowerCase().includes('aerial') ? 'aerial'
         : sub.title.toLowerCase().includes('followup') ? 'followups'
         : sub.title;
+      // Sous-section nommée d'après le coup lui-même (pages assist : h2 « Cure »…)
+      if (!['ground', 'aerial', 'followups'].includes(k) && flow.moves.length === 1 && !flow.moves[0].name) {
+        flow.moves[0].name = sub.title;
+      }
       groups[k] = flow;
     }
     const count = Object.values(groups).reduce((n, g) => n + g.moves.length, 0);

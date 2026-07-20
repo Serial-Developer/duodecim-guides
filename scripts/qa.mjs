@@ -89,13 +89,21 @@ if (process.argv.includes('--links')) {
   const skip = /fonts\.(googleapis|gstatic)\.com|creativecommons\.org|web\.archive\.org/;
   const toCheck = [...externalLinks].filter((u) => !skip.test(u));
   console.log(`Vérification de ${toCheck.length} liens externes uniques…`);
+  let done = 0;
   for (const url of toCheck) {
     try {
-      const res = await fetch(url, { method: 'GET', headers: { 'User-Agent': 'dissidia012-guides-qa/0.1' }, redirect: 'follow' });
+      const res = await fetch(url, {
+        method: 'GET',
+        headers: { 'User-Agent': 'dissidia012-guides-qa/0.1' },
+        redirect: 'follow',
+        signal: AbortSignal.timeout(12000),
+      });
       if (res.status >= 400) errors.push(`lien externe ${res.status} : ${url}`);
     } catch (e) {
       errors.push(`lien externe injoignable : ${url} (${e.message})`);
     }
+    done++;
+    if (done % 10 === 0) console.log(`  … ${done}/${toCheck.length}`);
     await sleep(800);
   }
 }

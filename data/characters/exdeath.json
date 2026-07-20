@@ -111,6 +111,37 @@
               ],
               "image": "https://dissidia.wiki/images/3/32/Brv_exdeath_shell_guard_1.jpeg",
               "description": "30 (15)",
+              "rawRows": [
+                [
+                  "Block Frames",
+                  "End Frames",
+                  "Dodge Cancel Frames",
+                  "Priority"
+                ],
+                [
+                  "1~37F",
+                  "100F",
+                  "50F",
+                  "Block Ranged High"
+                ],
+                [
+                  "CP (Mastered)",
+                  "Cancels",
+                  "Assist Gain (Attack)",
+                  "Assist Gain (Hit)"
+                ],
+                [
+                  "30 (15)",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "Unlocked at level",
+                  "Mastered at AP",
+                  ""
+                ]
+              ],
               "name": "Shell Guard",
               "notes": "[Block] Call a protective wind that protects against magic attacks.\nCan only block Ranged Low and Ranged Mid priority attacks successfully. Reflects Ranged Low attacks directly back to opponent."
             },
@@ -123,6 +154,37 @@
               ],
               "image": "https://dissidia.wiki/images/0/0c/Brv_exdeath_protect_guard.jpeg",
               "description": "30 (15)",
+              "rawRows": [
+                [
+                  "Block Frames",
+                  "End Frames",
+                  "Dodge Cancel Frames",
+                  "Priority"
+                ],
+                [
+                  "1~45F",
+                  "68F",
+                  "56F",
+                  "Block Melee High"
+                ],
+                [
+                  "CP (Mastered)",
+                  "Cancels",
+                  "Assist Gain (Attack)",
+                  "Assist Gain (Hit)"
+                ],
+                [
+                  "30 (15)",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "Unlocked at level",
+                  "Mastered at AP",
+                  ""
+                ]
+              ],
               "name": "Protect Guard",
               "notes": "[Block] Create cerulean wall that defends against physical attacks.\nCan only block Melee Low and Melee Mid priority attacks successfully."
             },
@@ -135,6 +197,37 @@
               ],
               "image": "https://dissidia.wiki/images/7/7a/Brv_exdeath_turn_guard_1.jpeg",
               "description": "30 (15)",
+              "rawRows": [
+                [
+                  "Block Frames",
+                  "End Frames",
+                  "Dodge Cancel Frames",
+                  "Priority"
+                ],
+                [
+                  "1~N",
+                  "varies",
+                  "varies",
+                  "Block Mid"
+                ],
+                [
+                  "CP (Mastered)",
+                  "Cancels",
+                  "Assist Gain (Attack)",
+                  "Assist Gain (Hit)"
+                ],
+                [
+                  "30 (15)",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "Unlocked at level",
+                  "Mastered at AP",
+                  ""
+                ]
+              ],
               "name": "Turn Guard",
               "notes": "[Block] Call a crimson crest. Maintain block with button hold.\nIf Turn Guard is held for over a second, Exdeath goes through a noticeable recovery period before dodge cancel becomes possible."
             },
@@ -147,6 +240,37 @@
               ],
               "image": "https://dissidia.wiki/images/1/1c/Brv_exdeath_omni_block.jpeg",
               "description": "30 (15)",
+              "rawRows": [
+                [
+                  "Block Frames",
+                  "End Frames",
+                  "Dodge Cancel Frames",
+                  "Priority"
+                ],
+                [
+                  "~9F after button release",
+                  "80F",
+                  "40F",
+                  "Block Highest"
+                ],
+                [
+                  "CP (Mastered)",
+                  "Cancels",
+                  "Assist Gain (Attack)",
+                  "Assist Gain (Hit)"
+                ],
+                [
+                  "30 (15)",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "Unlocked at level",
+                  "Mastered at AP",
+                  ""
+                ]
+              ],
               "name": "Omni Block",
               "notes": "[Block] Blocks any blow. Deploys on button release.\nDoes not work against attacks with Unblockable priority, such as The Emperor's Thunder Crest."
             },
@@ -415,7 +539,137 @@
                 "Attack"
               ],
               "description": "Quo Vadis",
-              "name": null
+              "rawRows": [
+                [
+                  "Character",
+                  "Attack"
+                ],
+                [
+                  "Warrior of Light",
+                  "Shield of Light"
+                ],
+                [
+                  "Garland",
+                  "Earthquake"
+                ],
+                [
+                  "Firion",
+                  "Lord of Arms"
+                ],
+                [
+                  "The Emperor",
+                  "Bombard"
+                ],
+                [
+                  "Onion Knight",
+                  "Blade Torrent"
+                ],
+                [
+                  "Cloud of Darkness",
+                  "[0-Form] Particle Beam"
+                ],
+                [
+                  "Cecil",
+                  "Soul Eater"
+                ],
+                [
+                  "Kain",
+                  "Jump (charged)"
+                ],
+                [
+                  "Golbez",
+                  "Nightglow"
+                ],
+                [
+                  "Bartz",
+                  "Ragnarok Blade"
+                ],
+                [
+                  "Exdeath",
+                  "Delta Attack"
+                ],
+                [
+                  "Gilgamesh",
+                  "Death Claw (2nd hit)"
+                ],
+                [
+                  "Terra",
+                  "Tornado"
+                ],
+                [
+                  "Kefka",
+                  "Havoc Wing"
+                ],
+                [
+                  "Cloud",
+                  "Cross-Slash"
+                ],
+                [
+                  "Sephiroth",
+                  "Hell's Gate"
+                ],
+                [
+                  "Tifa",
+                  "Burning Arrow"
+                ],
+                [
+                  "Squall",
+                  "Revolver Drive"
+                ],
+                [
+                  "Ultimecia",
+                  "Knight's Lance (charged)"
+                ],
+                [
+                  "Laguna",
+                  "Ragnarok Buster"
+                ],
+                [
+                  "Zidane",
+                  "Stellar Circle"
+                ],
+                [
+                  "Kuja",
+                  "None"
+                ],
+                [
+                  "Tidus",
+                  "Energy Rain"
+                ],
+                [
+                  "Jecht",
+                  "Jecht Rush (LV3)"
+                ],
+                [
+                  "Yuna",
+                  "None"
+                ],
+                [
+                  "Shantotto",
+                  "None"
+                ],
+                [
+                  "Prishe",
+                  "Backhand Blow"
+                ],
+                [
+                  "Vaan",
+                  "Axe and Shield (Switch)"
+                ],
+                [
+                  "Gabranth",
+                  "Execution"
+                ],
+                [
+                  "Lightning",
+                  "Razor Gale (melee hit)"
+                ],
+                [
+                  "Feral Chaos",
+                  "Deus Iratus"
+                ]
+              ],
+              "name": "Maelstrom Counterstrategy"
             }
           ]
         }

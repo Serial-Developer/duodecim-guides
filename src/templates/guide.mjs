@@ -44,7 +44,9 @@ function moveAccordion(m, noteFr) {
 <span class="mv-meta">${esc(startup || '')}</span>${priorityBadge(prio)}</summary>
 <div class="mv-body">
 ${noteFr ? `<div class="mv-note"><p>${esc(noteFr)}</p></div>` : ''}
-<div class="table-scroll"><table class="stats">${moveRows(m)}</table></div>
+${m.rawRows?.length
+    ? `<div class="table-scroll"><table class="data"><tr>${m.rawRows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr>${m.rawRows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`
+    : `<div class="table-scroll"><table class="stats">${moveRows(m)}</table></div>`}
 </div>
 </details>`;
 }
@@ -214,7 +216,9 @@ ${s.matchups?.documented && ed?.matchups?.summary?.length
     ? paras(ed.matchups.summary)
     : ed?.matchups?.summary?.length
       ? paras(ed.matchups.summary)
-      : banner(`La sous-page <a href="${esc(char.url)}/Matchups" rel="external noopener">Matchups du wiki</a> est un squelette vide à ce jour.`)}
+      : banner(s.matchups?.sources?.length
+          ? `La sous-page <a href="${esc(s.matchups.sources[0])}" rel="external noopener">Matchups du wiki</a> est un squelette vide à ce jour.`
+          : `Aucune page de matchups n'existe sur le wiki pour ce personnage.`)}
 <p>Vidéos de matchs : <a href="${esc(replayUrl)}" rel="external noopener">Replay Theater — matchs de ${esc(char.name)}</a>.</p>
 </section>`;
 

@@ -1,0 +1,71 @@
+{
+  "slug": "kuja",
+  "tagline": "Mage dont les enchaînements changent selon la distance, assist d'élite",
+  "archetype": "Mage à combos variables selon la distance",
+  "overview": null,
+  "tierNote": "Kuja est classé 9e (tier A) de la tier list 2017. L'overview du wiki n'étant pas rédigé, les sources ne fournissent aucun commentaire qualitatif sur ce classement côté joueur.",
+  "strengths": null,
+  "weaknesses": null,
+  "moveNotes": {
+    "Burst Energy": "Ouvre l'attaque avec Flare à courte portée ; la distance avec l'adversaire modifie l'enchaînement (variantes Close et Far aux dégâts, priorités et effets distincts : Wall Rush de près, Chase de loin). C'est la bravery la plus rapide de Kuja (15F). Comme pour ses autres braveries à variantes, le nombre de coups dépend du positionnement et peut monter jusqu'à 16 sur un adversaire acculé dans un coin.",
+    "Snatch Blow": "Lance l'attaque avec Holy à moyenne portée ; la distance modifie l'enchaînement (Wall Rush de près, Chase de loin). Startup de 35F. Toutes les braveries de Kuja existent en version sol et aérienne avec des données partagées.",
+    "Ring Holy": "Projectiles à tête chercheuse tirés par trois à longue portée, orientables au stick analogique. C'est, avec Remote Flare, l'une des deux braveries de Kuja sans variante de distance.",
+    "Strike Energy": "Enchaînement lancé depuis Holy à courte portée ; la distance modifie la suite (Chase de près, Wall Rush de loin). Startup de 17F, l'une de ses braveries les plus rapides.",
+    "Snatch Shot": "Enchaînement lancé avec Flare à moyenne portée ; la distance modifie la suite (Chase de près, Wall Rush de loin). Startup de 31F, priorité Ranged Low sur les deux variantes.",
+    "Remote Flare": "Encercle l'adversaire de déflagrations à longue portée, orientables au stick analogique, avec Wall Rush et Absorb ; priorité Special. Startup lent (63F).",
+    "Flare Star": "Deux grosses déflagrations déclenchées à courte portée, orientables au stick analogique, avec Wall Rush et priorité Ranged High.",
+    "Seraphic Star": "Sort lancé à moyenne portée provoquant une énorme explosion d'énergie, avec Absorb et une forte génération d'EX (87).",
+    "Ultima": "Pluie d'innombrables projectiles magiques à longue portée, orientable au stick analogique ; 23 touches potentielles en Ranged High.",
+    "Force Symphony": "Pluie de magie disponible uniquement en l'air : maintenir le bouton pour prolonger le tir, orientable au stick analogique. Après le premier orbe, un orbe supplémentaire apparaît toutes les 0,5 secondes, jusqu'à 6 au maximum. C'est le HP le plus rapide de Kuja (33F) et son HP en un coup."
+  },
+  "exMode": {
+    "summary": [
+      "L'EX Mode de Kuja, « Trance! », confère Regen, Critical Boost, Hyper Glide et Auto Magic. Hyper Glide, activé en maintenant X en l'air, maintient l'altitude plus longtemps que le glide normal.",
+      "Auto Magic, actif en permanence en EX Mode, lance automatiquement Holy et Flare quand Kuja saute, tombe, touche le sol ou plane : Holy en saut/chute et en glide (orbes lumineux, Melee Low, 1 de dégât de base), Flare pendant les sauts aériens (orbes rouge sombre, Ranged Low, 1) et à l'atterrissage (explosion, Ranged Low, 3)."
+    ],
+    "burst": "Final Requiem est une chaîne d'attaques qui gagne en puissance à chaque coup : marteler Cercle augmente la force de chaque frappe (7 de dégâts de base initiaux, 100 au total, type Magical)."
+  },
+  "uniqueMechanics": null,
+  "gameplan": null,
+  "advancedTech": null,
+  "matchups": null,
+  "builds": {
+    "philosophy": [
+      "La section builds du wiki n'est pas rédigée : elle ne contient que des tableaux bruts. Un seul build complet y figure, construit autour de l'effet spécial Seal of Lufenia : Terra's Legacy en arme, pièces Lufenian (Lufenian Dirk, Lufenian Headband, Lufenian Vest), assist Zidane, invocation Rubicante, et des accessoires mêlant Hyper Ring, Earring, Battle Hammer, Summon Unused, Pre-EX Revenge, trois White Drop, White Gem et Glutton, pour 10626 HP, 877 BRV, 178 ATK et 184 DEF à 450 CP. Le wiki précise que le coût total en points de capacité suppose l'utilisation de l'Equip Glitch (abilités « Gear »)."
+    ],
+    "notes": "Aucun texte explicatif n'accompagne ce build (pas de philosophie rédigée, pas de liste d'attaques recommandées), et le second onglet de build est entièrement vide dans les données."
+  },
+  "assist": {
+    "asAssist": [
+      "Kuja est l'un des tout meilleurs assists du jeu — classé Top tier de la tier list assist (Muggshotter) — et il l'est resté durant toute la vie compétitive du titre. Ses braveries tiennent bien en combo, avec un bon hit stun et des finishers Assist Chase, ce qui le fait synergiser fondamentalement avec la plupart des personnages. Les dégâts de base de ses braveries sont excellents (ce qui vaut aussi pour la déplétion de jauge EX sur hit) et il whiff punit efficacement les attaques aériennes. Il est si polyvalent qu'il peut servir de point de départ pour apprendre le système d'assist.",
+      "Ses défauts : une sécurité limitée face aux deux niveaux d'Assist Change — ses braveries en priorité mêlée perdent contre le LV2 Change, et ses animations de durée moyenne à longue l'exposent aux tentatives d'Assist Lock. Le knockback vers le haut de ses coups limite aussi les combos au sol et les opportunités de setup : les joueurs cherchant à optimiser ce registre ne le choisiront pas toujours. À l'inverse, pour Kefka et Ultimecia, Kuja est l'un des seuls assists réellement viables en compétition, si ce n'est le seul.",
+      "En BRV assist : Snatch Blow (sol, 35F) est un multi-hit qui maintient l'adversaire en place avant de l'envoyer en l'air ; sa longue durée sur hit est idéale pour les coups de remplissage (Bardiche de Garland, Firaga de Cloud, HP Wall Rush mono-coup comme Straightarrow de Firion ou Aerial Circle de Squall). Lent au démarrage, il doit être appelé tôt et whiff punit mal, mais le coup de retour possède une hitbox qui peut toucher dans le dos. Kuja restant assez statique, il faut le protéger contre les échappées en LV1 Assist Change. Strike Energy (air, 17F) est la valeur sûre : rapide, bonne allonge latérale, léger tracking vertical, finisher Assist Chase vers le haut, 50 de dégâts de base et un hit stun généreux qui facilite les suites en projectile ou en HP — un excellent whiff punisher et extenseur de combo, même si sa hitbox touche mal très bas.",
+      "En HP assist : Flare Star (sol, Ranged High) sert surtout de démarreur de combo assist sûr contre le LV2 Assist Change et de punish d'esquive au sol difficile à contester, précieux quand les deux joueurs sont bloqués à deux barres pleines, notamment à killing bravery. Force Symphony (air, Ranged High) tire des projectiles en ligne du haut vers le bas : checkmate situationnel en séquence de Chase et très bon outil de désengagement en scramble, chaque projectile étant un HP mono-coup à petite zone d'effet avec Assist Chase. Au global, Kuja assist offre puissance et flexibilité là où un assist en a le plus besoin : conversions, punish, interruptions et une relative sécurité contre le LV2 Assist Change."
+    ],
+    "recommended": [
+      {
+        "name": "Aerith",
+        "why": "Citée dans la section Synergies du wiki parmi les assists avec lesquels Kuja fonctionne bien, sans détail supplémentaire."
+      },
+      {
+        "name": "Kefka",
+        "why": "Cité dans la section Synergies du wiki, sans détail supplémentaire."
+      },
+      {
+        "name": "Zidane",
+        "why": "Cité dans la section Synergies du wiki ; c'est aussi l'assist retenu par le seul build documenté de Kuja."
+      }
+    ]
+  },
+  "communityTech": [],
+  "limits": [
+    "Overview du wiki non rédigé : aucune synthèse d'archétype, aucune liste de forces/faiblesses, aucun historique compétitif côté joueur — d'où les champs overview, strengths et weaknesses à null.",
+    "Aucun gameplan joueur documenté (overview vide, section combos vide, notes de coups limitées aux descriptions du jeu) — gameplan à null.",
+    "Page matchups à l'état de stub, sans contenu exploitable dans l'overview — matchups à null.",
+    "Pas de mécanique unique documentée — uniqueMechanics à null.",
+    "Aucune technique avancée spécifique à Kuja joueur dans les sources — advancedTech à null.",
+    "Notes de coups joueur limitées aux descriptions officielles et aux intros de sections (variantes de distance, plafond de 16 coups en coin) : aucune analyse d'usage compétitif coup par coup.",
+    "Section builds sans texte : un seul build en tableaux bruts, second onglet vide, aucune recommandation d'attaques.",
+    "Aucune référence communautaire listée ; champ assist gain des coups non renseigné."
+  ]
+}

@@ -79,6 +79,46 @@
                 "CP (mastered)"
               ],
               "description": "Air (Down)",
+              "rawRows": [
+                [
+                  "Version",
+                  "Damage multiplier",
+                  "Startup frame",
+                  "Type",
+                  "Priority",
+                  "EX Force",
+                  "Effects",
+                  "CP (mastered)"
+                ],
+                [
+                  "Ground / Air (Neutral)",
+                  "1x4, 6, [19] (+10, 19)",
+                  "??",
+                  "Physical",
+                  "Melee Mid",
+                  "9",
+                  "Wall Rush",
+                  "-"
+                ],
+                [
+                  "Ground (Up)",
+                  "3, 1x5, 2, [19] (+10, 19)",
+                  "??",
+                  "Physical",
+                  "Melee Mid",
+                  "9",
+                  "Wall Rush"
+                ],
+                [
+                  "Air (Down)",
+                  "5, 5, [1x4, 15] (+10, 19)",
+                  "??",
+                  "Physical",
+                  "Melee Mid",
+                  "9",
+                  "Wall Rush"
+                ]
+              ],
               "name": null,
               "notes": "Ground / Air (Neutral)="
             },
@@ -165,6 +205,46 @@
                 "CP (mastered)"
               ],
               "description": "Level 3",
+              "rawRows": [
+                [
+                  "Version",
+                  "Damage multiplier",
+                  "Startup frame",
+                  "Type",
+                  "Priority",
+                  "EX Force",
+                  "Effects",
+                  "CP (mastered)"
+                ],
+                [
+                  "Level 1",
+                  "2 x 5 (10)",
+                  "41F",
+                  "Physical",
+                  "Melee High",
+                  "30",
+                  "Wall Rush",
+                  "30 (15)"
+                ],
+                [
+                  "Level 2",
+                  "1 x 6, 2, 2, 3, 3 (16)",
+                  "48F charge, 11F release",
+                  "Physical",
+                  "Melee High",
+                  "30",
+                  "Wall Rush"
+                ],
+                [
+                  "Level 3",
+                  "1 x 9, 2 x 6 (21)",
+                  "64F charge, 11F release",
+                  "Physical",
+                  "Melee High",
+                  "36",
+                  "Wall Rush"
+                ]
+              ],
               "name": null,
               "notes": "Level 1="
             },
