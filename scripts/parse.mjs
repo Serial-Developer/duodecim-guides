@@ -441,14 +441,23 @@ function parseCharacter(char) {
     data.sections[key] = payload;
   }
 
-  // Références (liens externes)
+  // Références (liens externes). Certaines URLs YouTube du wiki sont malformées
+  // (id dupliqué, « ?feature » après « ?v= ») : normalisation canonique.
+  const cleanUrl = (u) => {
+    const m = (u || '').match(/youtube\.com\/watch\?v=([\w-]{11})/);
+    if (m) {
+      const t = u.match(/[?&]t=(\d+)/);
+      return `https://www.youtube.com/watch?v=${m[1]}${t ? `&t=${t[1]}` : ''}`;
+    }
+    return u;
+  };
   if (bySec.references) {
     const refs = [];
     $(bySec.references.elems).find('a[href^="http"]').each((_, a) => {
-      refs.push({ text: cleanText($(a).text()), url: $(a).attr('href') });
+      refs.push({ text: cleanText($(a).text()), url: cleanUrl($(a).attr('href')) });
     });
     for (const el of bySec.references.elems) {
-      $(el).find('a[href^="http"]').each((_, a) => refs.push({ text: cleanText($(a).text()), url: $(a).attr('href') }));
+      $(el).find('a[href^="http"]').each((_, a) => refs.push({ text: cleanText($(a).text()), url: cleanUrl($(a).attr('href')) }));
     }
     const seen = new Set();
     data.sections.references = {
