@@ -322,6 +322,6 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Frame data incomplète : startup, position, spawn, effets et priorités listés comme variantes sans valeurs (« ? »), et la sous-section « Seal Evil combos » est vide.
 - Un tableau de matchups par adversaire n'a pas de sens pour un personnage assist uniquement (la page matchups du wiki est d'ailleurs un stub) : matchups laissé à null, délibérément.
 
-## Questions ouvertes
+## Hébergement
 
-1. Hébergement : local pour le moment (décision Jonath) ; GitHub Pages/Netlify possibles sans modification.
+Repo public `Serial-Developer/duodecim-guides`, déployé sur GitHub Pages : https://serial-developer.github.io/duodecim-guides/ (workflow `.github/workflows/pages.yml`, republication à chaque push sur main).

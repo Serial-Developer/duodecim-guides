@@ -55,9 +55,9 @@ ${rows.join('\n')}
 
 ${allLimits.join('\n\n')}
 
-## Questions ouvertes
+## Hébergement
 
-1. Hébergement : local pour le moment (décision Jonath) ; GitHub Pages/Netlify possibles sans modification.
+Repo public \`Serial-Developer/duodecim-guides\`, déployé sur GitHub Pages : https://serial-developer.github.io/duodecim-guides/ (workflow \`.github/workflows/pages.yml\`, republication à chaque push sur main).
 `;
 
 writeFileSync(join(ROOT, 'reports', 'coverage.md'), md);

@@ -1,6 +1,10 @@
 # Guides Dissidia 012 [duodecim] Final Fantasy
 
-Site statique de guides compétitifs français pour les 31 personnages jouables de *Dissidia 012 [duodecim] Final Fantasy* (PSP, 2011), plus une fiche assist pour Aerith. Données extraites de [dissidia.wiki](https://dissidia.wiki) (CC BY 4.0).
+**Site en ligne : https://serial-developer.github.io/duodecim-guides/**
+
+Site statique de guides compétitifs français pour les 31 personnages jouables de *Dissidia 012 [duodecim] Final Fantasy* (PSP, 2011), plus une fiche assist pour Aerith. Données extraites de [dissidia.wiki](https://dissidia.wiki) (CC BY 4.0), enrichies de sources communautaires d'époque (GameFAQs, dissidiaforums via la Wayback Machine, guides Steam, vidéos de joueurs) — chaque affirmation est sourcée.
+
+Le déploiement est automatique : tout push sur `main` republie `dist/` via GitHub Actions (`.github/workflows/pages.yml`).
 
 ## Lancer le site
 
