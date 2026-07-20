@@ -69,15 +69,33 @@
     },
     {
       "name": "Assist call tracking",
-      "desc": "Le tracking vertical de Sonic Buster, Full Slide, Slice & Dice et Stick & Move augmente fortement pendant un appel d'assist, ce qui en fait des whiff punishers à mi-distance contre les coups à longue recovery."
+      "desc": "Le tracking vertical de Sonic Buster, Full Slide, Slice & Dice et Stick & Move augmente fortement pendant un appel d'assist, ce qui en fait des whiff punishers à mi-distance contre les coups à longue recovery.",
+      "video": {
+        "url": "https://www.youtube.com/watch?v=KowbxKm8-DQ",
+        "title": "Dissidia 012 - Tidus' Tracking During Assist",
+        "author": "Dissidia Mediawiki",
+        "date": null
+      }
     },
     {
       "name": "Stick & Move disjoint",
-      "desc": "L'épée lancée n'est pas considérée comme un projectile séparé : elle peut poke à travers les murs et les éléments de décor, et touche encore au retour, ce qui laisse le temps de dodge cancel et de combotter en Hop Step."
+      "desc": "L'épée lancée n'est pas considérée comme un projectile séparé : elle peut poke à travers les murs et les éléments de décor, et touche encore au retour, ce qui laisse le temps de dodge cancel et de combotter en Hop Step.",
+      "video": {
+        "url": "https://www.youtube.com/watch?v=n7pLWp2p6D8",
+        "title": "Dissidia 012 - Tidus Stick & Move Disjoint",
+        "author": "Dissidia Mediawiki",
+        "date": null
+      }
     },
     {
       "name": "Sphere Shot stagger > Hop Step",
-      "desc": "Un block adverse sur Sphere Shot provoque un stagger ; dos au mur, Tidus obtient assez d'avantage de frames pour garantir un Hop Step après dodge cancel. Les assists autres qu'Aerith convertissent aussi le stagger en combo."
+      "desc": "Un block adverse sur Sphere Shot provoque un stagger ; dos au mur, Tidus obtient assez d'avantage de frames pour garantir un Hop Step après dodge cancel. Les assists autres qu'Aerith convertissent aussi le stagger en combo.",
+      "video": {
+        "url": "https://www.youtube.com/watch?v=PApmGwJaK64",
+        "title": "Dissidia 012 - Tidus Sphere Shot block stagger into Hop Step",
+        "author": "Dissidia Mediawiki",
+        "date": null
+      }
     },
     {
       "name": "Quick Hit knockback cancel (Aerith)",

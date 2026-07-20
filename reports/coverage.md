@@ -8,38 +8,38 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 
 | Personnage | Coups | Vue d'ens. | Méca unique | Matchups | Builds | Assist | Tech comm. | Éditorial |
 |---|---|---|---|---|---|---|---|---|
-| Warrior of Light | 10+9 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
-| Garland | 10+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 0 | ✅ |
-| Firion | 11+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 6 | ✅ |
-| The Emperor | 8+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 0 | ✅ |
-| Onion Knight | 12+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 0 | ✅ |
-| Cloud of Darkness | 5+9 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
-| Cecil Harvey | 6+6 | ✅ | ✅ | ❌ | ✅ | ✅ | 0 | ✅ |
-| Golbez | 7+8 | ✅ | ❌ | ❌ | ✅ | ✅ | 1 | ✅ |
-| Kain Highwind | 7+7 | ✅ | ✅ | ✅ | ✅ | ✅ | 1 | ✅ |
-| Bartz Klauser | 7+5 | ✅ | ❌ | ❌ | ✅ | ✅ | 0 | ✅ |
-| Exdeath | 9+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 0 | ✅ |
-| Gilgamesh | 8+6 | ✅ | ✅ | ❌ | ✅ | ✅ | 0 | ✅ |
-| Terra Branford | 11+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 0 | ✅ |
-| Kefka Palazzo | 8+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 15 | ✅ |
-| Cloud Strife | 11+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 4 | ✅ |
-| Sephiroth | 8+7 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
-| Tifa Lockhart | 10+7 | ✅ | ✅ | ✅ | ✅ | ✅ | 0 | ✅ |
-| Squall Leonhart | 9+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 0 | ✅ |
-| Ultimecia | 4+4 | ✅ | ❌ | ❌ | ✅ | ✅ | 0 | ✅ |
-| Laguna Loire | 12+4 | ✅ | ❌ | ❌ | ✅ | ✅ | 0 | ✅ |
-| Zidane Tribal | 9+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 0 | ✅ |
-| Kuja | 6+4 | ❌ | ❌ | ❌ | ✅ | ✅ | 0 | ✅ |
+| Warrior of Light | 10+9 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Garland | 10+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Firion | 11+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 8 | ✅ |
+| The Emperor | 8+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Onion Knight | 12+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
+| Cloud of Darkness | 5+9 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Cecil Harvey | 6+6 | ✅ | ✅ | ❌ | ✅ | ✅ | 2 | ✅ |
+| Golbez | 7+8 | ✅ | ❌ | ❌ | ✅ | ✅ | 2 | ✅ |
+| Kain Highwind | 7+7 | ✅ | ✅ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Bartz Klauser | 7+5 | ✅ | ❌ | ❌ | ✅ | ✅ | 1 | ✅ |
+| Exdeath | 9+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Gilgamesh | 8+6 | ✅ | ✅ | ❌ | ✅ | ✅ | 1 | ✅ |
+| Terra Branford | 11+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
+| Kefka Palazzo | 8+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 16 | ✅ |
+| Cloud Strife | 11+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 6 | ✅ |
+| Sephiroth | 8+7 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Tifa Lockhart | 10+7 | ✅ | ✅ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Squall Leonhart | 9+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Ultimecia | 4+4 | ✅ | ❌ | ❌ | ✅ | ✅ | 2 | ✅ |
+| Laguna Loire | 12+4 | ✅ | ❌ | ❌ | ✅ | ✅ | 3 | ✅ |
+| Zidane Tribal | 9+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Kuja | 6+4 | ❌ | ❌ | ❌ | ✅ | ✅ | 2 | ✅ |
 | Tidus | 12+11 | ✅ | ❌ | ❌ | ✅ | ✅ | 10 | ✅ |
-| Jecht | 4+5 | ✅ | ✅ | ✅ | ✅ | ✅ | 1 | ✅ |
-| Yuna | 18+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 0 | ✅ |
-| Shantotto | 8+6 | ❌ | ❌ | ❌ | ✅ | ✅ | 0 | ✅ |
-| Prishe | 18+4 | ✅ | ✅ | ✅ | ✅ | ✅ | 0 | ✅ |
-| Vaan | 8+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 0 | ✅ |
+| Jecht | 4+5 | ✅ | ✅ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Yuna | 18+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Shantotto | 8+6 | ❌ | ❌ | ❌ | ✅ | ✅ | 2 | ✅ |
+| Prishe | 18+4 | ✅ | ✅ | ✅ | ✅ | ✅ | 1 | ✅ |
+| Vaan | 8+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
 | Gabranth | 8+4 | ✅ | ✅ | ✅ | ✅ | ✅ | 5 | ✅ |
-| Lightning | 16+5 | ✅ | ❌ | ❌ | ✅ | ✅ | 0 | ✅ |
-| Feral Chaos | 8+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 0 | ✅ |
-| Aerith Gainsborough | 2+2 | ✅ | ❌ | ❌ | ❌ | ✅ | 0 | ✅ |
+| Lightning | 16+5 | ✅ | ❌ | ❌ | ✅ | ✅ | 2 | ✅ |
+| Feral Chaos | 8+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
+| Aerith Gainsborough | 2+2 | ✅ | ❌ | ❌ | ❌ | ✅ | 3 | ✅ |
 
 ## Choix arbitraires faits (à valider)
 
@@ -56,7 +56,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 
 - Sous-pages `/Matchups` : squelettes vides pour 27 persos sur 31 (remplies : Firion, Sephiroth, Tifa, Jecht) → bandeaux + synthèse depuis l'overview quand elle existe.
 - Sous-pages `/Starter_Guide`, `/Strategy`, `/Frame_Data` : stubs généralisés sur le wiki.
-- Tech communautaire : seules les références présentes sur le wiki ont été exploitées. Le minage GameFAQs (board 605802) et guides Steam (ex. Exdeath `2333236279`) reste à faire — voir Questions.
+- Tech communautaire : références du wiki + passe de croisement web (juillet 2026, validée par Jonath) — vidéos YouTube d'époque, threads GameFAQs (board 605802, vérifiés en navigateur car le site renvoie 403 aux robots), guides GameFAQs/Steam (dont l'Exdeath `2333236279`). Chaque URL vérifiée vivante et confirmée Dissidia 012 (les sources 2008/NT/Opera Omnia rencontrées ont été écartées, listées dans les rapports d'agents). Vidéos associées aux techniques quand une démonstration fiable existe : blodge, dash feint, Equip Glitch, Assist Storage Glitch, plus Tidus (3) et Jecht (1) ; aucune vidéo fiable trouvée pour lock off et dodge punishment.
 - Vérification responsive réelle (3 breakpoints) : la preview navigateur de la session a été bloquée par la politique locale ; CSS écrit pour 4/6/11 colonnes et testable via `npx serve dist`.
 
 ## Limites par personnage (déclarées par l'éditorial)
@@ -327,5 +327,4 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 
 ## Questions ouvertes
 
-1. Passe « tech communautaire » GameFAQs/Steam/YouTube pour étoffer la section 9 : validée par Jonath, **en attente de son go**.
-2. Hébergement : local pour le moment (décision Jonath) ; GitHub Pages/Netlify possibles sans modification.
+1. Hébergement : local pour le moment (décision Jonath) ; GitHub Pages/Netlify possibles sans modification.

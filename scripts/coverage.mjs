@@ -48,7 +48,7 @@ ${rows.join('\n')}
 
 - Sous-pages \`/Matchups\` : squelettes vides pour 27 persos sur 31 (remplies : Firion, Sephiroth, Tifa, Jecht) → bandeaux + synthèse depuis l'overview quand elle existe.
 - Sous-pages \`/Starter_Guide\`, \`/Strategy\`, \`/Frame_Data\` : stubs généralisés sur le wiki.
-- Tech communautaire : seules les références présentes sur le wiki ont été exploitées. Le minage GameFAQs (board 605802) et guides Steam (ex. Exdeath \`2333236279\`) reste à faire — voir Questions.
+- Tech communautaire : références du wiki + passe de croisement web (juillet 2026, validée par Jonath) — vidéos YouTube d'époque, threads GameFAQs (board 605802, vérifiés en navigateur car le site renvoie 403 aux robots), guides GameFAQs/Steam (dont l'Exdeath \`2333236279\`). Chaque URL vérifiée vivante et confirmée Dissidia 012 (les sources 2008/NT/Opera Omnia rencontrées ont été écartées, listées dans les rapports d'agents). Vidéos associées aux techniques quand une démonstration fiable existe : blodge, dash feint, Equip Glitch, Assist Storage Glitch, plus Tidus (3) et Jecht (1) ; aucune vidéo fiable trouvée pour lock off et dodge punishment.
 - Vérification responsive réelle (3 breakpoints) : la preview navigateur de la session a été bloquée par la politique locale ; CSS écrit pour 4/6/11 colonnes et testable via \`npx serve dist\`.
 
 ## Limites par personnage (déclarées par l'éditorial)
@@ -57,8 +57,7 @@ ${allLimits.join('\n\n')}
 
 ## Questions ouvertes
 
-1. Passe « tech communautaire » GameFAQs/Steam/YouTube pour étoffer la section 9 : validée par Jonath, **en attente de son go**.
-2. Hébergement : local pour le moment (décision Jonath) ; GitHub Pages/Netlify possibles sans modification.
+1. Hébergement : local pour le moment (décision Jonath) ; GitHub Pages/Netlify possibles sans modification.
 `;
 
 writeFileSync(join(ROOT, 'reports', 'coverage.md'), md);

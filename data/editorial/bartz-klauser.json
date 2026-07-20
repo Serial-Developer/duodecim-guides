@@ -96,7 +96,14 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Bartz INFINITE COMBO - Dissidia 012: Duodecim — Frutte",
+      "desc": "Vidéo d'époque montrant une variante du reset combo Holy -> Flare de Bartz ; l'assist Kuja étend la portée du setup grâce au chase.",
+      "source": "https://www.youtube.com/watch?v=5EO5BX_DD8g",
+      "date": "2012"
+    }
+  ],
   "limits": [
     "Overview très courte (trois phrases descriptives) : la synthèse repose surtout sur le tableau forces/faiblesses et les notes de coups.",
     "Page matchups à l'état d'ébauche (stub) : aucun contenu.",

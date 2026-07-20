@@ -80,7 +80,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "How do I Ultimecia? — thread GameFAQs",
+      "desc": "Thread d'époque du board Duodecim : tour d'horizon coup par coup (Knight's Arrow chargées à laisser en place, Charged Knight's Lance comme bouclier au block quasi-Omniblock, Hell's Judgement en suivi systématique) et enchaînements simples comme Charged Lance > Apocalypse ou Charged Lance > Charged Arrows > Hell's Judgement.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/59674823",
+      "date": "2011"
+    },
+    {
+      "title": "Ultimecia combos? — thread GameFAQs",
+      "desc": "Thread d'époque consacré aux routes d'assist finies en HP : Knight's Arrow > assist Kuja > Hell's Judgement (imparable sans Assist Change d'après les tests du thread), et setups Lance/Arrow/Blade vers Hell's Judgement.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/59292905",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "Aucun combo n'est documenté (section combos vide, documented: false) : le gameplan repose uniquement sur l'overview et les notes de coups.",
     "La page matchups est une ébauche (stub) et l'overview ne cite aucun personnage adverse : la section matchups est donc laissée à null.",

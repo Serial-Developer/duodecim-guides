@@ -99,7 +99,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Dissidia 012 Duodecim Final Fantasy Zidane Combo Montage",
+      "desc": "Montage de combos d'époque (Andyz5448) : recueil de routes solo et avec assist de Zidane, de la même série que ses montages Squall et Cecil.",
+      "source": "https://www.youtube.com/watch?v=iU9bOdVEx-E",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012 Duodecim Zidane Pure Assist Exp to Bravery Build",
+      "desc": "Vidéo de build d'époque (Tiger Bub) : configuration full assist Exp to Bravery avec Fragile Pride, Assist Critical Boost, Sneak Attack et Counterattack/Riposte.",
+      "source": "https://www.youtube.com/watch?v=dhWYc7PstTI",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "Page matchups du wiki à l'état de stub : aucune analyse par personnage.",
     "Section combos vide dans les sources : aucune route de combo documentée.",

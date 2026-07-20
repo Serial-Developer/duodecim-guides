@@ -123,7 +123,26 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Tifa. (tips, tricks, whatnot) — thread GameFAQs",
+      "desc": "Thread d'époque du board Duodecim (6 pages) : mindgames autour des feintes (feinter puis attendre la fin du block adverse avant de frapper), équipements exclusifs chiffrés (Godhand, Premium Heart, Seventh Heaven) et suivi d'assist Kuja avec les deux premiers coups de Moonsault Kick après un Wall Rush.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58951399",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012 duodecim tifa how to play the best by feint",
+      "desc": "Vidéo d'époque (seventhheven131311) sur l'usage offensif des feintes : dasher sur la garde adverse puis feinter ou sauter pour tromper le block.",
+      "source": "https://www.youtube.com/watch?v=oQxuNM1kg0c",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012 - Tifa's Feints",
+      "desc": "Démonstration vidéo (Orlando) passant en revue les feintes de Tifa coup par coup.",
+      "source": "https://www.youtube.com/watch?v=kG8GgmUi808",
+      "date": "2014"
+    }
+  ],
   "limits": [
     "La section Combos du wiki est vide (documented: false) : aucun combo détaillé chiffré n'est fourni, seules les indications des notes de coups et de builds ont été utilisées.",
     "Aucune référence externe (section References vide) : pas de communityTech attribuable.",

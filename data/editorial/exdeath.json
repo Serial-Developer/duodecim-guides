@@ -99,7 +99,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "DISSIDIA 012—SOLDE EXDEATH GUIDE — Solde Starlight Serenity",
+      "desc": "Guide Steam très complet dédié à Exdeath : blocks et blodging, remplissage d'assist par annulations, usage de Black Hole / Maelstrom / Grand Cross, mixups cancel-blodge et matchups détaillés contre l'ensemble du cast.",
+      "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279",
+      "date": "2020"
+    },
+    {
+      "title": "Exdeath builds and combos and just how to use (thread GameFAQs)",
+      "desc": "Thread d'époque du board GameFAQs : choix des blocks selon le matchup, Maelstrom utilisé en bait, moveset type autour d'Omni Block et Black Hole, et la synergie assist Aerith (Planet Protector) pour un Maelstrom inarrêtable.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/62156969",
+      "date": "2012"
+    }
+  ],
   "limits": [
     "Page matchups à l'état d'ébauche (stub) : aucun contenu dédié, la synthèse matchups repose sur l'overview et la contre-stratégie Maelstrom.",
     "Section combos vide (sous-section « Solo » sans texte ni tableau).",

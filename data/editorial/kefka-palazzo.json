@@ -128,7 +128,8 @@
     { "title": "Zap-Trap Thundaga en empty chase vers assist", "desc": "Exemple de conversion d'assist via empty chase instantané.", "source": "https://www.youtube.com/watch?v=WQaW9dZop-A&t=36s", "date": null },
     { "title": "Zap-Trap Thundaga en dodge cancel", "desc": "Exemple du dodge cancel après les premiers bolts.", "source": "https://www.youtube.com/watch?v=WQaW9dZop-A&t=16s", "date": null },
     { "title": "Combos solo depuis Zap-Trap Thundaga", "desc": "Exemples de follow-ups solo (Scatter-Spray Blizzaga, Havoc Wing) après dodge cancel.", "source": "https://www.youtube.com/watch?v=WQaW9dZop-A", "date": null },
-    { "title": "Meteor en dodge cancel vers assist", "desc": "Exemple de conversion d'assist depuis les projectiles de Meteor.", "source": "https://www.youtube.com/watch?v=sfztRLFzEF4", "date": null }
+    { "title": "Meteor en dodge cancel vers assist", "desc": "Exemple de conversion d'assist depuis les projectiles de Meteor.", "source": "https://www.youtube.com/watch?v=sfztRLFzEF4", "date": null },
+    { "title": "What is a good Kefka setup? (thread GameFAQs)", "desc": "Thread d'époque du board GameFAQs : movesets types (WW Firaga / SS Blizzaga / EC Firaga en aérien), pression au Waggle-Wobbly Firaga avec punish des dodges en Scatter-Spray Blizzaga, et conversions d'assist (Kuja, Aerith, Sephiroth) en Havoc Wing.", "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/59268680", "date": "2011" }
   ],
   "limits": [
     "Page matchups dédiée non documentée (stub) : la synthèse matchups repose uniquement sur l'overview et les notes de coups (Lightning, Onion Knight, Sephiroth, Gilgamesh, Jecht, Vaan, Cloud, Prishe).",

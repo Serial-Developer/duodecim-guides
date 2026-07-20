@@ -101,7 +101,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "- Fighting Fate - [Dissidia 012] Lightning Combo Montage (HD + Guide)",
+      "desc": "Montage-guide d'époque de combos de Lightning (chaîne Varsona, août 2011), publié quelques mois après la sortie du jeu — un complément filmé aux routes de combo décrites par le wiki.",
+      "source": "https://www.youtube.com/watch?v=ZxVkk1e3XV8",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012 Duodecim: [TUTORIAL] Lightning Basics and Combos (Prologus)",
+      "desc": "Tutoriel des bases et combos de Lightning par FrizFroz, enregistré sur Dissidia 012 Prologus, la démo-prologue officielle de Duodecim (janvier 2011) : antérieur au jeu final, certaines données peuvent légèrement différer.",
+      "source": "https://www.youtube.com/watch?v=ohmtE5cvLM4",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "La page matchups du wiki est un stub sans contenu, et l'overview ne détaille aucun matchup nommé : matchups à null.",
     "La section « mécaniques uniques » est marquée non documentée sur le wiki : le Paradigm Shift n'est décrit que dans l'overview et la partie EX Mode de la page (repris ici dans overview, exMode et gameplan), d'où uniqueMechanics à null.",

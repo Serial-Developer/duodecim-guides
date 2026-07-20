@@ -96,7 +96,14 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Dissidia Duodecim: The Essential Guide to Learning Prishe",
+      "desc": "La vidéo-guide d'époque de référence pour apprendre Prishe (chaîne glenburg89, mars 2011) : propriétés des attaques et fondamentaux du personnage, toujours en ligne.",
+      "source": "https://www.youtube.com/watch?v=pbXhyagrfqE",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "La page matchups du wiki est un stub : aucune analyse détaillée par personnage (seuls les exemples cités dans l'overview ont pu être repris).",
     "Aucune section combos renseignée (sous-section Solo vide) : pas de routes de combo détaillées au-delà des mentions de l'overview et de la section Skillchain.",

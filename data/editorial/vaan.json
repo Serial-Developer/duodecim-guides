@@ -88,7 +88,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Dissdia 012 vaan infinite combo tutorial.",
+      "desc": "Tutoriel d'époque (avril 2011) d'un combo infini découvert par accident, exigeant Staff équipé en l'air — l'une des rares traces documentées des « combos infinis » évoqués par l'overview.",
+      "source": "https://www.youtube.com/watch?v=mDG7aVLYZUM",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012: Final Fantasy - Vaan Combo Exhibition",
+      "desc": "Exhibition de combos par Muramishi (juin 2011) : Axe & Shield ou Sword & Shield utilisées dans leur version On-hand produisent un combo difficile mais vraisemblablement infini.",
+      "source": "https://www.youtube.com/watch?v=LOJRXYv1Cdc",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "La page matchups du wiki est un stub : seuls les repères de l'overview et de la note de Greatsword (Cecil, Cloud, Squall) ont pu être repris.",
     "Aucune section combos renseignée (sous-section Solo vide) : les « combos infinis » mentionnés dans l'overview ne sont détaillés nulle part.",

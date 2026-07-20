@@ -93,7 +93,14 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Dissidia 012 Duodecim Onion Knight Highly Pure Assist Build 1",
+      "desc": "Démonstration en match par Tiger Bub d'un build assist « pur » d'Onion Knight (liste d'abilities en description de la vidéo), premier volet d'une série de trois.",
+      "source": "https://www.youtube.com/watch?v=px2Oy02DJs8",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "La page Matchups du wiki est une ébauche (stub) : aucune analyse détaillée par matchup, seules les mentions de l'overview sont exploitables.",
     "La section Combos est vide (non documentée) : aucune route de combo chiffrée n'est disponible.",

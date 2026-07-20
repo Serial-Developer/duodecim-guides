@@ -128,7 +128,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "How to play the Emperor ? (thread GameFAQs)",
+      "desc": "Thread d'époque sur le style tortue : punish de block Riposte > Thunder Crest > double Landmine (jusqu'à 110 de puissance de base cumulée), Dynamite doté de Defense Crush, et préférence pour le sol car le Flare aérien ne track pas.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58911961",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia Duodecim 012 Emperor Combo/EXR Combo Guide",
+      "desc": "Guide vidéo par ChosenL : guard combos, setups à mindgames, punishes et combos d'EX Revenge — une vision offensive du personnage, loin du pur camping.",
+      "source": "https://www.youtube.com/watch?v=yQHCYjZpqJU",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "Page matchups dédiée non documentée (stub) : la synthèse matchups repose uniquement sur l'overview et les notes de coups.",
     "Aucune mécanique unique documentée (section absente des sources).",

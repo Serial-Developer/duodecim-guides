@@ -74,7 +74,26 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Best ways to use Aerith? (thread GameFAQs)",
+      "desc": "Thread d'échange de setups entre joueurs : Seal Evil après Wall Rush, Holy couvert par Nightglow ou le Tornado de Terra, Planet Protector pendant le Time Crush d'Ultimecia, purge de bravery volontaire et chase cancels avec Tidus, Kuja ou Lightning.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63856982",
+      "date": "2013"
+    },
+    {
+      "title": "Dissidia 012 Duodecim: Aerith Assist (All Moves)",
+      "desc": "Démonstration d'époque (mordredisdead, avril 2011) des quatre coups d'assist d'Aerith : Cure, Seal Evil, Planet Protector et Holy en situation.",
+      "source": "https://www.youtube.com/watch?v=1PWbUoqgk-g",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012 - Tidus Combos (Solo + Aerith Assist)",
+      "desc": "Compilation de la chaîne du wiki communautaire (Dissidia Mediawiki) : combos de Tidus exploitant l'assist Aerith, avec notations (DC, WR) et timestamps.",
+      "source": "https://www.youtube.com/watch?v=oDOs-TVaqYg",
+      "date": "2024"
+    }
+  ],
   "limits": [
     "Personnage assist uniquement : aucune donnée joueur — statistiques d'infobox toutes à « - », sections EX Mode, mécaniques uniques, combos, builds et assist marquées non documentées. Les champs joueur (exMode, uniqueMechanics, builds) sont donc à null.",
     "Non classée dans la tier list joueur 2017 (assist uniquement) : tierNote à null.",

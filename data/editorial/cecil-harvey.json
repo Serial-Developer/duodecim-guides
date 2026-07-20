@@ -108,7 +108,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Dissidia 012 Duodecim Final Fantasy Cecil Combo Montage",
+      "desc": "Montage d'époque par Andyz5448 : collection de combos et chains de Cecil testés sur des adversaires level 105 à force maximale.",
+      "source": "https://www.youtube.com/watch?v=GhIEbsPIKc0",
+      "date": "2011"
+    },
+    {
+      "title": "Advice Using Cecil? (thread GameFAQs)",
+      "desc": "Thread de coaching d'époque : équilibrer Dark Knight et Paladin, Dark Cannon qui combote proprement dans Soul Eater, Assist Chase converti en Paladin Force facile et usage raisonné des assists (après Wall Rush ou en punish de HP).",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63911036",
+      "date": "2012"
+    }
+  ],
   "limits": [
     "La page Matchups du wiki est une ébauche (stub) et l'overview ne contient pas d'analyse exploitable par matchup : section matchups laissée à null.",
     "Le moveset bravery documenté est incomplet (6 coups détaillés seulement) : Valiant Blow, Dark Cannon, Paladin Arts et Shadow Lance apparaissent dans l'infobox, les combos ou les données d'assist sans fiche de coup détaillée.",

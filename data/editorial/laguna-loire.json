@@ -105,7 +105,26 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Laguna Assist Combo",
+      "desc": "Vidéo d'époque (Ansonpants) : combo d'assist à deux barres démarré sur Machine Gun, facile à placer et très dommageable d'après l'auteur.",
+      "source": "https://www.youtube.com/watch?v=H40dPjZvgE8",
+      "date": "2011"
+    },
+    {
+      "title": "How do i successfully use Laguna? — thread GameFAQs",
+      "desc": "Thread d'époque du board Duodecim : conseils de pression en variant Homing Bazooka, Sticky Bomb et Pummel/Electroshield en l'air, Machine Gun, Ricochet Shot et Pummel/Electroshield au sol — un style décrit comme « un Emperor plus rapide ».",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58596037",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia Duodecim Builds Exdeath,Tifa,Laguna,WoL,Bartz",
+      "desc": "Vidéo de builds multi-personnages d'époque (Tiger Bub) incluant une configuration Laguna, issue de sa série « Duodecim Builds ».",
+      "source": "https://www.youtube.com/watch?v=E30pdXaq3pQ",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "Pas de table forces/faiblesses sur la page wiki : les listes ci-dessus sont dérivées de la prose de l'overview et des notes de coups.",
     "Frame data très incomplète : Machine Gun, Grenade Bomb, Pummel, Missile Barrage et Electro Shield n'ont ni startup, ni priorité, ni EX Force chiffrés dans les données (seuls les multiplicateurs de dégâts sont présents) ; les dégâts de Ragnarok Blade et Split Laser ne sont pas chiffrés (« - »).",

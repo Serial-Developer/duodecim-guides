@@ -14,7 +14,8 @@
         "Appuyez sur Croix juste après R — en séquence, jamais simultanément. La fenêtre est de 2 frames à 30 FPS (la fréquence d'images du jeu), ce qui rend l'input délicat à réussir.",
         "Si la manipulation est correcte, le son (ou la voix) du block se déclenche pendant que le personnage esquive."
       ],
-      "source": "https://dissidia.wiki/Blodge"
+      "source": "https://dissidia.wiki/Blodge",
+      "video": { "url": "https://www.youtube.com/watch?v=3Pw-viOoVig", "title": "Dissidia Duodecim - Blodging Etiquette by Dart", "author": "BashBros", "date": "2013" }
     },
     {
       "id": "dash-feint",
@@ -30,7 +31,8 @@
         "Appuyez sur Triangle juste après R — en séquence, pas en même temps. La fenêtre est de 2 frames à 30 FPS.",
         "Le block est alors annulé en dash. Répétez autant que nécessaire."
       ],
-      "source": "https://dissidia.wiki/Dash_feint"
+      "source": "https://dissidia.wiki/Dash_feint",
+      "video": { "url": "https://www.youtube.com/watch?v=siQU984t0gs", "title": "[Dissidia 012 Tutorial] How to DASH FEINT", "author": "King of The Lilies", "date": "2025" }
     },
     {
       "id": "lock-off",
@@ -76,7 +78,8 @@
         "La manipulation (découverte par ujhbn) : débloquez l'Extra Ability voulue à la boutique, retirez toutes les Extra Abilities du personnage, équipez uniquement celle qui vous intéresse (ex. Peltast's Gear), équipez l'objet souhaité, retournez au menu des aptitudes, triez les Extra Abilities avec Triangle en choisissant « Equipped », puis retirez l'aptitude. Tant qu'une seule Extra Ability est équipée, le jeu la retire sans exiger de retirer les objets liés. La manipulation doit être refaite pour chaque personnage et chaque set d'équipement, et de nouveau si l'équipement est retiré plus tard."
       ],
       "competitiveUse": "Malgré son avantage évident (jusqu'à 40 CP économisés par build), le glitch n'a pas causé de déséquilibre majeur en compétition : il a été déclaré légal en tournoi.",
-      "source": "https://dissidia.wiki/Equip_Glitch_(Dissidia_012)"
+      "source": "https://dissidia.wiki/Equip_Glitch_(Dissidia_012)",
+      "video": { "url": "https://www.youtube.com/watch?v=TMERRLj8FPc", "title": "Dissidia 012 - Equip Glitch and How to Do It", "author": "Dissidia Mediawiki", "date": "2026" }
     },
     {
       "id": "assist-storage-glitch",
@@ -88,7 +91,8 @@
         "Contreparties : le glitch exige de consommer l'une des deux mécaniques EX, donc les personnages équipés de Side by Side ne peuvent pas l'activer via EX Burst, et subir un combo complet d'EX Revenge (surtout contre Garland) peut coûter cher. Le délai parfois long entre la mise en place et l'appel suivant peut aussi désorienter au début."
       ],
       "competitiveUse": "Rarement vu en compétition à cause de ses prérequis situationnels, mais le bénéfice est réel : whiff punishment à la réaction plus fiable (y compris avec des assists lents comme Kuja), combos d'assist normalement impossibles (ex. : Solid Barrel de Squall combote dans le BRV aérien de Kuja sans mur), et contres au LV2 Assist Change à coût réduit — le stagger du LV2 Change peut alors être suivi d'un appel d'assist pour un combo fiable, ce dont profitent des personnages comme Yuna, Prishe et Ultimecia.",
-      "source": "https://dissidia.wiki/Assist_Storage_Glitch"
+      "source": "https://dissidia.wiki/Assist_Storage_Glitch",
+      "video": { "url": "https://www.youtube.com/watch?v=UKixw8LkJM0&t=300", "title": "Dissidia 012 - Squall Combos (Kuja Assist)", "author": "Dissidia Mediawiki", "date": "2026" }
     }
   ],
   "onlineSetup": {

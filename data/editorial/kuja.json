@@ -57,7 +57,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Dissidia Duodecim - Kuja EXR/Assist Combos",
+      "desc": "Vidéo d'époque (97Nonsense) : démonstrations de combos de Kuja en EX Revenge et avec assist.",
+      "source": "https://www.youtube.com/watch?v=SBS4tboGNLU",
+      "date": "2011"
+    },
+    {
+      "title": "Help with playing Kuja! — thread GameFAQs",
+      "desc": "Thread du board Duodecim : différences Holy/Flare au block (Strike Energy et Snatch Blow staggent Kuja bloqué, pas les attaques Flare), setup aérien type Strike Energy + Snatch Shot + Ring Holy, et discussion des assists (Jecht pour renvoyer au sol, Aerith, Sephiroth).",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63105855",
+      "date": "2012"
+    }
+  ],
   "limits": [
     "Overview du wiki non rédigé : aucune synthèse d'archétype, aucune liste de forces/faiblesses, aucun historique compétitif côté joueur — d'où les champs overview, strengths et weaknesses à null.",
     "Aucun gameplan joueur documenté (overview vide, section combos vide, notes de coups limitées aux descriptions du jeu) — gameplan à null.",

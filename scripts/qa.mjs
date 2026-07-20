@@ -86,13 +86,19 @@ for (const c of [...CHARACTERS, ...SPECIAL]) {
 // --- 3. Liens externes (optionnel) ---
 if (process.argv.includes('--links')) {
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-  const skip = /fonts\.(googleapis|gstatic)\.com|creativecommons\.org|web\.archive\.org/;
+  // gamefaqs : 403 systématique pour les clients non-navigateur (threads vérifiés
+  // manuellement au moment de leur ajout) ; youtube : vérifié via oEmbed ci-dessous.
+  const skip = /fonts\.(googleapis|gstatic)\.com|creativecommons\.org|web\.archive\.org|gamefaqs\.gamespot\.com/;
   const toCheck = [...externalLinks].filter((u) => !skip.test(u));
   console.log(`Vérification de ${toCheck.length} liens externes uniques…`);
   let done = 0;
   for (const url of toCheck) {
     try {
-      const res = await fetch(url, {
+      // YouTube : l'API oEmbed publique dit si la vidéo est disponible (une page
+      // watch répond 200 même pour une vidéo supprimée)
+      const yt = url.match(/youtube\.com\/watch\?v=([\w-]+)/);
+      const target = yt ? `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${yt[1]}&format=json` : url;
+      const res = await fetch(target, {
         method: 'GET',
         headers: { 'User-Agent': 'dissidia012-guides-qa/0.1' },
         redirect: 'follow',

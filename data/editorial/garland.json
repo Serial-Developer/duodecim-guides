@@ -110,7 +110,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Garland tips? (thread GameFAQs)",
+      "desc": "Thread d'époque : synergie avec le Snatch Blow de l'assist Kuja (dégâts records via Bardiche), kit aérien recommandé Thundaga / Twist Drill / Bardiche, et pourquoi Twin Swords est déconseillé (même portée que Bardiche mais animation plus longue et punissable).",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/59144075",
+      "date": "2011"
+    },
+    {
+      "title": "Garland's EX Revenge Funtime",
+      "desc": "Courte démonstration par SpacePirateKhan des dégâts de Garland sous EX Revenge (mécanique propre à Duodecim), recommandée sur le board GameFAQs de l'époque.",
+      "source": "https://www.youtube.com/watch?v=VfqFeso5Gbs",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "Page matchups du wiki à l'état de stub : aucun matchup détaillé n'est documenté.",
     "Aucune mécanique unique documentée (section absente des sources).",

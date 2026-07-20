@@ -68,7 +68,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Shantotto chase cancel combos (Dissidia 012)",
+      "desc": "Vidéo d'époque de Michey : combos en chase cancel annotés (notations en annotations YouTube), où chaque Spirit Magic est interchangeable avec ses paliers supérieurs ou inférieurs — une des rares démonstrations filmées de la conversion qui fait sa force.",
+      "source": "https://www.youtube.com/watch?v=fmezZmn7Aow",
+      "date": "2011"
+    },
+    {
+      "title": "How to properly use Shantotto? (thread GameFAQs)",
+      "desc": "Thread d'époque du board Dissidia 012 : le jeu HP pivote sur Stun (Stun > Aero, Stun > Stone), Retribution traverse les gardes type Delta Attack, et Bio, nerfé, se réserve à l'après-block — un instantané de sa relecture entre Dissidia et Duodecim.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "Pas de texte d'overview sur la page (seul le tableau forces/faiblesses est renseigné) : champ overview laissé à null et gameplan reconstruit uniquement depuis ce tableau.",
     "La page matchups du wiki est un stub et aucune information de matchup n'apparaît ailleurs : champ matchups laissé à null.",

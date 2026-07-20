@@ -89,7 +89,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Dissidia 012: Duodecim Final Fantasy – Yuna Guide (v1.2)",
+      "desc": "Guide complet d'époque signé Pokefan362/Jirachi, main Yuna en PvP : attaques, builds et abilities recommandés, assists et combos, matchups. Version 1.2 mise à jour en juin 2011.",
+      "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/62416",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012 [duodecim] - Tidus and Yuna Assist Combos",
+      "desc": "Vidéo d'époque de KindredCVS explorant Yuna en tant qu'assist à travers des combos avec Tidus — un usage que les sources du wiki ne détaillent pas au-delà de son classement High tier.",
+      "source": "https://www.youtube.com/watch?v=vV4xQP3f7zU",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "La page matchups du wiki est un stub : aucune analyse détaillée par personnage.",
     "La section assist de la page prévoit des onglets Tidus, Jecht et Sephiroth, mais seuls les contenus concernant Kuja sont renseignés.",

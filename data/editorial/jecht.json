@@ -62,7 +62,13 @@
   "advancedTech": [
     {
       "name": "Jecht Rush dodge cancel combo",
-      "desc": "Combo solo étendu à base de dodge cancels de Jecht Rush, cité comme route de dégâts avec plusieurs assists (Tidus après un Wall Rush au sol de Sonic Buster, Onion Knight, et en boucle avec Ultimecia via Knight's Axe près du mur)."
+      "desc": "Combo solo étendu à base de dodge cancels de Jecht Rush, cité comme route de dégâts avec plusieurs assists (Tidus après un Wall Rush au sol de Sonic Buster, Onion Knight, et en boucle avec Ultimecia via Knight's Axe près du mur).",
+      "video": {
+        "url": "https://www.youtube.com/watch?v=tpW--tMNfYI",
+        "title": "[Dissidia 012] Jecht DC & Assist Combos",
+        "author": "Shilag",
+        "date": "2011"
+      }
     },
     {
       "name": "Double Ultimate Jecht Shot (Aerith)",
@@ -144,6 +150,18 @@
     ]
   },
   "communityTech": [
+    {
+      "title": "Dissidia Duodecim 012 Jecht Combo Timing/EXR Guide",
+      "desc": "Guide vidéo d'époque (ChosenL) : astuces de timing pour les chaînes de combo de Jecht et combos d'EX Revenge.",
+      "source": "https://www.youtube.com/watch?v=zTPGYL5gGQs",
+      "date": "2011"
+    },
+    {
+      "title": "DDFF - A brief guide on timing Jecht combos",
+      "desc": "Guide vidéo de Muggshotter (auteur des tier lists du wiki) sur les fenêtres de timing des combos de Jecht, filmé à 60 fps avec affichage des inputs pour une lecture image par image.",
+      "source": "https://www.youtube.com/watch?v=5W1zGEMzbeM",
+      "date": "2021"
+    },
     {
       "title": "Jecht assist corner followup",
       "desc": "Démonstration vidéo du comportement de l'assist Jecht dans un coin : la chaîne finale de Jecht Rush ne sort pas et laisse place à un Assist Chase.",

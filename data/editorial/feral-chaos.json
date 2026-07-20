@@ -102,7 +102,14 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Feral Chaos and You: A Guide (SPOILERS) — thread GameFAQs",
+      "desc": "Guide communautaire d'époque signé __Shinryu__ consacré à Feral Chaos jouable : déblocage via Confessions of the Creator, présentation du moveset et de l'EX Burst Regnum Dei, et set d'équipement exclusif Rise of Discord.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58793116",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "Non classé dans la tier list 2017 : absent de la liste tournoi (note de meta-lite.json), l'overview précisant qu'il a été banni la majeure partie de la vie du jeu pour ses matchups polarisants — d'où tierNote à null.",
     "La page matchups dédiée est un stub sans contenu : le résumé matchups repose uniquement sur l'overview.",

@@ -92,7 +92,14 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Dissidia 012 Duodecim Final Fantasy Gilgamesh Combo Montage — Andyz5448",
+      "desc": "Montage d'époque recensant une liste de combos et d'enchaînements de Gilgamesh, démonstrations en jeu à l'appui.",
+      "source": "https://www.youtube.com/watch?v=WFcdFkgU3Ks",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "Aucune note d'usage par coup dans les sources : moveNotes est synthétisé à partir des descriptions officielles, des données de frames et des mentions de l'overview et de la mécanique unique.",
     "Page matchups dédiée non documentée (stub) et aucun matchup nommé dans l'overview : champ matchups à null.",

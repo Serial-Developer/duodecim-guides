@@ -120,7 +120,20 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Dissidia 012 Duodecim Final Fantasy Squall Combo Montage",
+      "desc": "Montage de combos d'époque (Andyz5448) : recueil de routes solo et avec assist de Squall, démontrées contre des adversaires niveau 105 aux réglages maximaux.",
+      "source": "https://www.youtube.com/watch?v=OSazQtfzckk",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012 Duodecim Squall Revolver Damage Assist Build",
+      "desc": "Vidéo de build d'époque (Tiger Bub) : configuration dégâts + assist articulée autour de Revolver Drive, avec le détail des abilities (Assist Critical Boost, etc.).",
+      "source": "https://www.youtube.com/watch?v=QEQCjqOH_Ng",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "Pas de section « mécaniques uniques » : le wiki la marque non documentée (documented: false) pour Squall.",
     "La page matchups est un stub sans contenu : le résumé des matchups repose uniquement sur les indices de l'overview.",

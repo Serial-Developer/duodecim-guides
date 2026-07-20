@@ -98,7 +98,14 @@
       }
     ]
   },
-  "communityTech": [],
+  "communityTech": [
+    {
+      "title": "Terra Branford Guide — Soki_25 (GameFAQs)",
+      "desc": "Guide GameFAQs d'époque : arsenal BRV/HP commenté, abilities et assists recommandés, combos (Meteor -> Blizzara, Meltdown chargé -> Holy Combo -> Ultima), conseils matchup contre tout le cast et par arène.",
+      "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/62359",
+      "date": "2011"
+    }
+  ],
   "limits": [
     "Page matchups à l'état d'ébauche (stub) : aucune analyse par personnage, seuls des repères issus de l'overview.",
     "Section combos non documentée (sous-section Solo vide dans les sources).",
