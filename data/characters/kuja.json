@@ -30,17 +30,7 @@
     "overview": {
       "documented": false,
       "text": [],
-      "tables": [
-        {
-          "caption": null,
-          "rows": [
-            [
-              "Strengths",
-              "Weaknesses"
-            ]
-          ]
-        }
-      ],
+      "tables": [],
       "sources": [
         "https://dissidia.wiki/Kuja_(Dissidia_012)"
       ]
@@ -557,22 +547,6 @@
             [
               "Ground",
               "Aerial"
-            ]
-          ]
-        },
-        {
-          "caption": null,
-          "rows": [
-            [
-              "Stats"
-            ]
-          ]
-        },
-        {
-          "caption": "Special Effect:",
-          "rows": [
-            [
-              "Equipment"
             ]
           ]
         },

@@ -272,7 +272,8 @@ function tablesOf($, elems) {
         // lignes sans aucune valeur utile (vides ou « - ») : bruit des templates
         .filter((cells) => cells.some((c) => c && c !== '-'))
         .filter((cells) => !(cells.length > 1 && cells.slice(1).every((c) => c === '' || c === '-')));
-      if (rows.length) out.push({ caption, rows });
+      // une table réduite à une ligne est un squelette vide (ex. « Build #2 » non rempli)
+      if (rows.length >= 2) out.push({ caption, rows });
     }
   }
   return out;

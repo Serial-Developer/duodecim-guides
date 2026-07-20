@@ -1,7 +1,7 @@
 // Template d'un guide personnage — structure imposée §7 du cahier des charges
 import {
   esc, banner, infoBanner, paras, priorityBadge, startupChartSvg, mobilityChartSvg,
-  chainSvg, sourcesSection, pageShell, siteFooter,
+  chainSvg, sectionSources, sourcesSection, pageShell, siteFooter,
 } from './helpers.mjs';
 
 const FIELDS = [
@@ -185,8 +185,10 @@ ${tierNoteClean ? `<p>${esc(tierNoteClean)}</p>` : ''}
 <div class="card strengths"><h3>Forces</h3><ul>${(ed.strengths || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
 <div class="card weaknesses"><h3>Faiblesses</h3><ul>${(ed.weaknesses || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
 </div>` : '';
+  const secSrc = ed?.sourcesBySection || {};
   const overview = `<section id="overview"><h2>Vue d'ensemble</h2>
 ${ed?.overview?.length ? paras(ed.overview) : (s.overview?.documented ? edBanner || banner() : banner())}
+${sectionSources(secSrc.overview)}
 ${forces}
 <h3>Stats &amp; vitesses</h3>
 ${statsTable}
@@ -239,7 +241,8 @@ ${(s.uniqueMechanics.subs || []).map((sub) => genericTables(sub.tables)).join('\
     : [];
   const gameplan = `<section id="gameplan"><h2>Plan de jeu &amp; techniques avancées</h2>
 ${ed?.gameplan?.length ? paras(ed.gameplan) : edBanner || banner()}
-${ed?.advancedTech?.length ? `<h3>Techniques spécifiques</h3>${ed.advancedTech.map((t) => `<div class="card"><h3 style="margin-top:0">${esc(t.name)}</h3><p>${esc(t.desc)}</p>${t.video?.url ? `<p class="video-link"><a href="${esc(t.video.url)}" rel="external noopener">▶ ${esc(t.video.title || 'Vidéo de démonstration')}</a>${t.video.author ? ` — ${esc(t.video.author)}` : ''}${t.video.date ? ` (${esc(String(t.video.date))})` : ''}</p>` : ''}</div>`).join('')}` : ''}
+${ed?.advancedTech?.length ? `<h3>Techniques spécifiques</h3>${ed.advancedTech.map((t) => `<div class="card"><h3 style="margin-top:0">${esc(t.name)}</h3><p>${esc(t.desc)}</p>${t.video?.url ? `<p class="video-link"><a href="${esc(t.video.url)}" rel="external noopener">▶ ${esc(t.video.title || 'Vidéo de démonstration')}</a>${t.video.author ? ` — ${esc(t.video.author)}` : ''}${t.video.date ? ` (${esc(String(t.video.date))})` : ''}</p>` : ''}${t.source ? sectionSources([t.source]) : ''}</div>`).join('')}` : ''}
+${sectionSources(secSrc.gameplan)}
 ${combosRaw.length ? `<details class="move"><summary><span class="mv-name">Combos documentés (notation d'origine, dissidia.wiki)</span></summary><div class="mv-body">${combosRaw.map((c) => `<p class="mono">${esc(c)}</p>`).join('')}</div></details>` : ''}
 <p class="mv-desc">Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href="../techniques.html">Techniques &amp; glitches</a>.</p>
 </section>`;
@@ -254,16 +257,18 @@ ${s.matchups?.documented && ed?.matchups?.summary?.length
       : banner(s.matchups?.sources?.length
           ? `La sous-page <a href="${esc(s.matchups.sources[0])}" rel="external noopener">Matchups du wiki</a> est un squelette vide à ce jour.`
           : `Aucune page de matchups n'existe sur le wiki pour ce personnage.`)}
+${sectionSources(secSrc.matchups)}
 <p>Vidéos de matchs : <a href="${esc(replayUrl)}" rel="external noopener">Replay Theater — matchs de ${esc(char.name)}</a>.</p>
 </section>`;
 
   // --- 7. Builds ---
   const builds = `<section id="builds"><h2>Builds</h2>
-${s.builds?.documented
+${s.builds?.documented || ed?.builds?.philosophy?.length
     ? `${ed?.builds?.philosophy?.length ? paras(ed.builds.philosophy) : edBanner || banner()}
-${genericTables(s.builds.tables)}
-${(s.builds.subs || []).map((sub) => `${sub.title ? `<h3>${esc(sub.title)}</h3>` : ''}${genericTables(sub.tables)}`).join('\n')}
-${ed?.builds?.notes ? `<p class="mv-desc">${esc(ed.builds.notes)}</p>` : ''}`
+${genericTables(s.builds?.tables)}
+${(s.builds?.subs || []).filter((sub) => sub.text.length || sub.tables.length).map((sub) => `${sub.title ? `<h3>${esc(sub.title)}</h3>` : ''}${genericTables(sub.tables)}`).join('\n')}
+${ed?.builds?.notes ? `<p class="mv-desc">${esc(ed.builds.notes)}</p>` : ''}
+${sectionSources(secSrc.builds)}`
     : banner()}
 </section>`;
 
@@ -290,6 +295,8 @@ ${ed?.communityTech?.length
     ...(s.matchups?.documented ? s.matchups.sources || [] : []),
     ...(char.sources || []),
     ...((ed?.communityTech || []).map((t) => t.source)),
+    ...Object.values(secSrc).flat(),
+    ...((ed?.advancedTech || []).map((t) => t.source).filter(Boolean)),
     'https://dissidia.wiki/Tier_List_(Dissidia_012)',
     'https://dissidia.wiki/Tier_List_(Assist)',
   ];

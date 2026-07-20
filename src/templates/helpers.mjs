@@ -196,6 +196,12 @@ ${axis}${items}
 </figure>`;
 }
 
+// Petites sources en pied de section (contenu issu de la passe externe)
+export function sectionSources(urls) {
+  if (!urls || !urls.length) return '';
+  return `<p class="sources-list">Sources : ${urls.map((u) => `<a href="${esc(u)}" rel="external noopener">${esc(u.replace(/^https?:\/\/(www\.)?/, '').slice(0, 60))}</a>`).join(' · ')}</p>`;
+}
+
 export function sourcesSection(urls, limitsFr) {
   const seen = new Set();
   const list = (urls || []).filter((u) => u && !seen.has(u) && seen.add(u));

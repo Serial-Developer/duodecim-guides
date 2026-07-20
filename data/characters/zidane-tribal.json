@@ -55,17 +55,7 @@
         "A character who has low health, but exceptional tools for damage, resources or other things. Characters can be built this way in Dissidia 012.",
         "- He thrives when he succeeds, but suffers greatly if he doesn't."
       ],
-      "tables": [
-        {
-          "caption": null,
-          "rows": [
-            [
-              "Strengths",
-              "Weaknesses"
-            ]
-          ]
-        }
-      ],
+      "tables": [],
       "sources": [
         "https://dissidia.wiki/Zidane_Tribal_(Dissidia_012)"
       ]
