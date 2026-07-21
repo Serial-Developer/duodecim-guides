@@ -34,15 +34,21 @@ npm run coverage     # reports/coverage.md
 3. Rédiger/corriger `data/editorial/<slug>.json` (prose française — schéma dans `docs/editorial-guidelines.md`). Règle d'or : ne rien écrire qui ne soit adossé à `data/characters/<slug>.json` ou `data/meta.json`.
 4. `npm run build && npm run qa`.
 
+## Page « Installer sur PPSSPP »
+
+`dist/install.html` explique l'installation de l'émulateur, la mise en place du jeu, les réglages, le jeu en local et en ligne — une section PC, une section mobile. Le contenu vit dans `data/editorial/_install.json` et le rendu dans `src/templates/install.mjs`.
+
+La page part du principe que le joueur possède déjà un ISO obtenu légalement (dump de son propre UMD) : **aucune source de téléchargement n'y figure et il ne faut pas en ajouter**. Les faits sont adossés à la documentation officielle de PPSSPP et au guide `Online_Setup_(PPSSPP)` du wiki ; les sources sont listées section par section et en pied de page.
+
 ## Architecture
 
 ```
 cache/            HTML bruts du wiki (non versionnés)
 data/characters/  extraction structurée par perso (stats, coups, frames…)
-data/editorial/   prose française (rédigée, un JSON par perso + _shared.json)
+data/editorial/   prose française (rédigée, un JSON par perso + _shared.json + _install.json)
 data/meta.json    tier lists, vitesses, techniques universelles
 scripts/          scrape / parse / parse-meta / fetch-images / build / qa / coverage
-src/templates/    templates JS (landing « écran de sélection », guide, techniques)
+src/templates/    templates JS (landing « écran de sélection », guide, techniques, install)
 src/styles/       design system (nuit violette, Cinzel/Inter)
 assets/           portraits + icônes (copiés dans dist/ au build)
 dist/             site final

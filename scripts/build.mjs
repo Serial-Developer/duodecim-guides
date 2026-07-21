@@ -4,6 +4,7 @@ import { CHARACTERS, SPECIAL } from './characters.mjs';
 import { renderLanding } from '../src/templates/landing.mjs';
 import { renderGuide } from '../src/templates/guide.mjs';
 import { renderTechniques } from '../src/templates/techniques.mjs';
+import { renderInstall } from '../src/templates/install.mjs';
 import { renderChaos } from '../src/templates/chaos.mjs';
 import { speedValues } from '../src/templates/helpers.mjs';
 import { readFileSync, writeFileSync, existsSync, mkdirSync, cpSync, readdirSync } from 'node:fs';
@@ -17,6 +18,7 @@ const readJson = (p) => (existsSync(p) ? JSON.parse(readFileSync(p, 'utf-8')) : 
 
 const meta = readJson(join(ROOT, 'data', 'meta.json'));
 const shared = readJson(join(ROOT, 'data', 'editorial', '_shared.json'));
+const install = readJson(join(ROOT, 'data', 'editorial', '_install.json'));
 
 // Correspondance nom tier list -> slug (la tier list utilise des noms courts)
 const TIER_NAME_TO_SLUG = {
@@ -119,9 +121,12 @@ for (const { def, data, ed } of chars) {
 // Techniques
 writeFileSync(join(DIST, 'techniques.html'), renderTechniques(shared));
 
+// Installation (PPSSPP, PC et mobile)
+writeFileSync(join(DIST, 'install.html'), renderInstall(install));
+
 // Statiques
 cpSync(join(ROOT, 'src', 'styles', 'main.css'), join(DIST, 'styles', 'main.css'));
 cpSync(join(ROOT, 'src', 'scripts', 'site.js'), join(DIST, 'scripts', 'site.js'));
 cpSync(join(ROOT, 'assets'), join(DIST, 'assets'), { recursive: true });
 
-console.log(`dist/ généré : index + ${chars.length - 1} guides + techniques.html${missingEd ? ` (${missingEd} sans éditorial — bandeaux)` : ''}`);
+console.log(`dist/ généré : index + ${chars.length - 1} guides + techniques.html + install.html${missingEd ? ` (${missingEd} sans éditorial — bandeaux)` : ''}`);

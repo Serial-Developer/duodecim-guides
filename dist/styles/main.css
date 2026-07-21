@@ -313,6 +313,70 @@ details.move .mv-body::after { content: ""; display: block; clear: both; }
 }
 .mv-note { border-left: 3px solid var(--gold); padding: 0.15rem 0 0.15rem 0.8rem; margin: 0.6rem 0; }
 
+/* ---------- Page d'installation ---------- */
+.install-hero {
+  background: linear-gradient(160deg, var(--surface-2), var(--surface) 65%);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  margin-top: 1.4rem;
+}
+.install-hero h1 { margin: 0.25rem 0 0; font-size: clamp(1.7rem, 4vw, 2.6rem); color: var(--gold); }
+.install-hero .origin { margin: 0; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.85rem; }
+.install-hero .tagline { margin: 0.7rem 0 0; max-width: 62ch; }
+
+h2 .plat-sub {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0;
+  margin-left: 0.8rem;
+}
+
+.card.step { padding: 1.2rem 1.4rem; }
+.step-title { display: flex; align-items: baseline; gap: 0.7rem; margin-top: 0; }
+.step-num {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--bg);
+  background: var(--violet);
+  border-radius: 999px;
+  width: 1.6rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+}
+ol.steps { margin: 0.6rem 0 0; padding-left: 1.4rem; }
+ol.steps li { margin: 0.5rem 0; padding-left: 0.2rem; }
+ol.steps li::marker { color: var(--gold); font-weight: 600; }
+ol.steps li strong { color: var(--text); }
+.step-notes { margin: 0.8rem 0 0; padding-left: 1.2rem; color: var(--muted); font-size: 0.92rem; }
+.step-notes li { margin: 0.3rem 0; }
+
+ul.checklist { list-style: none; margin: 0; padding: 0; }
+ul.checklist li { margin: 0.45rem 0; padding-left: 1.7rem; position: relative; }
+ul.checklist li::before {
+  content: "☐";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+table.data caption {
+  caption-side: top;
+  text-align: left;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-style: italic;
+  padding-bottom: 0.35rem;
+}
+
+.guide-toc ol.toc-sub { padding-left: 0.7rem; }
+.guide-toc ol.toc-sub a { font-size: 0.86rem; padding: 0.22rem 0.6rem; }
+
 /* Bandeaux */
 .banner {
   border: 1px dashed var(--danger);

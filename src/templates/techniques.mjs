@@ -37,6 +37,7 @@ ${(shared.techniques || []).map(block).join('\n')}
 ${(shared.glitches || []).map(block).join('\n')}
 
 <h2>Jouer en ligne (PPSSPP)</h2>
+<p class="mv-desc">Installation pas à pas de l'émulateur, mise en place du jeu et premier match : voir la page <a href="install.html">Installer Dissidia 012 sur PPSSPP</a>. La synthèse ci-dessous reprend le guide de dissidia.wiki.</p>
 ${shared.onlineSetup ? paras(shared.onlineSetup.summary) + `<p class="sources-list"><a href="${esc(shared.onlineSetup.source)}" rel="external noopener">${esc(shared.onlineSetup.source)}</a></p>` : banner()}
 
 <h2>Glossaire</h2>

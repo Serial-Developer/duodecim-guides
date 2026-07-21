@@ -35,6 +35,7 @@ ${tier ? `<span class="tier-badge" aria-hidden="true">${esc(tier)}</span>` : ''}
 <span class="vs-plate">Sélection du personnage</span>
 <h1>Dissidia 012 <span class="gold">[duodecim]</span> Final Fantasy — guides compétitifs</h1>
 <nav class="vs-nav" aria-label="Navigation du site">
+<a href="install.html">Installer sur PPSSPP</a>
 <a href="techniques.html">Techniques &amp; glitches</a>
 <a href="characters/aerith.html">Assist : Aerith</a>
 <a href="characters/chaos.html">Boss : Chaos</a>
