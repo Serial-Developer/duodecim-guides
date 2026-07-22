@@ -425,7 +425,7 @@ function splitHpLinks(hpGroups, extraNames) {
 }
 
 const SECTIONS_NAV = [
-  ['meta', 'Méta'], ['overview', "Vue d'ensemble"], ['moves', 'Coups'], ['unique', 'Mécanique unique'],
+  ['meta', 'Méta'], ['overview', "Vue d'ensemble"], ['unlock', 'Débloquer'], ['moves', 'Coups'], ['unique', 'Mécanique unique'],
   ['gameplan', 'Plan de jeu'], ['matchups', 'Matchups'], ['builds', 'Builds'],
   ['assist', 'Assists'], ['community', 'Tech communautaire'], ['sources', 'Sources'],
 ];
@@ -482,6 +482,15 @@ ${isAssist ? '' : `<h3>Stats &amp; vitesses</h3>
 ${statsTable}
 ${mobilityChartSvg(char, castStats)}`}
 </section>`;
+
+  // --- 2 bis. Déblocage (éditorial ; Aerith : DLC lié à Prologus) ---
+  const unlockSec = ed?.unlock ? `<section id="unlock"><h2>${esc(ed.unlock.title || `Débloquer ${char.name}`)}</h2>
+${paras(ed.unlock.intro)}
+${(ed.unlock.versions || []).map((v) => `<article class="card"><h3 style="margin-top:0">${esc(v.name)}</h3>
+${paras(v.intro)}
+${v.points?.length ? `<ul>${v.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>` : ''}</article>`).join('\n')}
+${ed.unlock.note ? `<p class="mv-desc">${esc(ed.unlock.note)}</p>` : ''}
+</section>` : '';
 
   // --- 3. Coups ---
   const allMoves = [];
@@ -611,6 +620,7 @@ ${ed?.communityTech?.length
     ...((ed?.communityTech || []).map((t) => t.source)),
     ...Object.values(secSrc).flat(),
     ...((ed?.advancedTech || []).map((t) => t.source).filter(Boolean)),
+    ...(ed?.unlock?.sources || []),
     'https://dissidia.wiki/Tier_List_(Dissidia_012)',
     'https://dissidia.wiki/Tier_List_(Assist)',
   ];
@@ -620,7 +630,8 @@ ${sourcesSection(allSources, ed?.limits)}
 
   const nav = SECTIONS_NAV
     .filter(([id]) => id !== 'unique' || hasUnique)
-    .filter(([id]) => id !== 'matchups' || !isAssist);
+    .filter(([id]) => id !== 'matchups' || !isAssist)
+    .filter(([id]) => id !== 'unlock' || ed?.unlock);
   const tocLinks = nav.map(([id, label]) => `<li><a href="#${id}">${esc(label)}</a></li>`).join('');
   const body = `${siteHeader({ base: '../', active: char.slug === 'aerith' ? 'aerith' : '' })}
 <nav class="guide-top" aria-label="Sections du guide"><div class="chips-nav">
@@ -636,6 +647,7 @@ ${tocLinks}
 ${hero}
 ${metaSection}
 ${overview}
+${unlockSec}
 ${moves}
 ${unique}
 ${gameplan}

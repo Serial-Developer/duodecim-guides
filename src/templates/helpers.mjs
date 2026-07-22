@@ -252,7 +252,7 @@ export function siteHeader({ base = '', active = '', h1 = false } = {}) {
     { title: 'Données du jeu', items: [
       { key: 'index', href: `${base}index.html`, label: 'Personnages' },
       { key: 'aerith', href: `${base}characters/aerith.html`, label: 'Assist : Aerith' },
-      { key: 'chaos', href: `${base}characters/chaos.html`, label: 'Boss : Chaos' },
+      { key: 'feral', href: `${base}obtenir-feral-chaos.html`, label: 'Obtenir Feral Chaos' },
       { key: 'techniques', href: `${base}techniques.html`, label: 'Techniques &amp; glitches' },
     ] },
     { title: 'Jouer à Dissidia', items: [

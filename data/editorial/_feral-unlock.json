@@ -1,0 +1,76 @@
+{
+  "title": "Obtenir Feral Chaos",
+  "lede": "Le vrai boss final de Duodecim n'est pas Chaos mais sa forme déchaînée : Feral Chaos, niveau 130, plus de 125 000 PV — et le seul boss du jeu qui devienne jouable une fois vaincu. Voici le chemin complet du déblocage, et trois méthodes éprouvées pour gagner le combat qui le verrouille.",
+  "chemin": {
+    "intro": [
+      "Feral Chaos se débloque au bout du scénario bonus « Confessions of the Creator » (le scénario 000), dont il est le boss final. Le parcours :"
+    ],
+    "etapes": [
+      "Terminer le scénario principal 012 « Treachery of the Gods ». Cela débloque à la fois l'histoire du premier Dissidia (013 « Light to All ») et l'achat du scénario 000 au catalogue PP.",
+      "Ouvrir « Confessions of the Creator » : soit l'acheter 2 000 PP au catalogue, soit terminer le scénario 013 — ce qui le débloque gratuitement. L'achat est le chemin le plus rapide.",
+      "Traverser le scénario 000 — pensé pour des personnages à haut niveau (les ennemis vont d'environ 50 à 130). En chemin, un premier Feral Chaos niveau 95 en tenue « Jade Dissonance » (~60 000 PV) sert de boss intermédiaire : le combat se joue en équipe de cinq, et après 60 secondes son accessoire Booster lui donne un multiplicateur ×90 (+450 % en attaque et défense) qui le rend quasi invulnérable — il faut donc placer un maximum de dégâts HP avant, ou ressortir du gateway pour recommencer le combat à zéro.",
+      "Atteindre le dernier gateway, « Edge of Discord » : un donjon de cinq étages peuplé de manikins niveau 120 et plus, avec le véritable Feral Chaos niveau 130 au fond.",
+      "Le vaincre — voir les trois méthodes ci-dessous. La victoire fait apparaître des coffres (un Megalixir et les quatre pièces de son set exclusif « Rise of Discord ») et termine le scénario."
+    ],
+    "boss": "Le Feral Chaos final : niveau 130, plus de 125 000 PV, Garland en assist, l'invocation Shinryu Verus (réutilisable), et des accessoires uniques — toute attaque HP qui vous touche vide vos jauges EX et Assist, sa jauge d'assist se remplit 50 % plus vite, et il inflige 400 % de dégâts en EX Mode.",
+    "piege": "Le piège du tutoriel : répondre « oui » au Mog qui demande si vous maîtrisez déjà Dissidia lance un combat Lightning niveau 1 contre ce même Feral Chaos niveau 130. Il est conçu pour être perdu — même une victoire (au prix d'une patience extrême) ne débloque pas le personnage : le jeu vous dépose simplement au début du scénario 000."
+  },
+  "methodes": [
+    {
+      "id": "m1",
+      "name": "Méthode 1 — Le build Iai Strike : victoire en moins d'une minute",
+      "intro": [
+        "La méthode la plus expéditive documentée par le Final Fantasy Wiki exploite la capacité Iai Strike (chance de Break instantané à chaque coup) portée à un taux d'activation quasi garanti par un multiplicateur de boosters de 99,9×."
+      ],
+      "points": [
+        "Prendre un personnage niveau 1 (l'écart de niveau est le moteur du build).",
+        "Équiper Smiting Soul (qui porte la capacité Iai Strike), Sniper Eye (dégâts de Wall Rush +10 %), et des boosters totalisant 99,9× : « Level Gap ≥ 90 » (×10) est indispensable, complété d'au moins cinq boosters ×1,5 du type Weaponless, Hatless, Armorless, Gloveless — être sans équipement ne gêne en rien le build — et d'un septième d'au moins ×1,4.",
+        "Ajouter la capacité Exp to Bravery, et jouer un jour calendaire Exp ×2 ou avec une Chocobo Feather.",
+        "En combat : Iai Strike se déclenche presque à chaque coup et casse instantanément la bravoure de Feral Chaos à 9999. Enchaîner avec une attaque HP à Wall Rush : l'écran affiche « 9999 + 9999 » et, grâce à Sniper Eye et au booster, le Wall Rush dépasse la limite de dégâts. Exp to Bravery remonte aussitôt votre bravoure à plusieurs milliers — et le cycle recommence jusqu'à la victoire, en moins d'une minute."
+      ]
+    },
+    {
+      "id": "m2",
+      "name": "Méthode 2 — Les attaques HP que l'IA n'esquive pas",
+      "intro": [
+        "Le guide communautaire de référence de GameFAQs (2011) a identifié des attaques HP que l'IA de Feral Chaos ne sait tout simplement pas éviter — à répéter sans scrupule :"
+      ],
+      "points": [
+        "Megaflare de Yuna — le bombardement de Bahamut le prend systématiquement.",
+        "Les Particle Beams de Cloud of Darkness (variantes Fusillade et 0-Form).",
+        "Lord of Arms de Firion — la nuée d'armes le submerge.",
+        "Mention spéciale à l'Empereur : occupé à éviter ses pièges (Flare, mines), Feral Chaos ne parvient pas à interrompre Starfall.",
+        "Le même guide recommande en complément les enchaînements Bravery-to-HP, qui convertissent chaque ouverture en dégâts HP."
+      ]
+    },
+    {
+      "id": "m3",
+      "name": "Méthode 3 — À la loyale : neutraliser Shinryu Verus et punir",
+      "intro": [
+        "La méthode complète du Final Fantasy Wiki, pour gagner sans build spécialisé :"
+      ],
+      "points": [
+        "Dès le début du combat, invoquer Asura pour détruire définitivement Shinryu Verus. Si la destruction échoue, recommencer le combat : privé de son invocation (échange et triplement de bravoure), Feral Chaos part avec un vrai handicap.",
+        "Profiter des boosters naturellement actifs contre lui : « Large Gap in HP », « (Opp) HP ≥ 10000 », « Level Gap ≥ 30 » et « (Opp) Summon Unused » donnent ×3,8 en continu presque tout le combat — un ou deux boosters de plus et le multiplicateur devient considérable.",
+        "Équiper Exp to HP pour tenir la distance face à ses 125 000 PV ; Spite est rentable contre sa bravoure de base élevée (plus de 3 500). Inutile en revanche de payer Sneak Attack : il porte Disable Sneak Attack.",
+        "Ses attaques HP ont un gros temps de récupération : c'est la fenêtre de contre-attaque. S'il vous touche avec une attaque HP, vos jauges EX/Assist sont vidées de toute façon — autant les dépenser en EX Revenge ou Assist Change pour annuler le coup.",
+        "Se méfier de sa boucle signature : Wall Rush (Destroy ou Vicious, ou son assist Garland) enchaîné sur Deus Iratus ou Ventus Ire — esquiver immédiatement après le Wall Rush pour en sortir."
+      ]
+    }
+  ],
+  "apres": {
+    "intro": [
+      "Une fois « Confessions of the Creator » terminé, Feral Chaos apparaît au catalogue PP : 350 PP pour le débloquer en personnage jouable. Son alternate « Jade Dissonance » s'y achète aussi.",
+      "En jeu, c'est un colosse à contraintes : bravoure qui se vide et jauges EX/Assist verrouillées tant qu'il n'a pas appris ses capacités exclusives (niveaux 10, 30 et 100), coups à 30-50 CP une fois maîtrisés, capacités de base hors de prix — et impossible de le prendre en assist. En compétition, le ruleset moderne le bannit, et les règlements qui l'admettent (Japan Ranked, DISSent Folk) lui interdisent les jauges EX et Assist."
+    ]
+  },
+  "sources": [
+    "https://finalfantasy.fandom.com/wiki/Feral_Chaos",
+    "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58793116",
+    "https://www.youtube.com/watch?v=-PrHOpbeIn8"
+  ],
+  "limits": [
+    "Les stratégies datent de la communauté de 2011 (Final Fantasy Wiki, guide « Feral Chaos and You » de __Shinryu__ sur GameFAQs) ; l'IA étant identique sous PPSSPP, elles restent valables telles quelles.",
+    "Les PV exacts du boss varient selon les sources (125 000+ selon le guide GameFAQs pour le niveau 130 ; ~60 000 pour le niveau 95)."
+  ]
+}

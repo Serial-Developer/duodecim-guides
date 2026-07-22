@@ -11,7 +11,7 @@ import { renderParticiper } from '../src/templates/participer.mjs';
 import { renderOrganiser } from '../src/templates/organiser.mjs';
 import { renderCalendrier } from '../src/templates/calendrier.mjs';
 import { slugAnchor } from '../src/templates/helpers.mjs';
-import { renderChaos } from '../src/templates/chaos.mjs';
+import { renderFeralUnlock } from '../src/templates/feral-unlock.mjs';
 import { speedValues } from '../src/templates/helpers.mjs';
 import { readFileSync, writeFileSync, existsSync, mkdirSync, cpSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -29,6 +29,7 @@ const savedata = readJson(join(ROOT, 'data', 'editorial', '_savedata.json'));
 const tournois = readJson(join(ROOT, 'data', 'editorial', '_tournois.json'));
 const participer = readJson(join(ROOT, 'data', 'editorial', '_participer.json'));
 const organiser = readJson(join(ROOT, 'data', 'editorial', '_organiser.json'));
+const feralUnlock = readJson(join(ROOT, 'data', 'editorial', '_feral-unlock.json'));
 
 // Correspondance nom tier list -> slug (la tier list utilise des noms courts)
 const TIER_NAME_TO_SLUG = {
@@ -109,11 +110,14 @@ writeFileSync(join(DIST, 'index.html'), renderLanding({
 let missingEd = 0;
 for (const { def, data, ed } of chars) {
   if (def.slug === 'chaos') {
-    writeFileSync(join(DIST, 'characters', 'chaos.html'), renderChaos({
-      char: data,
-      ed,
-      hasPortrait: existsSync(join(ROOT, 'assets', 'portraits', 'chaos.png')),
-    }));
+    // L'ancienne fiche « Boss : Chaos » est remplacée par la page « Obtenir
+    // Feral Chaos » à la racine ; l'URL publiée reste vivante via redirection.
+    writeFileSync(join(DIST, 'characters', 'chaos.html'), `<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url=../obtenir-feral-chaos.html">
+<link rel="canonical" href="../obtenir-feral-chaos.html">
+<title>Obtenir Feral Chaos — Dissidia 012 [duodecim]</title></head>
+<body><p>Cette page a déménagé : <a href="../obtenir-feral-chaos.html">Obtenir Feral Chaos</a>.</p></body></html>`);
     continue;
   }
   if (!ed) missingEd++;
@@ -139,6 +143,7 @@ writeFileSync(join(DIST, 'savedata.html'), renderSavedata(savedata));
 writeFileSync(join(DIST, 'tournois.html'), renderTournois(tournois));
 writeFileSync(join(DIST, 'participer.html'), renderParticiper(participer));
 writeFileSync(join(DIST, 'organiser.html'), renderOrganiser(organiser));
+writeFileSync(join(DIST, 'obtenir-feral-chaos.html'), renderFeralUnlock(feralUnlock));
 
 // Calendrier des tournois : passés documentés (_tournois.json) + à venir
 // confirmés (upcoming.json) + détectés sur start.gg (auto.json), dédupliqués

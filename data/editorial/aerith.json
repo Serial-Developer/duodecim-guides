@@ -106,7 +106,8 @@
     "La section overview extraite ne contient aucune présentation rédigée — uniquement un combo de Cloud et une mention de vidéo : l'overview ci-dessus est synthétisé à partir des notes de ses quatre coups d'assist et de meta-lite.json.",
     "Le champ « name » des coups est vide dans les données : les intitulés de groupes (Cure, Seal Evil, Planet Protector, Holy) servent de clés dans moveNotes.",
     "Frame data incomplète : startup, position, spawn, effets et priorités listés comme variantes sans valeurs (« ? »), et la sous-section « Seal Evil combos » est vide.",
-    "Un tableau de matchups par adversaire n'a pas de sens pour un personnage assist uniquement (la page matchups du wiki est d'ailleurs un stub) : matchups laissé à null, délibérément."
+    "Un tableau de matchups par adversaire n'a pas de sens pour un personnage assist uniquement (la page matchups du wiki est d'ailleurs un stub) : matchups laissé à null, délibérément.",
+    "Pour la version japonaise, le guide communautaire de 2011 documente l'identifiant de l'édition digitale (NPJH-50377) ; le cas de l'UMD japonais (ULJM) n'y est pas précisé."
   ],
   "sourcesBySection": {
     "builds": [
@@ -119,5 +120,44 @@
   "groupNotes": {
     "bravery/main": "Comme les autres personnages assist, Aerith n'a que deux braveries : une au sol, une en l'air.",
     "hp/main": "Comme les autres personnages assist, Aerith n'a que deux attaques HP : une au sol, une en l'air."
+  },
+  "unlock": {
+    "title": "Débloquer Aerith",
+    "intro": [
+      "Aerith n'est pas sur l'UMD : c'est un contenu téléchargeable, réservé à l'époque aux acheteurs de Dissidia Duodecim Prologus — la démo payante (2,99 $/€, ¥300) sortie sur le PlayStation Store début 2011. « L'achat de Prologus est le seul moyen de recevoir Aerith dans le jeu complet », résume le Final Fantasy Wiki. Cette voie officielle est fermée depuis l'arrêt du Store PSP en 2021.",
+      "Aujourd'hui, elle s'obtient en installant les fichiers DLC officiels dans la carte mémoire (réelle ou virtuelle) du jeu. Ses données étant téléchargées et non présentes dans l'ISO, les codes CWCheat ne peuvent pas en tenir lieu : il faut les fichiers. Le plus simple, si vous jouez sur la version américaine : le starter pack de la communauté les inclut déjà, Aerith comprise.",
+      "Le principe est identique sur les trois versions du jeu — seul le nom du dossier DLC change, car le contenu doit correspondre à la région de l'ISO."
+    ],
+    "versions": [
+      {
+        "name": "Version américaine — ULUS-10566",
+        "points": [
+          "La voie express : le starter pack de la page Savedata. Son memstick PPSSPP embarque déjà les DLC officiels — Aerith apparaît dans la liste des assists sans aucune manipulation.",
+          "Installation manuelle sur PPSSPP : placer le dossier DLC (déchiffré) dans PSP/GAME/ULUS10566/ du memstick, à côté du dossier de sauvegarde. PPSSPP charge ce contenu nativement.",
+          "Sur PSP réelle : custom firmware et plugin NPloader nécessaires pour charger le DLC — la méthode documentée par la communauté dès avril 2011."
+        ]
+      },
+      {
+        "name": "Version européenne — ULES-01505",
+        "points": [
+          "Mêmes fichiers DLC que la version américaine : renommer le dossier en ULES01505 avant de le placer dans PSP/GAME/. Un dossier laissé au nom US n'est pas détecté par une copie européenne — le DLC doit correspondre à la région de l'ISO.",
+          "Sur PSP réelle : mêmes prérequis (custom firmware + NPloader). Le guide de 2011 note que le DLC européen passait aussi sur les firmwares 5.00 M33 et 5.50 GEN, là où le DLC US exigeait un firmware 6.xx."
+        ]
+      },
+      {
+        "name": "Version japonaise — NPJH-50377",
+        "points": [
+          "Renommer le dossier DLC en NPJH50377 — l'identifiant de l'édition japonaise documenté par le guide communautaire de 2011 — et le placer dans PSP/GAME/.",
+          "Le Japon est la région d'origine du contenu : Prologus y est sorti dès janvier 2011, deux mois avant l'Occident."
+        ]
+      }
+    ],
+    "note": "Les fichiers DLC officiels circulent via la communauté (starter pack, salon resources du Discord DISSIDIA). Bonus d'époque : les accessoires gagnés dans Prologus se transféraient vers Duodecim — dont la Midgar Flower, échangeable contre une arme exclusive de Lightning.",
+    "sources": [
+      "https://finalfantasy.fandom.com/wiki/Aerith_Gainsborough_(Dissidia_PSP)",
+      "https://finalfantasy.fandom.com/wiki/Dissidia_Duodecim_Prologus_Final_Fantasy",
+      "https://docs.retroachievements.org/general/tutorials/working-with-dlc-for-the-psp.html",
+      "https://www.atmaxplorer.com/2011/04/installing-dissidia-duodecims-dlc-on-your-psp/"
+    ]
   }
 }
