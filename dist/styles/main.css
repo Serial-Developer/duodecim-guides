@@ -223,6 +223,19 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
 @media (max-width: 767px) {
   .sh-groups { display: none; }
   .sh-drawer { display: block; }
+  /* Header collant : il suit le scroll. Hauteur verrouillée par min-height pour
+     que la barre de sections (.guide-top) puisse se coller juste en dessous. */
+  :root { --mob-header-h: 5.3rem; }
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    min-height: var(--mob-header-h);
+    background: rgba(20, 16, 33, 0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  nav.guide-top { top: var(--mob-header-h); }
   /* marque sur deux lignes (« guides compétitifs » passe dessous), burger aligné
      sur la ligne du titre */
   .site-header { flex-wrap: nowrap; align-items: flex-start; }
