@@ -5,6 +5,9 @@ import { renderLanding } from '../src/templates/landing.mjs';
 import { renderGuide } from '../src/templates/guide.mjs';
 import { renderTechniques } from '../src/templates/techniques.mjs';
 import { renderInstall } from '../src/templates/install.mjs';
+import { renderSavedata } from '../src/templates/savedata.mjs';
+import { renderTournois } from '../src/templates/tournois.mjs';
+import { renderParticiper } from '../src/templates/participer.mjs';
 import { renderChaos } from '../src/templates/chaos.mjs';
 import { speedValues } from '../src/templates/helpers.mjs';
 import { readFileSync, writeFileSync, existsSync, mkdirSync, cpSync, readdirSync } from 'node:fs';
@@ -19,6 +22,9 @@ const readJson = (p) => (existsSync(p) ? JSON.parse(readFileSync(p, 'utf-8')) : 
 const meta = readJson(join(ROOT, 'data', 'meta.json'));
 const shared = readJson(join(ROOT, 'data', 'editorial', '_shared.json'));
 const install = readJson(join(ROOT, 'data', 'editorial', '_install.json'));
+const savedata = readJson(join(ROOT, 'data', 'editorial', '_savedata.json'));
+const tournois = readJson(join(ROOT, 'data', 'editorial', '_tournois.json'));
+const participer = readJson(join(ROOT, 'data', 'editorial', '_participer.json'));
 
 // Correspondance nom tier list -> slug (la tier list utilise des noms courts)
 const TIER_NAME_TO_SLUG = {
@@ -124,9 +130,14 @@ writeFileSync(join(DIST, 'techniques.html'), renderTechniques(shared));
 // Installation (PPSSPP, PC et mobile)
 writeFileSync(join(DIST, 'install.html'), renderInstall(install));
 
+// Savedata, tournois et participation
+writeFileSync(join(DIST, 'savedata.html'), renderSavedata(savedata));
+writeFileSync(join(DIST, 'tournois.html'), renderTournois(tournois));
+writeFileSync(join(DIST, 'participer.html'), renderParticiper(participer));
+
 // Statiques
 cpSync(join(ROOT, 'src', 'styles', 'main.css'), join(DIST, 'styles', 'main.css'));
 cpSync(join(ROOT, 'src', 'scripts', 'site.js'), join(DIST, 'scripts', 'site.js'));
 cpSync(join(ROOT, 'assets'), join(DIST, 'assets'), { recursive: true });
 
-console.log(`dist/ généré : index + ${chars.length - 1} guides + techniques.html + install.html${missingEd ? ` (${missingEd} sans éditorial — bandeaux)` : ''}`);
+console.log(`dist/ généré : index + ${chars.length - 1} guides + techniques.html + install.html + savedata.html + tournois.html + participer.html${missingEd ? ` (${missingEd} sans éditorial — bandeaux)` : ''}`);

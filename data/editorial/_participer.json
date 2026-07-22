@@ -1,0 +1,125 @@
+{
+  "title": "Participer aux tournois",
+  "lede": "Tout ce qu'il faut pour passer de spectateur à participant : rejoindre la communauté, préparer son installation, s'inscrire, jouer ses matchs — et même organiser son propre tournoi. Toutes les informations viennent du Discord DISSIDIA et des règlements publiés sur start.gg et Challonge.",
+  "sections": [
+    {
+      "id": "rejoindre",
+      "name": "Rejoindre la communauté",
+      "intro": [
+        "Toute la scène compétitive vit sur le Discord DISSIDIA : c'est là que les tournois sont annoncés, que les inscriptions se prennent et que les matchs s'arbitrent. L'inscription au serveur est gratuite et ouverte à tous."
+      ],
+      "points": [
+        "Les annonces générales passent par le canal announcements ; les tournois ont leurs canaux dédiés event-announcements (annonces et inscriptions) et event-active-thread (threads de suivi pendant l'événement).",
+        "L'onboarding du serveur (« Channels & Roles ») permet de s'assigner un rôle de matchmaking régional — NA, EU, AS, SA ou AF — pour trouver des adversaires proches et limiter la latence.",
+        "Participer à un tournoi communautaire rapporte le rôle « Emu Era », qui débloque le partage de liens et d'images sur le serveur."
+      ],
+      "cta": [
+        {
+          "url": "https://discord.gg/a44rneC",
+          "label": "Rejoindre le Discord DISSIDIA",
+          "ext": true
+        }
+      ],
+      "short": "Rejoindre"
+    },
+    {
+      "id": "equiper",
+      "name": "S'équiper pour jouer en ligne",
+      "intro": [
+        "Les exigences matérielles sont constantes d'un tournoi à l'autre ; seule la version de PPSSPP change, fixée par l'organisateur dans le règlement de chaque édition (1.12.3 pour 012 Ranked en 2024, 1.19.3 pour DISSent Folk en 2025, par exemple)."
+      ],
+      "points": [
+        "Une copie nord-américaine du jeu (ULUS10566), obtenue légalement — les sauvegardes et les adversaires utilisent cette version, les autres régions ne sont pas compatibles.",
+        "PPSSPP dans la version exacte demandée par l'organisateur : une version différente peut désynchroniser le netplay.",
+        "Radmin VPN, connecté au réseau du serveur Discord, pour créer le réseau local virtuel dans lequel PPSSPP joue en ligne.",
+        "Le « tournament pack » partagé sur le Discord regroupe PPSSPP, Radmin et une sauvegarde 100 % avec les builds compétitifs — le plus court chemin vers une installation prête à jouer."
+      ],
+      "cta": [
+        {
+          "url": "install.html",
+          "label": "Guide d'installation PPSSPP (PC et mobile)"
+        },
+        {
+          "url": "savedata.html",
+          "label": "Récupérer une savedata prête à jouer"
+        }
+      ],
+      "short": "S'équiper"
+    },
+    {
+      "id": "inscrire",
+      "name": "S'inscrire à un tournoi",
+      "intro": [
+        "L'inscription est gratuite et se fait dans le canal d'événement du tournoi, parfois doublée d'une inscription sur la page start.gg ou Challonge de l'édition. Avant de s'inscrire, deux choses à vérifier dans l'annonce :"
+      ],
+      "points": [
+        "Le règlement complet, publié sur la page start.gg ou Challonge du tournoi : personnages et stages bannis, limites d'infinis, version de PPSSPP, format des sets. Chaque édition a ses particularités — voir la page Tournois pour les rulesets de référence et leurs évolutions.",
+        "Les conditions d'admission éventuelles : la plupart des tournois sont ouverts à tous, mais certains ciblent un public — « Date With Death » (2026) était réservé aux joueurs n'ayant jamais gagné de tournoi, et certains sont limités à une plateforme (PC uniquement)."
+      ],
+      "cta": [
+        {
+          "url": "tournois.html",
+          "label": "Les rulesets et tournois documentés"
+        }
+      ],
+      "short": "S'inscrire"
+    },
+    {
+      "id": "jouer",
+      "name": "Jouer ses matchs",
+      "intro": [
+        "Les tournois se jouent en ligne sur plusieurs jours : chaque round dispose d'une fenêtre pour être joué (extensible de un à trois jours selon les emplois du temps, dans les éditions récentes). Le déroulement type d'un match :"
+      ],
+      "points": [
+        "Le stage est déterminé d'abord (stage striking ou choix selon le règlement), puis les personnages se choisissent en blind pick : chaque joueur envoie son choix en message privé à un organisateur avant de le révéler.",
+        "Les organisateurs diffusent généralement les matchs sur Twitch — être disponible pour jouer sur le créneau du stream fait partie du jeu.",
+        "En cas de litige, les replays et captures d'écran font foi ; le règlement moderne prévoit de rejouer le match à l'identique. Certaines éditions formalisent aussi une « clause des gentlemen » : les accords entre joueurs (règles maison d'un set) doivent être publics dans le thread du tournoi pour être valables."
+      ],
+      "cta": [],
+      "short": "Jouer ses matchs"
+    },
+    {
+      "id": "recompenses",
+      "name": "Les récompenses",
+      "intro": [
+        "Les enjeux restent symboliques — c'est une scène de passionnés — mais chaque édition récompense ses participants :"
+      ],
+      "points": [
+        "Tous les participants reçoivent le rôle Discord « Emu Era » (partage de liens et d'images sur le serveur).",
+        "Les vainqueurs peuvent recevoir le rôle « Emu Era Champion » (DISSent Folk 2025), un abonnement Discord Nitro (012 Ranked 2024) ou des permissions étendues et un prix spécial (Date With Death 2026)."
+      ],
+      "cta": [],
+      "short": "Récompenses"
+    },
+    {
+      "id": "organiser",
+      "name": "Organiser son propre tournoi",
+      "intro": [
+        "N'importe quel membre du serveur peut organiser un tournoi : le rôle temporaire « Tournament Organizer » s'obtient en en faisant la demande au staff du Discord."
+      ],
+      "points": [
+        "Le rôle donne les permissions nécessaires le temps de l'événement : publier dans event-announcements, créer des threads dans event-active-thread et poster des embeds. Il est retiré une fois l'événement terminé.",
+        "Le serveur fournit un document d'aide à la création de ruleset ; les règlements de référence (Duodecim 22-1, Japan Ranked) et leurs évolutions récentes servent de base de travail.",
+        "Les brackets se gèrent sur start.gg ou Challonge — les deux plateformes utilisées par tous les tournois documentés de la communauté."
+      ],
+      "cta": [
+        {
+          "url": "tournois.html#rulesets",
+          "label": "Les rulesets de référence"
+        }
+      ],
+      "short": "Organiser"
+    }
+  ],
+  "sources": [
+    "https://discord.gg/a44rneC",
+    "https://www.start.gg/tournament/dissent-folk/details",
+    "https://www.start.gg/tournament/duodecim-22-1/details",
+    "https://challonge.com/dj52284z",
+    "https://challonge.com/edokjat0"
+  ],
+  "limits": [
+    "Les informations propres au serveur Discord (canaux, rôles Emu Era et Tournament Organizer, tournament pack, onboarding régional) ont été relevées sur le Discord DISSIDIA en juillet 2026 ; l'organisation du serveur peut évoluer.",
+    "Les exemples de conditions d'admission, de fenêtres de matchs et de récompenses viennent des règlements publiés des éditions 2022-2026 ; chaque tournoi fixe ses propres modalités dans son annonce."
+  ]
+}

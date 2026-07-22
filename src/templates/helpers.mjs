@@ -212,6 +212,8 @@ export function sourcesSection(urls, limitsFr) {
 }
 
 export function pageShell({ title, description, cssPath, jsPath, body, extraHead = '' }) {
+  // Favicon : même préfixe relatif que la feuille de style (pages racine vs characters/)
+  const base = cssPath.startsWith('../') ? '../' : '';
   return `<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -219,6 +221,9 @@ export function pageShell({ title, description, cssPath, jsPath, body, extraHead
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
+<link rel="icon" href="${base}assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="${base}assets/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="${base}assets/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -245,9 +250,12 @@ export function siteHeader({ base = '', active = '', h1 = false } = {}) {
     ] },
     { title: 'Outils pour jouer', items: [
       { key: 'install', href: `${base}install.html`, label: 'Installer sur PPSSPP' },
+      { key: 'savedata', href: `${base}savedata.html`, label: 'Savedata prêtes à jouer' },
     ] },
     { title: 'Données compétitives', items: [
       { key: 'techniques', href: `${base}techniques.html`, label: 'Techniques &amp; glitches' },
+      { key: 'tournois', href: `${base}tournois.html`, label: 'Tournois' },
+      { key: 'participer', href: `${base}participer.html`, label: 'Participer aux tournois' },
       { key: 'tierlist', href: 'https://dissidia.wiki/Tier_List_(Dissidia_012)', label: 'Tier list tournoi 2017', ext: true },
       { key: 'videos', href: 'https://replaytheater.app/?game=d012', label: 'Vidéos de matchs', ext: true },
     ] },

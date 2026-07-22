@@ -1,0 +1,53 @@
+{
+  "title": "Savedata prêtes pour les tournois",
+  "lede": "La communauté Discord DISSIDIA entretient des sauvegardes complètes du jeu, avec des builds déjà montés pour chaque ruleset courant : de quoi jouer en ligne ou s'inscrire à un tournoi sans passer des heures dans les menus de customisation.",
+  "avertissement": "Toutes ces sauvegardes sont prévues pour la version nord-américaine du jeu (ULUS10566) — la version utilisée par la communauté en ligne. Elles sont hébergées et maintenues par la communauté Discord DISSIDIA (relevés de Muggshotter, mis à jour jusqu'en 2026).",
+  "saves": [
+    {
+      "name": "Online play starter pack",
+      "desc": "Le pack tout-en-un de la communauté (version 2026) : il ne contient pas le jeu, mais tout le reste — PPSSPP 1.19.3 (64 bits), une sauvegarde 100 % avec des builds personnalisés prêts pour le jeu en ligne, les DLC officiels, des mods de costumes et de musiques créés par des fans, l'installateur Radmin VPN pour PC et ZeroTier One pour le crossplay mobile.",
+      "url": "https://drive.google.com/file/d/1AJNu3VWD7I6s04ebhYe4aCKN3JOIaIj3/view",
+      "pour": "Débuter en ligne sans rien configurer"
+    },
+    {
+      "name": "2017 Tournament Rules — builds d'exemple",
+      "desc": "Sauvegarde contenant des builds d'exemple conformes au ruleset du circuit 2017 — celui dont est issue la tier list de référence du site.",
+      "url": "https://drive.google.com/file/d/1LG1Gh2RQPmxEGCYHf7OyHJMWK0VAyg3q/view",
+      "pour": "Ruleset 2017 Tournament Rules"
+    },
+    {
+      "name": "Modern Alternate Rules — builds",
+      "desc": "Sauvegarde de builds pour le ruleset « Modern Alternate Rules » de la communauté.",
+      "url": "https://drive.google.com/file/d/1J0M2vM-YhHxnhvPM-vKEnEaLtMgCpgIT/view",
+      "pour": "Ruleset Modern Alternate Rules"
+    },
+    {
+      "name": "Japan Ranked — builds",
+      "desc": "Sauvegarde de builds au format Japan Ranked : le set niveau 60 « Imp's Blessing » imposé par ce ruleset, prêt à l'emploi. Le détail des règles est sur la page Tournois.",
+      "url": "https://drive.google.com/file/d/190U2xMzHnFmZoUSq0KEKSXvv1BPg0n8-/view",
+      "pour": "Ruleset Japan Ranked"
+    }
+  ],
+  "installation": {
+    "intro": "Une savedata PPSSPP est un simple dossier à déposer dans la carte mémoire virtuelle de l'émulateur.",
+    "etapes": [
+      "Télécharger et décompresser l'archive : elle contient un ou plusieurs dossiers dont le nom commence par ULUS10566.",
+      "Repérer le dossier memstick de PPSSPP : sur PC, le dossier « memstick » à côté de PPSSPP (ou Documents/PPSSPP) ; sur Android et iOS, le dossier de stockage choisi au premier lancement.",
+      "Copier les dossiers ULUS10566… dans PSP/SAVEDATA/ à l'intérieur du memstick, puis relancer le jeu : les sauvegardes apparaissent dans le menu de chargement.",
+      "Le starter pack fait exception : sa sauvegarde est déjà en place dans son memstick — il suffit d'utiliser le PPSSPP inclus."
+    ],
+    "note": "Pour le transfert des fichiers vers un téléphone, la marche à suivre est détaillée sur la page Installer sur PPSSPP."
+  },
+  "comprendre": {
+    "texte": "Pour comprendre les builds contenus dans ces sauvegardes — Damage, Side by Side, EX, EX Core, Bravery Boost on Dodge/Block, Hybrid — le wiki documente les archétypes et le rôle de chaque famille d'accessoires dans son guide de customisation pour le jeu en ligne.",
+    "source": "https://dissidia.wiki/Customisation_for_Online_Battles"
+  },
+  "sources": [
+    "https://discord.gg/a44rneC",
+    "https://dissidia.wiki/Customisation_for_Online_Battles"
+  ],
+  "limits": [
+    "Le contenu exact des sauvegardes (liste des builds par personnage) n'est pas documenté publiquement : les descriptions reprennent celles du salon resources du Discord DISSIDIA.",
+    "Les liens pointent vers des fichiers Google Drive maintenus par la communauté : leur disponibilité dépend d'elle."
+  ]
+}

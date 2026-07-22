@@ -1,0 +1,273 @@
+{
+  "title": "Tournois",
+  "lede": "La scène compétitive de Dissidia 012 vit en ligne depuis la fermeture des forums d'époque : les tournois s'organisent sur le Discord DISSIDIA, se jouent sur PPSSPP et se retrouvent sur start.gg ou Challonge. Cette page rassemble les tournois documentés, leurs règles et leurs résultats.",
+  "participer": {
+    "intro": [
+      "L'inscription aux tournois communautaires est gratuite et passe par le Discord DISSIDIA. Rejoindre la communauté, préparer son installation, s'inscrire, jouer ses matchs, organiser sa propre édition : le guide complet est sur la page dédiée."
+    ]
+  },
+  "rulesets": [
+    {
+      "id": "ruleset-22",
+      "name": "Ruleset communautaire moderne (Duodecim 22-1)",
+      "source": "https://www.start.gg/tournament/duodecim-22-1/details",
+      "sourceLabel": "Règlement complet sur start.gg",
+      "summary": [
+        "Le règlement le plus détaillé publié par la communauté Discord, utilisé pour la série de tournois de 2022. Il sert de référence au jeu compétitif moderne."
+      ],
+      "points": [
+        "Réglage en jeu « Official » obligatoire (les rulesets EX-centric, BRV-centric ou none sont interdits).",
+        "Personnages : tous autorisés sauf Feral Chaos.",
+        "Équipement niveau 100. Accessoires/armes hackés (memory editing, cheat codes), Rebellious Soul et accessoires cassables interdits. Le CP glitch est autorisé.",
+        "Invocations : uniquement les quatre counter summons (Barbariccia, Scarmiglione, Cagnazzo, Rubicante), facultatives.",
+        "Assists : toutes autorisées, sauf l'assist du même personnage que le sien (Jecht + assist Jecht interdit).",
+        "Chase : un seul hit par chase ; relancer un chase ensuite est permis à condition de n'y faire aucune attaque (les suivis d'assist restent permis).",
+        "Infinis interdits : les boucles répétables sont limitées à deux répétitions, les infinis continus (glitch Hell's Gate de Sephiroth) à une seconde temps réel.",
+        "Stages : 5 stages de départ (World of Darkness, Lunar Subterrane, Order's Sanctuary, Sky Fortress Bahamut, Pandaemonium Top Floor) avec stage striking 1-2-1 au premier match ; ensuite tous les stages normaux sauf The Rift, Phantom Train et les variantes Omega.",
+        "Counterpick : blind pick des personnages au premier match ; le vainqueur bannit deux stages et annonce son personnage, le perdant choisit stage et personnage. « Dave's stupid rule » : interdit de rechoisir un stage où l'on a déjà gagné dans le set.",
+        "Programmes tiers (macros, memory editing) interdits ; en cas de litige, replays et captures font foi, le match est rejoué à l'identique."
+      ]
+    },
+    {
+      "id": "ruleset-japan",
+      "name": "Japan Ranked",
+      "source": "https://dissidia.wiki/Japan_Ranked_(DDFF)",
+      "sourceLabel": "Page du ruleset sur dissidia.wiki",
+      "summary": [
+        "Ruleset de la communauté japonaise, pensé comme un ladder permanent : sélection de stages réduite, loadout d'équipement imposé et quasi toutes les extra abilities interdites. Pas de meter depletion, et une grosse prime aux personnages qui convertissent leurs combos en bravery et en EX via les assists — Garland, Sephiroth, Lightning et Gilgamesh y prospèrent."
+      ],
+      "points": [
+        "Tous les personnages autorisés, y compris Feral Chaos — qui n'a pas le droit de débloquer les jauges EX et d'assist.",
+        "Extra abilities : uniquement Precision Jump, Precision Block, Precision Evasion et le Reverse Paradigm de Lightning.",
+        "Invocations interdites.",
+        "Stages : World of Darkness, Lunar Subterrane, Order's Sanctuary et Sky Fortress Bahamut.",
+        "Équipement imposé : set niveau 60 au bonus « Imp's Blessing » (EX Intake Range +15 m) — Impartisan, Tortoise Shield, Saucer, Reed Cloak, et les dix accessoires fixés (Power Ring, Hyper Ring, Muscle Belt, Earring, Large Gap in HP, Green Drop, Red Gem, Green Gem, White Gem, Tenacious Attacker). Stats résultantes : 10009 HP, 450 CP, 957 BRV, Max Booster ×1,5."
+      ]
+    },
+    {
+      "id": "ruleset-2017",
+      "name": "2017 Tournament Rules et Modern Alternate Rules",
+      "source": "https://dissidia.wiki/Tier_List_(Dissidia_012)",
+      "sourceLabel": "Tier list issue du circuit 2017",
+      "summary": [
+        "Deux autres rulesets circulent dans la communauté : les « 2017 Tournament Rules », base du circuit dont est issue la tier list de référence du site, et les « Modern Alternate Rules ». Leurs textes complets vivaient sur des pages du wiki et le bot du Discord ; les pages n'ont pas été archivées, mais des sauvegardes d'exemples de builds conformes à chacun sont disponibles sur la page Savedata."
+      ],
+      "points": []
+    },
+    {
+      "id": "ruleset-evolutions",
+      "name": "Évolutions récentes (2024-2026)",
+      "source": "https://www.start.gg/tournament/dissent-folk/details",
+      "sourceLabel": "Exemple : règlement de DISSent Folk (2025)",
+      "summary": [
+        "Les tournois récents partent du ruleset moderne et l'ajustent édition par édition. Tendances observées : Feral Chaos réadmis mais privé d'EX et d'assist (DISSent Folk) là où il était banni ; infinis par répétition assouplis de deux à trois boucles ; Dream's End rejoint les stages bannis ; la clause des gentlemen se formalise (accord public dans le thread du tournoi) ; et les éditions 2026 bannissent l'accessoire MS Prima et l'assist depletion. La variante « 012 Ranked » d'avril 2024 montre l'autre voie : le loadout Japan Ranked avec Dismay Shock à la place de Green Drop pour réintroduire une légère EX depletion, et les counter summons obligatoires."
+      ],
+      "points": []
+    }
+  ],
+  "tournois": [
+    {
+      "name": "Day to Die",
+      "date": "20 juin 2026",
+      "format": "Double élimination — FT2, grandes finales FT3",
+      "joueurs": "12 joueurs",
+      "podium": [
+        "WheelzZzzz",
+        "Pastulio814",
+        "Mako_Tsunami"
+      ],
+      "organisation": "Mericus, sur le Discord DISSIDIA",
+      "liens": [
+        {
+          "url": "https://challonge.com/eoybbvgi",
+          "label": "Bracket complet (Challonge)"
+        }
+      ],
+      "notes": "Ruleset des éditions 2026 : pas d'infinis (une répétition), pas d'invocations, pas de multi-hit chase, Bonecrusher/Rebellious Soul et Feral Chaos bannis, assist depletion interdite, MS Prima banni (nouveauté), sans Dave's Stupid Rule. Stages bannis : Phantom Train, The Rift, Orphan's Cradle, Ultimecia's Castle, Crystal Tower, Omegas. WheelzZzzz l'emporte invaincu — 3-1 en grande finale contre Pastulio814, sorti vainqueur du bracket des perdants face à Mako_Tsunami. Le bracket Challonge est resté affiché « en cours », l'organisateur ne l'ayant pas formellement clôturé, mais toutes les rencontres sont jouées."
+    },
+    {
+      "name": "Date With Death — tournoi Beginner's Only",
+      "date": "23 mai 2026",
+      "format": "Double élimination — FT2, grandes finales FT3, PC uniquement",
+      "joueurs": "15 joueurs",
+      "podium": [
+        "Xavier",
+        "Mako_Tsunami",
+        "Stealthslash444"
+      ],
+      "organisation": "Mericus — réservé aux nouveaux : les vainqueurs de tournois passés étaient exclus (les anciens participants non titrés pouvaient s'inscrire). À la clé : les permissions d'images du serveur et un prix spécial possible.",
+      "liens": [
+        {
+          "url": "https://challonge.com/dj52284z",
+          "label": "Bracket complet (Challonge)"
+        }
+      ],
+      "notes": "Même base de ruleset que Day to Die (sans le ban MS Prima). Fenêtre de matchs extensible de un à trois jours selon les emplois du temps ; stage choisi d'abord, blind picks des personnages envoyés en privé à un organisateur. Xavier l'a emporté sans perdre un set."
+    },
+    {
+      "name": "DISSent Folk",
+      "date": "6 décembre 2025",
+      "format": "Round robin BO3 (double élimination prévue, adaptée faute de participants)",
+      "joueurs": "4 joueurs",
+      "podium": [
+        "WheelZ",
+        "Sashawarma",
+        "Rocher"
+      ],
+      "organisation": "Sashawaruma — inscription gratuite via le Discord, matchs diffusés sur sa chaîne Twitch (plus celle de Rocher pour sa partie du round robin). Tous les participants recevaient le rôle Emu Era, le vainqueur le rôle « Emu Era Champion ».",
+      "liens": [
+        {
+          "url": "https://www.start.gg/tournament/dissent-folk/details",
+          "label": "Règlement complet (start.gg)"
+        },
+        {
+          "url": "https://www.start.gg/tournament/dissent-folk/event/duodecim-round-robin-tournament/standings",
+          "label": "Classement"
+        }
+      ],
+      "notes": "Ruleset notable : Feral Chaos autorisé mais privé d'EX et d'assist ; infinis par répétition limités à trois boucles ; Dream's End ajouté aux stages bannis ; clause des gentlemen formalisée (accord public dans le thread Discord). PPSSPP 1.19.3, CP glitch autorisé. WheelZ a gagné toutes ses manches (6-0)."
+    },
+    {
+      "name": "012 Ranked (« JP Ranked with a twist »)",
+      "date": "6 avril 2024",
+      "format": "Double élimination — FT2, demi-finales et grandes finales FT3",
+      "joueurs": "9 joueurs",
+      "podium": [
+        "Nightdazer",
+        "haharaven",
+        "Foxmanity"
+      ],
+      "organisation": "Annoncé par la communauté et animé par Mericus (bracket : Slaycrol), sur PPSSPP 1.12.3. Le vainqueur recevait un abonnement Discord Nitro, et tous les participants le rôle Emu Era.",
+      "liens": [
+        {
+          "url": "https://challonge.com/edokjat0",
+          "label": "Règlement et bracket (Challonge)"
+        },
+        {
+          "url": "https://www.youtube.com/playlist?list=PLaNM81vSi2QutMov19X2lyf9yF7f9tB2M",
+          "label": "VODs du tournoi (YouTube)"
+        }
+      ],
+      "notes": "Japan Ranked modifié : le loadout Imp's Blessing avec Dismay Shock à la place de Green Drop — une légère EX depletion réintroduite —, counter summons obligatoires, et une sélection de premiers stages élargie (dont Edge of Madness et Crystal World)."
+    },
+    {
+      "name": "Duodecim 22-1",
+      "date": "29 janvier 2022",
+      "format": "Double élimination — BO3, finales BO5",
+      "joueurs": "13 joueurs",
+      "podium": [
+        "FreZz",
+        "kewldude475",
+        "AgiBufuZioGaruHamaMudo"
+      ],
+      "organisation": "Communauté Discord DISSIDIA (série « Emu Era ») — inscription gratuite via le serveur, matchs diffusés sur la chaîne Twitch lxd92",
+      "liens": [
+        {
+          "url": "https://www.start.gg/tournament/duodecim-22-1/details",
+          "label": "Règlement et détails (start.gg)"
+        },
+        {
+          "url": "https://www.start.gg/tournament/duodecim-22-1/event/dissidia-22-1-tournament/standings",
+          "label": "Classement complet"
+        }
+      ],
+      "notes": "Le règlement de ce tournoi est le ruleset moderne de référence, détaillé ci-dessus."
+    },
+    {
+      "name": "2nd October 2022 DDFF Tournament",
+      "date": "2 octobre 2022",
+      "format": "Simple élimination — BO5, finales comprises",
+      "joueurs": "4 joueurs",
+      "podium": [
+        "JoyRaines",
+        "AgiBufuZioGaruHamaMudo",
+        "WoofWoof"
+      ],
+      "organisation": "Communauté Discord DISSIDIA — « toute personne pouvant rejoindre le Discord avec les outils pour jouer est la bienvenue »",
+      "liens": [
+        {
+          "url": "https://www.start.gg/tournament/2nd-october-2022-ddff-tournament-hosted-by-the-dissidia-community/details",
+          "label": "Règlement et détails (start.gg)"
+        }
+      ],
+      "notes": "Variante du ruleset moderne : PPSSPP 1.1.1 ou 1.12.3, meter depletion d'assist bannie (set Lufenia Judgement, Battle Hammer), un seul hit de chase par combo, infinis limités à deux boucles."
+    },
+    {
+      "name": "11th November 2022 DDFF Tournament",
+      "date": "annoncé au 11 novembre 2022 (événement daté du 30 octobre sur start.gg)",
+      "format": "Double élimination",
+      "joueurs": "4 joueurs",
+      "podium": [
+        "AgiBufuZioGaruHamaMudo",
+        "Mericus",
+        "Kokoro"
+      ],
+      "organisation": "Communauté Discord DISSIDIA",
+      "liens": [
+        {
+          "url": "https://www.start.gg/tournament/11th-november-2022-ddff-tournament-hosted-by-the-dissidia-community/details",
+          "label": "Détails (start.gg)"
+        }
+      ],
+      "notes": null
+    },
+    {
+      "name": "Festivo — 6ᵉ Major de Dissidia Forums",
+      "date": "10 août 2014",
+      "format": "Double élimination",
+      "joueurs": "31 joueurs",
+      "podium": [
+        "VII",
+        "kewldude",
+        "TKG09"
+      ],
+      "organisation": "Dissidia Forums, la communauté historique du jeu — sixième tournoi majeur de sa série",
+      "liens": [
+        {
+          "url": "https://challonge.com/id/Festivo",
+          "label": "Bracket complet (Challonge)"
+        }
+      ],
+      "notes": "Le ruleset était publié sur le thread « Festivo Ruleset & Signups » de dissidiaforums.com, aujourd'hui hors ligne et sans copie archivée connue."
+    },
+    {
+      "name": "Conquerer of the Rift 001 « Unus »",
+      "date": "8 juin 2014",
+      "format": "Double élimination — 30 inscrits, chacun enregistré sous le nom du personnage qu'il joue",
+      "joueurs": "30 joueurs",
+      "podium": [
+        "« Tidus » (Kennith)",
+        "« Cloud »",
+        "« Lightning »"
+      ],
+      "organisation": "XxSkyler_CrossxX — première édition d'une série où le champion remet son titre en jeu",
+      "liens": [
+        {
+          "url": "https://challonge.com/Conquerer_of_the_Rift_001_Unus",
+          "label": "Bracket complet (Challonge)"
+        }
+      ],
+      "notes": "Le bracket se lit comme un tournoi de personnages : chaque participant y apparaît sous son main, du vainqueur « Tidus » aux « Cloud » et « Lightning » du podium."
+    }
+  ],
+  "sources": [
+    "https://www.start.gg/tournament/duodecim-22-1/details",
+    "https://www.start.gg/tournament/2nd-october-2022-ddff-tournament-hosted-by-the-dissidia-community/details",
+    "https://www.start.gg/tournament/11th-november-2022-ddff-tournament-hosted-by-the-dissidia-community/details",
+    "https://challonge.com/id/Festivo",
+    "https://challonge.com/Conquerer_of_the_Rift_001_Unus",
+    "https://dissidia.wiki/Japan_Ranked_(DDFF)",
+    "https://dissidia.wiki/Tier_List_(Dissidia_012)",
+    "https://challonge.com/eoybbvgi",
+    "https://challonge.com/dj52284z",
+    "https://www.start.gg/tournament/dissent-folk/details",
+    "https://challonge.com/edokjat0",
+    "https://www.youtube.com/playlist?list=PLaNM81vSi2QutMov19X2lyf9yF7f9tB2M"
+  ],
+  "limits": [
+    "La page des rulesets communautaires de dissidia.wiki (catégorie « Dissidia 012 Community Rules ») n'a pas été archivée : seul Japan Ranked a survécu en ligne. Les textes complets des « 2017 Tournament Rules » et « Modern Alternate Rules » ne sont connus que par les sauvegardes d'exemples de builds partagées sur le Discord.",
+    "Des tournois d'époque (majors Dissidia Forums antérieurs à Festivo, tournois GameFAQs comme ScrubCity ou le Test Team Tournament) sont attestés par des threads mais leurs brackets et règlements n'ont pas pu être retrouvés en ligne.",
+    "Les annonces de tournois du Discord DISSIDIA (canal announcements, consulté en juillet 2026) sont la source des éditions 2024-2026 ; les canaux d'événements dédiés peuvent contenir des éditions supplémentaires non recensées ici.",
+    "Cette page recense les tournois passés documentés ; un planning des tournois à venir est prévu séparément."
+  ]
+}
