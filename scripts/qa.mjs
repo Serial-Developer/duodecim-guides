@@ -56,11 +56,16 @@ for (const c of [...CHARACTERS, ...SPECIAL]) {
   const ed = readJson(join(ROOT, 'data', 'editorial', `${c.slug}.json`));
   const s = data.sections;
 
+  // La section « Mécanique unique » n'existe que si le perso a une mécanique
+  // (documentée par le wiki ou rédigée dans l'éditorial) : absente sinon, par design.
+  const hasUnique = !!(s.uniqueMechanics?.documented || ed?.uniqueMechanics?.intro?.length);
+  if (!hasUnique && $('#unique').length) errors.push(`${c.slug} : section #unique présente alors que le personnage n'a pas de mécanique unique`);
+
   const checks = [
     // passe d'enrichissement : l'overview/les builds peuvent être remplis depuis des
     // sources externes (sourcesBySection) même si le wiki ne documente pas la section.
     ['overview', !!ed?.overview?.length],
-    ['unique', s.uniqueMechanics?.documented && (ed?.uniqueMechanics?.intro?.length || false)],
+    ...(hasUnique ? [['unique', !!(ed?.uniqueMechanics?.intro?.length)]] : []),
     ['gameplan', !!ed?.gameplan?.length],
     ['matchups', !!(ed?.matchups?.summary?.length)],
     ['builds', !!ed?.builds?.philosophy?.length],

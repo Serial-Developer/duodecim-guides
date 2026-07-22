@@ -247,7 +247,11 @@ table.stats th, table.stats td, table.data th, table.data td {
   border-bottom: 1px solid var(--surface-2);
   vertical-align: top;
 }
-table.stats th { color: var(--muted); font-weight: 500; width: 42%; }
+/* La largeur ne vaut que pour la colonne des libellés : dans les tableaux à
+   variantes (Switch / On Hand / EX Mode…), chaque en-tête de variante est aussi
+   un th, et une largeur globale écraserait la dernière colonne. */
+table.stats th { color: var(--muted); font-weight: 500; }
+table.stats tr > th:first-child { width: 42%; }
 table.data th { color: var(--gold); font-family: var(--font-display); font-weight: 600; }
 .mono, td.mono { font-family: var(--font-mono); font-size: 0.88em; }
 .table-scroll { overflow-x: auto; }

@@ -14,12 +14,12 @@
 <body>
 <nav class="guide-top" aria-label="Sections du guide"><div class="chips-nav">
 <a href="../index.html">← Sélection</a>
-<a href="#meta">Méta</a><a href="#overview">Vue d'ensemble</a><a href="#moves">Coups</a><a href="#unique">Mécanique unique</a><a href="#gameplan">Plan de jeu</a><a href="#matchups">Matchups</a><a href="#builds">Builds</a><a href="#assist">Assists</a><a href="#community">Tech communautaire</a><a href="#sources">Sources</a>
+<a href="#meta">Méta</a><a href="#overview">Vue d'ensemble</a><a href="#moves">Coups</a><a href="#gameplan">Plan de jeu</a><a href="#matchups">Matchups</a><a href="#builds">Builds</a><a href="#assist">Assists</a><a href="#community">Tech communautaire</a><a href="#sources">Sources</a>
 </div></nav>
 <div class="guide-layout">
 <nav class="guide-toc" aria-label="Sommaire"><ol>
 <li><a href="../index.html" class="backlink">← Sélection</a></li>
-<li><a href="#meta">Méta</a></li><li><a href="#overview">Vue d'ensemble</a></li><li><a href="#moves">Coups</a></li><li><a href="#unique">Mécanique unique</a></li><li><a href="#gameplan">Plan de jeu</a></li><li><a href="#matchups">Matchups</a></li><li><a href="#builds">Builds</a></li><li><a href="#assist">Assists</a></li><li><a href="#community">Tech communautaire</a></li><li><a href="#sources">Sources</a></li>
+<li><a href="#meta">Méta</a></li><li><a href="#overview">Vue d'ensemble</a></li><li><a href="#moves">Coups</a></li><li><a href="#gameplan">Plan de jeu</a></li><li><a href="#matchups">Matchups</a></li><li><a href="#builds">Builds</a></li><li><a href="#assist">Assists</a></li><li><a href="#community">Tech communautaire</a></li><li><a href="#sources">Sources</a></li>
 </ol></nav>
 <main class="guide-main">
 <section class="hero" id="hero">
@@ -69,7 +69,7 @@ Melee Mid (3rd hit / max charge)</text><text x="222" y="72" fill="var(--text)" f
 </figure>
 <h3 style="color:var(--gold)">Braveries</h3>
 <h3>Liste</h3>
-<p class="mv-desc">All of Vaan's bravery attacks have two versions. Switch (SW) versions are performed when Vaan has not previously used the attack in question e.g. at the start of a match. On-hand (OH) versions are only performed if Vaan uses the same attack again after the Switch version.</p>
+<p class="mv-desc">Chaque bravery de Vaan a deux versions : Switch (SW) quand l'attaque n'a pas encore été utilisée (début de match compris), On Hand (OH) quand il réutilise la même attaque ensuite. Toutes existent au sol et en l'air.</p>
 
 <details class="move">
 <summary><span class="mv-name">Sword &amp; Shield</span>
@@ -77,7 +77,21 @@ Melee Mid (3rd hit / max charge)</text><text x="222" y="72" fill="var(--text)" f
 <div class="mv-body">
 
 <div class="mv-note"><p>Attaque à l'épée et au bouclier de courte portée qui bloque pendant le Switch (Block 1~30F sur la version SW) : c'est le command block de Vaan. En EX Mode, la priorité de block passe de Block Mid à Block High, au même niveau que le Wrath de Cloud of Darkness ou le Protect Guard d'Exdeath : il fait stagger les attaques Melee Mid, mais Vaan stagger lui-même contre les attaques de haute priorité (HP attacks). La version OH est à égalité sa bravery la plus rapide (19 frames).</p></div>
-<div class="table-scroll"><table class="stats"><tr><th></th><th>Switch (SW)</th><th>On Hand (OH)</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">30</span></td><td><span class="mono">25 (5, 7, 13)</span></td><td><span class="mono">30</span></td></tr><tr><th>Startup</th><td><span class="mono">39F (Block 1~30F)</span></td><td><span class="mono">19F</span></td><td><span class="mono">39F (Block 1~30F)</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Block Mid / Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-high">Block High / Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">60</span></td><td><span class="mono">90</span></td><td><span class="mono">60</span></td></tr><tr><th>Effets</th><td>Chase, Block</td><td>Chase</td><td>Chase, Block</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div>
+<details class="move variant" aria-label="Sword &amp; Shield — Switch (SW)">
+<summary><span class="mv-name">Switch (SW)</span>
+<span class="mv-meta">39F (Block 1~30F)</span><span class="badge prio-melee-mid">Block Mid / Melee Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">30</span></td></tr><tr><th>Startup</th><td><span class="mono">39F (Block 1~30F)</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Block Mid / Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">60</span></td></tr><tr><th>Effets</th><td>Chase, Block</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Sword &amp; Shield — On Hand (OH)">
+<summary><span class="mv-name">On Hand (OH)</span>
+<span class="mv-meta">19F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">25 (5, 7, 13)</span></td></tr><tr><th>Startup</th><td><span class="mono">19F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">90</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Sword &amp; Shield — EX Mode">
+<summary><span class="mv-name">EX Mode</span>
+<span class="mv-meta">39F (Block 1~30F)</span><span class="badge prio-melee-high">Block High / Melee Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">30</span></td></tr><tr><th>Startup</th><td><span class="mono">39F (Block 1~30F)</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Block High / Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">60</span></td></tr><tr><th>Effets</th><td>Chase, Block</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
 
 </div>
 </details>
@@ -87,7 +101,21 @@ Melee Mid (3rd hit / max charge)</text><text x="222" y="72" fill="var(--text)" f
 <div class="mv-body">
 
 <div class="mv-note"><p>Coup de hache de courte portée qui brise la garde adverse pendant le Switch : la version SW est Melee High avec Wall Rush, la version OH une Melee Low rapide (19 frames, à égalité sa bravery la plus rapide). En EX Mode, la version gagne un follow-up supplémentaire.</p></div>
-<div class="table-scroll"><table class="stats"><tr><th></th><th>Switch (SW)</th><th>On Hand (OH)</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">30</span></td><td><span class="mono">7~25 (1~2x2, 1~2x4, 13)</span></td><td><span class="mono">29~45 (1~5x4, 25)</span></td></tr><tr><th>Startup</th><td><span class="mono">33F</span></td><td><span class="mono">19F</span></td><td><span class="mono">33F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td><td><span class="mono">30</span></td><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td><td>Wall Rush</td><td>Wall Rush, extra follow-up</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div>
+<details class="move variant" aria-label="Axe &amp; Shield — Switch (SW)">
+<summary><span class="mv-name">Switch (SW)</span>
+<span class="mv-meta">33F</span><span class="badge prio-melee-high">Melee High</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">30</span></td></tr><tr><th>Startup</th><td><span class="mono">33F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Axe &amp; Shield — On Hand (OH)">
+<summary><span class="mv-name">On Hand (OH)</span>
+<span class="mv-meta">19F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">7~25 (1~2x2, 1~2x4, 13)</span></td></tr><tr><th>Startup</th><td><span class="mono">19F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Axe &amp; Shield — EX Mode">
+<summary><span class="mv-name">EX Mode</span>
+<span class="mv-meta">33F</span><span class="badge prio-melee-high">Melee High</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">29~45 (1~5x4, 25)</span></td></tr><tr><th>Startup</th><td><span class="mono">33F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-high">Melee High</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush, extra follow-up</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
 
 </div>
 </details>
@@ -98,9 +126,23 @@ Melee Mid (3rd hit / max charge)</span></summary>
 <div class="mv-body">
 
 <div class="mv-note"><p>L'une de ses braveries les plus fortes, à cheval entre courte et moyenne portée : initiateur rapproché, extension de combo, gap closer et punish d'esquive engagé (SW chargée). La version SW est son attaque la plus rapide (11 frames) ; chargée à fond, elle gagne en tracking, passe Melee Mid, et son multiplicateur dépasse celui du Bardiche de Garland — la hitbox initiale reste active pendant la majorité du déplacement, très bonne contre les esquives dans sa trajectoire, mais l'attaque tourne mal après la charge initiale. La version OH est un poke avançant correct, rapide à whiffer, dont le premier hit se confirme facilement en assist sans mur, avec un tracking rapproché trompeusement bon ; elle ne produit ni son ni effet visuel au démarrage, difficile à réagir visuellement. La version EX réduit seulement le temps de charge maximale. SW Greatsword sert aussi de follow-up en dodge cancel après SW Katana, SW Staff, SW Crossbow et Windburst. Populaire dans de nombreux matchups, comme Cecil, Cloud et Squall.</p></div>
-<div class="table-scroll"><table class="stats"><tr><th></th><th>Switch (SW)</th><th>On Hand (OH)</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">40 (10, 10, 20)</span></td><td><span class="mono">30 (13, 17)</span></td><td><span class="mono">40 (10, 10, 20)</span></td></tr><tr><th>Startup</th><td><span class="mono">11F / 43F (max charge)</span></td><td><span class="mono">23F</span></td><td><span class="mono">11F / 33F (max charge)</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Melee Low
-Melee Mid (3rd hit / max charge)</span></td><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-mid">Melee Low
-Melee Mid (3rd hit / max charge)</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td><td><span class="mono">30</span></td><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td><td>Wall Rush</td><td>Wall Rush, faster charge</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div>
+<details class="move variant" aria-label="Greatsword — Switch (SW)">
+<summary><span class="mv-name">Switch (SW)</span>
+<span class="mv-meta">11F / 43F (max charge)</span><span class="badge prio-melee-mid">Melee Low
+Melee Mid (3rd hit / max charge)</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">40 (10, 10, 20)</span></td></tr><tr><th>Startup</th><td><span class="mono">11F / 43F (max charge)</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Melee Low Melee Mid (3rd hit / max charge)</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Greatsword — On Hand (OH)">
+<summary><span class="mv-name">On Hand (OH)</span>
+<span class="mv-meta">23F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">30 (13, 17)</span></td></tr><tr><th>Startup</th><td><span class="mono">23F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Greatsword — EX Mode">
+<summary><span class="mv-name">EX Mode</span>
+<span class="mv-meta">11F / 33F (max charge)</span><span class="badge prio-melee-mid">Melee Low
+Melee Mid (3rd hit / max charge)</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">40 (10, 10, 20)</span></td></tr><tr><th>Startup</th><td><span class="mono">11F / 33F (max charge)</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Melee Low Melee Mid (3rd hit / max charge)</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush, faster charge</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
 
 </div>
 </details>
@@ -110,7 +152,21 @@ Melee Mid (3rd hit / max charge)</span></td></tr><tr><th>EX Force</th><td><span 
 <div class="mv-body">
 
 <div class="mv-note"><p>Taillade au katana à mi-distance : la version SW (Melee Mid, Chase) monte en puissance avec un combo lent pendant le Switch et culmine à un multiplicateur de 50 ; la version OH est une Melee Low plus rapide (23 frames). Bon générateur d'EX Force (jusqu'à 90). En EX Mode, le timing du finisher est allongé.</p></div>
-<div class="table-scroll"><table class="stats"><tr><th></th><th>Switch (SW)</th><th>On Hand (OH)</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">50 (1 x 12, 30, 8)</span></td><td><span class="mono">30 (9,1 x 4, 17)</span></td><td><span class="mono">50 (1 x 12, 30, 8)</span></td></tr><tr><th>Startup</th><td><span class="mono">39F</span></td><td><span class="mono">23F</span></td><td><span class="mono">39F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Melee Mid</span></td><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-mid">Melee Mid</span></td></tr><tr><th>EX Force</th><td><span class="mono">60 ~ 90</span></td><td><span class="mono">90</span></td><td><span class="mono">60 ~ 90</span></td></tr><tr><th>Effets</th><td>Chase</td><td>Chase</td><td>Chase, longer finisher timing</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div>
+<details class="move variant" aria-label="Katana — Switch (SW)">
+<summary><span class="mv-name">Switch (SW)</span>
+<span class="mv-meta">39F</span><span class="badge prio-melee-mid">Melee Mid</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">50 (1 x 12, 30, 8)</span></td></tr><tr><th>Startup</th><td><span class="mono">39F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Melee Mid</span></td></tr><tr><th>EX Force</th><td><span class="mono">60 ~ 90</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Katana — On Hand (OH)">
+<summary><span class="mv-name">On Hand (OH)</span>
+<span class="mv-meta">23F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">30 (9,1 x 4, 17)</span></td></tr><tr><th>Startup</th><td><span class="mono">23F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">90</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Katana — EX Mode">
+<summary><span class="mv-name">EX Mode</span>
+<span class="mv-meta">39F</span><span class="badge prio-melee-mid">Melee Mid</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">50 (1 x 12, 30, 8)</span></td></tr><tr><th>Startup</th><td><span class="mono">39F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Melee Mid</span></td></tr><tr><th>EX Force</th><td><span class="mono">60 ~ 90</span></td></tr><tr><th>Effets</th><td>Chase, longer finisher timing</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
 
 </div>
 </details>
@@ -120,7 +176,21 @@ Melee Mid (3rd hit / max charge)</span></td></tr><tr><th>EX Force</th><td><span 
 <div class="mv-body">
 
 <div class="mv-note"><p>Coup de lance à mi-distance qui attire l'adversaire pendant le Switch (effet Absorb sur la version SW, Melee Mid) ; les deux versions provoquent un Wall Rush. En EX Mode, la version gagne une seconde salve de hits (multiplicateur 55).</p></div>
-<div class="table-scroll"><table class="stats"><tr><th></th><th>Switch (SW)</th><th>On Hand (OH)</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">35 (4 x 5, 15)</span></td><td><span class="mono">28 (2 x 4, 7, 13)</span></td><td><span class="mono">55 (4 x 5, 4 x 5, 15)</span></td></tr><tr><th>Startup</th><td><span class="mono">23F</span></td><td><span class="mono">21F</span></td><td><span class="mono">23F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Melee Mid</span></td><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-mid">Melee Mid</span></td></tr><tr><th>EX Force</th><td><span class="mono">15</span></td><td><span class="mono">30</span></td><td><span class="mono">24</span></td></tr><tr><th>Effets</th><td>Wall Rush, Absorb</td><td>Wall Rush</td><td>Wall Rush, Absorb</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div>
+<details class="move variant" aria-label="Spear — Switch (SW)">
+<summary><span class="mv-name">Switch (SW)</span>
+<span class="mv-meta">23F</span><span class="badge prio-melee-mid">Melee Mid</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">35 (4 x 5, 15)</span></td></tr><tr><th>Startup</th><td><span class="mono">23F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Melee Mid</span></td></tr><tr><th>EX Force</th><td><span class="mono">15</span></td></tr><tr><th>Effets</th><td>Wall Rush, Absorb</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Spear — On Hand (OH)">
+<summary><span class="mv-name">On Hand (OH)</span>
+<span class="mv-meta">21F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">28 (2 x 4, 7, 13)</span></td></tr><tr><th>Startup</th><td><span class="mono">21F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">30</span></td></tr><tr><th>Effets</th><td>Wall Rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Spear — EX Mode">
+<summary><span class="mv-name">EX Mode</span>
+<span class="mv-meta">23F</span><span class="badge prio-melee-mid">Melee Mid</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">55 (4 x 5, 4 x 5, 15)</span></td></tr><tr><th>Startup</th><td><span class="mono">23F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-mid">Melee Mid</span></td></tr><tr><th>EX Force</th><td><span class="mono">24</span></td></tr><tr><th>Effets</th><td>Wall Rush, Absorb</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
 
 </div>
 </details>
@@ -130,7 +200,21 @@ Melee Mid (3rd hit / max charge)</span></td></tr><tr><th>EX Force</th><td><span 
 <div class="mv-body">
 
 <div class="mv-note"><p>Coup de bâton à mi-distance qui génère énormément d'EX Force (108 à 150 selon la version, le record de son kit) avec effet Chase ; la version SW, magique, laisse Vaan libre de se déplacer.</p></div>
-<div class="table-scroll"><table class="stats"><tr><th></th><th>Switch (SW)</th><th>On Hand (OH)</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">30 (1 x 8, 22)</span></td><td><span class="mono">20 (3 x 3, 11)</span></td><td><span class="mono">38 (1 x 8, 1 x 8, 22)</span></td></tr><tr><th>Startup</th><td><span class="mono">23F</span></td><td><span class="mono">21F</span></td><td><span class="mono">150</span></td></tr><tr><th>Type</th><td>Magical</td><td>Physical</td><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">108</span></td><td><span class="mono">114</span></td><td><span class="mono">150</span></td></tr><tr><th>Effets</th><td>Chase</td><td>Chase</td><td>Chase</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div>
+<details class="move variant" aria-label="Staff — Switch (SW)">
+<summary><span class="mv-name">Switch (SW)</span>
+<span class="mv-meta">23F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">30 (1 x 8, 22)</span></td></tr><tr><th>Startup</th><td><span class="mono">23F</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">108</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Staff — On Hand (OH)">
+<summary><span class="mv-name">On Hand (OH)</span>
+<span class="mv-meta">21F</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">20 (3 x 3, 11)</span></td></tr><tr><th>Startup</th><td><span class="mono">21F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">114</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Staff — EX Mode">
+<summary><span class="mv-name">EX Mode</span>
+<span class="mv-meta">150</span><span class="badge prio-melee-low">Melee Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">38 (1 x 8, 1 x 8, 22)</span></td></tr><tr><th>Startup</th><td><span class="mono">150</span></td></tr><tr><th>Type</th><td>Magical</td></tr><tr><th>Priorité</th><td><span class="badge prio-melee-low">Melee Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">150</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
 
 </div>
 </details>
@@ -140,7 +224,21 @@ Melee Mid (3rd hit / max charge)</span></td></tr><tr><th>EX Force</th><td><span 
 <div class="mv-body">
 
 <div class="mv-note"><p>Tir de bowgun à longue portée (Ranged Low, Chase) : maintenir le bouton sur la version SW déclenche un tir en rafale, jusqu'à 105 d'EX Force. La version OH est nettement plus faible (12 de multiplicateur, aucune EX Force). En EX Mode, la portée augmente. SW Crossbow fait partie des attaques annulables en dodge cancel vers SW Greatsword.</p></div>
-<div class="table-scroll"><table class="stats"><tr><th></th><th>Switch (SW)</th><th>On Hand (OH)</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">30 (1 x 15, 15)</span></td><td><span class="mono">12 (4 x 3)</span></td><td><span class="mono">30 (1 x 15, 15)</span></td></tr><tr><th>Startup</th><td><span class="mono">41F</span></td><td><span class="mono">31F</span></td><td><span class="mono">41F</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td><td><span class="badge prio-ranged">Ranged Low</span></td><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">max 105</span></td><td><span class="mono">0</span></td><td><span class="mono">max 105</span></td></tr><tr><th>Effets</th><td>Chase</td><td>Chase</td><td>Chase, increased range</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div>
+<details class="move variant" aria-label="Crossbow — Switch (SW)">
+<summary><span class="mv-name">Switch (SW)</span>
+<span class="mv-meta">41F</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">30 (1 x 15, 15)</span></td></tr><tr><th>Startup</th><td><span class="mono">41F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">max 105</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Crossbow — On Hand (OH)">
+<summary><span class="mv-name">On Hand (OH)</span>
+<span class="mv-meta">31F</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">12 (4 x 3)</span></td></tr><tr><th>Startup</th><td><span class="mono">31F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Chase</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Crossbow — EX Mode">
+<summary><span class="mv-name">EX Mode</span>
+<span class="mv-meta">41F</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">30 (1 x 15, 15)</span></td></tr><tr><th>Startup</th><td><span class="mono">41F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">max 105</span></td></tr><tr><th>Effets</th><td>Chase, increased range</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
 
 </div>
 </details>
@@ -150,7 +248,21 @@ Melee Mid (3rd hit / max charge)</span></td></tr><tr><th>EX Force</th><td><span 
 <div class="mv-body">
 
 <div class="mv-note"><p>Tir de fusil à longue portée avec Wall Rush : la version SW comporte une esquive pendant le Switch (Dodge 1~20F), la version OH sort en 29 frames. En EX Mode, une seconde salve double le multiplicateur.</p></div>
-<div class="table-scroll"><table class="stats"><tr><th></th><th>Switch (SW)</th><th>On Hand (OH)</th><th>EX Mode</th></tr><tr><th>Dégâts de base</th><td><span class="mono">18 (3 x 6)</span></td><td><span class="mono">18 (3 x 6)</span></td><td><span class="mono">36 (3 x 6, 3 x 6)</span></td></tr><tr><th>Startup</th><td><span class="mono">49F (Dodge 1~20F)</span></td><td><span class="mono">29F</span></td><td><span class="mono">49F (Dodge 1~20F)</span></td></tr><tr><th>Type</th><td>Physical</td><td>Physical</td><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td><td><span class="badge prio-ranged">Ranged Low</span></td><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td><td><span class="mono">0</span></td><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush, Dodge</td><td>Wall rush</td><td>Wall Rush, Dodge</td></tr><tr><th>Cancels</th><td>Dodge</td><td>Dodge</td><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div>
+<details class="move variant" aria-label="Rifle — Switch (SW)">
+<summary><span class="mv-name">Switch (SW)</span>
+<span class="mv-meta">49F (Dodge 1~20F)</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">18 (3 x 6)</span></td></tr><tr><th>Startup</th><td><span class="mono">49F (Dodge 1~20F)</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush, Dodge</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Rifle — On Hand (OH)">
+<summary><span class="mv-name">On Hand (OH)</span>
+<span class="mv-meta">29F</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">18 (3 x 6)</span></td></tr><tr><th>Startup</th><td><span class="mono">29F</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall rush</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
+<details class="move variant" aria-label="Rifle — EX Mode">
+<summary><span class="mv-name">EX Mode</span>
+<span class="mv-meta">49F (Dodge 1~20F)</span><span class="badge prio-ranged">Ranged Low</span></summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats"><tr><th>Dégâts de base</th><td><span class="mono">36 (3 x 6, 3 x 6)</span></td></tr><tr><th>Startup</th><td><span class="mono">49F (Dodge 1~20F)</span></td></tr><tr><th>Type</th><td>Physical</td></tr><tr><th>Priorité</th><td><span class="badge prio-ranged">Ranged Low</span></td></tr><tr><th>EX Force</th><td><span class="mono">0</span></td></tr><tr><th>Effets</th><td>Wall Rush, Dodge</td></tr><tr><th>Cancels</th><td>Dodge</td></tr><tr><th>CP (maîtrisé)</th><td><span class="mono">30 (20)</span></td></tr></table></div></div>
+</details>
 
 </div>
 </details>
@@ -202,20 +314,20 @@ Melee Mid (3rd hit / max charge)</span></td></tr><tr><th>EX Force</th><td><span 
 
 </div>
 </details>
+
 <h3 style="color:var(--gold)">EX Mode: Obtained all Licenses! &amp; EX Burst</h3>
 <p>L'EX Mode « Obtained all Licenses! » confère Regen, Critical Boost, Free Switch et Zodiak. Free Switch (activable avec R + carré) permet de revenir aux attaques désarmées à tout moment : démarre à 1 frame, se termine à 31, annulable en esquive ou en attaque à 21 frames — c'est ce qui laisse Vaan réutiliser ses versions SW plus souvent et avec moins de risque. Zodiak, actif en permanence, augmente stats et capacités et renforce fortement les attaques : chaque version Switch d'une bravery gagne un bonus (portée accrue, invincibilité, charge plus courte ou follow-up supplémentaire).</p>
 <p>L'overview tempère néanmoins : malgré ces effets, l'EX Mode de Vaan est considéré comme l'un des plus décevants du jeu.</p>
 <p><strong>EX Burst :</strong> « Quickening » : attaque imprégnée de Mist où l'on fait défiler les options avec R et où l'on valide avec X. Une méthode consistante : appuyer sur R, puis marteler X quelques fois, et répéter cette boucle trois fois par Quickening.</p>
 
+
 </section>
-<section id="unique"><h2>Mécanique unique</h2>
-<div class="banner" data-undocumented="1"><strong>Section non documentée sur dissidia.wiki à ce jour — à compléter.</strong> <a href="https://dissidia.wiki/Vaan_(Dissidia_012)" rel="external noopener">Page wiki du personnage</a> — pas de section « Unique Mechanics » dédiée ; le cas échéant, la mécanique du personnage est couverte dans la vue d'ensemble et les coups.</div>
-</section>
+
 <section id="gameplan"><h2>Plan de jeu &amp; techniques avancées</h2>
 <p>Le jeu de Vaan s'organise autour du Switch : chaque bravery utilisée bascule vers sa version On-hand, et il faut « consommer » (souvent en whiffant) une attaque pour recharger sa version Switch, plus puissante. Le plan consiste donc à séquencer son arsenal : ouvrir avec les versions SW aux propriétés fortes (Sword &amp; Shield qui bloque, Axe &amp; Shield qui brise la garde, Greatsword 11 frames, Rifle avec esquive intégrée), puis exploiter les versions OH plus rapides — dont plusieurs, comme OH Greatsword, ne produisent aucun signal sonore ou visuel au démarrage et sont difficiles à réagir.</p>
 <p>En neutral, Greatsword est le pivot : initiateur rapproché, gap closer, extension de combo et punish d'esquive en version SW chargée, avec un premier hit OH facilement confirmable en assist sans mur — précieux pour un personnage par ailleurs médiocre à construire la jauge d'assist. Katana, Spear et Staff couvrent la mi-distance (Staff générant énormément d'EX Force), Crossbow et Rifle la longue portée. Côté HP attacks, Torrent (21 frames sur la composante montante) et Cataclysm sont ses plus rapides ; Cataclysm et le projectile de Windburst servent de 1-hit HP.</p>
 <p>Le build documenté illustre la répartition type : au sol Spear, Axe &amp; Shield et Sword &amp; Shield ; en l'air Katana, Greatsword et Rifle. Le dilemme des trois slots impose des compromis, et chaque matchup peut exiger des combinaisons spécifiques : peu de loadouts standards existent. En EX Mode, Free Switch lève temporairement la contrainte principale du personnage en redonnant accès aux versions SW à la demande, et Zodiak renforce toutes les versions Switch.</p>
-<h3>Techniques spécifiques</h3><div class="card"><h3 style="margin-top:0">Dodge cancel &gt; SW Greatsword</h3><p>SW Greatsword peut être utilisée comme follow-up en dodge cancel après SW Katana, SW Staff, SW Crossbow et Windburst, ce qui relie ses outils de mi-distance et de zone à son attaque la plus rapide et la plus rentable.</p></div>
+<h3>Techniques spécifiques</h3><div class="card"><h3 style="margin-top:0">Dodge cancel &gt; SW Greatsword</h3><p>SW Greatsword peut être utilisée comme follow-up en dodge cancel après SW Katana, SW Staff, SW Crossbow et Windburst, ce qui relie ses outils de mi-distance et de zone à son attaque la plus rapide et la plus rentable.</p></div><div class="card"><h3 style="margin-top:0">Routes de combo solo recensées</h3><p>Le relevé décrit l'un des kits de combo les plus fournis et praticables du cast, avec trois infinis (un seul réellement jouable). Routes : Katana SW &gt; dodge cancel &gt; Greatsword SW ; Staff SW &gt; DC &gt; Greatsword SW ou Staff non-SW ; Crossbow SW &gt; DC &gt; Staff, Spear ou Greatsword SW ; Crossbow SW en bord de portée d'esquive (équipement Adamant) &gt; DC &gt; Windburst ; Windburst &gt; DC &gt; Staff SW vers la tornade, Spear SW ou Greatsword SW ; Windburst posé &gt; hit de Windburst &gt; Crossbow SW ou Greatsword SW chargé ; Windburst posé &gt; Crossbow SW sans maintien &gt; hit de Windburst &gt; Chase HP ; Axe &amp; Shield non-SW (2 coups) &gt; DC &gt; landing lag &gt; Greatsword SW, Axe &amp; Shield non-SW ou Windburst. SW désigne la version Switch d'une arme (changement d'arme), non-SW la version arme en main (On Hand).</p><p class="sources-list">Sources : <a href="https://pastebin.com/8FWDXjvJ" rel="external noopener">pastebin.com/8FWDXjvJ</a></p></div><div class="card"><h3 style="margin-top:0">Empty chase vers reset de jauge d'assist</h3><p>D'après le relevé des empty chases, Crossbow (non-SW) et Sword &amp; Shield (non-SW, extrêmement serré) offrent un empty chase vers reset de la jauge d'assist ; Sword &amp; Shield (SW) et Katana (non-SW) échouent de justesse.</p><p class="sources-list">Sources : <a href="https://pastebin.com/dKSWgUQ6" rel="external noopener">pastebin.com/dKSWgUQ6</a></p></div>
 
 
 <p class="mv-desc">Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href="../techniques.html">Techniques &amp; glitches</a>.</p>
@@ -260,19 +372,15 @@ Melee Mid (3rd hit / max charge)</span></td></tr><tr><th>EX Force</th><td><span 
 <tr><td>Summon</td><td>Rubicante</td></tr>
 </table></div>
 <div class="table-scroll"><table class="data">
-
-<tr><th>Bravery attacks</th></tr>
-<tr><td>Ground</td><td>Aerial</td></tr>
-<tr><td>HP attacks</td></tr>
-<tr><td>Ground</td><td>Aerial</td></tr>
+<caption>Braveries équipées</caption>
+<tr><th>Au sol</th><th>En l’air</th></tr>
+<tr><td>Spear</td><td>Katana</td></tr>
+<tr><td>Axe &amp; Shield</td><td>Greatsword</td></tr>
+<tr><td>Sword &amp; Shield</td><td>Rifle</td></tr>
 </table></div>
-<div class="table-scroll"><table class="data">
 
-<tr><th>Bravery attacks</th></tr>
-<tr><td>Ground</td><td>Aerial</td></tr>
-<tr><td>HP attacks</td></tr>
-<tr><td>Ground</td><td>Aerial</td></tr>
-</table></div>
+<p class="mv-desc">Loadout du build « Damage (Seal of Lufenia) », tel que documenté par le wiki. Seules les braveries sont spécifiées : le choix des attaques HP n'est pas documenté pour ce build.</p>
+
 
 <p class="mv-desc">Le second build (« Build #2 ») est un gabarit vide dans les données sources.</p>
 
@@ -284,16 +392,16 @@ Melee Mid (3rd hit / max charge)</span></td></tr><tr><th>EX Force</th><td><span 
 
 </section>
 <section id="community"><h2>Tech communautaire</h2>
-<div class="card"><h3 style="margin-top:0">Dissdia 012 vaan infinite combo tutorial. <span class="badge">2011</span></h3><p>Tutoriel d'époque (avril 2011) d'un combo infini découvert par accident, exigeant Staff équipé en l'air — l'une des rares traces documentées des « combos infinis » évoqués par l'overview.</p><p class="sources-list"><a href="https://www.youtube.com/watch?v=mDG7aVLYZUM" rel="external noopener">https://www.youtube.com/watch?v=mDG7aVLYZUM</a></p></div><div class="card"><h3 style="margin-top:0">Dissidia 012: Final Fantasy - Vaan Combo Exhibition <span class="badge">2011</span></h3><p>Exhibition de combos par Muramishi (juin 2011) : Axe &amp; Shield ou Sword &amp; Shield utilisées dans leur version On-hand produisent un combo difficile mais vraisemblablement infini.</p><p class="sources-list"><a href="https://www.youtube.com/watch?v=LOJRXYv1Cdc" rel="external noopener">https://www.youtube.com/watch?v=LOJRXYv1Cdc</a></p></div>
+<div class="card"><h3 style="margin-top:0">Dissdia 012 vaan infinite combo tutorial. <span class="badge">2011</span></h3><p>Tutoriel d'époque (avril 2011) d'un combo infini découvert par accident, exigeant Staff équipé en l'air — l'une des rares traces documentées des « combos infinis » évoqués par l'overview.</p><p class="sources-list"><a href="https://www.youtube.com/watch?v=mDG7aVLYZUM" rel="external noopener">https://www.youtube.com/watch?v=mDG7aVLYZUM</a></p></div><div class="card"><h3 style="margin-top:0">Dissidia 012: Final Fantasy - Vaan Combo Exhibition <span class="badge">2011</span></h3><p>Exhibition de combos par Muramishi (juin 2011) : Axe &amp; Shield ou Sword &amp; Shield utilisées dans leur version On-hand produisent un combo difficile mais vraisemblablement infini.</p><p class="sources-list"><a href="https://www.youtube.com/watch?v=LOJRXYv1Cdc" rel="external noopener">https://www.youtube.com/watch?v=LOJRXYv1Cdc</a></p></div><div class="card"><h3 style="margin-top:0">Liste de combos solo de tout le cast (Eddiegames) <span class="badge">2022</span></h3><p>Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Vaan y est décrit comme l'un des kits de combo les plus fournis du cast, avec trois infinis dont un praticable.</p><p class="sources-list"><a href="https://pastebin.com/8FWDXjvJ" rel="external noopener">https://pastebin.com/8FWDXjvJ</a></p></div><div class="card"><h3 style="margin-top:0">Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)</h3><p>Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.</p><p class="sources-list"><a href="https://pastebin.com/dKSWgUQ6" rel="external noopener">https://pastebin.com/dKSWgUQ6</a></p></div>
 </section>
 <section id="sources"><h2>Sources</h2>
-<ul class="sources-list"><li><a href="https://dissidia.wiki/Vaan_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Vaan_(Dissidia_012)</a></li><li><a href="https://www.youtube.com/watch?v=mDG7aVLYZUM" rel="external noopener">https://www.youtube.com/watch?v=mDG7aVLYZUM</a></li><li><a href="https://www.youtube.com/watch?v=LOJRXYv1Cdc" rel="external noopener">https://www.youtube.com/watch?v=LOJRXYv1Cdc</a></li><li><a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Tier_List_(Dissidia_012)</a></li><li><a href="https://dissidia.wiki/Tier_List_(Assist)" rel="external noopener">https://dissidia.wiki/Tier_List_(Assist)</a></li></ul><h3>Limites connues</h3><ul class="sources-list"><li>La page matchups du wiki est un stub : seuls les repères de l'overview et de la note de Greatsword (Cecil, Cloud, Squall) ont pu être repris.</li><li>Aucune section combos renseignée (sous-section Solo vide) : les « combos infinis » mentionnés dans l'overview ne sont détaillés nulle part.</li><li>Pas de section « Unique Mechanics » documentée : le Switch n'est décrit que dans l'overview et l'intro des braveries, d'où uniqueMechanics laissé à null et la mécanique traitée dans overview et gameplan.</li><li>Notes d'usage détaillées absentes pour la plupart des coups : seuls Sword &amp; Shield (version EX) et Greatsword ont de vraies notes ; le reste se limite aux descriptions du jeu et aux frame data.</li><li>Le second build (« Build #2 ») est un gabarit vide ; valeurs d'assist gain absentes des tableaux de coups.</li><li>Section References vide et aucune mention communautaire datée : communityTech laissé vide.</li></ul>
+<ul class="sources-list"><li><a href="https://dissidia.wiki/Vaan_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Vaan_(Dissidia_012)</a></li><li><a href="https://www.youtube.com/watch?v=mDG7aVLYZUM" rel="external noopener">https://www.youtube.com/watch?v=mDG7aVLYZUM</a></li><li><a href="https://www.youtube.com/watch?v=LOJRXYv1Cdc" rel="external noopener">https://www.youtube.com/watch?v=LOJRXYv1Cdc</a></li><li><a href="https://pastebin.com/8FWDXjvJ" rel="external noopener">https://pastebin.com/8FWDXjvJ</a></li><li><a href="https://pastebin.com/dKSWgUQ6" rel="external noopener">https://pastebin.com/dKSWgUQ6</a></li><li><a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" rel="external noopener">https://dissidia.wiki/Tier_List_(Dissidia_012)</a></li><li><a href="https://dissidia.wiki/Tier_List_(Assist)" rel="external noopener">https://dissidia.wiki/Tier_List_(Assist)</a></li></ul><h3>Limites connues</h3><ul class="sources-list"><li>La page matchups du wiki est un stub : seuls les repères de l'overview et de la note de Greatsword (Cecil, Cloud, Squall) ont pu être repris.</li><li>Aucune section combos renseignée (sous-section Solo vide) : les « combos infinis » mentionnés dans l'overview ne sont détaillés nulle part.</li><li>Pas de section « Unique Mechanics » documentée : le Switch n'est décrit que dans l'overview et l'intro des braveries, d'où uniqueMechanics laissé à null et la mécanique traitée dans overview et gameplan.</li><li>Notes d'usage détaillées absentes pour la plupart des coups : seuls Sword &amp; Shield (version EX) et Greatsword ont de vraies notes ; le reste se limite aux descriptions du jeu et aux frame data.</li><li>Le second build (« Build #2 ») est un gabarit vide ; valeurs d'assist gain absentes des tableaux de coups.</li><li>Section References vide et aucune mention communautaire datée : communityTech laissé vide.</li><li>Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.</li></ul>
 </section>
 </main>
 </div>
 <footer class="site"><div class="wrap">
 <p>Site de fans non commercial. Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011).</p>
-<p>Contenu textuel adapté et traduit de <a href="https://dissidia.wiki" rel="external noopener">dissidia.wiki</a> (licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="external noopener">CC BY 4.0</a>). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+<p>Contenu textuel adapté et traduit de <a href="https://dissidia.wiki" rel="external noopener">dissidia.wiki</a> (licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="external noopener">CC BY 4.0</a>). Compléments de moveset (rôles et jobs par coup, coups spéciaux) adaptés du <a href="https://finalfantasy.fandom.com" rel="external noopener">Final Fantasy Wiki</a> (licence <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="external noopener">CC BY-SA 3.0</a>). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
 </div></footer>
 
 </body>

@@ -16,6 +16,14 @@ const FIELDS = [
   ['cp', 'CP (maîtrisé)'],
 ];
 
+// Certaines cellules extraites embarquent la définition d'un terme du glossaire du
+// wiki (tooltip « Hitbox » inliné sur sa propre ligne) : on retire les lignes de
+// prose longue pour ne garder que la valeur.
+const cleanVal = (v) => String(v ?? '').split('\n').filter((l) => !(l.trim().length > 60 && /\.\s*$/.test(l.trim()))).join(' ').trim();
+// Valeur multi-variantes concaténée par « || » : premier segment pour l'affichage
+// compact (le détail par variante vit dans les sous-fiches).
+const firstVal = (v) => { const c = cleanVal(v); return c.includes('||') ? c.split('||')[0].trim() : c; };
+
 function moveRows(m) {
   const variantHeader = m.variants && m.variants.length > 1
     ? `<tr><th></th>${m.variants.map((v) => `<th>${esc(v)}</th>`).join('')}</tr>`
@@ -25,19 +33,52 @@ function moveRows(m) {
     if (val === undefined || val === null || val === '' ) return '';
     const cells = Array.isArray(val) ? val : [val];
     if (cells.every((c) => c === '' || c === '-')) return '';
-    const render = (c, i) => {
+    const render = (raw, attr = '') => {
+      const c = cleanVal(raw);
       let out = esc(c);
       if (key === 'priority') out = priorityBadge(c);
       if (key === 'startup' || key === 'damage' || key === 'cp' || key === 'exForce') out = `<span class="mono">${esc(c)}</span>`;
-      return `<td>${out}</td>`;
+      return `<td${attr}>${out}</td>`;
     };
-    return `<tr><th>${label}</th>${cells.map(render).join('')}</tr>`;
+    // Valeur unique dans un tableau à variantes (ex. CP identique pour Switch /
+    // On Hand / EX Mode) : elle vaut pour toutes les colonnes, on l'étale.
+    if (m.variants && m.variants.length > 1 && cells.length === 1) {
+      return `<tr><th>${label}</th>${render(cells[0], ` colspan="${m.variants.length}"`)}</tr>`;
+    }
+    return `<tr><th>${label}</th>${cells.map((c) => render(c)).join('')}</tr>`;
   }).join('');
   return variantHeader + rows;
 }
 
+// Vraies variantes (Switch/On Hand, Normal/EX Mode, niveaux de charge…) par
+// opposition aux tableaux mal extraits dont la ligne « variantes » est en fait
+// une ligne d'en-tête (Damage multiplier, Startup frame…) : ceux-là gardent le
+// rendu en colonnes.
+const isRealVariants = (m) => m.variants && m.variants.length > 1 &&
+  m.variants.every((v) => !/multiplier|startup|cancel|assist|CP|force|priorit|effect|position|spawn|^type$/i.test(String(v)));
+
+// Un coup à variantes est rendu comme un parent + une sous-fiche par variante,
+// sur le modèle des niveaux de charge de Jecht ou des invocations de Yuna.
+function variantChildren(m) {
+  return m.variants.map((v, i) => {
+    const sub = { ...m, variants: null };
+    for (const [key] of FIELDS) {
+      if (Array.isArray(m[key])) { sub[key] = m[key][i] ?? ''; continue; }
+      const c = cleanVal(m[key]);
+      if (c.includes('||')) { const parts = c.split('||').map((x) => x.trim()); sub[key] = parts[i] ?? parts[0]; }
+    }
+    const st = Array.isArray(m.startup) ? (m.startup[i] || '') : cleanVal(sub.startup ?? m.startup);
+    const pr = Array.isArray(m.priority) ? m.priority[i] : m.priority;
+    return `<details class="move variant" aria-label="${esc(m.name)} — ${esc(v)}">
+<summary><span class="mv-name">${esc(v)}</span>
+<span class="mv-meta">${esc(st)}</span>${priorityBadge(pr)}</summary>
+<div class="mv-body"><div class="table-scroll"><table class="stats">${moveRows(sub)}</table></div></div>
+</details>`;
+  }).join('\n');
+}
+
 function moveAccordion(m, noteFr, ctx, asChild = false) {
-  const startup = Array.isArray(m.startup) ? m.startup[0] : m.startup;
+  const startup = firstVal(Array.isArray(m.startup) ? m.startup[0] : m.startup);
   const prio = Array.isArray(m.priority) ? m.priority[0] : m.priority;
   let shot = '';
   if (m.image && ctx?.moveImages) {
@@ -57,7 +98,9 @@ ${shot}
 ${noteFr ? `<div class="mv-note"><p>${esc(noteFr)}</p></div>` : ''}
 ${m.rawRows?.length
     ? `<div class="table-scroll"><table class="data"><tr>${m.rawRows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr>${m.rawRows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`
-    : `<div class="table-scroll"><table class="stats">${moveRows(m)}</table></div>`}
+    : isRealVariants(m)
+      ? variantChildren(m)
+      : `<div class="table-scroll"><table class="stats">${moveRows(m)}</table></div>`}
 ${(m.extraTables || []).map((t) => `<div class="table-scroll"><table class="data"><tr>${t.rows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr>${t.rows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`).join('')}
 </div>
 </details>`;
@@ -65,9 +108,12 @@ ${(m.extraTables || []).map((t) => `<div class="table-scroll"><table class="data
 
 const GROUP_LABELS = { ground: 'Au sol', aerial: 'En l’air', followups: 'Followups', main: 'Liste' };
 
-function movesGroup(groupKey, flow, ed, ctx) {
+function movesGroup(groupKey, flow, ed, ctx, sect = '') {
   if (!flow || !flow.moves.length) return '';
   const label = GROUP_LABELS[groupKey] || groupKey;
+  // L'intro brute du wiki (anglaise) n'est plus rendue : la note française
+  // éditoriale groupNotes["section/groupe"] la remplace.
+  const note = ed?.groupNotes?.[`${sect}/${groupKey}`];
   const chainRef = groupKey === 'followups'
     ? `<p class="mv-desc">Ces followups se greffent sur les braveries « (One) » — le <a href="#chaines">diagramme des chaînes</a> ci-dessous résume les embranchements.</p>`
     : '';
@@ -81,7 +127,7 @@ function movesGroup(groupKey, flow, ed, ctx) {
     return moveAccordion(m, ed?.moveNotes?.[m.name], ctx, asChild);
   });
   return `<h3>${esc(label)}</h3>
-${flow.intro ? `<p class="mv-desc">${esc(flow.intro.split('\n')[0])}</p>` : ''}
+${note ? `<p class="mv-desc">${esc(note)}</p>` : ''}
 ${chainRef}
 ${accordions.join('\n')}`;
 }
@@ -113,6 +159,189 @@ ${t.caption ? `<caption>${esc(t.caption)}</caption>` : ''}
 ${rest.map((r) => `<tr>${r.map((c) => `<td>${escBr(c)}</td>`).join('')}</tr>`).join('\n')}
 </table></div>`;
   }).join('\n');
+}
+
+// --- Builds : tableau « moveset équipé » ---
+// Le wiki prévoit par build un tableau des coups à équiper (sol / en l'air), mais ne
+// le remplit que pour une poignée de personnages ; ailleurs il ne reste que les
+// en-têtes. Rendu tel quel, cela donne un tableau vide sur la quasi-totalité des
+// fiches. On le rend proprement quand il est rempli, et on le remplace sinon par le
+// budget CP du build en regard du coût de chaque coup — de quoi composer soi-même,
+// sans rien inventer.
+const MOVESET_HEAD = 'Bravery attacks';
+const MOVESET_LABELS = { 'Bravery attacks': 'Braveries équipées', 'HP attacks': 'Attaques HP équipées' };
+const SLOT_LABELS = { Ground: 'Au sol', Aerial: 'En l’air' };
+
+// « 30 (15) » -> { base: 30, mastered: 15 }
+function cpValue(m) {
+  const str = String((Array.isArray(m.cp) ? m.cp[0] : m.cp) ?? '');
+  const base = str.match(/^(\d+)/);
+  if (!base) return null;
+  const mastered = str.match(/\((\d+)\)/);
+  return { base: parseInt(base[1], 10), mastered: mastered ? parseInt(mastered[1], 10) : null };
+}
+
+function movesetTable(rows) {
+  const blocks = [];
+  let cur = null;
+  for (const r of rows) {
+    if (r.length === 1 && /attacks$/i.test(r[0])) { cur = { title: r[0], head: null, body: [] }; blocks.push(cur); continue; }
+    if (!cur) continue;
+    if (!cur.head && r[0] === 'Ground') { cur.head = r; continue; }
+    cur.body.push(r);
+  }
+  return blocks.filter((b) => b.body.length).map((b) => `<div class="table-scroll"><table class="data">
+<caption>${esc(MOVESET_LABELS[b.title] || b.title)}</caption>
+<tr>${(b.head || ['Ground', 'Aerial']).map((c) => `<th>${esc(SLOT_LABELS[c] || c)}</th>`).join('')}</tr>
+${b.body.map((r) => `<tr>${r.map((c) => `<td>${escBr(c)}</td>`).join('')}</tr>`).join('\n')}
+</table></div>`).join('\n');
+}
+
+// Emplacement d'équipement. Les clés « ground » / « aerial » sont les deux slots
+// normaux ; toute autre clé est un nom de rôle ou de forme donné par le wiki
+// (« Medic » chez Lightning), qui conditionne l'accès au coup.
+const SLOT_NAMES = { ground: 'Au sol', aerial: 'En l’air', main: '—', followups: 'Follow-up', 'Follow-ups': 'Follow-up' };
+const ONLY_LABELS = { midair: 'en l’air', ground: 'au sol' };
+
+// Première ligne de context du type « Commando only. » -> condition d'accès au coup.
+function onlyCondition(m) {
+  const first = String(m.context || '').split('\n')[0].trim();
+  const match = first.match(/^(.{1,28}?)\s+only\.?$/i);
+  if (!match) return null;
+  const raw = match[1].trim();
+  return ONLY_LABELS[raw.toLowerCase()] || raw;
+}
+
+// `extra` (éditorial) prime sur la clé de groupe : le wiki source range parfois les
+// coups par rôle plutôt que par emplacement, et une colonne dédiée dit alors mieux
+// les choses. Quand une colonne éditoriale couvre déjà la condition d'accès, on
+// n'ajoute pas le suffixe « X uniquement » déduit du context — ce serait redondant.
+function slotCell(m, slotOverrides, hasExtraColumns) {
+  const override = slotOverrides?.[m.name];
+  if (override) return override;
+  const slot = SLOT_NAMES[m.groupKey] ?? m.groupKey;
+  const only = hasExtraColumns ? null : onlyCondition(m);
+  if (!only) return slot;
+  return slot === '—' ? `${only} uniquement` : `${slot} · ${only} uniquement`;
+}
+
+function cpBudgetPanel(cpTotals, allMoves, opts = {}) {
+  const extra = (opts.columns || []).filter((c) => c?.header && c.values);
+  const rows = allMoves
+    .map((m) => ({
+      name: m.name,
+      cat: m.cat,
+      type: opts.types?.[m.name] || (m.cat === 'HP' ? 'HP' : 'Bravery'),
+      slot: slotCell(m, opts.slots, extra.length > 0),
+      extra: extra.map((c) => c.values[m.name] || '—'),
+      cp: cpValue(m),
+    }))
+    .filter((x) => x.name && x.cp);
+  if (!rows.length) return '';
+  rows.sort((a, b) => b.cp.base - a.cp.base || a.name.localeCompare(b.name, 'fr'));
+
+  // Colonnes adaptatives : une colonne dont toutes les valeurs sont identiques (ou
+  // vides) n'apprend rien au lecteur et n'est pas rendue.
+  const informative = (vals) => new Set(vals.map((v) => String(v ?? '').trim())).size > 1;
+  const cols = [
+    { th: 'Coup', cell: (r) => esc(r.name), keep: true },
+    { th: 'Type', cell: (r) => esc(r.type), vals: rows.map((r) => r.type) },
+    { th: 'Où l’équiper', cell: (r) => esc(r.slot), vals: rows.map((r) => r.slot) },
+    ...extra.map((c, i) => ({ th: esc(c.header), cell: (r) => esc(r.extra[i]), vals: rows.map((r) => r.extra[i]) })),
+    { th: 'CP', cell: (r) => `<span class="mono">${r.cp.base}</span>`, keep: true },
+    { th: 'CP maîtrisé', cell: (r) => `<span class="mono">${r.cp.mastered ?? '—'}</span>`, vals: rows.map((r) => r.cp.mastered ?? '') },
+  ].filter((c) => c.keep || informative(c.vals));
+
+  const totals = [...new Set(cpTotals.filter(Boolean))];
+  const budget = totals.length ? ` — ${totals.join(' / ')} CP disponibles selon le build` : '';
+  return `<figure class="diagram">
+<figcaption>Composer son moveset : coût en CP des coups${esc(budget)}</figcaption>
+<div class="table-scroll"><table class="data">
+<tr>${cols.map((c) => `<th>${c.th}</th>`).join('')}</tr>
+${rows.map((r) => `<tr>${cols.map((c) => `<td>${c.cell(r)}</td>`).join('')}</tr>`).join('\n')}
+</table></div>
+<p class="mv-desc">Le wiki laisse vide le tableau des coups équipés de ce ou ces builds : ce moveset n'est pas documenté. À défaut, voici le coût en CP de chaque coup, à mettre en regard du total du build. Les coups les plus chers sont en haut.</p>
+${opts.note ? `<p class="mv-note">${esc(opts.note)}</p>` : ''}
+${opts.sources?.length ? sectionSources(opts.sources) : ''}
+</figure>`;
+}
+
+// Parcourt les tableaux de la section builds en mémorisant le total CP du build
+// courant, pour l'associer au tableau de moveset qui le suit.
+const isEmptyMoveset = (t) => t.rows?.[0]?.[0] === MOVESET_HEAD && t.rows.length <= 4;
+
+// Pré-passe : total CP de chaque build dont le tableau de moveset est vide. Il faut
+// les connaître tous avant de rendre, puisque le panneau s'affiche à la place du
+// premier tableau vide rencontré — donc avant d'avoir vu les builds suivants.
+function collectCpTotals(tableGroups) {
+  const totals = [];
+  for (const tables of tableGroups) {
+    let currentCp = null;
+    for (const t of tables || []) {
+      if (!t.rows?.length) continue;
+      if (t.rows[0][0] === 'Stats') currentCp = t.rows.find((r) => r[0] === 'CP')?.[1] ?? null;
+      if (isEmptyMoveset(t) && currentCp) totals.push(currentCp);
+    }
+  }
+  return totals;
+}
+
+// Rend les tableaux d'un groupe. Le panneau de repli prend la place du premier
+// tableau de moveset vide (ctx.pending), là où le lecteur l'attend ; les suivants
+// sont simplement omis pour ne pas répéter la même information.
+// Les tables « Substitutes » du wiki portent une colonne Notes en prose anglaise,
+// dont le contenu est déjà restitué en français dans l'éditorial des builds : la
+// colonne est retirée au rendu.
+function dropNotesColumn(t) {
+  const i = t.rows?.[0]?.findIndex((c) => String(c).trim() === 'Notes');
+  if (i === undefined || i < 0) return t;
+  return { ...t, rows: t.rows.map((r) => r.filter((_, k) => k !== i)) };
+}
+
+function buildsTables(tables, ctx) {
+  return (tables || []).map((t) => {
+    if (!t.rows?.length) return '';
+    if (t.rows[0][0] !== MOVESET_HEAD) return genericTables([dropNotesColumn(t)]);
+    if (t.rows.length > 4) return movesetTable(t.rows);
+    if (!ctx.pending) return '';
+    const panel = ctx.pending;
+    ctx.pending = null;
+    return panel;
+  }).join('\n');
+}
+
+// Loadout documenté par le wiki en prose plutôt qu'en tableau (cas Vaan :
+// « Ground: … / Air: … »). L'éditorial le restitue via builds.movesetLoadout et
+// on le rend comme un tableau de moveset rempli, à la place du panneau CP.
+function loadoutTables(loadout) {
+  const block = (caption, part) => {
+    if (!part) return '';
+    const g = part.ground || [], a = part.aerial || [];
+    const rows = Array.from({ length: Math.max(g.length, a.length) }, (_, i) =>
+      `<tr><td>${esc(g[i] || '')}</td><td>${esc(a[i] || '')}</td></tr>`).join('\n');
+    if (!rows) return '';
+    return `<div class="table-scroll"><table class="data">
+<caption>${esc(caption)}</caption>
+<tr><th>Au sol</th><th>En l’air</th></tr>
+${rows}
+</table></div>`;
+  };
+  return `${block('Braveries équipées', loadout.bravery)}
+${block('Attaques HP équipées', loadout.hp)}
+${loadout.note ? `<p class="mv-desc">${esc(loadout.note)}</p>` : ''}`;
+}
+
+function buildsSection(builds, allMoves, opts) {
+  const subs = (builds?.subs || []).filter((sub) => sub.text.length || sub.tables.length);
+  const groups = [builds?.tables, ...subs.map((s) => s.tables)];
+  const totals = collectCpTotals(groups);
+  // Le panneau est requis dès qu'un tableau de moveset est vide, même si aucun total
+  // CP ne le précède (le budget est alors simplement omis de la légende).
+  const needed = groups.some((g) => (g || []).some(isEmptyMoveset));
+  const ctx = { pending: needed ? (opts?.loadout ? loadoutTables(opts.loadout) : cpBudgetPanel(totals, allMoves, opts)) : '' };
+  const main = buildsTables(builds?.tables, ctx);
+  const subsHtml = subs.map((sub) => `${sub.title ? `<h3>${esc(sub.title)}</h3>` : ''}${buildsTables(sub.tables, ctx)}`).join('\n');
+  return `${main}\n${subsHtml}`;
 }
 
 // Diagramme des Skillchains (Prishe) : starter(s) --nom--> finisher(s)
@@ -159,6 +388,40 @@ function heroChips(info) {
   const links = info['HP Links'];
   if (links) chips.push(`<span class="chip ${/^yes/i.test(links) ? 'ok' : 'no'}">HP links <b>${/^yes/i.test(links) ? 'Oui' : 'Non'}</b></span>`);
   return `<div class="chips">${chips.join('')}</div>`;
+}
+
+// Regroupement éditorial des braveries (ex. rôles du Paradigm Shift de Lightning)
+function regroupMoves(groups, spec) {
+  if (!spec?.length) return groups;
+  const all = new Map();
+  for (const g of Object.values(groups || {})) g.moves.forEach((m) => m.name && all.set(m.name, m));
+  const out = {};
+  for (const { title, names } of spec) {
+    const moves = names.map((n) => all.get(n)).filter(Boolean);
+    names.forEach((n) => all.delete(n));
+    if (moves.length) out[title] = { moves, intro: null };
+  }
+  if (all.size) out['Autres'] = { moves: [...all.values()], intro: null };
+  return out;
+}
+
+// HP links : attaques HP qui se déclenchent en prolongement d'une bravery.
+// Détection par les notes du wiki (« X is …'s HP link », « Branching from ») puis
+// rattachement des déclinaisons partageant le même nom de base (A/B/C, ground/midair).
+const HP_LINK_RE = /HP link|Branching from/i;
+const hpLinkBase = (n) => String(n || '').replace(/ \((ground|midair)\)$/, '').replace(/ [A-F]$/, '');
+function splitHpLinks(hpGroups) {
+  const flagged = new Set();
+  for (const g of Object.values(hpGroups || {}))
+    g.moves.forEach((m) => { if (HP_LINK_RE.test(String(m.notes || '') + String(m.context || ''))) flagged.add(hpLinkBase(m.name)); });
+  if (!flagged.size) return { groups: hpGroups, links: [] };
+  const groups = {}; const links = [];
+  for (const [k, g] of Object.entries(hpGroups || {})) {
+    const keep = g.moves.filter((m) => !flagged.has(hpLinkBase(m.name)));
+    links.push(...g.moves.filter((m) => flagged.has(hpLinkBase(m.name))));
+    if (keep.length) groups[k] = { ...g, moves: keep };
+  }
+  return { groups, links };
 }
 
 const SECTIONS_NAV = [
@@ -221,15 +484,20 @@ ${mobilityChartSvg(char, castStats)}
   const allMoves = [];
   for (const key of ['bravery', 'hp']) {
     const groups = s[key]?.groups || {};
-    for (const g of Object.values(groups)) {
-      allMoves.push(...g.moves.map((m) => ({ ...m, cat: key === 'hp' ? 'HP' : 'BRV' })));
+    // La clé de groupe porte l'emplacement d'équipement (ground / aerial) ou, pour
+    // quelques personnages, le rôle ou la forme qui débloque le coup (« Medic »
+    // chez Lightning) : on la conserve pour le panneau de moveset.
+    for (const [groupKey, g] of Object.entries(groups)) {
+      allMoves.push(...g.moves.map((m) => ({ ...m, cat: key === 'hp' ? 'HP' : 'BRV', groupKey })));
     }
   }
+  const braveryGroups = regroupMoves(s.bravery?.groups, ed?.moveRegroup?.bravery);
   const braveryHtml = s.bravery?.documented
-    ? Object.entries(s.bravery.groups).map(([k, g]) => movesGroup(k, g, ed, ctx)).join('\n')
+    ? Object.entries(braveryGroups).map(([k, g]) => movesGroup(k, g, ed, ctx, 'bravery')).join('\n')
     : banner();
+  const { groups: hpGroups, links: hpLinks } = splitHpLinks(s.hp?.groups);
   const hpHtml = s.hp?.documented
-    ? Object.entries(s.hp.groups).map(([k, g]) => movesGroup(k, g, ed, ctx)).join('\n')
+    ? Object.entries(hpGroups).map(([k, g]) => movesGroup(k, g, ed, ctx, 'hp')).join('\n')
     : banner();
   const exHtml = s.exMode?.documented
     ? `${ed?.exMode?.summary?.length ? paras(ed.exMode.summary) : edBanner || ''}
@@ -243,22 +511,33 @@ ${braveryHtml}
 ${chainDiagram(s.bravery?.groups)}
 <h3 style="color:var(--gold)">Attaques HP</h3>
 ${hpHtml}
+${hpLinks.length ? `<h3 style="color:var(--gold)">HP links (Bravery → HP)</h3>
+<p class="mv-desc">Attaques HP qui se déclenchent en prolongement d'une bravery précise — le « HP link ». Elles s'équipent comme les autres attaques HP.</p>
+${ed?.groupNotes?.['hp/links'] ? `<p class="mv-desc">${esc(ed.groupNotes['hp/links'])}</p>` : ''}
+${hpLinks.map((m) => moveAccordion(m, ed?.moveNotes?.[m.name], ctx)).join('\n')}` : ''}
 <h3 style="color:var(--gold)">${esc(s.exMode?.title || 'EX Mode')} &amp; EX Burst</h3>
 ${exHtml}
+${ed?.specialMoves?.length ? `<h3 style="color:var(--gold)">Coups spéciaux</h3>
+<p class="mv-desc">Commandes particulières absentes des listes d'équipement : elles ne coûtent aucun CP et s'activent par une commande dédiée.</p>
+${ed.specialMoves.map((sp) => `<details class="move"><summary><span class="mv-name">${esc(sp.name)}</span>
+<span class="badge prio-melee-high">Coup spécial</span><span class="mv-meta">${esc(sp.input || '')}</span></summary>
+<div class="mv-body"><div class="mv-note"><p>${esc(sp.desc)}</p></div>${sp.source ? sectionSources([sp.source]) : ''}</div>
+</details>`).join('\n')}` : ''}
 </section>`;
 
   // --- 4. Mécanique unique ---
   const uniqTables = s.uniqueMechanics?.tables || [];
   const scTables = uniqTables.filter(isSkillchainTable);
   const otherUniqTables = uniqTables.filter((t) => !isSkillchainTable(t));
-  const unique = `<section id="unique"><h2>Mécanique unique</h2>
-${s.uniqueMechanics?.documented
-    ? `${ed?.uniqueMechanics?.intro?.length ? paras(ed.uniqueMechanics.intro) : edBanner || banner()}
+  // Section rendue seulement si le personnage a une mécanique (wiki ou éditorial) :
+  // pas de bloc « rien à signaler » sur les fiches sans mécanique.
+  const hasUnique = !!(s.uniqueMechanics?.documented || ed?.uniqueMechanics?.intro?.length);
+  const unique = !hasUnique ? '' : `<section id="unique"><h2>Mécanique unique</h2>
+${ed?.uniqueMechanics?.intro?.length ? paras(ed.uniqueMechanics.intro) : edBanner || banner()}
 ${ed?.uniqueMechanics?.details?.length ? `<ul>${ed.uniqueMechanics.details.map((d) => `<li>${esc(d)}</li>`).join('')}</ul>` : ''}
-${scTables.map(skillchainDiagram).join('\n')}
+${s.uniqueMechanics?.documented ? `${scTables.map(skillchainDiagram).join('\n')}
 ${genericTables(otherUniqTables)}
-${(s.uniqueMechanics.subs || []).map((sub) => genericTables(sub.tables)).join('\n')}`
-    : banner(`<a href="${esc(char.url)}" rel="external noopener">Page wiki du personnage</a> — pas de section « Unique Mechanics » dédiée ; le cas échéant, la mécanique du personnage est couverte dans la vue d'ensemble et les coups.`)}
+${(s.uniqueMechanics.subs || []).map((sub) => genericTables(sub.tables)).join('\n')}` : ''}
 </section>`;
 
   // --- 5. Plan de jeu & techniques avancées ---
@@ -291,8 +570,14 @@ ${sectionSources(secSrc.matchups)}
   const builds = `<section id="builds"><h2>Builds</h2>
 ${s.builds?.documented || ed?.builds?.philosophy?.length
     ? `${ed?.builds?.philosophy?.length ? paras(ed.builds.philosophy) : edBanner || banner()}
-${genericTables(s.builds?.tables)}
-${(s.builds?.subs || []).filter((sub) => sub.text.length || sub.tables.length).map((sub) => `${sub.title ? `<h3>${esc(sub.title)}</h3>` : ''}${genericTables(sub.tables)}`).join('\n')}
+${buildsSection(s.builds, allMoves, {
+    note: ed?.builds?.movesetNote,
+    columns: ed?.builds?.movesetColumns,
+    slots: ed?.builds?.movesetSlots,
+    types: ed?.builds?.movesetTypes,
+    sources: ed?.builds?.movesetSources,
+    loadout: ed?.builds?.movesetLoadout,
+  })}
 ${ed?.builds?.notes ? `<p class="mv-desc">${esc(ed.builds.notes)}</p>` : ''}
 ${sectionSources(secSrc.builds)}`
     : banner()}
@@ -330,10 +615,11 @@ ${ed?.communityTech?.length
 ${sourcesSection(allSources, ed?.limits)}
 </section>`;
 
-  const tocLinks = SECTIONS_NAV.map(([id, label]) => `<li><a href="#${id}">${esc(label)}</a></li>`).join('');
+  const nav = SECTIONS_NAV.filter(([id]) => id !== 'unique' || hasUnique);
+  const tocLinks = nav.map(([id, label]) => `<li><a href="#${id}">${esc(label)}</a></li>`).join('');
   const body = `<nav class="guide-top" aria-label="Sections du guide"><div class="chips-nav">
 <a href="../index.html">← Sélection</a>
-${SECTIONS_NAV.map(([id, label]) => `<a href="#${id}">${esc(label)}</a>`).join('')}
+${nav.map(([id, label]) => `<a href="#${id}">${esc(label)}</a>`).join('')}
 </div></nav>
 <div class="guide-layout">
 <nav class="guide-toc" aria-label="Sommaire"><ol>

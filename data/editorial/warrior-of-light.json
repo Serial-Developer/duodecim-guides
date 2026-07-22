@@ -62,7 +62,8 @@
   "advancedTech": [
     {
       "name": "Dayflash empty chase reset",
-      "desc": "Retarder au maximum le Chase de Dayflash, puis le déclencher juste avant que l'adversaire touche le sol pour forcer une réaction Wall Rush. Permet de chasser sans se faire contrer, de récupérer tout l'EX du stage et de réinitialiser l'usage d'assist pour prolonger un combo si une autre barre est en stock."
+      "desc": "Retarder au maximum le Chase de Dayflash, puis le déclencher juste avant que l'adversaire touche le sol pour forcer une réaction Wall Rush. Permet de chasser sans se faire contrer, de récupérer tout l'EX du stage et de réinitialiser l'usage d'assist pour prolonger un combo si une autre barre est en stock. Le relevé communautaire des empty chases confirme Dayflash (au sol) parmi les rares coups du cast offrant ce reset.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     },
     {
       "name": "Bitter End knockback cancel",
@@ -75,6 +76,11 @@
     {
       "name": "Double assist Aerith",
       "desc": "Après un Wall Rush, Shield of Light peut poser le setup d'un second assist Aerith dans le même combo ; avec une bravery de base élevée, le double assist inflige de très gros dégâts."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "White Fang et Blue Fang enchaînent sur toute attaque de mêlée sauf Shield of Light ; EX Crossover (sans le dernier hit) > dodge cancel > EX Dayflash aérien ; l'auteur mentionne aussi EX Dayflash au sol (2 coups sur adversaire aérien) > DC > landing lag > EX Crossover, en le marquant lui-même comme non confirmé.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -127,6 +133,18 @@
       "desc": "Thread d'époque du board Duodecim : link glitches de White Fang (avec Ascension, Sword Thrust, Rising Buckler jusqu'à Bitter End, Crossover), comparatif Ultimate Shield / Shield of Light et conseils de moves à équiper par des mainers.",
       "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/61779862",
       "date": "2012"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Le relevé retient ses links depuis White Fang et Blue Fang, et deux routes EX.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "limits": [
@@ -135,6 +153,7 @@
     "Section combos solo marquée « Main article pending » : seuls deux combos solo et trois combos assist (Sephiroth) sont détaillés.",
     "Valeurs d'assist gain des coups non renseignées dans les données.",
     "Startup exact des HP links (Rune Saber, Bitter End) inconnu (« ? » dans les tables), tout comme certains décomptes d'EX Force et de Comrade's Vow des combos (« ??? »).",
-    "Un seul build documenté (hybride Seal of Lufenia) ; pas de variantes détaillées (l'article builds dédié n'est pas inclus dans les données)."
+    "Un seul build documenté (hybride Seal of Lufenia) ; pas de variantes détaillées (l'article builds dédié n'est pas inclus dans les données).",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi."
   ]
 }

@@ -72,6 +72,16 @@
       "name": "Reset loop Holy -> Flare (Side by Side)",
       "desc": "Documenté par Djungelkorv sur dissidiaforums (2011) : combo d'assist dans Holy, second Holy immédiat (Link Glitch), puis activer Flare le plus tard possible — l'adversaire doit faire son aerial recovery entre Holy et Flare. La jauge d'assist redevient alors active, Side by Side + EXP to Assist la remplissent, et le tracking de Flare garantit la touche HP (testé : impossible d'y échapper même sans recovery, hors double dodge ou Precision Dodge) — on rappelle l'assist sur Flare et on boucle. Kuja permet la longue portée via le chase et se contente d'une seule vague de Holy ; Jecht inflige le plus de dégâts mais exige un timing et une distance plus stricts ; Aerith facilite le réglage de distance mais n'ajoute aucun dégât.",
       "source": "https://web.archive.org/web/20131020093302/http://dissidiaforums.com/showthread.php?10794-Bartz-Reset-Combos"
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Peu nombreux mais excellents, surtout en dégâts bravery : Reel Impulse à bout portant (sans follow-up) > dodge cancel > landing lag > Blade Crash ; Holy > DC > Slide Shooter ou Ragnarok Blade (« Rag Blade » dans le relevé) ; Holy > hit glitch Holy > Flare ou setup de Chase HP.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase vers reset de jauge d'assist",
+      "desc": "Holy à bout portant offre l'empty chase vers reset de la jauge d'assist.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     }
   ],
   "matchups": {
@@ -113,6 +123,18 @@
       "desc": "Vidéo d'époque montrant une variante du reset combo Holy -> Flare de Bartz ; l'assist Kuja étend la portée du setup grâce au chase.",
       "source": "https://www.youtube.com/watch?v=5EO5BX_DD8g",
       "date": "2012"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Bartz y est crédité de combos peu nombreux mais excellents, appuyés sur Holy et Reel Impulse.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "sourcesBySection": {
@@ -133,6 +155,15 @@
     "Aucune mécanique unique documentée (documented: false).",
     "Aucune référence communautaire dans les sources.",
     "Second build (« Build #2 ») entièrement vide.",
-    "Données incomplètes : startup et priorité de Flare incertains (« ? »), notes minimales pour les HP attacks (Hellfire, Dark Flame, Ragnarok Blade, Luminous Shard), niveau de déblocage et AP de Goblin Punch non renseignés."
+    "Données incomplètes : startup et priorité de Flare incertains (« ? »), notes minimales pour les HP attacks (Hellfire, Dark Flame, Ragnarok Blade, Luminous Shard), niveau de déblocage et AP de Goblin Punch non renseignés.",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi."
+  ],
+  "specialMoves": [
+    {
+      "name": "Goblin Punch",
+      "input": "R + Carré — EX Mode (Job Mastered) uniquement",
+      "desc": "Attaque HP spéciale absente des listes d'équipement, disponible uniquement en EX Mode : rapide, à courte portée et imblocable, avec Wall Rush. Elle inflige des dégâts bravery avant d'éjecter l'adversaire et — tradition du sort oblige — huit fois plus de dégâts bravery si Bartz et son adversaire sont au même niveau. Son exécution rapide et ses bons dégâts au niveau 100 compensent la lenteur des attaques HP normales de Bartz.",
+      "source": "https://finalfantasy.fandom.com/wiki/Bartz_Klauser_(Dissidia_PSP)"
+    }
   ]
 }

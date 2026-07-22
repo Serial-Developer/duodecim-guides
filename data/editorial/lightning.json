@@ -51,7 +51,13 @@
     ],
     "burst": "Gestalt Drive : une chaîne d'attaques imprégnées des pouvoirs d'Odin, à exécuter en entrant les commandes affichées à l'écran — les directions se font impérativement au stick analogique, même si vos déplacements sont configurés sur les boutons directionnels. Le +1 ATK passif du rôle Commando s'applique aussi à l'EX Burst."
   },
-  "uniqueMechanics": null,
+  "uniqueMechanics": {
+    "intro": [
+      "Lightning dispose de trois sets de braveries distincts, portés par ses trois rôles : Commando (corps à corps et mi-distance), Ravager (zoning, poke et pression Thunder) et Medic (génération de bravery). On change de rôle avec L + R ; la rotation par défaut est Commando > Ravager > Medic, et l'extra ability Reverse Paradigm l'inverse en Ravager > Commando > Medic.",
+      "Si aucun coup d'un rôle n'est équipé, ce rôle disparaît purement et simplement de la rotation en combat — ne pas équiper de bravery Medic permet ainsi de basculer directement entre Commando et Ravager. Le rôle Commando confère par ailleurs un bonus passif de +1 ATK, qui s'applique aussi à l'EX Burst. Les attaques HP restent disponibles quel que soit le rôle actif."
+    ],
+    "details": null
+  },
   "gameplan": [
     "Le Paradigm Shift (L + R) structure tout : Commando pour le close/mid range (avec +1 ATK passif), Ravager pour le zoning, le poke et le rushdown, Medic pour générer de la bravery. La rotation par défaut est Commando > Ravager > Medic, inversée en Ravager > Commando > Medic avec l'extra ability Reverse Paradigm ; ne rien équiper dans un rôle — typiquement Medic — le retire de la rotation et fluidifie les changements. Les braveries Medic ne sont pas prioritaires pour apprendre le personnage, mais offrent une optimisation supplémentaire aux joueurs dédiés.",
     "En neutral, Thunder est la colonne vertébrale : poke à 13F, anti-air, dur à punir même bloqué, et générateur de jauge d'assist quand il est enchaîné en rythme grâce à sa recovery minuscule. Autour de lui, Watera occupe l'espace, Fire et Thundaga stoppent les approches, Blizzara contre les setups de zoning adverses, et Ruinga/Ruin offrent de rares whiff punishes à longue distance. Contre la défensive adverse, Army of One (surtout en l'air) forme avec Thunder un mixup block/esquive permanent, et Thundaga lui ménage des temps de respiration pour caster ou passer en Medic.",
@@ -65,7 +71,8 @@
     },
     {
       "name": "Hit glitch Aerora > Lightning Strike",
-      "desc": "Aerora peut hit glitch vers Lightning Strike pour une touche HP, de manière fiable contre un adversaire au sol et éventuellement après un stagger sur block. Plus difficile à placer que les combos en link glitch plus pratiques."
+      "desc": "Aerora peut hit glitch vers Lightning Strike pour une touche HP, de manière fiable contre un adversaire au sol et éventuellement après un stagger sur block. Plus difficile à placer que les combos en link glitch plus pratiques. Le relevé communautaire recense la même route.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     },
     {
       "name": "Watera reflect (Army of One)",
@@ -73,12 +80,28 @@
     },
     {
       "name": "Army of One > DC > Thunder (Adamant Chains)",
-      "desc": "Loin des murs, ce combo exige l'effet spécial de l'équipement Adamant Chains pour que la distance d'air dodge normale suffise ; près des murs, plafonds et coins, le knockback réduit s'en passe. Génération d'EX exceptionnelle : 210, et jusqu'à 270 en partant de Blizzara — l'un des combos solo les plus générateurs d'EX du jeu."
+      "desc": "Loin des murs, ce combo exige l'effet spécial de l'équipement Adamant Chains pour que la distance d'air dodge normale suffise ; près des murs, plafonds et coins, le knockback réduit s'en passe. Génération d'EX exceptionnelle : 210, et jusqu'à 270 en partant de Blizzara — l'un des combos solo les plus générateurs d'EX du jeu. Le relevé de combos solo de la communauté confirme la route et en précise le départ : c'est un Blizzara maintenu (« Hold ») qui l'ouvre, et l'équipement Adamant n'est requis qu'en l'absence de mur.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     },
     {
       "name": "Aerora > Army of One (link garanti)",
       "desc": "D'après le guide de Suih (GameFAQs, 2012), un hit d'Aerora permet d'enchaîner l'intégralité d'Army of One au sol : contrairement au hit glitch vers Lightning Strike (qui laisse une petite fenêtre d'esquive), ce suivi sort à 100 % tant que la portée le permet. Le guide suggère de couvrir la manœuvre d'un assist que l'adversaire sera forcé d'esquiver.",
       "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/62070"
+    },
+    {
+      "name": "Fire Set > Blaze Rush > Smite",
+      "desc": "Route longue entièrement bâtie sur ses projectiles de setup : poser Fire, laisser passer les deux premiers hits, placer Crushing Blow pendant que les trois hits restants tombent, puis Blaze Rush sans follow-up, dodge cancel, landing lag et Smite. C'est la conversion la plus longue recensée dans son kit.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Watera (mi-distance) > Thunderfall",
+      "desc": "Link simple relevé par la communauté : un Watera touché à mi-distance enchaîne sur Thunderfall. Aucune condition d'équipement ni de mur n'est mentionnée.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Ruin : empty chase vers reset de jauge d'assist",
+      "desc": "Ruin fait partie des rares coups du cast dont le hit stun autorise un empty chase — un chase initié sans rien y exécuter — débouchant sur un reset de la jauge d'assist. Thunder en est très proche mais n'y parvient pas, d'après le relevé.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     }
   ],
   "matchups": {
@@ -93,7 +116,42 @@
       "Deux builds sont documentés, tous deux avec l'Equip Glitch supposé pour le coût total en CP et le summon Rubicante. Le build « Adamant Chains + EX » (450 CP, booster x1.4, 10972 HP) monte le set Adamant complet avec Zantetsuken pour l'effet spécial Adamant Chains — celui qui débloque Army of One > DC > Thunder sans mur — avec l'assist Aerith et des accessoires orientés EX (BRV = 0, White Drop x3, White Gem, Tenacious Attacker, Glutton, Great Gospel, Dismay Shock, Battle Hammer). Master Guardsman peut s'équiper pour +1000 HP.",
       "Le build « Hybrid » (480 CP, booster x3.5) mise sur une base bravery élevée (1414) : Piggy's Stick, Hero's Shield, Royal Crown et Maximillian, assist Tidus (ou au choix du joueur), et des boosters conditionnels (Hyper Ring, Large Gap in HP, Summon Unused, Pre-EX Mode, Pre-EX Revenge, Hero's Essence, Tenacious Attacker, Glutton). L'extra ability Best Dresser ajoute +100 de base bravery."
     ],
-    "notes": "Les tableaux « Bravery attacks / HP attacks » des deux builds sont vides dans les données extraites : les loadouts de coups recommandés par build ne sont pas connus. Le FAQ d'époque de TWOxACROSS (« Invoke my name — I am Spark », dissidiaforums, 2011) argumente en revanche le choix des types d'équipement : dagues (bonus Initial EX Force+) pour les builds EX « one-shot », katanas (base bravery élevée et EX Intake Range+ en fin de progression) pour le chipping HP agressif au prix de la DEF, Heaven's Cloud plutôt que Zwill Crossblade pour un EX Rush constant, et sets Super Rocket (glass cannon) ou Genji (Soul of Yamato) selon le plan EX retenu."
+    "notes": "Les tableaux « Bravery attacks / HP attacks » des deux builds sont vides dans les données extraites : les loadouts de coups recommandés par build ne sont pas connus. Le FAQ d'époque de TWOxACROSS (« Invoke my name — I am Spark », dissidiaforums, 2011) argumente en revanche le choix des types d'équipement : dagues (bonus Initial EX Force+) pour les builds EX « one-shot », katanas (base bravery élevée et EX Intake Range+ en fin de progression) pour le chipping HP agressif au prix de la DEF, Heaven's Cloud plutôt que Zwill Crossblade pour un EX Rush constant, et sets Super Rocket (glass cannon) ou Genji (Soul of Yamato) selon le plan EX retenu.",
+    "movesetColumns": [
+      {
+        "header": "Rôle",
+        "values": {
+          "Blitz": "Commando",
+          "Launch": "Commando",
+          "Ruinga": "Commando",
+          "Smite": "Commando",
+          "Ruin": "Commando",
+          "Blaze Rush": "Commando",
+          "Fire": "Ravager",
+          "Aerora": "Ravager",
+          "Thundaga": "Ravager",
+          "Army of One (ground)": "Ravager",
+          "Watera": "Ravager",
+          "Thunder": "Ravager",
+          "Blizzara": "Ravager",
+          "Army of One (midair)": "Ravager",
+          "Cure": "Medic",
+          "Cura": "Medic",
+          "Flourish of Steel": "Commando"
+        }
+      }
+    ],
+    "movesetSlots": {
+      "Cure": "Au sol et en l’air",
+      "Cura": "Au sol et en l’air"
+    },
+    "movesetNote": "Les trois rôles du Paradigm Shift ne concernent que les braveries : Lightning dispose de trois sets distincts, dont on change avec L + R. La rotation par défaut est Commando > Ravager > Medic, inversée en Ravager > Commando > Medic avec l'extra ability Reverse Paradigm. Conséquence directe à l'équipement : si aucun coup d'un rôle n'est équipé, ce rôle devient indisponible en combat — ne pas équiper de Medic streamline le cycle à deux rôles. Le rôle Commando apporte en outre un bonus passif de +1 ATK. Les attaques HP proprement dites ne dépendent d'aucun rôle. Flourish of Steel est un cas à part : c'est une attaque Bravery → HP, c'est-à-dire une bravery que l'on peut prolonger ou non par une attaque HP. Sa bravery de base est Launch, qui n'est accessible qu'en Commando : l'attaque entière est donc Commando uniquement.",
+    "movesetSources": [
+      "https://finalfantasy.fandom.com/wiki/Lightning_(Dissidia_PSP)"
+    ],
+    "movesetTypes": {
+      "Flourish of Steel": "Bravery → HP"
+    }
   },
   "assist": {
     "asAssist": [
@@ -126,6 +184,18 @@
       "desc": "Tutoriel des bases et combos de Lightning par FrizFroz, enregistré sur Dissidia 012 Prologus, la démo-prologue officielle de Duodecim (janvier 2011) : antérieur au jeu final, certaines données peuvent légèrement différer.",
       "source": "https://www.youtube.com/watch?v=ohmtE5cvLM4",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Pour Lightning, il confirme les routes Army of One > Thunder et Aerora > Lightning Strike décrites par le wiki, et ajoute Fire Set > Blaze Rush > Smite ainsi que Watera > Thunderfall.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase suivi d'un reset de la jauge d'assist. Lightning y figure avec Ruin ; Thunder est signalé comme juste hors de portée.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "sourcesBySection": {
@@ -141,10 +211,60 @@
   },
   "limits": [
     "La page matchups du wiki est un stub : la section matchups est reconstruite depuis les threads d'époque de dissidiaforums (via la Wayback Machine) et le guide Steam Exdeath listés dans sourcesBySection ; aucune chart complète n'a survécu, seuls les matchups réellement discutés (Sephiroth, Emperor, Exdeath, Golbez, Cloud, Firion, Jecht) sont couverts.",
-    "La section « mécaniques uniques » est marquée non documentée sur le wiki : le Paradigm Shift n'est décrit que dans l'overview et la partie EX Mode de la page (repris ici dans overview, exMode et gameplan), d'où uniqueMechanics à null.",
+    "La section « Lightning's mechanic (Paradigm Shift) » de la page wiki avait échappé à l'extraction automatique (titre hors du schéma standard) : la mécanique unique a été réintégrée manuellement depuis la page archivée, et le découpage des braveries par rôle vient du Final Fantasy Wiki.",
     "La section assist est marquée non documentée (une seule phrase générique) : l'évaluation de Lightning en tant qu'assist repose uniquement sur la tier list assist de meta-lite.json.",
     "La section References du wiki est vide : les entrées communityTech et les sources de sourcesBySection proviennent de recherches externes.",
     "Frame data incomplète : startup de Flourish of Steel inconnu (« ? »), dégâts de Crushing Blow non renseignés (« - »), champs cancels et assistGain vides pour tous les coups.",
-    "Les vidéos de combos et la vidéo du magic block de Thunderfall sont mentionnées sans URL exploitable."
-  ]
+    "Les vidéos de combos et la vidéo du magic block de Thunderfall sont mentionnées sans URL exploitable.",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.",
+    "Le rôle Paradigm Shift de chaque bravery (Commando / Ravager / Medic) vient du Final Fantasy Wiki (Fandom), qui range les coups par rôle : dissidia.wiki, source principale du site, ne documente que le set Medic."
+  ],
+  "groupNotes": {
+    "bravery/Medic": "Les deux braveries Medic existent au sol et en l'air : des capacités passives, sans attaque, qui ne servent qu'à générer de la bravery. Leur animation laisse Lightning vulnérable — à réserver aux moments sûrs."
+  },
+  "moveRegroup": {
+    "bravery": [
+      {
+        "title": "Commando — au sol",
+        "names": [
+          "Blitz",
+          "Launch",
+          "Ruinga"
+        ]
+      },
+      {
+        "title": "Commando — en l’air",
+        "names": [
+          "Smite",
+          "Ruin",
+          "Blaze Rush"
+        ]
+      },
+      {
+        "title": "Ravager — au sol",
+        "names": [
+          "Fire",
+          "Aerora",
+          "Thundaga",
+          "Army of One (ground)"
+        ]
+      },
+      {
+        "title": "Ravager — en l’air",
+        "names": [
+          "Watera",
+          "Thunder",
+          "Blizzara",
+          "Army of One (midair)"
+        ]
+      },
+      {
+        "title": "Medic",
+        "names": [
+          "Cure",
+          "Cura"
+        ]
+      }
+    ]
+  }
 }

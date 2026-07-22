@@ -95,6 +95,11 @@
       "name": "Block normal enchaîné en Jecht Block",
       "desc": "Toujours d'après Phaze08 : enchaîner un block normal immédiatement suivi d'un Jecht Block augmente nettement les chances de bloquer — l'adversaire frappe juste après le block normal, au moment exact où le Jecht Block sort. Utile aussi contre les rafales combinées assist + joueur ; le Jecht Block placé en fin d'esquive prolonge par ailleurs la fenêtre d'invincibilité (dodge cancel).",
       "source": "https://web.archive.org/web/20131114035245/http://dissidiaforums.com/showthread.php?11017-The-Brutal-Blitzer-From-Zanarkand-A-Guide-to-Learning-Jecht"
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Conçu comme un personnage à combos intégrés, Jecht n'a que deux familles de links en dehors de ses routes natives : Jecht Rush niveau 2 angle haut > dodge cancel > Jecht Stream ; et toutes ses braveries de niveau 3 enchaînent sur ses HP chargés niveau 2, par difficulté croissante — angle haut vers Ultimate Jecht Shot niveau 2, angle bas vers Triumphant Grasp niveau 2, angle haut puis neutre vers Jecht Beam niveau 2.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -179,6 +184,12 @@
       "desc": "Démonstration vidéo du comportement de l'assist Jecht dans un coin : la chaîne finale de Jecht Rush ne sort pas et laisse place à un Assist Chase.",
       "source": "https://www.youtube.com/watch?v=8fEBzsbJS58&t=44s",
       "date": null
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Jecht y est décrit comme un personnage à combos intégrés, avec seulement deux familles de links externes.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "sourcesBySection": {
@@ -193,6 +204,7 @@
     "Matchups : seul The Emperor est rédigé ; le reste de la page n'est qu'une liste de noms sans analyse.",
     "Builds : la page principale « Jecht (012) Builds » n'est pas extraite ; seuls deux builds (Side by Side et Hybrid Seal of Lufenia) figurent dans les données, et certaines sous-sections (Basic Abilities et CP Allocation du build Lufenia) sont vides.",
     "Champ assist gain des coups non renseigné ; startups absents sur les chaînes de combo extraites.",
-    "Le build Center of the World est cité mais jamais détaillé dans les sources wiki ; un build Pure EX communautaire complet (dissidiaforums, 2011) comble partiellement ce manque via la passe d'enrichissement."
+    "Le build Center of the World est cité mais jamais détaillé dans les sources wiki ; un build Pure EX communautaire complet (dissidiaforums, 2011) comble partiellement ce manque via la passe d'enrichissement.",
+    "Pour l'empty chase vers reset de jauge d'assist, l'éditeur du relevé communautaire écrit « aucun » tout en demandant lui-même une vérification (TAS) : l'affirmation est laissée hors de la fiche."
   ]
 }

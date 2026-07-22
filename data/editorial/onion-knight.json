@@ -64,6 +64,11 @@
     {
       "name": "Assist decay reset",
       "desc": "Incanter Strength Booster ou Magic Booster permet de réinitialiser le decay de la jauge d'assist sans s'exposer : un moyen sûr d'entretenir la ressource, là où whiffer des braveries serait dangereux."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Un petit nombre de links, tous bons : Blizzaga > dodge cancel > Turbo-Hit ; EX Thundaga > DC > Turbo-Hit ; Comet (de loin, au plafond) > DC > Turbo-Hit ; Thunder > DC > landing lag > Turbo-Hit.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -99,6 +104,12 @@
       "desc": "Démonstration en match par Tiger Bub d'un build assist « pur » d'Onion Knight (liste d'abilities en description de la vidéo), premier volet d'une série de trois.",
       "source": "https://www.youtube.com/watch?v=px2Oy02DJs8",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). L'Onion Knight y est crédité d'un petit nombre de links, tous convergeant vers Turbo-Hit.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "limits": [
@@ -108,5 +119,9 @@
     "Le gain de jauge d'assist par coup n'est pas renseigné (colonnes vides) et plusieurs startups de coups de branche sont notés « ?? ».",
     "Les builds sont donnés uniquement en tables d'équipement, sans texte explicatif détaillé.",
     "La section References est vide : aucune tech communautaire attribuable ou datée."
-  ]
+  ],
+  "groupNotes": {
+    "bravery/ground": "La plupart des braveries ont des multiplicateurs de dégâts distincts, plus élevés, en EX Mode (en gras dans les tableaux).",
+    "hp/ground": "La plupart des attaques HP ont des multiplicateurs de dégâts distincts, plus élevés, en EX Mode (en gras dans les tableaux)."
+  }
 }

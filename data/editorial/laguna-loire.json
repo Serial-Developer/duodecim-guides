@@ -83,6 +83,11 @@
       "name": "Ricochet Shot aimed shots",
       "desc": "Le tir principal se vise avant de partir : tiré dans ses propres pieds, il ricoche à la verticale et sert d'anti-air ; banké sur un mur proche, il frappe l'adversaire de flanc ou de dos — de quoi contourner un block, voire déclencher Sneak Attack (guide de Balguna, 2011).",
       "source": "https://web.archive.org/web/20120306072914/http://dissidiaforums.com/showthread.php?9619-The-Man-with-More-Than-a-Machine-Gun-a-Laguna-Loire-guide"
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Peu de combos solo directs, mais des setups dévastateurs à la Sticky Bomb : Shotgun (2 tirs) > dodge cancel > landing lag > Pummel ; Sticky Bomb posée > Pummel > explosion > Chase HP ; Sticky Bomb posée > Shotgun (2 tirs) > DC > explosion > Ragnarok Blade.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -139,6 +144,12 @@
       "desc": "Vidéo de builds multi-personnages d'époque (Tiger Bub) incluant une configuration Laguna, issue de sa série « Duodecim Builds ».",
       "source": "https://www.youtube.com/watch?v=E30pdXaq3pQ",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Laguna y est crédité de peu de combos solo, mais de setups dévastateurs autour de Sticky Bomb.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "sourcesBySection": {

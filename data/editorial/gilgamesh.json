@@ -70,6 +70,11 @@
     {
       "name": "Double Trouble > Hurricane (plafond)",
       "desc": "Enchaînement notable car il combote au plafond sur hit, tout en conservant l'arme dégainée (il fonctionne aussi sur un miss pour garder l'arme)."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Le personnage qui exploite le plus les links sans landing lag — technique et très payant, même si le Chicken Knife ou la hache faussent parfois les portées de certains combos : Whirlwind Slash (premier hit) > dodge cancel > Double Trouble ; le même à mi-distance > Hurricane ; le même près de la fin > Whirlwind Slash ou Tsubamegaeshi ; Whirlwind Slash dos au mur > DC > Double Trouble ; Double Trouble au plafond > Hurricane ; Electrocute > Whirlwind Slash, Tsubamegaeshi, Double Trouble ou Hurricane.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -103,6 +108,12 @@
       "desc": "Montage d'époque recensant une liste de combos et d'enchaînements de Gilgamesh, démonstrations en jeu à l'appui.",
       "source": "https://www.youtube.com/watch?v=WFcdFkgU3Ks",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Gilgamesh y est décrit comme le personnage exploitant le plus les links sans landing lag.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "sourcesBySection": {
@@ -118,6 +129,10 @@
     "Builds : un seul build (Hybrid (EX)) sans philosophie rédigée ni coups équipés ; le second emplacement de build est vide.",
     "Synergies d'assist réduites à une phrase générique (aucun assist recommandé nommément hors le Kuja du build).",
     "Aucune référence externe (section References vide) : pas de communityTech attribuable.",
-    "Valeurs d'assist gain des coups non renseignées ; le texte de l'EX Burst est tronqué dans la source (« Select Excalipoor to... ») et l'effet exact d'Excalipoor dans le Burst n'y est pas explicité."
-  ]
+    "Valeurs d'assist gain des coups non renseignées ; le texte de l'EX Burst est tronqué dans la source (« Select Excalipoor to... ») et l'effet exact d'Excalipoor dans le Burst n'y est pas explicité.",
+    "Le relevé de combos solo orthographie « Tsubemigashi » le coup nommé Tsubamegaeshi dans les données : même coup, orthographe communautaire."
+  ],
+  "groupNotes": {
+    "bravery/main": "Quand Masamune est dégainée, les attaques génèrent plus d'EX Force (valeur listée après la valeur par défaut pour les attaques d'épée). Quand Masamune ou Genji Blade est dégainée, les dégâts de base sont ×0,75 (arrondi à l'entier inférieur, minimum 1), et Genji Blade vide la jauge EX adverse à chaque hit — voir la mécanique unique."
+  }
 }

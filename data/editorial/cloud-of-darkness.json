@@ -61,6 +61,11 @@
     {
       "name": "Reflect Suffering 3 pour activer Wrath",
       "desc": "Contre des personnages comme The Emperor et Ultimecia, tirez Suffering 3 contre les murs pour que les projectiles soient réfléchis vers vous : ils servent alors de déclencheur au command block Wrath Particle Beam."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Un EX Mode entièrement bâti autour des combos, mais un bon nombre de routes existent en dehors malgré sa frame data médiocre. Le relevé abrège les noms : le chiffre désigne la variante du tentacule (followup 1 à 3) et « Beam » les Particle Beams. Routes : Tentacle of Pain 3 > [Anti-air] Particle Beam, [Feint] Particle Beam EX ou [Wide-Angle] Particle Beam EX ; Tentacle of Spite 3 (mi-longue portée, courte en EX) > dodge cancel hors EX > [Wide-Angle] Particle Beam ; [Wrath] Particle Beam > DC > Tentacle of Suffering 1 ou 2, ou Tentacle of Scorn 1 ; Aura Ball (hit retardé) > DC > Suffering 1, Scorn 1 ou [0-form] Particle Beam EX ; Pain 3 > DC > l'un des deux tentacules aériens (Suffering, Scorn) ; Scorn 3 (près du sol) > [0-form] Particle Beam EX ou dash vers un tentacule aérien ; Suffering 1 > [0-form] Particle Beam EX ; Suffering 1 au plafond > DC > Suffering 1.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -119,6 +124,12 @@
       "desc": "Courte vidéo de Kiyuu Ch montrant les combos d'assist de base de Cloud of Darkness.",
       "source": "https://www.youtube.com/watch?v=3ETIks3fVao",
       "date": "2012"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Cloud of Darkness y est décrite avec un EX Mode bâti pour les combos et un bon nombre de routes en dehors.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "limits": [
@@ -127,5 +138,8 @@
     "Aucune évaluation rédigée du personnage en tant qu'assist (section « Assist Overview » vide) : seuls la table de données et le classement Low de la meta sont disponibles.",
     "Combos incomplets de l'aveu même du wiki (« This section does not show all combos right now ») ; les dégâts et gains d'EX des combos assist Jecht sont notés « ??? ».",
     "Le coût CP de Tentacle of Pain est partiellement inconnu (« ?? (30) ») et le gain de jauge d'assist par coup n'est pas renseigné."
-  ]
+  ],
+  "groupNotes": {
+    "bravery/main": "Tous les starters de bravery partagent les mêmes propriétés de base."
+  }
 }

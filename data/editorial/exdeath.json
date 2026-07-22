@@ -71,6 +71,16 @@
       "name": "Delta Attack en lock-off + Seal Evil (Aerith)",
       "desc": "Tech du guide Steam de Solde : près d'un plafond sans mur exploitable, lier Delta Attack au Carré neutre, descendre sous l'adversaire et la poser en lock-off sous lui pour le forcer vers le plafond, où un second HP conclut. Un glitch de Seal Evil complète le setup : relancé sur une cible déjà piégée sans la toucher assez tôt, il lui donne une vitesse de chute très élevée — anticipable pour la faire retomber dans une Delta Attack déjà active.",
       "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Des combos presque exclusivement autour de Black Hole : Black Hole > dodge cancel > Sword Dance (Black Hole annule le knockback) > DC > Delta Attack ; Black Hole > DC > Vacuum Wave > Chase HP ; Vacuum Wave en block counter à très longue portée > hit glitch sur la seconde vague > Chase HP.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase vers reset de jauge d'assist",
+      "desc": "Vacuum Wave est à la frontière exacte du reset de jauge d'assist par empty chase : possible mais très serré d'après le relevé.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     }
   ],
   "matchups": {
@@ -119,6 +129,18 @@
       "desc": "Thread d'époque du board GameFAQs : choix des blocks selon le matchup, Maelstrom utilisé en bait, moveset type autour d'Omni Block et Black Hole, et la synergie assist Aerith (Planet Protector) pour un Maelstrom inarrêtable.",
       "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/62156969",
       "date": "2012"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Exdeath y est crédité de combos presque exclusivement bâtis autour de Black Hole.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "sourcesBySection": {
@@ -135,6 +157,12 @@
     "Table de contre-stratégie Maelstrom incomplète dans l'extraction : une seule entrée (« Quo Vadis ») sans personnage lisible, la liste des attaques capables de dévier n'est donc pas exploitable.",
     "Second build (« Build #2 ») entièrement vide dans le wiki ; comblé partiellement par des builds communautaires externes (guide Steam, dissidiaforums) lors de la passe d'enrichissement.",
     "Aucune référence communautaire dans les sources.",
-    "Données partielles : dégâts non chiffrés (« - ») sur Delta Attack et Almagest, vitesse de course « ?? » dans l'infobox."
-  ]
+    "Données partielles : dégâts non chiffrés (« - ») sur Delta Attack et Almagest, vitesse de course « ?? » dans l'infobox.",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi."
+  ],
+  "groupNotes": {
+    "bravery/main": "Chaque bravery existe au sol et en l'air, à données identiques sauf mention contraire. Exdeath dispose en outre de guard counters uniques : après un block réussi avec Turn Guard, Shell Guard, Protect Guard ou Omni Block, il peut contrer avec des versions renforcées de ses attaques BRV ou HP.",
+    "hp/main": "Chaque attaque existe au sol et en l'air, à données identiques sauf mention contraire.",
+    "hp/Maelstrom Counterstrategy": "Maelstrom ne s'esquive pas : il faut le dévier avec une attaque Melee High capable de traverser la seconde hitbox qui apparaît après la déviation de la première. Seuls Kuja, Yuna et Shantotto n'en ont aucune, et doivent désamorcer la situation autrement (interrompre le setup, etc.)."
+  }
 }

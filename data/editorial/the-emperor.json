@@ -86,6 +86,11 @@
       "name": "Precision Block sur Flare réfléchi",
       "desc": "Toujours d'après LuckySeven, Precision Block (à équiper sur tous les sets) permet de re-réfléchir le Flare bleu en l'air, comme d'autres projectiles persistants (Watera) : The Emperor récupère ainsi la pression de son Flare face aux personnages capables de le décoller du sol après l'avoir renvoyé.",
       "source": "https://web.archive.org/web/20131030022659/http://dissidiaforums.com/showthread.php?14313-Absolute-Dominion-Emperor-Mateus-Guide&p=418967&viewfull=1"
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Les combos les plus libres du jeu, difficiles à réduire à des links précis, mais aux dégâts très élevés quand ils passent : Mine (hit tardif) > dash > Mine ; Thunder Crest > deux Landmines > Flare au sol ; Thunder Crest > Dynamite chargée au maximum > deux Mines > explosion de la Dynamite ; Starfall > Thunder Crest > Landmine > Flare aérien.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -152,6 +157,12 @@
       "desc": "Guide vidéo par ChosenL : guard combos, setups à mindgames, punishes et combos d'EX Revenge — une vision offensive du personnage, loin du pur camping.",
       "source": "https://www.youtube.com/watch?v=yQHCYjZpqJU",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). L'Emperor y est décrit avec les combos les plus libres du jeu, aux dégâts très élevés.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "sourcesBySection": {

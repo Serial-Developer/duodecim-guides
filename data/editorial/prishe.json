@@ -93,6 +93,16 @@
       "name": "Dragon Kick, l'exception hors Skillchain",
       "desc": "Dragon Kick ne déclenche aucune Skillchain, ni en starter ni en finisher, mais chargé c'est son attaque au sol la plus forte. Sur l'enchaînement Dragon Kick chargé > One Inch Punch chargé, les sources d'époque divergent : donné comme son combo au sol le plus puissant à égalité par un joueur, jugé quasi inliable (timing extrême) par un autre.",
       "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58732928"
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Un seul combo solo — le seul dont elle a besoin, ses gros dégâts bravery passant par Backhand Blow et les assists : Raging Fists (4 hits) > dodge cancel > landing lag > Raging Fists ou One Inch Punch non chargé. L'éditeur précise que Combo au sol chaîne aussi vers Raging Fists, et que les follow-ups au landing lag valent également pour One Inch Punch.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase vers reset de jauge d'assist",
+      "desc": "Howling Fist non chargé offre le reset de jauge d'assist par empty chase (un peu serré) ; Combo et Raging Fists sont à la frontière exacte.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     }
   ],
   "matchups": {
@@ -128,6 +138,18 @@
       "desc": "La vidéo-guide d'époque de référence pour apprendre Prishe (chaîne glenburg89, mars 2011) : propriétés des attaques et fondamentaux du personnage, toujours en ligne.",
       "source": "https://www.youtube.com/watch?v=pbXhyagrfqE",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Prishe y est créditée d'un seul combo solo — le seul dont elle a besoin.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "limits": [
@@ -136,6 +158,11 @@
     "Le timing exact de la charge raccourcie de One Inch Punch (Two) en finisher est explicitement non documenté dans les sources.",
     "Le wiki ne nomme aucune technique avancée en dehors des Skillchains (traitées dans uniqueMechanics) : les entrées advancedTech proviennent d'un thread GameFAQs d'époque (2011), avec un point de désaccord signalé (liaison Dragon Kick chargé > One Inch Punch chargé).",
     "Le second build (« Build #2 ») est un gabarit vide et les slots d'attaques du build principal ne sont pas renseignés.",
-    "Valeurs d'assist gain absentes des tableaux de coups ; section References vide : communityTech laissé vide."
-  ]
+    "Valeurs d'assist gain absentes des tableaux de coups ; section References vide : communityTech laissé vide.",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi."
+  ],
+  "groupNotes": {
+    "bravery/main": "La plupart des braveries de Prishe enchaînent sur un followup équipable séparément : le starter est noté « (One) », le followup « (Two) ». La liste des followups est identique quel que soit le starter — ils sont listés à part ci-dessous.",
+    "bravery/followups": "Les données sont proches des versions (One), mais les followups (Two) génèrent un autre montant d'EX Force, peuvent Wall Rush ou lancer un Chase, et coûtent moins de CP à équiper."
+  }
 }

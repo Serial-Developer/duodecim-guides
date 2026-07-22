@@ -63,7 +63,8 @@
     },
     {
       "name": "Twist Drill empty chase",
-      "desc": "Le hit stun de Twist Drill en fait l'un des rares moves du jeu au chase à vide sûr n'importe où : parfait pour collecter l'EX Force et démarrer les combos d'assist. Restez prudent en corner, où le chase laisse Garland plus près de l'adversaire et plus exposé au Recovery Attack."
+      "desc": "Le hit stun de Twist Drill en fait l'un des rares moves du jeu au chase à vide sûr n'importe où : parfait pour collecter l'EX Force et démarrer les combos d'assist. Restez prudent en corner, où le chase laisse Garland plus près de l'adversaire et plus exposé au Recovery Attack. Précision de périmètre : ce chase à vide « sûr » (hit stun énorme, pas de punition) est distinct du reset de jauge d'assist — pour ce dernier, le relevé communautaire ne crédite Garland que de Round Edge, à la frontière exacte (possible mais très serré).",
+      "source": "https://pastebin.com/dKSWgUQ6"
     },
     {
       "name": "Dodge cancel guidé à la caméra",
@@ -72,6 +73,11 @@
     {
       "name": "Frappes derrière le block",
       "desc": "Twist Drill (à la bonne distance et au bon angle, par en dessous) et Chain Cast (nettement au-dessus ou en dessous de l'adversaire) peuvent toucher derrière un block adverse. Les conditions exactes de Chain Cast restent mal documentées."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Peu de combos, mais très rentables en EX Force : Chain Cast > dodge cancel > Twist Drill ; Cyclone (hit tardif) > DC > Chain Cast ou Twist Drill ; Thundaga près d'un mur > DC > Flare ou Chain Cast ; Blaze > DC > Twist Drill ; l'éditeur ajoute Deathblow > direction maintenue pour annuler l'end lag > saut > Twist Drill, route prouvée à bonne synergie avec le neutral.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -122,6 +128,18 @@
       "desc": "Courte démonstration par SpacePirateKhan des dégâts de Garland sous EX Revenge (mécanique propre à Duodecim), recommandée sur le board GameFAQs de l'époque.",
       "source": "https://www.youtube.com/watch?v=VfqFeso5Gbs",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Garland y est crédité de peu de combos mais très rentables en EX Force.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "limits": [
@@ -131,6 +149,7 @@
     "Article combos dédié (« Garland (Combos) ») non inclus : seuls deux combos solo et le combo EX Revenge sont détaillés.",
     "Valeurs d'assist gain des coups non renseignées, et décomptes Comrade's Vow des combos inconnus (« ??? »).",
     "Hitbox de Chain Cast incomplètement documentée (« requires further research ») et conditions exactes des frappes derrière le block non établies.",
-    "Les tables des deux builds ne listent pas les braveries et HP équipés (lignes vides dans les données)."
+    "Les tables des deux builds ne listent pas les braveries et HP équipés (lignes vides dans les données).",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi."
   ]
 }

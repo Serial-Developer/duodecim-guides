@@ -36,8 +36,7 @@
     "Raid": "Miroir d'Erupt : piqué Melee Mid dont l'early release écourte la course pour l'une de ses recoveries les plus rapides, à sécuriser au dodge cancel — sans générer de jauge d'assist s'il ne touche pas. Maintenu, il plonge en ligne droite jusqu'au sol avec deux hitboxes à l'atterrissage : le corps (Melee Mid, stoppé par les blocks haute priorité type Jecht Block ou Wrath, mais dont le stagger sur block normal laisse enchaîner à peu près n'importe quoi après le landing lag, jusqu'à Quo Vadis) et l'onde de choc, bloquable uniquement en haute priorité. Près d'un mur, il installe l'okizeme Via Dolorosa ; comme Erupt, il se cancel en block, esquive ou n'importe quelle attaque.",
     "Deus Iratus": "HP multi-hit stationnaire au corps-à-corps (Wall Rush), parmi ses plus gros dégâts de bravery en martelant le bouton, dont la priorité Block High couvre tout le startup dans toutes les directions : il garde même après une esquive et peut servir de substitut au block au sol pour économiser des CP dans un build. Mixup correct après un Wall Rush, mais l'animation et la recovery longues rendent le whiff dangereux — comme le Shield of Light du Warrior of Light, tout est dans l'anticipation du moment où l'adversaire frappe.",
     "Quo Vadis": "Uppercut en téléportation suivi d'une ascension de coups ultra-rapides, Wall Rush au sol en fin de combo (mais pas à certaines hauteurs). Si l'adversaire sort en assist change précoce, l'attaque continue et son tracking transperce l'invincibilité avant même qu'une esquive soit possible ; le stagger via LV2 Assist Change exige de garder un coup de téléportation précis plutôt que l'explosion qui suit — un vrai risque pour l'adversaire — et la téléportation initiale esquive même des attaques. Bonne portée, startup moyen et recovery basse pour un HP (bon dodge punish et counterpoke), mais il ne se démarque pas assez de ses autres HP pour être priorisé.",
-    "Via Dolorosa": "L'illustre HP qui fait sa réputation : deux colonnes de feu à longue portée, bon tracking et hitbox verticale gigantesque débordant largement des visuels, la seconde retardable jusqu'à 218F (~3,6 s) en maintenant le bouton — esquiver la première trop tôt fait souvent encaisser la seconde en recovery d'esquive, du HP quasi garanti contre les personnages sans protection fiable post-esquive, Precision Evasion s'activant en plus difficilement sur la première vague. Excellent pour créer de l'espace et ralentir le match, mais un angle mort existe derrière lui (gare aux air-to-ground et aux projectiles qui spawnent sur la cible comme le Shadow Flare de Sephiroth), les coureurs rapides comme Onion Knight et Tidus l'évitent en courant latéralement à mi-distance, et les command blocks haute priorité (Jecht Block, Omni Block d'Exdeath) l'annulent voire ripostent. La seconde colonne étant incancellable, un mauvais timing expose à la punition d'assist ; sur les stages à plafond bas (M.S. Prima Vista, Pandaemonium - Top Floor), il Wall Rush sur hit, pour des combos d'assist et une nouvelle pression Via Dolorosa."
-    ,
+    "Via Dolorosa": "L'illustre HP qui fait sa réputation : deux colonnes de feu à longue portée, bon tracking et hitbox verticale gigantesque débordant largement des visuels, la seconde retardable jusqu'à 218F (~3,6 s) en maintenant le bouton — esquiver la première trop tôt fait souvent encaisser la seconde en recovery d'esquive, du HP quasi garanti contre les personnages sans protection fiable post-esquive, Precision Evasion s'activant en plus difficilement sur la première vague. Excellent pour créer de l'espace et ralentir le match, mais un angle mort existe derrière lui (gare aux air-to-ground et aux projectiles qui spawnent sur la cible comme le Shadow Flare de Sephiroth), les coureurs rapides comme Onion Knight et Tidus l'évitent en courant latéralement à mi-distance, et les command blocks haute priorité (Jecht Block, Omni Block d'Exdeath) l'annulent voire ripostent. La seconde colonne étant incancellable, un mauvais timing expose à la punition d'assist ; sur les stages à plafond bas (M.S. Prima Vista, Pandaemonium - Top Floor), il Wall Rush sur hit, pour des combos d'assist et une nouvelle pression Via Dolorosa.",
     "Ventus Ire": "Son HP aérien le plus rapide (41F), au tracking automatique qui ajuste son angle et punit les esquives négligentes. Sa priorité Ranged High lui évite le stagger sur LV2 Assist Change et son allonge transperce les projectiles persistants (Cyclone de Garland, Flare de The Emperor), mais il reste surclassé par ses autres HP aériens — Flagro Maximus couvre des situations similaires avec plus de déplétion, de dégâts et de sécurité.",
     "Lux Magnus": "Rayon vertical descendant à longue portée, prolongeable en maintenant le bouton pour plus de dégâts de bravery, « orientable » au sens où Feral Chaos peut se déplacer pendant l'attaque pour poursuivre sa cible. Utilisé au-dessus de l'adversaire (air-to-ground ou air-to-air) pour punir les whiffs, occuper l'espace ou ralentir le rythme, très difficile à punir de loin et excellent pour démarrer ou prolonger les combos d'assist, notamment avec Aerith. Les assists adverses peuvent toutefois le toucher au startup, voire pendant les frames actives selon leur position de spawn : un staple de la plupart de ses builds, à condition de ne pas devenir prévisible.",
     "Flagro Maximus": "Explosion massive à la portée courte par défaut, dont la charge (50F, sortie 11 frames après relâchement ou automatique à 76F) augmente exponentiellement la portée, le potentiel de Wall Rush et le nombre de hits HP — gros gains de jauge avec Side by Side et grosse déplétion avec l'équipement adapté. Malgré son allure de projectile, toutes les hitboxes sont Melee High : il transperce les Ranged High et clash avec les autres attaques et blocks haute priorité. La fenêtre de full charge est minuscule et non fiabilisable, et charger télégraphie le counter adverse — variez les timings, même si la charge attrape bien les whiff punishes d'assist avec Auto Assist Lock On ; l'un de ses HP les plus forts, bon en counter post-block et pour contourner les checkmates d'EX Revenge grâce à l'absence de dégâts de bravery."
@@ -71,6 +70,16 @@
     {
       "name": "Side by Side + verrous de jauge",
       "desc": "Ses verrous EX et Assist innés, conservés et équipés en même temps que l'accessoire Side by Side, contournent la restriction d'absorption d'EX de celui-ci : la jauge EX ne se remplit plus qu'aux EX Cores, mais Feral Chaos utilise EX et Assist sans les restrictions habituelles — un atout unique en son genre vu la puissance de ses HP."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Le relevé est catégorique : Feral Chaos n'a pas de combo solo — ses conversions intéressantes passent par les combos d'assist, principalement via l'empty chase reset.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase vers reset de jauge d'assist",
+      "desc": "Le relevé le crédite d'une abondance d'empty chases vers reset de jauge d'assist : Raid et Snarl fonctionnent à coup sûr, la plupart des autres coups probablement aussi, les détails restant non testés.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     }
   ],
   "matchups": {
@@ -108,6 +117,18 @@
       "desc": "Guide communautaire d'époque signé __Shinryu__ consacré à Feral Chaos jouable : déblocage via Confessions of the Creator, présentation du moveset et de l'EX Burst Regnum Dei, et set d'équipement exclusif Rise of Discord.",
       "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58793116",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Feral Chaos y est décrit sans combo solo, mais avec une abondance d'empty chases vers reset.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "limits": [
@@ -118,6 +139,7 @@
     "Pas de section « mécaniques uniques » dédiée sur le wiki : ses restrictions innées (réduction de bravery, verrous EX/Assist, coûts CP exponentiels) ne sont décrites que dans l'overview — uniqueMechanics à null.",
     "Le troisième build est entièrement vide et le loadout de coups du build Side By Side n'est pas renseigné dans les données extraites.",
     "Aucune référence externe (section References vide) : communityTech vide.",
-    "Champs cancels et assistGain vides pour tous les coups ; dégâts de Flagro Maximus non renseignés (« - »)."
+    "Champs cancels et assistGain vides pour tous les coups ; dégâts de Flagro Maximus non renseignés (« - »).",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi."
   ]
 }

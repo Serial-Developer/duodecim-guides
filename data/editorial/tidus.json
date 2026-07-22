@@ -104,6 +104,11 @@
     {
       "name": "Sound cue masking",
       "desc": "Le cue sonore de Sonic Buster est le même que celui du block de Tidus : des spot dashes permettent de le masquer et de piéger les adversaires qui jouent à l'oreille."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Le relevé conclut que Tidus n'a pas vraiment de combo solo — hit stun des HP insuffisant, presque aucun landing lag dans son kit — et que sa force est de monter de gros combos avec assist. Pistes recensées : Wither Shot > dodge cancel > Hop Step ou Full Slide ; au mur, Cut & Run > dodge cancel > Hop Step (non testé) ; Stick & Move (dernier hit à bout portant) > DC > Hop Step (non testé) ; l'éditeur du relevé confirme Dart & Weave au sol > DC > Hop Step aérien, la route déjà documentée par le wiki.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -205,6 +210,12 @@
       "desc": "Lien de référence du wiki, cité dans les notes de Slice & Dice au sujet du tracking vertical accru pendant l'assist ; le wiki ne fournit pas de titre pour cette vidéo.",
       "source": "https://www.youtube.com/watch?v=KowbxKm8-DQ&t=67",
       "date": null
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Le relevé conclut que Tidus n'a pas vraiment de combo solo — Hop Step et Cut & Run échouent même de justesse au reset d'assist.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "sourcesBySection": {
@@ -222,5 +233,9 @@
     "Aucune fiche chiffrée de l'EX Burst (nom, dégâts, déroulé) dans les données ; seuls les effets de l'EX Mode sont listés, et Mirror Dash comme Caladbolg (DODGE) ne sont pas expliqués.",
     "Un seul combo solo documenté (Dart & Weave > DC > Hop Step) ; la page combos dédiée n'est pas extraite.",
     "Champ assist gain des coups non renseigné ; deux références vidéo du wiki sont listées sans titre (URL brute)."
-  ]
+  ],
+  "groupNotes": {
+    "bravery/main": "Les braveries évasives Stick & Move, Dart & Weave et Cut & Run ont une invincibilité intégrée : frames 1 à 20 en temps normal, 1 à 40 en EX Mode (l'équivalent d'une esquive normale, puis d'une esquive avec Evasion Boost).",
+    "hp/links": "Toutes les versions de Quick Hit partagent les mêmes données — une par bravery évasive d'origine."
+  }
 }

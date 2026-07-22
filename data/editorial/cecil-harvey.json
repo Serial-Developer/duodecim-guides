@@ -81,6 +81,16 @@
       "name": "Link glitch Gravity Ball",
       "desc": "Le Competitive Cecil Guide note que Gravity Ball, normalement incapable de combo HP hors setup, peut en obtenir un via le link glitch — de préférence lancé depuis dessous l'adversaire, où le glitch passe plus facilement. Risqué, mais cela ajoute une conversion HP à un coup autrement cantonné au harcèlement ; sa trajectoire courbe permet en outre de toucher derrière les blocks depuis au-dessus ou en dessous.",
       "source": "https://web.archive.org/web/20120107184432/http://dissidiaforums.com/showthread.php?10165-Competitive-Cecil-Guide"
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Searchlight et Paladin Arts sont cités parmi les outils de combo les plus polyvalents du jeu : Slash > petit dash ou mur > Radiant Wings, Sacred Cross ou Paladin Force ; Dark Cannon > toute mêlée au sol ; Searchlight > dodge cancel > EX Switch > Paladin Arts ; Searchlight > n'importe quoi sauf lui-même ou Luminous Shard.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase vers reset de jauge d'assist",
+      "desc": "Sacred Cross, dans ses deux angles, offre l'empty chase vers reset de la jauge d'assist ; Nightfall échoue de justesse.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     }
   ],
   "matchups": {
@@ -95,7 +105,37 @@
       "Deux builds sont documentés, Equip Glitch assumé pour le coût CP. Le build « Side by Side (Dark Knight) » : base bravery élevée (1623 BRV), assist Jecht / Sephiroth / Yuna, invocation Rubicante, Piggy's Stick / Chainsaw / Thornlet / Maximillian, boosters (Sniper Eye, Dismay Shock, Battle Hammer, BRV = 0, Empty EX Gauge, Pre-EX Mode, Pre-EX Revenge) plus Blue Gem, Miracle Shoes et Side by Side, pour un Max Booster x3.8.",
       "Le build « Hybrid (Paladin) » : set Lufenian complet + Cleaver (effet spécial Judgment of Lufenia), assist Kuja / Aerith, 956 BRV (1147 avec First to Victory), accessoires Hyper Ring, Muscle Belt, Dismay Shock et boosters conditionnels (Summon Unused, Pre-EX Mode, Pre-EX Revenge, Opponent Summon Unused), White Gem, Tenacious Attacker et First to Victory, Max Booster x3.0."
     ],
-    "notes": "Substitutions documentées : côté Dark Knight, Blue Gem et Miracle Shoes peuvent céder la place à Together as One, Hero's Seal ou Back-Breaking Straw (pour compenser les malus de Thornlet), et les boosters « Grounded » et « BRV = 0 » gonflent les dégâts de HP wall rush au prix d'une base bravery plus basse. Côté Paladin, Muscle Belt et « Opponent Summon Unused » sont librement remplaçables, Tenacious Attacker n'est pas indispensable avec Aerith assist, Hero's Essence peut fournir des extra abilities (taux de critique) et Winged Boots est utile dans les stages à banish trap."
+    "notes": "Substitutions documentées : côté Dark Knight, Blue Gem et Miracle Shoes peuvent céder la place à Together as One, Hero's Seal ou Back-Breaking Straw (pour compenser les malus de Thornlet), et les boosters « Grounded » et « BRV = 0 » gonflent les dégâts de HP wall rush au prix d'une base bravery plus basse. Côté Paladin, Muscle Belt et « Opponent Summon Unused » sont librement remplaçables, Tenacious Attacker n'est pas indispensable avec Aerith assist, Hero's Essence peut fournir des extra abilities (taux de critique) et Winged Boots est utile dans les stages à banish trap.",
+    "movesetNote": "Contrainte propre à Cecil : ses deux jobs ont chacun leurs propres braveries au sol et en l'air, tandis que les attaques HP sont communes aux deux. Il démarre chaque combat en Dark Knight, et le changement de job passe obligatoirement par des coups précis — attaques HP au sol ou Dark Step pour aller en Dark Knight, attaques HP aériennes ou Paladin Arts pour aller en Paladin. Chacun de ces coups doit être équipé pour que le changement soit possible : un moveset qui les omet enferme Cecil dans un seul job, hors EX Mode où Proteus autorise le changement libre.",
+    "movesetColumns": [
+      {
+        "header": "Job",
+        "values": {
+          "Valiant Blow": "Dark Knight",
+          "Dark Cannon": "Dark Knight",
+          "Shadow Lance": "Dark Knight",
+          "Gravity Ball": "Dark Knight",
+          "Nightfall": "Dark Knight",
+          "Paladin Arts": "Dark Knight",
+          "Slash": "Paladin",
+          "Lightning Rise": "Paladin",
+          "Dark Step": "Paladin",
+          "Radiant Wings": "Paladin",
+          "Sacred Cross": "Paladin",
+          "Searchlight": "Paladin",
+          "Soul Eater": "Commun",
+          "Dark Flame": "Commun",
+          "Shadow Bringer": "Commun",
+          "Saint's Fall": "Commun",
+          "Paladin Force": "Commun",
+          "Luminous Shard": "Commun"
+        }
+      }
+    ],
+    "movesetSources": [
+      "https://finalfantasy.fandom.com/wiki/Cecil_Harvey_(Dissidia_PSP)",
+      "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
+    ]
   },
   "assist": {
     "asAssist": [
@@ -136,6 +176,18 @@
       "desc": "Thread de coaching d'époque : équilibrer Dark Knight et Paladin, Dark Cannon qui combote proprement dans Soul Eater, Assist Chase converti en Paladin Force facile et usage raisonné des assists (après Wall Rush ou en punish de HP).",
       "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63911036",
       "date": "2012"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Cecil y est décrit avec Searchlight et Paladin Arts comme outils de combo parmi les plus polyvalents du jeu.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "sourcesBySection": {
@@ -151,6 +203,16 @@
     "Aucune évaluation rédigée de Cecil en tant qu'assist : seuls la table de données et le classement Mid de la meta sont disponibles.",
     "Dans les tables de combos, les valeurs « Opponent Assist (Comrade's Vow) » sont notées « ??? » et certains gains d'EX sont partiels.",
     "Le gain de jauge d'assist par coup n'est pas renseigné (colonnes vides).",
-    "La section References est vide : aucune tech communautaire attribuable ou datée."
+    "La section References est vide : aucune tech communautaire attribuable ou datée.",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.",
+    "Le job de chaque bravery vient des sections « Ground/Aerial (Dark Knight) » et « (Paladin) » de la page 012 de dissidia.wiki (que l'extraction automatique avait aplaties en sol/air), et est confirmé par les tableaux « Dissidia 012 » de la page Cecil du Final Fantasy Wiki — qui listent aussi les deux attaques HP propres à 012, Shadow Bringer et Luminous Shard. Les attaques HP restent communes aux deux jobs."
+  ],
+  "specialMoves": [
+    {
+      "name": "Proteus",
+      "input": "R + Carré — EX Mode uniquement",
+      "desc": "Commande spéciale disponible uniquement en EX Mode : elle permet de changer de job librement, sans passer par une attaque. Hors EX Mode, le passage Dark Knight ↔ Paladin n'est possible qu'à travers des coups précis — attaques HP au sol ou Dark Step vers Dark Knight, attaques HP aériennes ou Paladin Arts vers Paladin — qui doivent être équipés pour que le changement reste disponible.",
+      "source": "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
+    }
   ]
 }

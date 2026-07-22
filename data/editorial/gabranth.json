@@ -72,6 +72,16 @@
     {
       "name": "Aero camera reset",
       "desc": "Le knockback d'Aero (vertical et vers l'extérieur) suit l'angle de la caméra : la réinitialiser dans une autre direction permet, en combo assist, de garder l'adversaire au mur ou dans le coin au lieu de le repousser. C'est la seule route de combo solo aérienne de Gabranth."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "L'essentiel tourne autour d'Aero, plus un combo au landing lag : Vortex of Judgment (2 hits) > dodge cancel > landing lag > Dual Rend ou Rupture ; Aero posé > Vortex of Judgment (2 hits) > DC > hit d'Aero > Rupture ou Hatred ; Aero posé > Gaia Breach > hit d'Aero > Chase HP (le relevé orthographie « Gaea Breach »).",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase vers reset de jauge d'assist",
+      "desc": "Aucun coup confirmé pour le reset : Relentless Lunge est à la frontière exacte, Aero échoue de justesse, et l'éditeur marque lui-même la ligne d'un point d'interrogation.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     }
   ],
   "matchups": {
@@ -84,7 +94,35 @@
     "philosophy": [
       "Un seul build est réellement documenté : « Hybrid (Soul of Yamato) », un build généraliste construit autour de l'effet spécial Soul of Yamato (Chaos Blade et set Genji complet), avec l'assist Jecht et l'invocation Rubicante. Le total de Capacity Points suppose l'utilisation de l'Equip Glitch, et l'extra ability Master Guardsman ajoute +1000 HP. Stats affichées : 11299 HP, 996 BRV, 176 ATK, 183 DEF, 63 LUK, booster max x2,1 pour 450 CP."
     ],
-    "notes": "Le second emplacement de build de la page est entièrement vide (aucun équipement ni aucune stat renseignés)."
+    "notes": "Le second emplacement de build de la page est entièrement vide (aucun équipement ni aucune stat renseignés).",
+    "movesetNote": "Gabranth ne peut pas infliger de dégâts HP hors EX Mode : son moveset se lit en deux temps. Hors EX Mode il ne dispose que de quatre braveries et son emplacement HP est occupé par EX Charge, qui remplit la jauge sans générer d'EX Force récupérable par l'adversaire. Le déclenchement du Mist débloque le reste du kit. À l'équipement, cela impose de couvrir les deux phases : de quoi survivre et charger d'abord, de quoi convertir ensuite.",
+    "movesetColumns": [
+      {
+        "header": "Mode",
+        "values": {
+          "Sentence (ground)": "Hors EX",
+          "Lunge": "Hors EX",
+          "Sentence (midair)": "Hors EX",
+          "Circle of Judgment": "Hors EX",
+          "Enrage": "EX Mode",
+          "Aero (ground)": "EX Mode",
+          "Relentless Lunge": "EX Mode",
+          "Gaia Breach": "EX Mode",
+          "Dual Rend": "EX Mode",
+          "Rupture": "EX Mode",
+          "Aero (midair)": "EX Mode",
+          "Vortex of Judgment": "EX Mode",
+          "Execution": "EX Mode",
+          "Innocence (ground)": "EX Mode",
+          "Hatred": "EX Mode",
+          "Innocence (midair)": "EX Mode"
+        }
+      }
+    ],
+    "movesetSources": [
+      "https://finalfantasy.fandom.com/wiki/Gabranth_(Dissidia_PSP)",
+      "https://dissidia.wiki/Gabranth_(Dissidia_012)"
+    ]
   },
   "assist": {
     "asAssist": [
@@ -136,6 +174,18 @@
       "desc": "Démonstration du block Ranged Low de la version aérienne d'Innocence, lames fusionnées.",
       "source": "https://www.youtube.com/watch?v=VzeDzz2oIiE&t=91",
       "date": null
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Gabranth y est décrit avec des combos centrés sur Aero, plus un combo au landing lag.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "limits": [
@@ -143,6 +193,9 @@
     "Page matchups dédiée à l'état d'ébauche (stub) ; seules les tendances générales de l'overview sont reprises ici.",
     "Section assist marquée non documentée : uniquement un tableau de données et une phrase de synergies (Kuja, Jecht).",
     "Deuxième emplacement de build entièrement vide dans les données.",
-    "Valeurs manquantes dans les tables : gain d'assist des coups non renseigné, dégâts et EX Force d'EX Charge notés « ? »."
+    "Valeurs manquantes dans les tables : gain d'assist des coups non renseigné, dégâts et EX Force d'EX Charge notés « ? ».",
+    "Deux coups de nos données extraites — Gaia Breach et Execution — n apparaissent dans aucun tableau de coups du Final Fantasy Wiki : leur mode n est pas renseigné. Inversement, cette source liste Guilt et EX Charge, absents de nos données.",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.",
+    "La répartition hors EX Mode / EX Mode des coups est confirmée par deux sources concordantes : les sections « Ground/Aerial (Normal) / (EX Mode) » de la page 012 de dissidia.wiki, et les tableaux repliables « Dissidia 012 » de la page Gabranth du Final Fantasy Wiki. Hors EX Mode, l'emplacement HP est occupé par EX Charge, absent des tableaux de coups extraits ; au même emplacement et au même niveau de déblocage (38), la table du premier Dissidia liste Guilt là où celle de 012 liste Execution."
   ]
 }

@@ -64,6 +64,11 @@
     {
       "name": "Diamond Dust late hit > Heavenly Strike",
       "desc": "Quand Diamond Dust touche en fin de frames actives, Yuna a assez d'avantage de frames pour un follow-up solo. Heavenly Strike suit de façon consistante grâce à sa portée verticale, très rentable s'il Wall Rush pour un combo assist. Poser la situation avec une assist aide à garder l'adversaire au sol."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Trois combos, puissants mais peu pratiques : Impulse chargé au maximum > hit glitch Heavenly Strike ; EX Aerospark > Diamond Dust ou Heavenly Strike ; Diamond Dust (hit retardé) > Heavenly Strike, Diamond Dust ou Sonic Wings. Côté empty chase vers reset de jauge d'assist, aucun coup fiable : Ixion niveau 1 échoue de justesse même à l'espacement idéal, et Valefor envoie trop haut.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -101,6 +106,12 @@
       "desc": "Vidéo d'époque de KindredCVS explorant Yuna en tant qu'assist à travers des combos avec Tidus — un usage que les sources du wiki ne détaillent pas au-delà de son classement High tier.",
       "source": "https://www.youtube.com/watch?v=vV4xQP3f7zU",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Yuna y est créditée de trois combos puissants mais peu pratiques.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "limits": [
@@ -109,5 +120,8 @@
     "Le second build (« Build #2 ») est un gabarit vide : stats, équipement et attaques non renseignés.",
     "Aucune référence communautaire datée ou sourcée (section References vide) : communityTech laissé vide.",
     "Pas de section « Unique Mechanics » documentée pour Yuna : champ laissé à null."
-  ]
+  ],
+  "groupNotes": {
+    "bravery/main": "Les braveries de Yuna invoquent ses aeons : elle reste immobile pendant l'incantation, l'invocation attaquant devant elle avec une hitbox disjointe et une bonne portée. En EX Mode, Double Summon ajoute une seconde invocation (dégâts accrus, effets modifiés) ; les données entre crochets correspondent au Double Summon."
+  }
 }

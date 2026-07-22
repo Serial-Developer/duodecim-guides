@@ -77,6 +77,11 @@
       "name": "Force Symphony : set & drop",
       "desc": "N'utiliser que le premier orbe : le poser au-dessus de l'adversaire pour le forcer à quitter le sol ou à réagir, puis enchaîner. Prolonger le tir en maintenant le bouton multiplie surtout la vulnérabilité de Kuja.",
       "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63105855"
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Ses plus gros combos vivent en EX Mode, mais plusieurs routes existent en dehors : Snatch Shot > dodge cancel > Strike Energy ou Burst Energy ; Snatch Shot (seul le second tir, longue portée) > DC > Flare Star ou Snatch Blow ; Snatch Blow de loin > DC > Burst Energy ; Force Symphony (hit retardé) > Strike Energy ; en EX Mode, les boucles d'Air Jump, Glide et Fall convertissent vers Flare Star ou Ultima.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -125,6 +130,12 @@
       "desc": "Thread du board Duodecim : différences Holy/Flare au block (Strike Energy et Snatch Blow staggent Kuja bloqué, pas les attaques Flare), setup aérien type Strike Energy + Snatch Shot + Ring Holy, et discussion des assists (Jecht pour renvoyer au sol, Aerith, Sephiroth).",
       "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63105855",
       "date": "2012"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Kuja y est décrit avec ses plus gros combos en EX Mode et plusieurs routes correctes en dehors.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "sourcesBySection": {
@@ -150,5 +161,9 @@
     "Notes de coups joueur limitées aux descriptions officielles et aux intros de sections côté wiki (variantes de distance, plafond de 16 coups en coin) : aucune analyse d'usage compétitif coup par coup sur la page du personnage.",
     "Section builds du wiki sans texte : un seul build en tableaux bruts, second onglet vide, aucune recommandation d'attaques.",
     "Champ assist gain des coups non renseigné dans les tableaux du wiki."
-  ]
+  ],
+  "groupNotes": {
+    "bravery/main": "Toutes les braveries de Kuja existent au sol et en l'air, à données partagées. Hors Remote Flare et Ring Holy, leurs follow-ups changent selon la distance à l'adversaire.",
+    "hp/main": "Toutes les attaques HP existent au sol et en l'air, sauf Force Symphony, disponible uniquement en l'air."
+  }
 }

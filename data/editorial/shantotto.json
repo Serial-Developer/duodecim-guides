@@ -75,6 +75,16 @@
       "name": "Retribution anti-garde + Seal Evil",
       "desc": "Retribution traverse les gardes actives type Delta Attack. Avec l'assist Aerith, appeler Seal Evil avant le coup de retour du sceptre fige l'adversaire — fenêtre pour caser Bio puis Retribution ou une HP attack pendant l'entrave.",
       "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Le personnage aux combos les plus libres et au plus grand potentiel de combo du jeu — pour une récompense modeste au regard de leur difficulté : Stun > landing lag > tout sauf Spirit Magic: Ice (« Blizzard » dans le relevé) ; Retribution à bout portant > dodge cancel > Stun ; Stun > Retribution (aérien inclus d'après l'éditeur) ; Bio à portée très précise > Stun ; Bio > landing lag > Stun, Bio, Retribution ou quelques autres ; Spirit Magic: Water (attaque HP) > finisher de Spirit Magic: Earth au sommet (niveau 1 peut-être requis) > DC > Stun ; Bio au-dessus > Spirit Magic: Air > hit de Bio > Stun.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase vers reset de jauge d'assist",
+      "desc": "Sans setup Bio, pas de reset de jauge d'assist par empty chase ; avec un setup Bio, probablement possible d'après le relevé.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     }
   ],
   "matchups": {
@@ -120,6 +130,18 @@
       "desc": "Thread d'époque du board Dissidia 012 : le jeu HP pivote sur Stun (Stun > Aero, Stun > Stone), Retribution traverse les gardes type Delta Attack, et Bio, nerfé, se réserve à l'après-block — un instantané de sa relecture entre Dissidia et Duodecim.",
       "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Shantotto y est décrite comme le plus grand potentiel de combo du jeu, pour une récompense modeste.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "sourcesBySection": {
@@ -138,6 +160,12 @@
     "Aucune section combos renseignée côté wiki (sous-section Solo vide) malgré la conversion présentée comme sa force principale ; les techniques avancées proviennent d'un unique thread GameFAQs (2011).",
     "Notes d'usage détaillées absentes pour la plupart des coups (Stun, Bind, Bio, Retribution et les six Spirit Magic n'ont que la description du jeu et les frame data) ; la note d'A Couple Attacks est tronquée dans les données sources.",
     "Pas de section « Unique Mechanics » documentée : champ laissé à null.",
-    "Section assist non documentée au-delà d'une phrase ; valeurs d'assist gain absentes des tableaux de coups ; section References du wiki vide."
-  ]
+    "Section assist non documentée au-delà d'une phrase ; valeurs d'assist gain absentes des tableaux de coups ; section References du wiki vide.",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.",
+    "Le relevé communautaire désigne les Spirit Magic de Shantotto par les noms de leurs sorts de palier 1 (Water, Stone, Aero, Blizzard) : la correspondance — Water → Spirit Magic: Water, Stone → Earth, Aero → Air, Blizzard → Ice — est confirmée par la page Shantotto du Final Fantasy Wiki, qui rappelle aussi que les Spirit Magic sont ses attaques HP (Fire, Earth et Thunder au sol ; Air, Water et Ice en l'air)."
+  ],
+  "groupNotes": {
+    "bravery/main": "La plupart des braveries existent au sol et en l'air ; A Couple Attacks est uniquement au sol, Retribution uniquement en l'air.",
+    "hp/main": "Les attaques HP se renforcent avec la bravery accumulée : chaque Spirit Magic a trois paliers, les paliers supérieurs ayant de plus grandes hitbox."
+  }
 }

@@ -81,6 +81,16 @@
     {
       "name": "Swordslash filler aérien",
       "desc": "Pendant les combos d'assist Kuja au sol (après ground Wall Rush), le Swordslash aérien s'insère comme filler avant Lord of Arms ou Straightarrow pour des dégâts supplémentaires."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Plus de combos qu'on ne l'attendrait : Reel Axe à bout portant > dodge cancel > landing lag > Rope Knife ; Swordslash (angle haut, près d'un mur) > DC > Rope Knife ; double Magic Arts: Frost en hit glitch Chase vers un setup de Chase HP ; Magic Arts: Flame est cité comme outil de combo flexible plus que comme départ.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase vers reset de jauge d'assist",
+      "desc": "Magic Arts: Frost offre l'empty chase vers reset de la jauge d'assist.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     }
   ],
   "matchups": {
@@ -166,6 +176,18 @@
       "desc": "Montage d'époque par Andyz5448 recensant combos et chains de Firion, testés sur des adversaires level 105 à force maximale.",
       "source": "https://www.youtube.com/watch?v=qYOgibxaNy4",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Firion y est crédité de plus de combos qu'attendu, autour de Reel Axe et des Magic Arts.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "limits": [
@@ -174,6 +196,11 @@
     "Valeurs d'assist gain des coups non renseignées ; startup des follow-ups et de Double Trouble inconnu (« ? »/« ?? »), certains décomptes EX/Comrade's Vow des combos incomplets (« ??? » ou approximations).",
     "Matchups documentés pour 9 adversaires seulement (sur 30) ; les fiches Cloud of Darkness, Cecil et Golbez sont marquées « REVISION COMING SOON » et Cecil n'a pas de verdict.",
     "Article builds dédié (« Firion (012) Builds ») non inclus : un seul build Side by Side est détaillé.",
-    "Les références YouTube ne sont pas datées (champ date à null) et l'une d'elles n'a pas de libellé exploitable (URL brute)."
-  ]
+    "Les références YouTube ne sont pas datées (champ date à null) et l'une d'elles n'a pas de libellé exploitable (URL brute).",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi."
+  ],
+  "groupNotes": {
+    "bravery/aerial": "Comme Lance Combo au sol, les Magic Arts de Firion ont des follow-ups intégrés (deux enchaînements possibles) : Rond pour Magic Arts: Frost, Haut + Rond pour Magic Arts: Flame, Bas + Rond pour Magic Arts: Bolt — sans qu'il soit nécessaire d'équiper les braveries correspondantes.",
+    "bravery/Follow-ups": "Rope Knife, Lance Combo et Reel Axe peuvent enchaîner sur l'un de trois follow-ups : Rond (neutre) pour Punch, Haut + Rond (vers l'adversaire) pour Slash & Arrow, Bas + Rond (en s'éloignant) pour Lance. Les starters ayant les mêmes dégâts de base, le total est indiqué entre parenthèses."
+  }
 }

@@ -70,6 +70,11 @@
       "name": "Timing du combo Aerith double Shift Break",
       "desc": "Dans le combo Aerith de LXD92 (Swift Attack > Meo Twister > Aerith > Shift Break > Aerith > Shift Break > Swift Attack > Meo Twister, 4000+ dégâts HP sur petit stage), l'appel d'Aerith pendant Shift Break ne doit pas être trop précoce : sinon l'adversaire sort du gel de Seal Evil et esquive. Il faut appeler l'assist juste avant que la partie HP de Shift Break ne touche.",
       "source": "https://web.archive.org/web/20131114044756/http://dissidiaforums.com/showthread.php?11981-Zidane-Video-A-Small-Guide"
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Peu de links directs, mais des combos via les setups Scoop Art et Tidal Flame : Shift Break > Swift Attack ; Tidal Flame (mi-distance et plus) > dodge cancel > hit glitch Swift Attack ; Scoop Art (mi-distance, adversaire aérien) > DC > landing lag > Vortex ; Booster 8 > presque n'importe quoi ; près d'un mur, Booster 8 > Scoop Art > landing lag > Swift Attack.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -118,6 +123,12 @@
       "desc": "Vidéo de build d'époque (Tiger Bub) : configuration full assist Exp to Bravery avec Fragile Pride, Assist Critical Boost, Sneak Attack et Counterattack/Riposte.",
       "source": "https://www.youtube.com/watch?v=dhWYc7PstTI",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Zidane y est décrit avec peu de links directs mais des setups via Scoop Art et Tidal Flame.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "sourcesBySection": {

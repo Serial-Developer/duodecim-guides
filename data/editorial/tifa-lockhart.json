@@ -87,6 +87,11 @@
     {
       "name": "Moonsault Kick lock-off / knockback negation",
       "desc": "Utilisé en lock off, Moonsault Kick se dirige librement pour bâtir la jauge en sécurité dans les grandes arènes. Un appel d'assist à un timing très précis pendant la ruée finale annule par ailleurs son knockback."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Trois routes, toutes au départ de Blizzaga, et rien d'autre : Blizzaga > Waterkick ; Blizzaga (hit près du sol) > Meteodrive ou Meteor Strike ; Blizzaga (hit près du sol) > dash pour pousser l'adversaire hors du dernier hit > Meteor Strike.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -141,6 +146,12 @@
       "desc": "Démonstration vidéo (Orlando) passant en revue les feintes de Tifa coup par coup.",
       "source": "https://www.youtube.com/watch?v=kG8GgmUi808",
       "date": "2014"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Tifa y est créditée de trois routes, toutes au départ de Blizzaga.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "limits": [

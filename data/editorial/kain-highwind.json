@@ -78,6 +78,16 @@
     {
       "name": "Cyclone > Rising Drive",
       "desc": "Le hit stun de Cyclone permet de combotter en HP depuis la mi-distance, notamment Rising Drive. Fenêtre stricte : Kain n'est considéré airborne qu'un très court instant après la recovery, et redevient grounded s'il n'agit pas au bon timing."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "De nombreux combos à gros dégâts bravery, la plupart exigeants ou peu pratiques : Lance Burst > Lance Barrage (ou d'autres braveries aériennes près d'un mur) ; Lance Barrage angle haut > Lance Barrage (infini très serré) ; Crashing Dive angle haut > Lance Barrage ; Lancet (coup spécial, EX Mode) > Lance Barrage ; Cyclone > à peu près n'importe quoi ; Jump niveau 2 (hit au sommet) > dodge cancel > Crashing Dive, Sky Rave ou Dragon's Fang.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase vers reset de jauge d'assist",
+      "desc": "Trois coups offrent l'empty chase vers reset de la jauge d'assist : Lance Barrage (angle bas), Crashing Dive (angle neutre) et Celestial Shooter (angle bas).",
+      "source": "https://pastebin.com/dKSWgUQ6"
     }
   ],
   "matchups": {
@@ -124,6 +134,18 @@
       "desc": "Guide GameFAQs d'époque : movelist commentée, usage de l'EX Mode, combos et builds, plus un chapitre de conseils matchup par matchup couvrant tout le cast (30 personnages).",
       "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/62772",
       "date": "2012"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Kain y est décrit avec de nombreux combos à gros dégâts bravery, souvent exigeants.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "limits": [
@@ -132,6 +154,14 @@
     "Le tableau Strengths/Weaknesses de l'overview est vide : forces et faiblesses reconstruites uniquement depuis le texte.",
     "Pas d'évaluation rédigée du rôle d'assist : seules les données chiffrées et deux noms de synergies (« Kuja, Onion Knight ») sont fournis.",
     "Rising Drive, Sky Rave, Gungnir et Dragon's Fang (midair) n'ont pas de notes d'usage dédiées, seulement des descriptions courtes et des mentions dans l'overview.",
-    "Données de Lancet incomplètes (AP de maîtrise non renseignés)."
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi."
+  ],
+  "specialMoves": [
+    {
+      "name": "Lancet",
+      "input": "R + Carré — EX Mode (Holy Strength) uniquement",
+      "desc": "Attaque spéciale absente des listes d'équipement, disponible uniquement en EX Mode : après un court temps de charge, Kain frappe depuis le dessous de l'adversaire. Elle lui rend autant de HP que les dégâts HP infligés et restaure rapidement sa bravery jusqu'à sa valeur de base. Kain peut se déplacer pendant Lancet et, comme après ses attaques de mêlée, presser X ensuite pour dasher vers l'adversaire — même si Lancet n'a pas touché. C'est le point de départ de la route « Lancet > Lance Barrage » du relevé communautaire de combos.",
+      "source": "https://finalfantasy.fandom.com/wiki/Kain_Highwind_(Dissidia_PSP)"
+    }
   ]
 }

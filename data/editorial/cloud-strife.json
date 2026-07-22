@@ -79,6 +79,16 @@
     {
       "name": "Blade Beam dodge cancel",
       "desc": "L'explosion de Blade Beam crée un prompt de Chase et peut même se convertir en assist Kuja après un dodge cancel. L'essentiel de l'EX (60) est généré par l'explosion : après une touche à distance, dasher vers l'adversaire permet de récupérer la majorité de l'EX Force."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Une grande quantité de links très serrés mais très payants, au-delà des évidences autour de Fire : Climhazzard (jusqu'à la montée) > Double Cut ou Slashing Blow ; Double Cut au sol (premier hit sur adversaire aérien) > landing lag > presque tout (Cross-slash en suite courante) ; Fire à courte portée > Climhazzard, Sonic Break ou Double Cut ; Sonic Break (2 hits) > landing lag > Double Cut au sol ; Meteorain près d'un mur > Slashing Blow (en l'air au-dessus de l'adversaire, d'après la note de l'éditeur du relevé).",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase vers reset de jauge d'assist",
+      "desc": "Aucun coup n'est crédité du reset — Double Cut est à la frontière exacte : l'auteur le pense possible mais très serré.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     }
   ],
   "matchups": {
@@ -163,6 +173,18 @@
       "desc": "Démonstration de combos où Cloud frappe l'adversaire pendant ses recovery frames pour débloquer un second appel d'assist dans le même combo, illustrée avec plusieurs assists.",
       "source": "https://www.youtube.com/watch?v=FvNcrTFnKP0",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Cloud y est décrit avec une grande quantité de links très serrés mais très payants.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase (un chase initié sans rien y exécuter) suivi d'un reset de la jauge d'assist adverse. Le détail pour ce personnage est repris dans les techniques spécifiques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
     }
   ],
   "limits": [
@@ -170,6 +192,7 @@
     "Aucune mécanique unique n'est documentée pour Cloud (section absente du wiki).",
     "La startup de Finishing Touch et d'Omnislash Version 5 n'est pas renseignée (« ? » dans les données), tout comme la priorité d'Omnislash Version 5.",
     "Les valeurs de gain de jauge assist (assistGain) sont vides pour tous les coups.",
-    "Les références vidéo du wiki ne comportent ni auteur ni date."
+    "Les références vidéo du wiki ne comportent ni auteur ni date.",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi."
   ]
 }

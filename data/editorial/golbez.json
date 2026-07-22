@@ -83,6 +83,11 @@
       "name": "Glare Hand -> Cosmic Ray à travers les murs",
       "desc": "La portion « glare » de Glare Hand tire l'adversaire vers Golbez et ses frames actives durent plus longtemps que l'animation ne le suggère : en bufferisant Carré pendant et juste après l'animation, le link Cosmic Ray sort de façon fiable — et l'ensemble fonctionne à travers les murs, ce que le guide de tehdr4g0n exploite notamment dans Pandaemonium.",
       "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/63562"
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Une quantité correcte de combos, très spécialisés dans leur application ou leur espacement : Gravity Force en hauteur qui claque vers le bas > Float System ou Nightglow ; Attack System > dodge cancel > toute bravery sauf lui-même ou Gravity Force ; Rising Wave à bout portant > follow-up bravery > DC > Float System ; Float System > DC > landing lag > Gravity System ; Gravity Force bas qui claque vers le haut > Genesis Rock.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -127,6 +132,12 @@
       "desc": "Guide texte complet (v1.4, 2012) : analyse du personnage, EX, assists, combos, builds et matchups détaillés contre l'ensemble du roster, Feral Chaos et Gilgamesh compris.",
       "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/63562",
       "date": "2012"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Golbez y est crédité d'une quantité correcte de combos très spécialisés — Float System échoue de justesse au reset d'assist.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "sourcesBySection": {
@@ -147,5 +158,17 @@
     "Builds : un seul build (Seal of Lufenia) sans philosophie rédigée ni coups équipés ; le second emplacement de build est vide ; booster max non renseigné.",
     "Données incomplètes dans les tableaux : Fall Speed « ?? », startup de Cosmic Ray « ?? », valeurs d'assist gain absentes.",
     "Aucun texte de synthèse sur l'EX Mode au-delà de la liste d'effets et du tableau Black Fang ; dégâts et détails de l'EX Burst limités au tableau."
-  ]
+  ],
+  "specialMoves": [
+    {
+      "name": "Black Fang",
+      "input": "R + Carré maintenus — EX Mode (Summon Shadow Dragon) uniquement",
+      "desc": "Attaque spéciale absente des listes d'équipement, disponible uniquement en EX Mode : après un long temps de charge qui rend Golbez vulnérable, elle inflige un Break instantané si elle aboutit — y compris si Golbez est lui-même en état de Break au moment où elle part. Seule l'invocation Phénix permet de l'arrêter : les invocations qui gèlent la bravery adverse (comme Alexander) voient leur effet immédiatement interrompu, et Demon Wall ou Mandragora persistent mais ne la bloquent pas.",
+      "source": "https://finalfantasy.fandom.com/wiki/Golbez_(Dissidia_PSP)"
+    }
+  ],
+  "groupNotes": {
+    "bravery/main": "Chaque attaque de Golbez a deux parties : un coup rapproché et un projectile à plus longue portée. La réaction au hit et les dégâts varient selon la partie qui touche en premier — le coup rapproché offre le plus de dégâts et de suites, mais se faire bloquer dessus fait stagger Golbez.",
+    "hp/links": "Tous les Cosmic Ray partagent les mêmes données, bien qu'ils se déclenchent depuis des braveries différentes."
+  }
 }

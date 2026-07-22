@@ -80,6 +80,11 @@
     {
       "name": "Hell's Gate input hold",
       "desc": "Pour garantir qu'un Hell's Gate ne s'arrête pas prématurément en appelant un assist BRV : maintenir carré, puis maintenir aussi cercle et presser L. L'input est inconfortable (pouce + index gauche) mais fiabilise le setup, notamment sur un clash avec un One Inch Punch chargé."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Beaucoup de routes autour de Shadow Flare, très peu en dehors, toutes à très gros dégâts : Shadow Flare > dodge cancel > n'importe quoi ; Black Materia niveau 3 > Reaper ou Octaslash ; Godspeed à bout portant > landing lag > Godspeed > landing lag > Sudden Cruelty.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -134,6 +139,12 @@
       "desc": "Courte démo d'un setup d'EX Mode : activation pendant le slam pour purger l'assist adverse, appel d'assist puis Heartless Angel, et nouvelle conversion derrière.",
       "source": "https://www.youtube.com/watch?v=eSCTYJF2NLA",
       "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Sephiroth y est décrit avec beaucoup de routes autour de Shadow Flare, toutes à très gros dégâts.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
     }
   ],
   "limits": [
@@ -143,5 +154,16 @@
     "Le second build est entièrement vide et les sélections d'attaques des builds ne sont pas renseignées.",
     "Les valeurs de gain de jauge assist (assistGain) sont vides pour tous les coups, et les dégâts de Heaven's Light ne sont pas chiffrés (« - »).",
     "L'unique référence du wiki est une URL sans titre, auteur ni date."
-  ]
+  ],
+  "specialMoves": [
+    {
+      "name": "Heartless Angel",
+      "input": "R + Carré maintenus — EX Mode (One-Winged Angel) uniquement",
+      "desc": "Attaque spéciale absente des listes d'équipement, disponible uniquement en EX Mode : après un long temps de charge qui laisse Sephiroth vulnérable, elle réduit instantanément la bravery de l'adversaire à 1 si elle aboutit. Elle échoue si Sephiroth est en état de Break au moment où la charge se termine. Elle ignore les invocations protectrices comme Demon Wall, et face à un gel de bravery (Alexander), elle force un gel à 1. L'EX Mode apporte aussi Glide : maintenir X permet de planer.",
+      "source": "https://finalfantasy.fandom.com/wiki/Sephiroth_(Dissidia_PSP)"
+    }
+  ],
+  "groupNotes": {
+    "bravery/main": "Certaines braveries de mêlée demandent une seconde pression pour se terminer : ce finisher peut partir tôt, mais le retarder jusqu'à ce que tous les hits précédents aient connecté maximise les dégâts — c'est le sens de « delay combo to boost hit times » dans les descriptions."
+  }
 }

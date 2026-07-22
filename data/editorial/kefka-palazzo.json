@@ -72,7 +72,8 @@
     },
     {
       "name": "Conversions empty chase / dodge cancel des Thundagas",
-      "desc": "Lickety-Split Thundaga combote dans l'assist après dodge cancel ou empty chase instantané ; Zap-Trap Thundaga fait de même et, si plusieurs bolts s'enchaînent, offre l'un des plus gros frame advantages sur empty chase du jeu, avec des follow-ups solo (Scatter-Spray Blizzaga, Havoc Wing) après dodge cancel des premiers bolts."
+      "desc": "Lickety-Split Thundaga combote dans l'assist après dodge cancel ou empty chase instantané ; Zap-Trap Thundaga fait de même et, si plusieurs bolts s'enchaînent, offre l'un des plus gros frame advantages sur empty chase du jeu, avec des follow-ups solo (Scatter-Spray Blizzaga, Havoc Wing) après dodge cancel des premiers bolts. Attention à ne pas confondre deux usages du terme : ces empty chases servent à convertir vers l'assist, mais le relevé communautaire des empty chases menant à un reset de la jauge d'assist ne crédite Kefka d'aucun coup — Extra-Crispy Firaga y fonctionnerait probablement si un seul de ses projectiles touchait, sans qu'aucune méthode ne soit connue pour l'obtenir.",
+      "source": "https://pastebin.com/dKSWgUQ6"
     },
     {
       "name": "Trine anti-EX Core",
@@ -81,6 +82,11 @@
     {
       "name": "Conversion EX de Hyperdrive",
       "desc": "Activer l'EX Mode pendant le startup de Hyperdrive le convertit automatiquement en version EX (réalignement du tracking en route, couverture de l'angle mort vertical) — utile contre ceux qui cherchent le contact, comme Jecht."
+    },
+    {
+      "name": "Routes de combo solo recensées",
+      "desc": "Quatre routes ressortent du relevé communautaire : Meteor, Trine, Zap-Trap Thundaga ou Lickety-Split Thundaga à mi/longue portée, dodge cancel, puis Scatter-Spray Blizzaga ; Zap-Trap Thundaga au motif idéal enchaînant soit sur dodge cancel > Waggle-Wobbly Firaga > Havoc Wing, soit sur empty chase > Scatter-Spray Blizzaga ; Waggle-Wobbly Firaga à courte portée vers Havoc Wing ; et Waggle-Wobbly Firaga à hit retardé, landing lag, puis Trine.",
+      "source": "https://pastebin.com/8FWDXjvJ"
     }
   ],
   "matchups": {
@@ -114,22 +120,114 @@
     ]
   },
   "communityTech": [
-    { "title": "Conversion d'assist sur Scatter-Spray Blizzaga bloqué", "desc": "Exemple vidéo du block stagger de Scatter-Spray Blizzaga converti en combo d'assist.", "source": "https://www.youtube.com/watch?v=66QtcOnaWos&t=51s", "date": null },
-    { "title": "Éclats de Scatter-Spray Blizzaga renvoyés vers Kefka sur block", "desc": "Démonstration du renvoi des éclats de glace vers Kefka quand le projectile mid est bloqué.", "source": "https://www.youtube.com/watch?v=66QtcOnaWos&t=16s", "date": null },
-    { "title": "Éclats EX de Scatter-Spray Blizzaga réfléchis sur block", "desc": "Même comportement en EX Mode : les éclats répétés peuvent poursuivre Kefka si le projectile est bloqué.", "source": "https://www.youtube.com/watch?v=66QtcOnaWos&t=59s", "date": null },
-    { "title": "Hit faible d'Extra-Crispy Firaga", "desc": "Exemple du hit stun bref du projectile initial, qui repousse simplement l'adversaire.", "source": "https://www.youtube.com/watch?v=LaMMvK8bmnU", "date": null },
-    { "title": "Hit fort d'Extra-Crispy Firaga converti en assist", "desc": "Exemple des projectiles séparés envoyant vers le haut avec assez de hit stun pour dodge cancel et follow-up d'assist.", "source": "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=12s", "date": null },
-    { "title": "Double hit d'Extra-Crispy Firaga au-dessus de l'adversaire", "desc": "Exemple du double hit des trois projectiles juste au-dessus de la cible.", "source": "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=45s", "date": null },
-    { "title": "Double hit d'Extra-Crispy Firaga (en match)", "desc": "Autre exemple du comportement de double hit.", "source": "https://www.youtube.com/watch?v=1zOrrOI4WvE&t=236s", "date": null },
-    { "title": "Double hit d'Extra-Crispy Firaga (2)", "desc": "Second exemple complémentaire du double hit.", "source": "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=50s", "date": null },
-    { "title": "Combo d'assist sur Lickety-Split Thundaga en dodge cancel", "desc": "Démonstration de la conversion en assist après dodge cancel.", "source": "https://www.youtube.com/watch?v=iUK7ak7mKag", "date": null },
-    { "title": "Combo d'assist sur Lickety-Split Thundaga en empty chase", "desc": "Démonstration de la conversion via empty chase instantané.", "source": "https://www.youtube.com/watch?v=iUK7ak7mKag&t=35s", "date": null },
-    { "title": "Hitbox de Lickety-Split Thundaga à bout portant", "desc": "Illustration du trou entre les éclairs qui peut faire rater le move entièrement de très près.", "source": "https://www.youtube.com/watch?v=iUK7ak7mKag&t=29s", "date": null },
-    { "title": "Zap-Trap Thundaga en empty chase vers assist", "desc": "Exemple de conversion d'assist via empty chase instantané.", "source": "https://www.youtube.com/watch?v=WQaW9dZop-A&t=36s", "date": null },
-    { "title": "Zap-Trap Thundaga en dodge cancel", "desc": "Exemple du dodge cancel après les premiers bolts.", "source": "https://www.youtube.com/watch?v=WQaW9dZop-A&t=16s", "date": null },
-    { "title": "Combos solo depuis Zap-Trap Thundaga", "desc": "Exemples de follow-ups solo (Scatter-Spray Blizzaga, Havoc Wing) après dodge cancel.", "source": "https://www.youtube.com/watch?v=WQaW9dZop-A", "date": null },
-    { "title": "Meteor en dodge cancel vers assist", "desc": "Exemple de conversion d'assist depuis les projectiles de Meteor.", "source": "https://www.youtube.com/watch?v=sfztRLFzEF4", "date": null },
-    { "title": "What is a good Kefka setup? (thread GameFAQs)", "desc": "Thread d'époque du board GameFAQs : movesets types (WW Firaga / SS Blizzaga / EC Firaga en aérien), pression au Waggle-Wobbly Firaga avec punish des dodges en Scatter-Spray Blizzaga, et conversions d'assist (Kuja, Aerith, Sephiroth) en Havoc Wing.", "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/59268680", "date": "2011" }
+    {
+      "title": "Conversion d'assist sur Scatter-Spray Blizzaga bloqué",
+      "desc": "Exemple vidéo du block stagger de Scatter-Spray Blizzaga converti en combo d'assist.",
+      "source": "https://www.youtube.com/watch?v=66QtcOnaWos&t=51s",
+      "date": null
+    },
+    {
+      "title": "Éclats de Scatter-Spray Blizzaga renvoyés vers Kefka sur block",
+      "desc": "Démonstration du renvoi des éclats de glace vers Kefka quand le projectile mid est bloqué.",
+      "source": "https://www.youtube.com/watch?v=66QtcOnaWos&t=16s",
+      "date": null
+    },
+    {
+      "title": "Éclats EX de Scatter-Spray Blizzaga réfléchis sur block",
+      "desc": "Même comportement en EX Mode : les éclats répétés peuvent poursuivre Kefka si le projectile est bloqué.",
+      "source": "https://www.youtube.com/watch?v=66QtcOnaWos&t=59s",
+      "date": null
+    },
+    {
+      "title": "Hit faible d'Extra-Crispy Firaga",
+      "desc": "Exemple du hit stun bref du projectile initial, qui repousse simplement l'adversaire.",
+      "source": "https://www.youtube.com/watch?v=LaMMvK8bmnU",
+      "date": null
+    },
+    {
+      "title": "Hit fort d'Extra-Crispy Firaga converti en assist",
+      "desc": "Exemple des projectiles séparés envoyant vers le haut avec assez de hit stun pour dodge cancel et follow-up d'assist.",
+      "source": "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=12s",
+      "date": null
+    },
+    {
+      "title": "Double hit d'Extra-Crispy Firaga au-dessus de l'adversaire",
+      "desc": "Exemple du double hit des trois projectiles juste au-dessus de la cible.",
+      "source": "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=45s",
+      "date": null
+    },
+    {
+      "title": "Double hit d'Extra-Crispy Firaga (en match)",
+      "desc": "Autre exemple du comportement de double hit.",
+      "source": "https://www.youtube.com/watch?v=1zOrrOI4WvE&t=236s",
+      "date": null
+    },
+    {
+      "title": "Double hit d'Extra-Crispy Firaga (2)",
+      "desc": "Second exemple complémentaire du double hit.",
+      "source": "https://www.youtube.com/watch?v=LaMMvK8bmnU&t=50s",
+      "date": null
+    },
+    {
+      "title": "Combo d'assist sur Lickety-Split Thundaga en dodge cancel",
+      "desc": "Démonstration de la conversion en assist après dodge cancel.",
+      "source": "https://www.youtube.com/watch?v=iUK7ak7mKag",
+      "date": null
+    },
+    {
+      "title": "Combo d'assist sur Lickety-Split Thundaga en empty chase",
+      "desc": "Démonstration de la conversion via empty chase instantané.",
+      "source": "https://www.youtube.com/watch?v=iUK7ak7mKag&t=35s",
+      "date": null
+    },
+    {
+      "title": "Hitbox de Lickety-Split Thundaga à bout portant",
+      "desc": "Illustration du trou entre les éclairs qui peut faire rater le move entièrement de très près.",
+      "source": "https://www.youtube.com/watch?v=iUK7ak7mKag&t=29s",
+      "date": null
+    },
+    {
+      "title": "Zap-Trap Thundaga en empty chase vers assist",
+      "desc": "Exemple de conversion d'assist via empty chase instantané.",
+      "source": "https://www.youtube.com/watch?v=WQaW9dZop-A&t=36s",
+      "date": null
+    },
+    {
+      "title": "Zap-Trap Thundaga en dodge cancel",
+      "desc": "Exemple du dodge cancel après les premiers bolts.",
+      "source": "https://www.youtube.com/watch?v=WQaW9dZop-A&t=16s",
+      "date": null
+    },
+    {
+      "title": "Combos solo depuis Zap-Trap Thundaga",
+      "desc": "Exemples de follow-ups solo (Scatter-Spray Blizzaga, Havoc Wing) après dodge cancel.",
+      "source": "https://www.youtube.com/watch?v=WQaW9dZop-A",
+      "date": null
+    },
+    {
+      "title": "Meteor en dodge cancel vers assist",
+      "desc": "Exemple de conversion d'assist depuis les projectiles de Meteor.",
+      "source": "https://www.youtube.com/watch?v=sfztRLFzEF4",
+      "date": null
+    },
+    {
+      "title": "What is a good Kefka setup? (thread GameFAQs)",
+      "desc": "Thread d'époque du board GameFAQs : movesets types (WW Firaga / SS Blizzaga / EC Firaga en aérien), pression au Waggle-Wobbly Firaga avec punish des dodges en Scatter-Spray Blizzaga, et conversions d'assist (Kuja, Aerith, Sephiroth) en Havoc Wing.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/59268680",
+      "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Kefka y est décrit comme un personnage aux combos très libres, centrés sur Waggle-Wobbly Firaga ; l'auteur écarte explicitement l'EX Mode du relevé.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage. Kefka n'y est crédité d'aucun coup : c'est la précision qui distingue ses conversions d'assist par empty chase, bien réelles, du reset de jauge qu'il n'obtient pas.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
+    }
   ],
   "limits": [
     "Page matchups dédiée non documentée (stub) : la synthèse matchups repose uniquement sur l'overview et les notes de coups (Lightning, Onion Knight, Sephiroth, Gilgamesh, Jecht, Vaan, Cloud, Prishe).",
@@ -137,6 +235,13 @@
     "Combos : seules les routes solo sont listées (en notation abrégée, sans dégâts ni conditions détaillées) ; aucun combo d'assist chiffré.",
     "Builds : coups équipés non renseignés pour les deux builds, summon absent du build High Initial EX.",
     "Assist : aucune évaluation en prose de Kefka en tant qu'assist (données de table et tier Low de meta uniquement) ; valeurs d'assist gain des coups non renseignées.",
-    "Les références YouTube ne sont pas datées (champ date à null) ; le startup de la seconde salve EX de Scatter-Spray Blizzaga est inconnu (« ?? »)."
-  ]
+    "Les références YouTube ne sont pas datées (champ date à null) ; le startup de la seconde salve EX de Scatter-Spray Blizzaga est inconnu (« ?? »).",
+    "Le relevé de combos solo de la communauté écarte volontairement l'EX Mode de Kefka (« EX Mode just does whatever it wants ») : aucune route solo en EX Mode n'en est tirée.",
+    "Ce même relevé mentionne un follow-up nommé « Split Shot Blizzaga » qui ne correspond à aucun nom de coup des données du wiki : la branche n'a pas été reprise, faute de pouvoir l'identifier avec certitude.",
+    "Le relevé d'empty chases de la communauté n'est pas daté : son état de fraîcheur ne peut pas être établi."
+  ],
+  "groupNotes": {
+    "bravery/main": "Toutes les braveries de Kefka existent au sol et en l'air, à données partagées.",
+    "hp/main": "Toutes les attaques HP existent au sol et en l'air à données partagées, sauf Hyperdrive, disponible uniquement au sol."
+  }
 }
