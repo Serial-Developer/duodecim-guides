@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Organiser un tournoi — Dissidia 012 [duodecim]</title>
+<meta name="description" content="Organiser son propre tournoi Dissidia 012 [duodecim] : obtenir le rôle Tournament Organizer, écrire le règlement, créer le bracket sur start.gg ou Challonge, annoncer, arbitrer et clôturer l'édition.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body>
+<header class="site-header">
+<a class="sh-brand" href="index.html">Dissidia 012 <span class="gold">[duodecim]</span> <span class="sh-sub">guides compétitifs</span></a>
+<nav class="sh-groups" aria-label="Navigation du site">
+<div class="sh-group">
+<span class="sh-group-label">Contenu du jeu</span>
+<div class="sh-drop">
+<a href="index.html">Personnages</a>
+<a href="characters/aerith.html">Assist : Aerith</a>
+<a href="characters/chaos.html">Boss : Chaos</a>
+</div>
+</div>
+<div class="sh-group">
+<span class="sh-group-label">Outils pour jouer</span>
+<div class="sh-drop">
+<a href="install.html">Installer sur PPSSPP</a>
+<a href="savedata.html">Savedata prêtes à jouer</a>
+</div>
+</div>
+<div class="sh-group is-active">
+<span class="sh-group-label">Données compétitives</span>
+<div class="sh-drop">
+<a href="techniques.html">Techniques &amp; glitches</a>
+<a href="participer.html">Participer aux tournois</a>
+<a href="organiser.html" aria-current="page">Organiser un tournoi</a>
+<a href="futurs-tournois.html">Futurs tournois</a>
+<a href="tournois.html">Tournois passés</a>
+<a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">Tier list tournoi 2017<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a href="https://replaytheater.app/?game=d012" target="_blank" rel="external noopener">Vidéos de matchs<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</nav>
+<details class="sh-drawer">
+<summary aria-label="Menu"><span class="sh-burger" aria-hidden="true"></span></summary>
+<nav class="sh-panel" aria-label="Navigation du site (mobile)">
+<p class="sh-cat">Contenu du jeu</p>
+<a href="index.html">Personnages</a>
+<a href="characters/aerith.html">Assist : Aerith</a>
+<a href="characters/chaos.html">Boss : Chaos</a>
+<p class="sh-cat">Outils pour jouer</p>
+<a href="install.html">Installer sur PPSSPP</a>
+<a href="savedata.html">Savedata prêtes à jouer</a>
+<p class="sh-cat">Données compétitives</p>
+<a href="techniques.html">Techniques &amp; glitches</a>
+<a href="participer.html">Participer aux tournois</a>
+<a href="organiser.html" aria-current="page">Organiser un tournoi</a>
+<a href="futurs-tournois.html">Futurs tournois</a>
+<a href="tournois.html">Tournois passés</a>
+<a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">Tier list tournoi 2017<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a href="https://replaytheater.app/?game=d012" target="_blank" rel="external noopener">Vidéos de matchs<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</nav>
+</details>
+</header>
+<nav class="guide-top" aria-label="Sections de la page"><div class="chips-nav">
+<a href="index.html">← Sélection</a>
+<a href="#pourquoi">Pourquoi</a>
+<a href="#role">Le rôle TO</a>
+<a href="#ruleset">Le règlement</a>
+<a href="#bracket">Le bracket</a>
+<a href="#annoncer">Annoncer</a>
+<a href="#pendant">Pendant</a>
+<a href="#apres">Après</a>
+</div></nav>
+<main class="wrap" style="padding-bottom:3rem">
+<h1 style="color:var(--gold)">Organiser un tournoi</h1>
+<p class="mv-desc">La scène Duodecim vit entièrement grâce aux joueurs qui se lancent : chaque tournoi documenté depuis 2022 a été monté par un membre de la communauté, avec les outils gratuits du Discord, de start.gg et de Challonge. Ce guide déroule tout le parcours, de l'idée à la remise des rôles — organiser une édition est à la portée de n'importe quel membre motivé.</p>
+
+<h2 id="pourquoi">Pourquoi se lancer</h2>
+<article class="card">
+<p>Il n'y a pas de structure officielle derrière les tournois Duodecim : la série de 2022, 012 Ranked, DISSent Folk, les éditions 2026 — toutes sont nées de l'initiative d'un joueur. Et la barre d'entrée est basse :</p>
+<ul><li>Pas besoin d'une foule : les éditions récentes ont réuni de 4 à 15 joueurs, et un tournoi à 4 reste un vrai tournoi — DISSent Folk (2025) a simplement basculé sa double élimination en round robin pour que chacun joue plus de matchs.</li><li>Pas besoin d'expérience : le serveur fournit un document d'aide à la création de ruleset, les règlements de référence sont publics, et les organisateurs passés (Mericus, Sashawaruma, JoyRaines…) sont sur le même Discord.</li><li>L'organisateur donne sa couleur à l'édition : format inédit (le 2v2 par équipes de décembre 2022), public ciblé (« Date With Death » 2026, réservé aux joueurs jamais titrés), ou variante de règles (012 Ranked et son « JP Ranked with a twist »).</li></ul>
+
+</article>
+
+<h2 id="role">Étape 1 — Obtenir le rôle Tournament Organizer</h2>
+<article class="card">
+<p>Sur le Discord DISSIDIA, l'organisation passe par le rôle temporaire « Tournament Organizer », ouvert à tous les volontaires : il suffit d'en faire la demande au staff du serveur.</p>
+<ul><li>Le rôle donne, le temps de l'événement, les permissions de publier dans le canal event-announcements, de créer des threads dans event-active-thread et de poster des embeds.</li><li>Il est retiré une fois l'événement terminé — chaque édition repart d'une demande.</li><li>C'est aussi le canal pour récupérer le document d'aide à la création de ruleset fourni par le serveur.</li></ul>
+<p class="video-link"><a href="https://discord.gg/a44rneC" target="_blank" rel="external noopener">Rejoindre le Discord DISSIDIA</a></p>
+</article>
+
+<h2 id="ruleset">Étape 2 — Écrire le règlement</h2>
+<article class="card">
+<p>Personne ne repart de zéro : les éditions récentes prennent un règlement de référence et l'ajustent. Les décisions à trancher, telles qu'on les voit dans les règlements publiés :</p>
+<ul><li>La base : le ruleset communautaire moderne (Duodecim 22-1) pour un tournoi classique, ou Japan Ranked pour un format à loadout imposé — les deux sont détaillés sur la page Tournois.</li><li>Le format : double élimination dans la plupart des éditions, FT2 avec finales FT3 (2026) ou BO3/BO5 (2022) ; prévoir un plan B si peu d'inscrits (le round robin de DISSent Folk).</li><li>Les bans : personnages (Feral Chaos banni, ou autorisé sans EX ni assist), stages, invocations, accessoires (Rebellious Soul, MS Prima en 2026), limites d'infinis (une à trois répétitions selon les éditions), chase à un hit.</li><li>Les règles de match : stage déterminé d'abord, blind picks des personnages par message privé à l'organisateur, « Dave's Stupid Rule » (gardée ou abandonnée selon les éditions).</li><li>La technique : version exacte de PPSSPP (1.12.3 en 2024, 1.19.3 en 2025…), copie ULUS10566, Radmin VPN — le tournament pack du serveur équipe les nouveaux venus.</li><li>Les conditions d'admission éventuelles : ouvert à tous par défaut, réservé aux débutants (Date With Death), ou limité à une plateforme (PC uniquement).</li><li>La gestion des litiges : replays et captures d'écran font foi, match rejoué à l'identique en cas de problème ; la « clause des gentlemen » de DISSent Folk impose que tout accord entre joueurs soit public dans le thread du tournoi.</li></ul>
+<p class="video-link"><a href="tournois.html#rulesets">Les rulesets de référence et leurs évolutions</a></p>
+</article>
+
+<h2 id="bracket">Étape 3 — Créer le bracket</h2>
+<article class="card">
+<p>Tous les tournois documentés de la communauté utilisent l'une des deux plateformes gratuites :</p>
+<ul><li>start.gg : page d'inscription complète avec règlement intégré et classements — le choix de Duodecim 22-1 et DISSent Folk.</li><li>Challonge : plus léger, bracket immédiat — le choix de 012 Ranked, Date With Death et Day to Die.</li><li>Publier le règlement complet sur la page du bracket : c'est la version qui fait foi, et c'est elle qui reste consultable des années après.</li><li>Après la finale, penser à clôturer officiellement l'événement sur la plateforme : le bracket de Day to Die est resté affiché « en cours » après sa conclusion, ce qui sème le doute sur le résultat.</li></ul>
+
+</article>
+
+<h2 id="annoncer">Étape 4 — Annoncer et recruter</h2>
+<article class="card">
+<p>L'annonce se fait dans les canaux d'événements du Discord, de quelques jours à quelques semaines avant la date. Une annonce type contient :</p>
+<ul><li>La date, le lien d'inscription (start.gg ou Challonge) et le règlement — ou un lien vers lui.</li><li>Les conditions d'admission et la version de PPSSPP requise.</li><li>Un rappel du tournament pack pour les nouveaux : PPSSPP, Radmin et une sauvegarde 100 % prête à jouer, tout est fourni.</li><li>Le prix en jeu, même symbolique : rôle « Emu Era Champion » (DISSent Folk), Discord Nitro (012 Ranked), permissions du serveur et prix spécial (Date With Death) — chaque édition a le sien.</li></ul>
+<p class="video-link"><a href="savedata.html">Le tournament pack et les savedata prêtes à jouer</a></p>
+</article>
+
+<h2 id="pendant">Étape 5 — Faire vivre l'événement</h2>
+<article class="card">
+<p>Un tournoi en ligne s'étale sur plusieurs jours : le rôle de l'organisateur est surtout de coordonner.</p>
+<ul><li>Ouvrir un thread de suivi dans event-active-thread : c'est là que vivent les plannings de matchs, les résultats et les accords publics entre joueurs.</li><li>Recueillir les blind picks par message privé et donner des fenêtres de matchs souples — les éditions 2026 laissaient un à trois jours par round selon les emplois du temps.</li><li>Diffuser si possible : les matchs de 22-1 passaient sur la chaîne Twitch lxd92, ceux de DISSent Folk sur celles de Sashawaruma et Rocher — le stream est ce qui reste de l'édition avec le bracket.</li><li>Trancher les litiges avec les replays et captures, comme le prévoit le règlement moderne.</li></ul>
+
+</article>
+
+<h2 id="apres">Après le tournoi</h2>
+<article class="card">
+<p>Les dernières tâches font la différence entre une édition oubliée et une édition qui compte :</p>
+<ul><li>Publier les résultats dans le thread et clôturer le bracket sur la plateforme.</li><li>Distribuer les récompenses annoncées et faire attribuer les rôles Emu Era aux participants.</li><li>Archiver les VODs : la playlist YouTube de 012 Ranked est aujourd'hui la seule trace en vidéo de l'édition — et une source précieuse pour ce site.</li><li>Rendre le rôle Tournament Organizer… et pourquoi pas annoncer la prochaine édition.</li></ul>
+<p class="video-link"><a href="tournois.html">Les tournois passés documentés</a></p>
+</article>
+
+<h2 id="sources">Sources</h2>
+<ul class="sources-list"><li><a href="https://discord.gg/a44rneC" target="_blank" rel="external noopener">https://discord.gg/a44rneC</a></li><li><a href="https://www.start.gg/tournament/duodecim-22-1/details" target="_blank" rel="external noopener">https://www.start.gg/tournament/duodecim-22-1/details</a></li><li><a href="https://www.start.gg/tournament/dissent-folk/details" target="_blank" rel="external noopener">https://www.start.gg/tournament/dissent-folk/details</a></li><li><a href="https://challonge.com/edokjat0" target="_blank" rel="external noopener">https://challonge.com/edokjat0</a></li><li><a href="https://challonge.com/dj52284z" target="_blank" rel="external noopener">https://challonge.com/dj52284z</a></li><li><a href="https://challonge.com/eoybbvgi" target="_blank" rel="external noopener">https://challonge.com/eoybbvgi</a></li><li><a href="https://dissidia.wiki/Japan_Ranked_(DDFF)" target="_blank" rel="external noopener">https://dissidia.wiki/Japan_Ranked_(DDFF)</a></li></ul><h3>Limites connues</h3><ul class="sources-list"><li>Le fonctionnement du rôle Tournament Organizer et des canaux d'événements a été relevé sur le Discord DISSIDIA en juillet 2026 ; l'organisation du serveur peut évoluer.</li><li>Les pratiques décrites (formats, annonces, arbitrage, récompenses) sont tirées des règlements et annonces publiés des éditions 2022-2026 ; chaque organisateur reste libre de ses choix.</li></ul>
+</main>
+<footer class="site"><div class="wrap">
+<p class="foot-line">Site de fans non commercial — personnages et artworks © Square Enix. Textes adaptés de <a href="https://dissidia.wiki" target="_blank" rel="external noopener">dissidia.wiki</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noopener">CC BY 4.0</a>) et du <a href="https://finalfantasy.fandom.com" target="_blank" rel="external noopener">Final Fantasy Wiki</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external noopener">CC BY-SA 3.0</a>).</p>
+<details class="foot-more"><summary>Détail des licences et des sources</summary>
+<p>Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011). Contenu textuel adapté et traduit de dissidia.wiki (CC BY 4.0) ; compléments de moveset (rôles et jobs par coup, coups spéciaux) adaptés du Final Fantasy Wiki (CC BY-SA 3.0). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" target="_blank" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+</details>
+</div></footer>
+
+</body>
+</html>

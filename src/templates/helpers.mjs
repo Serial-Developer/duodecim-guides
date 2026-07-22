@@ -260,9 +260,10 @@ export function siteHeader({ base = '', active = '', h1 = false } = {}) {
     ] },
     { title: 'Données compétitives', items: [
       { key: 'techniques', href: `${base}techniques.html`, label: 'Techniques &amp; glitches' },
-      { key: 'tournois', href: `${base}tournois.html`, label: 'Tournois' },
       { key: 'participer', href: `${base}participer.html`, label: 'Participer aux tournois' },
+      { key: 'organiser', href: `${base}organiser.html`, label: 'Organiser un tournoi' },
       { key: 'futurs', href: `${base}futurs-tournois.html`, label: 'Futurs tournois' },
+      { key: 'tournois', href: `${base}tournois.html`, label: 'Tournois passés' },
       { key: 'tierlist', href: 'https://dissidia.wiki/Tier_List_(Dissidia_012)', label: 'Tier list tournoi 2017', ext: true },
       { key: 'videos', href: 'https://replaytheater.app/?game=d012', label: 'Vidéos de matchs', ext: true },
     ] },

@@ -12,7 +12,8 @@
     "qa:links": "node scripts/qa.mjs --links",
     "coverage": "node scripts/coverage.mjs",
     "serve": "npx serve dist",
-    "watch": "node scripts/watch-tournaments.mjs"
+    "watch": "node scripts/watch-tournaments.mjs",
+    "add-tournoi": "node scripts/add-tournoi.mjs"
   },
   "keywords": [],
   "author": "",

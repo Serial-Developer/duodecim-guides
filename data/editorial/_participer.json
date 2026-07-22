@@ -95,17 +95,13 @@
       "id": "organiser",
       "name": "Organiser son propre tournoi",
       "intro": [
-        "N'importe quel membre du serveur peut organiser un tournoi : le rôle temporaire « Tournament Organizer » s'obtient en en faisant la demande au staff du Discord."
+        "N'importe quel membre du serveur peut monter son édition — tous les tournois documentés depuis 2022 sont nés comme ça. Le parcours complet (rôle Tournament Organizer, règlement, bracket, annonce, arbitrage) a sa page dédiée."
       ],
-      "points": [
-        "Le rôle donne les permissions nécessaires le temps de l'événement : publier dans event-announcements, créer des threads dans event-active-thread et poster des embeds. Il est retiré une fois l'événement terminé.",
-        "Le serveur fournit un document d'aide à la création de ruleset ; les règlements de référence (Duodecim 22-1, Japan Ranked) et leurs évolutions récentes servent de base de travail.",
-        "Les brackets se gèrent sur start.gg ou Challonge — les deux plateformes utilisées par tous les tournois documentés de la communauté."
-      ],
+      "points": [],
       "cta": [
         {
-          "url": "tournois.html#rulesets",
-          "label": "Les rulesets de référence"
+          "url": "organiser.html",
+          "label": "Organiser un tournoi : le guide complet"
         }
       ],
       "short": "Organiser"

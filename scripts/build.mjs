@@ -8,6 +8,7 @@ import { renderInstall } from '../src/templates/install.mjs';
 import { renderSavedata } from '../src/templates/savedata.mjs';
 import { renderTournois } from '../src/templates/tournois.mjs';
 import { renderParticiper } from '../src/templates/participer.mjs';
+import { renderOrganiser } from '../src/templates/organiser.mjs';
 import { renderCalendrier } from '../src/templates/calendrier.mjs';
 import { slugAnchor } from '../src/templates/helpers.mjs';
 import { renderChaos } from '../src/templates/chaos.mjs';
@@ -27,6 +28,7 @@ const install = readJson(join(ROOT, 'data', 'editorial', '_install.json'));
 const savedata = readJson(join(ROOT, 'data', 'editorial', '_savedata.json'));
 const tournois = readJson(join(ROOT, 'data', 'editorial', '_tournois.json'));
 const participer = readJson(join(ROOT, 'data', 'editorial', '_participer.json'));
+const organiser = readJson(join(ROOT, 'data', 'editorial', '_organiser.json'));
 
 // Correspondance nom tier list -> slug (la tier list utilise des noms courts)
 const TIER_NAME_TO_SLUG = {
@@ -136,6 +138,7 @@ writeFileSync(join(DIST, 'install.html'), renderInstall(install));
 writeFileSync(join(DIST, 'savedata.html'), renderSavedata(savedata));
 writeFileSync(join(DIST, 'tournois.html'), renderTournois(tournois));
 writeFileSync(join(DIST, 'participer.html'), renderParticiper(participer));
+writeFileSync(join(DIST, 'organiser.html'), renderOrganiser(organiser));
 
 // Calendrier des tournois : passés documentés (_tournois.json) + à venir
 // confirmés (upcoming.json) + détectés sur start.gg (auto.json), dédupliqués
@@ -173,8 +176,8 @@ writeFileSync(join(DIST, 'participer.html'), renderParticiper(participer));
       'https://discord.gg/a44rneC',
     ],
     limits: [
-      'La veille couvre l’API officielle de start.gg et le canal d’annonces du Discord DISSIDIA : un tournoi annoncé uniquement ailleurs (Twitter/X, dont l’API de lecture est payante, ou un autre serveur) peut lui échapper.',
-      'Challonge n’offre pas d’API publique de recherche par jeu : les brackets Challonge sont détectés via leur annonce sur le Discord.',
+      'Seule start.gg est couverte automatiquement (API officielle). Le canal d’annonces du Discord DISSIDIA est un canal texte classique, non suivable depuis un autre serveur : ses annonces — notamment les brackets Challonge, qui n’ont pas d’API publique de recherche — sont relayées manuellement et peuvent arriver avec du retard.',
+      'Un tournoi annoncé uniquement ailleurs (Twitter/X, dont l’API de lecture est payante, ou un autre serveur) peut échapper au calendrier.',
     ],
   }));
 }
@@ -185,4 +188,4 @@ cpSync(join(ROOT, 'src', 'scripts', 'site.js'), join(DIST, 'scripts', 'site.js')
 cpSync(join(ROOT, 'src', 'scripts', 'calendrier.js'), join(DIST, 'scripts', 'calendrier.js'));
 cpSync(join(ROOT, 'assets'), join(DIST, 'assets'), { recursive: true });
 
-console.log(`dist/ généré : index + ${chars.length - 1} guides + techniques.html + install.html + savedata.html + tournois.html + participer.html${missingEd ? ` (${missingEd} sans éditorial — bandeaux)` : ''}`);
+console.log(`dist/ généré : index + ${chars.length - 1} guides + 7 pages transverses (techniques, install, savedata, tournois, participer, organiser, futurs-tournois)${missingEd ? ` (${missingEd} sans éditorial — bandeaux)` : ''}`);

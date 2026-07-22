@@ -1,0 +1,133 @@
+{
+  "title": "Organiser un tournoi",
+  "lede": "La scène Duodecim vit entièrement grâce aux joueurs qui se lancent : chaque tournoi documenté depuis 2022 a été monté par un membre de la communauté, avec les outils gratuits du Discord, de start.gg et de Challonge. Ce guide déroule tout le parcours, de l'idée à la remise des rôles — organiser une édition est à la portée de n'importe quel membre motivé.",
+  "sections": [
+    {
+      "id": "pourquoi",
+      "name": "Pourquoi se lancer",
+      "short": "Pourquoi",
+      "intro": [
+        "Il n'y a pas de structure officielle derrière les tournois Duodecim : la série de 2022, 012 Ranked, DISSent Folk, les éditions 2026 — toutes sont nées de l'initiative d'un joueur. Et la barre d'entrée est basse :"
+      ],
+      "points": [
+        "Pas besoin d'une foule : les éditions récentes ont réuni de 4 à 15 joueurs, et un tournoi à 4 reste un vrai tournoi — DISSent Folk (2025) a simplement basculé sa double élimination en round robin pour que chacun joue plus de matchs.",
+        "Pas besoin d'expérience : le serveur fournit un document d'aide à la création de ruleset, les règlements de référence sont publics, et les organisateurs passés (Mericus, Sashawaruma, JoyRaines…) sont sur le même Discord.",
+        "L'organisateur donne sa couleur à l'édition : format inédit (le 2v2 par équipes de décembre 2022), public ciblé (« Date With Death » 2026, réservé aux joueurs jamais titrés), ou variante de règles (012 Ranked et son « JP Ranked with a twist »)."
+      ],
+      "cta": []
+    },
+    {
+      "id": "role",
+      "name": "Étape 1 — Obtenir le rôle Tournament Organizer",
+      "short": "Le rôle TO",
+      "intro": [
+        "Sur le Discord DISSIDIA, l'organisation passe par le rôle temporaire « Tournament Organizer », ouvert à tous les volontaires : il suffit d'en faire la demande au staff du serveur."
+      ],
+      "points": [
+        "Le rôle donne, le temps de l'événement, les permissions de publier dans le canal event-announcements, de créer des threads dans event-active-thread et de poster des embeds.",
+        "Il est retiré une fois l'événement terminé — chaque édition repart d'une demande.",
+        "C'est aussi le canal pour récupérer le document d'aide à la création de ruleset fourni par le serveur."
+      ],
+      "cta": [
+        { "url": "https://discord.gg/a44rneC", "label": "Rejoindre le Discord DISSIDIA", "ext": true }
+      ]
+    },
+    {
+      "id": "ruleset",
+      "name": "Étape 2 — Écrire le règlement",
+      "short": "Le règlement",
+      "intro": [
+        "Personne ne repart de zéro : les éditions récentes prennent un règlement de référence et l'ajustent. Les décisions à trancher, telles qu'on les voit dans les règlements publiés :"
+      ],
+      "points": [
+        "La base : le ruleset communautaire moderne (Duodecim 22-1) pour un tournoi classique, ou Japan Ranked pour un format à loadout imposé — les deux sont détaillés sur la page Tournois.",
+        "Le format : double élimination dans la plupart des éditions, FT2 avec finales FT3 (2026) ou BO3/BO5 (2022) ; prévoir un plan B si peu d'inscrits (le round robin de DISSent Folk).",
+        "Les bans : personnages (Feral Chaos banni, ou autorisé sans EX ni assist), stages, invocations, accessoires (Rebellious Soul, MS Prima en 2026), limites d'infinis (une à trois répétitions selon les éditions), chase à un hit.",
+        "Les règles de match : stage déterminé d'abord, blind picks des personnages par message privé à l'organisateur, « Dave's Stupid Rule » (gardée ou abandonnée selon les éditions).",
+        "La technique : version exacte de PPSSPP (1.12.3 en 2024, 1.19.3 en 2025…), copie ULUS10566, Radmin VPN — le tournament pack du serveur équipe les nouveaux venus.",
+        "Les conditions d'admission éventuelles : ouvert à tous par défaut, réservé aux débutants (Date With Death), ou limité à une plateforme (PC uniquement).",
+        "La gestion des litiges : replays et captures d'écran font foi, match rejoué à l'identique en cas de problème ; la « clause des gentlemen » de DISSent Folk impose que tout accord entre joueurs soit public dans le thread du tournoi."
+      ],
+      "cta": [
+        { "url": "tournois.html#rulesets", "label": "Les rulesets de référence et leurs évolutions" }
+      ]
+    },
+    {
+      "id": "bracket",
+      "name": "Étape 3 — Créer le bracket",
+      "short": "Le bracket",
+      "intro": [
+        "Tous les tournois documentés de la communauté utilisent l'une des deux plateformes gratuites :"
+      ],
+      "points": [
+        "start.gg : page d'inscription complète avec règlement intégré et classements — le choix de Duodecim 22-1 et DISSent Folk.",
+        "Challonge : plus léger, bracket immédiat — le choix de 012 Ranked, Date With Death et Day to Die.",
+        "Publier le règlement complet sur la page du bracket : c'est la version qui fait foi, et c'est elle qui reste consultable des années après.",
+        "Après la finale, penser à clôturer officiellement l'événement sur la plateforme : le bracket de Day to Die est resté affiché « en cours » après sa conclusion, ce qui sème le doute sur le résultat."
+      ],
+      "cta": []
+    },
+    {
+      "id": "annoncer",
+      "name": "Étape 4 — Annoncer et recruter",
+      "short": "Annoncer",
+      "intro": [
+        "L'annonce se fait dans les canaux d'événements du Discord, de quelques jours à quelques semaines avant la date. Une annonce type contient :"
+      ],
+      "points": [
+        "La date, le lien d'inscription (start.gg ou Challonge) et le règlement — ou un lien vers lui.",
+        "Les conditions d'admission et la version de PPSSPP requise.",
+        "Un rappel du tournament pack pour les nouveaux : PPSSPP, Radmin et une sauvegarde 100 % prête à jouer, tout est fourni.",
+        "Le prix en jeu, même symbolique : rôle « Emu Era Champion » (DISSent Folk), Discord Nitro (012 Ranked), permissions du serveur et prix spécial (Date With Death) — chaque édition a le sien."
+      ],
+      "cta": [
+        { "url": "savedata.html", "label": "Le tournament pack et les savedata prêtes à jouer" }
+      ]
+    },
+    {
+      "id": "pendant",
+      "name": "Étape 5 — Faire vivre l'événement",
+      "short": "Pendant",
+      "intro": [
+        "Un tournoi en ligne s'étale sur plusieurs jours : le rôle de l'organisateur est surtout de coordonner."
+      ],
+      "points": [
+        "Ouvrir un thread de suivi dans event-active-thread : c'est là que vivent les plannings de matchs, les résultats et les accords publics entre joueurs.",
+        "Recueillir les blind picks par message privé et donner des fenêtres de matchs souples — les éditions 2026 laissaient un à trois jours par round selon les emplois du temps.",
+        "Diffuser si possible : les matchs de 22-1 passaient sur la chaîne Twitch lxd92, ceux de DISSent Folk sur celles de Sashawaruma et Rocher — le stream est ce qui reste de l'édition avec le bracket.",
+        "Trancher les litiges avec les replays et captures, comme le prévoit le règlement moderne."
+      ],
+      "cta": []
+    },
+    {
+      "id": "apres",
+      "name": "Après le tournoi",
+      "short": "Après",
+      "intro": [
+        "Les dernières tâches font la différence entre une édition oubliée et une édition qui compte :"
+      ],
+      "points": [
+        "Publier les résultats dans le thread et clôturer le bracket sur la plateforme.",
+        "Distribuer les récompenses annoncées et faire attribuer les rôles Emu Era aux participants.",
+        "Archiver les VODs : la playlist YouTube de 012 Ranked est aujourd'hui la seule trace en vidéo de l'édition — et une source précieuse pour ce site.",
+        "Rendre le rôle Tournament Organizer… et pourquoi pas annoncer la prochaine édition."
+      ],
+      "cta": [
+        { "url": "tournois.html", "label": "Les tournois passés documentés" }
+      ]
+    }
+  ],
+  "sources": [
+    "https://discord.gg/a44rneC",
+    "https://www.start.gg/tournament/duodecim-22-1/details",
+    "https://www.start.gg/tournament/dissent-folk/details",
+    "https://challonge.com/edokjat0",
+    "https://challonge.com/dj52284z",
+    "https://challonge.com/eoybbvgi",
+    "https://dissidia.wiki/Japan_Ranked_(DDFF)"
+  ],
+  "limits": [
+    "Le fonctionnement du rôle Tournament Organizer et des canaux d'événements a été relevé sur le Discord DISSIDIA en juillet 2026 ; l'organisation du serveur peut évoluer.",
+    "Les pratiques décrites (formats, annonces, arbitrage, récompenses) sont tirées des règlements et annonces publiés des éditions 2022-2026 ; chaque organisateur reste libre de ses choix."
+  ]
+}

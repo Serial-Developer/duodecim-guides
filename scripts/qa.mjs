@@ -22,6 +22,7 @@ const htmlFiles = [
   join(DIST, 'tournois.html'),
   join(DIST, 'participer.html'),
   join(DIST, 'futurs-tournois.html'),
+  join(DIST, 'organiser.html'),
   ...readdirSync(join(DIST, 'characters')).map((f) => join(DIST, 'characters', f)),
 ];
 const externalLinks = new Set();

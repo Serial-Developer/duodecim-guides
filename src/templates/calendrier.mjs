@@ -11,7 +11,7 @@ function frDate(iso) {
 
 function upcomingList(events) {
   if (!events.length) {
-    return `<div class="banner info">Aucun tournoi à venir annoncé pour le moment. Les annonces tombent sur le canal <strong>announcements</strong> du Discord DISSIDIA — cette page est mise à jour automatiquement quand la veille en détecte une.</div>`;
+    return `<div class="banner info">Aucun tournoi à venir annoncé pour le moment. Les annonces tombent sur le canal <strong>announcements</strong> du Discord DISSIDIA — les tournois créés sur start.gg apparaissent ici automatiquement, les autres sont relayés à la main.</div>`;
   }
   return events.map((e) => `<article class="card">
 <h3 style="margin-top:0">${esc(e.name)}</h3>
@@ -52,7 +52,7 @@ export function renderCalendrier(data) {
 </div></nav>
 <main class="wrap" style="padding-bottom:3rem">
 <h1 style="color:var(--gold)">Futurs tournois</h1>
-<p class="mv-desc">Le calendrier de la scène compétitive : les tournois annoncés à venir et tous les tournois passés documentés. Il se remplit automatiquement — une veille sonde start.gg et les annonces du Discord DISSIDIA deux fois par jour.</p>
+<p class="mv-desc">Le calendrier de la scène compétitive : les tournois annoncés à venir et tous les tournois passés documentés. Une veille sonde start.gg deux fois par jour ; les annonces du Discord DISSIDIA sont relayées à la main.</p>
 
 <h2 id="calendrier">Calendrier</h2>
 <div class="cal" id="cal">
@@ -79,7 +79,7 @@ ${inboxList(candidates)}
 
 <h2 id="veille">Comment cette page se remplit</h2>
 <article class="card">
-<p>Deux fois par jour, une veille automatique interroge l'API officielle de start.gg (tournois Duodecim, dates fiables, placés directement sur le calendrier) et relève les annonces du canal <strong>announcements</strong> du Discord DISSIDIA (liens Challonge ou start.gg, listés en « à confirmer » le temps d'en vérifier la date et le règlement). Les tournois passés viennent de la <a href="tournois.html">page Tournois</a>, où chaque édition est documentée avec son ruleset et ses résultats.</p>
+<p>Deux fois par jour, une veille automatique interroge l'API officielle de start.gg : chaque tournoi Duodecim qui y est créé apparaît ici de lui-même, avec sa date et son lien. Les annonces du canal <strong>announcements</strong> du Discord DISSIDIA (notamment les brackets Challonge) sont relayées manuellement sur le calendrier. Les tournois passés viennent de la <a href="tournois.html">page Tournois</a>, où chaque édition est documentée avec son ruleset et ses résultats.</p>
 <p class="mv-desc">${lastCheckTxt}</p>
 </article>
 

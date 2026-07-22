@@ -4,10 +4,14 @@
 //  - start.gg (API GraphQL officielle) -> data/calendar/auto.json
 //    Tournois Duodecim à venir et passés, avec dates fiables : placés
 //    directement sur le calendrier.
-//  - Miroir Discord (canal de son propre serveur qui « suit » #announcements
-//    de DISSIDIA) -> data/calendar/inbox.json
+//  - Discord (dormant) -> data/calendar/inbox.json
 //    Messages contenant un lien Challonge/start.gg ou un mot-clé tournoi :
 //    enregistrés comme candidats à confirmer à la main (pas de date fiable).
+//    Nécessite un bot avec accès en lecture au canal : #announcements de
+//    DISSIDIA est un canal texte classique (non suivable en miroir), il faut
+//    donc que le staff du serveur invite le bot (canal : 192750086273499136)
+//    ou convertisse le canal en canal d'annonces. En attendant : relais
+//    manuel via npm run add-tournoi.
 //
 // Variables d'environnement (chaque source est sautée si la sienne manque) :
 //  STARTGG_TOKEN      token API start.gg (https://start.gg/admin/profile/developer)
