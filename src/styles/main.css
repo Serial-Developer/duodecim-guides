@@ -231,9 +231,10 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
     top: 0;
     z-index: 30;
     min-height: var(--mob-header-h);
-    background: rgba(20, 16, 33, 0.94);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    /* Fond opaque, sans backdrop-filter : un filtre ferait du header le bloc
+       conteneur du volet burger (position: fixed), qui se retrouverait confiné
+       dans ses 85px au lieu de couvrir l'écran. */
+    background: linear-gradient(90deg, var(--surface-2), var(--surface));
   }
   nav.guide-top { top: var(--mob-header-h); }
   /* marque sur deux lignes (« guides compétitifs » passe dessous), burger aligné
