@@ -40,7 +40,13 @@
     ],
     "burst": "« Play Rough » : sélectionner les sorts dans un menu dédié, dans l'ordre Flare > Flood > Burst > Quake > Tornado > Freeze (chaque sort demande deux appuis de croix, environ 5 secondes au total ; seule la position de Flare est mélangée, la suite est toujours sort > bas > sort > bas). Bons dégâts, voire au-dessus de la moyenne — sans scaling sur la santé comme Cloud ou Tidus, mais loin du burst le plus faible du jeu. Auto EX Command Ω trivialise la saisie."
   },
-  "uniqueMechanics": null,
+  "uniqueMechanics": {
+    "intro": [
+      "Les paliers de Spirit Magic : les attaques HP de Shantotto se renforcent avec sa bravery accumulée. Chaque Spirit Magic possède trois paliers (par exemple Stone, puis Stonega, puis Quake pour Spirit Magic: Earth), les paliers supérieurs gagnant des hitbox nettement plus grandes.",
+      "Sa bravery est donc à la fois sa ressource offensive et son arsenal : plus elle est haute, plus ses HP couvrent d'espace — et la perdre au break la désarme doublement."
+    ],
+    "details": null
+  },
   "gameplan": [
     "Les sources ne fournissent pas d'overview rédigée, mais le tableau forces/faiblesses dessine le plan de jeu : convertir presque n'importe quel hit en dégâts HP avec un peu d'exécution, puis prolonger avec les assists. Stun, instantanée à 13 frames, sert de pivot au whiff punish en combotant vers les Spirit Magic ; toutes ses HP attacks et Retribution génèrent beaucoup d'EX Force, qui s'accumule d'autant plus que les combos sont bien exécutés.",
     "Bio ajoute un levier de contrôle unique : un adversaire empoisonné est instantanément break s'il touche Shantotto avec une HP attack, ce qui permet, hors situation de match point, de le priver de ses HP attacks pendant une période. En contrepartie, il faut composer avec l'absence de Wall Rush sur ses HP attacks, une recovery énorme, la vulnérabilité de presque toutes ses attaques aux punish d'assist et une forte exposition à Glutton sur l'absorption d'EX à moyenne distance."

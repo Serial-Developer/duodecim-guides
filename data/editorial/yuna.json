@@ -41,7 +41,13 @@
     ],
     "burst": "« To the Farplane » : appuyer sur le bouton affiché quand le cercle blanc se referme, plusieurs fois d'affilée. Dégâts au-dessus de la moyenne (les hits initiaux ignorent l'EX defense adverse) pour une exécution peu exigeante."
   },
-  "uniqueMechanics": null,
+  "uniqueMechanics": {
+    "intro": [
+      "Les invocations : chaque bravery de Yuna appelle un aeon. Yuna reste immobile pendant l'incantation tandis que l'invocation attaque devant elle, avec une hitbox disjointe de son corps et une bonne portée — l'aeon frappe même si Yuna est menacée, mais elle reste vulnérable pendant toute l'animation.",
+      "En EX Mode, Double Summon ajoute une seconde invocation à chaque attaque : dégâts accrus et effets modifiés (les données entre crochets dans les tableaux correspondent au Double Summon)."
+    ],
+    "details": null
+  },
   "gameplan": [
     "Le plan de jeu de Yuna consiste à se tenir juste hors de la portée de poke adverse et à y faire travailler ses aeons : Heavenly Strike comme poke aérien principal et générateur d'assist, Sonic Wings comme poke melee disjoint, Meteor Strike et Aerospark au sol (gap closer Melee Mid, anti-air occasionnel). Whiffer ses braveries en sécurité construit la jauge d'assist ; ses HP attacks peu engageantes (Hellfire et Diamond Dust en défense/anti-approche, Thor's Hammer pour attraper les esquives autour d'elle, Mega Flare pour le Wall Rush, la pression au réveil et la réflexion de projectiles) punissent les mauvais déplacements en neutral.",
     "Les dégâts de HP passent surtout par l'assist et les reads en HP brute : Heavenly Strike provoque souvent un Wall Rush au sol qui combote en assist Kuja au sol pour de gros dégâts et du temps de follow-up. Les combos solo existent mais restent situationnels : hit glitch d'Impulse chargé vers Heavenly Strike à longue portée, EX Aerospark > dodge cancel > Diamond Dust (seul combo solo vers une HP attack, en EX Mode près d'un mur), et Diamond Dust en late hit > Heavenly Strike.",

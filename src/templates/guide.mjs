@@ -410,8 +410,8 @@ function regroupMoves(groups, spec) {
 // rattachement des déclinaisons partageant le même nom de base (A/B/C, ground/midair).
 const HP_LINK_RE = /HP link|Branching from/i;
 const hpLinkBase = (n) => String(n || '').replace(/ \((ground|midair)\)$/, '').replace(/ [A-F]$/, '');
-function splitHpLinks(hpGroups) {
-  const flagged = new Set();
+function splitHpLinks(hpGroups, extraNames) {
+  const flagged = new Set((extraNames || []).map(hpLinkBase));
   for (const g of Object.values(hpGroups || {}))
     g.moves.forEach((m) => { if (HP_LINK_RE.test(String(m.notes || '') + String(m.context || ''))) flagged.add(hpLinkBase(m.name)); });
   if (!flagged.size) return { groups: hpGroups, links: [] };
@@ -495,7 +495,7 @@ ${mobilityChartSvg(char, castStats)}
   const braveryHtml = s.bravery?.documented
     ? Object.entries(braveryGroups).map(([k, g]) => movesGroup(k, g, ed, ctx, 'bravery')).join('\n')
     : banner();
-  const { groups: hpGroups, links: hpLinks } = splitHpLinks(s.hp?.groups);
+  const { groups: hpGroups, links: hpLinks } = splitHpLinks(s.hp?.groups, ed?.hpLinks);
   const hpHtml = s.hp?.documented
     ? Object.entries(hpGroups).map(([k, g]) => movesGroup(k, g, ed, ctx, 'hp')).join('\n')
     : banner();

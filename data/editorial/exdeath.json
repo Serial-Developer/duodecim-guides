@@ -47,7 +47,13 @@
     ],
     "burst": "« Power of the Void » : comme celui de Cloud of Darkness, on maintient Cercle puis on relâche quand le compteur atteint 0 — le décompte ralentit nettement sur la fin, ce qui rend l'exécution fiable. Des dégâts légèrement sous la moyenne des EX Bursts, mais toujours efficaces pour conclure après un combo assist."
   },
-  "uniqueMechanics": null,
+  "uniqueMechanics": {
+    "intro": [
+      "Les guard counters : après un block réussi avec Turn Guard, Shell Guard, Protect Guard ou Omni Block, Exdeath peut contrer avec des versions renforcées de ses attaques bravery ou HP — c'est le cœur de son identité de personnage à garde.",
+      "Chaque garde couvre des angles et des priorités différents, et le choix du counter (bravery ou HP selon l'entrée) fait de chaque block réussi un point de décision offensif."
+    ],
+    "details": null
+  },
   "gameplan": [
     "La boucle d'Exdeath est celle du défenseur absolu : laisser venir, bloquer, riposter. Ses guard counters sont intégrés — après un block réussi avec Turn Guard, Shell Guard, Protect Guard ou Omni Block, il accède à des versions renforcées de Hurricane, Sword Dance, Vacuum Wave, Almagest et Grand Cross, qui sortent bien plus vite et frappent souvent plus fort. Le choix du block est un jeu de lecture : Protect Guard contre la mêlée, Shell Guard contre la magie (avec renvoi des Ranged Low), Omni Block contre presque tout sauf l'Unblockable.",
     "En neutral, il exploite les mécaniques système mieux que quiconque : les annulations attaque <-> block et le dash feint en font le personnage le plus rapide du jeu pour remplir la jauge d'assist, et le blodge accélère ses esquives. Reverse Polarity tient l'adversaire à distance — elle stagger la plupart des pokes et téléporte loin — pendant que la jauge monte. Cet avantage d'« Assist King » rend ses assist punishes et ses LV2 Assist Change plus fréquents et moins coûteux : même touché, il s'échappe et recommence.",

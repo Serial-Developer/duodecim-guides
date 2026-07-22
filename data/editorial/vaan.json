@@ -45,7 +45,13 @@
     ],
     "burst": "« Quickening » : attaque imprégnée de Mist où l'on fait défiler les options avec R et où l'on valide avec X. Une méthode consistante : appuyer sur R, puis marteler X quelques fois, et répéter cette boucle trois fois par Quickening."
   },
-  "uniqueMechanics": null,
+  "uniqueMechanics": {
+    "intro": [
+      "Le Switch : toutes les braveries de Vaan existent en deux versions. La version Switch (SW) s'exécute quand l'attaque n'a pas encore été utilisée — y compris en tout début de match ; la version On Hand (OH), quand il réutilise la même attaque ensuite. Les deux versions d'un même coup diffèrent en frame data, en priorité et en effets — le détail est dans les sous-fiches de chaque coup.",
+      "Tout le jeu de Vaan consiste à séquencer ses armes pour rester sur les bonnes versions au bon moment : les versions SW, plus lentes mais souvent assorties d'un block ou d'effets supplémentaires, ouvrent le jeu ; les versions OH, plus rapides, punissent — sa bravery la plus rapide (19 frames) est une version OH."
+    ],
+    "details": null
+  },
   "gameplan": [
     "Le jeu de Vaan s'organise autour du Switch : chaque bravery utilisée bascule vers sa version On-hand, et il faut « consommer » (souvent en whiffant) une attaque pour recharger sa version Switch, plus puissante. Le plan consiste donc à séquencer son arsenal : ouvrir avec les versions SW aux propriétés fortes (Sword & Shield qui bloque, Axe & Shield qui brise la garde, Greatsword 11 frames, Rifle avec esquive intégrée), puis exploiter les versions OH plus rapides — dont plusieurs, comme OH Greatsword, ne produisent aucun signal sonore ou visuel au démarrage et sont difficiles à réagir.",
     "En neutral, Greatsword est le pivot : initiateur rapproché, gap closer, extension de combo et punish d'esquive en version SW chargée, avec un premier hit OH facilement confirmable en assist sans mur — précieux pour un personnage par ailleurs médiocre à construire la jauge d'assist. Katana, Spear et Staff couvrent la mi-distance (Staff générant énormément d'EX Force), Crossbow et Rifle la longue portée. Côté HP attacks, Torrent (21 frames sur la composante montante) et Cataclysm sont ses plus rapides ; Cataclysm et le projectile de Windburst servent de 1-hit HP.",

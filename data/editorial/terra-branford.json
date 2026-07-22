@@ -132,9 +132,14 @@
     "Aucune référence communautaire (section References vide), d'où un communityTech vide.",
     "Startup inconnu pour Firaga et Ultima (« ? » dans les données) ; gain de jauge d'assist non renseigné pour tous les coups ; un variant aérien de Blizzard Combo est listé sans nom.",
     "La liste des attaques équipées dans les builds n'est pas renseignée dans les tables extraites.",
-    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi."
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.",
+    "Section « Bravery to HP Attacks » (table Dissidia 012) de la page du personnage sur le Final Fantasy Wiki : classement absent des notes de dissidia.wiki, réintégré depuis cette source."
   ],
   "groupNotes": {
     "bravery/main": "Blizzard Combo et Holy Combo ont des multiplicateurs distincts en EX Mode, indiqués en gras après les valeurs normales."
-  }
+  },
+  "hpLinks": [
+    "Firaga",
+    "Ultima"
+  ]
 }

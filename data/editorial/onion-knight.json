@@ -118,10 +118,17 @@
     "Aucune mécanique unique n'est documentée pour ce personnage (section absente du wiki).",
     "Le gain de jauge d'assist par coup n'est pas renseigné (colonnes vides) et plusieurs startups de coups de branche sont notés « ?? ».",
     "Les builds sont donnés uniquement en tables d'équipement, sans texte explicatif détaillé.",
-    "La section References est vide : aucune tech communautaire attribuable ou datée."
+    "La section References est vide : aucune tech communautaire attribuable ou datée.",
+    "Section « Bravery to HP Attacks » (table Dissidia 012) de la page du personnage sur le Final Fantasy Wiki : classement absent des notes de dissidia.wiki, réintégré depuis cette source."
   ],
   "groupNotes": {
     "bravery/ground": "La plupart des braveries ont des multiplicateurs de dégâts distincts, plus élevés, en EX Mode (en gras dans les tableaux).",
     "hp/ground": "La plupart des attaques HP ont des multiplicateurs de dégâts distincts, plus élevés, en EX Mode (en gras dans les tableaux)."
-  }
+  },
+  "hpLinks": [
+    "Swordshower",
+    "Quake",
+    "Guiding Swipe",
+    "Flare"
+  ]
 }

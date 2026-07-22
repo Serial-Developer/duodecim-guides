@@ -146,6 +146,12 @@
     "Aucune référence communautaire (vidéos, liens datés) listée dans les sources.",
     "Pas de mécanique unique documentée pour ce personnage.",
     "Le tableau Forces/Faiblesses du wiki est vide et le champ assist gain des coups n'est pas renseigné.",
-    "Les listes d'équipement exactes des deux builds de LXD92 (dissidiaforums) étaient dans des spoilers/images non capturés par la Wayback Machine : seuls les principes rédigés et les stats citées subsistent."
+    "Les listes d'équipement exactes des deux builds de LXD92 (dissidiaforums) étaient dans des spoilers/images non capturés par la Wayback Machine : seuls les principes rédigés et les stats citées subsistent.",
+    "Section « Bravery to HP Attacks » (table Dissidia 012) de la page du personnage sur le Final Fantasy Wiki : classement absent des notes de dissidia.wiki, réintégré depuis cette source."
+  ],
+  "hpLinks": [
+    "Meo Twister A",
+    "Meo Twister B",
+    "Meo Twister C"
   ]
 }
