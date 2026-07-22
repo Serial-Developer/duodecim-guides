@@ -249,17 +249,17 @@ ${jsPath ? `<script src="${jsPath}" defer></script>` : ''}
 // landing (les autres pages ont leur propre h1).
 export function siteHeader({ base = '', active = '', h1 = false } = {}) {
   const groups = [
-    { title: 'Contenu du jeu', items: [
+    { title: 'Données du jeu', items: [
       { key: 'index', href: `${base}index.html`, label: 'Personnages' },
       { key: 'aerith', href: `${base}characters/aerith.html`, label: 'Assist : Aerith' },
       { key: 'chaos', href: `${base}characters/chaos.html`, label: 'Boss : Chaos' },
+      { key: 'techniques', href: `${base}techniques.html`, label: 'Techniques &amp; glitches' },
     ] },
-    { title: 'Outils pour jouer', items: [
+    { title: 'Jouer à Dissidia', items: [
       { key: 'install', href: `${base}install.html`, label: 'Installer sur PPSSPP' },
       { key: 'savedata', href: `${base}savedata.html`, label: 'Savedata prêtes à jouer' },
     ] },
-    { title: 'Données compétitives', items: [
-      { key: 'techniques', href: `${base}techniques.html`, label: 'Techniques &amp; glitches' },
+    { title: 'Les tournois', items: [
       { key: 'participer', href: `${base}participer.html`, label: 'Participer aux tournois' },
       { key: 'organiser', href: `${base}organiser.html`, label: 'Organiser un tournoi' },
       { key: 'futurs', href: `${base}futurs-tournois.html`, label: 'Futurs tournois' },
