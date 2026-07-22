@@ -14,6 +14,12 @@ export function infoBanner(html) {
 
 export const paras = (arr) => (arr || []).map((p) => `<p>${esc(p)}</p>`).join('\n');
 
+// Ancre stable depuis un nom ("Day to Die" -> "t-day-to-die") — partagée entre
+// les cartes de tournois.html et les liens du calendrier.
+export const slugAnchor = (name) => 't-' + String(name)
+  .normalize('NFD').replace(/[̀-ͯ]/g, '')
+  .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
 export function priorityBadge(prio) {
   if (!prio) return '';
   const p = String(prio);
@@ -256,6 +262,7 @@ export function siteHeader({ base = '', active = '', h1 = false } = {}) {
       { key: 'techniques', href: `${base}techniques.html`, label: 'Techniques &amp; glitches' },
       { key: 'tournois', href: `${base}tournois.html`, label: 'Tournois' },
       { key: 'participer', href: `${base}participer.html`, label: 'Participer aux tournois' },
+      { key: 'futurs', href: `${base}futurs-tournois.html`, label: 'Futurs tournois' },
       { key: 'tierlist', href: 'https://dissidia.wiki/Tier_List_(Dissidia_012)', label: 'Tier list tournoi 2017', ext: true },
       { key: 'videos', href: 'https://replaytheater.app/?game=d012', label: 'Vidéos de matchs', ext: true },
     ] },

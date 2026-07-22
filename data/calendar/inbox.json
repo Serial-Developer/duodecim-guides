@@ -1,0 +1,5 @@
+{
+  "_doc": "Candidats détectés sur le miroir Discord par scripts/watch-tournaments.mjs. Après traitement (ajout dans upcoming.json ou rejet), déplacer l'id du message dans handled.",
+  "candidates": [],
+  "handled": []
+}

@@ -754,3 +754,61 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
   .card { padding: 0.9rem 1rem; }
   h2 { font-size: 1.35rem; }
 }
+
+/* --- Calendrier des tournois (futurs-tournois.html) --- */
+.cal { margin: 1rem 0 2rem; }
+.cal-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.7rem; }
+.cal-nav { display: flex; gap: 0.4rem; }
+.cal-nav button {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid rgba(157, 134, 232, 0.35);
+  border-radius: var(--radius);
+  padding: 0.35rem 0.75rem;
+  font: inherit;
+  cursor: pointer;
+}
+.cal-nav button:hover { border-color: var(--gold); color: var(--gold); }
+.cal-label { font-family: var(--font-display); font-size: 1.25rem; color: var(--gold); margin: 0; text-transform: capitalize; }
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  background: var(--surface);
+  border: 1px solid rgba(157, 134, 232, 0.25);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+}
+.cal-head { text-align: center; font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; padding: 0.25rem 0; }
+.cal-cell { min-height: 4.2rem; background: var(--bg); border-radius: 6px; padding: 0.25rem; display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
+.cal-pad { background: transparent; }
+.cal-num { font-size: 0.75rem; color: var(--muted); }
+.cal-today { outline: 1px solid var(--gold); }
+.cal-today .cal-num { color: var(--gold); font-weight: 700; }
+.cal-ev {
+  display: block;
+  font-size: 0.72rem;
+  line-height: 1.25;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cal-ev-past { background: rgba(157, 134, 232, 0.18); color: var(--violet); border: 1px solid rgba(157, 134, 232, 0.4); }
+.cal-ev-up { background: rgba(240, 192, 90, 0.15); color: var(--gold); border: 1px solid rgba(240, 192, 90, 0.5); }
+.cal-ev:hover { filter: brightness(1.25); }
+.cal-legend { display: flex; gap: 1rem; margin-top: 0.5rem; font-size: 0.8rem; color: var(--muted); }
+.cal-key::before { content: ''; display: inline-block; width: 0.7em; height: 0.7em; border-radius: 3px; margin-right: 0.35em; vertical-align: baseline; }
+.cal-key-past::before { background: rgba(157, 134, 232, 0.5); }
+.cal-key-up::before { background: rgba(240, 192, 90, 0.6); }
+.cal-list { list-style: none; padding: 0; margin: 0.8rem 0 0; }
+.cal-list li { padding: 0.3rem 0; border-bottom: 1px solid rgba(157, 134, 232, 0.15); }
+.cal-list .cal-ev { display: inline; white-space: normal; background: none; border: none; padding: 0; text-decoration: underline; }
+.cal-empty { color: var(--muted); font-style: italic; margin: 0.8rem 0 0; }
+@media (max-width: 640px) {
+  .cal-cell { min-height: 2.6rem; padding: 0.15rem; }
+  .cal-ev { font-size: 0; padding: 0; width: 0.55rem; height: 0.55rem; border-radius: 50%; }
+  .cal-num { font-size: 0.68rem; }
+}

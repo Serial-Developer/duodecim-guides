@@ -1,5 +1,5 @@
 // Page transverse : tournois documentés, rulesets et participation
-import { esc, paras, sectionSources, sourcesSection, pageShell, siteHeader, siteFooter } from './helpers.mjs';
+import { esc, paras, sectionSources, sourcesSection, pageShell, siteHeader, siteFooter, slugAnchor } from './helpers.mjs';
 
 function rulesetBlock(r) {
   return `<article class="card" id="${esc(r.id)}">
@@ -12,7 +12,7 @@ ${r.points?.length ? `<ul>${r.points.map((p) => `<li>${esc(p)}</li>`).join('')}<
 
 function tournoiBlock(t) {
   const medals = ['🥇', '🥈', '🥉'];
-  return `<article class="card">
+  return `<article class="card" id="${slugAnchor(t.name)}">
 <h3 style="margin-top:0">${esc(t.name)}</h3>
 <div class="table-scroll"><table class="stats">
 <tr><th>Date</th><td>${esc(t.date)}</td></tr>

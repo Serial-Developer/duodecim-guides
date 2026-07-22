@@ -83,7 +83,8 @@
           "label": "Bracket complet (Challonge)"
         }
       ],
-      "notes": "Ruleset des éditions 2026 : pas d'infinis (une répétition), pas d'invocations, pas de multi-hit chase, Bonecrusher/Rebellious Soul et Feral Chaos bannis, assist depletion interdite, MS Prima banni (nouveauté), sans Dave's Stupid Rule. Stages bannis : Phantom Train, The Rift, Orphan's Cradle, Ultimecia's Castle, Crystal Tower, Omegas. WheelzZzzz l'emporte invaincu — 3-1 en grande finale contre Pastulio814, sorti vainqueur du bracket des perdants face à Mako_Tsunami. Le bracket Challonge est resté affiché « en cours », l'organisateur ne l'ayant pas formellement clôturé, mais toutes les rencontres sont jouées."
+      "notes": "Ruleset des éditions 2026 : pas d'infinis (une répétition), pas d'invocations, pas de multi-hit chase, Bonecrusher/Rebellious Soul et Feral Chaos bannis, assist depletion interdite, MS Prima banni (nouveauté), sans Dave's Stupid Rule. Stages bannis : Phantom Train, The Rift, Orphan's Cradle, Ultimecia's Castle, Crystal Tower, Omegas. WheelzZzzz l'emporte invaincu — 3-1 en grande finale contre Pastulio814, sorti vainqueur du bracket des perdants face à Mako_Tsunami. Le bracket Challonge est resté affiché « en cours », l'organisateur ne l'ayant pas formellement clôturé, mais toutes les rencontres sont jouées.",
+      "iso": "2026-06-20"
     },
     {
       "name": "Date With Death — tournoi Beginner's Only",
@@ -102,7 +103,8 @@
           "label": "Bracket complet (Challonge)"
         }
       ],
-      "notes": "Même base de ruleset que Day to Die (sans le ban MS Prima). Fenêtre de matchs extensible de un à trois jours selon les emplois du temps ; stage choisi d'abord, blind picks des personnages envoyés en privé à un organisateur. Xavier l'a emporté sans perdre un set."
+      "notes": "Même base de ruleset que Day to Die (sans le ban MS Prima). Fenêtre de matchs extensible de un à trois jours selon les emplois du temps ; stage choisi d'abord, blind picks des personnages envoyés en privé à un organisateur. Xavier l'a emporté sans perdre un set.",
+      "iso": "2026-05-23"
     },
     {
       "name": "DISSent Folk",
@@ -125,7 +127,8 @@
           "label": "Classement"
         }
       ],
-      "notes": "Ruleset notable : Feral Chaos autorisé mais privé d'EX et d'assist ; infinis par répétition limités à trois boucles ; Dream's End ajouté aux stages bannis ; clause des gentlemen formalisée (accord public dans le thread Discord). PPSSPP 1.19.3, CP glitch autorisé. WheelZ a gagné toutes ses manches (6-0)."
+      "notes": "Ruleset notable : Feral Chaos autorisé mais privé d'EX et d'assist ; infinis par répétition limités à trois boucles ; Dream's End ajouté aux stages bannis ; clause des gentlemen formalisée (accord public dans le thread Discord). PPSSPP 1.19.3, CP glitch autorisé. WheelZ a gagné toutes ses manches (6-0).",
+      "iso": "2025-12-06"
     },
     {
       "name": "012 Ranked (« JP Ranked with a twist »)",
@@ -148,7 +151,8 @@
           "label": "VODs du tournoi (YouTube)"
         }
       ],
-      "notes": "Japan Ranked modifié : le loadout Imp's Blessing avec Dismay Shock à la place de Green Drop — une légère EX depletion réintroduite —, counter summons obligatoires, et une sélection de premiers stages élargie (dont Edge of Madness et Crystal World)."
+      "notes": "Japan Ranked modifié : le loadout Imp's Blessing avec Dismay Shock à la place de Green Drop — une légère EX depletion réintroduite —, counter summons obligatoires, et une sélection de premiers stages élargie (dont Edge of Madness et Crystal World).",
+      "iso": "2024-04-06"
     },
     {
       "name": "Duodecim 22-1",
@@ -171,7 +175,8 @@
           "label": "Classement complet"
         }
       ],
-      "notes": "Le règlement de ce tournoi est le ruleset moderne de référence, détaillé ci-dessus."
+      "notes": "Le règlement de ce tournoi est le ruleset moderne de référence, détaillé ci-dessus.",
+      "iso": "2022-01-29"
     },
     {
       "name": "2nd October 2022 DDFF Tournament",
@@ -190,7 +195,8 @@
           "label": "Règlement et détails (start.gg)"
         }
       ],
-      "notes": "Variante du ruleset moderne : PPSSPP 1.1.1 ou 1.12.3, meter depletion d'assist bannie (set Lufenia Judgement, Battle Hammer), un seul hit de chase par combo, infinis limités à deux boucles."
+      "notes": "Variante du ruleset moderne : PPSSPP 1.1.1 ou 1.12.3, meter depletion d'assist bannie (set Lufenia Judgement, Battle Hammer), un seul hit de chase par combo, infinis limités à deux boucles.",
+      "iso": "2022-10-02"
     },
     {
       "name": "11th November 2022 DDFF Tournament",
@@ -209,7 +215,8 @@
           "label": "Détails (start.gg)"
         }
       ],
-      "notes": null
+      "notes": null,
+      "iso": "2022-11-11"
     },
     {
       "name": "Festivo — 6ᵉ Major de Dissidia Forums",
@@ -228,7 +235,8 @@
           "label": "Bracket complet (Challonge)"
         }
       ],
-      "notes": "Le ruleset était publié sur le thread « Festivo Ruleset & Signups » de dissidiaforums.com, aujourd'hui hors ligne et sans copie archivée connue."
+      "notes": "Le ruleset était publié sur le thread « Festivo Ruleset & Signups » de dissidiaforums.com, aujourd'hui hors ligne et sans copie archivée connue.",
+      "iso": "2014-08-10"
     },
     {
       "name": "Conquerer of the Rift 001 « Unus »",
@@ -247,7 +255,8 @@
           "label": "Bracket complet (Challonge)"
         }
       ],
-      "notes": "Le bracket se lit comme un tournoi de personnages : chaque participant y apparaît sous son main, du vainqueur « Tidus » aux « Cloud » et « Lightning » du podium."
+      "notes": "Le bracket se lit comme un tournoi de personnages : chaque participant y apparaît sous son main, du vainqueur « Tidus » aux « Cloud » et « Lightning » du podium.",
+      "iso": "2014-06-08"
     }
   ],
   "sources": [

@@ -1,0 +1,4 @@
+{
+  "_doc": "Tournois à venir confirmés à la main. Un candidat détecté par la veille (inbox.json) se confirme en le recopiant ici avec sa vraie date, puis en ajoutant son messageId dans inbox.json > handled.",
+  "events": []
+}

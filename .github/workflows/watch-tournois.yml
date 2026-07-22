@@ -1,0 +1,57 @@
+# Veille tournois : sonde start.gg et le miroir Discord deux fois par jour.
+# S'il y a du nouveau, rebuild le site, commit, et déclenche le déploiement
+# Pages (le push d'un GITHUB_TOKEN ne déclenche pas les workflows on:push,
+# d'où le déclenchement explicite en dernière étape).
+#
+# Secrets à configurer dans Settings > Secrets and variables > Actions :
+#   STARTGG_TOKEN      — token API start.gg (gratuit, start.gg/admin/profile/developer)
+#   DISCORD_BOT_TOKEN  — token du bot du serveur miroir personnel (facultatif)
+#   DISCORD_CHANNEL_ID — id du canal miroir qui suit #announcements (facultatif)
+# Sans secret, le script tourne à vide et ne commit rien.
+name: Veille tournois
+
+on:
+  schedule:
+    - cron: '17 7,19 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: veille-tournois
+  cancel-in-progress: false
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Sonder les sources
+        run: node scripts/watch-tournaments.mjs
+        env:
+          STARTGG_TOKEN: ${{ secrets.STARTGG_TOKEN }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
+      - name: Rebuild et contrôle qualité
+        run: npm run build && npm run qa
+      - name: Commit et déploiement si nouveauté
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "veille-tournois[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Rien de neuf, pas de commit."
+          else
+            git commit -m "Veille tournois : mise à jour automatique du calendrier"
+            git push
+            gh workflow run pages.yml --ref main
+          fi

@@ -8,6 +8,8 @@ import { renderInstall } from '../src/templates/install.mjs';
 import { renderSavedata } from '../src/templates/savedata.mjs';
 import { renderTournois } from '../src/templates/tournois.mjs';
 import { renderParticiper } from '../src/templates/participer.mjs';
+import { renderCalendrier } from '../src/templates/calendrier.mjs';
+import { slugAnchor } from '../src/templates/helpers.mjs';
 import { renderChaos } from '../src/templates/chaos.mjs';
 import { speedValues } from '../src/templates/helpers.mjs';
 import { readFileSync, writeFileSync, existsSync, mkdirSync, cpSync, readdirSync } from 'node:fs';
@@ -135,9 +137,52 @@ writeFileSync(join(DIST, 'savedata.html'), renderSavedata(savedata));
 writeFileSync(join(DIST, 'tournois.html'), renderTournois(tournois));
 writeFileSync(join(DIST, 'participer.html'), renderParticiper(participer));
 
+// Calendrier des tournois : passés documentés (_tournois.json) + à venir
+// confirmés (upcoming.json) + détectés sur start.gg (auto.json), dédupliqués
+// par URL ; les candidats Discord (inbox.json) restent hors calendrier.
+{
+  const calDir = join(ROOT, 'data', 'calendar');
+  const upcoming = readJson(join(calDir, 'upcoming.json')) || { events: [] };
+  const auto = readJson(join(calDir, 'auto.json')) || { events: [] };
+  const inbox = readJson(join(calDir, 'inbox.json')) || { candidates: [] };
+  const lastCheck = (readJson(join(calDir, 'last-check.json')) || {}).lastCheck || null;
+
+  const normUrl = (u) => String(u || '').replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '').replace(/\/details$/, '').toLowerCase();
+  const known = new Set();
+  for (const t of tournois.tournois) for (const l of t.liens || []) known.add(normUrl(l.url));
+  for (const e of upcoming.events) if (e.url) known.add(normUrl(e.url));
+
+  const past = tournois.tournois
+    .filter((t) => t.iso)
+    .map((t) => ({ iso: t.iso, name: t.name, url: `tournois.html#${slugAnchor(t.name)}` }));
+  const autoEvents = auto.events.filter((e) => !known.has(normUrl(e.url)));
+  const events = [...past, ...upcoming.events, ...autoEvents]
+    .map(({ iso, name, url }) => ({ iso, name, url }))
+    .sort((a, b) => a.iso.localeCompare(b.iso));
+
+  const today = new Date().toISOString().slice(0, 10);
+  const futurs = [...upcoming.events, ...autoEvents].filter((e) => e.iso >= today).sort((a, b) => a.iso.localeCompare(b.iso));
+
+  writeFileSync(join(DIST, 'futurs-tournois.html'), renderCalendrier({
+    events,
+    upcoming: futurs,
+    candidates: inbox.candidates || [],
+    lastCheck,
+    sources: [
+      'https://www.start.gg/',
+      'https://discord.gg/a44rneC',
+    ],
+    limits: [
+      'La veille couvre l’API officielle de start.gg et le canal d’annonces du Discord DISSIDIA : un tournoi annoncé uniquement ailleurs (Twitter/X, dont l’API de lecture est payante, ou un autre serveur) peut lui échapper.',
+      'Challonge n’offre pas d’API publique de recherche par jeu : les brackets Challonge sont détectés via leur annonce sur le Discord.',
+    ],
+  }));
+}
+
 // Statiques
 cpSync(join(ROOT, 'src', 'styles', 'main.css'), join(DIST, 'styles', 'main.css'));
 cpSync(join(ROOT, 'src', 'scripts', 'site.js'), join(DIST, 'scripts', 'site.js'));
+cpSync(join(ROOT, 'src', 'scripts', 'calendrier.js'), join(DIST, 'scripts', 'calendrier.js'));
 cpSync(join(ROOT, 'assets'), join(DIST, 'assets'), { recursive: true });
 
 console.log(`dist/ généré : index + ${chars.length - 1} guides + techniques.html + install.html + savedata.html + tournois.html + participer.html${missingEd ? ` (${missingEd} sans éditorial — bandeaux)` : ''}`);
