@@ -1,5 +1,90 @@
 {
   "_doc": "Écrit par scripts/watch-tournaments.mjs (source start.gg). Ne pas éditer à la main.",
-  "fetchedAt": null,
-  "events": []
+  "fetchedAt": "2026-07-22T13:37:55.918Z",
+  "events": [
+    {
+      "iso": "2022-01-29",
+      "name": "Duodecim 22-1",
+      "url": "https://www.start.gg/tournament/duodecim-22-1",
+      "joueurs": 13,
+      "source": "start.gg"
+    },
+    {
+      "iso": "2022-06-11",
+      "name": "11/06/2022 DDFF Double Elimination Tournament hosted by the Dissidia Community",
+      "url": "https://www.start.gg/tournament/11-06-2022-ddff-double-elimination-tournament-hosted-by-the",
+      "joueurs": 6,
+      "source": "start.gg"
+    },
+    {
+      "iso": "2022-07-09",
+      "name": "9th July 2022 DDFF Tournament hosted by JoyRaines from the Dissidia Community",
+      "url": "https://www.start.gg/tournament/9th-july-2022-ddff-tournament-hosted-by-joyraines-from-the",
+      "joueurs": 5,
+      "source": "start.gg"
+    },
+    {
+      "iso": "2022-08-20",
+      "name": "20th August 2022 DDFF Tournament hosted by JoyRaines from the Dissidia Community",
+      "url": "https://www.start.gg/tournament/20th-august-2022-ddff-tournament-hosted-by-joyraines-from-the",
+      "joueurs": 4,
+      "source": "start.gg"
+    },
+    {
+      "iso": "2022-09-10",
+      "name": "10th September 2022 DDFF Tournament hosted by the Dissidia Community",
+      "url": "https://www.start.gg/tournament/10th-september-2022-ddff-tournament-hosted-by-the-dissidia-community",
+      "joueurs": 4,
+      "source": "start.gg"
+    },
+    {
+      "iso": "2022-10-02",
+      "name": "2nd October 2022 DDFF Tournament hosted by the Dissidia Community",
+      "url": "https://www.start.gg/tournament/2nd-october-2022-ddff-tournament-hosted-by-the-dissidia-community",
+      "joueurs": 4,
+      "source": "start.gg"
+    },
+    {
+      "iso": "2022-11-11",
+      "name": "11th November 2022 DDFF Tournament hosted by the Dissidia Community",
+      "url": "https://www.start.gg/tournament/11th-november-2022-ddff-tournament-hosted-by-the-dissidia-community",
+      "joueurs": 4,
+      "source": "start.gg"
+    },
+    {
+      "iso": "2022-12-10",
+      "name": "10th December 2022 DDFF 2v2 Team Tournament",
+      "url": "https://www.start.gg/tournament/10th-december-2022-ddff-2v2-team-tournament",
+      "joueurs": null,
+      "source": "start.gg"
+    },
+    {
+      "iso": "2024-03-20",
+      "name": "Square World",
+      "url": "https://www.start.gg/tournament/square-world",
+      "joueurs": 64,
+      "source": "start.gg"
+    },
+    {
+      "iso": "2024-10-04",
+      "name": "RIDGE SMASHING ROOTS ¡Encore!",
+      "url": "https://www.start.gg/tournament/ridge-smashing-roots-encore",
+      "joueurs": 45,
+      "source": "start.gg"
+    },
+    {
+      "iso": "2024-10-18",
+      "name": "RIDGE SMASHING ROOTS ¡Second!",
+      "url": "https://www.start.gg/tournament/ridge-smashing-roots-second",
+      "joueurs": 67,
+      "source": "start.gg"
+    },
+    {
+      "iso": "2024-11-03",
+      "name": "RIDGE SMASHING ROOTS The THIRD",
+      "url": "https://www.start.gg/tournament/ridge-smashing-roots-the-third",
+      "joueurs": 55,
+      "source": "start.gg"
+    }
+  ]
 }
