@@ -199,13 +199,13 @@ ${axis}${items}
 // Petites sources en pied de section (contenu issu de la passe externe)
 export function sectionSources(urls) {
   if (!urls || !urls.length) return '';
-  return `<p class="sources-list">Sources : ${urls.map((u) => `<a href="${esc(u)}" rel="external noopener">${esc(u.replace(/^https?:\/\/(www\.)?/, '').slice(0, 60))}</a>`).join(' · ')}</p>`;
+  return `<p class="sources-list">Sources : ${urls.map((u) => `<a href="${esc(u)}" target="_blank" rel="external noopener">${esc(u.replace(/^https?:\/\/(www\.)?/, '').slice(0, 60))}</a>`).join(' · ')}</p>`;
 }
 
 export function sourcesSection(urls, limitsFr) {
   const seen = new Set();
   const list = (urls || []).filter((u) => u && !seen.has(u) && seen.add(u));
-  return `<ul class="sources-list">${list.map((u) => `<li><a href="${esc(u)}" rel="external noopener">${esc(u)}</a></li>`).join('')}</ul>` +
+  return `<ul class="sources-list">${list.map((u) => `<li><a href="${esc(u)}" target="_blank" rel="external noopener">${esc(u)}</a></li>`).join('')}</ul>` +
     (limitsFr && limitsFr.length
       ? `<h3>Limites connues</h3><ul class="sources-list">${limitsFr.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>`
       : '');
@@ -232,9 +232,54 @@ ${jsPath ? `<script src="${jsPath}" defer></script>` : ''}
 </html>`;
 }
 
+// Header global du site : bandeau titre + navigation, présent sur toutes les pages.
+// `base` préfixe les liens relatifs ('' à la racine, '../' dans characters/) ;
+// `active` marque le lien de la page courante ; `h1` réserve la balise h1 à la
+// landing (les autres pages ont leur propre h1).
+export function siteHeader({ base = '', active = '', h1 = false } = {}) {
+  const groups = [
+    { title: 'Contenu du jeu', items: [
+      { key: 'index', href: `${base}index.html`, label: 'Personnages' },
+      { key: 'aerith', href: `${base}characters/aerith.html`, label: 'Assist : Aerith' },
+      { key: 'chaos', href: `${base}characters/chaos.html`, label: 'Boss : Chaos' },
+    ] },
+    { title: 'Outils pour jouer', items: [
+      { key: 'install', href: `${base}install.html`, label: 'Installer sur PPSSPP' },
+    ] },
+    { title: 'Données compétitives', items: [
+      { key: 'techniques', href: `${base}techniques.html`, label: 'Techniques &amp; glitches' },
+      { key: 'tierlist', href: 'https://dissidia.wiki/Tier_List_(Dissidia_012)', label: 'Tier list tournoi 2017', ext: true },
+      { key: 'videos', href: 'https://replaytheater.app/?game=d012', label: 'Vidéos de matchs', ext: true },
+    ] },
+  ];
+  const extIco = '<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const link = (it) => `<a href="${it.href}"${it.key === active ? ' aria-current="page"' : ''}${it.ext ? ' target="_blank" rel="external noopener"' : ''}>${it.label}${it.ext ? extIco : ''}</a>`;
+  const brand = `Dissidia 012 <span class="gold">[duodecim]</span> <span class="sh-sub">guides compétitifs</span>`;
+  return `<header class="site-header">
+${h1 ? `<h1 class="sh-brand">${brand}</h1>` : `<a class="sh-brand" href="${base}index.html">${brand}</a>`}
+<nav class="sh-groups" aria-label="Navigation du site">
+${groups.map((g) => `<div class="sh-group${g.items.some((it) => it.key === active) ? ' is-active' : ''}">
+<span class="sh-group-label">${g.title}</span>
+<div class="sh-drop">
+${g.items.map(link).join('\n')}
+</div>
+</div>`).join('\n')}
+</nav>
+<details class="sh-drawer">
+<summary aria-label="Menu"><span class="sh-burger" aria-hidden="true"></span></summary>
+<nav class="sh-panel" aria-label="Navigation du site (mobile)">
+${groups.map((g) => `<p class="sh-cat">${g.title}</p>
+${g.items.map(link).join('\n')}`).join('\n')}
+</nav>
+</details>
+</header>`;
+}
+
 export function siteFooter() {
   return `<footer class="site"><div class="wrap">
-<p>Site de fans non commercial. Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011).</p>
-<p>Contenu textuel adapté et traduit de <a href="https://dissidia.wiki" rel="external noopener">dissidia.wiki</a> (licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="external noopener">CC BY 4.0</a>). Compléments de moveset (rôles et jobs par coup, coups spéciaux) adaptés du <a href="https://finalfantasy.fandom.com" rel="external noopener">Final Fantasy Wiki</a> (licence <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="external noopener">CC BY-SA 3.0</a>). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+<p class="foot-line">Site de fans non commercial — personnages et artworks © Square Enix. Textes adaptés de <a href="https://dissidia.wiki" target="_blank" rel="external noopener">dissidia.wiki</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noopener">CC BY 4.0</a>) et du <a href="https://finalfantasy.fandom.com" target="_blank" rel="external noopener">Final Fantasy Wiki</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external noopener">CC BY-SA 3.0</a>).</p>
+<details class="foot-more"><summary>Détail des licences et des sources</summary>
+<p>Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011). Contenu textuel adapté et traduit de dissidia.wiki (CC BY 4.0) ; compléments de moveset (rôles et jobs par coup, coups spéciaux) adaptés du Final Fantasy Wiki (CC BY-SA 3.0). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" target="_blank" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+</details>
 </div></footer>`;
 }

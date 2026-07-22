@@ -1,10 +1,10 @@
 // Page transverse : installer le jeu sur PPSSPP (PC et mobile)
-import { esc, paras, banner, infoBanner, sectionSources, sourcesSection, pageShell, siteFooter } from './helpers.mjs';
+import { esc, paras, banner, infoBanner, sectionSources, sourcesSection, pageShell, siteHeader, siteFooter } from './helpers.mjs';
 
 function actionItem(a) {
   if (!a?.do) return '';
   const link = a.link?.url
-    ? ` <a href="${esc(a.link.url)}" rel="external noopener">${esc(a.link.label || a.link.url)}</a>`
+    ? ` <a href="${esc(a.link.url)}" target="_blank" rel="external noopener">${esc(a.link.label || a.link.url)}</a>`
     : '';
   return `<li><strong>${esc(a.do)}</strong>${a.detail ? ` — ${esc(a.detail)}` : ''}${link}</li>`;
 }
@@ -12,10 +12,12 @@ function actionItem(a) {
 function settingsTable(s) {
   if (!s?.rows?.length) return '';
   const [head, ...body] = s.rows;
-  return `<div class="table-scroll"><table class="data">
+  // stack-sm : sur mobile, chaque ligne devient une carte (nom du réglage en
+  // titre, valeur mise en avant via data-label, explication en dessous).
+  return `<div class="table-scroll"><table class="data stack-sm">
 ${s.caption ? `<caption>${esc(s.caption)}</caption>` : ''}
 <tr>${head.map((c) => `<th>${esc(c)}</th>`).join('')}</tr>
-${body.map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('\n')}
+${body.map((r) => `<tr>${r.map((c, i) => `<td${i > 0 && head[i] ? ` data-label="${esc(head[i])}"` : ''}>${esc(c)}</td>`).join('')}</tr>`).join('\n')}
 </table></div>`;
 }
 
@@ -80,7 +82,8 @@ ${sectionSources(data.checklist.sources)}
 ${sourcesSection(data.sources, data.limits)}
 </section>`;
 
-  const body = `<nav class="guide-top" aria-label="Sections de la page"><div class="chips-nav">
+  const body = `${siteHeader({ active: 'install' })}
+<nav class="guide-top" aria-label="Sections de la page"><div class="chips-nav">
 <a href="index.html">← Sélection</a>
 <a href="#prerequis">Prérequis</a>
 ${chips}

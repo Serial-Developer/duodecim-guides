@@ -1,7 +1,7 @@
 // Landing : reproduction de l'écran « Player Select » du mode versus du jeu —
 // panneau d'infos à gauche mis à jour au survol, grande illustration à droite,
 // grille en rangées (nouveaux venus 012 / héros / antagonistes / rangée bonus).
-import { esc, pageShell, siteFooter } from './helpers.mjs';
+import { esc, pageShell, siteHeader, siteFooter } from './helpers.mjs';
 
 // Rangées inspirées de l'écran de sélection du jeu (roster exact, ordre libre §3)
 const ROWS = [
@@ -25,23 +25,14 @@ ${row.map((slug) => {
  data-tier="${esc(tier || '')}" data-tagline="${esc(taglineBySlug[slug] || '')}"
  data-portrait="assets/portraits/${slug}.png">
 <img src="assets/portraits/${slug}.png" alt="${esc(c.name)}" width="80" height="80" loading="lazy">
+</a>
 ${tier ? `<span class="tier-badge" aria-hidden="true">${esc(tier)}</span>` : ''}
-</a></span>`;
+</span>`;
   }).join('\n')}
 </li>`).join('\n');
 
-  const body = `<main class="select-screen">
-<header class="vs-header">
-<span class="vs-plate">Sélection du personnage</span>
-<h1>Dissidia 012 <span class="gold">[duodecim]</span> Final Fantasy — guides compétitifs</h1>
-<nav class="vs-nav" aria-label="Navigation du site">
-<a href="install.html">Installer sur PPSSPP</a>
-<a href="techniques.html">Techniques &amp; glitches</a>
-<a href="characters/aerith.html">Assist : Aerith</a>
-<a href="characters/chaos.html">Boss : Chaos</a>
-<a href="https://replaytheater.app/?game=d012" rel="external noopener">Vidéos de matchs</a>
-</nav>
-</header>
+  const body = `${siteHeader({ active: 'index', h1: true })}
+<main class="select-screen">
 <div class="vs-body">
 <div class="vs-left">
 <div class="vs-info" aria-live="polite">
@@ -52,10 +43,13 @@ ${tier ? `<span class="tier-badge" aria-hidden="true">${esc(tier)}</span>` : ''}
 <ul class="char-grid" id="char-grid" aria-label="Grille de sélection des personnages">
 ${rows}
 </ul>
-<p class="select-extras">Badge de coin : tier tournoi 2017 (dissidia.wiki) · navigation clavier : flèches + Entrée</p>
+<p class="select-extras">Le rang des personnages se base sur le tier tournoi 2017 — <a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">dissidia.wiki</a></p>
 </div>
+<div class="vs-right">
+<div class="plate-row"><span class="vs-plate">Sélection du personnage</span></div>
 <div class="vs-portrait" aria-hidden="true">
 <img id="np-portrait" src="assets/portraits/${first.slug}.png" alt="">
+</div>
 </div>
 </div>
 ${siteFooter()}

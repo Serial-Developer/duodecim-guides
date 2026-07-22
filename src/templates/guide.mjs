@@ -1,7 +1,7 @@
 // Template d'un guide personnage — structure imposée §7 du cahier des charges
 import {
   esc, banner, infoBanner, paras, priorityBadge, startupChartSvg, mobilityChartSvg,
-  chainSvg, sectionSources, sourcesSection, pageShell, siteFooter,
+  chainSvg, sectionSources, sourcesSection, pageShell, siteHeader, siteFooter,
 } from './helpers.mjs';
 
 const FIELDS = [
@@ -433,6 +433,9 @@ const SECTIONS_NAV = [
 export function renderGuide({ char, ed, tierEntry, castStats, hasPortrait, moveImages }) {
   const ctx = { slug: char.slug, moveImages };
   const s = char.sections;
+  // Personnage assist (non contrôlable) : pas de stats de déplacement, pas
+  // d'EX Mode/EX Burst, pas de matchups — ces sections sont omises.
+  const isAssist = char.slug === 'aerith';
   const noEd = !ed;
   const edBanner = noEd ? infoBanner('Contenu éditorial français en cours de rédaction — données brutes ci-dessous.') : '';
 
@@ -455,7 +458,7 @@ ${heroChips(char.infobox)}
     .trim();
   const metaSection = `<section id="meta"><h2>Position dans la méta</h2>
 ${tierEntry
-    ? `<p><span class="badge prio-melee-high">Tier ${esc(tierEntry.tier)}</span> <strong>${tierEntry.rank}ᵉ sur 30</strong> — tier list tournoi 2017 de <a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" rel="external noopener">dissidia.wiki</a> (moitié valeurs de matchups, moitié avis de joueurs experts).</p>`
+    ? `<p><span class="badge prio-melee-high">Tier ${esc(tierEntry.tier)}</span> <strong>${tierEntry.rank}ᵉ sur 30</strong> — tier list tournoi 2017 de <a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">dissidia.wiki</a> (moitié valeurs de matchups, moitié avis de joueurs experts).</p>`
     : `<p class="mv-desc">Non classé dans la tier list tournoi 2017.</p>`}
 ${tierNoteClean ? `<p>${esc(tierNoteClean)}</p>` : ''}
 </section>`;
@@ -475,9 +478,9 @@ ${tierNoteClean ? `<p>${esc(tierNoteClean)}</p>` : ''}
 ${ed?.overview?.length ? paras(ed.overview) : (s.overview?.documented ? edBanner || banner() : banner())}
 ${sectionSources(secSrc.overview)}
 ${forces}
-<h3>Stats &amp; vitesses</h3>
+${isAssist ? '' : `<h3>Stats &amp; vitesses</h3>
 ${statsTable}
-${mobilityChartSvg(char, castStats)}
+${mobilityChartSvg(char, castStats)}`}
 </section>`;
 
   // --- 3. Coups ---
@@ -515,8 +518,8 @@ ${hpLinks.length ? `<h3 style="color:var(--gold)">HP links (Bravery → HP)</h3>
 <p class="mv-desc">Attaques HP qui se déclenchent en prolongement d'une bravery précise — le « HP link ». Elles s'équipent comme les autres attaques HP.</p>
 ${ed?.groupNotes?.['hp/links'] ? `<p class="mv-desc">${esc(ed.groupNotes['hp/links'])}</p>` : ''}
 ${hpLinks.map((m) => moveAccordion(m, ed?.moveNotes?.[m.name], ctx)).join('\n')}` : ''}
-<h3 style="color:var(--gold)">${esc(s.exMode?.title || 'EX Mode')} &amp; EX Burst</h3>
-${exHtml}
+${isAssist ? '' : `<h3 style="color:var(--gold)">${esc(s.exMode?.title || 'EX Mode')} &amp; EX Burst</h3>
+${exHtml}`}
 ${ed?.specialMoves?.length ? `<h3 style="color:var(--gold)">Coups spéciaux</h3>
 <p class="mv-desc">Commandes particulières absentes des listes d'équipement : elles ne coûtent aucun CP et s'activent par une commande dédiée.</p>
 ${ed.specialMoves.map((sp) => `<details class="move"><summary><span class="mv-name">${esc(sp.name)}</span>
@@ -546,7 +549,7 @@ ${(s.uniqueMechanics.subs || []).map((sub) => genericTables(sub.tables)).join('\
     : [];
   const gameplan = `<section id="gameplan"><h2>Plan de jeu &amp; techniques avancées</h2>
 ${ed?.gameplan?.length ? paras(ed.gameplan) : edBanner || banner()}
-${ed?.advancedTech?.length ? `<h3>Techniques spécifiques</h3>${ed.advancedTech.map((t) => `<div class="card"><h3 style="margin-top:0">${esc(t.name)}</h3><p>${esc(t.desc)}</p>${t.video?.url ? `<p class="video-link"><a href="${esc(t.video.url)}" rel="external noopener">▶ ${esc(t.video.title || 'Vidéo de démonstration')}</a>${t.video.author ? ` — ${esc(t.video.author)}` : ''}${t.video.date ? ` (${esc(String(t.video.date))})` : ''}</p>` : ''}${t.source ? sectionSources([t.source]) : ''}</div>`).join('')}` : ''}
+${ed?.advancedTech?.length ? `<h3>Techniques spécifiques</h3>${ed.advancedTech.map((t) => `<div class="card"><h3 style="margin-top:0">${esc(t.name)}</h3><p>${esc(t.desc)}</p>${t.video?.url ? `<p class="video-link"><a href="${esc(t.video.url)}" target="_blank" rel="external noopener">▶ ${esc(t.video.title || 'Vidéo de démonstration')}</a>${t.video.author ? ` — ${esc(t.video.author)}` : ''}${t.video.date ? ` (${esc(String(t.video.date))})` : ''}</p>` : ''}${t.source ? sectionSources([t.source]) : ''}</div>`).join('')}` : ''}
 ${sectionSources(secSrc.gameplan)}
 ${combosRaw.length ? `<details class="move"><summary><span class="mv-name">Combos documentés (notation d'origine, dissidia.wiki)</span></summary><div class="mv-body">${combosRaw.map((c) => `<p class="mono">${esc(c)}</p>`).join('')}</div></details>` : ''}
 <p class="mv-desc">Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href="../techniques.html">Techniques &amp; glitches</a>.</p>
@@ -554,16 +557,16 @@ ${combosRaw.length ? `<details class="move"><summary><span class="mv-name">Combo
 
   // --- 6. Matchups ---
   const replayUrl = `https://replaytheater.app/?game=d012&c1=${encodeURIComponent(char.name)}`;
-  const matchups = `<section id="matchups"><h2>Matchups</h2>
+  const matchups = isAssist ? '' : `<section id="matchups"><h2>Matchups</h2>
 ${s.matchups?.documented && ed?.matchups?.summary?.length
     ? paras(ed.matchups.summary)
     : ed?.matchups?.summary?.length
       ? paras(ed.matchups.summary)
       : banner(s.matchups?.sources?.length
-          ? `La sous-page <a href="${esc(s.matchups.sources[0])}" rel="external noopener">Matchups du wiki</a> est un squelette vide à ce jour.`
+          ? `La sous-page <a href="${esc(s.matchups.sources[0])}" target="_blank" rel="external noopener">Matchups du wiki</a> est un squelette vide à ce jour.`
           : `Aucune page de matchups n'existe sur le wiki pour ce personnage.`)}
 ${sectionSources(secSrc.matchups)}
-<p>Vidéos de matchs : <a href="${esc(replayUrl)}" rel="external noopener">Replay Theater — matchs de ${esc(char.name)}</a>.</p>
+<p>Vidéos de matchs : <a href="${esc(replayUrl)}" target="_blank" rel="external noopener">Replay Theater — matchs de ${esc(char.name)}</a>.</p>
 </section>`;
 
   // --- 7. Builds ---
@@ -596,7 +599,7 @@ ${!ed?.assist ? edBanner || banner() : ''}`
   // --- 9. Tech communautaire ---
   const community = `<section id="community"><h2>Tech communautaire</h2>
 ${ed?.communityTech?.length
-    ? ed.communityTech.map((t) => `<div class="card"><h3 style="margin-top:0">${esc(t.title)}${t.date ? ` <span class="badge">${esc(String(t.date))}</span>` : ''}</h3><p>${esc(t.desc)}</p>${t.source ? `<p class="sources-list"><a href="${esc(t.source)}" rel="external noopener">${esc(t.source)}</a></p>` : ''}</div>`).join('')
+    ? ed.communityTech.map((t) => `<div class="card"><h3 style="margin-top:0">${esc(t.title)}${t.date ? ` <span class="badge">${esc(String(t.date))}</span>` : ''}</h3><p>${esc(t.desc)}</p>${t.source ? `<p class="sources-list"><a href="${esc(t.source)}" target="_blank" rel="external noopener">${esc(t.source)}</a></p>` : ''}</div>`).join('')
     : banner('Aucune trouvaille communautaire attribuable relevée dans les sources récupérées pour ce personnage.')}
 </section>`;
 
@@ -615,9 +618,12 @@ ${ed?.communityTech?.length
 ${sourcesSection(allSources, ed?.limits)}
 </section>`;
 
-  const nav = SECTIONS_NAV.filter(([id]) => id !== 'unique' || hasUnique);
+  const nav = SECTIONS_NAV
+    .filter(([id]) => id !== 'unique' || hasUnique)
+    .filter(([id]) => id !== 'matchups' || !isAssist);
   const tocLinks = nav.map(([id, label]) => `<li><a href="#${id}">${esc(label)}</a></li>`).join('');
-  const body = `<nav class="guide-top" aria-label="Sections du guide"><div class="chips-nav">
+  const body = `${siteHeader({ base: '../', active: char.slug === 'aerith' ? 'aerith' : '' })}
+<nav class="guide-top" aria-label="Sections du guide"><div class="chips-nav">
 <a href="../index.html">← Sélection</a>
 ${nav.map(([id, label]) => `<a href="#${id}">${esc(label)}</a>`).join('')}
 </div></nav>

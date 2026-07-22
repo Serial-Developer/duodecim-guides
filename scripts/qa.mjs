@@ -67,7 +67,7 @@ for (const c of [...CHARACTERS, ...SPECIAL]) {
     ['overview', !!ed?.overview?.length],
     ...(hasUnique ? [['unique', !!(ed?.uniqueMechanics?.intro?.length)]] : []),
     ['gameplan', !!ed?.gameplan?.length],
-    ['matchups', !!(ed?.matchups?.summary?.length)],
+    ...(c.slug === 'aerith' ? [] : [['matchups', !!(ed?.matchups?.summary?.length)]]),
     ['builds', !!ed?.builds?.philosophy?.length],
     ['community', !!ed?.communityTech?.length],
   ];
