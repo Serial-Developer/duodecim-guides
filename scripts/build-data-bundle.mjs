@@ -70,36 +70,15 @@ function table(items, cols) {
   };
 }
 
-// Un HP link est une attaque HP qui se branche sur une bravery. Le jeu l'écrit
-// dans la description du coup (« Branching from Launch »), mais le wiki ne
-// reprend cette forme que pour une poignée de personnages : le reste est en
-// prose libre, non extractible sans risque. Les paires manquantes se déclarent à
-// la main dans data/editorial/_build-creator.json.
-const HP_LINK_PATTERNS = [
-  /Branching from ([^.\[\n]{2,40})/i,
-  /HP link from ([^.,\n]{2,40})/i,
-];
-
-function extractHpLinks(data, kindGroups) {
-  const braveries = [];
-  for (const g of kindGroups.bravery || []) for (const m of g.moves) braveries.push(m);
-  const links = [];
-  for (const g of kindGroups.hp || []) {
-    for (const m of g.moves) {
-      const raw = data.__notes[m.id] || '';
-      for (const re of HP_LINK_PATTERNS) {
-        const hit = re.exec(raw);
-        if (!hit) continue;
-        const cible = hit[1].trim().replace(/^(his|her|the)\s+/i, '');
-        const parent = braveries.find((b) => b.name.toLowerCase() === cible.toLowerCase())
-          || braveries.find((b) => cible.toLowerCase().indexOf(b.name.toLowerCase()) !== -1);
-        if (parent) links.push({ from: parent.id, to: m.id, source: 'description du coup sur dissidia.wiki' });
-        break;
-      }
-    }
-  }
-  return links;
-}
+// Rapproche un nom de coup du Final Fantasy Wiki de celui de dissidia.wiki :
+// ponctuation, casse et qualificatifs de posture varient d'un wiki à l'autre.
+const moveKey = (name) => String(name || '')
+  .toLowerCase()
+  .replace(/&/g, ' and ')
+  .replace(/[^a-z0-9 ]/g, ' ')
+  .replace(/\b(ground|grounded)\b/g, 'ground')
+  .replace(/\b(midair|mid air|aerial|air)\b/g, 'midair')
+  .split(/\s+/).filter(Boolean).join(' ');
 
 export function buildDataBundle(ROOT, editorial = null) {
   const dir = join(ROOT, 'data', 'build');
@@ -113,7 +92,10 @@ export function buildDataBundle(ROOT, editorial = null) {
   const capacity = readJson(join(dir, 'capacity.json'));
   const baseStats = readJson(join(dir, 'base-stats.json'));
 
+  const hpLinkPairs = readJson(join(dir, 'hp-links.json'));
   const native = nativeByCharacter(equipment);
+  const unresolvedLinks = [];
+  const aliasedAll = [];
 
   const characters = [];
   for (const def of CHARACTERS) {
@@ -219,19 +201,44 @@ export function buildDataBundle(ROOT, editorial = null) {
       if (kept.length) attacks[kind] = kept.map((g) => ({ key: g.key, intro: g.intro, followUp: g.followUp, moves: table(g.moves, MOVE_COLS) }));
     }
 
-    // HP links : extraits de la description du coup quand elle les nomme, puis
-    // complétés par les paires déclarées à la main.
+    // HP links : paires extraites du Final Fantasy Wiki, complétées par celles
+    // déclarées à la main. Les noms sont résolus contre nos propres coups ; ceux
+    // qui ne correspondent à rien sont rapportés plutôt que devinés.
     const byName = {};
-    for (const kind of ['bravery', 'hp']) for (const g of rawGroups[kind] || []) for (const m of g.moves) byName[`${kind}:${m.name.toLowerCase()}`] = m.id;
-    const hpLinks = extractHpLinks({ __notes: notesById }, rawGroups);
-    for (const decl of (editorial?.hpLinks || {})[def.slug] || []) {
-      const from = byName['bravery:' + String(decl.from).toLowerCase()];
-      const to = byName['hp:' + String(decl.to).toLowerCase()];
-      if (!from) throw new Error(`_build-creator.json : hpLinks[${def.slug}] — bravery inconnue « ${decl.from} »`);
-      if (!to) throw new Error(`_build-creator.json : hpLinks[${def.slug}] — attaque HP inconnue « ${decl.to} »`);
-      if (!hpLinks.some((l) => l.from === from && l.to === to)) hpLinks.push({ from, to, source: decl.source || 'déclaré dans l’éditorial' });
+    for (const kind of ['bravery', 'hp']) {
+      for (const g of rawGroups[kind] || []) for (const m of g.moves) byName[`${kind}:${moveKey(m.name)}`] = m.id;
+    }
+    // Les deux wikis ne nomment pas toujours le coup pareil : le Final Fantasy
+    // Wiki écrit « Master Sonic Break » là où dissidia.wiki écrit « Sonic Break ».
+    // On ne tolère que ce préfixe, et seulement si le nom nu existe et que la
+    // forme « Master … » n'existe pas de son côté — le rapprochement est tracé.
+    const aliased = [];
+    const resolve = (kind, name) => {
+      const exact = byName[`${kind}:${moveKey(name)}`];
+      if (exact) return exact;
+      const nu = String(name).replace(/^\s*Master\s+/i, '');
+      if (nu !== name) {
+        const alt = byName[`${kind}:${moveKey(nu)}`];
+        if (alt) { aliased.push({ slug: def.slug, wiki: name, retenu: nu }); return alt; }
+      }
+      return null;
+    };
+    const hpLinks = [];
+    const sources = [
+      ...hpLinkPairs.items.filter((l) => l.slug === def.slug).map((l) => ({ ...l, origine: l.source })),
+      ...((editorial?.hpLinks || {})[def.slug] || []).map((l) => ({ ...l, origine: l.source || 'déclaré dans l’éditorial' })),
+    ];
+    for (const l of sources) {
+      const from = resolve('bravery', l.from);
+      const to = resolve('hp', l.to);
+      if (!from || !to) {
+        unresolvedLinks.push({ slug: def.slug, from: l.from, to: l.to, manquant: !from ? 'bravery' : 'attaque HP' });
+        continue;
+      }
+      if (!hpLinks.some((x) => x.from === from && x.to === to)) hpLinks.push({ from, to, source: l.origine });
     }
 
+    aliasedAll.push(...aliased);
     characters.push({
       slug: def.slug,
       name: def.name,
@@ -241,6 +248,7 @@ export function buildDataBundle(ROOT, editorial = null) {
       // Paires bravery -> attaque HP réellement identifiées ; l'infobox ci-dessus
       // dit seulement si le personnage en a.
       links: hpLinks,
+      // (rapprochements de noms consignés plus bas)
       native: native[def.slug] || { weapon: [], hand: [], head: [], body: [] },
       attacks,
       attacksDocumented: Object.keys(attacks).length > 0,
@@ -281,6 +289,8 @@ export function buildDataBundle(ROOT, editorial = null) {
     schemaVersion: 1,
     generated: new Date().toISOString(),
     capacity: { base: capacity.base, max: capacity.max, quote: capacity.quote, extenders: capacity.extenders, documented: capacity.documented },
+    unresolvedHpLinks: unresolvedLinks,
+    aliasedHpLinks: aliasedAll,
     baseStats: { shared: baseStats.shared, byCharacter: baseStats.byCharacter, documented: baseStats.documented },
     ruleset: {
       id: ruleset.id, name: ruleset.name, url: ruleset.sources[0],

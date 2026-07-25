@@ -213,6 +213,27 @@ for (const f of readdirSync(join(ROOT, 'data', 'editorial')).filter((x) => x.end
       for (const r of D.ruleset.itemRules) {
         if (!r.quote) errors.push(`créateur de builds : règle « ${r.rule} » sans citation source`);
       }
+
+      // HP links : chaque paire doit pointer sur des coups réellement présents,
+      // une bravery vers une attaque HP, et aucune paire ne doit rester en
+      // souffrance (sinon l'attaque HP disparaîtrait de l'interface).
+      for (const c of D.characters) {
+        const ids = new Set();
+        for (const kind of ['bravery', 'hp']) {
+          for (const g of c.attacks[kind] || []) for (const row of g.moves.r) ids.add(row[g.moves.c.indexOf('id')]);
+        }
+        for (const l of c.links || []) {
+          if (!ids.has(l.from)) errors.push(`créateur de builds : HP link de ${c.slug} — bravery introuvable (${l.from})`);
+          if (!ids.has(l.to)) errors.push(`créateur de builds : HP link de ${c.slug} — attaque HP introuvable (${l.to})`);
+          if (l.from.indexOf('bravery:') !== 0 || l.to.indexOf('hp:') !== 0) {
+            errors.push(`créateur de builds : HP link de ${c.slug} mal orienté (${l.from} -> ${l.to})`);
+          }
+          if (!l.source) errors.push(`créateur de builds : HP link de ${c.slug} sans source`);
+        }
+      }
+      for (const u of D.unresolvedHpLinks || []) {
+        errors.push(`créateur de builds : HP link non résolu chez ${u.slug} — ${u.to} <- ${u.from} (${u.manquant} introuvable)`);
+      }
     }
   }
 }

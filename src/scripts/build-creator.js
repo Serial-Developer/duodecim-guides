@@ -642,7 +642,9 @@
           : 'Enchaînements — équipez d’abord ' + parent.name,
       }),
     ]);
-    if (actifs && parentEquipe) det.setAttribute('open', '');
+    // Équiper le coup ouvre son embranchement : c'est le moment où il devient
+    // choisissable, autant le montrer sans clic supplémentaire.
+    if (parentEquipe) det.setAttribute('open', '');
     if (intro && parentEquipe) det.appendChild(el('p', { class: 'bc-note', text: intro.split('\n')[0] }));
     var l = el('div', { class: 'bc-list' });
     suites.forEach(function (m) { l.appendChild(attackRow(m, false, !parentEquipe)); });

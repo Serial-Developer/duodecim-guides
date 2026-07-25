@@ -1,0 +1,268 @@
+{
+  "generated": "2026-07-25T22:22:44.925Z",
+  "license": "CC BY-SA — finalfantasy.fandom.com",
+  "note": "Colonne « Obtained » = la bravery dont part l’attaque HP. Seule la table dont la légende cite Dissidia 012 est lue : les deux tables de la section partagent la même classe CSS.",
+  "sources": [
+    "https://finalfantasy.fandom.com/wiki/Warrior_of_Light_(Dissidia_PSP)",
+    "https://finalfantasy.fandom.com/wiki/Firion_(Dissidia_PSP)",
+    "https://finalfantasy.fandom.com/wiki/Onion_Knight_(Dissidia_PSP)",
+    "https://finalfantasy.fandom.com/wiki/Cloud_Strife_(Dissidia_PSP)",
+    "https://finalfantasy.fandom.com/wiki/Terra_Branford_(Dissidia_PSP)",
+    "https://finalfantasy.fandom.com/wiki/Bartz_Klauser_(Dissidia_PSP)",
+    "https://finalfantasy.fandom.com/wiki/Golbez_(Dissidia_PSP)",
+    "https://finalfantasy.fandom.com/wiki/Zidane_Tribal_(Dissidia_PSP)",
+    "https://finalfantasy.fandom.com/wiki/Tidus_(Dissidia_PSP)",
+    "https://finalfantasy.fandom.com/wiki/Tifa_Lockhart_(Dissidia_PSP)",
+    "https://finalfantasy.fandom.com/wiki/Lightning_(Dissidia_PSP)"
+  ],
+  "items": [
+    {
+      "slug": "warrior-of-light",
+      "from": "Ascension",
+      "to": "Rune Saber (ground)",
+      "source": "https://finalfantasy.fandom.com/wiki/Warrior_of_Light_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "warrior-of-light",
+      "from": "Crossover",
+      "to": "Rune Saber (midair)",
+      "source": "https://finalfantasy.fandom.com/wiki/Warrior_of_Light_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "warrior-of-light",
+      "from": "Shield Strike",
+      "to": "Bitter End A",
+      "source": "https://finalfantasy.fandom.com/wiki/Warrior_of_Light_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "warrior-of-light",
+      "from": "Rising Buckler",
+      "to": "Bitter End B",
+      "source": "https://finalfantasy.fandom.com/wiki/Warrior_of_Light_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "firion",
+      "from": "Lance Combo",
+      "to": "Double Trouble A",
+      "source": "https://finalfantasy.fandom.com/wiki/Firion_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "firion",
+      "from": "Rope Knife",
+      "to": "Double Trouble B",
+      "source": "https://finalfantasy.fandom.com/wiki/Firion_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "firion",
+      "from": "Reel Axe",
+      "to": "Double Trouble C",
+      "source": "https://finalfantasy.fandom.com/wiki/Firion_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "onion-knight",
+      "from": "Multi-Hit",
+      "to": "Swordshower",
+      "source": "https://finalfantasy.fandom.com/wiki/Onion_Knight_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "onion-knight",
+      "from": "Blizzard",
+      "to": "Quake",
+      "source": "https://finalfantasy.fandom.com/wiki/Onion_Knight_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "onion-knight",
+      "from": "Turbo-Hit",
+      "to": "Guiding Swipe",
+      "source": "https://finalfantasy.fandom.com/wiki/Onion_Knight_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "onion-knight",
+      "from": "Thunder",
+      "to": "Flare",
+      "source": "https://finalfantasy.fandom.com/wiki/Onion_Knight_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "cloud-strife",
+      "from": "Master Sonic Break",
+      "to": "Finishing Touch",
+      "source": "https://finalfantasy.fandom.com/wiki/Cloud_Strife_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "cloud-strife",
+      "from": "Master Slashing Blow",
+      "to": "Omnislash Version 5",
+      "source": "https://finalfantasy.fandom.com/wiki/Cloud_Strife_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "terra-branford",
+      "from": "Fire",
+      "to": "Firaga",
+      "source": "https://finalfantasy.fandom.com/wiki/Terra_Branford_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "terra-branford",
+      "from": "Holy Combo",
+      "to": "Ultima",
+      "source": "https://finalfantasy.fandom.com/wiki/Terra_Branford_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "bartz-klauser",
+      "from": "Holy",
+      "to": "Flare",
+      "source": "https://finalfantasy.fandom.com/wiki/Bartz_Klauser_(Dissidia_PSP)",
+      "critere": "classe CSS D012",
+      "caption": "Dissidia Bravery to HP attacks"
+    },
+    {
+      "slug": "golbez",
+      "from": "Rising Wave",
+      "to": "Cosmic Ray A",
+      "source": "https://finalfantasy.fandom.com/wiki/Golbez_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "golbez",
+      "from": "Glare Hand",
+      "to": "Cosmic Ray B",
+      "source": "https://finalfantasy.fandom.com/wiki/Golbez_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "golbez",
+      "from": "Gravity System",
+      "to": "Cosmic Ray C",
+      "source": "https://finalfantasy.fandom.com/wiki/Golbez_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "golbez",
+      "from": "Float System",
+      "to": "Cosmic Ray D",
+      "source": "https://finalfantasy.fandom.com/wiki/Golbez_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "zidane-tribal",
+      "from": "Rumble Rush",
+      "to": "Meo Twister A",
+      "source": "https://finalfantasy.fandom.com/wiki/Zidane_Tribal_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "zidane-tribal",
+      "from": "Tempest",
+      "to": "Meo Twister B",
+      "source": "https://finalfantasy.fandom.com/wiki/Zidane_Tribal_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "zidane-tribal",
+      "from": "Swift Attack",
+      "to": "Meo Twister C",
+      "source": "https://finalfantasy.fandom.com/wiki/Zidane_Tribal_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "tidus",
+      "from": "Stick & Move (ground)",
+      "to": "Quick Hit A",
+      "source": "https://finalfantasy.fandom.com/wiki/Tidus_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "tidus",
+      "from": "Dart & Weave (ground)",
+      "to": "Quick Hit B",
+      "source": "https://finalfantasy.fandom.com/wiki/Tidus_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "tidus",
+      "from": "Cut & Run (ground)",
+      "to": "Quick Hit C",
+      "source": "https://finalfantasy.fandom.com/wiki/Tidus_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "tidus",
+      "from": "Stick & Move (midair)",
+      "to": "Quick Hit D",
+      "source": "https://finalfantasy.fandom.com/wiki/Tidus_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "tidus",
+      "from": "Dart & Weave (midair)",
+      "to": "Quick Hit E",
+      "source": "https://finalfantasy.fandom.com/wiki/Tidus_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "tidus",
+      "from": "Cut & Run (midair)",
+      "to": "Quick Hit F",
+      "source": "https://finalfantasy.fandom.com/wiki/Tidus_(Dissidia_PSP)",
+      "critere": "légende",
+      "caption": "Dissidia 012 Bravery to HP attacks"
+    },
+    {
+      "slug": "tifa-lockhart",
+      "from": "Waterkick",
+      "to": "Somersault",
+      "source": "https://finalfantasy.fandom.com/wiki/Tifa_Lockhart_(Dissidia_PSP)",
+      "critere": "classe CSS D012",
+      "caption": "Bravery to HP attacks"
+    },
+    {
+      "slug": "lightning",
+      "from": "Launch",
+      "to": "Flourish of Steel",
+      "source": "https://finalfantasy.fandom.com/wiki/Lightning_(Dissidia_PSP)",
+      "critere": "classe CSS D012",
+      "caption": "Bravery to HP attacks"
+    }
+  ]
+}

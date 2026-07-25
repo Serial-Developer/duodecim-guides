@@ -836,6 +836,107 @@ function parseBaseStats() {
   });
 }
 
+// ============================================================================
+// 10. HP links — pages personnages du Final Fantasy Wiki
+// ============================================================================
+// La section « Bravery to HP Attacks » contient deux tables : celle du Dissidia
+// de 2008 et celle de 012. ATTENTION : les deux portent la même classe CSS
+// `DFF2008` — seule la LÉGENDE les distingue (« Dissidia 012 Bravery to HP
+// attacks »). Filtrer sur la classe ferait lire les données du mauvais jeu.
+const HP_LINK_PAGES = {
+  'warrior-of-light': 'Warrior_of_Light_(Dissidia_PSP)',
+  firion: 'Firion_(Dissidia_PSP)',
+  'onion-knight': 'Onion_Knight_(Dissidia_PSP)',
+  'cloud-strife': 'Cloud_Strife_(Dissidia_PSP)',
+  'terra-branford': 'Terra_Branford_(Dissidia_PSP)',
+  'bartz-klauser': 'Bartz_Klauser_(Dissidia_PSP)',
+  golbez: 'Golbez_(Dissidia_PSP)',
+  'zidane-tribal': 'Zidane_Tribal_(Dissidia_PSP)',
+  tidus: 'Tidus_(Dissidia_PSP)',
+  'tifa-lockhart': 'Tifa_Lockhart_(Dissidia_PSP)',
+  lightning: 'Lightning_(Dissidia_PSP)',
+};
+
+// Découpe le wikitext en blocs de table, en conservant légende et attributs.
+function tablesWithCaptions(wikitext) {
+  const out = [];
+  let depth = 0;
+  let buf = null;
+  for (const line of wikitext.split('\n')) {
+    const t = line.trim();
+    if (t.startsWith('{|')) {
+      depth++;
+      if (depth === 1) { buf = { caption: '', attrs: t.slice(2).trim(), body: [] }; continue; }
+    }
+    if (!buf) continue;
+    if (t.startsWith('|}')) { depth--; if (depth === 0) { out.push(buf); buf = null; continue; } }
+    if (depth === 1 && t.startsWith('|+')) { buf.caption = plain(t.slice(2)); continue; }
+    buf.body.push(line);
+  }
+  return out;
+}
+
+// Désigne la table Dissidia 012 d'une section. Aucun critère unique ne suffit :
+// certaines pages ne distinguent les deux jeux que par la légende (les deux
+// tables y portent la classe DFF2008), d'autres seulement par la classe (les
+// deux légendes disent « Dissidia »). On essaie donc dans cet ordre.
+function pickD012Table(tables, page) {
+  const parLegende = tables.find((t) => /dissidia\s*012/i.test(t.caption));
+  if (parLegende) return { table: parLegende, critere: 'légende' };
+  const parClasse = tables.filter((t) => /\bD012\b/.test(t.attrs));
+  if (parClasse.length === 1) return { table: parClasse[0], critere: 'classe CSS D012' };
+  if (parClasse.length > 1) warn(`HP links : ${parClasse.length} tables D012 sur ${page}, la première est retenue`);
+  return parClasse.length ? { table: parClasse[0], critere: 'classe CSS D012' } : null;
+}
+
+function parseHpLinks() {
+  const items = [];
+  for (const [slug, page] of Object.entries(HP_LINK_PAGES)) {
+    const file = join(CACHE, 'fandom', page + '.wikitext');
+    if (!existsSync(file)) { warn(`HP links : cache manquant pour ${page}`); continue; }
+    const wikitext = readFileSync(file, 'utf8');
+    const url = fandomUrl(page);
+
+    const i = wikitext.indexOf('Bravery to HP Attacks');
+    if (i === -1) { warn(`HP links : section absente sur ${page}`); continue; }
+    const next = wikitext.indexOf('\n==', i + 25);
+    const section = wikitext.slice(i, next > 0 ? next : wikitext.length);
+
+    const choix = pickD012Table(tablesWithCaptions(section), page);
+    if (!choix) { warn(`HP links : table Dissidia 012 introuvable sur ${page}`); continue; }
+    const table = choix.table;
+
+    const parsed = parseTables('{|\n' + table.body.join('\n') + '\n|}')[0];
+    if (!parsed) { warn(`HP links : table illisible sur ${page}`); continue; }
+    const head = parsed.rows[0].map((c) => plain(c).toLowerCase());
+    const iMove = head.indexOf('move');
+    const iFrom = head.indexOf('obtained');
+    if (iMove === -1 || iFrom === -1) { warn(`HP links : colonnes Move/Obtained absentes sur ${page} (${head.join('|')})`); continue; }
+
+    for (const row of parsed.rows.slice(1)) {
+      // Les lignes de description (colspan) n'ont pas de colonne « Obtained ».
+      if (row.length <= Math.max(iMove, iFrom)) continue;
+      // Les <br/> deviennent « · » : « Rune Saber · (ground) » se relit
+      // « Rune Saber (ground) », la forme utilisée par les fiches du site.
+      const propre = (s) => plain(s).replace(/\s*·\s*/g, ' ').replace(/\s+/g, ' ').trim();
+      const to = propre(row[iMove]);
+      const from = propre(row[iFrom]);
+      if (!to || !from || /^—|^-$|^n\/a$/i.test(from)) continue;
+      items.push({ slug, from, to, source: url, critere: choix.critere, caption: table.caption });
+    }
+  }
+
+  if (!items.length) warn('HP links : aucune paire extraite');
+  write('hp-links.json', {
+    generated: new Date().toISOString(),
+    license: 'CC BY-SA — finalfantasy.fandom.com',
+    note: 'Colonne « Obtained » = la bravery dont part l’attaque HP. Seule la table dont la légende cite Dissidia 012 est lue : les deux tables de la section partagent la même classe CSS.',
+    sources: Object.values(HP_LINK_PAGES).map(fandomUrl),
+    items,
+  });
+  return items;
+}
+
 // --- Exécution ---------------------------------------------------------------
 for (const f of ['Abilities_(Dissidia_012)', 'Assist_(Dissidia_012)', 'Summons_(Dissidia_012)', 'Tournament_Rules_(Dissidia_012)', 'Statistic_(Dissidia_012)']) {
   if (!existsSync(join(CACHE, f + '.html'))) { console.error(`cache manquant : ${f} — lancer npm run scrape:build`); process.exit(1); }
@@ -851,6 +952,7 @@ parseSummons();
 parseRuleset();
 parseCapacity(accessories);
 parseBaseStats();
+parseHpLinks();
 
 writeFileSync(join(ROOT, 'reports', 'parse-builddata-log.json'), JSON.stringify({ generated: new Date().toISOString(), warnings }, null, 2) + '\n');
 console.log(`\n${warnings.length} avertissement(s) — reports/parse-builddata-log.json`);

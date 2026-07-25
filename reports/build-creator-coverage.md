@@ -58,7 +58,7 @@ Master Guardsman, que la fiche du wiki mentionne en note.
 | Sujet | État | Traitement dans l'outil |
 |---|---|---|
 | Nombre d'emplacements d'attaques par catégorie | Introuvable dans les sources consultées | Aucune limite de nombre n'est imposée ; la contrainte appliquée est le budget de CP. Signalé dans l'onglet Attaques. |
-| Quelles braveries mènent à quelle attaque HP (HP links) | Le jeu l'écrit dans la description du coup (« Branching from Launch »), mais le wiki ne reprend cette forme que pour **2 personnages sur les 25** annoncés « HP Links: Yes » ; ailleurs la paire est noyée dans la prose | Les 2 paires sourcées (Lightning : Launch → Flourish of Steel ; Cloud : Slashing Blow → Omnislash Version 5) sont imbriquées sous leur bravery. Pour les 23 autres, l'infobox est affichée telle quelle, sans paire inventée. Les paires connues se déclarent dans `hpLinks` de `data/editorial/_build-creator.json` |
+| Quelles braveries mènent à quelle attaque HP (HP links) | **Résolu** : la catégorie `Bravery to HP abilities in Dissidia 012 Final Fantasy` du Final Fantasy Wiki recense les 19 attaques concernées, et la section « Bravery to HP Attacks » de chaque page personnage donne la bravery d'origine (colonne « Obtained ») | 31 paires sur 11 personnages, toutes résolues contre nos fiches. Des paires supplémentaires restent déclarables dans `hpLinks` de `data/editorial/_build-creator.json` |
 | Coût en CP de 24 attaques sur 431 | Absent du wiki | Étiquette « non documenté » sur la ligne, et le total de CP est présenté comme un minimum dès qu'une de ces attaques est sélectionnée |
 | Emplacement de 3 armures exclusives de Feral Chaos (Aegis of Strife, Calamitous Rage, Deafening Fissure) | Le Fandom ne donne pas l'emplacement, et aucune page de dissidia.wiki ne les couvre | `documented: false`, exclues des listes équipables, signalées ici |
 | Effet de l'invocation Barbariccia | Citée comme counter summon légal par la page de règles, mais absente de la page Summons | Proposée (elle est légale), sans description, avec l'étiquette « non documenté » |
@@ -84,6 +84,17 @@ Master Guardsman, que la fiche du wiki mentionne en note.
 - **Colonne en `colspan`** dans la table des accessoires « Trade » : elle décalait la
   lecture de toutes les colonnes suivantes, et le rang se perdait. Le lecteur de tables
   répète désormais une cellule sur le nombre de colonnes qu'elle couvre.
+- **Les deux jeux se ressemblent au point de se confondre.** Dans la section « Bravery to
+  HP Attacks » des pages personnages du Fandom cohabitent la table du Dissidia de 2008 et
+  celle de 012. Aucun critère unique ne les sépare : chez Warrior of Light les deux portent
+  la classe `DFF2008` et seule la légende cite « Dissidia 012 » ; chez Bartz les deux
+  légendes disent « Dissidia » et seule la classe `D012` tranche. Le parseur essaie la
+  légende, puis la classe, et refuse de choisir au hasard.
+- **Un même coup nommé différemment d'un wiki à l'autre** : le Fandom écrit « Master Sonic
+  Break » et « Master Slashing Blow » là où dissidia.wiki écrit « Sonic Break » et
+  « Slashing Blow ». Le rapprochement ne tolère que le préfixe « Master », uniquement si le
+  nom nu existe de notre côté, et chaque cas est consigné dans le payload
+  (`aliasedHpLinks`).
 
 ## Règles de composition appliquées
 

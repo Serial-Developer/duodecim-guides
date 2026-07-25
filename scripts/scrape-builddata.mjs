@@ -43,6 +43,14 @@ export const FANDOM_PAGES = [
   'Dissidia_012_Final_Fantasy_armor',
   'Dissidia_012_Final_Fantasy_accessories',
   'Combination',
+  // Pages personnages du Fandom : leur section « Bravery to HP Attacks » donne,
+  // pour chaque attaque HP branchée, la bravery dont elle part (colonne
+  // « Obtained »). Liste des personnages concernés obtenue via
+  // Category:Bravery_to_HP_abilities_in_Dissidia_012_Final_Fantasy.
+  ...[
+    'Warrior of Light', 'Firion', 'Onion Knight', 'Cloud Strife', 'Terra Branford',
+    'Bartz Klauser', 'Golbez', 'Zidane Tribal', 'Tidus', 'Tifa Lockhart', 'Lightning',
+  ].map((n) => `${n.replaceAll(' ', '_')}_(Dissidia_PSP)`),
 ];
 
 async function fetchWiki(page) {
