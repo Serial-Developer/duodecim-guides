@@ -105,8 +105,7 @@ Master Guardsman, que la fiche du wiki mentionne en note.
 | Un enchaînement n'est équipable que si son attaque de départ l'est | idem ; l'interface verrouille la branche et purge les sélections orphelines |
 | Toute bravery « (One) » mène à n'importe quel enchaînement « (Two) » équipé | Les descriptions des enchaînements de Prishe indiquent « Branching from _ (One) », le tiret bas valant pour n'importe laquelle |
 | Exemplaires d'un même accessoire : 1 pour un rang S, 2 pour un A, 3 pour un B, illimité pour un C | Règle de jeu fournie par l'auteur du site ; les rangs viennent du Final Fantasy Wiki |
-| Paliers d'une même ability mutuellement exclusifs | Nommage du wiki (`+`, `++`, `Ω`) |
-| Descent Speed Boost et Zero Gravity incompatibles | Confirmé par l'auteur ; les deux descriptions commencent par « Press X after jumping » |
+| Abilities mutuellement exclusives | Déduites des descriptions du wiki (voir ci-dessous) |
 
 ## Légalité en tournoi
 
@@ -129,6 +128,39 @@ Cagnazzo, Rubicante). Aucun équipement listé n'est banni : les artefacts, seul
 équipements interdits par le ruleset, sont générés aléatoirement et n'ont pas de fiche
 sur les wikis. Rien n'est masqué en silence : un interrupteur « Afficher les items
 illégaux » les fait réapparaître, toujours étiquetés avec leur motif.
+
+## Abilities mutuellement exclusives
+
+Le wiki n'énonce aucune incompatibilité, mais il en donne la matière : chaque
+description dit **dans quelle situation on appuie sur quoi**. Deux abilities qui
+occupent la même commande dans la même situation ne peuvent pas coexister. La
+déduction combine trois règles, puis fusionne les familles qui se recoupent.
+
+1. **Commande partagée** — « While on ground, press R + triangle » réunit Ground Dash,
+   Reverse Ground Dash et Omni Ground Dash.
+2. **Paliers d'une même ability** — le nommage (`+`, `++`, `Ω`) marque des rangs d'un
+   même effet, pas des abilities cumulables.
+3. **Un prérequis n'est pas un conflit** — Descent Speed Boost et Zero Gravity partagent
+   la commande de Multi Air Slide, mais leurs notes disent « available after jumps and
+   Multi Air Slide » : le prérequis sort du groupe, les deux autres restent
+   incompatibles entre eux.
+
+La fusion des règles 1 et 2 rattrape un défaut de la source : la description d'Omni
+Ground Dash+ omet « au sol », ce qui l'aurait rangé avec les dashes aériens. Son lien
+de palier avec Omni Ground Dash le remet dans la bonne famille.
+
+Résultat : **11 groupes couvrant 30 abilities**.
+
+| Groupe | Fondement |
+|---|---|
+| Air Dash · Reverse Air Dash | triangle pendant un Quickmove |
+| Free Air Dash · Reverse Free Air Dash · Omni Air Dash · Omni Air Dash+ | R + triangle en l'air |
+| Ground Dash · Reverse Ground Dash · Omni Ground Dash · Omni Ground Dash+ | R + triangle au sol |
+| Descent Speed Boost · Zero Gravity | X après un saut |
+| Speed Boost ×3, Jump Boost ×3, Jump Times Boost ×3, Auto EX Command ×2, Auto EX Defense ×2, Concentration ×3, Achy ×2 | paliers d'une même ability |
+
+Un cas que la déduction raterait se déclare dans `abilityExclusions` de
+`data/editorial/_build-creator.json` ; le tableau est vide aujourd'hui.
 
 ## Contrôles automatiques
 

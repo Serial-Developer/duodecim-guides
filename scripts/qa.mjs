@@ -195,6 +195,22 @@ for (const f of readdirSync(join(ROOT, 'data', 'editorial')).filter((x) => x.end
         }
       }
 
+      // Exclusions d'abilities : chaque groupe doit compter au moins deux
+      // membres existants, et une même ability ne peut appartenir qu'à un seul
+      // groupe (sinon cocher l'une en déséquiperait deux familles).
+      const dansGroupe = new Map();
+      for (const g of D.abilityExclusions || []) {
+        if (!Array.isArray(g.abilities) || g.abilities.length < 2) {
+          errors.push(`créateur de builds : groupe d'exclusion « ${g.id} » à moins de deux abilities`);
+        }
+        if (!g.reason || !g.source) errors.push(`créateur de builds : groupe d'exclusion « ${g.id} » sans motif ou sans source`);
+        for (const id of g.abilities || []) {
+          if (!abilityIds.has(id)) errors.push(`créateur de builds : exclusion « ${g.id} » — ability inconnue ${id}`);
+          if (dansGroupe.has(id)) errors.push(`créateur de builds : ${id} apparaît dans deux groupes d'exclusion (${dansGroupe.get(id)} et ${g.id})`);
+          dansGroupe.set(id, g.id);
+        }
+      }
+
       // Idem pour les coups : le client les référence par identifiant.
       for (const c of D.characters) {
         const moveIds = new Set();

@@ -79,6 +79,122 @@ function abilityStatBonus(description) {
   };
 }
 
+// --- Exclusions mutuelles entre abilities -----------------------------------
+// Le wiki ne les énonce jamais, mais il donne de quoi les déduire : chaque
+// description dit dans quelle situation on appuie sur quoi. Deux abilities qui
+// occupent la même commande dans la même situation ne peuvent pas coexister —
+// « Ground Dash » et « Reverse Ground Dash » se déclenchent toutes deux par
+// R + triangle au sol. S'y ajoutent les paliers d'une même ability.
+//
+// Deux garde-fous :
+//  - le contexte manque parfois dans la description (« Omni Ground Dash+ » ne
+//    dit pas « au sol ») : le nom le rattrape ;
+//  - une ability qui en requiert une autre s'y ajoute au lieu de la remplacer
+//    (« Descent Speed Boost » est disponible après un Multi Air Slide) : ces
+//    paires sont retirées.
+function abilityCommand(a) {
+  const d = a.description || '';
+  let contexte = null;
+  if (/\b(on the ground|while on ground)\b/i.test(d)) contexte = 'sol';
+  else if (/\b(in the air|while in midair|through the air)\b/i.test(d)) contexte = 'air';
+  else if (/while quickmoving/i.test(d)) contexte = 'quickmove';
+  else if (/after jumping/i.test(d)) contexte = 'après un saut';
+  else if (/after a quickmove/i.test(d)) contexte = 'après un quickmove';
+  // Le nom tranche quand la description reste muette.
+  if (!contexte) {
+    if (/\bground\b/i.test(a.name)) contexte = 'sol';
+    else if (/\b(air|midair|aerial)\b/i.test(a.name)) contexte = 'air';
+  }
+  const m = /\b(?:push|press)\s+((?:R\s*\+\s*)?(?:X|triangle|circle|square|R)(?:\s+or\s+(?:X|triangle|circle|square))?)\b/i.exec(d);
+  const commande = m ? m[1].replace(/\s+/g, ' ').toUpperCase() : null;
+  return contexte && commande ? { contexte, commande } : null;
+}
+
+// Un prérequis cité par son nom de base vaut pour tous ses paliers : « available
+// after … Multi Air Slide » couvre aussi « Multi Air Slide+ ».
+function abilityDependsOn(a, parNom) {
+  const txt = `${a.description || ''} ${a.notes || ''}`;
+  const base = (n) => n.replace(/\s*(\+\+?|Ω)\s*$/, '').trim().toLowerCase();
+  const cites = new Set();
+  for (const nom of parNom.keys()) {
+    const n = nom.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    if (new RegExp(`(must enable\\s+${n}|${n}\\s+must be enabled|available after[^.]*\\b${n})`, 'i').test(txt)) cites.add(base(nom));
+  }
+  const out = [];
+  for (const [nom, id] of parNom) {
+    if (id !== a.id && cites.has(base(nom))) out.push(id);
+  }
+  return out;
+}
+
+function deriveExclusions(groups, url) {
+  const all = groups.flatMap((g) => g.abilities.map((a) => ({ ...a, group: g.key })));
+  const parNom = new Map(all.map((a) => [a.name, a.id]));
+
+  // 1. Familles par commande partagée, 2. familles par palier.
+  const familles = new Map();
+  const ajouter = (cle, motif, id) => {
+    if (!familles.has(cle)) familles.set(cle, { motif, ids: new Set() });
+    familles.get(cle).ids.add(id);
+  };
+  for (const a of all) {
+    const cmd = abilityCommand(a);
+    if (cmd) ajouter(`cmd|${a.group}|${cmd.contexte}|${cmd.commande}`, `même commande : ${cmd.commande} ${cmd.contexte}`, a.id);
+    const base = a.name.replace(/\s*(\+\+?|Ω)\s*$/, '').trim();
+    ajouter(`palier|${a.group}|${base}`, `« ${base} » n'existe qu'en un seul palier à la fois`, a.id);
+  }
+
+  // 3. Fusion transitive : un palier peut relier une ability à sa famille de
+  //    commande quand sa propre description est muette.
+  const parent = new Map();
+  const trouver = (x) => { while (parent.get(x) !== x) { parent.set(x, parent.get(parent.get(x))); x = parent.get(x); } return x; };
+  for (const a of all) parent.set(a.id, a.id);
+  // Le motif affiché doit décrire ce qui fonde vraiment l'exclusion : la commande
+  // partagée prime sur le palier, qui n'a servi qu'à raccrocher un membre.
+  const motifParFamille = [];
+  for (const [cle, f] of familles) {
+    const ids = [...f.ids];
+    if (ids.length < 2) continue;
+    for (const id of ids) {
+      const [x, y] = [trouver(ids[0]), trouver(id)];
+      if (x !== y) parent.set(y, x);
+    }
+    motifParFamille.push({ cle, motif: f.motif, ids });
+  }
+  const motifs = new Map();
+  for (const f of motifParFamille.sort((a, b) => (a.cle.startsWith('cmd|') ? -1 : 1) - (b.cle.startsWith('cmd|') ? -1 : 1))) {
+    const r = trouver(f.ids[0]);
+    if (!motifs.has(r)) motifs.set(r, f.motif);
+  }
+
+  const paquets = new Map();
+  for (const a of all) {
+    const r = trouver(a.id);
+    if (!paquets.has(r)) paquets.set(r, []);
+    paquets.get(r).push(a);
+  }
+
+  const out = [];
+  for (const [racine, membres] of paquets) {
+    if (membres.length < 2) continue;
+    // 4. Un prérequis n'exclut pas ce qui s'appuie dessus : Multi Air Slide
+    //    partage la commande de Descent Speed Boost et Zero Gravity, mais ces
+    //    deux-là s'utilisent « après un Multi Air Slide ». On sort donc le
+    //    prérequis du groupe ; ceux qui en dépendent restent incompatibles
+    //    entre eux.
+    const deps = new Map(membres.map((a) => [a.id, abilityDependsOn(a, parNom)]));
+    const retenus = membres.filter((a) => !membres.some((b) => (deps.get(b.id) || []).includes(a.id)));
+    if (retenus.length < 2) continue;
+    out.push({
+      id: slugify('excl-' + retenus[0].id),
+      abilities: retenus.map((a) => a.id),
+      reason: (motifs.get(racine) || 'incompatibles') + '.',
+      source: url,
+    });
+  }
+  return out;
+}
+
 function parseAbilities() {
   const page = 'Abilities_(Dissidia_012)';
   const html = readWiki(page);
@@ -143,28 +259,7 @@ function parseAbilities() {
       seenIds.set(a.id, a);
     }
   }
-  // Exclusions mutuelles dérivables des sources : les paliers d'une même ability
-  // (« Speed Boost », « Speed Boost+ », « Speed Boost++ ») sont des rangs d'un
-  // même effet, pas des abilities cumulables — c'est le nommage du wiki qui le
-  // dit. Les autres exclusions ne sont documentées nulle part sur le wiki : elles
-  // sont déclarées à la main dans data/editorial/_build-creator.json.
-  const families = new Map();
-  for (const g of groups) {
-    for (const a of g.abilities) {
-      const base = a.name.replace(/\s*(\+\+?|Ω)\s*$/, '').trim();
-      const key = `${g.key}|${base}`;
-      if (!families.has(key)) families.set(key, { base, group: g.key, abilities: [] });
-      families.get(key).abilities.push(a.id);
-    }
-  }
-  const exclusiveGroups = [...families.values()]
-    .filter((f) => f.abilities.length > 1)
-    .map((f) => ({
-      id: slugify(f.group + '-' + f.base),
-      abilities: f.abilities,
-      reason: `« ${f.base} » n'existe qu'en un seul palier à la fois.`,
-      source: url,
-    }));
+  const exclusiveGroups = deriveExclusions(groups, url);
 
   write('abilities.json', {
     generated: new Date().toISOString(),

@@ -6,16 +6,10 @@
     "La jauge de CP suit les règles du jeu : 450 points de capacité au niveau 100, extensibles à 510 avec les accessoires Hero's Spirit et Hero's Essence. Un build qui dépasse son budget reste modifiable et sauvegardable, mais il est signalé comme invalide."
   ],
   "legalityNote": "Les items marqués « illégal » le sont au regard du ruleset de tournoi 2017, qui correspond au réglage « Official » du jeu. Le bouton « Afficher les items illégaux » les fait réapparaître, toujours étiquetés — rien n'est masqué en silence.",
-  "_abilityExclusionsNote": "Le wiki ne documente pas les incompatibilités entre abilities. Les paliers d'une même ability (Speed Boost / + / ++) sont dérivés automatiquement du nommage ; les cas ci-dessous sont déclarés à la main. Chaque entrée cite sa source. Ajouter une entrée suffit à l'activer dans le créateur : la QA vérifie que les noms existent.",
+  "_abilityExclusionsNote": "Les incompatibilités sont déduites des descriptions du wiki : deux abilities qui occupent la même commande dans la même situation s'excluent (R + triangle au sol = Ground Dash, Reverse Ground Dash, Omni Ground Dash, Omni Ground Dash+), de même que les paliers d'une même ability. Un prérequis n'est pas un conflit : « available after Multi Air Slide » sort Multi Air Slide du groupe. Ce tableau ne sert qu'à déclarer un cas que la déduction raterait : [{ \"abilities\": [\"Nom A\", \"Nom B\"], \"reason\": \"…\", \"source\": \"…\" }]. Le build échoue si un nom n'existe pas.",
   "_hpLinksNote": "Le wiki n'écrit la paire bravery → attaque HP que pour une poignée de personnages (« Branching from Launch ») ; ailleurs elle est noyée dans la prose. Les paires connues se déclarent ici, par slug : [{ \"from\": \"nom de la bravery\", \"to\": \"nom de l'attaque HP\", \"source\": \"…\" }]. Les noms doivent correspondre exactement à ceux des fiches ; le build échoue sinon.",
   "hpLinks": {},
-  "abilityExclusions": [
-    {
-      "abilities": ["Descent Speed Boost", "Zero Gravity"],
-      "reason": "Les deux occupent la même commande — appui sur X après un saut.",
-      "source": "Confirmé par l'auteur du site ; les deux descriptions du wiki commencent par « Press X after jumping »."
-    }
-  ],
+  "abilityExclusions": [],
   "undocumented": {
     "attackSlots": "Le nombre d'emplacements d'attaques par catégorie n'est documenté dans aucune de nos sources. L'outil ne limite donc pas le nombre d'attaques cochées : la contrainte appliquée est le budget de CP, qui, lui, est documenté.",
     "hpLinks": "Les sources indiquent si un personnage dispose de HP links, mais pas quelles attaques s'enchaînent. L'information est affichée telle quelle, sans détail par attaque.",

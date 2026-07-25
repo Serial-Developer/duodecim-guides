@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T22:22:44.795Z",
+  "generated": "2026-07-25T22:39:43.784Z",
   "license": "CC BY 4.0 — dissidia.wiki",
   "sources": [
     "https://dissidia.wiki/Abilities_(Dissidia_012)"
@@ -1919,34 +1919,47 @@
   ],
   "exclusiveGroups": [
     {
-      "id": "basic-omni-air-dash",
+      "id": "excl-air-dash",
       "abilities": [
+        "air-dash",
+        "reverse-air-dash"
+      ],
+      "reason": "même commande : TRIANGLE quickmove.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-free-air-dash",
+      "abilities": [
+        "free-air-dash",
+        "reverse-free-air-dash",
         "omni-air-dash",
         "omni-air-dash-plus"
       ],
-      "reason": "« Omni Air Dash » n'existe qu'en un seul palier à la fois.",
+      "reason": "même commande : R + TRIANGLE air.",
       "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
     },
     {
-      "id": "basic-omni-ground-dash",
+      "id": "excl-ground-dash",
       "abilities": [
+        "ground-dash",
+        "reverse-ground-dash",
         "omni-ground-dash",
         "omni-ground-dash-plus"
       ],
-      "reason": "« Omni Ground Dash » n'existe qu'en un seul palier à la fois.",
+      "reason": "même commande : R + TRIANGLE sol.",
       "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
     },
     {
-      "id": "basic-multi-air-slide",
+      "id": "excl-descent-speed-boost",
       "abilities": [
-        "multi-air-slide",
-        "multi-air-slide-plus"
+        "descent-speed-boost",
+        "zero-gravity"
       ],
-      "reason": "« Multi Air Slide » n'existe qu'en un seul palier à la fois.",
+      "reason": "même commande : X après un saut.",
       "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
     },
     {
-      "id": "basic-speed-boost",
+      "id": "excl-speed-boost",
       "abilities": [
         "speed-boost",
         "speed-boost-plus",
@@ -1956,7 +1969,7 @@
       "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
     },
     {
-      "id": "basic-jump-boost",
+      "id": "excl-jump-boost",
       "abilities": [
         "jump-boost",
         "jump-boost-plus",
@@ -1966,7 +1979,7 @@
       "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
     },
     {
-      "id": "basic-jump-times-boost",
+      "id": "excl-jump-times-boost",
       "abilities": [
         "jump-times-boost",
         "jump-times-boost-cp40",
@@ -1976,7 +1989,7 @@
       "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
     },
     {
-      "id": "support-auto-ex-command",
+      "id": "excl-auto-ex-command",
       "abilities": [
         "auto-ex-command",
         "auto-ex-command-omega"
@@ -1985,7 +1998,7 @@
       "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
     },
     {
-      "id": "support-auto-ex-defense",
+      "id": "excl-auto-ex-defense",
       "abilities": [
         "auto-ex-defense",
         "auto-ex-defense-omega"
@@ -1994,7 +2007,7 @@
       "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
     },
     {
-      "id": "extra-concentration",
+      "id": "excl-concentration",
       "abilities": [
         "concentration",
         "concentration-plus",
@@ -2004,7 +2017,7 @@
       "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
     },
     {
-      "id": "extra-achy",
+      "id": "excl-achy",
       "abilities": [
         "achy",
         "achy-plus"
