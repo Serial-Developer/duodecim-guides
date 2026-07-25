@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Créateur de builds — Dissidia 012 [duodecim]</title>
+<meta name="description" content="Composer, sauvegarder, exporter et partager des builds Dissidia 012 [duodecim] : attaques, abilities, équipement, accessoires, assist et invocation, avec jauge de CP et contrôle de légalité tournoi.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+<script src="scripts/build-data.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+<a class="sh-brand" href="index.html">Dissidia 012 <span class="gold">[duodecim]</span> <span class="sh-sub">guides compétitifs</span></a>
+<nav class="sh-groups" aria-label="Navigation du site">
+<div class="sh-group">
+<span class="sh-group-label">Données du jeu</span>
+<div class="sh-drop">
+<a href="index.html">Personnages</a>
+<a href="characters/aerith.html">Assist : Aerith</a>
+<a href="obtenir-feral-chaos.html">Obtenir Feral Chaos</a>
+<a href="techniques.html">Techniques &amp; glitches</a>
+</div>
+</div>
+<div class="sh-group is-active">
+<span class="sh-group-label">Créateur de builds</span>
+<div class="sh-drop">
+<a href="createur-de-builds.html" aria-current="page">Composer un build</a>
+</div>
+</div>
+<div class="sh-group">
+<span class="sh-group-label">Jouer à Dissidia</span>
+<div class="sh-drop">
+<a href="install.html">Installer sur PPSSPP</a>
+<a href="savedata.html">Savedata prêtes à jouer</a>
+<a href="multijoueur.html">Jouer en multijoueur</a>
+</div>
+</div>
+<div class="sh-group">
+<span class="sh-group-label">Les tournois</span>
+<div class="sh-drop">
+<a href="participer.html">Participer aux tournois</a>
+<a href="organiser.html">Organiser un tournoi</a>
+<a href="futurs-tournois.html">Futurs tournois</a>
+<a href="tournois.html">Tournois passés</a>
+<a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">Tier list tournoi 2017<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a href="https://replaytheater.app/?game=d012" target="_blank" rel="external noopener">Vidéos de matchs<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</nav>
+<details class="sh-drawer">
+<summary aria-label="Menu"><span class="sh-burger" aria-hidden="true"></span></summary>
+<nav class="sh-panel" aria-label="Navigation du site (mobile)">
+<p class="sh-cat">Données du jeu</p>
+<a href="index.html">Personnages</a>
+<a href="characters/aerith.html">Assist : Aerith</a>
+<a href="obtenir-feral-chaos.html">Obtenir Feral Chaos</a>
+<a href="techniques.html">Techniques &amp; glitches</a>
+<p class="sh-cat">Créateur de builds</p>
+<a href="createur-de-builds.html" aria-current="page">Composer un build</a>
+<p class="sh-cat">Jouer à Dissidia</p>
+<a href="install.html">Installer sur PPSSPP</a>
+<a href="savedata.html">Savedata prêtes à jouer</a>
+<a href="multijoueur.html">Jouer en multijoueur</a>
+<p class="sh-cat">Les tournois</p>
+<a href="participer.html">Participer aux tournois</a>
+<a href="organiser.html">Organiser un tournoi</a>
+<a href="futurs-tournois.html">Futurs tournois</a>
+<a href="tournois.html">Tournois passés</a>
+<a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">Tier list tournoi 2017<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a href="https://replaytheater.app/?game=d012" target="_blank" rel="external noopener">Vidéos de matchs<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</nav>
+</details>
+</header>
+<main class="wrap bc-main">
+<h1 style="color:var(--gold)">Créateur de builds</h1>
+<p>Cet outil reproduit l'écran de personnalisation de Dissidia 012 : attaques, abilities, équipement, accessoires, assist et invocation. Tout se passe dans votre navigateur — rien n'est envoyé sur un serveur, et vos builds restent stockés sur votre machine.</p>
+<p>La jauge de CP suit les règles du jeu : 450 points de capacité au niveau 100, extensibles à 510 avec les accessoires Hero's Spirit et Hero's Essence. Un build qui dépasse son budget reste modifiable et sauvegardable, mais il est signalé comme invalide.</p>
+
+<noscript><div class="banner info">Le créateur de builds a besoin de JavaScript pour fonctionner. Les données de jeu restent consultables sur les fiches de personnages.</div></noscript>
+
+<section class="card bc-step" aria-labelledby="bc-step1">
+<h2 id="bc-step1" style="margin-top:0.2rem">1. Choisir un personnage</h2>
+<div class="bc-roster" role="radiogroup" aria-label="Choisir un personnage">
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="warrior-of-light" title="Warrior of Light">
+<img src="assets/portraits/warrior-of-light.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Warrior of Light</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="garland" title="Garland">
+<img src="assets/portraits/garland.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Garland</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="firion" title="Firion">
+<img src="assets/portraits/firion.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Firion</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="the-emperor" title="The Emperor">
+<img src="assets/portraits/the-emperor.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">The Emperor</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="onion-knight" title="Onion Knight">
+<img src="assets/portraits/onion-knight.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Onion Knight</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="cloud-of-darkness" title="Cloud of Darkness">
+<img src="assets/portraits/cloud-of-darkness.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Cloud of Darkness</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="cecil-harvey" title="Cecil Harvey">
+<img src="assets/portraits/cecil-harvey.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Cecil Harvey</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="golbez" title="Golbez">
+<img src="assets/portraits/golbez.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Golbez</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="kain-highwind" title="Kain Highwind">
+<img src="assets/portraits/kain-highwind.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Kain Highwind</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="bartz-klauser" title="Bartz Klauser">
+<img src="assets/portraits/bartz-klauser.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Bartz Klauser</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="exdeath" title="Exdeath">
+<img src="assets/portraits/exdeath.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Exdeath</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="gilgamesh" title="Gilgamesh">
+<img src="assets/portraits/gilgamesh.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Gilgamesh</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="terra-branford" title="Terra Branford">
+<img src="assets/portraits/terra-branford.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Terra Branford</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="kefka-palazzo" title="Kefka Palazzo">
+<img src="assets/portraits/kefka-palazzo.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Kefka Palazzo</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="cloud-strife" title="Cloud Strife">
+<img src="assets/portraits/cloud-strife.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Cloud Strife</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="sephiroth" title="Sephiroth">
+<img src="assets/portraits/sephiroth.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Sephiroth</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="tifa-lockhart" title="Tifa Lockhart">
+<img src="assets/portraits/tifa-lockhart.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Tifa Lockhart</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="squall-leonhart" title="Squall Leonhart">
+<img src="assets/portraits/squall-leonhart.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Squall Leonhart</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="ultimecia" title="Ultimecia">
+<img src="assets/portraits/ultimecia.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Ultimecia</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="laguna-loire" title="Laguna Loire">
+<img src="assets/portraits/laguna-loire.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Laguna Loire</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="zidane-tribal" title="Zidane Tribal">
+<img src="assets/portraits/zidane-tribal.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Zidane Tribal</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="kuja" title="Kuja">
+<img src="assets/portraits/kuja.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Kuja</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="tidus" title="Tidus">
+<img src="assets/portraits/tidus.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Tidus</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="jecht" title="Jecht">
+<img src="assets/portraits/jecht.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Jecht</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="yuna" title="Yuna">
+<img src="assets/portraits/yuna.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Yuna</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="shantotto" title="Shantotto">
+<img src="assets/portraits/shantotto.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Shantotto</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="prishe" title="Prishe">
+<img src="assets/portraits/prishe.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Prishe</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="vaan" title="Vaan">
+<img src="assets/portraits/vaan.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Vaan</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="gabranth" title="Gabranth">
+<img src="assets/portraits/gabranth.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Gabranth</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="lightning" title="Lightning">
+<img src="assets/portraits/lightning.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Lightning</span>
+</button>
+<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="feral-chaos" title="Feral Chaos">
+<img src="assets/portraits/feral-chaos.png" alt="" loading="lazy" width="56" height="56">
+<span class="bc-char-name">Feral Chaos</span>
+</button>
+</div>
+</section>
+
+<section class="card bc-editor" id="bc-editor" hidden aria-labelledby="bc-step2">
+<div class="bc-editor-head">
+<h2 id="bc-step2" style="margin:0">2. <span id="bc-current-name">Composer le build</span></h2>
+<div class="bc-build-meta">
+<label class="bc-field"><span>Nom du build</span>
+<input type="text" id="bc-build-name" maxlength="60" placeholder="Sans titre" autocomplete="off"></label>
+<label class="bc-field bc-field-inline"><input type="checkbox" id="bc-mastered" checked> <span>Coûts maîtrisés</span></label>
+</div>
+</div>
+
+<div class="bc-sticky">
+<div class="bc-gauge-wrap" id="bc-gauge-wrap">
+<div class="bc-gauge" id="bc-gauge" role="meter" aria-valuemin="0" aria-valuemax="450" aria-valuenow="0" aria-valuetext="0 sur 450 CP — attaques 0, abilities 0" aria-labelledby="bc-gauge-label">
+<span class="bc-gauge-fill bc-gauge-attacks" id="bc-gauge-attacks"></span>
+<span class="bc-gauge-fill bc-gauge-abilities" id="bc-gauge-abilities"></span>
+</div>
+<p class="bc-gauge-text" id="bc-gauge-label"><strong id="bc-gauge-used">0</strong>/<span id="bc-gauge-max">450</span> CP
+<span class="bc-legend"><span class="bc-dot bc-dot-attacks"></span>attaques <span id="bc-gauge-a">0</span></span>
+<span class="bc-legend"><span class="bc-dot bc-dot-abilities"></span>abilities <span id="bc-gauge-b">0</span></span>
+</p>
+</div>
+<div class="bc-status" id="bc-status" role="status" aria-live="polite"></div>
+</div>
+
+<div class="bc-tabs">
+<div class="bc-tablist" role="tablist" aria-label="Sections du build">
+<button type="button" class="bc-tab" role="tab" id="bc-tab-attack" aria-controls="bc-panel-attack" aria-selected="true" tabindex="0" data-tab="attack">Attaques</button>
+<button type="button" class="bc-tab" role="tab" id="bc-tab-abilities" aria-controls="bc-panel-abilities" aria-selected="false" tabindex="-1" data-tab="abilities">Abilities</button>
+<button type="button" class="bc-tab" role="tab" id="bc-tab-stuff" aria-controls="bc-panel-stuff" aria-selected="false" tabindex="-1" data-tab="stuff">Équipement</button>
+<button type="button" class="bc-tab" role="tab" id="bc-tab-accessories" aria-controls="bc-panel-accessories" aria-selected="false" tabindex="-1" data-tab="accessories">Accessoires</button>
+<button type="button" class="bc-tab" role="tab" id="bc-tab-assist" aria-controls="bc-panel-assist" aria-selected="false" tabindex="-1" data-tab="assist">Assist &amp; invocation</button>
+</div>
+<div class="bc-panel" role="tabpanel" id="bc-panel-attack" aria-labelledby="bc-tab-attack" tabindex="0"></div>
+<div class="bc-panel" role="tabpanel" id="bc-panel-abilities" aria-labelledby="bc-tab-abilities" tabindex="0" hidden></div>
+<div class="bc-panel" role="tabpanel" id="bc-panel-stuff" aria-labelledby="bc-tab-stuff" tabindex="0" hidden></div>
+<div class="bc-panel" role="tabpanel" id="bc-panel-accessories" aria-labelledby="bc-tab-accessories" tabindex="0" hidden></div>
+<div class="bc-panel" role="tabpanel" id="bc-panel-assist" aria-labelledby="bc-tab-assist" tabindex="0" hidden></div>
+</div>
+</section>
+
+<section class="card bc-step" id="bc-manager" hidden aria-labelledby="bc-step3">
+<h2 id="bc-step3" style="margin-top:0.2rem">3. Builds enregistrés</h2>
+<div class="bc-actions">
+<button type="button" class="bc-btn bc-btn-primary" id="bc-save">Enregistrer le build</button>
+<button type="button" class="bc-btn" id="bc-new">Nouveau build</button>
+<button type="button" class="bc-btn" id="bc-share">Copier le lien de partage</button>
+<button type="button" class="bc-btn" id="bc-export">Exporter (JSON)</button>
+<button type="button" class="bc-btn" id="bc-export-all">Tout exporter</button>
+<button type="button" class="bc-btn" id="bc-export-csv">Exporter (CSV)</button>
+<label class="bc-btn bc-btn-file">Importer…<input type="file" id="bc-import" accept="application/json,.json" hidden></label>
+</div>
+<div id="bc-saved-list" class="bc-saved-list"></div>
+<p class="bc-notes-label"><label for="bc-notes">Notes libres sur ce build</label></p>
+<textarea id="bc-notes" rows="3" placeholder="Remarques, matchups visés, variantes…"></textarea>
+</section>
+
+<section class="card" aria-labelledby="bc-help">
+<h2 id="bc-help" style="margin-top:0.2rem">Repères</h2>
+<div class="banner info">Les items marqués « illégal » le sont au regard du ruleset de tournoi 2017, qui correspond au réglage « Official » du jeu. Le bouton « Afficher les items illégaux » les fait réapparaître, toujours étiquetés — rien n'est masqué en silence.</div>
+<h3>Comment se calcule le budget de CP</h3><ul><li>Chaque attaque et chaque ability coûte des CP. Le coût baisse une fois l'élément maîtrisé : l'outil affiche par défaut le coût maîtrisé, et la case « Coûts maîtrisés » bascule vers le coût à l'achat.</li><li>Les totaux du récapitulatif valent statistiques de base au niveau 100 plus bonus des pièces équipées. Les effets d'accessoires exprimés en pourcentage n'y sont pas intégrés : les sources ne les expriment pas en points.</li><li>La jauge distingue en vert pomme la part consommée par les attaques et en bleu ciel celle des abilities, comme dans le jeu.</li><li>Équiper Hero's Spirit ou Hero's Essence relève le plafond au fil de la sélection : deux Hero's Spirit et un Hero's Essence portent la capacité à 510.</li></ul>
+<h3>Equip glitch</h3><ul><li>Un équipement dont la catégorie n'est pas portée nativement par le personnage est marqué d'une icône dédiée : il n'est portable qu'en passant par l'Equip Glitch.</li><li>La manipulation économise jusqu'à 40 CP, à raison de 10 par pièce, et doit être refaite à chaque changement d'équipement.</li></ul>
+<h3>Sauvegarde et partage</h3><ul><li>Les builds sont enregistrés dans le stockage local de votre navigateur. Vider les données du site les efface : exportez vos builds importants.</li><li>L'export JSON conserve toute la structure et se réimporte à l'identique. L'export CSV aplatit un build par ligne, pour un tableur.</li><li>Le lien de partage encode le build dans l'adresse : il suffit de l'envoyer, sans fichier ni compte.</li></ul>
+<h3>Limites connues</h3>
+<ul class="sources-list">
+<li>Le nombre d'emplacements d'attaques par catégorie n'est documenté dans aucune de nos sources. L'outil ne limite donc pas le nombre d'attaques cochées : la contrainte appliquée est le budget de CP, qui, lui, est documenté.</li>
+<li>Les sources indiquent si un personnage dispose de HP links, mais pas quelles attaques s'enchaînent. L'information est affichée telle quelle, sans détail par attaque.</li>
+<li>Le cumul multiplicatif des boosters est confirmé par un exemple chiffré du guide de builds multijoueur (1.5 × 1.4 × 1.3 donne le ×2.7 annoncé). Les boosters n'agissent que sur les effets des accessoires, pas sur les statistiques des équipements.</li>
+</ul>
+</section>
+
+<p class="sources-list" id="bc-sources"></p>
+</main>
+<footer class="site"><div class="wrap">
+<p class="foot-line">Site de fans non commercial — personnages et artworks © Square Enix. Textes adaptés de <a href="https://dissidia.wiki" target="_blank" rel="external noopener">dissidia.wiki</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noopener">CC BY 4.0</a>) et du <a href="https://finalfantasy.fandom.com" target="_blank" rel="external noopener">Final Fantasy Wiki</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external noopener">CC BY-SA 3.0</a>).</p>
+<details class="foot-more"><summary>Détail des licences et des sources</summary>
+<p>Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011). Contenu textuel adapté et traduit de dissidia.wiki (CC BY 4.0) ; compléments de moveset (rôles et jobs par coup, coups spéciaux) adaptés du Final Fantasy Wiki (CC BY-SA 3.0). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" target="_blank" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+</details>
+</div></footer>
+<script src="scripts/build-creator.js" defer></script>
+</body>
+</html>

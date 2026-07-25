@@ -1,0 +1,72 @@
+{
+  "generated": "2026-07-25T22:47:23.622Z",
+  "license": "CC BY 4.0 — dissidia.wiki",
+  "id": "tournament-rules-2017",
+  "name": "Tournament Rules (2017) — ruleset in-game « Official »",
+  "sources": [
+    "https://dissidia.wiki/Tournament_Rules_(Dissidia_012)"
+  ],
+  "prohibitions": [
+    "Feral Chaos BANNED",
+    "Rebellious Soul (Bonecrusher) BANNED",
+    "Omega Stages BANNED",
+    "The Rift & Phantom Train stages BANNED",
+    "Infinites BANNED (Beat Fang → landing lag → BF → landing lag → BF for example)",
+    "Jobs in Group Battle BANNED (Freelancer only)",
+    "Hacked Items BANNED",
+    "Breakable Items BANNED",
+    "Artifacts BANNED (Automatically addressed with setting to \"Official\")",
+    "All summons are BANNED, except counter summons (Barbariccia, Scarmiglione, Cagnazzo and Rubicante). Unless stated otherwise, counter summons must be equipped as well.",
+    "No 3rd party cheat codes (e.g. 60 FPS hack, exclusive equipment)",
+    "Using hex editing on PPSSPP to equip exclusive equipment, same character assists or illegal combinations of accessories is BANNED"
+  ],
+  "allowances": [
+    "All abilities are allowed",
+    "1 Hit Chase ONLY"
+  ],
+  "notes": [
+    "The in-game ruleset \"Official\" disables calendar bonuses, artifacts, breakable accessories and a select few booster accessories. This inherently levels much of the playing field in customisation.",
+    "All Breakable Accessories are banned by the official ruleset. Sometimes Chocobo Items+Great Ribbon is allowed, but it's on a case by case basis.",
+    "The Equip-less multipliers and Level Gap are banned by the official ruleset in-game, the equip-less multipliers are usually allowed in any non-official format or casuals.",
+    "Played on the \"Fan Official\" in-game custom ruleset which implements the community's equipment restrictions and is otherwise standard.",
+    "The EXP boosting \"Chocobo\" breakable accessories are allowed when paired with Great Ribbon (-30% breakable chance)."
+  ],
+  "legalSummons": [
+    "Barbariccia",
+    "Scarmiglione",
+    "Cagnazzo",
+    "Rubicante"
+  ],
+  "itemRules": [
+    {
+      "rule": "breakable",
+      "label": "Accessoires brisables bannis",
+      "quote": "Breakable Items BANNED"
+    },
+    {
+      "rule": "artifact",
+      "label": "Artefacts bannis",
+      "quote": "Artifacts BANNED (Automatically addressed with setting to \"Official\")"
+    },
+    {
+      "rule": "bonecrusher",
+      "label": "Rebellious Soul (Bonecrusher) banni",
+      "quote": "Rebellious Soul (Bonecrusher) BANNED"
+    },
+    {
+      "rule": "equipless-levelgap",
+      "label": "Multiplicateurs « sans équipement » et « Level Gap » désactivés",
+      "quote": "The Equip-less multipliers and Level Gap are banned by the official ruleset in-game, the equip-less multipliers are usually allowed in any non-official format or casuals."
+    },
+    {
+      "rule": "summons",
+      "label": "Summons bannis sauf counter summons",
+      "quote": "All summons are BANNED, except counter summons (Barbariccia, Scarmiglione, Cagnazzo and Rubicante). Unless stated otherwise, counter summons must be equipped as well."
+    },
+    {
+      "rule": "feral-chaos",
+      "label": "Feral Chaos banni en tournoi",
+      "quote": "Feral Chaos BANNED"
+    }
+  ]
+}

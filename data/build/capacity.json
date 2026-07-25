@@ -1,0 +1,32 @@
+{
+  "generated": "2026-07-25T22:47:23.625Z",
+  "license": "CC BY 4.0 — dissidia.wiki ; CC BY-SA — finalfantasy.fandom.com",
+  "base": 450,
+  "max": 510,
+  "sources": [
+    "https://dissidia.wiki/Statistic_(Dissidia_012)",
+    "https://finalfantasy.fandom.com/wiki/Dissidia_012_Final_Fantasy_accessories"
+  ],
+  "quote": "Capacity points. Determines how many abilities can be equipped simultaneously. Can be increased with special accessories Hero's Spirit and Hero's Essence. Equip two Hero's Spirit and one Hero's Essence for a maximum of 510 CP with any character.",
+  "extenders": [
+    {
+      "name": "Hero's Spirit",
+      "uid": "special::heros-spirit",
+      "cp": 15,
+      "maxEquipped": 2,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Dissidia_012_Final_Fantasy_accessories"
+      ]
+    },
+    {
+      "name": "Hero's Essence",
+      "uid": "special::heros-essence",
+      "cp": 30,
+      "maxEquipped": 1,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Dissidia_012_Final_Fantasy_accessories"
+      ]
+    }
+  ],
+  "documented": true
+}

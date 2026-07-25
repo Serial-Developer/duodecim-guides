@@ -110,7 +110,10 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
   z-index: 60;
 }
-.sh-group:last-child .sh-drop { left: auto; right: 0; }
+/* Les panneaux restent dans le flux (masqués par opacité) : ceux des derniers
+   groupes doivent s'ouvrir vers la gauche, sinon ils poussent la page en
+   défilement horizontal quand la barre compte quatre menus. */
+.sh-group:nth-last-child(-n + 2) .sh-drop { left: auto; right: 0; }
 .sh-group:hover .sh-drop, .sh-group:focus-within .sh-drop {
   opacity: 1;
   translate: 0 0;
@@ -811,4 +814,283 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
   .cal-cell { min-height: 2.6rem; padding: 0.15rem; }
   .cal-ev { font-size: 0; padding: 0; width: 0.55rem; height: 0.55rem; border-radius: 50%; }
   .cal-num { font-size: 0.68rem; }
+}
+
+/* ---------- Créateur de builds ---------- */
+.bc-main { padding-bottom: 3rem; }
+
+/* Bandeau des 31 personnages : défilement horizontal en petit écran */
+.bc-roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 0.5rem;
+}
+.bc-char {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.2rem;
+  background: var(--bg);
+  border: 1px solid rgba(157, 134, 232, 0.25);
+  border-radius: var(--radius);
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+}
+.bc-char img { border-radius: 6px; display: block; width: 56px; height: 56px; aspect-ratio: 1; object-fit: cover; }
+.bc-char-fallback { width: 56px; height: 56px; border-radius: 6px; background: var(--surface-2); display: block; }
+.bc-char-name { text-align: center; line-height: 1.2; }
+.bc-char:hover { border-color: var(--violet); color: var(--text); transform: translateY(-2px); }
+.bc-char[aria-checked="true"] { border-color: var(--gold); color: var(--gold); background: var(--surface-2); }
+
+/* Jauge de CP : couleurs du jeu — vert pomme les attaques, bleu ciel les abilities */
+.bc-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  /* Fond opaque : un dégradé vers le transparent laissait le contenu des onglets
+     transparaître sous le panneau d'état quand la page défilait. */
+  background: var(--surface);
+  padding: 0.6rem 0 0.5rem;
+  margin: 0.6rem 0 1rem;
+  border-bottom: 1px solid rgba(157, 134, 232, 0.2);
+}
+.bc-gauge {
+  display: flex;
+  height: 1.1rem;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid rgba(157, 134, 232, 0.35);
+  overflow: hidden;
+}
+.bc-gauge-fill { display: block; height: 100%; transition: width 0.18s ease; }
+.bc-gauge-attacks { background: #86d94b; }
+.bc-gauge-abilities { background: #66c6f0; }
+.bc-gauge-wrap.is-over .bc-gauge { border-color: var(--danger); box-shadow: 0 0 0 2px rgba(239, 136, 150, 0.35); }
+.bc-gauge-wrap.is-over .bc-gauge-attacks { background: #ef8896; }
+.bc-gauge-wrap.is-over .bc-gauge-abilities { background: #c4566a; }
+.bc-gauge-text { margin: 0.35rem 0 0; font-size: 0.85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: baseline; }
+.bc-gauge-text strong { color: var(--text); font-size: 1.05rem; }
+.bc-legend { display: inline-flex; align-items: center; gap: 0.3rem; }
+.bc-dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; display: inline-block; }
+.bc-dot-attacks { background: #86d94b; }
+.bc-dot-abilities { background: #66c6f0; }
+
+.bc-status { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.bc-stat-line { margin: 0; display: flex; flex-wrap: wrap; gap: 0.9rem; font-size: 0.85rem; }
+.bc-stat strong { color: var(--gold); font-weight: 600; margin-right: 0.2rem; }
+.bc-alert { margin: 0; font-size: 0.83rem; padding: 0.35rem 0.6rem; border-radius: 6px; border-left: 3px solid; }
+.bc-alert-error { background: rgba(239, 136, 150, 0.12); border-color: var(--danger); color: #ffc9d1; }
+.bc-alert-info { background: rgba(157, 134, 232, 0.12); border-color: var(--violet); color: var(--text); }
+.bc-alert-muted { background: transparent; border-color: rgba(157, 134, 232, 0.3); color: var(--muted); }
+
+/* Onglets */
+.bc-tablist { display: flex; flex-wrap: wrap; gap: 0.3rem; border-bottom: 1px solid rgba(157, 134, 232, 0.25); margin-bottom: 1rem; }
+.bc-tab {
+  background: none;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 0.5rem 0.9rem;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+.bc-tab:hover { color: var(--text); }
+.bc-tab[aria-selected="true"] { color: var(--gold); border-color: rgba(157, 134, 232, 0.35); background: var(--surface-2); }
+.bc-panel:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+
+/* Listes d'items */
+.bc-group { border: 1px solid rgba(157, 134, 232, 0.2); border-radius: var(--radius); padding: 0.6rem 0.8rem 0.8rem; margin: 0 0 1rem; }
+.bc-group legend { color: var(--violet); font-weight: 600; padding: 0 0.4rem; }
+.bc-list { display: flex; flex-direction: column; gap: 0.25rem; }
+.bc-list-scroll { max-height: 26rem; overflow-y: auto; padding-right: 0.3rem; }
+.bc-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  background: var(--bg);
+  border: 1px solid rgba(157, 134, 232, 0.18);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text);
+  font: inherit;
+}
+.bc-row:hover { border-color: var(--violet); }
+.bc-row.is-disabled { opacity: 0.42; cursor: not-allowed; }
+.bc-row.is-disabled:hover { border-color: rgba(157, 134, 232, 0.18); }
+
+/* Compteur d'emplacements dans la légende du groupe */
+.bc-slots { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+.bc-slots.is-full { color: var(--gold); }
+.bc-group.is-full > legend { color: var(--gold); }
+
+/* Embranchement d'un coup (enchaînement, HP link) : replié par défaut, indenté */
+.bc-branch, .bc-followups {
+  margin: 0.15rem 0 0.3rem 1.6rem;
+  border-left: 2px solid rgba(157, 134, 232, 0.35);
+  padding-left: 0.6rem;
+}
+.bc-branch > summary, .bc-followups > summary {
+  font-size: 0.78rem;
+  color: var(--violet);
+  cursor: pointer;
+  padding: 0.15rem 0;
+  list-style: none;
+}
+.bc-branch > summary::before, .bc-followups > summary::before { content: "↳ "; opacity: 0.8; }
+.bc-branch > summary::-webkit-details-marker, .bc-followups > summary::-webkit-details-marker { display: none; }
+.bc-branch > summary:hover, .bc-followups > summary:hover { color: var(--gold); }
+.bc-branch .bc-list, .bc-followups .bc-list { margin-top: 0.2rem; }
+/* Embranchement verrouille tant que l attaque de depart n est pas equipee */
+.bc-branch.is-locked { border-left-color: rgba(157, 134, 232, 0.15); }
+.bc-branch.is-locked > summary { color: var(--muted); font-style: italic; }
+.bc-followups { margin-left: 0; margin-bottom: 1rem; }
+.bc-row-btn.is-selected { border-color: var(--gold); background: var(--surface-2); }
+.bc-row-btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+.bc-row-main { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.bc-row-name { font-weight: 500; }
+.bc-row-meta { font-size: 0.78rem; color: var(--muted); }
+.bc-cp { font-family: var(--font-mono); font-size: 0.8rem; color: var(--gold); white-space: nowrap; }
+.bc-count { margin: 0 0 0.3rem; font-size: 0.78rem; color: var(--muted); }
+.bc-note { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.6rem; }
+
+.bc-tag { font-size: 0.68rem; padding: 0.1rem 0.4rem; border-radius: 999px; white-space: nowrap; border: 1px solid; }
+.bc-tag-info { color: var(--violet); border-color: rgba(157, 134, 232, 0.5); }
+.bc-tag-warn { color: var(--gold); border-color: rgba(240, 192, 90, 0.5); }
+.bc-tag-illegal { color: var(--danger); border-color: rgba(239, 136, 150, 0.6); }
+.bc-tag-glitch { color: #7fd8a6; border-color: rgba(127, 216, 166, 0.6); }
+.bc-tag-excl { color: var(--danger); border-color: rgba(239, 136, 150, 0.5); }
+.bc-tag-mult { color: #66c6f0; border-color: rgba(102, 198, 240, 0.6); font-family: var(--font-mono); }
+
+/* Filtres, emplacements, actions */
+.bc-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
+.bc-filters input, .bc-filters select, .bc-editor input[type="text"], .bc-main textarea {
+  background: var(--bg);
+  border: 1px solid rgba(157, 134, 232, 0.3);
+  border-radius: 7px;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.55rem;
+}
+.bc-filters input[type="search"] { flex: 1 1 12rem; min-width: 0; }
+.bc-main textarea { width: 100%; resize: vertical; }
+.bc-slot { margin-bottom: 1.6rem; }
+.bc-current { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; font-size: 0.85rem; margin: 0 0 0.5rem; }
+.bc-acc-slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0.35rem; margin-bottom: 1.2rem; }
+.bc-acc-slot { display: flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.6rem; background: var(--bg); border: 1px solid rgba(157, 134, 232, 0.18); border-radius: 8px; }
+.bc-acc-slot.is-empty { border-style: dashed; color: var(--muted); }
+.bc-acc-index { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); min-width: 1.2rem; }
+
+.bc-editor-head { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; justify-content: space-between; }
+.bc-build-meta { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: flex-end; }
+.bc-field { display: flex; flex-direction: column; gap: 0.2rem; font-size: 0.8rem; color: var(--muted); }
+.bc-field-inline { flex-direction: row; align-items: center; gap: 0.4rem; }
+.bc-illegal-toggle { margin-bottom: 0.8rem; }
+
+.bc-actions { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+.bc-btn {
+  background: var(--surface-2);
+  border: 1px solid rgba(157, 134, 232, 0.35);
+  border-radius: 8px;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+.bc-btn:hover { border-color: var(--gold); color: var(--gold); }
+.bc-btn-primary { background: var(--gold); color: #241b06; border-color: var(--gold); font-weight: 600; }
+.bc-btn-primary:hover { filter: brightness(1.1); color: #241b06; }
+.bc-btn-small { font-size: 0.75rem; padding: 0.2rem 0.55rem; }
+.bc-btn-danger:hover { border-color: var(--danger); color: var(--danger); }
+.bc-btn-file { display: inline-flex; align-items: center; }
+.bc-saved { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; padding: 0.4rem 0.6rem; background: var(--bg); border: 1px solid rgba(157, 134, 232, 0.18); border-radius: 8px; margin-bottom: 0.3rem; }
+.bc-saved-list { margin-bottom: 1rem; }
+.bc-notes-label { margin: 0 0 0.3rem; font-size: 0.8rem; color: var(--muted); }
+
+.bc-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.2rem;
+  /* La seule translation ne suffisait pas à sortir le bandeau de l'écran : sa
+     bordure restait visible en bas. On le rend franchement invisible et
+     inatteignable au repos, la translation ne servant plus qu'à l'animation. */
+  transform: translateX(-50%) translateY(120%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: var(--surface-2);
+  border: 1px solid var(--violet);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.7rem 0.6rem 1rem;
+  font-size: 0.85rem;
+  max-width: min(90vw, 34rem);
+  z-index: 50;
+  transition: transform 0.2s ease, opacity 0.2s ease, visibility 0s linear 0.2s;
+}
+.bc-toast-text { flex: 1; }
+.bc-toast-close {
+  flex: none;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 0.2rem;
+  cursor: pointer;
+}
+.bc-toast-close:hover { color: var(--gold); }
+/* Les URLs de sources sont longues et insécables : sans cette règle elles
+   poussent la page en défilement horizontal sur mobile. */
+.bc-main .sources-list a { overflow-wrap: anywhere; }
+
+.bc-toast.is-visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform 0.2s ease, opacity 0.2s ease, visibility 0s;
+}
+.bc-toast.is-error { border-color: var(--danger); color: #ffc9d1; }
+
+@media (max-width: 1023px) {
+  .bc-list-scroll { max-height: 22rem; }
+}
+@media (max-width: 767px) {
+  /* Sous 768px le header du site devient collant : la jauge se cale dessous,
+     comme la barre de sections des guides. */
+  .bc-sticky { top: var(--mob-header-h); }
+}
+@media (max-width: 599px) {
+  /* Bandeau de personnages sur deux rangées qui défilent horizontalement :
+     à une seule rangée, retrouver un personnage demandait trop de défilement. */
+  .bc-roster {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-columns: 5.2rem;
+    overflow-x: auto;
+    gap: 0.4rem;
+    padding-bottom: 0.4rem;
+    scroll-snap-type: x proximity;
+  }
+  .bc-char { scroll-snap-align: start; }
+  .bc-tablist { flex-wrap: nowrap; overflow-x: auto; }
+  .bc-tab { white-space: nowrap; padding: 0.45rem 0.7rem; font-size: 0.85rem; }
+  .bc-acc-slots { grid-template-columns: 1fr; }
+  .bc-editor-head { flex-direction: column; align-items: stretch; }
+  .bc-row { flex-wrap: wrap; }
 }

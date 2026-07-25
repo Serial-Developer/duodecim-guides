@@ -1,0 +1,3935 @@
+{
+  "generated": "2026-07-25T22:47:23.541Z",
+  "license": "CC BY 4.0 — dissidia.wiki",
+  "sources": [
+    "https://dissidia.wiki/Abilities_(Dissidia_012)"
+  ],
+  "groups": [
+    {
+      "key": "basic",
+      "label": "Basic Abilities",
+      "abilities": [
+        {
+          "id": "ground-evasion",
+          "name": "Ground Evasion",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "On the ground, push R + X to dodge opponent's attack.",
+          "statBonus": null,
+          "notes": "Staple.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "midair-evasion",
+          "name": "Midair Evasion",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "In the air, push R + X to dodge opponent's attack.",
+          "statBonus": null,
+          "notes": "Staple.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "ground-block",
+          "name": "Ground Block",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "On the ground, push R to guard against foe's attack.",
+          "statBonus": null,
+          "notes": "Staple",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "midair-block",
+          "name": "Midair Block",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "In the air, push R to guard against foe's attack.",
+          "statBonus": null,
+          "notes": "Staple.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "aerial-recovery",
+          "name": "Aerial Recovery",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "When tumbling through the air, press X to break fall.",
+          "statBonus": null,
+          "notes": "Staple.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "recovery-attack",
+          "name": "Recovery Attack",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 70,
+          "description": "Press circle or square to attack while flying through air. Must enable Aerial Recovery.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "controlled-recovery",
+          "name": "Controlled Recovery",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 70,
+          "description": "Can move while breaking fall. Aerial Recovery must be enabled.",
+          "statBonus": null,
+          "notes": "Staple.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "wall-jump",
+          "name": "Wall Jump",
+          "cp": 0,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "Press X after a Quickmove to run on a wall for a high jump.",
+          "statBonus": null,
+          "notes": "It's free.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "air-dash",
+          "name": "Air Dash",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "While Quickmoving, press triangle to dash toward opponent. Hold button to extend range.",
+          "statBonus": null,
+          "notes": "Faster than most dashes.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "reverse-air-dash",
+          "name": "Reverse Air Dash",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "While Quickmoving, press triangle to dash away from opponent. Hold button to extend range.",
+          "statBonus": null,
+          "notes": "Like Air Dash, faster than other dashes.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "free-air-dash",
+          "name": "Free Air Dash",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 70,
+          "description": "Press R + triangle to dash toward opponent. Hold button to extend range.",
+          "statBonus": null,
+          "notes": "Staple. Works with Assist Gauge Up Dash.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "reverse-free-air-dash",
+          "name": "Reverse Free Air Dash",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 70,
+          "description": "Press R + triangle to dash away from opponent. Hold button to extend range.",
+          "statBonus": null,
+          "notes": "Recommended for Kefka. Works with Assist Gauge Up Dash.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "omni-air-dash",
+          "name": "Omni Air Dash",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 130,
+          "description": "Press R + triangle to dash in any direction. Hold button to extend range.",
+          "statBonus": null,
+          "notes": "Recommended for Ultimecia, The Emperor.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "omni-air-dash-plus",
+          "name": "Omni Air Dash+",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 200,
+          "description": "Press R + triangle to dash in any direction. Turns capable during dash.",
+          "statBonus": null,
+          "notes": "Recommended for Ultimecia, The Emperor.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "ground-dash",
+          "name": "Ground Dash",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 70,
+          "description": "While on ground, press R + triangle to dash toward opponent. Hold button to extend range.",
+          "statBonus": null,
+          "notes": "Works with Assist Gauge Up Dash.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "reverse-ground-dash",
+          "name": "Reverse Ground Dash",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 70,
+          "description": "While on ground, press R + triangle to dash away from opponent. Hold button too extend range. Works with Assist Gauge Up Dash.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "omni-ground-dash",
+          "name": "Omni Ground Dash",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 130,
+          "description": "While on ground, press R + triangle to dash in any direction. Hold button to extend range.",
+          "statBonus": null,
+          "notes": "Okay for ground combat.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "omni-ground-dash-plus",
+          "name": "Omni Ground Dash+",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 200,
+          "description": "Press R + triangle to dash in any direction. Turns capable during dash.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "multi-air-slide",
+          "name": "Multi Air Slide",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 130,
+          "description": "Press X after jumping to dash in any direction. Hold button to extend range.",
+          "statBonus": null,
+          "notes": "Available when no jumps remain / after an air dodge.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "multi-air-slide-plus",
+          "name": "Multi Air Slide+",
+          "cp": 30,
+          "cpMastered": 15,
+          "ap": 130,
+          "description": "Multi Air Slide can be performed twice.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "air-dash-boost",
+          "name": "Air Dash Boost",
+          "cp": 30,
+          "cpMastered": 15,
+          "ap": 130,
+          "description": "Air Dash speed increases.",
+          "statBonus": null,
+          "notes": "4 % speed increase. Only affects the abilities \"Air Dash\" and \"Reverse Air Dash\". Details here",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "free-air-dash-boost",
+          "name": "Free Air Dash Boost",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 200,
+          "description": "Free Air Dash and Omni Air Dash speed increase.",
+          "statBonus": null,
+          "notes": "8 % speed increase. Details here",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "assist-gauge-up-dash",
+          "name": "Assist Gauge Up dash",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 100,
+          "description": "Assist Gauge fills when using Air Dash, Free Air Dash, or Ground Dash.",
+          "statBonus": null,
+          "notes": "Staple. Assist gained is universal.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "glide-boost",
+          "name": "Glide Boost",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 100,
+          "description": "Glide boost. Glide must be enabled.",
+          "statBonus": null,
+          "notes": "Terra, Kefka, Sephiroth and Kuja only.",
+          "only": [
+            "terra-branford",
+            "kefka-palazzo",
+            "sephiroth",
+            "kuja"
+          ],
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "ex-glide-boost",
+          "name": "EX Glide Boost",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 130,
+          "description": "Glide boost while in EX Mode.",
+          "statBonus": null,
+          "notes": "Kuja only.",
+          "only": [
+            "kuja"
+          ],
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "speed-boost",
+          "name": "Speed Boost",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 70,
+          "description": "Slight movement speed boost.",
+          "statBonus": null,
+          "notes": "+8 % movement speed.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "speed-boost-plus",
+          "name": "Speed Boost+",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 130,
+          "description": "Movement speed boost.",
+          "statBonus": null,
+          "notes": "+16 % movement speed.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "speed-boost-plus-plus",
+          "name": "Speed Boost++",
+          "cp": 60,
+          "cpMastered": 30,
+          "ap": 130,
+          "description": "Large movement speed boost.",
+          "statBonus": null,
+          "notes": "+24 % movement speed.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "jump-boost",
+          "name": "Jump Boost",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 70,
+          "description": "Slight jump strength boost.",
+          "statBonus": null,
+          "notes": "+10 % jump height.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "jump-boost-plus",
+          "name": "Jump Boost+",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 130,
+          "description": "Jump strength boost.",
+          "statBonus": null,
+          "notes": "+20 % jump height.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "jump-boost-plus-plus",
+          "name": "Jump Boost++",
+          "cp": 60,
+          "cpMastered": 30,
+          "ap": 130,
+          "description": "Large jump strength boost.",
+          "statBonus": null,
+          "notes": "+30 % jump height.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "jump-times-boost",
+          "name": "Jump Times Boost",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 70,
+          "description": "Jump times increase by 1.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "jump-times-boost-cp40",
+          "name": "Jump Times Boost",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 130,
+          "description": "Jump times increase by 2.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ],
+          "idDisambiguated": true
+        },
+        {
+          "id": "jump-times-boost-plus-plus",
+          "name": "Jump Times Boost++",
+          "cp": 60,
+          "cpMastered": 30,
+          "ap": 130,
+          "description": "Jump times increase by 3.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "ground-evasion-boost",
+          "name": "Ground Evasion Boost",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 100,
+          "description": "Increase movement distance for ground evasion. Must enable Ground Evasion.",
+          "statBonus": null,
+          "notes": "Staple. +2m distance boost. Can make grounded dodge cancel combos more difficult.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "midair-evasion-boost",
+          "name": "Midair Evasion Boost",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 100,
+          "description": "Increase movement distance for midair evasion. Must enable Midair Evasion.",
+          "statBonus": null,
+          "notes": "Staple. +2m distance boost. Stacks with Adamant Chains' set bonus.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "evasion-boost",
+          "name": "Evasion Boost",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 100,
+          "description": "Increase duration of invincibility after evasion.",
+          "statBonus": null,
+          "notes": "Staple. Doubles invincibility from 20F to 40F.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "descent-speed-boost",
+          "name": "Descent Speed Boost",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "Press X after jumping to quickly descend.",
+          "statBonus": null,
+          "notes": "Available after jumps and Multi Air Slide.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "zero-gravity",
+          "name": "Zero Gravity",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "Press X after jumping to temporarily stop in midair. Release X to descend normally.",
+          "statBonus": null,
+          "notes": "Available after jumps and Multi Air Slide.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "support",
+      "label": "Support Abilities",
+      "abilities": [
+        {
+          "id": "always-target-indicator",
+          "name": "Always Target Indicator",
+          "cp": 5,
+          "cpMastered": 0,
+          "ap": 50,
+          "description": "Target indicatoro showing opponent's position will always be displayed.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "ex-core-lock-on",
+          "name": "EX Core Lock On",
+          "cp": 5,
+          "cpMastered": 0,
+          "ap": 50,
+          "description": "When EX Core is present, push L while locked on to lock onto the EX Core.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "assist-lock-on",
+          "name": "Assist Lock On",
+          "cp": 5,
+          "cpMastered": 0,
+          "ap": 50,
+          "description": "When foe's Assist is present, push L to lock onto their Assist.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "rpg-mode-boost",
+          "name": "RPG Mode Boost",
+          "cp": 5,
+          "cpMastered": 0,
+          "ap": 10,
+          "description": "Takes immediate action when command is issued in RPG Mode battle.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "auto-assist-lock-on",
+          "name": "Auto Assist Lock On",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "Automatically lock onto opponent's Assist Character.",
+          "statBonus": null,
+          "notes": "Attacks will immediately steer towards the assist character as soon as the assist call happens.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "auto-assist",
+          "name": "Auto Assist",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "Automatically summons Assist Character.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "auto-chase",
+          "name": "Auto Chase",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "Automatically chase foes.",
+          "statBonus": null,
+          "notes": "Chase is initiated whenever possible.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "auto-recovery",
+          "name": "Auto Recovery",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "Automatically break fall.",
+          "statBonus": null,
+          "notes": "Useful for verifying combos where aerial recovery is possible.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "auto-ex-burst",
+          "name": "Auto EX Burst",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "Automatically use EX Burst.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "auto-ex-command",
+          "name": "Auto EX Command",
+          "cp": 30,
+          "cpMastered": 15,
+          "ap": 160,
+          "description": "Automatically input EX Burst commands.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "auto-ex-command-omega",
+          "name": "Auto EX Command Ω",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 200,
+          "description": "Automatically input EX Burst commands perfectly.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "auto-ex-defense",
+          "name": "Auto EX Defense",
+          "cp": 30,
+          "cpMastered": 15,
+          "ap": 160,
+          "description": "Automatically defend against EX Bursts.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "auto-ex-defense-omega",
+          "name": "Auto EX Defense Ω",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 200,
+          "description": "Automatically defend against EX Bursts perfectly.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "extra",
+      "label": "Extra Abilities",
+      "abilities": [
+        {
+          "id": "reverse-paradigm",
+          "name": "Reverse Paradigm",
+          "cp": 5,
+          "cpMastered": 0,
+          "ap": 50,
+          "description": "Order of Ravager and Commando are reversed when using Paradigm Shift.",
+          "statBonus": null,
+          "notes": "Lightning only.",
+          "only": [
+            "lightning"
+          ],
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-bravery-reduction",
+          "name": "Disable Bravery Reduction",
+          "cp": 70,
+          "cpMastered": 50,
+          "ap": 300,
+          "description": "Bravery does not deplete.",
+          "statBonus": null,
+          "notes": "Feral Chaos only.",
+          "only": [
+            "feral-chaos"
+          ],
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-ex-gauge-lock",
+          "name": "Disable EX Gauge Lock",
+          "cp": 70,
+          "cpMastered": 50,
+          "ap": 300,
+          "description": "EX Gauge fills steadily.",
+          "statBonus": null,
+          "notes": "Feral Chaos only. EX absorption fills the EX meter.",
+          "only": [
+            "feral-chaos"
+          ],
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-assist-lock",
+          "name": "Disable Assist Lock",
+          "cp": 70,
+          "cpMastered": 50,
+          "ap": 300,
+          "description": "Assist Gauge fills steadily.",
+          "statBonus": null,
+          "notes": "Feral Chaos only. Attacks fill the Assist meter.",
+          "only": [
+            "feral-chaos"
+          ],
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "precision-jump",
+          "name": "Precision Jump",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "Press X at high point of jump to jump higher than usual.",
+          "statBonus": null,
+          "notes": "Peak of the jump. Recommended for Kain and Kefka. This can also be done after an attack finishes if it was done at the peak of a jump.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "precision-block",
+          "name": "Precision Block",
+          "cp": 90,
+          "cpMastered": 45,
+          "ap": 200,
+          "description": "Blocks are more effective when well-timed.",
+          "statBonus": null,
+          "notes": "Staggers against Mid & High priority instead of guard crushed if  blocked at the first 4 frames.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "precision-evasion",
+          "name": "Precision Evasion",
+          "cp": 90,
+          "cpMastered": 45,
+          "ap": 200,
+          "description": "Evasions are more effective when well-timed.",
+          "statBonus": null,
+          "notes": "Extends invincibility to the end of a dodge if evasion is registered within first 4 frames.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "concentration",
+          "name": "Concentration",
+          "cp": 30,
+          "cpMastered": 15,
+          "ap": 130,
+          "description": "Bravery increases after not attacking for a length of time.",
+          "statBonus": null,
+          "notes": "Activates after doing nothing for 5 seconds. 10 % of raw BRV every 1.67 seconds (100F)",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "concentration-plus",
+          "name": "Concentration +",
+          "cp": 60,
+          "cpMastered": 30,
+          "ap": 130,
+          "description": "Bravery increases after not attacking for a length of time. Stronger than Concentration.",
+          "statBonus": null,
+          "notes": "Activates after doing nothing for 5 seconds. 30 % of raw BRV every 1.67 seconds (100F).",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "concentration-plus-plus",
+          "name": "Concentration ++",
+          "cp": 100,
+          "cpMastered": 50,
+          "ap": 130,
+          "description": "Bravery increases after not attacking for a length of time. Stronger than Concentration +.",
+          "statBonus": null,
+          "notes": "Activates after doing nothing for 5 seconds. 50 % of raw BRV every 1.67 seconds (100F)",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "snooze-and-lose",
+          "name": "Snooze and Lose",
+          "cp": 100,
+          "cpMastered": 50,
+          "ap": 200,
+          "description": "When foe doesn't attack for a certain length of time, foe's bravery begins to fall.",
+          "statBonus": null,
+          "notes": "Activates after opponent does not attack for 5 seconds. Opponent loses 30% of raw BRV every 1.67 seconds (100F). Obsolete due to assist meter.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "achy",
+          "name": "Achy",
+          "cp": 30,
+          "cpMastered": 15,
+          "ap": 130,
+          "description": "Gain \"near death\" status with more HP.",
+          "statBonus": null,
+          "notes": "Activates under 26 % of max HP instead of 21 %.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "achy-plus",
+          "name": "Achy +",
+          "cp": 60,
+          "cpMastered": 30,
+          "ap": 130,
+          "description": "Gain \"near death\" status with even more HP.",
+          "statBonus": null,
+          "notes": "Activates under 31 % of max HP instead of 21 %.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "magic-shield",
+          "name": "Magic Shield",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "When near death, magic damage cut by 20 %.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "physical-shield",
+          "name": "Physical Shield",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "When near death, physical damage cut by 20 %.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "bravery-regen",
+          "name": "Bravery Regen",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "In EX Mode, gain bravery instead of regenerating HP.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "perseverance",
+          "name": "Perseverance",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Decreases Wall Rush damage at times.",
+          "statBonus": null,
+          "notes": "20% chance of -95% BRV Wall Rush damage taken.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "reflect-boost",
+          "name": "Reflect Boost",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 100,
+          "description": "Increases magic damage when deflecting opponent's magic attack.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "counterattack",
+          "name": "Counterattack",
+          "cp": 40,
+          "cpMastered": 25,
+          "ap": 200,
+          "description": "Critical hit rate rises when opponent is attacking.",
+          "statBonus": null,
+          "notes": "+50 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "sneak-attack",
+          "name": "Sneak Attack",
+          "cp": 40,
+          "cpMastered": 25,
+          "ap": 200,
+          "description": "Critical hit rate rises when attacking from behind.",
+          "statBonus": null,
+          "notes": "+50 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "first-strike",
+          "name": "First Strike",
+          "cp": 30,
+          "cpMastered": 15,
+          "ap": 130,
+          "description": "When landing the first BRV attack, critical hit rate of the first combo rises.",
+          "statBonus": null,
+          "notes": "+100 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "ex-critical-boost",
+          "name": "EX Critical Boost",
+          "cp": 60,
+          "cpMastered": 45,
+          "ap": 200,
+          "description": "Further boosts critical hit rate during EX Mode.",
+          "statBonus": null,
+          "notes": "+50 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "cat-nip",
+          "name": "Cat Nip",
+          "cp": 40,
+          "cpMastered": 25,
+          "ap": 200,
+          "description": "Boosts critical hit rate when opponent has chance of a one-hit victory.",
+          "statBonus": null,
+          "notes": "+50 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "riposte",
+          "name": "Riposte",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "Boosts critical hit rate when attacking staggering opponent. Also activates with guard breaks, e.g. when higher priority attack connects.",
+          "statBonus": null,
+          "notes": "+25 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "back-to-the-wall",
+          "name": "Back to the Wall",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "Boosts critical hit rate when near death.",
+          "statBonus": null,
+          "notes": "+50 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "gamblers-spirit",
+          "name": "Gambler's Spirit",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 50,
+          "description": "Boosts critical hit rate after being afflicted by Break.",
+          "statBonus": null,
+          "notes": "+100 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "anti-ex",
+          "name": "Anti-EX",
+          "cp": 60,
+          "cpMastered": 45,
+          "ap": 200,
+          "description": "Boosts critical hit rate when opponent is in EX Mode.",
+          "statBonus": null,
+          "notes": "+50 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "spite",
+          "name": "Spite",
+          "cp": 60,
+          "cpMastered": 45,
+          "ap": 200,
+          "description": "Critical hit rate increases when opponent's bravery exceeds 3000.",
+          "statBonus": null,
+          "notes": "+25 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "fragile-pride",
+          "name": "Fragile Pride",
+          "cp": 100,
+          "cpMastered": 50,
+          "ap": 200,
+          "description": "Critical hit rate increases when opponent's attacks have all been blocked or evaded.",
+          "statBonus": null,
+          "notes": "+25 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "assist-critical-boost",
+          "name": "Assist Critical Boost",
+          "cp": 40,
+          "cpMastered": 25,
+          "ap": 200,
+          "description": "Critical hit rate of Assist character's attacks increases.",
+          "statBonus": null,
+          "notes": "+25 % critical hit rate.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-counterattack",
+          "name": "Disable Counterattack",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 100,
+          "description": "Counterattack ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-sneak-attack",
+          "name": "Disable Sneak Attack",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 100,
+          "description": "Sneak Attack ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-first-strike",
+          "name": "Disable First Strike",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 100,
+          "description": "First Strike ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-ex-critical-boost",
+          "name": "Disable EX Critical Boost",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 100,
+          "description": "EX Critical Boost ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-cat-nip",
+          "name": "Disable Cat Nip",
+          "cp": 30,
+          "cpMastered": 15,
+          "ap": 100,
+          "description": "Cat Nip ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-riposte",
+          "name": "Disable Riposte",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 100,
+          "description": "Riposte ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-back-to-the-wall",
+          "name": "Disable Back to the Wall",
+          "cp": 30,
+          "cpMastered": 15,
+          "ap": 100,
+          "description": "Back to the Wall ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-gamblers-spirit",
+          "name": "Disable Gambler's Spirit",
+          "cp": 10,
+          "cpMastered": 5,
+          "ap": 100,
+          "description": "Gambler's Spirit ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-anti-ex",
+          "name": "Disable Anti-EX",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 100,
+          "description": "Anti-EX ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-spite",
+          "name": "Disable Spite",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 100,
+          "description": "Spite ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-fragile-pride",
+          "name": "Disable Fragile Pride",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 100,
+          "description": "Fragile Pride ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "disable-assist-critical-boost",
+          "name": "Disable Assist Critical Boost",
+          "cp": 40,
+          "cpMastered": 20,
+          "ap": 100,
+          "description": "Assist Critical Boost ability effect disabled.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "exp-to-hp",
+          "name": "EXP to HP",
+          "cp": 60,
+          "cpMastered": 0,
+          "ap": 100,
+          "description": "Instead of gaining EXP, recover an equivalent amount of HP.",
+          "statBonus": null,
+          "notes": "10 % conversion.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "exp-to-bravery",
+          "name": "EXP to Bravery",
+          "cp": 69,
+          "cpMastered": 0,
+          "ap": 130,
+          "description": "Instead of obtaining EXP, gain an equivalent amount of bravery.",
+          "statBonus": null,
+          "notes": "10 % conversion.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "exp-to-ex-force",
+          "name": "EXP to EX Force",
+          "cp": 60,
+          "cpMastered": 0,
+          "ap": 130,
+          "description": "Instead of obtaining EXP, the EX Gauge rises by an equivalent amount.",
+          "statBonus": null,
+          "notes": "0.1 % conversion.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "exp-to-assist",
+          "name": "EXP to Assist",
+          "cp": 60,
+          "cpMastered": 0,
+          "ap": 130,
+          "description": "Instead of gaining EXP, the Assist Gauge rises by an equivalent amount.",
+          "statBonus": null,
+          "notes": "0.3 % conversion.",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "peltasts-gear",
+          "name": "Peltast's Gear",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Swords, daggers, greatswords, and katana can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "hoplites-gear",
+          "name": "Hoplite's Gear",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Spears, axes, and grappling weapons can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "mages-gear",
+          "name": "Mage's Gear",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Rods, staves, and poles can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "rangers-gear",
+          "name": "Ranger's Gear",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Thrown weapons, instruments, and guns can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "knights-gear",
+          "name": "Knight's Gear",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Shields and large shields can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "thiefs-gear",
+          "name": "Thief's Gear",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Bangles, gauntlets, and parrying weapons can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "infantry-gear",
+          "name": "Infantry Gear",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Helms and hats can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "bards-gear",
+          "name": "Bard's Gear",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Hairpins and headbands can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "cavaliers-gear",
+          "name": "Cavalier's Gear",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Light armor, heavy armor, and chestplates can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "evokers-gear",
+          "name": "Evoker's Gear",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Clothing and robes can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "dancers-garb",
+          "name": "Dancer's Garb",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Ribbons can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "equip-machines",
+          "name": "Equip Machines",
+          "cp": 20,
+          "cpMastered": 10,
+          "ap": 170,
+          "description": "Machines can be equipped.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "master-swordsman",
+          "name": "Master Swordsman",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "Damage +5% when equipping swords, daggers, greatswords, or katana.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "master-fighter",
+          "name": "Master Fighter",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "Damage +5% when equipping spears, axes, or grappling weapons.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "master-sorcerer",
+          "name": "Master Sorcerer",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "Damage +5% when equipping rods, staves, or poles.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "master-sniper",
+          "name": "Master Sniper",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "Damage +5% when equipping thrown weapons, instruments or guns.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "master-defender",
+          "name": "Master Defender",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "Defense +5% when equipping shields or large shields.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "master-attacker",
+          "name": "Master Attacker",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "Defense +5% when equipping bangles, gauntlets, or parrying weapons.",
+          "statBonus": null,
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "master-protector",
+          "name": "Master Protector",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "BRV +100 when equipping helms or hats.",
+          "statBonus": {
+            "stat": "brv",
+            "value": 100,
+            "whenEquipping": [
+              "helm",
+              "hat"
+            ],
+            "raw": "BRV +100 when equipping helms or hats."
+          },
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "best-dresser",
+          "name": "Best Dresser",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "BRV +100 when equipping hairpins or headbands.",
+          "statBonus": {
+            "stat": "brv",
+            "value": 100,
+            "whenEquipping": [
+              "hairpin",
+              "headband"
+            ],
+            "raw": "BRV +100 when equipping hairpins or headbands."
+          },
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "master-guardsman",
+          "name": "Master Guardsman",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "HP +1000 when equipping light armor, heavy armor, or chestplates.",
+          "statBonus": {
+            "stat": "hp",
+            "value": 1000,
+            "whenEquipping": [
+              "light armor",
+              "heavy armor",
+              "chestplate"
+            ],
+            "raw": "HP +1000 when equipping light armor, heavy armor, or chestplates."
+          },
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "master-mage",
+          "name": "Master Mage",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "HP +1000 when equipping clothing or robes.",
+          "statBonus": {
+            "stat": "hp",
+            "value": 1000,
+            "whenEquipping": [
+              "clothing",
+              "robe"
+            ],
+            "raw": "HP +1000 when equipping clothing or robes."
+          },
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "master-dancer",
+          "name": "Master Dancer",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "BRV +100 when equipping ribbons.",
+          "statBonus": {
+            "stat": "brv",
+            "value": 100,
+            "whenEquipping": [
+              "ribbon"
+            ],
+            "raw": "BRV +100 when equipping ribbons."
+          },
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        },
+        {
+          "id": "machinery",
+          "name": "Machinery",
+          "cp": 50,
+          "cpMastered": 35,
+          "ap": 200,
+          "description": "BRV +100 when equipping machines.",
+          "statBonus": {
+            "stat": "brv",
+            "value": 100,
+            "whenEquipping": [
+              "machine"
+            ],
+            "raw": "BRV +100 when equipping machines."
+          },
+          "notes": "",
+          "only": null,
+          "documented": true,
+          "sources": [
+            "https://dissidia.wiki/Abilities_(Dissidia_012)"
+          ]
+        }
+      ]
+    }
+  ],
+  "exclusiveGroups": [
+    {
+      "id": "excl-air-dash",
+      "abilities": [
+        "air-dash",
+        "reverse-air-dash"
+      ],
+      "reason": "même commande : TRIANGLE quickmove.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-free-air-dash",
+      "abilities": [
+        "free-air-dash",
+        "reverse-free-air-dash",
+        "omni-air-dash",
+        "omni-air-dash-plus"
+      ],
+      "reason": "même commande : R + TRIANGLE air.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-ground-dash",
+      "abilities": [
+        "ground-dash",
+        "reverse-ground-dash",
+        "omni-ground-dash",
+        "omni-ground-dash-plus"
+      ],
+      "reason": "même commande : R + TRIANGLE sol.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-descent-speed-boost",
+      "abilities": [
+        "descent-speed-boost",
+        "zero-gravity"
+      ],
+      "reason": "même commande : X après un saut.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-speed-boost",
+      "abilities": [
+        "speed-boost",
+        "speed-boost-plus",
+        "speed-boost-plus-plus"
+      ],
+      "reason": "« Speed Boost » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-jump-boost",
+      "abilities": [
+        "jump-boost",
+        "jump-boost-plus",
+        "jump-boost-plus-plus"
+      ],
+      "reason": "« Jump Boost » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-jump-times-boost",
+      "abilities": [
+        "jump-times-boost",
+        "jump-times-boost-cp40",
+        "jump-times-boost-plus-plus"
+      ],
+      "reason": "« Jump Times Boost » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-auto-ex-command",
+      "abilities": [
+        "auto-ex-command",
+        "auto-ex-command-omega"
+      ],
+      "reason": "« Auto EX Command » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-auto-ex-defense",
+      "abilities": [
+        "auto-ex-defense",
+        "auto-ex-defense-omega"
+      ],
+      "reason": "« Auto EX Defense » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-concentration",
+      "abilities": [
+        "concentration",
+        "concentration-plus",
+        "concentration-plus-plus"
+      ],
+      "reason": "« Concentration » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-achy",
+      "abilities": [
+        "achy",
+        "achy-plus"
+      ],
+      "reason": "« Achy » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-exp-to-hp",
+      "abilities": [
+        "exp-to-hp",
+        "exp-to-bravery",
+        "exp-to-ex-force",
+        "exp-to-assist"
+      ],
+      "reason": "ces abilities convertissent toutes la même ressource (EXP).",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    }
+  ],
+  "entries": [
+    {
+      "id": "ground-evasion",
+      "name": "Ground Evasion",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "On the ground, push R + X to dodge opponent's attack.",
+      "statBonus": null,
+      "notes": "Staple.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "midair-evasion",
+      "name": "Midair Evasion",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "In the air, push R + X to dodge opponent's attack.",
+      "statBonus": null,
+      "notes": "Staple.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "ground-block",
+      "name": "Ground Block",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "On the ground, push R to guard against foe's attack.",
+      "statBonus": null,
+      "notes": "Staple",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "midair-block",
+      "name": "Midair Block",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "In the air, push R to guard against foe's attack.",
+      "statBonus": null,
+      "notes": "Staple.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "aerial-recovery",
+      "name": "Aerial Recovery",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "When tumbling through the air, press X to break fall.",
+      "statBonus": null,
+      "notes": "Staple.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "recovery-attack",
+      "name": "Recovery Attack",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 70,
+      "description": "Press circle or square to attack while flying through air. Must enable Aerial Recovery.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "controlled-recovery",
+      "name": "Controlled Recovery",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 70,
+      "description": "Can move while breaking fall. Aerial Recovery must be enabled.",
+      "statBonus": null,
+      "notes": "Staple.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "wall-jump",
+      "name": "Wall Jump",
+      "cp": 0,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "Press X after a Quickmove to run on a wall for a high jump.",
+      "statBonus": null,
+      "notes": "It's free.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "air-dash",
+      "name": "Air Dash",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "While Quickmoving, press triangle to dash toward opponent. Hold button to extend range.",
+      "statBonus": null,
+      "notes": "Faster than most dashes.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "reverse-air-dash",
+      "name": "Reverse Air Dash",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "While Quickmoving, press triangle to dash away from opponent. Hold button to extend range.",
+      "statBonus": null,
+      "notes": "Like Air Dash, faster than other dashes.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "free-air-dash",
+      "name": "Free Air Dash",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 70,
+      "description": "Press R + triangle to dash toward opponent. Hold button to extend range.",
+      "statBonus": null,
+      "notes": "Staple. Works with Assist Gauge Up Dash.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "reverse-free-air-dash",
+      "name": "Reverse Free Air Dash",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 70,
+      "description": "Press R + triangle to dash away from opponent. Hold button to extend range.",
+      "statBonus": null,
+      "notes": "Recommended for Kefka. Works with Assist Gauge Up Dash.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "omni-air-dash",
+      "name": "Omni Air Dash",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 130,
+      "description": "Press R + triangle to dash in any direction. Hold button to extend range.",
+      "statBonus": null,
+      "notes": "Recommended for Ultimecia, The Emperor.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "omni-air-dash-plus",
+      "name": "Omni Air Dash+",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 200,
+      "description": "Press R + triangle to dash in any direction. Turns capable during dash.",
+      "statBonus": null,
+      "notes": "Recommended for Ultimecia, The Emperor.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "ground-dash",
+      "name": "Ground Dash",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 70,
+      "description": "While on ground, press R + triangle to dash toward opponent. Hold button to extend range.",
+      "statBonus": null,
+      "notes": "Works with Assist Gauge Up Dash.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "reverse-ground-dash",
+      "name": "Reverse Ground Dash",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 70,
+      "description": "While on ground, press R + triangle to dash away from opponent. Hold button too extend range. Works with Assist Gauge Up Dash.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "omni-ground-dash",
+      "name": "Omni Ground Dash",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 130,
+      "description": "While on ground, press R + triangle to dash in any direction. Hold button to extend range.",
+      "statBonus": null,
+      "notes": "Okay for ground combat.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "omni-ground-dash-plus",
+      "name": "Omni Ground Dash+",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 200,
+      "description": "Press R + triangle to dash in any direction. Turns capable during dash.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "multi-air-slide",
+      "name": "Multi Air Slide",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 130,
+      "description": "Press X after jumping to dash in any direction. Hold button to extend range.",
+      "statBonus": null,
+      "notes": "Available when no jumps remain / after an air dodge.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "multi-air-slide-plus",
+      "name": "Multi Air Slide+",
+      "cp": 30,
+      "cpMastered": 15,
+      "ap": 130,
+      "description": "Multi Air Slide can be performed twice.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "air-dash-boost",
+      "name": "Air Dash Boost",
+      "cp": 30,
+      "cpMastered": 15,
+      "ap": 130,
+      "description": "Air Dash speed increases.",
+      "statBonus": null,
+      "notes": "4 % speed increase. Only affects the abilities \"Air Dash\" and \"Reverse Air Dash\". Details here",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "free-air-dash-boost",
+      "name": "Free Air Dash Boost",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 200,
+      "description": "Free Air Dash and Omni Air Dash speed increase.",
+      "statBonus": null,
+      "notes": "8 % speed increase. Details here",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "assist-gauge-up-dash",
+      "name": "Assist Gauge Up dash",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 100,
+      "description": "Assist Gauge fills when using Air Dash, Free Air Dash, or Ground Dash.",
+      "statBonus": null,
+      "notes": "Staple. Assist gained is universal.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "glide-boost",
+      "name": "Glide Boost",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 100,
+      "description": "Glide boost. Glide must be enabled.",
+      "statBonus": null,
+      "notes": "Terra, Kefka, Sephiroth and Kuja only.",
+      "only": [
+        "terra-branford",
+        "kefka-palazzo",
+        "sephiroth",
+        "kuja"
+      ],
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "ex-glide-boost",
+      "name": "EX Glide Boost",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 130,
+      "description": "Glide boost while in EX Mode.",
+      "statBonus": null,
+      "notes": "Kuja only.",
+      "only": [
+        "kuja"
+      ],
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "speed-boost",
+      "name": "Speed Boost",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 70,
+      "description": "Slight movement speed boost.",
+      "statBonus": null,
+      "notes": "+8 % movement speed.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "speed-boost-plus",
+      "name": "Speed Boost+",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 130,
+      "description": "Movement speed boost.",
+      "statBonus": null,
+      "notes": "+16 % movement speed.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "speed-boost-plus-plus",
+      "name": "Speed Boost++",
+      "cp": 60,
+      "cpMastered": 30,
+      "ap": 130,
+      "description": "Large movement speed boost.",
+      "statBonus": null,
+      "notes": "+24 % movement speed.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "jump-boost",
+      "name": "Jump Boost",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 70,
+      "description": "Slight jump strength boost.",
+      "statBonus": null,
+      "notes": "+10 % jump height.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "jump-boost-plus",
+      "name": "Jump Boost+",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 130,
+      "description": "Jump strength boost.",
+      "statBonus": null,
+      "notes": "+20 % jump height.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "jump-boost-plus-plus",
+      "name": "Jump Boost++",
+      "cp": 60,
+      "cpMastered": 30,
+      "ap": 130,
+      "description": "Large jump strength boost.",
+      "statBonus": null,
+      "notes": "+30 % jump height.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "jump-times-boost",
+      "name": "Jump Times Boost",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 70,
+      "description": "Jump times increase by 1.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "jump-times-boost-cp40",
+      "name": "Jump Times Boost",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 130,
+      "description": "Jump times increase by 2.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ],
+      "idDisambiguated": true
+    },
+    {
+      "id": "jump-times-boost-plus-plus",
+      "name": "Jump Times Boost++",
+      "cp": 60,
+      "cpMastered": 30,
+      "ap": 130,
+      "description": "Jump times increase by 3.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "ground-evasion-boost",
+      "name": "Ground Evasion Boost",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 100,
+      "description": "Increase movement distance for ground evasion. Must enable Ground Evasion.",
+      "statBonus": null,
+      "notes": "Staple. +2m distance boost. Can make grounded dodge cancel combos more difficult.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "midair-evasion-boost",
+      "name": "Midair Evasion Boost",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 100,
+      "description": "Increase movement distance for midair evasion. Must enable Midair Evasion.",
+      "statBonus": null,
+      "notes": "Staple. +2m distance boost. Stacks with Adamant Chains' set bonus.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "evasion-boost",
+      "name": "Evasion Boost",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 100,
+      "description": "Increase duration of invincibility after evasion.",
+      "statBonus": null,
+      "notes": "Staple. Doubles invincibility from 20F to 40F.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "descent-speed-boost",
+      "name": "Descent Speed Boost",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "Press X after jumping to quickly descend.",
+      "statBonus": null,
+      "notes": "Available after jumps and Multi Air Slide.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "zero-gravity",
+      "name": "Zero Gravity",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "Press X after jumping to temporarily stop in midair. Release X to descend normally.",
+      "statBonus": null,
+      "notes": "Available after jumps and Multi Air Slide.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "always-target-indicator",
+      "name": "Always Target Indicator",
+      "cp": 5,
+      "cpMastered": 0,
+      "ap": 50,
+      "description": "Target indicatoro showing opponent's position will always be displayed.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "ex-core-lock-on",
+      "name": "EX Core Lock On",
+      "cp": 5,
+      "cpMastered": 0,
+      "ap": 50,
+      "description": "When EX Core is present, push L while locked on to lock onto the EX Core.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "assist-lock-on",
+      "name": "Assist Lock On",
+      "cp": 5,
+      "cpMastered": 0,
+      "ap": 50,
+      "description": "When foe's Assist is present, push L to lock onto their Assist.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "rpg-mode-boost",
+      "name": "RPG Mode Boost",
+      "cp": 5,
+      "cpMastered": 0,
+      "ap": 10,
+      "description": "Takes immediate action when command is issued in RPG Mode battle.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "auto-assist-lock-on",
+      "name": "Auto Assist Lock On",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "Automatically lock onto opponent's Assist Character.",
+      "statBonus": null,
+      "notes": "Attacks will immediately steer towards the assist character as soon as the assist call happens.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "auto-assist",
+      "name": "Auto Assist",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "Automatically summons Assist Character.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "auto-chase",
+      "name": "Auto Chase",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "Automatically chase foes.",
+      "statBonus": null,
+      "notes": "Chase is initiated whenever possible.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "auto-recovery",
+      "name": "Auto Recovery",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "Automatically break fall.",
+      "statBonus": null,
+      "notes": "Useful for verifying combos where aerial recovery is possible.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "auto-ex-burst",
+      "name": "Auto EX Burst",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "Automatically use EX Burst.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "auto-ex-command",
+      "name": "Auto EX Command",
+      "cp": 30,
+      "cpMastered": 15,
+      "ap": 160,
+      "description": "Automatically input EX Burst commands.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "auto-ex-command-omega",
+      "name": "Auto EX Command Ω",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 200,
+      "description": "Automatically input EX Burst commands perfectly.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "auto-ex-defense",
+      "name": "Auto EX Defense",
+      "cp": 30,
+      "cpMastered": 15,
+      "ap": 160,
+      "description": "Automatically defend against EX Bursts.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "auto-ex-defense-omega",
+      "name": "Auto EX Defense Ω",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 200,
+      "description": "Automatically defend against EX Bursts perfectly.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "reverse-paradigm",
+      "name": "Reverse Paradigm",
+      "cp": 5,
+      "cpMastered": 0,
+      "ap": 50,
+      "description": "Order of Ravager and Commando are reversed when using Paradigm Shift.",
+      "statBonus": null,
+      "notes": "Lightning only.",
+      "only": [
+        "lightning"
+      ],
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-bravery-reduction",
+      "name": "Disable Bravery Reduction",
+      "cp": 70,
+      "cpMastered": 50,
+      "ap": 300,
+      "description": "Bravery does not deplete.",
+      "statBonus": null,
+      "notes": "Feral Chaos only.",
+      "only": [
+        "feral-chaos"
+      ],
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-ex-gauge-lock",
+      "name": "Disable EX Gauge Lock",
+      "cp": 70,
+      "cpMastered": 50,
+      "ap": 300,
+      "description": "EX Gauge fills steadily.",
+      "statBonus": null,
+      "notes": "Feral Chaos only. EX absorption fills the EX meter.",
+      "only": [
+        "feral-chaos"
+      ],
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-assist-lock",
+      "name": "Disable Assist Lock",
+      "cp": 70,
+      "cpMastered": 50,
+      "ap": 300,
+      "description": "Assist Gauge fills steadily.",
+      "statBonus": null,
+      "notes": "Feral Chaos only. Attacks fill the Assist meter.",
+      "only": [
+        "feral-chaos"
+      ],
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "precision-jump",
+      "name": "Precision Jump",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "Press X at high point of jump to jump higher than usual.",
+      "statBonus": null,
+      "notes": "Peak of the jump. Recommended for Kain and Kefka. This can also be done after an attack finishes if it was done at the peak of a jump.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "precision-block",
+      "name": "Precision Block",
+      "cp": 90,
+      "cpMastered": 45,
+      "ap": 200,
+      "description": "Blocks are more effective when well-timed.",
+      "statBonus": null,
+      "notes": "Staggers against Mid & High priority instead of guard crushed if  blocked at the first 4 frames.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "precision-evasion",
+      "name": "Precision Evasion",
+      "cp": 90,
+      "cpMastered": 45,
+      "ap": 200,
+      "description": "Evasions are more effective when well-timed.",
+      "statBonus": null,
+      "notes": "Extends invincibility to the end of a dodge if evasion is registered within first 4 frames.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "concentration",
+      "name": "Concentration",
+      "cp": 30,
+      "cpMastered": 15,
+      "ap": 130,
+      "description": "Bravery increases after not attacking for a length of time.",
+      "statBonus": null,
+      "notes": "Activates after doing nothing for 5 seconds. 10 % of raw BRV every 1.67 seconds (100F)",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "concentration-plus",
+      "name": "Concentration +",
+      "cp": 60,
+      "cpMastered": 30,
+      "ap": 130,
+      "description": "Bravery increases after not attacking for a length of time. Stronger than Concentration.",
+      "statBonus": null,
+      "notes": "Activates after doing nothing for 5 seconds. 30 % of raw BRV every 1.67 seconds (100F).",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "concentration-plus-plus",
+      "name": "Concentration ++",
+      "cp": 100,
+      "cpMastered": 50,
+      "ap": 130,
+      "description": "Bravery increases after not attacking for a length of time. Stronger than Concentration +.",
+      "statBonus": null,
+      "notes": "Activates after doing nothing for 5 seconds. 50 % of raw BRV every 1.67 seconds (100F)",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "snooze-and-lose",
+      "name": "Snooze and Lose",
+      "cp": 100,
+      "cpMastered": 50,
+      "ap": 200,
+      "description": "When foe doesn't attack for a certain length of time, foe's bravery begins to fall.",
+      "statBonus": null,
+      "notes": "Activates after opponent does not attack for 5 seconds. Opponent loses 30% of raw BRV every 1.67 seconds (100F). Obsolete due to assist meter.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "achy",
+      "name": "Achy",
+      "cp": 30,
+      "cpMastered": 15,
+      "ap": 130,
+      "description": "Gain \"near death\" status with more HP.",
+      "statBonus": null,
+      "notes": "Activates under 26 % of max HP instead of 21 %.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "achy-plus",
+      "name": "Achy +",
+      "cp": 60,
+      "cpMastered": 30,
+      "ap": 130,
+      "description": "Gain \"near death\" status with even more HP.",
+      "statBonus": null,
+      "notes": "Activates under 31 % of max HP instead of 21 %.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "magic-shield",
+      "name": "Magic Shield",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "When near death, magic damage cut by 20 %.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "physical-shield",
+      "name": "Physical Shield",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "When near death, physical damage cut by 20 %.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "bravery-regen",
+      "name": "Bravery Regen",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "In EX Mode, gain bravery instead of regenerating HP.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "perseverance",
+      "name": "Perseverance",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Decreases Wall Rush damage at times.",
+      "statBonus": null,
+      "notes": "20% chance of -95% BRV Wall Rush damage taken.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "reflect-boost",
+      "name": "Reflect Boost",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 100,
+      "description": "Increases magic damage when deflecting opponent's magic attack.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "counterattack",
+      "name": "Counterattack",
+      "cp": 40,
+      "cpMastered": 25,
+      "ap": 200,
+      "description": "Critical hit rate rises when opponent is attacking.",
+      "statBonus": null,
+      "notes": "+50 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "sneak-attack",
+      "name": "Sneak Attack",
+      "cp": 40,
+      "cpMastered": 25,
+      "ap": 200,
+      "description": "Critical hit rate rises when attacking from behind.",
+      "statBonus": null,
+      "notes": "+50 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "first-strike",
+      "name": "First Strike",
+      "cp": 30,
+      "cpMastered": 15,
+      "ap": 130,
+      "description": "When landing the first BRV attack, critical hit rate of the first combo rises.",
+      "statBonus": null,
+      "notes": "+100 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "ex-critical-boost",
+      "name": "EX Critical Boost",
+      "cp": 60,
+      "cpMastered": 45,
+      "ap": 200,
+      "description": "Further boosts critical hit rate during EX Mode.",
+      "statBonus": null,
+      "notes": "+50 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "cat-nip",
+      "name": "Cat Nip",
+      "cp": 40,
+      "cpMastered": 25,
+      "ap": 200,
+      "description": "Boosts critical hit rate when opponent has chance of a one-hit victory.",
+      "statBonus": null,
+      "notes": "+50 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "riposte",
+      "name": "Riposte",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "Boosts critical hit rate when attacking staggering opponent. Also activates with guard breaks, e.g. when higher priority attack connects.",
+      "statBonus": null,
+      "notes": "+25 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "back-to-the-wall",
+      "name": "Back to the Wall",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "Boosts critical hit rate when near death.",
+      "statBonus": null,
+      "notes": "+50 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "gamblers-spirit",
+      "name": "Gambler's Spirit",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 50,
+      "description": "Boosts critical hit rate after being afflicted by Break.",
+      "statBonus": null,
+      "notes": "+100 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "anti-ex",
+      "name": "Anti-EX",
+      "cp": 60,
+      "cpMastered": 45,
+      "ap": 200,
+      "description": "Boosts critical hit rate when opponent is in EX Mode.",
+      "statBonus": null,
+      "notes": "+50 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "spite",
+      "name": "Spite",
+      "cp": 60,
+      "cpMastered": 45,
+      "ap": 200,
+      "description": "Critical hit rate increases when opponent's bravery exceeds 3000.",
+      "statBonus": null,
+      "notes": "+25 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "fragile-pride",
+      "name": "Fragile Pride",
+      "cp": 100,
+      "cpMastered": 50,
+      "ap": 200,
+      "description": "Critical hit rate increases when opponent's attacks have all been blocked or evaded.",
+      "statBonus": null,
+      "notes": "+25 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "assist-critical-boost",
+      "name": "Assist Critical Boost",
+      "cp": 40,
+      "cpMastered": 25,
+      "ap": 200,
+      "description": "Critical hit rate of Assist character's attacks increases.",
+      "statBonus": null,
+      "notes": "+25 % critical hit rate.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-counterattack",
+      "name": "Disable Counterattack",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 100,
+      "description": "Counterattack ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-sneak-attack",
+      "name": "Disable Sneak Attack",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 100,
+      "description": "Sneak Attack ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-first-strike",
+      "name": "Disable First Strike",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 100,
+      "description": "First Strike ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-ex-critical-boost",
+      "name": "Disable EX Critical Boost",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 100,
+      "description": "EX Critical Boost ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-cat-nip",
+      "name": "Disable Cat Nip",
+      "cp": 30,
+      "cpMastered": 15,
+      "ap": 100,
+      "description": "Cat Nip ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-riposte",
+      "name": "Disable Riposte",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 100,
+      "description": "Riposte ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-back-to-the-wall",
+      "name": "Disable Back to the Wall",
+      "cp": 30,
+      "cpMastered": 15,
+      "ap": 100,
+      "description": "Back to the Wall ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-gamblers-spirit",
+      "name": "Disable Gambler's Spirit",
+      "cp": 10,
+      "cpMastered": 5,
+      "ap": 100,
+      "description": "Gambler's Spirit ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-anti-ex",
+      "name": "Disable Anti-EX",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 100,
+      "description": "Anti-EX ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-spite",
+      "name": "Disable Spite",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 100,
+      "description": "Spite ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-fragile-pride",
+      "name": "Disable Fragile Pride",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 100,
+      "description": "Fragile Pride ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "disable-assist-critical-boost",
+      "name": "Disable Assist Critical Boost",
+      "cp": 40,
+      "cpMastered": 20,
+      "ap": 100,
+      "description": "Assist Critical Boost ability effect disabled.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "exp-to-hp",
+      "name": "EXP to HP",
+      "cp": 60,
+      "cpMastered": 0,
+      "ap": 100,
+      "description": "Instead of gaining EXP, recover an equivalent amount of HP.",
+      "statBonus": null,
+      "notes": "10 % conversion.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "exp-to-bravery",
+      "name": "EXP to Bravery",
+      "cp": 69,
+      "cpMastered": 0,
+      "ap": 130,
+      "description": "Instead of obtaining EXP, gain an equivalent amount of bravery.",
+      "statBonus": null,
+      "notes": "10 % conversion.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "exp-to-ex-force",
+      "name": "EXP to EX Force",
+      "cp": 60,
+      "cpMastered": 0,
+      "ap": 130,
+      "description": "Instead of obtaining EXP, the EX Gauge rises by an equivalent amount.",
+      "statBonus": null,
+      "notes": "0.1 % conversion.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "exp-to-assist",
+      "name": "EXP to Assist",
+      "cp": 60,
+      "cpMastered": 0,
+      "ap": 130,
+      "description": "Instead of gaining EXP, the Assist Gauge rises by an equivalent amount.",
+      "statBonus": null,
+      "notes": "0.3 % conversion.",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "peltasts-gear",
+      "name": "Peltast's Gear",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Swords, daggers, greatswords, and katana can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "hoplites-gear",
+      "name": "Hoplite's Gear",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Spears, axes, and grappling weapons can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "mages-gear",
+      "name": "Mage's Gear",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Rods, staves, and poles can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "rangers-gear",
+      "name": "Ranger's Gear",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Thrown weapons, instruments, and guns can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "knights-gear",
+      "name": "Knight's Gear",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Shields and large shields can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "thiefs-gear",
+      "name": "Thief's Gear",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Bangles, gauntlets, and parrying weapons can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "infantry-gear",
+      "name": "Infantry Gear",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Helms and hats can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "bards-gear",
+      "name": "Bard's Gear",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Hairpins and headbands can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "cavaliers-gear",
+      "name": "Cavalier's Gear",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Light armor, heavy armor, and chestplates can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "evokers-gear",
+      "name": "Evoker's Gear",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Clothing and robes can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "dancers-garb",
+      "name": "Dancer's Garb",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Ribbons can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "equip-machines",
+      "name": "Equip Machines",
+      "cp": 20,
+      "cpMastered": 10,
+      "ap": 170,
+      "description": "Machines can be equipped.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "master-swordsman",
+      "name": "Master Swordsman",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "Damage +5% when equipping swords, daggers, greatswords, or katana.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "master-fighter",
+      "name": "Master Fighter",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "Damage +5% when equipping spears, axes, or grappling weapons.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "master-sorcerer",
+      "name": "Master Sorcerer",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "Damage +5% when equipping rods, staves, or poles.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "master-sniper",
+      "name": "Master Sniper",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "Damage +5% when equipping thrown weapons, instruments or guns.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "master-defender",
+      "name": "Master Defender",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "Defense +5% when equipping shields or large shields.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "master-attacker",
+      "name": "Master Attacker",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "Defense +5% when equipping bangles, gauntlets, or parrying weapons.",
+      "statBonus": null,
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "master-protector",
+      "name": "Master Protector",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "BRV +100 when equipping helms or hats.",
+      "statBonus": {
+        "stat": "brv",
+        "value": 100,
+        "whenEquipping": [
+          "helm",
+          "hat"
+        ],
+        "raw": "BRV +100 when equipping helms or hats."
+      },
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "best-dresser",
+      "name": "Best Dresser",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "BRV +100 when equipping hairpins or headbands.",
+      "statBonus": {
+        "stat": "brv",
+        "value": 100,
+        "whenEquipping": [
+          "hairpin",
+          "headband"
+        ],
+        "raw": "BRV +100 when equipping hairpins or headbands."
+      },
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "master-guardsman",
+      "name": "Master Guardsman",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "HP +1000 when equipping light armor, heavy armor, or chestplates.",
+      "statBonus": {
+        "stat": "hp",
+        "value": 1000,
+        "whenEquipping": [
+          "light armor",
+          "heavy armor",
+          "chestplate"
+        ],
+        "raw": "HP +1000 when equipping light armor, heavy armor, or chestplates."
+      },
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "master-mage",
+      "name": "Master Mage",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "HP +1000 when equipping clothing or robes.",
+      "statBonus": {
+        "stat": "hp",
+        "value": 1000,
+        "whenEquipping": [
+          "clothing",
+          "robe"
+        ],
+        "raw": "HP +1000 when equipping clothing or robes."
+      },
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "master-dancer",
+      "name": "Master Dancer",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "BRV +100 when equipping ribbons.",
+      "statBonus": {
+        "stat": "brv",
+        "value": 100,
+        "whenEquipping": [
+          "ribbon"
+        ],
+        "raw": "BRV +100 when equipping ribbons."
+      },
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "machinery",
+      "name": "Machinery",
+      "cp": 50,
+      "cpMastered": 35,
+      "ap": 200,
+      "description": "BRV +100 when equipping machines.",
+      "statBonus": {
+        "stat": "brv",
+        "value": 100,
+        "whenEquipping": [
+          "machine"
+        ],
+        "raw": "BRV +100 when equipping machines."
+      },
+      "notes": "",
+      "only": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Abilities_(Dissidia_012)"
+      ]
+    }
+  ]
+}

@@ -114,7 +114,11 @@ function movesGroup(groupKey, flow, ed, ctx, sect = '') {
   // L'intro brute du wiki (anglaise) n'est plus rendue : la note française
   // éditoriale groupNotes["section/groupe"] la remplace.
   const note = ed?.groupNotes?.[`${sect}/${groupKey}`];
-  const chainRef = groupKey === 'followups'
+  // Le diagramme n'est produit que pour les chaînes nommées « (One) → (Two) » :
+  // sans elles (les followups directionnels de Firion, par exemple), le renvoi
+  // pointerait vers une ancre inexistante.
+  const hasChainDiagram = groupKey === 'followups' && flow.moves.some((m) => /\(Two\)/i.test(m.name || ''));
+  const chainRef = hasChainDiagram
     ? `<p class="mv-desc">Ces followups se greffent sur les braveries « (One) » — le <a href="#chaines">diagramme des chaînes</a> ci-dessous résume les embranchements.</p>`
     : '';
   // Une variante (« X — Normal ») est indentée sous son parent quand le coup
