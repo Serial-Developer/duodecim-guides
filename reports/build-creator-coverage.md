@@ -60,7 +60,6 @@ Master Guardsman, que la fiche du wiki mentionne en note.
 | Quelles braveries mènent à quelle attaque HP (HP links) | **Résolu** : la catégorie `Bravery to HP abilities in Dissidia 012 Final Fantasy` du Final Fantasy Wiki recense les 19 attaques concernées, et la section « Bravery to HP Attacks » de chaque page personnage donne la bravery d'origine (colonne « Obtained ») | 31 paires sur 11 personnages, toutes résolues contre nos fiches. Des paires supplémentaires restent déclarables dans `hpLinks` de `data/editorial/_build-creator.json` |
 | Coût en CP de 23 attaques sur 472 | Absent du wiki | Étiquette « non documenté » sur la ligne, et le total de CP est présenté comme un minimum dès qu'une de ces attaques est sélectionnée |
 | Emplacement de 3 armures exclusives de Feral Chaos (Aegis of Strife, Calamitous Rage, Deafening Fissure) | Le Fandom ne donne pas l'emplacement, et aucune page de dissidia.wiki ne les couvre | `documented: false`, exclues des listes équipables, signalées ici |
-| Effet de l'invocation Barbariccia | Citée comme counter summon légal par la page de règles, mais absente de la page Summons | Proposée (elle est légale), sans description, avec l'étiquette « non documenté » |
 | Formule exacte du cumul des boosters | Jamais énoncée ; un exemple chiffré du guide de builds multijoueur (1,5 × 1,4 × 1,3 → le ×2,7 annoncé) confirme le cumul multiplicatif | Cumul multiplicatif appliqué, mention de la déduction dans les repères de la page |
 
 ## Défauts relevés dans les sources
@@ -105,6 +104,7 @@ Master Guardsman, que la fiche du wiki mentionne en note.
 | Toute bravery « (One) » mène à n'importe quel enchaînement « (Two) » équipé | Les descriptions des enchaînements de Prishe indiquent « Branching from _ (One) », le tiret bas valant pour n'importe laquelle |
 | Exemplaires d'un même accessoire : 1 pour un rang S, 2 pour un A, 3 pour un B, illimité pour un C | Règle de jeu fournie par l'auteur du site ; les rangs viennent du Final Fantasy Wiki |
 | Abilities mutuellement exclusives | Déduites des descriptions du wiki (voir ci-dessous) |
+| Effet de l'invocation Barbariccia | Fourni par l'auteur du site : le wiki la cite comme counter summon légal mais ne lui consacre aucune section |
 
 ## Légalité en tournoi
 

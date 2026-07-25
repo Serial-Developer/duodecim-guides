@@ -9,6 +9,13 @@
   "_abilityExclusionsNote": "Les incompatibilités sont déduites des descriptions du wiki : deux abilities qui occupent la même commande dans la même situation s'excluent (R + triangle au sol = Ground Dash, Reverse Ground Dash, Omni Ground Dash, Omni Ground Dash+), de même que les paliers d'une même ability. Un prérequis n'est pas un conflit : « available after Multi Air Slide » sort Multi Air Slide du groupe. Ce tableau ne sert qu'à déclarer un cas que la déduction raterait : [{ \"abilities\": [\"Nom A\", \"Nom B\"], \"reason\": \"…\", \"source\": \"…\" }]. Le build échoue si un nom n'existe pas.",
   "_hpLinksNote": "Le wiki n'écrit la paire bravery → attaque HP que pour une poignée de personnages (« Branching from Launch ») ; ailleurs elle est noyée dans la prose. Les paires connues se déclarent ici, par slug : [{ \"from\": \"nom de la bravery\", \"to\": \"nom de l'attaque HP\", \"source\": \"…\" }]. Les noms doivent correspondre exactement à ceux des fiches ; le build échoue sinon.",
   "hpLinks": {},
+  "_summonEffectsNote": "La page Summons du wiki ne couvre pas toutes les invocations citées par les règles de tournoi. Les effets manquants se déclarent ici, par identifiant : { \"slug\": { \"text\": \"…\", \"source\": \"…\" } }. Le build échoue si l'identifiant ne correspond à aucune invocation.",
+  "summonEffects": {
+    "barbariccia": {
+      "text": "Quand l'adversaire invoque, les braveries des deux joueurs sont échangées.",
+      "source": "Auteur du site — l'invocation est citée comme counter summon légal par la page de règles, mais n'a pas de section sur la page Summons du wiki."
+    }
+  },
   "abilityExclusions": [],
   "undocumented": {
     "attackSlots": "Le nombre d'emplacements d'attaques par catégorie n'est documenté dans aucune de nos sources. L'outil ne limite donc pas le nombre d'attaques cochées : la contrainte appliquée est le budget de CP, qui, lui, est documenté.",

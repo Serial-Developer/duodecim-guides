@@ -276,9 +276,19 @@ export function buildDataBundle(ROOT, editorial = null) {
     if (code) o.ill = code;
     return o;
   });
+  // Effets d'invocation déclarés à la main : le wiki ne décrit pas toutes les
+  // invocations que les règles de tournoi citent (Barbariccia n'a pas de section).
+  const effetsDeclares = editorial?.summonEffects || {};
+  for (const id of Object.keys(effetsDeclares)) {
+    if (!summons.items.some((s) => s.id === id)) {
+      throw new Error(`_build-creator.json : summonEffects — invocation inconnue « ${id} »`);
+    }
+  }
   const summonsOut = summons.items.map((i) => {
     const o = trim(i, ['id', 'name', 'legal', 'documented']);
+    const declare = effetsDeclares[i.id];
     if (i.text) o.text = cut(i.text.split('\n')[0], 320);
+    else if (declare?.text) { o.text = cut(declare.text, 320); o.documented = true; }
     const code = reasonFor(i);
     if (code) o.ill = code;
     return o;
