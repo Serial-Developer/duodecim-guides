@@ -258,6 +258,7 @@ export function siteHeader({ base = '', active = '', h1 = false } = {}) {
     { title: 'Jouer à Dissidia', items: [
       { key: 'install', href: `${base}install.html`, label: 'Installer sur PPSSPP' },
       { key: 'savedata', href: `${base}savedata.html`, label: 'Savedata prêtes à jouer' },
+      { key: 'multijoueur', href: `${base}multijoueur.html`, label: 'Jouer en multijoueur' },
     ] },
     { title: 'Les tournois', items: [
       { key: 'participer', href: `${base}participer.html`, label: 'Participer aux tournois' },

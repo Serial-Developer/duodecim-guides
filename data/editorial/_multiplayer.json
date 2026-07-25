@@ -1,0 +1,105 @@
+{
+  "source": "https://dissidia.wiki/Online_Setup_(PPSSPP)",
+  "intro": [
+    "Dissidia 012 ne propose que du multijoueur ad-hoc (WiFi local) : pour jouer à distance, la scène passe par l'émulateur PPSSPP et un programme de réseau virtuel (Radmin, Hamachi ou ZeroTier One) qui fait croire au jeu que les joueurs sont sur le même réseau local. Cette page synthétise le guide de la communauté ; chaque scénario a sa section.",
+    "Point commun à tous les scénarios en ligne : la latence est reine. En dessous de ~50 ms de ping, le jeu est fluide ; au-delà d'environ 120 ms, il commence à ralentir et à geler par à-coups, avec des entrées non enregistrées."
+  ],
+  "scenarios": [
+    {
+      "id": "prerequis",
+      "title": "Prérequis communs (tous scénarios)",
+      "points": [
+        "Un build PPSSPP capable de jouer en ligne (à partir de la version 1.1.1).",
+        "La MÊME version de PPSSPP pour tous les joueurs — et le même type d'exécutable : mélanger 32 bits et 64 bits est une cause classique de désynchronisation.",
+        "Le jeu dans la MÊME version régionale pour tout le monde : une copie européenne (ULES01505) ne peut pas se connecter à une copie nord-américaine (ULUS10566). La communauté Discord joue sur la version nord-américaine (ULUS10566). En cas de doute, le code s'affiche en haut de la fenêtre de l'émulateur.",
+        "Réglez vos contrôles et vos options graphiques avant de jouer.",
+        "Votre sauvegarde personnelle peut être réutilisée avec le pack tournoi : copiez le dossier ppsspp/memstick/PSP/SAVEDATA/ULUS10566GameDataxx (ou ULES01505… pour l'Europe) vers le même chemin du pack."
+      ]
+    },
+    {
+      "id": "pc-pc",
+      "title": "PC ↔ PC — Radmin ou Hamachi (voie principale)",
+      "points": [
+        "Radmin est aujourd'hui le moyen principal de connexion de la communauté Discord ; Hamachi fonctionne de façon très similaire.",
+        "Installez et lancez Radmin, activez la connectivité (gros bouton), puis créez un réseau (« Create network », nom + mot de passe) et partagez les identifiants — ou rejoignez le réseau d'un autre joueur (« Join network »).",
+        "Tous les joueurs d'une session doivent être dans le même réseau Radmin ; le programme affiche alors l'IP de chacun."
+      ],
+      "sub": [
+        {
+          "title": "Réglages PPSSPP — tout le monde",
+          "points": [
+            "Onglet Networking : activez « Enable networking/WLAN ».",
+            "Cliquez plusieurs fois sur « Change MAC address » pour éviter une adresse dupliquée issue du pack tournoi.",
+            "« Port offset » : 5000, à ne jamais changer."
+          ]
+        },
+        {
+          "title": "Réglages PPSSPP — hôte (un seul par session)",
+          "points": [
+            "Activez « Enable built-in PRO ad hoc server ».",
+            "Entrez VOTRE IP Radmin dans « Change PRO ad hoc server IP address ».",
+            "Entrez dans un lobby en ligne ou le menu de group battle pour initialiser le réseau, puis communiquez votre IP aux autres joueurs."
+          ]
+        },
+        {
+          "title": "Réglages PPSSPP — invités",
+          "points": [
+            "Entrez l'IP Radmin de L'HÔTE dans « Change PRO ad hoc server IP address ».",
+            "Attendez que l'hôte soit dans la sélection de lobby, dans un lobby (Cornelia, Zanarkand…) ou qu'il ait créé une salle de group battle avant de rejoindre.",
+            "En group battle, tous les invités utilisent la même IP fournie par l'hôte."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zerotier",
+      "title": "PC ↔ PC — alternative ZeroTier One",
+      "points": [
+        "Si Radmin/Hamachi échouent sur PC, essayez ZeroTier One (attention : ces programmes peuvent entrer en conflit entre eux).",
+        "Installez ZeroTier, collez l'identifiant de réseau 8056c2e21c000001 puis « Join » : vous êtes sur le serveur earth.zerotier.net.",
+        "Votre IP ZeroTier s'affiche en bas à droite du programme (ligne « Managed IPs ») ; s'il y a un suffixe « /xx », ne PAS l'inclure dans PPSSPP.",
+        "ZeroTier tourne ensuite en arrière-plan ; appliquez les mêmes procédures hôte/invité que ci-dessus."
+      ]
+    },
+    {
+      "id": "android",
+      "title": "Android ↔ Android",
+      "points": [
+        "Prérequis : PPSSPP et ZeroTier depuis le Google Play Store, et un appareil assez puissant pour faire tourner le jeu à pleine vitesse.",
+        "La procédure est la même que sur PC (même hiérarchie hôte/invité), via ZeroTier : rejoignez le serveur 8056c2e21c58fb08, puis relevez votre IP dans « Managed IPs » (ignorez le suffixe « /xx »).",
+        "Appliquez ensuite les réglages réseau PPSSPP décrits dans la section PC ↔ PC.",
+        "Le WiFi peut induire du lag, et un appareil trop faible fera ramer le jeu."
+      ]
+    },
+    {
+      "id": "crossplay",
+      "title": "Crossplay PC ↔ Android",
+      "points": [
+        "Possible depuis PPSSPP 1.15.4. La version 1.17.1 est réputée performante (dernière version au moment de la rédaction du guide, juillet 2024).",
+        "Les DEUX plateformes doivent utiliser ZeroTier et rejoindre le serveur 8056c2e21c58fb08 (celui des joueurs Android). PC : ZeroTier depuis le site officiel et PPSSPP 1.17.1 (zip/installeur, section « previous releases ») ; Android : APK 1.17.1 et ZeroTier du Play Store.",
+        "Sur les deux plateformes, dans Settings → Tools → Developer tools → « JIT debug tools » (section general), cochez : VFPU_VEC, VFPU_MTX_VTFM, VFPU_MTX_VMSCL, VFPU_MTX_VMMUL, VFPU_MTX_VMMOV, VFPU_COMP.",
+        "Sur Android uniquement (Settings → System) : décochez « Fast memory (unstable) » et cochez « Force real clock sync (slower, less lag) ».",
+        "Terminez avec les préparatifs communs et les procédures hôte/invité ZeroTier."
+      ]
+    },
+    {
+      "id": "local",
+      "title": "Jeu local — deux instances sur un seul PC",
+      "points": [
+        "PPSSPP permet de jouer à deux sur un même ordinateur, sans Radmin/Hamachi/ZeroTier, via deux instances de l'émulateur.",
+        "Configurez d'abord vos réglages (ils serviront de base aux deux instances), activez « Enable built-in PRO ad hoc server » et mettez « localhost » comme IP du serveur ad hoc, puis fermez et relancez l'émulateur.",
+        "Lancez une seconde instance depuis le même exécutable : elle affiche « instance: 2 » entre crochets.",
+        "La seconde instance partage TOUS vos réglages : pensez à lui donner ses propres contrôles pour éviter les doubles entrées, et notez qu'elle peut ne pas avoir de son."
+      ]
+    },
+    {
+      "id": "depannage",
+      "title": "Dépannage",
+      "points": [
+        "Jeu lent, son qui craque : l'appareil peine à rendre le jeu. Baissez la résolution de rendu, désactivez le texture scaling, vérifiez que « hardware transform » est actif — et partez des réglages recommandés du site officiel de PPSSPP. Si vous avez migré le contenu d'un vieux PPSSPP, repartez d'un dossier propre (mods de textures, DLC du dossier GAME et sauvegardes peuvent être déplacés sans risque).",
+        "Connexion au lobby interminable : un réglage est faux quelque part. Si la notification « Network initialized » n'apparaît pas, l'hôte n'est pas en ligne ou ses réglages sont incorrects. Hôtes : annoncez aux autres joueurs quand vous êtes effectivement connectés."
+      ]
+    }
+  ],
+  "note": "Le multijoueur du jeu est exclusivement ad-hoc : le jeu entre PPSSPP et une PSP/Vita réelle n'est pas documenté par la communauté — la scène joue en PPSSPP contre PPSSPP."
+}

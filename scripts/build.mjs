@@ -12,6 +12,7 @@ import { renderOrganiser } from '../src/templates/organiser.mjs';
 import { renderCalendrier } from '../src/templates/calendrier.mjs';
 import { slugAnchor } from '../src/templates/helpers.mjs';
 import { renderFeralUnlock } from '../src/templates/feral-unlock.mjs';
+import { renderMultiplayer } from '../src/templates/multiplayer.mjs';
 import { speedValues } from '../src/templates/helpers.mjs';
 import { readFileSync, writeFileSync, existsSync, mkdirSync, cpSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -132,8 +133,9 @@ for (const { def, data, ed } of chars) {
   writeFileSync(join(DIST, 'characters', `${def.slug}.html`), html);
 }
 
-// Techniques
+// Techniques + Multijoueur
 writeFileSync(join(DIST, 'techniques.html'), renderTechniques(shared));
+writeFileSync(join(DIST, 'multijoueur.html'), renderMultiplayer(readJson(join(ROOT, 'data', 'editorial', '_multiplayer.json'))));
 
 // Installation (PPSSPP, PC et mobile)
 writeFileSync(join(DIST, 'install.html'), renderInstall(install));
