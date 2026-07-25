@@ -97,6 +97,24 @@ for (const c of [...CHARACTERS, ...SPECIAL]) {
   }
 }
 
+// --- 2b. Cohérence terminologique (docs/style-pass.md) ---
+// Termes bannis dans la prose éditoriale ; « finisher » est toléré uniquement
+// dans le contexte Skillchain (fichier prishe).
+const BANNED_TERMS = [
+  [/HP de branche|branche HP|HP dérivé/i, '« HP de branche » -> HP link'],
+  [/\bender(s)?\b/i, '« ender » -> attaque HP de conclusion / reformuler'],
+  [/\bmeter\b/i, '« meter » -> jauges / ressources'],
+];
+for (const f of readdirSync(join(ROOT, 'data', 'editorial')).filter((x) => x.endsWith('.json'))) {
+  const raw = readFileSync(join(ROOT, 'data', 'editorial', f), 'utf-8');
+  for (const [re, hint] of BANNED_TERMS) {
+    if (re.test(raw)) {
+      if (f === 'prishe.json' && /finisher/i.test(raw) && !re.test(raw.replace(/finisher/gi, ''))) continue;
+      warns.push(`terme banni dans ${f} : ${hint}`);
+    }
+  }
+}
+
 // --- 3. Liens externes (optionnel) ---
 if (process.argv.includes('--links')) {
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
