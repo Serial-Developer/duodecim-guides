@@ -5,13 +5,13 @@
   "overview": [
     "Shantotto est un mage de conversion et de patience : presque n'importe quelle touche se transforme en dégâts HP, et son jeu entier pivote sur Stun — instantané à 13 frames, sans dégâts, qui annule l'attaque adverse et se cancel en attaque sur hit. Les joueurs d'époque résumaient le personnage d'une formule : « Stun > n'importe quoi » — Stun > Stone au sol, Stun > Aero en l'air, Stun > Bio ou une bravery selon la situation. Ses Spirit Magic gagnent un palier de puissance et de hitbox à 2000 puis 4000 de bravery, d'où l'intérêt de sets à haute bravery de base pour rester au palier supérieur.",
     "Le passage à Duodecim l'a profondément relue, et les threads d'époque en dressent le bilan. Côté buffs : Stun enchaîne désormais dans ses attaques, Retribution traverse les gardes actives (le Delta Attack d'Exdeath, par exemple), A Couple Attacks est devenue nettement plus rapide, et toucher avec un sort accélère l'incantation des suivants — ce qui rend les chaînes complètes réalisables. Côté nerfs : le Manafont de son EX Mode a été fortement affaibli (il ne fait plus que reconstituer la bravery après une HP attack réussie, loin de l'abus permanent du premier Dissidia), Bio se réfléchit au block et Bind ne stagge plus un adversaire en pleine attaque.",
-    "Son niveau divisait la communauté d'époque : les uns la jugeaient « nerfée, mauvaise », les autres « l'un des personnages les plus redoutables » — ces derniers soulignant qu'elle était enfin utile hors EX Mode. Tous s'accordaient sur le fond : c'est le personnage de la patience par excellence, qui punit les erreurs adverses plutôt qu'il n'impose son rythme, et qui récompense l'exécution par de gros sorts mérités."
+    "Son niveau divisait la communauté d'époque : les uns la jugeaient « nerfée, mauvaise », les autres « l'un des personnages les plus redoutables » — ces derniers soulignant qu'elle était enfin utile hors EX Mode. Tous s'accordaient sur le fond : c'est le personnage de la patience par excellence, qui punit les erreurs adverses plutôt qu'il n'impose son rythme, et récompense l'exécution par de gros sorts mérités."
   ],
   "tierNote": "Classée 23e (tier B) dans la tier list compétitive 2017. La page du wiki ne fournit pas de texte d'overview permettant de contextualiser ce classement.",
   "strengths": [
     "Excellente conversion : Shantotto transforme presque n'importe quel hit en dégâts HP avec un peu d'exécution, et prolonge de manière fiable avec les assists.",
     "Forte génération d'EX Force : toutes ses HP attacks et Retribution génèrent beaucoup d'EX, encore davantage avec des combos bien exécutés.",
-    "Déni des HP attacks adverses : un adversaire empoisonné par Bio est instantanément break s'il touche Shantotto avec une HP attack ; loin de la défaite, cela le prive de fait de ses HP attacks pendant un temps.",
+    "Déni des HP attacks adverses : un adversaire empoisonné par Bio est instantanément break s'il touche Shantotto avec une HP attack ; loin de la défaite, cela le prive de fait de ses HP attacks un temps.",
     "Bon jeu de whiff punish : bonne mobilité et startup de Stun pour comboter en HP attack ; quelques outils peu conventionnels rendent les whiffs imprudents dangereux face à elle."
   ],
   "weaknesses": [
@@ -23,7 +23,7 @@
   ],
   "moveNotes": {
     "A Couple Attacks": "Combo simple de trois coups de sceptre, Melee Low en 19 frames, avec un bond en avant sur le premier hit. Le troisième hit provoque un Wall Rush et projette l'adversaire loin à l'horizontale et à faible hauteur, l'empêchant d'utiliser l'aerial recovery.",
-    "Stun": "Coup spécial Ranged Low instantané (13 frames, sa bravery la plus rapide) sans dégâts : il annule l'attaque adverse. Une attaque différente libère l'adversaire. Existe au sol et en l'air, cancelable en esquive ou en attaque sur hit — c'est l'outil de whiff punish cité dans ses forces, qui combote en HP attack.",
+    "Stun": "Coup spécial Ranged Low instantané (13 frames, sa bravery la plus rapide) sans dégâts : il annule l'attaque adverse. Une attaque différente libère l'adversaire. Existe au sol et en l'air, cancelable en esquive ou en attaque sur hit — l'outil de whiff punish cité dans ses forces, qui combote en HP attack.",
     "Bind": "Coup spécial Ranged Low lent (65 frames) qui immobilise l'adversaire ; celui-ci est libéré dès qu'un autre coup le touche. Versions sol et air.",
     "Bio": "Projectile Ranged Low (33 frames) : les ténèbres rongent l'adversaire et volent sa bravery en continu pendant une durée déterminée (4 x 11). Un adversaire empoisonné qui touche Shantotto avec une HP attack est instantanément break, ce qui permet de le dissuader d'en utiliser.",
     "Retribution": "Coup tournoyant à deux mains, Melee Mid en 41 frames, effet Chase et 90 d'EX Force — sa seule attaque melee aérienne et l'un de ses gros générateurs d'EX. Attention : elle couvre mal les flancs de Shantotto.",
@@ -96,7 +96,7 @@
   "matchups": {
     "summary": [
       "Aucun chart de matchups n'a survécu pour Shantotto (la page du wiki est un stub) : les threads d'époque raisonnent par profils d'adversaires. Contre les rushdowns qui collent (« up-in-your-face fighters »), A Couple Attacks sert de coup de dégagement — son troisième hit projette loin et bas, sans aerial recovery possible — et Stun, placé sur le startup d'une attaque adverse, retourne l'agression : c'est son meilleur argument défensif. Contre les personnages à garde active, Retribution est l'outil : elle traverse les blocks du type Delta Attack d'Exdeath.",
-      "Ses matchups difficiles découlent de ses faiblesses structurelles plus que d'adversaires nommés : tout personnage capable de punir à l'assist brute exploite le fait que presque toutes ses attaques y sont vulnérables, et quiconque la presse après une esquive profite de son absence de melee aérien rapide. Bio reste un levier à double tranchant : il dissuade les HP attacks adverses (break instantané si l'adversaire empoisonné la touche en HP), mais se réfléchit au block — les joueurs d'époque le réservaient à l'après-block ou aux hits garantis en combo."
+      "Ses matchups difficiles découlent de ses faiblesses structurelles plus que d'adversaires nommés : tout personnage punissant à l'assist brute exploite la vulnérabilité de presque toutes ses attaques, et quiconque la presse après une esquive profite de son absence de melee aérien rapide. Bio reste un levier à double tranchant : il dissuade les HP attacks adverses (break instantané si l'adversaire empoisonné la touche en HP), mais se réfléchit au block — les joueurs d'époque le réservaient à l'après-block ou aux hits garantis en combo."
     ]
   },
   "builds": {
@@ -127,7 +127,7 @@
   "communityTech": [
     {
       "title": "Shantotto chase cancel combos (Dissidia 012)",
-      "desc": "Vidéo d'époque de Michey : combos en chase cancel annotés (notations en annotations YouTube), où chaque Spirit Magic est interchangeable avec ses paliers supérieurs ou inférieurs — une des rares démonstrations filmées de la conversion qui fait sa force.",
+      "desc": "Vidéo d'époque de Michey : combos en chase cancel notés en annotations YouTube, où chaque Spirit Magic est interchangeable avec ses paliers supérieurs ou inférieurs — une des rares démonstrations filmées de la conversion qui fait sa force.",
       "source": "https://www.youtube.com/watch?v=fmezZmn7Aow",
       "date": "2011"
     },

@@ -152,7 +152,7 @@
     "Pas de section « Unique Mechanics » documentée : le Switch n'est décrit que dans l'overview et l'intro des braveries, d'où uniqueMechanics laissé à null et la mécanique traitée dans overview et gameplan.",
     "Notes d'usage détaillées absentes pour la plupart des coups : seuls Sword & Shield (version EX) et Greatsword ont de vraies notes ; le reste se limite aux descriptions du jeu et aux frame data.",
     "Le second build (« Build #2 ») est un gabarit vide ; valeurs d'assist gain absentes des tableaux de coups.",
-    "Section References vide et aucune mention communautaire datée : communityTech laissé vide.",
+    "Section References du wiki vide et aucune mention communautaire datée sur la page ; les entrées de tech communautaire viennent de la passe de sources externes.",
     "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi."
   ],
   "groupNotes": {
