@@ -4,9 +4,9 @@
   "archetype": "Combattant aérien défensif",
   "overview": [
     "Kain est un combattant aérien de courte portée doté d'une mobilité verticale exceptionnelle. Il dispose d'un air dash homing unique, exécutable après ses braveries de mêlée. Sa défense aérienne est de tout premier ordre : ses air jumps et ses Precision Jumps sont parmi les meilleurs du jeu, et sa fall speed rapide rend ses air dodges très sûrs. Ses attaques aériennes sortent vite et couvrent bien les angles diagonaux, ce qui sert idéalement un style orienté punish défensif.",
-    "Quand Kain touche, il peut modifier la direction du knockback grâce à ses follow-ups directionnels, et convertir via des solo combos peu nombreux mais très rentables. Son wall carry est excellent grâce aux loops de Lance Barrage et à ses HP attacks aériennes dévastatrices. Malgré une ATK de base moyenne, ses dégâts réels sont bien supérieurs en pratique : combos, coups critiques et forte base damage sur ses coups à Wall Rush comme Rising Drive et Sky Rave. Au sol, il contrôle l'espace aérien avec son emblématique Jump et peut ralentir le rythme à tout moment.",
-    "Ses limites tiennent à une offense sans réel point fort : ses braveries aériennes ne sont pas de premier plan pour le rushdown. Il peut poke, mais tous ses coups sont un peu plus lents que la moyenne, Kain ne se déplace pas pendant leur startup et leur tracking est linéaire dans une seule direction. Sa recovery relativement lente l'expose au whiff punish à courte portée. Il dépend donc de timing mixups pour ne pas être bloqué, et ne peut pas toujours arrêter les déplacements rapides. Ses rares projectiles sont télégraphiés ou risqués pour poke à travers les pièges, comme le Knight's Lance chargé d'Ultimecia ou le Thunder Crest de The Emperor.",
-    "En compétition, Kain est généralement classé en mid tier. Son style défensif fonctionne de façon fiable contre une grande variété de personnages : il évite bien les dégâts en l'air et peut passer en force avec des Jumps chargés au sol. Explosif dès qu'il place un combo propre, il peine toutefois à forcer des ouvertures contre les adversaires défensifs, et son remplissage de jauge d'assist est un peu lent — surtout en petite arène sous pression. Dans un jeu où le jeu défensif est roi, Kain reste un personnage compétent, au moveset assez direct et aux dégâts élevés."
+    "Sur hit, ses follow-ups directionnels modifient la direction du knockback et convertissent via des solo combos peu nombreux mais très rentables. Son wall carry est excellent grâce aux loops de Lance Barrage et à ses HP attacks aériennes dévastatrices. Malgré une ATK de base moyenne, ses dégâts réels sont bien supérieurs : combos, critiques et forts dégâts de base sur ses coups à Wall Rush comme Rising Drive et Sky Rave. Au sol, il contrôle l'espace aérien avec son emblématique Jump et peut ralentir le rythme à tout moment.",
+    "Ses limites tiennent à une offense sans réel point fort : ses braveries aériennes ne sont pas de premier plan pour le rushdown. Il peut poke, mais tous ses coups sont un peu plus lents que la moyenne, sans déplacement pendant le startup et au tracking linéaire dans une seule direction. Sa recovery relativement lente l'expose au whiff punish à courte portée. Il dépend donc de timing mixups pour ne pas être bloqué et n'arrête pas toujours les déplacements rapides. Ses rares projectiles sont télégraphés ou risqués pour poke à travers les pièges, comme le Knight's Lance chargé d'Ultimecia ou le Thunder Crest de The Emperor.",
+    "En compétition, Kain est généralement classé en mid tier. Son style défensif fonctionne de façon fiable contre une grande variété de personnages : il évite bien les dégâts en l'air et passe en force avec des Jumps chargés au sol. Explosif dès qu'il place un combo propre, il peine toutefois à forcer des ouvertures contre les adversaires défensifs, et son remplissage de jauge d'assist est un peu lent — surtout en petite arène sous pression. Dans un jeu où la défense est reine, Kain reste un personnage compétent, au moveset direct et aux dégâts élevés."
   ],
   "tierNote": "Classé B (17e sur 30) dans la tier list 2017, ce qui rejoint l'overview : un personnage régulièrement rangé en mid tier, fiable défensivement mais sans atout offensif marquant.",
   "strengths": [
@@ -14,14 +14,14 @@
     "Attaques aériennes rapides couvrant bien les diagonales, parfaites pour un jeu de punish.",
     "Air dash homing unique après les braveries de mêlée (Air Dash Cancel).",
     "Wall carry élevé via les loops de Lance Barrage et des HP aériens très puissants (Rising Drive, Sky Rave).",
-    "Dégâts pratiques bien supérieurs à son ATK de base moyenne grâce aux combos, aux critiques et à la forte base damage de ses coups à Wall Rush.",
+    "Dégâts pratiques bien supérieurs à son ATK de base moyenne grâce aux combos, aux critiques et aux forts dégâts de base de ses coups à Wall Rush.",
     "Jump contrôle l'espace aérien depuis le sol et ralentit le rythme à la demande, avec de l'invincibilité en montée."
   ],
   "weaknesses": [
     "Braveries aériennes en deçà des meilleures pour le rushdown : startup plus lent, aucun déplacement pendant le startup, tracking linéaire.",
     "Recovery relativement lente : vulnérable au whiff punish à courte portée.",
     "Dépend de timing mixups pour éviter le block et ne stoppe pas toujours les déplacements rapides.",
-    "Peu de projectiles, tous télégraphiés ou risqués face aux pièges (Knight's Lance chargé d'Ultimecia, Thunder Crest de The Emperor).",
+    "Peu de projectiles, tous télégraphés ou risqués face aux pièges (Knight's Lance chargé d'Ultimecia, Thunder Crest de The Emperor).",
     "Peine à forcer des ouvertures contre les adversaires défensifs.",
     "Remplissage de jauge d'assist un peu lent, problématique surtout en petite arène sous pression."
   ],

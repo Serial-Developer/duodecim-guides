@@ -1,11 +1,11 @@
 {
   "title": "Savedata prêtes pour les tournois",
   "lede": "La communauté Discord DISSIDIA entretient des sauvegardes complètes du jeu, avec des builds déjà montés pour chaque ruleset courant : de quoi jouer en ligne ou s'inscrire à un tournoi sans passer des heures dans les menus de customisation.",
-  "avertissement": "Toutes ces sauvegardes sont prévues pour la version nord-américaine du jeu (ULUS10566) — la version utilisée par la communauté en ligne. Elles sont hébergées et maintenues par la communauté Discord DISSIDIA (relevés de Muggshotter, mis à jour jusqu'en 2026).",
+  "avertissement": "Toutes ces sauvegardes sont prévues pour la version nord-américaine du jeu (ULUS10566), celle de la communauté en ligne. Elles sont hébergées et maintenues par la communauté Discord DISSIDIA (relevés de Muggshotter, mis à jour jusqu'en 2026).",
   "saves": [
     {
       "name": "Online play starter pack",
-      "desc": "Le pack tout-en-un de la communauté (version 2026) : il ne contient pas le jeu, mais tout le reste — PPSSPP 1.19.3 (64 bits), une sauvegarde 100 % avec des builds personnalisés prêts pour le jeu en ligne, les DLC officiels, des mods de costumes et de musiques créés par des fans, l'installateur Radmin VPN pour PC et ZeroTier One pour le crossplay mobile.",
+      "desc": "Le pack tout-en-un de la communauté (version 2026) : pas le jeu, mais tout le reste — PPSSPP 1.19.3 (64 bits), une sauvegarde 100 % avec des builds personnalisés prêts pour le jeu en ligne, les DLC officiels, des mods de costumes et de musiques créés par des fans, l'installateur Radmin VPN pour PC et ZeroTier One pour le crossplay mobile.",
       "url": "https://drive.google.com/file/d/1AJNu3VWD7I6s04ebhYe4aCKN3JOIaIj3/view",
       "pour": "Débuter en ligne sans rien configurer"
     },
@@ -39,7 +39,7 @@
     "note": "Pour le transfert des fichiers vers un téléphone, la marche à suivre est détaillée sur la page Installer sur PPSSPP."
   },
   "comprendre": {
-    "texte": "Pour comprendre les builds contenus dans ces sauvegardes — Damage, Side by Side, EX, EX Core, Bravery Boost on Dodge/Block, Hybrid — le wiki documente les archétypes et le rôle de chaque famille d'accessoires dans son guide de customisation pour le jeu en ligne.",
+    "texte": "Pour comprendre les builds de ces sauvegardes — Damage, Side by Side, EX, EX Core, Bravery Boost on Dodge/Block, Hybrid — le wiki documente les archétypes et le rôle de chaque famille d'accessoires dans son guide de customisation pour le jeu en ligne.",
     "source": "https://dissidia.wiki/Customisation_for_Online_Battles"
   },
   "sources": [

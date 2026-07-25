@@ -34,7 +34,7 @@
       "source": "https://dissidia.wiki/Japan_Ranked_(DDFF)",
       "sourceLabel": "Page du ruleset sur dissidia.wiki",
       "summary": [
-        "Ruleset de la communauté japonaise, pensé comme un ladder permanent : sélection de stages réduite, loadout d'équipement imposé et quasi toutes les extra abilities interdites. Pas de meter depletion, et une grosse prime aux personnages qui convertissent leurs combos en bravery et en EX via les assists — Garland, Sephiroth, Lightning et Gilgamesh y prospèrent."
+        "Ruleset de la communauté japonaise, pensé comme un ladder permanent : sélection de stages réduite, loadout d'équipement imposé et quasi toutes les extra abilities interdites. Pas de depletion de jauges, et une grosse prime aux personnages qui convertissent leurs combos en bravery et en EX via les assists — Garland, Sephiroth, Lightning et Gilgamesh y prospèrent."
       ],
       "points": [
         "Tous les personnages autorisés, y compris Feral Chaos — qui n'a pas le droit de débloquer les jauges EX et d'assist.",
@@ -50,7 +50,7 @@
       "source": "https://dissidia.wiki/Tier_List_(Dissidia_012)",
       "sourceLabel": "Tier list issue du circuit 2017",
       "summary": [
-        "Deux autres rulesets circulent dans la communauté : les « 2017 Tournament Rules », base du circuit dont est issue la tier list de référence du site, et les « Modern Alternate Rules ». Leurs textes complets vivaient sur des pages du wiki et le bot du Discord ; les pages n'ont pas été archivées, mais des sauvegardes d'exemples de builds conformes à chacun sont disponibles sur la page Savedata."
+        "Deux autres rulesets circulent dans la communauté : les « 2017 Tournament Rules », base du circuit dont est issue la tier list de référence du site, et les « Modern Alternate Rules ». Leurs textes complets vivaient sur des pages du wiki et le bot du Discord ; les pages n'ont pas été archivées, mais des sauvegardes d'exemples de builds conformes à chacun sont sur la page Savedata."
       ],
       "points": []
     },
@@ -60,7 +60,7 @@
       "source": "https://www.start.gg/tournament/dissent-folk/details",
       "sourceLabel": "Exemple : règlement de DISSent Folk (2025)",
       "summary": [
-        "Les tournois récents partent du ruleset moderne et l'ajustent édition par édition. Tendances observées : Feral Chaos réadmis mais privé d'EX et d'assist (DISSent Folk) là où il était banni ; infinis par répétition assouplis de deux à trois boucles ; Dream's End rejoint les stages bannis ; la clause des gentlemen se formalise (accord public dans le thread du tournoi) ; et les éditions 2026 bannissent l'accessoire MS Prima et l'assist depletion. La variante « 012 Ranked » d'avril 2024 montre l'autre voie : le loadout Japan Ranked avec Dismay Shock à la place de Green Drop pour réintroduire une légère EX depletion, et les counter summons obligatoires."
+        "Les tournois récents partent du ruleset moderne et l'ajustent édition par édition. Tendances observées : Feral Chaos réadmis mais privé d'EX et d'assist (DISSent Folk) là où il était banni ; infinis par répétition assouplis de deux à trois boucles ; Dream's End rejoint les stages bannis ; la clause des gentlemen se formalise (accord public dans le thread du tournoi) ; et les éditions 2026 bannissent l'accessoire MS Prima et la depletion de la jauge d'assist. La variante « 012 Ranked » d'avril 2024 montre l'autre voie : le loadout Japan Ranked avec Dismay Shock à la place de Green Drop pour réintroduire une légère depletion de la jauge EX, et les counter summons obligatoires."
       ],
       "points": []
     }
@@ -83,7 +83,7 @@
           "label": "Bracket complet (Challonge)"
         }
       ],
-      "notes": "Ruleset des éditions 2026 : pas d'infinis (une répétition), pas d'invocations, pas de multi-hit chase, Bonecrusher/Rebellious Soul et Feral Chaos bannis, assist depletion interdite, MS Prima banni (nouveauté), sans Dave's Stupid Rule. Stages bannis : Phantom Train, The Rift, Orphan's Cradle, Ultimecia's Castle, Crystal Tower, Omegas. WheelzZzzz l'emporte invaincu — 3-1 en grande finale contre Pastulio814, sorti vainqueur du bracket des perdants face à Mako_Tsunami. Le bracket Challonge est resté affiché « en cours », l'organisateur ne l'ayant pas formellement clôturé, mais toutes les rencontres sont jouées.",
+      "notes": "Ruleset des éditions 2026 : pas d'infinis (une répétition), pas d'invocations, pas de multi-hit chase, Bonecrusher/Rebellious Soul et Feral Chaos bannis, depletion de la jauge d'assist interdite, MS Prima banni (nouveauté), sans Dave's Stupid Rule. Stages bannis : Phantom Train, The Rift, Orphan's Cradle, Ultimecia's Castle, Crystal Tower, Omegas. WheelzZzzz l'emporte invaincu — 3-1 en grande finale contre Pastulio814, sorti vainqueur du bracket des perdants face à Mako_Tsunami. Le bracket Challonge est resté affiché « en cours », l'organisateur ne l'ayant pas formellement clôturé, mais toutes les rencontres sont jouées.",
       "iso": "2026-06-20"
     },
     {
@@ -151,7 +151,7 @@
           "label": "VODs du tournoi (YouTube)"
         }
       ],
-      "notes": "Japan Ranked modifié : le loadout Imp's Blessing avec Dismay Shock à la place de Green Drop — une légère EX depletion réintroduite —, counter summons obligatoires, et une sélection de premiers stages élargie (dont Edge of Madness et Crystal World).",
+      "notes": "Japan Ranked modifié : le loadout Imp's Blessing avec Dismay Shock à la place de Green Drop — une légère depletion de la jauge EX réintroduite —, counter summons obligatoires, et une sélection de premiers stages élargie (dont Edge of Madness et Crystal World).",
       "iso": "2024-04-06"
     },
     {
@@ -195,7 +195,7 @@
           "label": "Règlement et détails (start.gg)"
         }
       ],
-      "notes": "Variante du ruleset moderne : PPSSPP 1.1.1 ou 1.12.3, meter depletion d'assist bannie (set Lufenia Judgement, Battle Hammer), un seul hit de chase par combo, infinis limités à deux boucles.",
+      "notes": "Variante du ruleset moderne : PPSSPP 1.1.1 ou 1.12.3, depletion de la jauge d'assist bannie (set Lufenia Judgement, Battle Hammer), un seul hit de chase par combo, infinis limités à deux boucles.",
       "iso": "2022-10-02"
     },
     {
@@ -275,7 +275,7 @@
   ],
   "limits": [
     "La page des rulesets communautaires de dissidia.wiki (catégorie « Dissidia 012 Community Rules ») n'a pas été archivée : seul Japan Ranked a survécu en ligne. Les textes complets des « 2017 Tournament Rules » et « Modern Alternate Rules » ne sont connus que par les sauvegardes d'exemples de builds partagées sur le Discord.",
-    "Des tournois d'époque (majors Dissidia Forums antérieurs à Festivo, tournois GameFAQs comme ScrubCity ou le Test Team Tournament) sont attestés par des threads mais leurs brackets et règlements n'ont pas pu être retrouvés en ligne.",
+    "Des tournois d'époque (majors Dissidia Forums antérieurs à Festivo, tournois GameFAQs comme ScrubCity ou le Test Team Tournament) sont attestés par des threads, mais leurs brackets et règlements n'ont pas été retrouvés en ligne.",
     "Les annonces de tournois du Discord DISSIDIA (canal announcements, consulté en juillet 2026) sont la source des éditions 2024-2026 ; les canaux d'événements dédiés peuvent contenir des éditions supplémentaires non recensées ici.",
     "Cette page recense les tournois passés documentés ; un planning des tournois à venir est prévu séparément."
   ]
