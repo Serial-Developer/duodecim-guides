@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Multijoueur — Dissidia 012 [duodecim]</title>
+<title>Jouer en multijoueur — Dissidia 012 [duodecim]</title>
 <meta name="description" content="Configurer le multijoueur de Dissidia 012 [duodecim] : PPSSPP en ligne (Radmin, ZeroTier), Android, crossplay PC-Android, deux instances locales — un scénario par section.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,14 +15,66 @@
 
 </head>
 <body>
-<nav class="guide-top" style="display:block" aria-label="Scénarios"><div class="chips-nav">
-<a href="index.html">← Sélection</a>
-<a href="#prerequis">Prérequis communs (tous scénarios)</a><a href="#pc-pc">PC ↔ PC</a><a href="#zerotier">PC ↔ PC</a><a href="#android">Android ↔ Android</a><a href="#crossplay">Crossplay PC ↔ Android</a><a href="#local">Jeu local</a><a href="#depannage">Dépannage</a>
-</div></nav>
+<header class="site-header">
+<a class="sh-brand" href="index.html">Dissidia 012 <span class="gold">[duodecim]</span> <span class="sh-sub">guides compétitifs</span></a>
+<nav class="sh-groups" aria-label="Navigation du site">
+<div class="sh-group">
+<span class="sh-group-label">Données du jeu</span>
+<div class="sh-drop">
+<a href="index.html">Personnages</a>
+<a href="characters/aerith.html">Assist : Aerith</a>
+<a href="obtenir-feral-chaos.html">Obtenir Feral Chaos</a>
+<a href="techniques.html">Techniques &amp; glitches</a>
+</div>
+</div>
+<div class="sh-group is-active">
+<span class="sh-group-label">Jouer à Dissidia</span>
+<div class="sh-drop">
+<a href="install.html">Installer sur PPSSPP</a>
+<a href="savedata.html">Savedata prêtes à jouer</a>
+<a href="multijoueur.html" aria-current="page">Jouer en multijoueur</a>
+</div>
+</div>
+<div class="sh-group">
+<span class="sh-group-label">Les tournois</span>
+<div class="sh-drop">
+<a href="participer.html">Participer aux tournois</a>
+<a href="organiser.html">Organiser un tournoi</a>
+<a href="futurs-tournois.html">Futurs tournois</a>
+<a href="tournois.html">Tournois passés</a>
+<a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">Tier list tournoi 2017<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a href="https://replaytheater.app/?game=d012" target="_blank" rel="external noopener">Vidéos de matchs<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</nav>
+<details class="sh-drawer">
+<summary aria-label="Menu"><span class="sh-burger" aria-hidden="true"></span></summary>
+<nav class="sh-panel" aria-label="Navigation du site (mobile)">
+<p class="sh-cat">Données du jeu</p>
+<a href="index.html">Personnages</a>
+<a href="characters/aerith.html">Assist : Aerith</a>
+<a href="obtenir-feral-chaos.html">Obtenir Feral Chaos</a>
+<a href="techniques.html">Techniques &amp; glitches</a>
+<p class="sh-cat">Jouer à Dissidia</p>
+<a href="install.html">Installer sur PPSSPP</a>
+<a href="savedata.html">Savedata prêtes à jouer</a>
+<a href="multijoueur.html" aria-current="page">Jouer en multijoueur</a>
+<p class="sh-cat">Les tournois</p>
+<a href="participer.html">Participer aux tournois</a>
+<a href="organiser.html">Organiser un tournoi</a>
+<a href="futurs-tournois.html">Futurs tournois</a>
+<a href="tournois.html">Tournois passés</a>
+<a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">Tier list tournoi 2017<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a href="https://replaytheater.app/?game=d012" target="_blank" rel="external noopener">Vidéos de matchs<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</nav>
+</details>
+</header>
 <main class="wrap" style="padding-bottom:3rem">
 <h1 style="color:var(--gold)">Jouer en multijoueur</h1>
 <p>Dissidia 012 ne propose que du multijoueur ad-hoc (WiFi local) : pour jouer à distance, la scène passe par l'émulateur PPSSPP et un programme de réseau virtuel (Radmin, Hamachi ou ZeroTier One) qui fait croire au jeu que les joueurs sont sur le même réseau local. Cette page synthétise le guide de la communauté ; chaque scénario a sa section.</p>
 <p>Point commun à tous les scénarios en ligne : la latence est reine. En dessous de ~50 ms de ping, le jeu est fluide ; au-delà d'environ 120 ms, il commence à ralentir et à geler par à-coups, avec des entrées non enregistrées.</p>
+<p class="mv-desc">Aller au scénario : <a href="#prerequis">Prérequis communs</a> · <a href="#pc-pc">PC ↔ PC</a> · <a href="#zerotier">PC ↔ PC</a> · <a href="#android">Android ↔ Android</a> · <a href="#crossplay">Crossplay PC ↔ Android</a> · <a href="#local">Jeu local</a> · <a href="#depannage">Dépannage</a></p>
+<p class="mv-desc">Pas encore installé ? Commencez par <a href="install.html">Installer Dissidia 012 sur PPSSPP</a>, et récupérez une <a href="savedata.html">savedata prête à jouer</a>.</p>
 <article class="card" id="prerequis">
 <h2 style="margin-top:0.2rem">Prérequis communs (tous scénarios)</h2>
 <ul><li>Un build PPSSPP capable de jouer en ligne (à partir de la version 1.1.1).</li><li>La MÊME version de PPSSPP pour tous les joueurs — et le même type d'exécutable : mélanger 32 bits et 64 bits est une cause classique de désynchronisation.</li><li>Le jeu dans la MÊME version régionale pour tout le monde : une copie européenne (ULES01505) ne peut pas se connecter à une copie nord-américaine (ULUS10566). La communauté Discord joue sur la version nord-américaine (ULUS10566). En cas de doute, le code s'affiche en haut de la fenêtre de l'émulateur.</li><li>Réglez vos contrôles et vos options graphiques avant de jouer.</li><li>Votre sauvegarde personnelle peut être réutilisée avec le pack tournoi : copiez le dossier ppsspp/memstick/PSP/SAVEDATA/ULUS10566GameDataxx (ou ULES01505… pour l'Europe) vers le même chemin du pack.</li></ul>
@@ -56,11 +111,13 @@
 
 </article>
 <div class="banner info">Le multijoueur du jeu est exclusivement ad-hoc : le jeu entre PPSSPP et une PSP/Vita réelle n'est pas documenté par la communauté — la scène joue en PPSSPP contre PPSSPP.</div>
-<p class="sources-list">Source : <a href="https://dissidia.wiki/Online_Setup_(PPSSPP)" rel="external noopener">https://dissidia.wiki/Online_Setup_(PPSSPP)</a> (dissidia.wiki, CC BY 4.0).</p>
+<p class="sources-list">Source : <a href="https://dissidia.wiki/Online_Setup_(PPSSPP)" target="_blank" rel="external noopener">https://dissidia.wiki/Online_Setup_(PPSSPP)</a> (dissidia.wiki, CC BY 4.0).</p>
 </main>
 <footer class="site"><div class="wrap">
-<p>Site de fans non commercial. Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011).</p>
-<p>Contenu textuel adapté et traduit de <a href="https://dissidia.wiki" rel="external noopener">dissidia.wiki</a> (licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="external noopener">CC BY 4.0</a>). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+<p class="foot-line">Site de fans non commercial — personnages et artworks © Square Enix. Textes adaptés de <a href="https://dissidia.wiki" target="_blank" rel="external noopener">dissidia.wiki</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noopener">CC BY 4.0</a>) et du <a href="https://finalfantasy.fandom.com" target="_blank" rel="external noopener">Final Fantasy Wiki</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external noopener">CC BY-SA 3.0</a>).</p>
+<details class="foot-more"><summary>Détail des licences et des sources</summary>
+<p>Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011). Contenu textuel adapté et traduit de dissidia.wiki (CC BY 4.0) ; compléments de moveset (rôles et jobs par coup, coups spéciaux) adaptés du Final Fantasy Wiki (CC BY-SA 3.0). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" target="_blank" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+</details>
 </div></footer>
 
 </body>
