@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T21:04:22.683Z",
+  "generated": "2026-07-25T21:53:19.539Z",
   "license": "CC BY 4.0 — dissidia.wiki",
   "sources": [
     "https://dissidia.wiki/Abilities_(Dissidia_012)"
@@ -1915,6 +1915,102 @@
           ]
         }
       ]
+    }
+  ],
+  "exclusiveGroups": [
+    {
+      "id": "basic-omni-air-dash",
+      "abilities": [
+        "omni-air-dash",
+        "omni-air-dash-plus"
+      ],
+      "reason": "« Omni Air Dash » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "basic-omni-ground-dash",
+      "abilities": [
+        "omni-ground-dash",
+        "omni-ground-dash-plus"
+      ],
+      "reason": "« Omni Ground Dash » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "basic-multi-air-slide",
+      "abilities": [
+        "multi-air-slide",
+        "multi-air-slide-plus"
+      ],
+      "reason": "« Multi Air Slide » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "basic-speed-boost",
+      "abilities": [
+        "speed-boost",
+        "speed-boost-plus",
+        "speed-boost-plus-plus"
+      ],
+      "reason": "« Speed Boost » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "basic-jump-boost",
+      "abilities": [
+        "jump-boost",
+        "jump-boost-plus",
+        "jump-boost-plus-plus"
+      ],
+      "reason": "« Jump Boost » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "basic-jump-times-boost",
+      "abilities": [
+        "jump-times-boost",
+        "jump-times-boost-cp40",
+        "jump-times-boost-plus-plus"
+      ],
+      "reason": "« Jump Times Boost » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "support-auto-ex-command",
+      "abilities": [
+        "auto-ex-command",
+        "auto-ex-command-omega"
+      ],
+      "reason": "« Auto EX Command » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "support-auto-ex-defense",
+      "abilities": [
+        "auto-ex-defense",
+        "auto-ex-defense-omega"
+      ],
+      "reason": "« Auto EX Defense » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "extra-concentration",
+      "abilities": [
+        "concentration",
+        "concentration-plus",
+        "concentration-plus-plus"
+      ],
+      "reason": "« Concentration » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "extra-achy",
+      "abilities": [
+        "achy",
+        "achy-plus"
+      ],
+      "reason": "« Achy » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
     }
   ],
   "entries": [

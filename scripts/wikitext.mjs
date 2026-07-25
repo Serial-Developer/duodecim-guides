@@ -52,13 +52,24 @@ export function plain(str) {
   return s.replace(/[ \t]+/g, ' ').replace(/\s*·\s*·\s*/g, ' · ').trim().replace(/^·\s*|\s*·$/g, '').trim();
 }
 
-// Retire un préfixe d'attributs de cellule (`style="..."|contenu`, `width=5%|contenu`).
-function stripCellAttrs(cell) {
+// Sépare le préfixe d'attributs (`style="..."|contenu`, `width=5%|contenu`) du
+// contenu, et remonte le colspan : une cellule qui couvre N colonnes est répétée
+// N fois, sinon l'en-tête et les lignes de données se désalignent (la table des
+// accessoires « Trade » a une colonne Description/Effect en colspan=2, ce qui
+// décalait la lecture du rang).
+function splitCell(cell) {
   const parts = splitTop(cell, '|');
-  if (parts.length < 2) return cell.trim();
-  const head = parts[0];
-  const isAttrs = /^[^[{]*=/.test(head) && !/\[\[|\{\{/.test(head);
-  return (isAttrs ? parts.slice(1).join('|') : cell).trim();
+  let attrs = '';
+  let content = cell;
+  if (parts.length >= 2) {
+    const head = parts[0];
+    if (/^[^[{]*=/.test(head) && !/\[\[|\{\{/.test(head)) {
+      attrs = head;
+      content = parts.slice(1).join('|');
+    }
+  }
+  const m = /colspan\s*=\s*["']?(\d+)/i.exec(attrs);
+  return { content: content.trim(), span: m ? Math.max(1, Number(m[1])) : 1 };
 }
 
 // Extrait toutes les tables d'une page wikitext.
@@ -90,7 +101,10 @@ export function parseTables(wikitext) {
       if (!cur.rows.length) cur.rows.push([]);
       const row = cur.rows[cur.rows.length - 1];
       const sep = t.startsWith('!') ? '!!' : '||';
-      for (const cell of splitTop(t.slice(1), sep)) row.push(stripCellAttrs(cell));
+      for (const cell of splitTop(t.slice(1), sep)) {
+        const { content, span } = splitCell(cell);
+        for (let k = 0; k < span; k++) row.push(content);
+      }
       continue;
     }
     // Continuation d'une cellule multi-lignes.

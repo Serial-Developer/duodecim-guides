@@ -9,7 +9,27 @@ import { CHARACTERS } from './characters.mjs';
 
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf-8'));
 
-const MOVE_COLS = ['id', 'name', 'cp', 'cpMastered', 'damage', 'startup', 'type', 'priority', 'effects', 'variants'];
+const MOVE_COLS = ['id', 'name', 'cp', 'cpMastered', 'damage', 'startup', 'type', 'priority', 'effects', 'variants', 'style', 'parent'];
+
+// Rapproche « Howling Fist (One) » de « Howling Fists (Two) » : le wiki n'est pas
+// constant sur le pluriel, et l'enchaînement doit se rattacher à son coup d'origine.
+// Deux formes de `variants` cohabitent dans les données :
+//  - de vraies versions d'un même coup (« Normal », « Charged ») : le coup porte
+//    alors ses propres dégâts, c'est un coup équipable normal ;
+//  - des noms de colonnes (« CP (Mastered) », « Cancels »…) : la ligne n'est
+//    qu'un en-tête, et les lignes suivantes sont ses déclinaisons.
+// Même critère que src/templates/guide.mjs, pour que les deux rendus concordent.
+const COLUMN_LABEL = /multiplier|startup|cancel|assist|CP|force|priorit|effect|position|spawn|^type$|^version$/i;
+const isHeaderRow = (m) => Boolean(m.variants && m.variants.length > 1 && m.variants.some((v) => COLUMN_LABEL.test(String(v))));
+
+const followKey = (name) => String(name || '')
+  .replace(/\((one|two)\)/ig, '')
+  .toLowerCase()
+  .replace(/[^a-z ]/g, ' ')
+  .split(/\s+/)
+  .filter(Boolean)
+  .map((w) => w.replace(/s$/, ''))
+  .join(' ');
 const EQUIP_COLS = ['uid', 'name', 'slot', 'category', 'level', 'stats', 'effects', 'combination', 'exclusiveTo', 'labyrinth', 'documented'];
 const ACC_COLS = ['uid', 'name', 'category', 'boosterType', 'effect', 'requirements', 'multiplier', 'acquired', 'rank', 'breakable', 'legal', 'documented', 'ill'];
 
@@ -50,7 +70,7 @@ function table(items, cols) {
   };
 }
 
-export function buildDataBundle(ROOT) {
+export function buildDataBundle(ROOT, editorial = null) {
   const dir = join(ROOT, 'data', 'build');
   const equipment = readJson(join(dir, 'equipment.json'));
   const accessories = readJson(join(dir, 'accessories.json'));
@@ -89,7 +109,7 @@ export function buildDataBundle(ROOT) {
         for (const m of group.moves || []) {
           if (!m.name) continue;
           const cp = parseMoveCp(m.cp);
-          if (m.variants && m.variants.length > 1) {
+          if (isHeaderRow(m)) {
             parent = {
               id: `${kind}:${key}:${m.name}`,
               name: m.name,
@@ -120,14 +140,47 @@ export function buildDataBundle(ROOT) {
             priority: m.priority || '',
             effects: m.effects || '',
             variants: [],
+            style: m.style || null,
           });
         }
         for (const m of moves) m.variants = m.variants.length ? m.variants.join(' | ') : '';
         // L'intro n'est affichée qu'en première ligne : inutile d'embarquer la suite.
         const intro = group.intro ? group.intro.split('\n')[0].slice(0, 260) : null;
-        if (moves.length) groups.push({ key, intro, moves: table(moves, MOVE_COLS) });
+        if (moves.length) groups.push({ key, intro, moves, followUp: /^follow-?ups?$/i.test(key) });
       }
-      if (groups.length) attacks[kind] = groups;
+
+      // Un groupe nommé qui cohabite avec « Ground » et « Aerial » est un
+      // paradigme, pas une posture : ses coups s'utilisent au sol comme en l'air
+      // (le Medic de Lightning). On les verse donc dans les deux postures, où ils
+      // occupent leurs propres emplacements.
+      const STANCES = ['ground', 'aerial'];
+      const hasStances = STANCES.every((s) => groups.some((g) => g.key === s));
+      if (hasStances) {
+        for (const g of groups.filter((x) => !STANCES.includes(x.key) && x.key !== 'main' && !x.followUp)) {
+          for (const stance of STANCES) {
+            const target = groups.find((x) => x.key === stance);
+            for (const m of g.moves) {
+              target.moves.push({ ...m, id: `${kind}:${stance}:${m.name}`, style: g.key });
+            }
+          }
+          g.moves = [];
+        }
+      }
+
+      // Un enchaînement prolonge un coup et n'occupe pas d'emplacement : quand son
+      // nom désigne son origine (« (One) » → « (Two) »), on l'y rattache.
+      const parents = new Map();
+      for (const g of groups) {
+        if (g.followUp) continue;
+        for (const m of g.moves) parents.set(followKey(m.name), m.id);
+      }
+      for (const g of groups) {
+        if (!g.followUp) continue;
+        for (const m of g.moves) m.parent = parents.get(followKey(m.name)) || null;
+      }
+
+      const kept = groups.filter((g) => g.moves.length);
+      if (kept.length) attacks[kind] = kept.map((g) => ({ key: g.key, intro: g.intro, followUp: g.followUp, moves: table(g.moves, MOVE_COLS) }));
     }
 
     characters.push({
@@ -193,6 +246,21 @@ export function buildDataBundle(ROOT) {
     illegalReasons,
     equipment: table(equipment.items, EQUIP_COLS),
     accessories: table(accessoriesOut, ACC_COLS),
+    // Exclusions mutuelles : paliers dérivés du nommage du wiki + cas déclarés à
+    // la main dans l'éditorial (le wiki ne les documente pas).
+    abilityExclusions: (function () {
+      const byName = new Map();
+      for (const g of abilities.groups) for (const a of g.abilities) byName.set(a.name.toLowerCase(), a.id);
+      const declared = (editorial?.abilityExclusions || []).map((x, i) => {
+        const ids = (x.abilities || []).map((n) => {
+          const id = byName.get(String(n).toLowerCase());
+          if (!id) throw new Error(`_build-creator.json : ability inconnue dans abilityExclusions — « ${n} »`);
+          return id;
+        });
+        return { id: 'declared-' + i, abilities: ids, reason: x.reason, source: x.source };
+      });
+      return [...abilities.exclusiveGroups, ...declared];
+    })(),
     abilities: abilities.groups.map((g) => ({
       key: g.key, label: g.label,
       abilities: g.abilities.map((a) => trim(a, ['id', 'name', 'cp', 'cpMastered', 'ap', 'description', 'notes', 'only', 'statBonus', 'documented'])),

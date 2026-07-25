@@ -24,6 +24,10 @@
     { key: 'body', label: 'Corps' },
   ];
   var ACCESSORY_SLOTS = 10;
+  // Nombre d'exemplaires d'un même accessoire, selon son rang : 1 pour un rang S,
+  // 2 pour un A, 3 pour un B, sans limite pour un C. Un accessoire sans rang
+  // documenté n'est pas contraint — on le signale plutôt que de deviner.
+  var RANK_COPY_LIMIT = { S: 1, A: 2, B: 3, C: Infinity };
   var ACCESSORY_CATEGORIES = [
     { key: 'basic', label: 'Basic' },
     { key: 'booster', label: 'Booster' },
@@ -383,6 +387,19 @@
       problems.push(o + ' : la source ne documente la capacité que jusqu’à ' + D.capacity.max + ' CP, les exemplaires supplémentaires ne sont pas comptés.');
     });
 
+    // Un build importé ou reçu par lien peut dépasser la limite d'exemplaires.
+    var dejaVu = {};
+    equippedAccessories().forEach(function (a) {
+      if (dejaVu[a.uid]) return;
+      dejaVu[a.uid] = true;
+      var limite = copyLimit(a);
+      var n = copiesOf(a.uid);
+      if (limite !== null && limite !== Infinity && n > limite) {
+        problems.push(a.name + ' : ' + n + ' exemplaires équipés, ' + limite + ' au maximum pour un rang ' + a.rank + '.');
+      }
+      if (limite === null) infos.push(a.name + ' : rang non documenté, la limite d’exemplaires n’est pas vérifiée.');
+    });
+
     var illegal = [];
     equippedAccessories().forEach(function (a) { if (a.legal === false) illegal.push(a.name); });
     if (state.build.summon) {
@@ -485,45 +502,130 @@
   var GROUP_LABELS = { ground: 'Au sol', aerial: 'En l’air', main: 'Principales', followups: 'Enchaînements' };
   function groupLabel(key) { return GROUP_LABELS[key] || key; }
 
+  // Trois emplacements par catégorie d'attaque. Une catégorie est définie par le
+  // couple (sol/air, style) : les styles d'un personnage — paradigmes de
+  // Lightning, jobs de Cecil, moveset EX de Gabranth — ont chacun leurs
+  // emplacements. Les enchaînements prolongent un coup et n'en consomment pas.
+  var MAX_SLOTS = 3;
+  function poolKey(kind, groupKey, style) { return kind + '|' + groupKey + '|' + (style || ''); }
+
+  // Découpe un groupe en sous-groupes de style, dans l'ordre d'apparition.
+  function byStyle(moves) {
+    var out = [];
+    var index = {};
+    moves.forEach(function (m) {
+      var s = m.style || '';
+      if (index[s] === undefined) { index[s] = out.length; out.push({ style: m.style || null, moves: [] }); }
+      out[index[s]].moves.push(m);
+    });
+    return out;
+  }
+
+  function poolUsage(char, kind, groupKey, style) {
+    var used = 0;
+    (char.attacks[kind] || []).forEach(function (g) {
+      if (g.followUp || g.key !== groupKey) return;
+      g.moves.forEach(function (m) {
+        if ((m.style || null) !== (style || null)) return;
+        if (state.build.attacks.indexOf(m.id) !== -1) used++;
+      });
+    });
+    return used;
+  }
+
   function renderAttacks(panel) {
     var char = charBySlug[state.build.character];
     if (char.hpLinks) {
-      // La caveat n'a de sens que si le personnage en a : sinon la réponse est
-      // complète telle quelle.
       var aDesLinks = !/^no\b/i.test(char.hpLinks);
       panel.appendChild(el('p', {
         class: 'bc-note',
         text: 'HP links : ' + char.hpLinks + '.' + (aDesLinks ? ' Les sources n’indiquent pas quelles attaques s’enchaînent — l’information reste au niveau du personnage.' : ''),
       }));
     }
-    panel.appendChild(el('p', { class: 'bc-note', text: 'Le nombre d’emplacements d’attaques n’est documenté nulle part : seules les CP limitent la sélection ici.' }));
+    panel.appendChild(el('p', { class: 'bc-note', text: 'Trois emplacements par catégorie. Les enchaînements prolongent un coup et n’occupent pas d’emplacement.' }));
 
     [['bravery', 'Attaques Bravery'], ['hp', 'Attaques HP']].forEach(function (pair) {
-      var groups = char.attacks[pair[0]];
+      var kind = pair[0];
+      var groups = char.attacks[kind];
       if (!groups || !groups.length) {
         panel.appendChild(el('p', { class: 'bc-alert bc-alert-muted', text: pair[1] + ' : non documentées pour ce personnage.' }));
         return;
       }
       panel.appendChild(el('h3', { text: pair[1] }));
+
+      // Enchaînements rattachés à un coup précis, indexés par identifiant parent.
+      var byParent = {};
+      var orphans = [];
       groups.forEach(function (g) {
-        var fs = el('fieldset', { class: 'bc-group' }, [el('legend', { text: groupLabel(g.key) })]);
-        if (g.intro) fs.appendChild(el('p', { class: 'bc-note', text: g.intro.split('\n')[0] }));
-        var list = el('div', { class: 'bc-list' });
-        g.moves.forEach(function (m) { list.appendChild(attackRow(m)); });
-        fs.appendChild(list);
-        panel.appendChild(fs);
+        if (!g.followUp) return;
+        g.moves.forEach(function (m) {
+          if (m.parent) (byParent[m.parent] = byParent[m.parent] || []).push(m);
+          else orphans.push({ move: m, intro: g.intro });
+        });
       });
+
+      groups.forEach(function (g) {
+        if (g.followUp) return;
+        byStyle(g.moves).forEach(function (sub) {
+          var used = poolUsage(char, kind, g.key, sub.style);
+          var plein = used >= MAX_SLOTS;
+          var titre = groupLabel(g.key) + (sub.style ? ' — ' + sub.style : '');
+          var fs = el('fieldset', { class: 'bc-group' + (plein ? ' is-full' : '') }, [
+            el('legend', {}, [
+              el('span', { text: titre + ' ' }),
+              el('span', { class: 'bc-slots' + (plein ? ' is-full' : ''), text: used + '/' + MAX_SLOTS }),
+            ]),
+          ]);
+          if (g.intro) fs.appendChild(el('p', { class: 'bc-note', text: g.intro.split('\n')[0] }));
+          var list = el('div', { class: 'bc-list' });
+          sub.moves.forEach(function (m) {
+            list.appendChild(attackRow(m, plein));
+            var suites = byParent[m.id];
+            if (suites && suites.length) list.appendChild(followUpBranch(m, suites));
+          });
+          fs.appendChild(list);
+          panel.appendChild(fs);
+        });
+      });
+
+      // Enchaînements dont la source ne nomme pas le coup d'origine : proposés
+      // dans un bloc replié, avec l'explication du wiki.
+      if (orphans.length) {
+        var det = el('details', { class: 'bc-followups' }, [
+          el('summary', { text: 'Enchaînements (' + orphans.length + ') — sans emplacement' }),
+        ]);
+        if (orphans[0].intro) det.appendChild(el('p', { class: 'bc-note', text: orphans[0].intro.split('\n')[0] }));
+        var l = el('div', { class: 'bc-list' });
+        orphans.forEach(function (o) { l.appendChild(attackRow(o.move, false)); });
+        det.appendChild(l);
+        panel.appendChild(det);
+      }
     });
   }
 
-  function attackRow(m) {
+  // Embranchement replié sous le coup qu'il prolonge, comme dans le jeu.
+  function followUpBranch(parent, suites) {
+    var actifs = suites.filter(function (m) { return state.build.attacks.indexOf(m.id) !== -1; }).length;
+    var det = el('details', { class: 'bc-branch' }, [
+      el('summary', { text: 'Enchaînement' + (actifs ? ' (' + actifs + ' sélectionné' + (actifs > 1 ? 's' : '') + ')' : '') }),
+    ]);
+    if (actifs) det.setAttribute('open', '');
+    var l = el('div', { class: 'bc-list' });
+    suites.forEach(function (m) { l.appendChild(attackRow(m, false)); });
+    det.appendChild(l);
+    return det;
+  }
+
+  function attackRow(m, poolFull) {
     var checked = state.build.attacks.indexOf(m.id) !== -1;
-    var input = el('input', { type: 'checkbox', checked: checked });
+    var bloque = poolFull && !checked;
+    var input = el('input', { type: 'checkbox', checked: checked, disabled: bloque });
     input.addEventListener('change', function () {
       var i = state.build.attacks.indexOf(m.id);
       if (input.checked && i === -1) state.build.attacks.push(m.id);
       else if (!input.checked && i !== -1) state.build.attacks.splice(i, 1);
       markDirty();
+      renderPanel('attack');
       refresh();
     });
     var meta = [];
@@ -532,7 +634,10 @@
     if (m.type) meta.push(m.type);
     if (m.priority) meta.push(m.priority);
     if (m.variants) meta.push(m.variants);
-    var row = el('label', { class: 'bc-row' }, [
+    var row = el('label', {
+      class: 'bc-row' + (bloque ? ' is-disabled' : ''),
+      title: bloque ? 'Les trois emplacements de cette catégorie sont pris — décochez une attaque pour libérer une place.' : '',
+    }, [
       input,
       el('span', { class: 'bc-row-main' }, [
         el('span', { class: 'bc-row-name', text: m.name }),
@@ -559,14 +664,49 @@
     });
   }
 
+  // Abilities incompatibles entre elles : cocher l'une décoche l'autre.
+  function conflictsWith(id) {
+    var out = [];
+    (D.abilityExclusions || []).forEach(function (g) {
+      if (g.abilities.indexOf(id) === -1) return;
+      g.abilities.forEach(function (other) {
+        if (other !== id && state.build.abilities.indexOf(other) !== -1) out.push({ id: other, reason: g.reason });
+      });
+    });
+    return out;
+  }
+  function exclusionPartners(id) {
+    var names = [];
+    (D.abilityExclusions || []).forEach(function (g) {
+      if (g.abilities.indexOf(id) === -1) return;
+      g.abilities.forEach(function (other) {
+        if (other !== id && abilityById[other]) names.push(abilityById[other].name);
+      });
+    });
+    return names;
+  }
+
   function abilityRow(a) {
     var checked = state.build.abilities.indexOf(a.id) !== -1;
     var input = el('input', { type: 'checkbox', checked: checked });
     input.addEventListener('change', function () {
       var i = state.build.abilities.indexOf(a.id);
-      if (input.checked && i === -1) state.build.abilities.push(a.id);
-      else if (!input.checked && i !== -1) state.build.abilities.splice(i, 1);
+      if (input.checked && i === -1) {
+        var conflits = conflictsWith(a.id);
+        conflits.forEach(function (c) {
+          var k = state.build.abilities.indexOf(c.id);
+          if (k !== -1) state.build.abilities.splice(k, 1);
+        });
+        state.build.abilities.push(a.id);
+        if (conflits.length) {
+          toast(conflits.map(function (c) { return abilityById[c.id].name; }).join(', ')
+            + ' retiré' + (conflits.length > 1 ? 's' : '') + ' : ' + conflits[0].reason);
+        }
+      } else if (!input.checked && i !== -1) {
+        state.build.abilities.splice(i, 1);
+      }
       markDirty();
+      renderPanel('abilities');
       refresh();
     });
     var children = [
@@ -579,6 +719,14 @@
     ];
     var row = el('label', { class: 'bc-row' }, children);
     if (a.only) row.appendChild(el('span', { class: 'bc-tag bc-tag-info', text: 'spécifique' }));
+    var partenaires = exclusionPartners(a.id);
+    if (partenaires.length) {
+      row.appendChild(el('span', {
+        class: 'bc-tag bc-tag-excl',
+        title: 'Incompatible avec : ' + partenaires.join(', '),
+        text: '⊘',
+      }));
+    }
     if (!a.documented) row.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: 'non documenté' }));
     return row;
   }
@@ -768,13 +916,26 @@
     return box;
   }
 
+  function copyLimit(a) {
+    return a.rank && RANK_COPY_LIMIT[a.rank] !== undefined ? RANK_COPY_LIMIT[a.rank] : null;
+  }
+  function copiesOf(uid) {
+    return state.build.accessories.filter(function (u) { return u === uid; }).length;
+  }
+
   function accessoryRow(a) {
-    var count = state.build.accessories.filter(function (u) { return u === a.uid; }).length;
+    var count = copiesOf(a.uid);
+    var limite = copyLimit(a);
+    var atteinte = limite !== null && count >= limite;
     var full = state.build.accessories.indexOf(null) === -1;
+    var bloque = full || atteinte;
     var btn = el('button', {
       type: 'button',
-      class: 'bc-row bc-row-btn' + (count ? ' is-selected' : ''),
-      disabled: full,
+      class: 'bc-row bc-row-btn' + (count ? ' is-selected' : '') + (bloque ? ' is-disabled' : ''),
+      disabled: bloque,
+      title: atteinte
+        ? 'Rang ' + a.rank + ' : ' + limite + ' exemplaire' + (limite > 1 ? 's' : '') + ' au maximum.'
+        : (full ? 'Les dix emplacements d’accessoires sont pris.' : ''),
       onclick: function () {
         var free = state.build.accessories.indexOf(null);
         if (free === -1) return;
@@ -789,6 +950,13 @@
         el('span', { class: 'bc-row-meta', text: [a.category, a.boosterType, a.requirements, a.effect].filter(Boolean).join(' · ') }),
       ]),
     ]);
+    if (limite !== null && limite !== Infinity) {
+      btn.appendChild(el('span', {
+        class: 'bc-tag' + (atteinte ? ' bc-tag-warn' : ' bc-tag-info'),
+        title: 'Rang ' + a.rank + ' : ' + limite + ' exemplaire' + (limite > 1 ? 's' : '') + ' au maximum',
+        text: count + '/' + limite,
+      }));
+    }
     if (a.multiplier) btn.appendChild(el('span', { class: 'bc-tag bc-tag-mult', text: '×' + a.multiplier }));
     if (a.legal === false) btn.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(a), text: 'illégal' }));
     if (a.rank) btn.appendChild(el('span', { class: 'bc-tag bc-tag-info', title: 'Rang ' + a.rank, text: a.rank }));

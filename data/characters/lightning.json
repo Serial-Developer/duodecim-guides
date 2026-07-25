@@ -72,6 +72,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Launch",
+              "style": "Commando",
               "notes": "[Close] Sword slash sending foe flying vertically upward.\nYour fastest grounded move but still reactable. It has decent tracking and range, so it's great for a quick whiff punish or punishing back / side dodges when playing on the ground.\nPrimarily though, you will use this for following up assist combos into Flourish of Steel as your most damaging HP combo ender in terms of bravery damage."
             },
             {
@@ -86,6 +87,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Blitz",
+              "style": "Commando",
               "notes": "[Mid] Spinning slash and gun shot. Boost hit times when close.\nVery active, huge and far going spinning slash. Due to it's active frames and Melee Mid priority it can be used to bash through attacks like Squall Thunder Barret, and comboed off of with assist from both the first hit and the wallrush. Lightning can convert into a combo on guard break with assist or a very late guard break, though the wall rush shot won't come out when it does and it has to be dodge cancelled.\nThough it has fairly long recovery, it can be hard to punish so often times you could end up safe to dodge cancel out and return to neutral. Use with caution."
             },
             {
@@ -100,6 +102,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Ruinga",
+              "style": "Commando",
               "notes": "[Mid] Shoot forth pearls of light. Deal damage on hit and explosion.\nA long range orb with limited vertical tracking that upon hit wall rushes. The somewhat more useful version of Ruin, it can be used for long range whiff punishes into assist to combo off of, but you might rarely get the chance for that. Still an option that can be considered every now and then."
             },
             {
@@ -115,6 +118,7 @@
               "cp": "20 (10)",
               "name": "Thundaga",
               "context": "The first bolt appears at 27 frames. After that, bolts appear every 8 frames and stay on field for 12 frames. The last bolt appears at ~4 seconds (235F) for a total of 27 bolts.\nLightning regains control at about 100F and can dodge cancel at about 56F.",
+              "style": "Ravager",
               "notes": "[Close] Call down lightning bolts. Long duration, keeps foe at bay.\nCalls down lightning bolts in a small area around her. All Ranged Low priority, but because they spawn frequently and stay if she gets hit, most characters can't punish her staying within them. This gives Lightning time to breathe and generate bravery in Medic role, cast another Ravager spell or build assist meter with other attacks.\nThe bolts have enough hit stun to follow up with an assist during chase, but it is difficult to confirm it in the moment; The chase prompt comes out as soon as a bolt hits."
             },
             {
@@ -129,6 +133,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Fire",
+              "style": "Ravager",
               "notes": "[Long] Flame projectile. Eventual speed increase.\nLightning spawns up to 3 small projectiles in front of her, which after a short time go after the opponent at decent speed. Has very generous hit stun so if it does hit, it's easy to follow up. When used in conjunction with Thundaga and / or Watera, they can halt approaches and put the opponent on the defensive for a moment.\nCommonly sees use in some advanced ground combos, such as after wall rushing with Aerith on the ground. Similiarly, Jecht assist gives enough time and distance to set up Fire and combo afterwards. Fire > Launch is a nice extension when it's available."
             },
             {
@@ -143,6 +148,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Aerora",
+              "style": "Ravager",
               "notes": "[Mid] Launch wind projectiles. Paralyzes foe with multiple hits.\nLaunches a small projectile with slow vertical tracking at them. It's not a strong projectile in neutral, but can hit glitch into Lightning Strike. However, it is harder to land than some of the more practical link glitch combos."
             },
             {
@@ -157,6 +163,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Army of One (ground)",
+              "style": "Ravager",
               "notes": "[Close] Barrage of attacks. Generates extra EX Force.\nA tracking dash attack that leads into Chase on hit. The range is much longer than you'd expect and it can dodge punish consistently upclose. A good mixup to call out block and dodge, even if the animation is on the slower side. On hit it builds an insane amount of EX and with Chase combos even more, making this a rewarding tool when it connects.\nThe ground version sees less use due to Lightning having other moves on the ground that cover similiar situations."
             }
           ]
@@ -176,6 +183,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Blaze Rush",
+              "style": "Commando",
               "notes": "[Mid] Gun shot & charge slash. Effective against any height."
             },
             {
@@ -190,6 +198,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Smite",
+              "style": "Commando",
               "notes": "[Close] Sword slash knocking foe downwards."
             },
             {
@@ -204,6 +213,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Ruin",
+              "style": "Commando",
               "notes": "[Long] Shoot forth pearls of light. Can aim with the analog stick.\nA long range projectile that can be done up to 3 times, all hits leading to Chase. Not the greatest move to use due to being outclassed in utility by Blizzara / Watera often, but it's faster than Blizzara and can be used for a rare long range whiff punish."
             },
             {
@@ -218,6 +228,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Thunder",
+              "style": "Ravager",
               "notes": "[Close] Call down lightning bolts. Short range, quick execution.\nA character defining move. Lightning's fastest move and an incredibly oppressive tool. Deceptive range, anti airs, very fast and spammable due to having low recovery and confirmable followup opportunities. Due to it's insanely low recovery you can use this to cancel it into a neutral state and keep using it in rhythm to build assist meter quickly.\nBecause of the Ranged Low priority, Lightning can use this move without the fear of getting blocked. Even when the opponent can act immediately after a successful block, the low recovery on Thunder means many characters will struggle to retaliate consistently. This means that guarding against this move does not guarantee your turn. The low recovery time of Thunder also enables Lightning to block, dodge or do it again. Players looking to counterattack may have to guess correctly again to put her at a disadvantage.\nThe Ranged Low priority does mean however, that melee priority attacks can attack through Thunder. Dashes and attacks with magic block property such as Squall's Heel Crush can also power through this move. This risk may not be in player's favor, but they can be used to call out Lightning's timing on using it.\nThe low damage output on Thunder itself means Lightning has to land this attack multiple times before it begins to amount to anything noteworthy. However, bypassing LV2 Assist Change is possible before or after the third hit depending on the assist which can shift the momentum in Lightning's favor.\nThunder also generates 90 EX Force when completed, which is on par with other quick, high EX Force generating attacks.\nThis is a move that excels at multiple aspects of competitive gameplay. Ease of use, meter management and favorable risk / reward ratio...\nAll that is to say, yes - Thunder is really good."
             },
             {
@@ -232,6 +243,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Blizzara",
+              "style": "Ravager",
               "notes": "[Mid] Launch shards of ice after drawing in foe.\nLightning's anti-zoning tool. Extremely slow for a bravery and just as punishable on reaction, but works well when used to counter setups of other characters.\nAs soon as the ice spawns at around half of its startup, it has a strong vacuum effect around it to draw in even from slightly out of its range. As it can be dashed through it works well in tandem with Watera to stay safe.\nLightning can start moving again at around the same time it hits, and with its long floaty hit stun makes her able to combo off of it solo when close, or with any common assist."
             },
             {
@@ -246,6 +258,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Watera",
+              "style": "Ravager",
               "notes": "[Long] Launch waterballs. Slowly tracks opponent.\nA staple projectile. Stays out incredibly long, but also very slow. The slow speed makes it great for occupying space.\nSince it has to be reflected to disarm it, characters without a fast, safe mid / high priority have limited strategies to utilise against it. And if they do block it, Lightning can punish the stagger with HPs, or just throw out another Watera and reflect back the other with Army of One.\nWatera stays out even if she gets hit, so it can intercept low priority combos / assist calls when nearby. The EX Force generation is great, and it has ample hit stun for solo or assist combos. Assists are more practical regardless of positioning, solo combos often require being near / above the opponent or actively moving towards them as Watera makes contact.\nCertain assists can whiff punish it consistently when timed well, although its a tricky timing that requires the assist to attack after the ball has launched.\nA strong tool in many ways."
             },
             {
@@ -260,6 +273,7 @@
               "assistGain": "",
               "cp": "20 (10)",
               "name": "Army of One (midair)",
+              "style": "Ravager",
               "notes": "[Close] Barrage of attacks. Generates extra EX Force.\nAir version of an already good attack.\nThis version becomes even more useful than the grounded due to it's good vertical tracking chasing down, reflecting Watera with it, and using it in tandem with Thunder for amazing block / dodge mixup to keep the opponent guessing at all times."
             }
           ]

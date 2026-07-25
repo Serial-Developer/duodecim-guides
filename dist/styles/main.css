@@ -924,6 +924,32 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
   font: inherit;
 }
 .bc-row:hover { border-color: var(--violet); }
+.bc-row.is-disabled { opacity: 0.42; cursor: not-allowed; }
+.bc-row.is-disabled:hover { border-color: rgba(157, 134, 232, 0.18); }
+
+/* Compteur d'emplacements dans la légende du groupe */
+.bc-slots { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+.bc-slots.is-full { color: var(--gold); }
+.bc-group.is-full > legend { color: var(--gold); }
+
+/* Embranchement d'un coup (enchaînement, HP link) : replié par défaut, indenté */
+.bc-branch, .bc-followups {
+  margin: 0.15rem 0 0.3rem 1.6rem;
+  border-left: 2px solid rgba(157, 134, 232, 0.35);
+  padding-left: 0.6rem;
+}
+.bc-branch > summary, .bc-followups > summary {
+  font-size: 0.78rem;
+  color: var(--violet);
+  cursor: pointer;
+  padding: 0.15rem 0;
+  list-style: none;
+}
+.bc-branch > summary::before, .bc-followups > summary::before { content: "↳ "; opacity: 0.8; }
+.bc-branch > summary::-webkit-details-marker, .bc-followups > summary::-webkit-details-marker { display: none; }
+.bc-branch > summary:hover, .bc-followups > summary:hover { color: var(--gold); }
+.bc-branch .bc-list, .bc-followups .bc-list { margin-top: 0.2rem; }
+.bc-followups { margin-left: 0; margin-bottom: 1rem; }
 .bc-row-btn.is-selected { border-color: var(--gold); background: var(--surface-2); }
 .bc-row-btn[disabled] { opacity: 0.45; cursor: not-allowed; }
 .bc-row-main { display: flex; flex-direction: column; min-width: 0; flex: 1; }
@@ -938,6 +964,7 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
 .bc-tag-warn { color: var(--gold); border-color: rgba(240, 192, 90, 0.5); }
 .bc-tag-illegal { color: var(--danger); border-color: rgba(239, 136, 150, 0.6); }
 .bc-tag-glitch { color: #7fd8a6; border-color: rgba(127, 216, 166, 0.6); }
+.bc-tag-excl { color: var(--danger); border-color: rgba(239, 136, 150, 0.5); }
 .bc-tag-mult { color: #66c6f0; border-color: rgba(102, 198, 240, 0.6); font-family: var(--font-mono); }
 
 /* Filtres, emplacements, actions */

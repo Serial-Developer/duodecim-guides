@@ -143,11 +143,35 @@ function parseAbilities() {
       seenIds.set(a.id, a);
     }
   }
+  // Exclusions mutuelles dérivables des sources : les paliers d'une même ability
+  // (« Speed Boost », « Speed Boost+ », « Speed Boost++ ») sont des rangs d'un
+  // même effet, pas des abilities cumulables — c'est le nommage du wiki qui le
+  // dit. Les autres exclusions ne sont documentées nulle part sur le wiki : elles
+  // sont déclarées à la main dans data/editorial/_build-creator.json.
+  const families = new Map();
+  for (const g of groups) {
+    for (const a of g.abilities) {
+      const base = a.name.replace(/\s*(\+\+?|Ω)\s*$/, '').trim();
+      const key = `${g.key}|${base}`;
+      if (!families.has(key)) families.set(key, { base, group: g.key, abilities: [] });
+      families.get(key).abilities.push(a.id);
+    }
+  }
+  const exclusiveGroups = [...families.values()]
+    .filter((f) => f.abilities.length > 1)
+    .map((f) => ({
+      id: slugify(f.group + '-' + f.base),
+      abilities: f.abilities,
+      reason: `« ${f.base} » n'existe qu'en un seul palier à la fois.`,
+      source: url,
+    }));
+
   write('abilities.json', {
     generated: new Date().toISOString(),
     license: 'CC BY 4.0 — dissidia.wiki',
     sources: [url],
     groups,
+    exclusiveGroups,
     entries: groups.flatMap((g) => g.abilities),
   });
   return groups;
@@ -409,7 +433,8 @@ function parseAccessories() {
       const head = table.rows[0].map((c) => plain(c).toLowerCase());
       const iName = head.indexOf('accessory');
       if (iName === -1) continue;
-      const iEffect = head.findIndex((h) => h === 'effect' || h === 'description');
+      // « Effect », « Description » ou « Description/Effect » selon les tables.
+      const iEffect = head.findIndex((h) => /^(effect|description)/.test(h));
       const iType = head.indexOf('type');
       const iReq = head.indexOf('requirements');
       const iMult = head.indexOf('multiplier');
@@ -419,7 +444,17 @@ function parseAccessories() {
       for (const row of table.rows.slice(1)) {
         const name = plain(row[iName]);
         if (!name) continue;
-        const effect = iEffect === -1 ? '' : plain(row[iEffect]);
+        // Une colonne en colspan est répétée : on recolle ses cellules (les
+        // accessoires « Trade » séparent la description de l'effet chiffré).
+        let effect = '';
+        if (iEffect !== -1) {
+          const parts = [];
+          for (let k = iEffect; k < head.length && head[k] === head[iEffect]; k++) {
+            const v = plain(row[k]);
+            if (v && parts.indexOf(v) === -1) parts.push(v);
+          }
+          effect = parts.join(' · ');
+        }
         const typeFiles = iType === -1 ? [] : fileRefs(row[iType] || '');
         // En section Labyrinthe, l'icône de la colonne Type donne la catégorie.
         const iconCat = (BOOSTER_TYPE_FROM_FILE(typeFiles) || '').toLowerCase();

@@ -109,18 +109,28 @@ function nameFromImage(url, charWords) {
   return tokens.map((t) => t[0].toUpperCase() + t.slice(1)).join(' ');
 }
 
-function parseMovesFlow($, elems, charWords = new Set()) {
+function parseMovesFlow($, elems, charWords = new Set(), baseStyle = null) {
   const moves = [];
   const intro = [];
   let pendingName = null;
   let pendingNotes = [];
   let lastMove = null;
   let lastBaseName = null;
+  // Les pages à styles (paradigmes de Lightning, jobs de Cecil) imbriquent deux
+  // tabbers : le marqueur externe nomme le style, l'interne nomme le coup. Un
+  // marqueur remplacé avant qu'aucune table ne l'ait consommé est donc un
+  // libellé de style, pas un coup.
+  let style = baseStyle;
 
   // Marqueur de VARIANTE (et non de coup) : qualifié par le dernier nom complet
   const VARIANT = /^((level|phase|stage)\s*\d+|normal|ex mode|charged|uncharged|max(\s*charge)?|grounded|midair)$/i;
   const setPending = (rawName, rest) => {
     let name = rawName.trim();
+    // Marqueur non consommé par une table : c'était l'onglet de style englobant.
+    if (pendingName && !lastMove) {
+      style = pendingName;
+      lastBaseName = null;
+    }
     if (VARIANT.test(name)) {
       if (lastBaseName) name = `${lastBaseName} — ${name}`;
     } else {
@@ -132,6 +142,8 @@ function parseMovesFlow($, elems, charWords = new Set()) {
   };
 
   for (const el of elems) {
+    // Repère de style injecté par le découpage en sous-sections (« Ground (Paladin) »).
+    if (el && el.__style) { style = el.__style; lastBaseName = null; continue; }
     const tag = el.tagName?.toLowerCase();
     if (tag === 'table' && $(el).hasClass('wikitable')) {
       const move = parseMoveTable($, el);
@@ -145,6 +157,7 @@ function parseMovesFlow($, elems, charWords = new Set()) {
         || cleanText($(el).find('caption').first().text())
         || (move.image ? nameFromImage(move.image, charWords) : null);
       if (pendingNotes.length) move.context = pendingNotes.join('\n');
+      if (style) move.style = style;
       moves.push(move);
       lastMove = move;
       pendingName = null;
@@ -367,19 +380,27 @@ function parseCharacter(char) {
     const segs = [{ title: null, elems: sec.elems }, ...sec.subs.map((s) => ({ title: s.title, elems: s.elems }))];
     const order = [];
     const merged = {};
+    const segStyle = {};
     let cur = 'main';
     const standalone = [];
     for (const seg of segs) {
       const t = (seg.title || '').toLowerCase();
+      // « Ground (Dark Knight) » : le groupe reste `ground` (les guides s'appuient
+      // sur ces clés), la parenthèse devient le style porté par chaque coup.
+      const qualifier = /\(([^)]+)\)\s*$/.exec(seg.title || '');
       if (t.includes('ground')) cur = 'ground';
       else if (t.includes('aerial') || t.includes('midair')) cur = 'aerial';
-      else if (t.includes('followup')) cur = 'followups';
+      else if (t.includes('followup') || t.includes('follow-up')) cur = 'followups';
       else if (seg.title && !GENERIC_SUB.test(seg.title)) {
         // titre spécifique : peut être un coup nommé isolé (à vérifier après parse)
         standalone.push(seg);
         continue;
       }
       if (!merged[cur]) { merged[cur] = []; order.push(cur); }
+      // Un groupe reste un flux unique (les sous-sections « Data comparison » sont
+      // des continuations : les séparer ferait perdre le nom du coup en cours).
+      // Le style de la sous-section est injecté comme repère dans ce flux.
+      if (qualifier) merged[cur].push({ __style: qualifier[1].trim() });
       merged[cur].push(...seg.elems);
     }
     const charWords = new Set(char.page.replace(/_\(Dissidia_012\)$/, '').toLowerCase().split('_'));

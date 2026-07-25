@@ -139,7 +139,7 @@ for (const { def, data, ed } of chars) {
 // fetcher, pour rester consultable sans serveur comme le reste du site).
 {
   const ed = readJson(join(ROOT, 'data', 'editorial', '_build-creator.json'));
-  const bundle = buildDataBundle(ROOT);
+  const bundle = buildDataBundle(ROOT, ed);
   writeFileSync(join(DIST, 'scripts', 'build-data.js'), `window.BUILD_DATA=${JSON.stringify(bundle)};\n`);
   writeFileSync(join(DIST, 'createur-de-builds.html'), renderBuildCreator({
     ed,
