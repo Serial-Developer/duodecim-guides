@@ -58,7 +58,7 @@ Master Guardsman, que la fiche du wiki mentionne en note.
 | Sujet | État | Traitement dans l'outil |
 |---|---|---|
 | Nombre d'emplacements d'attaques par catégorie | Introuvable dans les sources consultées | Aucune limite de nombre n'est imposée ; la contrainte appliquée est le budget de CP. Signalé dans l'onglet Attaques. |
-| Quelles attaques s'enchaînent en HP link | Les sources donnent l'information au niveau du personnage (« HP Links: Yes/No »), pas par attaque | La valeur du personnage est affichée telle quelle, sans détail par attaque |
+| Quelles braveries mènent à quelle attaque HP (HP links) | Le jeu l'écrit dans la description du coup (« Branching from Launch »), mais le wiki ne reprend cette forme que pour **2 personnages sur les 25** annoncés « HP Links: Yes » ; ailleurs la paire est noyée dans la prose | Les 2 paires sourcées (Lightning : Launch → Flourish of Steel ; Cloud : Slashing Blow → Omnislash Version 5) sont imbriquées sous leur bravery. Pour les 23 autres, l'infobox est affichée telle quelle, sans paire inventée. Les paires connues se déclarent dans `hpLinks` de `data/editorial/_build-creator.json` |
 | Coût en CP de 24 attaques sur 431 | Absent du wiki | Étiquette « non documenté » sur la ligne, et le total de CP est présenté comme un minimum dès qu'une de ces attaques est sélectionnée |
 | Emplacement de 3 armures exclusives de Feral Chaos (Aegis of Strife, Calamitous Rage, Deafening Fissure) | Le Fandom ne donne pas l'emplacement, et aucune page de dissidia.wiki ne les couvre | `documented: false`, exclues des listes équipables, signalées ici |
 | Effet de l'invocation Barbariccia | Citée comme counter summon légal par la page de règles, mais absente de la page Summons | Proposée (elle est légale), sans description, avec l'étiquette « non documenté » |
@@ -81,6 +81,21 @@ Master Guardsman, que la fiche du wiki mentionne en note.
   le type fait partie de la clé.
 - **Tables incomplètes** signalées côté Fandom sur `Combination` et les sous-pages `Shop`
   (sans effet sur le créateur : seule l'obtention des items en pâtit).
+- **Colonne en `colspan`** dans la table des accessoires « Trade » : elle décalait la
+  lecture de toutes les colonnes suivantes, et le rang se perdait. Le lecteur de tables
+  répète désormais une cellule sur le nombre de colonnes qu'elle couvre.
+
+## Règles de composition appliquées
+
+| Règle | Origine |
+|---|---|
+| Trois emplacements par catégorie (posture × style) | Règle de jeu fournie par l'auteur du site |
+| Les enchaînements et les attaques HP branchées n'occupent pas d'emplacement | idem |
+| Un enchaînement n'est équipable que si son attaque de départ l'est | idem ; l'interface verrouille la branche et purge les sélections orphelines |
+| Toute bravery « (One) » mène à n'importe quel enchaînement « (Two) » équipé | Les descriptions des enchaînements de Prishe indiquent « Branching from _ (One) », le tiret bas valant pour n'importe laquelle |
+| Exemplaires d'un même accessoire : 1 pour un rang S, 2 pour un A, 3 pour un B, illimité pour un C | Règle de jeu fournie par l'auteur du site ; les rangs viennent du Final Fantasy Wiki |
+| Paliers d'une même ability mutuellement exclusifs | Nommage du wiki (`+`, `++`, `Ω`) |
+| Descent Speed Boost et Zero Gravity incompatibles | Confirmé par l'auteur ; les deux descriptions commencent par « Press X after jumping » |
 
 ## Légalité en tournoi
 

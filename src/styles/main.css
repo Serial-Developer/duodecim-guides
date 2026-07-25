@@ -949,6 +949,9 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
 .bc-branch > summary::-webkit-details-marker, .bc-followups > summary::-webkit-details-marker { display: none; }
 .bc-branch > summary:hover, .bc-followups > summary:hover { color: var(--gold); }
 .bc-branch .bc-list, .bc-followups .bc-list { margin-top: 0.2rem; }
+/* Embranchement verrouille tant que l attaque de depart n est pas equipee */
+.bc-branch.is-locked { border-left-color: rgba(157, 134, 232, 0.15); }
+.bc-branch.is-locked > summary { color: var(--muted); font-style: italic; }
 .bc-followups { margin-left: 0; margin-bottom: 1rem; }
 .bc-row-btn.is-selected { border-color: var(--gold); background: var(--surface-2); }
 .bc-row-btn[disabled] { opacity: 0.45; cursor: not-allowed; }

@@ -521,16 +521,43 @@
     return out;
   }
 
-  function poolUsage(char, kind, groupKey, style) {
+  // Les enchaînements et les attaques HP branchées prolongent un coup : ils ne
+  // comptent pas dans les emplacements de leur catégorie.
+  function poolUsage(char, kind, groupKey, style, isLinked) {
     var used = 0;
     (char.attacks[kind] || []).forEach(function (g) {
       if (g.followUp || g.key !== groupKey) return;
       g.moves.forEach(function (m) {
         if ((m.style || null) !== (style || null)) return;
+        if (isLinked && isLinked[m.id]) return;
         if (state.build.attacks.indexOf(m.id) !== -1) used++;
       });
     });
     return used;
+  }
+
+  // Retire les enchaînements devenus orphelins : un « (Two) » n'a de sens que si
+  // une bravery de départ est équipée, une attaque HP branchée que si sa bravery
+  // d'origine l'est.
+  function pruneOrphanBranches() {
+    var char = charBySlug[state.build.character];
+    if (!char) return;
+    var followUpIds = {};
+    var starterSelected = false;
+    (char.attacks.bravery || []).forEach(function (g) {
+      g.moves.forEach(function (m) {
+        if (g.followUp) followUpIds[m.id] = true;
+        else if (state.build.attacks.indexOf(m.id) !== -1) starterSelected = true;
+      });
+    });
+    var linkParent = {};
+    (char.links || []).forEach(function (l) { linkParent[l.to] = l.from; });
+
+    state.build.attacks = state.build.attacks.filter(function (id) {
+      if (followUpIds[id]) return starterSelected;
+      if (linkParent[id]) return state.build.attacks.indexOf(linkParent[id]) !== -1;
+      return true;
+    });
   }
 
   function renderAttacks(panel) {
@@ -553,21 +580,32 @@
       }
       panel.appendChild(el('h3', { text: pair[1] }));
 
-      // Enchaînements rattachés à un coup précis, indexés par identifiant parent.
-      var byParent = {};
-      var orphans = [];
-      groups.forEach(function (g) {
-        if (!g.followUp) return;
-        g.moves.forEach(function (m) {
-          if (m.parent) (byParent[m.parent] = byParent[m.parent] || []).push(m);
-          else orphans.push({ move: m, intro: g.intro });
-        });
+      // Les enchaînements « (Two) » forment une réserve commune : le wiki écrit
+      // « Branching from _ (One) », le tiret bas valant pour n'importe quelle
+      // bravery « (One) ». Chaque coup d'origine propose donc toute la réserve.
+      var pool = [];
+      groups.forEach(function (g) { if (g.followUp) pool = pool.concat(g.moves); });
+      var poolIntro = (groups.filter(function (g) { return g.followUp; })[0] || {}).intro;
+
+      // Attaques HP branchées sur une bravery : affichées sous elle, retirées de
+      // leur propre liste pour ne pas apparaître deux fois.
+      var linksByParent = {};
+      var isLinked = {};
+      (char.links || []).forEach(function (l) {
+        (linksByParent[l.from] = linksByParent[l.from] || []).push(l.to);
+        isLinked[l.to] = true;
+      });
+      var moveById = {};
+      ['bravery', 'hp'].forEach(function (k) {
+        (char.attacks[k] || []).forEach(function (g) { g.moves.forEach(function (m) { moveById[m.id] = m; }); });
       });
 
       groups.forEach(function (g) {
         if (g.followUp) return;
         byStyle(g.moves).forEach(function (sub) {
-          var used = poolUsage(char, kind, g.key, sub.style);
+          var visibles = sub.moves.filter(function (m) { return !isLinked[m.id]; });
+          if (!visibles.length) return;
+          var used = poolUsage(char, kind, g.key, sub.style, isLinked);
           var plein = used >= MAX_SLOTS;
           var titre = groupLabel(g.key) + (sub.style ? ' — ' + sub.style : '');
           var fs = el('fieldset', { class: 'bc-group' + (plein ? ' is-full' : '') }, [
@@ -578,52 +616,49 @@
           ]);
           if (g.intro) fs.appendChild(el('p', { class: 'bc-note', text: g.intro.split('\n')[0] }));
           var list = el('div', { class: 'bc-list' });
-          sub.moves.forEach(function (m) {
+          visibles.forEach(function (m) {
             list.appendChild(attackRow(m, plein));
-            var suites = byParent[m.id];
-            if (suites && suites.length) list.appendChild(followUpBranch(m, suites));
+            var suites = (kind === 'bravery' ? pool : []).slice();
+            (linksByParent[m.id] || []).forEach(function (id) { if (moveById[id]) suites.push(moveById[id]); });
+            if (suites.length) list.appendChild(branch(m, suites, poolIntro));
           });
           fs.appendChild(list);
           panel.appendChild(fs);
         });
       });
-
-      // Enchaînements dont la source ne nomme pas le coup d'origine : proposés
-      // dans un bloc replié, avec l'explication du wiki.
-      if (orphans.length) {
-        var det = el('details', { class: 'bc-followups' }, [
-          el('summary', { text: 'Enchaînements (' + orphans.length + ') — sans emplacement' }),
-        ]);
-        if (orphans[0].intro) det.appendChild(el('p', { class: 'bc-note', text: orphans[0].intro.split('\n')[0] }));
-        var l = el('div', { class: 'bc-list' });
-        orphans.forEach(function (o) { l.appendChild(attackRow(o.move, false)); });
-        det.appendChild(l);
-        panel.appendChild(det);
-      }
     });
   }
 
-  // Embranchement replié sous le coup qu'il prolonge, comme dans le jeu.
-  function followUpBranch(parent, suites) {
+  // Embranchement replié sous le coup qu'il prolonge. Il reste verrouillé tant
+  // que ce coup n'est pas équipé : dans le jeu, un enchaînement n'existe pas
+  // sans son attaque de départ.
+  function branch(parent, suites, intro) {
+    var parentEquipe = state.build.attacks.indexOf(parent.id) !== -1;
     var actifs = suites.filter(function (m) { return state.build.attacks.indexOf(m.id) !== -1; }).length;
-    var det = el('details', { class: 'bc-branch' }, [
-      el('summary', { text: 'Enchaînement' + (actifs ? ' (' + actifs + ' sélectionné' + (actifs > 1 ? 's' : '') + ')' : '') }),
+    var det = el('details', { class: 'bc-branch' + (parentEquipe ? '' : ' is-locked') }, [
+      el('summary', {
+        text: parentEquipe
+          ? 'Enchaînements' + (actifs ? ' (' + actifs + ' équipé' + (actifs > 1 ? 's' : '') + ')' : '')
+          : 'Enchaînements — équipez d’abord ' + parent.name,
+      }),
     ]);
-    if (actifs) det.setAttribute('open', '');
+    if (actifs && parentEquipe) det.setAttribute('open', '');
+    if (intro && parentEquipe) det.appendChild(el('p', { class: 'bc-note', text: intro.split('\n')[0] }));
     var l = el('div', { class: 'bc-list' });
-    suites.forEach(function (m) { l.appendChild(attackRow(m, false)); });
+    suites.forEach(function (m) { l.appendChild(attackRow(m, false, !parentEquipe)); });
     det.appendChild(l);
     return det;
   }
 
-  function attackRow(m, poolFull) {
+  function attackRow(m, poolFull, locked) {
     var checked = state.build.attacks.indexOf(m.id) !== -1;
-    var bloque = poolFull && !checked;
+    var bloque = locked || (poolFull && !checked);
     var input = el('input', { type: 'checkbox', checked: checked, disabled: bloque });
     input.addEventListener('change', function () {
       var i = state.build.attacks.indexOf(m.id);
       if (input.checked && i === -1) state.build.attacks.push(m.id);
       else if (!input.checked && i !== -1) state.build.attacks.splice(i, 1);
+      pruneOrphanBranches();
       markDirty();
       renderPanel('attack');
       refresh();
@@ -636,7 +671,9 @@
     if (m.variants) meta.push(m.variants);
     var row = el('label', {
       class: 'bc-row' + (bloque ? ' is-disabled' : ''),
-      title: bloque ? 'Les trois emplacements de cette catégorie sont pris — décochez une attaque pour libérer une place.' : '',
+      title: locked
+        ? 'Équipez d’abord l’attaque de départ : un enchaînement ne s’utilise pas seul.'
+        : (bloque ? 'Les trois emplacements de cette catégorie sont pris — décochez une attaque pour libérer une place.' : ''),
     }, [
       input,
       el('span', { class: 'bc-row-main' }, [

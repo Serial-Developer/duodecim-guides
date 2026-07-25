@@ -70,6 +70,37 @@ function table(items, cols) {
   };
 }
 
+// Un HP link est une attaque HP qui se branche sur une bravery. Le jeu l'écrit
+// dans la description du coup (« Branching from Launch »), mais le wiki ne
+// reprend cette forme que pour une poignée de personnages : le reste est en
+// prose libre, non extractible sans risque. Les paires manquantes se déclarent à
+// la main dans data/editorial/_build-creator.json.
+const HP_LINK_PATTERNS = [
+  /Branching from ([^.\[\n]{2,40})/i,
+  /HP link from ([^.,\n]{2,40})/i,
+];
+
+function extractHpLinks(data, kindGroups) {
+  const braveries = [];
+  for (const g of kindGroups.bravery || []) for (const m of g.moves) braveries.push(m);
+  const links = [];
+  for (const g of kindGroups.hp || []) {
+    for (const m of g.moves) {
+      const raw = data.__notes[m.id] || '';
+      for (const re of HP_LINK_PATTERNS) {
+        const hit = re.exec(raw);
+        if (!hit) continue;
+        const cible = hit[1].trim().replace(/^(his|her|the)\s+/i, '');
+        const parent = braveries.find((b) => b.name.toLowerCase() === cible.toLowerCase())
+          || braveries.find((b) => cible.toLowerCase().indexOf(b.name.toLowerCase()) !== -1);
+        if (parent) links.push({ from: parent.id, to: m.id, source: 'description du coup sur dissidia.wiki' });
+        break;
+      }
+    }
+  }
+  return links;
+}
+
 export function buildDataBundle(ROOT, editorial = null) {
   const dir = join(ROOT, 'data', 'build');
   const equipment = readJson(join(dir, 'equipment.json'));
@@ -94,6 +125,8 @@ export function buildDataBundle(ROOT, editorial = null) {
     // portent les noms du jeu (ground/aerial, mais aussi « Medic » chez Lightning
     // ou « followups » chez Prishe).
     const attacks = {};
+    const rawGroups = {};
+    const notesById = {};
     for (const kind of ['bravery', 'hp']) {
       const section = data.sections?.[kind];
       if (!section?.groups) continue;
@@ -130,8 +163,10 @@ export function buildDataBundle(ROOT, editorial = null) {
             parent.variants.push([m.name, m.damage || '', m.startup || ''].join(' · ').replace(/( · )+$/, ''));
             continue;
           }
+          const id = `${kind}:${key}:${m.name}`;
+          notesById[id] = (m.notes || '') + ' ' + (m.context || '');
           moves.push({
-            id: `${kind}:${key}:${m.name}`,
+            id,
             name: m.name,
             ...cp,
             damage: m.damage || '',
@@ -180,7 +215,21 @@ export function buildDataBundle(ROOT, editorial = null) {
       }
 
       const kept = groups.filter((g) => g.moves.length);
+      rawGroups[kind] = kept;
       if (kept.length) attacks[kind] = kept.map((g) => ({ key: g.key, intro: g.intro, followUp: g.followUp, moves: table(g.moves, MOVE_COLS) }));
+    }
+
+    // HP links : extraits de la description du coup quand elle les nomme, puis
+    // complétés par les paires déclarées à la main.
+    const byName = {};
+    for (const kind of ['bravery', 'hp']) for (const g of rawGroups[kind] || []) for (const m of g.moves) byName[`${kind}:${m.name.toLowerCase()}`] = m.id;
+    const hpLinks = extractHpLinks({ __notes: notesById }, rawGroups);
+    for (const decl of (editorial?.hpLinks || {})[def.slug] || []) {
+      const from = byName['bravery:' + String(decl.from).toLowerCase()];
+      const to = byName['hp:' + String(decl.to).toLowerCase()];
+      if (!from) throw new Error(`_build-creator.json : hpLinks[${def.slug}] — bravery inconnue « ${decl.from} »`);
+      if (!to) throw new Error(`_build-creator.json : hpLinks[${def.slug}] — attaque HP inconnue « ${decl.to} »`);
+      if (!hpLinks.some((l) => l.from === from && l.to === to)) hpLinks.push({ from, to, source: decl.source || 'déclaré dans l’éditorial' });
     }
 
     characters.push({
@@ -189,6 +238,9 @@ export function buildDataBundle(ROOT, editorial = null) {
       origin: def.origin,
       // Valeur brute de l'infobox : « Yes », « No », « Yes (Combos only) »…
       hpLinks: data.infobox?.['HP Links'] || null,
+      // Paires bravery -> attaque HP réellement identifiées ; l'infobox ci-dessus
+      // dit seulement si le personnage en a.
+      links: hpLinks,
       native: native[def.slug] || { weapon: [], hand: [], head: [], body: [] },
       attacks,
       attacksDocumented: Object.keys(attacks).length > 0,

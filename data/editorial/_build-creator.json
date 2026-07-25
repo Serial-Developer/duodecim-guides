@@ -7,6 +7,8 @@
   ],
   "legalityNote": "Les items marqués « illégal » le sont au regard du ruleset de tournoi 2017, qui correspond au réglage « Official » du jeu. Le bouton « Afficher les items illégaux » les fait réapparaître, toujours étiquetés — rien n'est masqué en silence.",
   "_abilityExclusionsNote": "Le wiki ne documente pas les incompatibilités entre abilities. Les paliers d'une même ability (Speed Boost / + / ++) sont dérivés automatiquement du nommage ; les cas ci-dessous sont déclarés à la main. Chaque entrée cite sa source. Ajouter une entrée suffit à l'activer dans le créateur : la QA vérifie que les noms existent.",
+  "_hpLinksNote": "Le wiki n'écrit la paire bravery → attaque HP que pour une poignée de personnages (« Branching from Launch ») ; ailleurs elle est noyée dans la prose. Les paires connues se déclarent ici, par slug : [{ \"from\": \"nom de la bravery\", \"to\": \"nom de l'attaque HP\", \"source\": \"…\" }]. Les noms doivent correspondre exactement à ceux des fiches ; le build échoue sinon.",
+  "hpLinks": {},
   "abilityExclusions": [
     {
       "abilities": ["Descent Speed Boost", "Zero Gravity"],
