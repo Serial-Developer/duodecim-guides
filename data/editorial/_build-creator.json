@@ -15,7 +15,8 @@
     {
       "title": "Comment se calcule le budget de CP",
       "points": [
-        "Chaque attaque et chaque ability coûte des CP. Le coût baisse une fois l'élément maîtrisé : l'outil affiche les deux valeurs et vous laisse basculer entre « coût à l'achat » et « coût maîtrisé ».",
+        "Chaque attaque et chaque ability coûte des CP. Le coût baisse une fois l'élément maîtrisé : l'outil affiche par défaut le coût maîtrisé, et la case « Coûts maîtrisés » bascule vers le coût à l'achat.",
+        "Les totaux du récapitulatif valent statistiques de base au niveau 100 plus bonus des pièces équipées. Les effets d'accessoires exprimés en pourcentage n'y sont pas intégrés : les sources ne les expriment pas en points.",
         "La jauge distingue en vert pomme la part consommée par les attaques et en bleu ciel celle des abilities, comme dans le jeu.",
         "Équiper Hero's Spirit ou Hero's Essence relève le plafond au fil de la sélection : deux Hero's Spirit et un Hero's Essence portent la capacité à 510."
       ]

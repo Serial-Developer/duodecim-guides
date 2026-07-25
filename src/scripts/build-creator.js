@@ -114,7 +114,9 @@
 
   var state = {
     build: emptyBuild(null),
-    mastered: false,
+    // Les builds de tournoi se composent avec des éléments maîtrisés : c'est le
+    // coût réduit qui sert de référence, d'où la valeur par défaut.
+    mastered: true,
     showIllegal: false,
     dirty: false,
     activeTab: 'attack',
@@ -420,12 +422,10 @@
       infos.push('Bonus d’ability appliqué : ' + st.appliedAbilities.join(', ') + '.');
     }
 
+    // Seuls les messages qui dépendent du build restent dans le panneau collant :
+    // l'explication du mode de calcul, invariable, vit dans les repères de la page.
     problems.forEach(function (p) { statusBox.appendChild(el('p', { class: 'bc-alert bc-alert-error', text: p })); });
     infos.forEach(function (i) { statusBox.appendChild(el('p', { class: 'bc-alert bc-alert-info', text: i })); });
-    statusBox.appendChild(el('p', {
-      class: 'bc-alert bc-alert-muted',
-      text: 'Totaux = statistiques de base au niveau 100 + bonus des pièces équipées. Les effets d’accessoires exprimés en pourcentage n’y sont pas intégrés.',
-    }));
   }
 
   function refresh() {

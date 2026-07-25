@@ -63,7 +63,7 @@ ${characterBanner(characters, hasPortrait)}
 <div class="bc-build-meta">
 <label class="bc-field"><span>Nom du build</span>
 <input type="text" id="bc-build-name" maxlength="60" placeholder="Sans titre" autocomplete="off"></label>
-<label class="bc-field bc-field-inline"><input type="checkbox" id="bc-mastered"> <span>Coûts maîtrisés</span></label>
+<label class="bc-field bc-field-inline"><input type="checkbox" id="bc-mastered" checked> <span>Coûts maîtrisés</span></label>
 </div>
 </div>
 

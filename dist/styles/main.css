@@ -851,8 +851,10 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
   position: sticky;
   top: 0;
   z-index: 5;
-  background: linear-gradient(var(--surface) 85%, transparent);
-  padding: 0.6rem 0 0.4rem;
+  /* Fond opaque : un dégradé vers le transparent laissait le contenu des onglets
+     transparaître sous le panneau d'état quand la page défilait. */
+  background: var(--surface);
+  padding: 0.6rem 0 0.5rem;
   margin: 0.6rem 0 1rem;
   border-bottom: 1px solid rgba(157, 134, 232, 0.2);
 }
@@ -1009,16 +1011,25 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
 @media (max-width: 1023px) {
   .bc-list-scroll { max-height: 22rem; }
 }
+@media (max-width: 767px) {
+  /* Sous 768px le header du site devient collant : la jauge se cale dessous,
+     comme la barre de sections des guides. */
+  .bc-sticky { top: var(--mob-header-h); }
+}
 @media (max-width: 599px) {
-  /* Bandeau de personnages en défilement horizontal, onglets en barre compacte */
+  /* Bandeau de personnages sur deux rangées qui défilent horizontalement :
+     à une seule rangée, retrouver un personnage demandait trop de défilement. */
   .bc-roster {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-columns: 5.2rem;
     overflow-x: auto;
     gap: 0.4rem;
     padding-bottom: 0.4rem;
     scroll-snap-type: x proximity;
   }
-  .bc-char { flex: 0 0 5.2rem; scroll-snap-align: start; }
+  .bc-char { scroll-snap-align: start; }
   .bc-tablist { flex-wrap: nowrap; overflow-x: auto; }
   .bc-tab { white-space: nowrap; padding: 0.45rem 0.7rem; font-size: 0.85rem; }
   .bc-acc-slots { grid-template-columns: 1fr; }
