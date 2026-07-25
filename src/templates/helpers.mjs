@@ -255,9 +255,9 @@ export function siteHeader({ base = '', active = '', h1 = false } = {}) {
       { key: 'feral', href: `${base}obtenir-feral-chaos.html`, label: 'Obtenir Feral Chaos' },
       { key: 'techniques', href: `${base}techniques.html`, label: 'Techniques &amp; glitches' },
     ] },
-    { title: 'Créateur de builds', items: [
-      { key: 'createur', href: `${base}createur-de-builds.html`, label: 'Composer un build' },
-    ] },
+    // Entrée sans `items` : lien direct, sans panneau déroulant — il n'y a
+    // qu'une destination, dérouler pour un seul choix serait un clic de trop.
+    { title: 'Créateur de builds', key: 'createur', href: `${base}createur-de-builds.html` },
     { title: 'Jouer à Dissidia', items: [
       { key: 'install', href: `${base}install.html`, label: 'Installer sur PPSSPP' },
       { key: 'savedata', href: `${base}savedata.html`, label: 'Savedata prêtes à jouer' },
@@ -278,18 +278,21 @@ export function siteHeader({ base = '', active = '', h1 = false } = {}) {
   return `<header class="site-header">
 ${h1 ? `<h1 class="sh-brand">${brand}</h1>` : `<a class="sh-brand" href="${base}index.html">${brand}</a>`}
 <nav class="sh-groups" aria-label="Navigation du site">
-${groups.map((g) => `<div class="sh-group${g.items.some((it) => it.key === active) ? ' is-active' : ''}">
+${groups.map((g) => (g.items
+    ? `<div class="sh-group${g.items.some((it) => it.key === active) ? ' is-active' : ''}">
 <span class="sh-group-label">${g.title}</span>
 <div class="sh-drop">
 ${g.items.map(link).join('\n')}
 </div>
-</div>`).join('\n')}
+</div>`
+    : `<a class="sh-group-label sh-group-link${g.key === active ? ' is-active' : ''}" href="${g.href}"${g.key === active ? ' aria-current="page"' : ''}>${g.title}</a>`)).join('\n')}
 </nav>
 <details class="sh-drawer">
 <summary aria-label="Menu"><span class="sh-burger" aria-hidden="true"></span></summary>
 <nav class="sh-panel" aria-label="Navigation du site (mobile)">
-${groups.map((g) => `<p class="sh-cat">${g.title}</p>
-${g.items.map(link).join('\n')}`).join('\n')}
+${groups.map((g) => (g.items
+    ? `<p class="sh-cat">${g.title}</p>\n${g.items.map(link).join('\n')}`
+    : link({ key: g.key, href: g.href, label: g.title }))).join('\n')}
 </nav>
 </details>
 </header>`;
