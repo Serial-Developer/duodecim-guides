@@ -1021,21 +1021,49 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
   position: fixed;
   left: 50%;
   bottom: 1.2rem;
+  /* La seule translation ne suffisait pas à sortir le bandeau de l'écran : sa
+     bordure restait visible en bas. On le rend franchement invisible et
+     inatteignable au repos, la translation ne servant plus qu'à l'animation. */
   transform: translateX(-50%) translateY(120%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
   background: var(--surface-2);
   border: 1px solid var(--violet);
   border-radius: var(--radius);
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 0.7rem 0.6rem 1rem;
   font-size: 0.85rem;
   max-width: min(90vw, 34rem);
   z-index: 50;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, visibility 0s linear 0.2s;
 }
+.bc-toast-text { flex: 1; }
+.bc-toast-close {
+  flex: none;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 0.2rem;
+  cursor: pointer;
+}
+.bc-toast-close:hover { color: var(--gold); }
 /* Les URLs de sources sont longues et insécables : sans cette règle elles
    poussent la page en défilement horizontal sur mobile. */
 .bc-main .sources-list a { overflow-wrap: anywhere; }
 
-.bc-toast.is-visible { transform: translateX(-50%) translateY(0); }
+.bc-toast.is-visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform 0.2s ease, opacity 0.2s ease, visibility 0s;
+}
 .bc-toast.is-error { border-color: var(--danger); color: #ffc9d1; }
 
 @media (max-width: 1023px) {

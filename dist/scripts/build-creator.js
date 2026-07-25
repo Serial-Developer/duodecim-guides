@@ -1078,16 +1078,27 @@
   }
 
   // --- Gestion des builds ---------------------------------------------------
+  function hideToast(box) {
+    box.className = 'bc-toast';
+    window.clearTimeout(box._t);
+  }
+
   function toast(message, isError) {
     var box = document.getElementById('bc-toast');
     if (!box) {
-      box = el('div', { id: 'bc-toast', class: 'bc-toast', role: 'status', 'aria-live': 'polite' });
+      box = el('div', { id: 'bc-toast', class: 'bc-toast', role: 'status', 'aria-live': 'polite' }, [
+        el('span', { class: 'bc-toast-text' }),
+        el('button', {
+          type: 'button', class: 'bc-toast-close', 'aria-label': 'Fermer le message', title: 'Fermer',
+          onclick: function () { hideToast(box); },
+        }, ['×']),
+      ]);
       document.body.appendChild(box);
     }
-    box.textContent = message;
+    box.querySelector('.bc-toast-text').textContent = message;
     box.className = 'bc-toast is-visible' + (isError ? ' is-error' : '');
     window.clearTimeout(box._t);
-    box._t = window.setTimeout(function () { box.className = 'bc-toast'; }, 4000);
+    box._t = window.setTimeout(function () { hideToast(box); }, 6000);
   }
 
   function currentSnapshot() {
