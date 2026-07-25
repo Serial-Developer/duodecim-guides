@@ -846,7 +846,7 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
 .bc-char:hover { border-color: var(--violet); color: var(--text); transform: translateY(-2px); }
 .bc-char[aria-checked="true"] { border-color: var(--gold); color: var(--gold); background: var(--surface-2); }
 
-/* Jauge de CP : couleurs du jeu — bleu ciel les attaques, vert pomme les abilities */
+/* Jauge de CP : couleurs du jeu — vert pomme les attaques, bleu ciel les abilities */
 .bc-sticky {
   position: sticky;
   top: 0;
@@ -865,8 +865,8 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
   overflow: hidden;
 }
 .bc-gauge-fill { display: block; height: 100%; transition: width 0.18s ease; }
-.bc-gauge-attacks { background: #66c6f0; }
-.bc-gauge-abilities { background: #86d94b; }
+.bc-gauge-attacks { background: #86d94b; }
+.bc-gauge-abilities { background: #66c6f0; }
 .bc-gauge-wrap.is-over .bc-gauge { border-color: var(--danger); box-shadow: 0 0 0 2px rgba(239, 136, 150, 0.35); }
 .bc-gauge-wrap.is-over .bc-gauge-attacks { background: #ef8896; }
 .bc-gauge-wrap.is-over .bc-gauge-abilities { background: #c4566a; }
@@ -874,8 +874,8 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
 .bc-gauge-text strong { color: var(--text); font-size: 1.05rem; }
 .bc-legend { display: inline-flex; align-items: center; gap: 0.3rem; }
 .bc-dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; display: inline-block; }
-.bc-dot-attacks { background: #66c6f0; }
-.bc-dot-abilities { background: #86d94b; }
+.bc-dot-attacks { background: #86d94b; }
+.bc-dot-abilities { background: #66c6f0; }
 
 .bc-status { margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.3rem; }
 .bc-stat-line { margin: 0; display: flex; flex-wrap: wrap; gap: 0.9rem; font-size: 0.85rem; }

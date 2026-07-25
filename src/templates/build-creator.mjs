@@ -20,7 +20,7 @@ ${hasPortrait(c.slug) ? `<img src="assets/icons/${esc(c.slug)}.png" alt="" loadi
 </div>`;
 }
 
-// Jauge de CP : couleurs du jeu (bleu ciel = attaques, vert pomme = abilities).
+// Jauge de CP : couleurs du jeu (vert pomme = attaques, bleu ciel = abilities).
 // L'équivalent textuel est porté par aria-valuetext, mis à jour par le script.
 function cpGauge() {
   return `<div class="bc-gauge-wrap" id="bc-gauge-wrap">
