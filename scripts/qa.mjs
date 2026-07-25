@@ -24,6 +24,7 @@ const htmlFiles = [
   join(DIST, 'futurs-tournois.html'),
   join(DIST, 'organiser.html'),
   join(DIST, 'obtenir-feral-chaos.html'),
+  join(DIST, 'createur-de-builds.html'),
   ...readdirSync(join(DIST, 'characters')).map((f) => join(DIST, 'characters', f)),
 ];
 const externalLinks = new Set();
@@ -111,6 +112,107 @@ for (const f of readdirSync(join(ROOT, 'data', 'editorial')).filter((x) => x.end
     if (re.test(raw)) {
       if (f === 'prishe.json' && /finisher/i.test(raw) && !re.test(raw.replace(/finisher/gi, ''))) continue;
       warns.push(`terme banni dans ${f} : ${hint}`);
+    }
+  }
+}
+
+// --- 2c. Créateur de builds : intégrité du payload servi au navigateur ---
+// Le fichier est du JS (window.BUILD_DATA = …) : on isole le JSON pour l'analyser
+// sans l'exécuter.
+{
+  const bundlePath = join(DIST, 'scripts', 'build-data.js');
+  if (!existsSync(bundlePath)) {
+    errors.push('créateur de builds : dist/scripts/build-data.js absent');
+  } else {
+    const src = readFileSync(bundlePath, 'utf-8');
+    const json = src.replace(/^window\.BUILD_DATA=/, '').replace(/;\s*$/, '');
+    let D = null;
+    try { D = JSON.parse(json); } catch (e) { errors.push(`créateur de builds : payload illisible (${e.message})`); }
+
+    if (D) {
+      const rows = (t) => (t && t.c ? t.r.map((r) => Object.fromEntries(t.c.map((k, i) => [k, r[i]]))) : []);
+      const equipment = rows(D.equipment);
+      const accessories = rows(D.accessories);
+
+      if (D.characters.length !== CHARACTERS.length) errors.push(`créateur de builds : ${D.characters.length} personnages dans le payload, ${CHARACTERS.length} attendus`);
+
+      // Identifiants uniques : le client indexe équipements et accessoires par uid.
+      for (const [label, list] of [['équipement', equipment], ['accessoire', accessories]]) {
+        const seen = new Set();
+        for (const it of list) {
+          if (!it.uid) errors.push(`créateur de builds : ${label} « ${it.name} » sans uid`);
+          else if (seen.has(it.uid)) errors.push(`créateur de builds : uid ${label} en double — ${it.uid}`);
+          seen.add(it.uid);
+        }
+      }
+
+      // Un équipement sans emplacement ne doit jamais être proposé comme équipable :
+      // il doit porter documented:false pour que l'interface l'étiquette.
+      for (const it of equipment) {
+        if (!it.slot && it.documented !== false) errors.push(`créateur de builds : « ${it.name} » sans emplacement mais marqué documenté`);
+      }
+
+      // Les motifs d'illégalité passent par une légende partagée.
+      for (const it of accessories) {
+        if (it.ill && !D.illegalReasons[it.ill]) errors.push(`créateur de builds : code d'illégalité inconnu « ${it.ill} » (${it.name})`);
+        if (it.legal === false && !it.ill) errors.push(`créateur de builds : accessoire illégal sans motif — ${it.name}`);
+      }
+      for (const s of D.summons) {
+        if (s.legal === false && !s.ill) errors.push(`créateur de builds : invocation illégale sans motif — ${s.name}`);
+        if (s.documented === false && s.text) errors.push(`créateur de builds : invocation « ${s.name} » marquée non documentée mais porteuse d'un texte`);
+      }
+
+      // Le plafond de CP doit rester la somme de ce que les sources documentent.
+      const computed = D.capacity.base + (D.capacity.extenders || []).reduce((s, e) => s + e.cp * e.maxEquipped, 0);
+      if (computed !== D.capacity.max) errors.push(`créateur de builds : plafond CP incohérent (${computed} calculé, ${D.capacity.max} annoncé)`);
+
+      // Statistiques de base : sans elles, les totaux affichés seraient faux.
+      for (const c of CHARACTERS) {
+        if (!D.baseStats.byCharacter[c.slug]) errors.push(`créateur de builds : statistiques ATK/DEF de base manquantes pour ${c.slug}`);
+      }
+      for (const k of ['hp', 'cp', 'brv', 'luk']) {
+        if (typeof D.baseStats.shared[k] !== 'number') errors.push(`créateur de builds : statistique de base « ${k} » absente`);
+      }
+
+      // Un set sans nombre de pièces requis ne peut pas être évalué : il ne doit
+      // pas être publié plutôt que d'être approximé.
+      for (const c of D.combinations) {
+        if (!c.required) errors.push(`créateur de builds : set « ${c.name} » sans nombre de pièces requis`);
+        if (c.required && Object.keys(c.pieces || {}).length < c.required) {
+          errors.push(`créateur de builds : set « ${c.name} » exige ${c.required} pièces mais n'en liste que ${Object.keys(c.pieces || {}).length}`);
+        }
+      }
+
+      // Coûts CP : une attaque ou une ability sans coût connu doit être signalée.
+      // Les identifiants doivent rester uniques, sinon deux paliers d'une même
+      // ability (Speed Boost / Speed Boost+) se confondraient dans les builds.
+      const abilityIds = new Set();
+      for (const g of D.abilities) {
+        for (const a of g.abilities) {
+          if (a.cp == null && a.documented !== false) errors.push(`créateur de builds : ability « ${a.name} » sans coût CP mais marquée documentée`);
+          if (abilityIds.has(a.id)) errors.push(`créateur de builds : identifiant d'ability en double — ${a.id} (${a.name})`);
+          abilityIds.add(a.id);
+        }
+      }
+
+      // Idem pour les coups : le client les référence par identifiant.
+      for (const c of D.characters) {
+        const moveIds = new Set();
+        for (const kind of ['bravery', 'hp']) {
+          for (const g of c.attacks[kind] || []) {
+            for (const row of g.moves.r) {
+              const id = row[g.moves.c.indexOf('id')];
+              if (moveIds.has(id)) errors.push(`créateur de builds : identifiant de coup en double chez ${c.slug} — ${id}`);
+              moveIds.add(id);
+            }
+          }
+        }
+      }
+
+      // Le ruleset doit citer sa source pour chaque règle appliquée aux items.
+      for (const r of D.ruleset.itemRules) {
+        if (!r.quote) errors.push(`créateur de builds : règle « ${r.rule} » sans citation source`);
+      }
     }
   }
 }

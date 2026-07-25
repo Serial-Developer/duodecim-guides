@@ -1,0 +1,1188 @@
+{
+  "generated": "2026-07-25T21:04:22.768Z",
+  "license": "CC BY 4.0 — dissidia.wiki",
+  "note": "Feral Chaos n’existe pas en assist ; Aerith n’est jouable qu’en assist.",
+  "sources": [
+    "https://dissidia.wiki/Assist_(Dissidia_012)"
+  ],
+  "items": [
+    {
+      "slug": "warrior-of-light",
+      "name": "Warrior of Light",
+      "attacks": [
+        {
+          "name": "Sword Thrust (Ground BRV)",
+          "startup": "31F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "6, 3 x 5, 15 (30)",
+          "properties": "Melee Mid, Wall Rush"
+        },
+        {
+          "name": "Rising Buckler (Midair BRV)",
+          "startup": "25F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 4, 6, 16 (30)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Shining Wave (Ground HP)",
+          "startup": "53F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "--",
+          "properties": "Chase"
+        },
+        {
+          "name": "Shield of Light (Midair HP)",
+          "startup": "51F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "--",
+          "properties": "Block, Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "garland",
+      "name": "Garland",
+      "attacks": [
+        {
+          "name": "Round Edge (Ground BRV)",
+          "startup": "23F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 4, 6, 16 (30)",
+          "properties": "Melee Mid (third hit), Wall Rush"
+        },
+        {
+          "name": "Bardiche (Midair BRV)",
+          "startup": "23F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "30 (30)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Tsunami (Ground HP)",
+          "startup": "45F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 6 (12)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Cyclone (Midair HP)",
+          "startup": "51F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Chase"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "firion",
+      "name": "Firion",
+      "attacks": [
+        {
+          "name": "Rope Knife (Ground BRV)",
+          "startup": "23F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 10, 25 (45)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Magic Arts: Flame (Midair BRV)",
+          "startup": "25F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "10 each (up to 30)",
+          "properties": "-"
+        },
+        {
+          "name": "Straightarrow (Ground HP)",
+          "startup": "61F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Weaponmaster (Aerial HP)",
+          "startup": "52F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 11 (22)",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "the-emperor",
+      "name": "The Emperor",
+      "attacks": [
+        {
+          "name": "Thunder Crest (Ground BRV)",
+          "startup": "35F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "2 x 17, 6 (40)",
+          "properties": "Unblockable"
+        },
+        {
+          "name": "Mine (Midair BRV)",
+          "startup": "23F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "35 each (up to 70)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Flare (Ground HP)",
+          "startup": "35F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "-",
+          "properties": "-"
+        },
+        {
+          "name": "Flare (Midair HP)",
+          "startup": "37F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "onion-knight",
+      "name": "Onion Knight",
+      "attacks": [
+        {
+          "name": "Blizzard (Ground BRV)",
+          "startup": "35F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "4 x 43, 7, 7, 18 (44)",
+          "properties": "Chase, Ranged Low"
+        },
+        {
+          "name": "Turbo-Hit (Midair BRV)",
+          "startup": "13F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 7, 2, 3 x 7, 10 (40)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Blade Torrent (Ground HP)",
+          "startup": "41F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 15 (15)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Comet (Midair HP)",
+          "startup": "81F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 15 (15)",
+          "properties": "Chase"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "cloud-of-darkness",
+      "name": "Cloud of Darkness",
+      "attacks": [
+        {
+          "name": "Tentacle of Pain (Ground BRV)",
+          "startup": "37F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "7, 7, 12 x 4 (62)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Tentacle of Suffering (Midair BRV)",
+          "startup": "37F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "3 x 10, 10 (40)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Anti-Air Particle Beam (Ground HP)",
+          "startup": "39F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 9 (9)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Fusillade Particle Beam (Midair HP)",
+          "startup": "83F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "cecil-harvey",
+      "name": "Cecil",
+      "attacks": [
+        {
+          "name": "Shadow Lance (Ground BRV)",
+          "startup": "35F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "8, 7 x 6 (up to 50)",
+          "properties": "Melee High (close), Ranged Low (far), Wall Rush"
+        },
+        {
+          "name": "Radiant Wings (Midair BRV)",
+          "startup": "19F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "3, 3, 7, 6, 6, 9 (40)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Soul Eater (Ground HP)",
+          "startup": "39F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "4, 2 x 5, 6 (20)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Saint's Fall (Midair HP)",
+          "startup": "53F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 3, 2, 1 x 2, 3 (10)",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "kain-highwind",
+      "name": "Kain",
+      "attacks": [
+        {
+          "name": "Lance Burst (Ground BRV)",
+          "startup": "29F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 6, 5, 15 (32)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Crashing Dive (Midair BRV)",
+          "startup": "21F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 7, 8, 1 x 7, 6, 12 (40)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Jump (Ground HP)",
+          "startup": "62F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x N",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Dragon's Fang (Midair HP)",
+          "startup": "41F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "golbez",
+      "name": "Golbez",
+      "attacks": [
+        {
+          "name": "Glare Hand (Ground BRV)",
+          "startup": "23F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "8 x N, 6 x 3 (up to 26)",
+          "properties": "Chase (first hit), Wall Rush *5"
+        },
+        {
+          "name": "Attack System (Midair BRV)",
+          "startup": "23/83F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "4, 2 x N",
+          "properties": "Chase *5"
+        },
+        {
+          "name": "Nightglow (Ground HP)",
+          "startup": "15F (close), 91F (far)",
+          "spawnsNear": "Player",
+          "damageMultiplier": "1 x 3, 4, 4",
+          "properties": "Melee High (five hits), Ranged High, Wall Rush"
+        },
+        {
+          "name": "Genesis Rock (Midair HP)",
+          "startup": "51F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 13 (up to 13)",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "bartz-klauser",
+      "name": "Bartz",
+      "attacks": [
+        {
+          "name": "Blade Crash (Ground BRV)",
+          "startup": "23F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "8, 7, 6, 1 x 4, 15 (40)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Slide Shooter (Midair BRV)",
+          "startup": "25F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 6, 5, 6, 3, 3, 5, 12 (40)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Dark Flame (Ground HP)",
+          "startup": "53F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Ragnarok Blade (Midair HP)",
+          "startup": "45F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "exdeath",
+      "name": "Exdeath",
+      "attacks": [
+        {
+          "name": "Sword Dance (Ground BRV)",
+          "startup": "65F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "30 (30)",
+          "properties": "Melee Mid, Wall Rush"
+        },
+        {
+          "name": "Hurricane (Midair BRV)",
+          "startup": "43F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 6, 20 (32)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Grand Cross (Ground HP)",
+          "startup": "93F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 5 (10)",
+          "properties": "Unblockable, Chase"
+        },
+        {
+          "name": "Delta Attack (Midair HP)",
+          "startup": "51F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Block, Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "gilgamesh",
+      "name": "Gilgamesh",
+      "attacks": [
+        {
+          "name": "Cross Slash (Ground BRV)",
+          "startup": "21F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "6, 6, 8, 8, 16, 16 (60) OR 1, 1, 1, 1, 1, 1 (6)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Tsubamegaeshi (Midair BRV)",
+          "startup": "21F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "8, 8, 12, 12, 24 (60) OR 1, 1, 1, 1, 1 (5)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Death Claw (Ground HP)",
+          "startup": "41F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "10, 10 (20) OR 1, 1 (2)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Hurricane (Midair HP)",
+          "startup": "13F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "4 x 6 (24) OR 1 x 6 (6)",
+          "properties": "Chase"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "terra-branford",
+      "name": "Terra",
+      "attacks": [
+        {
+          "name": "Graviga (Ground BRV)",
+          "startup": "183F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "2 x N, 40 (40+)",
+          "properties": "Unblockable, Wall Rush"
+        },
+        {
+          "name": "Blizzara (Midair BRV)",
+          "startup": "27F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "20, 5 x 3 (35)",
+          "properties": "Ranged Low, Wall Rush"
+        },
+        {
+          "name": "Flood (Ground HP)",
+          "startup": "71F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "-",
+          "properties": "Unblockable, Chase"
+        },
+        {
+          "name": "Meltdown (Midair HP)",
+          "startup": "145F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "kefka-palazzo",
+      "name": "Kefka",
+      "attacks": [
+        {
+          "name": "Meteor (Ground BRV)",
+          "startup": "35F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "15 each (up to 75)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Extra-Crispy Firaga (Midair BRV)",
+          "startup": "49F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "15 each (up to 45)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Hyperdrive (Ground HP)",
+          "startup": "143F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Unblockable, Chase"
+        },
+        {
+          "name": "Havoc Wing (Midair HP)",
+          "startup": "51F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "cloud-strife",
+      "name": "Cloud",
+      "attacks": [
+        {
+          "name": "Sonic Break (Ground BRV)",
+          "startup": "21F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "8, 12, 25 (45)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Slashing Blow (Midair BRV)",
+          "startup": "21F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "5, 10, 25 (40)",
+          "properties": "Wall R ush"
+        },
+        {
+          "name": "Cross Slash (Ground HP)",
+          "startup": "41F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "5, 5 (10)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Braver (Midair HP)",
+          "startup": "47F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2, 1 x N (4+)",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "tifa-lockhart",
+      "name": "Tifa",
+      "attacks": [
+        {
+          "name": "Beat Rush (Ground BRV)",
+          "startup": "21F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "8, 11, 16 (35)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Falcon's Dive (Midair BRV)",
+          "startup": "23F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "26 (26)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Meteodrive (Ground HP)",
+          "startup": "39F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "15 (15)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Rolling Blaze (Midair HP)",
+          "startup": "45F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 7 (7)",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "sephiroth",
+      "name": "Sephiroth",
+      "attacks": [
+        {
+          "name": "Reaper (Ground BRV)",
+          "startup": "21F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2, 1 x 5, 10, 2, 1 x 6, 10, 3, 1 x 5, 2 (45)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Sudden Cruelty (Midair BRV)",
+          "startup": "17F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 8, 9, 4, 1 x 5, 6 (40)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Octaslash (Ground HP)",
+          "startup": "43F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 6, 4 (16)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Hell's Gate (Midair HP)",
+          "startup": "55F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x N",
+          "properties": "Chase"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "aerith",
+      "name": "Aerith",
+      "attacks": [
+        {
+          "name": "Cure (Ground BRV)",
+          "startup": "-",
+          "spawnsNear": "Player",
+          "damageMultiplier": "60 % of raw BRV",
+          "properties": "BRV heal"
+        },
+        {
+          "name": "Seal Evil (Midair BRV)",
+          "startup": "-",
+          "spawnsNear": "Player",
+          "damageMultiplier": "3-second stun",
+          "properties": "Ranged Low"
+        },
+        {
+          "name": "Planet Protector (Ground HP)",
+          "startup": "-",
+          "spawnsNear": "Player",
+          "damageMultiplier": "5-second duration",
+          "properties": "Damage immunity"
+        },
+        {
+          "name": "Holy (Midair HP)",
+          "startup": "480F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "-",
+          "properties": "Ranged High, Block (close)"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "squall-leonhart",
+      "name": "Squall",
+      "attacks": [
+        {
+          "name": "Solid Barrel (Ground BRV)",
+          "startup": "13F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "5, 6, 8, 10, 5, 5, 16 (55)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Heel Crush (Midair BRV)",
+          "startup": "41F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "20 (20)",
+          "properties": "Melee Mid, Wall Rush, Block (Ranged Low)"
+        },
+        {
+          "name": "Blasting Zone (Ground HP)",
+          "startup": "41F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "6, 1 x 4 (10)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Aerial Circle (Midair HP)",
+          "startup": "43F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush, Block (Ranged Low)"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "laguna-loire",
+      "name": "Laguna",
+      "attacks": [
+        {
+          "name": "Machine Gun (Ground BRV)",
+          "startup": "31F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 31 (31)",
+          "properties": "-"
+        },
+        {
+          "name": "Shotgun (Midair BRV)",
+          "startup": "55F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 6, 1 x 6, 3 x 6 (30)",
+          "properties": "Ranged Low, Ranged Mid, Wall Rush"
+        },
+        {
+          "name": "Satellite Laser (Ground HP)",
+          "startup": "83F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "2 x 8 (16)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Ragnarok Blade (Midair HP)",
+          "startup": "43F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "ultimecia",
+      "name": "Ultimecia",
+      "attacks": [
+        {
+          "name": "Knight's Axe (Ground BRV, uncharged)",
+          "startup": "33F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "10 x 3 (up to 30)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Knight's Axe (Midair BRV, charged)",
+          "startup": "53F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "40 (40)",
+          "properties": "Ranged High, Wall Rush"
+        },
+        {
+          "name": "Hell's Judgement (Ground HP)",
+          "startup": "103F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "3 x 13 (39)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Apocalypse (Midair HP)",
+          "startup": "59~240F",
+          "spawnsNear": "Player",
+          "damageMultiplier": "-",
+          "properties": "Chase"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "zidane-tribal",
+      "name": "Zidane",
+      "attacks": [
+        {
+          "name": "Rumble Rush (Ground BRV)",
+          "startup": "19F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2, 3, 4, 6, 2 x 3, 9 (30)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Vortex (Midair BRV)",
+          "startup": "23F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 3, 9, 1 x 5, 15 (35)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Stellar Circle (Ground HP)",
+          "startup": "43F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 9 (9)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Free Energy (Midair HP)",
+          "startup": "25F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Chase"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "kuja",
+      "name": "Kuja",
+      "attacks": [
+        {
+          "name": "Snatch Blow (Ground BRV)",
+          "startup": "35F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "8, 1 x 4, 2 x 10, 15 (47)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Strike Energy (Midair BRV)",
+          "startup": "17F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "4 x 4, 2 x 7, 20 (50)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Flare Star (Ground HP)",
+          "startup": "39F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "10, 1 x 5 (15)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Force Symphony (Midair HP)",
+          "startup": "33F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Chase"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "tidus",
+      "name": "Tidus",
+      "attacks": [
+        {
+          "name": "Sonic Buster (Ground BRV)",
+          "startup": "25F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 5, 6, 8, 16 (40)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Hop Step (Midair BRV)",
+          "startup": "11F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "7, 13 (20)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Spiral Cut (Ground HP)",
+          "startup": "39F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 4, 6 (10)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Slice and Dice (Midair HP)",
+          "startup": "53F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 5 (10)",
+          "properties": "Chase"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "yuna",
+      "name": "Yuna",
+      "attacks": [
+        {
+          "name": "Meteor Strike (Ground BRV)",
+          "startup": "19F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "10, 20 (30)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Heavenly Strike (Midair BRV)",
+          "startup": "11F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "4, 6, 12 (22)",
+          "properties": "Ranged Low, Wall Rush"
+        },
+        {
+          "name": "Hellfire (Ground HP)",
+          "startup": "39F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "10 (10)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Diamond Dust (Midair HP)",
+          "startup": "21F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 5 (10)",
+          "properties": "Chase"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "jecht",
+      "name": "Jecht",
+      "attacks": [
+        {
+          "name": "Jecht Rush (Ground BRV)",
+          "startup": "13F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "4, 1 x 9, 3, 1 x 5, 2, 19 (42)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Jecht Stream (Midair BRV)",
+          "startup": "17F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2, 2, 1 x 4, 3, 5, 5, 1 x 4, 15 (40)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Jecht Blade (Ground HP)",
+          "startup": "41F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 5 (10)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Triumphant Grasp (Midair HP)",
+          "startup": "41F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 5, 3, 2 (10)",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "shantotto",
+      "name": "Shantotto",
+      "attacks": [
+        {
+          "name": "Bind (Ground BRV)",
+          "startup": "65F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Ranged Low"
+        },
+        {
+          "name": "Bio (Midair BRV)",
+          "startup": "33F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "4 x 11 (44)",
+          "properties": "Ranged Low"
+        },
+        {
+          "name": "Spirit Magic: Earth (Ground HP)",
+          "startup": "49F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "5 x 5 (25)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Spirit Magic: Ice (Midair HP)",
+          "startup": "69F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "3 x 5 (15)",
+          "properties": "Chase"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "prishe",
+      "name": "Prishe",
+      "attacks": [
+        {
+          "name": "Howling Fists -> Raging Fists (Ground BRV)",
+          "startup": "17F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 3, 7, 2 x 4, 7 (25)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Backhand Blow -> Shoulder Tackle (Midair BRV)",
+          "startup": "29F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "18, 12 (30)",
+          "properties": "Melee High, Wall Rush"
+        },
+        {
+          "name": "Nullifying Dropkick (Ground HP)",
+          "startup": "49F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Auroral Uppercut (Midair HP)",
+          "startup": "43F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "2 x 5 (10)",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "vaan",
+      "name": "Vaan",
+      "attacks": [
+        {
+          "name": "Greatsword (Ground BRV, non-switch)",
+          "startup": "23F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "13, 17 (30)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Staff (Midair BRV, non-switch)",
+          "startup": "21F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "3 x 3, 11 (20)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Cataclysm (Ground HP)",
+          "startup": "45F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Chase"
+        },
+        {
+          "name": "Inferno (Midair HP)",
+          "startup": "51F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 9 (9)",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "gabranth",
+      "name": "Gabranth",
+      "attacks": [
+        {
+          "name": "Enrage (Ground BRV)",
+          "startup": "15F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "3 x 8, 16 (40)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Aero (Midair BRV)",
+          "startup": "31F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "15 (15)",
+          "properties": "Ranged Low, Chase"
+        },
+        {
+          "name": "Execution (Ground HP)",
+          "startup": "41F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "20 (20)",
+          "properties": "Chase"
+        },
+        {
+          "name": "Hatred (Midair HP)",
+          "startup": "35F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "-",
+          "properties": "Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    },
+    {
+      "slug": "lightning",
+      "name": "Lightning",
+      "attacks": [
+        {
+          "name": "Aerora (Ground BRV)",
+          "startup": "43F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 5, 6 (11)",
+          "properties": "-"
+        },
+        {
+          "name": "Smite (Midair BRV)",
+          "startup": "23F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "12, 10, 18 (40)",
+          "properties": "Wall Rush"
+        },
+        {
+          "name": "Lightning Strike (Ground HP)",
+          "startup": "47F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "7 each",
+          "properties": "Chase"
+        },
+        {
+          "name": "Thunderfall (Midair HP)",
+          "startup": "55F",
+          "spawnsNear": "Opponent",
+          "damageMultiplier": "1 x 8, 2 x 6 (8/12)",
+          "properties": "Block, Wall Rush"
+        }
+      ],
+      "sources": [
+        "https://dissidia.wiki/Assist_(Dissidia_012)"
+      ],
+      "documented": true
+    }
+  ]
+}

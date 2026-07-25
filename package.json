@@ -6,6 +6,8 @@
   "scripts": {
     "scrape": "node scripts/scrape.mjs",
     "parse": "node scripts/parse.mjs && node scripts/parse-meta.mjs",
+    "scrape:build": "node scripts/scrape-builddata.mjs",
+    "parse:build": "node scripts/parse-builddata.mjs",
     "images": "node scripts/fetch-images.mjs",
     "build": "node scripts/build.mjs",
     "qa": "node scripts/qa.mjs",

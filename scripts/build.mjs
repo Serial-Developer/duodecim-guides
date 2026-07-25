@@ -13,6 +13,8 @@ import { renderCalendrier } from '../src/templates/calendrier.mjs';
 import { slugAnchor } from '../src/templates/helpers.mjs';
 import { renderFeralUnlock } from '../src/templates/feral-unlock.mjs';
 import { renderMultiplayer } from '../src/templates/multiplayer.mjs';
+import { renderBuildCreator } from '../src/templates/build-creator.mjs';
+import { buildDataBundle } from './build-data-bundle.mjs';
 import { speedValues } from '../src/templates/helpers.mjs';
 import { readFileSync, writeFileSync, existsSync, mkdirSync, cpSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -133,6 +135,19 @@ for (const { def, data, ed } of chars) {
   writeFileSync(join(DIST, 'characters', `${def.slug}.html`), html);
 }
 
+// Créateur de builds : page + payload de données (script plutôt que JSON à
+// fetcher, pour rester consultable sans serveur comme le reste du site).
+{
+  const ed = readJson(join(ROOT, 'data', 'editorial', '_build-creator.json'));
+  const bundle = buildDataBundle(ROOT);
+  writeFileSync(join(DIST, 'scripts', 'build-data.js'), `window.BUILD_DATA=${JSON.stringify(bundle)};\n`);
+  writeFileSync(join(DIST, 'createur-de-builds.html'), renderBuildCreator({
+    ed,
+    characters: CHARACTERS,
+    hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'icons', `${slug}.png`)),
+  }));
+}
+
 // Techniques + Multijoueur
 writeFileSync(join(DIST, 'techniques.html'), renderTechniques(shared));
 writeFileSync(join(DIST, 'multijoueur.html'), renderMultiplayer(readJson(join(ROOT, 'data', 'editorial', '_multiplayer.json'))));
@@ -193,6 +208,7 @@ writeFileSync(join(DIST, 'obtenir-feral-chaos.html'), renderFeralUnlock(feralUnl
 cpSync(join(ROOT, 'src', 'styles', 'main.css'), join(DIST, 'styles', 'main.css'));
 cpSync(join(ROOT, 'src', 'scripts', 'site.js'), join(DIST, 'scripts', 'site.js'));
 cpSync(join(ROOT, 'src', 'scripts', 'calendrier.js'), join(DIST, 'scripts', 'calendrier.js'));
+cpSync(join(ROOT, 'src', 'scripts', 'build-creator.js'), join(DIST, 'scripts', 'build-creator.js'));
 cpSync(join(ROOT, 'assets'), join(DIST, 'assets'), { recursive: true });
 
-console.log(`dist/ généré : index + ${chars.length - 1} guides + 7 pages transverses (techniques, install, savedata, tournois, participer, organiser, futurs-tournois)${missingEd ? ` (${missingEd} sans éditorial — bandeaux)` : ''}`);
+console.log(`dist/ généré : index + ${chars.length - 1} guides + créateur de builds + 7 pages transverses (techniques, install, savedata, tournois, participer, organiser, futurs-tournois)${missingEd ? ` (${missingEd} sans éditorial — bandeaux)` : ''}`);

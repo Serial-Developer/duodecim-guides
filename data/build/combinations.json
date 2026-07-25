@@ -1,0 +1,704 @@
+{
+  "generated": "2026-07-25T21:04:22.753Z",
+  "license": "CC BY-SA — finalfantasy.fandom.com",
+  "note": "La page Combination porte un bandeau « table incomplète » côté Fandom.",
+  "sources": [
+    "https://finalfantasy.fandom.com/wiki/Combination"
+  ],
+  "items": [
+    {
+      "id": "adamant-chains",
+      "name": "Adamant Chains",
+      "level": 100,
+      "pieces": {
+        "weapon": [
+          "Adamant Knife"
+        ],
+        "hand": [
+          "Adamant Shield"
+        ],
+        "head": [
+          "Adamant Helm"
+        ],
+        "body": [
+          "Adamant Vest"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "BRV Boost on Dodge +8% · Slight Midair Evasion Boost effect",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "blessed-crystal",
+      "name": "Blessed Crystal",
+      "level": 30,
+      "pieces": {
+        "weapon": [
+          "Crystal Sword",
+          "Crystal Lance"
+        ],
+        "hand": [
+          "Crystal Shield",
+          "Crystal Bangle"
+        ],
+        "head": [
+          "Crystal Hairpin",
+          "Crystal Helm"
+        ],
+        "body": [
+          "Crystal Vest",
+          "Crystal Armor"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "+20% EX Force Absorption · +20% EX Core Absorption",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "dark-force",
+      "name": "Dark Force",
+      "level": 1,
+      "pieces": {
+        "weapon": [
+          "Dark Sword"
+        ],
+        "hand": [
+          "Dark Shield"
+        ],
+        "head": [
+          "Dark Helm"
+        ],
+        "body": [
+          "Dark Armor"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "+20% Wall Rush Bravery damage · +20% Wall Rush HP damage",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "dazzling-diamond",
+      "name": "Dazzling Diamond",
+      "level": 60,
+      "pieces": {
+        "weapon": [
+          "Diamond Sword"
+        ],
+        "hand": [
+          "Diamond Shield",
+          "Diamond Cuff"
+        ],
+        "head": [
+          "Diamond Hairpin",
+          "Diamond Helm"
+        ],
+        "body": [
+          "Diamond Vest",
+          "Diamond Armor"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "+100% AP earned",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "glorious-gold",
+      "name": "Glorious Gold",
+      "level": 30,
+      "pieces": {
+        "weapon": [
+          "Gold Sword",
+          "Golden Staff"
+        ],
+        "hand": [
+          "Golden Shield",
+          "Gold Bangle",
+          "Gold Armlet"
+        ],
+        "head": [
+          "Gold Hairpin",
+          "Golden Helm"
+        ],
+        "body": [
+          "Golden Vest",
+          "Golden Armor"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "+50% Gil earned in battle",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "judgment-of-lufenia",
+      "name": "Judgment of Lufenia",
+      "level": 100,
+      "pieces": {
+        "weapon": [
+          "Lufenia's Edge",
+          "Lufenian Axe",
+          "Lufenian Claw",
+          "Lufenian Rod",
+          "Lufenian Gun"
+        ],
+        "hand": [
+          "Lufenian Shield"
+        ],
+        "head": [
+          "Lufenian Helm",
+          "Lufenian Cap"
+        ],
+        "body": [
+          "Lufenian Armor",
+          "Lufenian Robes",
+          "Lufenian Chestplate"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "Assist Gauge Depletion+15%",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "mystic-mythril",
+      "name": "Mystic Mythril",
+      "level": 1,
+      "pieces": {
+        "weapon": [
+          "Mythril Sword",
+          "Mythril Spear",
+          "Mythril Axe",
+          "Mythril Rod",
+          "Mythril Claw"
+        ],
+        "hand": [
+          "Mythril Shield",
+          "Mythril Bangle"
+        ],
+        "head": [
+          "Mythril Helm",
+          "Mythril Hairpin"
+        ],
+        "body": [
+          "Mythril Vest",
+          "Mythril Armor"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "+30% EX Mode Duration",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "pride-of-the-titans",
+      "name": "Pride of the Titans",
+      "level": 90,
+      "pieces": {
+        "weapon": [
+          "Giant's Axe"
+        ],
+        "hand": [
+          "Giant's Gloves"
+        ],
+        "head": [
+          "Giant's Helm"
+        ],
+        "body": [
+          "Giant's Harness"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "+750 HP · +100 Brave",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "seal-of-lufenia",
+      "name": "Seal of Lufenia",
+      "level": 100,
+      "pieces": {
+        "weapon": [
+          "Lufenian Saber",
+          "Lufenian Katana",
+          "Lufenian Lance",
+          "Lufenian Dagger",
+          "Lufenian Staff",
+          "Star of Lufenia",
+          "Lufenian Lute",
+          "Lufenian Pole"
+        ],
+        "hand": [
+          "Lufenian Dirk",
+          "Lufenian Bangle",
+          "Lufenian Gauntlets",
+          "Lufenian Greatshield"
+        ],
+        "head": [
+          "Lufenian Headband",
+          "Lufenian Hairpin"
+        ],
+        "body": [
+          "Lufenian Jacket",
+          "Lufenian Vest"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "EX Gauge Depletion+5%",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "snowpetal",
+      "name": "Snowpetal",
+      "level": 100,
+      "pieces": {
+        "weapon": [
+          "None"
+        ],
+        "hand": [
+          "Blue Moon",
+          "Lunate Armlet"
+        ],
+        "head": [
+          "Chaplet"
+        ],
+        "body": [
+          "Snowflake Sweater"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "Magic Counter Strength +100% · BRV Boost on Block+30%",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "soul-of-yamato",
+      "name": "Soul of Yamato",
+      "level": 100,
+      "pieces": {
+        "weapon": [
+          "Genji Blade"
+        ],
+        "hand": [
+          "Genji Shield"
+        ],
+        "head": [
+          "Genji Helm"
+        ],
+        "body": [
+          "Genji Armor"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "+3 Luck · +20% Regen · HP to Brave · EX Core Appearance Boost",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "whisper-of-the-wyrm",
+      "name": "Whisper of the Wyrm",
+      "level": 60,
+      "pieces": {
+        "weapon": [
+          "Dragon Slayer",
+          "Wyvern Lance",
+          "Dragon's Tail"
+        ],
+        "hand": [
+          "Dragon Shield",
+          "Dragon Armlet",
+          "Dragon Gloves"
+        ],
+        "head": [
+          "Dragon's Crest"
+        ],
+        "body": [
+          "Dragon Mail"
+        ]
+      },
+      "required": 3,
+      "pieceCount": 4,
+      "effects": "+10% Physical Defense · +10% Magical Defense",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "all-glories-must-fade",
+      "name": "All Glories Must Fade",
+      "level": 60,
+      "pieces": {
+        "weapon": [
+          "Heike's Blade"
+        ],
+        "hand": [
+          "Heike's Shield"
+        ],
+        "head": [
+          "Heike's Helm"
+        ],
+        "body": [
+          "Heike's Armor"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "Initial EX Force+100% & EX Mode Duration-50%",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "allure-of-honey",
+      "name": "Allure of Honey",
+      "level": 30,
+      "pieces": {
+        "weapon": [
+          "Sexy Cologne"
+        ],
+        "hand": [
+          "Member's Card"
+        ],
+        "head": [
+          "Blonde Wig"
+        ],
+        "body": [
+          "Silk Dress"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "+50% Battlegen rate · +50% Drop rate",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "ancient-weapon",
+      "name": "Ancient Weapon",
+      "level": 100,
+      "pieces": {
+        "weapon": [
+          "Particle Beam"
+        ],
+        "hand": [
+          "Tome Shield"
+        ],
+        "head": [
+          "Defense Node"
+        ],
+        "body": [
+          "Mage Mail"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "Damage +40% · Defense -50%",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "elemental-archfiend",
+      "name": "Elemental Archfiend",
+      "level": 30,
+      "pieces": {
+        "weapon": [
+          "Scarmiglione's Fang"
+        ],
+        "hand": [
+          "Barbariccia's Wristlet"
+        ],
+        "head": [
+          "Rubicante's Cowl"
+        ],
+        "body": [
+          "Cagnazzo's Carapace"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "Bravery boost on Block/Evasion/Quickmove/Stage Destruction",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "final-strike",
+      "name": "Final Strike",
+      "level": null,
+      "pieces": {
+        "weapon": [
+          "Death Blade"
+        ],
+        "hand": [
+          "Reaper's Shield"
+        ],
+        "head": [
+          "Helmet of the Dead"
+        ],
+        "body": [
+          "Death Armor"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "EX Absorption & Range Boost · AST Charge & Duration Boost",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "flavor-of-life",
+      "name": "Flavor of Life",
+      "level": 1,
+      "pieces": {
+        "weapon": [
+          "Frying Pan"
+        ],
+        "hand": [
+          "Kitchen Timer"
+        ],
+        "head": [
+          "Toque Blanche"
+        ],
+        "body": [
+          "Iron Apron"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "+100% Regen rate",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "force-of-the-resolute",
+      "name": "Force of the Resolute",
+      "level": 30,
+      "pieces": {
+        "weapon": [
+          "Nail Bat"
+        ],
+        "hand": [
+          "Skull Wristlet"
+        ],
+        "head": [
+          "Spirit Band"
+        ],
+        "body": [
+          "Bomber Jacket"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "+30% EX Force Absorption · EX Core and EX Force to Brave",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "imps-blessing",
+      "name": "Imp's Blessing",
+      "level": 60,
+      "pieces": {
+        "weapon": [
+          "Impartisan"
+        ],
+        "hand": [
+          "Tortoise Shield"
+        ],
+        "head": [
+          "Saucer"
+        ],
+        "body": [
+          "Reed Cloak"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "+15m EX Force Absorption range",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "king-of-tragedy",
+      "name": "King of Tragedy",
+      "level": 100,
+      "pieces": {
+        "weapon": [
+          "Caliburn",
+          "Rhongomiant"
+        ],
+        "hand": [
+          "Prytwen"
+        ],
+        "head": [
+          "Dragon Sallet"
+        ],
+        "body": [
+          "Wygar"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "EX Revenge Duration +40% · EX Revenge Damage +50%",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "rise-of-discord",
+      "name": "Rise of Discord",
+      "level": 100,
+      "pieces": {
+        "weapon": [
+          "Endless Oblivion"
+        ],
+        "hand": [
+          "Eternal Despair"
+        ],
+        "head": [
+          "Phantasmal Abyss"
+        ],
+        "body": [
+          "Cycle's End"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "EX Mode & EX Revenge Duration +40%",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "succubuss-soul",
+      "name": "Succubus's Soul",
+      "level": 100,
+      "pieces": {
+        "weapon": [
+          "Blood Sword"
+        ],
+        "hand": [
+          "Sanguine Shield"
+        ],
+        "head": [
+          "Blood Helm"
+        ],
+        "body": [
+          "Blood Armor"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "Recover 20% HP upon dealing HP damage. · (includes wall rush)",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "super-rocket",
+      "name": "Super Rocket",
+      "level": 100,
+      "pieces": {
+        "weapon": [
+          "Hardwood Katana"
+        ],
+        "hand": [
+          "Scorpion Mittens"
+        ],
+        "head": [
+          "Ace's Helm"
+        ],
+        "body": [
+          "Fighter's Lorica"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "Damage Boost Near Death +30% · Physical Def. -100%",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    },
+    {
+      "id": "uniter",
+      "name": "Uniter",
+      "level": 30,
+      "pieces": {
+        "weapon": [
+          "Warblade"
+        ],
+        "hand": [
+          "Warlord's Gauntlets"
+        ],
+        "head": [
+          "Warlord's Soul"
+        ],
+        "body": [
+          "Warlord's Corslet"
+        ]
+      },
+      "required": 4,
+      "pieceCount": 4,
+      "effects": "+200% Bravery recovery",
+      "documented": true,
+      "sources": [
+        "https://finalfantasy.fandom.com/wiki/Combination"
+      ]
+    }
+  ]
+}

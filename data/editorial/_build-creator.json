@@ -1,0 +1,39 @@
+{
+  "title": "Créateur de builds",
+  "tagline": "Composez, sauvegardez et partagez vos builds de tournoi",
+  "intro": [
+    "Cet outil reproduit l'écran de personnalisation de Dissidia 012 : attaques, abilities, équipement, accessoires, assist et invocation. Tout se passe dans votre navigateur — rien n'est envoyé sur un serveur, et vos builds restent stockés sur votre machine.",
+    "La jauge de CP suit les règles du jeu : 450 points de capacité au niveau 100, extensibles à 510 avec les accessoires Hero's Spirit et Hero's Essence. Un build qui dépasse son budget reste modifiable et sauvegardable, mais il est signalé comme invalide."
+  ],
+  "legalityNote": "Les items marqués « illégal » le sont au regard du ruleset de tournoi 2017, qui correspond au réglage « Official » du jeu. Le bouton « Afficher les items illégaux » les fait réapparaître, toujours étiquetés — rien n'est masqué en silence.",
+  "undocumented": {
+    "attackSlots": "Le nombre d'emplacements d'attaques par catégorie n'est documenté dans aucune de nos sources. L'outil ne limite donc pas le nombre d'attaques cochées : la contrainte appliquée est le budget de CP, qui, lui, est documenté.",
+    "hpLinks": "Les sources indiquent si un personnage dispose de HP links, mais pas quelles attaques s'enchaînent. L'information est affichée telle quelle, sans détail par attaque.",
+    "maxBooster": "Le cumul multiplicatif des boosters est confirmé par un exemple chiffré du guide de builds multijoueur (1.5 × 1.4 × 1.3 donne le ×2.7 annoncé). Les boosters n'agissent que sur les effets des accessoires, pas sur les statistiques des équipements."
+  },
+  "help": [
+    {
+      "title": "Comment se calcule le budget de CP",
+      "points": [
+        "Chaque attaque et chaque ability coûte des CP. Le coût baisse une fois l'élément maîtrisé : l'outil affiche les deux valeurs et vous laisse basculer entre « coût à l'achat » et « coût maîtrisé ».",
+        "La jauge distingue en bleu ciel la part consommée par les attaques et en vert pomme celle des abilities, comme dans le jeu.",
+        "Équiper Hero's Spirit ou Hero's Essence relève le plafond au fil de la sélection : deux Hero's Spirit et un Hero's Essence portent la capacité à 510."
+      ]
+    },
+    {
+      "title": "Equip glitch",
+      "points": [
+        "Un équipement dont la catégorie n'est pas portée nativement par le personnage est marqué d'une icône dédiée : il n'est portable qu'en passant par l'Equip Glitch.",
+        "La manipulation économise jusqu'à 40 CP, à raison de 10 par pièce, et doit être refaite à chaque changement d'équipement."
+      ]
+    },
+    {
+      "title": "Sauvegarde et partage",
+      "points": [
+        "Les builds sont enregistrés dans le stockage local de votre navigateur. Vider les données du site les efface : exportez vos builds importants.",
+        "L'export JSON conserve toute la structure et se réimporte à l'identique. L'export CSV aplatit un build par ligne, pour un tableur.",
+        "Le lien de partage encode le build dans l'adresse : il suffit de l'envoyer, sans fichier ni compte."
+      ]
+    }
+  ]
+}

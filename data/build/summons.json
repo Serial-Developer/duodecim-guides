@@ -1,0 +1,526 @@
+{
+  "generated": "2026-07-25T21:04:22.779Z",
+  "license": "CC BY 4.0 — dissidia.wiki",
+  "sources": [
+    "https://dissidia.wiki/Summons_(Dissidia_012)"
+  ],
+  "items": [
+    {
+      "id": "ifrit",
+      "name": "Ifrit",
+      "text": "<tabber>\n|-|Auto=\nBravery boosted to 150%.\nAuto when stage bravery gained.\n|-|Manual=\nBravery boosted to 150%.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "shiva",
+      "name": "Shiva",
+      "text": "<tabber>\n|-|Auto=\nOpponent's bravery prevented from rising for a short time (10 seconds).\nAuto summon when foe's BRV=0.\n|-|Manual=\nOpponent's bravery prevented from rising for a short time (15 seconds). Duration longer than Auto.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "ramuh",
+      "name": "Ramuh",
+      "text": "<tabber>\n|-|Auto=\nOpponent's summons sealed for a short time (30 seconds).\nAuto when foe gains stage bravery.\n|-|Manual=\nOpponent's summons sealed for a short time (50 seconds). Duration longer than Auto.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "carbuncle",
+      "name": "Carbuncle",
+      "text": "<tabber>\n|-|Auto=\nMatches opponent's bravery to yours.\nAuto summon when BRV=0.\n|-|Manual=\nMatches opponent's bravery to yours.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "magic-pot",
+      "name": "Magic Pot",
+      "text": "<tabber>\n|-|Auto=\nCopies opponent's bravery.\nAuto when foe's BRV=3x base value.\n|-|Manual=\nCopies opponent's bravery.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "demon-wall",
+      "name": "Demon Wall",
+      "text": "<tabber>\n|-|Auto=\nBravery shielded for a time (10 seconds).\nAuto when BRV=50% base value.\n|-|Manual=\nBravery shielded for a time (15 seconds). Duration longer than Auto.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "magus-sisters",
+      "name": "Magus Sisters",
+      "text": "<tabber>\n|-|Auto=\nOpponent's bravery halved for a short time (30 seconds). Base bravery halved.\nAuto when foe gains stage BRV.\n|-|Manual=\nOpponent's bravery halved for a short time. Base bravery halved. Duration longer than Auto.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "odin",
+      "name": "Odin",
+      "text": "<tabber>\n|-|Auto=\n50% chance of inflicting Break.\nAuto summon when near death.\n|-|Manual=\n50% chance of inflicting Break.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "phoenix",
+      "name": "Phoenix",
+      "text": "<tabber>\n|-|Auto=\nProtected from Break for a time (20 seconds). BRV is restored to base value.\nAuto when BRV=50% base value.\n|-|Manual=\nProtected from Break for a time (30 seconds). BRV is restored to base value. Duration longer than Auto.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "alexander",
+      "name": "Alexander",
+      "text": "<tabber>\n|-|Auto=\nBravery frozen for a short time (15 seconds).\nAuto when stage bravery gained.\n|-|Manual=\nBravery frozen for a short time (10 seconds). Duration is shorter than Auto, but can be devastating if timed right.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "leviathan",
+      "name": "Leviathan",
+      "text": "<tabber>\n|-|Auto=\nOpponent's bravery decreases (-50 BRV per second) for a short period of time (30 seconds).\nAuto when foe gains stage bravery.\nTotal bravery reduction is 1500.\n|-|Manual=\nOpponent's bravery decreases for a short period of time (-66 BRV per second, 30 seconds). More effective than Auto.\nTotal bravery reduction is 1980.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "bahamut",
+      "name": "Bahamut",
+      "text": "<tabber>\n|-|Auto=\nBravery rises of a short time (+75 BRV per second, 20 seconds).\nAuto when BRV=50% base value.\nTotal bravery increase is 1500.\n|-|Manual=\nBravery rises for a short time (+99 BRV per second, 20 seconds). More effective than Auto.\nTotal bravery increase is 1980.\n</tabber>",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "chocobo",
+      "name": "Chocobo",
+      "text": "Both fighters' BRV values are randomly shuffled.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "moogle",
+      "name": "Moogle",
+      "text": "Who knows what will happen...",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "mandragora",
+      "name": "Mandragora",
+      "text": "For a short period (50 seconds), recover BRV to base value more quickly.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "bomb",
+      "name": "Bomb",
+      "text": "After a set period of time (10 seconds), opponent takes BRV damage corresponding to your BRV.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "asura",
+      "name": "Asura",
+      "text": "Will either seal summons, induce a summon, or destroy opponent's Summonstone.\nDuration (seal): 75 seconds.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "titan",
+      "name": "Titan",
+      "text": "For a period of time (10 seconds), BRV tripled when you take HP damage.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "atomos",
+      "name": "Atomos",
+      "text": "For a period (10 seconds), absorb double the opponent's BRV when you take HP damage.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "iron-giant",
+      "name": "Iron Giant",
+      "text": "For a period of time (50 seconds), when you deal HP damage, opponent's BRV is halved.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "cactuar",
+      "name": "Cactuar",
+      "text": "Opponent's BRV is reduced by 1000.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "tonberry",
+      "name": "Tonberry",
+      "text": "After a set period of time (25 seconds), opponent loses BRV equal to the HP damage you take.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "malboro",
+      "name": "Malboro",
+      "text": "Constantly reduces foe's BRV (for 30 seconds). The closer you are, the greater the reduction.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "ultros",
+      "name": "Ultros",
+      "text": "Opponent cannot see BRV for a short period (120 seconds).",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "typhon",
+      "name": "Typhon",
+      "text": "One digit of the opponent's BRV is blown away.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "deathgaze",
+      "name": "Deathgaze",
+      "text": "Inflicts Break if opponent's BRV is a multiple of 5.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "behemoth",
+      "name": "Behemoth",
+      "text": "BRV doubled, but afterwards, quickly falls'\nDuration: -60 BRV per second, 50 seconds for total of 3000 BRV.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "pupu",
+      "name": "PuPu",
+      "text": "BRV halved, but afterwards quickly rises'\nDuration: +60 BRV per second, 50 seconds for total of 3000 BRV.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "lich",
+      "name": "Lich",
+      "text": "Opponent's BRV falls to 0 after a set period of time (15 seconds).",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "marilith",
+      "name": "Marilith",
+      "text": "Opponent's BRV frozen after a set period of time.\nActivation: 5 seconds\nDuration: 15 seconds",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken",
+      "text": "Opponent's BRV switched with yours after a set period of time (15 seconds).",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "tiamat",
+      "name": "Tiamat",
+      "text": "BRV tripled after a set period of time.\nActivation: 20 seconds.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "scarmiglione",
+      "name": "Scarmiglione",
+      "text": "When opponent calls a summon, their BRV falls to 0.",
+      "legal": true,
+      "illegalReason": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "cagnazzo",
+      "name": "Cagnazzo",
+      "text": "When opponent calls a summon, their BRV swap with yours.",
+      "legal": true,
+      "illegalReason": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "rubicante",
+      "name": "Rubicante",
+      "text": "When opponent calls a summon, your BRV is tripled.",
+      "legal": true,
+      "illegalReason": null,
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "gilgamesh",
+      "name": "Gilgamesh",
+      "text": "A strike with the strongest of swords triples your BRV.\nBut if you're unlucky...",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "ultima-weapon",
+      "name": "Ultima Weapon",
+      "text": "Focuses a massive energy beam at the foe, inflicting Break after a set period of time (50 seconds).",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "omega",
+      "name": "Omega",
+      "text": "For a short period of time (13 seconds), opponent's BRV decreases.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "calcabrina",
+      "name": "Calcabrina",
+      "text": "Cancels opponent's Break status.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "giant-of-babil",
+      "name": "Giant of Babil",
+      "text": "Transfers 30% of both fighter's BRV to stage BRV.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "syldra",
+      "name": "Syldra",
+      "text": "Nullifies active summon effects.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "ultima-the-high-seraph",
+      "name": "Ultima, the High Seraph",
+      "text": "For a short period, receive stage BRV after suffering an AST Break or EX Break.\nDuration: 50 seconds.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "zalera-the-death-seraph",
+      "name": "Zalera, the Death Seraph",
+      "text": "Inflicts Break if opponent's BRV value is 9999.\nThis summon will miss when forcefully activated by Asura.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "brynhildr",
+      "name": "Brynhildr",
+      "text": "Doubles stage BRV and doubles base BRV for a set period.\nDuration: 50 seconds.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "hecatoncheir",
+      "name": "Hecatoncheir",
+      "text": "Resets stage BRV to 0.",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "land-worm",
+      "name": "Land Worm",
+      "text": "Constantly reduces foe's BRV (for 30 seconds). The farther you are, the greater the reduction.\nNavigation\nDissidia 012 [duodecim] Final Fantasy\nPlayable characters\nBartz Klauser • Cecil Harvey • Cloud Strife • Cloud of Darkness • Feral Chaos • Exdeath • Firion • Gabranth • Garland • Gilgamesh • Golbez • Jecht • Kain Highwind • Kefka Palazzo • Kuja • Laguna Loire • Lightning • Onion Knight • Prishe • Sephiroth • Shantotto • Squall Leonhart • Terra Branford • Tidus • The Emperor • Tifa Lockhart • Ultimecia • Vaan • Warrior of Light • Yuna • Zidane Tribal\nOther characters\nAerith Gainsborough • Chaos\nFirst-timers\nChange Log • FAQ • Glossary • Starter Guide\nResources\nNew! Button Combinations • Combo Videos • New!  How to Do Combos • List of Useful Info • Multiplayer Build Guide • Online Setup (PPSSPP) • Tier List • Tier List (Assist) • Trade Component Farming Guide • Translations\nBattle mechanics\nAerial Recovery • Assist • Assist Gauge Charge • Battlegen • Block • Bravery • Chase • Dash • Dodge • EX • HP • Landing Lag • Quickmove • Wall Rush\nCustomization\nAbilities • Accessories • Equipment • Special Effects • Statistic • Summons\nTechniques\nBlodge • Dash Feint • Dodge Punishment • Lock Off\nCommunity rulesets\nDC Ranked • Dissidence • Japan Ranked • Tournament Rules\nStages\nCrystal Tower • Crystal World • Dream's End • Edge of Madness • Empyreal Paradox • Kefka's Tower • Lunar Subterrane • M.S. Prima Vista • Old Chaos Shrine • Order's Sanctuary • Orphan's Cradle • Pandaemonium • Pandaemonium - Top Floor • Phantom Train • Planet's Core • Sky Fortress Bahamut • The Rift • Ultimecia's Castle • World of Darkness\nData\nAttack Priority • Equip Glitch • EX Burst Damage • Damage Formula • Frame Data • Glitches (Assist Storage Glitch) • Movement Speed • Music • Staff credits • Unlockables\nMisc.\nDissidia 012 Prologus (Script)\nModding\nDLC EDAT Reference",
+      "legal": false,
+      "illegalReason": "Hors counter summons : banni par le ruleset de tournoi.",
+      "documented": true,
+      "sources": [
+        "https://dissidia.wiki/Summons_(Dissidia_012)"
+      ]
+    },
+    {
+      "id": "barbariccia",
+      "name": "Barbariccia",
+      "text": "",
+      "legal": true,
+      "illegalReason": null,
+      "documented": false,
+      "sources": [
+        "https://dissidia.wiki/Tournament_Rules_(Dissidia_012)"
+      ]
+    }
+  ]
+}

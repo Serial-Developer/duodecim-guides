@@ -255,6 +255,9 @@ export function siteHeader({ base = '', active = '', h1 = false } = {}) {
       { key: 'feral', href: `${base}obtenir-feral-chaos.html`, label: 'Obtenir Feral Chaos' },
       { key: 'techniques', href: `${base}techniques.html`, label: 'Techniques &amp; glitches' },
     ] },
+    { title: 'Créateur de builds', items: [
+      { key: 'createur', href: `${base}createur-de-builds.html`, label: 'Composer un build' },
+    ] },
     { title: 'Jouer à Dissidia', items: [
       { key: 'install', href: `${base}install.html`, label: 'Installer sur PPSSPP' },
       { key: 'savedata', href: `${base}savedata.html`, label: 'Savedata prêtes à jouer' },

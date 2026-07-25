@@ -1,0 +1,172 @@
+{
+  "generated": "2026-07-25T21:04:22.799Z",
+  "license": "CC BY 4.0 — dissidia.wiki",
+  "sources": [
+    "https://dissidia.wiki/Statistic_(Dissidia_012)"
+  ],
+  "note": "Valeurs au niveau 100. HP/CP/BRV/LUK sont identiques pour tout le cast.",
+  "shared": {
+    "hp": 6999,
+    "cp": 450,
+    "brv": 667,
+    "luk": 60
+  },
+  "byCharacter": {
+    "warrior-of-light": {
+      "atk": 110,
+      "def": 113,
+      "note": "113 (+10 EX Mode)"
+    },
+    "garland": {
+      "atk": 111,
+      "def": 112,
+      "note": null
+    },
+    "firion": {
+      "atk": 111,
+      "def": 112,
+      "note": null
+    },
+    "the-emperor": {
+      "atk": 110,
+      "def": 112,
+      "note": null
+    },
+    "onion-knight": {
+      "atk": 107,
+      "def": 111,
+      "note": null
+    },
+    "cloud-of-darkness": {
+      "atk": 109,
+      "def": 111,
+      "note": null
+    },
+    "cecil-harvey": {
+      "atk": 109,
+      "def": 110,
+      "note": "109 (+2 in DK) ; 110 (+2 in PLD)"
+    },
+    "golbez": {
+      "atk": 110,
+      "def": 112,
+      "note": null
+    },
+    "kain-highwind": {
+      "atk": 110,
+      "def": 111,
+      "note": null
+    },
+    "bartz-klauser": {
+      "atk": 110,
+      "def": 111,
+      "note": null
+    },
+    "exdeath": {
+      "atk": 110,
+      "def": 113,
+      "note": null
+    },
+    "gilgamesh": {
+      "atk": 111,
+      "def": 111,
+      "note": null
+    },
+    "terra-branford": {
+      "atk": 111,
+      "def": 110,
+      "note": null
+    },
+    "kefka-palazzo": {
+      "atk": 111,
+      "def": 110,
+      "note": null
+    },
+    "cloud-strife": {
+      "atk": 110,
+      "def": 112,
+      "note": null
+    },
+    "sephiroth": {
+      "atk": 111,
+      "def": 111,
+      "note": null
+    },
+    "tifa-lockhart": {
+      "atk": 108,
+      "def": 111,
+      "note": null
+    },
+    "squall-leonhart": {
+      "atk": 109,
+      "def": 111,
+      "note": null
+    },
+    "ultimecia": {
+      "atk": 111,
+      "def": 109,
+      "note": null
+    },
+    "laguna-loire": {
+      "atk": 111,
+      "def": 110,
+      "note": null
+    },
+    "zidane-tribal": {
+      "atk": 108,
+      "def": 110,
+      "note": null
+    },
+    "kuja": {
+      "atk": 109,
+      "def": 111,
+      "note": null
+    },
+    "tidus": {
+      "atk": 110,
+      "def": 111,
+      "note": null
+    },
+    "jecht": {
+      "atk": 112,
+      "def": 111,
+      "note": null
+    },
+    "yuna": {
+      "atk": 110,
+      "def": 110,
+      "note": null
+    },
+    "shantotto": {
+      "atk": 112,
+      "def": 109,
+      "note": null
+    },
+    "prishe": {
+      "atk": 109,
+      "def": 110,
+      "note": null
+    },
+    "vaan": {
+      "atk": 109,
+      "def": 112,
+      "note": null
+    },
+    "gabranth": {
+      "atk": 108,
+      "def": 109,
+      "note": "108 (+4 EX Mode) ; 109 (+3 EX Mode)"
+    },
+    "lightning": {
+      "atk": 109,
+      "def": 111,
+      "note": "109 (+1 COM)"
+    },
+    "feral-chaos": {
+      "atk": 113,
+      "def": 114,
+      "note": "113 (+1 EX Mode) ; 114 (+1 EX Mode)"
+    }
+  },
+  "documented": true
+}

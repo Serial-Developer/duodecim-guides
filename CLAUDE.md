@@ -10,11 +10,13 @@ Site statique de guides compétitifs FR pour *Dissidia 012 [duodecim] Final Fant
 4. Orthographe française irréprochable, accents compris.
 
 ## Pipeline (npm run …)
-`scrape` (wiki → cache/, jamais re-fetché) → `parse` (→ data/characters/*.json + meta.json) → `images` (Wayback → assets/) → `build` (→ dist/) → `qa` (ressources locales, ancres, anti-invention, termes bannis ; `qa:links` ajoute la vérification réseau) → `coverage` (reports/coverage.md).
+`scrape` (wiki → cache/, jamais re-fetché) → `parse` (→ data/characters/*.json + meta.json) → `images` (Wayback → assets/) → `build` (→ dist/) → `qa` (ressources locales, ancres, anti-invention, termes bannis, intégrité du créateur de builds ; `qa:links` ajoute la vérification réseau) → `coverage` (reports/coverage.md).
+Créateur de builds : `scrape:build` puis `parse:build` (→ data/build/*.json), consommés par `build` qui émet `dist/scripts/build-data.js`.
 Après TOUTE modification d'éditorial : `node scripts/build.mjs && node scripts/qa.mjs` puis commit incluant `dist/`.
 
 ## Architecture
 - `data/characters/*.json` : extraction structurée par perso (infobox, coups avec frames, sections). Régénérés par `parse` — ne pas éditer à la main.
+- `data/build/*.json` : données du créateur de builds (equipment, accessories, abilities, combinations, assists, summons, ruleset, capacity, base-stats). Régénérés par `parse:build` — ne pas éditer à la main. Équipements et accessoires viennent du **Final Fantasy Wiki** (CC BY-SA), le reste de dissidia.wiki.
 - `data/editorial/*.json` : prose FR (une fiche par perso + `_shared`, `_multiplayer`, `_install`, `_savedata`, `_tournois`, `_participer`, `_organiser`, `_feral-unlock`). C'est ICI qu'on écrit. Schéma : docs/editorial-guidelines.md ; enrichissements : docs/enrichment-pass.md.
 - `src/templates/*.mjs` : templates JS (helpers.mjs contient `siteHeader` — le menu global à 3 catégories — et les générateurs SVG). `src/styles/main.css` : design system nuit violette/or, breakpoints 600/1024.
 - `scripts/` : scrape, parse, parse-meta, fetch-images, fetch-move-images, clean-portraits, build, qa, coverage.
@@ -28,6 +30,17 @@ Après TOUTE modification d'éditorial : `node scripts/build.mjs && node scripts
 - **Sessions parallèles** : d'autres sessions Claude travaillent parfois sur ce repo. TOUJOURS `git pull --rebase` avant de pousser ; en conflit, la structure distante gagne et on greffe son ajout (précédent : intégration de multijoueur.html dans le header global).
 - File d'attente GitHub Actions parfois bloquée >10 min : `gh run cancel` + relance.
 
+## Pièges du créateur de builds
+- **finalfantasy.fandom.com renvoie 403 sur `/wiki/…`** : passer par `api.php?action=parse&prop=wikitext`. Attention aux pages jumelles Dissidia 2008 (filtrer sur la classe CSS `D012`).
+- **Homonymes** : « Flamberge » (épée / gunblade de Lightning), « Claymore » (niv. 1 / niv. 30 Labyrinthe), « Summon Unused » (soi / adversaire), paliers d'abilities (`Speed Boost` / `+` / `++`, `Ω`). Les identifiants intègrent ce qui les distingue — ne pas « simplifier » les slugs.
+- **Le wiki oublie le `+` d'un « Jump Times Boost »** (20 et 40 CP sous le même nom) : l'identifiant est suffixé par le coût, le nom affiché reste fidèle.
+- **Coups à déclinaisons** : une ligne portant `variants` est le coup équipable, les lignes suivantes en sont les versions (Jecht : « Ground (Up) » existe sous deux parents).
+- **Sets « à trois pièces » listent quatre pièces** : trois suffisent (d'où la mention « (1/3) » sur chaque pièce).
+- **Vérification de référence** : le build « Adamant Chains + EX » de Lightning du wiki (HP 10972, BRV 957, ATK 177, DEF 185) doit être retrouvé exactement — c'est le test qui valide le modèle de calcul.
+- Le serveur de preview `python -m http.server` coupe parfois le chargement de `build-data.js` (~310 ko) : recharger. `npx serve dist` ne présente pas le problème.
+
 ## État au 25/07/2026
 Fait : 31 guides complets + fiches Aerith/Feral Chaos ; landing « Player Select » ; pages transverses (techniques, multijoueur, install, savedata, tournois ×3, organiser) ; header global 3 menus ; ~100 apports communautaires sourcés + vidéos ; passe de style intégrale (0 terme banni) ; QA 0/0 ; 265+ liens vérifiés.
 Ouvert : rien de bloquant. Idées en attente de demande : tier list alternative post-2017 (n'existe pas sur le wiki), captures de coups manquantes si la Wayback les archive un jour, nom de domaine personnalisé (CNAME).
+
+Branche `feature/build-creator` : créateur de builds (page + 5 onglets, jauge CP 450/510, légalité tournoi 2017, localStorage, export JSON/CSV, lien de partage). 670 équipements, 551 accessoires, 122 abilities, 25 sets, 31 assists, 47 invocations. Trous assumés listés dans `reports/build-creator-coverage.md` (emplacements d'attaques et HP links par attaque non documentés, 24 coups sans coût CP, 3 armures de Feral Chaos sans emplacement, effet de Barbariccia).
