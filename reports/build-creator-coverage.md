@@ -30,9 +30,9 @@ passe par `api.php?action=parse&prop=wikitext`, qui livre la source des tables.
 | Sets d'équipement | 25 | 12 à trois pièces, 13 à quatre |
 | Assists | 31 | 124 attaques (30 jouables + Aerith) |
 | Invocations | 47 | 4 légales en tournoi (counter summons) |
-| Attaques équipables | 431 | tous personnages confondus |
+| Attaques équipables | 472 | tous personnages confondus, enchaînements et attaques HP branchées compris |
 
-Payload servi au navigateur : `dist/scripts/build-data.js`, 309 ko (listes encodées
+Payload servi au navigateur : `dist/scripts/build-data.js`, 347 ko (listes encodées
 en colonnes, réhydratées côté client ; environ 80 ko une fois compressé à la volée).
 
 ## Modèle de calcul, et sa vérification
@@ -57,9 +57,8 @@ Master Guardsman, que la fiche du wiki mentionne en note.
 
 | Sujet | État | Traitement dans l'outil |
 |---|---|---|
-| Nombre d'emplacements d'attaques par catégorie | Introuvable dans les sources consultées | Aucune limite de nombre n'est imposée ; la contrainte appliquée est le budget de CP. Signalé dans l'onglet Attaques. |
 | Quelles braveries mènent à quelle attaque HP (HP links) | **Résolu** : la catégorie `Bravery to HP abilities in Dissidia 012 Final Fantasy` du Final Fantasy Wiki recense les 19 attaques concernées, et la section « Bravery to HP Attacks » de chaque page personnage donne la bravery d'origine (colonne « Obtained ») | 31 paires sur 11 personnages, toutes résolues contre nos fiches. Des paires supplémentaires restent déclarables dans `hpLinks` de `data/editorial/_build-creator.json` |
-| Coût en CP de 24 attaques sur 431 | Absent du wiki | Étiquette « non documenté » sur la ligne, et le total de CP est présenté comme un minimum dès qu'une de ces attaques est sélectionnée |
+| Coût en CP de 23 attaques sur 472 | Absent du wiki | Étiquette « non documenté » sur la ligne, et le total de CP est présenté comme un minimum dès qu'une de ces attaques est sélectionnée |
 | Emplacement de 3 armures exclusives de Feral Chaos (Aegis of Strife, Calamitous Rage, Deafening Fissure) | Le Fandom ne donne pas l'emplacement, et aucune page de dissidia.wiki ne les couvre | `documented: false`, exclues des listes équipables, signalées ici |
 | Effet de l'invocation Barbariccia | Citée comme counter summon légal par la page de règles, mais absente de la page Summons | Proposée (elle est légale), sans description, avec l'étiquette « non documenté » |
 | Formule exacte du cumul des boosters | Jamais énoncée ; un exemple chiffré du guide de builds multijoueur (1,5 × 1,4 × 1,3 → le ×2,7 annoncé) confirme le cumul multiplicatif | Cumul multiplicatif appliqué, mention de la déduction dans les repères de la page |
@@ -138,9 +137,11 @@ déduction combine trois règles, puis fusionne les familles qui se recoupent.
 
 1. **Commande partagée** — « While on ground, press R + triangle » réunit Ground Dash,
    Reverse Ground Dash et Omni Ground Dash.
-2. **Paliers d'une même ability** — le nommage (`+`, `++`, `Ω`) marque des rangs d'un
+2. **Ressource convertie** — « Instead of gaining EXP » ouvre les quatre conversions
+   d'EXP : elles consomment la même chose, une seule peut s'appliquer.
+3. **Paliers d'une même ability** — le nommage (`+`, `++`, `Ω`) marque des rangs d'un
    même effet, pas des abilities cumulables.
-3. **Un prérequis n'est pas un conflit** — Descent Speed Boost et Zero Gravity partagent
+4. **Un prérequis n'est pas un conflit** — Descent Speed Boost et Zero Gravity partagent
    la commande de Multi Air Slide, mais leurs notes disent « available after jumps and
    Multi Air Slide » : le prérequis sort du groupe, les deux autres restent
    incompatibles entre eux.
@@ -149,7 +150,7 @@ La fusion des règles 1 et 2 rattrape un défaut de la source : la description d
 Ground Dash+ omet « au sol », ce qui l'aurait rangé avec les dashes aériens. Son lien
 de palier avec Omni Ground Dash le remet dans la bonne famille.
 
-Résultat : **11 groupes couvrant 30 abilities**.
+Résultat : **12 groupes couvrant 34 abilities**.
 
 | Groupe | Fondement |
 |---|---|
@@ -157,6 +158,7 @@ Résultat : **11 groupes couvrant 30 abilities**.
 | Free Air Dash · Reverse Free Air Dash · Omni Air Dash · Omni Air Dash+ | R + triangle en l'air |
 | Ground Dash · Reverse Ground Dash · Omni Ground Dash · Omni Ground Dash+ | R + triangle au sol |
 | Descent Speed Boost · Zero Gravity | X après un saut |
+| EXP to HP · EXP to Bravery · EXP to EX Force · EXP to Assist | même ressource convertie (EXP) |
 | Speed Boost ×3, Jump Boost ×3, Jump Times Boost ×3, Auto EX Command ×2, Auto EX Defense ×2, Concentration ×3, Achy ×2 | paliers d'une même ability |
 
 Un cas que la déduction raterait se déclare dans `abilityExclusions` de

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T22:39:43.784Z",
+  "generated": "2026-07-25T22:47:23.541Z",
   "license": "CC BY 4.0 — dissidia.wiki",
   "sources": [
     "https://dissidia.wiki/Abilities_(Dissidia_012)"
@@ -2023,6 +2023,17 @@
         "achy-plus"
       ],
       "reason": "« Achy » n'existe qu'en un seul palier à la fois.",
+      "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
+    },
+    {
+      "id": "excl-exp-to-hp",
+      "abilities": [
+        "exp-to-hp",
+        "exp-to-bravery",
+        "exp-to-ex-force",
+        "exp-to-assist"
+      ],
+      "reason": "ces abilities convertissent toutes la même ressource (EXP).",
       "source": "https://dissidia.wiki/Abilities_(Dissidia_012)"
     }
   ],

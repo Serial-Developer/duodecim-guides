@@ -110,6 +110,14 @@ function abilityCommand(a) {
   return contexte && commande ? { contexte, commande } : null;
 }
 
+// Certaines abilities ne se disputent pas une commande mais une ressource : les
+// quatre conversions d'EXP annoncent toutes « Instead of gaining/obtaining EXP ».
+// Une seule peut s'appliquer, puisqu'elles consomment la même chose.
+function abilityConsumes(a) {
+  const m = /^\s*instead of (?:gaining|obtaining|getting|receiving)\s+([A-Za-z ]+?)\s*,/i.exec(a.description || '');
+  return m ? m[1].trim().toUpperCase() : null;
+}
+
 // Un prérequis cité par son nom de base vaut pour tous ses paliers : « available
 // after … Multi Air Slide » couvre aussi « Multi Air Slide+ ».
 function abilityDependsOn(a, parNom) {
@@ -140,6 +148,8 @@ function deriveExclusions(groups, url) {
   for (const a of all) {
     const cmd = abilityCommand(a);
     if (cmd) ajouter(`cmd|${a.group}|${cmd.contexte}|${cmd.commande}`, `même commande : ${cmd.commande} ${cmd.contexte}`, a.id);
+    const conso = abilityConsumes(a);
+    if (conso) ajouter(`conso|${conso}`, `ces abilities convertissent toutes la même ressource (${conso})`, a.id);
     const base = a.name.replace(/\s*(\+\+?|Ω)\s*$/, '').trim();
     ajouter(`palier|${a.group}|${base}`, `« ${base} » n'existe qu'en un seul palier à la fois`, a.id);
   }
@@ -162,7 +172,8 @@ function deriveExclusions(groups, url) {
     motifParFamille.push({ cle, motif: f.motif, ids });
   }
   const motifs = new Map();
-  for (const f of motifParFamille.sort((a, b) => (a.cle.startsWith('cmd|') ? -1 : 1) - (b.cle.startsWith('cmd|') ? -1 : 1))) {
+  const rang = (cle) => (cle.startsWith('cmd|') || cle.startsWith('conso|') ? 0 : 1);
+  for (const f of motifParFamille.sort((a, b) => rang(a.cle) - rang(b.cle))) {
     const r = trouver(f.ids[0]);
     if (!motifs.has(r)) motifs.set(r, f.motif);
   }
