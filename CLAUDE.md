@@ -39,8 +39,9 @@ Après TOUTE modification d'éditorial : `node scripts/build.mjs && node scripts
 - **Vérification de référence** : le build « Adamant Chains + EX » de Lightning du wiki (HP 10972, BRV 957, ATK 177, DEF 185) doit être retrouvé exactement — c'est le test qui valide le modèle de calcul.
 - Le serveur de preview `python -m http.server` coupe parfois le chargement de `build-data.js` (~310 ko) : recharger. `npx serve dist` ne présente pas le problème.
 
-## État au 25/07/2026
+## État au 26/07/2026
 Fait : 31 guides complets + fiches Aerith/Feral Chaos ; landing « Player Select » ; pages transverses (techniques, multijoueur, install, savedata, tournois ×3, organiser) ; header global 3 menus ; ~100 apports communautaires sourcés + vidéos ; passe de style intégrale (0 terme banni) ; QA 0/0 ; 265+ liens vérifiés.
+Créateur de builds en ligne (createur-de-builds.html, sous-menu dédié) : 5 onglets, jauge CP 450/510, règles du jeu appliquées (3 emplacements par catégorie posture × style, enchaînements et HP links imbriqués sans emplacement, 12 groupes d'exclusions d'abilities, exemplaires d'accessoires 1/2/3 selon rang S/A/B), localStorage, export JSON/CSV, lien de partage. 670 équipements, 551 accessoires, 122 abilities, 31 HP links, 25 sets. Le modèle de calcul est validé contre le build « Adamant Chains » de Lightning du wiki.
+
 Ouvert : rien de bloquant. Idées en attente de demande : tier list alternative post-2017 (n'existe pas sur le wiki), captures de coups manquantes si la Wayback les archive un jour, nom de domaine personnalisé (CNAME).
 
-Branche `feature/build-creator` : créateur de builds (page + 5 onglets, jauge CP 450/510, légalité tournoi 2017, localStorage, export JSON/CSV, lien de partage). 670 équipements, 551 accessoires, 122 abilities, 25 sets, 31 assists, 47 invocations. Trous assumés listés dans `reports/build-creator-coverage.md` (emplacements d'attaques et HP links par attaque non documentés, 24 coups sans coût CP, 3 armures de Feral Chaos sans emplacement, effet de Barbariccia).
