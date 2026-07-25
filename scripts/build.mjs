@@ -144,7 +144,9 @@ for (const { def, data, ed } of chars) {
   writeFileSync(join(DIST, 'createur-de-builds.html'), renderBuildCreator({
     ed,
     characters: CHARACTERS,
-    hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'icons', `${slug}.png`)),
+    // Les fichiers de assets/icons/ sont des planches de 128×32 (quatre vignettes
+    // côte à côte) : ce sont les portraits carrés qu'il faut afficher ici.
+    hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
   }));
 }
 

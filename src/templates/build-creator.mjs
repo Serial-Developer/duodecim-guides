@@ -14,7 +14,7 @@ const TABS = [
 function characterBanner(characters, hasPortrait) {
   return `<div class="bc-roster" role="radiogroup" aria-label="Choisir un personnage">
 ${characters.map((c) => `<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="${esc(c.slug)}" title="${esc(c.name)}">
-${hasPortrait(c.slug) ? `<img src="assets/icons/${esc(c.slug)}.png" alt="" loading="lazy" width="56" height="56">` : '<span class="bc-char-fallback" aria-hidden="true"></span>'}
+${hasPortrait(c.slug) ? `<img src="assets/portraits/${esc(c.slug)}.png" alt="" loading="lazy" width="56" height="56">` : '<span class="bc-char-fallback" aria-hidden="true"></span>'}
 <span class="bc-char-name">${esc(c.name)}</span>
 </button>`).join('\n')}
 </div>`;
