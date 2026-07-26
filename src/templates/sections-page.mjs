@@ -1,6 +1,6 @@
 // Rendu générique des pages transverses à sections (Participer, Organiser…) :
 // sections {id, name, short?, intro[], points[], cta[]} + sources/limites.
-import { esc, paras, sourcesSection, pageShell, siteHeader, siteFooter } from './helpers.mjs';
+import { esc, paras, sourcesSection, pageShell, siteHeader, siteFooter, linksFor } from './helpers.mjs';
 
 function ctaLink(l) {
   const ext = l.ext ? ' target="_blank" rel="external noopener"' : '';
@@ -16,10 +16,11 @@ ${(s.cta || []).map(ctaLink).join('\n')}
 </article>`;
 }
 
-export function renderSectionsPage({ data, active, pageTitle, description, seo }) {
-  const body = `${siteHeader({ active })}
-<nav class="guide-top" aria-label="Sections de la page"><div class="chips-nav">
-<a href="index.html">← Sélection</a>
+export function renderSectionsPage({ data, active, pageTitle, description, seo, t, locale, path, alternates, availability }) {
+  const L = linksFor(path, locale, availability);
+  const body = `${siteHeader(t, { path, locale, alternates, availability, active })}
+<nav class="guide-top" aria-label="${esc(t('common.pageSections'))}"><div class="chips-nav">
+<a href="${L.page('home')}">${t('common.backToSelect')}</a>
 ${data.sections.map((s) => `<a href="#${esc(s.id)}">${esc(s.short || s.name)}</a>`).join('\n')}
 </div></nav>
 <main class="wrap" style="padding-bottom:3rem">
@@ -28,15 +29,18 @@ ${data.sections.map((s) => `<a href="#${esc(s.id)}">${esc(s.short || s.name)}</a
 
 ${data.sections.map(sectionBlock).join('\n\n')}
 
-<h2 id="sources">Sources</h2>
-${sourcesSection(data.sources, data.limits)}
+<h2 id="sources">${t('common.sources')}</h2>
+${sourcesSection(t, data.sources, data.limits)}
 </main>
-${siteFooter()}`;
+${siteFooter(t)}`;
   return pageShell({
+    t,
+    locale,
     seo,
     title: pageTitle,
     description,
-    cssPath: 'styles/main.css',
+    path,
+    alternates,
     jsPath: null,
     body,
   });

@@ -1,5 +1,5 @@
 // Page transverse : tournois documentés, rulesets et participation
-import { esc, paras, sectionSources, sourcesSection, pageShell, siteHeader, siteFooter, slugAnchor } from './helpers.mjs';
+import { esc, paras, sourcesSection, pageShell, siteHeader, siteFooter, slugAnchor, linksFor } from './helpers.mjs';
 
 function rulesetBlock(r) {
   return `<article class="card" id="${esc(r.id)}">
@@ -10,53 +10,57 @@ ${r.points?.length ? `<ul>${r.points.map((p) => `<li>${esc(p)}</li>`).join('')}<
 </article>`;
 }
 
-function tournoiBlock(t) {
+function tournoiBlock(t, tr) {
   const medals = ['🥇', '🥈', '🥉'];
-  return `<article class="card" id="${slugAnchor(t.name)}">
-<h3 style="margin-top:0">${esc(t.name)}</h3>
+  return `<article class="card" id="${slugAnchor(tr.name)}">
+<h3 style="margin-top:0">${esc(tr.name)}</h3>
 <div class="table-scroll"><table class="stats">
-<tr><th>Date</th><td>${esc(t.date)}</td></tr>
-<tr><th>Format</th><td>${esc(t.format)}</td></tr>
-<tr><th>Participants</th><td>${esc(t.joueurs)}</td></tr>
-${t.podium?.length ? `<tr><th>Podium</th><td>${t.podium.map((p, i) => `${medals[i] || ''} ${esc(p)}`).join(' · ')}</td></tr>` : ''}
-<tr><th>Organisation</th><td>${esc(t.organisation)}</td></tr>
+<tr><th>${t('tournaments.date')}</th><td>${esc(tr.date)}</td></tr>
+<tr><th>${t('tournaments.format')}</th><td>${esc(tr.format)}</td></tr>
+<tr><th>${t('tournaments.players')}</th><td>${esc(tr.joueurs)}</td></tr>
+${tr.podium?.length ? `<tr><th>${t('tournaments.podium')}</th><td>${tr.podium.map((p, i) => `${medals[i] || ''} ${esc(p)}`).join(' · ')}</td></tr>` : ''}
+<tr><th>${t('tournaments.organisation')}</th><td>${esc(tr.organisation)}</td></tr>
 </table></div>
-${t.notes ? `<p class="mv-desc">${esc(t.notes)}</p>` : ''}
-${(t.liens || []).map((l) => `<p class="video-link"><a href="${esc(l.url)}" target="_blank" rel="external noopener">${esc(l.label)}</a></p>`).join('\n')}
+${tr.notes ? `<p class="mv-desc">${esc(tr.notes)}</p>` : ''}
+${(tr.liens || []).map((l) => `<p class="video-link"><a href="${esc(l.url)}" target="_blank" rel="external noopener">${esc(l.label)}</a></p>`).join('\n')}
 </article>`;
 }
 
-export function renderTournois(data, seo) {
-  const body = `${siteHeader({ active: 'tournois' })}
-<nav class="guide-top" aria-label="Sections de la page"><div class="chips-nav">
-<a href="index.html">← Sélection</a>
-<a href="#rulesets">Rulesets</a>
-<a href="#tournois">Tournois</a>
-<a href="#participer">Participer</a>
+export function renderTournois(data, seo, { t, locale, path, alternates, availability }) {
+  const L = linksFor(path, locale, availability);
+  const body = `${siteHeader(t, { path, locale, alternates, availability, active: 'tournois' })}
+<nav class="guide-top" aria-label="${esc(t('common.pageSections'))}"><div class="chips-nav">
+<a href="${L.page('home')}">${t('common.backToSelect')}</a>
+<a href="#rulesets">${t('tournaments.navRulesets')}</a>
+<a href="#tournois">${t('tournaments.navTournaments')}</a>
+<a href="#participer">${t('tournaments.participate')}</a>
 </div></nav>
 <main class="wrap" style="padding-bottom:3rem">
 <h1 style="color:var(--gold)">${esc(data.title)}</h1>
 <p class="mv-desc">${esc(data.lede)}</p>
 
-<h2 id="rulesets">Les rulesets</h2>
+<h2 id="rulesets">${t('tournaments.rulesets')}</h2>
 ${(data.rulesets || []).map(rulesetBlock).join('\n')}
 
-<h2 id="tournois">Tournois documentés</h2>
-${(data.tournois || []).map(tournoiBlock).join('\n')}
+<h2 id="tournois">${t('tournaments.documented')}</h2>
+${(data.tournois || []).map((tr) => tournoiBlock(t, tr)).join('\n')}
 
-<h2 id="participer">Participer</h2>
+<h2 id="participer">${t('tournaments.participate')}</h2>
 ${paras(data.participer?.intro)}
-<p><a href="participer.html">Participer aux tournois : le guide complet →</a></p>
+<p><a href="${L.page('participate')}">${t('tournaments.participateLink')}</a></p>
 
-<h2 id="sources">Sources</h2>
-${sourcesSection(data.sources, data.limits)}
+<h2 id="sources">${t('common.sources')}</h2>
+${sourcesSection(t, data.sources, data.limits)}
 </main>
-${siteFooter()}`;
+${siteFooter(t)}`;
   return pageShell({
+    t,
+    locale,
     seo,
-    title: 'Tournois — Dissidia 012 [duodecim]',
-    description: 'Les tournois compétitifs de Dissidia 012 [duodecim] : rulesets (Duodecim 22-1, Japan Ranked), brackets, résultats et conditions de participation.',
-    cssPath: 'styles/main.css',
+    path,
+    alternates,
+    title: t('tournaments.metaTitle'),
+    description: t('tournaments.metaDescription'),
     jsPath: null,
     body,
   });

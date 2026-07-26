@@ -31,7 +31,13 @@ export function gitDates(root) {
   try {
     // Une seule passe sur tout l'historique : premier commit touchant un
     // fichier = création, dernier = modification.
-    out = execFileSync('git', ['log', '--reverse', '--format=' + MARK + '%aI', '--name-only'], {
+    //
+    // `--name-status -M` plutôt que `--name-only` : il signale les renommages
+    // (`R100  ancien  nouveau`), ce qui permet de transporter l'historique vers
+    // le nouveau chemin. Sans cela, un simple `git mv` ferait passer un fichier
+    // pour neuf et `datePublished` mentirait — c'est arrivé en rangeant
+    // l'éditorial par locale (data/editorial/*.json -> data/editorial/fr/).
+    out = execFileSync('git', ['log', '--reverse', '-M', '--format=' + MARK + '%aI', '--name-status'], {
       cwd: root, encoding: 'utf-8', maxBuffer: 64 * 1024 * 1024,
     });
   } catch {
@@ -40,14 +46,27 @@ export function gitDates(root) {
     return cache;
   }
   const map = new Map();
+  const touch = (path, date) => {
+    const e = map.get(path);
+    if (e) e.modified = date;
+    else map.set(path, { created: date, modified: date });
+  };
   let date = null;
   for (const line of out.split('\n')) {
     const l = line.trimEnd();
     if (l.startsWith(MARK)) { date = l.slice(MARK.length); continue; }
     if (!l || !date) continue;
-    const e = map.get(l);
-    if (e) e.modified = date;
-    else map.set(l, { created: date, modified: date });
+    const parts = l.split('\t');
+    const status = parts[0];
+    if (status[0] === 'R' && parts.length >= 3) {
+      // Renommage : le nouveau chemin hérite de la date de création de l'ancien.
+      const [, from, to] = parts;
+      const prev = map.get(from);
+      map.delete(from);
+      map.set(to, { created: prev ? prev.created : date, modified: date });
+      continue;
+    }
+    if (parts.length >= 2) touch(parts[1], date);
   }
   cache = map;
   return cache;

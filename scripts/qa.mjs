@@ -4,9 +4,11 @@
 // Usage : node scripts/qa.mjs [--links]
 import { CHARACTERS, SPECIAL } from './characters.mjs';
 import * as cheerio from 'cheerio';
-import { readFileSync, existsSync, readdirSync } from 'node:fs';
-import { join, dirname } from 'node:path';
+import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
+import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { LOCALES, DEFAULT_LOCALE, LOCALE_META, localeDir } from '../src/i18n/config.mjs';
+import { guidePathFor } from '../src/i18n/routes.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -17,10 +19,24 @@ const warns = [];
 // Découverte automatique : une liste écrite à la main finit par oublier une page
 // (multijoueur.html a échappé aux contrôles jusqu'à cette passe). 404.html est
 // traité à part, avec les contrôles de référencement.
-const htmlFiles = [
-  ...readdirSync(DIST).filter((f) => f.endsWith('.html') && f !== '404.html').map((f) => join(DIST, f)),
-  ...readdirSync(join(DIST, 'characters')).filter((f) => f.endsWith('.html')).map((f) => join(DIST, 'characters', f)),
-];
+// Le parcours est récursif : les arbres de langue sont des sous-dossiers de
+// dist/ (dist/en/…), et une découverte à plat les manquerait entièrement.
+const SKIP_DIRS = new Set(['assets', 'styles', 'scripts']);
+function findHtml(dir) {
+  const out = [];
+  for (const name of readdirSync(dir)) {
+    const full = join(dir, name);
+    if (statSync(full).isDirectory()) {
+      if (!SKIP_DIRS.has(name)) out.push(...findHtml(full));
+    } else if (name.endsWith('.html') && !(dir === DIST && name === '404.html')) {
+      out.push(full);
+    }
+  }
+  return out;
+}
+const htmlFiles = findHtml(DIST);
+// Locales réellement publiées : celles dont l'arbre existe dans dist/.
+const builtLocales = LOCALES.filter((l) => existsSync(join(DIST, localeDir(l), 'index.html')));
 const externalLinks = new Set();
 for (const file of htmlFiles) {
   const $ = cheerio.load(readFileSync(file, 'utf-8'));
@@ -47,20 +63,27 @@ for (const file of htmlFiles) {
 // --- 2. Anti-invention ---
 const BANNER = 'Section non documentée';
 const readJson = (p) => (existsSync(p) ? JSON.parse(readFileSync(p, 'utf-8')) : null);
-for (const c of [...CHARACTERS, ...SPECIAL]) {
+for (const locale of builtLocales) for (const c of [...CHARACTERS, ...SPECIAL]) {
   if (c.slug === 'chaos') continue;
-  const htmlPath = join(DIST, 'characters', `${c.slug}.html`);
-  if (!existsSync(htmlPath)) { errors.push(`guide manquant : ${c.slug}`); continue; }
+  const ed = readJson(join(ROOT, 'data', 'editorial', locale, `${c.slug}.json`));
+  const htmlPath = join(DIST, guidePathFor(c.slug, locale));
+  // Un guide sans prose dans cette langue n'est pas généré : c'est la règle de
+  // repli du build, pas un manque. Son absence n'est une erreur que si la prose
+  // existe.
+  if (!existsSync(htmlPath)) {
+    if (ed) errors.push(`guide manquant : ${c.slug} (${locale})`);
+    continue;
+  }
   const html = readFileSync(htmlPath, 'utf-8');
   const $ = cheerio.load(html);
   const data = readJson(join(ROOT, 'data', 'characters', `${c.slug}.json`));
-  const ed = readJson(join(ROOT, 'data', 'editorial', `${c.slug}.json`));
   const s = data.sections;
+  const who = `${c.slug} (${locale})`;
 
   // La section « Mécanique unique » n'existe que si le perso a une mécanique
   // (documentée par le wiki ou rédigée dans l'éditorial) : absente sinon, par design.
   const hasUnique = !!(s.uniqueMechanics?.documented || ed?.uniqueMechanics?.intro?.length);
-  if (!hasUnique && $('#unique').length) errors.push(`${c.slug} : section #unique présente alors que le personnage n'a pas de mécanique unique`);
+  if (!hasUnique && $('#unique').length) errors.push(`${who} : section #unique présente alors que le personnage n'a pas de mécanique unique`);
 
   const checks = [
     // passe d'enrichissement : l'overview/les builds peuvent être remplis depuis des
@@ -74,10 +97,10 @@ for (const c of [...CHARACTERS, ...SPECIAL]) {
   ];
   for (const [id, hasContent] of checks) {
     const section = $(`#${id}`);
-    if (!section.length) { errors.push(`${c.slug} : section #${id} absente du HTML`); continue; }
+    if (!section.length) { errors.push(`${who} : section #${id} absente du HTML`); continue; }
     const hasBanner = section.find('.banner').length > 0;
     if (!hasContent && !hasBanner) {
-      errors.push(`${c.slug} : section #${id} sans données documentées ET sans bandeau`);
+      errors.push(`${who} : section #${id} sans données documentées ET sans bandeau`);
     }
   }
   // les notes de coups FR doivent correspondre à des coups existants
@@ -87,25 +110,35 @@ for (const c of [...CHARACTERS, ...SPECIAL]) {
       for (const g of Object.values(s[key]?.groups || {})) g.moves.forEach((m) => m.name && moveNames.add(m.name));
     }
     for (const name of Object.keys(ed.moveNotes)) {
-      if (!moveNames.has(name)) warns.push(`${c.slug} : moveNote « ${name} » ne correspond à aucun coup extrait (note non affichée)`);
+      if (!moveNames.has(name)) warns.push(`${who} : moveNote « ${name} » ne correspond à aucun coup extrait (note non affichée)`);
     }
   }
 }
 
 // --- 2b. Cohérence terminologique (docs/style-pass.md) ---
-// Termes bannis dans la prose éditoriale ; « finisher » est toléré uniquement
-// dans le contexte Skillchain (fichier prishe).
-const BANNED_TERMS = [
-  [/HP de branche|branche HP|HP dérivé/i, '« HP de branche » -> HP link'],
-  [/\bender(s)?\b/i, '« ender » -> attaque HP de conclusion / reformuler'],
-  [/\bmeter\b/i, '« meter » -> jauges / ressources'],
-];
-for (const f of readdirSync(join(ROOT, 'data', 'editorial')).filter((x) => x.endsWith('.json'))) {
-  const raw = readFileSync(join(ROOT, 'data', 'editorial', f), 'utf-8');
-  for (const [re, hint] of BANNED_TERMS) {
-    if (re.test(raw)) {
-      if (f === 'prishe.json' && /finisher/i.test(raw) && !re.test(raw.replace(/finisher/gi, ''))) continue;
-      warns.push(`terme banni dans ${f} : ${hint}`);
+// La liste est PAR LANGUE et ne peut pas être partagée : « ender » et « meter »
+// sont bannis du français précisément parce que ce sont des anglicismes — en
+// anglais, ce sont les termes communautaires normaux. La liste anglaise reste
+// vide tant qu'aucune règle de style anglaise n'a été arrêtée.
+const BANNED_TERMS = {
+  fr: [
+    [/HP de branche|branche HP|HP dérivé/i, '« HP de branche » -> HP link'],
+    [/ender(s)?/i, '« ender » -> attaque HP de conclusion / reformuler'],
+    [/meter/i, '« meter » -> jauges / ressources'],
+  ],
+  en: [],
+};
+for (const locale of builtLocales) {
+  const dir = join(ROOT, 'data', 'editorial', locale);
+  if (!existsSync(dir)) continue;
+  for (const f of readdirSync(dir).filter((x) => x.endsWith('.json'))) {
+    const raw = readFileSync(join(dir, f), 'utf-8');
+    for (const [re, hint] of BANNED_TERMS[locale] || []) {
+      if (re.test(raw)) {
+        // « finisher » est toléré dans le contexte Skillchain (fiche Prishe).
+        if (f === 'prishe.json' && /finisher/i.test(raw) && !re.test(raw.replace(/finisher/gi, ''))) continue;
+        warns.push(`terme banni dans ${locale}/${f} : ${hint}`);
+      }
     }
   }
 }
@@ -342,6 +375,54 @@ for (const f of readdirSync(join(ROOT, 'data', 'editorial')).filter((x) => x.end
         warns.push(`${rel} : <img> sans width/height (${src})`);
       }
     });
+  }
+
+  // Annotations d'alternance linguistique : la réciprocité est la condition de
+  // leur prise en compte — si A déclare B, B doit déclarer A, sinon Google
+  // ignore l'ensemble. On vérifie aussi que chaque cible existe réellement et
+  // que x-default désigne bien la langue par défaut du site.
+  {
+    const declared = new Map();  // page -> { hreflang -> chemin }
+    for (const file of allHtml) {
+      const rel = file.replace(DIST, 'dist').replace(/\\/g, '/');
+      const path = rel.replace('dist/', '');
+      const $ = cheerio.load(readFileSync(file, 'utf-8'));
+      if (($('meta[name="robots"]').attr('content') || '').includes('noindex')) continue;
+      const map = {};
+      $('link[rel="alternate"][hreflang]').each((_, el) => {
+        const lang = $(el).attr('hreflang');
+        const href = $(el).attr('href') || '';
+        map[lang] = href.replace(/^https:\/\/[^/]+\/duodecim-guides\//, '') || 'index.html';
+      });
+      if (Object.keys(map).length) declared.set(path, map);
+    }
+    const defaultLang = LOCALE_META[DEFAULT_LOCALE].lang;
+    for (const [path, map] of declared) {
+      // Cibles existantes
+      for (const [lang, target] of Object.entries(map)) {
+        if (!existsSync(join(DIST, target))) {
+          errors.push(`hreflang : ${path} déclare « ${lang} » vers une page absente (${target})`);
+        }
+      }
+      // x-default sur la langue par défaut
+      if (!map['x-default']) errors.push(`hreflang : ${path} sans x-default`);
+      else if (map['x-default'] !== map[defaultLang]) {
+        errors.push(`hreflang : ${path} — x-default (${map['x-default']}) ne pointe pas la langue par défaut « ${defaultLang} » (${map[defaultLang]})`);
+      }
+      // Auto-référence : une page doit se déclarer elle-même
+      if (!Object.values(map).includes(path)) {
+        errors.push(`hreflang : ${path} ne se déclare pas elle-même`);
+      }
+      // Réciprocité
+      for (const [lang, target] of Object.entries(map)) {
+        if (lang === 'x-default' || target === path) continue;
+        const back = declared.get(target);
+        if (!back) { errors.push(`hreflang : ${path} pointe ${target}, qui ne déclare aucune alternance`); continue; }
+        if (!Object.values(back).includes(path)) {
+          errors.push(`hreflang non réciproque : ${path} -> ${target}, mais pas l'inverse`);
+        }
+      }
+    }
   }
 
   // Sitemap : couverture exacte des pages indexables

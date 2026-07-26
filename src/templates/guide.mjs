@@ -2,20 +2,13 @@
 import {
   esc, banner, infoBanner, paras, priorityBadge, startupChartSvg, mobilityChartSvg,
   chainSvg, sectionSources, sourcesSection, pageShell, siteHeader, siteFooter, linkRoster,
+  linksFor, ordinal,
 } from './helpers.mjs';
 import { ldArticle } from './jsonld.mjs';
 
-const FIELDS = [
-  ['damage', 'Dégâts de base'],
-  ['startup', 'Startup'],
-  ['type', 'Type'],
-  ['priority', 'Priorité'],
-  ['exForce', 'EX Force'],
-  ['effects', 'Effets'],
-  ['cancels', 'Cancels'],
-  ['assistGain', "Gain d'assist"],
-  ['cp', 'CP (maîtrisé)'],
-];
+// Champs d'un coup, dans l'ordre d'affichage. Les clés sont celles des données
+// extraites ; les libellés viennent du catalogue de la locale.
+const FIELD_KEYS = ['damage', 'startup', 'type', 'priority', 'exForce', 'effects', 'cancels', 'assistGain', 'cp'];
 
 // Certaines cellules extraites embarquent la définition d'un terme du glossaire du
 // wiki (tooltip « Hitbox » inliné sur sa propre ligne) : on retire les lignes de
@@ -25,11 +18,13 @@ const cleanVal = (v) => String(v ?? '').split('\n').filter((l) => !(l.trim().len
 // compact (le détail par variante vit dans les sous-fiches).
 const firstVal = (v) => { const c = cleanVal(v); return c.includes('||') ? c.split('||')[0].trim() : c; };
 
-function moveRows(m) {
+function moveRows(t, m) {
+  const labels = t.table('guide.fields');
   const variantHeader = m.variants && m.variants.length > 1
     ? `<tr><th></th>${m.variants.map((v) => `<th>${esc(v)}</th>`).join('')}</tr>`
     : '';
-  const rows = FIELDS.map(([key, label]) => {
+  const rows = FIELD_KEYS.map((key) => {
+    const label = labels[key];
     let val = m[key];
     if (val === undefined || val === null || val === '' ) return '';
     const cells = Array.isArray(val) ? val : [val];
@@ -60,10 +55,10 @@ const isRealVariants = (m) => m.variants && m.variants.length > 1 &&
 
 // Un coup à variantes est rendu comme un parent + une sous-fiche par variante,
 // sur le modèle des niveaux de charge de Jecht ou des invocations de Yuna.
-function variantChildren(m) {
+function variantChildren(t, m) {
   return m.variants.map((v, i) => {
     const sub = { ...m, variants: null };
-    for (const [key] of FIELDS) {
+    for (const key of FIELD_KEYS) {
       if (Array.isArray(m[key])) { sub[key] = m[key][i] ?? ''; continue; }
       const c = cleanVal(m[key]);
       if (c.includes('||')) { const parts = c.split('||').map((x) => x.trim()); sub[key] = parts[i] ?? parts[0]; }
@@ -73,12 +68,12 @@ function variantChildren(m) {
     return `<details class="move variant" aria-label="${esc(m.name)} — ${esc(v)}">
 <summary><span class="mv-name">${esc(v)}</span>
 <span class="mv-meta">${esc(st)}</span>${priorityBadge(pr)}</summary>
-<div class="mv-body"><div class="table-scroll"><table class="stats">${moveRows(sub)}</table></div></div>
+<div class="mv-body"><div class="table-scroll"><table class="stats">${moveRows(t, sub)}</table></div></div>
 </details>`;
   }).join('\n');
 }
 
-function moveAccordion(m, noteFr, ctx, asChild = false) {
+function moveAccordion(t, m, note, ctx, asChild = false) {
   const startup = firstVal(Array.isArray(m.startup) ? m.startup[0] : m.startup);
   const prio = Array.isArray(m.priority) ? m.priority[0] : m.priority;
   let shot = '';
@@ -86,43 +81,40 @@ function moveAccordion(m, noteFr, ctx, asChild = false) {
     const fn = decodeURIComponent(m.image.split('/').pop());
     if (ctx.moveImages.has(`${ctx.slug}/${fn}`)) {
       const dim = ctx.sizeOf ? ctx.sizeOf(`moves/${ctx.slug}/${fn}`) : '';
-      shot = `<img class="mv-shot" src="../assets/moves/${ctx.slug}/${encodeURIComponent(fn)}" alt="Capture in-game : ${esc(m.name || 'coup')}"${dim} loading="lazy">`;
+      const alt = t('guide.moves.screenshotAlt', { name: m.name || t('guide.moves.screenshotAltFallback') });
+      shot = `<img class="mv-shot" src="${ctx.L.asset(`assets/moves/${ctx.slug}/${encodeURIComponent(fn)}`)}" alt="${esc(alt)}"${dim} loading="lazy">`;
     }
   }
   // Variante (« X — Normal ») rendue en enfant indenté : seul le nom de la
   // variante est affiché, le nom complet reste accessible.
-  const displayName = asChild ? m.name.split(' — ').slice(1).join(' — ') : (m.name || 'Coup sans nom');
+  const displayName = asChild ? m.name.split(' — ').slice(1).join(' — ') : (m.name || t('guide.moves.unnamed'));
   return `<details class="move${asChild ? ' variant' : ''}"${asChild ? ` aria-label="${esc(m.name)}"` : ''}>
 <summary><span class="mv-name">${esc(displayName)}</span>
 <span class="mv-meta">${esc(startup || '')}</span>${priorityBadge(prio)}</summary>
 <div class="mv-body">
 ${shot}
-${noteFr ? `<div class="mv-note"><p>${esc(noteFr)}</p></div>` : ''}
+${note ? `<div class="mv-note"><p>${esc(note)}</p></div>` : ''}
 ${m.rawRows?.length
     ? `<div class="table-scroll"><table class="data"><tr>${m.rawRows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr>${m.rawRows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`
     : isRealVariants(m)
-      ? variantChildren(m)
-      : `<div class="table-scroll"><table class="stats">${moveRows(m)}</table></div>`}
-${(m.extraTables || []).map((t) => `<div class="table-scroll"><table class="data"><tr>${t.rows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr>${t.rows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`).join('')}
+      ? variantChildren(t, m)
+      : `<div class="table-scroll"><table class="stats">${moveRows(t, m)}</table></div>`}
+${(m.extraTables || []).map((tb) => `<div class="table-scroll"><table class="data"><tr>${tb.rows[0].map((c) => `<th>${esc(c)}</th>`).join('')}</tr>${tb.rows.slice(1).map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>`).join('')}
 </div>
 </details>`;
 }
 
-const GROUP_LABELS = { ground: 'Au sol', aerial: 'En l’air', followups: 'Followups', main: 'Liste' };
-
-function movesGroup(groupKey, flow, ed, ctx, sect = '') {
+function movesGroup(t, groupKey, flow, ed, ctx, sect = '') {
   if (!flow || !flow.moves.length) return '';
-  const label = GROUP_LABELS[groupKey] || groupKey;
-  // L'intro brute du wiki (anglaise) n'est plus rendue : la note française
-  // éditoriale groupNotes["section/groupe"] la remplace.
+  const label = t.table('guide.groupLabels')[groupKey] || groupKey;
+  // L'intro brute du wiki (anglaise) n'est plus rendue : la note éditoriale
+  // groupNotes["section/groupe"] la remplace.
   const note = ed?.groupNotes?.[`${sect}/${groupKey}`];
   // Le diagramme n'est produit que pour les chaînes nommées « (One) → (Two) » :
   // sans elles (les followups directionnels de Firion, par exemple), le renvoi
   // pointerait vers une ancre inexistante.
   const hasChainDiagram = groupKey === 'followups' && flow.moves.some((m) => /\(Two\)/i.test(m.name || ''));
-  const chainRef = hasChainDiagram
-    ? `<p class="mv-desc">Ces followups se greffent sur les braveries « (One) » — le <a href="#chaines">diagramme des chaînes</a> ci-dessous résume les embranchements.</p>`
-    : '';
+  const chainRef = hasChainDiagram ? `<p class="mv-desc">${t('guide.moves.chainRef')}</p>` : '';
   // Une variante (« X — Normal ») est indentée sous son parent quand le coup
   // qui la précède partage la même base.
   const accordions = flow.moves.map((m, i) => {
@@ -130,7 +122,7 @@ function movesGroup(groupKey, flow, ed, ctx, sect = '') {
     const isVariant = (m.name || '').includes(' — ');
     const prevBase = i > 0 ? (flow.moves[i - 1].name || '').split(' — ')[0] : null;
     const asChild = isVariant && prevBase === base;
-    return moveAccordion(m, ed?.moveNotes?.[m.name], ctx, asChild);
+    return moveAccordion(t, m, ed?.moveNotes?.[m.name], ctx, asChild);
   });
   return `<h3>${esc(label)}</h3>
 ${note ? `<p class="mv-desc">${esc(note)}</p>` : ''}
@@ -138,7 +130,7 @@ ${chainRef}
 ${accordions.join('\n')}`;
 }
 
-function chainDiagram(braveryGroups) {
+function chainDiagram(t, braveryGroups) {
   const fu = braveryGroups?.followups;
   if (!fu || !fu.moves.length) return '';
   const starters = Object.entries(braveryGroups)
@@ -147,9 +139,9 @@ function chainDiagram(braveryGroups) {
     .filter((n) => n && /\(One\)/i.test(n));
   if (!starters.length) return '';
   return `<figure class="diagram" id="chaines">
-<figcaption>Diagramme des chaînes One → Two</figcaption>
-<div class="table-scroll">${chainSvg(starters, fu.moves.map((m) => m.name).filter(Boolean))}</div>
-<p class="mv-desc">Chaque bravery « (One) » (à gauche) peut enchaîner sur n'importe quel followup « (Two) » équipé (à droite) — le followup est choisi à l'équipement, pas pendant le combo. Détail de chaque coup dans les accordéons ci-dessus.</p>
+<figcaption>${esc(t('guide.charts.chainCaption'))}</figcaption>
+<div class="table-scroll">${chainSvg(t, starters, fu.moves.map((m) => m.name).filter(Boolean))}</div>
+<p class="mv-desc">${t('guide.charts.chainDesc')}</p>
 </figure>`;
 }
 
@@ -175,8 +167,6 @@ ${rest.map((r) => `<tr>${r.map((c) => `<td>${escBr(c)}</td>`).join('')}</tr>`).j
 // budget CP du build en regard du coût de chaque coup — de quoi composer soi-même,
 // sans rien inventer.
 const MOVESET_HEAD = 'Bravery attacks';
-const MOVESET_LABELS = { 'Bravery attacks': 'Braveries équipées', 'HP attacks': 'Attaques HP équipées' };
-const SLOT_LABELS = { Ground: 'Au sol', Aerial: 'En l’air' };
 
 // « 30 (15) » -> { base: 30, mastered: 15 }
 function cpValue(m) {
@@ -187,7 +177,9 @@ function cpValue(m) {
   return { base: parseInt(base[1], 10), mastered: mastered ? parseInt(mastered[1], 10) : null };
 }
 
-function movesetTable(rows) {
+function movesetTable(t, rows) {
+  const movesetLabels = t.table('guide.movesetLabels');
+  const slotLabels = t.table('guide.slotLabels');
   const blocks = [];
   let cur = null;
   for (const r of rows) {
@@ -197,78 +189,79 @@ function movesetTable(rows) {
     cur.body.push(r);
   }
   return blocks.filter((b) => b.body.length).map((b) => `<div class="table-scroll"><table class="data">
-<caption>${esc(MOVESET_LABELS[b.title] || b.title)}</caption>
-<tr>${(b.head || ['Ground', 'Aerial']).map((c) => `<th>${esc(SLOT_LABELS[c] || c)}</th>`).join('')}</tr>
+<caption>${esc(movesetLabels[b.title] || b.title)}</caption>
+<tr>${(b.head || ['Ground', 'Aerial']).map((c) => `<th>${esc(slotLabels[c] || c)}</th>`).join('')}</tr>
 ${b.body.map((r) => `<tr>${r.map((c) => `<td>${escBr(c)}</td>`).join('')}</tr>`).join('\n')}
 </table></div>`).join('\n');
 }
 
-// Emplacement d'équipement. Les clés « ground » / « aerial » sont les deux slots
-// normaux ; toute autre clé est un nom de rôle ou de forme donné par le wiki
-// (« Medic » chez Lightning), qui conditionne l'accès au coup.
-const SLOT_NAMES = { ground: 'Au sol', aerial: 'En l’air', main: '—', followups: 'Follow-up', 'Follow-ups': 'Follow-up' };
-const ONLY_LABELS = { midair: 'en l’air', ground: 'au sol' };
-
 // Première ligne de context du type « Commando only. » -> condition d'accès au coup.
-function onlyCondition(m) {
+function onlyCondition(t, m) {
   const first = String(m.context || '').split('\n')[0].trim();
   const match = first.match(/^(.{1,28}?)\s+only\.?$/i);
   if (!match) return null;
   const raw = match[1].trim();
-  return ONLY_LABELS[raw.toLowerCase()] || raw;
+  return t.table('guide.onlyLabels')[raw.toLowerCase()] || raw;
 }
 
 // `extra` (éditorial) prime sur la clé de groupe : le wiki source range parfois les
 // coups par rôle plutôt que par emplacement, et une colonne dédiée dit alors mieux
 // les choses. Quand une colonne éditoriale couvre déjà la condition d'accès, on
 // n'ajoute pas le suffixe « X uniquement » déduit du context — ce serait redondant.
-function slotCell(m, slotOverrides, hasExtraColumns) {
+//
+// Les clés « ground » / « aerial » sont les deux emplacements normaux ; toute autre
+// clé est un nom de rôle ou de forme donné par le wiki (« Medic » chez Lightning),
+// qui conditionne l'accès au coup.
+function slotCell(t, m, slotOverrides, hasExtraColumns) {
   const override = slotOverrides?.[m.name];
   if (override) return override;
-  const slot = SLOT_NAMES[m.groupKey] ?? m.groupKey;
-  const only = hasExtraColumns ? null : onlyCondition(m);
+  const slotNames = t.table('guide.slotNames');
+  const slot = slotNames[m.groupKey] ?? m.groupKey;
+  const only = hasExtraColumns ? null : onlyCondition(t, m);
   if (!only) return slot;
-  return slot === '—' ? `${only} uniquement` : `${slot} · ${only} uniquement`;
+  return slot === '—'
+    ? t('guide.builds.onlySuffix', { only })
+    : t('guide.builds.slotAndOnly', { slot, only });
 }
 
-function cpBudgetPanel(cpTotals, allMoves, opts = {}) {
+function cpBudgetPanel(t, cpTotals, allMoves, opts = {}) {
   const extra = (opts.columns || []).filter((c) => c?.header && c.values);
   const rows = allMoves
     .map((m) => ({
       name: m.name,
       cat: m.cat,
-      type: opts.types?.[m.name] || (m.cat === 'HP' ? 'HP' : 'Bravery'),
-      slot: slotCell(m, opts.slots, extra.length > 0),
+      type: opts.types?.[m.name] || (m.cat === 'HP' ? t('guide.builds.typeHp') : t('guide.builds.typeBravery')),
+      slot: slotCell(t, m, opts.slots, extra.length > 0),
       extra: extra.map((c) => c.values[m.name] || '—'),
       cp: cpValue(m),
     }))
     .filter((x) => x.name && x.cp);
   if (!rows.length) return '';
-  rows.sort((a, b) => b.cp.base - a.cp.base || a.name.localeCompare(b.name, 'fr'));
+  rows.sort((a, b) => b.cp.base - a.cp.base || a.name.localeCompare(b.name, t.locale));
 
   // Colonnes adaptatives : une colonne dont toutes les valeurs sont identiques (ou
   // vides) n'apprend rien au lecteur et n'est pas rendue.
   const informative = (vals) => new Set(vals.map((v) => String(v ?? '').trim())).size > 1;
   const cols = [
-    { th: 'Coup', cell: (r) => esc(r.name), keep: true },
-    { th: 'Type', cell: (r) => esc(r.type), vals: rows.map((r) => r.type) },
-    { th: 'Où l’équiper', cell: (r) => esc(r.slot), vals: rows.map((r) => r.slot) },
+    { th: t('guide.builds.colMove'), cell: (r) => esc(r.name), keep: true },
+    { th: t('guide.builds.colType'), cell: (r) => esc(r.type), vals: rows.map((r) => r.type) },
+    { th: t('guide.builds.colSlot'), cell: (r) => esc(r.slot), vals: rows.map((r) => r.slot) },
     ...extra.map((c, i) => ({ th: esc(c.header), cell: (r) => esc(r.extra[i]), vals: rows.map((r) => r.extra[i]) })),
-    { th: 'CP', cell: (r) => `<span class="mono">${r.cp.base}</span>`, keep: true },
-    { th: 'CP maîtrisé', cell: (r) => `<span class="mono">${r.cp.mastered ?? '—'}</span>`, vals: rows.map((r) => r.cp.mastered ?? '') },
+    { th: t('guide.builds.colCp'), cell: (r) => `<span class="mono">${r.cp.base}</span>`, keep: true },
+    { th: t('guide.builds.colCpMastered'), cell: (r) => `<span class="mono">${r.cp.mastered ?? '—'}</span>`, vals: rows.map((r) => r.cp.mastered ?? '') },
   ].filter((c) => c.keep || informative(c.vals));
 
   const totals = [...new Set(cpTotals.filter(Boolean))];
-  const budget = totals.length ? ` — ${totals.join(' / ')} CP disponibles selon le build` : '';
+  const budget = totals.length ? t('guide.builds.cpBudget', { totals: totals.join(' / ') }) : '';
   return `<figure class="diagram">
-<figcaption>Composer son moveset : coût en CP des coups${esc(budget)}</figcaption>
+<figcaption>${esc(t('guide.builds.cpCaption', { budget }))}</figcaption>
 <div class="table-scroll"><table class="data">
 <tr>${cols.map((c) => `<th>${c.th}</th>`).join('')}</tr>
 ${rows.map((r) => `<tr>${cols.map((c) => `<td>${c.cell(r)}</td>`).join('')}</tr>`).join('\n')}
 </table></div>
-<p class="mv-desc">Le wiki laisse vide le tableau des coups équipés de ce ou ces builds : ce moveset n'est pas documenté. À défaut, voici le coût en CP de chaque coup, à mettre en regard du total du build. Les coups les plus chers sont en haut.</p>
+<p class="mv-desc">${t('guide.builds.cpDesc')}</p>
 ${opts.note ? `<p class="mv-note">${esc(opts.note)}</p>` : ''}
-${opts.sources?.length ? sectionSources(opts.sources) : ''}
+${opts.sources?.length ? sectionSources(t, opts.sources) : ''}
 </figure>`;
 }
 
@@ -283,10 +276,10 @@ function collectCpTotals(tableGroups) {
   const totals = [];
   for (const tables of tableGroups) {
     let currentCp = null;
-    for (const t of tables || []) {
-      if (!t.rows?.length) continue;
-      if (t.rows[0][0] === 'Stats') currentCp = t.rows.find((r) => r[0] === 'CP')?.[1] ?? null;
-      if (isEmptyMoveset(t) && currentCp) totals.push(currentCp);
+    for (const tb of tables || []) {
+      if (!tb.rows?.length) continue;
+      if (tb.rows[0][0] === 'Stats') currentCp = tb.rows.find((r) => r[0] === 'CP')?.[1] ?? null;
+      if (isEmptyMoveset(tb) && currentCp) totals.push(currentCp);
     }
   }
   return totals;
@@ -296,19 +289,19 @@ function collectCpTotals(tableGroups) {
 // tableau de moveset vide (ctx.pending), là où le lecteur l'attend ; les suivants
 // sont simplement omis pour ne pas répéter la même information.
 // Les tables « Substitutes » du wiki portent une colonne Notes en prose anglaise,
-// dont le contenu est déjà restitué en français dans l'éditorial des builds : la
-// colonne est retirée au rendu.
-function dropNotesColumn(t) {
-  const i = t.rows?.[0]?.findIndex((c) => String(c).trim() === 'Notes');
-  if (i === undefined || i < 0) return t;
-  return { ...t, rows: t.rows.map((r) => r.filter((_, k) => k !== i)) };
+// dont le contenu est déjà restitué dans l'éditorial des builds : la colonne est
+// retirée au rendu.
+function dropNotesColumn(tb) {
+  const i = tb.rows?.[0]?.findIndex((c) => String(c).trim() === 'Notes');
+  if (i === undefined || i < 0) return tb;
+  return { ...tb, rows: tb.rows.map((r) => r.filter((_, k) => k !== i)) };
 }
 
-function buildsTables(tables, ctx) {
-  return (tables || []).map((t) => {
-    if (!t.rows?.length) return '';
-    if (t.rows[0][0] !== MOVESET_HEAD) return genericTables([dropNotesColumn(t)]);
-    if (t.rows.length > 4) return movesetTable(t.rows);
+function buildsTables(t, tables, ctx) {
+  return (tables || []).map((tb) => {
+    if (!tb.rows?.length) return '';
+    if (tb.rows[0][0] !== MOVESET_HEAD) return genericTables([dropNotesColumn(tb)]);
+    if (tb.rows.length > 4) return movesetTable(t, tb.rows);
     if (!ctx.pending) return '';
     const panel = ctx.pending;
     ctx.pending = null;
@@ -319,7 +312,8 @@ function buildsTables(tables, ctx) {
 // Loadout documenté par le wiki en prose plutôt qu'en tableau (cas Vaan :
 // « Ground: … / Air: … »). L'éditorial le restitue via builds.movesetLoadout et
 // on le rend comme un tableau de moveset rempli, à la place du panneau CP.
-function loadoutTables(loadout) {
+function loadoutTables(t, loadout) {
+  const slotLabels = t.table('guide.slotLabels');
   const block = (caption, part) => {
     if (!part) return '';
     const g = part.ground || [], a = part.aerial || [];
@@ -328,76 +322,67 @@ function loadoutTables(loadout) {
     if (!rows) return '';
     return `<div class="table-scroll"><table class="data">
 <caption>${esc(caption)}</caption>
-<tr><th>Au sol</th><th>En l’air</th></tr>
+<tr><th>${esc(slotLabels.Ground)}</th><th>${esc(slotLabels.Aerial)}</th></tr>
 ${rows}
 </table></div>`;
   };
-  return `${block('Braveries équipées', loadout.bravery)}
-${block('Attaques HP équipées', loadout.hp)}
+  return `${block(t('guide.builds.loadoutBravery'), loadout.bravery)}
+${block(t('guide.builds.loadoutHp'), loadout.hp)}
 ${loadout.note ? `<p class="mv-desc">${esc(loadout.note)}</p>` : ''}`;
 }
 
-function buildsSection(builds, allMoves, opts) {
+function buildsSection(t, builds, allMoves, opts) {
   const subs = (builds?.subs || []).filter((sub) => sub.text.length || sub.tables.length);
   const groups = [builds?.tables, ...subs.map((s) => s.tables)];
   const totals = collectCpTotals(groups);
   // Le panneau est requis dès qu'un tableau de moveset est vide, même si aucun total
   // CP ne le précède (le budget est alors simplement omis de la légende).
   const needed = groups.some((g) => (g || []).some(isEmptyMoveset));
-  const ctx = { pending: needed ? (opts?.loadout ? loadoutTables(opts.loadout) : cpBudgetPanel(totals, allMoves, opts)) : '' };
-  const main = buildsTables(builds?.tables, ctx);
-  const subsHtml = subs.map((sub) => `${sub.title ? `<h3>${esc(sub.title)}</h3>` : ''}${buildsTables(sub.tables, ctx)}`).join('\n');
+  const ctx = { pending: needed ? (opts?.loadout ? loadoutTables(t, opts.loadout) : cpBudgetPanel(t, totals, allMoves, opts)) : '' };
+  const main = buildsTables(t, builds?.tables, ctx);
+  const subsHtml = subs.map((sub) => `${sub.title ? `<h3>${esc(sub.title)}</h3>` : ''}${buildsTables(t, sub.tables, ctx)}`).join('\n');
   return `${main}\n${subsHtml}`;
 }
 
 // Diagramme des Skillchains (Prishe) : starter(s) --nom--> finisher(s)
-function isSkillchainTable(t) {
-  const head = (t.rows?.[0] || []).map((c) => c.toLowerCase());
+function isSkillchainTable(tb) {
+  const head = (tb.rows?.[0] || []).map((c) => c.toLowerCase());
   return head.includes('skillchain') && head.includes('starter') && head.includes('finisher');
 }
 
-function skillchainDiagram(t) {
+function skillchainDiagram(t, tb) {
   const pills = (cell) => cell.split('\n').map((n) => n.trim()).filter(Boolean)
     .map((n) => `<span class="pill">${esc(n)}</span>`).join('');
-  const rows = t.rows.slice(1).map(([name, starter, finisher]) => `<div class="sc-row">
+  const rows = tb.rows.slice(1).map(([name, starter, finisher]) => `<div class="sc-row">
 <span class="sc-name">${esc(name)}</span>
-<div class="chain">${pills(starter)}<span class="arrow" aria-label="enchaîne vers">→</span>${pills(finisher)}</div>
+<div class="chain">${pills(starter)}<span class="arrow" aria-label="${esc(t('guide.charts.chainArrowAria'))}">→</span>${pills(finisher)}</div>
 </div>`).join('\n');
   return `<figure class="diagram" id="skillchains">
-<figcaption>Diagramme des Skillchains</figcaption>
+<figcaption>${esc(t('guide.charts.skillchainCaption'))}</figcaption>
 ${rows}
-<p class="mv-desc">Un Skillchain se déclenche en enchaînant un coup de la colonne de gauche (starter) sur un coup de la colonne de droite (finisher) — quand plusieurs pilules sont listées, n'importe laquelle convient.</p>
+<p class="mv-desc">${t('guide.charts.skillchainDesc')}</p>
 </figure>`;
 }
 
-const STAT_LABELS = {
-  'Name': 'Nom', 'Original game': "Jeu d'origine", 'Base ATK (LV100)': 'ATK de base (LV100)',
-  'Base DEF (LV100)': 'DEF de base (LV100)', 'Run Speed': 'Vitesse de course', 'Dash Speed': 'Vitesse de dash',
-  'Fall Speed': 'Vitesse de chute', 'Fall Speed Ratio After Dodge': 'Chute après esquive',
-  'Fastest BRV': 'BRV la plus rapide', 'Fastest HP': 'HP la plus rapide', '1-Hit HP': 'HP en 1 coup',
-  'HP Links': 'HP links', 'Command Block': 'Command block', 'Weapon': 'Armes', 'Armor': 'Armures',
-  'Exclusive weapons': 'Armes exclusives', 'Alignment': 'Camp', 'Voice Actor (JP)': 'Doubleur (JP)',
-  'Voice Actor (ENG)': 'Doubleur (ENG)',
-};
-
-function heroChips(info) {
+function heroChips(t, info) {
   if (!info) return '';
   const chips = [];
   const add = (label, val, cls = '') => { if (val) chips.push(`<span class="chip ${cls}">${label} <b>${esc(val)}</b></span>`); };
-  add('BRV la + rapide', info['Fastest BRV']);
-  add('HP la + rapide', info['Fastest HP']);
-  add('Dash', (info['Dash Speed'] || '').split(',')[0]);
-  add('ATK', (info['Base ATK (LV100)'] || '').split(' ')[0]);
-  add('DEF', (info['Base DEF (LV100)'] || '').split(' ')[0]);
+  const yes = t('guide.chips.yes'), no = t('guide.chips.no');
+  add(t('guide.chips.fastestBrv'), info['Fastest BRV']);
+  add(t('guide.chips.fastestHp'), info['Fastest HP']);
+  add(t('guide.chips.dash'), (info['Dash Speed'] || '').split(',')[0]);
+  add(t('guide.chips.atk'), (info['Base ATK (LV100)'] || '').split(' ')[0]);
+  add(t('guide.chips.def'), (info['Base DEF (LV100)'] || '').split(' ')[0]);
   const oneHit = info['1-Hit HP'];
-  if (oneHit) chips.push(`<span class="chip ${/^yes/i.test(oneHit) ? 'ok' : 'no'}">HP 1 coup <b>${/^yes/i.test(oneHit) ? 'Oui' : 'Non'}</b></span>`);
+  if (oneHit) chips.push(`<span class="chip ${/^yes/i.test(oneHit) ? 'ok' : 'no'}">${t('guide.chips.oneHitHp')} <b>${/^yes/i.test(oneHit) ? yes : no}</b></span>`);
   const links = info['HP Links'];
-  if (links) chips.push(`<span class="chip ${/^yes/i.test(links) ? 'ok' : 'no'}">HP links <b>${/^yes/i.test(links) ? 'Oui' : 'Non'}</b></span>`);
+  if (links) chips.push(`<span class="chip ${/^yes/i.test(links) ? 'ok' : 'no'}">${t('guide.chips.hpLinks')} <b>${/^yes/i.test(links) ? yes : no}</b></span>`);
   return `<div class="chips">${chips.join('')}</div>`;
 }
 
 // Regroupement éditorial des braveries (ex. rôles du Paradigm Shift de Lightning)
-function regroupMoves(groups, spec) {
+function regroupMoves(t, groups, spec) {
   if (!spec?.length) return groups;
   const all = new Map();
   for (const g of Object.values(groups || {})) g.moves.forEach((m) => m.name && all.set(m.name, m));
@@ -407,7 +392,7 @@ function regroupMoves(groups, spec) {
     names.forEach((n) => all.delete(n));
     if (moves.length) out[title] = { moves, intro: null };
   }
-  if (all.size) out['Autres'] = { moves: [...all.values()], intro: null };
+  if (all.size) out[t('guide.moves.othersGroup')] = { moves: [...all.values()], intro: null };
   return out;
 }
 
@@ -439,13 +424,13 @@ function splitHpLinks(hpGroups, extraNames) {
 // Le title complet dépasse la largeur affichée par Google pour les noms longs :
 // « [duodecim] » est alors retiré, le reste est identique.
 const TITLE_BUDGET = 65;
-export function guideTitle(name, isAssist) {
+export function guideTitle(t, name, isAssist) {
   // Une fiche assist n'a ni builds ni matchups : annoncer le contraire dans le
   // title promettrait un contenu absent de la page.
-  const what = isAssist ? 'Assist' : 'Guide';
-  const tail = isAssist ? ' : coups, gains, usages' : ' : coups, builds, matchups';
-  const full = `${name} — ${what} Dissidia 012 [duodecim]${tail}`;
-  return full.length <= TITLE_BUDGET ? full : `${name} — ${what} Dissidia 012${tail}`;
+  const what = isAssist ? t('guide.seo.titleAssist') : t('guide.seo.titleGuide');
+  const tail = isAssist ? t('guide.seo.titleTailAssist') : t('guide.seo.titleTailGuide');
+  const full = t('guide.seo.titleFull', { name, what, tail });
+  return full.length <= TITLE_BUDGET ? full : t('guide.seo.titleShort', { name, what, tail });
 }
 
 // Minuscule initiale de l'archétype pour l'insérer dans une phrase (tous les
@@ -453,41 +438,43 @@ export function guideTitle(name, isAssist) {
 const lower1 = (s) => (s ? s.charAt(0).toLowerCase() + s.slice(1) : '');
 
 const DESC_BUDGET = 170;
-export function guideDescription({ name, archetype, tier, isAssist }) {
-  const who = tier ? `${name} (tier ${tier})` : name;
-  const arche = archetype ? ` : ${lower1(archetype)}` : '';
+export function guideDescription(t, { name, archetype, tier, isAssist }) {
   if (isAssist) {
-    const lead = `${name} dans Dissidia 012 [duodecim]`;
-    const keys = ' : coups appelables, gains d’assist et usages en combo.';
+    const lead = t('guide.seo.descAssistLead', { name });
+    const keys = t('guide.seo.descAssistKeys');
     const d = `${lead}, ${lower1(archetype || '')}${keys}`;
     return archetype && d.length <= DESC_BUDGET ? d : lead + keys;
   }
-  const lead = `Guide compétitif de ${who} dans Dissidia 012 [duodecim]`;
-  const keys = '. Frame data, plan de jeu, builds et matchups.';
+  const who = tier ? t('guide.seo.descGuideWhoTier', { name, tier }) : name;
+  const arche = archetype ? ` : ${lower1(archetype)}` : '';
+  const lead = t('guide.seo.descGuideLead', { who });
+  const keys = t('guide.seo.descGuideKeys');
   const d = lead + arche + keys;
   if (d.length <= DESC_BUDGET) return d;
-  const noTier = `Guide compétitif de ${name} dans Dissidia 012 [duodecim]` + arche + keys;
+  const noTier = t('guide.seo.descGuideLead', { who: name }) + arche + keys;
   return noTier.length <= DESC_BUDGET ? noTier : lead + keys;
 }
 
-const SECTIONS_NAV = [
-  ['meta', 'Méta'], ['overview', "Vue d'ensemble"], ['unlock', 'Débloquer'], ['moves', 'Coups'], ['unique', 'Mécanique unique'],
-  ['gameplan', 'Plan de jeu'], ['matchups', 'Matchups'], ['builds', 'Builds'],
-  ['assist', 'Assists'], ['community', 'Tech communautaire'], ['sources', 'Sources'],
-];
+// Ancres des sections : identiques dans toutes les langues, pour qu'un lien
+// profond partagé (…#matchups) ouvre la bonne section quelle que soit la version.
+const SECTION_IDS = ['meta', 'overview', 'unlock', 'moves', 'unique', 'gameplan', 'matchups', 'builds', 'assist', 'community', 'sources'];
 
-export function renderGuide({ char, ed, tierEntry, castStats, hasPortrait, moveImages, sizeOf, dates, ogImage, roster = [] }) {
-  const ctx = { slug: char.slug, moveImages, sizeOf };
+export function renderGuide({
+  char, ed, tierEntry, castStats, hasPortrait, moveImages, sizeOf, dates, ogImage,
+  roster = [], t, locale, path, alternates, availability,
+}) {
+  const L = linksFor(path, locale, availability);
+  const ctx = { slug: char.slug, moveImages, sizeOf, L };
   const s = char.sections;
   // Personnage assist (non contrôlable) : pas de stats de déplacement, pas
   // d'EX Mode/EX Burst, pas de matchups — ces sections sont omises.
   const isAssist = char.slug === 'aerith';
   const noEd = !ed;
-  const edBanner = noEd ? infoBanner('Contenu éditorial français en cours de rédaction — données brutes ci-dessous.') : '';
+  const edBanner = noEd ? infoBanner(t('common.editorialPending')) : '';
 
   // --- 1. Hero ---
   // Texte alternatif du portrait. Deux exigences :
-  //  - l'élision (« portrait d'Exdeath », pas « de Exdeath ») ;
+  //  - l'élision en français (« portrait d'Exdeath », pas « de Exdeath ») ;
   //  - dire ce que l'image montre réellement. Les 31 portraits sont les rendus
   //    de l'écran de sélection de Dissidia 012 ; Aerith, non jouable, n'en a
   //    aucun (vérifié dans l'index d'archives), le sien est son artwork Final
@@ -496,15 +483,15 @@ export function renderGuide({ char, ed, tierEntry, castStats, hasPortrait, moveI
   // fait pas l'élision — on écrit « portrait de Yuna », jamais « d'Yuna ».
   const dus = (n) => (/^[aeiouàâäéèêëîïôöùûü]/i.test(n) ? `d’${n}` : `de ${n}`);
   const portraitAlt = char.slug === 'aerith'
-    ? `Artwork officiel d’Aerith Gainsborough (Final Fantasy VII), personnage assist de Dissidia 012 [duodecim]`
-    : `Portrait officiel ${dus(char.name)} dans Dissidia 012 [duodecim]`;
+    ? t('guide.portraitAltAerith')
+    : t('guide.portraitAlt', { of: locale === 'fr' ? dus(char.name) : char.name });
   const hero = `<section class="hero" id="hero">
-${hasPortrait ? `<img class="portrait" src="../assets/portraits/${char.slug}.png" alt="${esc(portraitAlt)}"${sizeOf ? sizeOf(`portraits/${char.slug}.png`) : ''}>` : ''}
+${hasPortrait ? `<img class="portrait" src="${L.asset(`assets/portraits/${char.slug}.png`)}" alt="${esc(portraitAlt)}"${sizeOf ? sizeOf(`portraits/${char.slug}.png`) : ''}>` : ''}
 <div class="hero-id">
 <p class="origin">${esc(char.origin)}</p>
 <h1>${esc(char.name)}</h1>
 ${ed?.tagline ? `<p class="tagline">${esc(ed.tagline)}</p>` : ''}
-${heroChips(char.infobox)}
+${heroChips(t, char.infobox)}
 </div>
 </section>`;
 
@@ -514,35 +501,36 @@ ${heroChips(char.infobox)}
     .replace(/^Class[ée]e?\s[^.]*tier list[^.]*\.\s*/iu, '')
     .replace(/^\d+ᵉ?e?\s+sur\s+30[^.]*\.\s*/iu, '')
     .trim();
-  const metaSection = `<section id="meta"><h2>Position dans la méta</h2>
+  const metaSection = `<section id="meta"><h2>${t('guide.headings.meta')}</h2>
 ${tierEntry
-    ? `<p><span class="badge prio-melee-high">Tier ${esc(tierEntry.tier)}</span> <strong>${tierEntry.rank}ᵉ sur 30</strong> — tier list tournoi 2017 de <a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">dissidia.wiki</a> (moitié valeurs de matchups, moitié avis de joueurs experts).</p>`
-    : `<p class="mv-desc">Non classé dans la tier list tournoi 2017.</p>`}
+    ? `<p><span class="badge prio-melee-high">${esc(t('guide.meta.tierBadge', { tier: tierEntry.tier }))}</span> <strong>${esc(t('guide.meta.rank', { rank: ordinal(t, tierEntry.rank) }))}</strong> ${t('guide.meta.tierListNote')}</p>`
+    : `<p class="mv-desc">${t('guide.meta.unranked')}</p>`}
 ${tierNoteClean ? `<p>${esc(tierNoteClean)}</p>` : ''}
 </section>`;
 
   // --- 2. Vue d'ensemble ---
+  const statLabels = t.table('guide.statLabels');
   const statsTable = char.infobox
     ? `<div class="table-scroll"><table class="stats">${Object.entries(char.infobox)
-        .map(([k, v]) => `<tr><th>${esc(STAT_LABELS[k] || k)}</th><td>${esc(v)}</td></tr>`).join('')}</table></div>`
-    : banner();
+        .map(([k, v]) => `<tr><th>${esc(statLabels[k] || k)}</th><td>${esc(v)}</td></tr>`).join('')}</table></div>`
+    : banner(t);
   const forces = ed?.strengths?.length || ed?.weaknesses?.length
     ? `<div class="two-col">
-<div class="card strengths"><h3>Forces</h3><ul>${(ed.strengths || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
-<div class="card weaknesses"><h3>Faiblesses</h3><ul>${(ed.weaknesses || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
+<div class="card strengths"><h3>${t('guide.headings.strengths')}</h3><ul>${(ed.strengths || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
+<div class="card weaknesses"><h3>${t('guide.headings.weaknesses')}</h3><ul>${(ed.weaknesses || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
 </div>` : '';
   const secSrc = ed?.sourcesBySection || {};
-  const overview = `<section id="overview"><h2>Vue d'ensemble</h2>
-${ed?.overview?.length ? paras(ed.overview) : (s.overview?.documented ? edBanner || banner() : banner())}
-${sectionSources(secSrc.overview)}
+  const overview = `<section id="overview"><h2>${t('guide.headings.overview')}</h2>
+${ed?.overview?.length ? paras(ed.overview) : (s.overview?.documented ? edBanner || banner(t) : banner(t))}
+${sectionSources(t, secSrc.overview)}
 ${forces}
-${isAssist ? '' : `<h3>Stats &amp; vitesses</h3>
+${isAssist ? '' : `<h3>${t('guide.headings.statsSpeeds')}</h3>
 ${statsTable}
-${mobilityChartSvg(char, castStats)}`}
+${mobilityChartSvg(t, char, castStats)}`}
 </section>`;
 
   // --- 2 bis. Déblocage (éditorial ; Aerith : DLC lié à Prologus) ---
-  const unlockSec = ed?.unlock ? `<section id="unlock"><h2>${esc(ed.unlock.title || `Débloquer ${char.name}`)}</h2>
+  const unlockSec = ed?.unlock ? `<section id="unlock"><h2>${esc(ed.unlock.title || t('guide.headings.unlockDefault', { name: char.name }))}</h2>
 ${paras(ed.unlock.intro)}
 ${(ed.unlock.versions || []).map((v) => `<article class="card"><h3 style="margin-top:0">${esc(v.name)}</h3>
 ${paras(v.intro)}
@@ -561,51 +549,51 @@ ${ed.unlock.note ? `<p class="mv-desc">${esc(ed.unlock.note)}</p>` : ''}
       allMoves.push(...g.moves.map((m) => ({ ...m, cat: key === 'hp' ? 'HP' : 'BRV', groupKey })));
     }
   }
-  const braveryGroups = regroupMoves(s.bravery?.groups, ed?.moveRegroup?.bravery);
+  const braveryGroups = regroupMoves(t, s.bravery?.groups, ed?.moveRegroup?.bravery);
   const braveryHtml = s.bravery?.documented
-    ? Object.entries(braveryGroups).map(([k, g]) => movesGroup(k, g, ed, ctx, 'bravery')).join('\n')
-    : banner();
+    ? Object.entries(braveryGroups).map(([k, g]) => movesGroup(t, k, g, ed, ctx, 'bravery')).join('\n')
+    : banner(t);
   const { groups: hpGroups, links: hpLinks } = splitHpLinks(s.hp?.groups, ed?.hpLinks);
   const hpHtml = s.hp?.documented
-    ? Object.entries(hpGroups).map(([k, g]) => movesGroup(k, g, ed, ctx, 'hp')).join('\n')
-    : banner();
+    ? Object.entries(hpGroups).map(([k, g]) => movesGroup(t, k, g, ed, ctx, 'hp')).join('\n')
+    : banner(t);
   const exHtml = s.exMode?.documented
     ? `${ed?.exMode?.summary?.length ? paras(ed.exMode.summary) : edBanner || ''}
 ${ed?.exMode?.burst ? `<p><strong>EX Burst :</strong> ${esc(ed.exMode.burst)}</p>` : ''}
 ${genericTables(s.exMode.tables)}`
-    : banner();
-  const moves = `<section id="moves"><h2>Coups</h2>
-${startupChartSvg(allMoves, `Startup des coups de ${char.name}`)}
-<h3 style="color:var(--gold)">Braveries</h3>
+    : banner(t);
+  const moves = `<section id="moves"><h2>${t('guide.headings.moves')}</h2>
+${startupChartSvg(t, allMoves, t('guide.charts.startupTitle', { name: char.name }))}
+<h3 style="color:var(--gold)">${t('guide.headings.braveries')}</h3>
 ${braveryHtml}
-${chainDiagram(s.bravery?.groups)}
-<h3 style="color:var(--gold)">Attaques HP</h3>
+${chainDiagram(t, s.bravery?.groups)}
+<h3 style="color:var(--gold)">${t('guide.headings.hpAttacks')}</h3>
 ${hpHtml}
-${hpLinks.length ? `<h3 style="color:var(--gold)">HP links (Bravery → HP)</h3>
-<p class="mv-desc">Attaques HP qui se déclenchent en prolongement d'une bravery précise — le « HP link ». Elles s'équipent comme les autres attaques HP.</p>
+${hpLinks.length ? `<h3 style="color:var(--gold)">${t('guide.headings.hpLinks')}</h3>
+<p class="mv-desc">${t('guide.moves.hpLinksDesc')}</p>
 ${ed?.groupNotes?.['hp/links'] ? `<p class="mv-desc">${esc(ed.groupNotes['hp/links'])}</p>` : ''}
-${hpLinks.map((m) => moveAccordion(m, ed?.moveNotes?.[m.name], ctx)).join('\n')}` : ''}
-${isAssist ? '' : `<h3 style="color:var(--gold)">${esc(s.exMode?.title || 'EX Mode')} &amp; EX Burst</h3>
+${hpLinks.map((m) => moveAccordion(t, m, ed?.moveNotes?.[m.name], ctx)).join('\n')}` : ''}
+${isAssist ? '' : `<h3 style="color:var(--gold)">${t('guide.headings.exModeBurst', { exMode: esc(s.exMode?.title || 'EX Mode') })}</h3>
 ${exHtml}`}
-${ed?.specialMoves?.length ? `<h3 style="color:var(--gold)">Coups spéciaux</h3>
-<p class="mv-desc">Commandes particulières absentes des listes d'équipement : elles ne coûtent aucun CP et s'activent par une commande dédiée.</p>
+${ed?.specialMoves?.length ? `<h3 style="color:var(--gold)">${t('guide.headings.specialMoves')}</h3>
+<p class="mv-desc">${t('guide.moves.specialMovesDesc')}</p>
 ${ed.specialMoves.map((sp) => `<details class="move"><summary><span class="mv-name">${esc(sp.name)}</span>
-<span class="badge prio-melee-high">Coup spécial</span><span class="mv-meta">${esc(sp.input || '')}</span></summary>
-<div class="mv-body"><div class="mv-note"><p>${esc(sp.desc)}</p></div>${sp.source ? sectionSources([sp.source]) : ''}</div>
+<span class="badge prio-melee-high">${t('guide.moves.specialBadge')}</span><span class="mv-meta">${esc(sp.input || '')}</span></summary>
+<div class="mv-body"><div class="mv-note"><p>${esc(sp.desc)}</p></div>${sp.source ? sectionSources(t, [sp.source]) : ''}</div>
 </details>`).join('\n')}` : ''}
 </section>`;
 
   // --- 4. Mécanique unique ---
   const uniqTables = s.uniqueMechanics?.tables || [];
   const scTables = uniqTables.filter(isSkillchainTable);
-  const otherUniqTables = uniqTables.filter((t) => !isSkillchainTable(t));
+  const otherUniqTables = uniqTables.filter((tb) => !isSkillchainTable(tb));
   // Section rendue seulement si le personnage a une mécanique (wiki ou éditorial) :
   // pas de bloc « rien à signaler » sur les fiches sans mécanique.
   const hasUnique = !!(s.uniqueMechanics?.documented || ed?.uniqueMechanics?.intro?.length);
-  const unique = !hasUnique ? '' : `<section id="unique"><h2>Mécanique unique</h2>
-${ed?.uniqueMechanics?.intro?.length ? paras(ed.uniqueMechanics.intro) : edBanner || banner()}
+  const unique = !hasUnique ? '' : `<section id="unique"><h2>${t('guide.headings.unique')}</h2>
+${ed?.uniqueMechanics?.intro?.length ? paras(ed.uniqueMechanics.intro) : edBanner || banner(t)}
 ${ed?.uniqueMechanics?.details?.length ? `<ul>${ed.uniqueMechanics.details.map((d) => `<li>${esc(d)}</li>`).join('')}</ul>` : ''}
-${s.uniqueMechanics?.documented ? `${scTables.map(skillchainDiagram).join('\n')}
+${s.uniqueMechanics?.documented ? `${scTables.map((tb) => skillchainDiagram(t, tb)).join('\n')}
 ${genericTables(otherUniqTables)}
 ${(s.uniqueMechanics.subs || []).map((sub) => genericTables(sub.tables)).join('\n')}` : ''}
 </section>`;
@@ -614,12 +602,12 @@ ${(s.uniqueMechanics.subs || []).map((sub) => genericTables(sub.tables)).join('\
   const combosRaw = s.combos?.documented
     ? [...(s.combos.text || []), ...(s.combos.subs || []).flatMap((x) => x.text)]
     : [];
-  const gameplan = `<section id="gameplan"><h2>Plan de jeu &amp; techniques avancées</h2>
-${ed?.gameplan?.length ? paras(ed.gameplan) : edBanner || banner()}
-${ed?.advancedTech?.length ? `<h3>Techniques spécifiques</h3>${ed.advancedTech.map((t) => `<div class="card"><h3 style="margin-top:0">${esc(t.name)}</h3><p>${esc(t.desc)}</p>${t.video?.url ? `<p class="video-link"><a href="${esc(t.video.url)}" target="_blank" rel="external noopener">▶ ${esc(t.video.title || 'Vidéo de démonstration')}</a>${t.video.author ? ` — ${esc(t.video.author)}` : ''}${t.video.date ? ` (${esc(String(t.video.date))})` : ''}</p>` : ''}${t.source ? sectionSources([t.source]) : ''}</div>`).join('')}` : ''}
-${sectionSources(secSrc.gameplan)}
-${combosRaw.length ? `<details class="move"><summary><span class="mv-name">Combos documentés (notation d'origine, dissidia.wiki)</span></summary><div class="mv-body">${combosRaw.map((c) => `<p class="mono">${esc(c)}</p>`).join('')}</div></details>` : ''}
-<p class="mv-desc">Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href="../techniques.html">Techniques &amp; glitches</a>.</p>
+  const gameplan = `<section id="gameplan"><h2>${t('guide.headings.gameplan')}</h2>
+${ed?.gameplan?.length ? paras(ed.gameplan) : edBanner || banner(t)}
+${ed?.advancedTech?.length ? `<h3>${t('guide.headings.specificTech')}</h3>${ed.advancedTech.map((x) => `<div class="card"><h3 style="margin-top:0">${esc(x.name)}</h3><p>${esc(x.desc)}</p>${x.video?.url ? `<p class="video-link"><a href="${esc(x.video.url)}" target="_blank" rel="external noopener">▶ ${esc(x.video.title || t('guide.gameplan.videoFallback'))}</a>${x.video.author ? ` — ${esc(x.video.author)}` : ''}${x.video.date ? ` (${esc(String(x.video.date))})` : ''}</p>` : ''}${x.source ? sectionSources(t, [x.source]) : ''}</div>`).join('')}` : ''}
+${sectionSources(t, secSrc.gameplan)}
+${combosRaw.length ? `<details class="move"><summary><span class="mv-name">${t('guide.gameplan.combosSummary')}</span></summary><div class="mv-body">${combosRaw.map((c) => `<p class="mono">${esc(c)}</p>`).join('')}</div></details>` : ''}
+<p class="mv-desc">${t('guide.gameplan.universalTech', { href: L.page('techniques') })}</p>
 </section>`;
 
   // --- 6. Matchups ---
@@ -628,23 +616,23 @@ ${combosRaw.length ? `<details class="move"><summary><span class="mv-name">Combo
   // guide : c'est là que le lecteur veut naviguer, et cela relie les 31 pages
   // entre elles au lieu de les laisser dépendre de la seule page d'accueil.
   const matchupProse = ed?.matchups?.summary?.length
-    ? linkRoster(paras(ed.matchups.summary), { roster, currentSlug: char.slug, base: '../' })
+    ? linkRoster(paras(ed.matchups.summary), { roster, currentSlug: char.slug, hrefFor: L.guide })
     : null;
-  const matchups = isAssist ? '' : `<section id="matchups"><h2>Matchups</h2>
+  const matchups = isAssist ? '' : `<section id="matchups"><h2>${t('guide.headings.matchups')}</h2>
 ${matchupProse
     ? matchupProse
-    : banner(s.matchups?.sources?.length
-          ? `La sous-page <a href="${esc(s.matchups.sources[0])}" target="_blank" rel="external noopener">Matchups du wiki</a> est un squelette vide à ce jour.`
-          : `Aucune page de matchups n'existe sur le wiki pour ce personnage.`)}
-${sectionSources(secSrc.matchups)}
-<p>Vidéos de matchs : <a href="${esc(replayUrl)}" target="_blank" rel="external noopener">Replay Theater — matchs de ${esc(char.name)}</a>.</p>
+    : banner(t, s.matchups?.sources?.length
+          ? t('guide.matchups.wikiSkeleton', { url: esc(s.matchups.sources[0]) })
+          : t('guide.matchups.noWikiPage'))}
+${sectionSources(t, secSrc.matchups)}
+<p>${t('guide.matchups.replayLink', { url: esc(replayUrl), name: esc(char.name) })}</p>
 </section>`;
 
   // --- 7. Builds ---
-  const builds = `<section id="builds"><h2>Builds</h2>
+  const builds = `<section id="builds"><h2>${t('guide.headings.builds')}</h2>
 ${s.builds?.documented || ed?.builds?.philosophy?.length
-    ? `${ed?.builds?.philosophy?.length ? paras(ed.builds.philosophy) : edBanner || banner()}
-${buildsSection(s.builds, allMoves, {
+    ? `${ed?.builds?.philosophy?.length ? paras(ed.builds.philosophy) : edBanner || banner(t)}
+${buildsSection(t, s.builds, allMoves, {
     note: ed?.builds?.movesetNote,
     columns: ed?.builds?.movesetColumns,
     slots: ed?.builds?.movesetSlots,
@@ -653,26 +641,26 @@ ${buildsSection(s.builds, allMoves, {
     loadout: ed?.builds?.movesetLoadout,
   })}
 ${ed?.builds?.notes ? `<p class="mv-desc">${esc(ed.builds.notes)}</p>` : ''}
-${sectionSources(secSrc.builds)}`
-    : banner()}
-<p>Composer et vérifier un build de ${esc(char.name)} emplacement par emplacement : <a href="../createur-de-builds.html">créateur de builds</a> (jauge de CP, exclusions d’abilities et règles tournoi appliquées).</p>
+${sectionSources(t, secSrc.builds)}`
+    : banner(t)}
+<p>${t('guide.builds.creatorLink', { name: esc(char.name), href: L.page('buildCreator') })}</p>
 </section>`;
 
   // --- 8. Synergies d'assist ---
-  const assist = `<section id="assist"><h2>Synergies d'assist</h2>
+  const assist = `<section id="assist"><h2>${t('guide.headings.assist')}</h2>
 ${s.assist?.documented || ed?.assist
-    ? `${ed?.assist?.asAssist?.length ? `<h3>${esc(char.name)} en tant qu'assist</h3>${paras(ed.assist.asAssist)}` : ''}
+    ? `${ed?.assist?.asAssist?.length ? `<h3>${t('guide.headings.asAssist', { name: esc(char.name) })}</h3>${paras(ed.assist.asAssist)}` : ''}
 ${genericTables(s.assist?.tables)}
-${ed?.assist?.recommended?.length ? `<h3>Assists recommandées</h3><ul>${ed.assist.recommended.map((a) => `<li><strong>${esc(a.name)}</strong> — ${esc(a.why)}</li>`).join('')}</ul>` : ''}
-${!ed?.assist ? edBanner || banner() : ''}`
-    : banner()}
+${ed?.assist?.recommended?.length ? `<h3>${t('guide.headings.recommendedAssists')}</h3><ul>${ed.assist.recommended.map((a) => `<li><strong>${esc(a.name)}</strong> — ${esc(a.why)}</li>`).join('')}</ul>` : ''}
+${!ed?.assist ? edBanner || banner(t) : ''}`
+    : banner(t)}
 </section>`;
 
   // --- 9. Tech communautaire ---
-  const community = `<section id="community"><h2>Tech communautaire</h2>
+  const community = `<section id="community"><h2>${t('guide.headings.community')}</h2>
 ${ed?.communityTech?.length
-    ? ed.communityTech.map((t) => `<div class="card"><h3 style="margin-top:0">${esc(t.title)}${t.date ? ` <span class="badge">${esc(String(t.date))}</span>` : ''}</h3><p>${esc(t.desc)}</p>${t.source ? `<p class="sources-list"><a href="${esc(t.source)}" target="_blank" rel="external noopener">${esc(t.source)}</a></p>` : ''}</div>`).join('')
-    : banner('Aucune trouvaille communautaire attribuable relevée dans les sources récupérées pour ce personnage.')}
+    ? ed.communityTech.map((x) => `<div class="card"><h3 style="margin-top:0">${esc(x.title)}${x.date ? ` <span class="badge">${esc(String(x.date))}</span>` : ''}</h3><p>${esc(x.desc)}</p>${x.source ? `<p class="sources-list"><a href="${esc(x.source)}" target="_blank" rel="external noopener">${esc(x.source)}</a></p>` : ''}</div>`).join('')
+    : banner(t, t('guide.community.none'))}
 </section>`;
 
   // --- 10. Sources ---
@@ -680,30 +668,32 @@ ${ed?.communityTech?.length
     char.url,
     ...(s.matchups?.documented ? s.matchups.sources || [] : []),
     ...(char.sources || []),
-    ...((ed?.communityTech || []).map((t) => t.source)),
+    ...((ed?.communityTech || []).map((x) => x.source)),
     ...Object.values(secSrc).flat(),
-    ...((ed?.advancedTech || []).map((t) => t.source).filter(Boolean)),
+    ...((ed?.advancedTech || []).map((x) => x.source).filter(Boolean)),
     ...(ed?.unlock?.sources || []),
     'https://dissidia.wiki/Tier_List_(Dissidia_012)',
     'https://dissidia.wiki/Tier_List_(Assist)',
   ];
-  const sources = `<section id="sources"><h2>Sources</h2>
-${sourcesSection(allSources, ed?.limits)}
+  const sources = `<section id="sources"><h2>${t('guide.headings.sources')}</h2>
+${sourcesSection(t, allSources, ed?.limits)}
 </section>`;
 
-  const nav = SECTIONS_NAV
-    .filter(([id]) => id !== 'unique' || hasUnique)
-    .filter(([id]) => id !== 'matchups' || !isAssist)
-    .filter(([id]) => id !== 'unlock' || ed?.unlock);
+  const sectionLabels = t.table('guide.sections');
+  const nav = SECTION_IDS
+    .filter((id) => id !== 'unique' || hasUnique)
+    .filter((id) => id !== 'matchups' || !isAssist)
+    .filter((id) => id !== 'unlock' || ed?.unlock)
+    .map((id) => [id, sectionLabels[id]]);
   const tocLinks = nav.map(([id, label]) => `<li><a href="#${id}">${esc(label)}</a></li>`).join('');
-  const body = `${siteHeader({ base: '../', active: char.slug === 'aerith' ? 'aerith' : '' })}
-<nav class="guide-top" aria-label="Sections du guide"><div class="chips-nav">
-<a href="../index.html">← Sélection</a>
+  const body = `${siteHeader(t, { path, locale, alternates, availability, active: char.slug === 'aerith' ? 'aerith' : '' })}
+<nav class="guide-top" aria-label="${esc(t('guide.navAria'))}"><div class="chips-nav">
+<a href="${L.page('home')}">${t('common.backToSelect')}</a>
 ${nav.map(([id, label]) => `<a href="#${id}">${esc(label)}</a>`).join('')}
 </div></nav>
 <div class="guide-layout">
-<nav class="guide-toc" aria-label="Sommaire"><ol>
-<li><a href="../index.html" class="backlink">← Sélection</a></li>
+<nav class="guide-toc" aria-label="${esc(t('common.tocAria'))}"><ol>
+<li><a href="${L.page('home')}" class="backlink">${t('common.backToSelect')}</a></li>
 ${tocLinks}
 </ol></nav>
 <main class="guide-main">
@@ -721,22 +711,23 @@ ${community}
 ${sources}
 </main>
 </div>
-${siteFooter()}`;
+${siteFooter(t)}`;
 
-  const title = guideTitle(char.name, isAssist);
-  const description = guideDescription({
+  const title = guideTitle(t, char.name, isAssist);
+  const description = guideDescription(t, {
     name: char.name,
     archetype: ed?.archetype,
     tier: tierEntry?.tier,
     isAssist,
   });
-  const path = `characters/${char.slug}.html`;
-  const imageAlt = `${char.name} — guide Dissidia 012 [duodecim]`;
+  const imageAlt = t('guide.seo.ogAlt', { name: char.name });
   return pageShell({
+    t,
+    locale,
     title,
     description,
     path,
-    cssPath: '../styles/main.css',
+    alternates,
     jsPath: null,
     body,
     og: ogImage ? { image: ogImage, alt: imageAlt, width: 1200, height: 630, type: 'article' } : { type: 'article' },
@@ -745,9 +736,10 @@ ${siteFooter()}`;
       headline: title,
       description,
       path,
+      locale,
       image: ogImage,
       imageAlt,
-      section: isAssist ? 'Assists' : 'Guides personnages',
+      section: isAssist ? t('guide.seo.sectionAssists') : t('guide.seo.sectionGuides'),
       ...dates,
     }),
   });

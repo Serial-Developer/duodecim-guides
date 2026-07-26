@@ -1,42 +1,46 @@
 // Page transverse : savedata prêtes pour les tournois (communauté Discord DISSIDIA)
-import { esc, paras, infoBanner, sectionSources, sourcesSection, pageShell, siteHeader, siteFooter } from './helpers.mjs';
+import { esc, infoBanner, sectionSources, sourcesSection, pageShell, siteHeader, siteFooter, linksFor } from './helpers.mjs';
 
-export function renderSavedata(data, seo) {
+export function renderSavedata(data, seo, { t, locale, path, alternates, availability }) {
+  const L = linksFor(path, locale, availability);
   const saves = (data.saves || []).map((s) => `<article class="card">
 <h3 style="margin-top:0">${esc(s.name)}</h3>
 <p><span class="badge prio-melee-high">${esc(s.pour)}</span></p>
 <p>${esc(s.desc)}</p>
-<p class="video-link"><a href="${esc(s.url)}" target="_blank" rel="external noopener">Télécharger (Google Drive)</a></p>
+<p class="video-link"><a href="${esc(s.url)}" target="_blank" rel="external noopener">${t('savedata.download')}</a></p>
 </article>`).join('\n');
 
   const inst = data.installation;
-  const body = `${siteHeader({ active: 'savedata' })}
+  const body = `${siteHeader(t, { path, locale, alternates, availability, active: 'savedata' })}
 <main class="wrap" style="padding-bottom:3rem">
 <h1 style="color:var(--gold)">${esc(data.title)}</h1>
 <p class="mv-desc">${esc(data.lede)}</p>
 ${infoBanner(esc(data.avertissement))}
 
-<h2 id="saves">Les sauvegardes disponibles</h2>
+<h2 id="saves">${t('savedata.saves')}</h2>
 ${saves}
 
-<h2 id="installation">Installer une savedata</h2>
+<h2 id="installation">${t('savedata.installTitle')}</h2>
 ${inst?.intro ? `<p>${esc(inst.intro)}</p>` : ''}
 ${inst?.etapes?.length ? `<ol class="steps">${inst.etapes.map((e) => `<li>${esc(e)}</li>`).join('')}</ol>` : ''}
-${inst?.note ? `<p class="mv-desc">${esc(inst.note)} <a href="install.html">Installer sur PPSSPP →</a></p>` : ''}
+${inst?.note ? `<p class="mv-desc">${esc(inst.note)} <a href="${L.page('install')}">${t('savedata.installLink')}</a></p>` : ''}
 
-<h2 id="builds">Comprendre les builds</h2>
+<h2 id="builds">${t('savedata.builds')}</h2>
 <p>${esc(data.comprendre?.texte || '')}</p>
-${sectionSources(data.comprendre?.source ? [data.comprendre.source] : [])}
+${sectionSources(t, data.comprendre?.source ? [data.comprendre.source] : [])}
 
-<h2 id="sources">Sources</h2>
-${sourcesSection(data.sources, data.limits)}
+<h2 id="sources">${t('common.sources')}</h2>
+${sourcesSection(t, data.sources, data.limits)}
 </main>
-${siteFooter()}`;
+${siteFooter(t)}`;
   return pageShell({
+    t,
+    locale,
     seo,
-    title: 'Savedata prêtes pour les tournois — Dissidia 012 [duodecim]',
-    description: 'Sauvegardes Dissidia 012 (ULUS10566) prêtes pour le jeu en ligne : starter pack et builds 2017 Tournament Rules, Modern Alternate Rules et Japan Ranked.',
-    cssPath: 'styles/main.css',
+    path,
+    alternates,
+    title: t('savedata.metaTitle'),
+    description: t('savedata.metaDescription'),
     jsPath: null,
     body,
   });

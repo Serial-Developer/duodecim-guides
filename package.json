@@ -12,6 +12,7 @@
     "images": "node scripts/fetch-images.mjs",
     "build": "node scripts/build.mjs",
     "qa": "node scripts/qa.mjs",
+    "i18n:check": "node scripts/i18n-check.mjs",
     "qa:links": "node scripts/qa.mjs --links",
     "coverage": "node scripts/coverage.mjs",
     "serve": "npx serve dist",
