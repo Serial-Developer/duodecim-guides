@@ -1,0 +1,176 @@
+{
+  "slug": "laguna-loire",
+  "tagline": "A mid-range zoner: a threat at every distance, but punishable recoveries",
+  "archetype": "Mid-range zoner",
+  "overview": [
+    "Laguna is a mid-range zoner who balances keepaway and rushdown tools. His strengths: a wide array of pokes to chip away at the opponent's bravery, and unique move properties that allow unconventional strategies for getting around the opponent.",
+    "His variety of ranges means he can always threaten something: Homing Bazooka at long range, Ricochet Shot at mid range, Pummel and Electroshield up close.",
+    "His greatest weakness is the long recovery of many of his key moves, which makes him easy to whiff punish at the slightest mistake. To hold up on defence, he has to vary his options constantly so as to disorient the opponent, and keep an eye on their resources to calibrate the risk/reward ratio.",
+    "If you like mid-range play, poking away at the opponent and cashing in big on the right hit, and playing a keepaway neutral, Laguna is your “Man with the Machine Gun”."
+  ],
+  "tierNote": "Laguna is 29th out of 30 on the 2017 ranking, in tier C (second to last). The overview does not comment on that placement, but it underlines his main competitive limit: long recoveries on his key moves, easy to whiff punish.",
+  "strengths": [
+    "A wide array of pokes to chip away at the opponent's bravery over time.",
+    "A threat at every range: Homing Bazooka from afar, Ricochet Shot at mid range, Pummel and Electroshield up close.",
+    "Unique move properties that open unconventional strategies (Sticky Bomb's unblockable explosion, Electro Shield's persistent barrier, a ricocheting laser).",
+    "Electro Shield and Ricochet Shot combined are hard to contest and to punish, and they build assist gauge well.",
+    "An EX Burst with a devastating opening: 32 initial base damage, the second highest value in the game, tied with Lightning — valuable for bravery breaks."
+  ],
+  "weaknesses": [
+    "Long recovery on many key moves: every mistake exposes him to a whiff punish.",
+    "Several of his HP attacks (Ragnarok Blade, Split Laser, Satellite Laser) are among the easiest assist punishes to perform — an assist called just before the impact guarantees a bravery break for the opponent.",
+    "A defence that rests on constant mixups: without varying his options all the time, Laguna gets overwhelmed.",
+    "Missile Barrage, probably his worst move, is too niche next to the quality of the rest of his arsenal."
+  ],
+  "moveNotes": {
+    "Machine Gun": "Literal run'n'gun: after the startup, Laguna moves while firing, with slight tracking. Fairly short range but a good EX Force gain, and many characters cannot strike through it by charging head-on; combined with Electroshield, it punishes ground dashes or pushes the opponent towards a position suited to Ricochet Shot. Converting into an assist is possible but delicate, with very little hit stun.",
+    "Ricochet Shot": "His main ground tool, a Swiss army knife of mid/long-range pressure: the main shot (Ranged Mid) ricochets off the ground and walls, and the ricocheting bullet is Low. Chargeable for more split bullets (3 at half charge, 5 at full charge, each hitting separately); only the main shot tracks the opponent after the ricochet — excellent for dodge punishing, for shooting behind the opponent's projectiles or just above Laguna. Careful: a block still reflects the ricochet, and the Chase effect is skipped if a full charge connects with only one split bullet. To be used as much as possible, without overusing it.",
+    "Grenade Bomb": "Probably Laguna's move with the shortest recovery: slow to come out, but cancellable into a block or a dodge very soon after the throw — good for mixups and low-commitment for building assist gauge. It intercepts moves with long startups to force an engagement, converts into a combo on a read or as a hit confirm with an assist, and adds extra damage at the end of an assist combo.",
+    "Pummel (ground)": "A close-range Melee Low move that completes his all-distances game: a fast poke, defence after a dodge, an excellent EX Force gain and a reasonable recovery — it cancels into itself faster than into a block or a dodge. Mostly horizontal tracking, with a little vertical; the ground version leaves Laguna airborne afterwards. Few assists combo off it, but it is a pillar of the moveset in many matchups: learn to love this move.",
+    "Missile Barrage (ground)": "Up to 6 small missiles (hold to fire them all) with abysmal tracking: they fly off in all directions with an awkward turning radius, can be dashed through and can be blocked. They slow the opponent's movement down, but the weak hit stun and the small damage make converting difficult. Probably his worst move, far too niche next to the rest of the arsenal.",
+    "Electro Shield (ground)": "It places a persistent shield in front of Laguna, a Mid projectile that knocks the opponent away and Wall Rushes on contact. Laguna is almost entirely covered by standing just inside it (very reliable on the ground), even though some hitboxes still reach him — space yourself according to the matchup. Blocked, it behaves as though reflected (the opponent can then pass through it); a high-priority melee hit destroys it; the ground version puts Laguna in the air, handy for repositioning with a backdodge. The bread and butter of his keepaway: it slows approaches, serves as a mixup, resists assist punishes well and builds assist gauge.",
+    "Shotgun": "A shotgun that fires like one — except when charged (55F), where it becomes Ranged Mid. Slow and Ranged Low otherwise, but with good range and a fairly early dodge cancel (impossible during the charge). Up to three shots, which helps assist conversions, the last one Wall Rushing; the tracking, which is limited, no longer really follows after the first shot. A tool with little versatility but useful in certain matchups, to be handled carefully without an Electro Shield placed.",
+    "Homing Bazooka": "A big missile: up to two presses delay the acceleration and increase the range. Remarkable horizontal tracking up to the initial shot, then homing with a very wide turning radius. A unique quirk: it is the explosion on contact that carries the Mid priority — the missile goes through other projectiles until it connects or is blocked, and the explosion hitbox appears even against a wall. The knockback depends directly on the angle of impact (hit from behind, the opponent comes straight back towards Laguna — crucial for confirming Wall Rushes). Excellent anti-zoning, but fairly easy to assist punish: to be used thoughtfully and with gauge in reserve.",
+    "Sticky Bomb": "A bomb that sticks to the opponent and explodes after 186F (about 3 seconds); charging increases the throwing speed and range, and a full charge can be held for a moment. The thrown bomb is Ranged Low, but the explosion — at maximum range or after the sticking delay — is unblockable and converts with many assists; at maximum range without sticking, it even hits twice for double damage. The sticking delay feeds the mindgames and makes it a fairly fast, safe horizontal check against the opponent's setups: a fantastic tool for aerial presence at mid range.",
+    "Pummel (midair)": "Identical to the ground version: a fast close-range poke, post-dodge defence, an excellent EX Force gain, cancellable into itself faster than into a block or a dodge. A pillar of Laguna's close-range game in many matchups, even if few assists combo off it.",
+    "Missile Barrage (midair)": "Identical to the ground version: up to 6 missiles with abysmal homing, which can be dashed through and blocked. They hinder movement but convert very poorly — probably Laguna's worst move.",
+    "Electro Shield (midair)": "Identical to the ground version: a persistent Mid shield that knocks the opponent away and Wall Rushes on contact, the heart of Laguna's keepaway and mixups, hard to assist punish and a good assist gauge generator. Destroyed by a high-priority melee hit, and an opponent's block makes it behave as though reflected.",
+    "Ragnarok Buster": "An enormous laser cannon with great range (Melee High), an excellent HP attack for intercepting committal moves at mid range. The charge (53F~172F) allows the shot to be delayed to foil punish attempts and trap fast-falling characters; delaying it to deliberately provoke a clash with an HP attack and stagger the assist punisher is a vicious option too. It is notably one of the simplest ways to clash with Maelstrom or Holy for protection, and a very good assist combo ending that keeps distance with its Wall Rush.",
+    "Satellite Laser": "An enormous startup (83F) but infinite vertical range and immense horizontal tracking: cast on a read, it directly punishes moves with long startups from any height. Many characters can dash horizontally through it, and an opponent's assist called just before the impact guarantees a bravery break — take care. As a combo ending, it is the biggest in damage and always ground rushes: the ideal choice when it is available. A niche HP attack but with remarkable properties for long-range pressure.",
+    "Ragnarok Blade": "The absolute pillar of Laguna's mid-range presence: a fairly fast HP attack (43F) despite its risk, with enormous upward and horizontal range, fantastic tracking and long Wall Rush range. It shines in the punish and Assist Change game, punishing many slow moves on reaction. The knockback angle depends directly on the point of impact, ideal for controlling the Wall Rush angle and hit confirming with an assist. The downside: it is one of the easiest assist punishes to time for a guaranteed break — check the opponent's resources before using it.",
+    "Split Laser": "His fastest HP attack (35F at minimum charge, released in 3F): a ball of energy that splits into projectiles after detonating. Easy to assist punish on reaction, but not to be neglected in neutral: it covers the angle just below Laguna, punishes slow setup moves and confirms with an assist — an excellent HP poke to ration. Very strong too as an Assist Change punish against long HP attacks such as Quick Hit. First-rate EX Force generation (60 per hit): with the right spacing, 2-3 hits inflict massive depletion or a massive gain."
+  },
+  "exMode": {
+    "summary": [
+      "The “Look, the faeries are here!” EX Mode grants Regen, Critical Boost and A Faerie's Miracle: as long as EX Mode is active, the recovery of his bravery attacks can be cancelled by performing any attack."
+    ],
+    "burst": "The Desperado EX Burst is a shooting mini-game: hold R to spray (the reticle drifts with every hit, so stay on the edges), and 40 hits fill the gauge. A notable Burst: while its 100 total damage is average, its 32 initial base damage before the defence multiplier is the second highest value in the game, tied with Lightning — very useful for breaking then adding damage on top."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Laguna's gameplan: always threaten something, whatever the distance — Homing Bazooka to disrupt the opponent's zoning and setups from afar, Ricochet Shot as a Swiss army knife of mid/long-range pressure on the ground, Sticky Bomb as an aerial horizontal check, and Pummel plus Electro Shield to hold close range. The objective: chip away at the opponent's bravery with pokes and cash in big on the right hit.",
+    "Electro Shield is the keystone of his keepaway: placed in front of him, it slows approaches, covers Laguna almost entirely, serves as a mixup and is hard to assist punish. Combined with Machine Gun, it punishes ground dashes or pushes the opponent towards a firing position that suits Ricochet Shot; combined with Ricochet Shot, the pair becomes hard to contest and to punish.",
+    "The HP attacks structure his punish game: Ragnarok Blade punishes slow moves on reaction and controls the Wall Rush angle, Split Laser covers the angle below Laguna and excels at Assist Change punishes (including against long HP attacks such as Quick Hit), Ragnarok Buster intercepts at mid range with its delayable shot, Satellite Laser punishes on a read from any height and serves as a maximum-damage ending. Grenade Bomb, which commits him to little, builds assist gauge and lengthens assist combos.",
+    "Defensive discipline is vital: the long recoveries of his key moves make every mistake a potential whiff punish, and several HP attacks are easy to assist punish for a guaranteed break. Vary your options constantly to disorient the opponent, and watch their resources (the assist gauge in particular) before committing to a risky HP attack. In EX Mode, A Faerie's Miracle removes that Achilles heel on his bravery attacks by making their recovery cancellable by any attack."
+  ],
+  "advancedTech": [
+    {
+      "name": "Ragnarok Buster delayed clash",
+      "desc": "Delay Ragnarok Buster's charge to foil punish attempts, trap fast-falling characters, or deliberately provoke a clash with an opponent's HP attack and stagger the assist punisher. It is also one of the simplest ways to clash with Maelstrom or Holy for protection."
+    },
+    {
+      "name": "Homing Bazooka angle control",
+      "desc": "The explosion's knockback depends directly on the angle of impact: hit from behind, the opponent is always sent straight back towards Laguna — a crucial property for confirming Wall Rushes. The missile can also be aimed slightly to the side of the opponent, and its explosion (the real Mid projectile) passes through other projectiles."
+    },
+    {
+      "name": "Split Laser spacing",
+      "desc": "With the right spacing, Split Laser connects 2 to 3 times: at 60 EX Force per hit, that produces massive depletion or a massive gain. It is also a prime tool for punishing the opponent's Assist Changes on long HP attacks."
+    },
+    {
+      "name": "Sticky Bomb mindgames",
+      "desc": "The sticking delay (about 3 seconds before the unblockable explosion) feeds the mindgames: the opponent carrying the bomb has to manage the deadline, and the explosion converts with many assists. At maximum range without sticking, the explosion hits twice for double damage."
+    },
+    {
+      "name": "Electro Shield repositioning",
+      "desc": "The ground version of Electro Shield puts Laguna in an airborne state during the animation, which allows him to reposition immediately with a backdodge after placing the shield."
+    },
+    {
+      "name": "Sticky Bomb break trade",
+      "desc": "An application documented by Balguna's guide (dissidiaforums, 2011): stick a Sticky Bomb then deliberately let the opponent land their HP attack — the explosion during their attack all but guarantees a Bravery Break in return (only a Shantotto in EX Mode escapes it).",
+      "source": "https://web.archive.org/web/20120306072914/http://dissidiaforums.com/showthread.php?9619-The-Man-with-More-Than-a-Machine-Gun-a-Laguna-Loire-guide"
+    },
+    {
+      "name": "Ricochet Shot aimed shots",
+      "desc": "The main shot is aimed before it leaves: fired into his own feet, it ricochets vertically and serves as an anti-air; banked off a nearby wall, it hits the opponent from the flank or from behind — enough to get around a block, or even to trigger Sneak Attack (Balguna's guide, 2011).",
+      "source": "https://web.archive.org/web/20120306072914/http://dissidiaforums.com/showthread.php?9619-The-Man-with-More-Than-a-Machine-Gun-a-Laguna-Loire-guide"
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "Few direct solo combos, but devastating Sticky Bomb setups: Shotgun (2 shots) > dodge cancel > landing lag > Pummel; a placed Sticky Bomb > Pummel > the explosion > an HP Chase; a placed Sticky Bomb > Shotgun (2 shots) > DC > the explosion > Ragnarok Blade.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "The “Match-up Discussion: Laguna” thread on dissidiaforums (recovered through the Wayback Machine) contains a genuine chart written by Erourk, a main of the character (October 2011, deliberately excluding assists), then discussed and amended by the forum regulars. His rare advantages: Onion Knight 7-3, arguably his easiest matchup — Electroshield shuts down all of OK's bravery attacks and each of his HP attacks (Blade Torrent, Comet, Wind Shear) is punished by Ricochet Shot, Satellite Laser or Split Laser; and Cecil 6-4, whose Paladin kit bounces off the shield, leaving only the Dark Knight form to hope for better. Garland is his most enjoyable 5-5 (two characters with a dual ground/air plan punishing one another), Kain hovers around 5-5, and The Emperor is a 4.5-5.5 that depends heavily on the stage: on the ground Laguna dominates (Ragnarok Buster cancels the Flares), in the air Starfall overwhelms him, and a small stage lets him stay on the ground threatening Satellite Laser.",
+      "The rest of the chart tips the other way. WoL 3-7: his disjointed hitboxes go through Electroshield (which only sends bodies back, not weapons), Shield of Light cancels the Ricochet punish and Shining Wave forces him into the open. Golbez 3-7: Glarehand and Rising Wave tear through all his cooldowns and Nightglow reflects Ricochet Shot. Firion 3.5-6.5: his non-reflectable spells go through the shield and Shield Bash cancels the Ricochet punish here too. Sephiroth is the worst of all (down to 2.5-7.5 in the discussion): nothing against Shadow Flare spam, and Hell's Gate ignores Satellite Laser as well as Split Laser. Add Kuja (Remote Flare shuts down his ranged options, with virtually no chance of getting in against a smart Kuja), Yuna (the aeons go through Electroshield like butter), Cloud of Darkness 4-6 to 3.5-6.5, Gabranth 3.5-6.5 depending on the stage, and both Kefka and Exdeath as thankless matchups — an Exdeath with two bars locks him down, even if a well-spaced Shotgun gets him out of Reverse Polarity. The common thread of these analyses: every mistake costs Laguna far more than it costs the opponent, and he remains a sitting duck for assists.",
+      "Two more contested matchups deserve detail. Ultimecia: judged futile by some, but brought back to 4-6, or even 3.5-6.5, by a main — Laguna is among the characters who fear Knight's Lance least; posted inside his Electroshield at equal distance and height, he answers arrow spam with Homing Bazooka (whose homing is far superior to the axes she can put up against it), and can even attack from below (Ragnarok Blade on a dodge, Pummel outside the lances' coverage); it is the assists, not the neutral, that tip the match, since Ultimecia is far harder to punish than he is. Cloud: 55-45 to 6-4 Laguna for some — in theory Cloud cannot touch him, and the Cloud in a commentated match from the thread confirms the difficulty — but a good Cloud right on his heels, with Rising Fang to cover his dodges and Double Cut to interrupt the shield placements, turns the balance around. Solde Starlight Serenity's Steam Exdeath guide (2020), for its part, considers the matchup favourable to Exdeath, owing to Laguna's weak bravery game."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "The documented build is a “Side by Side” build with the Judgment of Lufenia special effect and the Equip Glitch (the total CP cost assumes the glitch has been performed): Lufenian Axe, Lufenian Shield, Lufenian Helm and Auto Crossbow, Kuja or Jecht assist, Rubicante summon, and booster accessories (Muscle Belt, Sniper Eye, Battle Hammer, the Empty EX Gauge / Summon Unused / Pre-EX Mode / Pre-EX Revenge / Grounded / Opponent Summon Unused conditions, Side By Side) peaking at a maximum multiplier of x6.9 — 9377 HP, 956 BRV, 180 ATK, 184 DEF."
+    ],
+    "notes": "A second build is provided in the data but is entirely empty, and the attack selections of the builds are not filled in in the tables. The competitive selections are documented elsewhere, however: Balguna's guide (dissidiaforums, 2011) makes Ricochet Shot compulsory (always to be equipped) with Electroshield and/or Pummel on the ground, and Pummel/Homing Bazooka/Sticky Bomb as aerial staples (Shotgun as an option for the Wall Rush and assist links); the Steam Exdeath guide (2020) describes competitive Laguna loadouts as Pummel/Ricochet Shot/Electroshield on the ground and Pummel/Shotgun/Sticky Bomb in the air, with any other loadout being easy to block."
+  },
+  "assist": {
+    "asAssist": [
+      "Laguna sits in the Low tier of the assist tier list. The wiki provides neither a written evaluation nor a data table for Laguna as an assist."
+    ],
+    "recommended": [
+      {
+        "name": "Yuna",
+        "why": "Cited by the wiki in Laguna's assist section, with no written justification."
+      },
+      {
+        "name": "Jecht",
+        "why": "Cited by the wiki in Laguna's assist section (with no written justification) and chosen as one of the two assists of the documented build."
+      },
+      {
+        "name": "Aerith",
+        "why": "Cited by the wiki in Laguna's assist section, with no written justification."
+      },
+      {
+        "name": "Kuja",
+        "why": "Chosen as one of the two assists of the documented “Side by Side” build."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Laguna Assist Combo",
+      "desc": "A period video (Ansonpants): a two-bar assist combo started on Machine Gun, easy to land and very damaging according to the author.",
+      "source": "https://www.youtube.com/watch?v=H40dPjZvgE8",
+      "date": "2011"
+    },
+    {
+      "title": "How do i successfully use Laguna? — GameFAQs thread",
+      "desc": "A period thread from the Duodecim board: advice on applying pressure by varying Homing Bazooka, Sticky Bomb and Pummel/Electroshield in the air, and Machine Gun, Ricochet Shot and Pummel/Electroshield on the ground — a style described as a faster Emperor.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58596037",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia Duodecim Builds Exdeath,Tifa,Laguna,WoL,Bartz",
+      "desc": "A period multi-character build video (Tiger Bub) including a Laguna configuration, from his “Duodecim Builds” series.",
+      "source": "https://www.youtube.com/watch?v=E30pdXaq3pQ",
+      "date": "2011"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Laguna is credited there with few solo combos, but with devastating setups around Sticky Bomb.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    }
+  ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://web.archive.org/web/20120521160123/http://dissidiaforums.com/showthread.php?9543-Match-up-Discussion-Laguna/page2",
+      "https://web.archive.org/web/20120521173218/http://dissidiaforums.com/showthread.php?9543-Match-up-Discussion-Laguna/page3",
+      "https://web.archive.org/web/20120521143521/http://dissidiaforums.com/showthread.php?9543-Match-up-Discussion-Laguna/page5",
+      "https://web.archive.org/web/20120521175002/http://dissidiaforums.com/showthread.php?9543-Match-up-Discussion-Laguna",
+      "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
+    ],
+    "builds": [
+      "https://web.archive.org/web/20120306072914/http://dissidiaforums.com/showthread.php?9619-The-Man-with-More-Than-a-Machine-Gun-a-Laguna-Loire-guide",
+      "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
+    ]
+  },
+  "limits": [
+    "No strengths/weaknesses table on the wiki page: the lists above are derived from the overview prose and the move notes.",
+    "Very incomplete frame data: Machine Gun, Grenade Bomb, Pummel, Missile Barrage and Electro Shield have no startup, priority or EX Force figures in the data (only the damage multipliers are present); the damage of Ragnarok Blade and Split Laser is not quantified (“-”).",
+    "No combo is documented (the combos section is empty, documented: false).",
+    "The wiki's matchups page is a stub: the matchups section is reconstructed from Erourk's chart and the discussions in the period dissidiaforums thread (through the Wayback Machine, with the chart drawn up excluding assists) plus the Steam Exdeath guide; some matchups are not covered there (Terra, Tifa, Squall, Zidane, Bartz, Prishe, Vaan, Tidus, Lightning). The move notes keep their occasional mentions (Ragnarok Buster clashing with Maelstrom/Holy, punishing Quick Hit with Split Laser).",
+    "The assist section amounts to three names (“Yuna, Jecht, Aerith.”) with no justification at all, and no data exists for Laguna as an assist: the recommendations are given as they stand.",
+    "No unique mechanic is documented; the second build is empty and the attack selections are absent from the wiki's tables (the competitive staples are now documented in builds.notes through external sources); the assistGain values are empty."
+  ]
+}

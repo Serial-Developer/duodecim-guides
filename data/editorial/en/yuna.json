@@ -1,0 +1,133 @@
+{
+  "slug": "yuna",
+  "tagline": "A summoner with disjoints: mid-range poking and superior EX generation",
+  "archetype": "Mid-range poking (disjointed attacks)",
+  "overview": [
+    "Yuna excels through disjointed attacks at short and medium range: every move summons an aeon that strikes in her place, from a fast poke to a long-range projectile. The essential point is the aeons themselves: they strike beyond her reach, without moving her forward and with no hurtbox of their own — excellent for poking and whiff punishing, but also for connecting through Ranged attacks of higher priority where other characters struggle. With options at almost every distance, she keeps up the pressure wherever the opponent is.",
+    "This arsenal lets her build her assist gauge safely by whiffing her bravery attacks, notably Heavenly Strike, a very fast Ranged Low move. Her HP attacks, less committal than average, remain effective in neutral for punishing bad movement or controlling space. Like many characters, she depends on assists and on raw HP attack reads for HP damage: her only solo combo into an HP attack requires EX Mode, so it is situational. In exchange, almost all her attacks generate above-average EX Force, and her EX Mode adds hits to all her bravery attacks — markedly increased damage and better dodge catching, but Heavenly Strike becomes vulnerable to staggers (melee priority hits).",
+    "She accepts a wide variety of builds, including EX-gain hybrids. Her exclusive level 100 weapon offers a valuable +3 m of EX Intake Range: without it, her disjoints make absorbing EX difficult. Her assist conversion is average with most competitive assists; she does not depend on walls for her combos, even though they help, and her large mid-range attacks make extra movement abilities such as Multi Air Slide valuable.",
+    "On weaknesses: low stats and low base damage on her bravery attacks, which weigh down her overall damage and make her a little fragile. Her aerial tools, rather projectile-oriented, suffer against disjointed or high-priority melee attacks; her long-range projectiles, being simple, are neutralised by universal defensive options — added to her slow movement, that makes it hard to bring a defensive opponent into her optimal zone. Finally, her air dodges are more vulnerable than average (an average fall, slow acceleration, no reliable defensive option against melee); the Adamant Chains set makes them safe but sacrifices other parts of the build, which suits her poorly."
+  ],
+  "tierNote": "Ranked 21st (tier B) on the 2017 competitive tier list. The overview places her historically in mid tier or low tier: enough utility to stand out in the roster, but potential held back by her below-average damage and her modest conversion.",
+  "strengths": [
+    "Mid range: a variety of attacks that poke and mix outside the opponent's poke range, or through persistent projectiles.",
+    "Flexibility: a reliable, versatile kit that allows many different builds depending on the matchup.",
+    "Gauge generation: good assist building tools; above-average EX, accessible from all her moves with EX Intake Range bonuses.",
+    "Atypical attacks: a fast Ranged Low bravery attack (Heavenly Strike) and very fast anti-approach HP attacks.",
+    "Accessible: an atypical but direct kit, decent for new players."
+  ],
+  "weaknesses": [
+    "Limited anti-zoning: few options for forcing the opponent into her effective zone.",
+    "Mobility: a slow dash that makes chasing a runaway opponent or racing for EX Cores awkward; risky air dodges (a slow fall, her fastest aerial attacks being Ranged, no very fast ground attack).",
+    "Low base stats: below-average base power and reliance on weapons boosting EX Intake Range, hence damage often lower than the rest of the cast."
+  ],
+  "moveNotes": {
+    "Meteor Strike": "Ifrit's claw strike on the ground. Good vertical tracking, a large hitbox, average damage and slightly weak knockback. The first hit confirms into an assist (Kuja for instance) with a generous input window. A slow startup for a Melee Low move: poor defensively and vulnerable to blocks. In EX Mode, two Shiva hits are inserted between the claws while keeping the long input window, making it easier to react for a follow-up.",
+    "Aerospark": "A rush with Ixion, Melee Mid: it staggers normal blocks, so it is a safe tool in ground-to-ground exchanges, an anti-air and a zone denial move. After the launch, delaying the second press as long as possible fires all 6 discs, one of the game's rare ways of securing an empty chase against a recovery attack. Fast in startup and recovery for its range; Ixion can appear on the other side of thin obstacles for an ultra-safe poke. The EX Mode version puts Yuna in the air: a dodge cancel towards the opponent then EX Heavenly Strike with no wall, or Diamond Dust near a wall — her only solo combo into an HP attack, difficult but rewarding.",
+    "Energy Blast": "Multiple projectiles in a cone through Valefor. Low commitment, low reward: easily countered by universal defensive options. It rarely serves as filler during a ground assist; not essential. The EX version adds a fast Melee Low Ifrit claw that can beat dash attempts, but no more than that.",
+    "Sonic Wings": "Yuna's main melee poke: Valefor spins with an enormous hitbox, strong vertical tracking and a complete disjoint, but a slower startup, vulnerable to reactive blocks at certain distances. After the first hits, an assist such as Kuja combos. Since Valefor is far from Yuna, without Spira's Hope or without a chase the opponent absorbs most of the EX Force through Glutton. Its disjoint passes through certain higher-priority projectiles (The Emperor's Flares, Ultimecia's charged Knight's Lances), which is very valuable in those matchups. In EX Mode, the last hit trades the chase for a Wall Rush.",
+    "Heavenly Strike": "Shiva's ice strike, slightly offset: THE aerial poke Yuna uses to build assist. An 11 frame startup, in the fastest bracket of pokes. It appears on the opponent when possible, with deceptive high and forward range that lets it connect through attacks it would lose to on priority. Ranged Low: no stagger on block (which avoids damage against blocked HP attacks), but a total loss against dashes and Melee Low moves — so it cannot be used to defend by clashing at a frame disadvantage, after an air dodge for instance. Slightly short knockback; the assist still confirms on the second hit if Yuna is high up. In EX Mode, Ixion hits (Melee Low) are added: vulnerable to blocks, but with increased range and a better answer to dash option selects.",
+    "Impulse": "Bahamut's long-range fireball, chargeable into 4 small projectiles. A low reward, brushed aside by a dash or a block. The single shot, with its surprising projectile speed, serves as a poke to fish for Assist Charge counter hits. The charged version is generally worse: a long charge, slightly shorter range, very telegraphed and easily punished by an assist. But if several charged projectiles connect, a hit glitch allows Heavenly Strike to be chained for an assist confirm or a knockdown.",
+    "Hellfire": "Highly active anti-approach pillars of fire, tall and wide — to be used when the opponent approaches through the air or along the ground (it does not hit directly above Yuna). A very fast HP attack for its power, an excellent anti-air and very good against close dodges thanks to its enormous active frames. Ifrit's claw is her fastest and safest Melee High move, and her option for reflecting Ranged High attacks. The pillars serve as a 1-hit HP attack against an opponent with a full EX gauge, and the knockback converts into a combo with precise timing on the Kuja assist.",
+    "Energy Ray": "A long-range HP attack: Valefor traces a line that explodes vertically after a short delay. The slight curved tracking forces slow characters to dodge sideways, without really catching dodges. It reaches its maximum distance quickly; useful for forcing a lateral dodge with an assist in support, or for punishing a long whiff. Very vulnerable to assist punishes on reaction — to be used with care.",
+    "Thor's Hammer": "Ixion places a sucking electric orb almost anywhere across 360°, but with limited maximum distance and orb size. To be used at semi-close range when the opponent, at a big frame disadvantage, is likely to dodge. It leaves Yuna very exposed to assist punishes and to fast mid-range attacks; the opponent often recovers the EX generated through Glutton. Diamond Dust remains a safer block check in neutral.",
+    "Diamond Dust": "Shiva's persistent ice cloud: a very fast anti-approach tool and mixup, especially against advancing melee attacks. Surprisingly strong vertical tracking (it even combos after EX Aerospark). The last hit sends the opponent straight upwards for easy assist conversions. If the opponent sets off the hits at the end of the active frames, Yuna becomes actionable again before the hit stun ends: a real combo follows, with Heavenly Strike being the most practical.",
+    "Mega Flare": "Bahamut fires a big laser at mid range: good damage and Yuna's only HP attack with a Wall Rush. Excellent horizontal tracking before the shot and good downward tracking during it — it catches most close dodges. Yuna's only aerial Melee High move, but it covers her body poorly and leaves her completely exposed to punishes (a long duration). It is also used as okizeme close to the ground or a wall, and as a last resort for reflecting Ranged High projectiles."
+  },
+  "exMode": {
+    "summary": [
+      "The “Grand Summon!” EX Mode grants Regen, Critical Boost and Double Summons: two aeons are summoned simultaneously on every bravery attack. All the bravery attacks gain extra hits with their own base damage, which increases her overall damage and her ability to catch dodges.",
+      "In detail: Meteor Strike gains Shiva hits while keeping its lenient input window; Aerospark makes Yuna airborne with more hit stun, allowing the dodge cancel > Diamond Dust combo; Energy Blast receives a Melee Low hitbox before the projectiles; Heavenly Strike becomes partly Melee Low and can therefore stagger Yuna if blocked; Sonic Wings trades the chase for a Wall Rush; Impulse adds a Valefor projectile, at maximum charge only. It is a gain in power overall, but a blocked Heavenly Strike has to be watched and the assist timings adapted to the extra hits."
+    ],
+    "burst": "“To the Farplane”: press the button shown when the white circle closes in, several times in a row. Above-average damage (the initial hits ignore the opponent's EX defence) for undemanding execution."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "The summons: every bravery attack calls an aeon. Yuna stays still during the incantation while the summon attacks in front of her, with a hitbox disjointed from her body and good range — the aeon strikes even if Yuna is threatened, but she stays vulnerable throughout the animation.",
+      "In EX Mode, Double Summon adds a second summon to every attack: increased damage and modified effects (the data in brackets in the tables corresponds to Double Summon)."
+    ],
+    "details": null
+  },
+  "gameplan": [
+    "Yuna's gameplan: stand just outside the opponent's poke range and put her aeons to work there — Heavenly Strike as her main aerial poke and assist generator, Sonic Wings as a disjointed melee poke, Meteor Strike and Aerospark on the ground (a Melee Mid gap closer, an occasional anti-air). Whiffing her bravery attacks safely builds assist gauge; her low-commitment HP attacks (Hellfire and Diamond Dust on defence and anti-approach, Thor's Hammer to catch dodges around her, Mega Flare for the Wall Rush, wake-up pressure and projectile reflection) punish bad movement in neutral.",
+    "HP damage comes mainly through the assist and through raw HP reads: Heavenly Strike often causes a ground Wall Rush that combos into the ground Kuja assist for heavy damage and follow-up time. Solo combos exist but remain situational: the charged Impulse hit glitch into Heavenly Strike at long range, EX Aerospark > dodge cancel > Diamond Dust (her only solo combo into an HP attack, in EX Mode near a wall), and a late-hit Diamond Dust > Heavenly Strike.",
+    "Managing EX is central: almost all her moves generate a lot of EX Force, and Spira's Hope (+3 m of EX Intake Range) makes up for the distance of her aeons — without it, the opponent absorbs a good part of the EX through Glutton. Once EX Mode is reached, Double Summons reinforces every bravery attack and opens her only solo combo into an HP attack.",
+    "She excels on small and medium stages (M.S. Prima Vista, Top Floor for instance) where her disjoints, her EX generation and her HP attacks control more space; stage elements help her without being indispensable."
+  ],
+  "advancedTech": [
+    {
+      "name": "Charged Impulse hit glitch",
+      "desc": "If several charged Impulse projectiles connect, the hits trigger a hit glitch that combos into Heavenly Strike. Since Yuna cannot cancel Impulse into Heavenly Strike, the projectiles have to connect well after the shot, which limits how practical it is — but it offers a long-range Wall Rush conversion into the assist."
+    },
+    {
+      "name": "Aerospark through thin obstacles",
+      "desc": "A niche technique: Ixion can appear on the other side of thin obstacles that Yuna is pressed against, making Aerospark an even safer poking option."
+    },
+    {
+      "name": "EX Aerospark > dodge cancel > Diamond Dust",
+      "desc": "In EX Mode, Aerospark makes Yuna airborne with increased hit stun: a forward dodge cancel then Diamond Dust near a wall, a corner or the ceiling. Yuna's only solo combo into an HP attack; demanding and situational, but notable. Mapping Diamond Dust to up + square makes the execution easier."
+    },
+    {
+      "name": "Diamond Dust late hit > Heavenly Strike",
+      "desc": "When Diamond Dust connects at the end of its active frames, Yuna has enough frame advantage for a solo follow-up. Heavenly Strike follows consistently thanks to its vertical range, and is very rewarding if it Wall Rushes into an assist combo. Setting the situation up with an assist helps keep the opponent grounded."
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "Three combos, powerful but impractical: a fully charged Impulse > Heavenly Strike hit glitch; EX Aerospark > Diamond Dust or Heavenly Strike; Diamond Dust (delayed hit) > Heavenly Strike, Diamond Dust or Sonic Wings. On the empty chase into an assist gauge reset, no move is reliable: level 1 Ixion falls just short even at ideal spacing, and Valefor sends the opponent too high.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "The wiki's matchups page is a stub, but the overview and the move notes give a few markers: Sonic Wings' disjoint passes through certain higher-priority projectiles, notably The Emperor's Flares and Ultimecia's charged Knight's Lances, which makes it a very good tool in those matchups. More broadly, Yuna has enough utility to compete in a variety of matchups, but she struggles against defensive opponents she cannot force into her effective zone. She prefers small and medium stages where her disjoints and her HP attacks control more space."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "The documented build is a general-purpose hybrid: constant EX absorption, a long EX Intake Range thanks to the exclusive weapon Spira's Hope, and high base bravery. The damage comes from base bravery, which regenerates far faster with Royal Crown and Great Gospel; if Yuna lands an HP attack on its own at base bravery, the Kuja assist generally leaves time to recover it. The Best Dresser extra ability is required for the higher base bravery. The build uses the Equip Glitch (the total CP cost assumes it has been performed) and the Kuja assist, with Rubicante as the summon.",
+      "On attacks, the core barely moves: Meteor Strike, Aerospark, Heavenly Strike and Sonic Wings as bravery attacks; Hellfire, Diamond Dust, Thor's Hammer and Mega Flare as HP attacks. Impulse and Energy Ray are flexible depending on the matchup, the stage or personal preference; Energy Blast is advised against (low priority, low damage, mediocre space control), unless the opponent's ground assist is slow."
+    ],
+    "notes": "25 CP remain available for Energy Blast, Energy Ray, the Counterattack extra ability or other basic abilities. Documented substitutes: Blue Gem can be replaced by First to Victory (an initial gauge and bravery boost) or Winged Boots (against the banish traps of certain stages); Omni Ground Dash can be replaced by Ground Dash or Reverse Ground Dash; Assist Critical Boost can be replaced by Counterattack (good with her pokes but often negated by Disable Counterattack). A second build is provided on the wiki but left empty."
+  },
+  "assist": {
+    "asAssist": [
+      "As an assist, Yuna is ranked in the High tier of Muggshotter's assist tier list (alongside Sephiroth, Tidus and Onion Knight). The sources on her page do not detail her use as an assist beyond that ranking."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "Most of Yuna's builds use Kuja, for his heavy damage and his consistent confirms from most of her moves: Heavenly Strike (with or without a ground Wall Rush), the first part of Sonic Wings and even Hellfire. Heavenly Strike's ground Wall Rush combos into the ground Kuja assist for a lot of damage and follow-up time."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Dissidia 012: Duodecim Final Fantasy – Yuna Guide (v1.2)",
+      "desc": "A complete period guide by Pokefan362/Jirachi, a Yuna main in PvP: attacks, recommended builds and abilities, assists and combos, matchups. Version 1.2 updated in June 2011.",
+      "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/62416",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012 [duodecim] - Tidus and Yuna Assist Combos",
+      "desc": "A period video by KindredCVS exploring Yuna as an assist through combos with Tidus — a use the wiki's sources do not detail beyond her High tier ranking.",
+      "source": "https://www.youtube.com/watch?v=vV4xQP3f7zU",
+      "date": "2011"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Yuna is credited there with three powerful but impractical combos.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    }
+  ],
+  "limits": [
+    "The wiki's matchups page is a stub: no detailed analysis per character.",
+    "The assist section of the page provides for Tidus, Jecht and Sephiroth tabs, but only the Kuja content is filled in.",
+    "The second build (“Build #2”) is an empty template: stats, equipment and attacks are not filled in.",
+    "No dated or sourced community reference (the wiki's References section is empty); the community tech entries come from the external sources pass.",
+    "No “Unique Mechanics” section is documented for Yuna: the field is left as null."
+  ],
+  "groupNotes": {
+    "bravery/main": "Yuna's bravery attacks summon her aeons: she stays still during the incantation, with the summon attacking in front of her with a disjointed hitbox and good range. In EX Mode, Double Summon adds a second summon (increased damage, modified effects); the data in brackets corresponds to Double Summon."
+  }
+}
