@@ -96,7 +96,9 @@ function backdrop() {
 
 function characterSvg({ name, origin, tagline, tier, portrait }) {
   const px = 100, py = 137, ps = 356; // portrait : carré, centré verticalement
-  const tx = portrait ? 470 : 96;    // colonne de texte
+  // Colonne de texte : le cadre du portrait s'arrête à px + ps + 16, il faut
+  // partir franchement après, sinon le texte vient coller le trait doré.
+  const tx = portrait ? px + ps + 16 + 60 : 96;
   const nameSize = name.length > 16 ? 62 : name.length > 12 ? 72 : 84;
   const taglineLines = wrap(tagline, 42, 2);
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
