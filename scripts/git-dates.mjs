@@ -59,11 +59,19 @@ export function gitDates(root) {
     const parts = l.split('\t');
     const status = parts[0];
     if (status[0] === 'R' && parts.length >= 3) {
-      // Renommage : le nouveau chemin hérite de la date de création de l'ancien.
+      // Renommage : le nouveau chemin hérite de l'historique de l'ancien.
+      // `R100` signale un déplacement à contenu identique — déplacer un fichier
+      // ne modifie pas ce qu'il dit, donc `dateModified` ne bouge pas. Sans cette
+      // nuance, ranger l'éditorial par locale aurait redaté les 33 fiches et
+      // annoncé aux moteurs une mise à jour qui n'a pas eu lieu.
       const [, from, to] = parts;
       const prev = map.get(from);
+      const untouched = status === 'R100';
       map.delete(from);
-      map.set(to, { created: prev ? prev.created : date, modified: date });
+      map.set(to, {
+        created: prev ? prev.created : date,
+        modified: untouched && prev ? prev.modified : date,
+      });
       continue;
     }
     if (parts.length >= 2) touch(parts[1], date);

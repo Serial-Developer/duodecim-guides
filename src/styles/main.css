@@ -1144,7 +1144,9 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
 
 /* Dans le volet mobile, le sélecteur reprend la mise en page des catégories. */
 .lang-switch-drawer { margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px solid var(--surface-2); gap: 0.35rem; }
-.lang-switch-drawer .lang-opt { padding: 0.35rem 0.75rem; font-size: 0.9rem; }
+/* Cible tactile d'au moins 44 px de haut : au doigt, la pastille du header
+   (dimensionnée pour la souris) serait trop basse. */
+.lang-switch-drawer .lang-opt { padding: 0.55rem 0.9rem; font-size: 0.95rem; min-height: 44px; display: inline-flex; align-items: center; }
 
 /* Bandeau de proposition linguistique. Inséré en tête de page par
    scripts/lang.js quand le navigateur réclame une langue publiée qui n'est pas

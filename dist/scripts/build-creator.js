@@ -15,13 +15,30 @@
   var root = document.getElementById('bc-editor');
   if (!D || !root) return;
 
+  // Libellés de l'outil, injectés par le template dans la langue de la page
+  // (voir src/i18n/build-creator-strings.mjs). Ce script est servi tel quel aux
+  // deux langues : il ne contient donc aucun texte.
+  var BC = window.BC_I18N || { locale: 'fr', ui: {}, app: {} };
+  function T(key, params) {
+    var node = BC.app;
+    var parts = key.split('.');
+    for (var i = 0; i < parts.length && node != null; i++) node = node[parts[i]];
+    if (node == null) return '⟨' + key + '⟩';
+    if (!params) return String(node);
+    return String(node).replace(/\{(\w+)\}/g, function (m, k) {
+      return Object.prototype.hasOwnProperty.call(params, k) ? String(params[k]) : m;
+    });
+  }
+  // Tri alphabétique dans la langue affichée (« é » se range avec « e »).
+  function byName(a, b) { return a.name.localeCompare(b.name, BC.locale); }
+
   var STORAGE_KEY = 'dissidia012.builds.v1';
   var SCHEMA_VERSION = 1;
   var SLOTS = [
-    { key: 'weapon', label: 'Arme' },
-    { key: 'hand', label: 'Main' },
-    { key: 'head', label: 'Tête' },
-    { key: 'body', label: 'Corps' },
+    { key: 'weapon', label: T('slots.weapon') },
+    { key: 'hand', label: T('slots.hand') },
+    { key: 'head', label: T('slots.head') },
+    { key: 'body', label: T('slots.body') },
   ];
   var ACCESSORY_SLOTS = 10;
   // Nombre d'exemplaires d'un même accessoire, selon son rang : 1 pour un rang S,
@@ -29,10 +46,10 @@
   // documenté n'est pas contraint — on le signale plutôt que de deviner.
   var RANK_COPY_LIMIT = { S: 1, A: 2, B: 3, C: Infinity };
   var ACCESSORY_CATEGORIES = [
-    { key: 'basic', label: 'Basic' },
-    { key: 'booster', label: 'Booster' },
-    { key: 'special', label: 'Special' },
-    { key: 'trade', label: 'Trade' },
+    { key: 'basic', label: T('accCategories.basic') },
+    { key: 'booster', label: T('accCategories.booster') },
+    { key: 'special', label: T('accCategories.special') },
+    { key: 'trade', label: T('accCategories.trade') },
   ];
 
   // Les longues listes voyagent en colonnes ({ c: noms, r: lignes }) pour ne pas
@@ -141,7 +158,7 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify({ schemaVersion: SCHEMA_VERSION, builds: builds }));
       return true;
     } catch (e) {
-      toast('Enregistrement impossible : stockage du navigateur indisponible ou plein.', true);
+      toast(T('err.storageFull'), true);
       return false;
     }
   }
@@ -149,21 +166,21 @@
   // Validation stricte : un import ne doit jamais introduire de structure
   // inattendue, ni d'identifiant inconnu des données de jeu.
   function validateBuild(b) {
-    if (!b || typeof b !== 'object') return { ok: false, error: 'Objet de build attendu.' };
-    if (b.schemaVersion !== SCHEMA_VERSION) return { ok: false, error: 'Version de schéma inconnue (' + b.schemaVersion + ', attendu ' + SCHEMA_VERSION + ').' };
-    if (typeof b.character !== 'string' || !charBySlug[b.character]) return { ok: false, error: 'Personnage inconnu : ' + b.character + '.' };
-    if (!Array.isArray(b.attacks) || !Array.isArray(b.abilities)) return { ok: false, error: 'Listes d’attaques ou d’abilities absentes.' };
-    if (!b.equipment || typeof b.equipment !== 'object') return { ok: false, error: 'Bloc d’équipement absent.' };
-    if (!Array.isArray(b.accessories)) return { ok: false, error: 'Liste d’accessoires absente.' };
+    if (!b || typeof b !== 'object') return { ok: false, error: T('err.notObject') };
+    if (b.schemaVersion !== SCHEMA_VERSION) return { ok: false, error: T('err.schema', { found: b.schemaVersion, expected: SCHEMA_VERSION }) };
+    if (typeof b.character !== 'string' || !charBySlug[b.character]) return { ok: false, error: T('err.character', { name: b.character }) };
+    if (!Array.isArray(b.attacks) || !Array.isArray(b.abilities)) return { ok: false, error: T('err.lists') };
+    if (!b.equipment || typeof b.equipment !== 'object') return { ok: false, error: T('err.equipBlock') };
+    if (!Array.isArray(b.accessories)) return { ok: false, error: T('err.accList') };
     var badSlot = SLOTS.some(function (s) {
       var v = b.equipment[s.key];
       return v != null && (typeof v !== 'string' || !equipByUid[v]);
     });
-    if (badSlot) return { ok: false, error: 'Équipement inconnu dans un emplacement.' };
+    if (badSlot) return { ok: false, error: T('err.unknownEquip') };
     var badAcc = b.accessories.some(function (v) { return v != null && (typeof v !== 'string' || !accByUid[v]); });
-    if (badAcc) return { ok: false, error: 'Accessoire inconnu.' };
-    if (b.assist != null && !assistBySlug[b.assist]) return { ok: false, error: 'Assist inconnu : ' + b.assist + '.' };
-    if (b.summon != null && !summonById[b.summon]) return { ok: false, error: 'Invocation inconnue : ' + b.summon + '.' };
+    if (badAcc) return { ok: false, error: T('err.unknownAcc') };
+    if (b.assist != null && !assistBySlug[b.assist]) return { ok: false, error: T('err.unknownAssist', { name: b.assist }) };
+    if (b.summon != null && !summonById[b.summon]) return { ok: false, error: T('err.unknownSummon', { name: b.summon }) };
     return { ok: true };
   }
 
@@ -309,16 +326,16 @@
     var char = charBySlug[state.build.character];
     if (item.exclusiveTo) {
       return item.exclusiveTo === char.slug
-        ? { state: 'native', label: 'Exclusivité du personnage' }
-        : { state: 'unavailable', label: 'Exclusivité d’un autre personnage' };
+        ? { state: 'native', label: T('equipState.exclusiveOwn') }
+        : { state: 'unavailable', label: T('equipState.exclusiveOther') };
     }
     var native = (char.native[item.slot] || []).map(function (c) { return c.toLowerCase(); });
-    if (!native.length) return { state: 'unknown', label: 'Catégories natives non documentées pour ce personnage' };
+    if (!native.length) return { state: 'unknown', label: T('equipState.noNative') };
     var cat = (item.category || '').toLowerCase();
     var known = (D.equipmentCategories[item.slot] || []).map(function (c) { return c.toLowerCase(); });
-    if (known.indexOf(cat) === -1) return { state: 'unknown', label: 'Catégorie « ' + item.category + ' » non rattachée à une liste native' };
-    if (native.indexOf(cat) !== -1) return { state: 'native', label: 'Équipable nativement' };
-    return { state: 'glitch', label: 'Nécessite l’Equip Glitch' };
+    if (known.indexOf(cat) === -1) return { state: 'unknown', label: T('equipState.unknownCategory', { category: item.category }) };
+    if (native.indexOf(cat) !== -1) return { state: 'native', label: T('equipState.native') };
+    return { state: 'glitch', label: T('equipState.needsGlitch') };
   }
 
   function itemLegality(item) {
@@ -370,7 +387,8 @@
     gauge.meter.setAttribute('aria-valuemax', String(cp.max));
     gauge.meter.setAttribute('aria-valuenow', String(cp.used));
     gauge.meter.setAttribute('aria-valuetext',
-      cp.used + ' sur ' + cp.max + ' CP — attaques ' + cp.attacks + ', abilities ' + cp.abilities + (over ? ' — budget dépassé' : ''));
+      T('gauge.valueText', { used: cp.used, max: cp.max, attacks: cp.attacks, abilities: cp.abilities })
+      + (over ? T('gauge.over') : ''));
     return cp;
   }
 
@@ -379,12 +397,12 @@
     var problems = [];
     var infos = [];
 
-    if (cp.used > cp.max) problems.push('Budget dépassé de ' + (cp.used - cp.max) + ' CP — build invalide.');
+    if (cp.used > cp.max) problems.push(T('status.overBudget', { over: cp.used - cp.max }));
     if (cp.unknownCost.length) {
-      infos.push('Coût en CP non documenté pour : ' + cp.unknownCost.join(', ') + '. Le total affiché est donc un minimum.');
+      infos.push(T('status.unknownCost', { list: cp.unknownCost.join(', ') }));
     }
     cp.overEquipped.forEach(function (o) {
-      problems.push(o + ' : la source ne documente la capacité que jusqu’à ' + D.capacity.max + ' CP, les exemplaires supplémentaires ne sont pas comptés.');
+      problems.push(T('status.overCapacity', { name: o, max: D.capacity.max }));
     });
 
     // Un build importé ou reçu par lien peut dépasser la limite d'exemplaires.
@@ -395,18 +413,18 @@
       var limite = copyLimit(a);
       var n = copiesOf(a.uid);
       if (limite !== null && limite !== Infinity && n > limite) {
-        problems.push(a.name + ' : ' + n + ' exemplaires équipés, ' + limite + ' au maximum pour un rang ' + a.rank + '.');
+        problems.push(T('status.tooManyCopies', { name: a.name, count: n, max: limite, rank: a.rank }));
       }
-      if (limite === null) infos.push(a.name + ' : rang non documenté, la limite d’exemplaires n’est pas vérifiée.');
+      if (limite === null) infos.push(T('status.unknownRank', { name: a.name }));
     });
 
     var illegal = [];
     equippedAccessories().forEach(function (a) { if (a.legal === false) illegal.push(a.name); });
     if (state.build.summon) {
       var sm = summonById[state.build.summon];
-      if (sm && sm.legal === false) illegal.push(sm.name + ' (invocation)');
+      if (sm && sm.legal === false) illegal.push(sm.name + ' ' + T('status.summonSuffix'));
     }
-    if (illegal.length) problems.push('Items illégaux en tournoi : ' + illegal.join(', ') + '.');
+    if (illegal.length) problems.push(T('status.illegalItems', { list: illegal.join(', ') }));
 
     var glitch = [];
     var unavailable = [];
@@ -415,8 +433,8 @@
       if (st.state === 'glitch') glitch.push(e.name);
       if (st.state === 'unavailable') unavailable.push(e.name);
     });
-    if (unavailable.length) problems.push('Équipement non portable par ce personnage : ' + unavailable.join(', ') + '.');
-    if (glitch.length) infos.push('Equip Glitch requis pour : ' + glitch.join(', ') + ' (jusqu’à 10 CP économisés par pièce).');
+    if (unavailable.length) problems.push(T('status.notWearable', { list: unavailable.join(', ') }));
+    if (glitch.length) infos.push(T('status.glitchNeeded', { list: glitch.join(', ') }));
 
     var combos = activeCombinations();
     if (combos.length) infos.push('Set actif : ' + combos.map(function (c) { return c.name + ' — ' + c.effects; }).join(' ; '));
@@ -427,16 +445,16 @@
     [['HP', st.totals.hp], ['CP', cp.max], ['BRV', st.totals.brv], ['ATK', st.totals.atk], ['DEF', st.totals.def], ['LUK', st.totals.luk]]
       .forEach(function (pair) {
         statLine.appendChild(el('span', { class: 'bc-stat' }, [
-          el('strong', { text: pair[0] }), ' ', el('span', { text: pair[1] == null ? 'non documenté' : String(pair[1]) }),
+          el('strong', { text: pair[0] }), ' ', el('span', { text: pair[1] == null ? T('status.undocumented') : String(pair[1]) }),
         ]));
       });
     statLine.appendChild(el('span', { class: 'bc-stat' }, [
-      el('strong', { text: 'Max Booster' }), ' ', el('span', { text: '×' + (Math.round(boost * 10) / 10) }),
+      el('strong', { text: T('equipment.maxBooster') }), ' ', el('span', { text: '×' + (Math.round(boost * 10) / 10) }),
     ]));
     statusBox.appendChild(statLine);
 
     if (st.appliedAbilities.length) {
-      infos.push('Bonus d’ability appliqué : ' + st.appliedAbilities.join(', ') + '.');
+      infos.push(T('status.abilityBonus', { list: st.appliedAbilities.join(', ') }));
     }
 
     // Seuls les messages qui dépendent du build restent dans le panneau collant :
@@ -499,8 +517,7 @@
   }
 
   // --- Onglet Attaques ------------------------------------------------------
-  var GROUP_LABELS = { ground: 'Au sol', aerial: 'En l’air', main: 'Principales', followups: 'Enchaînements' };
-  function groupLabel(key) { return GROUP_LABELS[key] || key; }
+  function groupLabel(key) { return T('groupLabels.' + key) || key; }
 
   // Trois emplacements par catégorie d'attaque. Une catégorie est définie par le
   // couple (sol/air, style) : les styles d'un personnage — paradigmes de
@@ -566,16 +583,16 @@
       var aDesLinks = !/^no\b/i.test(char.hpLinks);
       panel.appendChild(el('p', {
         class: 'bc-note',
-        text: 'HP links : ' + char.hpLinks + '.' + (aDesLinks ? ' Les sources n’indiquent pas quelles attaques s’enchaînent — l’information reste au niveau du personnage.' : ''),
+        text: T('attacks.hpLinks', { value: char.hpLinks }) + (aDesLinks ? T('attacks.hpLinksNoDetail') : ''),
       }));
     }
-    panel.appendChild(el('p', { class: 'bc-note', text: 'Trois emplacements par catégorie. Les enchaînements prolongent un coup et n’occupent pas d’emplacement.' }));
+    panel.appendChild(el('p', { class: 'bc-note', text: T('attacks.slotsNote') }));
 
-    [['bravery', 'Attaques Bravery'], ['hp', 'Attaques HP']].forEach(function (pair) {
+    [['bravery', T('attacks.braveryTitle')], ['hp', T('attacks.hpTitle')]].forEach(function (pair) {
       var kind = pair[0];
       var groups = char.attacks[kind];
       if (!groups || !groups.length) {
-        panel.appendChild(el('p', { class: 'bc-alert bc-alert-muted', text: pair[1] + ' : non documentées pour ce personnage.' }));
+        panel.appendChild(el('p', { class: 'bc-alert bc-alert-muted', text: T('attacks.notDocumented', { title: pair[1] }) }));
         return;
       }
       panel.appendChild(el('h3', { text: pair[1] }));
@@ -638,8 +655,8 @@
     var det = el('details', { class: 'bc-branch' + (parentEquipe ? '' : ' is-locked') }, [
       el('summary', {
         text: parentEquipe
-          ? 'Enchaînements' + (actifs ? ' (' + actifs + ' équipé' + (actifs > 1 ? 's' : '') + ')' : '')
-          : 'Enchaînements — équipez d’abord ' + parent.name,
+          ? (actifs ? T(actifs > 1 ? 'attacks.followupsActiveMany' : 'attacks.followupsActiveOne', { count: actifs }) : T('attacks.followups'))
+          : T('attacks.followupsNeedParent', { name: parent.name }),
       }),
     ]);
     // Équiper le coup ouvre son embranchement : c'est le moment où il devient
@@ -666,32 +683,32 @@
       refresh();
     });
     var meta = [];
-    if (m.damage) meta.push('dégâts ' + m.damage);
-    if (m.startup) meta.push('startup ' + m.startup);
+    if (m.damage) meta.push(T('attacks.damage', { value: m.damage }));
+    if (m.startup) meta.push(T('attacks.startup', { value: m.startup }));
     if (m.type) meta.push(m.type);
     if (m.priority) meta.push(m.priority);
     if (m.variants) meta.push(m.variants);
     var row = el('label', {
       class: 'bc-row' + (bloque ? ' is-disabled' : ''),
       title: locked
-        ? 'Équipez d’abord l’attaque de départ : un enchaînement ne s’utilise pas seul.'
-        : (bloque ? 'Les trois emplacements de cette catégorie sont pris — décochez une attaque pour libérer une place.' : ''),
+        ? T('attacks.lockedTitle')
+        : (bloque ? T('attacks.slotsFullTitle') : ''),
     }, [
       input,
       el('span', { class: 'bc-row-main' }, [
         el('span', { class: 'bc-row-name', text: m.name }),
         el('span', { class: 'bc-row-meta', text: meta.join(' · ') }),
       ]),
-      el('span', { class: 'bc-cp', text: m.cp == null ? 'coût inconnu' : cpOf(m) + ' CP' }),
+      el('span', { class: 'bc-cp', text: m.cp == null ? T('attacks.unknownCost') : cpOf(m) + ' CP' }),
     ]);
-    if (m.cp == null) row.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: 'Le wiki ne donne pas le coût en CP de ce coup', text: 'non documenté' }));
+    if (m.cp == null) row.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: T('attacks.unknownCostTitle'), text: T('status.undocumented') }));
     return row;
   }
 
   // --- Onglet Abilities -----------------------------------------------------
   function renderAbilities(panel) {
     var slug = state.build.character;
-    panel.appendChild(el('p', { class: 'bc-note', text: 'Coût affiché : ' + (state.mastered ? 'ability maîtrisée' : 'à l’achat') + '. La case « Coûts maîtrisés » bascule les deux.' }));
+    panel.appendChild(el('p', { class: 'bc-note', text: T('abilities.costNote', { mode: state.mastered ? T('abilities.modeMastered') : T('abilities.modePurchase') }) }));
     D.abilities.forEach(function (g) {
       var usable = g.abilities.filter(function (a) { return !a.only || a.only.indexOf(slug) !== -1; });
       if (!usable.length) return;
@@ -738,8 +755,10 @@
         });
         state.build.abilities.push(a.id);
         if (conflits.length) {
-          toast(conflits.map(function (c) { return abilityById[c.id].name; }).join(', ')
-            + ' retiré' + (conflits.length > 1 ? 's' : '') + ' : ' + conflits[0].reason);
+          toast(T(conflits.length > 1 ? 'abilities.removedMany' : 'abilities.removedOne', {
+            list: conflits.map(function (c) { return abilityById[c.id].name; }).join(', '),
+            reason: conflits[0].reason,
+          }));
         }
       } else if (!input.checked && i !== -1) {
         state.build.abilities.splice(i, 1);
@@ -757,16 +776,16 @@
       el('span', { class: 'bc-cp', text: a.cp == null ? 'CP ?' : cpOf(a) + ' CP' }),
     ];
     var row = el('label', { class: 'bc-row' }, children);
-    if (a.only) row.appendChild(el('span', { class: 'bc-tag bc-tag-info', text: 'spécifique' }));
+    if (a.only) row.appendChild(el('span', { class: 'bc-tag bc-tag-info', text: T('abilities.specific') }));
     var partenaires = exclusionPartners(a.id);
     if (partenaires.length) {
       row.appendChild(el('span', {
         class: 'bc-tag bc-tag-excl',
-        title: 'Incompatible avec : ' + partenaires.join(', '),
+        title: T('abilities.incompatible', { list: partenaires.join(', ') }),
         text: '⊘',
       }));
     }
-    if (!a.documented) row.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: 'non documenté' }));
+    if (!a.documented) row.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: T('status.undocumented') }));
     return row;
   }
 
@@ -788,13 +807,13 @@
     if (current) {
       var st = equipStatus(current);
       var line = el('p', { class: 'bc-current' }, [
-        el('span', { text: fmtStats(current.stats) || 'stats non documentées' }),
+        el('span', { text: fmtStats(current.stats) || T('equipment.noStats') }),
         current.effects ? el('span', { class: 'bc-row-meta', text: ' · ' + current.effects }) : null,
       ]);
-      if (st.state === 'glitch') line.appendChild(el('span', { class: 'bc-tag bc-tag-glitch', title: st.label, text: '⚙ Equip Glitch' }));
-      if (st.state === 'unknown') line.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: st.label, text: 'non documenté' }));
+      if (st.state === 'glitch') line.appendChild(el('span', { class: 'bc-tag bc-tag-glitch', title: st.label, text: T('equipment.glitchTag') }));
+      if (st.state === 'unknown') line.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: st.label, text: T('status.undocumented') }));
       line.appendChild(el('button', {
-        type: 'button', class: 'bc-btn bc-btn-small', text: 'Retirer',
+        type: 'button', class: 'bc-btn bc-btn-small', text: T('equipment.remove'),
         onclick: function () { state.build.equipment[slot.key] = null; markDirty(); renderPanel('stuff'); refresh(); },
       }));
       section.appendChild(line);
@@ -802,20 +821,20 @@
 
     var cats = D.equipmentCategories[slot.key] || [];
     var bar = el('div', { class: 'bc-filters' });
-    var search = el('input', { type: 'search', placeholder: 'Filtrer par nom…', value: stuffFilters[slot.key], 'aria-label': 'Filtrer les ' + slot.label });
+    var search = el('input', { type: 'search', placeholder: T('equipment.filterName'), value: stuffFilters[slot.key], 'aria-label': T('equipment.filterAria', { slot: slot.label }) });
     search.addEventListener('input', function () { stuffFilters[slot.key] = search.value; renderList(); });
-    var catSel = el('select', { 'aria-label': 'Catégorie' }, [el('option', { value: '', text: 'Toutes catégories' })].concat(
+    var catSel = el('select', { 'aria-label': T('equipment.category') }, [el('option', { value: '', text: T('equipment.allCategories') })].concat(
       cats.concat(['Exclusive']).map(function (c) { return el('option', { value: c, text: c, selected: stuffCategory[slot.key] === c }); })
     ));
     catSel.addEventListener('change', function () { stuffCategory[slot.key] = catSel.value; renderList(); });
-    var sortSel = el('select', { 'aria-label': 'Tri' }, [
-      el('option', { value: 'name', text: 'Nom' }),
-      el('option', { value: 'level', text: 'Niveau' }),
+    var sortSel = el('select', { 'aria-label': T('equipment.sort') }, [
+      el('option', { value: 'name', text: T('equipment.sortName') }),
+      el('option', { value: 'level', text: T('equipment.sortLevel') }),
       el('option', { value: 'atk', text: 'ATK' }),
       el('option', { value: 'def', text: 'DEF' }),
       el('option', { value: 'hp', text: 'HP' }),
       el('option', { value: 'brv', text: 'BRV' }),
-      el('option', { value: 'combination', text: 'Set d’équipement' }),
+      el('option', { value: 'combination', text: T('equipment.sortSet') }),
     ]);
     sortSel.value = stuffSort[slot.key];
     sortSel.addEventListener('change', function () { stuffSort[slot.key] = sortSel.value; renderList(); });
@@ -838,18 +857,18 @@
       });
       var key = stuffSort[slot.key];
       items.sort(function (a, b) {
-        if (key === 'name') return a.name.localeCompare(b.name, 'fr');
-        if (key === 'level') return (a.level || 0) - (b.level || 0) || a.name.localeCompare(b.name, 'fr');
+        if (key === 'name') return byName(a, b);
+        if (key === 'level') return (a.level || 0) - (b.level || 0) || byName(a, b);
         if (key === 'combination') {
           var an = a.combination ? a.combination.name : '￿';
           var bn = b.combination ? b.combination.name : '￿';
-          return an.localeCompare(bn, 'fr') || a.name.localeCompare(b.name, 'fr');
+          return an.localeCompare(bn, BC.locale) || byName(a, b);
         }
-        return ((b.stats && b.stats[key]) || 0) - ((a.stats && a.stats[key]) || 0) || a.name.localeCompare(b.name, 'fr');
+        return ((b.stats && b.stats[key]) || 0) - ((a.stats && a.stats[key]) || 0) || byName(a, b);
       });
-      listBox.appendChild(el('p', { class: 'bc-count', text: items.length + ' pièce(s)' }));
+      listBox.appendChild(el('p', { class: 'bc-count', text: T('equipment.pieces', { count: items.length }) }));
       items.slice(0, 400).forEach(function (e) { listBox.appendChild(equipRow(slot, e)); });
-      if (items.length > 400) listBox.appendChild(el('p', { class: 'bc-note', text: 'Affichage limité aux 400 premières — affinez le filtre.' }));
+      if (items.length > 400) listBox.appendChild(el('p', { class: 'bc-note', text: T('equipment.limit400') }));
     }
     renderList();
     return section;
@@ -876,8 +895,8 @@
     ]);
     if (st.state === 'glitch') btn.appendChild(el('span', { class: 'bc-tag bc-tag-glitch', title: st.label, text: '⚙' }));
     if (st.state === 'unknown') btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: st.label, text: '?' }));
-    if (e.labyrinth) btn.appendChild(el('span', { class: 'bc-tag bc-tag-info', title: 'Obtenu dans le Labyrinthe', text: 'Lab' }));
-    if (!e.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: 'non documenté' }));
+    if (e.labyrinth) btn.appendChild(el('span', { class: 'bc-tag bc-tag-info', title: T('equipment.labyrinth'), text: T('equipment.labTag') }));
+    if (!e.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: T('status.undocumented') }));
     return btn;
   }
 
@@ -892,7 +911,7 @@
       renderPanel(state.activeTab);
     });
     return el('label', { class: 'bc-field bc-field-inline bc-illegal-toggle' }, [
-      input, el('span', { text: 'Afficher les items illégaux en tournoi (ruleset ' + D.ruleset.name + ')' }),
+      input, el('span', { text: T('equipment.showIllegal', { ruleset: D.ruleset.name }) }),
     ]);
   }
 
@@ -901,14 +920,14 @@
 
     var slotsBox = el('div', { class: 'bc-acc-slots' });
     for (var i = 0; i < ACCESSORY_SLOTS; i++) slotsBox.appendChild(accessorySlot(i));
-    panel.appendChild(el('h3', { text: 'Emplacements (' + state.build.accessories.filter(Boolean).length + '/10)' }));
+    panel.appendChild(el('h3', { text: T('accessories.slotsTitle', { count: state.build.accessories.filter(Boolean).length + '/' + ACCESSORY_SLOTS }) }));
     panel.appendChild(slotsBox);
 
-    panel.appendChild(el('h3', { text: 'Choisir un accessoire' }));
+    panel.appendChild(el('h3', { text: T('accessories.choose') }));
     var bar = el('div', { class: 'bc-filters' });
-    var search = el('input', { type: 'search', placeholder: 'Filtrer par nom ou effet…', value: accFilter, 'aria-label': 'Filtrer les accessoires' });
+    var search = el('input', { type: 'search', placeholder: T('accessories.filterNameEffect'), value: accFilter, 'aria-label': T('accessories.filterAria') });
     search.addEventListener('input', function () { accFilter = search.value; renderList(); });
-    var catSel = el('select', { 'aria-label': 'Catégorie' }, [el('option', { value: '', text: 'Toutes catégories' })].concat(
+    var catSel = el('select', { 'aria-label': T('equipment.category') }, [el('option', { value: '', text: T('equipment.allCategories') })].concat(
       ACCESSORY_CATEGORIES.map(function (c) { return el('option', { value: c.key, text: c.label, selected: accCategory === c.key }); })
     ));
     catSel.addEventListener('change', function () { accCategory = catSel.value; renderList(); });
@@ -927,9 +946,9 @@
         if (q && (a.name + ' ' + (a.effect || '') + ' ' + (a.requirements || '')).toLowerCase().indexOf(q) === -1) return false;
         return true;
       });
-      listBox.appendChild(el('p', { class: 'bc-count', text: items.length + ' accessoire(s)' }));
+      listBox.appendChild(el('p', { class: 'bc-count', text: T('accessories.count', { count: items.length }) }));
       items.slice(0, 400).forEach(function (a) { listBox.appendChild(accessoryRow(a)); });
-      if (items.length > 400) listBox.appendChild(el('p', { class: 'bc-note', text: 'Affichage limité aux 400 premiers — affinez le filtre.' }));
+      if (items.length > 400) listBox.appendChild(el('p', { class: 'bc-note', text: T('accessories.limit400') }));
     }
     renderList();
   }
@@ -940,16 +959,16 @@
     var box = el('div', { class: 'bc-acc-slot' + (a ? '' : ' is-empty') });
     box.appendChild(el('span', { class: 'bc-acc-index', text: String(i + 1) }));
     if (!a) {
-      box.appendChild(el('span', { class: 'bc-row-meta', text: 'vide' }));
+      box.appendChild(el('span', { class: 'bc-row-meta', text: T('accessories.empty') }));
       return box;
     }
     box.appendChild(el('span', { class: 'bc-row-main' }, [
       el('span', { class: 'bc-row-name', text: a.name }),
       el('span', { class: 'bc-row-meta', text: [a.category, a.multiplier ? '×' + a.multiplier : '', a.effect || a.requirements].filter(Boolean).join(' · ') }),
     ]));
-    if (a.legal === false) box.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(a), text: 'illégal' }));
+    if (a.legal === false) box.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(a), text: T('accessories.illegal') }));
     box.appendChild(el('button', {
-      type: 'button', class: 'bc-btn bc-btn-small', text: 'Retirer',
+      type: 'button', class: 'bc-btn bc-btn-small', text: T('equipment.remove'),
       onclick: function () { state.build.accessories[i] = null; markDirty(); renderPanel('accessories'); refresh(); },
     }));
     return box;
@@ -973,8 +992,8 @@
       class: 'bc-row bc-row-btn' + (count ? ' is-selected' : '') + (bloque ? ' is-disabled' : ''),
       disabled: bloque,
       title: atteinte
-        ? 'Rang ' + a.rank + ' : ' + limite + ' exemplaire' + (limite > 1 ? 's' : '') + ' au maximum.'
-        : (full ? 'Les dix emplacements d’accessoires sont pris.' : ''),
+        ? T(limite > 1 ? 'accessories.rankLimitMany' : 'accessories.rankLimitOne', { rank: a.rank, max: limite })
+        : (full ? T('accessories.allSlotsFull', { count: ACCESSORY_SLOTS }) : ''),
       onclick: function () {
         var free = state.build.accessories.indexOf(null);
         if (free === -1) return;
@@ -992,13 +1011,13 @@
     if (limite !== null && limite !== Infinity) {
       btn.appendChild(el('span', {
         class: 'bc-tag' + (atteinte ? ' bc-tag-warn' : ' bc-tag-info'),
-        title: 'Rang ' + a.rank + ' : ' + limite + ' exemplaire' + (limite > 1 ? 's' : '') + ' au maximum',
+        title: T(limite > 1 ? 'accessories.rankLimitMany' : 'accessories.rankLimitOne', { rank: a.rank, max: limite }),
         text: count + '/' + limite,
       }));
     }
     if (a.multiplier) btn.appendChild(el('span', { class: 'bc-tag bc-tag-mult', text: '×' + a.multiplier }));
-    if (a.legal === false) btn.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(a), text: 'illégal' }));
-    if (a.rank) btn.appendChild(el('span', { class: 'bc-tag bc-tag-info', title: 'Rang ' + a.rank, text: a.rank }));
+    if (a.legal === false) btn.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(a), text: T('accessories.illegal') }));
+    if (a.rank) btn.appendChild(el('span', { class: 'bc-tag bc-tag-info', title: T('accessories.rank', { rank: a.rank }), text: a.rank }));
     return btn;
   }
 
@@ -1006,10 +1025,10 @@
   function renderAssist(panel) {
     panel.appendChild(illegalToggle());
 
-    panel.appendChild(el('h3', { text: 'Assist' }));
-    panel.appendChild(el('p', { class: 'bc-note', text: 'Un assist par build. Feral Chaos n’existe pas en assist ; Aerith n’est jouable que sous cette forme.' }));
+    panel.appendChild(el('h3', { text: T('assist.title') }));
+    panel.appendChild(el('p', { class: 'bc-note', text: T('assist.note') }));
     var alist = el('div', { class: 'bc-list bc-list-scroll' });
-    D.assists.slice().sort(function (a, b) { return a.name.localeCompare(b.name, 'fr'); }).forEach(function (a) {
+    D.assists.slice().sort(function (a, b) { return byName(a, b); }).forEach(function (a) {
       var selected = state.build.assist === a.slug;
       var btn = el('button', {
         type: 'button', class: 'bc-row bc-row-btn' + (selected ? ' is-selected' : ''), 'aria-pressed': selected ? 'true' : 'false',
@@ -1020,16 +1039,16 @@
           el('span', { class: 'bc-row-meta', text: a.attacks.map(function (x) { return x.name + (x.startup ? ' (' + x.startup + ')' : ''); }).join(' · ') }),
         ]),
       ]);
-      if (!a.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: 'non documenté' }));
+      if (!a.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: T('status.undocumented') }));
       alist.appendChild(btn);
     });
     panel.appendChild(alist);
 
-    panel.appendChild(el('h3', { text: 'Invocation' }));
-    panel.appendChild(el('p', { class: 'bc-note', text: 'Le ruleset de tournoi n’autorise que les counter summons : ' + D.ruleset.legalSummons.join(', ') + '.' }));
+    panel.appendChild(el('h3', { text: T('assist.summonTitle') }));
+    panel.appendChild(el('p', { class: 'bc-note', text: T('assist.summonNote', { list: D.ruleset.legalSummons.join(', ') }) }));
     var slist = el('div', { class: 'bc-list bc-list-scroll' });
     D.summons.filter(function (s) { return state.showIllegal || s.legal !== false; })
-      .sort(function (a, b) { return a.name.localeCompare(b.name, 'fr'); })
+      .sort(function (a, b) { return byName(a, b); })
       .forEach(function (s) {
         var selected = state.build.summon === s.id;
         var btn = el('button', {
@@ -1042,7 +1061,7 @@
           ]),
         ]);
         if (s.legal === false) btn.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(s), text: 'illégal' }));
-        if (!s.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: 'Effet non documenté par nos sources', text: 'non documenté' }));
+        if (!s.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: T('assist.undocumentedEffect'), text: T('status.undocumented') }));
         slist.appendChild(btn);
       });
     panel.appendChild(slist);
@@ -1054,7 +1073,7 @@
     btn.addEventListener('click', function () {
       var slug = btn.dataset.slug;
       if (slug === state.build.character) return;
-      if (state.dirty && !window.confirm('Le build en cours n’est pas enregistré. Changer de personnage l’écrasera. Continuer ?')) return;
+      if (state.dirty && !window.confirm(T('manager.confirmChangeChar'))) return;
       setCharacter(slug);
     });
   });
@@ -1072,7 +1091,7 @@
     root.hidden = !state.build.character;
     document.getElementById('bc-manager').hidden = !state.build.character;
     var char = charBySlug[state.build.character];
-    document.getElementById('bc-current-name').textContent = char ? 'Build de ' + char.name : 'Composer le build';
+    document.getElementById('bc-current-name').textContent = char ? T('manager.buildOf', { name: char.name }) : BC.ui.step2Default;
     document.getElementById('bc-build-name').value = state.build.name;
     document.getElementById('bc-notes').value = state.build.notes;
   }
@@ -1089,7 +1108,7 @@
       box = el('div', { id: 'bc-toast', class: 'bc-toast', role: 'status', 'aria-live': 'polite' }, [
         el('span', { class: 'bc-toast-text' }),
         el('button', {
-          type: 'button', class: 'bc-toast-close', 'aria-label': 'Fermer le message', title: 'Fermer',
+          type: 'button', class: 'bc-toast-close', 'aria-label': T('manager.closeMessage'), title: T('manager.close'),
           onclick: function () { hideToast(box); },
         }, ['×']),
       ]);
@@ -1115,7 +1134,7 @@
     clear(box);
     var builds = loadAll();
     if (!builds.length) {
-      box.appendChild(el('p', { class: 'bc-note', text: 'Aucun build enregistré pour l’instant.' }));
+      box.appendChild(el('p', { class: 'bc-note', text: T('manager.noBuilds') }));
       return;
     }
     var byChar = {};
@@ -1126,54 +1145,54 @@
       byChar[slug].forEach(function (b) {
         box.appendChild(el('div', { class: 'bc-saved' }, [
           el('span', { class: 'bc-row-main' }, [
-            el('span', { class: 'bc-row-name', text: b.name || 'Sans titre' }),
-            el('span', { class: 'bc-row-meta', text: 'modifié le ' + new Date(b.modified).toLocaleDateString('fr-FR') }),
+            el('span', { class: 'bc-row-name', text: b.name || T('manager.untitled') }),
+            el('span', { class: 'bc-row-meta', text: T('manager.modifiedOn', { date: new Date(b.modified).toLocaleDateString(BC.locale) }) }),
           ]),
-          el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: 'Charger', onclick: function () { loadBuild(b); } }),
-          el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: 'Dupliquer', onclick: function () { duplicateBuild(b); } }),
-          el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: 'Renommer', onclick: function () { renameBuild(b); } }),
-          el('button', { type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: 'Supprimer', onclick: function () { deleteBuild(b); } }),
+          el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.load'), onclick: function () { loadBuild(b); } }),
+          el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.duplicate'), onclick: function () { duplicateBuild(b); } }),
+          el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.rename'), onclick: function () { renameBuild(b); } }),
+          el('button', { type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('manager.delete'), onclick: function () { deleteBuild(b); } }),
         ]));
       });
     });
   }
 
   function loadBuild(b) {
-    if (state.dirty && !window.confirm('Le build en cours n’est pas enregistré. Le remplacer ?')) return;
+    if (state.dirty && !window.confirm(T('manager.confirmReplace'))) return;
     state.build = normalize(b);
     state.build.id = b.id;
     state.dirty = false;
     applyCharacterUi();
     selectTab(state.activeTab, false);
     refresh();
-    toast('Build « ' + (b.name || 'Sans titre') + ' » chargé.');
+    toast(T('manager.loaded', { name: b.name || T('manager.untitled') }));
   }
 
   function duplicateBuild(b) {
     var copy = normalize(b);
     copy.id = uid();
-    copy.name = (b.name || 'Sans titre') + ' (copie)';
+    copy.name = (b.name || T('manager.untitled')) + T('manager.copySuffix');
     var builds = loadAll();
     builds.push(copy);
-    if (saveAll(builds)) { renderSavedList(); toast('Copie créée.'); }
+    if (saveAll(builds)) { renderSavedList(); toast(T('manager.copyCreated')); }
   }
 
   function renameBuild(b) {
-    var next = window.prompt('Nouveau nom du build :', b.name || '');
+    var next = window.prompt(T('manager.promptRename'), b.name || '');
     if (next === null) return;
     var builds = loadAll().map(function (x) { return x.id === b.id ? Object.assign({}, x, { name: next.trim().slice(0, 60), modified: new Date().toISOString() }) : x; });
-    if (saveAll(builds)) { renderSavedList(); toast('Build renommé.'); }
+    if (saveAll(builds)) { renderSavedList(); toast(T('manager.renamed')); }
   }
 
   function deleteBuild(b) {
-    if (!window.confirm('Supprimer définitivement « ' + (b.name || 'Sans titre') + ' » ?')) return;
-    if (saveAll(loadAll().filter(function (x) { return x.id !== b.id; }))) { renderSavedList(); toast('Build supprimé.'); }
+    if (!window.confirm(T('manager.confirmDelete', { name: b.name || T('manager.untitled') }))) return;
+    if (saveAll(loadAll().filter(function (x) { return x.id !== b.id; }))) { renderSavedList(); toast(T('manager.deleted')); }
   }
 
   document.getElementById('bc-save').addEventListener('click', function () {
     var snap = currentSnapshot();
     var check = validateBuild(snap);
-    if (!check.ok) { toast('Enregistrement refusé : ' + check.error, true); return; }
+    if (!check.ok) { toast(T('manager.saveRefused', { error: check.error }), true); return; }
     var builds = loadAll();
     var i = -1;
     builds.forEach(function (b, k) { if (b.id === snap.id) i = k; });
@@ -1182,12 +1201,12 @@
       state.build = snap;
       state.dirty = false;
       renderSavedList();
-      toast('Build enregistré.');
+      toast(T('manager.saved'));
     }
   });
 
   document.getElementById('bc-new').addEventListener('click', function () {
-    if (state.dirty && !window.confirm('Le build en cours n’est pas enregistré. Le remplacer par un build vide ?')) return;
+    if (state.dirty && !window.confirm(T('manager.confirmNew'))) return;
     setCharacter(state.build.character);
   });
 
@@ -1219,7 +1238,7 @@
 
   document.getElementById('bc-export-all').addEventListener('click', function () {
     var builds = loadAll();
-    if (!builds.length) { toast('Aucun build enregistré à exporter.', true); return; }
+    if (!builds.length) { toast(T('manager.noneToExport'), true); return; }
     download('dissidia012-builds.json', JSON.stringify({ schemaVersion: SCHEMA_VERSION, builds: builds }, null, 2), 'application/json');
   });
 
@@ -1255,7 +1274,7 @@
       importPayload(String(reader.result));
       ev.target.value = '';
     };
-    reader.onerror = function () { toast('Lecture du fichier impossible.', true); ev.target.value = ''; };
+    reader.onerror = function () { toast(T('manager.readError'), true); ev.target.value = ''; };
     reader.readAsText(file);
   });
 
@@ -1264,13 +1283,13 @@
   function importPayload(text) {
     var parsed;
     try { parsed = JSON.parse(text); }
-    catch (e) { toast('Fichier illisible : ce n’est pas du JSON valide.', true); return; }
+    catch (e) { toast(T('manager.notJson'), true); return; }
 
     var candidates = Array.isArray(parsed) ? parsed
       : parsed && Array.isArray(parsed.builds) ? parsed.builds
         : [parsed];
     if (parsed && parsed.builds && parsed.schemaVersion !== SCHEMA_VERSION) {
-      toast('Version de collection inconnue (' + parsed.schemaVersion + ').', true);
+      toast(T('err.collectionSchema', { found: parsed.schemaVersion, expected: SCHEMA_VERSION }), true);
       return;
     }
 
@@ -1283,7 +1302,7 @@
     });
 
     if (!accepted.length) {
-      toast('Import refusé — ' + (rejected[0] || 'aucun build valide dans le fichier.'), true);
+      toast(T('manager.importRefused', { reason: rejected[0] || T('manager.noValidBuild') }), true);
       return;
     }
     var builds = loadAll();
@@ -1295,7 +1314,10 @@
     if (!saveAll(builds)) return;
     renderSavedList();
     loadBuildSilently(accepted[0]);
-    toast(accepted.length + ' build(s) importé(s)' + (rejected.length ? ', ' + rejected.length + ' rejeté(s) : ' + rejected[0] : '') + '.', rejected.length > 0);
+    toast(T('manager.imported', {
+      count: accepted.length,
+      rejected: rejected.length ? T('manager.importedRejected', { count: rejected.length, first: rejected[0] }) : '',
+    }), rejected.length > 0);
   }
 
   function loadBuildSilently(b) {
@@ -1342,11 +1364,11 @@
   document.getElementById('bc-share').addEventListener('click', function () {
     var snap = currentSnapshot();
     var url = location.origin + location.pathname + '?build=' + encodeBuild(snap);
-    var done = function () { toast('Lien copié dans le presse-papiers.'); };
+    var done = function () { toast(T('manager.linkCopied')); };
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copiez ce lien :', url); });
+      navigator.clipboard.writeText(url).then(done, function () { window.prompt(T('manager.promptCopyLink'), url); });
     } else {
-      window.prompt('Copiez ce lien :', url);
+      window.prompt(T('manager.promptCopyLink'), url);
     }
   });
 
@@ -1355,12 +1377,12 @@
     if (!m) return false;
     var b;
     try { b = decodeBuild(decodeURIComponent(m[1])); }
-    catch (e) { toast('Le lien de partage est corrompu.', true); return false; }
+    catch (e) { toast(T('manager.linkCorrupt'), true); return false; }
     var check = validateBuild(b);
-    if (!check.ok) { toast('Lien de partage refusé : ' + check.error, true); return false; }
+    if (!check.ok) { toast(T('manager.linkRefused', { error: check.error }), true); return false; }
     loadBuildSilently(b);
     state.dirty = true;
-    toast('Build reçu par lien — enregistrez-le pour le conserver.');
+    toast(T('manager.linkReceived'));
     return true;
   }
 

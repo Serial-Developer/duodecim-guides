@@ -12,16 +12,30 @@ Site statique de guides compétitifs FR pour *Dissidia 012 [duodecim] Final Fant
 ## Pipeline (npm run …)
 `scrape` (wiki → cache/, jamais re-fetché) → `parse` (→ data/characters/*.json + meta.json) → `images` (Wayback → assets/) → `og` (images de partage 1200×630 → assets/og/, `--force` pour régénérer) → `build` (→ dist/, plus sitemap.xml/404.html/humans.txt) → `qa` (ressources locales, ancres, anti-invention, termes bannis, intégrité du créateur de builds, métadonnées de référencement et couverture du sitemap ; `qa:links` ajoute la vérification réseau) → `coverage` (reports/coverage.md).
 Créateur de builds : `scrape:build` puis `parse:build` (→ data/build/*.json), consommés par `build` qui émet `dist/scripts/build-data.js`.
+`i18n:check` : clés manquantes, paramètres d'interpolation perdus, couverture de la prose, chaînes en dur.
 Après TOUTE modification d'éditorial : `node scripts/build.mjs && node scripts/qa.mjs` puis commit incluant `dist/`.
 
 ## Architecture
 - `data/characters/*.json` : extraction structurée par perso (infobox, coups avec frames, sections). Régénérés par `parse` — ne pas éditer à la main.
 - `data/build/*.json` : données du créateur de builds (equipment, accessories, abilities, combinations, assists, summons, ruleset, capacity, base-stats). Régénérés par `parse:build` — ne pas éditer à la main. Équipements et accessoires viennent du **Final Fantasy Wiki** (CC BY-SA), le reste de dissidia.wiki.
-- `data/editorial/*.json` : prose FR (une fiche par perso + `_shared`, `_multiplayer`, `_install`, `_savedata`, `_tournois`, `_participer`, `_organiser`, `_feral-unlock`). C'est ICI qu'on écrit. Schéma : docs/editorial-guidelines.md ; enrichissements : docs/enrichment-pass.md.
+- `data/editorial/<locale>/*.json` : prose par langue (une fiche par perso + `_shared`, `_multiplayer`, `_install`, `_savedata`, `_tournois`, `_participer`, `_organiser`, `_feral-unlock`). C'est ICI qu'on écrit. Schéma : docs/editorial-guidelines.md ; enrichissements : docs/enrichment-pass.md.
+- `locales/<locale>.json` : chaînes d'interface (513 clés). `locales/glossary.md` fige les correspondances EN ↔ FR, l'anglais faisant référence.
+- `src/i18n/` : `config.mjs` (**`DEFAULT_LOCALE`** — la constante de bascule, `fr` aujourd'hui), `routes.mjs` (chemins publiés par langue), `t.mjs` (catalogues et repli).
 - `src/templates/*.mjs` : templates JS (helpers.mjs contient `siteHeader` — le menu global à 3 catégories —, `pageShell` qui centralise toutes les métadonnées, `siteFooter` avec le copyright, `linkRoster` pour le maillage interne, et les générateurs SVG ; jsonld.mjs pour schema.org). `src/styles/main.css` : design system nuit violette/or, breakpoints 600/1024.
 - `src/site-config.mjs` : **source unique** de `SITE_URL`, de la signature (« Serial ») et des balises de vérification Search Console/Bing. Le site est un *project site* GitHub Pages (`…github.io/duodecim-guides/`) : toute URL absolue doit inclure ce segment, passer par `absUrl()`.
 - `scripts/` : scrape, parse, parse-meta, fetch-images, fetch-move-images, clean-portraits, build, qa, coverage.
 - `data/calendar/` : veille tournois automatique (workflow « Veille tournois » planifié).
+
+## Pièges de l'internationalisation
+- **`DEFAULT_LOCALE` décide qui est à la racine.** La langue par défaut est publiée à la racine de `dist/`, les autres sous leur préfixe. La passer de `fr` à `en` intervertit les deux arbres — c'est toute la bascule prévue, à ne faire qu'une fois la prose anglaise complète.
+- **Une page sans prose dans une langue n'est pas générée** : pas de page à moitié traduite, pas de `hreflang` vers le vide. Exception : la landing (aucune prose propre). Un lien vers une page non traduite vise la version publiée et le déclare (`hreflang` sur le `<a>`).
+- **Le sélecteur de langue liste toutes les langues publiées**, même sur une page sans équivalent (repli sur l'accueil de la langue cible) ; les `hreflang` du `<head>`, eux, restent limités aux équivalents réels.
+- **Aucune redirection, jamais** : l'URL demandée est toujours servie. C'est ce qui garde les deux versions indexables. Le bandeau de `src/scripts/lang.js` propose, il ne redirige pas — et il est rédigé dans la langue proposée, pas dans celle de la page.
+- **Les termes bannis de `qa.mjs` sont par langue** : « ender » et « meter » sont des anglicismes en français, des mots normaux en anglais.
+- **Le pluriel ne se met pas dans un gabarit** (`{count} équipé{s}` ne se traduit pas) : deux clés, une par forme. Idem pour l'élision, les ordinaux, l'espace avant « : » et l'ordre des dates — voir `locales/glossary.md`.
+- **`git-dates.mjs` suit les renommages** (`git log -M`) : sans cela un `git mv` ferait passer un fichier pour neuf. Un renommage pur (`R100`) ne touche pas `dateModified`.
+- **`src/scripts/build-creator.js` ne contient aucun texte** : ses libellés arrivent par `window.BC_I18N` (`src/i18n/build-creator-strings.mjs`). C'est là qu'on ajoute une chaîne.
+- **Images de partage par langue** (`assets/og/<locale>/`) : elles portent du texte, `npm run og` les génère pour chaque langue ayant de la prose.
 
 ## Pièges connus (durement acquis)
 - **curl Windows → dissidia.wiki exige `--ssl-no-revoke`** ; préférer `fetch` de Node.
@@ -57,6 +71,8 @@ Fait : 31 guides complets + fiches Aerith/Feral Chaos ; landing « Player Select
 Créateur de builds en ligne (createur-de-builds.html, sous-menu dédié) : 5 onglets, jauge CP 450/510, règles du jeu appliquées (3 emplacements par catégorie posture × style, enchaînements et HP links imbriqués sans emplacement, 12 groupes d'exclusions d'abilities, exemplaires d'accessoires 1/2/3 selon rang S/A/B), localStorage, export JSON/CSV, lien de partage. 670 équipements, 551 accessoires, 122 abilities, 31 HP links, 25 sets. Le modèle de calcul est validé contre le build « Adamant Chains » de Lightning du wiki.
 
 Passe de référencement et de paternité (branche `feature/seo`, rapport dans `reports/seo.md`) : canonical absolu, Open Graph et Twitter Cards avec 34 images 1200×630, JSON-LD (WebSite/TechArticle/Article/WebApplication), sitemap.xml généré au build, 404.html, humans.txt, titles et descriptions composés depuis `archetype`/`tagline`/tier, maillage interne des matchups, width/height sur les 289 images, LICENSE (MIT + CC BY-NC-ND 4.0) et NOTICE.md, footer signé « © 2026 Serial ». QA 0/0, 43 pages atteignables sans JS à profondeur 1.
+
+Internationalisation (branche `feature/i18n`, rapport dans `reports/i18n.md`) : socle bilingue EN/FR, français par défaut. 513 clés d'interface traduites des deux côtés (y compris les ~200 libellés du créateur de builds, désormais injectés par `window.BC_I18N`), routage par langue, sélecteur dans le header, bandeau de proposition sans aucune redirection, `hreflang` réciproques contrôlés par la QA, sitemap multilingue, images de partage par langue, `npm run i18n:check`. QA 0/0. **La prose anglaise reste à écrire (121 189 mots)** — c'est le seul obstacle à passer `DEFAULT_LOCALE` sur `en`. Lot suivant validé : 3 pilotes (Prishe, Lightning, Jecht, ~12 000 mots) à relire avant industrialisation.
 
 Ouvert : rien de bloquant. **À faire à la main** (checklist complète en fin de `reports/seo.md`) : créer la propriété Search Console de type *Préfixe d'URL*, remplir `SITE_VERIFICATION` dans `src/site-config.mjs`, soumettre le sitemap, importer dans Bing, puis partager sur le Discord DISSIDIA et r/DissidiaOO — c'est le seul levier de positionnement restant. Idées en attente de demande : page « À propos / Crédits », tier list alternative post-2017 (n'existe pas sur le wiki), captures de coups manquantes si la Wayback les archive un jour, nom de domaine personnalisé (débloquerait robots.txt et IndexNow).
 

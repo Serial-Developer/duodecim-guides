@@ -514,15 +514,14 @@ ${groups.map((g) => (g.items
 ${g.items.map(link).join('\n')}
 </div>
 </div>`
-    : `<a class="sh-group-label sh-group-link${g.key === active ? ' is-active' : ''}" href="${g.href}"${g.key === active ? ' aria-current="page"' : ''}>${g.title}</a>`)).join('\n')}
+    : `<a class="sh-group-label sh-group-link${g.key === active ? ' is-active' : ''}" href="${g.href}"${g.key === active ? ' aria-current="page"' : ''}${g.lang ? ` hreflang="${g.lang}" lang="${g.lang}"` : ''}>${g.title}</a>`)).join('\n')}
 </nav>
-${siteTools(t, locale, alternates, L)}<details class="sh-drawer">
+${siteTools(t, locale, alternates, L, availability?.routes?.home)}<details class="sh-drawer">
 <summary aria-label="${esc(t('nav.menu'))}"><span class="sh-burger" aria-hidden="true"></span></summary>
 <nav class="sh-panel" aria-label="${esc(t('nav.ariaMobile'))}">
 ${groups.map((g) => (g.items
     ? `<p class="sh-cat">${g.title}</p>\n${g.items.map(link).join('\n')}`
-    : link({ key: g.key, href: g.href, label: g.title }))).join('\n')}
-${langSwitcher(t, locale, alternates, L, { inDrawer: true })}
+    : link({ key: g.key, href: g.href, label: g.title, lang: g.lang }))).join('\n')}${drawerSwitcher(t, locale, alternates, L, availability?.routes?.home)}
 </nav>
 </details>
 </header>`;
@@ -531,8 +530,8 @@ ${langSwitcher(t, locale, alternates, L, { inDrawer: true })}
 // Zone d'outils du header : sélecteur de langue, puis l'emplacement réservé à la
 // barre de recherche (fonctionnalité suivante). Réserver la place maintenant
 // évite d'avoir à remanier le header une deuxième fois.
-function siteTools(t, locale, alternates, L) {
-  const sw = langSwitcher(t, locale, alternates, L);
+function siteTools(t, locale, alternates, L, published) {
+  const sw = langSwitcher(t, locale, alternates, L, { published });
   if (!sw) return '';
   return `<div class="sh-tools">
 ${sw}
@@ -541,8 +540,8 @@ ${sw}
 }
 
 // Même sélecteur, dans le tiroir mobile.
-function drawerSwitcher(t, locale, alternates, L) {
-  const sw = langSwitcher(t, locale, alternates, L, { inDrawer: true });
+function drawerSwitcher(t, locale, alternates, L, published) {
+  const sw = langSwitcher(t, locale, alternates, L, { inDrawer: true, published });
   return sw ? `
 ${sw}` : '';
 }
@@ -550,10 +549,16 @@ ${sw}` : '';
 // Sélecteur de langue : codes compacts (EN / FR), jamais de drapeau — un drapeau
 // désigne un pays, pas une langue. La langue courante n'est pas un lien vers
 // elle-même mais un repère marqué `aria-current`.
-function langSwitcher(t, locale, alternates, L, { inDrawer = false } = {}) {
-  const entries = Object.entries(alternates || {});
-  if (entries.length < 2) return '';
-  const items = entries.map(([l, p]) => {
+function langSwitcher(t, locale, alternates, L, { inDrawer = false, published = null } = {}) {
+  // Le sélecteur liste toutes les langues publiées, pas seulement celles où
+  // CETTE page existe : une page sans équivalent renvoie vers l'accueil de la
+  // langue cible plutôt que de disparaître du header. Les balises hreflang du
+  // <head>, elles, restent strictement limitées aux équivalents réels — annoncer
+  // une traduction inexistante serait un mensonge fait aux moteurs.
+  const langs = published && published.length ? published : Object.keys(alternates || {});
+  if (langs.length < 2) return '';
+  const items = langs.map((l) => {
+    const p = (alternates || {})[l] || pathFor('home', l);
     const m = LOCALE_META[l];
     if (l === locale) {
       return `<span class="lang-opt is-current" lang="${m.lang}" aria-current="true" title="${esc(t('lang.current', { label: m.label }))}">${esc(m.code)}</span>`;
