@@ -1,0 +1,177 @@
+{
+  "slug": "shantotto",
+  "tagline": "A ranged mage: almost every hit converts into HP damage",
+  "archetype": "Conversion mage (Spirit Magic)",
+  "overview": [
+    "Shantotto is a mage of conversion and patience: almost any hit turns into HP damage, and her whole game pivots on Stun — instant at 13 frames, dealing no damage, cancelling the opponent's attack and cancellable into an attack on hit. Players of the day summed the character up in a formula: Stun into anything — Stun > Stone on the ground, Stun > Aero in the air, Stun > Bio or a bravery attack depending on the situation. Her Spirit Magic gains a tier of power and hitbox at 2000 then 4000 bravery, hence the value of high base bravery sets for staying at the upper tier.",
+    "The move to Duodecim reworked her deeply, and the threads of the day take stock. On the buffs: Stun now chains into her attacks, Retribution goes through active guards (Exdeath's Delta Attack, for instance), A Couple Attacks became markedly faster, and connecting with a spell speeds up the casting of the following ones — which makes complete chains achievable. On the nerfs: the Manafont of her EX Mode was heavily weakened (it now only restores bravery after a successful HP attack, far from the permanent abuse of the first Dissidia), Bio is reflected on block and Bind no longer staggers an opponent in mid-attack.",
+    "Her standing divided the community of the day: some judged her nerfed and poor, others one of the most formidable characters — the latter pointing out that she was finally useful outside EX Mode. All agreed on the substance: she is the patience character par excellence, one who punishes the opponent's mistakes rather than imposing her own pace, and rewards execution with big, earned spells."
+  ],
+  "tierNote": "Ranked 23rd (tier B) on the 2017 competitive tier list. The wiki page provides no overview text with which to put that placement in context.",
+  "strengths": [
+    "Excellent conversion: Shantotto turns almost any hit into HP damage with a little execution, and extends reliably with assists.",
+    "Strong EX Force generation: all her HP attacks and Retribution generate a lot of EX, more still with well-executed combos.",
+    "Denial of the opponent's HP attacks: an opponent poisoned by Bio is instantly broken if they hit Shantotto with an HP attack; far from being a defeat, that effectively deprives them of their HP attacks for a while.",
+    "A good whiff punish game: good mobility and Stun's startup for comboing into an HP attack; a few unconventional tools make careless whiffs dangerous against her."
+  ],
+  "weaknesses": [
+    "No HP attack with a Wall Rush: that severely cuts into her potential combo damage and into the return on the high base bravery sets she usually runs.",
+    "Extreme vulnerability to Glutton: all the HP attacks she uses connect at medium range, so the opponent has priority for absorbing EX most of the time, sharply reducing her intake without build investment.",
+    "Vulnerability to assist punishes: Retribution covers her flanks poorly and all her other attacks are Ranged; in practice, almost every one of her attacks is punishable by a raw assist.",
+    "No fast aerial melee attack: she is vulnerable to a great many attacks and to pressure after a dodge.",
+    "Enormous recovery: the end lag on her attacks is above the cast average, and it is particularly bad on most of her HP attacks."
+  ],
+  "moveNotes": {
+    "A Couple Attacks": "A simple three-hit sceptre combo, Melee Low in 19 frames, with a forward hop on the first hit. The third hit causes a Wall Rush and throws the opponent far away horizontally and low down, preventing them from using an aerial recovery.",
+    "Stun": "An instant Ranged Low special move (13 frames, her fastest bravery attack) dealing no damage: it cancels the opponent's attack. A different attack releases the opponent. It exists on the ground and in the air, cancellable into a dodge or into an attack on hit — the whiff punish tool cited among her strengths, which combos into an HP attack.",
+    "Bind": "A slow Ranged Low special move (65 frames) that immobilises the opponent; they are released as soon as another hit connects. Ground and air versions.",
+    "Bio": "A Ranged Low projectile (33 frames): darkness eats away at the opponent and steals their bravery continuously for a set duration (4 x 11). A poisoned opponent who hits Shantotto with an HP attack is instantly broken, which allows her to deter them from using any.",
+    "Retribution": "A two-handed spinning attack, Melee Mid in 41 frames, with a Chase effect and 90 EX Force — her only aerial melee attack and one of her big EX generators. Careful: it covers Shantotto's flanks poorly.",
+    "Spirit Magic: Earth": "A long-range ground HP attack (49 frames, tied for the fastest of her HP attacks): it throws up rocks. Its power depends on her bravery — Stone (Ranged Mid), Stonega then Quake (Ranged High), from weakest to strongest.",
+    "Spirit Magic: Fire": "A long-range ground HP attack (57 to 61 frames): a sphere of flames thrown forwards. Three tiers depending on bravery: Fire (Ranged Mid), Firaga and Flare (Ranged High).",
+    "Spirit Magic: Thunder": "A mid-range ground HP attack (67 to 71 frames): lightning coming down on the opponent. Three tiers depending on bravery: Thunder (Ranged Mid), Thundaga and Burst (Ranged High).",
+    "Spirit Magic: Water": "A long-range aerial HP attack (59 frames): it engulfs the opponent. Three tiers depending on bravery: Water (Ranged Mid), Waterga and Flood (Ranged High).",
+    "Spirit Magic: Air": "A long-range aerial HP attack (49 frames, her fastest aerial HP attack): violent winds. Three tiers depending on bravery: Aero (Ranged Mid), Aeroga and Tornado (Ranged High).",
+    "Spirit Magic: Ice": "A long-range aerial HP attack (69 frames, the slowest): shards of ice thrown forwards. Three tiers depending on bravery: Blizzard (Ranged Mid), Blizzaga and Freeze (Ranged High)."
+  },
+  "exMode": {
+    "summary": [
+      "The “Two-Hour Ability!” EX Mode grants Regen, Critical Boost and Manafont: as long as EX Mode is active, Shantotto's bravery is instantly restored after every successful HP attack."
+    ],
+    "burst": "“Play Rough”: select the spells from a dedicated menu, in the order Flare > Flood > Burst > Quake > Tornado > Freeze (each spell requires two presses of the d-pad, about 5 seconds in total; only Flare's position is shuffled, the rest is always spell > down > spell > down). Good, even above-average damage — with no health scaling as with Cloud or Tidus, but far from the weakest burst in the game. Auto EX Command Ω makes the input trivial."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "The Spirit Magic tiers: Shantotto's HP attacks grow stronger with her accumulated bravery. Each Spirit Magic has three tiers (Stone, then Stonega, then Quake for Spirit Magic: Earth, for instance), with the higher tiers gaining markedly larger hitboxes.",
+      "Her bravery is therefore both her offensive resource and her arsenal: the higher it is, the more space her HP attacks cover — and losing it to a break disarms her twice over."
+    ],
+    "details": null
+  },
+  "gameplan": [
+    "The sources provide no written overview, but the strengths/weaknesses table sketches out the gameplan: convert almost any hit into HP damage with a little execution, then extend with assists. Stun, instant at 13 frames, serves as the pivot of her whiff punishing by comboing into the Spirit Magic; all her HP attacks and Retribution generate a lot of EX Force, which accumulates all the faster the better her combos are executed.",
+    "Bio adds a unique control lever: a poisoned opponent is instantly broken if they hit Shantotto with an HP attack, which allows her, outside a match point situation, to deprive them of their HP attacks for a period. In exchange, she has to live with the absence of a Wall Rush on her HP attacks, an enormous recovery, the vulnerability of almost all her attacks to assist punishes and heavy exposure to Glutton on EX absorption at medium range."
+  ],
+  "advancedTech": [
+    {
+      "name": "Stun > Stone, the only guaranteed chain",
+      "desc": "The players of the day considered only one Stun chain guaranteed: Stun > Stone, provided the opponent is on the ground or very close to it. Stun > Aero, often presented as the safe aerial bet, is not: the landing lag can let the opponent out — a finding confirmed at LAN, not just against the AI.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "The fall induced by Stun",
+      "desc": "Stun immediately reactivates the target's gravity: an opponent hit in the air drops like a stone. The consequence: Retribution or Bio miss if the target is too low — Stun chains have to be planned on the ground or at a controlled height, all the more so since floors with Banish traps (the FFX stage, Ultimecia's Castle, the pit of Pandaemonium) make the timing harder still.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "Spell acceleration on hit",
+      "desc": "Connecting with a spell speeds up the casting of the following ones in the chain: that is what makes complete Spirit Magic chains achievable — hence the advice of the day always to run the whole chain once the first spell has connected.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "A Couple Attacks delayed over Bio",
+      "desc": "If Bio is travelling towards the opponent while A Couple Attacks is under way, delaying each hit of the combo lets Bio's ticks steal bravery between the hits — bravery theft slotted into the pressure for free.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "Assist relays off Stun",
+      "desc": "The assist routes of the day pivot on Stun: Stun > Kain assist > Retribution/Aero; Stun > Kuja assist > Assist Chase > Stun > Retribution/Aero; on the ground, Stun > Kuja > A Couple Attacks (up to the 2nd hit) > Assist Chase > Stun > finisher. The same players acknowledged that no assist suits her perfectly, her moves being far from assist-friendly.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "Retribution against guards + Seal Evil",
+      "desc": "Retribution goes through active guards of the Delta Attack type. With the Aerith assist, calling Seal Evil before the sceptre's return swing freezes the opponent — a window to slot in Bio then Retribution or an HP attack while they are held.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666"
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "The character with the freest combos and the greatest combo potential in the game — for a modest reward given their difficulty: Stun > landing lag > anything except Spirit Magic: Ice (“Blizzard” in the record); point-blank Retribution > dodge cancel > Stun; Stun > Retribution (including the aerial one according to the compiler); Bio at a very precise range > Stun; Bio > landing lag > Stun, Bio, Retribution or a few others; Spirit Magic: Water (the HP attack) > a Spirit Magic: Earth finisher at the apex (tier 1 may be required) > DC > Stun; Bio from above > Spirit Magic: Air > the Bio hit > Stun.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase into an assist gauge reset",
+      "desc": "With no Bio setup, no assist gauge reset through an empty chase; with a Bio setup, probably possible according to the record.",
+      "source": "https://pastebin.com/dKSWgUQ6"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "No matchup chart has survived for Shantotto (the wiki page is a stub): the threads of the day reason by opponent profile. Against rushdown characters who stick to her (up-in-your-face fighters), A Couple Attacks serves as an escape move — its third hit throws them far and low, with no aerial recovery possible — and Stun, placed on the startup of an opponent's attack, turns the aggression around: it is her best defensive argument. Against characters with active guards, Retribution is the tool: it goes through blocks of the Exdeath Delta Attack type.",
+      "Her difficult matchups follow from her structural weaknesses more than from named opponents: any character punishing with a raw assist exploits the vulnerability of almost all her attacks, and anyone who pressures her after a dodge takes advantage of her lack of a fast aerial melee move. Bio remains a double-edged lever: it deters the opponent's HP attacks (an instant break if the poisoned opponent hits her with one), but it is reflected on block — the players of the day kept it for after a block or for guaranteed hits in a combo."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "The documented hybrid build rests on the Equip Glitch (the total CP cost assumes it has been performed) and on the Best Dresser extra ability for +100 base bravery — consistent with the high base bravery sets she usually runs (1444 BRV here). It pairs the Yuna assist, the Heaven's Cloud weapon, Hero's Shield, Thornlet and Maximillian, with booster-oriented accessories (Dismay Shock, Battle Hammer, BRV = 0, Summon Unused, Blue Gem, Tenacious Attacker, Glutton, First to Victory, Hero's Seal, Miracle Shoes) and Rubicante as the summon."
+    ],
+    "notes": "The bravery and HP attack slots of the build are not filled in in the data, and the second build (“Build #2”) is an empty template."
+  },
+  "assist": {
+    "asAssist": [
+      "As an assist, Shantotto is ranked alone in the Bottom tier of Muggshotter's assist tier list — the worst placement in the roster. The sources on her page give no further detail on her use as an assist."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "The page simply states that Shantotto works well with the Kuja, Yuna and Jecht assists, with no further detail."
+      },
+      {
+        "name": "Yuna",
+        "why": "Cited among the assists that work well with her; she is also the assist chosen in the documented hybrid build."
+      },
+      {
+        "name": "Jecht",
+        "why": "Cited among the assists that work well with her, with no further detail in the sources."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Shantotto chase cancel combos (Dissidia 012)",
+      "desc": "A period video by Michey: chase cancel combos annotated in YouTube annotations, where each Spirit Magic is interchangeable with its higher or lower tiers — one of the rare filmed demonstrations of the conversion that is her strength.",
+      "source": "https://www.youtube.com/watch?v=fmezZmn7Aow",
+      "date": "2011"
+    },
+    {
+      "title": "How to properly use Shantotto? (GameFAQs thread)",
+      "desc": "A period thread from the Dissidia 012 board: the HP game pivots on Stun (Stun > Aero, Stun > Stone), Retribution goes through Delta Attack type guards, and Bio, nerfed, is kept for after a block — a snapshot of her rework between Dissidia and Duodecim.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666",
+      "date": "2011"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Shantotto is described there as having the greatest combo potential in the game, for a modest reward.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "List of empty chases leading to an assist gauge reset (Eddiegames)",
+      "desc": "A character-by-character record of the moves whose hit stun allows an empty chase (a chase initiated without executing anything in it) followed by a reset of the opponent's assist gauge. The detail for this character is covered in the specific techniques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
+    }
+  ],
+  "sourcesBySection": {
+    "overview": [
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58696836"
+    ],
+    "matchups": [
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58899666",
+      "https://dissidia.wiki/Shantotto_(Dissidia_012)"
+    ]
+  },
+  "limits": [
+    "No overview text on the wiki page (only the strengths/weaknesses table is filled in): the overview is reconstructed from the GameFAQs threads of the day (2011, listed in sourcesBySection) and the gameplan solely from the wiki's table.",
+    "No matchup chart per character: the wiki page is a stub, and the matchups summary rests on the archetypal markers from the threads of the day, cross-referenced with the weaknesses documented by the wiki.",
+    "No combos section filled in on the wiki side (the Solo subsection is empty) despite conversion being presented as her main strength; the advanced techniques come from a single GameFAQs thread (2011).",
+    "Detailed usage notes are absent for most moves (Stun, Bind, Bio, Retribution and the six Spirit Magic have only the in-game description and the frame data); the A Couple Attacks note is truncated in the source data.",
+    "No “Unique Mechanics” section is documented: the field is left as null.",
+    "The assist section is undocumented beyond a single sentence; the assist gain values are absent from the move tables; the wiki's References section is empty.",
+    "The community's empty chase record is undated (the solo combo record that accompanies it is dated December 2022): how current it is cannot be established.",
+    "The community record designates Shantotto's Spirit Magic by the names of their tier 1 spells (Water, Stone, Aero, Blizzard): the correspondence — Water → Spirit Magic: Water, Stone → Earth, Aero → Air, Blizzard → Ice — is confirmed by the Shantotto page on the Final Fantasy Wiki, which also recalls that the Spirit Magic are her HP attacks (Fire, Earth and Thunder on the ground; Air, Water and Ice in the air)."
+  ],
+  "groupNotes": {
+    "bravery/main": "Most bravery attacks exist on the ground and in the air; A Couple Attacks is ground only, Retribution air only.",
+    "hp/main": "The HP attacks grow stronger with accumulated bravery: each Spirit Magic has three tiers, with the higher tiers having larger hitboxes."
+  }
+}

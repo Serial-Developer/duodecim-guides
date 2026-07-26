@@ -1,0 +1,163 @@
+{
+  "slug": "aerith",
+  "tagline": "A Top tier assist: binding, invincibility, gifted bravery and the only self-sufficient HP attack",
+  "archetype": "Utility control assist",
+  "overview": [
+    "Aerith is an assist-only character (the Prologus DLC): she is not played, she is equipped. Her infobox has no combat statistics and the wiki documents no EX Mode, no builds and no player combos — only her four assist moves: two bravery attacks (Cure, Seal Evil) and two HP attacks (Planet Protector, Holy).",
+    "Unlike conventional assists, her kit is not there to extend combos: Seal Evil freezes the opponent in place, Cure transfers bravery to the ally, Planet Protector makes them invincible and Holy sets up a delayed HP damage threat — the only assist move in the game to deal any by itself. That unique toolbox places her in the Top tier of Muggshotter's assist tier list, alongside Kuja and Jecht."
+  ],
+  "tierNote": null,
+  "strengths": [
+    "Top tier on the assist tier list (Muggshotter), alongside Kuja and Jecht.",
+    "Seal Evil freezes the opponent in place for three seconds, opening guaranteed HP damage through Chase setups.",
+    "Planet Protector: five seconds (300F) of total invincibility — nothing can hurt or kill the ally, and an HP attack taken even resets the opponent's bravery to zero.",
+    "Holy is the only assist move in the game to deal HP damage by itself, and it connects even if Aerith is hit during the incantation.",
+    "Cure transfers 60 % of the ally's raw bravery (always 400 at LV100): making up a deficit or landing a finishing blow on a stagger."
+  ],
+  "weaknesses": [
+    "Seal Evil is Ranged Low, with a notable startup compared with the aerial bravery attacks of conventional assists: it demands pre-emptive timing or an elaborate setup to connect.",
+    "Aerith is vulnerable during Cure: hitting her locks her, and the opponent can engage deliberately to discourage bravery accumulation.",
+    "Holy takes 8 seconds of incantation and has documented counter-measures: a guard stagger (Squall's Heel Crush), HP attacks and high priority (LV3 Jecht Stream), deflection by high-priority melee or by Jecht's and Exdeath's blocks, and even a Precision Block.",
+    "Planet Protector is not a combo move: no attack sequence can be chained into it, and chase attacks under way lose all effect."
+  ],
+  "moveNotes": {
+    "Cure": "Aerith appears near the player and transfers 60 % of her raw bravery to them — always 400 at LV100. Little used but valuable when both players have two assist bars and neither is connecting: making up a bravery deficit, or sealing a match on a stagger — a call for +400, then a finishing HP attack, with the assist call slowdown blocking the opponent's Assist Change into the bargain. Aerith is vulnerable during Cure and can be locked if she is hit: protect her, since the opponent can engage deliberately.",
+    "Seal Evil": "The basic tool: an opponent who is hit is frozen in place for three seconds, released only if they are hit by another attack. Ranged Low priority and a notable startup compared with the aerial bravery attacks of conventional assists: pre-emptive timing or an elaborate setup is often necessary.",
+    "Planet Protector": "Five seconds (300F) of total invincibility, signalled by a golden glow around Aerith and the player: bravery damage drops to 0, and an opponent's HP attack taken deals 0 while resetting the attacker's bravery to zero as though it had connected — so you can deliberately run into an attack to purge a big opposing bravery total or neutralise a move. Not a combo move, but the absence of a damage reaction allows immediate counter-attacks; chase attacks under way lose all effect. A documented exploit: Exdeath charges Maelstrom on the ground and calls Aerith in mid-animation — the opponent has to deflect Maelstrom, which Kuja, Shantotto and Yuna cannot do.",
+    "Holy": "The only assist move that deals HP damage by itself: an 8 second incantation (480F), with the hit at 524F — think Starfall: the “meteor” appears at 480F and takes 44 frames to reach its target. During the incantation, Aerith is in Block Mid: a guard stagger (Squall's Heel Crush) or high priority (HP attacks, LV3 Jecht Stream) is needed to intercept her — hitting her inflicts an Assist Lock on the caster, but Holy falls all the same. Ranged High, it can still be deflected by high-priority melee, by Jecht's and Exdeath's blocks, and even by a Precision Block with very strict timing."
+  },
+  "exMode": null,
+  "uniqueMechanics": null,
+  "gameplan": [
+    "The reference Seal Evil setup: call Aerith just before the Chase prompt, initiate the Chase, then perform an HP attack. A late dodge: Seal Evil freezes them; an immediate dodge: the HP attack connects — guaranteed HP damage from a single sequence, with activating the Chase absorbing all the EX on the field into the bargain.",
+    "Near a wall, the mixup gets richer: a chase HP attack dodged immediately inflicts the Wall Rush, which can chain into Seal Evil if Aerith was called late enough; a bravery attack in place of the HP attack adds damage — dodged, Seal Evil connects anyway; taken, the opponent suffers both damage and the bind (without a wall, the knockback takes them out of Seal Evil's range: watch the environment). Aerith also chains from Wall Rushes, called a little before the impact or as soon as the chase sequence counts as over.",
+    "The timings vary greatly by character: Vaan with (SW) Katana has short enough knockback and a long enough Chase window for Seal Evil to connect off the prompt alone — with the opponent still able to dodge the following attack as though Seal Evil had not happened; conversely, Cecil as Paladin after Sacred Cross has to commit to an HP attack during the chase (the window and hit stun are too short), the same problem as with Cloud's aerial Double Cut.",
+    "The rest of the kit is played as a resource: Cure makes up a deficit in double assist bar standoffs or seals a match (stagger > call > +400 > finishing HP attack), Planet Protector covers a whole sequence — to the point of making a charged Exdeath Maelstrom literally unavoidable for Kuja, Shantotto and Yuna — and Holy turns any moment into a delayed HP threat, to be defused in under eight seconds on pain of suffering it even while hitting Aerith."
+  ],
+  "advancedTech": [
+    {
+      "name": "Seal Evil chase setup",
+      "desc": "Call Aerith just before the Chase prompt, initiate the Chase then perform an HP attack: a late dodge = Seal Evil, an immediate dodge = a guaranteed HP attack — with all the EX on the field absorbed when the Chase activates. The building block of all her setups."
+    },
+    {
+      "name": "Wall rush chain into Seal Evil",
+      "desc": "Near a wall, the Wall Rush from a chase HP attack can chain into Seal Evil if Aerith was called late enough; outside a chase, calling her a little before the Wall Rush — or as soon as the chase sequence ends — allows the same chain."
+    },
+    {
+      "name": "Maelstrom + Planet Protector (Exdeath)",
+      "desc": "Exdeath charges Maelstrom on the ground then calls Aerith to cast Planet Protector in mid-animation: the opponent has no choice but to deflect Maelstrom, which Kuja, Shantotto and Yuna cannot do — unavoidable damage that sharply reduces their chances against Exdeath on large stages."
+    },
+    {
+      "name": "Bravery purge (Planet Protector)",
+      "desc": "Under Planet Protector, deliberately taking an opponent's HP attack deals 0 damage and resets the attacker's bravery to zero, as though the hit had connected: a pre-emptive reset against an opponent with a big accumulated bravery total."
+    }
+  ],
+  "matchups": null,
+  "builds": {
+    "philosophy": [
+      "Aerith cannot be built — no stats and no equipment: it is the carrier's set that is built around her. The best documented path is the assist-heavy build: the wiki's Assist page describes Side by Side — sacrificing all EX for a boosted assist gauge, with assist charge on HP attacks — as an accessory that characters like Zidane push to absurd heights with the Aerith assist. Any character able to land HP attacks without an assist recharges their gauge almost for free, and every bar regained becomes another Seal Evil, Planet Protector or Holy setup.",
+      "On the character side: the wiki's Tidus Starter Guide gives her as the assist of the recommended build outright — her chase setups on Hop Step convert with or without a wall (up to 195 EX Force on the reference route), making up for the earlier call that Seal Evil's startup demands — and the wiki also documents Prishe's Adamant Chains build around her (a long-term game, accumulating EX and bravery). The GameFAQs thread “Best ways to use Aerith?” (2012-2013) broadens the picture: manipulators of Chase windows (Tidus, Kuja, Lightning) for chase cancels that absorb all the EX on the field, and characters with incantations in cross-cover — Ultimecia casts Time Crush under Planet Protector, The Emperor imposes the Holy or Starfall dilemma, Terra covers Holy's incantation with Tornado, and Shantotto leans on Cure to reach her higher spell tiers."
+    ],
+    "notes": "No quantified build (stats, equipment) exists or can exist for Aerith herself: the above describes the sets built around her assist."
+  },
+  "assist": {
+    "asAssist": [
+      "Aerith is ranked Top tier on Muggshotter's assist tier list, alongside Kuja and Jecht. Her value comes not from combo damage but from effects no other assist offers: a three second bind (Seal Evil), five seconds of invincibility (Planet Protector), a bravery transfer (Cure), self-sufficient HP damage (Holy).",
+      "A setup assist: Seal Evil rewards characters who manipulate the Chase and Wall Rush windows, Holy and Planet Protector have to be prepared, and Cure requires Aerith to be protected during the animation. Since Planet Protector is not a combo move and Seal Evil demands pre-emptive timing, choosing Aerith commits you to a whole gameplan rather than to a simple combo extender."
+    ],
+    "recommended": [
+      {
+        "name": "Exdeath",
+        "why": "The most notorious documented exploiter: a charged Maelstrom + Planet Protector makes the attack unavoidable for Kuja, Shantotto and Yuna, who cannot deflect it."
+      },
+      {
+        "name": "Cloud",
+        "why": "The extracted overview documents a complete Seal Evil combo: Slashing Blow > Wall Rush > Seal Evil > a double Fire > Climhazzard (2 hits) > aerial Double Cut. That last move, on the other hand, suffers from a chase window and hit stun that are too short for the standard chase setup."
+      },
+      {
+        "name": "Vaan",
+        "why": "(SW) Katana has short enough knockback and a long enough Chase window to delay the timing: Seal Evil connects off the Chase prompt alone, without even committing to an attack."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Best ways to use Aerith? (GameFAQs thread)",
+      "desc": "A thread of setup exchanges between players: Seal Evil after a Wall Rush, Holy covered by Nightglow or Terra's Tornado, Planet Protector during Ultimecia's Time Crush, deliberate bravery purges and chase cancels with Tidus, Kuja or Lightning.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63856982",
+      "date": "2013"
+    },
+    {
+      "title": "Dissidia 012 Duodecim: Aerith Assist (All Moves)",
+      "desc": "A period demonstration (mordredisdead, April 2011) of Aerith's four assist moves: Cure, Seal Evil, Planet Protector and Holy in action.",
+      "source": "https://www.youtube.com/watch?v=1PWbUoqgk-g",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012 - Tidus Combos (Solo + Aerith Assist)",
+      "desc": "A compilation from the community wiki's channel (Dissidia Mediawiki): Tidus combos making use of the Aerith assist, with notations (DC, WR) and timestamps.",
+      "source": "https://www.youtube.com/watch?v=oDOs-TVaqYg",
+      "date": "2024"
+    }
+  ],
+  "limits": [
+    "An assist-only character: no player data — the infobox statistics are all “-”, and the EX Mode, unique mechanics, combos, builds and assist sections are marked undocumented. The player fields (exMode, uniqueMechanics) are therefore null; builds only describes the sets built around her assist, since no build of her own is possible.",
+    "Not ranked on the 2017 player tier list (assist only): tierNote is null.",
+    "The extracted overview section contains no written presentation — only a Cloud combo and a video mention: the overview above is synthesised from the notes on her four assist moves and from meta-lite.json.",
+    "The “name” field of the moves is empty in the data: the group headings (Cure, Seal Evil, Planet Protector, Holy) serve as the keys in moveNotes.",
+    "Incomplete frame data: startup, position, spawn, effects and priorities are listed as variants with no values (“?”), and the “Seal Evil combos” subsection is empty.",
+    "A per-opponent matchup table makes no sense for an assist-only character (the wiki's matchups page is a stub anyway): matchups is left as null, deliberately.",
+    "For the Japanese version, the 2011 community guide documents the identifier of the digital edition (NPJH-50377); the case of the Japanese UMD (ULJM) is not specified there."
+  ],
+  "sourcesBySection": {
+    "builds": [
+      "https://dissidia.wiki/Assist_(Dissidia_012)",
+      "https://dissidia.wiki/Tidus_(Dissidia_012)/Starter_Guide",
+      "https://dissidia.wiki/Prishe_(Dissidia_012)",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/63856982"
+    ]
+  },
+  "groupNotes": {
+    "bravery/main": "Like the other assist characters, Aerith has only two bravery attacks: one on the ground, one in the air.",
+    "hp/main": "Like the other assist characters, Aerith has only two HP attacks: one on the ground, one in the air."
+  },
+  "unlock": {
+    "title": "Unlocking Aerith",
+    "intro": [
+      "Aerith is not on the UMD: she is downloadable content, reserved at the time for buyers of Dissidia Duodecim Prologus — the paid demo ($/€2.99, ¥300) released on the PlayStation Store in early 2011. Buying Prologus was the only way to receive Aerith in the full game, as the Final Fantasy Wiki puts it. That official route has been closed since the PSP Store shut down in 2021.",
+      "Today, she is obtained by installing the official DLC files onto the game's memory card (real or virtual). Since her data is downloaded and absent from the ISO, CWCheat codes cannot stand in for it: the files are required. The simplest route on the US version: the community starter pack already includes them, Aerith among them.",
+      "The principle is identical across all three versions of the game — only the name of the DLC folder changes, with the content having to match the ISO's region."
+    ],
+    "versions": [
+      {
+        "name": "US version — ULUS-10566",
+        "points": [
+          "The express route: the starter pack from the Savedata page. Its PPSSPP memstick already carries the official DLC — Aerith appears in the assist list with no further work.",
+          "Manual installation on PPSSPP: place the (decrypted) DLC folder in PSP/GAME/ULUS10566/ on the memstick, next to the save folder. PPSSPP loads it natively.",
+          "On a real PSP: custom firmware and the NPloader plugin are required — the method documented by the community as early as April 2011."
+        ]
+      },
+      {
+        "name": "European version — ULES-01505",
+        "points": [
+          "The same DLC files as the US version: rename the folder to ULES01505 before placing it in PSP/GAME/ — a folder with a US name is not detected by a European copy, since the DLC has to match the ISO's region.",
+          "On a real PSP: the same prerequisites (custom firmware + NPloader). The 2011 guide notes that the European DLC also worked on the 5.00 M33 and 5.50 GEN firmwares, where the US DLC required a 6.xx firmware."
+        ]
+      },
+      {
+        "name": "Japanese version — NPJH-50377",
+        "points": [
+          "Rename the DLC folder to NPJH50377 — the identifier of the Japanese edition documented by the 2011 community guide — and place it in PSP/GAME/.",
+          "Japan is the content's region of origin: Prologus was released there in January 2011, two months before the West."
+        ]
+      }
+    ],
+    "note": "The official DLC files circulate through the community (the starter pack, the resources channel of the Discord DISSIDIA). A period bonus: the accessories earned in Prologus transferred over to Duodecim — including the Midgar Flower, exchangeable for an exclusive Lightning weapon.",
+    "sources": [
+      "https://finalfantasy.fandom.com/wiki/Aerith_Gainsborough_(Dissidia_PSP)",
+      "https://finalfantasy.fandom.com/wiki/Dissidia_Duodecim_Prologus_Final_Fantasy",
+      "https://docs.retroachievements.org/general/tutorials/working-with-dlc-for-the-psp.html",
+      "https://www.atmaxplorer.com/2011/04/installing-dissidia-duodecims-dlc-on-your-psp/"
+    ]
+  }
+}

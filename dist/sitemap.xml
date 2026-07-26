@@ -121,7 +121,7 @@
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/tifa-lockhart.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/tifa-lockhart.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/tifa-lockhart.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/tifa-lockhart.html"/>
@@ -142,7 +142,7 @@
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/laguna-loire.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/laguna-loire.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/laguna-loire.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/laguna-loire.html"/>
@@ -163,7 +163,7 @@
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/tidus.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/tidus.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/tidus.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/tidus.html"/>
@@ -177,10 +177,17 @@
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/yuna.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/yuna.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/yuna.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/yuna.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/shantotto.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/shantotto.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/shantotto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/shantotto.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/prishe.html</loc>
@@ -190,11 +197,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/prishe.html"/>
   </url>
   <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/vaan.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/vaan.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/vaan.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/vaan.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/gabranth.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/gabranth.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/gabranth.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/gabranth.html"/>
+  </url>
+  <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/lightning.html</loc>
     <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/lightning.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/lightning.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/lightning.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/aerith.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/aerith.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/aerith.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/aerith.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/build-creator.html</loc>
@@ -451,6 +479,7 @@
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/shantotto.html</loc>
     <lastmod>2026-07-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/shantotto.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/shantotto.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/shantotto.html"/>
   </url>
@@ -464,12 +493,14 @@
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/vaan.html</loc>
     <lastmod>2026-07-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/vaan.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/vaan.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/vaan.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/gabranth.html</loc>
     <lastmod>2026-07-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/gabranth.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/gabranth.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/gabranth.html"/>
   </url>
@@ -489,6 +520,7 @@
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/aerith.html</loc>
     <lastmod>2026-07-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/aerith.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/aerith.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/aerith.html"/>
   </url>
