@@ -5,7 +5,7 @@
 // il n'est jamais écrit à la main, une page ajoutée ici y entre automatiquement.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { datesFor, gitDates } from './git-dates.mjs';
+import { datesFor } from './git-dates.mjs';
 import { SITE_URL, AUTHOR, AUTHOR_URL, absUrl } from '../src/site-config.mjs';
 
 // Pages hors guides personnages. `sources` : fichiers dont l'historique git
@@ -53,17 +53,6 @@ export const PAGES = [
     sources: ['data/calendar/upcoming.json', 'data/calendar/auto.json'],
   },
 ];
-
-// Dates du dépôt entier — utilisées par l'accueil, qui reflète l'ensemble.
-export function repoDates(root) {
-  const map = gitDates(root);
-  let created = null, modified = null;
-  for (const { created: c, modified: m } of map.values()) {
-    if (!created || c < created) created = c;
-    if (!modified || m > modified) modified = m;
-  }
-  return { datePublished: created, dateModified: modified };
-}
 
 // Bloc `seo` prêt à passer au template : chemin, image OG (si elle existe),
 // dates git et type schema.org.

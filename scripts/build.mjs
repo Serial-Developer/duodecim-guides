@@ -17,7 +17,7 @@ import { renderBuildCreator } from '../src/templates/build-creator.mjs';
 import { buildDataBundle } from './build-data-bundle.mjs';
 import { speedValues, siteHeader, siteFooter } from '../src/templates/helpers.mjs';
 import { buildRoster } from '../src/templates/helpers.mjs';
-import { PAGES, seoFor, repoDates, writeSitemap, write404, writeHumansTxt } from './seo.mjs';
+import { PAGES, seoFor, writeSitemap, write404, writeHumansTxt } from './seo.mjs';
 import { datesFor } from './git-dates.mjs';
 import { sizeAttrs } from './image-size.mjs';
 import { absUrl } from '../src/site-config.mjs';
@@ -131,7 +131,15 @@ const roster = buildRoster([
 
 // Landing (31 jouables uniquement, rangées façon écran du jeu)
 const taglineBySlug = Object.fromEntries(chars.filter((c) => c.ed?.tagline).map((c) => [c.def.slug, c.ed.tagline]));
-const homeDates = repoDates(ROOT);
+// Dates de l'accueil : les fichiers dont son contenu dépend réellement (les
+// taglines des fiches, les tiers, le template de l'écran de sélection). Prendre
+// le dernier commit du dépôt entier la ferait changer à chaque build, y compris
+// pour une correction de README.
+const homeDates = datesFor(ROOT, [
+  ...chars.map(({ def }) => `data/editorial/${def.slug}.json`),
+  'data/meta.json',
+  'src/templates/landing.mjs',
+]);
 writeFileSync(join(DIST, 'index.html'), renderLanding({
   characters: CHARACTERS,
   tierBySlug,
