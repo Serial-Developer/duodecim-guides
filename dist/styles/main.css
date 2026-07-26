@@ -18,6 +18,14 @@
 }
 
 * { box-sizing: border-box; }
+
+/* Toutes les <img> portent des attributs width/height : le navigateur réserve
+   ainsi leur place avant le chargement et la page ne se décale plus. Mais dès
+   que la largeur est pilotée en CSS, la hauteur doit redevenir « auto », sinon
+   l'attribut height s'applique tel quel et déforme l'image (portrait carré rendu
+   en 190×256). Les règles qui veulent une hauteur imposée la déclarent
+   explicitement — leur spécificité l'emporte sur celle-ci. */
+img { height: auto; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

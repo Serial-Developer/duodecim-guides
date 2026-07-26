@@ -94,7 +94,7 @@ function backdrop() {
 <rect x="0" y="618" width="1200" height="12" fill="url(#rule)"/>`;
 }
 
-function characterSvg({ name, origin, tagline, tier, portrait }) {
+function characterSvg({ name, origin, tagline, tier, portrait, kicker = 'GUIDE COMPÉTITIF' }) {
   const px = 100, py = 137, ps = 356; // portrait : carré, centré verticalement
   // Colonne de texte : le cadre du portrait s'arrête à px + ps + 16, il faut
   // partir franchement après, sinon le texte vient coller le trait doré.
@@ -107,7 +107,7 @@ ${portrait ? `<g>
 <rect x="${px - 16}" y="${py - 16}" width="${ps + 32}" height="${ps + 32}" rx="18" fill="${C.surface}" stroke="${C.gold}" stroke-width="2" stroke-opacity="0.45"/>
 <image x="${px}" y="${py}" width="${ps}" height="${ps}" href="${portrait}" preserveAspectRatio="xMidYMid meet"/>
 </g>` : ''}
-<text x="${tx}" y="182" font-family="${esc(DISPLAY_FONT)}" font-size="26" fill="${C.violet}" letter-spacing="3">GUIDE COMPÉTITIF</text>
+<text x="${tx}" y="182" font-family="${esc(DISPLAY_FONT)}" font-size="26" fill="${C.violet}" letter-spacing="3">${esc(kicker)}</text>
 <text x="${tx}" y="${182 + nameSize + 14}" font-family="${esc(DISPLAY_FONT)}" font-size="${nameSize}" font-weight="700" fill="${C.gold}">${esc(name)}</text>
 ${origin ? `<text x="${tx}" y="${182 + nameSize + 56}" font-family="${esc(DISPLAY_FONT)}" font-size="27" fill="${C.text}">${esc(origin)}</text>` : ''}
 ${taglineLines.map((l, i) => `<text x="${tx}" y="${182 + nameSize + 108 + i * 34}" font-family="Segoe UI, sans-serif" font-size="25" fill="${C.muted}">${esc(l)}</text>`).join('\n')}
@@ -181,6 +181,9 @@ for (const c of [...CHARACTERS, ...SPECIAL]) {
   render(characterSvg({
     name: data?.name || c.name,
     origin: data?.origin || '',
+    // Aerith n'est pas jouable : sa fiche documente un assist, pas un plan de
+    // jeu. Le sur-titre le dit, comme son <title> (voir guide.mjs, isAssist).
+    kicker: c.slug === 'aerith' ? 'ASSIST' : 'GUIDE COMPÉTITIF',
     // La tagline éditoriale, telle qu'écrite — jamais reformulée ici.
     tagline: ed?.tagline || ed?.archetype || '',
     tier: tierBySlug[c.slug] || null,
