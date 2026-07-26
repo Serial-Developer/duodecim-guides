@@ -184,7 +184,7 @@
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/shantotto.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/shantotto.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/shantotto.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/shantotto.html"/>
@@ -198,7 +198,7 @@
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/vaan.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/vaan.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/vaan.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/vaan.html"/>
@@ -218,8 +218,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/lightning.html"/>
   </url>
   <url>
-    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/aerith.html</loc>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/feral-chaos.html</loc>
     <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/feral-chaos.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/feral-chaos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/feral-chaos.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/aerith.html</loc>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/aerith.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/aerith.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/aerith.html"/>
@@ -514,6 +521,7 @@
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/feral-chaos.html</loc>
     <lastmod>2026-07-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/feral-chaos.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/feral-chaos.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/feral-chaos.html"/>
   </url>
