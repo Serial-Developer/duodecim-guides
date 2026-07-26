@@ -13,9 +13,10 @@ ${item.source ? `<p class="sources-list"><a href="${esc(item.source)}" target="_
 </article>`;
 }
 
-export function renderTechniques(shared) {
+export function renderTechniques(shared, seo) {
   if (!shared) {
     return pageShell({
+    seo,
       title: 'Techniques — Dissidia 012 [duodecim]',
       description: 'Techniques universelles de Dissidia 012 [duodecim].',
       cssPath: 'styles/main.css', jsPath: null,
@@ -45,6 +46,7 @@ ${shared.glossaryNote ? paras(shared.glossaryNote.summary) + `<p class="sources-
 </main>
 ${siteFooter()}`;
   return pageShell({
+    seo,
     title: 'Techniques universelles & glitches — Dissidia 012 [duodecim]',
     description: 'Blodge, dash feint, lock off, dodge punishment, Equip Glitch, Assist Storage Glitch et jeu en ligne PPSSPP — synthèse française de dissidia.wiki.',
     cssPath: 'styles/main.css',

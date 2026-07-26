@@ -16,7 +16,7 @@ ${(s.cta || []).map(ctaLink).join('\n')}
 </article>`;
 }
 
-export function renderSectionsPage({ data, active, pageTitle, description }) {
+export function renderSectionsPage({ data, active, pageTitle, description, seo }) {
   const body = `${siteHeader({ active })}
 <nav class="guide-top" aria-label="Sections de la page"><div class="chips-nav">
 <a href="index.html">← Sélection</a>
@@ -33,6 +33,7 @@ ${sourcesSection(data.sources, data.limits)}
 </main>
 ${siteFooter()}`;
   return pageShell({
+    seo,
     title: pageTitle,
     description,
     cssPath: 'styles/main.css',

@@ -10,7 +10,7 @@ Site statique de guides compétitifs FR pour *Dissidia 012 [duodecim] Final Fant
 4. Orthographe française irréprochable, accents compris.
 
 ## Pipeline (npm run …)
-`scrape` (wiki → cache/, jamais re-fetché) → `parse` (→ data/characters/*.json + meta.json) → `images` (Wayback → assets/) → `build` (→ dist/) → `qa` (ressources locales, ancres, anti-invention, termes bannis, intégrité du créateur de builds ; `qa:links` ajoute la vérification réseau) → `coverage` (reports/coverage.md).
+`scrape` (wiki → cache/, jamais re-fetché) → `parse` (→ data/characters/*.json + meta.json) → `images` (Wayback → assets/) → `og` (images de partage 1200×630 → assets/og/, `--force` pour régénérer) → `build` (→ dist/, plus sitemap.xml/404.html/humans.txt) → `qa` (ressources locales, ancres, anti-invention, termes bannis, intégrité du créateur de builds, métadonnées de référencement et couverture du sitemap ; `qa:links` ajoute la vérification réseau) → `coverage` (reports/coverage.md).
 Créateur de builds : `scrape:build` puis `parse:build` (→ data/build/*.json), consommés par `build` qui émet `dist/scripts/build-data.js`.
 Après TOUTE modification d'éditorial : `node scripts/build.mjs && node scripts/qa.mjs` puis commit incluant `dist/`.
 
@@ -18,7 +18,8 @@ Après TOUTE modification d'éditorial : `node scripts/build.mjs && node scripts
 - `data/characters/*.json` : extraction structurée par perso (infobox, coups avec frames, sections). Régénérés par `parse` — ne pas éditer à la main.
 - `data/build/*.json` : données du créateur de builds (equipment, accessories, abilities, combinations, assists, summons, ruleset, capacity, base-stats). Régénérés par `parse:build` — ne pas éditer à la main. Équipements et accessoires viennent du **Final Fantasy Wiki** (CC BY-SA), le reste de dissidia.wiki.
 - `data/editorial/*.json` : prose FR (une fiche par perso + `_shared`, `_multiplayer`, `_install`, `_savedata`, `_tournois`, `_participer`, `_organiser`, `_feral-unlock`). C'est ICI qu'on écrit. Schéma : docs/editorial-guidelines.md ; enrichissements : docs/enrichment-pass.md.
-- `src/templates/*.mjs` : templates JS (helpers.mjs contient `siteHeader` — le menu global à 3 catégories — et les générateurs SVG). `src/styles/main.css` : design system nuit violette/or, breakpoints 600/1024.
+- `src/templates/*.mjs` : templates JS (helpers.mjs contient `siteHeader` — le menu global à 3 catégories —, `pageShell` qui centralise toutes les métadonnées, `siteFooter` avec le copyright, `linkRoster` pour le maillage interne, et les générateurs SVG ; jsonld.mjs pour schema.org). `src/styles/main.css` : design system nuit violette/or, breakpoints 600/1024.
+- `src/site-config.mjs` : **source unique** de `SITE_URL`, de la signature (« Serial ») et des balises de vérification Search Console/Bing. Le site est un *project site* GitHub Pages (`…github.io/duodecim-guides/`) : toute URL absolue doit inclure ce segment, passer par `absUrl()`.
 - `scripts/` : scrape, parse, parse-meta, fetch-images, fetch-move-images, clean-portraits, build, qa, coverage.
 - `data/calendar/` : veille tournois automatique (workflow « Veille tournois » planifié).
 
@@ -39,9 +40,20 @@ Après TOUTE modification d'éditorial : `node scripts/build.mjs && node scripts
 - **Vérification de référence** : le build « Adamant Chains + EX » de Lightning du wiki (HP 10972, BRV 957, ATK 177, DEF 185) doit être retrouvé exactement — c'est le test qui valide le modèle de calcul.
 - Le serveur de preview `python -m http.server` coupe parfois le chargement de `build-data.js` (~310 ko) : recharger. `npx serve dist` ne présente pas le problème.
 
+## Pièges du référencement
+- **`robots.txt` est impossible ici** : les robots ne le lisent qu'à la racine du domaine (`serial-developer.github.io/robots.txt`), servie par un repo user site qui n'existe pas. Un fichier dans `dist/` serait ignoré. Son absence = tout le crawl autorisé ; le sitemap se soumet directement en Search Console. Idem pour IndexNow (clé à la racine).
+- **`.nojekyll` inutile** : `build_type: workflow`, l'artefact n'est pas traité par Jekyll.
+- **Les dates viennent de git**, jamais du build (`scripts/git-dates.mjs`) : sinon chaque régénération prétendrait que le contenu a changé. Sans git, les dates sont omises.
+- **Le `404.html` a ses liens et sa CSS en URL absolue** : GitHub Pages le sert à n'importe quelle profondeur, un chemin relatif se résoudrait depuis un dossier inexistant. Conséquence assumée : sans style en local hors ligne.
+- **Maillage des matchups** : « Cloud » et « Chaos » ne sont jamais liés (ambigus), et un nom suivi d'un mot capitalisé non plus (c'est un nom de coup, « Jecht Beam »). Ne pas « améliorer » cette règle sans traiter les faux positifs.
+- **Images OG** : générées par `npm run og` avec Times New Roman (repli du design system — Cinzel n'est pas installée localement, elle est servie par Google Fonts). Commitées dans `assets/og/`, donc rendu figé.
+- La liste des pages contrôlées par `qa.mjs` est **découverte en lisant `dist/`** — la version écrite à la main oubliait `multijoueur.html`, qui n'a été contrôlée par aucun test jusqu'au 26/07/2026.
+
 ## État au 26/07/2026
 Fait : 31 guides complets + fiches Aerith/Feral Chaos ; landing « Player Select » ; pages transverses (techniques, multijoueur, install, savedata, tournois ×3, organiser) ; header global 3 menus ; ~100 apports communautaires sourcés + vidéos ; passe de style intégrale (0 terme banni) ; QA 0/0 ; 265+ liens vérifiés.
 Créateur de builds en ligne (createur-de-builds.html, sous-menu dédié) : 5 onglets, jauge CP 450/510, règles du jeu appliquées (3 emplacements par catégorie posture × style, enchaînements et HP links imbriqués sans emplacement, 12 groupes d'exclusions d'abilities, exemplaires d'accessoires 1/2/3 selon rang S/A/B), localStorage, export JSON/CSV, lien de partage. 670 équipements, 551 accessoires, 122 abilities, 31 HP links, 25 sets. Le modèle de calcul est validé contre le build « Adamant Chains » de Lightning du wiki.
 
-Ouvert : rien de bloquant. Idées en attente de demande : tier list alternative post-2017 (n'existe pas sur le wiki), captures de coups manquantes si la Wayback les archive un jour, nom de domaine personnalisé (CNAME).
+Passe de référencement et de paternité (branche `feature/seo`, rapport dans `reports/seo.md`) : canonical absolu, Open Graph et Twitter Cards avec 34 images 1200×630, JSON-LD (WebSite/TechArticle/Article/WebApplication), sitemap.xml généré au build, 404.html, humans.txt, titles et descriptions composés depuis `archetype`/`tagline`/tier, maillage interne des matchups, width/height sur les 289 images, LICENSE (MIT + CC BY-NC-ND 4.0) et NOTICE.md, footer signé « © 2026 Serial ». QA 0/0, 43 pages atteignables sans JS à profondeur 1.
+
+Ouvert : rien de bloquant. **À faire à la main** (checklist complète en fin de `reports/seo.md`) : créer la propriété Search Console de type *Préfixe d'URL*, remplir `SITE_VERIFICATION` dans `src/site-config.mjs`, soumettre le sitemap, importer dans Bing, puis partager sur le Discord DISSIDIA et r/DissidiaOO — c'est le seul levier de positionnement restant. Idées en attente de demande : page « À propos / Crédits », tier list alternative post-2017 (n'existe pas sur le wiki), captures de coups manquantes si la Wayback les archive un jour, nom de domaine personnalisé (débloquerait robots.txt et IndexNow).
 

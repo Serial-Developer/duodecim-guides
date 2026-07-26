@@ -14,18 +14,12 @@ const errors = [];
 const warns = [];
 
 // --- 1. Ressources locales ---
+// Découverte automatique : une liste écrite à la main finit par oublier une page
+// (multijoueur.html a échappé aux contrôles jusqu'à cette passe). 404.html est
+// traité à part, avec les contrôles de référencement.
 const htmlFiles = [
-  join(DIST, 'index.html'),
-  join(DIST, 'techniques.html'),
-  join(DIST, 'install.html'),
-  join(DIST, 'savedata.html'),
-  join(DIST, 'tournois.html'),
-  join(DIST, 'participer.html'),
-  join(DIST, 'futurs-tournois.html'),
-  join(DIST, 'organiser.html'),
-  join(DIST, 'obtenir-feral-chaos.html'),
-  join(DIST, 'createur-de-builds.html'),
-  ...readdirSync(join(DIST, 'characters')).map((f) => join(DIST, 'characters', f)),
+  ...readdirSync(DIST).filter((f) => f.endsWith('.html') && f !== '404.html').map((f) => join(DIST, f)),
+  ...readdirSync(join(DIST, 'characters')).filter((f) => f.endsWith('.html')).map((f) => join(DIST, 'characters', f)),
 ];
 const externalLinks = new Set();
 for (const file of htmlFiles) {
@@ -252,6 +246,122 @@ for (const f of readdirSync(join(ROOT, 'data', 'editorial')).filter((x) => x.end
       }
     }
   }
+}
+
+// --- 2d. Référencement : métadonnées, sitemap, images de partage ---
+// Ce qui est vérifié ici est ce qui casse silencieusement : un canonical qui ne
+// correspond pas à l'URL de la page, une image de partage en 404 (aperçu vide
+// sur Discord), un title dupliqué (les moteurs n'en gardent qu'un), une page
+// absente du sitemap (jamais découverte).
+{
+  const allHtml = [
+    join(DIST, '404.html'),
+    ...htmlFiles,
+  ].filter(existsSync);
+
+  const seenTitles = new Map();
+  const seenDescs = new Map();
+  const indexable = new Set();
+
+  for (const file of allHtml) {
+    const rel = file.replace(DIST, 'dist').replace(/\\/g, '/');
+    const raw = readFileSync(file, 'utf-8');
+    const $ = cheerio.load(raw);
+    const path = rel.replace('dist/', '');
+    const robots = ($('meta[name="robots"]').attr('content') || '').toLowerCase();
+    const noindex = robots.includes('noindex');
+
+    const title = ($('head > title').text() || '').trim();
+    const desc = ($('meta[name="description"]').attr('content') || '').trim();
+    const canonical = $('link[rel="canonical"]').attr('href') || '';
+
+    // Une page en noindex (404, redirection) n'a pas à porter de description ni
+    // de canonical vers elle-même : on ne contrôle que ce qui a du sens pour elle.
+    if (!title) errors.push(`${rel} : <title> absent`);
+    if (!noindex) {
+      if (!desc) errors.push(`${rel} : meta description absente`);
+      if (!canonical) errors.push(`${rel} : link rel="canonical" absent`);
+    }
+    if (canonical && !/^https:\/\//.test(canonical)) errors.push(`${rel} : canonical non absolu (${canonical})`);
+
+    // Le canonical doit désigner la page elle-même — sauf sur une page de
+    // redirection, dont le rôle est justement de pointer sa destination.
+    if (canonical && !noindex) {
+      const expected = path === 'index.html' ? '/' : `/${path}`;
+      if (!canonical.endsWith(expected)) {
+        errors.push(`${rel} : canonical ne correspond pas à la page (${canonical})`);
+      }
+    }
+
+    if (title.length > 68) warns.push(`${rel} : title de ${title.length} caractères (tronqué au-delà de ~65)`);
+    if (desc && (desc.length < 70 || desc.length > 170)) {
+      warns.push(`${rel} : description de ${desc.length} caractères (viser 120-165)`);
+    }
+
+    if (!noindex) {
+      indexable.add(path);
+      if (seenTitles.has(title)) errors.push(`title dupliqué : ${rel} et ${seenTitles.get(title)}`);
+      else seenTitles.set(title, rel);
+      if (seenDescs.has(desc)) errors.push(`description dupliquée : ${rel} et ${seenDescs.get(desc)}`);
+      else seenDescs.set(desc, rel);
+
+      // Un seul h1 par page
+      const h1 = $('h1').length;
+      if (h1 !== 1) errors.push(`${rel} : ${h1} balise(s) h1 (une seule attendue)`);
+
+      // Open Graph : les balises minimales pour un aperçu correct
+      for (const prop of ['og:title', 'og:description', 'og:url', 'og:type', 'og:site_name']) {
+        if (!$(`meta[property="${prop}"]`).attr('content')) errors.push(`${rel} : ${prop} absent`);
+      }
+      const ogImg = $('meta[property="og:image"]').attr('content');
+      if (!ogImg) warns.push(`${rel} : og:image absent (aperçu sans visuel au partage)`);
+      else {
+        const local = join(DIST, ogImg.replace(/^https:\/\/[^/]+\/duodecim-guides\//, ''));
+        if (!existsSync(local)) errors.push(`${rel} : og:image en 404 (${ogImg})`);
+        if (!$('meta[property="og:image:alt"]').attr('content')) warns.push(`${rel} : og:image:alt absent`);
+      }
+
+      // JSON-LD : présent et syntaxiquement valide
+      const ld = $('script[type="application/ld+json"]').first().html();
+      if (!ld) errors.push(`${rel} : données structurées JSON-LD absentes`);
+      else {
+        try {
+          const data = JSON.parse(ld);
+          if (!data['@context'] || !data['@type']) errors.push(`${rel} : JSON-LD sans @context ou @type`);
+        } catch (e) {
+          errors.push(`${rel} : JSON-LD invalide (${e.message})`);
+        }
+      }
+    }
+
+    // Images : width/height obligatoires (sinon la page se décale au chargement)
+    $('img').each((_, el) => {
+      const src = $(el).attr('src') || '(sans src)';
+      if ($(el).attr('alt') === undefined) errors.push(`${rel} : <img> sans attribut alt (${src})`);
+      if (!$(el).attr('width') || !$(el).attr('height')) {
+        warns.push(`${rel} : <img> sans width/height (${src})`);
+      }
+    });
+  }
+
+  // Sitemap : couverture exacte des pages indexables
+  const smFile = join(DIST, 'sitemap.xml');
+  if (!existsSync(smFile)) errors.push('dist/sitemap.xml absent');
+  else {
+    const sm = readFileSync(smFile, 'utf-8');
+    const locs = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+    const paths = new Set(locs.map((l) => l.replace(/^https:\/\/[^/]+\/duodecim-guides\//, '')).map((p) => (p === '' ? 'index.html' : p)));
+    for (const p of indexable) {
+      if (!paths.has(p)) errors.push(`sitemap : page indexable absente (${p})`);
+    }
+    for (const p of paths) {
+      if (!existsSync(join(DIST, p))) errors.push(`sitemap : URL sans fichier (${p})`);
+      else if (!indexable.has(p)) errors.push(`sitemap : URL en noindex ou hors périmètre (${p})`);
+    }
+    if (locs.some((l) => !/^https:\/\//.test(l))) errors.push('sitemap : URL non absolue');
+  }
+
+  if (!existsSync(join(DIST, '404.html'))) errors.push('dist/404.html absent');
 }
 
 // --- 3. Liens externes (optionnel) ---

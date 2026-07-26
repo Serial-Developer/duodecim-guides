@@ -43,9 +43,10 @@ ${(p.steps || []).map((st, i) => step(st, i + 1)).join('\n')}
 </section>`;
 }
 
-export function renderInstall(data) {
+export function renderInstall(data, seo) {
   if (!data) {
     return pageShell({
+    seo,
       title: 'Installer Dissidia 012 sur PPSSPP',
       description: 'Installer Dissidia 012 [duodecim] sur PPSSPP.',
       cssPath: 'styles/main.css', jsPath: null,
@@ -108,6 +109,7 @@ ${sources}
 ${siteFooter()}`;
 
   return pageShell({
+    seo,
     title: 'Installer Dissidia 012 sur PPSSPP — PC et mobile',
     description: 'Installer et configurer PPSSPP pour Dissidia 012 [duodecim] Final Fantasy sur PC et sur mobile : émulateur, mise en place du jeu, réglages, jeu en local et en ligne.',
     cssPath: 'styles/main.css',

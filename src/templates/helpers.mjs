@@ -1,4 +1,12 @@
 // Helpers partagés des templates
+import {
+  SITE_URL, SITE_NAME, SITE_LOCALE, SITE_LANG, AUTHOR, AUTHOR_URL, GAME,
+  SITE_VERIFICATION, absUrl,
+} from '../site-config.mjs';
+import { ldArticle } from './jsonld.mjs';
+
+export { SITE_URL, SITE_NAME, AUTHOR, AUTHOR_URL, GAME, absUrl };
+
 export const esc = (s) =>
   String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -202,6 +210,50 @@ ${axis}${items}
 </figure>`;
 }
 
+// --- Maillage interne : personnages cités -> lien vers leur guide ---
+// Appliqué à la prose des matchups, où un nom propre désigne nécessairement un
+// personnage. Trois garde-fous contre les faux liens :
+//  - les noms les plus longs passent d'abord (« Cloud of Darkness » avant tout
+//    nom court, « The Emperor » avant « Emperor ») ;
+//  - un nom suivi d'un mot capitalisé n'est pas lié : c'est un nom de coup
+//    (« Jecht Beam », « Jecht Block ») et non une mention du personnage ;
+//  - une seule occurrence liée par personnage et par section, pour que le
+//    texte reste lisible.
+// Le personnage de la page courante n'est jamais lié (auto-référence).
+export function buildRoster(entries) {
+  // Un même nom peut arriver deux fois (« Jecht » est à la fois le nom complet
+  // du roster et un nom court) : sans déduplication il serait lié deux fois,
+  // produisant un lien imbriqué.
+  const seen = new Set();
+  return entries
+    .filter(({ name }) => !seen.has(name) && seen.add(name))
+    .sort((a, b) => b.name.length - a.name.length)
+    .map(({ name, slug }) => ({
+      name,
+      slug,
+      re: new RegExp(`(?<![\\w-])(${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})(?![\\w-])(?!\\s+[A-Z])`),
+    }));
+}
+
+export function linkRoster(html, { roster, currentSlug, base = '' }) {
+  if (!roster?.length) return html;
+  let out = html;
+  for (const { slug, re } of roster) {
+    if (slug === currentSlug) continue;
+    // On découpe sur les liens complets et les balises : les segments impairs
+    // sont laissés intacts, ce qui interdit d'écrire un <a> dans un <a> (HTML
+    // invalide) ou dans un attribut.
+    let done = false;
+    out = out.split(/(<a\b[^>]*>[\s\S]*?<\/a>|<[^>]+>)/).map((seg, i) => {
+      if (done || i % 2 === 1 || !seg) return seg;
+      if (!re.test(seg)) return seg;
+      done = true;
+      return seg.replace(re, `<a href="${base}characters/${slug}.html">$1</a>`);
+    }).join('');
+  }
+  return out;
+}
+
 // Petites sources en pied de section (contenu issu de la passe externe)
 export function sectionSources(urls) {
   if (!urls || !urls.length) return '';
@@ -217,23 +269,87 @@ export function sourcesSection(urls, limitsFr) {
       : '');
 }
 
-export function pageShell({ title, description, cssPath, jsPath, body, extraHead = '' }) {
+// Sérialisation d'un bloc JSON-LD : `</` est neutralisé pour qu'une chaîne de
+// données ne puisse pas fermer la balise <script> prématurément.
+export function jsonLdScript(data) {
+  if (!data) return '';
+  const json = JSON.stringify(data, null, 0).replace(/<\//g, '<\\/');
+  return `<script type="application/ld+json">${json}</script>`;
+}
+
+// `path` : chemin de la page telle qu'elle est publiée ('index.html',
+// 'characters/prishe.html'…). Il sert à composer le canonical et l'og:url en
+// URL absolue — obligatoire sur un project site GitHub Pages (voir
+// src/site-config.mjs).
+// `og` : { image, alt, width, height, type } — `image` est un chemin publié
+// (ex. 'assets/og/prishe.png'), converti en URL absolue.
+// `robots` : valeur de <meta name="robots"> ; omise par défaut (indexable).
+// `seo` : raccourci pour les pages transverses — { path, ogImage, ogAlt, dates,
+// ldType }. Il évite de recopier la même construction Open Graph + JSON-LD dans
+// chaque template ; un `jsonLd` explicite (landing, guides, créateur) l'emporte.
+export function pageShell({
+  title, description, path, cssPath, jsPath, body, extraHead = '',
+  og = null, jsonLd = null, robots = null, seo = null,
+}) {
   // Favicon : même préfixe relatif que la feuille de style (pages racine vs characters/)
   const base = cssPath.startsWith('../') ? '../' : '';
+  const pagePath = path ?? seo?.path;
+  if (og === null && seo) {
+    og = { image: seo.ogImage, alt: seo.ogAlt, width: 1200, height: 630, type: seo.ogType || 'article' };
+  }
+  if (jsonLd === null && seo && seo.ldType !== 'none') {
+    jsonLd = ldArticle({
+      type: seo.ldType || 'Article',
+      headline: title,
+      description,
+      path: pagePath,
+      image: seo.ogImage,
+      imageAlt: seo.ogAlt,
+      section: seo.section,
+      ...(seo.dates || {}),
+    });
+  }
+  const canonical = absUrl(pagePath);
+  const ogImage = og?.image ? absUrl(og.image) : null;
+  const verif = [
+    SITE_VERIFICATION.google && `<meta name="google-site-verification" content="${esc(SITE_VERIFICATION.google)}">`,
+    SITE_VERIFICATION.bing && `<meta name="msvalidate.01" content="${esc(SITE_VERIFICATION.bing)}">`,
+  ].filter(Boolean).join('\n');
+  const social = [
+    `<meta property="og:type" content="${esc(og?.type || 'website')}">`,
+    `<meta property="og:site_name" content="${esc(SITE_NAME)}">`,
+    `<meta property="og:locale" content="${SITE_LOCALE}">`,
+    `<meta property="og:title" content="${esc(title)}">`,
+    `<meta property="og:description" content="${esc(description)}">`,
+    `<meta property="og:url" content="${esc(canonical)}">`,
+    ogImage && `<meta property="og:image" content="${esc(ogImage)}">`,
+    ogImage && og.width && `<meta property="og:image:width" content="${og.width}">`,
+    ogImage && og.height && `<meta property="og:image:height" content="${og.height}">`,
+    ogImage && og.alt && `<meta property="og:image:alt" content="${esc(og.alt)}">`,
+    `<meta name="twitter:card" content="${ogImage && og.width >= 600 ? 'summary_large_image' : 'summary'}">`,
+    `<meta name="twitter:title" content="${esc(title)}">`,
+    `<meta name="twitter:description" content="${esc(description)}">`,
+    ogImage && `<meta name="twitter:image" content="${esc(ogImage)}">`,
+    ogImage && og.alt && `<meta name="twitter:image:alt" content="${esc(og.alt)}">`,
+  ].filter(Boolean).join('\n');
   return `<!DOCTYPE html>
-<html lang="fr">
+<html lang="${SITE_LANG}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
-<link rel="icon" href="${base}assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="${esc(canonical)}">
+${robots ? `<meta name="robots" content="${esc(robots)}">\n` : ''}<meta name="author" content="${esc(AUTHOR)}">
+${social}
+${verif ? verif + '\n' : ''}<link rel="icon" href="${base}assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="${base}assets/favicon.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="${base}assets/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${cssPath}">
+${jsonLdScript(jsonLd)}
 ${extraHead}
 </head>
 <body>
@@ -298,11 +414,19 @@ ${groups.map((g) => (g.items
 </header>`;
 }
 
+// Année de mise en ligne — figée : elle datera toujours la publication du site,
+// pas la date du dernier build.
+const COPYRIGHT_YEAR = 2026;
+const REPO = 'https://github.com/Serial-Developer/duodecim-guides';
+
 export function siteFooter() {
   return `<footer class="site"><div class="wrap">
-<p class="foot-line">Site de fans non commercial — personnages et artworks © Square Enix. Textes adaptés de <a href="https://dissidia.wiki" target="_blank" rel="external noopener">dissidia.wiki</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noopener">CC BY 4.0</a>) et du <a href="https://finalfantasy.fandom.com" target="_blank" rel="external noopener">Final Fantasy Wiki</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external noopener">CC BY-SA 3.0</a>).</p>
+<p class="foot-line">Textes et design © ${COPYRIGHT_YEAR} <strong>${AUTHOR}</strong> — <a href="${REPO}/blob/main/LICENSE" target="_blank" rel="external noopener license">code sous MIT, textes sous CC BY-NC-ND 4.0</a>. Site de fans non commercial : personnages et artworks © Square Enix.</p>
+<p class="foot-line">Données de jeu adaptées de <a href="https://dissidia.wiki" target="_blank" rel="external noopener">dissidia.wiki</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noopener">CC BY 4.0</a>) et du <a href="https://finalfantasy.fandom.com" target="_blank" rel="external noopener">Final Fantasy Wiki</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external noopener">CC BY-SA 3.0</a>).</p>
 <details class="foot-more"><summary>Détail des licences et des sources</summary>
-<p>Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011). Contenu textuel adapté et traduit de dissidia.wiki (CC BY 4.0) ; compléments de moveset (rôles et jobs par coup, coups spéciaux) adaptés du Final Fantasy Wiki (CC BY-SA 3.0). Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" target="_blank" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026).</p>
+<p>Personnages, artworks et éléments de jeu © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011) ; projet de fans sans affiliation ni approbation de Square Enix, toute demande de retrait des ayants droit sera honorée.</p>
+<p>Frame data, movesets, tier list 2017 et techniques adaptés et traduits de dissidia.wiki (CC BY 4.0, réutilisation libre avec attribution) ; équipements, accessoires et compléments de moveset adaptés du Final Fantasy Wiki (CC BY-SA 3.0, partage à l’identique) — ces données restent sous la licence de leur source, que je ne peux pas restreindre. Portraits et icônes : fichiers officiels du wiki récupérés via la <a href="https://web.archive.org" target="_blank" rel="external noopener">Wayback Machine</a> (CDN du wiki indisponible en juillet 2026). Sources communautaires (GameFAQs, dissidiaforums, guides Steam, vidéos de joueurs) créditées section par section.</p>
+<p>La prose française de ce site est signée ${AUTHOR} et diffusée sous <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr" target="_blank" rel="external noopener license">CC BY-NC-ND 4.0</a> : partage libre en citant l’auteur et en liant la page d’origine, sans usage commercial ni republication modifiée. Détail complet des sources : <a href="${REPO}/blob/main/NOTICE.md" target="_blank" rel="external noopener">NOTICE.md</a>.</p>
 </details>
 </div></footer>`;
 }

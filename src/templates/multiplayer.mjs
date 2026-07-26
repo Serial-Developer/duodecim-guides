@@ -10,9 +10,10 @@ ${(sc.sub || []).map((s) => `<h3>${esc(s.title)}</h3>${list(s.points)}`).join(''
 </article>`;
 }
 
-export function renderMultiplayer(mp) {
+export function renderMultiplayer(mp, seo) {
   if (!mp) {
     return pageShell({
+    seo,
       title: 'Multijoueur — Dissidia 012 [duodecim]',
       description: 'Configurer le multijoueur de Dissidia 012 [duodecim].',
       cssPath: 'styles/main.css', jsPath: null,
@@ -32,8 +33,9 @@ ${infoBanner(esc(mp.note))}
 </main>
 ${siteFooter()}`;
   return pageShell({
+    seo,
     title: 'Jouer en multijoueur — Dissidia 012 [duodecim]',
-    description: 'Configurer le multijoueur de Dissidia 012 [duodecim] : PPSSPP en ligne (Radmin, ZeroTier), Android, crossplay PC-Android, deux instances locales — un scénario par section.',
+    description: 'Configurer le multijoueur de Dissidia 012 [duodecim] : PPSSPP en ligne (Radmin, ZeroTier), Android, crossplay PC-Android, deux instances locales.',
     cssPath: 'styles/main.css',
     jsPath: null,
     body,

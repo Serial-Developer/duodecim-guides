@@ -2,11 +2,12 @@
 // jouer, récompenses)
 import { renderSectionsPage } from './sections-page.mjs';
 
-export function renderParticiper(data) {
+export function renderParticiper(data, seo) {
   return renderSectionsPage({
+    seo,
     data,
     active: 'participer',
     pageTitle: 'Participer aux tournois — Dissidia 012 [duodecim]',
-    description: 'Comment participer aux tournois de Dissidia 012 [duodecim] : rejoindre le Discord DISSIDIA, préparer PPSSPP et Radmin, s\'inscrire, jouer ses matchs et organiser son propre tournoi.',
+    description: 'Participer aux tournois Dissidia 012 [duodecim] : rejoindre le Discord DISSIDIA, préparer PPSSPP et Radmin, s\'inscrire et jouer ses matchs.',
   });
 }

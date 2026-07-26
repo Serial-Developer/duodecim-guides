@@ -8,37 +8,37 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 
 | Personnage | Coups | Vue d'ens. | Méca unique | Matchups | Builds | Assist | Tech comm. | Éditorial |
 |---|---|---|---|---|---|---|---|---|
-| Warrior of Light | 10+9 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
-| Garland | 10+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Firion | 11+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 8 | ✅ |
-| The Emperor | 8+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Onion Knight | 12+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
-| Cloud of Darkness | 5+9 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
-| Cecil Harvey | 12+6 | ✅ | ✅ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Golbez | 7+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Kain Highwind | 7+6 | ✅ | ✅ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Bartz Klauser | 7+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
-| Exdeath | 9+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Gilgamesh | 8+6 | ✅ | ✅ | ✅ | ✅ | ✅ | 1 | ✅ |
-| Terra Branford | 11+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
-| Kefka Palazzo | 8+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 16 | ✅ |
-| Cloud Strife | 11+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 6 | ✅ |
-| Sephiroth | 8+7 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
-| Tifa Lockhart | 10+7 | ✅ | ✅ | ✅ | ✅ | ✅ | 3 | ✅ |
-| Squall Leonhart | 9+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Ultimecia | 4+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Laguna Loire | 12+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
-| Zidane Tribal | 9+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Kuja | 6+4 | ❌ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Tidus | 12+11 | ✅ | ❌ | ✅ | ✅ | ✅ | 10 | ✅ |
-| Jecht | 17+18 | ✅ | ✅ | ✅ | ✅ | ✅ | 3 | ✅ |
-| Yuna | 18+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Shantotto | 8+6 | ❌ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Prishe | 18+4 | ✅ | ✅ | ✅ | ✅ | ✅ | 1 | ✅ |
-| Vaan | 8+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Gabranth | 12+4 | ✅ | ✅ | ✅ | ✅ | ✅ | 5 | ✅ |
-| Lightning | 16+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
-| Feral Chaos | 8+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 1 | ✅ |
+| Warrior of Light | 10+9 | ✅ | ❌ | ✅ | ✅ | ✅ | 5 | ✅ |
+| Garland | 10+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Firion | 11+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 10 | ✅ |
+| The Emperor | 8+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Onion Knight | 12+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Cloud of Darkness | 5+9 | ✅ | ❌ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Cecil Harvey | 12+6 | ✅ | ✅ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Golbez | 7+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Kain Highwind | 7+6 | ✅ | ✅ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Bartz Klauser | 7+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Exdeath | 9+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Gilgamesh | 8+6 | ✅ | ✅ | ✅ | ✅ | ✅ | 2 | ✅ |
+| Terra Branford | 11+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Kefka Palazzo | 8+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 18 | ✅ |
+| Cloud Strife | 11+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 8 | ✅ |
+| Sephiroth | 8+7 | ✅ | ❌ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Tifa Lockhart | 10+7 | ✅ | ✅ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Squall Leonhart | 9+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Ultimecia | 4+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Laguna Loire | 12+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Zidane Tribal | 9+8 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Kuja | 6+4 | ❌ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Tidus | 12+11 | ✅ | ❌ | ✅ | ✅ | ✅ | 11 | ✅ |
+| Jecht | 17+18 | ✅ | ✅ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Yuna | 18+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Shantotto | 8+6 | ❌ | ❌ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Prishe | 18+4 | ✅ | ✅ | ✅ | ✅ | ✅ | 3 | ✅ |
+| Vaan | 8+4 | ✅ | ❌ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Gabranth | 12+4 | ✅ | ✅ | ✅ | ✅ | ✅ | 7 | ✅ |
+| Lightning | 16+5 | ✅ | ❌ | ✅ | ✅ | ✅ | 4 | ✅ |
+| Feral Chaos | 8+6 | ✅ | ❌ | ✅ | ✅ | ✅ | 3 | ✅ |
 | Aerith Gainsborough | 2+2 | ✅ | ❌ | ❌ | ❌ | ✅ | 3 | ✅ |
 
 ## Choix arbitraires faits (à valider)
@@ -68,6 +68,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Valeurs d'assist gain des coups non renseignées dans les données.
 - Startup exact des HP links (Rune Saber, Bitter End) inconnu (« ? » dans les tables), tout comme certains décomptes d'EX Force et de Comrade's Vow des combos (« ??? »).
 - Un seul build documenté (hybride Seal of Lufenia) ; pas de variantes détaillées (l'article builds dédié n'est pas inclus dans les données).
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
 
 ### Garland
 - Page matchups du wiki à l'état de stub : aucun matchup détaillé n'est documenté.
@@ -77,6 +78,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Valeurs d'assist gain des coups non renseignées, et décomptes Comrade's Vow des combos inconnus (« ??? »).
 - Hitbox de Chain Cast incomplètement documentée (« requires further research ») et conditions exactes des frappes derrière le block non établies.
 - Les tables des deux builds ne listent pas les braveries et HP équipés (lignes vides dans les données).
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
 
 ### Firion
 - Aucune mécanique unique documentée (section absente des sources).
@@ -85,6 +87,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Matchups documentés pour 9 adversaires seulement (sur 30) ; les fiches Cloud of Darkness, Cecil et Golbez sont marquées « REVISION COMING SOON » et Cecil n'a pas de verdict.
 - Article builds dédié (« Firion (012) Builds ») non inclus : un seul build Side by Side est détaillé.
 - Les références YouTube ne sont pas datées (champ date à null) et l'une d'elles n'a pas de libellé exploitable (URL brute).
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
 
 ### The Emperor
 - Page matchups dédiée non documentée (stub) : la synthèse matchups repose uniquement sur l'overview et les notes de coups.
@@ -101,6 +104,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Le gain de jauge d'assist par coup n'est pas renseigné (colonnes vides) et plusieurs startups de coups de branche sont notés « ?? ».
 - Les builds sont donnés uniquement en tables d'équipement, sans texte explicatif détaillé.
 - La section References est vide : aucune tech communautaire attribuable ou datée.
+- Section « Bravery to HP Attacks » (table Dissidia 012) de la page du personnage sur le Final Fantasy Wiki : classement absent des notes de dissidia.wiki, réintégré depuis cette source.
 
 ### Cloud of Darkness
 - La page Matchups du wiki est une ébauche (stub) : aucune analyse détaillée par matchup.
@@ -116,6 +120,8 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Dans les tables de combos, les valeurs « Opponent Assist (Comrade's Vow) » sont notées « ??? » et certains gains d'EX sont partiels.
 - Le gain de jauge d'assist par coup n'est pas renseigné (colonnes vides).
 - La section References est vide : aucune tech communautaire attribuable ou datée.
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
+- Le job de chaque bravery vient des sections « Ground/Aerial (Dark Knight) » et « (Paladin) » de la page 012 de dissidia.wiki (que l'extraction automatique avait aplaties en sol/air), et est confirmé par les tableaux « Dissidia 012 » de la page Cecil du Final Fantasy Wiki — qui listent aussi les deux attaques HP propres à 012, Shadow Bringer et Luminous Shard. Les attaques HP restent communes aux deux jobs.
 
 ### Golbez
 - La page matchups du wiki reste une ébauche (stub) : la section matchups est entièrement sourcée hors wiki, sur le guide GameFAQs de tehdr4g0n (2012) — un point de vue d'auteur unique, complété par le guide Firion de b0untyhunter270 pour la vue adverse.
@@ -133,7 +139,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Le tableau Strengths/Weaknesses de l'overview est vide : forces et faiblesses reconstruites uniquement depuis le texte.
 - Pas d'évaluation rédigée du rôle d'assist : seules les données chiffrées et deux noms de synergies (« Kuja, Onion Knight ») sont fournis.
 - Rising Drive, Sky Rave, Gungnir et Dragon's Fang (midair) n'ont pas de notes d'usage dédiées, seulement des descriptions courtes et des mentions dans l'overview.
-- Données de Lancet incomplètes (AP de maîtrise non renseignés).
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
 
 ### Bartz Klauser
 - Overview très courte (trois phrases descriptives) : la synthèse repose surtout sur le tableau forces/faiblesses et les notes de coups.
@@ -143,6 +149,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Aucune référence communautaire dans les sources.
 - Second build (« Build #2 ») entièrement vide.
 - Données incomplètes : startup et priorité de Flare incertains (« ? »), notes minimales pour les HP attacks (Hellfire, Dark Flame, Ragnarok Blade, Luminous Shard), niveau de déblocage et AP de Goblin Punch non renseignés.
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
 
 ### Exdeath
 - Page matchups à l'état d'ébauche (stub) : aucun contenu dédié, la synthèse matchups repose sur l'overview et la contre-stratégie Maelstrom.
@@ -153,6 +160,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Second build (« Build #2 ») entièrement vide dans le wiki ; comblé partiellement par des builds communautaires externes (guide Steam, dissidiaforums) lors de la passe d'enrichissement.
 - Aucune référence communautaire dans les sources.
 - Données partielles : dégâts non chiffrés (« - ») sur Delta Attack et Almagest, vitesse de course « ?? » dans l'infobox.
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
 
 ### Gilgamesh
 - Aucune note d'usage par coup dans les sources : moveNotes est synthétisé à partir des descriptions officielles, des données de frames et des mentions de l'overview et de la mécanique unique.
@@ -162,15 +170,18 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Synergies d'assist réduites à une phrase générique (aucun assist recommandé nommément hors le Kuja du build).
 - Aucune référence externe (section References vide) : pas de communityTech attribuable.
 - Valeurs d'assist gain des coups non renseignées ; le texte de l'EX Burst est tronqué dans la source (« Select Excalipoor to... ») et l'effet exact d'Excalipoor dans le Burst n'y est pas explicité.
+- Le relevé de combos solo orthographie « Tsubemigashi » le coup nommé Tsubamegaeshi dans les données : même coup, orthographe communautaire.
 
 ### Terra Branford
 - Page matchups à l'état d'ébauche (stub) : aucune analyse par personnage, seuls des repères issus de l'overview.
 - Section combos non documentée (sous-section Solo vide dans les sources).
 - Onglets de synergies d'assist (Jecht, Aerith, Kuja) vides : la recommandation n'est pas argumentée au-delà d'une phrase.
 - Aucune mécanique unique documentée pour Terra.
-- Aucune référence communautaire (section References vide), d'où un communityTech vide.
+- Aucune référence communautaire (section References du wiki vide ; les entrées de tech communautaire viennent de la passe de sources externes).
 - Startup inconnu pour Firaga et Ultima (« ? » dans les données) ; gain de jauge d'assist non renseigné pour tous les coups ; un variant aérien de Blizzard Combo est listé sans nom.
 - La liste des attaques équipées dans les builds n'est pas renseignée dans les tables extraites.
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
+- Section « Bravery to HP Attacks » (table Dissidia 012) de la page du personnage sur le Final Fantasy Wiki : classement absent des notes de dissidia.wiki, réintégré depuis cette source.
 
 ### Kefka Palazzo
 - Page matchups dédiée non documentée (stub) : la synthèse matchups repose uniquement sur l'overview et les notes de coups (Lightning, Onion Knight, Sephiroth, Gilgamesh, Jecht, Vaan, Cloud, Prishe).
@@ -179,6 +190,9 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Builds : coups équipés non renseignés pour les deux builds, summon absent du build High Initial EX.
 - Assist : aucune évaluation en prose de Kefka en tant qu'assist (données de table et tier Low de meta uniquement) ; valeurs d'assist gain des coups non renseignées.
 - Les références YouTube ne sont pas datées (champ date à null) ; le startup de la seconde salve EX de Scatter-Spray Blizzaga est inconnu (« ?? »).
+- Le relevé de combos solo de la communauté écarte volontairement l'EX Mode de Kefka (« EX Mode just does whatever it wants ») : aucune route solo en EX Mode n'en est tirée.
+- Ce même relevé mentionne un follow-up nommé « Split Shot Blizzaga » qui ne correspond à aucun nom de coup des données du wiki : la branche n'a pas été reprise, faute de pouvoir l'identifier avec certitude.
+- Le relevé d'empty chases de la communauté n'est pas daté : son état de fraîcheur ne peut pas être établi.
 
 ### Cloud Strife
 - La page matchups dédiée est une ébauche (stub) : aucune analyse détaillée par personnage n'est documentée, seuls quelques éléments de l'overview et des synergies d'assist sont exploitables.
@@ -186,6 +200,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - La startup de Finishing Touch et d'Omnislash Version 5 n'est pas renseignée (« ? » dans les données), tout comme la priorité d'Omnislash Version 5.
 - Les valeurs de gain de jauge assist (assistGain) sont vides pour tous les coups.
 - Les références vidéo du wiki ne comportent ni auteur ni date.
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
 
 ### Sephiroth
 - Aucune mécanique unique n'est documentée pour Sephiroth (section absente du wiki).
@@ -214,7 +229,6 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - La page matchups du wiki est une ébauche : la section matchups est reconstruite depuis les sources compétitives d'époque listées dans sourcesBySection (guide « Fallen Chronomancer » et threads dissidiaforums via la Wayback Machine, guide Steam Exdeath) ; les matchups Lightning, Shantotto et Gabranth y restent non traités (« needs more testing »).
 - La section assist est marquée non documentée : seules la table de données brutes et la mention « Kuja » en synergie existent, sans évaluation rédigée.
 - Knight's Axe et Knight's Arrow n'ont aucune note d'usage ; Shockwave Pulsar et Hell's Judgement n'ont que leur description d'une ligne ; les dégâts de Shockwave Pulsar et d'Apocalypse ne sont pas chiffrés (« - »).
-- Aucune mécanique unique n'est documentée ; le second build est entièrement vide et les sélections d'attaques des builds manquent ; la table Time Crush est en grande partie vide (dégâts, priorité, type non renseignés).
 - La section references du wiki est vide : les entrées communityTech et les sources de sourcesBySection proviennent de recherches externes ; les valeurs assistGain sont vides pour tous les coups.
 
 ### Laguna Loire
@@ -234,6 +248,7 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Pas de mécanique unique documentée pour ce personnage.
 - Le tableau Forces/Faiblesses du wiki est vide et le champ assist gain des coups n'est pas renseigné.
 - Les listes d'équipement exactes des deux builds de LXD92 (dissidiaforums) étaient dans des spoilers/images non capturés par la Wayback Machine : seuls les principes rédigés et les stats citées subsistent.
+- Section « Bravery to HP Attacks » (table Dissidia 012) de la page du personnage sur le Final Fantasy Wiki : classement absent des notes de dissidia.wiki, réintégré depuis cette source.
 
 ### Kuja
 - Le wiki ne documente ni overview, ni gameplan, ni forces/faiblesses, ni matchups pour Kuja : ces sections sont reconstruites depuis des threads GameFAQs d'époque (2011-2012, listés dans sourcesBySection) — aucun guide dédié complet ni chart de matchups par personnage n'a été retrouvé.
@@ -257,12 +272,13 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Builds : la page principale « Jecht (012) Builds » n'est pas extraite ; seuls deux builds (Side by Side et Hybrid Seal of Lufenia) figurent dans les données, et certaines sous-sections (Basic Abilities et CP Allocation du build Lufenia) sont vides.
 - Champ assist gain des coups non renseigné ; startups absents sur les chaînes de combo extraites.
 - Le build Center of the World est cité mais jamais détaillé dans les sources wiki ; un build Pure EX communautaire complet (dissidiaforums, 2011) comble partiellement ce manque via la passe d'enrichissement.
+- Pour l'empty chase vers reset de jauge d'assist, l'éditeur du relevé communautaire écrit « aucun » tout en demandant lui-même une vérification (TAS) : l'affirmation est laissée hors de la fiche.
 
 ### Yuna
 - La page matchups du wiki est un stub : aucune analyse détaillée par personnage.
 - La section assist de la page prévoit des onglets Tidus, Jecht et Sephiroth, mais seuls les contenus concernant Kuja sont renseignés.
 - Le second build (« Build #2 ») est un gabarit vide : stats, équipement et attaques non renseignés.
-- Aucune référence communautaire datée ou sourcée (section References vide) : communityTech laissé vide.
+- Aucune référence communautaire datée ou sourcée (section References du wiki vide) ; les entrées de tech communautaire viennent de la passe de sources externes.
 - Pas de section « Unique Mechanics » documentée pour Yuna : champ laissé à null.
 
 ### Shantotto
@@ -272,14 +288,17 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Notes d'usage détaillées absentes pour la plupart des coups (Stun, Bind, Bio, Retribution et les six Spirit Magic n'ont que la description du jeu et les frame data) ; la note d'A Couple Attacks est tronquée dans les données sources.
 - Pas de section « Unique Mechanics » documentée : champ laissé à null.
 - Section assist non documentée au-delà d'une phrase ; valeurs d'assist gain absentes des tableaux de coups ; section References du wiki vide.
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
+- Le relevé communautaire désigne les Spirit Magic de Shantotto par les noms de leurs sorts de palier 1 (Water, Stone, Aero, Blizzard) : la correspondance — Water → Spirit Magic: Water, Stone → Earth, Aero → Air, Blizzard → Ice — est confirmée par la page Shantotto du Final Fantasy Wiki, qui rappelle aussi que les Spirit Magic sont ses attaques HP (Fire, Earth et Thunder au sol ; Air, Water et Ice en l'air).
 
 ### Prishe
 - La page matchups du wiki est un stub : aucune analyse détaillée par personnage (seuls les exemples cités dans l'overview ont pu être repris).
 - Aucune section combos renseignée (sous-section Solo vide) : pas de routes de combo détaillées au-delà des mentions de l'overview et de la section Skillchain.
 - Le timing exact de la charge raccourcie de One Inch Punch (Two) en finisher est explicitement non documenté dans les sources.
-- Le wiki ne nomme aucune technique avancée en dehors des Skillchains (traitées dans uniqueMechanics) : les entrées advancedTech proviennent d'un thread GameFAQs d'époque (2011), avec un point de désaccord signalé (liaison Dragon Kick chargé > One Inch Punch chargé).
+- Le wiki ne nomme aucune technique avancée hors Skillchains (traitées dans uniqueMechanics) : les entrées advancedTech viennent d'un thread GameFAQs d'époque (2011), avec un désaccord signalé (liaison Dragon Kick chargé > One Inch Punch chargé).
 - Le second build (« Build #2 ») est un gabarit vide et les slots d'attaques du build principal ne sont pas renseignés.
-- Valeurs d'assist gain absentes des tableaux de coups ; section References vide : communityTech laissé vide.
+- Valeurs d'assist gain absentes des tableaux de coups ; section References du wiki vide ; les entrées de tech communautaire viennent de la passe de sources externes.
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : sa fraîcheur ne peut pas être établie.
 
 ### Vaan
 - La page matchups du wiki est un stub : seuls les repères de l'overview et de la note de Greatsword (Cecil, Cloud, Squall) ont pu être repris.
@@ -287,7 +306,8 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Pas de section « Unique Mechanics » documentée : le Switch n'est décrit que dans l'overview et l'intro des braveries, d'où uniqueMechanics laissé à null et la mécanique traitée dans overview et gameplan.
 - Notes d'usage détaillées absentes pour la plupart des coups : seuls Sword & Shield (version EX) et Greatsword ont de vraies notes ; le reste se limite aux descriptions du jeu et aux frame data.
 - Le second build (« Build #2 ») est un gabarit vide ; valeurs d'assist gain absentes des tableaux de coups.
-- Section References vide et aucune mention communautaire datée : communityTech laissé vide.
+- Section References du wiki vide et aucune mention communautaire datée sur la page ; les entrées de tech communautaire viennent de la passe de sources externes.
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
 
 ### Gabranth
 - Section combos non documentée : l'onglet « Solo » de la page est vide.
@@ -295,14 +315,19 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Section assist marquée non documentée : uniquement un tableau de données et une phrase de synergies (Kuja, Jecht).
 - Deuxième emplacement de build entièrement vide dans les données.
 - Valeurs manquantes dans les tables : gain d'assist des coups non renseigné, dégâts et EX Force d'EX Charge notés « ? ».
+- Deux coups de nos données extraites — Gaia Breach et Execution — n'apparaissent dans aucun tableau de coups du Final Fantasy Wiki : leur mode n'est pas renseigné. Inversement, cette source liste Guilt et EX Charge, absents de nos données.
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
+- La répartition hors EX Mode / EX Mode des coups est confirmée par deux sources concordantes : les sections « Ground/Aerial (Normal) / (EX Mode) » de la page 012 de dissidia.wiki, et les tableaux repliables « Dissidia 012 » de la page Gabranth du Final Fantasy Wiki. Hors EX Mode, l'emplacement HP est occupé par EX Charge, absent des tableaux de coups extraits ; au même emplacement et au même niveau de déblocage (38), la table du premier Dissidia liste Guilt là où celle de 012 liste Execution.
 
 ### Lightning
 - La page matchups du wiki est un stub : la section matchups est reconstruite depuis les threads d'époque de dissidiaforums (via la Wayback Machine) et le guide Steam Exdeath listés dans sourcesBySection ; aucune chart complète n'a survécu, seuls les matchups réellement discutés (Sephiroth, Emperor, Exdeath, Golbez, Cloud, Firion, Jecht) sont couverts.
-- La section « mécaniques uniques » est marquée non documentée sur le wiki : le Paradigm Shift n'est décrit que dans l'overview et la partie EX Mode de la page (repris ici dans overview, exMode et gameplan), d'où uniqueMechanics à null.
+- La section « Lightning's mechanic (Paradigm Shift) » de la page wiki avait échappé à l'extraction automatique (titre hors du schéma standard) : la mécanique unique a été réintégrée manuellement depuis la page archivée, et le découpage des braveries par rôle vient du Final Fantasy Wiki.
 - La section assist est marquée non documentée (une seule phrase générique) : l'évaluation de Lightning en tant qu'assist repose uniquement sur la tier list assist de meta-lite.json.
 - La section References du wiki est vide : les entrées communityTech et les sources de sourcesBySection proviennent de recherches externes.
 - Frame data incomplète : startup de Flourish of Steel inconnu (« ? »), dégâts de Crushing Blow non renseignés (« - »), champs cancels et assistGain vides pour tous les coups.
 - Les vidéos de combos et la vidéo du magic block de Thunderfall sont mentionnées sans URL exploitable.
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
+- Le rôle Paradigm Shift de chaque bravery (Commando / Ravager / Medic) vient du Final Fantasy Wiki (Fandom), qui range les coups par rôle : dissidia.wiki, source principale du site, ne documente que le set Medic.
 
 ### Feral Chaos
 - Non classé dans la tier list 2017 : absent de la liste tournoi (note de meta-lite.json), l'overview précisant qu'il a été banni la majeure partie de la vie du jeu pour ses matchups polarisants — d'où tierNote à null.
@@ -311,16 +336,18 @@ Colonnes : coups extraits (BRV+HP) · vue d'ensemble rédigée · mécanique uni
 - Section assist marquée non documentée : une seule phrase générique sur les assists viables en tournoi.
 - Pas de section « mécaniques uniques » dédiée sur le wiki : ses restrictions innées (réduction de bravery, verrous EX/Assist, coûts CP exponentiels) ne sont décrites que dans l'overview — uniqueMechanics à null.
 - Le troisième build est entièrement vide et le loadout de coups du build Side By Side n'est pas renseigné dans les données extraites.
-- Aucune référence externe (section References vide) : communityTech vide.
+- Aucune référence externe (section References du wiki vide ; les entrées de tech communautaire viennent de la passe de sources externes).
 - Champs cancels et assistGain vides pour tous les coups ; dégâts de Flagro Maximus non renseignés (« - »).
+- Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.
 
 ### Aerith Gainsborough
-- Personnage assist uniquement : aucune donnée joueur — statistiques d'infobox toutes à « - », sections EX Mode, mécaniques uniques, combos, builds et assist marquées non documentées. Les champs joueur (exMode, uniqueMechanics) sont donc à null ; builds ne décrit que les sets que les joueurs construisent autour de son assist, aucun build propre n'étant possible.
+- Personnage assist uniquement : aucune donnée joueur — statistiques d'infobox toutes à « - », sections EX Mode, mécaniques uniques, combos, builds et assist marquées non documentées. Les champs joueur (exMode, uniqueMechanics) sont donc à null ; builds ne décrit que les sets construits autour de son assist, aucun build propre n'étant possible.
 - Non classée dans la tier list joueur 2017 (assist uniquement) : tierNote à null.
-- La section overview extraite ne contient aucune présentation rédigée — uniquement un combo de Cloud et une mention de vidéo : l'overview ci-dessus est synthétisé à partir des notes de ses quatre coups d'assist et de meta-lite.json.
+- La section overview extraite ne contient aucune présentation rédigée — seulement un combo de Cloud et une mention de vidéo : l'overview ci-dessus est synthétisé à partir des notes de ses quatre coups d'assist et de meta-lite.json.
 - Le champ « name » des coups est vide dans les données : les intitulés de groupes (Cure, Seal Evil, Planet Protector, Holy) servent de clés dans moveNotes.
 - Frame data incomplète : startup, position, spawn, effets et priorités listés comme variantes sans valeurs (« ? »), et la sous-section « Seal Evil combos » est vide.
 - Un tableau de matchups par adversaire n'a pas de sens pour un personnage assist uniquement (la page matchups du wiki est d'ailleurs un stub) : matchups laissé à null, délibérément.
+- Pour la version japonaise, le guide communautaire de 2011 documente l'identifiant de l'édition digitale (NPJH-50377) ; le cas de l'UMD japonais (ULJM) n'y est pas précisé.
 
 ## Hébergement
 

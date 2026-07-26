@@ -10,7 +10,7 @@ ${m.points?.length ? `<ul>${m.points.map((p) => `<li>${esc(p)}</li>`).join('')}<
 </article>`;
 }
 
-export function renderFeralUnlock(data) {
+export function renderFeralUnlock(data, seo) {
   const body = `${siteHeader({ active: 'feral' })}
 <nav class="guide-top" aria-label="Sections de la page"><div class="chips-nav">
 <a href="index.html">← Sélection</a>
@@ -43,8 +43,9 @@ ${sourcesSection(data.sources, data.limits)}
 </main>
 ${siteFooter()}`;
   return pageShell({
+    seo,
     title: 'Obtenir Feral Chaos — Dissidia 012 [duodecim]',
-    description: 'Débloquer Feral Chaos dans Dissidia 012 [duodecim] : le chemin par Confessions of the Creator, et trois méthodes éprouvées pour battre le boss final niveau 130 (build Iai Strike, attaques que l\'IA n\'esquive pas, méthode complète).',
+    description: 'Débloquer Feral Chaos dans Dissidia 012 [duodecim] : le chemin par Confessions of the Creator et trois méthodes pour battre le boss final niveau 130.',
     cssPath: 'styles/main.css',
     jsPath: null,
     body,

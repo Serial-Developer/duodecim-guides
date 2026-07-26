@@ -56,3 +56,40 @@ export const META_PAGES = [
   'Assist_Storage_Glitch',
   'Online_Setup_(PPSSPP)',
 ];
+
+// --- Maillage interne ---
+// Noms courts employés dans la prose éditoriale (« contre Sephiroth », « Kain
+// dodge punit bien ») et vers quel guide ils renvoient. Sert à transformer les
+// personnages cités dans les matchups en liens.
+//
+// Les noms ambigus sont volontairement absents : « Cloud » peut désigner Cloud
+// Strife ou Cloud of Darkness, « Chaos » le boss du jeu ou Feral Chaos. Un lien
+// faux est pire que pas de lien — leur nom complet, lui, est reconnu.
+export const SHORT_NAMES = {
+  Garland: 'garland',
+  Firion: 'firion',
+  Cecil: 'cecil-harvey',
+  Golbez: 'golbez',
+  Kain: 'kain-highwind',
+  Bartz: 'bartz-klauser',
+  Exdeath: 'exdeath',
+  Gilgamesh: 'gilgamesh',
+  Terra: 'terra-branford',
+  Kefka: 'kefka-palazzo',
+  Sephiroth: 'sephiroth',
+  Tifa: 'tifa-lockhart',
+  Squall: 'squall-leonhart',
+  Ultimecia: 'ultimecia',
+  Laguna: 'laguna-loire',
+  Zidane: 'zidane-tribal',
+  Kuja: 'kuja',
+  Tidus: 'tidus',
+  Jecht: 'jecht',
+  Yuna: 'yuna',
+  Shantotto: 'shantotto',
+  Prishe: 'prishe',
+  Vaan: 'vaan',
+  Lightning: 'lightning',
+  Gabranth: 'gabranth',
+  Aerith: 'aerith',
+};

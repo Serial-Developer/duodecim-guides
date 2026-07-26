@@ -2,6 +2,7 @@
 // panneau d'infos à gauche mis à jour au survol, grande illustration à droite,
 // grille en rangées (nouveaux venus 012 / héros / antagonistes / rangée bonus).
 import { esc, pageShell, siteHeader, siteFooter } from './helpers.mjs';
+import { ldWebSite } from './jsonld.mjs';
 
 // Rangées inspirées de l'écran de sélection du jeu (roster exact, ordre libre §3)
 const ROWS = [
@@ -11,7 +12,7 @@ const ROWS = [
   ['shantotto', 'gabranth', 'prishe', 'gilgamesh', 'feral-chaos'],
 ];
 
-export function renderLanding({ characters, tierBySlug, taglineBySlug }) {
+export function renderLanding({ characters, tierBySlug, taglineBySlug, ogImage, dates }) {
   const bySlug = Object.fromEntries(characters.map((c) => [c.slug, c]));
   const first = bySlug[ROWS[0][0]];
 
@@ -48,18 +49,23 @@ ${rows}
 <div class="vs-right">
 <div class="plate-row"><span class="vs-plate">Sélection du personnage</span></div>
 <div class="vs-portrait" aria-hidden="true">
-<img id="np-portrait" src="assets/portraits/${first.slug}.png" alt="">
+<img id="np-portrait" src="assets/portraits/${first.slug}.png" alt="" width="256" height="256">
 </div>
 </div>
 </div>
 ${siteFooter()}
 </main>`;
 
+  const title = 'Guides Dissidia 012 [duodecim] — 31 personnages, builds, matchups';
+  const description = 'Guides compétitifs français des 31 personnages de Dissidia 012 [duodecim] (PSP) : frame data, plans de jeu, matchups, tier list 2017 et créateur de builds.';
   return pageShell({
-    title: 'Dissidia 012 [duodecim] — Guides compétitifs',
-    description: 'Guides compétitifs français pour les 31 personnages de Dissidia 012 [duodecim] Final Fantasy (PSP) : frame data, builds, matchups, assists — données dissidia.wiki.',
+    title,
+    description,
+    path: 'index.html',
     cssPath: 'styles/main.css',
     jsPath: 'scripts/site.js',
     body,
+    og: ogImage ? { image: ogImage, alt: 'Guides compétitifs Dissidia 012 [duodecim] — écran de sélection des personnages', width: 1200, height: 630, type: 'website' } : { type: 'website' },
+    jsonLd: ldWebSite({ description, ...dates }),
   });
 }

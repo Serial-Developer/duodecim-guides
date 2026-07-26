@@ -36,7 +36,7 @@ ${(c.links || []).map((l) => `<p class="video-link"><a href="${esc(l)}" target="
 </article>`).join('\n')}`;
 }
 
-export function renderCalendrier(data) {
+export function renderCalendrier(data, seo) {
   const { events, upcoming, candidates, lastCheck, sources, limits } = data;
   const payload = JSON.stringify({ events }).replace(/</g, '\\u003c');
   const lastCheckTxt = lastCheck
@@ -88,6 +88,7 @@ ${sourcesSection(sources, limits)}
 </main>
 ${siteFooter()}`;
   return pageShell({
+    seo,
     title: 'Futurs tournois — Dissidia 012 [duodecim]',
     description: 'Calendrier des tournois de Dissidia 012 [duodecim] : éditions à venir et tournois passés, mis à jour automatiquement depuis start.gg et le Discord DISSIDIA.',
     cssPath: 'styles/main.css',

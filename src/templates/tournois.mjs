@@ -26,7 +26,7 @@ ${(t.liens || []).map((l) => `<p class="video-link"><a href="${esc(l.url)}" targ
 </article>`;
 }
 
-export function renderTournois(data) {
+export function renderTournois(data, seo) {
   const body = `${siteHeader({ active: 'tournois' })}
 <nav class="guide-top" aria-label="Sections de la page"><div class="chips-nav">
 <a href="index.html">← Sélection</a>
@@ -53,6 +53,7 @@ ${sourcesSection(data.sources, data.limits)}
 </main>
 ${siteFooter()}`;
   return pageShell({
+    seo,
     title: 'Tournois — Dissidia 012 [duodecim]',
     description: 'Les tournois compétitifs de Dissidia 012 [duodecim] : rulesets (Duodecim 22-1, Japan Ranked), brackets, résultats et conditions de participation.',
     cssPath: 'styles/main.css',

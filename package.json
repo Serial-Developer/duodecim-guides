@@ -4,6 +4,7 @@
   "description": "Guides competitifs francais pour Dissidia 012 [duodecim] Final Fantasy (PSP)",
   "main": "index.js",
   "scripts": {
+    "og": "node scripts/make-og-images.mjs",
     "scrape": "node scripts/scrape.mjs",
     "parse": "node scripts/parse.mjs && node scripts/parse-meta.mjs",
     "scrape:build": "node scripts/scrape-builddata.mjs",
@@ -18,10 +19,19 @@
     "add-tournoi": "node scripts/add-tournoi.mjs"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Serial",
+  "homepage": "https://serial-developer.github.io/duodecim-guides/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serial-Developer/duodecim-guides.git"
+  },
+  "//license": "MIT couvre le code et le design. Les textes français sont sous CC BY-NC-ND 4.0 et les données de jeu sous la licence de leur wiki d'origine — voir LICENSE et NOTICE.md.",
+  "license": "MIT",
   "dependencies": {
     "cheerio": "^1.2.0"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
 }

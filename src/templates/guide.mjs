@@ -1,8 +1,9 @@
 // Template d'un guide personnage — structure imposée §7 du cahier des charges
 import {
   esc, banner, infoBanner, paras, priorityBadge, startupChartSvg, mobilityChartSvg,
-  chainSvg, sectionSources, sourcesSection, pageShell, siteHeader, siteFooter,
+  chainSvg, sectionSources, sourcesSection, pageShell, siteHeader, siteFooter, linkRoster,
 } from './helpers.mjs';
+import { ldArticle } from './jsonld.mjs';
 
 const FIELDS = [
   ['damage', 'Dégâts de base'],
@@ -84,7 +85,8 @@ function moveAccordion(m, noteFr, ctx, asChild = false) {
   if (m.image && ctx?.moveImages) {
     const fn = decodeURIComponent(m.image.split('/').pop());
     if (ctx.moveImages.has(`${ctx.slug}/${fn}`)) {
-      shot = `<img class="mv-shot" src="../assets/moves/${ctx.slug}/${encodeURIComponent(fn)}" alt="Capture in-game : ${esc(m.name || 'coup')}" loading="lazy">`;
+      const dim = ctx.sizeOf ? ctx.sizeOf(`moves/${ctx.slug}/${fn}`) : '';
+      shot = `<img class="mv-shot" src="../assets/moves/${ctx.slug}/${encodeURIComponent(fn)}" alt="Capture in-game : ${esc(m.name || 'coup')}"${dim} loading="lazy">`;
     }
   }
   // Variante (« X — Normal ») rendue en enfant indenté : seul le nom de la
@@ -428,14 +430,54 @@ function splitHpLinks(hpGroups, extraNames) {
   return { groups, links };
 }
 
+// --- Métadonnées de référencement ---
+// Composées exclusivement depuis les champs déjà rédigés (`archetype`,
+// `tagline`) et le tier réel : aucun fait n'est ajouté ici. Les expressions
+// visées (« guide <perso> Dissidia 012 », « builds », « matchups ») sont dans
+// la formulation naturelle, pas accumulées.
+
+// Le title complet dépasse la largeur affichée par Google pour les noms longs :
+// « [duodecim] » est alors retiré, le reste est identique.
+const TITLE_BUDGET = 65;
+export function guideTitle(name, isAssist) {
+  // Une fiche assist n'a ni builds ni matchups : annoncer le contraire dans le
+  // title promettrait un contenu absent de la page.
+  const what = isAssist ? 'Assist' : 'Guide';
+  const tail = isAssist ? ' : coups, gains, usages' : ' : coups, builds, matchups';
+  const full = `${name} — ${what} Dissidia 012 [duodecim]${tail}`;
+  return full.length <= TITLE_BUDGET ? full : `${name} — ${what} Dissidia 012${tail}`;
+}
+
+// Minuscule initiale de l'archétype pour l'insérer dans une phrase (tous les
+// archétypes commencent par un nom commun : « Rushdown », « Zoneur »…).
+const lower1 = (s) => (s ? s.charAt(0).toLowerCase() + s.slice(1) : '');
+
+const DESC_BUDGET = 170;
+export function guideDescription({ name, archetype, tier, isAssist }) {
+  const who = tier ? `${name} (tier ${tier})` : name;
+  const arche = archetype ? ` : ${lower1(archetype)}` : '';
+  if (isAssist) {
+    const lead = `${name} dans Dissidia 012 [duodecim]`;
+    const keys = ' : coups appelables, gains d’assist et usages en combo.';
+    const d = `${lead}, ${lower1(archetype || '')}${keys}`;
+    return archetype && d.length <= DESC_BUDGET ? d : lead + keys;
+  }
+  const lead = `Guide compétitif de ${who} dans Dissidia 012 [duodecim]`;
+  const keys = '. Frame data, plan de jeu, builds et matchups.';
+  const d = lead + arche + keys;
+  if (d.length <= DESC_BUDGET) return d;
+  const noTier = `Guide compétitif de ${name} dans Dissidia 012 [duodecim]` + arche + keys;
+  return noTier.length <= DESC_BUDGET ? noTier : lead + keys;
+}
+
 const SECTIONS_NAV = [
   ['meta', 'Méta'], ['overview', "Vue d'ensemble"], ['unlock', 'Débloquer'], ['moves', 'Coups'], ['unique', 'Mécanique unique'],
   ['gameplan', 'Plan de jeu'], ['matchups', 'Matchups'], ['builds', 'Builds'],
   ['assist', 'Assists'], ['community', 'Tech communautaire'], ['sources', 'Sources'],
 ];
 
-export function renderGuide({ char, ed, tierEntry, castStats, hasPortrait, moveImages }) {
-  const ctx = { slug: char.slug, moveImages };
+export function renderGuide({ char, ed, tierEntry, castStats, hasPortrait, moveImages, sizeOf, dates, ogImage, roster = [] }) {
+  const ctx = { slug: char.slug, moveImages, sizeOf };
   const s = char.sections;
   // Personnage assist (non contrôlable) : pas de stats de déplacement, pas
   // d'EX Mode/EX Burst, pas de matchups — ces sections sont omises.
@@ -445,7 +487,7 @@ export function renderGuide({ char, ed, tierEntry, castStats, hasPortrait, moveI
 
   // --- 1. Hero ---
   const hero = `<section class="hero" id="hero">
-${hasPortrait ? `<img class="portrait" src="../assets/portraits/${char.slug}.png" alt="Portrait officiel de ${esc(char.name)} dans Dissidia 012 [duodecim]">` : ''}
+${hasPortrait ? `<img class="portrait" src="../assets/portraits/${char.slug}.png" alt="Portrait officiel de ${esc(char.name)} dans Dissidia 012 [duodecim]"${sizeOf ? sizeOf(`portraits/${char.slug}.png`) : ''}>` : ''}
 <div class="hero-id">
 <p class="origin">${esc(char.origin)}</p>
 <h1>${esc(char.name)}</h1>
@@ -570,12 +612,16 @@ ${combosRaw.length ? `<details class="move"><summary><span class="mv-name">Combo
 
   // --- 6. Matchups ---
   const replayUrl = `https://replaytheater.app/?game=d012&c1=${encodeURIComponent(char.name)}`;
+  // Les personnages cités dans les matchups deviennent des liens vers leur
+  // guide : c'est là que le lecteur veut naviguer, et cela relie les 31 pages
+  // entre elles au lieu de les laisser dépendre de la seule page d'accueil.
+  const matchupProse = ed?.matchups?.summary?.length
+    ? linkRoster(paras(ed.matchups.summary), { roster, currentSlug: char.slug, base: '../' })
+    : null;
   const matchups = isAssist ? '' : `<section id="matchups"><h2>Matchups</h2>
-${s.matchups?.documented && ed?.matchups?.summary?.length
-    ? paras(ed.matchups.summary)
-    : ed?.matchups?.summary?.length
-      ? paras(ed.matchups.summary)
-      : banner(s.matchups?.sources?.length
+${matchupProse
+    ? matchupProse
+    : banner(s.matchups?.sources?.length
           ? `La sous-page <a href="${esc(s.matchups.sources[0])}" target="_blank" rel="external noopener">Matchups du wiki</a> est un squelette vide à ce jour.`
           : `Aucune page de matchups n'existe sur le wiki pour ce personnage.`)}
 ${sectionSources(secSrc.matchups)}
@@ -597,6 +643,7 @@ ${buildsSection(s.builds, allMoves, {
 ${ed?.builds?.notes ? `<p class="mv-desc">${esc(ed.builds.notes)}</p>` : ''}
 ${sectionSources(secSrc.builds)}`
     : banner()}
+<p>Composer et vérifier un build de ${esc(char.name)} emplacement par emplacement : <a href="../createur-de-builds.html">créateur de builds</a> (jauge de CP, exclusions d’abilities et règles tournoi appliquées).</p>
 </section>`;
 
   // --- 8. Synergies d'assist ---
@@ -664,11 +711,32 @@ ${sources}
 </div>
 ${siteFooter()}`;
 
+  const title = guideTitle(char.name, isAssist);
+  const description = guideDescription({
+    name: char.name,
+    archetype: ed?.archetype,
+    tier: tierEntry?.tier,
+    isAssist,
+  });
+  const path = `characters/${char.slug}.html`;
+  const imageAlt = `${char.name} — guide Dissidia 012 [duodecim]`;
   return pageShell({
-    title: `${char.name} — Guide Dissidia 012 [duodecim]`,
-    description: `Guide compétitif français de ${char.name} dans Dissidia 012 [duodecim] Final Fantasy : frame data, plan de jeu, builds, assists.`,
+    title,
+    description,
+    path,
     cssPath: '../styles/main.css',
     jsPath: null,
     body,
+    og: ogImage ? { image: ogImage, alt: imageAlt, width: 1200, height: 630, type: 'article' } : { type: 'article' },
+    jsonLd: ldArticle({
+      type: 'TechArticle',
+      headline: title,
+      description,
+      path,
+      image: ogImage,
+      imageAlt,
+      section: isAssist ? 'Assists' : 'Guides personnages',
+      ...dates,
+    }),
   });
 }

@@ -1,7 +1,7 @@
 // Page transverse : savedata prêtes pour les tournois (communauté Discord DISSIDIA)
 import { esc, paras, infoBanner, sectionSources, sourcesSection, pageShell, siteHeader, siteFooter } from './helpers.mjs';
 
-export function renderSavedata(data) {
+export function renderSavedata(data, seo) {
   const saves = (data.saves || []).map((s) => `<article class="card">
 <h3 style="margin-top:0">${esc(s.name)}</h3>
 <p><span class="badge prio-melee-high">${esc(s.pour)}</span></p>
@@ -33,8 +33,9 @@ ${sourcesSection(data.sources, data.limits)}
 </main>
 ${siteFooter()}`;
   return pageShell({
+    seo,
     title: 'Savedata prêtes pour les tournois — Dissidia 012 [duodecim]',
-    description: 'Sauvegardes Dissidia 012 (ULUS10566) prêtes pour le jeu en ligne et les tournois : starter pack, builds 2017 Tournament Rules, Modern Alternate Rules et Japan Ranked.',
+    description: 'Sauvegardes Dissidia 012 (ULUS10566) prêtes pour le jeu en ligne : starter pack et builds 2017 Tournament Rules, Modern Alternate Rules et Japan Ranked.',
     cssPath: 'styles/main.css',
     jsPath: null,
     body,

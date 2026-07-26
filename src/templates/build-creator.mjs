@@ -2,6 +2,7 @@
 // onglets, jauge, panneau d'état). Tout le comportement vit dans
 // src/scripts/build-creator.js, alimenté par window.BUILD_DATA.
 import { esc, paras, banner, infoBanner, pageShell, siteHeader, siteFooter } from './helpers.mjs';
+import { ldWebApplication } from './jsonld.mjs';
 
 const TABS = [
   { key: 'attack', label: 'Attaques' },
@@ -35,9 +36,10 @@ function cpGauge() {
 </div>`;
 }
 
-export function renderBuildCreator({ ed, characters, hasPortrait }) {
+export function renderBuildCreator({ ed, characters, hasPortrait, seo }) {
   if (!ed) {
     return pageShell({
+    seo,
       title: 'Créateur de builds — Dissidia 012 [duodecim]',
       description: 'Composer un build Dissidia 012 [duodecim].',
       cssPath: 'styles/main.css', jsPath: null,
@@ -110,12 +112,25 @@ ${Object.values(ed.undocumented || {}).map((u) => `<li>${esc(u)}</li>`).join('\n
 </main>
 ${siteFooter()}`;
 
+  const title = 'Créateur de builds Dissidia 012 [duodecim] — CP et équipement';
+  const description = 'Composer et partager des builds Dissidia 012 [duodecim] : attaques, abilities, équipement, accessoires, assist, jauge de CP et règles tournoi.';
   return pageShell({
-    title: 'Créateur de builds — Dissidia 012 [duodecim]',
-    description: 'Composer, sauvegarder, exporter et partager des builds Dissidia 012 [duodecim] : attaques, abilities, équipement, accessoires, assist et invocation, avec jauge de CP et contrôle de légalité tournoi.',
+    seo,
+    title,
+    description,
     cssPath: 'styles/main.css',
     jsPath: 'scripts/build-creator.js',
     extraHead: '<script src="scripts/build-data.js" defer></script>',
     body,
+    // Ce n'est pas un article mais un outil : le type WebApplication décrit ce
+    // que la page fait, et signale qu'elle est gratuite et sans compte.
+    jsonLd: ldWebApplication({
+      name: 'Créateur de builds Dissidia 012 [duodecim]',
+      description,
+      path: seo?.path || 'createur-de-builds.html',
+      image: seo?.ogImage,
+      imageAlt: seo?.ogAlt,
+      ...(seo?.dates || {}),
+    }),
   });
 }

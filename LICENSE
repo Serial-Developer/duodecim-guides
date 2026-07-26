@@ -1,0 +1,105 @@
+Copyright (c) 2026 Serial
+
+Ce dépôt réunit trois natures de contenu, sous trois régimes distincts. Le
+fichier NOTICE.md détaille source par source ce qui relève de quoi.
+
+================================================================================
+1. CODE SOURCE, SCRIPTS ET DESIGN — Licence MIT
+================================================================================
+
+S'applique à : scripts/, src/templates/, src/styles/, src/scripts/,
+src/site-config.mjs, les fichiers de configuration, et le HTML/CSS/JavaScript
+généré dans dist/ en tant que structure technique (à l'exclusion du texte
+éditorial qu'il contient, couvert par la section 2).
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+2. TEXTES ORIGINAUX EN FRANÇAIS — CC BY-NC-ND 4.0
+================================================================================
+
+S'applique à : la prose française rédigée pour ce site — data/editorial/*.json
+(vues d'ensemble, plans de jeu, analyses de matchups, philosophies de build,
+notes de coups, forces et faiblesses, taglines et archétypes), les pages
+transverses, et les images de partage de assets/og/.
+
+Ces textes sont mis à disposition sous la licence Creative Commons
+Attribution - Pas d'Utilisation Commerciale - Pas de Modification 4.0
+International (CC BY-NC-ND 4.0) :
+
+    https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr
+
+Concrètement, vous pouvez : lire, copier et partager ces textes, sur tout
+support, pour un usage non commercial, à condition de créditer « Serial » et de
+renvoyer vers https://serial-developer.github.io/duodecim-guides/
+
+Vous ne pouvez pas : en publier une version modifiée, tronquée, traduite ou
+remixée, ni les republier sous une autre signature, ni en faire un usage
+commercial — sans autorisation écrite préalable.
+
+Exception importante : les passages adaptés du Final Fantasy Wiki (voir
+section 3) restent régis par CC BY-SA 3.0, qui autorise la modification. La
+présente section ne s'y applique pas et ne peut pas les reverrouiller.
+
+Citation courte : citer quelques phrases avec attribution et lien relève de la
+courte citation et ne demande aucune autorisation.
+
+================================================================================
+3. DONNÉES DE JEU ADAPTÉES DE SOURCES TIERCES
+================================================================================
+
+S'applique à : data/characters/*.json, data/build/*.json, data/meta.json, et
+les passages du texte éditorial qui traduisent ou adaptent ces sources.
+
+Ces contenus ne m'appartiennent pas et je ne peux pas en restreindre la
+réutilisation. Ils demeurent sous la licence de leur source :
+
+  - dissidia.wiki (frame data, infobox, movesets, tier list, techniques) :
+    CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+    Réutilisation libre, y compris commerciale et modifiée, avec attribution.
+
+  - Final Fantasy Wiki, finalfantasy.fandom.com (équipements, accessoires,
+    compléments de moveset) : CC BY-SA 3.0
+    https://creativecommons.org/licenses/by-sa/3.0/
+    Réutilisation et modification libres, avec attribution ET partage de
+    l'œuvre dérivée sous la même licence (clause de partage à l'identique).
+
+  - Sources communautaires citées nommément (GameFAQs, guides Steam, vidéos
+    de joueurs, archives dissidiaforums) : droits détenus par leurs auteurs
+    respectifs, cités et liés à titre de référence.
+
+Portraits, icônes et captures : fichiers du wiki récupérés via la Wayback
+Machine, voir section 4.
+
+================================================================================
+4. PROPRIÉTÉ INTELLECTUELLE DE SQUARE ENIX
+================================================================================
+
+Dissidia 012 [duodecim] Final Fantasy, ses personnages, leurs noms, artworks,
+portraits, icônes, captures d'écran, musiques et tout élément du jeu sont la
+propriété de © SQUARE ENIX CO., LTD. Tous droits réservés.
+
+Ce site est un projet de fans non commercial, sans affiliation ni approbation
+de Square Enix. Aucune revendication de propriété n'est faite sur ces éléments.
+Ils sont utilisés à des fins d'information et de documentation d'un jeu de
+2011. Toute demande de retrait de la part des ayants droit sera honorée.
+
+================================================================================
+
+Résumé lisible et liste complète des sources : NOTICE.md
