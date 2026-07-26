@@ -1,0 +1,157 @@
+{
+  "slug": "zidane-tribal",
+  "tagline": "Fragile aerial rushdown, specialist of HP links and assist combos",
+  "archetype": "Aerial rushdown built on HP links",
+  "overview": [
+    "Zidane is an agile close-range fighter who operates mainly in the air. His central strategy: close in on the opponent and hit them with one of his HP links to launch assist combos. His mobility is excellent thanks to his dash and his aerial jumps, which he uses to poke with Swift Attack and Scoop Art, and he can start his offence from vertical angles that are hard to contest.",
+    "What really sets him apart is his synergy with high base bravery Side by Side builds and the Aerith assist. Thanks to his Meo Twister HP link and his Shift Break setups, Zidane fills his assist gauge quickly off a single good read and can spend it all on hugely destructive combos: with two assist gauges and a suitable build, he deals over 6000 HP damage in a single combo, and does so consistently in the air whenever he is near a wall or ceiling. His above-average wall carry with the HP links supports that plan. Zidane lands his biggest hits at close range, but he also knows how to stall on defence and go again off a clear opening.",
+    "That safe, explosive plan has a cost. His base DEF is low: damage-oriented builds destroy his bravery. He runs fast, but he lacks a fast, safe grounded poke: his ground game is more committal and limited in potential (Tidal Flame controls space, Booster 8 can counter with its Melee Mid priority, but both have relatively long startups). His base damage and ATK are low, he lacks reliable Wall Rush attacks, and the EX generation of his key moves is poor — his assist combos far outstrip his EX gain. Finally, Swift Attack and Tempest go through a long string before the Meo Twister HP link, which is vulnerable to Assist Change counters, especially at high level. More glass cannon than all-rounder: he shines when he succeeds, and suffers badly when he fails."
+  ],
+  "tierNote": "Zidane is ranked 7th (tier A+) on the 2017 tier list. The overview describes him as historically ranked near the top, with a consistent, effective tournament gameplan and a moveset simple enough for an intermediate player to pick up.",
+  "strengths": [
+    "Great aerial mobility (a fast dash, aerial jumps) and offence available from vertical angles that are hard to contest.",
+    "Effective pokes at point-blank range (Swift Attack) as well as at long range (Scoop Art, Shift Break).",
+    "HP links (Meo Twister) that launch highly rewarding assist combos.",
+    "Remarkable synergy with high base bravery Side by Side builds and the Aerith assist: over 6000 HP damage in a two-gauge combo, consistently near walls and ceilings.",
+    "Above-average wall carry thanks to the HP links.",
+    "Hard to whiff punish; able to play defensively and go again off a clear opening.",
+    "A gameplan recognised as consistent and effective in tournament play."
+  ],
+  "weaknesses": [
+    "Low base DEF: damage builds destroy his bravery.",
+    "No fast, safe grounded poke; a more committal, limited ground game (the long startups of Tidal Flame and Booster 8).",
+    "Low ATK and base damage, few reliable Wall Rush attacks.",
+    "Low EX generation on his most important moves; his assist combos quickly outstrip his EX gain.",
+    "The Swift Attack and Tempest strings into Meo Twister are vulnerable to Assist Change counters, especially at high level.",
+    "He struggles to create offence against characters with strong area denial (The Emperor) and to apply mixups on blocks at range."
+  ],
+  "moveNotes": {
+    "Rumble Rush": "Zidane's true grounded BRV-to-HP string, mostly used as a close-range punish and as a starter for assist combos (usually through the Meo Twister HP link), with above-average base damage for him. Careful: despite a fast startup, the full animation is long and plays out even on a whiff, which leaves him open to blocks and whiff punishes; the tracking is weak and Zidane always ends up in the air. It is not a safe poke in neutral: 30 base damage does not offset the risk.",
+    "Scoop Art (ground)": "A passive zoning tool used from afar to look for combo opportunities: up to two extra shots by pressing again, good vertical tracking, decent hit stun and short recovery. Two shots that connect confirm into a combo through a dodge cancel or an assist, and the shots can be delayed. Ranged Low priority and slow speed: it loses to dashes and melee, and is ineffective against rushdown; the grounded version sees little use since Zidane is stronger in the air.",
+    "Booster 8": "Zidane's main grounded bravery attack: a gap closer and combo starter whose Melee Mid priority forces blocks to be respected. On hit, the recovery cancels into any equipped aerial attack, which allows a combo into an HP attack or HP link (Swift Attack and Free Energy are reliable follow-ups). A startup slow enough to be reactable, very weak vertical tracking, a linear trajectory; on a simple stagger, no cancel is possible.",
+    "Storm Impulse": "A secondary punish bravery attack with the longest lateral reach of his aerial melee moves, one of his two bravery attacks with Wall Rush, and an initial launch that combos into an assist at midscreen. Little used competitively: diminishing returns for the risk taken, a fast startup only at point-blank range, a spin that continues even on a whiff (easy to block from afar) and a need for the Wall Rush to really pay off in damage.",
+    "Vortex": "A secondary bravery attack for whiff punishing from a relatively safe angle, from below, after dodging a move with long recovery. It can start assist combos (a Wall Rush is needed if the attack runs its course) and also serves to fill the assist gauge on whiff in a passive game. A slow, telegraphed rise, easy to block during the spins, and it connects poorly against opponents in front of him because of the angle: use it sparingly.",
+    "Tempest": "A dagger thrown downwards, useful for attacking from above. This is Zidane's downward HP link (into Meo Twister B): a starter for high-damage assist combos, with more base damage than Swift Attack, and a good aerial punish according to the builds section.",
+    "Scoop Art (midair)": "The aerial version of the projectile: it works identically to the grounded one, but with better synergy with the rest of Zidane's aerial kit. In a build, it mostly serves to build assist gauge and can convert into an assist combo on the fly if two or more shots connect; using it too often leaves him open to a dash > poke.",
+    "Solution 9": "A long-range projectile firing multiple energy shots, imprecise but numerous. No competitive usage notes are documented for this move.",
+    "Swift Attack": "Fast blade strikes at point-blank range: Zidane's fastest bravery attack (13F), low on damage but very quick to launch, with 90 EX Force. It is his reference aerial poke, his main HP link (into Meo Twister C) and his starter for high-damage assist combos according to the overview and the builds section.",
+    "Tidal Flame": "A low-skimming flame projectile with fast homing, which brings grounded space control according to the overview, at the cost of a relatively long startup (49F). It is also one of his two single-hit HP options.",
+    "Stellar Circle 5": "A short-range cyclone that provides coverage around Zidane, with an Absorb effect. No competitive usage notes are documented for this move.",
+    "Meo Twister A": "A laser fired as a follow-up to Rumble Rush: this is Zidane's grounded HP link, at the heart of his assist combos according to the overview.",
+    "Shift Break": "A long-range HP attack mixing water columns (unblockable) and lightning to unsettle the opponent. The overview makes it, alongside Meo Twister, one of the pillars of Zidane's setups for building assist gauge and converting into heavy damage; in a build, it is equipped as the low aerial HP attack.",
+    "Grand Lethal": "An energy charge with limited vertical reach but a long duration, with Wall Rush. No competitive usage notes are documented for this move.",
+    "Free Energy": "A short-range energy wave with fast execution: Zidane's fastest HP attack (25F), a single-hit HP attack, and a reliable follow-up after Booster 8 according to that move's notes.",
+    "Meo Twister B": "The follow-up to Tempest, identical to Meo Twister A.",
+    "Meo Twister C": "The follow-up to Swift Attack, identical to Meo Twister A."
+  },
+  "exMode": {
+    "summary": [
+      "Zidane's EX Mode, “Trance!”, grants Regen, Critical Boost, Aerial Jump and Dodge Jump. Aerial Jump adds +10 aerial jumps (the counter resets after a dodge) and Double Jump gives invincibility during the rising phase of the jump — without triggering the Bravery Boost on Dodge effect, since it does not count as a dodge.",
+      "Despite those solid universal bonuses, this EX Mode pays off poorly for Zidane competitively: his EX generation is only average and largely outclassed by his Side by Side builds, he is often far from EX when he uses his key moves, his aerial jumps already suffice in footsies, and the extra jumps rarely serve in the situations where EX Mode gets activated (securing an assist combo or a win). He can still create checkmate situations, but filling a complete EX gauge runs against his damage-oriented Side by Side builds."
+    ],
+    "burst": "Reverse Gaia asks you to mash Circle at a moderate rhythm to fill four sections of the gauge (2, 3, 3 then 4 attacks per section); if a gauge is not filled by the end of a section, Zidane goes straight to the final hit. It is one of the least powerful EX Bursts in the game, thanks to fairly low base damage and Zidane's low base ATK."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Zidane's game loop is aerial and centred on assist resources: poke with Swift Attack (at point-blank range) and Scoop Art (from afar) to occupy space and fill the gauge, then convert a hit into an assist combo through the HP links. The plan of the reference builds is explicit: land Swift Attack > Meo Twister or Shift Break, then extend the assist combo as far as it goes — over 6000 HP damage is possible with two gauges, without even needing a Wall Rush.",
+    "On the ground, Booster 8 serves as a gap closer and starter: on hit, it cancels into any aerial attack (Swift Attack, Free Energy), which brings Zidane back into his aerial plan. Tidal Flame provides space control and Booster 8 can counter blocks thanks to its Melee Mid priority, but both are slow: the ground game remains a commitment to keep in check.",
+    "Zidane is also at home near walls and ceilings, where his above-average wall carry and his HP links guarantee the conversion. When he does not have the advantage, he can stall on defence and strike off a clear opening. EX is secondary in his plan: his assist combos pay more than his EX gain, hence the priority given to assist gauge accessories (Together As One) and base bravery (Hero's Seal, Bravery Orb) in his builds."
+  ],
+  "advancedTech": [
+    {
+      "name": "Booster 8 kara cancel into EX Mode",
+      "desc": "With a full EX gauge, Zidane can kara cancel Booster 8 into an EX Mode activation on hit, then jump and combo into Tempest for more bravery damage."
+    },
+    {
+      "name": "Scoop Art double shot confirm",
+      "desc": "Fire two Scoop Art projectiles to confirm a combo through a dodge cancel or an assist call; the extra shots can be delayed to confirm or simply to add presence on the field."
+    },
+    {
+      "name": "Timing of the double Shift Break Aerith combo",
+      "desc": "In LXD92's Aerith combo (Swift Attack > Meo Twister > Aerith > Shift Break > Aerith > Shift Break > Swift Attack > Meo Twister, 4000+ HP damage on a small stage), Aerith must not be called too early during Shift Break: otherwise the opponent comes out of Seal Evil's freeze and dodges. The assist has to be called just before Shift Break's HP portion connects.",
+      "source": "https://web.archive.org/web/20131114044756/http://dissidiaforums.com/showthread.php?11981-Zidane-Video-A-Small-Guide"
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "Few direct links, but combos through the Scoop Art and Tidal Flame setups: Shift Break > Swift Attack; Tidal Flame (mid range and beyond) > dodge cancel > Swift Attack hit glitch; Scoop Art (mid range, aerial opponent) > DC > landing lag > Vortex; Booster 8 > almost anything; near a wall, Booster 8 > Scoop Art > landing lag > Swift Attack.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "The wiki's matchup page is a stub: no detailed per-character analysis is available. The overview does give a few bearings: Zidane is effective at point-blank range (Swift Attack) as well as at long range (Scoop Art, Shift Break), but he struggles to apply mixups on blocks at range. Hard to whiff punish himself, he does have trouble creating offence against characters with strong area denial, The Emperor being cited as the example. Since his HP link strings are vulnerable to Assist Change counters, he can also suffer against opponents who often keep assist gauge in reserve."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Zidane is an HP linker who relies on assist combos for his big damage. His comparatively low EX generation, low base damage and lack of reliable Wall Rush moves steer his builds towards Side by Side and raising base bravery: with two assist bars, he goes past 6000 HP damage with no Wall Rush.",
+      "The reference build “Side by Side (High Base BRV)” (450 CP, with the Equip Glitch) revolves around the Aerith assist: Piggy's Stick, Chainsaw, Royal Crown, Auto Crossbow, and a battery of accessories (Together As One to start with assist gauge, Hero's Seal which takes initial bravery past 2000, Bravery Orb to climb back to base bravery faster during combos, plus the Empty EX Gauge, Summon Unused, Pre-EX Mode and Pre-EX Revenge boosters, Dismay Shock, Battle Hammer, Rubicante as the summon). Since Zidane leans on base bravery, the absence of critical hits and his low ATK do not affect his damage. Max HP is low (8454): a glass cannon build, but a single Aerith assist combo goes past 3000 HP damage at base bravery, and more with the double Aerith and Shift Break extensions. The 25 remaining capacity points can go into Speed Boost+, Ground Dash or Auto Assist Lock On.",
+      "On attacks, the staples recommended in any matchup are Booster 8 (a Melee Mid gap closer that combos into aerial moves), Swift Attack + Meo Twister (the reference aerial poke, main HP link, assist combo starter) and Tempest + Meo Twister (the downward HP link, with more base damage than Swift Attack, a good aerial punish). Scoop Art (midair) is classed as flexible: a long-range projectile that converts into an assist combo if two or more shots connect, but which leaves him open to a dash > poke when overused.",
+      "LXD92's guide (dissidiaforums, December 2011, through the Wayback Machine), presented on the forum as “probably the best Zidane” of the era, already documented two builds. His “High Base BRV Setup” overlaps with the wiki's reference build, formulated independently as early as 2011: around 1450 base bravery, Side by Side, fast bravery recovery, Together as One by personal preference (an assist bar all but available from the start) and Best Dresser required, at the cost of low defence (181) and a complete abandonment of EX; on a small stage, his Aerith combo — Swift Attack > Meo Twister > Aerith > Shift Break > Aerith > Shift Break > Swift Attack > Meo Twister — goes past 4000 HP damage. His second configuration, “High Base BRV / extreme assist-EX depletion”, replaces Side by Side with a depletion battery at a maximum booster of around x8: fewer guaranteed assist combos, but a Zidane who eats away at the opponent's gauges and can exploit EX himself — with the documented option of switching back to Side by Side mid-match through the conditional boosters.",
+      "On move selection, the thread “What ability setup do you use for Zidane?” (dissidiaforums, 2011) shows a consensus close to the wiki's staples — Booster 8 often alone on the ground, several players equipping no grounded HP attack at all, Swift Attack judged indispensable in the air — but openly acknowledged disagreements on the rest: resident waterfowl plays Storm Impulse / Tempest / Swift Attack with all the HP links and calls Rumble Rush a “block bait” to save for punishes, Alice prefers Vortex against Sephiroth, Spike rotates Solution 9 and Vortex depending on long-range matchups. On the GameFAQs side, the thread “Recommended Zidane and Golbez build” (2015) confirms the scene's view: high base bravery + Side by Side for multi-HP assist combos, with a depletion build (Dismay Shock, Battle Hammer) remaining the cited alternative."
+    ],
+    "notes": "Documented substitutions: Summon Unused can give way to Aerial (a stronger x1.5 booster if the ground is not needed), and Tidal Flame can be replaced by Speed Boost++ to make Zidane faster on the ground and in the air if space control is not judged essential. The builds and loadout debates described at the end of philosophy come from verified external community sources (archived dissidiaforums threads, GameFAQs)."
+  },
+  "assist": {
+    "asAssist": [
+      "As an assist, Zidane is rated Mid tier on the assist tier list (Muggshotter's ranking). The wiki's data gives no detailed analysis of his assist moves."
+    ],
+    "recommended": [
+      {
+        "name": "Aerith",
+        "why": "Cited in the wiki's assist section and the assist of the reference build: a single Aerith assist combo goes past 3000 HP damage at base bravery, more with the double Aerith and Shift Break extensions."
+      },
+      {
+        "name": "Kuja",
+        "why": "Cited by the wiki among the assists Zidane works well with, with no further detail in the sources."
+      },
+      {
+        "name": "Sephiroth",
+        "why": "Cited by the wiki among the assists Zidane works well with, with no further detail in the sources."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Dissidia 012 Duodecim Final Fantasy Zidane Combo Montage",
+      "desc": "A period combo montage (Andyz5448): a collection of Zidane's solo and assist routes, from the same series as his Squall and Cecil montages.",
+      "source": "https://www.youtube.com/watch?v=iU9bOdVEx-E",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012 Duodecim Zidane Pure Assist Exp to Bravery Build",
+      "desc": "A period build video (Tiger Bub): a full assist Exp to Bravery configuration with Fragile Pride, Assist Critical Boost, Sneak Attack and Counterattack/Riposte.",
+      "source": "https://www.youtube.com/watch?v=dhWYc7PstTI",
+      "date": "2011"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Zidane is described there as having few direct links but setups through Scoop Art and Tidal Flame.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    }
+  ],
+  "sourcesBySection": {
+    "builds": [
+      "https://web.archive.org/web/20131114044756/http://dissidiaforums.com/showthread.php?11981-Zidane-Video-A-Small-Guide",
+      "https://web.archive.org/web/20131020104305/http://dissidiaforums.com/showthread.php?10598-What-ability-setup-do-you-use-for-Zidane",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/69751106"
+    ]
+  },
+  "limits": [
+    "The wiki's matchup page is a stub: no per-character analysis.",
+    "The combos section is empty in the sources: no documented combo route.",
+    "No detailed usage notes for Solution 9, Stellar Circle 5 and Grand Lethal (only the in-game description is available); Tidal Flame, Swift Attack, Tempest, Shift Break and Free Energy are documented only indirectly through the overview and the builds section.",
+    "The assist section is all but empty: a single sentence of synergies, and no data on Zidane's moves as an assist.",
+    "No community reference (videos, dated links) listed in the sources.",
+    "No unique mechanic documented for this character.",
+    "The wiki's Strengths/Weaknesses table is empty and the assist gain field of the moves is not filled in.",
+    "The exact equipment lists of LXD92's two builds (dissidiaforums) were inside spoilers/images the Wayback Machine did not capture: only the written principles and the quoted stats survive.",
+    "The “Bravery to HP Attacks” section (Dissidia 012 table) of the character's page on the Final Fantasy Wiki: that classification is absent from dissidia.wiki's notes and was reinstated from this source."
+  ],
+  "hpLinks": [
+    "Meo Twister A",
+    "Meo Twister B",
+    "Meo Twister C"
+  ]
+}
