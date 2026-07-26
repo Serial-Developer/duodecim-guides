@@ -1,0 +1,122 @@
+{
+  "techniques": [
+    {
+      "id": "blodge",
+      "name": "Blodge",
+      "summary": [
+        "The blodge lets you block then dodge immediately afterwards. Like the dash feint, it exploits a very early input window during the block to cancel it into a dodge. A universal technique: any character can perform it as soon as they have a block and a dodge equipped.",
+        "The blodge is used above all defensively, as an option select: a single input sequence covers several of the opponent's offensive options within a very short span — precious at high level. It lets you dodge attacks, stagger the opponent, and even destroy certain high-priority projectiles without taking damage. Exdeath benefits particularly: the blodge lets him chain his HP attacks and fill his assist gauge faster than anyone.",
+        "Its limits: the blodge only works against low-priority attacks and certain HP projectiles. It blocks neither Mid attacks (Melee or Ranged) nor most HP attacks — the result there is a stagger or a plain Guard Crush. Against certain Ranged High projectiles, however (The Emperor's Flare, Terra's Meltdown, Zidane's Tidal Flame), a well-executed blodge destroys them with the “Guard Crush” message during the dodge. The timing is demanding and takes practice."
+      ],
+      "howTo": [
+        "Equip a block and a dodge (Ground Block and Ground Evasion, for instance).",
+        "Press R and hold it.",
+        "Press Cross just after R — in sequence, never at the same time. The window is 2 frames at 30 FPS (the game's frame rate), which makes the input tricky to land.",
+        "If you did it right, the block's sound (or voice line) plays while the character dodges."
+      ],
+      "source": "https://dissidia.wiki/Blodge",
+      "video": { "url": "https://www.youtube.com/watch?v=3Pw-viOoVig", "title": "Dissidia Duodecim - Blodging Etiquette by Dart", "author": "BashBros", "date": "2013" }
+    },
+    {
+      "id": "dash-feint",
+      "name": "Dash feint",
+      "summary": [
+        "The dash feint (also called spot dashing) exploits an early input window during the block to cancel it into a dash. The manoeuvre repeats very quickly, before or after a dash.",
+        "Its competitive uses are many. Assist gauge: combined with the Assist Gauge Up Dash ability, the dash feint fills the gauge on the spot — one of the safest ways to charge it at high level (attacking now and then is still necessary, since a dash does not count as an attack and does not stop the gauge from draining). Offensive pressure: it lets you realign with Free Air Dash against aerial dodges and threaten a dodge punish; repeatable and ambiguous, it also serves to delay approaches and throw the opponent off. Defence: every dash feint blocks for at least 1 frame, which makes the opponent's attacks riskier. Finally, since a dash slows down at the end of its travel, chaining it through a dash feint restarts a new dash sooner, at peak speed.",
+        "One note: with Omni Ground Dash or Omni Air Dash, the dash feint makes the character dash forward at a constant height, but does not fill the assist gauge."
+      ],
+      "howTo": [
+        "Equip a ground/air block and a manual dash (Ground Block, Midair Block and Free Air Dash, for instance).",
+        "Press R and hold it.",
+        "Press Triangle just after R — in sequence, not at the same time. The window is 2 frames at 30 FPS.",
+        "The block is then cancelled into a dash. Repeat as needed."
+      ],
+      "source": "https://dissidia.wiki/Dash_feint",
+      "video": { "url": "https://www.youtube.com/watch?v=siQU984t0gs", "title": "[Dissidia 012 Tutorial] How to DASH FEINT", "author": "King of The Lilies", "date": "2025" }
+    },
+    {
+      "id": "lock-off",
+      "name": "Lock Off",
+      "summary": [
+        "Lock Off is a technique from Dissidia (PSP) and Dissidia 012: the player turns their Lock On off by pressing L while locked onto the opponent. If there is no assist or EX Core left to target, the character enters a Lock Off state, in which they can no longer use the Bravery or HP attacks assigned to a directional input.",
+        "Attacks assigned to Circle or Square with no direction, on the other hand, stay usable: they then come out in the direction of movement rather than towards the opponent. This makes it possible to build assist gauge by attacking into thin air (whiffing) without risking a block — by far the most common use of Lock Off in a match, notably for Squall.",
+        "Other documented applications: Golbez can make the Ranged High of his Nightglow HP attack appear directly beneath himself rather than beneath the opponent, to counter dashes towards him during the attack. The rest is rare, such as parrying with Jecht Block the second hit of Kuja's Snatch Blow, which strikes from behind."
+      ],
+      "howTo": [
+        "Press L while locked onto the opponent to turn Lock On off (no assist or EX Core must be left to target)."
+      ],
+      "source": "https://dissidia.wiki/Lock_Off"
+    },
+    {
+      "id": "dodge-punishment",
+      "name": "Dodge punishment",
+      "summary": [
+        "Dodge punishment means hitting a character after their dodge, before they can defend again. It is an essential aspect of competitive play from intermediate level onwards: the fall speed ratio after a dodge, dodge timings and attacks with defensive properties draw a risk/reward balance for each player.",
+        "With the invincibility added by the Evasion Boost ability and the early cancel window of attacks during a dodge, many characters can act coming out of a dodge while still invulnerable. Since dodging quickly creates distance and punishing requires being in range, the pressure sits on the attacker, who has to strike with very precise timing."
+      ],
+      "howTo": [
+        "On offence: first make sure you can reach the opponent, usually through Free Air Dash's tracking combined with dash feints to adjust to their dodge timing; some attacks (Kuja's Snatching Blow, Firion's Straightarrow, Squall's Blasting Zone) reach on their own if you are close enough.",
+        "Strike at the moment of the dodge (or just before) with the appropriate attack; near a wall or in a corner the opponent creates less distance and the punish is easier.",
+        "With Free Air Dash or Ground Dash, the dash must have finished its start-up and be moving when the dodge happens; confirm the dodge visually then follow with a fast attack at the end of the dodge (Squall's Beat Fang, Zidane's Swift Attack).",
+        "Watch for when the opponent can dodge and when they are happy to (e.g. a Cloud who systematically dodges after a missed Double Cut leaves himself open); how viable the punish is varies with the stage, the position and the matchup.",
+        "Beware of defensive attacks (Cloud of Darkness's Particle Beam [Wrath], Jecht Block): avoid dashing into a guard by cancelling into a jump, a dodge or a high-priority attack that guard breaks.",
+        "On defence: cover your dodge with an attack that has defensive properties (Warrior of Light's Shield of Light, Sephiroth's Scintilla, Vaan's Sword and Shield) or evasive ones (Tidus's Cut & Run, Vaan's Rifle, sometimes called “double dodges”).",
+        "Play the dodge direction: dodge where the opponent cannot reach (e.g. a forward dodge on the ground against Cloud's Cross Slash); in the air, a forward dodge that passes behind the opponent can throw off their Free Air Dash's tracking.",
+        "As a last resort, a fast Melee Low attack can clash with the punish attempt, or an assist can interrupt the opponent's attack if the timing is right.",
+        "Account for the fall speed ratio after a dodge: the sooner a character falls after an air dodge, the harder their back dodges are to punish (Onion Knight, Kain, Prishe, Kefka and Tidus benefit particularly)."
+      ],
+      "source": "https://dissidia.wiki/Dodge_(Dissidia_012)"
+    }
+  ],
+  "glitches": [
+    {
+      "id": "equip-glitch",
+      "name": "Equip Glitch",
+      "summary": [
+        "The Equip Glitch lets a character wear equipment (a weapon, armour) normally out of reach, without keeping the required Extra Ability. Peltast's Gear, for instance, allows anyone to equip katanas: Zidane can keep using Piggy's Stick, a katana-type weapon, even after removing Peltast's Gear.",
+        "In practice, that saves up to 40 Capacity Points per build (10 points per piece of equipment). Many builds use it for one or two items, some for the whole loadout. The glitch is available to any character, with no third-party modification.",
+        "The manoeuvre (discovered by ujhbn): unlock the Extra Ability you want in the shop, remove all the character's Extra Abilities, equip only the one you care about (Peltast's Gear, say), equip the item you want, go back to the abilities menu, sort the Extra Abilities with Triangle by choosing “Equipped”, then remove the ability. As long as a single Extra Ability is equipped, the game removes it without requiring the linked items to be removed. The manoeuvre has to be redone for each character and each equipment set, and again if the equipment is removed later on."
+      ],
+      "competitiveUse": "Despite its obvious advantage (up to 40 CP saved per build), the glitch has not unbalanced competition: it was declared legal in tournament play.",
+      "source": "https://dissidia.wiki/Equip_Glitch_(Dissidia_012)",
+      "video": { "url": "https://www.youtube.com/watch?v=TMERRLj8FPc", "title": "Dissidia 012 - Equip Glitch and How to Do It", "author": "Dissidia Mediawiki", "date": "2026" }
+    },
+    {
+      "id": "assist-storage-glitch",
+      "name": "Assist Storage Glitch",
+      "summary": [
+        "The Assist Storage Glitch is an abnormal behaviour of the assist system in specific circumstances: once triggered, the next assist attacks far earlier than normal, and HP assists as well as LV2 Assist Change cost only one bar of gauge instead of two. Since the principle rests on a universal mechanic, every character and every assist can benefit from it.",
+        "To trigger it, you have to interrupt the slow-motion of an assist call — through EX Revenge or EX Burst — while the assist orb is visible but before the assist character acts. The player whose call was interrupted will see their next assist affected. The effect is single-use: once spent, the whole setup has to be redone. The glitch is cancelled if the player concerned uses their assist to cancel the opponent's EX Revenge (LV1 Assist Change).",
+        "Its effects: a fast assist call (the assist attacks immediately instead of waiting for the orb to disappear, for Bravery as well as HP attacks), one-bar HP assist attacks, a LV1 Assist Change that ends sooner, and a LV2 Assist Change at one bar instead of two — an already powerful defensive mechanic becomes more fearsome still.",
+        "The trade-offs: the glitch consumes one of the two EX mechanics — characters equipped with Side by Side therefore cannot trigger it through EX Burst — and taking a full EX Revenge combo (especially against Garland) can cost dearly. The sometimes long delay between the setup and the next call can also be disorienting at first."
+      ],
+      "competitiveUse": "Rarely seen in competition because of its situational prerequisites, but the benefit is real: more reliable whiff punishment on reaction (including with slow assists such as Kuja), assist combos that are normally impossible (e.g. Squall's Solid Barrel combos into Kuja's aerial BRV with no wall), and counters to LV2 Assist Change at a reduced cost — the LV2 Change stagger can then be followed by an assist call for a reliable combo, which characters such as Yuna, Prishe and Ultimecia make good use of.",
+      "source": "https://dissidia.wiki/Assist_Storage_Glitch",
+      "video": { "url": "https://www.youtube.com/watch?v=UKixw8LkJM0&t=300", "title": "Dissidia 012 - Squall Combos (Kuja Assist)", "author": "Dissidia Mediawiki", "date": "2026" }
+    }
+  ],
+  "onlineSetup": {
+    "summary": [
+      "Dissidia 012 is played online through the PPSSPP emulator, on Windows PC as well as Android. The principle: players share an IP address supplied by a connectivity program (Radmin, Hamachi or ZeroTier One) and meet on the same virtual network. You need a PPSSPP build compatible with online play (version 1.1.1 onwards), a connectivity client, and above all the same regional version of the game for everyone — a European copy (ULES01505) cannot connect to an American one (ULUS10566); the Discord community uses the North American version.",
+      "Stability rests on several preparations: the same emulator version for everyone (and the same architecture, 32 or 64-bit — mixing them is a frequent cause of desynchronisation), firewall off or an exception added for the emulator, port offset set to 5000 in the network settings, MAC address refreshed, only one VPN active at a time, the same confirm button for everyone (X for English speakers, to avoid disconnections during EX Bursts) and a name filled in on the game's friend card.",
+      "On the network side, a single player acts as host: they enable PPSSPP's built-in PRO ad hoc server and enter their own Radmin IP, then enter an online lobby or create a group battle room. The others type the host's IP in the “Change PRO ad hoc server IP address” field and wait for the host to be in a lobby before joining. ZeroTier One is the preferred alternative on Android (and a fallback on PC), and PC/Android crossplay has been possible since PPSSPP 1.15.4.",
+      "PPSSPP also allows local “online” play: two instances of the emulator on the same machine (built-in ad hoc server enabled, IP set to “localhost”) are enough for two people to face off on a single computer, with no Radmin, Hamachi or ZeroTier One. The wiki page finally offers a troubleshooting section (slowdowns, white screen, failure to connect to the ad hoc server, desynchronisation, online lag…)."
+    ],
+    "source": "https://dissidia.wiki/Online_Setup_(PPSSPP)"
+  },
+  "attackPriority": {
+    "summary": [
+      "Dissidia 012 rests on a priority system that determines which action wins when two actions interact. It is what structures the game's basic triangle: attacking with fast Bravery attacks, blocking them with a Block, and breaking guards with HP attacks. The general rule: the highest priority wins, two identical Melee priorities clash, and Melee beats Ranged at equal priority.",
+      "Most attacks are classed as Melee or Ranged — not to be confused with the damage type (physical/magical), which only concerns equipment calculations. When blocked, a Melee attack staggers the attacker, but it wins against a Ranged attack of the same level; a blocked Ranged attack does not stagger the attacker, but loses to a Melee attack of the same level. These are typically close-range strikes on one side and projectiles or spells on the other, with exceptions.",
+      "Melee and Ranged each come in three levels: Low, Mid and High. Low covers the majority of Bravery attacks, which lose to a block. Mid is the level of the basic Block: it beats Bravery Low attacks, and the few Mid attacks in turn beat a normal block as well as Ranged Low and Ranged Mid attacks. High is the level of every HP attack: it wins against anything of lower priority, blocks included (a Guard Crush on a normal block).",
+      "On top of that come some special priorities: Block Highest (no attack reaches that level — LV2 Assist Change gets its reputation from it, losing only to Special and Unblockable); Dash (any dash blocks Ranged Low and Special attacks for its duration); Special (unblockable but loses to Melee, Dash and Ranged Mid/High, e.g. Kuja's Remote Flare); Unblockable (interacts with nothing but a dodge and therefore passes through every attack and every block, Block Highest included, e.g. Terra's Graviga); and the unique case of Jecht Block, a command block that beats Dash, Low, Mid and Ranged High, causes a double stagger against Melee High, and loses to Special and Unblockable."
+    ],
+    "source": "https://dissidia.wiki/Attack_Priority_(Dissidia_012)"
+  },
+  "glossaryNote": {
+    "summary": [
+      "dissidia.wiki keeps a complete glossary of Dissidia 012's vocabulary: over fifty entries covering the official statistics and mechanics (Bravery, Ability Points, Capacity Points, EX Mode, Battlegen…) as well as the competitive jargon coined by the community — blodge, dash feint, dodge punish, Wall Rush, Free Air Dash, cross-up, stagger, poke and many more. Each term is defined in a few lines there, often with a link to the detailed page. It is the reference to consult when a term in our guides is unfamiliar."
+    ],
+    "source": "https://dissidia.wiki/Glossary_(Dissidia_012)"
+  }
+}
