@@ -19,9 +19,14 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Resvg } from '@resvg/resvg-js';
 import { CHARACTERS, SPECIAL } from './characters.mjs';
+import { LOCALES } from '../src/i18n/config.mjs';
+import { createT } from '../src/i18n/t.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const OUT = join(ROOT, 'assets', 'og');
+// Une série d'images par langue : elles portent du texte (sur-titre, accroche,
+// sous-titre), une carte de partage anglaise avec une accroche française serait
+// pire que pas d'image du tout.
+const OG_ROOT = join(ROOT, 'assets', 'og');
 const FORCE = process.argv.includes('--force');
 
 const C = {
@@ -94,7 +99,7 @@ function backdrop() {
 <rect x="0" y="618" width="1200" height="12" fill="url(#rule)"/>`;
 }
 
-function characterSvg({ name, origin, tagline, tier, portrait, kicker = 'GUIDE COMPÉTITIF' }) {
+function characterSvg({ name, origin, tagline, tier, portrait, kicker, tierBadge }) {
   const px = 100, py = 137, ps = 356; // portrait : carré, centré verticalement
   // Colonne de texte : le cadre du portrait s'arrête à px + ps + 16, il faut
   // partir franchement après, sinon le texte vient coller le trait doré.
@@ -113,7 +118,7 @@ ${origin ? `<text x="${tx}" y="${182 + nameSize + 56}" font-family="${esc(DISPLA
 ${taglineLines.map((l, i) => `<text x="${tx}" y="${182 + nameSize + 108 + i * 34}" font-family="Segoe UI, sans-serif" font-size="25" fill="${C.muted}">${esc(l)}</text>`).join('\n')}
 ${tier ? `<g>
 <rect x="${tx}" y="${182 + nameSize + 108 + taglineLines.length * 34 + 14}" width="${160 + tier.length * 16}" height="42" rx="21" fill="${C.surface}" stroke="${C.gold}" stroke-width="1.5"/>
-<text x="${tx + 20}" y="${182 + nameSize + 108 + taglineLines.length * 34 + 42}" font-family="Segoe UI, sans-serif" font-size="23" fill="${C.gold}">Tier ${esc(tier)} · 2017</text>
+<text x="${tx + 20}" y="${182 + nameSize + 108 + taglineLines.length * 34 + 42}" font-family="Segoe UI, sans-serif" font-size="23" fill="${C.gold}">${esc(tierBadge)}</text>
 </g>` : ''}
 <text x="1152" y="588" text-anchor="end" font-family="${esc(DISPLAY_FONT)}" font-size="25" fill="${C.muted}">Dissidia 012 <tspan fill="${C.gold}">[duodecim]</tspan></text>
 </svg>`;
@@ -147,8 +152,6 @@ function render(svg, out) {
 }
 
 // --- Exécution ---
-mkdirSync(OUT, { recursive: true });
-
 const readJson = (p) => (existsSync(p) ? JSON.parse(readFileSync(p, 'utf-8')) : null);
 const meta = readJson(join(ROOT, 'data', 'meta.json'));
 
@@ -169,48 +172,60 @@ for (const e of meta?.tierList?.entries || []) {
   if (slug) tierBySlug[slug] = e.tier;
 }
 
-let made = 0, skipped = 0;
-for (const c of [...CHARACTERS, ...SPECIAL]) {
-  // chaos.html n'est qu'une redirection : pas d'image de partage.
-  if (c.slug === 'chaos') continue;
-  const out = join(OUT, `${c.slug}.png`);
-  if (existsSync(out) && !FORCE) { skipped++; continue; }
-  const data = readJson(join(ROOT, 'data', 'characters', `${c.slug}.json`));
-  const ed = readJson(join(ROOT, 'data', 'editorial', `${c.slug}.json`));
-  const pFile = join(ROOT, 'assets', 'portraits', `${c.slug}.png`);
-  render(characterSvg({
-    name: data?.name || c.name,
-    origin: data?.origin || '',
-    // Aerith n'est pas jouable : sa fiche documente un assist, pas un plan de
-    // jeu. Le sur-titre le dit, comme son <title> (voir guide.mjs, isAssist).
-    kicker: c.slug === 'aerith' ? 'ASSIST' : 'GUIDE COMPÉTITIF',
-    // La tagline éditoriale, telle qu'écrite — jamais reformulée ici.
-    tagline: ed?.tagline || ed?.archetype || '',
-    tier: tierBySlug[c.slug] || null,
-    portrait: existsSync(pFile) ? dataUri(pFile) : null,
-  }), out);
-  made++;
-}
+// La bande de portraits des pages sans personnage unique : les nouveaux venus de
+// 012 (première rangée de l'écran de sélection) suivis des trois personnages du
+// tier S. Elle ne dépend pas de la langue, on la prépare une fois.
+const FEATURED = ['lightning', 'vaan', 'laguna-loire', 'yuna', 'kain-highwind', 'tifa-lockhart', 'prishe', 'exdeath', 'ultimecia'];
+const portraits = FEATURED
+  .map((s) => join(ROOT, 'assets', 'portraits', `${s}.png`))
+  .filter(existsSync)
+  .map(dataUri);
 
-// Pages sans personnage unique : accueil et créateur de builds. La bande de
-// portraits reprend les nouveaux venus de 012 (première rangée de l'écran de
-// sélection) suivis des trois personnages du tier S.
-{
-  const featured = ['lightning', 'vaan', 'laguna-loire', 'yuna', 'kain-highwind', 'tifa-lockhart', 'prishe', 'exdeath', 'ultimecia'];
-  const portraits = featured
-    .map((s) => join(ROOT, 'assets', 'portraits', `${s}.png`))
-    .filter(existsSync)
-    .map(dataUri);
+let made = 0, skipped = 0;
+const locales = LOCALES.filter((l) => existsSync(join(ROOT, 'locales', `${l}.json`)));
+
+for (const locale of locales) {
+  const t = createT(locale);
+  const OUT = join(OG_ROOT, locale);
+  mkdirSync(OUT, { recursive: true });
+
+  for (const c of [...CHARACTERS, ...SPECIAL]) {
+    // chaos.html n'est qu'une redirection : pas d'image de partage.
+    if (c.slug === 'chaos') continue;
+    const ed = readJson(join(ROOT, 'data', 'editorial', locale, `${c.slug}.json`));
+    // L'accroche est le texte principal de la carte : sans prose dans cette
+    // langue, la fiche n'est pas publiée et l'image n'aurait rien à montrer.
+    if (!ed) continue;
+    const out = join(OUT, `${c.slug}.png`);
+    if (existsSync(out) && !FORCE) { skipped++; continue; }
+    const data = readJson(join(ROOT, 'data', 'characters', `${c.slug}.json`));
+    const pFile = join(ROOT, 'assets', 'portraits', `${c.slug}.png`);
+    render(characterSvg({
+      name: data?.name || c.name,
+      origin: data?.origin || '',
+      // Aerith n'est pas jouable : sa fiche documente un assist, pas un plan de
+      // jeu. Le sur-titre le dit, comme son <title> (voir guide.mjs, isAssist).
+      kicker: c.slug === 'aerith' ? t('og.kickerAssist') : t('og.kickerGuide'),
+      // La tagline éditoriale, telle qu'écrite — jamais reformulée ici.
+      tagline: ed?.tagline || ed?.archetype || '',
+      tier: tierBySlug[c.slug] || null,
+      tierBadge: t('og.tierBadge', { tier: tierBySlug[c.slug] || '' }),
+      portrait: existsSync(pFile) ? dataUri(pFile) : null,
+    }), out);
+    made++;
+  }
+
+  // Pages sans personnage unique : accueil et créateur de builds.
   const pages = [
     ['site', {
-      title: 'Dissidia 012 [duodecim]',
-      subtitle: 'Guides compétitifs français',
-      tagline: '31 personnages · frame data · matchups · créateur de builds',
+      title: t('og.siteTitle'),
+      subtitle: t('og.siteSubtitle'),
+      tagline: t('og.siteTagline'),
     }],
     ['createur-de-builds', {
-      title: 'Créateur de builds',
-      subtitle: 'Dissidia 012 [duodecim]',
-      tagline: 'Attaques, abilities, équipement, accessoires · jauge de CP · règles tournoi',
+      title: t('og.builderTitle'),
+      subtitle: t('og.builderSubtitle'),
+      tagline: t('og.builderTagline'),
     }],
   ];
   for (const [name, texts] of pages) {
@@ -221,4 +236,4 @@ for (const c of [...CHARACTERS, ...SPECIAL]) {
   }
 }
 
-console.log(`images OG : ${made} générée(s), ${skipped} déjà présente(s) — police d'affichage « ${DISPLAY_FONT} »${FORCE ? ' (--force)' : ''}`);
+console.log(`images OG : ${made} générée(s), ${skipped} déjà présente(s) — langues ${locales.join(', ')}, police d'affichage « ${DISPLAY_FONT} »${FORCE ? ' (--force)' : ''}`);

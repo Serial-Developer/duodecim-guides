@@ -1,0 +1,277 @@
+{
+  "slug": "lightning",
+  "tagline": "Polyvalente à trois rôles, pression Thunder et économie d'EX redoutable",
+  "archetype": "Polyvalente multi-rôles (Paradigm Shift)",
+  "overview": [
+    "Protagoniste de Final Fantasy XIII, Lightning s'adapte à toutes les situations grâce au Paradigm Shift : Commando pour le corps à corps et la mi-distance, Ravager pour le zoning, le poke et le rushdown (Thunder), Medic pour générer de la bravery. Quelques outils sortent du lot, mais son vrai potentiel tient à un kit très complet, qui couvre énormément de fondamentaux du jeu.",
+    "Son gameplay est simple et polyvalent : bons pokes, bon zoning, bon rushdown et mixups sur dodge/block — de quoi répondre à la plupart des options et matchups courants. Son zoning est agressif : elle tient à distance, envoie des projectiles aux trousses de l'adversaire et punit les setups depuis la mi-distance, compliquant le démarrage de l'offense adverse tout en lançant la sienne. Beaucoup de ses coups ont un hit stun élevé, mènent au Chase ou provoquent un Wall Rush : elle confirme la plupart des touches en assist, parfois en HP, et sort des combos impressionnants de longueur.",
+    "L'économie de ses jauges est un moteur central : ses confirms courants, combos d'assist et combos avancés génèrent beaucoup d'EX Force, sa dash speed et son zoning gagnent fréquemment les courses aux EX Cores, et Thunder (entre autres) dope son gain de jauge d'assist. Lightning est l'un des rares personnages capables de remplir la jauge EX deux fois dans un (long) match, et l'une des meilleures utilisatrices de la jauge : bons combos en EX Revenge, bon EX Mode, et Omega Weapon en kill confirm sur Bravery Break.",
+    "En contrepartie, ses dégâts restent faibles même sur ses combos les plus optimisés, Glutton couplé à une portée d'absorption d'EX boostée peut siphonner une grande partie de son EX si elle n'investit pas elle-même en EX intake range, et Watera — pourtant excellent — peut ruiner ses propres combos s'il est reflété ou négligé."
+  ],
+  "tierNote": "Lightning est classée 4e, en tier A+, sur la tier list compétitive de 2017 — première derrière le trio S. L'overview attribue ce niveau non à un outil unique mais à un kit très complet couvrant la plupart des fondamentaux du jeu.",
+  "strengths": [
+    "Gameplay simple et polyvalent : bons pokes, bon zoning, bon rushdown et mixups sur dodge/block, de quoi couvrir la plupart des options et matchups courants.",
+    "Économie de jauges puissante : confirms, combos d'assist et combos avancés génèrent beaucoup d'EX Force ; dash speed et zoning gagnent souvent les courses aux EX Cores ; Thunder dope aussi le gain de jauge d'assist. Peut remplir la jauge EX deux fois dans un long match.",
+    "Zoning agressif : de nombreux outils pour tenir à distance, poursuivre avec des projectiles ou punir les setups depuis la mi-distance.",
+    "Gros potentiel de combo : hit stun élevé, Chase et Wall Rush sur beaucoup de coups, d'où des confirms en assist (parfois en HP) et de très longs combos sur la bonne touche.",
+    "Excellente utilisation de l'EX : bons combos en EX Revenge, bon EX Mode, et Omega Weapon en kill confirm de Bravery Break."
+  ],
+  "weaknesses": [
+    "Dégâts faibles : même avec ses combos les plus optimaux, elle peine à sortir de gros chiffres de manière constante.",
+    "Vulnérable à Glutton : couplé à une portée d'absorption d'EX boostée, il peut lui retirer une grande partie de son EX si elle n'investit pas elle-même en EX intake range.",
+    "Watera à double tranchant : reflété ou négligé, il peut fréquemment ruiner ses propres combos."
+  ],
+  "moveNotes": {
+    "Blitz": "Slash tournoyant très actif, immense et avançant loin : ses frames actives et sa priorité Melee Mid le font passer au travers d'attaques comme le Thunder Barret de Squall, et il se convertit en assist depuis le premier hit comme depuis le Wall Rush. Un guard break se convertit avec assist (ou sur break très tardif), mais le tir de Wall Rush ne sort alors pas et il faut dodge cancel. Recovery assez longue mais souvent difficile à punir : à utiliser avec prudence.",
+    "Ruinga": "Orbe à longue portée au tracking vertical limité, Wall Rush sur hit. La version un peu plus utile de Ruin : whiff punish longue distance converti en assist, à considérer de temps en temps même si l'occasion est rare.",
+    "Fire": "Jusqu'à trois petits projectiles posés devant elle puis lancés vers l'adversaire à bonne vitesse, au hit stun très généreux qui facilite le follow-up. Combiné à Thundaga et/ou Watera, il stoppe les approches et met l'adversaire sur la défensive. Pilier de combos au sol avancés — après un Wall Rush au sol avec Aerith, ou derrière l'assist Jecht qui laisse le temps de le poser — avec Fire > Launch en belle extension quand elle est disponible.",
+    "Aerora": "Petit projectile au tracking vertical lent, faible en neutral. Son intérêt : il peut hit glitch vers Lightning Strike, même si ce combo est plus dur à placer que les combos en link glitch plus pratiques.",
+    "Army of One (ground)": "Ruée traqueuse menant au Chase sur hit, à la portée bien plus longue qu'attendu et au dodge punish fiable de près ; bon mixup pour punir block et esquive malgré une animation un peu lente. Génération d'EX énorme sur hit (120, davantage avec le Chase), mais la version au sol sert moins, d'autres coups couvrant les mêmes situations.",
+    "Smite": "Slash à 23F qui envoie l'adversaire vers le bas, Wall Rush. Conclut les combos solo via le landing lag de Blaze Rush ; follow-up possible de Watera.",
+    "Ruin": "Projectile longue portée utilisable jusqu'à trois fois, tous les hits menant au Chase, orientable au stick. Souvent surclassé en utilité par Blizzara/Watera, mais plus rapide que Blizzara pour un rare whiff punish à longue distance.",
+    "Blizzara": "L'outil anti-zoning de Lightning : extrêmement lent pour une bravery (63F) et punissable à vue, mais excellent pour contrer les setups adverses. Dès que la glace apparaît (vers la moitié du startup), un fort effet d'aspiration attire même légèrement hors de portée ; elle se traverse en dash et fonctionne bien en tandem avec Watera pour rester safe. Lightning peut rebouger environ au moment de l'impact : le hit stun long et flottant permet de combotter en solo de près, ou avec n'importe quel assist courant.",
+    "Watera": "Projectile staple : très lent mais très persistant, idéal pour occuper l'espace, à refléter pour être désarmé — peu de réponses pour les personnages sans coup mid/high rapide et sûr ; bloqué, Lightning punit le stagger en HP ou relance un Watera en refletant l'autre avec Army of One. Il reste actif même si elle est touchée (interception des combos et assists basse priorité à proximité), génère beaucoup d'EX (90) et offre un hit stun ample pour les combos solo (près/au-dessus de l'adversaire ou en avançant) comme d'assist. Certains assists peuvent le whiff punir de façon constante, mais le timing est délicat : l'assist doit attaquer après le lancement de la boule.",
+    "Army of One (midair)": "Version aérienne encore plus utile que la version au sol : bon tracking vertical pour poursuivre vers le bas, capacité à refléter Watera, et tandem avec Thunder pour un mixup block/esquive qui garde l'adversaire en permanence dans le doute. Toujours 120 EX Force et Chase sur hit.",
+    "Cure": "Génère de la bravery passivement (138 au total au niveau 100 en ~3 secondes), sans timing d'input requis et avec un ending lag raisonnable. À utiliser avec parcimonie entre deux projectiles ou sur une course à l'EX Core perdue pour regagner ou stocker de la bravery.",
+    "Cura": "Comme Cure mais démarre plus lentement, se termine plus vite (~2,5 s) et rapporte plus (165 au niveau 100), au prix de deux inputs supplémentaires à timer : un raté laisse moins de bravery qu'un Cure, le risque/récompense monte nettement. Le meilleur choix des deux si votre timing est constant.",
+    "Lightning Strike": "HP au sol (47F, son plus rapide avec Crushing Blow) : éclairs appelés autour d'elle, très bons contre les attaques de flanc. Se combote depuis Aerora via hit glitch contre un adversaire au sol, éventuellement après un stagger sur block.",
+    "Razor Gale": "Onde de choc projetée par l'épée à longue portée : lente mais au homing puissant, Wall Rush, et l'un de ses deux HP mono-hit.",
+    "Flourish of Steel": "HP link accessible uniquement en rôle Commando, à la suite de Launch. C'est l'attaque HP qui inflige le plus de dégâts de bravery dans ses combos d'assist.",
+    "Crushing Blow": "Charge tranchante qui envoie l'adversaire vers le haut, à égalité de HP le plus rapide (47F) et mono-hit. S'insère au milieu des combos Fire (Fire 1 et 2 > Crushing Blow > Fire 3 > Blaze Rush...).",
+    "Thunderfall": "Foudre lâchée à longue portée avec lames tournoyantes, Wall Rush, dotée d'un magic block en fin d'animation quand les lames tournent au-dessus de sa tête. Bon follow-up HP de Watera depuis une distance plus grande que ses autres suivis.",
+    "Launch": "Deux coups homonymes selon le rôle et la position. Au sol (Launch, 23F) : son coup au sol le plus rapide, réactable mais doté d'un bon tracking et d'une bonne portée pour un whiff punish rapide ou punir les esquives arrière/latérales — surtout utilisé après un combo d'assist pour enchaîner sur Flourish of Steel, l'attaque HP qui inflige le plus de dégâts de bravery. En l'air (Blaze Rush, 29F) : tir + charge à l'épée efficace à toute hauteur, dont la première partie ouvre un combo solo (Blaze Rush > dodge cancel > landing lag > Smite).",
+    "Blaze Rush": "Deux coups homonymes selon le rôle et la position. Au sol (Launch, 23F) : son coup au sol le plus rapide, réactable mais doté d'un bon tracking et d'une bonne portée pour un whiff punish rapide ou punir les esquives arrière/latérales — surtout utilisé après un combo d'assist pour enchaîner sur Flourish of Steel, l'attaque HP qui inflige le plus de dégâts de bravery. En l'air (Blaze Rush, 29F) : tir + charge à l'épée efficace à toute hauteur, dont la première partie ouvre un combo solo (Blaze Rush > dodge cancel > landing lag > Smite).",
+    "Thundaga": "Deux sorts homonymes selon la position. Au sol (Thundaga, 27F) : éclairs Ranged Low dans une petite zone autour d'elle, si fréquents et persistants (même si elle est touchée) que la plupart des personnages ne peuvent pas la punir dedans — le temps de générer de la bravery en Medic, de recaster ou de bâtir la jauge d'assist ; le hit stun permet un assist pendant le chase, mais le confirm est difficile, le prompt sortant dès qu'un éclair touche. En l'air (Thunder, 13F) : le coup qui définit le personnage — portée trompeuse, anti-air, spammable grâce à une recovery minuscule qui permet de le cancel en état neutre et de le répéter en rythme pour bâtir la jauge d'assist ; même bloqué, beaucoup de personnages peinent à riposter, donc bloquer ne garantit pas son tour. Sa priorité Ranged Low le laisse toutefois perméable aux attaques melee, aux dashes et aux magic blocks (Heel Crush de Squall) ; dégâts faibles, mais 90 EX Force par cast complet et contournement possible de l'Assist Change LV2 autour du troisième hit.",
+    "Thunder": "Deux sorts homonymes selon la position. Au sol (Thundaga, 27F) : éclairs Ranged Low dans une petite zone autour d'elle, si fréquents et persistants (même si elle est touchée) que la plupart des personnages ne peuvent pas la punir dedans — le temps de générer de la bravery en Medic, de recaster ou de bâtir la jauge d'assist ; le hit stun permet un assist pendant le chase, mais le confirm est difficile, le prompt sortant dès qu'un éclair touche. En l'air (Thunder, 13F) : le coup qui définit le personnage — portée trompeuse, anti-air, spammable grâce à une recovery minuscule qui permet de le cancel en état neutre et de le répéter en rythme pour bâtir la jauge d'assist ; même bloqué, beaucoup de personnages peinent à riposter, donc bloquer ne garantit pas son tour. Sa priorité Ranged Low le laisse toutefois perméable aux attaques melee, aux dashes et aux magic blocks (Heel Crush de Squall) ; dégâts faibles, mais 90 EX Force par cast complet et contournement possible de l'Assist Change LV2 autour du troisième hit."
+  },
+  "exMode": {
+    "summary": [
+      "EX Mode « Omega Weapon equipped! » : Regen, Critical Boost, Omega Weapon et Grav-con Unit. Omega Weapon, qui s'active avec une bravery, provoque instantanément un Bravery Break si l'adversaire est proche du Break — concrètement, une attaque break dès qu'il est sous 30 % de sa bravery de base (200 BRV au niveau 100). Très puissant pour gonfler les dégâts d'un EX Burst.",
+      "Grav-con Unit, toujours actif en EX Mode, évite automatiquement les dégâts de Wall Rush. L'overview classe Lightning parmi les utilisateurs de jauge EX les plus redoutables du jeu : bons combos en EX Revenge, bon EX Mode, et Omega Weapon en kill confirm sur Bravery Break."
+    ],
+    "burst": "Gestalt Drive : une chaîne d'attaques imprégnées des pouvoirs d'Odin, à exécuter en entrant les commandes affichées à l'écran — les directions se font impérativement au stick analogique, même si vos déplacements sont configurés sur les boutons directionnels. Le +1 ATK passif du rôle Commando s'applique aussi à l'EX Burst."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "Lightning dispose de trois sets de braveries distincts, portés par ses trois rôles : Commando (corps à corps et mi-distance), Ravager (zoning, poke et pression Thunder) et Medic (génération de bravery). On change de rôle avec L + R ; la rotation par défaut est Commando > Ravager > Medic, et l'extra ability Reverse Paradigm l'inverse en Ravager > Commando > Medic.",
+      "Si on retire tous les coups d'un rôle, il disparaît de la rotation en combat — retirer les attaques du rôle Medic permet de basculer directement entre Commando et Ravager. En outre, le rôle Commando confère un bonus passif de +1 ATK, applicable aussi à l'EX Burst. Les attaques HP restent disponibles quel que soit le rôle actif."
+    ],
+    "details": null
+  },
+  "gameplan": [
+    "Le Paradigm Shift (L + R) structure tout : Commando pour le corps à corps et la mi-distance (avec +1 ATK passif), Ravager pour le zoning, le poke et le rushdown, Medic pour générer de la bravery. La rotation par défaut est Commando > Ravager > Medic, inversée en Ravager > Commando > Medic avec l'extra ability Reverse Paradigm ; ne rien équiper dans un rôle — typiquement Medic — le retire de la rotation et fluidifie les changements. Les braveries Medic ne sont pas prioritaires pour apprendre le personnage, mais offrent une optimisation supplémentaire aux joueurs dédiés.",
+    "En neutral, Thunder est la colonne vertébrale : poke à 13F, anti-air, dur à punir même bloqué, et générateur de jauge d'assist quand il est enchaîné en rythme grâce à sa recovery minuscule. Autour de lui, Watera occupe l'espace, Fire et Thundaga stoppent les approches, Blizzara contre les setups de zoning adverses, et Ruinga/Ruin offrent de rares whiff punishes à longue distance. Contre la défensive adverse, Army of One (surtout en l'air) forme avec Thunder un mixup block/esquive permanent, et Thundaga lui ménage des temps de respiration pour caster ou passer en Medic.",
+    "Chaque touche doit convertir : hit stun élevé, Chase et Wall Rush permettent de confirmer la plupart des hits en assist, parfois en HP. Les routes types : assist > Launch > Flourish of Steel (l'attaque HP la plus dommageable en bravery), les extensions Fire au sol (après un Wall Rush au sol avec Aerith, ou derrière Jecht qui laisse le temps de poser), Watera/Blizzara suivis en solo ou en assist, l'ouverture solo Blaze Rush > dodge cancel > landing lag > Smite, et les combos à très forte génération d'EX comme Blizzara > Army of One (DC) > Thunder (270 EX) — Army of One > DC > Thunder exigeant l'effet spécial Adamant Chains loin des murs.",
+    "L'économie des jauges est le vrai moteur : les confirms génèrent beaucoup d'EX Force, la dash speed et le zoning gagnent les courses aux EX Cores, et la jauge EX peut se remplir deux fois dans un long match. En Medic, Cure/Cura compensent une course à l'EX Core perdue, provoquent une approche en situation de stalemate ou stockent de la bravery à distance sûre. Jauge pleine, l'EX Mode transforme un Bravery Break en kill confirm via Omega Weapon. Restez toutefois vigilant face aux porteurs de Glutton, qui siphonnent son EX si elle n'investit pas en EX intake range, et à vos propres Watera, qui reflétés peuvent ruiner vos combos."
+  ],
+  "advancedTech": [
+    {
+      "name": "Thunder rhythm (dodge cancel)",
+      "desc": "Profiter de la recovery minuscule de Thunder pour le cancel en état neutre et le relancer en cadence : la jauge d'assist monte très vite, et même un block réussi ne rend pas son tour à l'adversaire — beaucoup de personnages ne peuvent pas riposter de manière fiable, et Lightning peut re-bloquer, esquiver ou recommencer."
+    },
+    {
+      "name": "Hit glitch Aerora > Lightning Strike",
+      "desc": "Aerora peut hit glitch vers Lightning Strike pour une touche HP, de manière fiable contre un adversaire au sol et éventuellement après un stagger sur block. Plus difficile à placer que les combos en link glitch plus pratiques. Le relevé communautaire recense la même route.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Watera reflect (Army of One)",
+      "desc": "Si l'adversaire bloque Watera, punissez le stagger en HP ou relancez un Watera en refletant le premier avec Army of One ; la version aérienne d'Army of One sert aussi à refléter un Watera à la volée."
+    },
+    {
+      "name": "Army of One > DC > Thunder (Adamant Chains)",
+      "desc": "Loin des murs, ce combo exige l'effet spécial de l'équipement Adamant Chains pour que la distance d'air dodge normale suffise ; près des murs, plafonds et coins, le knockback réduit s'en passe. Génération d'EX exceptionnelle : 210, jusqu'à 270 en partant de Blizzara — l'un des combos solo les plus générateurs d'EX du jeu. Le relevé de combos solo de la communauté confirme la route et précise son départ : un Blizzara maintenu (« Hold »), l'équipement Adamant n'étant requis qu'en l'absence de mur.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Aerora > Army of One (link garanti)",
+      "desc": "D'après le guide de Suih (GameFAQs, 2012), un hit d'Aerora permet d'enchaîner l'intégralité d'Army of One au sol : contrairement au hit glitch vers Lightning Strike (qui laisse une petite fenêtre d'esquive), ce suivi sort à 100 % tant que la portée le permet. Le guide suggère de couvrir la manœuvre d'un assist que l'adversaire sera forcé d'esquiver.",
+      "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/62070"
+    },
+    {
+      "name": "Fire Set > Blaze Rush > Smite",
+      "desc": "Route longue entièrement bâtie sur ses projectiles de setup : poser Fire, laisser passer les deux premiers hits, placer Crushing Blow pendant que les trois hits restants tombent, puis Blaze Rush sans follow-up, dodge cancel, landing lag et Smite. C'est la conversion la plus longue recensée dans son kit.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Watera (mi-distance) > Thunderfall",
+      "desc": "Link simple relevé par la communauté : un Watera touché à mi-distance enchaîne sur Thunderfall. Aucune condition d'équipement ni de mur n'est mentionnée.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Ruin : empty chase vers reset de jauge d'assist",
+      "desc": "Ruin fait partie des rares coups du cast dont le hit stun autorise un empty chase — un chase initié sans rien y exécuter — débouchant sur un reset de la jauge d'assist. D'après le relevé, Thunder en est très proche mais n'y parvient pas.",
+      "source": "https://pastebin.com/dKSWgUQ6"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "Aucune chart consolidée n'a survécu pour Lightning, mais les threads d'époque de dissidiaforums (retrouvés via la Wayback Machine) dégagent un consensus net sur son pire matchup : Sephiroth, évalué autour de 6-4 en sa défaveur. Shadow Flare punit les startups de Watera et Blizzara, interdit Cure/Cura à portée et couvre Sephiroth pendant qu'il construit sa jauge ; Thunder est à peu près la seule réponse qui passe — ce qui n'est pas rien, puisqu'il remplit vite assist et EX. Les contre-mesures des threads : camper le sol sous Thundaga, que Sephiroth ne peut pas punir proprement, jouer un keepaway à base d'Omni Air Dash+ et de BRV Boost on Dodge en grattant de la bravery avec Cure (Cura est déconseillé à portée de Shadow Flare, son startup se fait toucher), et punir à l'assist les dodge cancels qui suivent chaque flare.",
+      "The Emperor est l'autre matchup pénible d'après le thread « Lightning's Toughest Opponent » : le Magic Block de Starfall neutralise la quasi-totalité de ses sorts Ravager (Fire, Blizzara, Thunder, Thundaga, Aerora, Ruin, Ruinga, jusqu'à Blaze Rush), la forçant vers des HP punissables par assist ; le conseil récurrent est de ne jamais le laisser installer ses traps, de lui rester collée aux basques — quitte à sortir Medic de la rotation le temps du match. Exdeath est cité par plusieurs joueurs comme son adversaire le plus ingrat (l'omniblock répond à tout), et Golbez revient sans cesse : « une Lightning au sol est une Lightning morte » — rester au-dessus de lui réduit le problème à Sector Ray et Nightglow, mais presque chaque bravery de Golbez convertit en Cosmic Ray. Ponctuellement, Jecht Block est signalé comme neutralisant Watera, et côté Firion, LonelyGaruga décrit (début 2012) un matchup confortable pour Firion : Straightarrow et Thunder punissent Watera, Shield Bash bloque Blizzara, et Fire/Thunder/Straightarrow couvrent le camping Cure/Cura.",
+      "En face de ça, plusieurs mainers du forum estiment qu'elle n'a aucun matchup ingagnable, sa polyvalence de Paradigm lui laissant toujours une réponse. Cloud est donné légèrement en sa faveur : il n'a pas de réponse sûre à Watera et elle le domine dans les airs, où elle a tout intérêt à l'attirer à coups de Blizzara/Watera. Le guide Steam Exdeath de Solde Starlight Serenity (2020) décrit de son côté un match « fun and heated » où Thunderfall, sa principale menace, s'échappe en assist-cancel suivi d'un block du segment HP — signe que même ses meilleurs outils demandent d'être variés pour passer."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Deux builds sont documentés, tous deux avec l’Equip Glitch supposé pour le coût total en CP et le summon Rubicante."
+    ],
+    "notes": "Les tableaux « Bravery attacks / HP attacks » des deux builds sont vides dans les données extraites : les loadouts de coups recommandés par build ne sont pas connus. Le FAQ d'époque de TWOxACROSS (« Invoke my name — I am Spark », dissidiaforums, 2011) argumente en revanche le choix des types d'équipement : dagues (bonus Initial EX Force+) pour les builds EX « one-shot », katanas (base bravery élevée et EX Intake Range+ en fin de progression) pour le chipping HP agressif au prix de la DEF, Heaven's Cloud plutôt que Zwill Crossblade pour un EX Rush constant, et sets Super Rocket (glass cannon) ou Genji (Soul of Yamato) selon le plan EX retenu.",
+    "movesetColumns": [
+      {
+        "header": "Rôle",
+        "values": {
+          "Blitz": "Commando",
+          "Launch": "Commando",
+          "Ruinga": "Commando",
+          "Smite": "Commando",
+          "Ruin": "Commando",
+          "Blaze Rush": "Commando",
+          "Fire": "Ravager",
+          "Aerora": "Ravager",
+          "Thundaga": "Ravager",
+          "Army of One (ground)": "Ravager",
+          "Watera": "Ravager",
+          "Thunder": "Ravager",
+          "Blizzara": "Ravager",
+          "Army of One (midair)": "Ravager",
+          "Cure": "Medic",
+          "Cura": "Medic",
+          "Flourish of Steel": "Commando"
+        }
+      }
+    ],
+    "movesetSlots": {
+      "Cure": "Au sol et en l’air",
+      "Cura": "Au sol et en l’air"
+    },
+    "movesetNote": "Les trois rôles du Paradigm Shift ne concernent que les braveries : Lightning dispose de trois sets distincts, dont on change avec L + R. La rotation par défaut est Commando > Ravager > Medic, inversée en Ravager > Commando > Medic avec l'extra ability Reverse Paradigm. Conséquence directe à l'équipement : si aucun coup d'un rôle n'est équipé, ce rôle devient indisponible en combat — ne pas équiper de Medic réduit le cycle à deux rôles. Le rôle Commando apporte en outre un bonus passif de +1 ATK. Les attaques HP proprement dites ne dépendent d'aucun rôle. Flourish of Steel est un cas à part : une attaque Bravery → HP, c'est-à-dire une bravery que l'on peut prolonger ou non par une attaque HP. Sa bravery de base est Launch, accessible seulement en Commando : l'attaque entière est donc Commando uniquement.",
+    "movesetSources": [
+      "https://finalfantasy.fandom.com/wiki/Lightning_(Dissidia_PSP)"
+    ],
+    "movesetTypes": {
+      "Flourish of Steel": "Bravery → HP"
+    },
+    "perBuild": {
+      "Adamant Chains + EX": [
+        "450 CP, booster x1.4, 10972 HP : il monte le set Adamant complet avec Zantetsuken pour l’effet spécial Adamant Chains — celui qui débloque Army of One > DC > Thunder sans mur — avec l’assist Aerith et des accessoires orientés EX (BRV = 0, White Drop x3, White Gem, Tenacious Attacker, Glutton, Great Gospel, Dismay Shock, Battle Hammer). Master Guardsman peut s’équiper pour +1000 HP."
+      ],
+      "Hybrid": [
+        "480 CP, booster x3.5 : il mise sur une base bravery élevée (1414) — Piggy’s Stick, Hero’s Shield, Royal Crown et Maximillian, assist Tidus (ou au choix du joueur), et des boosters conditionnels (Hyper Ring, Large Gap in HP, Summon Unused, Pre-EX Mode, Pre-EX Revenge, Hero’s Essence, Tenacious Attacker, Glutton). L’extra ability Best Dresser ajoute +100 de base bravery."
+      ]
+    }
+  },
+  "assist": {
+    "asAssist": [
+      "La section assist du wiki n'évalue pas les coups d'assist de Lightning : elle se limite à indiquer qu'elle fonctionne bien avec la plupart des assists viables en tournoi. Sur la tier list assist de Muggshotter, Lightning est classée Low."
+    ],
+    "recommended": [
+      {
+        "name": "Aerith",
+        "why": "Assist du build « Adamant Chains + EX », et point de départ documenté des combos au sol avancés : après un Wall Rush au sol avec Aerith, Lightning a le temps de poser Fire et de combotter derrière."
+      },
+      {
+        "name": "Jecht",
+        "why": "Son assist laisse assez de temps et de distance pour poser Fire et enchaîner un combo derrière."
+      },
+      {
+        "name": "Tidus",
+        "why": "Assist listé pour le build « Hybrid », explicitement interchangeable au choix du joueur."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "- Fighting Fate - [Dissidia 012] Lightning Combo Montage (HD + Guide)",
+      "desc": "Montage-guide d'époque de combos de Lightning (chaîne Varsona, août 2011), publié quelques mois après la sortie du jeu — un complément filmé aux routes de combo décrites par le wiki.",
+      "source": "https://www.youtube.com/watch?v=ZxVkk1e3XV8",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012 Duodecim: [TUTORIAL] Lightning Basics and Combos (Prologus)",
+      "desc": "Tutoriel des bases et combos de Lightning par FrizFroz, enregistré sur Dissidia 012 Prologus, la démo-prologue officielle de Duodecim (janvier 2011) : antérieur au jeu final, certaines données peuvent légèrement différer.",
+      "source": "https://www.youtube.com/watch?v=ohmtE5cvLM4",
+      "date": "2011"
+    },
+    {
+      "title": "Liste de combos solo de tout le cast (Eddiegames)",
+      "desc": "Relevé communautaire des routes de combo solo des 31 personnages, rédigé par Eddiegames sur le Discord DISSIDIA et publié en pastebin (dernière mise à jour décembre 2022). Pour Lightning, il confirme les routes Army of One > Thunder et Aerora > Lightning Strike décrites par le wiki, et ajoute Fire Set > Blaze Rush > Smite ainsi que Watera > Thunderfall.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "Liste des empty chases menant à un reset de jauge d'assist (Eddiegames)",
+      "desc": "Relevé personnage par personnage des coups dont le hit stun permet un empty chase suivi d'un reset de la jauge d'assist. Lightning y figure avec Ruin ; Thunder est signalé comme juste hors de portée.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
+    }
+  ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://web.archive.org/web/20120109220333/http://dissidiaforums.com/showthread.php?9535-Match-up-Discussion-Lightning",
+      "https://web.archive.org/web/20120521184354/http://dissidiaforums.com/showthread.php?9535-Match-up-Discussion-Lightning/page3",
+      "https://web.archive.org/web/20120108193315/http://dissidiaforums.com/showthread.php?8722-Lightning-s-Toughest-Opponent",
+      "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
+    ],
+    "builds": [
+      "https://web.archive.org/web/20120110170330/http://dissidiaforums.com/showthread.php?7184-quot-Invoke-my-name-I-am-Spark-quot-Lightning-FAQ"
+    ]
+  },
+  "limits": [
+    "La page matchups du wiki est un stub : la section matchups est reconstruite depuis les threads d'époque de dissidiaforums (via la Wayback Machine) et le guide Steam Exdeath listés dans sourcesBySection ; aucune chart complète n'a survécu, seuls les matchups réellement discutés (Sephiroth, Emperor, Exdeath, Golbez, Cloud, Firion, Jecht) sont couverts.",
+    "La section « Lightning's mechanic (Paradigm Shift) » de la page wiki avait échappé à l'extraction automatique (titre hors du schéma standard) : la mécanique unique a été réintégrée manuellement depuis la page archivée, et le découpage des braveries par rôle vient du Final Fantasy Wiki.",
+    "La section assist est marquée non documentée (une seule phrase générique) : l'évaluation de Lightning en tant qu'assist repose uniquement sur la tier list assist de meta-lite.json.",
+    "La section References du wiki est vide : les entrées communityTech et les sources de sourcesBySection proviennent de recherches externes.",
+    "Frame data incomplète : startup de Flourish of Steel inconnu (« ? »), dégâts de Crushing Blow non renseignés (« - »), champs cancels et assistGain vides pour tous les coups.",
+    "Les vidéos de combos et la vidéo du magic block de Thunderfall sont mentionnées sans URL exploitable.",
+    "Le relevé d'empty chases de la communauté n'est pas daté (le relevé de combos solo qui l'accompagne l'est de décembre 2022) : son état de fraîcheur ne peut pas être établi.",
+    "Le rôle Paradigm Shift de chaque bravery (Commando / Ravager / Medic) vient du Final Fantasy Wiki (Fandom), qui range les coups par rôle : dissidia.wiki, source principale du site, ne documente que le set Medic."
+  ],
+  "groupNotes": {
+    "bravery/Medic": "Les deux braveries Medic existent au sol et en l'air : des capacités passives, sans attaque, qui ne servent qu'à générer de la bravery. Leur animation laisse Lightning vulnérable — à réserver aux moments sûrs."
+  },
+  "moveRegroup": {
+    "bravery": [
+      {
+        "title": "Commando — au sol",
+        "names": [
+          "Blitz",
+          "Launch",
+          "Ruinga"
+        ]
+      },
+      {
+        "title": "Commando — en l’air",
+        "names": [
+          "Smite",
+          "Ruin",
+          "Blaze Rush"
+        ]
+      },
+      {
+        "title": "Ravager — au sol",
+        "names": [
+          "Fire",
+          "Aerora",
+          "Thundaga",
+          "Army of One (ground)"
+        ]
+      },
+      {
+        "title": "Ravager — en l’air",
+        "names": [
+          "Watera",
+          "Thunder",
+          "Blizzara",
+          "Army of One (midair)"
+        ]
+      },
+      {
+        "title": "Medic",
+        "names": [
+          "Cure",
+          "Cura"
+        ]
+      }
+    ]
+  }
+}

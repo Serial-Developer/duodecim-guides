@@ -1,0 +1,161 @@
+{
+  "slug": "vaan",
+  "tagline": "A jack of all trades at close and mid range, built on the Switch",
+  "archetype": "All-rounder with a switchable arsenal (Switch)",
+  "overview": [
+    "Vaan is a short to medium range character with highly varied bravery attacks. His unique “Switch” mechanic gives every bravery attack two versions: Switch (SW) when the attack has not yet been used, On-hand (OH) when he uses it again afterwards.",
+    "The weapon is double-edged: his attacks have often above-average properties, but having a particular bravery attack available later means attacking now. Many of his attacks have a long startup or a long recovery and target specific distances and angles; the need to whiff therefore comes as much from the accessibility of his repertoire as from the assist mechanic.",
+    "This gameplay suits beginner and intermediate players well, however: its mechanical diversity exposes them to many aspects of decision-making and game interactions. Few standard loadouts exist — each matchup can demand its own combinations — which makes him a stimulating character to experiment with. He can crush blocks, engage at mid range, get around projectiles, and even has infinite combos; his solo combos are rare, but assists markedly extend his potential. His damage multipliers are relatively high, but his below-average base ATK limits his damage without heavy investment — with which he scales well; good mobility overall, above-average base DEF, slightly above-average EX intake, but an EX Mode among the most disappointing in the game.",
+    "Historically ranked mid and low tier in competition, Vaan has no reputation as an effective counterpick, and optimising him takes a specialist's effort. Even at his best, his gameplay is not polarising: he suffers from a three bravery slot dilemma, from frame data and tracking that are often below average, builds his assist gauge poorly and struggles against command blocks designed around medium and high priority attacks. Players have to make compromises and exploit every mechanic, quirk and strategy available — Vaan may genuinely embody the adage about being a jack of all trades and master of none."
+  ],
+  "tierNote": "Ranked 25th (tier B, last in that tier) on the 2017 competitive tier list. The overview describes him as mid and low tier throughout the game's competitive history.",
+  "strengths": [
+    "A highly varied arsenal through the Switch: bravery attacks with often above-average properties for most distances and angles.",
+    "A complete toolbox: he can crush blocks, engage at mid range, get around projectiles, and even has infinite combos; assists extend his combo potential further.",
+    "Good overall mobility and above-average base DEF.",
+    "He scales well with investment: relatively high damage multipliers and slightly above-average EX intake.",
+    "Instructive mechanical diversity: relevant for beginners and intermediates, and stimulating to experiment with."
+  ],
+  "weaknesses": [
+    "The Switch forces commitment: to have a particular attack available later, he has to attack (or whiff) now.",
+    "Many attacks with long startups or long recoveries, with frame data and tracking often below average.",
+    "Below-average base ATK: only average damage without heavy investment.",
+    "The three bravery slot dilemma and few standard loadouts: each matchup can demand specific combinations.",
+    "He builds assist gauge poorly and struggles against command blocks designed around medium and high priorities.",
+    "One of the most disappointing EX Modes in the game."
+  ],
+  "moveNotes": {
+    "Sword & Shield": "A short-range sword and shield attack that blocks during the Switch (Block 1~30F on the SW version): this is Vaan's command block. In EX Mode, the block priority goes from Block Mid to Block High, on a par with Cloud of Darkness's Wrath or Exdeath's Protect Guard: it staggers Melee Mid attacks, but Vaan himself is staggered by high-priority attacks (HP attacks). The OH version is tied for his fastest bravery attack (19 frames).",
+    "Axe & Shield": "A short-range axe strike that breaks the opponent's guard during the Switch: the SW version is Melee High with a Wall Rush, the OH version a fast Melee Low (19 frames, tied for his fastest bravery attack). In EX Mode, the version gains an extra follow-up.",
+    "Greatsword": "One of his strongest bravery attacks, straddling short and medium range: a close-range starter, a combo extension, a gap closer and a committal dodge punish (charged SW). The SW version is his fastest attack (11 frames); fully charged, it gains tracking, becomes Melee Mid, and its multiplier exceeds that of Garland's Bardiche — the initial hitbox stays active for most of the movement, which is very good against dodges in its path, but the attack turns poorly after the initial charge. The OH version is a decent advancing poke, quick to whiff, whose first hit confirms easily into an assist with no wall, with deceptively good close-range tracking; it produces neither sound nor visual effect on startup, so it is hard to react to. The EX version only reduces the maximum charge time. SW Greatsword also serves as a dodge cancel follow-up after SW Katana, SW Staff, SW Crossbow and Windburst. Popular in many matchups, such as Cecil, Cloud and Squall.",
+    "Katana": "A katana slash at mid range: the SW version (Melee Mid, Chase) builds power with a slow combo during the Switch and peaks at a multiplier of 50; the OH version is a faster Melee Low (23 frames). A good EX Force generator (up to 90). In EX Mode, the finisher's timing is extended.",
+    "Spear": "A mid-range spear thrust that draws the opponent in during the Switch (an Absorb effect on the SW version, Melee Mid); both versions cause a Wall Rush. In EX Mode, the version gains a second volley of hits (a multiplier of 55).",
+    "Staff": "A mid-range staff strike that generates an enormous amount of EX Force (108 to 150 depending on the version, the record in his kit) with a Chase effect; the SW version, being magical, leaves Vaan free to move.",
+    "Crossbow": "A long-range bowgun shot (Ranged Low, Chase): holding the button on the SW version triggers a burst of fire, up to 105 EX Force. The OH version is markedly weaker (a multiplier of 12, no EX Force). In EX Mode, the range increases. SW Crossbow is among the attacks that can be dodge cancelled into SW Greatsword.",
+    "Rifle": "A long-range rifle shot with a Wall Rush: the SW version includes a dodge during the Switch (Dodge 1~20F), and the OH version comes out in 29 frames. In EX Mode, a second volley doubles the multiplier.",
+    "Torrent": "A long-range ground HP attack: torrents of water fired from a magic circle, Ranged High with a Wall Rush. Its “up” component comes out in 21 frames — the fastest HP attack in his kit — against 69 frames for the descending version.",
+    "Cataclysm": "A mid-range ground HP attack: it summons several rocks that charge the opponent, Melee High up close and Ranged High on the rocks. It is one of his 1-hit HP attacks (along with Windburst's projectile).",
+    "Inferno": "A mid-range aerial HP attack: Vaan concentrates flames then charges, with strong homing, Melee High and a Wall Rush.",
+    "Windburst": "A long-range aerial HP attack: it generates a tornado that sucks the opponent in for a set time (an Absorb effect), Melee High on the opening step and Ranged High on the wind — the projectile serves as a 1-hit HP attack. It can be dodge cancelled into SW Greatsword."
+  },
+  "exMode": {
+    "summary": [
+      "The “Obtained all Licenses!” EX Mode grants Regen, Critical Boost, Free Switch and Zodiak. Free Switch (activated with R + square) allows him to return to his unarmed attacks at any time: it starts at 1 frame, ends at 31, and is cancellable into a dodge or an attack at 21 frames — enough to reuse his SW versions more often and with less risk. Zodiak, permanently active, increases his stats and abilities and greatly strengthens his attacks: every Switch version of a bravery attack gains a bonus (increased range, invincibility, a shorter charge or an extra follow-up).",
+      "The overview tempers that, however: this EX Mode is still considered one of the most disappointing in the game."
+    ],
+    "burst": "“Quickening”: a Mist-infused attack where the options are scrolled with R and confirmed with X. One consistent method: press R, then mash X a few times, and repeat that loop three times per Quickening."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "The Switch: all of Vaan's bravery attacks exist in two versions. The Switch (SW) version executes when the attack has not yet been used — including at the very start of a match; the On Hand (OH) version, when he uses the same attack again afterwards. The two versions of a move differ in frame data, priority and effects — the detail is in each move's entry.",
+      "Vaan's whole game consists of sequencing his weapons so as to stay on the right versions at the right moment: the SW versions, slower but often carrying a block or extra effects, open the game; the OH versions, faster, punish — his fastest bravery attack (19 frames) is an OH version."
+    ],
+    "details": null
+  },
+  "gameplan": [
+    "Vaan's game is organised around the Switch: every bravery attack used flips to its On-hand version, and an attack has to be “spent” (often by whiffing) to recharge its more powerful Switch version. The plan is therefore to sequence his arsenal: open with the SW versions and their strong properties (Sword & Shield, which blocks, Axe & Shield, which breaks the guard, an 11 frame Greatsword, Rifle with its built-in dodge), then exploit the faster OH versions — several of them, such as OH Greatsword, signal nothing on startup and are hard to react to.",
+    "In neutral, Greatsword is the pivot: a close-range starter, a gap closer, a combo extension and a dodge punish in its charged SW version, with an OH first hit that confirms easily into an assist without a wall — valuable for a character who is otherwise mediocre at building assist gauge. Katana, Spear and Staff cover mid range (with Staff generating an enormous amount of EX Force), Crossbow and Rifle long range. On HP attacks, Torrent (21 frames on the rising component) and Cataclysm are his fastest; Cataclysm and Windburst's projectile serve as 1-hit HP attacks.",
+    "The documented build illustrates the typical spread: Spear, Axe & Shield and Sword & Shield on the ground; Katana, Greatsword and Rifle in the air. The three slot dilemma forces compromises, and each matchup can demand its own combinations: few standard loadouts exist. In EX Mode, Free Switch temporarily lifts the character's main constraint by giving access to the SW versions on demand, and Zodiak strengthens every Switch version."
+  ],
+  "advancedTech": [
+    {
+      "name": "Dodge cancel > SW Greatsword",
+      "desc": "SW Greatsword can be used as a dodge cancel follow-up after SW Katana, SW Staff, SW Crossbow and Windburst, which links his mid-range and area tools to his fastest and most rewarding attack."
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "The record describes one of the best stocked and most practicable combo kits in the cast, with three infinites (only one genuinely playable). Routes: SW Katana > dodge cancel > SW Greatsword; SW Staff > DC > SW Greatsword or non-SW Staff; SW Crossbow > DC > Staff, Spear or SW Greatsword; SW Crossbow at the edge of dodge range (Adamant equipment) > DC > Windburst; Windburst > DC > SW Staff into the tornado, SW Spear or SW Greatsword; a placed Windburst > the Windburst hit > SW Crossbow or a charged SW Greatsword; a placed Windburst > SW Crossbow without holding > the Windburst hit > an HP Chase; non-SW Axe & Shield (2 hits) > DC > landing lag > SW Greatsword, non-SW Axe & Shield or Windburst. SW designates the Switch version of a weapon (the weapon change), non-SW the weapon-in-hand version (On Hand).",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase into an assist gauge reset",
+      "desc": "According to the empty chase record, Crossbow (non-SW) and Sword & Shield (non-SW, extremely tight) offer an empty chase into an assist gauge reset; Sword & Shield (SW) and Katana (non-SW) fall just short.",
+      "source": "https://pastebin.com/dKSWgUQ6"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "The wiki's matchups page is a stub, but the sources give a few markers: Vaan has no reputation as an effective counterpick, and each matchup can demand specific attack combinations rather than a standard loadout. Greatsword is cited as a popular choice in many matchups, notably Cecil, Cloud and Squall. Conversely, he struggles structurally against command blocks designed around medium and high priority attacks."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "The documented build, “Damage (Seal of Lufenia)”, banks on the Seal of Lufenia special effect with a Max Booster of x4.4: the exclusive Zodiac Blade weapon and the Lufenian set (Dirk, Headband, Vest), accessories geared towards conditional boosters (Muscle Belt, Battle Hammer, Summon Unused, Pre-EX Mode, Pre-EX Revenge, two After 30 Seconds, Opponent Summon Unused, Glutton, First to Victory), the Kuja assist and Rubicante as the summon. It relies on the Equip Glitch (the total CP cost assumes it has been performed) and recommends the Master Guardsman extra ability for +1000 HP.",
+      "The associated attack loadout: Spear, Axe & Shield and Sword & Shield on the ground; Katana, Greatsword and Rifle in the air."
+    ],
+    "notes": "The second build (“Build #2”) is an empty template in the source data.",
+    "movesetLoadout": {
+      "bravery": {
+        "ground": [
+          "Spear",
+          "Axe & Shield",
+          "Sword & Shield"
+        ],
+        "aerial": [
+          "Katana",
+          "Greatsword",
+          "Rifle"
+        ]
+      },
+      "hp": null,
+      "note": "The loadout of the “Damage (Seal of Lufenia)” build, as documented by the wiki. Only the bravery attacks are specified: the choice of HP attacks is not documented for this build."
+    }
+  },
+  "assist": {
+    "asAssist": [
+      "As an assist, Vaan is ranked in the Mid tier of Muggshotter's assist tier list. The sources on his page do not detail his use as an assist beyond that ranking."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "Cited by the page among the assists that work well with Vaan; he is also the assist chosen in the documented Seal of Lufenia build, and OH Greatsword confirms easily into an assist with no wall."
+      },
+      {
+        "name": "Aerith",
+        "why": "Cited by the page among the assists that work well with Vaan, with no further detail in the sources."
+      },
+      {
+        "name": "Jecht",
+        "why": "Cited by the page among the assists that work well with Vaan, with no further detail in the sources."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Dissdia 012 vaan infinite combo tutorial.",
+      "desc": "A period tutorial (April 2011) of an infinite combo discovered by accident, requiring Staff equipped in the air — one of the rare documented traces of the “infinite combos” mentioned by the overview.",
+      "source": "https://www.youtube.com/watch?v=mDG7aVLYZUM",
+      "date": "2011"
+    },
+    {
+      "title": "Dissidia 012: Final Fantasy - Vaan Combo Exhibition",
+      "desc": "A combo exhibition by Muramishi (June 2011): Axe & Shield or Sword & Shield used in their On-hand version produce a difficult but seemingly infinite combo.",
+      "source": "https://www.youtube.com/watch?v=LOJRXYv1Cdc",
+      "date": "2011"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Vaan is described there as having one of the best stocked combo kits in the cast, with three infinites, one of them practicable.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "List of empty chases leading to an assist gauge reset (Eddiegames)",
+      "desc": "A character-by-character record of the moves whose hit stun allows an empty chase (a chase initiated without executing anything in it) followed by a reset of the opponent's assist gauge. The detail for this character is covered in the specific techniques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
+    }
+  ],
+  "limits": [
+    "The wiki's matchups page is a stub: only the markers from the overview and from the Greatsword note (Cecil, Cloud, Squall) could be used.",
+    "No combos section is filled in (the Solo subsection is empty): the “infinite combos” mentioned in the overview are detailed nowhere.",
+    "No “Unique Mechanics” section is documented: the Switch is described only in the overview and the bravery intro, hence uniqueMechanics being left as null and the mechanic being covered in the overview and gameplan.",
+    "Detailed usage notes are absent for most moves: only Sword & Shield (the EX version) and Greatsword have genuine notes; the rest is limited to the in-game descriptions and the frame data.",
+    "The second build (“Build #2”) is an empty template; the assist gain values are absent from the move tables.",
+    "The wiki's References section is empty and there is no dated community mention on the page; the community tech entries come from the external sources pass.",
+    "The community's empty chase record is undated (the solo combo record that accompanies it is dated December 2022): how current it is cannot be established."
+  ],
+  "groupNotes": {
+    "bravery/main": "Each of Vaan's bravery attacks has two versions: Switch (SW) when the attack has not yet been used (including at the start of a match), On Hand (OH) when he uses the same attack again afterwards. All of them exist on the ground and in the air."
+  }
+}

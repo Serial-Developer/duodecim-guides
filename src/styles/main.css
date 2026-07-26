@@ -1106,3 +1106,83 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
   .bc-editor-head { flex-direction: column; align-items: stretch; }
   .bc-row { flex-wrap: wrap; }
 }
+
+/* --- Internationalisation : sélecteur de langue et bandeau de proposition --- */
+
+/* Texte réservé aux lecteurs d'écran : le sélecteur affiche « EN » / « FR »,
+   trop court pour être compris hors contexte visuel — le nom complet de la
+   langue l'accompagne donc, visible pour les seules technologies d'assistance. */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Zone d'outils du header, à droite des menus. La barre de recherche viendra s'y
+   ajouter après le sélecteur : la place est réservée dès maintenant pour ne pas
+   avoir à remanier le header une seconde fois. */
+.sh-tools { display: flex; align-items: center; gap: 0.5rem; margin-left: 0.6rem; }
+
+.lang-switch { display: flex; align-items: center; gap: 0.15rem; }
+.lang-opt {
+  display: inline-block;
+  padding: 0.24rem 0.5rem;
+  border: 1px solid var(--surface-2);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.lang-opt:hover, .lang-opt:focus-visible { color: var(--gold); border-color: var(--gold); }
+/* La langue courante n'est pas un lien vers elle-même : c'est un repère. */
+.lang-opt.is-current { color: var(--gold); border-color: var(--gold); background: rgba(240, 192, 90, 0.1); cursor: default; }
+
+/* Dans le volet mobile, le sélecteur reprend la mise en page des catégories.
+   Il ouvre le volet : le filet le sépare donc du menu qui le suit, en dessous. */
+.lang-switch-drawer { margin-bottom: 0.9rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--surface-2); gap: 0.35rem; }
+/* Cible tactile d'au moins 44 px de haut : au doigt, la pastille du header
+   (dimensionnée pour la souris) serait trop basse. */
+.lang-switch-drawer .lang-opt { padding: 0.55rem 0.9rem; font-size: 0.95rem; min-height: 44px; display: inline-flex; align-items: center; }
+
+/* Bandeau de proposition linguistique. Inséré en tête de page par
+   scripts/lang.js quand le navigateur réclame une langue publiée qui n'est pas
+   celle de la page. Discret et fermable : il ne redirige rien, il propose. */
+.lang-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  padding: 0.55rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--violet);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.lang-bar-go { color: var(--gold); font-weight: 600; }
+.lang-bar-close {
+  background: none;
+  border: 1px solid var(--surface-2);
+  border-radius: 999px;
+  color: var(--muted);
+  padding: 0.15rem 0.7rem;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.lang-bar-close:hover, .lang-bar-close:focus-visible { color: var(--text); border-color: var(--muted); }
+
+/* Le sélecteur du header suit le sort des menus déroulants : sur mobile et sur
+   les appareils tactiles, c'est celui du volet burger qui prend le relais. */
+@media (hover: none) and (pointer: coarse) {
+  .sh-tools { display: none; }
+}
+@media (max-width: 767px) {
+  .sh-tools { display: none; }
+  .lang-bar { font-size: 0.85rem; padding: 0.5rem 0.75rem; }
+}

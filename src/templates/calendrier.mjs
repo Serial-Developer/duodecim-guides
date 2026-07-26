@@ -1,34 +1,35 @@
 // Page transverse : calendrier navigable des tournois (passés, à venir,
 // candidats détectés par la veille automatique)
-import { esc, paras, sourcesSection, pageShell, siteHeader, siteFooter } from './helpers.mjs';
+import { esc, sourcesSection, pageShell, siteHeader, siteFooter, linksFor } from './helpers.mjs';
 
-const MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
-
-function frDate(iso) {
+// Date longue localisée. Le nom du mois vient du catalogue ; l'ordre des
+// éléments, lui, est une règle de langue (« 3 mars 2026 » / « March 3, 2026 »).
+function longDate(t, iso) {
   const [y, m, d] = iso.split('-').map(Number);
-  return `${d} ${MOIS[m - 1]} ${y}`;
+  const month = t('calendar.months')[m - 1];
+  return t.locale === 'en' ? `${month} ${d}, ${y}` : `${d} ${month} ${y}`;
 }
 
-function upcomingList(events) {
+function upcomingList(t, events) {
   if (!events.length) {
-    return `<div class="banner info">Aucun tournoi à venir annoncé pour le moment. Les annonces tombent sur le canal <strong>announcements</strong> du Discord DISSIDIA — les tournois créés sur start.gg apparaissent ici automatiquement, les autres sont relayés à la main.</div>`;
+    return `<div class="banner info">${t('calendar.noUpcoming')}</div>`;
   }
   return events.map((e) => `<article class="card">
 <h3 style="margin-top:0">${esc(e.name)}</h3>
 <div class="table-scroll"><table class="stats">
-<tr><th>Date</th><td>${esc(frDate(e.iso))}</td></tr>
-${e.format ? `<tr><th>Format</th><td>${esc(e.format)}</td></tr>` : ''}
-${e.organisation ? `<tr><th>Organisation</th><td>${esc(e.organisation)}</td></tr>` : ''}
+<tr><th>${t('tournaments.date')}</th><td>${esc(longDate(t, e.iso))}</td></tr>
+${e.format ? `<tr><th>${t('tournaments.format')}</th><td>${esc(e.format)}</td></tr>` : ''}
+${e.organisation ? `<tr><th>${t('tournaments.organisation')}</th><td>${esc(e.organisation)}</td></tr>` : ''}
 </table></div>
 ${e.notes ? `<p class="mv-desc">${esc(e.notes)}</p>` : ''}
-${e.url ? `<p class="video-link"><a href="${esc(e.url)}" target="_blank" rel="external noopener">Inscription et détails</a></p>` : ''}
+${e.url ? `<p class="video-link"><a href="${esc(e.url)}" target="_blank" rel="external noopener">${t('calendar.signup')}</a></p>` : ''}
 </article>`).join('\n');
 }
 
-function inboxList(candidates) {
+function inboxList(t, candidates) {
   if (!candidates.length) return '';
-  return `<h2 id="detectes">Annonces détectées — à confirmer</h2>
-<p class="mv-desc">La veille a repéré ces messages sur le canal d'annonces ; ils sont listés tels quels en attendant une vérification manuelle (date, règlement, inscription).</p>
+  return `<h2 id="detectes">${t('calendar.detectedTitle')}</h2>
+<p class="mv-desc">${t('calendar.detectedDesc')}</p>
 ${candidates.map((c) => `<article class="card">
 <p><strong>${esc(c.at || '')}</strong>${c.author ? ` — ${esc(c.author)}` : ''}</p>
 <p class="mv-desc">${esc(c.excerpt)}</p>
@@ -36,62 +37,74 @@ ${(c.links || []).map((l) => `<p class="video-link"><a href="${esc(l)}" target="
 </article>`).join('\n')}`;
 }
 
-export function renderCalendrier(data, seo) {
+export function renderCalendrier(data, seo, { t, locale, path, alternates, availability }) {
+  const L = linksFor(path, locale, availability);
   const { events, upcoming, candidates, lastCheck, sources, limits } = data;
   const payload = JSON.stringify({ events }).replace(/</g, '\\u003c');
   const lastCheckTxt = lastCheck
-    ? `Dernière vérification automatique : ${esc(frDate(lastCheck.slice(0, 10)))}.`
-    : `La veille automatique n'a pas encore tourné — le calendrier reflète le dernier relevé manuel (juillet 2026).`;
+    ? t('calendar.lastCheck', { date: esc(longDate(t, lastCheck.slice(0, 10))) })
+    : t('calendar.noCheckYet');
 
-  const body = `${siteHeader({ active: 'futurs' })}
-<nav class="guide-top" aria-label="Sections de la page"><div class="chips-nav">
-<a href="index.html">← Sélection</a>
-<a href="#calendrier">Calendrier</a>
-<a href="#avenir">À venir</a>
-<a href="#veille">La veille automatique</a>
+  const body = `${siteHeader(t, { path, locale, alternates, availability, active: 'futurs' })}
+<nav class="guide-top" aria-label="${esc(t('common.pageSections'))}"><div class="chips-nav">
+<a href="${L.page('home')}">${t('common.backToSelect')}</a>
+<a href="#calendrier">${t('calendar.navCalendar')}</a>
+<a href="#avenir">${t('calendar.navUpcoming')}</a>
+<a href="#veille">${t('calendar.navWatch')}</a>
 </div></nav>
 <main class="wrap" style="padding-bottom:3rem">
-<h1 style="color:var(--gold)">Futurs tournois</h1>
-<p class="mv-desc">Le calendrier de la scène compétitive : les tournois annoncés à venir et tous les tournois passés documentés. Une veille sonde start.gg deux fois par jour ; les annonces du Discord DISSIDIA sont relayées à la main.</p>
+<h1 style="color:var(--gold)">${t('calendar.h1')}</h1>
+<p class="mv-desc">${t('calendar.lede')}</p>
 
-<h2 id="calendrier">Calendrier</h2>
+<h2 id="calendrier">${t('calendar.navCalendar')}</h2>
 <div class="cal" id="cal">
 <div class="cal-bar">
 <div class="cal-nav">
-<button type="button" id="cal-jump-prev" title="Aller au tournoi précédent">⏮</button>
-<button type="button" id="cal-prev" title="Mois précédent">‹</button>
-<button type="button" id="cal-today">Aujourd'hui</button>
-<button type="button" id="cal-next" title="Mois suivant">›</button>
-<button type="button" id="cal-jump-next" title="Aller au tournoi suivant">⏭</button>
+<button type="button" id="cal-jump-prev" title="${esc(t('calendar.jumpPrev'))}">⏮</button>
+<button type="button" id="cal-prev" title="${esc(t('calendar.prevMonth'))}">‹</button>
+<button type="button" id="cal-today">${esc(t('calendar.today'))}</button>
+<button type="button" id="cal-next" title="${esc(t('calendar.nextMonth'))}">›</button>
+<button type="button" id="cal-jump-next" title="${esc(t('calendar.jumpNext'))}">⏭</button>
 </div>
 <p class="cal-label" id="cal-label" aria-live="polite"></p>
 </div>
-<div class="cal-grid" id="cal-grid" role="grid" aria-label="Calendrier des tournois"></div>
-<div class="cal-legend"><span class="cal-key cal-key-past">tournoi joué</span><span class="cal-key cal-key-up">tournoi à venir</span></div>
+<div class="cal-grid" id="cal-grid" role="grid" aria-label="${esc(t('calendar.calendarAria'))}"></div>
+<div class="cal-legend"><span class="cal-key cal-key-past">${esc(t('calendar.keyPast'))}</span><span class="cal-key cal-key-up">${esc(t('calendar.keyUpcoming'))}</span></div>
 <div id="cal-month-list"></div>
 </div>
 <script type="application/json" id="cal-data">${payload}</script>
+<script type="application/json" id="cal-i18n">${JSON.stringify({
+    locale,
+    months: t('calendar.months'),
+    weekdays: t('calendar.weekdays'),
+    firstDay: Number(t('calendar.firstDay')),
+    dayMonth: t('calendar.dayMonth'),
+    empty: t('calendar.noEventsThisMonth'),
+  }).replace(/</g, '\\u003c')}</script>
 
-<h2 id="avenir">Tournois à venir</h2>
-${upcomingList(upcoming)}
+<h2 id="avenir">${t('calendar.upcomingTitle')}</h2>
+${upcomingList(t, upcoming)}
 
-${inboxList(candidates)}
+${inboxList(t, candidates)}
 
-<h2 id="veille">Comment cette page se remplit</h2>
+<h2 id="veille">${t('calendar.howTitle')}</h2>
 <article class="card">
-<p>Deux fois par jour, une veille automatique interroge l'API officielle de start.gg : chaque tournoi Duodecim qui y est créé apparaît ici de lui-même, avec sa date et son lien. Les annonces du canal <strong>announcements</strong> du Discord DISSIDIA (notamment les brackets Challonge) sont relayées manuellement sur le calendrier. Les tournois passés viennent de la <a href="tournois.html">page Tournois</a>, où chaque édition est documentée avec son ruleset et ses résultats.</p>
+<p>${t('calendar.howBody', { href: L.page('pastTournaments'), langAttr: L.pageLangAttr('pastTournaments') })}</p>
 <p class="mv-desc">${lastCheckTxt}</p>
 </article>
 
-<h2 id="sources">Sources</h2>
-${sourcesSection(sources, limits)}
+<h2 id="sources">${t('common.sources')}</h2>
+${sourcesSection(t, sources, limits)}
 </main>
-${siteFooter()}`;
+${siteFooter(t)}`;
   return pageShell({
+    t,
+    locale,
     seo,
-    title: 'Futurs tournois — Dissidia 012 [duodecim]',
-    description: 'Calendrier des tournois de Dissidia 012 [duodecim] : éditions à venir et tournois passés, mis à jour automatiquement depuis start.gg et le Discord DISSIDIA.',
-    cssPath: 'styles/main.css',
+    path,
+    alternates,
+    title: t('calendar.metaTitle'),
+    description: t('calendar.metaDescription'),
     jsPath: 'scripts/calendrier.js',
     body,
   });

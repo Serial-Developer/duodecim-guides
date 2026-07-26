@@ -1,0 +1,147 @@
+{
+  "title": "Running a tournament",
+  "lede": "The Duodecim scene lives on the players who take the plunge: every documented tournament since 2022 was put together by a community member, with the free tools of Discord, start.gg and Challonge. This guide walks the whole path, from the idea to handing out the roles — running an edition is within reach of any motivated member.",
+  "sections": [
+    {
+      "id": "pourquoi",
+      "name": "Why take the plunge",
+      "short": "Why",
+      "intro": [
+        "There is no official body behind the Duodecim tournaments: the 2022 series, 012 Ranked, DISSent Folk, the 2026 editions — every one of them came from a player's initiative. And the bar is low:"
+      ],
+      "points": [
+        "You do not need a crowd: recent editions gathered 4 to 15 players, and a 4-player tournament is still a real tournament — DISSent Folk (2025) switched its double elimination to a round robin so everyone would play more matches.",
+        "You do not need experience: the server provides a ruleset-writing help document, the reference rulesets are public, and past organisers (Mericus, Sashawaruma, JoyRaines…) are on the same Discord.",
+        "The organiser gives the edition its character: an unusual format (the 2v2 team event of December 2022), a targeted audience (“Date With Death” 2026, reserved for players with no title yet), or a rules variant (012 Ranked and its “JP Ranked with a twist”)."
+      ],
+      "cta": []
+    },
+    {
+      "id": "role",
+      "name": "Step 1 — Get the Tournament Organizer role",
+      "short": "The TO role",
+      "intro": [
+        "On the Discord DISSIDIA, organising goes through the temporary “Tournament Organizer” role, open to any volunteer who simply asks the server staff."
+      ],
+      "points": [
+        "For the duration of the event, the role grants permission to post in event-announcements, to create threads in event-active-thread and to post embeds.",
+        "It is removed once the event is over — every edition starts with a fresh request.",
+        "It is also the channel for getting the ruleset-writing help document the server provides."
+      ],
+      "cta": [
+        {
+          "url": "https://discord.gg/a44rneC",
+          "label": "Join the Discord DISSIDIA",
+          "ext": true
+        }
+      ]
+    },
+    {
+      "id": "ruleset",
+      "name": "Step 2 — Write the ruleset",
+      "short": "The ruleset",
+      "intro": [
+        "Nobody starts from scratch: recent editions take a reference ruleset and adjust it. The decisions to settle, as seen in the published rulesets:"
+      ],
+      "points": [
+        "The base: the modern community ruleset (Duodecim 22-1) for a classic tournament, or Japan Ranked for a fixed-loadout format — both are detailed on the Tournaments page.",
+        "The format: double elimination in most editions, FT2 with FT3 finals (2026) or BO3/BO5 (2022); have a plan B for low turnout (DISSent Folk's round robin).",
+        "The bans: characters (Feral Chaos banned, or allowed with no EX and no assist), stages, summons, accessories (Rebellious Soul, MS Prima in 2026), infinite limits (one to three repetitions depending on the edition), one-hit chase.",
+        "The match rules: stage settled first, blind character picks by private message to the organiser, “Dave's Stupid Rule” (kept or dropped depending on the edition).",
+        "The technical side: the exact PPSSPP version (1.12.3 in 2024, 1.19.3 in 2025…), a ULUS10566 copy, Radmin VPN — the server's tournament pack equips newcomers.",
+        "Any admission conditions: open to all by default, reserved for newcomers (Date With Death), or limited to one platform (PC only).",
+        "Dispute handling: replays and screenshots are the evidence, the match is replayed identically if something goes wrong; DISSent Folk's “gentlemen's clause” requires any agreement between players to be public in the tournament thread."
+      ],
+      "cta": [
+        {
+          "label": "The reference rulesets and how they evolved",
+          "route": "pastTournaments",
+          "anchor": "rulesets"
+        }
+      ]
+    },
+    {
+      "id": "bracket",
+      "name": "Step 3 — Create the bracket",
+      "short": "The bracket",
+      "intro": [
+        "Every documented community tournament uses one of the two free platforms:"
+      ],
+      "points": [
+        "start.gg: a full sign-up page with the ruleset built in and standings — the choice of Duodecim 22-1 and DISSent Folk.",
+        "Challonge: lighter, with an immediate bracket — the choice of 012 Ranked, Date With Death and Day to Die.",
+        "Publish the full ruleset on the bracket page: that is the authoritative version, the one still readable years later.",
+        "After the final, officially close the event on the platform: Day to Die's bracket stayed showing as “in progress” after it concluded, which casts doubt on the result."
+      ],
+      "cta": []
+    },
+    {
+      "id": "annoncer",
+      "name": "Step 4 — Announce and recruit",
+      "short": "Announce",
+      "intro": [
+        "The announcement goes in the Discord's event channels, from a few days to a few weeks before the date. A typical announcement contains:"
+      ],
+      "points": [
+        "The date, the sign-up link (start.gg or Challonge) and the ruleset — or a link to it.",
+        "The admission conditions and the required PPSSPP version.",
+        "A reminder of the tournament pack for newcomers: PPSSPP, Radmin and a 100% ready-to-play save, everything is provided.",
+        "The prize at stake, however symbolic: the “Emu Era Champion” role (DISSent Folk), Discord Nitro (012 Ranked), server permissions and a special prize (Date With Death) — each edition has its own."
+      ],
+      "cta": [
+        {
+          "label": "The tournament pack and ready-to-play savedata",
+          "route": "savedata"
+        }
+      ]
+    },
+    {
+      "id": "pendant",
+      "name": "Step 5 — Keep the event alive",
+      "short": "During",
+      "intro": [
+        "An online tournament stretches over several days: the organiser's role is mostly to coordinate."
+      ],
+      "points": [
+        "Open a follow-up thread in event-active-thread: that is where match schedules, results and public agreements between players live.",
+        "Collect the blind picks by private message and give flexible match windows — the 2026 editions allowed one to three days per round depending on schedules.",
+        "Stream if you can: 22-1's matches went out on the lxd92 Twitch channel, DISSent Folk's on Sashawaruma's and Rocher's — along with the bracket, the stream is what remains of the edition.",
+        "Settle disputes with replays and screenshots, as the modern ruleset provides."
+      ],
+      "cta": []
+    },
+    {
+      "id": "apres",
+      "name": "After the tournament",
+      "short": "After",
+      "intro": [
+        "The last few tasks are what separates a forgotten edition from one that counts:"
+      ],
+      "points": [
+        "Publish the results in the thread and close the bracket on the platform.",
+        "Hand out the announced rewards and have the Emu Era roles assigned to the entrants.",
+        "Archive the VODs: 012 Ranked's YouTube playlist is now the edition's only video trace — and a precious source for this site.",
+        "Give the Tournament Organizer role back… and why not announce the next edition."
+      ],
+      "cta": [
+        {
+          "label": "The documented past tournaments",
+          "route": "pastTournaments"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://discord.gg/a44rneC",
+    "https://www.start.gg/tournament/duodecim-22-1/details",
+    "https://www.start.gg/tournament/dissent-folk/details",
+    "https://challonge.com/edokjat0",
+    "https://challonge.com/dj52284z",
+    "https://challonge.com/eoybbvgi",
+    "https://dissidia.wiki/Japan_Ranked_(DDFF)"
+  ],
+  "limits": [
+    "How the Tournament Organizer role and the event channels work was recorded on the Discord DISSIDIA in July 2026; the server's organisation may change.",
+    "The practices described (formats, announcements, refereeing, rewards) are drawn from the published rulesets and announcements of the 2022-2026 editions; every organiser remains free to make their own choices."
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "title": "Unlocking Feral Chaos",
+  "lede": "Duodecim's true final boss is not Chaos but his unleashed form: Feral Chaos, level 130, over 125,000 HP — the only boss in the game to become playable once beaten. Here is the full unlock path and three proven ways to win the fight that gates him.",
+  "chemin": {
+    "intro": [
+      "Feral Chaos is unlocked at the end of the bonus scenario “Confessions of the Creator” (scenario 000), where he is the final boss. The route:"
+    ],
+    "etapes": [
+      "Finish the main 012 scenario “Treachery of the Gods”: this unlocks the first Dissidia's story (013 “Light to All”) and makes scenario 000 purchasable in the PP catalogue.",
+      "Open “Confessions of the Creator”: buy it for 2,000 PP in the catalogue, or finish scenario 013 — which unlocks it for free. Buying is the faster route.",
+      "Work through scenario 000, designed for high-level characters (enemies from roughly 50 to 130). Along the way, a first level 95 Feral Chaos in his “Jade Dissonance” outfit (~60,000 HP) serves as a mid-boss: a five-player team fight, and after 60 seconds his Booster accessory gives him a ×90 multiplier (+450% attack and defence) that makes him all but invulnerable — land as much HP damage as you can before that, or leave the gateway to restart the fight from scratch.",
+      "Reach the last gateway, “Edge of Discord”: a five-floor dungeon populated by level 120 and higher manikins, with the real level 130 Feral Chaos at the bottom.",
+      "Beat him — see the three methods below. The win spawns chests (a Megalixir and the four pieces of his exclusive “Rise of Discord” set) and completes the scenario."
+    ],
+    "boss": "The final Feral Chaos: level 130, over 125,000 HP, Garland as his assist, the Shinryu Verus summon (reusable) and unique accessories — any HP attack that hits you empties your EX and Assist gauges, his assist gauge fills 50% faster, and he deals 400% damage in EX Mode.",
+    "piege": "The tutorial trap: answering “yes” to the Mog who asks whether you already know Dissidia starts a level 1 Lightning fight against that same level 130 Feral Chaos, designed to be lost — and even a win (at the cost of extreme patience) does not unlock the character: the game drops you at the start of scenario 000."
+  },
+  "methodes": [
+    {
+      "id": "m1",
+      "name": "Method 1 — The Iai Strike build: a win in under a minute",
+      "intro": [
+        "The quickest method, documented by the Final Fantasy Wiki, exploits Iai Strike (a chance of an instant Break on every hit), pushed to a near-guaranteed trigger by a booster multiplier of 99.9×."
+      ],
+      "points": [
+        "Take a level 1 character (the level gap is what drives the build).",
+        "Equip Smiting Soul (which carries Iai Strike), Sniper Eye (Wall Rush damage +10%) and boosters totalling 99.9×: “Level Gap ≥ 90” (×10) is essential, rounded out with at least five ×1.5 boosters of the Weaponless, Hatless, Armorless, Gloveless kind — having no equipment does not hamper the build in the slightest — and a seventh of at least ×1.4.",
+        "Add the Exp to Bravery ability, and play on an Exp ×2 calendar day or with a Chocobo Feather.",
+        "In the fight: Iai Strike triggers on almost every hit and instantly breaks Feral Chaos's bravery at 9999. Chain an HP attack with Wall Rush: the screen shows “9999 + 9999” and, thanks to Sniper Eye and the booster, the Wall Rush goes past the damage cap. Exp to Bravery immediately takes your bravery back into the thousands — and the cycle starts again until the win, in under a minute."
+      ]
+    },
+    {
+      "id": "m2",
+      "name": "Method 2 — The HP attacks the AI does not dodge",
+      "intro": [
+        "The reference community guide on GameFAQs (2011) identified HP attacks that Feral Chaos's AI cannot avoid — repeat them without remorse:"
+      ],
+      "points": [
+        "Yuna's Megaflare — Bahamut's bombardment catches him every time.",
+        "Cloud of Darkness's Particle Beams (the Fusillade and 0-Form variants).",
+        "Firion's Lord of Arms — the swarm of weapons overwhelms him.",
+        "A special mention for The Emperor: busy avoiding his traps (Flare, mines), Feral Chaos cannot interrupt Starfall.",
+        "The same guide additionally recommends Bravery-to-HP chains, which convert every opening into HP damage."
+      ]
+    },
+    {
+      "id": "m3",
+      "name": "Method 3 — Straight up: neutralise Shinryu Verus and punish",
+      "intro": [
+        "The Final Fantasy Wiki's full method, for winning without a specialised build:"
+      ],
+      "points": [
+        "From the very start of the fight, summon Asura to destroy Shinryu Verus for good; if the destruction fails, restart the fight. Deprived of his summon (bravery swap and tripling), Feral Chaos starts at a real disadvantage.",
+        "Take advantage of the boosters naturally active against him: “Large Gap in HP”, “(Opp) HP ≥ 10000”, “Level Gap ≥ 30” and “(Opp) Summon Unused” give ×3.8 continuously for almost the whole fight — one or two more boosters and the multiplier becomes considerable.",
+        "Equip Exp to HP to survive his 125,000 HP; Spite pays off against his high base bravery (over 3,500). No point paying for Sneak Attack: he carries Disable Sneak Attack.",
+        "His HP attacks have long recovery: that is the counter-attack window. If he hits you with an HP attack, your EX/Assist gauges are emptied anyway — so you may as well spend them on EX Revenge or an Assist Change to cancel the hit.",
+        "Beware his signature loop: Wall Rush (Destroy or Vicious, or his Garland assist) chained into Deus Iratus or Ventus Ire — dodge immediately after the Wall Rush to get out of it."
+      ]
+    }
+  ],
+  "apres": {
+    "intro": [
+      "Once “Confessions of the Creator” is complete, Feral Chaos appears in the PP catalogue: 350 PP to unlock him as a playable character. His “Jade Dissonance” alternate can be bought there too.",
+      "In play, he is a colossus with strings attached: bravery that drains away and EX/Assist gauges locked until he has learned his exclusive abilities (levels 10, 30 and 100), moves costing 30-50 CP once mastered, basic abilities priced out of reach — and he cannot be taken as an assist. Competitively, the modern ruleset bans him; the rulesets that do admit him (Japan Ranked, DISSent Folk) forbid him the EX and Assist gauges."
+    ]
+  },
+  "sources": [
+    "https://finalfantasy.fandom.com/wiki/Feral_Chaos",
+    "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58793116",
+    "https://www.youtube.com/watch?v=-PrHOpbeIn8"
+  ],
+  "limits": [
+    "The strategies date from the 2011 community (Final Fantasy Wiki, __Shinryu__'s “Feral Chaos and You” guide on GameFAQs); since the AI is identical under PPSSPP, they hold as they stand.",
+    "The boss's exact HP varies between sources (125,000+ according to the GameFAQs guide for level 130; ~60,000 for level 95)."
+  ]
+}

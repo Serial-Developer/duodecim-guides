@@ -1,0 +1,169 @@
+{
+  "slug": "bartz-klauser",
+  "tagline": "A solid ground Mimic, betrayed by a slow aerial game and fragile zoning",
+  "archetype": "Ground fighter (Mimic)",
+  "overview": [
+    "Bartz Klauser is the carefree protagonist of Final Fantasy V. In Dissidia 012, he embodies the Mimic class from his original game: his moveset is borrowed entirely from the other Warriors of Cosmos.",
+    "The wiki's strengths and weaknesses table is a study in contrasts: a solid ground game, with fast pokes and HP attacks that cover the space above him well, and creative builds thanks to the passive boosts of his copied moves. Against that, an aerial game that is decent in itself but often outclassed: slow, punishable aerial pokes that make generating assist gauge safely difficult, weak zoning — Holy deals heavy damage and offers an excellent BRV to HP Link, but its Ranged Low priority is easily turned against him — and mediocre EX Force generation."
+  ],
+  "tierNote": "Bartz brings up the rear of the 2017 tier list: tier D, 30th out of 30. The overview does not comment on that placement, but the documented weaknesses (an outclassed aerial game, slow aerial pokes, weak zoning and EX Force) point the same way.",
+  "strengths": [
+    "A solid ground game: fast pokes and HP attacks that cover the space above him well.",
+    "Solid Ascension: a 13F startup, his best ground damage (50 base), close to a tenth of an EX gauge per hit and reliable assist building.",
+    "The passive boosts of his copied moves (Speed Boost, EX Intake, Physical Shield…), usable for creative builds.",
+    "Holy can link into Flare for significant damage, and the Link Glitch makes confirms far easier.",
+    "Reel Impulse: the longest range of his ground moves, a high priority that a normal guard cannot block, and a stacking +1m of EX Intake.",
+    "Goblin Punch in EX Mode: a 15F startup, Unblockable, massive damage at equal level."
+  ],
+  "weaknesses": [
+    "An aerial game that is average in itself and often outclassed by the rest of the cast.",
+    "Slow, punishable aerial pokes: generating assist gauge safely is difficult — and Rush Impact (19F) is his fastest aerial move at that.",
+    "Weak zoning: Holy (Ranged Low) is deflected by a simple Free Air Dash, its persistent orbs can come back and hit Bartz, and the move is assist-punishable.",
+    "Weak overall EX Force generation.",
+    "Reel Impulse has an extremely long recovery, punishable in many ways.",
+    "Solid Ascension has very short horizontal and vertical range: he has to be right up against the opponent."
+  ],
+  "moveNotes": {
+    "Blade Crash": "Copied from Lightning and Vaan: two Blazefire Saber strikes then a katana pass-through. A slow move (23F) but one that advances slightly, good for catching a whiff in range; easily blocked and punished if thrown out thoughtlessly. Good EX Force generation (90) — to be weighed against Hazard Raid. Each Blade Crash equipped adds 8 % run speed (Speed Boost).",
+    "Reel Impulse": "Copied from Firion and Zidane: an axe throw that pulls the opponent in, then slashes. The axe offers the longest range of his ground moves, and its high priority (Ranged High), unblockable with a normal guard, opens assist punishes on a failed dodge. The EX Intake +1m effect stacks (two Reel Impulse = +2m, almost a Heaven's Cloud). Major drawback: an extremely long recovery, vulnerable to assist punishes — only throw it out with at least one assist bar available. At point-blank range, the landing lag allows a dodge cancel into Blade Crash for a solo combo.",
+    "Hazard Raid": "Copied from Cloud and Tifa: the Climhazzard charge followed by Beat Rush. A good gap closer, but it inherits Climhazzard's flaws and trades its Wall Rush for a Chase. Of little interest in a Side by Side build next to Reel Impulse; in an EX build, its EX Force generation (90) is the main argument, but the move remains slow and rarely used.",
+    "Solid Ascension": "Copied from Squall and the Warrior of Light: his best ground bravery attack. An extremely fast startup (13F), his best ground damage, close to a tenth of an EX gauge per hit and reliable assist building that protects him from assist punishes. The trade-off: very low horizontal and vertical range, so he has to be right up against the opponent, and the move punishes aerial approaches poorly — his anti-air HP attacks make up for that.",
+    "Holy": "Copied from Terra: his de facto zoning, five homing orbs with good damage each that punish at long range, penalise excessive dodging and force the opponent to block every orb — a misblock can be very costly, all the more so since Holy links into Flare. The Link Glitch (casting Holy again before the first volley lands) makes confirms far easier and swells the damage beyond the normal. But the move has a very slow startup (37F), is deflected by a Free Air Dash, is assist-punishable, and the persistent orbs can come back and hit Bartz after his own hit: when it works it is excellent, otherwise it is his worst choice.",
+    "Rush Impact": "Copied from Kain and Lightning: his fastest aerial move, and slow for a poke even so (19F, comparable to Cloud's Slashing Blow). A little range and an easy assist combo, but predictable, mediocre as an approach and on whiff, with a late dodge cancel window: the emblem of his laborious aerial game.",
+    "Slide Shooter": "Copied from Tidus and Kain: a gap closer and a secondary tool for generating assist. Generous input windows and good hit stun make confirming an assist combo easy, even without a ceiling Wall Rush. On a neutral + Circle input, Lock Off lets him generate assist safely for a little longer. Like Tidus's Full Slide, the slowdown from an assist call greatly increases its vertical tracking — to be kept for punishes and approaches you are sure of, and the strategy rests on the Aerith assist, with the sacrifices that entails.",
+    "Hellfire": "Summons Ifrit and his pillars of fire (39F on the ground); the EX generation increases with the number of pillars that connect.",
+    "Dark Flame": "Plants his sword in the ground for gouts of black fire (53F, Ranged High) that track the opponent into the air and through walls.",
+    "Ragnarok Blade": "A long blade of energy swung like a sword (45F, Melee High, Wall Rush), with +5 % HP damage on Wall Rush.",
+    "Luminous Shard": "A blade of light thrown at long range (61F, Ranged High), paired with a Minor Midair Evasion Boost.",
+    "Flare": "The HP Link available from Holy: three beams converge to trap the opponent then explode. It is the reward that makes Holy so dangerous when it connects."
+  },
+  "exMode": {
+    "summary": [
+      "The “Job Mastered!” EX Mode: Regen, Critical Boost and the addition of the Goblin Punch HP attack. The sources call it a generic EX Mode, whose main appeal is precisely Goblin Punch.",
+      "Goblin Punch (R + Square, 15F, Magical, Unblockable, Wall Rush): an excellent melee move with a very fast startup, which deals solid damage if the target is the same level as Bartz (8 x 5). Its range is short: not to be thrown out lightly, on pain of a punish."
+    ],
+    "burst": "“Master Mime”: Bartz adds the strength of his allies to his own talents for a series of masterful blows — each direction (up, down, left, right) corresponds to a hit."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Bartz plays on the ground. Solid Ascension is the pivot: fast enough (13F) to punish slow moves in range, his best ground damage, big EX Force and reliable assist building — enough to keep at least one bar to protect himself from assist punishes or to convert himself. Its tiny range means being right up against the opponent; aerial approaches are better handled with his HP attacks, which cover the space above him well (Hellfire, Dark Flame).",
+    "At range, everything goes through Holy: long-range punishes, penalising dodges, pressure on the block orb by orb, and above all the link into Flare — made easier by the Link Glitch — for damage and HP hits. But the slightest Free Air Dash approach deflects the orbs back at him: no spamming Holy when the opponent has an assist bar or the room to dash.",
+    "Reel Impulse completes the ground kit: the longest range, a high priority that forces a dodge (and opens an assist punish on a failed dodge), and a stacking EX Intake +1m for EX builds. Its interminable recovery does require an assist bar in reserve before throwing it out, though. In the air, the bare minimum: Rush Impact for assist confirms, Slide Shooter as a gap closer and assist generator, making use of its generous input windows.",
+    "On resources, the sources point towards Kuja and Jecht as assists (fast startup on their follow-ups, damage potential on the Holy -> Flare setups), the Aerith assist being justified only for the reinforced Slide Shooter tracking strategy. In EX Mode, Goblin Punch (15F, Unblockable) becomes a major punish threat at short range."
+  ],
+  "advancedTech": [
+    {
+      "name": "Link Glitch (Holy)",
+      "desc": "Cast Holy at range, then cast a second Holy before the first volley connects: the first does not disappear and, if it connects, it counts as the second — which allows the link into Flare. Far easier confirms and more damage than Bartz is supposed to get."
+    },
+    {
+      "name": "Slide Shooter assist-call tracking",
+      "desc": "Like Tidus's Full Slide, the slowdown caused by an assist call greatly increases Slide Shooter's vertical tracking. To be used as a punish or on an approach you are sure of; the strategy rests on the Aerith assist, which costs the early conversions of his other aerial moves."
+    },
+    {
+      "name": "Lock Off (Slide Shooter)",
+      "desc": "With Slide Shooter set to neutral + Circle, Lock Off allows him to generate assist gauge safely for a little longer."
+    },
+    {
+      "name": "Reel Impulse dodge cancel",
+      "desc": "By connecting Reel Impulse at point-blank range, the landing lag allows a dodge cancel into Blade Crash for a solo combo."
+    },
+    {
+      "name": "Holy -> Flare reset loop (Side by Side)",
+      "desc": "Documented by Djungelkorv on dissidiaforums (2011): an assist combo into Holy, an immediate second Holy (Link Glitch), then activating Flare as late as possible — the opponent has to make their aerial recovery between Holy and Flare. The assist gauge then becomes active again, Side by Side + EXP to Assist fill it, and Flare's tracking guarantees the HP hit (tested: impossible to escape even without a recovery, barring a double dodge or Precision Dodge) — the assist is called again on Flare and the loop repeats. Kuja allows long range through the chase and needs only a single wave of Holy; Jecht deals the most damage but demands stricter timing and distance; Aerith makes adjusting the distance easier but adds no damage.",
+      "source": "https://web.archive.org/web/20131020093302/http://dissidiaforums.com/showthread.php?10794-Bartz-Reset-Combos"
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "Few in number but excellent, above all in bravery damage: point-blank Reel Impulse (with no follow-up) > dodge cancel > landing lag > Blade Crash; Holy > DC > Slide Shooter or Ragnarok Blade (“Rag Blade” in the record); Holy > Holy hit glitch > Flare or an HP Chase setup.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase into an assist gauge reset",
+      "desc": "Point-blank Holy offers the empty chase into an assist gauge reset.",
+      "source": "https://pastebin.com/dKSWgUQ6"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "The overall picture comes from the scene of the day: when the 2012 community tier list came out, the dissidiaforums players (the thread “Bartz Klauser, the second worst character in the game”, August 2012) accepted that Bartz was only the 2nd worst character in the game thanks to his slight advantage over Laguna — the one documented favourable matchup. Starwave's diagnosis sums up the logic: in any matchup, the opponent typically has a move that does what Bartz wants to do, but better — good at everything, master of nothing. kewldude475 draws out the concrete cases: against Firion you have to get creative with assists, and against Sephiroth or Ultimecia it is simply an uphill fight. Cramped stages, which favour his ground game and bring the ceilings closer, are cited as his best terrain.",
+      "The best documented matchup is Golbez, seen from the opponent's side (tehdr4g0n's guide, GameFAQs, 2012): on the ground, Bartz loses the zoning exchange — his only tool that goes through Glare Hand and Attack System is Hazard Raid, which Golbez punishes with a jump then a Gravity System behind him (with Sneak Attack and Counterattack to follow); Holy is handled with an airdash, which sends the orbs back, and blocking is judged unreliable because the five orbs travel at different speeds. In the air, on the other hand, tehdr4g0n concedes Bartz a slight advantage: Slide Shooter beats all of Golbez's aerial options, takes a big chunk of bravery and leads into a chase. The lesson on Bartz's side: against ground zoners of that profile, force the air, not the projectile duel.",
+      "Two cross-cutting warnings emerge from the opposing guides: b0untyhunter270 (Firion guide, 2012) judges Bartz very easy to beat outside EX Mode but devotes his entry to Goblin Punch, described — with the exaggeration of the day — as starting almost instantly: even opponents who dominate the matchup respect the punish threat in EX Mode. Conversely, Balguna's Bartz guide (dissidiaforums, 2011) recalls that fast fallers such as Kain or Gilgamesh dive under Luminous Shard and dash at Bartz to avoid it entirely: his slow long-range HP attacks are defused all the faster the quicker the opponent falls."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Only one build is genuinely documented: a “Side by Side” with the Kuja assist (Lufenian Axe, Blurry Moon, the Lufenian set, the Judgment of Lufenia special effect, the Rubicante summon), 450 CP with the Equip Glitch, for a maximum booster of x5.9.",
+      "The move notes sketch out the general philosophy: with Side by Side, the EX Intake effect is useless but Reel Impulse remains preferred for its range and priority, and the choice is between Blade Crash and Hazard Raid; in an EX build, two Reel Impulse can be equipped (+2m of EX Intake, almost the equivalent of a Heaven's Cloud) by giving up Blade Crash and Hazard Raid."
+    ],
+    "notes": "The second slot (“Build #2”) is empty in the sources: no data at all. For the Holy -> Flare reset loop, Djungelkorv (dissidiaforums, 2011) documents a dedicated set: Excalibur II, the Side by Side accessory and EXP to Assist — the latter two being indispensable to the loop — completed with Growth Egg(s), Bravery Orb and Earrings."
+  },
+  "assist": {
+    "asAssist": [
+      "Bartz is ranked Low on Muggshotter's assist tier list. His assist moves: Blade Crash as a ground BRV attack (23F, Chase), Slide Shooter as an aerial BRV attack (25F, Wall Rush), Dark Flame as a ground HP attack (53F, appearing on the player, Wall Rush) and Ragnarok Blade as an aerial HP attack (45F, Wall Rush). The wiki provides no written evaluation of his role as an assist."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "Cited in the wiki's synergies and chosen in the documented build; the Slide Shooter notes recommend him for the fast startup of his follow-ups and the damage potential of the Holy -> Flare setups."
+      },
+      {
+        "name": "Jecht",
+        "why": "Cited in the wiki's synergies, for the same reasons as Kuja (fast follow-ups, Holy -> Flare setups)."
+      },
+      {
+        "name": "Aerith",
+        "why": "Only for the reinforced Slide Shooter tracking strategy during the assist call; the notes warn that this choice sacrifices the early conversions of his other aerial moves."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Bartz INFINITE COMBO - Dissidia 012: Duodecim — Frutte",
+      "desc": "A period video showing a variant of Bartz's Holy -> Flare reset combo; the Kuja assist extends the range of the setup thanks to the chase.",
+      "source": "https://www.youtube.com/watch?v=5EO5BX_DD8g",
+      "date": "2012"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Bartz is credited there with combos that are few in number but excellent, built on Holy and Reel Impulse.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "List of empty chases leading to an assist gauge reset (Eddiegames)",
+      "desc": "A character-by-character record of the moves whose hit stun allows an empty chase (a chase initiated without executing anything in it) followed by a reset of the opponent's assist gauge. The detail for this character is covered in the specific techniques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
+    }
+  ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://web.archive.org/web/20131027082557/http://dissidiaforums.com/showthread.php?13515-Bartz-Klauser-the-second-worst-character-in-the-game",
+      "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/63562",
+      "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/65018",
+      "https://web.archive.org/web/20130815135120/http://dissidiaforums.com/showthread.php?10240-It-s-time-to-return-the-wind-to-the-world!-A-Bartz-Klauser-Guide"
+    ],
+    "builds": [
+      "https://web.archive.org/web/20131020093302/http://dissidiaforums.com/showthread.php?10794-Bartz-Reset-Combos"
+    ]
+  },
+  "limits": [
+    "A very short overview (three descriptive sentences): the summary rests mainly on the strengths/weaknesses table and the move notes.",
+    "The wiki's matchups page remains a stub: the matchups section is sourced outside the wiki (the 2012 dissidiaforums tier list thread and opposing GameFAQs guides); only one matchup is analysed in depth (Golbez, from the opponent's point of view).",
+    "The combos section is empty (the “Solo” subsection has neither text nor table).",
+    "No unique mechanic is documented (documented: false).",
+    "No community reference in the sources.",
+    "The second build (“Build #2”) is entirely empty.",
+    "Incomplete data: Flare's startup and priority are uncertain (“?”), the HP attacks have minimal notes (Hellfire, Dark Flame, Ragnarok Blade, Luminous Shard), and Goblin Punch's unlock level and AP are not filled in.",
+    "The community's empty chase record is undated (the solo combo record that accompanies it is dated December 2022): how current it is cannot be established."
+  ],
+  "specialMoves": [
+    {
+      "name": "Goblin Punch",
+      "input": "R + Square — EX Mode (Job Mastered) only",
+      "desc": "A special HP attack absent from the equipment lists, available only in EX Mode: fast, short-ranged and unblockable, with Wall Rush. It deals bravery damage before knocking the opponent away and — as the spell's tradition demands — eight times as much bravery damage if Bartz and his opponent are the same level. Its fast execution and its good damage at level 100 make up for the slowness of Bartz's normal HP attacks.",
+      "source": "https://finalfantasy.fandom.com/wiki/Bartz_Klauser_(Dissidia_PSP)"
+    }
+  ]
+}

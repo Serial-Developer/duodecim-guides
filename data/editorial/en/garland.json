@@ -1,0 +1,162 @@
+{
+  "slug": "garland",
+  "tagline": "A ground defender who turns every hit into bravery and EX",
+  "archetype": "Defensive short/mid range",
+  "overview": [
+    "Garland is a defensive short and mid range character. His strengths: bravery attacks that excel at whiff punishing, and the accumulation of EX and bravery on every hit. On the ground, he pokes with Deathblow to fill his assist gauge safely and to threaten any aerial approach; Lance Charge and his HP attacks break guards and catch ground dodges, and Deathblow's short recovery lets him adjust his timings, which makes his ground defence hard to read.",
+    "His aerial combat rests on vertical positioning: Twist Drill as an anti-air, Bardiche coming down with strong damage potential, Cyclone locking down an area and Chain Cast serving as an evasive vertical whiff punisher. On stats, his base ATK and DEF are above average, and his exclusive level 100 weapon, the Gigant Axe, is the best in its category for EX and damage builds.",
+    "The rest is more limited: below-average movement speed, no practicable solo HP link, floaty air dodges. Dodging is risky for Garland, his post-dodge self-defence options being slow and highly committal. His aerial offence is held back by bravery attacks with specific angles and notable blind spots, particularly straight in front of him; fast-falling characters after an air dodge and command blocks trouble him too.",
+    "Long considered low tier, Garland has had arguments for a better placement since 2020. His ground defence neutralises many close-range aerial approaches, and most of his hits pay out enormous bravery and EX. His win condition: a full EX gauge and a big stock of bravery, so as to end a match on a single EX Revenge combo with 5 Bardiche. His long-term strategy is strong, but it demands several hits and resources to guarantee the win."
+  ],
+  "tierNote": "Ranked 24th (tier B) on the 2017 tier list. The sources describe him as historically considered low tier, but his representation since 2020 argues for a higher position.",
+  "strengths": [
+    "Whiff punishing: several bravery attacks let him react from varied angles.",
+    "Bravery damage: Bardiche, the Kuja assist and Chain Cast solo combos can bravery break very quickly.",
+    "A safe ground neutral: Deathblow lets him dictate the pace with less risk than most characters.",
+    "EX gauge economy: he generates and collects EX efficiently through his combos, and can kill earlier than anyone in EX Revenge thanks to Bardiche and accumulated bravery.",
+    "Disjoints able to pass through projectiles.",
+    "Good ground-to-ground presence against close-range characters."
+  ],
+  "weaknesses": [
+    "Below-average mobility, on every axis.",
+    "Post-dodge vulnerability: his air dodges expose him, and Chain Cast offers no protection through invincibility.",
+    "Limited aerial dodge punishing: his HP attacks, Twist Drill and Bardiche demand precise angles; he struggles against fast fallers (Kain) and back air dodges, which makes offensive momentum hard to create.",
+    "Imperfect aerial neutral and mixups: trouble against blocking in the air, and his aerial HP attacks offer little utility against most characters.",
+    "Vulnerable to the speed + long range pairing: his aerial bravery attacks are slower on average, so they are easily interrupted head-on; his anti-zoning amounts to the dash and to Bravery Boost on Dodge builds."
+  ],
+  "moveNotes": {
+    "Round Edge": "Three sweeps with a choice of two finishers (Circle before the third hit for a Wall Rush, after it for a Chase), with free movement during the first two. A highly committal attack reserved for block staggers and surprises: long startup, and no dodge possible before the three hits are over. A fine reward on hit thanks to the Deathblow follow-ups (bravery, EX, assist gauge). With lock off, Garland moves freely on the ground during the move.",
+    "Lance Charge": "His basic move: a mid-range gap closer and a whiff punisher in a straight line, fast, mid priority, with assist combos on hit. It staggers ordinary blocks and can link into a ground Wall Rush even when blocked, which opens the big Kuja assist combos. Very linear: it loses to fast lateral and vertical movement and to higher priorities, leaves Garland airborne on a miss, and is of little use in aerial matchups such as Sephiroth.",
+    "Deathblow": "One of his best bravery attacks: a safe poke, an anti-air and a combo starter. Long active frames, strong tracking, fast recovery — a move that is safe without even needing a dodge, something very rare in this game. On hit, it combos into a jump > Twist Drill (150 EX in total) and into the assist. Indispensable in close-range ground fighting, but it loses to higher priorities and well-placed blocks, and it does not contest halo camping.",
+    "Highbringer": "A poke, a post-block punisher and an assist combo starter, ideal as a secondary ground bravery attack while learning the character. The low version (Circle twice): a Chase finisher and 90 EX; the high version (Circle held then tapped): a Wall Rush in the air. Fast and more accessible than Deathblow for assist combos, but outclassed at a high level: a far longer recovery, no consistent Twist Drill follow-up, and the high version leaves Garland airborne on a miss. The first hit of the high version can be dodge cancelled early on hit; the low version's cannot.",
+    "Thundaga (ground)": "Three lightning bolts appearing on the opponent in sequence: a long-range poke used mostly to interrupt. It goes through solid objects and persistent projectiles; low damage, and combos only at a wall (where the bolts chain and open into Flare, Chain Cast, or even an aerial bravery assist). A fairly short recovery for this kind of move, but little used competitively.",
+    "Twin Swords": "His dedicated advancing aerial bravery attack, whose tracking in every direction makes it a more reliable counter after a block. It suffers from the 3 slot dilemma against Twist Drill, Chain Cast and Bardiche: not always unreactable, a long animation at low priority, brief tracking, and the Wall Rush it requires for assist combos tips the risk/reward ratio against Garland. Risky in neutral.",
+    "Chain Cast": "Garland repositions above the opponent for two vertical strikes: an aerial combo starter, an air-to-ground whiff punisher and his main post-dodge defensive option in the air (not invincible, but the movement dodges slow punishes). On hit, a dodge cancel then Twist Drill for 180 EX (close to 20 % of a bar). Slow and telegraphed, so easy to block or dodge; it can hit behind the opponent's block under conditions that are still poorly understood, and its hitbox has gaps along the chain.",
+    "Bardiche": "His iconic axe strike: fast, decent whiff recovery, infamous damage. It fills the assist gauge on whiff, punishes long attacks below Garland, and above all feeds ground Wall Rush assist combos and EX Revenge — its high base damage makes it one of the best users of bravery bonuses on Wall Rush (Booster). Outside a combo, the reward is thin: 0 EX, a short assist confirm window, downward-only tracking, a small hitbox, and a loud, telegraphed move. The damage more than makes up for it.",
+    "Twist Drill": "Another pillar: a fast anti-air with good combo potential, damage and 90 EX. It tracks mostly upwards, serves as a whiff punisher or an occasional poke, and its range connects after Deathblow for 180 EX. Enormous hit stun: one of the few moves in the game offering a safe empty chase anywhere, perfect for assist combos and for collecting EX Force. A disjointed hitbox that pierces projectiles and traps (Ultimecia's charged Knight's Lance), a first segment that can be dodge cancelled early enough to contest The Emperor's Dreary Cells, and it can hit behind a block from below. Its whiff recovery is punishable on reaction, and it has a blind spot above his head.",
+    "Thundaga (midair)": "Identical to the ground version, but usable anywhere in the air. A valid option against mages and low-mobility characters, mainly to interrupt.",
+    "Earthquake": "A good mixup against aggressive grounded opponents: good tracking, strong knockback, and unblockable rocks that completely ignore LV2 Assist Change. It anti-airs forward ground dodges, and the independent rocks clash with Melee High attacks (Tifa's Rolling Blaze, Squall's Revolver Drive) and punish them, with trades often turning in Garland's favour. Hard to punish without mid-range attacks or an assist, but vulnerable to aerial attacks; covering the recovery with a dodge or an assist is expensive.",
+    "Blaze (ground)": "Homing fireballs, a little-used version since his ground kit is already relatively complete. A bad deadzone in front of Garland; each ball can inflict gauge depletion on hit — traits shared with the aerial version, which sees far more play.",
+    "Tsunami": "A high risk / high reward option with tracking against ground dodges, and a post-dodge defensive option thanks to the fast vertical movement of its startup. It catches ground dodges consistently and opens assist combos, and it is guaranteed after a blodge stagger. Against an opponent without a command block, Tsunami followed by an assist can create a checkmate. On a miss, Garland stays vulnerable for several seconds: the assist has to cover him.",
+    "Blaze (midair)": "A secondary long-range harassment tool, often combined with Cyclone to zone safely. The projectiles converge on a single point of impact: less presence on screen, but each ball can connect and trigger gauge depletion (Battle Hammer and the like). No protection around Garland after the shot: without Cyclone or an assist, beware of unfavourable trades. A low hit rate at a high level but low risk when used sparingly; against an opponent with Auto Assist Lock On, the projectiles scatter if they escape an assist combo.",
+    "Cyclone": "A passive defensive tool, an assist combo extender or a safer finisher after an assist. A good reward on hit (EX, hit stun, combos into assists, and even a Garland follow-up on a late hit); a key role in the EX optimisation of aerial combos, at the ceiling and after EX Revenge. Two persistent Ranged High projectiles that do not cover every angle: disjoints (Sephiroth's Sudden Cruelty, Aerith's Seal Evil) and advancing Melee High attacks (Cloud's Braver, Squall's Rough Divide) go straight through. A reliable barrier against characters who lack those tools.",
+    "Flare": "His main HP attack after a block and at the end of an assist combo. It tracks the opponent (but turns poorly just before advancing), with strong Wall Rush potential for consistent damage after a bravery break. Very brief active frames: ineffective against early blocks and against aerial dodges with Evasion Boost; heavy recovery. On contact, the second HP hit comes out even if the opponent escapes with LV1 Assist Change or on a clash with lower-priority melee. His only reliable aerial HP attack as a block counter."
+  },
+  "exMode": {
+    "summary": [
+      "The “Class Change!” EX Mode — effects: Regen, Critical Boost and Indomitable Resolve. A classically strong EX Mode given Garland's damage; the threat of his devastating EX Revenge combos complements it well, and activating it also depletes the opponent's assist gauge. Few unique bonuses, but since Garland fills his EX gauge efficiently in combos, he gets more chances to close the match with it.",
+      "Indomitable Resolve is a rare case of super armour in Dissidia 012: during an attack animation, Garland does not flinch at any attack that deals no HP damage. Useful for a surprise attack and as a stopgap against characters with HP links — but EX Mode does not change the properties of his attacks: he can still be blocked."
+    ],
+    "burst": "Soul of Chaos fills by mashing Circle. Not the strongest EX Burst in the game, but well above average thanks to Garland's high base ATK, good initial hits and accumulated bravery with a full EX gauge."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "The match is won on the ground: Deathblow sets the pace — a safe poke that needs no dodge, 60 EX per hit, an assist gauge that keeps climbing — while Lance Charge and the HP attacks (Earthquake, Tsunami) punish blocks and ground dodges. Every hit has to convert: Deathblow > jump > Twist Drill pays 45 base damage and 150 EX, and in the air Chain Cast > dodge cancel > Twist Drill climbs to 180 EX, close to 20 % of the bar per combo.",
+    "The long-term objective is explicit in the sources: stack bravery and EX gauge up to the win condition, an EX Revenge with 5 Bardiche chained into a Wall Rush then Flare (165 base damage + HP damage and 5 Wall Rushes). Activate EX Revenge near the opponent and near the ground to maximise Bardiche and Wall Rush; a dodge behind the opponent at the start adds criticals through Sneak Attack. At around 4,000 opponent HP, this combo practically kills; the dedicated build can reach about 7,000 HP damage with the Kuja assist.",
+    "In the air, stay vertical: Twist Drill from below, Bardiche from above, Chain Cast as an evasive punisher and Cyclone/Blaze to hold distance and zone safely. Avoid head-on confrontations, where his blind spots and slower bravery attacks put him at a disadvantage; Twist Drill's hit stun offers a safe empty chase anywhere to recover EX Force and call assists.",
+    "Manage your dodges sparingly: Garland's post-dodge options are slow and committal, Chain Cast is not invincible and his floaty air dodge exposes him. It is as a ground defender, exploiting the opponent's positioning, that he takes the advantage — his aerial offence is far more linear."
+  ],
+  "advancedTech": [
+    {
+      "name": "Bardiche filler",
+      "desc": "While the Kuja assist (ground BRV) holds the opponent, insert up to two Bardiche into the combo for massive damage. Careful: the confirm window for Kuja's ground BRV after Bardiche is very short, and if the opponent escapes early, give up the extra Bardiche to avoid an easy Assist Lock."
+    },
+    {
+      "name": "Twist Drill empty chase",
+      "desc": "Twist Drill's hit stun makes it one of the few moves in the game with a safe empty chase anywhere: perfect for collecting EX Force and starting assist combos. Take care in the corner, where the chase leaves Garland closer to the opponent and more exposed to a Recovery Attack. A point of scope: this “safe” empty chase (enormous hit stun, no punishment) is distinct from the assist gauge reset — for the latter, the community record credits Garland only with Round Edge, right on the boundary (possible but very tight).",
+      "source": "https://pastebin.com/dKSWgUQ6"
+    },
+    {
+      "name": "Camera-guided dodge cancel",
+      "desc": "Away from walls, after an Assist Chase, turn the camera to the side then perform a quarter circle (e.g. camera to the right, Garland to the left: left > up-left > up, holding the first direction for a fraction of a second) to dodge cancel towards the opponent reliably in the Chain Cast > Twist Drill combo."
+    },
+    {
+      "name": "Hits behind a block",
+      "desc": "Twist Drill (at the right distance and angle, from below) and Chain Cast (well above or below the opponent) can hit behind an opponent's block. The exact conditions for Chain Cast remain poorly documented."
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "Few combos, but very profitable in EX Force: Chain Cast > dodge cancel > Twist Drill; Cyclone (late hit) > DC > Chain Cast or Twist Drill; Thundaga near a wall > DC > Flare or Chain Cast; Blaze > DC > Twist Drill; the compiler adds Deathblow > direction held to cancel the end lag > jump > Twist Drill, a proven route with good synergy with his neutral.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "The wiki's matchups page is a stub: no detailed analysis is documented. The sources nonetheless give a few markers: Lance Charge is of little use in very aerial matchups such as Sephiroth; Garland struggles against fast fallers such as Kain and against back air dodges; Twist Drill pierces traps such as Ultimecia's charged Knight's Lance and its early dodge cancel contests The Emperor's Dreary Cells (the Tidus assist is also cited for stopping The Emperor); and finally, Cyclone is only a reliable barrier against characters without the Aerith assist, projectiles, command blocks, disjoints or a fast advancing Melee High attack."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Two builds are documented, both at 450 CP with the Equip Glitch, the Kuja assist and the Rubicante summon."
+    ],
+    "notes": "The “Gear” icon in the equipment lists indicates a Gear extra ability or the use of the Equip Glitch; the CP costs displayed assume the glitch has been performed. The data tables do not indicate the equipped moves for these builds.",
+    "perBuild": {
+      "Hybrid (Damage)": [
+        "To be used by default, it banks on the Gigant Axe and the Seal of Lufenia set: heavy bravery damage, reinforced EX absorption and an initial boost to gauges and bravery so as to reach the full EX bar, and the OHKO that follows, sooner (9644 HP, 956 BRV — 1147 initial —, 182 ATK, 184 DEF, Booster x3.5). Basic substitutions: Booster replaced by Battle Hammer (assist depletion) or Dismay Shock (EX depletion); Master Guardsman to go beyond 10,000 HP."
+      ],
+      "EX Revenge": [
+        "A dedicated EX Revenge build (King of Tragedy special effect, Rhongomiant weapon, Booster x2.7): against a Tidus at 184 DEF, a critical Bardiche deals more than 600 bravery damage, and EX Revenge alone can accumulate 5,000 bravery — two more Bardiche during a Kuja assist combo then Flare bring the total to about 7,000 HP damage. On the opponent's side, the Disable Sneak Attack extra ability blunts this combo."
+      ]
+    }
+  },
+  "assist": {
+    "asAssist": [
+      "Garland is one of the weakest assists in the game (Low tier on the assist tier list). His holds are short: he depends on Wall Rush for damage and combo opportunities. Bardiche is fast and easily dodges LV2 Assist Change staggers on a hit in neutral, but it leaves very little time to follow up; Tsunami covers grounded opponents well and leads into an Assist Chase, but it is expensive; Cyclone occupies space but is hard to combo with.",
+      "Overall, the Garland assist sees little competitive play: it cannot place HP attacks consistently anywhere, and it does not complement the strengths of most characters."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "The strongest assist for Garland: he maximises Garland's strengths on hit — big combo potential, high damage, whiff punishing preserved. The aerial BRV opens Chain Cast combos for plenty of EX, the ground BRV holds the opponent for two Bardiche fillers, and Force Symphony helps in Chase sequences."
+      },
+      {
+        "name": "Sephiroth",
+        "why": "Less damaging and less versatile combo routes, but he strikes faster on the ground with wider hitboxes: excellent for ground whiff punishing, and ground Bardiche combos are easier to confirm. Far less EX than with Kuja (the pushback of his finishers makes Chain Cast impractical), and he works around LV2 Assist Change staggers less well."
+      },
+      {
+        "name": "Aerith",
+        "why": "She avoids LV2 Assist Change staggers consistently, at the cost of damage and whiff punishing. Twist Drill and Chain Cast combo into Seal Evil through an empty chase, and Blaze completes the synergy at range; reinforced gauge depletion and possible double assists with Cyclone. Careful: after Earthquake, Aerith casts Cure because Garland is on the ground."
+      },
+      {
+        "name": "Tidus",
+        "why": "One of the fastest aerial BRV assists for whiff punishing, and a slower ground BRV for extended ground combos — useful too for stopping The Emperor's Dreary Cells. Garland draws few benefits beyond that."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Garland tips? (GameFAQs thread)",
+      "desc": "A period thread: the synergy with the Kuja assist's Snatch Blow (record damage through Bardiche), a recommended aerial kit of Thundaga / Twist Drill / Bardiche, and why Twin Swords is advised against (the same range as Bardiche but a longer, punishable animation).",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/59144075",
+      "date": "2011"
+    },
+    {
+      "title": "Garland's EX Revenge Funtime",
+      "desc": "A short demonstration by SpacePirateKhan of Garland's damage under EX Revenge (a mechanic specific to Duodecim), recommended on the GameFAQs board of the day.",
+      "source": "https://www.youtube.com/watch?v=VfqFeso5Gbs",
+      "date": "2011"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Garland is credited there with few combos, but very profitable ones in EX Force.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "List of empty chases leading to an assist gauge reset (Eddiegames)",
+      "desc": "A character-by-character record of the moves whose hit stun allows an empty chase (a chase initiated without executing anything in it) followed by a reset of the opponent's assist gauge. The detail for this character is covered in the specific techniques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
+    }
+  ],
+  "limits": [
+    "The wiki's matchups page is a stub: no detailed matchup is documented.",
+    "No unique mechanic is documented (the section is absent from the sources).",
+    "The references section is empty: no dated or attributable community source (the “Video” mentions in the combo tables carry no URL in the data).",
+    "The dedicated combos article (“Garland (Combos)”) is not included: only two solo combos and the EX Revenge combo are detailed.",
+    "The assist gain values of the moves are not filled in, and the Comrade's Vow counts for the combos are unknown (“???”).",
+    "Chain Cast's hitbox is incompletely documented (“requires further research”) and the exact conditions for hits behind a block are not established.",
+    "The tables for both builds do not list the equipped bravery and HP attacks (empty rows in the data).",
+    "The community's empty chase record is undated (the solo combo record that accompanies it is dated December 2022): how current it is cannot be established."
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "slug": "exdeath",
+  "tagline": "Counter fortress: frame 1 blocks, assist king and Maelstrom pressure",
+  "archetype": "Counter-based defender (turtle)",
+  "overview": [
+    "Exdeath is a defensive fighter who blocks and hits back: he parries melee with Protect Guard, magic with Shell Guard, and turns away most attacks in the game with the slightly slower Omni Block.",
+    "His defence is the best in the game: the only character able to cancel his attacks into normal blocks during their startup, he fills the assist gauge faster than anyone through dash feints and gains mobility from the blodge. Approaching him means having an answer to Reverse Polarity, which staggers most pokes and teleports across large distances; even when hit, he restarts the escape game with LV2 Assist Change. Left alone, he throws out Maelstrom, an HP attack that cannot be avoided.",
+    "His counter style leans on high base bravery and Side by Side builds. He depends on EX Cores for EX, and his very slow dash speed encourages pre-emptive positioning and the use of the Aerith assist to apply pressure.",
+    "His weaknesses follow from a dull offence and his reliance on counters: most of his offensive options are slow or need precise interactions to win — ceiling Wall Rushes, staggers, assist punishes or successful blocks. Maelstrom strategies crumble against characters who can deflect it safely and then stall for gauge. Add the demanding execution of his guard cancels: Exdeath is hard to play consistently, and anything that disrupts his timing (assists, unreactable mixups) is a serious threat.",
+    "Competitively, Exdeath is regarded as one of the strongest characters in the game: he exploits the system mechanics remarkably well, while remaining vulnerable to defensive strategies that cancel out his stage presence. For all his flaws, he has built a reputation as a top 3 contender — an advanced, technical character who repays the investment handsomely."
+  ],
+  "tierNote": "Number 1 on the 2017 tier list (tier S). The overview confirms it: one of the strongest characters in the game, reputed to be top 3, who exploits the system mechanics better than anyone.",
+  "strengths": [
+    "Ultimate defence: his various blocks counter almost every attack in the game.",
+    "The fastest in the game at filling the assist gauge, by cancelling attacks and normal blocks into one another.",
+    "“Assist King”: more frequent access to his assist than anyone, with assist punishes and LV2 Assist Change both more available and less costly.",
+    "Turtling: frame 1 command blocks and mobility — Reverse Polarity covers long distances quickly, blodges speed up his dodges, and LV2 Assist Change gives him repeated ways out.",
+    "Maelstrom pressure: a slow but unavoidable HP attack, which ignores Assist Change.",
+    "The highest base DEF in the game outside EX Mode, which mitigates bravery damage on top of everything else."
+  ],
+  "weaknesses": [
+    "Slow or short-range offence: few ways to open an opponent up on his own; an excellent defender, he suffers if he can be ignored, and the Regen of an opponent's EX Mode can be hard to overcome.",
+    "Anti-Maelstrom: against characters who reliably deflect Maelstrom with melee HP attacks (Squall and Firion, for instance), he has to take more risks.",
+    "The human factor: he demands consistent execution, patience and a good knowledge of the opponent's attacks; failing at it drops him well below his potential.",
+    "The slowest run and dash speeds in the game; reliance on EX Cores for EX.",
+    "Anything that disrupts the timing of his counters (assists, unreactable mixups) is a serious threat."
+  ],
+  "moveNotes": {
+    "Black Hole": "An Unblockable projectile (73F) that creates a black hole sucking in everything around it for a while, with an Absorb effect and strong EX Force generation (114).",
+    "Reverse Polarity": "A unique movement attack: hold the button then release to teleport. It comes out almost instantly on release (about 5-6F, his fastest bravery attack), staggers most pokes and covers long distances — the key to his mobility and his interception game.",
+    "Shell Guard": "A block dedicated to magic: it only successfully parries Ranged Low and Ranged Mid priorities, and reflects Ranged Low attacks straight back at the opponent.",
+    "Protect Guard": "A block dedicated to physical attacks: it only successfully parries Melee Low and Melee Mid priorities.",
+    "Turn Guard": "A block that can be held by keeping the button pressed. Careful: held for more than a second, it imposes noticeable recovery before a dodge cancel becomes possible again.",
+    "Omni Block": "Deploys when the button is released and blocks any hit — except attacks with Unblockable priority, such as The Emperor's Thunder Crest.",
+    "Sword Dance": "A mid-range sword arc, very slow in its normal version (65F) but cancellable into a block during the startup. As a guard counter, it comes out in 11F for 50 base (80 in EX Mode with four hits): the reference physical riposte, with Wall Rush.",
+    "Vacuum Wave": "A long-range shockwave, slow in its normal version (69F) but cancellable into a block during the startup. As a guard counter, it comes out in 5F for 40 base (60 in EX Mode) with Chase and 60 EX Force.",
+    "Hurricane": "Tornadoes around him at close range (43F in its normal version, cancellable into a block on startup), with an Absorb effect. As a guard counter: 13F and 55 base (90 in EX Mode).",
+    "Delta Attack": "An HP attack that defends while attacking: a block property active from frame 1 (Block Mid) during the startup, then a Melee High beam with Wall Rush at 51F.",
+    "Almagest": "A single-hit HP attack that fills an area with the Void, carrying a Magic Block, cancellable into a block during the startup. As a guard counter it drops to 23F — and gains Block Highest priority when it comes from Omni Block.",
+    "Grand Cross": "A long-range Unblockable HP attack (93F in its normal version) with Absorb and heavy EX Force generation. As a guard counter, 17F: his fastest HP attack, listed as “Counter Gr. Cross” in the infobox.",
+    "Maelstrom": "An enormous cyclone steerable with the stick, with an interminable startup (391F on the ground, 451F in the air) but unavoidable by dodging and immune to Assist Change: the provocation tool par excellence. It has to be deflected by a Melee High attack able to get through the second hitbox that appears after the first deflection; only Kuja, Yuna and Shantotto have no way of doing so and must defuse it otherwise (interrupting the startup, Aerith's Planet Protector, or EX Revenge while taking the hit)."
+  },
+  "exMode": {
+    "summary": [
+      "The “Power of the Void!” EX Mode: Regen, Critical Boost and Speed Guard. Decent assets, which Exdeath nonetheless struggles to exploit: his EX opportunities are rare, and Speed Guard only improves the recovery of command blocks and BRV guard counters, whereas he often finishes on HP guard counters — which benefit only from Critical Boost's critical rate. A full gauge generally serves to end the match (EX Mode) or to survive (EX Revenge); when the chance does come, the benefits are real: guard counter Sword Dances gain hits and wall carry, for markedly higher damage.",
+      "Speed Guard (permanent in EX Mode): the time needed to block an attack drops, every block becomes cancellable into an attack within its dodge cancel frames, and the limit on BRV guard counters doubles — Hurricane goes from 1 to 2 chains, Sword Dance and Vacuum Wave from 2 to 4. After a failed command block (Turn Guard, Omni Block…), Exdeath can also chain straight into other attacks (Turn Guard > Omni Block > Sword Dance, for instance) instead of having only the dodge: rarely necessary given his mobility, but a surprise weapon if the opponent tries to punish a missed block."
+    ],
+    "burst": "“Power of the Void”: like Cloud of Darkness's, you hold Circle then release when the counter reaches 0 — the countdown slows down markedly towards the end, which makes the execution reliable. Damage slightly below the EX Burst average, but still effective for finishing after an assist combo."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "Guard counters: after a successful block with Turn Guard, Shell Guard, Protect Guard or Omni Block, Exdeath can counter with reinforced versions of his bravery or HP attacks — the heart of his identity as a guard character.",
+      "Each guard covers different angles and priorities, and the choice of counter (bravery or HP depending on the input) turns every successful block into an offensive decision point."
+    ],
+    "details": null
+  },
+  "gameplan": [
+    "Exdeath's loop is that of the absolute defender: let them come, block, hit back. His guard counters are built in — after a successful block with Turn Guard, Shell Guard, Protect Guard or Omni Block, he gains access to reinforced versions of Hurricane, Sword Dance, Vacuum Wave, Almagest and Grand Cross, far faster and often stronger. Choosing the block is a reading game: Protect Guard against melee, Shell Guard against magic (reflecting Ranged Low), Omni Block against almost everything but Unblockable.",
+    "In neutral, he exploits the system mechanics better than anyone: attack ↔ block cancels and the dash feint make him the fastest in the game at filling the assist gauge, and the blodge speeds up his dodges. Reverse Polarity keeps the opponent at bay — staggering most pokes, teleporting far away — while the gauge climbs. That “Assist King” advantage makes his assist punishes and his LV2 Assist Changes more frequent and less costly: even when hit, he escapes and starts over.",
+    "The threat that forces the opponent to act is Maelstrom: unavoidable by dodging and immune to Assist Change, it punishes anyone who leaves him alone. The opponent must either deflect it with a suitable Melee High attack or interrupt the startup — exactly the counter situation Exdeath is looking for. On resources, he depends on EX Cores; his slow dash calls for pre-emptive positioning, and the Aerith assist serves as a pressure tool.",
+    "The gameplan has its limits: slow, short-range offence, wins conditioned on precise interactions (ceiling Wall Rushes, staggers, assist punishes, successful blocks) and demanding execution — constant guard cancels, reading timings. Against characters who deflect Maelstrom safely and stall, or against the assists and unreactable mixups that blur his timing, Exdeath has to leave his comfort zone and take risks."
+  ],
+  "advancedTech": [
+    {
+      "name": "Guard counters",
+      "desc": "After a successful block (Turn Guard, Shell Guard, Protect Guard or Omni Block), Exdeath hits back with reinforced versions of his attacks: Hurricane (Circle), Sword Dance (Up + Circle, Circle), Vacuum Wave (Down + Circle, Circle), Almagest (Square) and Grand Cross (Down + Square). These counters are built in — nothing to equip — come out far faster (Vacuum Wave 5F, Sword Dance 11F, Grand Cross 17F, Almagest 23F) and often deal more damage."
+    },
+    {
+      "name": "Block cancel (guard cancel)",
+      "desc": "Exdeath is the only character in the game able to cancel his attacks into normal blocks during their startup (Sword Dance, Vacuum Wave, Hurricane, Almagest, Grand Cross). It is the foundation of his identity: permanent offensive/defensive ambiguity, at the cost of demanding, constant execution."
+    },
+    {
+      "name": "Dash feint and blodge",
+      "desc": "Universal techniques, but decisive for Exdeath: thanks to his cancels, the dash feint lets him fill the assist gauge faster than any character, and the blodge gives him faster dodges — the two pillars of his mobility and his turtling."
+    },
+    {
+      "name": "Lock-off Delta Attack + Seal Evil (Aerith)",
+      "desc": "Tech from Solde's Steam guide: near a ceiling with no usable wall, bind Delta Attack to neutral Square, drop below the opponent and place it in lock-off underneath them to force them towards the ceiling, where a second HP attack finishes the job. A Seal Evil glitch rounds the setup off: thrown again at a target already trapped without hitting them soon enough, it gives them a very high fall speed — predictable enough to drop them back into an already active Delta Attack.",
+      "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "Combos built almost exclusively around Black Hole: Black Hole > dodge cancel > Sword Dance (Black Hole cancels the knockback) > DC > Delta Attack; Black Hole > DC > Vacuum Wave > HP Chase; a block counter Vacuum Wave at very long range > hit glitch on the second wave > HP Chase.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase into an assist gauge reset",
+      "desc": "Vacuum Wave sits exactly on the edge of the assist gauge reset through an empty chase: possible but very tight according to the record.",
+      "source": "https://pastebin.com/dKSWgUQ6"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "The wiki's matchup page is a stub, but the overview and the Maelstrom counter-strategy give clear bearings. Maelstrom strategies crumble against characters able to deflect it safely with melee HP attacks — Squall and Firion are cited as examples — and then stall for gauge; Exdeath then has to take more risks. Conversely, Kuja, Yuna and Shantotto have no attack capable of deflecting Maelstrom: they must interrupt the startup, lean on Aerith's Planet Protector, or take the hit while saving EX Revenge. More broadly, Exdeath stays vulnerable to defensive strategies that cancel out his stage presence, and to anything that disrupts the timing of his counters (assists, unreactable mixups)."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "The overview sets the course: Exdeath's counter style works with high base bravery and Side by Side builds, counting on EX Cores for EX.",
+      "The documented build, “Hybrid (Seal of Lufenia)”, follows that logic: the Yuna assist, Piggy's Stick and the Lufenian set (Bangle, Headband, Vest), drain accessories (Dismay Shock, Battle Hammer) and conditional boosters (BRV = 0, Pre-EX Mode, Pre-EX Revenge…), Rubicante as the summon, 450 CP with the Equip Glitch, for 11826 HP, 1296 BRV and a maximum booster of x2.5. The Master Guardsman extra ability adds +1000 HP.",
+      "Solde Starlight Serenity's Steam guide (2020) documents in screenshots two alternative loadouts to the Lufenian set. The first runs Enuo's Scourge, the exclusive level 100 weapon (BRV +39, ATK +67, BRV Boost on Block +10% and a Riposte effect), with the full Adamant set (Adamant Shield, Helm, Vest) whose “Adamant Chains” bonus adds BRV Boost on Dodge +8% and a slight Midair Evasion Boost: a pure counter loadout, converting every block and every dodge into bravery (10972 HP, 996 BRV, 177 ATK, 187 DEF at 450 CP). The second takes the high-bravery base of Piggy's Stick / Chainsaw / Royal Crown, rounded out with Rainbow Robes, for 1393 base bravery and 9721 HP. On accessories, a set close to the wiki's build: Muscle Belt, Sniper Eye, Dragonfly Orb and Bravery Orb, with the BRV = 0, Summon Unused (on both sides) and Aerial boosters, plus Great Gospel and Back-Breaking Straw.",
+      "The same guide insists on tailoring the loadout to the matchup, right down to the choice of inputs: Grand Cross bound to the back input so as not to advance towards the opponent in a defensive cancel-blodge (or, conversely, Almagest forward, more optimal for catching them in the blodge), Almagest on neutral with Omni Air Dash+ against Firion's Straightarrow spam, Shell Guard on the ground and Black Hole in the air against Kefka, Turn Guard against Golbez, Protect Guard against Gabranth's Melee Mid hits.",
+      "On dissidiaforums (the “Exdeath Builds” thread, April 2011, through the Wayback Machine), Zero_Ruzai described a full assist build for a “chipper” Exdeath (Black Hole > Almagest, Grand Cross dash cancels, Maelstrom + Aerith's Planet Protector): Rebellious Soul, Final Decision, Badge of Trust, First to Victory, Hero's Seal, Together as One, Side by Side, Endless Despair, Soul of Thamasa and Back-Breaking Straw — everything for the assist gauge. The same thread mentions Adamant Chains for the dodge-punish style, the Ancient set (+40% damage) to maximise counters, Succubus's Soul (20% of HP damage drained) paired with EXP to HP for the chip game, and King of Tragedy (+50% damage in EX Revenge) for Reverse Polarity spam finished with Delta Attack."
+    ],
+    "notes": "The second slot (“Build #2”) is empty in the wiki sources: no data at all. The alternative builds described above (Solde Starlight Serenity's Steam guide, the dissidiaforums “Exdeath Builds” thread) come from verified external community sources."
+  },
+  "assist": {
+    "asAssist": [
+      "Exdeath is rated Mid on Muggshotter's assist tier list. His assist moves: Sword Dance as grounded BRV (65F, Wall Rush), Hurricane as aerial BRV (43F, Chase), Grand Cross as grounded HP (93F, Chase) and Delta Attack as aerial HP (51F, Block + Wall Rush). The wiki gives no written assessment of his assist role, only this data."
+    ],
+    "recommended": [
+      {
+        "name": "Aerith",
+        "why": "Cited among the wiki's synergies; the overview recommends her assist for applying pressure despite Exdeath's slow dash, and her Planet Protector features in the Maelstrom counter-strategy."
+      },
+      {
+        "name": "Kuja",
+        "why": "Cited among the wiki's synergies."
+      },
+      {
+        "name": "Yuna",
+        "why": "Cited among the wiki's synergies and chosen as the assist of the documented “Hybrid (Seal of Lufenia)” build."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "DISSIDIA 012—SOLDE EXDEATH GUIDE — Solde Starlight Serenity",
+      "desc": "A very thorough Steam guide dedicated to Exdeath: blocks and blodging, filling assist through cancels, the use of Black Hole / Maelstrom / Grand Cross, cancel-blodge mixups and detailed matchups against the whole cast.",
+      "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279",
+      "date": "2020"
+    },
+    {
+      "title": "Exdeath builds and combos and just how to use (GameFAQs thread)",
+      "desc": "A period thread from the GameFAQs board: choosing blocks by matchup, Maelstrom used as bait, a typical moveset built around Omni Block and Black Hole, and the Aerith assist synergy (Planet Protector) for an unstoppable Maelstrom.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/62156969",
+      "date": "2012"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Exdeath is credited there with combos built almost exclusively around Black Hole.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "List of empty chases leading to an assist gauge reset (Eddiegames)",
+      "desc": "A character-by-character record of the moves whose hit stun allows an empty chase (a chase started without executing anything in it) followed by a reset of the opponent's assist gauge. The detail for this character is covered in the character-specific tech.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
+    }
+  ],
+  "sourcesBySection": {
+    "builds": [
+      "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279",
+      "https://web.archive.org/web/20131022034826/http://dissidiaforums.com/showthread.php?8287-Exdeath-Builds"
+    ]
+  },
+  "limits": [
+    "The matchup page is a stub: no dedicated content, so the matchup summary rests on the overview and the Maelstrom counter-strategy.",
+    "The combos section is empty (the “Solo” subsection has neither text nor table).",
+    "No unique mechanic is marked as documented (documented: false): the guard counters and block cancels are described in the intro of the bravery section, not in a dedicated one.",
+    "No individual usage notes for the moves: the moveNotes rest on the descriptions, the frame data and the overview.",
+    "The Maelstrom counter-strategy table is incomplete in the extraction: a single entry (“Quo Vadis”) with no readable character, so the list of attacks able to deflect it is not usable.",
+    "The second build (“Build #2”) is entirely empty in the wiki; partly filled in with external community builds (the Steam guide, dissidiaforums) during the enrichment pass.",
+    "No community references in the sources.",
+    "Partial data: damage not given (“-”) on Delta Attack and Almagest, run speed “??” in the infobox.",
+    "The community's empty chase record is undated (the solo combo record that accompanies it is dated December 2022): its freshness cannot be established."
+  ],
+  "groupNotes": {
+    "bravery/main": "Every bravery attack exists on the ground and in the air, with identical data unless stated otherwise. Exdeath additionally has unique guard counters: after a successful block with Turn Guard, Shell Guard, Protect Guard or Omni Block, he can counter with reinforced versions of his BRV or HP attacks.",
+    "hp/main": "Every attack exists on the ground and in the air, with identical data unless stated otherwise.",
+    "hp/Maelstrom Counterstrategy": "Maelstrom cannot be dodged: it has to be deflected with a Melee High attack able to get through the second hitbox that appears after the first is deflected. Only Kuja, Yuna and Shantotto have none, and must defuse the situation otherwise (interrupting the setup, and so on)."
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "slug": "prishe",
+  "tagline": "Fast close-range fighter: safe hit and run and war of attrition",
+  "archetype": "Defensive rushdown built on bravery chains",
+  "overview": [
+    "Prishe is a fast short-range fighter with a varied set of melee bravery attacks that chain into one another. Some of them, equipped together, trigger a “Skillchain” reaction that deals extra bravery damage.",
+    "She is known for her low-risk defensive close-range game, led by Raging Fists and One-Inch Punch: fast startup, short recovery, good reward on hit. Threaten with delayable advancing strikes, charge One-Inch Punch to crush blocks, dodge away if they whiff. Her fast fall makes her air dodges hard to punish, and her dash speed, among the fastest in the game, helps her chase opponents and EX Cores alike. Fast, safe, hard to touch: the textbook example of effective hit and run in Dissidia 012 — patience pays off handsomely, and she excels in a war of attrition.",
+    "Her weaknesses are subtler. Her bravery attacks, hard to punish, cannot be cancelled into block or into other attacks — a ceiling on her defensive mind games, effective as they already are. Most of her attacks track poorly on the vertical axis and struggle against long active disjoints (The Emperor's Thunder Crest, Sephiroth's Godspeed). Her 1-hit HP attacks stay situational in EX Revenge checkmates, and the sheer number of viable chains lands her in a bravery slot dilemma much like Vaan's.",
+    "In competitive play, Prishe has often been ranked among the strongest in the game. Her strategy, consistent and simple to execute in most matchups, makes her a notable blind pick: a stable game, even without a clear advantage."
+  ],
+  "tierNote": "Ranked 2nd in the game (tier S) on the 2017 competitive tier list, behind Exdeath. The overview confirms her among the strongest: consistent strategy, easy to execute.",
+  "strengths": [
+    "Mobility: very high dash speed, both on offense and in races for EX Cores; fast fall after an air dodge, making her dodges far safer than average.",
+    "Turtling: fast bravery attacks with short recovery, strong mixup through charged high-priority One Inch Punch; she fights at very low risk and becomes hard to touch.",
+    "Safe and reliable: her defence and her synergy with the Aerith assist let her play the long game, stacking EX gauge and bravery.",
+    "Heavy bravery damage: despite a low base ATK, charged One Inch Punch and EX Mode combos hurt badly, especially after a guard break."
+  ],
+  "weaknesses": [
+    "Mediocre HP attacks: compared with her bravery attacks, they have poor tracking and coverage.",
+    "Low base DEF: when Prishe does get hit, it hurts badly.",
+    "Three-slot dilemma: her competitive loadouts are strong but cannot cover everything.",
+    "EX Revenge checkmates: 1-hit HP attacks are situational at best (Nullifying Dropkick on the ground, Banishga at maximum range in the air); she falls back on movement and her assist.",
+    "Reliance on dodge cancels: a liability mostly at high level, it caps her mixup ceiling and punishes relentless whiffing in races for EX Cores."
+  ],
+  "moveNotes": {
+    "Combo (One)": "A quick three-punch combo, her fastest bravery attack (11 frames). Chains into another bravery attack and combos even on whiff. A chain started with Combo yields roughly 10% more EX Force on the finisher.",
+    "Howling Fist (One)": "A mid-range fist charge, chainable into another bravery attack. Charged: from Melee Low to Melee Mid, with double damage.",
+    "Dragon Kick (One)": "A mid-range leg sweep; charging adds a hit (Ranged Mid projectile) and takes damage from 15 to 25.",
+    "Shoulder Tackle (One)": "A backflip into a charge at the opponent, dodging their attack on startup (Dodge effect). Slow startup (45 frames).",
+    "Banish": "A grounded Ranged Low projectile: fast beads of light fired at long range. No Skillchain.",
+    "Backhand Blow (One)": "A downward Melee High backhand (29 frames), useful for attacking from above.",
+    "Spinning Attack (One)": "A rising fist rush with an Absorb effect, ideal for attacking from below.",
+    "Raging Fists (One)": "A five-punch combo in 13 frames that combos even on whiff: the backbone of her close-range defensive game (fast startup, short recovery, good reward on hit).",
+    "One Inch Punch (One)": "Hammered bursts of energy at point-blank range, 13 frames in its normal version. Charged: Melee High at 35 damage, the tool that crushes blocks and carries her mixup.",
+    "Holy": "A long-range aerial Ranged Low projectile: slow beads of light with strong homing. No Skillchain.",
+    "Combo (Two)": "Combo's follow-up: same attack data, but 75 EX Force (the best EX return of her follow-ups) and a Chase effect, for only 10 CP.",
+    "Howling Fists (Two)": "Chain follow-up: 60 EX and Chase when normal, Wall Rush when charged. As a finisher, the required charge is much shorter.",
+    "Dragon Kick (Two)": "Follow-up with Chase in both versions; 60 EX when normal, 75 when charged.",
+    "Shoulder Tackle (Two)": "A body slam follow-up with Wall Rush, no EX Force.",
+    "Backhand Blow (Two)": "A Melee High backhand follow-up with Wall Rush: its finishers set up combos with the Kuja assist beautifully (see the Skillchain section).",
+    "Spinning Attack (Two)": "A rising rush follow-up with Wall Rush, no EX Force.",
+    "Raging Fists (Two)": "Follow-up to the five-punch combo, with Chase and 72 EX Force.",
+    "One Inch Punch (Two)": "Follow-up with Wall Rush in both versions (no EX Force). As a finisher, the required charge is much shorter; the exact timing is not documented.",
+    "Asuran Fists": "A point-blank Melee High HP attack (43 frames, tied for her fastest) with Wall Rush: a brief charge then a flurry, effective at any height.",
+    "Nullifying Dropkick": "A charged mid-range Melee High dropkick with Wall Rush: slow to start (49 frames) but with good reach. Her grounded 1-hit HP attack, situational for solving EX Revenge checkmates.",
+    "Auroral Uppercut": "A fast Melee High uppercut (43 frames) with Wall Rush, excellent for attacking from below.",
+    "Banishga": "A Ranged High shockwave of light (47 frames) with Wall Rush, effective horizontally. At maximum range, an aerial 1-hit HP attack — situational here too."
+  },
+  "exMode": {
+    "summary": [
+      "The “Two-Hour Ability!” EX Mode grants Regen, Critical Boost and Hundred Fists: while it is active, Prishe chains up to three weapon skills and moves faster — every one of her mobility stats moves up a notch (run, dash, fall, fall after dodge)."
+    ],
+    "burst": "“The Five Lights”: Prishe throws a shard of Magicite, then entering the displayed commands clockwise increases the number of hits landed."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "Certain chained bravery attacks trigger a Skillchain: a burst of energy dealing extra bravery damage (multiplier 5, physical, no EX Force), fired alongside the attack in progress. Its name appears at the top of the screen, like HP attacks and EX Mode activations.",
+      "Only chains of physical bravery attacks trigger them: Banish, Holy and HP attacks never do."
+    ],
+    "details": [
+      "Eight Skillchains are documented with their starter/finisher pairs: Compression (Howling Fist > One Inch Punch), Detonation (Combo, Howling Fist, One Inch Punch, Raging Fists, Shoulder Tackle or Spinning Attack > Backhand Blow), Fusion (Spinning Attack > Combo, Howling Fist, Raging Fists, Shoulder Tackle or Spinning Attack), Gravitation (Backhand Blow > One Inch Punch), Impaction (Shoulder Tackle > Combo, Howling Fist, Raging Fists, Shoulder Tackle or Spinning Attack), Liquefaction (Combo, Howling Fist or Raging Fists > Spinning Attack), Reverberation (Howling Fist > Shoulder Tackle) and Transfixion (One Inch Punch > Howling Fist).",
+      "Detonation is one of the handiest: it starts from her most common starters, and Backhand Blow finishers set up combos with the Kuja assist beautifully. The Howling Fist finisher offers more flexibility for aerial assist combos (Chase or Wall Rush), at the cost of bravery damage or EX Force depending on the charge.",
+      "Skillchains often remain the third-best follow-up choice: good on certain bravery-damage sets, otherwise outclassed in reward or in utility. Only one bravery chain per slot, hence their limited overall viability. On the other hand, the input timing for charged attacks is more forgiving there — not through the system itself, but through the synergy (frame data and hit stun) between the bravery attacks of a chain."
+    ]
+  },
+  "gameplan": [
+    "Prishe's loop is a defensive close-range hit and run: threaten with delayable advancing strikes (Raging Fists, One Inch Punch at 13 frames), charge One Inch Punch to crush blocks, pull out with an all-but-unpunishable dodge if the opponent does not bite. Her dash speed, among the highest in the game, chases down runners and wins races for EX Cores. Patience pays: built for a war of attrition, she stacks EX gauge and bravery thanks to her defence and her synergy with the Aerith assist.",
+    "Her bravery attacks chain: the (One) versions start the chain, the (Two) follow-ups decide what comes next — Chase and heavy EX gains (Combo, Raging Fists, Dragon Kick) or Wall Rush to set up the assist (Backhand Blow, One Inch Punch, Spinning Attack, Shoulder Tackle). Backhand Blow finishers set up combos with the Kuja assist beautifully, and Skillchains add bonus damage on certain sets. Watch out: only one chain per bravery slot, so no complete coverage.",
+    "Her poorly tracking HP attacks remain the weak link: Asuran Fists and Auroral Uppercut are the fastest (43 frames, Wall Rush); Nullifying Dropkick and Banishga at maximum range serve as situational 1-hit HP attacks for EX Revenge checkmates — otherwise, movement and the assist do the work. In EX Mode, Hundred Fists chains up to three weapon skills, mobility picks up further, and combos deal heavy bravery damage, especially after a guard break."
+  ],
+  "advancedTech": [
+    {
+      "name": "Charged One Inch Punch as the universal finisher",
+      "desc": "Whatever the situation (EX Mode, Skillchain or neither), charged One Inch Punch remains her most powerful attack: players of the era advised ending as many chains as possible on it, balancing slots between One Inch Punch finishers (damage, Wall Rush) and Dragon Kick finishers (EX Force).",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58732928"
+    },
+    {
+      "name": "Combo > charged Dragon Kick, the EX chain",
+      "desc": "Any chain started with Combo yields roughly 10% more EX Force, and charged Dragon Kick is her biggest EX generator as a finisher: Combo > charged Dragon Kick peaks at around 125 EX Force with Chase — the character's best EX return, without any Skillchain at all.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58732928"
+    },
+    {
+      "name": "Double Skillchain in EX Mode",
+      "desc": "Hundred Fists allows three weapon skills back to back: with Spinning Attack as a slot's finisher, a chain becomes starter > Spinning Attack (Skillchain) > Spinning Attack (second Skillchain) — two bonus bursts in a single engagement.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58732928"
+    },
+    {
+      "name": "Spinning Attack's hitbox as an aerial starter",
+      "desc": "Its unusual rising-rush hitbox catches opponents caught low enough, right through their guard — an uncommon opening angle against an opponent who blocks.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58732928"
+    },
+    {
+      "name": "Dragon Kick, the non-Skillchain exception",
+      "desc": "Dragon Kick triggers no Skillchain, neither as a starter nor as a finisher, but charged it is her strongest grounded attack. On charged Dragon Kick > charged One Inch Punch, period sources disagree: the joint most powerful grounded combo for one player, all but unlinkable (extreme timing) for another.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58732928"
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "A single solo combo — the only one she needs, her heavy bravery damage going through Backhand Blow and assists: Raging Fists (4 hits) > dodge cancel > landing lag > Raging Fists or uncharged One Inch Punch. The compiler notes that grounded Combo also chains into Raging Fists, and that the landing lag follow-ups apply to One Inch Punch as well.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase into an assist gauge reset",
+      "desc": "Uncharged Howling Fist allows the assist gauge reset through an empty chase (slightly tight); Combo and Raging Fists sit exactly on the edge.",
+      "source": "https://pastebin.com/dKSWgUQ6"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "The wiki's matchup page is a stub, but the overview gives some bearings: a consistent strategy, simple to execute in most matchups — a notable blind pick, solid even without a clear advantage. Documented friction points: long active disjoints (The Emperor's Thunder Crest, Sephiroth's Godspeed), against which her mediocre vertical tracking struggles."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Her builds usually aim at EX and bravery damage. The documented build (“Adamant Chains”) leans on the special effect of the same name — damage, EX absorption, even safer air dodges — with the Aerith assist, the Cleaver weapon, the Adamant set (Shield, Helm, Vest), booster-oriented accessories (Hyper Ring, Muscle Belt, Dismay Shock, Battle Hammer, Summon Unused, three White Drop, White Gem, Glutton) and Rubicante as the summon. It relies on the Equip Glitch (the total CP cost assumes it has been performed).",
+      "Side by Side is not recommended on Prishe: average HP attacks and no solo combo into an HP attack."
+    ],
+    "notes": "The build's bravery and HP attack slots are left blank, and the second build (“Build #2”) is an empty template."
+  },
+  "assist": {
+    "asAssist": [
+      "As an assist, Prishe is rated Low tier on Muggshotter's assist tier list. The sources on her page give no detail on her use beyond that ranking."
+    ],
+    "recommended": [
+      {
+        "name": "Aerith",
+        "why": "Her synergy with Aerith is cited among her strengths: her defence and the Aerith assist let her play the long game, stacking EX gauge and bravery. It is also the assist of the documented Adamant Chains build."
+      },
+      {
+        "name": "Kuja",
+        "why": "Cited by the page among the assists that work well with her; the Skillchain section notes that Backhand Blow finishers set up combos with his assist beautifully."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Dissidia Duodecim: The Essential Guide to Learning Prishe",
+      "desc": "The reference video guide of the era for learning Prishe (glenburg89 channel, March 2011): attack properties and fundamentals, still online.",
+      "source": "https://www.youtube.com/watch?v=pbXhyagrfqE",
+      "date": "2011"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Prishe is credited with a single solo combo — the only one she needs.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "List of empty chases leading to an assist gauge reset (Eddiegames)",
+      "desc": "A character-by-character record of the moves whose hit stun allows an empty chase (a chase started without executing anything in it) followed by a reset of the opponent's assist gauge. The detail for this character is covered in the character-specific tech.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
+    }
+  ],
+  "limits": [
+    "The wiki's matchup page is a stub: no detailed per-character analysis (only the examples cited in the overview could be carried over).",
+    "No combo section filled in (the Solo subsection is empty): no detailed combo routes beyond the mentions in the overview and the Skillchain section.",
+    "The exact timing of One Inch Punch (Two)'s shortened charge as a finisher is explicitly undocumented in the sources.",
+    "The wiki names no advanced technique outside the Skillchains (covered in uniqueMechanics): the advancedTech entries come from a GameFAQs thread of the era (2011), with one disagreement flagged (linking charged Dragon Kick > charged One Inch Punch).",
+    "The second build (“Build #2”) is an empty template and the main build's attack slots are left blank.",
+    "Assist gain values are missing from the move tables; the wiki's References section is empty; the community tech entries come from the external source pass.",
+    "The community's empty chase record is undated (the solo combo record that accompanies it is dated December 2022): its freshness cannot be established."
+  ],
+  "groupNotes": {
+    "bravery/main": "Most of Prishe's bravery attacks chain into a follow-up equipped separately: the starter is marked “(One)”, the follow-up “(Two)”. The list of follow-ups is the same whatever the starter — they are listed separately below.",
+    "bravery/followups": "The data is close to the (One) versions, but the (Two) follow-ups generate a different amount of EX Force, can Wall Rush or start a Chase, and cost less CP to equip."
+  }
+}

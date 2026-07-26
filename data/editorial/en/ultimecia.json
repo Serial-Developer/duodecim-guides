@@ -1,0 +1,155 @@
+{
+  "slug": "ultimecia",
+  "tagline": "Elite zoner: chained projectiles and keepaway, but a glass defence",
+  "archetype": "Defensive aerial zoner",
+  "overview": [
+    "Ultimecia is a defensive, air-oriented character built entirely around long and mid-range zoning and keepaway. Her moves, almost all slow to start, are powerful projectiles that harass the opponent from just about anywhere on screen; their high damage adds up fast, between stray projectiles that connect and conversions into an assist or into HP.",
+    "She is at her most fearsome at mid range: that is where she lays down her projectiles and pressures the opponent's movement around them. If the opponent gets too close, Knight's Lance and Apocalypse push them back. With no natural combos, she creates plenty of chances to string her moves into very damaging sequences: a hit-confirm off a stray projectile, a Knight's Arrow set down to combo into, Knight's Axe for Chase setups, or a Charged Lance converted into Apocalypse — the cornerstones of her gameplan.",
+    "That power in neutral has a price: her defence collapses the moment she loses her favoured position. An enormous blind spot beneath her, mediocre movement and the lack of a fast move to get out make every bad defensive decision highly exploitable — all of it with the lowest base DEF in the game.",
+    "Despite that deficient defence, her neutral, her damage and her command of zoning make her very hard to approach for most of the cast, and every mistake the opponent makes can be punished heavily."
+  ],
+  "tierNote": "Ultimecia is 3rd in the 2017 ranking, in tier S. The overview backs that placing up: neutral, damage and zoning that lock the game down against most of the cast, despite a fragile defence.",
+  "strengths": [
+    "Fantastic zoning: one of the best-equipped zoners in the game — multiple projectiles to lay down and chain, strong tools to create space, a very wide area of effectiveness. Hard to find a spot where she cannot impose her game.",
+    "Charged Knight's Lance: a High Priority projectile, able to stagger HP attacks and reflect high-priority projectiles (Highest Priority as it appears) — a major roadblock for most characters, whose use can decide everything.",
+    "High damage: many high-damage projectiles, and up to 39 base damage on Hell's Judgement — every major hit hurts badly.",
+    "An assist gauge that fills fast thanks to the constant rotation of options in neutral.",
+    "Anti-air: one of the worst places to be against her is directly above, thanks to her arsenal of projectiles with long vertical reach."
+  ],
+  "weaknesses": [
+    "Catastrophic defence after a dodge when the opponent closes in: her fastest move is Ranged Low, a floaty dodge, a low jump, slow movement — a glass cannon as soon as the opponent finds the right angle.",
+    "A blind spot directly beneath her, where none of her moves can connect.",
+    "Assist restrictions: her moves lend themselves poorly to combos for most assists — Kuja is very nearly the only one to provide consistent hit-confirms on her key moves and an excellent setup into Hell's Judgement.",
+    "Bravery Boost on Block/Dodge: anti-zoning builds force her to rethink her neutral thoroughly so as not to feed the opponent free bravery."
+  ],
+  "moveNotes": {
+    "Knight's Blade": "Uncharged (tap Circle): a burst of red arrows, a fast poke with good damage and very nearly her only way out of a block at mid range; short hit stun (call the assist during the volley to secure the conversion) and low priority that can be dashed through, offset by low endlag. Charged (hold Circle): a swarm of swords with surprisingly good tracking that catches dodges, very high damage, longer hit stun to convert, and Magic Mid priority that staggers blocks and forbids dashing through — ideal for taking a breather and keeping melee at bay while charging the assist gauge. Charging makes her predictable and the endlag after a cancel leaves her open to a punish; against the ceiling, a Kuja assist follow-up lets her chip away at bravery.",
+    "Knight's Lance": "The charged Knight's Lance stays active for about 5 seconds (306F). Uncharged version: three lances at 13F, Ultimecia's fastest move; charged version: Block Highest then Ranged High with Wall Rush (data from the move table).",
+    "Great Attractor": "A sphere that grows during the charge and flies off at very high speed on release — Ultimecia's only HP attack able to Wall Rush, but the charge has to be performed to deal damage (level 2 between 187 and 362 frames, level 3 from 363F). Documented tricks: releasing between 183F and 186F produces an early level 3, and releasing within the first four frames of a half-charge gives a full charge. An extremely long charge time and mediocre vertical tracking limit its use: it mostly serves to charge the assist gauge cheaply by dodge cancelling the uncharged version.",
+    "Shockwave Pulsar": "A Ranged High HP attack with the Absorb property: lobbed azure projectiles whose range increases while the button is held (59F, 7F on release). No detailed usage notes in the sources.",
+    "Apocalypse": "Ultimecia's best HP attack and one of the best moves in the game, worth equipping in any circumstance. Simple press: the sigil explodes on the spot — excellent on defence (a long-lasting explosion), as a close-range HP attack out of a block, and as an assist follow-up when Hell's Judgement is out of reach. Button held: the sigil chases the opponent, bounces off walls in tight spaces and catches badly timed dodges, with an enormous vertical reach that goes beyond the visual effect — the opponent can be hit without even seeing the sigil. All but impossible to assist punish thanks to its minimal endlag, it even locks down an opponent's assist when released at point-blank range, dodge cancels into a combo towards an uncharged Knight's Lance or Knight's Blade thanks to its long hit stun (above the opponent or near the ceiling), and its status as a single-hit HP attack helps avoid EX Revenge checkmates.",
+    "Hell's Judgement": "A Ranged High HP attack (103F): it deploys a magic circle and steals the opponent's bravery through button presses — from 3 to 13 hits at 3 base damage each, so up to 39 base damage, one of the character's major damage sources. No detailed usage notes beyond that in the sources."
+  },
+  "exMode": {
+    "summary": [
+      "The “Junction Griever!” EX Mode grants Regen, Critical Boost and Time Crush.",
+      "Time Crush (R + Square): the opponent's movement is completely frozen for a fixed duration — 5.5 seconds (330 frames) once Ultimecia has recovered her own mobility — at the cost of a long cast time; recovery is about 34F after the button is released."
+    ],
+    "burst": "The Time Compression EX Burst is a flurry of hits capped by a crushing impact (100 base damage in total): press Circle at the right moment, as the cursor passes into the frame."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "Ultimecia's gameplan: never let the fight happen on the opponent's terms — harass from afar with her projectiles, then shift to mid range, her favoured zone, to lay her moves down and constrain the opponent's movement around them. Uncharged Knight's Blade serves as a fast poke, the charged version keeps melee at bay while filling the assist gauge, and the constant rotation of options makes that gauge climb quickly.",
+    "With no natural combos, her damage sequences have to be built: a hit-confirm off a stray projectile, a Knight's Arrow set down in advance to combo into, Knight's Axe for Chase setups, and a Charged Lance converted into Apocalypse. Apocalypse is the keystone: on the spot for defence and out of a block, held to hunt the opponent down in enclosed spaces, and its long hit stun converts into an uncharged Knight's Lance or Knight's Blade near the ceiling.",
+    "Against approaches, Charged Knight's Lance is the central barrier: a High Priority projectile that staggers HP attacks and reflects high-priority projectiles as it appears, active for about 5 seconds. Anti-air is another strong point: being directly above Ultimecia is one of the worst possible placements against her long vertical reach.",
+    "The flip side demands strict positioning discipline: never let the opponent settle into the blind spot beneath her or into close range — her post-dodge defence is very poor (a floaty dodge, slow movement, no fast move to create space) and her base DEF is the lowest in the game. Against Bravery Boost on Block/Dodge builds, adjust the neutral so as not to hand over free bravery. On assists, Kuja is very nearly the only choice that converts her key moves reliably, with an excellent setup into Hell's Judgement on top."
+  ],
+  "advancedTech": [
+    {
+      "name": "Great Attractor early release",
+      "desc": "Two documented charge shortcuts: releasing the button between 183F and 186F of charge produces a level 3 outright (well before the theoretical 363F), and releasing within the first four frames of a half-charge turns it into a full charge."
+    },
+    {
+      "name": "Great Attractor assist farming",
+      "desc": "Dodge cancelling the uncharged version of Great Attractor: a cheap way to fill the assist gauge — its main use, given the move's very long charge and mediocre vertical tracking."
+    },
+    {
+      "name": "Apocalypse dodge cancel combos",
+      "desc": "Thanks to its long hit stun, Apocalypse dodge cancels and combos into an uncharged Knight's Lance or Knight's Blade when Ultimecia is above the opponent or near the ceiling; released at point-blank range, it also locks down an opponent's assist attempting to punish."
+    },
+    {
+      "name": "Charged Lance reflector",
+      "desc": "The charged Knight's Lance is a High Priority projectile (Highest Priority as it appears) able to stagger HP attacks and send high-priority projectiles back — a roadblock that can decide a match on its own."
+    },
+    {
+      "name": "Time Crush combo loops",
+      "desc": "The “Fallen Chronomancer” guide documents loops specific to EX Mode: Charged Knight's Axe > EX Mode + assist > Time Crush > assist > Time Crush > Hell's Judgement, or Time Crush > Charged Knight's Axe x2 > Time Crush. The axe/Time Crush loop, weakened compared with the first Dissidia, remains doable; since activating EX Mode empties the opponent's assist gauge, Time Crush has no assist punish to fear.",
+      "source": "https://web.archive.org/web/20130121110044/http://dissidiaforums.com/showthread.php?11070-Fallen-Chronomancer-Ultimecia-Guide"
+    },
+    {
+      "name": "Charged Lance ceiling lock",
+      "desc": "Near the ceiling, an upward Wall Rush into the Charged Knight's Lance pins the opponent between ceiling and lance: coming out of the Wall Rush, they hit the still-active lance again and take more damage — an all but complete lock documented by the “Fallen Chronomancer” guide.",
+      "source": "https://web.archive.org/web/20130121110044/http://dissidiaforums.com/showthread.php?11070-Fallen-Chronomancer-Ultimecia-Guide"
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "Few solo combos — the record credits her instead with assist combos “probably the deadliest in the game”: uncharged Arrow > uncharged Axe or Shockwave Pulsar; charged Arrow (level 1) > any bravery attack but Arrow, or Apocalypse; charged Arrow (level 2 and up) > anything but itself; Time Crush (special move, EX Mode) > charged Knight's Arrow placed directly above > charged Knight's Lance (both loop up to four times) > Hell's Judgement; Apocalypse > dodge cancel > uncharged Lance; Hell's Judgement > DC > charged Lance; uncharged Axe > DC > Axe hit glitch > HP Chase.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "SilvaKairi's “Fallen Chronomancer” guide (dissidiaforums, 2011-2012, recovered through the Wayback Machine) documents Ultimecia's matchups against very nearly the whole cast, and the verdict is unambiguous: most of the roster gets locked down by her zoning. Pure melee is dominated — Cloud “simply cannot touch her”, Onion Knight and Zidane go out against a Charged Knight's Lance left permanently on the field, Kain has little left once it is down (only Gungnir gets through), and The Emperor is called a “laughable” matchup: continuous charged axes stop him casting Starfall and hiding in his Flares. Against Squall (favourable), beware of Aerial Circle, whose absorption effect sucks her in during casts; against Tifa and Gilgamesh, the instruction inverts: do not overuse dodges, which Meteor Crush and Electrocute punish — Electrocute even strikes through charged lances.",
+      "Her serious matchups can be counted on one hand according to the same guide. Kuja is the hardest: his attacks go through charged lances and Snatch Blow's recoil catches dodges — she has to dash a great deal and keep up charged axe/arrow pressure. Sephiroth is “the most tiresome”: against Shadow Flare spam, dash forward through it while firing blades or a charged axe, which break the flares. Garland and Kefka make Precision Dodge mandatory because of their lightning spells, and Exdeath, a former counter-pick, becomes manageable with the right set: Great Attractor in place of Shockwave Pulsar to get around Reverse Polarity (a full charge guard crushes even a teleporting RP), charged arrows and axes permanently, and above all never Auto Assist Lock-On. In those hard matchups, the guide recommends an EX build rather than Side by Side — dash speed and Time Crush make the difference. The mirror is a 5-5 “decided by who fills their EX gauge first”.",
+      "The period thread “Match-up Discussion: Ultimecia” qualifies a few cases. Jecht is debated: some see her “destroying” him with Charged Lance, but Veysey (on the Jecht side) points out that Jecht Block goes through the charged lance, that a well-spaced Beam punishes her while she places it, and that the blind spot beneath her stays exploitable — for him, the key to the matchup is constant Knight's Arrow pressure, the Lance/Blade pair serving only to recreate space once Jecht is in her face. Yuna is given 6-4, even 7-3 Ultimecia: the lance blocks Bahamut and denies her Shiva at point-blank range, and only Valefor gets through. Seen from the other side (the “How to Counter Ultimecia” thread), the answers cited at the time are Sephiroth's Shadow Flare, characters with a dedicated block (Jecht, Exdeath) and Kuja; Solde Starlight Serenity's Exdeath Steam guide (2020) still ranks her as an Exdeath counter-pick, thanks to her control of vertical space, her charged arrows that cannot be blocked once placed, and the threat of Time Crush."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "The documented build is a “Judgment of Lufenia” hybrid with the Equip Glitch (the total CP cost assumes the glitch has been performed): Shooting Star as the weapon, the Lufenian outfit (Shield, Helm, Armor), the Kuja assist, Rubicante as the summon and booster accessories (Hyper Ring, Earring, Dismay Shock, Battle Hammer, the Summon Unused / Pre-EX Mode / Pre-EX Revenge / Aerial / Opponent Summon Unused conditions, Glutton) for a maximum multiplier of x4.6 — 11626 HP, 916 BRV, 179 ATK, 184 DEF. The Master Guardsman extra ability is worth equipping for +1000 HP."
+    ],
+    "notes": "A second build is provided for in the data but entirely empty, and the builds' attack selections are not filled in the tables. SilvaKairi's “Fallen Chronomancer” guide (dissidiaforums, 2011-2012) does, however, document build choices by matchup: an EX build is recommended against Exdeath, Kuja, Kefka and Sephiroth (dash speed and Time Crush), where a Side by Side build stays playable elsewhere, with movesets adjusted per opponent (Great Attractor in place of Shockwave Pulsar against Exdeath, for instance)."
+  },
+  "assist": {
+    "asAssist": [
+      "Ultimecia is rated Low tier on the assist tier list. Her assist attacks: Knight's Axe on the ground (BRV, 33F, up to 30 base damage, Chase), Knight's Axe in the air (BRV, 53F, 40 damage, Wall Rush), Hell's Judgement (grounded HP, 103F, 39 damage, Chase, appears on the player) and Apocalypse (aerial HP, 59-240F, Chase, appears on the player). The wiki's assessment section is not written up beyond this raw data."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "The only synergy cited by the wiki, and the overview says why: he is very nearly the only assist providing consistent hit-confirms on Ultimecia's key moves, with an excellent setup into Hell's Judgement on top. He is also the assist of the documented build."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "How do I Ultimecia? — GameFAQs thread",
+      "desc": "A period thread from the Duodecim board: a move-by-move overview (charged Knight's Arrows to be left in place, Charged Knight's Lance as a near-Omniblock shield on block, Hell's Judgement as a systematic follow-up) and simple strings such as Charged Lance > Apocalypse or Charged Lance > Charged Arrows > Hell's Judgement.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/59674823",
+      "date": "2011"
+    },
+    {
+      "title": "Ultimecia combos? — GameFAQs thread",
+      "desc": "A period thread devoted to assist routes finished in HP: Knight's Arrow > Kuja assist > Hell's Judgement (unstoppable without an Assist Change according to the thread's testing), and Lance/Arrow/Blade setups into Hell's Judgement.",
+      "source": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/59292905",
+      "date": "2011"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Ultimecia is credited there with few solo combos but with the deadliest assist combos in the game — uncharged Knight's Lance narrowly fails the reset.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    }
+  ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://web.archive.org/web/20130121110044/http://dissidiaforums.com/showthread.php?11070-Fallen-Chronomancer-Ultimecia-Guide",
+      "https://web.archive.org/web/20120324214716/http://dissidiaforums.com/showthread.php?9542-Match-up-Discussion-Ultimecia",
+      "https://web.archive.org/web/20131106005523/http://dissidiaforums.com/showthread.php?9542-Match-up-Discussion-Ultimecia/page16",
+      "https://web.archive.org/web/20130121105811/http://dissidiaforums.com/showthread.php?10936-How-to-Counter-Ultimecia",
+      "https://steamcommunity.com/sharedfiles/filedetails/?id=2333236279"
+    ],
+    "builds": [
+      "https://web.archive.org/web/20130121110044/http://dissidiaforums.com/showthread.php?11070-Fallen-Chronomancer-Ultimecia-Guide"
+    ]
+  },
+  "limits": [
+    "No combo is documented (the combos section is empty, documented: false): the gameplan rests solely on the overview and the move notes.",
+    "The wiki's matchup page is a stub: the matchup section is rebuilt from the period competitive sources listed in sourcesBySection (the “Fallen Chronomancer” guide and dissidiaforums threads through the Wayback Machine, the Exdeath Steam guide); the Lightning, Shantotto and Gabranth matchups remain untreated there (“needs more testing”).",
+    "The assist section is marked undocumented: only the raw data table and the mention of “Kuja” as a synergy exist, with no written assessment.",
+    "Knight's Axe and Knight's Arrow have no usage notes at all; Shockwave Pulsar and Hell's Judgement have only their one-line description; the damage of Shockwave Pulsar and Apocalypse is not given (“-”).",
+    "The wiki's references section is empty: the communityTech entries and the sources in sourcesBySection come from external research; the assistGain values are empty for every move."
+  ],
+  "specialMoves": [
+    {
+      "name": "Time Crush",
+      "input": "R + Square held — EX Mode (Junction Griever) only",
+      "desc": "A special attack absent from the equip lists, available only in EX Mode: after a long charge time, it freezes and traps the opponent for several seconds. The only way out is to trigger your own EX Mode; a second Time Crush on an already paralysed opponent frees them. Ultimecia can start charging again during the paralysis: the move lands if it activates after the first effect ends. It is the opening of the loop in the community combo record.",
+      "source": "https://finalfantasy.fandom.com/wiki/Ultimecia_(Dissidia_PSP)"
+    }
+  ],
+  "groupNotes": {
+    "bravery/main": "Every bravery attack exists on the ground and in the air, with shared data, and can be charged: the first frame count is the minimum charge time, the second the appearance of the hitbox after the button is released.",
+    "hp/main": "Every HP attack exists on the ground and in the air, with shared data."
+  }
+}

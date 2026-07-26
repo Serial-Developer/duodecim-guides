@@ -1,6 +1,6 @@
 // Page transverse : obtenir Feral Chaos (chemin de déblocage + méthodes pour
 // battre le boss final du scénario 000)
-import { esc, paras, sourcesSection, pageShell, siteHeader, siteFooter } from './helpers.mjs';
+import { esc, paras, sourcesSection, pageShell, siteHeader, siteFooter, linksFor } from './helpers.mjs';
 
 function methodeBlock(m) {
   return `<article class="card" id="${esc(m.id)}">
@@ -10,43 +10,47 @@ ${m.points?.length ? `<ul>${m.points.map((p) => `<li>${esc(p)}</li>`).join('')}<
 </article>`;
 }
 
-export function renderFeralUnlock(data, seo) {
-  const body = `${siteHeader({ active: 'feral' })}
-<nav class="guide-top" aria-label="Sections de la page"><div class="chips-nav">
-<a href="index.html">← Sélection</a>
-<a href="#chemin">Le chemin</a>
-<a href="#methodes">Battre Feral Chaos</a>
-<a href="#apres">Après le déblocage</a>
+export function renderFeralUnlock(data, seo, { t, locale, path, alternates, availability }) {
+  const L = linksFor(path, locale, availability);
+  const body = `${siteHeader(t, { path, locale, alternates, availability, active: 'feral' })}
+<nav class="guide-top" aria-label="${esc(t('common.pageSections'))}"><div class="chips-nav">
+<a href="${L.page('home')}">${t('common.backToSelect')}</a>
+<a href="#chemin">${t('feralUnlock.navPath')}</a>
+<a href="#methodes">${t('feralUnlock.navMethods')}</a>
+<a href="#apres">${t('feralUnlock.navAfter')}</a>
 </div></nav>
 <main class="wrap" style="padding-bottom:3rem">
 <h1 style="color:var(--gold)">${esc(data.title)}</h1>
 <p class="mv-desc">${esc(data.lede)}</p>
 
-<h2 id="chemin">Le chemin du déblocage</h2>
+<h2 id="chemin">${t('feralUnlock.pathTitle')}</h2>
 ${paras(data.chemin.intro)}
 <ol class="steps">${data.chemin.etapes.map((e) => `<li>${esc(e)}</li>`).join('')}</ol>
 <article class="card">
-<h3 style="margin-top:0">Le combat qui verrouille tout</h3>
+<h3 style="margin-top:0">${t('feralUnlock.bossCard')}</h3>
 <p>${esc(data.chemin.boss)}</p>
 </article>
 <div class="banner info">${esc(data.chemin.piege)}</div>
 
-<h2 id="methodes">Trois méthodes pour le battre</h2>
+<h2 id="methodes">${t('feralUnlock.methodsTitle')}</h2>
 ${data.methodes.map(methodeBlock).join('\n')}
 
-<h2 id="apres">Après le déblocage</h2>
+<h2 id="apres">${t('feralUnlock.afterTitle')}</h2>
 ${paras(data.apres.intro)}
-<p class="video-link"><a href="characters/feral-chaos.html">La fiche complète de Feral Chaos jouable</a></p>
+<p class="video-link"><a href="${L.guide('feral-chaos')}"${L.guideLang('feral-chaos') ? ` hreflang="${L.guideLang('feral-chaos')}"` : ''}>${t('feralUnlock.sheetLink')}</a></p>
 
-<h2 id="sources">Sources</h2>
-${sourcesSection(data.sources, data.limits)}
+<h2 id="sources">${t('common.sources')}</h2>
+${sourcesSection(t, data.sources, data.limits)}
 </main>
-${siteFooter()}`;
+${siteFooter(t)}`;
   return pageShell({
+    t,
+    locale,
     seo,
-    title: 'Obtenir Feral Chaos — Dissidia 012 [duodecim]',
-    description: 'Débloquer Feral Chaos dans Dissidia 012 [duodecim] : le chemin par Confessions of the Creator et trois méthodes pour battre le boss final niveau 130.',
-    cssPath: 'styles/main.css',
+    path,
+    alternates,
+    title: t('feralUnlock.metaTitle'),
+    description: t('feralUnlock.metaDescription'),
     jsPath: null,
     body,
   });

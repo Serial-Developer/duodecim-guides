@@ -1,19 +1,24 @@
 // Calendrier des tournois : grille mensuelle navigable, événements injectés
 // au build dans #cal-data. Sans JS, la liste « À venir » reste lisible.
+//
+// Les libellés (mois, jours, premier jour de la semaine) sont injectés au build
+// dans #cal-i18n : ce script est partagé par toutes les langues et ne contient
+// aucun texte en dur.
 (function () {
   var dataEl = document.getElementById('cal-data');
+  var i18nEl = document.getElementById('cal-i18n');
   var grid = document.getElementById('cal-grid');
   if (!dataEl || !grid) return;
 
   var events = [];
   try { events = JSON.parse(dataEl.textContent).events || []; } catch (e) { return; }
 
+  var L;
+  try { L = JSON.parse(i18nEl.textContent); } catch (e) { return; }
+
   var byDay = {};
   events.forEach(function (e) { (byDay[e.iso] = byDay[e.iso] || []).push(e); });
   var sortedDays = Object.keys(byDay).sort();
-
-  var MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
-  var JOURS = ['lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim'];
 
   var label = document.getElementById('cal-label');
   var list = document.getElementById('cal-month-list');
@@ -23,6 +28,9 @@
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
   function iso(y, m, d) { return y + '-' + pad(m + 1) + '-' + pad(d); }
+  function fill(tpl, vals) {
+    return String(tpl).replace(/\{(\w+)\}/g, function (mm, k) { return k in vals ? vals[k] : mm; });
+  }
 
   function chip(e, full) {
     var a = document.createElement('a');
@@ -35,15 +43,17 @@
   }
 
   function render() {
-    label.textContent = MOIS[view.m] + ' ' + view.y;
+    label.textContent = L.months[view.m] + ' ' + view.y;
     grid.innerHTML = '';
-    JOURS.forEach(function (j) {
+    L.weekdays.forEach(function (j) {
       var h = document.createElement('div');
       h.className = 'cal-head';
       h.textContent = j;
       grid.appendChild(h);
     });
-    var offset = (new Date(view.y, view.m, 1).getDay() + 6) % 7;
+    // Décalage du 1er du mois par rapport au premier jour de semaine de la
+    // locale (lundi en français, dimanche en anglais).
+    var offset = (new Date(view.y, view.m, 1).getDay() - L.firstDay + 7) % 7;
     var days = new Date(view.y, view.m + 1, 0).getDate();
     for (var i = 0; i < offset; i++) {
       var padCell = document.createElement('div');
@@ -72,7 +82,7 @@
         byDay[k].forEach(function (e) {
           var li = document.createElement('li');
           var when = document.createElement('strong');
-          when.textContent = parseInt(k.slice(8), 10) + ' ' + MOIS[view.m];
+          when.textContent = fill(L.dayMonth, { day: parseInt(k.slice(8), 10), month: L.months[view.m] });
           li.appendChild(when);
           li.appendChild(document.createTextNode(' — '));
           li.appendChild(chip(e, true));
@@ -83,7 +93,7 @@
     } else {
       var p = document.createElement('p');
       p.className = 'cal-empty';
-      p.textContent = 'Aucun tournoi ce mois-ci.';
+      p.textContent = L.empty;
       list.appendChild(p);
     }
   }

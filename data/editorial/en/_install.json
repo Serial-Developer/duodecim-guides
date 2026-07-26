@@ -1,0 +1,363 @@
+{
+  "title": "Installing Dissidia 012 on PPSSPP",
+  "lede": "Dissidia 012 [duodecim] never released anywhere but on PSP. To play it today — and above all against someone else — the normal route is the PPSSPP emulator, on PC as well as on a phone. This page covers both platforms, from installation to your first online match.",
+  "emulatorVersion": "1.20.4",
+  "prerequisites": {
+    "summary": [
+      "This page assumes you already have a copy of the game as an ISO, CSO or CHD file, obtained 100% legally — that is, dumped from your own copy. Obtaining the file is not covered here and no download link will be given.",
+      "That is also the PPSSPP project's own position, which distributes no games: “You must have your PSP games as .ISO or .CSO files. I am not allowed to distribute them with the app, so you will have to provide them yourself.” The official documentation explains how to dump a UMD you own; it is summarised further down in each section."
+    ],
+    "sources": [
+      "https://www.ppsspp.org/docs/faq/",
+      "https://www.ppsspp.org/docs/getting-started/how-to-get-games/"
+    ]
+  },
+  "platforms": [
+    {
+      "id": "pc",
+      "label": "PC",
+      "subtitle": "Windows · macOS · Linux",
+      "intro": [
+        "The reference platform for competitive play: a wired controller, latency under control, and above all the ability to run two instances of the emulator on the same machine to play two-player on a single screen."
+      ],
+      "steps": [
+        {
+          "id": "pc-install",
+          "title": "Install PPSSPP",
+          "intro": [
+            "PPSSPP is free and open source. The current stable release is 1.20.4. The paid “Gold” variant, functionally identical, exists to support development."
+          ],
+          "actions": [
+            {
+              "do": "Download the emulator from the official site",
+              "detail": "Never install PPSSPP from a third-party site: repackaged builds are the number one source of online version trouble.",
+              "link": { "url": "https://www.ppsspp.org/download/", "label": "ppsspp.org/download" }
+            },
+            {
+              "do": "Windows: the classic installer, or the portable ZIP archive",
+              "detail": "An ARM64 build exists for Windows machines on ARM processors, along with a UWP/Xbox package."
+            },
+            {
+              "do": "macOS: DMG disk image"
+            },
+            {
+              "do": "Linux: Flatpak through Flathub, or an AppImage from the GitHub CI"
+            },
+            {
+              "do": "Launch PPSSPP once so it creates its folders",
+              "detail": "The interface is translated into many languages (Settings → System → Language)."
+            }
+          ],
+          "warning": "To play online, every player must have exactly the same version of PPSSPP — and the same architecture (32 or 64-bit). Mixing the two is a classic cause of desynchronisation.",
+          "sources": [
+            "https://www.ppsspp.org/download/",
+            "https://dissidia.wiki/Online_Setup_(PPSSPP)"
+          ]
+        },
+        {
+          "id": "pc-game",
+          "title": "Set the game up",
+          "intro": [
+            "PPSSPP reads the ISO, CSO and CHD formats (the last one since version 1.17). CSO and CHD are compressed ISOs, decompressed on the fly: the file size is cut with no loss of compatibility."
+          ],
+          "actions": [
+            {
+              "do": "Dump your UMD from your own PSP",
+              "detail": "You need a PSP on custom firmware and a mini USB cable. Insert the UMD, plug the console in, press Select from the main menu, set “USB Device” to “UMD Disc”, then choose “USB Connection” in the settings. A folder opens on the PC with a virtual ISO file: just copy it.",
+              "link": { "url": "https://www.ppsspp.org/docs/getting-started/dumping-games/", "label": "Official dumping procedure" }
+            },
+            {
+              "do": "Put the file in a dedicated folder",
+              "detail": "The location does not matter, as long as it stays put over time."
+            },
+            {
+              "do": "In PPSSPP, the “Games” tab → “Browse…” and point at that folder",
+              "detail": "The game then appears in the list; one click launches it."
+            }
+          ],
+          "settings": {
+            "caption": "The game's two editions, not to be confused",
+            "rows": [
+              ["Code", "Region", "Note"],
+              ["ULUS10566", "North America", "The version the online competitive community uses"],
+              ["ULES01505", "Europe", "Cannot connect to a North American copy"]
+            ]
+          },
+          "notes": [
+            "The region code is visible on the game's entry in PPSSPP. Two players on two different editions will not be able to connect — that is a constraint of the game, not the emulator."
+          ],
+          "sources": [
+            "https://www.ppsspp.org/docs/getting-started/dumping-games/",
+            "https://www.ppsspp.org/docs/faq/",
+            "https://dissidia.wiki/Online_Setup_(PPSSPP)"
+          ]
+        },
+        {
+          "id": "pc-setup",
+          "title": "Basic settings",
+          "intro": [
+            "The defaults run the game correctly on a recent machine. The settings below are the ones that matter for Dissidia: a versus game where a steady framerate beats resolution."
+          ],
+          "settings": {
+            "caption": "Settings to check before your first game",
+            "rows": [
+              ["Setting", "Recommended value", "Why"],
+              ["Graphics → Backend", "Vulkan, otherwise Direct3D 11", "The most stable backend depending on the driver; the first thing to change if the display misbehaves"],
+              ["Graphics → Rendering resolution", "2× to 4× the PSP resolution", "A clear gain in sharpness; drop a notch if the framerate slips"],
+              ["Graphics → Frame skipping", "Off", "Frameskip hides frames and makes reading startups impossible"],
+              ["Controls", "A controller is recommended", "Keyboard mapping works, but directional dodges are more reliable on a stick"],
+              ["Network → MAC address", "Leave it alone after the first launch", "Some games tie their saves to the emulated MAC address"],
+              ["Network → Online speed control", "Off", "The official documentation states that it frequently causes desynchronisations and disconnections"]
+            ]
+          },
+          "sources": [
+            "https://www.ppsspp.org/docs/settings/network/"
+          ]
+        },
+        {
+          "id": "pc-local",
+          "title": "Playing locally, two players on one PC",
+          "intro": [
+            "Dissidia 012's local versus goes through the PSP's ad hoc mode — there is no split screen. PPSSPP works around this with two instances of the emulator on the same machine, linked by its built-in ad hoc server. The official FAQ confirms it: “Yes, though it is not a perfectly smooth experience.”"
+          ],
+          "actions": [
+            {
+              "do": "Settings → Network: enable networking",
+              "detail": "This option corresponds to the physical WLAN switch on a real PSP."
+            },
+            {
+              "do": "Tick “Enable built-in ad hoc server”",
+              "detail": "The emulator then hosts the ad hoc server itself."
+            },
+            {
+              "do": "Set the ad hoc server address to “localhost”",
+              "detail": "Through “Change PRO ad hoc server IP address”."
+            },
+            {
+              "do": "Open the second instance: File → Open new instance",
+              "detail": "The second window inherits the same network settings."
+            },
+            {
+              "do": "Launch the game in both windows and go through ad hoc mode in-game",
+              "detail": "The two instances see each other as two PSPs on the same local network."
+            }
+          ],
+          "warning": "Sharing the controls between the two windows is the tricky part: turn on “ignore gamepads when the window is not focused” on at least one of the two instances, and plan on a keyboard for one and a controller for the other.",
+          "notes": [
+            "A documented limit: multiple instances launched on the same machine cannot play with a player on another machine. For that, you have to go through online play."
+          ],
+          "sources": [
+            "https://www.ppsspp.org/docs/faq/",
+            "https://www.ppsspp.org/docs/multiplayer/how-to-play/",
+            "https://www.ppsspp.org/docs/settings/network/"
+          ]
+        },
+        {
+          "id": "pc-online",
+          "title": "Playing online",
+          "intro": [
+            "There are two routes today. The relay server method, built into PPSSPP since 1.20.1, is by far the simplest and replaces the old VPN-based setup. The historic virtual network method is still documented: some long-standing groups of players still use it."
+          ],
+          "actions": [
+            {
+              "do": "Current method — Settings → Network → Ad Hoc Multiplayer",
+              "detail": "Enter a nickname, pick a relay server from the list offered, and make sure every player selects the same one. Then create or join a room normally, from the game's menu."
+            },
+            {
+              "do": "On the same local network (LAN / home Wi-Fi)",
+              "detail": "One player ticks “Built-in ad hoc server”; the others add their IP address as a custom server — taking care to untick “Relay server mode” when adding it."
+            },
+            {
+              "do": "Historic method — a shared virtual network",
+              "detail": "Players meet on a single IP supplied by Radmin, Hamachi or ZeroTier One. One player hosts by enabling the built-in PRO ad hoc server and entering their own virtual IP; the others type the host's IP in “Change PRO ad hoc server IP address” and wait for them to be in a lobby before joining.",
+              "link": { "url": "https://dissidia.wiki/Online_Setup_(PPSSPP)", "label": "Detailed guide on dissidia.wiki" }
+            }
+          ],
+          "warning": "Port offset: PPSSPP's official documentation recommends leaving the “port offset” at its default value of 10000; the older community guide on dissidia.wiki advises 5000. The only rule that matters: the same value for every player in a session.",
+          "notes": [
+            "Crossplay between PC and Android has worked since PPSSPP 1.15.4.",
+            "Firewall: add an exception for the emulator, without which the connection fails silently.",
+            "Only one VPN client active at a time if you go the historic route — two competing virtual networks prevent the connection."
+          ],
+          "sources": [
+            "https://www.ppsspp.org/docs/multiplayer/quickstart/",
+            "https://www.ppsspp.org/docs/settings/network/",
+            "https://dissidia.wiki/Online_Setup_(PPSSPP)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mobile",
+      "label": "Mobile",
+      "subtitle": "Android · iOS",
+      "intro": [
+        "PPSSPP is available on both official stores. A recent phone runs Dissidia 012 without trouble; the real constraint is touch controls, quickly out of their depth in a game where dodging is decided on the frame."
+      ],
+      "steps": [
+        {
+          "id": "mobile-install",
+          "title": "Install PPSSPP",
+          "actions": [
+            {
+              "do": "Android: Google Play Store (free)",
+              "detail": "The direct APK and the F-Droid package are official alternatives. “PPSSPP Gold” is the supporter version, paid and functionally identical.",
+              "link": { "url": "https://www.ppsspp.org/download/", "label": "Official links" }
+            },
+            {
+              "do": "iOS: App Store (free)",
+              "detail": "PPSSPP arrived on the App Store in 2024, after Apple relaxed its rules on emulators. The Gold version is bought separately there."
+            },
+            {
+              "do": "If you already own Gold on one platform",
+              "detail": "The official site says you can request free access to Gold on the other platform."
+            }
+          ],
+          "warning": "An iOS quirk: Apple forbids generating machine code at runtime, so there is no JIT compilation. PPSSPP uses an IR-cache interpreter there, enough for nearly every PSP game at full speed on a recent device — at the cost of higher battery drain.",
+          "sources": [
+            "https://www.ppsspp.org/download/",
+            "https://www.ppsspp.org/docs/reference/ios-support/"
+          ]
+        },
+        {
+          "id": "mobile-game",
+          "title": "Transfer the game to the device",
+          "intro": [
+            "The file is dumped the same way as for PC, from your own UMD and your own PSP. Only the transfer to the phone differs."
+          ],
+          "actions": [
+            {
+              "do": "Universal method (PPSSPP 1.20 onwards) — Wi-Fi transfer",
+              "detail": "In the “Games” tab, tap the upload icon (a folder with an arrow above it) and follow the instructions: a web interface opens, reachable from a computer on the same Wi-Fi, where you drop the ISO. The simplest method, identical on Android and iOS.",
+              "link": { "url": "https://www.ppsspp.org/docs/getting-started/installing-games-android/", "label": "Transfer documentation" }
+            },
+            {
+              "do": "Android over USB cable",
+              "detail": "Plug the phone in, choose “File transfer” mode, create a dedicated folder in internal storage (preferably separate from the system “PSP” folder), copy the ISO there, then tap “Browse…” in PPSSPP to select it."
+            },
+            {
+              "do": "iOS over cable",
+              "detail": "From a Mac, the copy goes through Finder; from Windows, you need to install the “Apple Devices” app. The games then appear on the emulator's virtual Memory Stick.",
+              "link": { "url": "https://www.ppsspp.org/docs/reference/ios-support/", "label": "iOS specifics" }
+            }
+          ],
+          "sources": [
+            "https://www.ppsspp.org/docs/getting-started/installing-games-android/",
+            "https://www.ppsspp.org/docs/reference/ios-support/"
+          ]
+        },
+        {
+          "id": "mobile-setup",
+          "title": "Basic settings",
+          "settings": {
+            "caption": "What to adjust on a phone",
+            "rows": [
+              ["Setting", "Recommended value", "Why"],
+              ["Bluetooth controller", "Strongly recommended", "Touch stays playable solo, but dodges and cancels need physical buttons"],
+              ["Touch controls → layout", "Worth customising", "The editor lets you move and resize every button; clear the right thumb for the dodge button"],
+              ["Graphics → Rendering resolution", "1× to 2×", "Beyond that, heat makes the framerate collapse after a few matches"],
+              ["Graphics → Frame skipping", "Off", "Same reason as on PC: frame readability comes first"]
+            ]
+          },
+          "notes": [
+            "On iOS, the camera and microphone are not handled by the emulator — of no consequence for Dissidia 012, which does not use them."
+          ],
+          "sources": [
+            "https://www.ppsspp.org/docs/reference/ios-support/"
+          ]
+        },
+        {
+          "id": "mobile-local",
+          "title": "Playing locally",
+          "intro": [
+            "The two-instance trick does not exist on mobile: you need two devices. Two phones on the same Wi-Fi, on the other hand, link up very simply."
+          ],
+          "actions": [
+            {
+              "do": "Connect both devices to the same Wi-Fi network"
+            },
+            {
+              "do": "On the host device: enable networking, then tick “Enable built-in ad hoc server”"
+            },
+            {
+              "do": "On the other device: add the host's local IP address as a custom server",
+              "detail": "Remember to untick “Relay server mode” when adding it, or the local connection fails."
+            },
+            {
+              "do": "Launch the game on both sides and go through ad hoc mode",
+              "detail": "Both devices must run the same version of PPSSPP and the same regional edition of the game."
+            }
+          ],
+          "sources": [
+            "https://www.ppsspp.org/docs/multiplayer/quickstart/",
+            "https://www.ppsspp.org/docs/settings/network/"
+          ]
+        },
+        {
+          "id": "mobile-online",
+          "title": "Playing online",
+          "intro": [
+            "The same procedure as on PC: the built-in relay server is the recommended route, identical on Android and iOS."
+          ],
+          "actions": [
+            {
+              "do": "Settings → Network → Ad Hoc Multiplayer",
+              "detail": "Enter a nickname, pick the same relay server as your opponents, then create or join a room from the game's menu."
+            },
+            {
+              "do": "Android, historic method",
+              "detail": "ZeroTier One is the virtual network client of choice on Android — Radmin and Hamachi are not available there."
+            },
+            {
+              "do": "iOS, historic method",
+              "detail": "None of the virtual network clients documented by the community guide exists on iOS: the built-in relay server is the only workable route there."
+            }
+          ],
+          "notes": [
+            "PC ↔ Android crossplay has been possible since PPSSPP 1.15.4: a player on a phone can face a player on PC.",
+            "On mobile, Wi-Fi is preferable to 4G/5G, whose variable latency causes desynchronisations."
+          ],
+          "sources": [
+            "https://www.ppsspp.org/docs/multiplayer/quickstart/",
+            "https://dissidia.wiki/Online_Setup_(PPSSPP)"
+          ]
+        }
+      ]
+    }
+  ],
+  "checklist": {
+    "title": "Checklist before an online session",
+    "intro": "Almost every connection failure comes from one of these points — check them on both sides before looking any further.",
+    "items": [
+      "The same regional edition of the game for every player — a European copy (ULES01505) does not connect to a North American one (ULUS10566).",
+      "The same version of PPSSPP, and the same 32 or 64-bit architecture.",
+      "The same port offset value for everyone.",
+      "The same relay server selected, or the same ad hoc server address.",
+      "Firewall off or an exception added for the emulator.",
+      "Only one virtual network client active at a time.",
+      "The same confirm button configured for everyone — disconnections during EX Bursts often come from that.",
+      "A name filled in on the game's friend card."
+    ],
+    "sources": [
+      "https://dissidia.wiki/Online_Setup_(PPSSPP)",
+      "https://www.ppsspp.org/docs/settings/network/"
+    ]
+  },
+  "sources": [
+    "https://www.ppsspp.org/download/",
+    "https://www.ppsspp.org/docs/faq/",
+    "https://www.ppsspp.org/docs/getting-started/how-to-get-games/",
+    "https://www.ppsspp.org/docs/getting-started/dumping-games/",
+    "https://www.ppsspp.org/docs/getting-started/installing-games-android/",
+    "https://www.ppsspp.org/docs/reference/ios-support/",
+    "https://www.ppsspp.org/docs/multiplayer/quickstart/",
+    "https://www.ppsspp.org/docs/multiplayer/how-to-play/",
+    "https://www.ppsspp.org/docs/settings/network/",
+    "https://dissidia.wiki/Online_Setup_(PPSSPP)"
+  ],
+  "limits": [
+    "Option names are given as they appear in PPSSPP's official documentation, in English for the network section: their translation varies between versions of the emulator.",
+    "The community guide on dissidia.wiki describes a setup that predates the built-in relay servers; its values (the port offset of 5000 in particular) differ from the current official recommendations.",
+    "No source consulted documents any graphics setting specific to Dissidia 012: the values recommended here are general emulation settings."
+  ]
+}

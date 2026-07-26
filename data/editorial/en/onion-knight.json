@@ -1,0 +1,141 @@
+{
+  "slug": "onion-knight",
+  "tagline": "Ultra-mobile melee rushdown whose every bravery attack leads into an HP link",
+  "archetype": "Melee rushdown with HP links",
+  "overview": [
+    "Onion Knight is a close-range fighter with remarkable mobility and very fast melee bravery attacks, plus a few ranged attacks to punish careless defensive play. His most striking trait is the abundance of HP links: all his bravery attacks extend into an HP attack, hence a very consistent HP damage output and damage spikes with high base bravery builds as soon as the assist is available.",
+    "Agile on every axis, with some of the best run and dash speeds in the game, he can chase down runaways such as Kefka and punish them on an air dodge, systematically secure EX Cores to deny the opponent EX, and even dodge attacks while running — enough to trouble characters with good tracking such as Firion or Squall. His fast fall after a dodge also makes him hard to hit following an air dodge.",
+    "The EX and assist build styles both work, with the assist ahead on consistency and damage thanks to high base bravery and Side by Side. His EX generation, while decent, lags behind because it is concentrated in the HP attacks and the magic bravery branches. His above-average base defence (111) allows him to invest in base bravery and HP with less risk.",
+    "These qualities come at a price: his melee bravery attacks, too fast to be seen on startup but active for a long time, leave him heavily exposed to whiff punishing, especially against attacks with better priority or tracking. His projectiles, too slow to occupy space, mostly serve as punishers. Building assist gauge by whiffing is difficult, and with his static animations and a single fast Melee High HP attack (on the ground only), he struggles against persistent projectiles and traps: Ultimecia and The Emperor can tip the risk/reward ratio lastingly in their favour."
+  ],
+  "tierNote": "Ranked 15th, in tier B, on the 2017 tier list. Historically placed at the top or middle of the rankings: his direct gameplan, how easy he is to pick up and his consistency make him a comfortable choice at many levels of play.",
+  "strengths": [
+    "A formidable close-range threat: all his bravery attacks, including lightning-fast melee attacks, extend into an HP attack for a consistent damage output.",
+    "Side by Side synergy: as a dedicated HP linker, he maximises the accessory's assist gauge gain and makes high base bravery builds reliable.",
+    "Mobility: a fast run, a very fast dash and a fast fall after an air dodge to approach, punish dodges, take EX Cores and evade.",
+    "Whiff punishment: all his bravery attacks are suited to punishing missed moves at various distances.",
+    "Relatively safe HP links: even against an opponent's Assist Change with the Precision Evasion ability equipped, he stays hard to punish.",
+    "A safe reset of the assist gauge decay through the Strength Booster and Magic Booster bravery attacks, without taking much risk.",
+    "Bravery damage in EX Mode: heavily increased multipliers across the whole kit, enough to grind down the opponent's bravery."
+  ],
+  "weaknesses": [
+    "Highly committal whiffs: missed melee bravery attacks last a long time and expose him to whiff punishment.",
+    "Laborious assist gauge generation on whiff outside Side by Side and the EXP to Assist / EXP accessories.",
+    "Weak ranged combat: Ranged Low bravery attacks and Ranged High HP attacks poorly suited to occupying the screen, and vulnerable to assist whiff punishes.",
+    "A lack of tools against traps: a single fast Melee High HP attack on the ground and slow aerial HP projectiles; Garland's Cyclone or The Emperor's Flare and Thunder Crest are very hard to get through safely.",
+    "A relatively low bravery damage output: the lowest base ATK in the game and reliance on HP links."
+  ],
+  "moveNotes": {
+    "Multi-Hit": "[Close] A flurry of hits on the ground, weak but very fast to come out (11F). It extends into Extra Slice (bravery) or Swordshower (HP link).",
+    "Extra Slice": "A branch of Multi-Hit: an extra slash with Wall Rush.",
+    "Blizzard": "[Long] Frost projectiles on the ground, limited in height but very fast. It extends into Blizzaga (bravery) or Quake (HP link).",
+    "Blizzaga": "A branch of Blizzard: it drops shards of ice, with a Chase effect and a big EX Force gain (78).",
+    "Strength Booster (ground)": "A temporary buff (40F of incantation, cancellable into an attack/dodge/block after 20F): physical damage and defence +10 %, critical rate +5 % for 10 seconds (600F). It also serves to maintain the assist gauge safely.",
+    "Magic Booster (ground)": "A temporary buff (40F of incantation, cancellable after 20F): magic damage and defence +10 %, critical rate +5 % for 10 seconds (600F). The same role of maintaining the assist gauge safely.",
+    "Turbo-Hit": "[Close] A high-speed aerial slash (13F, 11F in EX Mode), weak but effective at any height. It extends into Extra Lunge (bravery) or Guiding Swipe (HP link).",
+    "Extra Lunge": "A branch of Turbo-Hit: extra lunges with Wall Rush.",
+    "Thunder": "[Long] A trio of lightning orbs that curve their trajectory to track the opponent, effective at any height. It extends into Thundaga (bravery) or Flare (HP link).",
+    "Thundaga": "A branch of Thunder: two lightning bolts with a Chase effect and 78 EX Force.",
+    "Strength Booster (midair)": "The aerial version of the physical buff: the same effects (+10 % physical damage/defence, +5 % critical, 600F).",
+    "Magic Booster (midair)": "The aerial version of the magic buff: the same effects (+10 % magic damage/defence, +5 % critical, 600F), cancellable into an attack/dodge/block at 20F.",
+    "Blade Torrent": "[Close] An ultra-fast slash: the fastest HP attack in the kit (41F, 39F in EX Mode), usable in the air too, with Wall Rush.",
+    "Firaga": "[Long] Fireballs with a wide explosion on impact; this is the character's single-hit (1-hit) HP attack.",
+    "Swordshower": "A branch of Multi-Hit: a rain of blades of light with Wall Rush, the HP link of his ground game.",
+    "Quake": "A branch of Blizzard: a magical earthquake, 81 EX Force.",
+    "Wind Shear": "[Close] A high-speed spin steerable with the stick (41F), with Absorb and Wall Rush effects.",
+    "Comet": "[Long] Small meteors aimed with the stick: slow (81F) but very generous in EX Force (105).",
+    "Guiding Swipe": "A branch of Turbo-Hit: fast blades of light.",
+    "Flare": "A branch of Thunder: enormous explosions, 96 EX Force."
+  },
+  "exMode": {
+    "summary": [
+      "The “Job Change!” EX Mode: Regen, Critical Boost, Dual Wield and Sage's Wisdom. Dual Wield changes his job to Ninja on a physical attack: the attacks become faster than the eye and tear away more bravery. Sage's Wisdom changes his job to Sage on a magic attack and unleashes a sealed mystic power that strengthens the spells.",
+      "In practice, most bravery and HP attacks have higher damage multipliers in EX Mode (distinct values in the move tables), which greatly increases the bravery damage output across the whole kit."
+    ],
+    "burst": "Two EX Bursts depending on the job: Ninjutsu (select “Shuriken” in the menu, a physical ending, 100 base damage in total) and Spellbook (select “Holy”, a magic ending, 100 base in total)."
+  },
+  "uniqueMechanics": null,
+  "gameplan": [
+    "The gameplay loop rests on mobility and on a permanent HP link threat: approach or wait for the mistake thanks to his run and dash speed, land melee bravery attacks that are invisible on startup (Multi-Hit on the ground, Turbo-Hit in the air), and convert every hit into an HP attack. The projectiles (Blizzard, Thunder, Firaga, Comet) are not there to occupy space: save them for punishing careless defensive play.",
+    "On resources, gauge generation rests mainly on spot dashing, HP hits and EX Cores, but maintenance is easy: Strength Booster or Magic Booster reset the assist gauge decay without taking much risk. The assist build (high base bravery + Side by Side) offers the best consistency and the best output; investing in EX remains viable if needed, even though his EX generation is concentrated at the end of a combo.",
+    "Use the mobility defensively: chase down runaways, secure EX Cores to deny the opponent EX, evade while running and make the most of the fast fall after an air dodge. Beware of whiffs, on the other hand: your missed bravery attacks last a long time, and persistent projectiles or traps (Ultimecia, The Emperor) distort your risk/reward ratio — you have very few safe ways of getting around them once they are laid."
+  ],
+  "advancedTech": [
+    {
+      "name": "Assist decay reset",
+      "desc": "Casting Strength Booster or Magic Booster resets the assist gauge decay without exposing him: a safe way to maintain the resource, where whiffing bravery attacks would be dangerous."
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "A small number of links, all of them good: Blizzaga > dodge cancel > Turbo-Hit; EX Thundaga > DC > Turbo-Hit; Comet (from afar, at the ceiling) > DC > Turbo-Hit; Thunder > DC > landing lag > Turbo-Hit.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "According to the overview: Onion Knight effectively punishes runaways such as Kefka (chasing them down and punishing air dodges) and his run speed troubles even characters with good tracking such as Firion and Squall. He holds his own against a good part of the roster, notably Warrior of Light, Golbez and Zidane.",
+      "Conversely, characters with persistent projectiles and traps — Ultimecia and The Emperor above all (Flare, Thunder Crest), along with Garland's Cyclone — lastingly distort his risk/reward ratio: without a fast Melee High HP attack in the air, he has very few safe options for crossing those zones once they are laid."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Two builds are documented as equipment tables, both with the Sephiroth assist and the Rubicante summon, assuming the Equip Glitch for the CP cost.",
+      "The overview frames the philosophy: both styles (EX and assist) work, with the assist ahead on consistency and damage (high base bravery + Side by Side), and his above-average base DEF (111) allowing investment in bravery and HP with less risk."
+    ],
+    "notes": "The builds are given only as stat and equipment tables, with no written justification piece by piece.",
+    "perBuild": {
+      "Side by Side": [
+        "The Best Dresser extra ability: very high base bravery (1683 BRV, 10478 HP) with Piggy's Stick, Aegis Shield, Thornlet, Maximillian and a battery of accessories including Hero's Essence, Together as One and Side by Side."
+      ],
+      "EX Core": [
+        "The Master Protector extra ability for a higher base BRV: the Genji set + Onion Sword (Soul of Yamato special effect) and conditional booster accessories (EX Core Present, Pre-EX Mode, Pre-EX Revenge, etc.) for a Max Booster of x13.4."
+      ]
+    }
+  },
+  "assist": {
+    "asAssist": [
+      "Onion Knight is ranked High on the assist tier list (Muggshotter) and the wiki describes him as one of the strongest assists in competitive play: not strictly superior to the Kuja or Jecht assist, but his utility stands out in other areas.",
+      "Blizzard (ground BRV, 35F) is a Ranged priority combo that LV2 Assist Change does not stagger: good for ground Wall Rush combos and for interrupting a grounded opponent from range, but too slow on startup to punish dodges. Turbo-Hit (air BRV, 13F) is a fast melee combo that pushes towards the wall, holds long enough for combo fillers at ceilings and corners, and allows Chase conversions; its flaws: reliance on the wall rush (fairly weak knockback), and a missed Turbo-Hit exposes him badly to an Assist Lock.",
+      "Blade Torrent (ground HP, 41F) is one of the few ground HP assists able to cover roughly all four main ground dodge angles: enough to end a match on a good read. Comet (air HP, 81F) excels in inescapable situations: long duration, long range, many hits and a Ranged priority immune to LV2 Assist Change staggers, with movement towards the opponent that makes Chase setups easier."
+    ],
+    "recommended": [
+      {
+        "name": "Sephiroth",
+        "why": "This is the assist chosen in both of the wiki's documented builds; the Synergies section also notes that Onion Knight works well with most tournament-viable assists."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Dissidia 012 Duodecim Onion Knight Highly Pure Assist Build 1",
+      "desc": "An in-match demonstration by Tiger Bub of a “pure” assist build for Onion Knight (the ability list is in the video description), the first part of a series of three.",
+      "source": "https://www.youtube.com/watch?v=px2Oy02DJs8",
+      "date": "2011"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Onion Knight is credited there with a small number of links, all converging on Turbo-Hit.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    }
+  ],
+  "limits": [
+    "The wiki's Matchups page is a stub: no detailed analysis per matchup, and only the mentions in the overview can be used.",
+    "The Combos section is empty (undocumented): no quantified combo route is available.",
+    "No unique mechanic is documented for this character (the section is absent from the wiki).",
+    "The assist gauge gain per move is not filled in (empty columns) and several branch move startups are marked “??”.",
+    "The builds are given only as equipment tables, with no detailed explanatory text.",
+    "The References section is empty: no attributable or dated community tech.",
+    "The “Bravery to HP Attacks” section (the Dissidia 012 table) of the character's page on the Final Fantasy Wiki: this classification is absent from the dissidia.wiki notes and was reintegrated from that source."
+  ],
+  "groupNotes": {
+    "bravery/ground": "Most bravery attacks have distinct, higher damage multipliers in EX Mode (in bold in the tables).",
+    "hp/ground": "Most HP attacks have distinct, higher damage multipliers in EX Mode (in bold in the tables)."
+  },
+  "hpLinks": [
+    "Swordshower",
+    "Quake",
+    "Guiding Swipe",
+    "Flare"
+  ]
+}

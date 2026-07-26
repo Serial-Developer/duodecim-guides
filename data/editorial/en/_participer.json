@@ -1,0 +1,121 @@
+{
+  "title": "Entering tournaments",
+  "lede": "Everything you need to go from spectator to entrant: joining the community, setting up, signing up, playing your matches — and even running your own tournament. All of the information comes from the Discord DISSIDIA and the rulesets published on start.gg and Challonge.",
+  "sections": [
+    {
+      "id": "rejoindre",
+      "name": "Joining the community",
+      "intro": [
+        "The whole competitive scene lives on the Discord DISSIDIA: tournaments are announced there, entries are taken there, matches are refereed there. Joining the server is free and open to everyone."
+      ],
+      "points": [
+        "General announcements go through the announcements channel; tournaments have their own dedicated event-announcements (announcements and entries) and event-active-thread (follow-up threads during the event) channels.",
+        "The server's onboarding (“Channels & Roles”) lets you assign yourself a regional matchmaking role — NA, EU, AS, SA or AF — to find nearby opponents and keep latency down.",
+        "Entering a community tournament earns the “Emu Era” role, which unlocks link and image sharing on the server."
+      ],
+      "cta": [
+        {
+          "url": "https://discord.gg/a44rneC",
+          "label": "Join the Discord DISSIDIA",
+          "ext": true
+        }
+      ],
+      "short": "Joining"
+    },
+    {
+      "id": "equiper",
+      "name": "Setting up for online play",
+      "intro": [
+        "The hardware requirements are the same from one tournament to the next; only the PPSSPP version changes, set by the organiser in each edition's ruleset (1.12.3 for 012 Ranked in 2024, 1.19.3 for DISSent Folk in 2025, for instance)."
+      ],
+      "points": [
+        "A North American copy of the game (ULUS10566), legally obtained — the saves and your opponents use that version, and other regions are not compatible.",
+        "PPSSPP in the exact version the organiser asks for: a different version can desynchronise netplay.",
+        "Radmin VPN, connected to the Discord server's network, to create the virtual local network PPSSPP plays online inside.",
+        "The “tournament pack” shared on the Discord bundles PPSSPP, Radmin and a 100% save file with the competitive builds — the shortest path to a working setup."
+      ],
+      "cta": [
+        {
+          "route": "install",
+          "label": "PPSSPP installation guide (PC and mobile)"
+        },
+        {
+          "route": "savedata",
+          "label": "Get a ready-to-play savedata"
+        }
+      ],
+      "short": "Setting up"
+    },
+    {
+      "id": "inscrire",
+      "name": "Signing up for a tournament",
+      "intro": [
+        "Entry is free and happens in the tournament's event channel, sometimes alongside a sign-up on the edition's start.gg or Challonge page. Two things to check in the announcement before you enter:"
+      ],
+      "points": [
+        "The full ruleset, published on the tournament's start.gg or Challonge page: banned characters and stages, infinite limits, PPSSPP version, set format. Every edition has its quirks — see the Tournaments page for the reference rulesets and how they have evolved.",
+        "Any admission conditions: most tournaments are open to all, but some target a specific audience — “Date With Death” (2026) was reserved for players who had never won a tournament, and some are limited to one platform (PC only)."
+      ],
+      "cta": [
+        {
+          "route": "pastTournaments",
+          "label": "The documented rulesets and tournaments"
+        }
+      ],
+      "short": "Signing up"
+    },
+    {
+      "id": "jouer",
+      "name": "Playing your matches",
+      "intro": [
+        "Tournaments are played online over several days: each round has a window in which it must be played (extendable from one to three days depending on schedules, in recent editions). A typical match runs like this:"
+      ],
+      "points": [
+        "The stage is settled first (stage striking or a choice, depending on the ruleset), then characters are picked blind: each player sends their choice by private message to an organiser before revealing it.",
+        "Organisers usually stream the matches on Twitch — being available to play in the stream's slot is part of the deal.",
+        "In a dispute, replays and screenshots are the evidence; the modern ruleset provides for replaying the match identically. Some editions also formalise a “gentlemen's clause”: agreements between players (house rules for a set) must be public in the tournament thread to be valid."
+      ],
+      "cta": [],
+      "short": "Playing matches"
+    },
+    {
+      "id": "recompenses",
+      "name": "The rewards",
+      "intro": [
+        "The stakes stay symbolic — this is an enthusiasts' scene — but every edition rewards its entrants:"
+      ],
+      "points": [
+        "All entrants receive the “Emu Era” Discord role (link and image sharing on the server).",
+        "Winners may receive the “Emu Era Champion” role (DISSent Folk 2025), a Discord Nitro subscription (012 Ranked 2024) or extended permissions and a special prize (Date With Death 2026)."
+      ],
+      "cta": [],
+      "short": "Rewards"
+    },
+    {
+      "id": "organiser",
+      "name": "Running your own tournament",
+      "intro": [
+        "Any member of the server can put on an edition — every tournament documented since 2022 started that way. The full path (Tournament Organizer role, ruleset, bracket, announcement, refereeing) has its own page."
+      ],
+      "points": [],
+      "cta": [
+        {
+          "route": "organize",
+          "label": "Running a tournament: the full guide"
+        }
+      ],
+      "short": "Running one"
+    }
+  ],
+  "sources": [
+    "https://discord.gg/a44rneC",
+    "https://www.start.gg/tournament/dissent-folk/details",
+    "https://www.start.gg/tournament/duodecim-22-1/details",
+    "https://challonge.com/dj52284z",
+    "https://challonge.com/edokjat0"
+  ],
+  "limits": [
+    "The information specific to the Discord server (channels, Emu Era and Tournament Organizer roles, tournament pack, regional onboarding) was recorded on the Discord DISSIDIA in July 2026; the server's organisation may change.",
+    "The examples of admission conditions, match windows and rewards come from the published rulesets of the 2022-2026 editions; each tournament sets its own terms in its announcement."
+  ]
+}

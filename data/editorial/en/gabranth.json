@@ -1,0 +1,201 @@
+{
+  "slug": "gabranth",
+  "tagline": "He charges his EX on demand to explode in EX Mode",
+  "archetype": "Defensive EX specialist",
+  "overview": [
+    "Gabranth is a unique character whose entire game revolves around filling the EX gauge so as to enter EX Mode quickly. Outside EX Mode, he is one of the weakest characters in the game: slow movement, below-average frame data, and he is the only character whose HP attacks cannot deal HP damage. His strategy follows from that: fill the gauge with his one-of-a-kind EX Charge HP attack while pushing the opponent away, then trigger EX Mode at a moment of his choosing.",
+    "Once in EX Mode, Gabranth becomes markedly stronger: movement speed, bravery damage and mid priority are all far more present. The universal benefits of EX apply to him too: he enjoys critical hits, health regeneration and depletion of the opponent's assist gauge more often than others over the course of a match. That regeneration, a distinctive strength, makes him survive markedly longer than most characters.",
+    "This reliance on EX demands time and solid defensive fundamentals. Gabranth can suffer against effective rushdown, because of his floaty air dodges and a relatively slow EX gain between interactions. His HP attacks are ineffective neutral tools against highly mobile characters, and his mixups are not best in class, even in EX Mode. HP damage conversions require an assist (and often a Wall Rush), which he builds slowly. The limited duration of EX Mode leaves him a small window to do what many characters do without his constraints; players able to hold their ground will nonetheless find a rewarding character here, with a unique relationship to the game's gauges."
+  ],
+  "tierNote": "Ranked 20th (tier B) on the 2017 tier list. The wiki recalls that he has been considered high tier at times and mid tier at others in competitive play, with highly volatile matchups.",
+  "strengths": [
+    "The fastest EX generation in the game as soon as he can stay still for a few seconds.",
+    "Great survivability against defensive characters thanks to EX Mode's health regeneration.",
+    "Big burst damage through EX Mode criticals, the assist and the EX Burst.",
+    "Banish traps help him charge his EX without suffering big setbacks.",
+    "The only character immune to the bravery effect of an EX Break (Jamming)."
+  ],
+  "weaknesses": [
+    "Slow, with weak mixups and low damage outside EX Mode; no offensive HP attack outside EX Mode or a Chase.",
+    "He suffers against rushdown outside EX Mode: under constant pressure, he charges his EX slowly.",
+    "His reliance on EX Mode limits his ability to apply pressure and to close things out.",
+    "Only average HP attacks and mixup potential, even in EX Mode.",
+    "Average assist gauge building speed, even in EX Mode."
+  ],
+  "moveNotes": {
+    "Enrage": "A long ground combo with a fast startup (15F), used as a punish tool (dodges, blocks, whiffs) thanks to its reach, and fast enough to attempt mixups with Relentless Lunge up close. Up to four manual follow-ups on the Circle button, even on whiff, which makes it safer in neutral and makes hit confirming into an assist combo easier; its strong knockback allows a Wall Rush. The follow-ups can be delayed to extend EX Mode and regenerate more health; in the air, it mostly finishes combos after assists that pin the opponent to the ground (Jecht, Yuna).",
+    "Aero (ground)": "A persistent projectile (~5.5 s) that heads towards the opponent and leads into a chase; the ground version sees little use. Ranged Low priority: it loses to blocks, dashes and melee, hence a niche role as a passive defensive tool for building assist gauge, safe against assist punishes but weak against rushdown. It does not pass through physical walls and can destroy fragile scenery.",
+    "Relentless Lunge": "A Melee Mid ground gap closer: three rushes (manual Circle follow-ups, possible even on a miss) with a good horizontal hitbox and automatic re-aiming; it staggers normal blocks and beats lower-priority pokes. On hit, the first two rushes open an assist combo and the third leads into a chase, where Gabranth recovers the 90 EX generated before trying another mixup. A poor anti-air and confined to the ground, so of limited use since Gabranth fights mostly in the air.",
+    "Gaia Breach": "A mid-range projectile, fairly fast both to launch and in flight, useful for punishing landing lag and ground dodges; on hit, a chase mixup or a dodge cancel into an assist combo. Low priority (blockable, dashable through) but with a hitbox tall enough to anti-air; it can serve as a secondary ground poke if the matchup allows.",
+    "Dual Rend": "His main aerial poke: fast (15F), with a short recovery, good damage and decent vertical tracking on both hits. Both slashes always come out, which commits him a little more than comparable pokes (Dayflash, Hop Step); the Wall Rush is his main route to HP damage conversion.",
+    "Rupture": "A fast diagonal vertical rush with a Wall Rush; the direction (rising or diving) depends on the opponent's position. The longer animation makes whiffing dangerous, but it is a very good air-to-ground punish tool; as with Dual Rend, a Wall Rush and an assist are needed to draw HP damage from it.",
+    "Aero (midair)": "Functionally close to the ground version (~5.5 s, chase), with more opportunities in the air as a passive defensive tool for assist gauge: a short recovery, safe in neutral at mid range, but Ranged Low and therefore dangerous if predictable. Its knockback (vertical and outwards) can be steered with a camera reset to keep the opponent at the wall in an assist combo: this is his only aerial solo combo route. Not an obvious recommendation as a third aerial bravery attack in EX Mode next to Vortex of Judgment and Dual Rend.",
+    "Vortex of Judgment": "One of his most important bravery attacks: a three-part attack with good base damage, a big EX gain and Melee Mid priority, which punishes blocks and beats lower-priority pokes; it is his main aerial mixup alongside Dual Rend and the HP attacks. The Circle follow-ups come out even on a miss, can be delayed for pressure and hit confirm into an assist combo; the last hit leads into a chase, which absorbs the EX Force on the ground and extends his EX Mode. The attack sucks in nearby opponents and can block Ranged Low attacks for most of the animation.",
+    "Execution": "A short-range thrust followed by an explosion: Gabranth's only HP attack that deals bravery damage (20), which is welcome with EX Mode's increased critical rate. A good ground assist combo finisher with Jecht and Yuna, but it does not reliably punish neutral ground dodges; it can block Ranged Low attacks once the blades are fused.",
+    "Innocence (ground)": "A long-range barrage of projectiles, with long active frames and immediate HP damage on contact: often a last-chance attempt to occupy space and land HP damage. Gabranth stays completely still and vulnerable from above; the projectiles do not track once fired and the aim remains imprecise. It can block Ranged Low attacks with the blades fused.",
+    "Hatred": "An essential melee 1-hit HP attack: used after blocking the opponent and as an assist combo finisher, with a Wall Rush that can be steered in any direction. It can be held (Square) to move and make use of the Absorb effect that sucks in nearby opponents, with no gain in damage or hitbox; short active frames, so punishable on a miss.",
+    "Innocence (midair)": "A variant fired downwards, over roughly an air dash's distance: well placed to threaten nearby dodges (aerial as well as grounded), but the long recovery makes whiffing risky. Reserved for close quarters and small stages; it can stack depletion of the opponent's assist gauge in an assist combo, and Gabranth can move with the stick during the startup. It can block Ranged Low attacks with the blades fused."
+  },
+  "exMode": {
+    "summary": [
+      "The “Mist” EX Mode combines four effects: Regen, Critical Boost, Stray's Tenacity and Jamming. Stray's Tenacity, always active in EX Mode, strengthens his stats and attacks: +4 ATK and +3 DEF.",
+      "Jamming is unique to Gabranth: after suffering an EX Break, the opponent does not gain the stage bravery. Even if he is hit by an assist during his EX Mode, the opponent walks away without that bonus — a valuable safety net for a character meant to spend a lot of time in EX Mode."
+    ],
+    "burst": "Quickening chains three Mist techniques (Fulminating Oblivion, Ruin Unflinching, Frost Purge) to be selected by scrolling with R then confirming with Cross — one manipulation (R then Cross repeated at a steady rhythm) guarantees each step, and the finisher depends on the number of successful Quickenings (Inferno, Ark Blast or Black Hole) without changing the HP damage. The Burst is not especially devastating, but Gabranth reaches it several times per match and it is often enough to break an opponent at low bravery after an assist combo."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "Gabranth normally cannot deal HP damage outside EX Mode. Instead, he fills his EX gauge on demand with a unique HP attack, EX Charge, which generates no EX Force on the ground: the opponent therefore has nothing to pick up. Since EX Mode unlocks his potential, EX Charge is central to his gameplan.",
+      "EX Charge exists on the ground and in the air; the main difference is speed: the gauge fills completely in 5.5 seconds (334F) on the ground, and in 8.3 seconds (500F) in the air. It is the fastest way to reach a full gauge without EX Cores, to be used whenever possible."
+    ],
+    "details": [
+      "Gabranth is vulnerable during the charge, but the recovery is short: EX Charge cancels into a dodge, a block or another attack (EX Charge or a bravery attack).",
+      "Chaining a tapped EX Charge input then a dodge creates movement without sitting through the whole recovery animation, on the ground as in the air.",
+      "EX Charge does not fill the assist gauge, but it does stop it from draining on its own.",
+      "In the air, Gabranth descends slowly during the charge, which stops on contact with the ground; if he activates EX Mode during the movement, he descends far faster, in line with his EX Mode stats."
+    ]
+  },
+  "gameplan": [
+    "The gameplay loop is simple on paper: charge the gauge with EX Charge (on the ground preferably, 5.5 s against 8.3 s in the air) while pushing the opponent away, then trigger EX Mode at the right moment. Outside EX Mode, the priority is defensive: hold your ground, use Aero as a passive assist building tool and avoid suffering rushdown that would freeze his EX gain.",
+    "In the air, where Gabranth fights most often, the pressure is built around Dual Rend (a poke), Vortex of Judgment (a mid priority mixup, hit confirmable) and the Hatred and Innocence HP attacks; on the ground, Enrage and Relentless Lunge provide punishes and mixups. HP damage conversions go through the assist and often a Wall Rush: Hatred after an assist is the most reliable payoff, and Jecht or Yuna allow him to finish on the ground with Enrage or Execution.",
+    "The chase has a particular importance: initiating it absorbs all the EX Force on the ground, so finishing Vortex of Judgment or Relentless Lunge with a chase directly extends EX Mode. During it, criticals swell his damage before Hatred or the Burst, the regeneration lengthens his survival, and Quickening adds a burst of damage available several times per match. Delaying the Enrage follow-ups at the end of the gauge lets him scrape a few more moments of EX Mode."
+  ],
+  "advancedTech": [
+    {
+      "name": "EX Charge dodge chain",
+      "desc": "Chaining a tapped EX Charge input and a dodge creates movement without waiting for the end of the recovery animation. The aerial version charges little that way, but it makes Gabranth harder to hit if used carefully."
+    },
+    {
+      "name": "Delayed Enrage follow-ups",
+      "desc": "When the EX gauge is nearly empty, delaying the Enrage follow-ups extends EX Mode and lets the regeneration return more health."
+    },
+    {
+      "name": "Aero camera reset",
+      "desc": "Aero's knockback (vertical and outwards) follows the camera angle: resetting it in another direction allows him, in an assist combo, to keep the opponent at the wall or in the corner instead of pushing them away. It is Gabranth's only aerial solo combo route."
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "Most of it revolves around Aero, plus one landing lag combo: Vortex of Judgment (2 hits) > dodge cancel > landing lag > Dual Rend or Rupture; a placed Aero > Vortex of Judgment (2 hits) > DC > the Aero hit > Rupture or Hatred; a placed Aero > Gaia Breach > the Aero hit > an HP Chase (the record spells it “Gaea Breach”).",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase into an assist gauge reset",
+      "desc": "No move is confirmed for the reset: Relentless Lunge sits exactly on the boundary, Aero falls just short, and the compiler himself marks the line with a question mark.",
+      "source": "https://pastebin.com/dKSWgUQ6"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "Gabranth's matchups are described as particularly volatile. His frequent access to the EX mechanics is powerful against the best defences in the game, to the point of making him very hard to beat over time.",
+      "Conversely, he suffers badly against the best offences, which can dismantle him quickly before he has charged his gauge. The wiki's dedicated matchups page is in a stub state: no analysis per character is available."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Only one build is genuinely documented: “Hybrid (Soul of Yamato)”, a general-purpose build built around the Soul of Yamato special effect (Chaos Blade and the full Genji set), with the Jecht assist and the Rubicante summon. The Capacity Points total assumes the Equip Glitch is used, and the Master Guardsman extra ability adds +1000 HP. Displayed stats: 11299 HP, 996 BRV, 176 ATK, 183 DEF, 63 LUK, a maximum booster of x2.1 for 450 CP."
+    ],
+    "notes": "The page's second build slot is entirely empty (no equipment and no stats filled in).",
+    "movesetNote": "Gabranth cannot deal HP damage outside EX Mode: his moveset reads in two stages. Outside EX Mode he has only four bravery attacks and his HP slot is occupied by EX Charge, which fills the gauge without generating EX Force the opponent can pick up. Triggering the Mist unlocks the rest of the kit. When equipping, that means covering both phases: enough to survive and charge first, enough to convert afterwards.",
+    "movesetColumns": [
+      {
+        "header": "Mode",
+        "values": {
+          "Sentence (ground)": "Outside EX",
+          "Lunge": "Outside EX",
+          "Sentence (midair)": "Outside EX",
+          "Circle of Judgment": "Outside EX",
+          "Enrage": "EX Mode",
+          "Aero (ground)": "EX Mode",
+          "Relentless Lunge": "EX Mode",
+          "Gaia Breach": "EX Mode",
+          "Dual Rend": "EX Mode",
+          "Rupture": "EX Mode",
+          "Aero (midair)": "EX Mode",
+          "Vortex of Judgment": "EX Mode",
+          "Execution": "EX Mode",
+          "Innocence (ground)": "EX Mode",
+          "Hatred": "EX Mode",
+          "Innocence (midair)": "EX Mode"
+        }
+      }
+    ],
+    "movesetSources": [
+      "https://finalfantasy.fandom.com/wiki/Gabranth_(Dissidia_PSP)",
+      "https://dissidia.wiki/Gabranth_(Dissidia_012)"
+    ]
+  },
+  "assist": {
+    "asAssist": [
+      "As an assist, Gabranth is ranked Low on Muggshotter's assist tier list.",
+      "His assist moves appear on the opponent: Enrage (BRV, ground, 15F, Wall Rush), Aero (BRV, air, 31F, Chase), Execution (HP, ground, 41F, Chase) and Hatred (HP, air, 35F, Wall Rush)."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "A synergy cited by the wiki (Gabranth works well with the Kuja and Jecht assists), with no further detail."
+      },
+      {
+        "name": "Jecht",
+        "why": "A synergy cited by the wiki; his knockdowns allow ground combos to be finished with Enrage or Execution, and he is the assist of the documented build."
+      },
+      {
+        "name": "Yuna",
+        "why": "Like Jecht, her aerial knockdowns bring the opponent back to the ground to finish with Enrage or Execution."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Aero: knockback steered by a camera reset",
+      "desc": "A demonstration of the camera reset's influence on the direction of Aero's knockback, the basis of his only aerial solo combo route.",
+      "source": "https://www.youtube.com/watch?v=qUjhcyM5FwY",
+      "date": null
+    },
+    {
+      "title": "Vortex of Judgment blocks Ranged Low attacks",
+      "desc": "A demonstration of the Ranged Low block property covering most of Vortex of Judgment's animation.",
+      "source": "https://www.youtube.com/watch?v=VzeDzz2oIiE&t=39",
+      "date": null
+    },
+    {
+      "title": "Execution blocks Ranged Low attacks",
+      "desc": "A demonstration of Execution's Ranged Low block once the blades are fused.",
+      "source": "https://www.youtube.com/watch?v=VzeDzz2oIiE&t=7",
+      "date": null
+    },
+    {
+      "title": "Innocence (ground) blocks Ranged Low attacks",
+      "desc": "A demonstration of the Ranged Low block of Innocence's ground version, with the blades fused.",
+      "source": "https://www.youtube.com/watch?v=VzeDzz2oIiE",
+      "date": null
+    },
+    {
+      "title": "Innocence (midair) blocks Ranged Low attacks",
+      "desc": "A demonstration of the Ranged Low block of Innocence's aerial version, with the blades fused.",
+      "source": "https://www.youtube.com/watch?v=VzeDzz2oIiE&t=91",
+      "date": null
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Gabranth is described there with combos centred on Aero, plus one landing lag combo.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "List of empty chases leading to an assist gauge reset (Eddiegames)",
+      "desc": "A character-by-character record of the moves whose hit stun allows an empty chase (a chase initiated without executing anything in it) followed by a reset of the opponent's assist gauge. The detail for this character is covered in the specific techniques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
+    }
+  ],
+  "limits": [
+    "The combos section is undocumented: the page's “Solo” tab is empty.",
+    "The dedicated matchups page is in a stub state; only the general tendencies from the overview are used here.",
+    "The assist section is marked undocumented: only a data table and one synergies sentence (Kuja, Jecht).",
+    "The second build slot is entirely empty in the data.",
+    "Missing values in the tables: the assist gain of the moves is not filled in, and EX Charge's damage and EX Force are marked “?”.",
+    "Two moves in our extracted data — Gaia Breach and Execution — appear in no move table on the Final Fantasy Wiki: their mode is not filled in. Conversely, that source lists Guilt and EX Charge, which are absent from our data.",
+    "The community's empty chase record is undated (the solo combo record that accompanies it is dated December 2022): how current it is cannot be established.",
+    "The outside EX Mode / EX Mode split of the moves is confirmed by two concordant sources: the “Ground/Aerial (Normal) / (EX Mode)” sections of the 012 page on dissidia.wiki, and the collapsible “Dissidia 012” tables of the Gabranth page on the Final Fantasy Wiki. Outside EX Mode, the HP slot is occupied by EX Charge, which is absent from the extracted move tables; at the same slot and the same unlock level (38), the first Dissidia's table lists Guilt where the 012 one lists Execution."
+  ]
+}
