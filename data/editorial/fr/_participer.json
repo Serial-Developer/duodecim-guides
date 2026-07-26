@@ -36,12 +36,12 @@
       ],
       "cta": [
         {
-          "url": "install.html",
-          "label": "Guide d'installation PPSSPP (PC et mobile)"
+          "label": "Guide d'installation PPSSPP (PC et mobile)",
+          "route": "install"
         },
         {
-          "url": "savedata.html",
-          "label": "Récupérer une savedata prête à jouer"
+          "label": "Récupérer une savedata prête à jouer",
+          "route": "savedata"
         }
       ],
       "short": "S'équiper"
@@ -58,8 +58,8 @@
       ],
       "cta": [
         {
-          "url": "tournois.html",
-          "label": "Les rulesets et tournois documentés"
+          "label": "Les rulesets et tournois documentés",
+          "route": "pastTournaments"
         }
       ],
       "short": "S'inscrire"
@@ -100,8 +100,8 @@
       "points": [],
       "cta": [
         {
-          "url": "organiser.html",
-          "label": "Organiser un tournoi : le guide complet"
+          "label": "Organiser un tournoi : le guide complet",
+          "route": "organize"
         }
       ],
       "short": "Organiser"

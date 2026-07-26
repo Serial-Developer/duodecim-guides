@@ -1,0 +1,105 @@
+{
+  "source": "https://dissidia.wiki/Online_Setup_(PPSSPP)",
+  "intro": [
+    "Dissidia 012 only offers ad-hoc multiplayer (local WiFi): to play remotely, the scene goes through the PPSSPP emulator and a virtual network program (Radmin, Hamachi or ZeroTier One) that convinces the game the players share the same local network. This page condenses the community guide; each scenario has its own section.",
+    "One thing every online scenario has in common: latency rules. Under about 50 ms of ping the game is smooth; past roughly 120 ms it slows down and freezes in fits, with inputs going unregistered."
+  ],
+  "scenarios": [
+    {
+      "id": "prerequis",
+      "title": "Common prerequisites (all scenarios)",
+      "points": [
+        "A PPSSPP build capable of online play (version 1.1.1 onwards).",
+        "The SAME version of PPSSPP for every player — and the same kind of executable: mixing 32-bit and 64-bit is a classic cause of desynchronisation.",
+        "The game in the SAME regional version for everyone: a European copy (ULES01505) cannot connect to a North American one (ULUS10566), the version the Discord community plays. If in doubt, the code is displayed at the top of the emulator window.",
+        "Set your controls and graphics options before you play.",
+        "Your personal save can be reused with the tournament pack: copy the ppsspp/memstick/PSP/SAVEDATA/ULUS10566GameDataxx folder (or ULES01505… for Europe) to the same path in the pack."
+      ]
+    },
+    {
+      "id": "pc-pc",
+      "title": "PC ↔ PC — Radmin or Hamachi (the main route)",
+      "points": [
+        "Radmin is currently the Discord community's main way of connecting; Hamachi works very similarly.",
+        "Install and launch Radmin, switch connectivity on (the big button), then create a network (“Create network”, name + password) and share the credentials — or join another player's network (“Join network”).",
+        "Every player in a session must be on the same Radmin network; the program then shows everyone's IP."
+      ],
+      "sub": [
+        {
+          "title": "PPSSPP settings — everyone",
+          "points": [
+            "Networking tab: turn on “Enable networking/WLAN”.",
+            "Click “Change MAC address” several times to avoid a duplicate address inherited from the tournament pack.",
+            "“Port offset”: 5000, never to be changed."
+          ]
+        },
+        {
+          "title": "PPSSPP settings — host (one per session)",
+          "points": [
+            "Turn on “Enable built-in PRO ad hoc server”.",
+            "Enter YOUR Radmin IP in “Change PRO ad hoc server IP address”.",
+            "Enter an online lobby or the group battle menu to initialise the network, then give your IP to the other players."
+          ]
+        },
+        {
+          "title": "PPSSPP settings — guests",
+          "points": [
+            "Enter the HOST's Radmin IP in “Change PRO ad hoc server IP address”.",
+            "Wait until the host is in the lobby selection, in a lobby (Cornelia, Zanarkand…) or has created a group battle room before joining.",
+            "In group battle, every guest uses the same IP supplied by the host."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zerotier",
+      "title": "PC ↔ PC — the ZeroTier One alternative",
+      "points": [
+        "If Radmin/Hamachi fail on PC, try ZeroTier One (careful: these programs can conflict with one another).",
+        "Install ZeroTier, paste the network ID 8056c2e21c000001 then “Join”: you are on the earth.zerotier.net server.",
+        "Your ZeroTier IP appears at the bottom right of the program (the “Managed IPs” line); if there is a “/xx” suffix, do NOT include it in PPSSPP.",
+        "ZeroTier then runs in the background; apply the same host/guest procedures as above."
+      ]
+    },
+    {
+      "id": "android",
+      "title": "Android ↔ Android",
+      "points": [
+        "Prerequisites: PPSSPP and ZeroTier from the Google Play Store, and a device powerful enough to run the game at full speed.",
+        "The procedure is the same as on PC (same host/guest hierarchy), through ZeroTier: join the 8056c2e21c58fb08 server, then note your IP under “Managed IPs” (ignore the “/xx” suffix).",
+        "Then apply the PPSSPP network settings from the PC ↔ PC section.",
+        "WiFi can introduce lag, and an underpowered device will make the game chug."
+      ]
+    },
+    {
+      "id": "crossplay",
+      "title": "PC ↔ Android crossplay",
+      "points": [
+        "Possible since PPSSPP 1.15.4. Version 1.17.1 has a reputation for performing well (the latest version when the guide was written, July 2024).",
+        "BOTH platforms must use ZeroTier and join the 8056c2e21c58fb08 server (the Android players' one). PC: ZeroTier from the official site and PPSSPP 1.17.1 (zip/installer, “previous releases” section); Android: the 1.17.1 APK and ZeroTier from the Play Store.",
+        "On both platforms, under Settings → Tools → Developer tools → “JIT debug tools” (general section), tick: VFPU_VEC, VFPU_MTX_VTFM, VFPU_MTX_VMSCL, VFPU_MTX_VMMUL, VFPU_MTX_VMMOV, VFPU_COMP.",
+        "On Android only (Settings → System): untick “Fast memory (unstable)” and tick “Force real clock sync (slower, less lag)”.",
+        "Finish with the common preparations and the ZeroTier host/guest procedures."
+      ]
+    },
+    {
+      "id": "local",
+      "title": "Local play — two instances on a single PC",
+      "points": [
+        "PPSSPP lets two people play on the same computer, with no Radmin/Hamachi/ZeroTier, through two instances of the emulator.",
+        "Set your options first (they will serve as the basis for both instances), turn on “Enable built-in PRO ad hoc server” and put “localhost” as the ad hoc server IP, then close and relaunch the emulator.",
+        "Launch a second instance from the same executable: it displays “instance: 2” in brackets.",
+        "The second instance shares ALL your settings: give it its own controls to avoid double inputs, and note that it may have no sound."
+      ]
+    },
+    {
+      "id": "depannage",
+      "title": "Troubleshooting",
+      "points": [
+        "Slow game, crackling sound: the device is struggling to render the game. Lower the rendering resolution, turn off texture scaling, check that “hardware transform” is on — and start from the recommended settings on PPSSPP's official site. If you migrated the contents of an old PPSSPP, start again from a clean folder (texture mods, DLC in the GAME folder and saves move over safely).",
+        "Endless lobby connection: a setting is wrong somewhere. If the “Network initialized” notification does not appear, the host is not online or their settings are incorrect. Hosts: tell the other players once you are actually connected."
+      ]
+    }
+  ],
+  "note": "The game's multiplayer is ad-hoc only: play between PPSSPP and a real PSP/Vita is not documented by the community — the scene plays PPSSPP against PPSSPP."
+}

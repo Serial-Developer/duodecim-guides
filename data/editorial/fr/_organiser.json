@@ -29,7 +29,11 @@
         "C'est aussi le canal pour récupérer le document d'aide à la création de ruleset fourni par le serveur."
       ],
       "cta": [
-        { "url": "https://discord.gg/a44rneC", "label": "Rejoindre le Discord DISSIDIA", "ext": true }
+        {
+          "url": "https://discord.gg/a44rneC",
+          "label": "Rejoindre le Discord DISSIDIA",
+          "ext": true
+        }
       ]
     },
     {
@@ -49,7 +53,11 @@
         "La gestion des litiges : replays et captures font foi, match rejoué à l'identique en cas de problème ; la « clause des gentlemen » de DISSent Folk impose que tout accord entre joueurs soit public dans le thread du tournoi."
       ],
       "cta": [
-        { "url": "tournois.html#rulesets", "label": "Les rulesets de référence et leurs évolutions" }
+        {
+          "label": "Les rulesets de référence et leurs évolutions",
+          "route": "pastTournaments",
+          "anchor": "rulesets"
+        }
       ]
     },
     {
@@ -81,7 +89,10 @@
         "Le prix en jeu, même symbolique : rôle « Emu Era Champion » (DISSent Folk), Discord Nitro (012 Ranked), permissions du serveur et prix spécial (Date With Death) — chaque édition a le sien."
       ],
       "cta": [
-        { "url": "savedata.html", "label": "Le tournament pack et les savedata prêtes à jouer" }
+        {
+          "label": "Le tournament pack et les savedata prêtes à jouer",
+          "route": "savedata"
+        }
       ]
     },
     {
@@ -113,7 +124,10 @@
         "Rendre le rôle Tournament Organizer… et pourquoi pas annoncer la prochaine édition."
       ],
       "cta": [
-        { "url": "tournois.html", "label": "Les tournois passés documentés" }
+        {
+          "label": "Les tournois passés documentés",
+          "route": "pastTournaments"
+        }
       ]
     }
   ],

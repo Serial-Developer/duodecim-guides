@@ -20,7 +20,7 @@ import { join } from 'node:path';
 // `names` porte des listes de noms de coups (regroupements éditoriaux) : les
 // traduire romprait le lien avec les données extraites, et la section
 // disparaîtrait silencieusement du guide.
-const VERBATIM = new Set(['slug', 'source', 'sources', 'url', 'date', 'video', 'names']);
+const VERBATIM = new Set(['slug', 'source', 'sources', 'url', 'date', 'video', 'names', 'route', 'anchor', 'id']);
 // Clés dont les CLÉS d'objet sont des identifiants (noms de coups, sections).
 const KEYED_BY_IDENTIFIER = new Set(['moveNotes', 'groupNotes', 'sourcesBySection', 'movesetSlots', 'movesetTypes', 'values']);
 
@@ -28,7 +28,16 @@ const URL_RE = /https?:\/\/[^\s"'<>)]+/g;
 // Un nombre « significatif » : on ignore ceux collés à un mot (« One-Inch »).
 const NUM_RE = /(?<![\w.])\d+(?:[.,]\d+)?(?![\w])/g;
 
-const nums = (s) => (String(s).match(NUM_RE) || []).map((n) => n.replace(',', '.'));
+// Les séparateurs de milliers sont une convention de LANGUE, pas un fait :
+// le français écrit « 125 000 », l'anglais « 125,000 ». Sans cette
+// normalisation, la traduction correcte serait signalée comme une divergence.
+// Une virgule ne vaut séparateur que suivie d'exactement trois chiffres —
+// « 99,9 » reste le décimal français, « 1,400 » devient 1400.
+const stripGroups = (s) => String(s)
+  .replace(/(\d)[\s  ](\d{3})(?!\d)/g, '$1$2')
+  .replace(/(\d),(\d{3})(?!\d)/g, '$1$2');
+
+const nums = (s) => (stripGroups(s).match(NUM_RE) || []).map((n) => n.replace(',', '.'));
 const urls = (s) => String(s).match(URL_RE) || [];
 
 function walk(a, b, path, out, verbatim = false) {

@@ -1,0 +1,51 @@
+{
+  "title": "Build creator",
+  "tagline": "Build, save and share your tournament loadouts",
+  "intro": [
+    "This tool reproduces the customisation screen of Dissidia 012: attacks, abilities, equipment, accessories, assist and summon. Everything happens in your browser — nothing is sent to a server, and your builds stay on your machine.",
+    "The CP gauge follows the game's rules: 450 capacity points at level 100, extendable to 510 with the Hero's Spirit and Hero's Essence accessories. A build that goes over budget stays editable and saveable, but it is flagged as invalid."
+  ],
+  "legalityNote": "Items marked “illegal” are so under the 2017 tournament ruleset, which matches the game's “Official” setting. The “Show illegal items” button brings them back, still labelled — nothing is hidden silently.",
+  "_abilityExclusionsNote": "Incompatibilities are inferred from the wiki's descriptions: two abilities that occupy the same command in the same situation exclude each other (R + triangle on the ground = Ground Dash, Reverse Ground Dash, Omni Ground Dash, Omni Ground Dash+), as do the tiers of a single ability. A prerequisite is not a conflict: “available after Multi Air Slide” takes Multi Air Slide out of the group. This table only exists to declare a case the inference would miss: [{ \"abilities\": [\"Name A\", \"Name B\"], \"reason\": \"…\", \"source\": \"…\" }]. The build fails if a name does not exist.",
+  "_hpLinksNote": "The wiki only writes out the bravery → HP attack pair for a handful of characters (“Branching from Launch”); elsewhere it is buried in the prose. Known pairs are declared here, by slug: [{ \"from\": \"bravery attack name\", \"to\": \"HP attack name\", \"source\": \"…\" }]. The names must match those on the character pages exactly; the build fails otherwise.",
+  "hpLinks": {},
+  "_summonEffectsNote": "The wiki's Summons page does not cover every summon cited by the tournament rules. Missing effects are declared here, by identifier: { \"slug\": { \"text\": \"…\", \"source\": \"…\" } }. The build fails if the identifier matches no summon.",
+  "summonEffects": {
+    "barbariccia": {
+      "text": "When the opponent summons, both players' bravery is swapped.",
+      "source": "Auteur du site — l'invocation est citée comme counter summon légal par la page de règles, mais n'a pas de section sur la page Summons du wiki."
+    }
+  },
+  "abilityExclusions": [],
+  "undocumented": {
+    "attackSlots": "The number of attack slots per category is not documented in any of our sources. The tool therefore does not cap the number of attacks ticked: the constraint applied is the CP budget, which is documented.",
+    "hpLinks": "The sources say whether a character has HP links, but not which attacks chain. The information is shown as-is, with no per-attack detail.",
+    "maxBooster": "The multiplicative stacking of boosters is confirmed by a worked example in the multiplayer build guide (1.5 × 1.4 × 1.3 gives the stated ×2.7). Boosters act only on accessory effects, not on equipment statistics."
+  },
+  "help": [
+    {
+      "title": "How the CP budget is calculated",
+      "points": [
+        "Every attack and every ability costs CP. The cost drops once the item is mastered: the tool shows the mastered cost by default, and the “Mastered costs” checkbox switches to the purchase cost.",
+        "The summary totals are base statistics at level 100 plus the bonuses of the equipped pieces. Accessory effects expressed as percentages are not folded in: the sources do not express them in points.",
+        "The gauge distinguishes the share consumed by attacks in apple green and the share taken by abilities in sky blue, as the game does.",
+        "Equipping Hero's Spirit or Hero's Essence raises the cap as you select: two Hero's Spirit and one Hero's Essence take capacity to 510."
+      ]
+    },
+    {
+      "title": "Equip glitch",
+      "points": [
+        "A piece of equipment whose category the character cannot natively wear is marked with a dedicated icon: it can only be worn by going through the Equip Glitch.",
+        "The manipulation saves up to 40 CP, at 10 per piece, and has to be redone every time the equipment changes."
+      ]
+    },
+    {
+      "title": "Saving and sharing",
+      "points": [
+        "Builds are saved in your browser's local storage. Clearing the site's data erases them: export the builds that matter.",
+        "The JSON export preserves the whole structure and re-imports identically. The CSV export flattens one build per row, for a spreadsheet.",
+        "The share link encodes the build in the address: just send it, with no file and no account."
+      ]
+    }
+  ]
+}

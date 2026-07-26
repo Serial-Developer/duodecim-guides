@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playing multiplayer — Dissidia 012 [duodecim]</title>
+<meta name="description" content="Set up Dissidia 012 [duodecim] multiplayer: PPSSPP online (Radmin, ZeroTier), Android, PC-Android crossplay, two local instances.">
+<link rel="canonical" href="https://serial-developer.github.io/duodecim-guides/en/multiplayer.html">
+<link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/multiplayer.html">
+<link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/multijoueur.html">
+<link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/multijoueur.html">
+<meta name="author" content="Serial">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Dissidia 012 [duodecim] Guides">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:title" content="Playing multiplayer — Dissidia 012 [duodecim]">
+<meta property="og:description" content="Set up Dissidia 012 [duodecim] multiplayer: PPSSPP online (Radmin, ZeroTier), Android, PC-Android crossplay, two local instances.">
+<meta property="og:url" content="https://serial-developer.github.io/duodecim-guides/en/multiplayer.html">
+<meta property="og:image" content="https://serial-developer.github.io/duodecim-guides/assets/og/en/site.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dissidia 012 [duodecim] competitive guides — character banner">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Playing multiplayer — Dissidia 012 [duodecim]">
+<meta name="twitter:description" content="Set up Dissidia 012 [duodecim] multiplayer: PPSSPP online (Radmin, ZeroTier), Android, PC-Android crossplay, two local instances.">
+<meta name="twitter:image" content="https://serial-developer.github.io/duodecim-guides/assets/og/en/site.png">
+<meta name="twitter:image:alt" content="Dissidia 012 [duodecim] competitive guides — character banner">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="../assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/main.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Playing multiplayer — Dissidia 012 [duodecim]","description":"Set up Dissidia 012 [duodecim] multiplayer: PPSSPP online (Radmin, ZeroTier), Android, PC-Android crossplay, two local instances.","url":"https://serial-developer.github.io/duodecim-guides/en/multiplayer.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://serial-developer.github.io/duodecim-guides/en/multiplayer.html"},"inLanguage":"en","author":{"@type":"Person","@id":"https://serial-developer.github.io/duodecim-guides/#author","name":"Serial","url":"https://github.com/Serial-Developer/duodecim-guides"},"publisher":{"@type":"Person","@id":"https://serial-developer.github.io/duodecim-guides/#author","name":"Serial","url":"https://github.com/Serial-Developer/duodecim-guides"},"isPartOf":{"@id":"https://serial-developer.github.io/duodecim-guides/#website-en"},"license":"https://creativecommons.org/licenses/by-nc-nd/4.0/","about":{"@type":"VideoGame","name":"Dissidia 012 [duodecim] Final Fantasy","gamePlatform":"PlayStation Portable","datePublished":"2011","publisher":{"@type":"Organization","name":"Square Enix"}},"image":{"@type":"ImageObject","url":"https://serial-developer.github.io/duodecim-guides/assets/og/en/site.png","caption":"Dissidia 012 [duodecim] competitive guides — character banner"},"datePublished":"2026-07-26T15:26:44+02:00","dateModified":"2026-07-26T15:26:44+02:00","articleSection":"Jouer à Dissidia"}</script>
+
+</head>
+<body>
+<header class="site-header">
+<a class="sh-brand" href="../en/index.html">Dissidia 012 <span class="gold">[duodecim]</span> <span class="sh-sub">competitive guides</span></a>
+<nav class="sh-groups" aria-label="Site navigation">
+<div class="sh-group">
+<span class="sh-group-label">Game data</span>
+<div class="sh-drop">
+<a href="../en/index.html">Characters</a>
+<a href="../characters/aerith.html" hreflang="fr">Assist: Aerith</a>
+<a href="../en/unlock-feral-chaos.html">Unlocking Feral Chaos</a>
+<a href="../techniques.html" hreflang="fr">Techniques &amp; glitches</a>
+</div>
+</div>
+<a class="sh-group-label sh-group-link" href="../en/build-creator.html">Build creator</a>
+<div class="sh-group is-active">
+<span class="sh-group-label">Playing Dissidia</span>
+<div class="sh-drop">
+<a href="../install.html" hreflang="fr">Install on PPSSPP</a>
+<a href="../en/savedata.html">Ready-to-play savedata</a>
+<a href="../en/multiplayer.html" aria-current="page">Playing multiplayer</a>
+</div>
+</div>
+<div class="sh-group">
+<span class="sh-group-label">Tournaments</span>
+<div class="sh-drop">
+<a href="../en/join-tournaments.html">Entering tournaments</a>
+<a href="../en/run-a-tournament.html">Running a tournament</a>
+<a href="../futurs-tournois.html" hreflang="fr">Upcoming tournaments</a>
+<a href="../tournois.html" hreflang="fr">Past tournaments</a>
+<a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">2017 tournament tier list<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a href="https://replaytheater.app/?game=d012" target="_blank" rel="external noopener">Match videos<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+</div>
+</nav>
+<div class="sh-tools">
+<nav class="lang-switch" aria-label="Choose the site language">
+<span class="lang-opt is-current" lang="en" aria-current="true" title="Current language: English">EN</span>
+<a class="lang-opt" href="../multijoueur.html" lang="fr" hreflang="fr" title="Français"><span aria-hidden="true">FR</span><span class="sr-only">Français</span></a>
+</nav>
+</div>
+<details class="sh-drawer">
+<summary aria-label="Menu"><span class="sh-burger" aria-hidden="true"></span></summary>
+<nav class="sh-panel" aria-label="Site navigation (mobile)">
+<p class="sh-cat">Game data</p>
+<a href="../en/index.html">Characters</a>
+<a href="../characters/aerith.html" hreflang="fr">Assist: Aerith</a>
+<a href="../en/unlock-feral-chaos.html">Unlocking Feral Chaos</a>
+<a href="../techniques.html" hreflang="fr">Techniques &amp; glitches</a>
+<a href="../en/build-creator.html">Build creator</a>
+<p class="sh-cat">Playing Dissidia</p>
+<a href="../install.html" hreflang="fr">Install on PPSSPP</a>
+<a href="../en/savedata.html">Ready-to-play savedata</a>
+<a href="../en/multiplayer.html" aria-current="page">Playing multiplayer</a>
+<p class="sh-cat">Tournaments</p>
+<a href="../en/join-tournaments.html">Entering tournaments</a>
+<a href="../en/run-a-tournament.html">Running a tournament</a>
+<a href="../futurs-tournois.html" hreflang="fr">Upcoming tournaments</a>
+<a href="../tournois.html" hreflang="fr">Past tournaments</a>
+<a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">2017 tournament tier list<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a href="https://replaytheater.app/?game=d012" target="_blank" rel="external noopener">Match videos<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<nav class="lang-switch lang-switch-drawer" aria-label="Choose the site language">
+<span class="lang-opt is-current" lang="en" aria-current="true" title="Current language: English">EN</span>
+<a class="lang-opt" href="../multijoueur.html" lang="fr" hreflang="fr" title="Français"><span aria-hidden="true">FR</span><span class="sr-only">Français</span></a>
+</nav>
+</nav>
+</details>
+</header>
+<main class="wrap" style="padding-bottom:3rem">
+<h1 style="color:var(--gold)">Playing multiplayer</h1>
+<p>Dissidia 012 only offers ad-hoc multiplayer (local WiFi): to play remotely, the scene goes through the PPSSPP emulator and a virtual network program (Radmin, Hamachi or ZeroTier One) that convinces the game the players share the same local network. This page condenses the community guide; each scenario has its own section.</p>
+<p>One thing every online scenario has in common: latency rules. Under about 50 ms of ping the game is smooth; past roughly 120 ms it slows down and freezes in fits, with inputs going unregistered.</p>
+<p class="mv-desc">Jump to a scenario: <a href="#prerequis">Common prerequisites</a> · <a href="#pc-pc">PC ↔ PC</a> · <a href="#zerotier">PC ↔ PC</a> · <a href="#android">Android ↔ Android</a> · <a href="#crossplay">PC ↔ Android crossplay</a> · <a href="#local">Local play</a> · <a href="#depannage">Troubleshooting</a></p>
+<p class="mv-desc">Not installed yet? Start with <a href="../install.html" hreflang="fr">Install Dissidia 012 on PPSSPP</a>, and grab a <a href="../en/savedata.html">ready-to-play savedata</a>.</p>
+<article class="card" id="prerequis">
+<h2 style="margin-top:0.2rem">Common prerequisites (all scenarios)</h2>
+<ul><li>A PPSSPP build capable of online play (version 1.1.1 onwards).</li><li>The SAME version of PPSSPP for every player — and the same kind of executable: mixing 32-bit and 64-bit is a classic cause of desynchronisation.</li><li>The game in the SAME regional version for everyone: a European copy (ULES01505) cannot connect to a North American one (ULUS10566), the version the Discord community plays. If in doubt, the code is displayed at the top of the emulator window.</li><li>Set your controls and graphics options before you play.</li><li>Your personal save can be reused with the tournament pack: copy the ppsspp/memstick/PSP/SAVEDATA/ULUS10566GameDataxx folder (or ULES01505… for Europe) to the same path in the pack.</li></ul>
+
+</article>
+<article class="card" id="pc-pc">
+<h2 style="margin-top:0.2rem">PC ↔ PC — Radmin or Hamachi (the main route)</h2>
+<ul><li>Radmin is currently the Discord community's main way of connecting; Hamachi works very similarly.</li><li>Install and launch Radmin, switch connectivity on (the big button), then create a network (“Create network”, name + password) and share the credentials — or join another player's network (“Join network”).</li><li>Every player in a session must be on the same Radmin network; the program then shows everyone's IP.</li></ul>
+<h3>PPSSPP settings — everyone</h3><ul><li>Networking tab: turn on “Enable networking/WLAN”.</li><li>Click “Change MAC address” several times to avoid a duplicate address inherited from the tournament pack.</li><li>“Port offset”: 5000, never to be changed.</li></ul><h3>PPSSPP settings — host (one per session)</h3><ul><li>Turn on “Enable built-in PRO ad hoc server”.</li><li>Enter YOUR Radmin IP in “Change PRO ad hoc server IP address”.</li><li>Enter an online lobby or the group battle menu to initialise the network, then give your IP to the other players.</li></ul><h3>PPSSPP settings — guests</h3><ul><li>Enter the HOST's Radmin IP in “Change PRO ad hoc server IP address”.</li><li>Wait until the host is in the lobby selection, in a lobby (Cornelia, Zanarkand…) or has created a group battle room before joining.</li><li>In group battle, every guest uses the same IP supplied by the host.</li></ul>
+</article>
+<article class="card" id="zerotier">
+<h2 style="margin-top:0.2rem">PC ↔ PC — the ZeroTier One alternative</h2>
+<ul><li>If Radmin/Hamachi fail on PC, try ZeroTier One (careful: these programs can conflict with one another).</li><li>Install ZeroTier, paste the network ID 8056c2e21c000001 then “Join”: you are on the earth.zerotier.net server.</li><li>Your ZeroTier IP appears at the bottom right of the program (the “Managed IPs” line); if there is a “/xx” suffix, do NOT include it in PPSSPP.</li><li>ZeroTier then runs in the background; apply the same host/guest procedures as above.</li></ul>
+
+</article>
+<article class="card" id="android">
+<h2 style="margin-top:0.2rem">Android ↔ Android</h2>
+<ul><li>Prerequisites: PPSSPP and ZeroTier from the Google Play Store, and a device powerful enough to run the game at full speed.</li><li>The procedure is the same as on PC (same host/guest hierarchy), through ZeroTier: join the 8056c2e21c58fb08 server, then note your IP under “Managed IPs” (ignore the “/xx” suffix).</li><li>Then apply the PPSSPP network settings from the PC ↔ PC section.</li><li>WiFi can introduce lag, and an underpowered device will make the game chug.</li></ul>
+
+</article>
+<article class="card" id="crossplay">
+<h2 style="margin-top:0.2rem">PC ↔ Android crossplay</h2>
+<ul><li>Possible since PPSSPP 1.15.4. Version 1.17.1 has a reputation for performing well (the latest version when the guide was written, July 2024).</li><li>BOTH platforms must use ZeroTier and join the 8056c2e21c58fb08 server (the Android players' one). PC: ZeroTier from the official site and PPSSPP 1.17.1 (zip/installer, “previous releases” section); Android: the 1.17.1 APK and ZeroTier from the Play Store.</li><li>On both platforms, under Settings → Tools → Developer tools → “JIT debug tools” (general section), tick: VFPU_VEC, VFPU_MTX_VTFM, VFPU_MTX_VMSCL, VFPU_MTX_VMMUL, VFPU_MTX_VMMOV, VFPU_COMP.</li><li>On Android only (Settings → System): untick “Fast memory (unstable)” and tick “Force real clock sync (slower, less lag)”.</li><li>Finish with the common preparations and the ZeroTier host/guest procedures.</li></ul>
+
+</article>
+<article class="card" id="local">
+<h2 style="margin-top:0.2rem">Local play — two instances on a single PC</h2>
+<ul><li>PPSSPP lets two people play on the same computer, with no Radmin/Hamachi/ZeroTier, through two instances of the emulator.</li><li>Set your options first (they will serve as the basis for both instances), turn on “Enable built-in PRO ad hoc server” and put “localhost” as the ad hoc server IP, then close and relaunch the emulator.</li><li>Launch a second instance from the same executable: it displays “instance: 2” in brackets.</li><li>The second instance shares ALL your settings: give it its own controls to avoid double inputs, and note that it may have no sound.</li></ul>
+
+</article>
+<article class="card" id="depannage">
+<h2 style="margin-top:0.2rem">Troubleshooting</h2>
+<ul><li>Slow game, crackling sound: the device is struggling to render the game. Lower the rendering resolution, turn off texture scaling, check that “hardware transform” is on — and start from the recommended settings on PPSSPP's official site. If you migrated the contents of an old PPSSPP, start again from a clean folder (texture mods, DLC in the GAME folder and saves move over safely).</li><li>Endless lobby connection: a setting is wrong somewhere. If the “Network initialized” notification does not appear, the host is not online or their settings are incorrect. Hosts: tell the other players once you are actually connected.</li></ul>
+
+</article>
+<div class="banner info">The game's multiplayer is ad-hoc only: play between PPSSPP and a real PSP/Vita is not documented by the community — the scene plays PPSSPP against PPSSPP.</div>
+<p class="sources-list">Source: <a href="https://dissidia.wiki/Online_Setup_(PPSSPP)" target="_blank" rel="external noopener">https://dissidia.wiki/Online_Setup_(PPSSPP)</a> (dissidia.wiki, CC BY 4.0).</p>
+</main>
+<footer class="site"><div class="wrap">
+<p class="foot-line">Writing and design © 2026 <strong>Serial</strong> — <a href="https://github.com/Serial-Developer/duodecim-guides/blob/main/LICENSE" target="_blank" rel="external noopener license">code under MIT, writing under CC BY-NC-ND 4.0</a>. Non-commercial fan site: characters and artwork © Square Enix.</p>
+<p class="foot-line">Game data adapted from <a href="https://dissidia.wiki" target="_blank" rel="external noopener">dissidia.wiki</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noopener">CC BY 4.0</a>) and the <a href="https://finalfantasy.fandom.com" target="_blank" rel="external noopener">Final Fantasy Wiki</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external noopener">CC BY-SA 3.0</a>).</p>
+<details class="foot-more"><summary>Licence and source details</summary>
+<p>Characters, artwork and game assets © Square Enix — <em>Dissidia 012 [duodecim] Final Fantasy</em> (PSP, 2011); a fan project with no affiliation with or endorsement by Square Enix. Any takedown request from the rights holders will be honoured.</p>
+<p>Frame data, movesets, the 2017 tier list and techniques adapted from dissidia.wiki (CC BY 4.0, free reuse with attribution); equipment, accessories and moveset details adapted from the Final Fantasy Wiki (CC BY-SA 3.0, share-alike) — that data stays under its source licence, which I cannot restrict. Portraits and icons: official wiki files recovered through the <a href="https://web.archive.org" target="_blank" rel="external noopener">Wayback Machine</a> (the wiki's CDN was down in July 2026). Community sources (GameFAQs, dissidiaforums, Steam guides, player videos) are credited section by section.</p>
+<p>The original writing on this site is by Serial and published under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external noopener license">CC BY-NC-ND 4.0</a>: share it freely with credit and a link back to the original page, without commercial use or modified republication. Full source details: <a href="https://github.com/Serial-Developer/duodecim-guides/blob/main/NOTICE.md" target="_blank" rel="external noopener">NOTICE.md</a>.</p>
+</details>
+</div></footer>
+<script type="application/json" id="lang-alternates">{"fr":{"href":"../multijoueur.html","lang":"fr","text":"Ce site est aussi disponible en français.","action":"Voir en français","dismiss":"Fermer","dismissAria":"Fermer et rester en anglais"}}</script>
+<script src="../scripts/lang.js" defer></script>
+
+</body>
+</html>
