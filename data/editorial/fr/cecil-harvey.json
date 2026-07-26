@@ -102,8 +102,7 @@
   },
   "builds": {
     "philosophy": [
-      "Deux builds sont documentés, Equip Glitch assumé pour le coût CP. Le build « Side by Side (Dark Knight) » : base bravery élevée (1623 BRV), assist Jecht / Sephiroth / Yuna, invocation Rubicante, Piggy's Stick / Chainsaw / Thornlet / Maximillian, boosters (Sniper Eye, Dismay Shock, Battle Hammer, BRV = 0, Empty EX Gauge, Pre-EX Mode, Pre-EX Revenge) plus Blue Gem, Miracle Shoes et Side by Side, pour un Max Booster x3.8.",
-      "Le build « Hybrid (Paladin) » : set Lufenian complet + Cleaver (effet spécial Judgment of Lufenia), assist Kuja / Aerith, 956 BRV (1147 avec First to Victory), accessoires Hyper Ring, Muscle Belt, Dismay Shock et boosters conditionnels (Summon Unused, Pre-EX Mode, Pre-EX Revenge, Opponent Summon Unused), White Gem, Tenacious Attacker et First to Victory, Max Booster x3.0."
+      "Deux builds sont documentés, Equip Glitch assumé pour le coût CP."
     ],
     "notes": "Substitutions documentées : côté Dark Knight, Blue Gem et Miracle Shoes peuvent céder la place à Together as One, Hero's Seal ou Back-Breaking Straw (pour compenser les malus de Thornlet), et les boosters « Grounded » et « BRV = 0 » gonflent les dégâts de HP wall rush au prix d'une base bravery plus basse. Côté Paladin, Muscle Belt et « Opponent Summon Unused » sont librement remplaçables, Tenacious Attacker n'est pas indispensable avec Aerith assist, Hero's Essence peut fournir des extra abilities (taux de critique) et Winged Boots est utile dans les stages à banish trap.",
     "movesetNote": "Contrainte propre à Cecil : ses deux jobs ont chacun leurs propres braveries au sol et en l'air, tandis que les attaques HP sont communes aux deux. Il démarre chaque combat en Dark Knight, et le changement de job passe obligatoirement par des coups précis — attaques HP au sol ou Dark Step pour aller en Dark Knight, attaques HP aériennes ou Paladin Arts pour aller en Paladin. Chacun de ces coups doit être équipé pour que le changement soit possible : un moveset qui les omet enferme Cecil dans un seul job, hors EX Mode où Proteus autorise le changement libre.",
@@ -135,7 +134,15 @@
     "movesetSources": [
       "https://finalfantasy.fandom.com/wiki/Cecil_Harvey_(Dissidia_PSP)",
       "https://dissidia.wiki/Cecil_Harvey_(Dissidia_012)"
-    ]
+    ],
+    "perBuild": {
+      "Side by Side (Dark Knight)": [
+        "Base bravery élevée (1623 BRV), assist Jecht / Sephiroth / Yuna, invocation Rubicante, Piggy’s Stick / Chainsaw / Thornlet / Maximillian, boosters (Sniper Eye, Dismay Shock, Battle Hammer, BRV = 0, Empty EX Gauge, Pre-EX Mode, Pre-EX Revenge) plus Blue Gem, Miracle Shoes et Side by Side, pour un Max Booster x3.8."
+      ],
+      "Hybrid (Paladin)": [
+        "Set Lufenian complet + Cleaver (effet spécial Judgment of Lufenia), assist Kuja / Aerith, 956 BRV (1147 avec First to Victory), accessoires Hyper Ring, Muscle Belt, Dismay Shock et boosters conditionnels (Summon Unused, Pre-EX Mode, Pre-EX Revenge, Opponent Summon Unused), White Gem, Tenacious Attacker et First to Victory, Max Booster x3.0."
+      ]
+    }
   },
   "assist": {
     "asAssist": [

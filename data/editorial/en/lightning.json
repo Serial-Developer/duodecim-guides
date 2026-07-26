@@ -113,8 +113,7 @@
   },
   "builds": {
     "philosophy": [
-      "Two builds are documented, both assuming the Equip Glitch for the total CP cost and Rubicante as the summon. The “Adamant Chains + EX” build (450 CP, booster x1.4, 10972 HP) runs the full Adamant set with Zantetsuken for the Adamant Chains special effect — the one that unlocks Army of One > DC > Thunder with no wall — alongside the Aerith assist and EX-oriented accessories (BRV = 0, White Drop x3, White Gem, Tenacious Attacker, Glutton, Great Gospel, Dismay Shock, Battle Hammer). Master Guardsman can be equipped for +1000 HP.",
-      "The “Hybrid” build (480 CP, booster x3.5) leans on a high base bravery (1414): Piggy's Stick, Hero's Shield, Royal Crown and Maximillian, the Tidus assist (or the player's pick), and conditional boosters (Hyper Ring, Large Gap in HP, Summon Unused, Pre-EX Mode, Pre-EX Revenge, Hero's Essence, Tenacious Attacker, Glutton). The Best Dresser extra ability adds +100 base bravery."
+      "Two builds are documented, both assuming the Equip Glitch for the total CP cost and Rubicante as the summon."
     ],
     "notes": "The “Bravery attacks / HP attacks” tables of both builds are empty in the extracted data: the move loadouts recommended per build are not known. TWOxACROSS's period FAQ (“Invoke my name — I am Spark”, dissidiaforums, 2011) does, however, argue the choice of equipment types: daggers (Initial EX Force+ bonus) for “one-shot” EX builds, katanas (high base bravery and EX Intake Range+ late in the progression) for aggressive HP chipping at the cost of DEF, Heaven's Cloud over Zwill Crossblade for a consistent EX Rush, and Super Rocket (glass cannon) or Genji (Soul of Yamato) sets depending on the EX plan chosen.",
     "movesetColumns": [
@@ -151,6 +150,14 @@
     ],
     "movesetTypes": {
       "Flourish of Steel": "Bravery → HP"
+    },
+    "perBuild": {
+      "Adamant Chains + EX": [
+        "450 CP, booster x1.4, 10972 HP: it runs the full Adamant set with Zantetsuken for the Adamant Chains special effect — the one that unlocks Army of One > DC > Thunder with no wall — alongside the Aerith assist and EX-oriented accessories (BRV = 0, White Drop x3, White Gem, Tenacious Attacker, Glutton, Great Gospel, Dismay Shock, Battle Hammer). Master Guardsman can be equipped for +1000 HP."
+      ],
+      "Hybrid": [
+        "480 CP, booster x3.5: it leans on a high base bravery (1414) — Piggy’s Stick, Hero’s Shield, Royal Crown and Maximillian, the Tidus assist (or the player’s pick), and conditional boosters (Hyper Ring, Large Gap in HP, Summon Unused, Pre-EX Mode, Pre-EX Revenge, Hero’s Essence, Tenacious Attacker, Glutton). The Best Dresser extra ability adds +100 base bravery."
+      ]
     }
   },
   "assist": {

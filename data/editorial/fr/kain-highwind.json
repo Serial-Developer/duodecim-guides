@@ -97,11 +97,17 @@
   },
   "builds": {
     "philosophy": [
-      "Deux builds sont documentés, tous deux en 450 CP avec l'Equip Glitch (le coût total suppose le glitch), l'effet spécial Seal of Lufenia et l'invocation Rubicante.",
-      "« Side by Side (Damage) » : un build à hauts dégâts misant sur les dégâts bravery et le Wall Rush, pensé pour les petites arènes à plafond bas. Le booster maximal de x7.4 s'active avec Large Gap in HP et BRV = 0 réunis (x5.3 avec Large Gap in HP seul).",
-      "« Hybrid (EX) » : des dégâts sans sacrifier l'absorption d'EX, recommandé pour les arènes moyennes à grandes, avec un booster de x2.3 avant l'activation de Large Gap in HP."
+      "Deux builds sont documentés, tous deux en 450 CP avec l'Equip Glitch (le coût total suppose le glitch), l'effet spécial Seal of Lufenia et l'invocation Rubicante."
     ],
-    "notes": "Substituts documentés : sur le build dégâts, Hyper Ring peut céder sa place à Battle Hammer (drain d'assist) ou Dismay Shock (drain d'EX renforcé). Sur le build EX, préférez la Cleaver si vous jouez l'assist Aerith ; Heaven's Cloud convient si vous maîtrisez ses loops de braveries aériennes en corner."
+    "notes": "Substituts documentés : sur le build dégâts, Hyper Ring peut céder sa place à Battle Hammer (drain d'assist) ou Dismay Shock (drain d'EX renforcé). Sur le build EX, préférez la Cleaver si vous jouez l'assist Aerith ; Heaven's Cloud convient si vous maîtrisez ses loops de braveries aériennes en corner.",
+    "perBuild": {
+      "Side by Side (Damage)": [
+        "Un build à hauts dégâts misant sur les dégâts bravery et le Wall Rush, pensé pour les petites arènes à plafond bas. Le booster maximal de x7.4 s’active avec Large Gap in HP et BRV = 0 réunis (x5.3 avec Large Gap in HP seul)."
+      ],
+      "Hybrid (EX)": [
+        "Des dégâts sans sacrifier l’absorption d’EX, recommandé pour les arènes moyennes à grandes, avec un booster de x2.3 avant l’activation de Large Gap in HP."
+      ]
+    }
   },
   "assist": {
     "asAssist": [

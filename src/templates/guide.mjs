@@ -331,6 +331,38 @@ ${block(t('guide.builds.loadoutHp'), loadout.hp)}
 ${loadout.note ? `<p class="mv-desc">${esc(loadout.note)}</p>` : ''}`;
 }
 
+// --- Découpage de la section builds en builds distincts ---
+// Le wiki présente ses builds dans un tabber : les tableaux se suivent à plat,
+// et les noms des onglets survivent dans le texte brut sous la forme
+// « |-|Hybrid (Damage)= ». Un nouveau build commence à chaque tableau « Stats ».
+//
+// Sans ce découpage, une fiche à deux builds affiche les deux descriptions puis
+// les deux compositions — le lecteur doit faire l'aller-retour pour savoir de
+// quel build on lui parle.
+const BUILD_START = (tb) => tb.rows?.[0]?.[0] === 'Stats';
+// Onglet resté à l'état de gabarit sur le wiki : « Build #2 », « build 3 »,
+// « build 2=\nadd build here ». Il ne correspond à aucun tableau.
+const EMPTY_TAB = /^build\s*#?\s*\d+\s*$/i;
+
+function splitBuilds(builds) {
+  const tables = builds?.tables || [];
+  const groups = [];
+  for (const tb of tables) {
+    if (BUILD_START(tb) || !groups.length) groups.push({ name: null, tables: [] });
+    groups[groups.length - 1].tables.push(tb);
+  }
+  // Noms d'onglets, dans l'ordre, gabarits vides écartés.
+  const names = (builds?.text || [])
+    .map((x) => String(x).trim())
+    .filter((x) => x.startsWith('|-|'))
+    .map((x) => x.replace(/^\|-\|/, '').replace(/=[\s\S]*$/, '').trim())
+    .filter((x) => x && !EMPTY_TAB.test(x) && !/add build here/i.test(x));
+  // On ne nomme que si le compte concorde : un décalage attribuerait à un build
+  // le nom d'un autre, ce qui est pire que pas de nom du tout.
+  if (names.length === groups.length) groups.forEach((g, i) => { g.name = names[i]; });
+  return groups;
+}
+
 function buildsSection(t, builds, allMoves, opts) {
   const subs = (builds?.subs || []).filter((sub) => sub.text.length || sub.tables.length);
   const groups = [builds?.tables, ...subs.map((s) => s.tables)];
@@ -339,7 +371,18 @@ function buildsSection(t, builds, allMoves, opts) {
   // CP ne le précède (le budget est alors simplement omis de la légende).
   const needed = groups.some((g) => (g || []).some(isEmptyMoveset));
   const ctx = { pending: needed ? (opts?.loadout ? loadoutTables(t, opts.loadout) : cpBudgetPanel(t, totals, allMoves, opts)) : '' };
-  const main = buildsTables(t, builds?.tables, ctx);
+
+  const builtGroups = splitBuilds(builds);
+  // Un seul build : rien à démêler, la description éditoriale le précède déjà.
+  const main = builtGroups.length < 2
+    ? buildsTables(t, builds?.tables, ctx)
+    : builtGroups.map((g) => {
+      const desc = g.name ? opts?.perBuild?.[g.name] : null;
+      return `${g.name ? `<h3>${esc(g.name)}</h3>` : ''}
+${desc?.length ? paras(desc) : ''}
+${buildsTables(t, g.tables, ctx)}`;
+    }).join('\n');
+
   const subsHtml = subs.map((sub) => `${sub.title ? `<h3>${esc(sub.title)}</h3>` : ''}${buildsTables(t, sub.tables, ctx)}`).join('\n');
   return `${main}\n${subsHtml}`;
 }
@@ -641,6 +684,9 @@ ${buildsSection(t, s.builds, allMoves, {
     types: ed?.builds?.movesetTypes,
     sources: ed?.builds?.movesetSources,
     loadout: ed?.builds?.movesetLoadout,
+    // Description propre à chaque build, indexée par le nom d'onglet du wiki :
+    // elle s'affiche juste avant la composition qu'elle commente.
+    perBuild: ed?.builds?.perBuild,
   })}
 ${ed?.builds?.notes ? `<p class="mv-desc">${esc(ed.builds.notes)}</p>` : ''}
 ${sectionSources(t, secSrc.builds)}`

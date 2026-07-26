@@ -79,11 +79,18 @@
   },
   "builds": {
     "philosophy": [
-      "Deux builds sont documentés sous forme de tables d'équipement, tous deux avec l'assist Sephiroth et l'invocation Rubicante, en supposant l'Equip Glitch pour le coût en CP. Le premier est un build Side by Side (extra ability Best Dresser) : bravery de base très élevée (1683 BRV, 10478 HP) avec Piggy's Stick, Aegis Shield, Thornlet, Maximillian et une batterie d'accessoires dont Hero's Essence, Together as One et Side by Side.",
-      "Le second est un build EX Core (extra ability Master Protector pour une BRV de base plus haute) : set Genji + Onion Sword (effet spécial Soul of Yamato) et accessoires boosters conditionnels (EX Core Present, Pre-EX Mode, Pre-EX Revenge, etc.) pour un Max Booster de x13.4.",
-      "L'overview cadre la philosophie : les deux styles (EX et assist) fonctionnent, l'assist devant en constance et en dégâts (bravery de base élevée + Side by Side), la DEF de base au-dessus de la moyenne (111) autorisant l'investissement en bravery et HP avec moins de risque."
+      "Deux builds sont documentés sous forme de tables d’équipement, tous deux avec l’assist Sephiroth et l’invocation Rubicante, en supposant l’Equip Glitch pour le coût en CP.",
+      "L’overview cadre la philosophie : les deux styles (EX et assist) fonctionnent, l’assist devant en constance et en dégâts (bravery de base élevée + Side by Side), la DEF de base au-dessus de la moyenne (111) autorisant l’investissement en bravery et HP avec moins de risque."
     ],
-    "notes": "Les builds ne sont fournis que sous forme de tables de stats et d'équipement, sans justification rédigée pièce par pièce."
+    "notes": "Les builds ne sont fournis que sous forme de tables de stats et d'équipement, sans justification rédigée pièce par pièce.",
+    "perBuild": {
+      "Side by Side": [
+        "Extra ability Best Dresser : bravery de base très élevée (1683 BRV, 10478 HP) avec Piggy’s Stick, Aegis Shield, Thornlet, Maximillian et une batterie d’accessoires dont Hero’s Essence, Together as One et Side by Side."
+      ],
+      "EX Core": [
+        "Extra ability Master Protector pour une BRV de base plus haute : set Genji + Onion Sword (effet spécial Soul of Yamato) et accessoires boosters conditionnels (EX Core Present, Pre-EX Mode, Pre-EX Revenge, etc.) pour un Max Booster de x13.4."
+      ]
+    }
   },
   "assist": {
     "asAssist": [

@@ -88,11 +88,26 @@
   },
   "builds": {
     "philosophy": [
-      "Cinq builds sont documentés, tous à 450 CP en supposant l'Equip Glitch et presque tous avec l'assist Kuja. Le build Hybrid (set Lufenian « Judgment of Lufenia », Lionheart, booster x3.5) est l'all-rounder généraliste de référence.",
-      "Adamant Chains (booster x3.5) exploite le bonus de distance d'esquive aérienne du set pour couvrir la vraie faiblesse de Squall : ses air dodges vulnérables. L'arme s'ajuste au matchup, et contre Onion Knight, Jecht ou Cloud, on adapte les accessoires vers Side by Side pour la jauge d'assist ; Hero's Essence, Winged Boots (anti-pièges) et Glutton (contre les gros générateurs d'EX comme Lightning et Shantotto) sont cités.",
-      "Le build EX Core (set Genji, booster x5.3) mise sur l'absorption d'EX via les cores, sa principale source de jauge. Side by Side (Piggy's Stick, Together as One, booster x3.8) est recommandé sur petites scènes et matchups égaux ou favorables : deux whiffs suffisent pour une barre d'assist et chaque stagger à l'Assist Change LV2 converti en Aerial Circle entretient l'avance en ressources. Enfin, le build orienté déplétion de jauge (set Lufenian, assist Yuna, booster x6.9) exécute la boucle Aerial Circle + assist BRV aérien de Yuna : chaque hit HP supplémentaire déplète la jauge adverse sans dégâts additionnels."
+      "Cinq builds sont documentés, tous à 450 CP en supposant l’Equip Glitch et presque tous avec l’assist Kuja."
     ],
-    "notes": "De nombreux substituts sont listés par build (Sniper Eye, Dragonfly Orb, Dismay Shock, Muscle Belt, Together as One, Platinum Hourglass, Hyper Ring, Bravery Orb, boosters Large Gap in HP / Summon Unused / Grounded / Aerial / Assist, spéciaux Blue Gem / Growth Egg / Great Gospel / Winged Boots / Hero's Essence / Badge of Trust). La statistique LUK n'est renseignée pour aucun build."
+    "notes": "De nombreux substituts sont listés par build (Sniper Eye, Dragonfly Orb, Dismay Shock, Muscle Belt, Together as One, Platinum Hourglass, Hyper Ring, Bravery Orb, boosters Large Gap in HP / Summon Unused / Grounded / Aerial / Assist, spéciaux Blue Gem / Growth Egg / Great Gospel / Winged Boots / Hero's Essence / Badge of Trust). La statistique LUK n'est renseignée pour aucun build.",
+    "perBuild": {
+      "Hybrid": [
+        "Set Lufenian « Judgment of Lufenia », Lionheart, booster x3.5 : l’all-rounder généraliste de référence."
+      ],
+      "Adamant Chains": [
+        "Booster x3.5 : il exploite le bonus de distance d’esquive aérienne du set pour couvrir la vraie faiblesse de Squall, ses air dodges vulnérables. L’arme s’ajuste au matchup, et contre Onion Knight, Jecht ou Cloud, on adapte les accessoires vers Side by Side pour la jauge d’assist ; Hero’s Essence, Winged Boots (anti-pièges) et Glutton (contre les gros générateurs d’EX comme Lightning et Shantotto) sont cités."
+      ],
+      "EX Core": [
+        "Set Genji, booster x5.3 : il mise sur l’absorption d’EX via les cores, sa principale source de jauge."
+      ],
+      "Side by Side": [
+        "Piggy’s Stick, Together as One, booster x3.8 : recommandé sur petites scènes et matchups égaux ou favorables — deux whiffs suffisent pour une barre d’assist, et chaque stagger à l’Assist Change LV2 converti en Aerial Circle entretient l’avance en ressources."
+      ],
+      "Meter Depletion": [
+        "Set Lufenian, assist Yuna, booster x6.9 : ce build orienté déplétion de jauge exécute la boucle Aerial Circle + assist BRV aérien de Yuna — chaque hit HP supplémentaire déplète la jauge adverse sans dégâts additionnels."
+      ]
+    }
   },
   "assist": {
     "asAssist": [

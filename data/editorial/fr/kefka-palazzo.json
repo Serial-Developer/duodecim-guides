@@ -98,11 +98,17 @@
   },
   "builds": {
     "philosophy": [
-      "Kefka équipe généralement Waggle-Wobbly Firaga, Scatter-Spray Blizzaga et Extra-Crispy Firaga en braveries aériennes. Deux builds sont documentés (450 CP, Equip Glitch supposé), reflétant l'arbitrage de l'overview entre dégâts et accès à l'EX.",
-      "« Hybrid » : un build de dégâts standard avec apport d'EX activé — 10299 HP, 917 BRV, 180 ATK, 183 DEF, booster max x7.4 ; assist Kuja, summon Rubicante ; Dancing Mad avec Lufenian Dirk, Lufenian Headband et Lufenian Vest (effet spécial Seal of Lufenia) ; accessoires : Hyper Ring, Earring, Battle Hammer, Large Gap in HP, BRV > Base Value, Pre-EX Mode, Pre-EX Revenge, Aerial, Opponent HP < 50 %, Tenacious Attacker.",
-      "« High Initial EX » : démarre le match avec 90 % de la jauge EX remplie — 10299 HP, 956 BRV, 179 ATK, 185 DEF, sans booster ; assist Jecht ; Dancing Mad avec Lufenian Shield, Lufenian Helm et Lufenian Armor (effet spécial Judgment of Lufenia) ; accessoires : Earring, Dismay Shock, Battle Hammer, trois Cyan Drop, Cyan Gem, Tenacious Attacker, Glutton, First to Victory."
+      "Kefka équipe généralement Waggle-Wobbly Firaga, Scatter-Spray Blizzaga et Extra-Crispy Firaga en braveries aériennes. Deux builds sont documentés (450 CP, Equip Glitch supposé), reflétant l'arbitrage de l'overview entre dégâts et accès à l'EX."
     ],
-    "notes": "Les coups équipés des deux builds ne sont pas renseignés dans les tableaux (seule la phrase générale sur les trois braveries aériennes fait foi), et aucun summon n'est indiqué pour le build High Initial EX."
+    "notes": "Les coups équipés des deux builds ne sont pas renseignés dans les tableaux (seule la phrase générale sur les trois braveries aériennes fait foi), et aucun summon n'est indiqué pour le build High Initial EX.",
+    "perBuild": {
+      "Hybrid": [
+        "Un build de dégâts standard avec apport d’EX activé — 10299 HP, 917 BRV, 180 ATK, 183 DEF, booster max x7.4 ; assist Kuja, summon Rubicante ; Dancing Mad avec Lufenian Dirk, Lufenian Headband et Lufenian Vest (effet spécial Seal of Lufenia) ; accessoires : Hyper Ring, Earring, Battle Hammer, Large Gap in HP, BRV > Base Value, Pre-EX Mode, Pre-EX Revenge, Aerial, Opponent HP < 50 %, Tenacious Attacker."
+      ],
+      "High Initial EX": [
+        "Démarre le match avec 90 % de la jauge EX remplie — 10299 HP, 956 BRV, 179 ATK, 185 DEF, sans booster ; assist Jecht ; Dancing Mad avec Lufenian Shield, Lufenian Helm et Lufenian Armor (effet spécial Judgment of Lufenia) ; accessoires : Earring, Dismay Shock, Battle Hammer, trois Cyan Drop, Cyan Gem, Tenacious Attacker, Glutton, First to Victory."
+      ]
+    }
   },
   "assist": {
     "asAssist": [
