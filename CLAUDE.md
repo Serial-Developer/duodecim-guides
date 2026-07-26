@@ -54,6 +54,7 @@ Après TOUTE modification d'éditorial : `node scripts/build.mjs && node scripts
 - **Le wiki oublie le `+` d'un « Jump Times Boost »** (20 et 40 CP sous le même nom) : l'identifiant est suffixé par le coût, le nom affiché reste fidèle.
 - **Coups à déclinaisons** : une ligne portant `variants` est le coup équipable, les lignes suivantes en sont les versions (Jecht : « Ground (Up) » existe sous deux parents).
 - **Sets « à trois pièces » listent quatre pièces** : trois suffisent (d'où la mention « (1/3) » sur chaque pièce).
+- **Le payload est déterministe** : `dist/scripts/build-data.js` (355 ko, commité) ne doit changer que si les données changent. Son champ `dataModified` vient de git (`datesFor` sur `data/build/*.json` + `data/characters/*.json`), jamais de `new Date()` — sinon chaque build produit un faux diff de 355 ko. Aucun code ne lit ce champ (ni `build-creator.js`, ni `qa.mjs`) : il est purement informatif.
 - **Vérification de référence** : le build « Adamant Chains + EX » de Lightning du wiki (HP 10972, BRV 957, ATK 177, DEF 185) doit être retrouvé exactement — c'est le test qui valide le modèle de calcul.
 - Le serveur de preview `python -m http.server` coupe parfois le chargement de `build-data.js` (~310 ko) : recharger. `npx serve dist` ne présente pas le problème.
 

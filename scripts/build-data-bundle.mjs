@@ -3,9 +3,10 @@
 // Le fichier produit est un script (window.BUILD_DATA = …) et non un JSON à
 // fetcher : la page reste consultable en file:// comme le reste du site, et on
 // évite une requête supplémentaire.
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { CHARACTERS } from './characters.mjs';
+import { datesFor } from './git-dates.mjs';
 
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf-8'));
 
@@ -97,10 +98,16 @@ export function buildDataBundle(ROOT, editorial = null) {
   const unresolvedLinks = [];
   const aliasedAll = [];
 
+  // Fichiers dont ce payload est la mise en forme : ils datent le bundle (voir
+  // plus bas). Les chemins sont relatifs à la racine, en séparateurs POSIX,
+  // comme les clés de l'index git.
+  const sourceFiles = readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => `data/build/${f}`);
+
   const characters = [];
   for (const def of CHARACTERS) {
     const p = join(ROOT, 'data', 'characters', `${def.slug}.json`);
     if (!existsSync(p)) continue;
+    sourceFiles.push(`data/characters/${def.slug}.json`);
     const data = readJson(p);
 
     // Les coups gardent la structure de la page wiki du personnage : les groupes
@@ -297,7 +304,12 @@ export function buildDataBundle(ROOT, editorial = null) {
 
   return {
     schemaVersion: 1,
-    generated: new Date().toISOString(),
+    // Date des données, pas du build : l'horodatage de la génération changeait à
+    // chaque exécution et faisait apparaître un faux diff de 355 ko sur
+    // dist/scripts/build-data.js, que le dépôt commite. Même raison que pour les
+    // dates de pages (scripts/git-dates.mjs) : l'historique git est la seule
+    // source honnête. `null` si git est indisponible, comme ailleurs.
+    dataModified: datesFor(ROOT, sourceFiles).dateModified,
     capacity: { base: capacity.base, max: capacity.max, quote: capacity.quote, extenders: capacity.extenders, documented: capacity.documented },
     unresolvedHpLinks: unresolvedLinks,
     aliasedHpLinks: aliasedAll,
