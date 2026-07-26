@@ -14,6 +14,20 @@ let cache = null;
 export function gitDates(root) {
   if (cache) return cache;
   let out;
+  // Dépôt superficiel (`actions/checkout` sans fetch-depth: 0) : git ne connaît
+  // qu'un commit, tous les fichiers sembleraient créés ce jour-là et chaque
+  // build réécrirait toutes les dates. Mieux vaut aucune date qu'une date fausse
+  // — on renvoie donc une map vide, comme lorsque git est absent.
+  try {
+    const shallow = execFileSync('git', ['rev-parse', '--is-shallow-repository'], {
+      cwd: root, encoding: 'utf-8',
+    }).trim();
+    if (shallow === 'true') {
+      console.warn('(dépôt git superficiel : dates de publication omises — voir fetch-depth dans les workflows)');
+      cache = new Map();
+      return cache;
+    }
+  } catch { /* git absent : le bloc suivant s'en charge */ }
   try {
     // Une seule passe sur tout l'historique : premier commit touchant un
     // fichier = création, dernier = modification.

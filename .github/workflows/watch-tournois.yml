@@ -27,7 +27,14 @@ jobs:
   veille:
     runs-on: ubuntu-latest
     steps:
+      # fetch-depth: 0 est indispensable ici : le build lit l'historique git pour
+      # datter les pages (scripts/git-dates.mjs -> lastmod du sitemap et
+      # datePublished/dateModified du JSON-LD). Avec le clone superficiel par
+      # défaut, git ne voit qu'un commit et toutes les pages héritent de la date
+      # du run — le sitemap annoncerait 43 pages modifiées à chaque veille.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 20
