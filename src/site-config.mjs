@@ -28,7 +28,7 @@ export const GAME = {
 // faire indexer ») : coller ici la valeur du `content=` fournie par le moteur,
 // puis `node scripts/build.mjs`. Une chaîne vide = aucune balise émise.
 export const SITE_VERIFICATION = {
-  google: '', // <meta name="google-site-verification" content="…">
+  google: 'GQ45pzJIGMqbhiioMEPXfs_BZYmR_0Q-L8NgEWMHyhw', // propriété créée le 27/07/2026
   bing: '',   // <meta name="msvalidate.01" content="…">
 };
 
