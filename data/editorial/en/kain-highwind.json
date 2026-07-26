@@ -1,0 +1,173 @@
+{
+  "slug": "kain-highwind",
+  "tagline": "Defensive aerial hunter: vertical mobility, punishes and explosive combos",
+  "archetype": "Defensive aerial fighter",
+  "overview": [
+    "Kain is a short-range aerial fighter with exceptional vertical mobility. He has a unique homing air dash, which can be performed after his melee bravery attacks. His aerial defence is first rate: his air jumps and Precision Jumps are among the best in the game, and his fast fall speed makes his air dodges very safe. His aerial attacks come out fast and cover diagonal angles well, which serves a defensive punish style ideally.",
+    "On hit, his directional follow-ups change the direction of the knockback and convert through solo combos that are few in number but very rewarding. His wall carry is excellent thanks to the Lance Barrage loops and to his devastating aerial HP attacks. Despite an average base ATK, his real damage is far higher: combos, criticals and heavy base damage on his Wall Rush moves such as Rising Drive and Sky Rave. On the ground, he controls the aerial space with his emblematic Jump and can slow the pace at any time.",
+    "His limits come from an offence with no real strong point: his aerial bravery attacks are not front-rank tools for rushdown. He can poke, but all his moves are a little slower than average, with no movement during the startup and linear tracking in a single direction. His relatively slow recovery exposes him to whiff punishing at short range. He therefore depends on timing mixups to avoid being blocked and does not always stop fast movement. His few projectiles are telegraphed or risky for poking through traps, such as Ultimecia's charged Knight's Lance or The Emperor's Thunder Crest.",
+    "Competitively, Kain is generally ranked mid tier. His defensive style works reliably against a wide variety of characters: he avoids damage well in the air and forces his way through with charged Jumps on the ground. Explosive as soon as he lands a clean combo, he nonetheless struggles to force openings against defensive opponents, and his assist gauge filling is a little slow — especially in a small arena under pressure. In a game where defence is king, Kain remains a competent character, with a direct moveset and high damage."
+  ],
+  "tierNote": "Ranked B (17th out of 30) on the 2017 tier list, which matches the overview: a character regularly placed in mid tier, defensively reliable but with no standout offensive asset.",
+  "strengths": [
+    "First-rate aerial defence: excellent air jumps and Precision Jumps, and a fast fall speed that makes air dodges safe.",
+    "Fast aerial attacks that cover the diagonals well, perfect for a punish game.",
+    "A unique homing air dash after his melee bravery attacks (Air Dash Cancel).",
+    "High wall carry through the Lance Barrage loops and very powerful aerial HP attacks (Rising Drive, Sky Rave).",
+    "Practical damage far above his average base ATK thanks to combos, criticals and the heavy base damage of his Wall Rush moves.",
+    "Jump controls the aerial space from the ground and slows the pace on demand, with invincibility on the way up."
+  ],
+  "weaknesses": [
+    "Aerial bravery attacks short of the best for rushdown: slower startups, no movement during the startup, linear tracking.",
+    "A relatively slow recovery: vulnerable to whiff punishing at short range.",
+    "He depends on timing mixups to avoid blocks and does not always stop fast movement.",
+    "Few projectiles, all telegraphed or risky against traps (Ultimecia's charged Knight's Lance, The Emperor's Thunder Crest).",
+    "He struggles to force openings against defensive opponents.",
+    "Slightly slow assist gauge filling, a problem above all in a small arena under pressure."
+  ],
+  "moveNotes": {
+    "Spiral Blow": "A poke or an occasional punish tool near walls: a relatively fast startup (19F) and a low vertical angle, good for hitting in front of Kain, with decent base damage and average knockback into a Wall Rush — which also makes it an assist combo starter. Kain becomes airborne when he uses it, so it cannot be repeated on the ground; it is one of his safest ground moves to whiff, but it offers little return without a Wall Rush or an assist.",
+    "Lance Burst": "His most powerful ground bravery attack, dedicated to punishing blocks or dodges. Above-average base damage and combo starters everywhere: an assist after the thrust, or a dodge cancel > Lance Barrage solo — two practical routes often equipped competitively. The move advances and stays active as long as Kain keeps moving (enough to punish a ground dodge after a dash), but its startup is reactable and it cannot anti-air.",
+    "Cyclone (ground)": "A homing projectile used sparingly on the ground: on hit, it draws the opponent in and its hit stun allows a combo into an HP attack, notably Rising Drive, from mid range — with strict timing, since Kain is airborne only very briefly after the recovery. Poorly suited to space control: low priority, a slow startup (35F) and Kain stays still after the cast, which loses to homing dashes.",
+    "Lance Barrage": "Kain's main poke: it advances during the move, which makes it the reference tool for hitting in front of him and punishing at short range (a whiff, a block stagger, a missed block). On hit, an assist call or a directional follow-up: the Up Follow-up (90 EX) feeds his midscreen solo loop — technically infinite, limited to two repetitions competitively — ending with the Neutral Follow-up at a wall for the Wall Rush; the Down Follow-up confirms ground assist combos. Relatively safe in neutral thanks to the dodge cancel and his fall speed, but whiff punishable and prone to missing moving targets since Kain stops on startup.",
+    "Celestial Shooter": "A dedicated upward attack: it serves to build assist gauge on whiff and to punish opponents above Kain. Slightly slower than Lance Barrage (21F) but the diagonal movement that follows contributes to its range and its safety in neutral. The Up Follow-up can Wall Rush near ceilings to start assist combos; there is a blind spot just above Kain and only one trajectory, hence the importance of timing mixups.",
+    "Crashing Dive": "A dedicated downward attack, the mirror of Celestial Shooter: assist gauge on whiff, punishing opponents below and the occasional approach on grounded opponents thanks to its travel distance, mixed with dash feints and other bravery attacks close to the ground. On hit: a ground Wall Rush and a strict combo through a dodge cancel into Lance Barrage; the Up Follow-up (90 EX) opens a very rewarding route that does not depend on walls. It only travels in one direction, so timing mixups are indispensable.",
+    "Cyclone (midair)": "Almost identical to the ground version: an occasional mid-range poke and a setup tool in assist combos, able to combo into a second Cyclone at mid to long range. Little used competitively: too slow to zone, a low reward without precise positioning, and it sacrifices the vertical coverage of Celestial Shooter or Crashing Dive.",
+    "Jump": "A flexible and indispensable defensive tool: an emergency attack after a ground dodge thanks to its invincibility (LV1), space control in its charged versions (LV2/LV3) with a rising hitbox that crushes guards and guarantees the HP hit. The dodge cancel at the apex (LV2/LV3) allows him to charge while assessing the situation with very little risk, and opens solo combos if the opponent is at maximum height. Downsides: the LV1 forces a landing (punishable without an assist), a charged Jump does not force an approach (the opponent can fill their gauge at range), it loses to halo camping, and its maximum height does not reach the ceiling of large arenas — low-ceiling stages such as Pandaemonium - Top Floor and M. S. Prima Vista work in his favour. Technically vulnerable to EX Revenge checkmates, since it deals bravery damage on the way down.",
+    "Dragon's Fang": "Kain's single-hit HP attack and his fastest HP attack (41F), typically used after a block stagger, with good vertical tracking but short reach — beware of disjoints blocked at range. The ground version sees little use given the weakness of Kain's ground game outside charged Jumps.",
+    "Dragon's Fang (midair)": "Functionally identical to the ground version, but it fills the single-hit HP role more reliably in the air.",
+    "Rising Drive": "A rising aerial HP attack (49F) that spirals up to the ceiling, with Wall Rush and heavy base damage: it is the preferred ending to assist combos, notably after Cyclone or Crashing Dive's Wall Rush.",
+    "Sky Rave": "A diving aerial HP attack (49F) down to the ground, with Wall Rush: along with Rising Drive, it is one of the heavy base damage moves that swell Kain's real damage.",
+    "Gungnir": "A thrown lance of energy (55F, Ranged High) that flies until it hits the scenery, with Wall Rush."
+  },
+  "exMode": {
+    "summary": [
+      "The “Holy Strength!” EX Mode: Kain gains Regen, Critical Boost and Lancet.",
+      "Lancet (activated with R + Square, 51F, Ranged High priority): the damage dealt is absorbed as HP and the bravery spent is immediately recovered. The action can be cancelled into a Dodge or an Air Dash and triggers the EX Burst."
+    ],
+    "burst": "“Dragoon's Pride”, the ultimate dragoon jump: mash the command shown on screen to raise the gauge, with the command changing twice at random. Base damage of 30 in the initial phase and 100 in total (Physical)."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "Air Dash Cancel: when Kain finishes a melee bravery attack, he can cancel it into a homing air dash by pressing Triangle. The main application is filling the assist gauge with the Assist Gauge Up Dash ability while approaching the opponent — useful for optimising ground assist combo starters, but little used elsewhere. The dash and the relatively slow startup of Kain's aerial bravery attacks do not open any solo combo routes."
+    ],
+    "details": [
+      "The mechanic is built in: no dash ability to equip.",
+      "Kain performs the air dash even if Triangle is held in advance: in practice, it works like an input buffer, a rare thing in Dissidia 012."
+    ]
+  },
+  "gameplan": [
+    "Kain's gameplay loop is defensive and aerial: alternate Lance Barrage, Celestial Shooter and Crashing Dive to keep moving while building assist gauge on whiff, cover the three axes (in front, above, below) and punish everything that whiffs or recovers slowly. His fall speed makes his air dodges (back dodges especially) safer than average, which makes the dodge cancels after his pokes safe.",
+    "On hit, everything converges on wall carry and Wall Rush: Lance Barrage's Up Follow-up for the midscreen solo loop (two repetitions allowed competitively, big EX and wall carry gains), the Neutral Follow-up at a wall for the Wall Rush, the Down Follow-ups to confirm ground assist combos, and Rising Drive or Sky Rave as an ending for massive damage. The Air Dash Cancel lets him scrape a little assist gauge before the confirm.",
+    "On the ground, Kain is mediocre in direct combat: Lance Burst serves as a dedicated punish, but the default reflex remains the charged Jump — safe thanks to the dodge cancel at the apex, it crushes guards, controls space and slows the pace. Careful, though: charging Jump lets the opponent fill their gauge at range, which can cost him the assist race.",
+    "Gauge management is the point of friction: Kain's assist filling is a little slow, especially in a small arena under pressure. The move notes highlight the value of the Kuja (corner combos through the Up Follow-up) and Aerith (conversions through a Chase after the follow-ups) assists for making every hit pay."
+  ],
+  "advancedTech": [
+    {
+      "name": "Lance Barrage loop (Up Follow-up)",
+      "desc": "The Up Follow-up does not Wall Rush but generates 90 EX, which allows a dodge cancel then another Lance Barrage: Kain's main midscreen solo combo, technically infinite. The timing is fairly strict, but every repetition pays in wall carry and assist gauge; competitively, two Lance Barrages are always allowed, with the Neutral Follow-up near the wall to finish on a Wall Rush."
+    },
+    {
+      "name": "Jump dodge cancel",
+      "desc": "By charging Jump (LV2/LV3), Kain can air dodge at the apex of the jump: he threatens, observes and repositions with very little risk. Leaving Jump with a dodge also opens solo combos if the opponent is at the jump's maximum height."
+    },
+    {
+      "name": "Lance Burst dodge cancel combo",
+      "desc": "After Lance Burst's thrust, a dodge cancel into Lance Barrage starts a solo combo from the ground — one of the two routes (along with the assist call) that make this move so widely equipped competitively."
+    },
+    {
+      "name": "Cyclone > Rising Drive",
+      "desc": "Cyclone's hit stun allows a combo into an HP attack from mid range, notably Rising Drive. A strict window: Kain only counts as airborne for a very short moment after the recovery, and becomes grounded again if he does not act at the right time."
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "Many combos with heavy bravery damage, most of them demanding or impractical: Lance Burst > Lance Barrage (or other aerial bravery attacks near a wall); high-angle Lance Barrage > Lance Barrage (a very tight infinite); high-angle Crashing Dive > Lance Barrage; Lancet (special move, EX Mode) > Lance Barrage; Cyclone > almost anything; level 2 Jump (a hit at the top) > dodge cancel > Crashing Dive, Sky Rave or Dragon's Fang.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    },
+    {
+      "name": "Empty chase into an assist gauge reset",
+      "desc": "Three moves offer the empty chase into an assist gauge reset: Lance Barrage (low angle), Crashing Dive (neutral angle) and Celestial Shooter (low angle).",
+      "source": "https://pastebin.com/dKSWgUQ6"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "The wiki's matchups page is a stub, but the overview gives a few markers: Kain's defensive style works reliably against a wide variety of characters, whereas he struggles against defensive opponents who give him nothing to punish. His telegraphed projectiles make poking through Ultimecia's traps (a charged Knight's Lance) or The Emperor's (Thunder Crest) risky. Finally, Jump loses effectiveness against halo camping and in large arenas, while low-ceiling stages (Pandaemonium - Top Floor, M. S. Prima Vista) turn to his advantage."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Two builds are documented, both at 450 CP with the Equip Glitch (the total cost assumes the glitch), the Seal of Lufenia special effect and the Rubicante summon."
+    ],
+    "notes": "Documented substitutes: on the damage build, Hyper Ring can give way to Battle Hammer (assist drain) or Dismay Shock (reinforced EX drain). On the EX build, prefer the Cleaver if you play the Aerith assist; Heaven's Cloud suits you if you have mastered his aerial bravery loops in the corner.",
+    "perBuild": {
+      "Side by Side (Damage)": [
+        "A high-damage build banking on bravery damage and Wall Rush, designed for small, low-ceiling arenas. The maximum booster of x7.4 activates with Large Gap in HP and BRV = 0 together (x5.3 with Large Gap in HP alone)."
+      ],
+      "Hybrid (EX)": [
+        "Damage without sacrificing EX absorption, recommended for medium to large arenas, with a booster of x2.3 before Large Gap in HP activates."
+      ]
+    }
+  },
+  "assist": {
+    "asAssist": [
+      "Kain is ranked Mid on Muggshotter's assist tier list. His assist moves: Lance Burst as a ground BRV attack (29F, Chase), Crashing Dive as an aerial BRV attack (21F, Wall Rush), Jump as a ground HP attack (62F, Wall Rush) and Dragon's Fang as an aerial HP attack (41F, Wall Rush). The wiki provides no written evaluation of his role as an assist, only that data."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "Cited in the wiki's synergies; the Lance Barrage notes state that the Kuja assist connects in the corner after the Up Follow-up."
+      },
+      {
+        "name": "Onion Knight",
+        "why": "Cited in the wiki's synergies."
+      },
+      {
+        "name": "Aerith",
+        "why": "Mentioned repeatedly in the move notes: she combos through a Chase after the Lance Barrage, Celestial Shooter and Crashing Dive follow-ups, and the builds section recommends the Cleaver when playing her."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Cyclone combos into a second Cyclone",
+      "desc": "At mid to long range, Cyclone can be chained into another Cyclone; optimised that way, it adds more bravery damage than his other aerial bravery attacks (the first part of Lance Barrage, for instance).",
+      "source": "https://www.youtube.com/watch?v=J1afqP4ldQQ&t=51",
+      "date": null
+    },
+    {
+      "title": "Kain Highwind Character Guide (v1.6) — 3R9Sasuke",
+      "desc": "A period GameFAQs guide: an annotated movelist, EX Mode usage, combos and builds, plus a chapter of matchup-by-matchup advice covering the whole cast (30 characters).",
+      "source": "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/62772",
+      "date": "2012"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Kain is described there with many combos dealing heavy bravery damage, often demanding ones.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    },
+    {
+      "title": "List of empty chases leading to an assist gauge reset (Eddiegames)",
+      "desc": "A character-by-character record of the moves whose hit stun allows an empty chase (a chase initiated without executing anything in it) followed by a reset of the opponent's assist gauge. The detail for this character is covered in the specific techniques.",
+      "source": "https://pastebin.com/dKSWgUQ6",
+      "date": null
+    }
+  ],
+  "limits": [
+    "The matchups page is in a stub state: no content dedicated to matchups.",
+    "The combos section is empty in the sources (the “Solo” subsection has neither text nor table).",
+    "The overview's Strengths/Weaknesses table is empty: strengths and weaknesses are reconstructed from the text alone.",
+    "No written evaluation of his role as an assist: only the figures and two synergy names (“Kuja, Onion Knight”) are provided.",
+    "Rising Drive, Sky Rave, Gungnir and Dragon's Fang (midair) have no dedicated usage notes, only short descriptions and mentions in the overview.",
+    "The community's empty chase record is undated (the solo combo record that accompanies it is dated December 2022): how current it is cannot be established."
+  ],
+  "specialMoves": [
+    {
+      "name": "Lancet",
+      "input": "R + Square — EX Mode (Holy Strength) only",
+      "desc": "A special attack absent from the equipment lists, available only in EX Mode: after a short charge time, Kain strikes from below the opponent. It returns as much HP to him as the HP damage dealt and quickly restores his bravery up to its base value. Kain can move during Lancet and, as after his melee attacks, press X afterwards to dash towards the opponent — even if Lancet did not connect. It is the starting point of the “Lancet > Lance Barrage” route in the community combo record.",
+      "source": "https://finalfantasy.fandom.com/wiki/Kain_Highwind_(Dissidia_PSP)"
+    }
+  ]
+}

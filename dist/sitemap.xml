@@ -37,14 +37,14 @@
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/onion-knight.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/onion-knight.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/onion-knight.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/onion-knight.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/cloud-of-darkness.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/cloud-of-darkness.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/cloud-of-darkness.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/cloud-of-darkness.html"/>
@@ -58,10 +58,24 @@
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/golbez.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/golbez.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/golbez.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/golbez.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/kain-highwind.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/kain-highwind.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/kain-highwind.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/kain-highwind.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/bartz-klauser.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/bartz-klauser.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/bartz-klauser.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/bartz-klauser.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/exdeath.html</loc>
@@ -69,6 +83,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/exdeath.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/exdeath.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/exdeath.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/gilgamesh.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/gilgamesh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/gilgamesh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/gilgamesh.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/terra-branford.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/terra-branford.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/terra-branford.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/terra-branford.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/kefka-palazzo.html</loc>
@@ -276,12 +304,14 @@
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/kain-highwind.html</loc>
     <lastmod>2026-07-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/kain-highwind.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/kain-highwind.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/kain-highwind.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/bartz-klauser.html</loc>
     <lastmod>2026-07-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/bartz-klauser.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/bartz-klauser.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/bartz-klauser.html"/>
   </url>
@@ -295,12 +325,14 @@
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/gilgamesh.html</loc>
     <lastmod>2026-07-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/gilgamesh.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/gilgamesh.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/gilgamesh.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/terra-branford.html</loc>
     <lastmod>2026-07-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/terra-branford.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/terra-branford.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/terra-branford.html"/>
   </url>

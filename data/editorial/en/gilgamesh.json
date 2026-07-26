@@ -1,0 +1,138 @@
+{
+  "slug": "gilgamesh",
+  "tagline": "An aerial swordsman with eight random weapons, from Excalibur to the Zantetsuken break",
+  "archetype": "Close/mid-range swordsman",
+  "overview": [
+    "Gilgamesh is a swordsman who operates at close and mid range. He draws a random weapon on every sword attack: weapon length, damage and EX Force generation change with the draw — up to and including a possible Iai Strike (Bravery Break) with Zantetsuken. To that is added a complete aerial repertoire: Double Trouble is the fast poke par excellence for playing safe, Electrocute controls space from afar, Whirlwind Slash closes distance and starts varied combos, and Hurricane finishes combos or catches opponents out with its lightning startup.",
+    "His strengths lie in his synergy with the system mechanics and in his aerial attacks: defensive play and Whirlwind Slash combos fill the assist and EX gauges at a steady rate. While the reward varies with the weapon, Gilgamesh always benefits from EX: his damage potential explodes in EX Mode thanks to his high base ATK, to Octo Break and to an EX Burst that is arguably the strongest in the game.",
+    "Historically ranked somewhere in mid tier — more a matter of competitive representation than anything else — he is not all-powerful: his ground combat is slower and riskier, and the random draws can produce big damage or 1 damage per hit, with no way to guarantee an effect in most cases. His close-range attacks are very fast, his mid-range attacks far slower and telegraphed: he chooses between the two, with nothing in between, unless he sacrifices his consistent aerial loadout. Cornered, he has little turnaround potential outside random weapon effects, high-risk reads and long-term defensive play. Well balanced overall in the areas that matter, he is a competent character in competitive play."
+  ],
+  "tierNote": "Ranked 19th (tier B) on the 2017 tier list; the overview places him historically in mid tier, noting that this placement owes more to competitive representation than to anything else.",
+  "strengths": [
+    "Aerial combat: solo combos, a fast poke, a gap closer, a lightning HP attack (Hurricane, 13F) and ranged tools — he performs in the most contested zone of the game.",
+    "Mid-range anti-zoning: Electrocute checks ranged opponents very well and rewards him with a combo on hit.",
+    "Random weapons (the good side): extraordinary effects — an instant bravery break, weapon length, increased EX generation — apply as soon as one of the eight swords is drawn and can turn a match around in an instant.",
+    "EX Mode: one of the strongest EX Bursts in the game, which, with the eight swords brandished (Octo Break), increases the reward on hit exponentially.",
+    "Fast faller: on every air dodge, Gilgamesh is on average harder to hit on the way out."
+  ],
+  "weaknesses": [
+    "Ground combat: a slow run speed, average HP attacks and dull bravery attacks, which pale next to the fundamental solidity of his aerial moves.",
+    "Random weapons (the bad side): he cannot control which sword comes out — he may have to fight with sub-optimal effects at the worst moment.",
+    "EX Revenge checkmates: with a slow-starting aerial Missile and his other single-hit HP attacks limited to the ground, overcoming EX Revenge checkmates is difficult."
+  ],
+  "moveNotes": {
+    "Dual Thrust": "A lunge and a thrust at close range: short range but a fast strike, his quickest ground bravery attack (11F) with a Chase effect. Cancellable into an attack, a block or a dodge. A sword attack: subject to the weapon draw (162 EX Force with Masamune against 90 by default, with reduced damage with Masamune/Genji Blade).",
+    "Wind Slash": "Slow, long-range wind projectiles. Ranged Low, with no EX Force, cancellable into a dodge. One of the four moves that draw no weapon.",
+    "Cross Slash": "A cross-shaped slash at close range with Wall Rush, 21F. A sword attack subject to the draw (138 EX Force with Masamune). It is also his ground BRV assist.",
+    "Whirlwind Slash": "A spinning charge towards the opponent at mid range, vertically limited, with Chase: according to the overview, its combos fill the assist and EX gauges at a steady rate; a gap closer and the start of varied combos. Big EX Force (90, 162 with Masamune); following up on the Chase keeps the drawn weapon.",
+    "Electrocute": "Lightning brought down on the opponent: a single hit, but with long range and effective at any height. His mid-range anti-zoning tool, excellent for checking at a distance and rewarded with a combo on hit. It draws no weapon.",
+    "Double Trouble": "A wide sweep at close range, 11F, Wall Rush, cancellable into an attack, a block or a dodge: the fast poke par excellence for playing safe, the heart of his aerial game. A miss chained into Double Trouble, Whirlwind Slash, Hurricane or Sword Dance keeps the drawn weapon; on hit, Double Trouble > Hurricane is a notable combo at the ceiling.",
+    "Tsubamegaeshi": "A forward roll followed by a slash, effective at any height, 21F, Wall Rush. Chaining a missed Double Trouble into it makes the weapon disappear and draws a new one. It is also his aerial BRV assist.",
+    "Whirlwind Slash (midair)": "Identical to the ground version: a spinning charge at mid range, vertically limited, Chase, 90/162 EX Force. A gap closer and the engine of his aerial combos.",
+    "Rocket Punch": "A rocket punch fired at high speed at long range, Ranged High, Wall Rush, cancellable into a dodge. A single-hit HP attack (along with Missile), ground only. It draws no weapon.",
+    "Death Claw": "A cutting charge at mid range, vertically limited but very precise, Melee High, 41F, Wall Rush. A sword attack subject to the draw. It is also his ground HP assist.",
+    "Jump": "A jump then a swoop onto the opponent, steerable with the analogue stick, Melee High, with a Dodge effect and 60 EX Force per hit. A missed Dual Thrust can be chained into Jump while keeping the weapon.",
+    "Missile": "A long-range Missile that explodes on impact, Ranged High, 45F, Wall Rush. A single-hit HP attack, but its slow startup is cited among the reasons for his trouble against EX Revenge checkmates. It draws no weapon.",
+    "Hurricane": "A cyclone created by spinning on the spot at close range: his fastest HP attack (13F), with a lightning startup that catches opponents out and finishes combos according to the overview. A sword attack with very big EX Force (96, 180 with Masamune); it combos from Double Trouble at the ceiling while keeping the weapon. It is also his aerial HP assist (with Chase).",
+    "Sword Dance": "High-speed slashes at mid range, slow (45F) but effective at any height, Melee High, Wall Rush. A sword attack subject to the draw; a Double Trouble (missed or connected) can be chained into it while keeping the weapon."
+  },
+  "exMode": {
+    "summary": [
+      "The “Gilgamesh Morphing Time!” EX Mode — effects: Regen, Critical Boost and Octo Break.",
+      "Octo Break (always active in EX Mode): Gilgamesh brandishes a weapon in each of his eight arms, the line-up being known only on entering EX Mode. According to the overview, his damage potential explodes then, carried by his high base ATK, Octo Break and his EX Burst — Gilgamesh always benefits from EX, whatever the variance of the weapons."
+    ],
+    "burst": "The Greatest Sword: a flurry of attacks with the greatest sword ever known. Select Excalibur to deal heavy damage (the second part of the Burst is performed twice thanks to Excalibur)… and Excalipoor for the opposite result. Considered by the overview to be arguably the strongest EX Burst in the game."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "Weapon Draw: Gilgamesh draws one of eight weapons on every melee attack, chosen at random according to fixed probabilities. Each weapon has unique traits — length, EX gauge depletion, different base damage. No weapon is drawn on Wind Slash, Electrocute, Rocket Punch and Missile.",
+      "The weapon multipliers affect the attack's base damage, not the final damage: it is one of the few mechanics in the game to modify base damage, so everything scales with the build (high ATK, and so on)."
+    ],
+    "details": [
+      "Excalibur (10 %, reach x1.0): doubles the damage of every hit. Excalipoor (10 %, reach x1.0): 1 damage per hit.",
+      "Genji Blade (10 %, reach x1.0): depletes the opponent's EX gauge, with reduced damage (x0.75, rounded down, minimum 1). Zantetsuken (10 %, short reach): a 2 % chance of inflicting a bravery break — with no stage bravery gained — for normal damage.",
+      "Naginata (15 %, reach x1.5): the longest range, normal damage. Masamune (15 %, reach x1.3): long range, produces more EX Force on hit, reduced damage (x0.75).",
+      "Battle Axe (15 %, reach x0.7): random damage on every hit (x0.25 or x1.75). Chicken Knife (15 %, reach x0.7): damage that increases as Gilgamesh's health drops, from x1.0 (100-91 % health) to x2.77 (10 % and below).",
+      "Weapon retention: the weapon disappears if Gilgamesh dodges, blocks, gets hit or the Chase ends; it stays if he initiates a Chase or chains a missed attack into another (e.g. Double Trouble > Double Trouble). Sequences that keep the weapon: Whirlwind Slash > Chase; Double Trouble (missed/connected) > Hurricane or Sword Dance; Double Trouble (missed) > Double Trouble or Whirlwind Slash; Dual Thrust (missed) > Dual Thrust, Whirlwind Slash or Jump. Sequences that make it disappear (a new draw): Double Trouble (missed) > Tsubamegaeshi; Dual Thrust (missed) > Cross Slash or Death Claw.",
+      "In EX Revenge, Gilgamesh can chain his attacks into one another; the weapon stays or disappears depending on the move chained (it stays on the Whirlwind Slash / Double Trouble / Dual Thrust chains into Double Trouble, Whirlwind Slash, Hurricane, Sword Dance or Jump; it disappears on Dual Thrust > Cross Slash or Death Claw, Cross Slash > Cross Slash and Tsubamegaeshi > Tsubamegaeshi)."
+    ]
+  },
+  "gameplan": [
+    "Gilgamesh's game takes place in the air, the most contested zone of the game, where his repertoire is complete: Double Trouble as a fast, safe poke (11F, cancellable into an attack, a block or a dodge), Electrocute to check at a distance and punish with a combo on hit, Whirlwind Slash as a gap closer and combo starter, Hurricane (13F) to finish or to catch the opponent out. Defensive play and Whirlwind Slash combos fill the assist and EX gauges at a steady rate, and his fast faller status makes his air dodges harder to punish.",
+    "Managing the draw is part of the plan: every melee attack draws a random sword, and the chains steer whether it is kept — initiating a Chase or chaining a missed attack into the right attack keeps the weapon (holding on to an Excalibur), while chaining into Tsubamegaeshi, Cross Slash or Death Claw forces a new draw (getting rid of an Excalipoor). There is no way to guarantee an effect in most cases, though: the reward on hit stays variable.",
+    "Gilgamesh always benefits from EX: high base ATK, Octo Break and an EX Burst among the strongest in the game make his damage explode in EX Mode. On the ground, on the other hand, he is slower and riskier — a very slow run, dull bravery attacks — with nothing between his very fast close-range attacks and his slow, telegraphed mid-range moves. Cornered, his only resources are the random weapon effects, high-risk reads and long-term defensive play; against an EX Revenge, his single-hit HP attacks (Rocket Punch and Missile) are respectively ground-limited and slow to start."
+  ],
+  "advancedTech": [
+    {
+      "name": "Weapon retention",
+      "desc": "Controlling how long the drawn weapon lasts: initiating a Chase (Whirlwind Slash > Chase) or chaining a missed attack into a compatible attack (Double Trouble > Double Trouble, Dual Thrust > Jump…) keeps the weapon; chaining into Tsubamegaeshi, Cross Slash or Death Claw makes it disappear and forces a new draw. In EX Revenge, attack chains follow the same rules depending on the move chained."
+    },
+    {
+      "name": "Double Trouble > Hurricane (ceiling)",
+      "desc": "A notable chain because it combos at the ceiling on hit, while keeping the drawn weapon (it also works on a miss, to hold on to the weapon)."
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "The character who makes the most of links without landing lag — technical and very rewarding, even if the Chicken Knife or the axe sometimes distort the ranges of certain combos: Whirlwind Slash (first hit) > dodge cancel > Double Trouble; the same at mid range > Hurricane; the same near the end > Whirlwind Slash or Tsubamegaeshi; Whirlwind Slash with his back to the wall > DC > Double Trouble; Double Trouble at the ceiling > Hurricane; Electrocute > Whirlwind Slash, Tsubamegaeshi, Double Trouble or Hurricane.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "The only matchup analysed in detail in the period sources is Gilgamesh seen by Golbez (tehdr4g0n's guide, GameFAQs, 2012), and it illuminates both sides of the character. On one side: the variance in weapon reach — his longest is roughly Sephiroth's Reaper, his shortest roughly Tifa's — makes his attacks hard to dodge, to the point that the opponent would rather block; and among his HP attacks, Rocket Punch is judged consistently frightening: a little startup but blistering speed, range that exceeds Glare Hand, and the ability to catch the cooldown of a dodge — Sword Dance (depending on the weapon drawn) and Missile round out the threats, even if Missile can be dodged forwards without turning round and Jump is punished with an early dodge.",
+      "On the other side: his slow walk and the lack of startup invincibility on his charges leave him zoned at mid range on the ground, and kept away in the air by space-occupying projectiles (Sector Ray / Genesis Rock in Golbez's case). The opponent's verdict — a relatively simple matchup, but one where no lapse in concentration is allowed because he can turn a match around — matches the overview: Gilgamesh lives off converted hits and the EX threat, not off controlling the neutral at range. Another exploitable trait, noted this time in Balguna's Bartz guide (dissidiaforums, 2011): as a fast faller, Gilgamesh (like Kain) can dive under slow long-range HP attacks of the Luminous Shard type and dash beneath the attack to avoid it entirely — a free approach against aerial zoners."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "The data contains only one detailed build, “Hybrid (EX)”, consistent with the overview: Gilgamesh always benefits from EX, his damage potential exploding in EX Mode. The build (450 CP, Equip Glitch assumed): 10299 HP, 996 BRV, 179 ATK, 182 DEF, 60 LUK, maximum booster x3.5; Kuja assist, Rubicante summon; Heaven's Cloud, Lufenian Dirk, Lufenian Headband and Lufenian Vest for the Seal of Lufenia special effect; accessories: Muscle Belt, Dismay Shock, Summon Unused, Pre-EX Mode, Pre-EX Revenge, Aerial, White Gem, Tenacious Attacker, Glutton, First to Victory.",
+      "A documented substitution: if you do not use Gilgamesh's solo combos, Muscle Belt can be replaced by Battle Hammer or Large Gap in HP."
+    ],
+    "notes": "The second build slot (“build 2”) is empty, the moves equipped in the build are not filled in, and no philosophy prose accompanies the tables."
+  },
+  "assist": {
+    "asAssist": [
+      "As an assist (Mid tier on the assist tier list), Gilgamesh draws only Excalibur or Excalipoor, at 50 % each: Excalibur doubles the damage multiplier of the attacks and reinforces the drain on the opponent's EX gauge; Excalipoor reduces every hit to 1 damage and generates EX for the opponent. The reward of each call is therefore a coin toss.",
+      "His assist attacks: Cross Slash as a ground BRV attack (21F, Wall Rush, 30 damage with Excalibur against 6 with Excalipoor), Tsubamegaeshi as an aerial BRV attack (21F, Wall Rush, 60 against 5), Death Claw as a ground HP attack (41F, Wall Rush) and Hurricane as an aerial HP attack (13F, Chase)."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "The assist equipped in the documented Hybrid (EX) build. Otherwise the synergies section amounts to a single sentence: Gilgamesh works well with most tournament-viable assists."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Dissidia 012 Duodecim Final Fantasy Gilgamesh Combo Montage — Andyz5448",
+      "desc": "A period montage listing a range of Gilgamesh combos and chains, backed by in-game demonstrations.",
+      "source": "https://www.youtube.com/watch?v=WFcdFkgU3Ks",
+      "date": "2011"
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Gilgamesh is described there as the character who makes the most of links without landing lag.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    }
+  ],
+  "sourcesBySection": {
+    "matchups": [
+      "https://gamefaqs.gamespot.com/psp/605802-dissidia-012-duodecim-final-fantasy/faqs/63562",
+      "https://web.archive.org/web/20130815135120/http://dissidiaforums.com/showthread.php?10240-It-s-time-to-return-the-wind-to-the-world!-A-Bartz-Klauser-Guide"
+    ]
+  },
+  "limits": [
+    "No per-move usage notes in the sources: moveNotes is synthesised from the official descriptions, the frame data and the mentions in the overview and the unique mechanic.",
+    "The wiki's matchups page remains a stub: the matchups section rests solely on opposing views (tehdr4g0n's Golbez guide, Balguna's Bartz guide). No dedicated source on Gilgamesh's side could be read: the dissidiaforums guide “The Man with Many Arms — A Guide to Gilgamesh” is archived by the Wayback Machine only as 500 errors, and the only “Gilgamesh FAQ” on GameFAQs board 605802 is a parody with no competitive content.",
+    "The combos section is undocumented: no detailed combo (only the Double Trouble > Hurricane chain at the ceiling is mentioned, through weapon retention).",
+    "Builds: a single build (Hybrid (EX)) with no written philosophy and no equipped moves; the second build slot is empty.",
+    "Assist synergies are reduced to a generic sentence (no assist recommended by name apart from the Kuja of the build).",
+    "No external reference (the References section is empty): no attributable communityTech.",
+    "The assist gain values of the moves are not filled in; the EX Burst text is truncated in the source (“Select Excalipoor to…”) and Excalipoor's exact effect in the Burst is not spelled out there.",
+    "The solo combo record spells the move named Tsubamegaeshi in the data as “Tsubemigashi”: the same move, in the community's spelling."
+  ],
+  "groupNotes": {
+    "bravery/main": "When Masamune is drawn, the attacks generate more EX Force (the value listed after the default value for sword attacks). When Masamune or Genji Blade is drawn, the base damage is ×0.75 (rounded down, minimum 1), and Genji Blade drains the opponent's EX gauge on every hit — see the unique mechanic."
+  }
+}
