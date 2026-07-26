@@ -68,6 +68,14 @@ Fichiers officiels du wiki, indisponibles depuis son CDN (301 → 404 en juillet
 Ce sont des éléments du jeu : © Square Enix (voir § 4). La Wayback Machine n'est
 qu'un moyen d'accès, elle ne confère aucun droit supplémentaire.
 
+**Exception — le portrait d'Aerith** (`assets/portraits/aerith.png`). Aerith
+n'étant pas jouable, elle n'a aucun portrait d'écran de sélection : sa page
+dissidia.wiki ne contient aucune image, et l'index d'archives ne conserve d'elle
+qu'une icône de 128×32 pixels. Son portrait est donc un **artwork officiel de
+*Final Fantasy VII*** (© Square Enix), mis au format carré du site sans
+recadrage du sujet. Ce n'est pas un rendu de Dissidia 012, et les textes
+alternatifs du site le disent explicitement.
+
 ## 3. Sources communautaires citées
 
 Droits détenus par leurs auteurs. Elles sont citées nommément et liées dans les

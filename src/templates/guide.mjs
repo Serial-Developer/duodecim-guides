@@ -486,8 +486,20 @@ export function renderGuide({ char, ed, tierEntry, castStats, hasPortrait, moveI
   const edBanner = noEd ? infoBanner('Contenu éditorial français en cours de rédaction — données brutes ci-dessous.') : '';
 
   // --- 1. Hero ---
+  // Texte alternatif du portrait. Deux exigences :
+  //  - l'élision (« portrait d'Exdeath », pas « de Exdeath ») ;
+  //  - dire ce que l'image montre réellement. Les 31 portraits sont les rendus
+  //    de l'écran de sélection de Dissidia 012 ; Aerith, non jouable, n'en a
+  //    aucun (vérifié dans l'index d'archives), le sien est son artwork Final
+  //    Fantasy VII — l'annoncer « portrait Dissidia 012 » serait faux.
+  // « y » est volontairement exclu : devant un Y semi-consonne le français ne
+  // fait pas l'élision — on écrit « portrait de Yuna », jamais « d'Yuna ».
+  const dus = (n) => (/^[aeiouàâäéèêëîïôöùûü]/i.test(n) ? `d’${n}` : `de ${n}`);
+  const portraitAlt = char.slug === 'aerith'
+    ? `Artwork officiel d’Aerith Gainsborough (Final Fantasy VII), personnage assist de Dissidia 012 [duodecim]`
+    : `Portrait officiel ${dus(char.name)} dans Dissidia 012 [duodecim]`;
   const hero = `<section class="hero" id="hero">
-${hasPortrait ? `<img class="portrait" src="../assets/portraits/${char.slug}.png" alt="Portrait officiel de ${esc(char.name)} dans Dissidia 012 [duodecim]"${sizeOf ? sizeOf(`portraits/${char.slug}.png`) : ''}>` : ''}
+${hasPortrait ? `<img class="portrait" src="../assets/portraits/${char.slug}.png" alt="${esc(portraitAlt)}"${sizeOf ? sizeOf(`portraits/${char.slug}.png`) : ''}>` : ''}
 <div class="hero-id">
 <p class="origin">${esc(char.origin)}</p>
 <h1>${esc(char.name)}</h1>
