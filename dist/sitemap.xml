@@ -8,6 +8,34 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/"/>
   </url>
   <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/warrior-of-light.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/warrior-of-light.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/warrior-of-light.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/warrior-of-light.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/garland.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/garland.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/garland.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/garland.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/firion.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/firion.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/firion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/firion.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/characters/the-emperor.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/the-emperor.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/the-emperor.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/the-emperor.html"/>
+  </url>
+  <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/exdeath.html</loc>
     <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/exdeath.html"/>
@@ -16,21 +44,21 @@
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/kefka-palazzo.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/kefka-palazzo.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/kefka-palazzo.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/kefka-palazzo.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/cloud-strife.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/cloud-strife.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/cloud-strife.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/cloud-strife.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/sephiroth.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/sephiroth.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/sephiroth.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/sephiroth.html"/>
@@ -58,7 +86,7 @@
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/characters/kuja.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/kuja.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/kuja.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/kuja.html"/>
@@ -164,24 +192,28 @@
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/warrior-of-light.html</loc>
     <lastmod>2026-07-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/warrior-of-light.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/warrior-of-light.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/warrior-of-light.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/garland.html</loc>
     <lastmod>2026-07-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/garland.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/garland.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/garland.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/firion.html</loc>
     <lastmod>2026-07-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/firion.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/firion.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/firion.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/characters/the-emperor.html</loc>
     <lastmod>2026-07-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/characters/the-emperor.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/characters/the-emperor.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/characters/the-emperor.html"/>
   </url>
