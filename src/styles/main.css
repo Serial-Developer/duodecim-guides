@@ -1142,8 +1142,9 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
 /* La langue courante n'est pas un lien vers elle-même : c'est un repère. */
 .lang-opt.is-current { color: var(--gold); border-color: var(--gold); background: rgba(240, 192, 90, 0.1); cursor: default; }
 
-/* Dans le volet mobile, le sélecteur reprend la mise en page des catégories. */
-.lang-switch-drawer { margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px solid var(--surface-2); gap: 0.35rem; }
+/* Dans le volet mobile, le sélecteur reprend la mise en page des catégories.
+   Il ouvre le volet : le filet le sépare donc du menu qui le suit, en dessous. */
+.lang-switch-drawer { margin-bottom: 0.9rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--surface-2); gap: 0.35rem; }
 /* Cible tactile d'au moins 44 px de haut : au doigt, la pastille du header
    (dimensionnée pour la souris) serait trop basse. */
 .lang-switch-drawer .lang-opt { padding: 0.55rem 0.9rem; font-size: 0.95rem; min-height: 44px; display: inline-flex; align-items: center; }

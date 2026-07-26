@@ -523,9 +523,9 @@ ${g.items.map(link).join('\n')}
 ${siteTools(t, locale, alternates, L, availability?.routes?.home)}<details class="sh-drawer">
 <summary aria-label="${esc(t('nav.menu'))}"><span class="sh-burger" aria-hidden="true"></span></summary>
 <nav class="sh-panel" aria-label="${esc(t('nav.ariaMobile'))}">
-${groups.map((g) => (g.items
+${drawerSwitcher(t, locale, alternates, L, availability?.routes?.home)}${groups.map((g) => (g.items
     ? `<p class="sh-cat">${g.title}</p>\n${g.items.map(link).join('\n')}`
-    : link({ key: g.key, href: g.href, label: g.title, lang: g.lang }))).join('\n')}${drawerSwitcher(t, locale, alternates, L, availability?.routes?.home)}
+    : link({ key: g.key, href: g.href, label: g.title, lang: g.lang }))).join('\n')}
 </nav>
 </details>
 </header>`;
@@ -543,11 +543,12 @@ ${sw}
 `;
 }
 
-// Même sélecteur, dans le tiroir mobile.
+// Même sélecteur, dans le tiroir mobile — placé en tête du volet : au doigt,
+// changer de langue est un geste fréquent, il ne doit pas exiger de faire défiler
+// les quatre catégories du menu.
 function drawerSwitcher(t, locale, alternates, L, published) {
   const sw = langSwitcher(t, locale, alternates, L, { inDrawer: true, published });
-  return sw ? `
-${sw}` : '';
+  return sw ? `${sw}\n` : '';
 }
 
 // Sélecteur de langue : codes compacts (EN / FR), jamais de drapeau — un drapeau
