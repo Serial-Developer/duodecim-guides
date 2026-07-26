@@ -245,12 +245,12 @@
       "cpDesc": "The wiki leaves the equipped-moves table empty for this build (or these builds): that moveset is not documented. Instead, here is the CP cost of every move, to weigh against the build's total. The most expensive moves are at the top.",
       "loadoutBravery": "Equipped Bravery attacks",
       "loadoutHp": "Equipped HP attacks",
-      "creatorLink": "Build and check a {name} loadout slot by slot: <a href=\"{href}\">build creator</a> (CP gauge, ability exclusions and tournament rules applied)."
+      "creatorLink": "Build and check a {name} loadout slot by slot: <a href=\"{href}\"{langAttr}>build creator</a> (CP gauge, ability exclusions and tournament rules applied)."
     },
     "gameplan": {
       "videoFallback": "Demonstration video",
       "combosSummary": "Documented combos (original notation, dissidia.wiki)",
-      "universalTech": "Universal techniques (blodge, dash feint, lock off, dodge punishment): see the <a href=\"{href}\">Techniques &amp; glitches</a> page."
+      "universalTech": "Universal techniques (blodge, dash feint, lock off, dodge punishment): see the <a href=\"{href}\"{langAttr}>Techniques &amp; glitches</a> page."
     },
     "matchups": {
       "wikiSkeleton": "The wiki's <a href=\"{url}\" target=\"_blank\" rel=\"external noopener\">matchups subpage</a> is an empty skeleton so far.",
@@ -276,7 +276,8 @@
       "descGuideKeys": ". Frame data, gameplan, builds and matchups.",
       "ogAlt": "{name} — Dissidia 012 [duodecim] guide",
       "sectionAssists": "Assists",
-      "sectionGuides": "Character guides"
+      "sectionGuides": "Character guides",
+      "descArchetypeSep": ": "
     }
   },
   "techniques": {
@@ -286,8 +287,8 @@
     "universal": "Universal techniques",
     "glitches": "Documented glitches",
     "online": "Playing online (PPSSPP)",
-    "onlineIntro": "Step-by-step emulator install, game setup and first match: see <a href=\"{href}\">Install Dissidia 012 on PPSSPP</a>. The digest below follows the dissidia.wiki guide.",
-    "onlineDetail": "<strong>Detailed setup, scenario by scenario (PC, Android, crossplay, local): <a href=\"{href}\">Playing multiplayer</a>.</strong>",
+    "onlineIntro": "Step-by-step emulator install, game setup and first match: see <a href=\"{href}\"{langAttr}>Install Dissidia 012 on PPSSPP</a>. The digest below follows the dissidia.wiki guide.",
+    "onlineDetail": "<strong>Detailed setup, scenario by scenario (PC, Android, crossplay, local): <a href=\"{href}\"{langAttr}>Playing multiplayer</a>.</strong>",
     "glossary": "Glossary",
     "inPractice": "In practice",
     "competitiveUse": "Competitive use:",
@@ -352,7 +353,7 @@
     "detectedTitle": "Detected announcements — unconfirmed",
     "detectedDesc": "The watcher spotted these messages in the announcements channel; they are listed as-is pending a manual check (date, ruleset, sign-up).",
     "howTitle": "How this page fills up",
-    "howBody": "Twice a day, an automatic watcher queries start.gg's official API: every Duodecim tournament created there shows up here on its own, with its date and link. Announcements from the <strong>announcements</strong> channel of the Discord DISSIDIA (Challonge brackets in particular) are relayed to the calendar by hand. Past tournaments come from the <a href=\"{href}\">Tournaments page</a>, where each edition is documented with its ruleset and results.",
+    "howBody": "Twice a day, an automatic watcher queries start.gg's official API: every Duodecim tournament created there shows up here on its own, with its date and link. Announcements from the <strong>announcements</strong> channel of the Discord DISSIDIA (Challonge brackets in particular) are relayed to the calendar by hand. Past tournaments come from the <a href=\"{href}\"{langAttr}>Tournaments page</a>, where each edition is documented with its ruleset and results.",
     "lastCheck": "Last automatic check: {date}.",
     "noCheckYet": "The automatic watch has not run yet — the calendar reflects the last manual pass (July 2026).",
     "weekdays": [
@@ -389,7 +390,7 @@
   "multiplayer": {
     "h1": "Playing multiplayer",
     "goToScenario": "Jump to a scenario:",
-    "notInstalled": "Not installed yet? Start with <a href=\"{install}\">Install Dissidia 012 on PPSSPP</a>, and grab a <a href=\"{savedata}\">ready-to-play savedata</a>.",
+    "notInstalled": "Not installed yet? Start with <a href=\"{install}\"{installAttr}>Install Dissidia 012 on PPSSPP</a>, and grab a <a href=\"{savedata}\"{savedataAttr}>ready-to-play savedata</a>.",
     "sourceLine": "Source:",
     "sourceSuffix": "(dissidia.wiki, CC BY 4.0).",
     "metaTitle": "Playing multiplayer — Dissidia 012 [duodecim]",

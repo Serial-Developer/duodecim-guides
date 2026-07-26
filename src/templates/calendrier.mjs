@@ -89,7 +89,7 @@ ${inboxList(t, candidates)}
 
 <h2 id="veille">${t('calendar.howTitle')}</h2>
 <article class="card">
-<p>${t('calendar.howBody', { href: L.page('pastTournaments') })}</p>
+<p>${t('calendar.howBody', { href: L.page('pastTournaments'), langAttr: L.pageLangAttr('pastTournaments') })}</p>
 <p class="mv-desc">${lastCheckTxt}</p>
 </article>
 

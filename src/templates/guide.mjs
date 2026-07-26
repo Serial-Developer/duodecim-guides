@@ -446,7 +446,9 @@ export function guideDescription(t, { name, archetype, tier, isAssist }) {
     return archetype && d.length <= DESC_BUDGET ? d : lead + keys;
   }
   const who = tier ? t('guide.seo.descGuideWhoTier', { name, tier }) : name;
-  const arche = archetype ? ` : ${lower1(archetype)}` : '';
+  // Le séparateur porte sa propre ponctuation : le français exige une espace
+  // avant le deux-points, l'anglais la proscrit.
+  const arche = archetype ? `${t('guide.seo.descArchetypeSep')}${lower1(archetype)}` : '';
   const lead = t('guide.seo.descGuideLead', { who });
   const keys = t('guide.seo.descGuideKeys');
   const d = lead + arche + keys;
@@ -607,7 +609,7 @@ ${ed?.gameplan?.length ? paras(ed.gameplan) : edBanner || banner(t)}
 ${ed?.advancedTech?.length ? `<h3>${t('guide.headings.specificTech')}</h3>${ed.advancedTech.map((x) => `<div class="card"><h3 style="margin-top:0">${esc(x.name)}</h3><p>${esc(x.desc)}</p>${x.video?.url ? `<p class="video-link"><a href="${esc(x.video.url)}" target="_blank" rel="external noopener">▶ ${esc(x.video.title || t('guide.gameplan.videoFallback'))}</a>${x.video.author ? ` — ${esc(x.video.author)}` : ''}${x.video.date ? ` (${esc(String(x.video.date))})` : ''}</p>` : ''}${x.source ? sectionSources(t, [x.source]) : ''}</div>`).join('')}` : ''}
 ${sectionSources(t, secSrc.gameplan)}
 ${combosRaw.length ? `<details class="move"><summary><span class="mv-name">${t('guide.gameplan.combosSummary')}</span></summary><div class="mv-body">${combosRaw.map((c) => `<p class="mono">${esc(c)}</p>`).join('')}</div></details>` : ''}
-<p class="mv-desc">${t('guide.gameplan.universalTech', { href: L.page('techniques') })}</p>
+<p class="mv-desc">${t('guide.gameplan.universalTech', { href: L.page('techniques'), langAttr: L.pageLangAttr('techniques') })}</p>
 </section>`;
 
   // --- 6. Matchups ---
@@ -643,7 +645,7 @@ ${buildsSection(t, s.builds, allMoves, {
 ${ed?.builds?.notes ? `<p class="mv-desc">${esc(ed.builds.notes)}</p>` : ''}
 ${sectionSources(t, secSrc.builds)}`
     : banner(t)}
-<p>${t('guide.builds.creatorLink', { name: esc(char.name), href: L.page('buildCreator') })}</p>
+<p>${t('guide.builds.creatorLink', { name: esc(char.name), href: L.page('buildCreator'), langAttr: L.pageLangAttr('buildCreator') })}</p>
 </section>`;
 
   // --- 8. Synergies d'assist ---

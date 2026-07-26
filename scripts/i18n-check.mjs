@@ -15,6 +15,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { LOCALES, DEFAULT_LOCALE } from '../src/i18n/config.mjs';
 import { flatKeys, loadCatalog } from '../src/i18n/t.mjs';
+import { checkProseLocale } from './i18n-prose.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const JSON_ARG = process.argv.includes('--json');
@@ -77,6 +78,22 @@ for (const l of present) {
   };
 }
 
+// --- 3 bis : fidélité des traductions de prose ---
+// « Zéro invention » rendu mécanique : structure, nombres, URLs et noms propres
+// du jeu doivent survivre à la traduction. Ce sont des erreurs, pas des
+// avertissements — un chiffre qui bouge est un fait faux.
+const prose = {};
+for (const l of present) {
+  if (l === DEFAULT_LOCALE) continue;
+  prose[l] = checkProseLocale(ROOT, DEFAULT_LOCALE, l);
+  for (const [slug, errs] of Object.entries(prose[l].errors)) {
+    for (const e of errs) errors.push(`prose ${l}/${slug} — ${e}`);
+  }
+  for (const [slug, warns] of Object.entries(prose[l].warnings)) {
+    for (const w of warns) warnings.push(`prose ${l}/${slug} — ${w}`);
+  }
+}
+
 // --- 4 : chaînes en dur dans les templates ---
 // Heuristique volontairement étroite : on cherche du texte destiné à l'écran
 // entre balises ou dans un attribut visible, hors interpolation. Les commentaires
@@ -112,6 +129,7 @@ const summary = {
   keys: { total: allKeys.size, missing: missingByLocale },
   editorial: coverage,
   hardcoded,
+  prose,
   errors,
 };
 

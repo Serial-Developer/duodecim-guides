@@ -1,0 +1,210 @@
+{
+  "slug": "jecht",
+  "tagline": "Close-range charged combos: heavy damage, 3-frame timings",
+  "archetype": "Melee rushdown built on combos and charging",
+  "overview": [
+    "Jecht is a short-range character with innate solo combos into his HP attacks, powerful mixups, relatively high damage and real Wall Rush potential. By charging an attack during its startup, he increases its damage and reach, delays its release and breaks normal blocks thanks to the high priority. On defence, his unique Jecht Block threatens fast pokes, covers his dodges, stops the assist gauge from decaying and guards against mid/high priority attacks from frame 1; even persistent projectiles give it no trouble. Add bravery attacks that cannot be reacted to and standard mobility: Jecht is dangerous to face up close.",
+    "His combo-centred game works with a wide range of assists: his high-knockback finishers and branching combo paths secure an assist combo even far from a wall. On the build side he is spoilt for choice: raw-damage bravery combos, high base bravery with devastating results, and his ability to end combos with an HP attack makes the Side by Side accessory extremely effective — often the trigger of his momentum. EX-oriented Center of the World builds exist too, despite the enormous drawback of giving up assists.",
+    "That reliance on complete combos comes at a price: missing one of the 3-frame windows deprives him of the finishers where he earns most of his damage and gauge depletion. His timings are stricter than average, which online latency makes worse. Cancels mid-combo are limited and, with no mid-range tools, contesting The Emperor's traps is very hard — notoriously one of his worst matchups. Jecht is also vulnerable to certain assist interruptions at the start of his combos, and has almost no way of avoiding the LV2 Assist Change stagger without a trade-off. His whiffs, aerial Jecht Stream in particular, are heavily committal; with a single offensive bravery attack on the ground and in the air, he has to take risks to keep winning. His gauge generation is below average without Jecht Beam endings or Side by Side, and EX offers diminishing returns (mediocre EX Burst, EX Revenge combos and EX Mode bonus).",
+    "Historically, Jecht was ranked at the bottom of mid tier before climbing back into high tier. His gameplan, fairly direct, thrives on momentum but suffers when he has to manage a disadvantage. Aerial poking is riskier than it is for other strong characters, but Jecht Block is a fantastic post-dodge defensive option and counters on LV2 Assist Change earn him a full combo. The strict timings are a barrier to entry for new players, and punishing fast fallers on dodge costs resources — but when everything lines up, Jecht competes with most of the roster."
+  ],
+  "tierNote": "Jecht is ranked 6th (tier A+) on the 2017 tier list. The overview recalls that he languished at the bottom of mid tier for a long time before being recognised as high tier, able to compete with most of the roster when his gameplan comes together.",
+  "strengths": [
+    "Excellent close-range fighting: mobility, high-priority bravery attacks (charged) and utility moves to bend interactions his way.",
+    "Enormous damage: very high ATK (112), bravery combo multipliers and HP finishers — a single combo starter is enough to deal heavy damage.",
+    "Jecht Block guards high-priority attacks from frame 1: a rare and excellent post-dodge defensive option, very rewarding on a stagger.",
+    "Fearsome dodge punish: good hitboxes and startup on his bravery attacks, with increased tracking during assist calls.",
+    "Solo HP combos that carry the opponent all the way to the wall, for heavy damage and space control on small stages.",
+    "Flexible assist synergy with Wall Rush potential and fast bravery follow-ups; some assists can even salvage his dropped combos.",
+    "Works with a wide variety of builds — a famously strong Side by Side user, with Center of the World a possibility.",
+    "Momentum: one good hit early in the match starts the engine; LV2 Assist Change staggers give a full combo, and Jecht Beam plus Jecht Block let him get around a final EX Revenge."
+  ],
+  "weaknesses": [
+    "Limited moveset: predictable gameplan and effective range; his main aerial poke Jecht Stream has considerable recovery on whiff.",
+    "Execution precision: his solo combos demand several 3-frame timings to deal any HP damage at all — vulnerable to human error and severely compromised by lag.",
+    "Building gauge on whiff is hard: a single offensive bravery attack on the ground and in the air, and most of the gain comes from HP finishers.",
+    "Weak EX economy: reliance on Jecht Beam and EX Cores, a slightly below-average EX Burst, and a Full Combo bonus that is often situational.",
+    "Weakened presence without an assist: far less of a threat at long range or without gauge, and it is hard for him to claw back a resource deficit.",
+    "Unblockable area denial: Black Hole gets around Jecht Block, and The Emperor's traps reduce his approaches and pokes to telegraphed HP attacks and the assist."
+  ],
+  "moveNotes": {
+    "Ground (Up)": "Jecht Rush's Up 3: a sword thrown upwards in a spin, capped by a rising slash — a finisher with upward knockback that can Wall Rush. It is the only way to combo into Ultimate Jecht Shot, and the reward is worth the effort, with a 5 frame window to place the HP attack on the last multi-hit (on a bravery break, mashing HP is enough). Not an exceptional chain otherwise: Jecht stays put until the slash, and ceiling Wall Rushes are only possible on a handful of stages. If the opponent expects Ultimate Jecht Shot, ending with a grounded Jecht Beam avoids the whiff punish after an Assist Change.",
+    "Air (Down)": "Jecht Stream's Down 3: hammer blows capped by a spinning slam — a finisher with downward knockback that can Wall Rush. Available after Jecht Rush Up 2 or Jecht Stream Neutral 2, this is his grounded bravery Wall Rush of choice: good damage, assist follow-ups almost regardless of altitude, and pressure near the ground. The only way to combo into Triumphant Grasp, with a 5 frame window on a second hit clearly telegraphed on screen and in sound — the easiest chain for learning the character. The knockback is so strong that it triggers a grounded Wall Rush reaction even at the top of Order's Sanctuary (without the damage, but assist combos remain possible); near a wall, the multi-hits can drop the combo, in which case ending with the HP attack is safer.",
+    "Jecht Beam": "A single-hit HP attack with above-average EX generation (120), a combo tool and occasional poke that chains from Jecht Stream's Neutral 3. Below-average tracking but long active frames and a double hit at point-blank range: ending a solo combo with Jecht Beam always triggers the double hit, doubling EX and gauge — with Side by Side, a LV2 Assist Change stagger can be worth more than a full assist bar. The hit stun is enough to combo into an assist (a wall or corner is usually required); with Kuja or Tidus, Jecht Stream Down 3 combos into Jecht Beam with no wall. As a finisher, it is the “gauge” choice at the expense of the Wall Rush: LV2 Assist Change neither reflects nor staggers it, but standing still during the startup makes the opponent's LV1 Assist Change easier, all the more so since the linear timing of Jecht's combos telegraphs the Beam.",
+    "Jecht Blade — Level 2": "Jecht Blade charged to level 2: a slight rise in bravery damage in a solo combo (16 base, against 15 for a level 2 Triumphant Grasp), but the timing is trickier because of Neutral 3's more obscure cancel window.",
+    "Jecht Blade — Level 3": "Jecht Blade at full charge: like a level 3 Triumphant Grasp, it serves to threaten certain actions with reinforced tracking and high-priority hitboxes. The aerial version's vertical tracking increases markedly and the startup on release is fast (11F). Its lateral reach allows more liberal use against cornered opponents; a dodge punish is possible on reaction, but the longer the wait, the more the opponent can defuse it by backing off or hitting Jecht during the charge. On a raw hit, it forces the opponent to spend gauge; charging a level 3 Jecht Stream is generally safer, especially against an opponent in near death."
+  },
+  "exMode": {
+    "summary": [
+      "Jecht's EX Mode, “Final Aeon!”, grants Regen, Critical Boost and Full Combo. Full Combo lets him finish a combo even if the first hit missed: by whiffing Jecht Rush or Jecht Stream then activating EX Mode, Jecht can swoop in on the opponent with the second chain. Appealing on paper, but the tracking is weak and only the 3rd chain rises from Melee Low to Melee Mid; Jecht Rush makes particularly good use of it, its 2nd chain (neutral) crossing the screen in a flash or serving as an anti-air (up).",
+      "One notable detail: an EX Mode does not switch off while the character is in an attacking state. Since Jecht can charge with no time limit, he can in theory stay in EX Mode indefinitely and regenerate as much health as he likes — at the price of letting the opponent farm resources and of exposing himself to a whiff punish, the charge leaving him vulnerable. Finally, with no EX gauge left, EX Mode switches off after the 3rd chain: to guarantee an EX Burst, the HP attack must already be underway when the gauge empties."
+    ],
+    "burst": "Blitz King is a timing-based EX Burst: two inputs to be stopped in the centre of a gauge (windows of 2 then 1 second, two “Great” for the perfect Burst). Its low initial damage and long duration make it one of the weakest EX Bursts in the game; Auto EX Command Ω (20 CP) lets you ignore the timing, useful in lag or in rulesets with CP to spare, without being an obvious recommendation given Jecht's CP needs."
+  },
+  "uniqueMechanics": {
+    "intro": [
+      "Holding an attack button charges the move: charging increases its properties, releasing triggers the attack. Almost his whole kit charges, Jecht Block and Jecht Beam aside. Charging is a pillar of his gameplay, especially on bravery attacks: it serves above all to break normal blocks, but also to punish dodges and whiffs. In exchange, charging leaves Jecht more vulnerable and more telegraphed during the startup — and stretches his EX Mode well beyond its intended limit.",
+      "Once a charge has begun, Jecht MUST see the attack through, even if it cannot connect. Charging Jecht Stream is therefore risky (longer startup and recovery on both kicks, vulnerability during the approach, more room for the opponent to escape in the air), whereas a charged Jecht Rush is far safer: earlier hitbox, shorter animation, earlier cancel. Grounded fighting is thus safer for Jecht than aerial fighting — unfortunately, most interactions in Dissidia Duodecim happen in the air. Walls and small stages work in his favour. Finally, mind how long you hold: even a light press slows the attack down without changing its properties."
+    ],
+    "details": [
+      "Level 1: uncharged, Melee Low priority, fastest startup (tap the button).",
+      "Level 2: lightly charged, Melee Low, slower startup but slightly increased reach and damage; signalled by a different grunt and subtle effects.",
+      "Level 3: full charge, Melee High, slowest startup (nearly double that of level 2) but maximum gains in reach and damage; signalled by a distinct sound effect and a major aura.",
+      "For HP attacks, charging only adds tracking and extra bravery damage; the priority tiers concern Jecht Rush and Jecht Stream alone."
+    ]
+  },
+  "gameplan": [
+    "Jecht's gameplan is simple to state: force close range, land one hit, then convert into a full combo through to the HP attack. His Neutral 3 / Up 3 / Down 3 chains share high base damage and lead into his finishers (Jecht Blade, Ultimate Jecht Shot through Up 3, Triumphant Grasp through Down 3, or Jecht Beam for gauge). Picking the finisher is a decision in its own right: Wall Rush for damage, Jecht Beam for EX and gauge depletion, or a change of finisher to dodge the whiff punishes that follow an Assist Change.",
+    "Charging structures his neutral: break blocks with a level 3, punish dodges and whiffs, condition the opponent. Backing away from Jecht makes most of his moves miss: he therefore has to threaten from situations that expose him (extended dashes, delayed strikes) to force defensive opponents to commit off-beat. On defence, Jecht Block covers his dodges, threatens fast pokes and guards mid/high priorities from frame 1; counters on LV2 Assist Change earn a full combo.",
+    "On resources, Side by Side is often the engine of his momentum: with the reference build, the first Wall Rush combo with Hero's Seal goes past 3000 HP and a solo combo at base bravery lands around 2000 HP, with Together as One supplying the initial assist gauge that spares him from committing too early. The assist is his real economy — Kuja first and foremost for damage and follow-ups — while EX stays secondary (low gain, mediocre Burst), except when ending with Jecht Beam and through EX Cores.",
+    "Finally, the choice of neutral input is strategic and documented: Jecht Rush on neutral gives immunity to ambiguous camera angles and helps hit moving grounded opponents (as does Ultimate Jecht Shot as an anti-air), while Jecht Block on neutral makes gapless blocks more practical. Double-input setups exist to cover both, at the cost of more CP."
+  ],
+  "advancedTech": [
+    {
+      "name": "Jecht Rush dodge cancel combo",
+      "desc": "An extended solo combo built on Jecht Rush dodge cancels, cited as a damage route with several assists (Tidus after a grounded Sonic Buster Wall Rush, Onion Knight, and on a loop with Ultimecia through Knight's Axe near the wall).",
+      "video": {
+        "url": "https://www.youtube.com/watch?v=tpW--tMNfYI",
+        "title": "[Dissidia 012] Jecht DC & Assist Combos",
+        "author": "Shilag",
+        "date": "2011"
+      }
+    },
+    {
+      "name": "Double Ultimate Jecht Shot (Aerith)",
+      "desc": "With the Aerith assist, Jecht can land three HP attacks in a row on the ground: roughly 5000-6000 HP of damage for two assist bars with a high base bravery build. Fearsome in matchups that play out on the ground."
+    },
+    {
+      "name": "Endless EX Mode through charging",
+      "desc": "EX Mode does not switch off during an attacking state: by holding a charge with no time limit, Jecht extends his EX Mode (and his Regen) for as long as he likes, at the price of great vulnerability."
+    },
+    {
+      "name": "Gapless Jecht Block",
+      "desc": "Assigning Jecht Block to the neutral input makes gapless Jecht Blocks more practical and eases defence against aerial attacks whatever the angle; double directional input setups exist to cover camera cross-ups as well."
+    },
+    {
+      "name": "Getting around a final EX Revenge",
+      "desc": "Thanks to Jecht Beam and Jecht Block, Jecht can bypass an opponent's last EX Revenge, according to the strengths list in the overview."
+    },
+    {
+      "name": "Chase feint off Jecht Rush",
+      "desc": "Tech from Phaze08's guide: on Circle > Circle > Up+Circle, deliberately whiff the last hit — Jecht performs the flip kick and starts a chase, which you cancel at once (Circle) before dodging forward to catch the opponent with Jecht Stream during their fall. Works against humans, not against high-level CPUs.",
+      "source": "https://web.archive.org/web/20131114035245/http://dissidiaforums.com/showthread.php?11017-The-Brutal-Blitzer-From-Zanarkand-A-Guide-to-Learning-Jecht"
+    },
+    {
+      "name": "Normal block chained into Jecht Block",
+      "desc": "From Phaze08 again: chaining a normal block immediately followed by a Jecht Block markedly increases the chance of blocking — the opponent strikes just after the normal block, at the exact moment the Jecht Block comes out. Also useful against combined assist + player barrages; a Jecht Block placed at the end of a dodge additionally extends the invincibility window (dodge cancel).",
+      "source": "https://web.archive.org/web/20131114035245/http://dissidiaforums.com/showthread.php?11017-The-Brutal-Blitzer-From-Zanarkand-A-Guide-to-Learning-Jecht"
+    },
+    {
+      "name": "Documented solo combo routes",
+      "desc": "Designed as a character with built-in combos, Jecht has only two families of links outside his native routes: level 2 Jecht Rush at the up angle > dodge cancel > Jecht Stream; and all of his level 3 bravery attacks chain into his level 2 charged HP attacks, in increasing order of difficulty — up angle into level 2 Ultimate Jecht Shot, down angle into level 2 Triumphant Grasp, up angle then neutral into level 2 Jecht Beam.",
+      "source": "https://pastebin.com/8FWDXjvJ"
+    }
+  ],
+  "matchups": {
+    "summary": [
+      "The matchup page is filled in for a single opponent: The Emperor, described as Jecht's worst matchup. His lack of reach and of tools to deal with Thunder Crest (unblockable BRV) and Dreary Cell (HP) makes any safe approach very hard: Jecht Beam, whiff punishes with an assist, actively clearing traps and dashing to punish dodges all become essential. The wiki advises players still learning the character to avoid this matchup.",
+      "For the rest of the roster, the page holds nothing but a list of names with no analysis. The overview offers a few indirect bearings: unblockable area denial moves (Black Hole, the Emperor's traps) get around Jecht Block and hamper his approaches, and the Seal of Lufenia build is recommended against characters with strong EX generation (Gabranth, Gilgamesh, Prishe, Lightning, Garland, Tidus)."
+    ]
+  },
+  "builds": {
+    "philosophy": [
+      "Jecht works with a wide variety of builds: high base bravery + Side by Side, bravery boost on dodge, and even the niche Center of the World. The documented Side by Side build is the competitive standard: Piggy's Stick, Chainsaw, Royal Crown, Maximillian (through the Equip Glitch: Peltast's Gear, Bard's Gear, Cavalier's Gear, Equip Machines), the Kuja or Aerith assist, Rubicante as the summon, and accessories combining gauge depletion, mobility and initial bravery (Hero's Seal takes initial BRV to 2089, Together as One starts the assist gauge, Muscle Belt, Sniper Eye, Dismay Shock, BRV = 0, Empty EX Gauge / Pre-EX boosters). The aim: hit hard and fast — over 3000 HP on the first Wall Rush combo with Hero's Seal, roughly 2000 HP per solo combo at base bravery, and bravery recovery fast enough for a raw Jecht Blade to deal damage at base bravery after a Kuja combo. EX is sacrificed since Side by Side is equipped; 5 CP are left for Auto Assist Lock-On.",
+      "The second documented build, “Hybrid (Seal of Lufenia)”, is an all-rounder with stronger EX depletion, recommended against characters with good EX generation or in long EX-heavy matchups (Gabranth, Gilgamesh, Prishe, Lightning, Garland, Tidus): the Lufenian set with Piggy's Stick, the Kuja or Tidus assist, Bravery Orb to improve bravery recovery, Tenacious Attacker, Hero's Essence (max CP 480) and First to Victory for the opening.",
+      "On the attack side, almost all of Jecht's kit is a staple, recommended in any matchup. The flexible picks: grounded Jecht Beam (a good single-hit HP attack with deceptively long active frames, rounding out his poking but uncomboable without an assist) and grounded Jecht Blade (an alternative combo route into the Wall Rush, faster space occupation than the aerial version on small stages, but risky and judged non-essential by some — its 15 CP weigh on the rest of the build). The choice of neutral input (Jecht Rush or Jecht Block) is likewise an integral part of the build.",
+      "Phaze08's guide “The Brutal Blitzer from Zanarkand” (dissidiaforums, August 2011, through the Wayback Machine) compiles three builds drawn from the “Jecht Builds” thread. The Pure EX build (credited to Hollowed) gives up assists: Jecht Beam as the pivot HP attack (huge EX gain, bypassing Assist Change and EX Revenge as a self-sufficient HP attack), Auto Assist Lock On so charged moves hit assists too, Concentration++ to force the opponent in when they flee EX Mode, EXP to EX, and Peltast's Gear to equip Excalibur II — a permanent multiplier of at least x2.7 (x4 if Large Gap in HP triggers) peaking at EX Intake Range +7 m, EX Force Absorption +65%, EX Core +25%, assist depletion +35% and permanent EX Force absorption. The Pure Assist build (the author's own) leans on boosters active 100% of the time, Together as One, Sturm and Drang and Battle Gem: +148% Wall Rush damage and +77% assist duration in total, with Assist Gauge up Dash judged “100% necessary” (Jecht builds his gauge poorly on his own) and Assist Critical Boost. The Machines build (credited to Veysey) sacrifices the assist and HP (around 7500) for raw damage: boosters all active as soon as the summon is spent, +34% physical damage, +196% and more bravery on Wall Rush, +30% on chase — every chase becomes a mixup between devastating bravery, an HP attack that drains the assist, and roughly a quarter of an EX Force bar per hit.",
+      "On the GameFAQs side, the thread “Good physical damage jecht build, who has one?” (2011) documents Espeon8's damage build, adopted by the rest of the thread: Hyper Ring, Muscle Belt and Sniper Eye (for the Wall Rush) with boosters that can be kept up continuously (HP = 100%, Pre-EX Mode, Pre-EX Revenge, Summon Unused, Large Gap in HP), and the machines outfit through Chemist's Lore > Equip Machines — Auto-Crossbow (+15% physical damage) and Chainsaw (+20% HP damage on Wall Rush) — judged superior to anything Jecht normally carries in those slots, short of the complete Ancient set."
+    ],
+    "notes": "Documented substitutions: Hero's Seal → Badge of Trust (two assist bars almost immediately), BRV = 0 → Large Gap in HP, Counterattack + Precision Jump → Best Dresser (+100 base BRV) or Master Guardsman (+1000 max HP); for an EX variant, replace Side by Side and Together as One with Tenacious Attacker and/or Glutton. On the Lufenia build: First to Victory → Muscle Belt or Glutton, Hero's Essence → BRV = 0, Winged Boots (against Banish Traps) or Dismay Shock (stronger EX depletion). The three builds from Phaze08/Hollowed/Veysey and Espeon8's damage build described at the end of philosophy come from verified external community sources (archived dissidiaforums, GameFAQs); the Pure EX build incidentally offers a complete example of an EX-oriented build, a family the wiki mentions (Center of the World) without ever detailing it."
+  },
+  "assist": {
+    "asAssist": [
+      "Jecht is rated Top tier on the assist tier list (Muggshotter) and is one of the established assists of the meta. He provides no Assist Chase by default, but his combos hold the opponent for a very long time — ideal for setting up grounded combos or simply lining up an HP attack. Unlike Kuja and Sephiroth, Jecht advances during his bravery attacks and lends himself poorly to repeated filler bravery attacks; Jecht Rush (ground, 13F) ends on the Up 3, Jecht Stream (air, 17F) on the Down 3, the latter being the better filler thanks to its slower travel speed and its mostly stationary hit stun near the ground.",
+      "His rare quirk: fast bravery attacks on the ground AND in the air, both leading into reliable follow-ups, where many assists only whiff punish well in one register. His limits: no Ranged priority (LV2 Assist Change stops him reliably) and long animations on hit that expose him to Assist Locks after a LV1 Assist Change. A documented oddity: if Jecht ends up in a corner during Jecht Rush's second chain, the final chain does not come out and gives way to an Assist Chase — fairly consistent behaviour, but surprising."
+    ],
+    "recommended": [
+      {
+        "name": "Kuja",
+        "why": "Conventionally his strongest assist: heavy bravery damage, whiff punishes, consistent follow-ups everywhere, HP assists to get around LV2 Assist Change or force an HP attack out of a dropped combo; a Jecht Beam during the bravery assist is often guaranteed at the wall."
+      },
+      {
+        "name": "Tidus",
+        "why": "Less raw damage but expertise in whiff punishing and grounded combos: Hop Step gets around the Emperor's Dreary Cell, Sonic Buster opens the full Jecht Rush dodge cancel combo, and Slice and Dice salvages a dropped Jecht Stream combo in a chase sequence."
+      },
+      {
+        "name": "Aerith",
+        "why": "Cure and Holy force the approach, Seal Evil allows an HP attack to be placed through a chase after a dropped chain or to clash favourably with Jecht Block / charged Jecht Stream — and above all, the double Ultimate Jecht Shot (roughly 5000-6000 HP for two bars) on the ground."
+      },
+      {
+        "name": "Sephiroth",
+        "why": "Functionally a “budget Kuja” with a faster grounded bravery attack, but no Ranged High HP assist. Solid, a little average, viable."
+      },
+      {
+        "name": "Yuna",
+        "why": "An aerial bravery attack immune to stagger with downward knockback: a good pick on small stages (M.S. Prima Vista, Pandaemonium - Top Floor) where Jecht makes Wall Rushes easy; its Ranged Low priority and fast startup also whiff punish aerial attacks."
+      },
+      {
+        "name": "Onion Knight",
+        "why": "A Ranged Low grounded bravery attack for interceptions and Ultimate Jecht Shot follow-ups (opening the Jecht Rush dodge cancel combos); the Comet HP attack forces an HP hit if the 3rd chain fails."
+      },
+      {
+        "name": "Squall",
+        "why": "Niche: the grounded bravery attack Solid Barrel becomes the fastest grounded whiff punisher available to Jecht, with strong holding potential; Blasting Zone intercepts and Aerial Circle lands an HP attack despite a missed combo timing. Recommended against Golbez."
+      },
+      {
+        "name": "Ultimecia",
+        "why": "Gives up consistent Wall Rush follow-ups in exchange for looping Jecht Rush dodge cancel combos near the wall through Knight's Axe (which does not lock the assist gauge, since it connects after disappearing); requires investing in ATK and Assist Critical Boost."
+      },
+      {
+        "name": "Gilgamesh",
+        "why": "A Wall Rush combo assist for small stages, among the highest raw bravery damage with Excalibur (50/50), as an alternative to Yuna but vulnerable to LV2 Assist Change staggers."
+      },
+      {
+        "name": "Terra",
+        "why": "On small stages: a stagger-immune combo extension and an interception with aerial Blizzara; the homing Meltdown HP attack forces offensive situations in enclosed spaces."
+      }
+    ]
+  },
+  "communityTech": [
+    {
+      "title": "Dissidia Duodecim 012 Jecht Combo Timing/EXR Guide",
+      "desc": "A period video guide (ChosenL): timing tips for Jecht's combo chains and EX Revenge combos.",
+      "source": "https://www.youtube.com/watch?v=zTPGYL5gGQs",
+      "date": "2011"
+    },
+    {
+      "title": "DDFF - A brief guide on timing Jecht combos",
+      "desc": "A video guide by Muggshotter (author of the wiki's tier lists) on the timing windows of Jecht's combos, filmed at 60 fps with input display for frame-by-frame reading.",
+      "source": "https://www.youtube.com/watch?v=5W1zGEMzbeM",
+      "date": "2021"
+    },
+    {
+      "title": "Jecht assist corner followup",
+      "desc": "A video demonstration of the Jecht assist's behaviour in a corner: Jecht Rush's final chain does not come out and gives way to an Assist Chase.",
+      "source": "https://www.youtube.com/watch?v=8fEBzsbJS58&t=44s",
+      "date": null
+    },
+    {
+      "title": "Cast-wide solo combo list (Eddiegames)",
+      "desc": "A community record of solo combo routes for all 31 characters, compiled by Eddiegames on the Discord DISSIDIA and published on pastebin (last updated December 2022). Jecht is described there as a character with built-in combos, with only two families of external links.",
+      "source": "https://pastebin.com/8FWDXjvJ",
+      "date": "2022"
+    }
+  ],
+  "sourcesBySection": {
+    "builds": [
+      "https://web.archive.org/web/20131114035245/http://dissidiaforums.com/showthread.php?11017-The-Brutal-Blitzer-From-Zanarkand-A-Guide-to-Learning-Jecht",
+      "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58794910"
+    ]
+  },
+  "limits": [
+    "Very fragmentary extraction of the bravery and HP attacks: Jecht Rush, Jecht Stream, Jecht Block, Triumphant Grasp and Ultimate Jecht Shot have no individual entry in the data, and several move entries (Neutral 3, level 1 Jecht Blade) have no name at all — their information has been folded into the gameplan and the other sections.",
+    "Combo section undocumented: the dedicated combo page the wiki mentions is not extracted.",
+    "Matchups: only The Emperor is written up; the rest of the page is nothing but a list of names with no analysis.",
+    "Builds: the main “Jecht (012) Builds” page is not extracted; only two builds (Side by Side and Hybrid Seal of Lufenia) appear in the data, and some subsections (Basic Abilities and CP Allocation of the Lufenia build) are empty.",
+    "The assist gain field of the moves is not filled in; startup values are missing from the extracted combo chains.",
+    "The Center of the World build is mentioned but never detailed in the wiki sources; a complete community Pure EX build (dissidiaforums, 2011) partly fills that gap through the enrichment pass.",
+    "On the empty chase into an assist gauge reset, the compiler of the community record writes “none” while himself asking for verification (TAS): the claim is left out of this guide."
+  ]
+}

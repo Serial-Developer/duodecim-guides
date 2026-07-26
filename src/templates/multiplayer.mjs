@@ -27,7 +27,7 @@ export function renderMultiplayer(mp, seo, { t, locale, path, alternates, availa
 <h1 style="color:var(--gold)">${t('multiplayer.h1')}</h1>
 ${paras(mp.intro)}
 <p class="mv-desc">${t('multiplayer.goToScenario')} ${anchors}</p>
-<p class="mv-desc">${t('multiplayer.notInstalled', { install: L.page('install'), savedata: L.page('savedata') })}</p>
+<p class="mv-desc">${t('multiplayer.notInstalled', { install: L.page('install'), installAttr: L.pageLangAttr('install'), savedata: L.page('savedata'), savedataAttr: L.pageLangAttr('savedata') })}</p>
 ${mp.scenarios.map(scenario).join('\n')}
 ${infoBanner(esc(mp.note))}
 <p class="sources-list">${t('multiplayer.sourceLine')} <a href="${esc(mp.source)}" target="_blank" rel="external noopener">${esc(mp.source)}</a> ${t('multiplayer.sourceSuffix')}</p>

@@ -245,12 +245,12 @@
       "cpDesc": "Le wiki laisse vide le tableau des coups équipés de ce ou ces builds : ce moveset n'est pas documenté. À défaut, voici le coût en CP de chaque coup, à mettre en regard du total du build. Les coups les plus chers sont en haut.",
       "loadoutBravery": "Braveries équipées",
       "loadoutHp": "Attaques HP équipées",
-      "creatorLink": "Composer et vérifier un build de {name} emplacement par emplacement : <a href=\"{href}\">créateur de builds</a> (jauge de CP, exclusions d’abilities et règles tournoi appliquées)."
+      "creatorLink": "Composer et vérifier un build de {name} emplacement par emplacement : <a href=\"{href}\"{langAttr}>créateur de builds</a> (jauge de CP, exclusions d’abilities et règles tournoi appliquées)."
     },
     "gameplan": {
       "videoFallback": "Vidéo de démonstration",
       "combosSummary": "Combos documentés (notation d'origine, dissidia.wiki)",
-      "universalTech": "Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href=\"{href}\">Techniques &amp; glitches</a>."
+      "universalTech": "Techniques universelles (blodge, dash feint, lock off, dodge punishment) : voir la page <a href=\"{href}\"{langAttr}>Techniques &amp; glitches</a>."
     },
     "matchups": {
       "wikiSkeleton": "La sous-page <a href=\"{url}\" target=\"_blank\" rel=\"external noopener\">Matchups du wiki</a> est un squelette vide à ce jour.",
@@ -276,7 +276,8 @@
       "descGuideKeys": ". Frame data, plan de jeu, builds et matchups.",
       "ogAlt": "{name} — guide Dissidia 012 [duodecim]",
       "sectionAssists": "Assists",
-      "sectionGuides": "Guides personnages"
+      "sectionGuides": "Guides personnages",
+      "descArchetypeSep": " : "
     }
   },
   "techniques": {
@@ -286,8 +287,8 @@
     "universal": "Techniques universelles",
     "glitches": "Glitches documentés",
     "online": "Jouer en ligne (PPSSPP)",
-    "onlineIntro": "Installation pas à pas de l'émulateur, mise en place du jeu et premier match : voir la page <a href=\"{href}\">Installer Dissidia 012 sur PPSSPP</a>. La synthèse ci-dessous reprend le guide de dissidia.wiki.",
-    "onlineDetail": "<strong>Configuration détaillée, scénario par scénario (PC, Android, crossplay, local) : <a href=\"{href}\">page Jouer en multijoueur</a>.</strong>",
+    "onlineIntro": "Installation pas à pas de l'émulateur, mise en place du jeu et premier match : voir la page <a href=\"{href}\"{langAttr}>Installer Dissidia 012 sur PPSSPP</a>. La synthèse ci-dessous reprend le guide de dissidia.wiki.",
+    "onlineDetail": "<strong>Configuration détaillée, scénario par scénario (PC, Android, crossplay, local) : <a href=\"{href}\"{langAttr}>page Jouer en multijoueur</a>.</strong>",
     "glossary": "Glossaire",
     "inPractice": "En pratique",
     "competitiveUse": "Usage compétitif :",
@@ -352,7 +353,7 @@
     "detectedTitle": "Annonces détectées — à confirmer",
     "detectedDesc": "La veille a repéré ces messages sur le canal d'annonces ; ils sont listés tels quels en attendant une vérification manuelle (date, règlement, inscription).",
     "howTitle": "Comment cette page se remplit",
-    "howBody": "Deux fois par jour, une veille automatique interroge l'API officielle de start.gg : chaque tournoi Duodecim qui y est créé apparaît ici de lui-même, avec sa date et son lien. Les annonces du canal <strong>announcements</strong> du Discord DISSIDIA (notamment les brackets Challonge) sont relayées manuellement sur le calendrier. Les tournois passés viennent de la <a href=\"{href}\">page Tournois</a>, où chaque édition est documentée avec son ruleset et ses résultats.",
+    "howBody": "Deux fois par jour, une veille automatique interroge l'API officielle de start.gg : chaque tournoi Duodecim qui y est créé apparaît ici de lui-même, avec sa date et son lien. Les annonces du canal <strong>announcements</strong> du Discord DISSIDIA (notamment les brackets Challonge) sont relayées manuellement sur le calendrier. Les tournois passés viennent de la <a href=\"{href}\"{langAttr}>page Tournois</a>, où chaque édition est documentée avec son ruleset et ses résultats.",
     "lastCheck": "Dernière vérification automatique : {date}.",
     "noCheckYet": "La veille automatique n'a pas encore tourné — le calendrier reflète le dernier relevé manuel (juillet 2026).",
     "weekdays": [
@@ -389,7 +390,7 @@
   "multiplayer": {
     "h1": "Jouer en multijoueur",
     "goToScenario": "Aller au scénario :",
-    "notInstalled": "Pas encore installé ? Commencez par <a href=\"{install}\">Installer Dissidia 012 sur PPSSPP</a>, et récupérez une <a href=\"{savedata}\">savedata prête à jouer</a>.",
+    "notInstalled": "Pas encore installé ? Commencez par <a href=\"{install}\"{installAttr}>Installer Dissidia 012 sur PPSSPP</a>, et récupérez une <a href=\"{savedata}\"{savedataAttr}>savedata prête à jouer</a>.",
     "sourceLine": "Source :",
     "sourceSuffix": "(dissidia.wiki, CC BY 4.0).",
     "metaTitle": "Jouer en multijoueur — Dissidia 012 [duodecim]",

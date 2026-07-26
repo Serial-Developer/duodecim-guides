@@ -47,7 +47,7 @@ ${(data.tournois || []).map((tr) => tournoiBlock(t, tr)).join('\n')}
 
 <h2 id="participer">${t('tournaments.participate')}</h2>
 ${paras(data.participer?.intro)}
-<p><a href="${L.page('participate')}">${t('tournaments.participateLink')}</a></p>
+<p><a href="${L.page('participate')}"${L.pageLangAttr('participate')}>${t('tournaments.participateLink')}</a></p>
 
 <h2 id="sources">${t('common.sources')}</h2>
 ${sourcesSection(t, data.sources, data.limits)}

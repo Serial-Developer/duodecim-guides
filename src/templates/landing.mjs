@@ -28,7 +28,7 @@ ${row.map((slug) => {
     if (!c) return '';
     const tier = tierBySlug[slug];
     const link = linkFor(slug);
-    return `<span class="char-cell"><a href="${link.href}"${link.lang ? ` hreflang="${link.lang}" lang="${link.lang}"` : ''}
+    return `<span class="char-cell"><a href="${link.href}"${link.lang ? ` hreflang="${link.lang}"` : ''}
  data-name="${esc(c.name)}" data-origin="${esc(c.origin)}"
  data-tier="${esc(tier || '')}" data-tagline="${esc(taglineBySlug[slug] || '')}"
  data-portrait="${L.asset(`assets/portraits/${slug}.png`)}">

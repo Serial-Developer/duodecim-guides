@@ -23,7 +23,7 @@ ${saves}
 <h2 id="installation">${t('savedata.installTitle')}</h2>
 ${inst?.intro ? `<p>${esc(inst.intro)}</p>` : ''}
 ${inst?.etapes?.length ? `<ol class="steps">${inst.etapes.map((e) => `<li>${esc(e)}</li>`).join('')}</ol>` : ''}
-${inst?.note ? `<p class="mv-desc">${esc(inst.note)} <a href="${L.page('install')}">${t('savedata.installLink')}</a></p>` : ''}
+${inst?.note ? `<p class="mv-desc">${esc(inst.note)} <a href="${L.page('install')}"${L.pageLangAttr('install')}>${t('savedata.installLink')}</a></p>` : ''}
 
 <h2 id="builds">${t('savedata.builds')}</h2>
 <p>${esc(data.comprendre?.texte || '')}</p>

@@ -326,6 +326,10 @@ export function linksFor(path, locale, availability = null) {
     // Page transverse, par clé logique de src/i18n/routes.mjs
     page: (key) => `${up}${pathFor(key, routeLang(key) || locale)}`,
     pageLang: routeLang,
+    // Attribut prêt à insérer dans un gabarit de phrase, pour les liens de la
+    // prose qui peuvent traverser les langues le temps de la traduction. Pas de
+    // `lang` : le libellé du lien, lui, est bien dans la langue de la page.
+    pageLangAttr: (key) => { const l = routeLang(key); return l ? ` hreflang="${l}"` : ''; },
     // Guide d'un personnage
     guide: (slug) => `${up}${guidePathFor(slug, guideLang(slug) || locale)}`,
     guideLang,
@@ -502,7 +506,7 @@ export function siteHeader(t, { path, locale, active = '', h1 = false, alternate
   const extIco = '<svg class="ext-ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M5 2H2.2C1.5 2 1 2.5 1 3.2v6.6C1 10.5 1.5 11 2.2 11h6.6c.7 0 1.2-.5 1.2-1.2V7M7.5 1H11v3.5M11 1 5.8 6.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   // Une entrée dont la page n'existe pas encore dans cette langue pointe la
   // version publiée et le déclare, plutôt que de mener à une page absente.
-  const link = (it) => `<a href="${it.href}"${it.key === active ? ' aria-current="page"' : ''}${it.lang ? ` hreflang="${it.lang}" lang="${it.lang}"` : ''}${it.ext ? ' target="_blank" rel="external noopener"' : ''}>${it.label}${it.ext ? extIco : ''}</a>`;
+  const link = (it) => `<a href="${it.href}"${it.key === active ? ' aria-current="page"' : ''}${it.lang ? ` hreflang="${it.lang}"` : ''}${it.ext ? ' target="_blank" rel="external noopener"' : ''}>${it.label}${it.ext ? extIco : ''}</a>`;
   const brand = `${esc(t('site.brandGame'))} <span class="gold">${esc(t('site.brandBracket'))}</span> <span class="sh-sub">${esc(t('site.brandSub'))}</span>`;
   return `<header class="site-header">
 ${h1 ? `<h1 class="sh-brand">${brand}</h1>` : `<a class="sh-brand" href="${L.page('home')}">${brand}</a>`}
@@ -514,7 +518,7 @@ ${groups.map((g) => (g.items
 ${g.items.map(link).join('\n')}
 </div>
 </div>`
-    : `<a class="sh-group-label sh-group-link${g.key === active ? ' is-active' : ''}" href="${g.href}"${g.key === active ? ' aria-current="page"' : ''}${g.lang ? ` hreflang="${g.lang}" lang="${g.lang}"` : ''}>${g.title}</a>`)).join('\n')}
+    : `<a class="sh-group-label sh-group-link${g.key === active ? ' is-active' : ''}" href="${g.href}"${g.key === active ? ' aria-current="page"' : ''}${g.lang ? ` hreflang="${g.lang}"` : ''}>${g.title}</a>`)).join('\n')}
 </nav>
 ${siteTools(t, locale, alternates, L, availability?.routes?.home)}<details class="sh-drawer">
 <summary aria-label="${esc(t('nav.menu'))}"><span class="sh-burger" aria-hidden="true"></span></summary>

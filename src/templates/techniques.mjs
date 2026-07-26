@@ -39,8 +39,8 @@ ${(shared.techniques || []).map((x) => block(t, x)).join('\n')}
 ${(shared.glitches || []).map((x) => block(t, x)).join('\n')}
 
 <h2>${t('techniques.online')}</h2>
-<p class="mv-desc">${t('techniques.onlineIntro', { href: L.page('install') })}</p>
-${shared.onlineSetup ? paras(shared.onlineSetup.summary) + `<p>${t('techniques.onlineDetail', { href: L.page('multiplayer') })}</p><p class="sources-list"><a href="${esc(shared.onlineSetup.source)}" target="_blank" rel="external noopener">${esc(shared.onlineSetup.source)}</a></p>` : banner(t)}
+<p class="mv-desc">${t('techniques.onlineIntro', { href: L.page('install'), langAttr: L.pageLangAttr('install') })}</p>
+${shared.onlineSetup ? paras(shared.onlineSetup.summary) + `<p>${t('techniques.onlineDetail', { href: L.page('multiplayer'), langAttr: L.pageLangAttr('multiplayer') })}</p><p class="sources-list"><a href="${esc(shared.onlineSetup.source)}" target="_blank" rel="external noopener">${esc(shared.onlineSetup.source)}</a></p>` : banner(t)}
 
 <h2>${t('techniques.glossary')}</h2>
 ${shared.glossaryNote ? paras(shared.glossaryNote.summary) + `<p class="sources-list"><a href="${esc(shared.glossaryNote.source)}" target="_blank" rel="external noopener">${esc(shared.glossaryNote.source)}</a></p>` : banner(t)}

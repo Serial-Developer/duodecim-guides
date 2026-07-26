@@ -37,7 +37,7 @@ ${data.methodes.map(methodeBlock).join('\n')}
 
 <h2 id="apres">${t('feralUnlock.afterTitle')}</h2>
 ${paras(data.apres.intro)}
-<p class="video-link"><a href="${L.guide('feral-chaos')}">${t('feralUnlock.sheetLink')}</a></p>
+<p class="video-link"><a href="${L.guide('feral-chaos')}"${L.guideLang('feral-chaos') ? ` hreflang="${L.guideLang('feral-chaos')}"` : ''}>${t('feralUnlock.sheetLink')}</a></p>
 
 <h2 id="sources">${t('common.sources')}</h2>
 ${sourcesSection(t, data.sources, data.limits)}
