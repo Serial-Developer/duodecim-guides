@@ -40,13 +40,24 @@ const NUM_RE = /(?<![\w.])\d+(?:[.,]\d+)?(?![\w])/g;
 // Les suffixes ordinaux le sont aussi : « 6ᵉ » en français, « 6th » en anglais.
 // Sans les retirer, l'anglais perdrait le nombre (le « t » de « 6th » colle au
 // chiffre et le disqualifie), et la traduction correcte serait signalée.
+const FRAME_UNIT = /(\d)F\b/g;
+
 const stripOrdinals = (s) => String(s)
   .replace(/(\d+)(?:st|nd|rd|th)\b/gi, '$1')
   .replace(/(\d+)(?:ᵉʳ|ᵉ|ères|ère|res|re|ers|er|es|e)\b/g, '$1');
 
+// La virgule décimale française devient un point : sans cela « x4,6 » et
+// « x4.6 » ne se comparent pas. Le relevé ignore un chiffre précédé d'un
+// point (c'est une décimale, pas un nombre à part) mais pas s'il suit une
+// virgule — l'un des deux serait compté et l'autre non.
 const stripGroups = (s) => stripOrdinals(String(s)
   .replace(/(\d)[\s  ](\d{3})(?!\d)/g, '$1$2')
-  .replace(/(\d),(\d{3})(?!\d)/g, '$1$2'));
+  .replace(/(\d),(\d{3})(?!\d)/g, '$1$2')
+  .replace(/(\d),(\d)/g, '$1.$2')
+  // Les frames sont notées « 43F » : sans retirer l'unité, le « F » colle au
+  // chiffre et le disqualifie du relevé — toute la frame data échappait donc
+  // au contrôle. Vérifié : une frame altérée est désormais détectée.
+  .replace(FRAME_UNIT, '$1'));
 
 const nums = (s) => (stripGroups(s).match(NUM_RE) || []).map((n) => n.replace(',', '.'));
 const urls = (s) => String(s).match(URL_RE) || [];
