@@ -20,7 +20,11 @@ import { join } from 'node:path';
 // `names` porte des listes de noms de coups (regroupements éditoriaux) : les
 // traduire romprait le lien avec les données extraites, et la section
 // disparaîtrait silencieusement du guide.
-const VERBATIM = new Set(['slug', 'source', 'sources', 'url', 'date', 'video', 'names', 'route', 'anchor', 'id']);
+const VERBATIM = new Set(['slug', 'source', 'sources', 'url', 'video', 'names', 'route', 'anchor', 'id']);
+// `date` recouvre deux usages : une année ou une date machine, qui ne se
+// traduisent pas (« 2011 », « 2026-06-20»), et une date rédigée, qui se traduit
+// (« 20 juin 2026 » / « 20 June 2026 »). La forme tranche.
+const MACHINE_DATE = /^\d{4}(-\d{2}-\d{2})?$/;
 // Clés dont les CLÉS d'objet sont des identifiants (noms de coups, sections).
 const KEYED_BY_IDENTIFIER = new Set(['moveNotes', 'groupNotes', 'sourcesBySection', 'movesetSlots', 'movesetTypes', 'values']);
 
@@ -33,9 +37,16 @@ const NUM_RE = /(?<![\w.])\d+(?:[.,]\d+)?(?![\w])/g;
 // normalisation, la traduction correcte serait signalée comme une divergence.
 // Une virgule ne vaut séparateur que suivie d'exactement trois chiffres —
 // « 99,9 » reste le décimal français, « 1,400 » devient 1400.
-const stripGroups = (s) => String(s)
+// Les suffixes ordinaux le sont aussi : « 6ᵉ » en français, « 6th » en anglais.
+// Sans les retirer, l'anglais perdrait le nombre (le « t » de « 6th » colle au
+// chiffre et le disqualifie), et la traduction correcte serait signalée.
+const stripOrdinals = (s) => String(s)
+  .replace(/(\d+)(?:st|nd|rd|th)\b/gi, '$1')
+  .replace(/(\d+)(?:ᵉʳ|ᵉ|ères|ère|res|re|ers|er|es|e)\b/g, '$1');
+
+const stripGroups = (s) => stripOrdinals(String(s)
   .replace(/(\d)[\s  ](\d{3})(?!\d)/g, '$1$2')
-  .replace(/(\d),(\d{3})(?!\d)/g, '$1$2');
+  .replace(/(\d),(\d{3})(?!\d)/g, '$1$2'));
 
 const nums = (s) => (stripGroups(s).match(NUM_RE) || []).map((n) => n.replace(',', '.'));
 const urls = (s) => String(s).match(URL_RE) || [];
@@ -76,7 +87,8 @@ function walk(a, b, path, out, verbatim = false) {
     // « x.moveRegroup.bravery[0].names[2] », c'est bien « names ».
     const leaf = path.split(/[.[]/).map((x) => x.replace(/\]$/, ''))
       .filter((x) => x && !/^\d+$/.test(x)).pop();
-    if (verbatim || VERBATIM.has(leaf) || /^https?:/.test(a)) {
+    const isDate = leaf === 'date' || leaf === 'iso';
+    if (verbatim || VERBATIM.has(leaf) || (isDate && MACHINE_DATE.test(a)) || /^https?:/.test(a)) {
       if (a !== b) out.push(`${path} : champ non traduisible modifié\n      source : ${a}\n      trad.  : ${b}`);
       return;
     }

@@ -50,6 +50,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/savedata.html"/>
   </url>
   <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/past-tournaments.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/past-tournaments.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/tournois.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/tournois.html"/>
+  </url>
+  <url>
     <loc>https://serial-developer.github.io/duodecim-guides/en/join-tournaments.html</loc>
     <lastmod>2026-07-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/join-tournaments.html"/>
@@ -69,6 +75,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/unlock-feral-chaos.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/obtenir-feral-chaos.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/obtenir-feral-chaos.html"/>
+  </url>
+  <url>
+    <loc>https://serial-developer.github.io/duodecim-guides/en/upcoming-tournaments.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/upcoming-tournaments.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/futurs-tournois.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/futurs-tournois.html"/>
   </url>
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/</loc>
@@ -308,6 +321,7 @@
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/tournois.html</loc>
     <lastmod>2026-07-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/past-tournaments.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/tournois.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/tournois.html"/>
   </url>
@@ -335,6 +349,7 @@
   <url>
     <loc>https://serial-developer.github.io/duodecim-guides/futurs-tournois.html</loc>
     <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serial-developer.github.io/duodecim-guides/en/upcoming-tournaments.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://serial-developer.github.io/duodecim-guides/futurs-tournois.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://serial-developer.github.io/duodecim-guides/futurs-tournois.html"/>
   </url>
