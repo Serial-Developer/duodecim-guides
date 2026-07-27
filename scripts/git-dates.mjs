@@ -80,6 +80,26 @@ export function gitDates(root) {
   return cache;
 }
 
+// Dernière modification du CONTENU publié, en date seule (YYYY-MM-DD) : le
+// maximum des dates de modification des fichiers qui produisent les pages.
+// Alimente la mention « dernière mise à jour » du footer — qui, comme les dates
+// du sitemap, ne doit jamais être la date du build : régénérer le site ne le met
+// pas à jour. `null` si git est indisponible, et la mention est alors omise.
+const CONTENT_PREFIXES = [
+  'data/editorial/', 'data/characters/', 'data/build/', 'data/calendar/',
+  'src/', 'locales/',
+];
+
+export function contentLastModified(root) {
+  const map = gitDates(root);
+  let latest = null;
+  for (const [path, e] of map) {
+    if (!CONTENT_PREFIXES.some((p) => path.startsWith(p))) continue;
+    if (!latest || new Date(e.modified) > new Date(latest)) latest = e.modified;
+  }
+  return latest ? latest.slice(0, 10) : null;
+}
+
 // Dates agrégées d'un ensemble de fichiers sources : la plus ancienne création
 // et la plus récente modification. Les fichiers inconnus de git (jamais
 // commités) sont ignorés — ils n'ont pas de date de publication.

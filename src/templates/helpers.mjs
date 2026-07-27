@@ -11,6 +11,8 @@ import {
 import { LOCALE_META, DEFAULT_LOCALE, upTo } from '../i18n/config.mjs';
 import { ROUTES, pathFor, guidePathFor } from '../i18n/routes.mjs';
 import { ldArticle } from './jsonld.mjs';
+import { fileURLToPath } from 'node:url';
+import { contentLastModified } from '../../scripts/git-dates.mjs';
 
 export { SITE_URL, SITE_NAME, AUTHOR, AUTHOR_URL, GAME, absUrl };
 
@@ -583,16 +585,60 @@ ${items}
 const COPYRIGHT_YEAR = 2026;
 const REPO = 'https://github.com/Serial-Developer/duodecim-guides';
 
+// Date longue localisée. Le nom du mois vient du catalogue ; l'ordre des
+// éléments, lui, est une règle de langue (« 3 mars 2026 » / « March 3, 2026 »).
+export function longDate(t, iso) {
+  const [y, m, d] = String(iso).split('-').map(Number);
+  const month = t('calendar.months')[m - 1];
+  return t.locale === 'en' ? `${month} ${d}, ${y}` : `${d} ${month} ${y}`;
+}
+
+// Dernière modification du contenu, lue une seule fois dans l'historique git :
+// le footer est rendu sur les 88 pages, relancer `git log` à chaque fois serait
+// absurde. `null` si git est indisponible — la mention disparaît alors, comme
+// les dates du sitemap.
+const ROOT = fileURLToPath(new URL('../../', import.meta.url));
+let lastModifiedCache;
+const siteLastModified = () => {
+  if (lastModifiedCache === undefined) lastModifiedCache = contentLastModified(ROOT);
+  return lastModifiedCache;
+};
+
+const extLink = (href, label, rel = '') =>
+  `<a href="${href}" target="_blank" rel="external noopener${rel ? ' ' + rel : ''}">${label}</a>`;
+
+// Footer en trois colonnes : ce qu'est le site, d'où viennent ses données, où
+// vit le projet. Le détail complet des licences reste replié dessous — il est
+// long, et seul un lecteur qui le cherche a besoin de le déplier.
 export function siteFooter(t) {
-  return `<footer class="site"><div class="wrap">
-<p class="foot-line">${t('footer.textsAndDesign', { year: COPYRIGHT_YEAR })} <strong>${AUTHOR}</strong> — <a href="${REPO}/blob/main/LICENSE" target="_blank" rel="external noopener license">${t('footer.licenseLink')}</a>. ${t('footer.fanSite')}</p>
-<p class="foot-line">${t('footer.gameDataFrom')} <a href="https://dissidia.wiki" target="_blank" rel="external noopener">dissidia.wiki</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noopener">CC BY 4.0</a>) ${t('footer.and')} <a href="https://finalfantasy.fandom.com" target="_blank" rel="external noopener">Final Fantasy Wiki</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external noopener">CC BY-SA 3.0</a>).</p>
+  const updated = siteLastModified();
+  return `<footer class="site">
+<div class="wrap foot-grid">
+<section class="foot-col">
+<h2 class="foot-h">${t('footer.colSite')}</h2>
+<p>${t('footer.textsAndDesign', { year: COPYRIGHT_YEAR })} <strong>${AUTHOR}</strong> — ${extLink(`${REPO}/blob/main/LICENSE`, t('footer.licenseLink'), 'license')}.</p>
+<p>${t('footer.fanSite')}</p>
+</section>
+<section class="foot-col">
+<h2 class="foot-h">${t('footer.colSources')}</h2>
+<p>${t('footer.gameDataFrom')} ${extLink('https://dissidia.wiki', 'dissidia.wiki')} (${extLink('https://creativecommons.org/licenses/by/4.0/', 'CC BY 4.0')}) ${t('footer.and')} ${extLink('https://finalfantasy.fandom.com', 'Final Fantasy Wiki')} (${extLink('https://creativecommons.org/licenses/by-sa/3.0/', 'CC BY-SA 3.0')}).</p>
+<p>${t('footer.imagesVia')} ${extLink('https://web.archive.org', t('footer.waybackLabel'))}.</p>
+</section>
+<section class="foot-col">
+<h2 class="foot-h">${t('footer.colProject')}</h2>
+<p>${extLink(REPO, t('footer.repoLink'))}</p>
+<p>${extLink(`${REPO}/blob/main/NOTICE.md`, t('footer.noticeLink'))}</p>
+${updated ? `<p class="foot-updated"><span class="foot-dot" aria-hidden="true"></span>${t('footer.lastUpdate')} <time datetime="${updated}">${esc(longDate(t, updated))}</time></p>` : ''}
+</section>
+</div>
+<div class="wrap foot-bottom">
 <details class="foot-more"><summary>${t('footer.moreSummary')}</summary>
 <p>${t('footer.moreP1')}</p>
-<p>${t('footer.moreP2Before')} <a href="https://web.archive.org" target="_blank" rel="external noopener">${t('footer.waybackLabel')}</a> ${t('footer.moreP2After')}</p>
-<p>${t('footer.moreP3Before', { author: AUTHOR })} <a href="${ccUrl(t.locale)}" target="_blank" rel="external noopener license">${t('footer.ccByNcNd')}</a>${t('footer.moreP3After')} <a href="${REPO}/blob/main/NOTICE.md" target="_blank" rel="external noopener">NOTICE.md</a>.</p>
+<p>${t('footer.moreP2Before')} ${extLink('https://web.archive.org', t('footer.waybackLabel'))} ${t('footer.moreP2After')}</p>
+<p>${t('footer.moreP3Before', { author: AUTHOR })} ${extLink(ccUrl(t.locale), t('footer.ccByNcNd'), 'license')}${t('footer.moreP3After')} ${extLink(`${REPO}/blob/main/NOTICE.md`, 'NOTICE.md')}.</p>
 </details>
-</div></footer>`;
+</div>
+</footer>`;
 }
 
 // Creative Commons sert ses actes localisés sous /deed.<code> ; sans suffixe, la

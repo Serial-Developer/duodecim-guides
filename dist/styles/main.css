@@ -682,20 +682,68 @@ table.data caption {
 .sources-list li { margin: 0.3rem 0; overflow-wrap: anywhere; }
 footer.site {
   border-top: 1px solid var(--surface-2);
-  margin-top: 2rem;
-  padding: 0.9rem 1.2rem 1.1rem;
+  margin-top: 2.5rem;
+  padding: 1.8rem 1.2rem 1.4rem;
   color: var(--muted);
-  font-size: 0.75rem;
-  line-height: 1.5;
-  text-align: center;
-  opacity: 0.85;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  /* Léger dégradé vers le haut : le pied se détache du contenu sans trait dur. */
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.015));
 }
-footer.site .wrap { max-width: 860px; }
-footer.site .foot-line { margin: 0; }
-footer.site a { color: var(--muted); }
-footer.site a:hover, footer.site a:focus-visible { color: var(--gold); }
+footer.site .wrap { max-width: 1080px; }
+footer.site a { color: var(--muted); text-decoration-color: var(--surface-2); }
+footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-decoration-color: currentColor; }
+
+/* Une colonne par défaut, trois dès qu'il y a la place. Grille explicite plutôt
+   qu'`auto-fit` : ce dernier crée une quatrième piste vide qui consomme un gap
+   et décale le bloc vers la gauche. */
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem 2.4rem;
+  align-items: start;
+}
+@media (min-width: 700px) {
+  .foot-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.foot-col p { margin: 0 0 0.45rem; }
+.foot-col p:last-child { margin-bottom: 0; }
+.foot-h {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.9;
+}
+/* Mention de fraîcheur : la pastille signale « vivant » sans mot de plus. */
+.foot-updated {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.7rem !important;
+  font-size: 0.74rem;
+}
+.foot-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+  flex: none;
+}
+.foot-updated time { color: var(--text); }
+/* Filet de séparation avant le pavé de licences, aligné sur la grille. */
+.foot-bottom {
+  margin-top: 1.4rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--surface-2);
+  text-align: center;
+}
 /* Détail des licences replié par défaut : une ligne discrète, le reste à la demande */
-.foot-more { margin-top: 0.3rem; }
+.foot-more { margin-top: 0; }
 .foot-more summary {
   cursor: pointer;
   display: inline-block;

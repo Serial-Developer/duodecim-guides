@@ -1,14 +1,6 @@
 // Page transverse : calendrier navigable des tournois (passés, à venir,
 // candidats détectés par la veille automatique)
-import { esc, sourcesSection, pageShell, siteHeader, siteFooter, linksFor } from './helpers.mjs';
-
-// Date longue localisée. Le nom du mois vient du catalogue ; l'ordre des
-// éléments, lui, est une règle de langue (« 3 mars 2026 » / « March 3, 2026 »).
-function longDate(t, iso) {
-  const [y, m, d] = iso.split('-').map(Number);
-  const month = t('calendar.months')[m - 1];
-  return t.locale === 'en' ? `${month} ${d}, ${y}` : `${d} ${month} ${y}`;
-}
+import { esc, sourcesSection, pageShell, siteHeader, siteFooter, linksFor, longDate } from './helpers.mjs';
 
 function upcomingList(t, events) {
   if (!events.length) {
