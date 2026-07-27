@@ -679,8 +679,7 @@
       else if (!input.checked && i !== -1) state.build.attacks.splice(i, 1);
       pruneOrphanBranches();
       markDirty();
-      renderPanel('attack');
-      refresh();
+      keepScroll(null, function () { renderPanel('attack'); refresh(); });
     });
     var meta = [];
     if (m.damage) meta.push(T('attacks.damage', { value: m.damage }));
@@ -764,8 +763,7 @@
         state.build.abilities.splice(i, 1);
       }
       markDirty();
-      renderPanel('abilities');
-      refresh();
+      keepScroll(null, function () { renderPanel('abilities'); refresh(); });
     });
     var children = [
       input,
@@ -802,13 +800,21 @@
   // on cherchait des gantelets, on se retrouve au titre « Mains ». On capture
   // donc les positions avant le rendu pour les rendre après, et on redonne le
   // focus à la ligne cliquée (le lecteur d'écran ne repart pas du début non plus).
-  function keepScroll(slotKey, uid, fn) {
+  // Toutes les listes de l'onglet sont relevées, pas seulement celle qu'on
+  // vient de toucher : un onglet en affiche plusieurs (les quatre emplacements
+  // d'équipement, les accessoires et leurs slots), et le rendu les remplace
+  // toutes. Chacune est repérée par son `data-slot`.
+  function keepScroll(uid, fn) {
     var y = window.scrollY;
-    var box = document.querySelector('.bc-list-scroll[data-slot="' + slotKey + '"]');
-    var inner = box ? box.scrollTop : 0;
+    var saved = {};
+    var before = document.querySelectorAll('.bc-list-scroll[data-slot]');
+    for (var i = 0; i < before.length; i++) saved[before[i].getAttribute('data-slot')] = before[i].scrollTop;
     fn();
-    var newBox = document.querySelector('.bc-list-scroll[data-slot="' + slotKey + '"]');
-    if (newBox) newBox.scrollTop = inner;
+    var after = document.querySelectorAll('.bc-list-scroll[data-slot]');
+    for (var j = 0; j < after.length; j++) {
+      var v = saved[after[j].getAttribute('data-slot')];
+      if (v != null) after[j].scrollTop = v;
+    }
     window.scrollTo(0, y);
     if (uid) {
       var row = document.querySelector('.bc-row-btn[data-uid="' + uid + '"]');
@@ -836,7 +842,11 @@
       if (st.state === 'unknown') line.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: st.label, text: T('status.undocumented') }));
       line.appendChild(el('button', {
         type: 'button', class: 'bc-btn bc-btn-small', text: T('equipment.remove'),
-        onclick: function () { state.build.equipment[slot.key] = null; markDirty(); renderPanel('stuff'); refresh(); },
+        onclick: function () {
+          state.build.equipment[slot.key] = null;
+          markDirty();
+          keepScroll(null, function () { renderPanel('stuff'); refresh(); });
+        },
       }));
       section.appendChild(line);
     }
@@ -920,7 +930,7 @@
       onclick: function () {
         state.build.equipment[slot.key] = selected ? null : e.uid;
         markDirty();
-        keepScroll(slot.key, e.uid, function () {
+        keepScroll(e.uid, function () {
           renderPanel('stuff');
           refresh();
         });
@@ -972,7 +982,7 @@
     bar.appendChild(search); bar.appendChild(catSel);
     panel.appendChild(bar);
 
-    var listBox = el('div', { class: 'bc-list bc-list-scroll' });
+    var listBox = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'acc' });
     panel.appendChild(listBox);
 
     function renderList() {
@@ -1007,7 +1017,11 @@
     if (a.legal === false) box.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(a), text: T('accessories.illegal') }));
     box.appendChild(el('button', {
       type: 'button', class: 'bc-btn bc-btn-small', text: T('equipment.remove'),
-      onclick: function () { state.build.accessories[i] = null; markDirty(); renderPanel('accessories'); refresh(); },
+      onclick: function () {
+        state.build.accessories[i] = null;
+        markDirty();
+        keepScroll(null, function () { renderPanel('accessories'); refresh(); });
+      },
     }));
     return box;
   }
@@ -1032,13 +1046,16 @@
       title: atteinte
         ? T(limite > 1 ? 'accessories.rankLimitMany' : 'accessories.rankLimitOne', { rank: a.rank, max: limite })
         : (full ? T('accessories.allSlotsFull', { count: ACCESSORY_SLOTS }) : ''),
+      'data-uid': a.uid,
       onclick: function () {
         var free = state.build.accessories.indexOf(null);
         if (free === -1) return;
         state.build.accessories[free] = a.uid;
         markDirty();
-        renderPanel('accessories');
-        refresh();
+        keepScroll(a.uid, function () {
+          renderPanel('accessories');
+          refresh();
+        });
       },
     }, [
       el('span', { class: 'bc-row-main' }, [
@@ -1065,12 +1082,17 @@
 
     panel.appendChild(el('h3', { text: T('assist.title') }));
     panel.appendChild(el('p', { class: 'bc-note', text: T('assist.note') }));
-    var alist = el('div', { class: 'bc-list bc-list-scroll' });
+    var alist = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'assist' });
     D.assists.slice().sort(function (a, b) { return byName(a, b); }).forEach(function (a) {
       var selected = state.build.assist === a.slug;
       var btn = el('button', {
         type: 'button', class: 'bc-row bc-row-btn' + (selected ? ' is-selected' : ''), 'aria-pressed': selected ? 'true' : 'false',
-        onclick: function () { state.build.assist = selected ? null : a.slug; markDirty(); renderPanel('assist'); refresh(); },
+        'data-uid': a.slug,
+        onclick: function () {
+          state.build.assist = selected ? null : a.slug;
+          markDirty();
+          keepScroll(a.slug, function () { renderPanel('assist'); refresh(); });
+        },
       }, [
         el('span', { class: 'bc-row-main' }, [
           el('span', { class: 'bc-row-name', text: a.name }),
@@ -1084,14 +1106,19 @@
 
     panel.appendChild(el('h3', { text: T('assist.summonTitle') }));
     panel.appendChild(el('p', { class: 'bc-note', text: T('assist.summonNote', { list: D.ruleset.legalSummons.join(', ') }) }));
-    var slist = el('div', { class: 'bc-list bc-list-scroll' });
+    var slist = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'summon' });
     D.summons.filter(function (s) { return state.showIllegal || s.legal !== false; })
       .sort(function (a, b) { return byName(a, b); })
       .forEach(function (s) {
         var selected = state.build.summon === s.id;
         var btn = el('button', {
           type: 'button', class: 'bc-row bc-row-btn' + (selected ? ' is-selected' : ''), 'aria-pressed': selected ? 'true' : 'false',
-          onclick: function () { state.build.summon = selected ? null : s.id; markDirty(); renderPanel('assist'); refresh(); },
+          'data-uid': s.id,
+          onclick: function () {
+            state.build.summon = selected ? null : s.id;
+            markDirty();
+            keepScroll(s.id, function () { renderPanel('assist'); refresh(); });
+          },
         }, [
           el('span', { class: 'bc-row-main' }, [
             el('span', { class: 'bc-row-name', text: s.name }),
