@@ -1378,6 +1378,173 @@
   // Le résultat porte le préfixe « z » ; sans lui, le paramètre est lu comme
   // l'ancienne base64 brute — les liens déjà partagés continuent de s'ouvrir.
   var ZIP = 'z';
+  var BIN = 'c';
+
+  // --- Encodage binaire (préfixe « c ») --------------------------------------
+  // Le jeu est figé depuis 2011 : équipements, accessoires, abilities et coups
+  // ne bougeront plus. On peut donc remplacer chaque identifiant par son rang
+  // dans un catalogue trié — un accessoire tient sur 10 bits au lieu de la
+  // trentaine d'octets de « booster:ATK:pre-ex-revenge ». Les catalogues sont
+  // reconstruits à l'identique des deux côtés depuis le payload, il n'y a donc
+  // aucune table à transporter ni à maintenir.
+  //
+  // Le tri par identifiant rend l'ordre indépendant de la façon dont le wiki
+  // est extrait : corriger une donnée (les CP de Wall Jump, par exemple) ne
+  // déplace rien. Seul un AJOUT d'entrée décalerait les rangs suivants — d'où
+  // l'empreinte des catalogues placée en tête du lien : si elle ne correspond
+  // pas, on refuse le lien au lieu de charger un build faux, et le format
+  // « z » reste disponible.
+  var catalogs = null;
+  function catalogsOf() {
+    if (catalogs) return catalogs;
+    var sorted = function (a) { return a.slice().sort(); };
+    var abilities = [];
+    D.abilities.forEach(function (g) { g.abilities.forEach(function (a) { abilities.push(a.id); }); });
+    catalogs = {
+      chars: sorted(D.characters.map(function (c) { return c.slug; })),
+      abilities: sorted(abilities),
+      equipment: sorted(D.equipment.map(function (e) { return e.uid; })),
+      accessories: sorted(D.accessories.map(function (a) { return a.uid; })),
+      assists: sorted(D.assists.map(function (a) { return a.slug; })),
+      summons: sorted(D.summons.map(function (s) { return s.id; })),
+      attacks: {},
+    };
+    D.characters.forEach(function (c) {
+      var ids = [];
+      ['bravery', 'hp'].forEach(function (kind) {
+        (c.attacks[kind] || []).forEach(function (g) {
+          g.moves.forEach(function (m) { ids.push(m.id); });
+        });
+      });
+      catalogs.attacks[c.slug] = sorted(ids);
+    });
+    return catalogs;
+  }
+
+  // Empreinte FNV-1a repliée sur 8 bits : elle ne protège pas d'une attaque,
+  // seulement d'un décalage de catalogue entre l'émetteur et le lecteur.
+  function catalogStamp() {
+    var c = catalogsOf();
+    var seed = [c.chars.length, c.abilities.length, c.equipment.length, c.accessories.length,
+      c.assists.length, c.summons.length].join(',')
+      + '|' + c.equipment[0] + '|' + c.equipment[c.equipment.length - 1]
+      + '|' + c.accessories[0] + '|' + c.abilities[c.abilities.length - 1];
+    var h = 0x811c9dc5;
+    for (var i = 0; i < seed.length; i++) {
+      h ^= seed.charCodeAt(i);
+      h = (h + ((h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24))) >>> 0;
+    }
+    return ((h >>> 24) ^ (h >>> 16) ^ (h >>> 8) ^ h) & 0xff;
+  }
+
+  function bits(n) { var b = 1; while ((1 << b) < n) b++; return b; }
+
+  function BitWriter() { this.bytes = []; this.cur = 0; this.n = 0; }
+  BitWriter.prototype.put = function (value, width) {
+    for (var i = width - 1; i >= 0; i--) {
+      this.cur = (this.cur << 1) | ((value >> i) & 1);
+      if (++this.n === 8) { this.bytes.push(this.cur); this.cur = 0; this.n = 0; }
+    }
+  };
+  BitWriter.prototype.done = function () {
+    if (this.n) this.bytes.push(this.cur << (8 - this.n));
+    return new Uint8Array(this.bytes);
+  };
+
+  function BitReader(bytes) { this.b = bytes; this.i = 0; }
+  BitReader.prototype.get = function (width) {
+    var v = 0;
+    for (var k = 0; k < width; k++) {
+      var byte = this.b[this.i >> 3];
+      if (byte === undefined) throw new Error('lien tronqué');
+      v = (v << 1) | ((byte >> (7 - (this.i & 7))) & 1);
+      this.i++;
+    }
+    return v;
+  };
+
+  // Un identifiant absent du catalogue (donnée retirée entre-temps) fait
+  // échouer l'encodage compact : l'appelant retombe alors sur le format « z ».
+  function idx(list, value) {
+    var i = list.indexOf(value);
+    if (i < 0) throw new Error('hors catalogue : ' + value);
+    return i;
+  }
+
+  function encodeCompact(b) {
+    var c = catalogsOf();
+    var atk = c.attacks[b.character] || [];
+    var w = new BitWriter();
+    w.put(catalogStamp(), 8);
+    w.put(idx(c.chars, b.character), bits(c.chars.length));
+    // Attaques : longueur puis rangs, dans le catalogue du personnage.
+    var attacks = b.attacks || [];
+    w.put(attacks.length, 5);
+    for (var i = 0; i < attacks.length; i++) w.put(idx(atk, attacks[i]), bits(atk.length));
+    // Abilities : un bit par entrée du catalogue — plus court qu'une liste de
+    // rangs dès qu'on en équipe une dizaine, et de longueur constante.
+    var owned = {};
+    (b.abilities || []).forEach(function (id) { owned[id] = 1; });
+    for (var j = 0; j < c.abilities.length; j++) w.put(owned[c.abilities[j]] ? 1 : 0, 1);
+    // Emplacements : 0 = vide, sinon rang + 1.
+    var eqw = bits(c.equipment.length + 1);
+    ['weapon', 'hand', 'head', 'body'].forEach(function (slot) {
+      var u = b.equipment[slot];
+      w.put(u ? idx(c.equipment, u) + 1 : 0, eqw);
+    });
+    var accw = bits(c.accessories.length + 1);
+    var acc = b.accessories || [];
+    w.put(acc.length, 5);
+    for (var k = 0; k < acc.length; k++) w.put(acc[k] ? idx(c.accessories, acc[k]) + 1 : 0, accw);
+    w.put(b.assist ? idx(c.assists, b.assist) + 1 : 0, bits(c.assists.length + 1));
+    w.put(b.summon ? idx(c.summons, b.summon) + 1 : 0, bits(c.summons.length + 1));
+    // Nom et notes en UTF-8 : ce sont les seuls champs libres, et les seuls qui
+    // rallongent vraiment le lien. Vides, ils ne coûtent que leur compteur.
+    [b.name || '', b.notes || ''].forEach(function (text) {
+      var u8 = new TextEncoder().encode(text.slice(0, 255));
+      w.put(u8.length, 8);
+      for (var t = 0; t < u8.length; t++) w.put(u8[t], 8);
+    });
+    return BIN + b64url(w.done());
+  }
+
+  function decodeCompact(param) {
+    var c = catalogsOf();
+    var r = new BitReader(unb64url(param));
+    if (r.get(8) !== catalogStamp()) throw new Error('catalogues différents');
+    var slug = c.chars[r.get(bits(c.chars.length))];
+    var atk = c.attacks[slug] || [];
+    var attacks = [];
+    var n = r.get(5);
+    for (var i = 0; i < n; i++) attacks.push(atk[r.get(bits(atk.length))]);
+    var abilities = [];
+    for (var j = 0; j < c.abilities.length; j++) if (r.get(1)) abilities.push(c.abilities[j]);
+    var eqw = bits(c.equipment.length + 1);
+    var eq = ['weapon', 'hand', 'head', 'body'].map(function () {
+      var v = r.get(eqw);
+      return v ? c.equipment[v - 1] : null;
+    });
+    var accw = bits(c.accessories.length + 1);
+    var acc = [];
+    var m = r.get(5);
+    for (var k = 0; k < m; k++) { var a = r.get(accw); acc.push(a ? c.accessories[a - 1] : null); }
+    var as = r.get(bits(c.assists.length + 1));
+    var su = r.get(bits(c.summons.length + 1));
+    var texts = [0, 0].map(function () {
+      var len = r.get(8);
+      var u8 = new Uint8Array(len);
+      for (var t = 0; t < len; t++) u8[t] = r.get(8);
+      return new TextDecoder().decode(u8);
+    });
+    return {
+      schemaVersion: 1, id: uid(), name: texts[0], character: slug,
+      attacks: attacks, abilities: abilities,
+      equipment: { weapon: eq[0], hand: eq[1], head: eq[2], body: eq[3] },
+      accessories: acc, assist: as ? c.assists[as - 1] : null,
+      summon: su ? c.summons[su - 1] : null, notes: texts[1],
+      created: new Date().toISOString(), modified: new Date().toISOString(),
+    };
+  }
 
   function b64url(bytes) {
     var bin = '';
@@ -1411,6 +1578,9 @@
   // (navigateur ancien), on retombe sur la base64 brute, qui reste lisible par
   // tout le monde.
   function encodeBuild(b) {
+    // Format binaire d'abord : c'est le plus court, et il n'a besoin de rien
+    // d'autre que le payload déjà chargé.
+    try { return Promise.resolve(encodeCompact(b)); } catch (e) { /* repli ci-dessous */ }
     var bytes = new TextEncoder().encode(JSON.stringify(compactBuild(b)));
     if (typeof CompressionStream !== 'function') return Promise.resolve(b64url(bytes));
     try {
@@ -1426,8 +1596,12 @@
     }
   }
 
-  // Rend une promesse, la décompression étant asynchrone elle aussi.
+  // Rend une promesse, la décompression étant asynchrone elle aussi. Trois
+  // formats coexistent : binaire (« c »), deflate (« z ») et la base64 brute
+  // d'origine, sans préfixe — les liens partagés avant chaque changement
+  // continuent tous de s'ouvrir.
   function decodeBuild(param) {
+    if (param.charAt(0) === BIN) return Promise.resolve(decodeCompact(param.slice(1)));
     if (param.charAt(0) !== ZIP) return Promise.resolve(fromJsonBytes(unb64url(param)));
     var packed = unb64url(param.slice(1));
     var ds = new DecompressionStream('deflate-raw');
