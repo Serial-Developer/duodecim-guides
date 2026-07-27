@@ -1368,27 +1368,78 @@
   }
 
   // --- Lien de partage ------------------------------------------------------
-  // Le build voyage dans l'URL, encodé en base64url d'un JSON compact.
-  function encodeBuild(b) {
-    var compact = {
-      v: b.schemaVersion, c: b.character, n: b.name,
-      at: b.attacks, ab: b.abilities,
-      eq: [b.equipment.weapon, b.equipment.hand, b.equipment.head, b.equipment.body],
-      ac: b.accessories, as: b.assist, su: b.summon, no: b.notes,
-    };
-    var json = JSON.stringify(compact);
-    var bytes = new TextEncoder().encode(json);
+  // Le build voyage dans l'URL. Le JSON compact est très répétitif — douze
+  // identifiants d'attaques préfixés « bravery:ground: », vingt-quatre slugs
+  // d'abilities — et sa base64 dépassait 1500 caractères, illisible et hachée
+  // par les clients de messagerie. On le dégonfle donc au deflate avant de
+  // l'encoder : environ un tiers de la longueur, sans table de correspondance
+  // qui deviendrait fausse à la première mise à jour des données.
+  //
+  // Le résultat porte le préfixe « z » ; sans lui, le paramètre est lu comme
+  // l'ancienne base64 brute — les liens déjà partagés continuent de s'ouvrir.
+  var ZIP = 'z';
+
+  function b64url(bytes) {
     var bin = '';
-    bytes.forEach(function (x) { bin += String.fromCharCode(x); });
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
     return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
   }
 
-  function decodeBuild(param) {
-    var b64 = param.replace(/-/g, '+').replace(/_/g, '/');
+  function unb64url(s) {
+    var b64 = s.replace(/-/g, '+').replace(/_/g, '/');
     while (b64.length % 4) b64 += '=';
     var bin = atob(b64);
     var bytes = new Uint8Array(bin.length);
     for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes;
+  }
+
+  function compactBuild(b) {
+    var compact = {
+      v: b.schemaVersion, c: b.character,
+      at: b.attacks, ab: b.abilities,
+      eq: [b.equipment.weapon, b.equipment.hand, b.equipment.head, b.equipment.body],
+      ac: b.accessories, as: b.assist, su: b.summon,
+    };
+    // Un nom ou des notes vides n'ont pas à occuper l'URL.
+    if (b.name) compact.n = b.name;
+    if (b.notes) compact.no = b.notes;
+    return compact;
+  }
+
+  // Rend une promesse : la compression native est asynchrone. Sans elle
+  // (navigateur ancien), on retombe sur la base64 brute, qui reste lisible par
+  // tout le monde.
+  function encodeBuild(b) {
+    var bytes = new TextEncoder().encode(JSON.stringify(compactBuild(b)));
+    if (typeof CompressionStream !== 'function') return Promise.resolve(b64url(bytes));
+    try {
+      var cs = new CompressionStream('deflate-raw');
+      var writer = cs.writable.getWriter();
+      writer.write(bytes);
+      writer.close();
+      return new Response(cs.readable).arrayBuffer().then(function (buf) {
+        return ZIP + b64url(new Uint8Array(buf));
+      }, function () { return b64url(bytes); });
+    } catch (e) {
+      return Promise.resolve(b64url(bytes));
+    }
+  }
+
+  // Rend une promesse, la décompression étant asynchrone elle aussi.
+  function decodeBuild(param) {
+    if (param.charAt(0) !== ZIP) return Promise.resolve(fromJsonBytes(unb64url(param)));
+    var packed = unb64url(param.slice(1));
+    var ds = new DecompressionStream('deflate-raw');
+    var writer = ds.writable.getWriter();
+    writer.write(packed);
+    writer.close();
+    return new Response(ds.readable).arrayBuffer().then(function (buf) {
+      return fromJsonBytes(new Uint8Array(buf));
+    });
+  }
+
+  function fromJsonBytes(bytes) {
     var c = JSON.parse(new TextDecoder().decode(bytes));
     return {
       schemaVersion: c.v, id: uid(), name: c.n || '', character: c.c,
@@ -1399,28 +1450,58 @@
     };
   }
 
+  function shareUrl(base) {
+    return encodeBuild(currentSnapshot()).then(function (code) {
+      return (base || location.origin + location.pathname) + '?build=' + code;
+    });
+  }
+
   document.getElementById('bc-share').addEventListener('click', function () {
-    var snap = currentSnapshot();
-    var url = location.origin + location.pathname + '?build=' + encodeBuild(snap);
-    var done = function () { toast(T('manager.linkCopied')); };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(done, function () { window.prompt(T('manager.promptCopyLink'), url); });
-    } else {
-      window.prompt(T('manager.promptCopyLink'), url);
-    }
+    shareUrl().then(function (url) {
+      var done = function () { toast(T('manager.linkCopied')); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () { window.prompt(T('manager.promptCopyLink'), url); });
+      } else {
+        window.prompt(T('manager.promptCopyLink'), url);
+      }
+    });
   });
+
+  // Changer de langue depuis le créateur emporte le build en cours — y compris
+  // les retouches faites depuis l'ouverture du lien, que la query string de la
+  // page ne connaît pas. lang.js a déjà recopié cette query string ; on la
+  // remplace ici par l'état réel.
+  var langLinks = document.querySelectorAll('.lang-switch a[hreflang]');
+  for (var li = 0; li < langLinks.length; li++) {
+    (function (a) {
+      a.addEventListener('click', function (ev) {
+        if (!state.build || !state.build.character) return;
+        if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button) return; // ouverture dans un onglet
+        ev.preventDefault();
+        shareUrl(a.href.split('?')[0]).then(function (url) { location.href = url; },
+          function () { location.href = a.href; });
+      });
+    })(langLinks[li]);
+  }
+
+  // Le décodage étant asynchrone, l'application reste affichée le temps de la
+  // décompression, puis se replie sur l'écran de sélection si le lien est
+  // illisible — c'est ce que faisait la version synchrone en rendant `false`.
+  function collapseApp() {
+    root.hidden = true;
+    document.getElementById('bc-manager').hidden = true;
+  }
 
   function readSharedBuild() {
     var m = /[?&]build=([^&]+)/.exec(location.search);
     if (!m) return false;
-    var b;
-    try { b = decodeBuild(decodeURIComponent(m[1])); }
-    catch (e) { toast(T('manager.linkCorrupt'), true); return false; }
-    var check = validateBuild(b);
-    if (!check.ok) { toast(T('manager.linkRefused', { error: check.error }), true); return false; }
-    loadBuildSilently(b);
-    state.dirty = true;
-    toast(T('manager.linkReceived'));
+    decodeBuild(decodeURIComponent(m[1])).then(function (b) {
+      var check = validateBuild(b);
+      if (!check.ok) { toast(T('manager.linkRefused', { error: check.error }), true); collapseApp(); return; }
+      loadBuildSilently(b);
+      state.dirty = true;
+      toast(T('manager.linkReceived'));
+    }, function () { toast(T('manager.linkCorrupt'), true); collapseApp(); });
     return true;
   }
 
@@ -1443,8 +1524,5 @@
   // --- Démarrage ------------------------------------------------------------
   applyCharacterUi();
   renderSavedList();
-  if (!readSharedBuild()) {
-    root.hidden = true;
-    document.getElementById('bc-manager').hidden = true;
-  }
+  if (!readSharedBuild()) collapseApp();
 })();

@@ -26,9 +26,18 @@
   }
 
   // Le sélecteur enregistre le choix explicite de l'utilisateur.
+  //
+  // Il transporte aussi la query string : les liens du header sont statiques,
+  // et changer de langue depuis un build partagé (?build=…) faisait perdre le
+  // build. La même page dans l'autre langue est la même application, ses
+  // paramètres valent donc des deux côtés. Le créateur de builds réécrit ensuite
+  // ces mêmes liens avec son état vivant — les modifications non partagées
+  // survivent alors elles aussi.
+  var qs = location.search;
   var switches = document.querySelectorAll('.lang-switch a[hreflang]');
   for (var i = 0; i < switches.length; i++) {
     (function (a) {
+      if (qs && a.getAttribute('href').indexOf('?') === -1) a.href = a.href + qs;
       a.addEventListener('click', function () {
         write({ chosen: a.getAttribute('hreflang'), dismissed: true });
       });
@@ -68,7 +77,7 @@
 
   var go = document.createElement('a');
   go.className = 'lang-bar-go';
-  go.href = target.href;
+  go.href = target.href + (qs && target.href.indexOf('?') === -1 ? qs : '');
   go.setAttribute('hreflang', target.lang);
   go.textContent = target.action;
   go.addEventListener('click', function () {
