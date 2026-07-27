@@ -723,9 +723,9 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  margin-top: 0.7rem !important;
-  font-size: 0.74rem;
+  font-size: 0.9rem;
 }
+.foot-updated-note { font-size: 0.72rem; opacity: 0.75; }
 .foot-dot {
   width: 7px;
   height: 7px;
@@ -1071,6 +1071,19 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
 .bc-btn-primary { background: var(--gold); color: #241b06; border-color: var(--gold); font-weight: 600; }
 .bc-btn-primary:hover { filter: brightness(1.1); color: #241b06; }
 .bc-btn-small { font-size: 0.75rem; padding: 0.2rem 0.55rem; }
+/* Bascule du sens de tri : carrée, alignée sur la hauteur des champs de filtre,
+   et assez grande pour le doigt (44 px de cible tactile). */
+.bc-sort-dir {
+  min-width: 2.2rem;
+  min-height: 2.2rem;
+  font-size: 0.95rem;
+  line-height: 1;
+  padding: 0.2rem 0.5rem;
+}
+.bc-sort-dir[aria-pressed="true"] { border-color: var(--gold); color: var(--gold); }
+@media (hover: none) and (pointer: coarse) {
+  .bc-sort-dir { min-width: 44px; min-height: 44px; }
+}
 .bc-btn-danger:hover { border-color: var(--danger); color: var(--danger); }
 .bc-btn-file { display: inline-flex; align-items: center; }
 .bc-saved { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; padding: 0.4rem 0.6rem; background: var(--bg); border: 1px solid rgba(157, 134, 232, 0.18); border-radius: 8px; margin-bottom: 0.3rem; }

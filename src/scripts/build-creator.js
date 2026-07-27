@@ -793,6 +793,28 @@
   var stuffFilters = { weapon: '', hand: '', head: '', body: '' };
   var stuffSort = { weapon: 'name', hand: 'name', head: 'name', body: 'name' };
   var stuffCategory = { weapon: '', hand: '', head: '', body: '' };
+  // Sens du tri, par emplacement. Le comparateur garde son ordre naturel (A→Z
+  // pour un nom, décroissant pour une stat) ; ce drapeau ne fait que l'inverser.
+  var stuffDesc = { weapon: false, hand: false, head: false, body: false };
+
+  // Sélectionner une pièce reconstruit tout le panneau : le DOM est remplacé,
+  // la page remonte en haut de la section et la liste interne repart à zéro —
+  // on cherchait des gantelets, on se retrouve au titre « Mains ». On capture
+  // donc les positions avant le rendu pour les rendre après, et on redonne le
+  // focus à la ligne cliquée (le lecteur d'écran ne repart pas du début non plus).
+  function keepScroll(slotKey, uid, fn) {
+    var y = window.scrollY;
+    var box = document.querySelector('.bc-list-scroll[data-slot="' + slotKey + '"]');
+    var inner = box ? box.scrollTop : 0;
+    fn();
+    var newBox = document.querySelector('.bc-list-scroll[data-slot="' + slotKey + '"]');
+    if (newBox) newBox.scrollTop = inner;
+    window.scrollTo(0, y);
+    if (uid) {
+      var row = document.querySelector('.bc-row-btn[data-uid="' + uid + '"]');
+      if (row) row.focus({ preventScroll: true });
+    }
+  }
 
   function renderStuff(panel) {
     panel.appendChild(illegalToggle());
@@ -838,10 +860,22 @@
     ]);
     sortSel.value = stuffSort[slot.key];
     sortSel.addEventListener('change', function () { stuffSort[slot.key] = sortSel.value; renderList(); });
-    bar.appendChild(search); bar.appendChild(catSel); bar.appendChild(sortSel);
+    // Bascule du sens de tri : une flèche, pas un second menu déroulant — deux
+    // états n'en méritent pas un. `aria-pressed` porte l'état pour l'assistance.
+    var dirBtn = el('button', { type: 'button', class: 'bc-btn bc-btn-small bc-sort-dir' });
+    function paintDir() {
+      var desc = stuffDesc[slot.key];
+      dirBtn.textContent = desc ? '↓' : '↑';
+      dirBtn.setAttribute('aria-pressed', desc ? 'true' : 'false');
+      dirBtn.setAttribute('aria-label', T('equipment.sortDir'));
+      dirBtn.title = desc ? T('equipment.sortDesc') : T('equipment.sortAsc');
+    }
+    dirBtn.addEventListener('click', function () { stuffDesc[slot.key] = !stuffDesc[slot.key]; paintDir(); renderList(); });
+    paintDir();
+    bar.appendChild(search); bar.appendChild(catSel); bar.appendChild(sortSel); bar.appendChild(dirBtn);
     section.appendChild(bar);
 
-    var listBox = el('div', { class: 'bc-list bc-list-scroll' });
+    var listBox = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': slot.key });
     section.appendChild(listBox);
 
     function renderList() {
@@ -856,15 +890,16 @@
         return true;
       });
       var key = stuffSort[slot.key];
+      var sign = stuffDesc[slot.key] ? -1 : 1;
       items.sort(function (a, b) {
-        if (key === 'name') return byName(a, b);
-        if (key === 'level') return (a.level || 0) - (b.level || 0) || byName(a, b);
+        if (key === 'name') return sign * byName(a, b);
+        if (key === 'level') return sign * ((a.level || 0) - (b.level || 0) || byName(a, b));
         if (key === 'combination') {
           var an = a.combination ? a.combination.name : '￿';
           var bn = b.combination ? b.combination.name : '￿';
-          return an.localeCompare(bn, BC.locale) || byName(a, b);
+          return sign * (an.localeCompare(bn, BC.locale) || byName(a, b));
         }
-        return ((b.stats && b.stats[key]) || 0) - ((a.stats && a.stats[key]) || 0) || byName(a, b);
+        return sign * (((b.stats && b.stats[key]) || 0) - ((a.stats && a.stats[key]) || 0) || byName(a, b));
       });
       listBox.appendChild(el('p', { class: 'bc-count', text: T('equipment.pieces', { count: items.length }) }));
       items.slice(0, 400).forEach(function (e) { listBox.appendChild(equipRow(slot, e)); });
@@ -881,11 +916,14 @@
       type: 'button',
       class: 'bc-row bc-row-btn' + (selected ? ' is-selected' : ''),
       'aria-pressed': selected ? 'true' : 'false',
+      'data-uid': e.uid,
       onclick: function () {
         state.build.equipment[slot.key] = selected ? null : e.uid;
         markDirty();
-        renderPanel('stuff');
-        refresh();
+        keepScroll(slot.key, e.uid, function () {
+          renderPanel('stuff');
+          refresh();
+        });
       },
     }, [
       el('span', { class: 'bc-row-main' }, [

@@ -624,12 +624,11 @@ export function siteFooter(t) {
 <p>${t('footer.gameDataFrom')} ${extLink('https://dissidia.wiki', 'dissidia.wiki')} (${extLink('https://creativecommons.org/licenses/by/4.0/', 'CC BY 4.0')}) ${t('footer.and')} ${extLink('https://finalfantasy.fandom.com', 'Final Fantasy Wiki')} (${extLink('https://creativecommons.org/licenses/by-sa/3.0/', 'CC BY-SA 3.0')}).</p>
 <p>${t('footer.imagesVia')} ${extLink('https://web.archive.org', t('footer.waybackLabel'))}.</p>
 </section>
-<section class="foot-col">
-<h2 class="foot-h">${t('footer.colProject')}</h2>
-<p>${extLink(REPO, t('footer.repoLink'))}</p>
-<p>${extLink(`${REPO}/blob/main/NOTICE.md`, t('footer.noticeLink'))}</p>
-${updated ? `<p class="foot-updated"><span class="foot-dot" aria-hidden="true"></span>${t('footer.lastUpdate')} <time datetime="${updated}">${esc(longDate(t, updated))}</time></p>` : ''}
-</section>
+${updated ? `<section class="foot-col">
+<h2 class="foot-h">${t('footer.colUpdated')}</h2>
+<p class="foot-updated"><span class="foot-dot" aria-hidden="true"></span><time datetime="${updated}">${esc(longDate(t, updated))}</time></p>
+<p class="foot-updated-note">${t('footer.updatedNote')}</p>
+</section>` : ''}
 </div>
 <div class="wrap foot-bottom">
 <details class="foot-more"><summary>${t('footer.moreSummary')}</summary>
