@@ -230,6 +230,18 @@ function parseAbilities() {
       // « 10 (5) » = coût à l'achat (coût une fois l'ability maîtrisée)
       const m = /^(\d+)\s*\((\d+)\)$/.exec(c[1].replace(/\s+/g, ' ').trim());
       if (!m) warn(`Abilities : coût CP illisible pour « ${c[0] } » (« ${c[1]} »)`);
+      // Maîtriser une ability ne peut pas la rendre plus chère : toute la table
+      // suit « X (X/2) ». Quand le wiki annonce l'inverse, les deux valeurs sont
+      // interverties à la source — seul cas connu : « Wall Jump 0 (5) », dont la
+      // note du wiki lui-même (« It's free. ») confirme que c'est la version
+      // maîtrisée qui est gratuite. On rétablit l'ordre plutôt que de publier un
+      // coût faux, et on le signale dans le journal de parsing.
+      let cp = m ? Number(m[1]) : null;
+      let cpMastered = m ? Number(m[2]) : null;
+      if (cp !== null && cpMastered !== null && cpMastered > cp) {
+        warn(`Abilities : « ${c[0]} » annoncé « ${cp} (${cpMastered}) » — maîtrisé plus cher que non maîtrisé, valeurs interverties`);
+        [cp, cpMastered] = [cpMastered, cp];
+      }
       const notes = (c[4] || '').trim();
       const description = (c[3] || '').trim();
       // « Lightning only. », « Terra, Kefka, Sephiroth and Kuja only »
@@ -239,8 +251,8 @@ function parseAbilities() {
       abilities.push({
         id: slugify(c[0]),
         name: c[0],
-        cp: m ? Number(m[1]) : null,
-        cpMastered: m ? Number(m[2]) : null,
+        cp,
+        cpMastered,
         ap: /^\d+$/.test(c[2] || '') ? Number(c[2]) : null,
         description,
         statBonus: abilityStatBonus(description),

@@ -1,6 +1,7 @@
 {
-  "generated": "2026-07-25T22:47:23.638Z",
+  "generated": "2026-07-27T15:02:24.074Z",
   "warnings": [
+    "Abilities : « Wall Jump » annoncé « 0 (5) » — maîtrisé plus cher que non maîtrisé, valeurs interverties",
     "Abilities : « Jump Times Boost » (40 CP) et « Jump Times Boost » (20 CP) partagent l'identifiant jump-times-boost — palier probablement mal orthographié sur le wiki",
     "Armure exclusive « Aegis of Strife » : emplacement non documenté",
     "Armure exclusive « Calamitous Rage » : emplacement non documenté",

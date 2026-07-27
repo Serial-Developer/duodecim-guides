@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T22:47:23.541Z",
+  "generated": "2026-07-27T15:02:23.963Z",
   "license": "CC BY 4.0 — dissidia.wiki",
   "sources": [
     "https://dissidia.wiki/Abilities_(Dissidia_012)"
@@ -117,8 +117,8 @@
         {
           "id": "wall-jump",
           "name": "Wall Jump",
-          "cp": 0,
-          "cpMastered": 5,
+          "cp": 5,
+          "cpMastered": 0,
           "ap": 50,
           "description": "Press X after a Quickmove to run on a wall for a high jump.",
           "statBonus": null,
@@ -2146,8 +2146,8 @@
     {
       "id": "wall-jump",
       "name": "Wall Jump",
-      "cp": 0,
-      "cpMastered": 5,
+      "cp": 5,
+      "cpMastered": 0,
       "ap": 50,
       "description": "Press X after a Quickmove to run on a wall for a high jump.",
       "statBonus": null,

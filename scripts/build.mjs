@@ -286,7 +286,14 @@ for (const locale of activeLocales) {
   // fetcher, pour rester consultable sans serveur comme le reste du site).
   if (pageAvailability.buildCreator.includes(locale)) {
     const ed = readEd(locale, '_build-creator');
-    const bundle = buildDataBundle(ROOT, ed);
+    // Le payload est partagé par toutes les langues, mais l'éditorial dont il
+    // tire ses quelques textes déclarés à la main (effets d'invocation, motifs
+    // d'exclusion) existe, lui, dans chaque langue. L'assembler depuis la locale
+    // en cours faisait gagner la DERNIÈRE rendue : Barbariccia s'affichait en
+    // français sur le site anglais. On l'assemble donc toujours depuis
+    // l'anglais, langue des données de jeu — comme les descriptions du wiki que
+    // le payload embarque déjà et que le site français affiche telles quelles.
+    const bundle = buildDataBundle(ROOT, readEd('en', '_build-creator'));
     // Le payload de données est partagé par toutes les langues (identifiants,
     // chiffres et noms propres du jeu) : il est écrit une seule fois.
     writeFileSync(join(DIST, 'scripts', 'build-data.js'), `window.BUILD_DATA=${JSON.stringify(bundle)};\n`);
