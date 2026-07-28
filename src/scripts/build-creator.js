@@ -716,7 +716,7 @@
     if (glitch.length) infos.push(T('status.glitchNeeded', { list: glitch.join(', ') }));
 
     var combos = activeCombinations();
-    if (combos.length) infos.push('Set actif : ' + combos.map(function (c) { return c.name + ' — ' + c.effects; }).join(' ; '));
+    if (combos.length) infos.push(T('status.activeSet', { list: combos.map(function (c) { return c.name + ' — ' + c.effects; }).join(' ; ') }));
 
     var st = computeStats();
     var boost = maxBooster();
@@ -1712,7 +1712,8 @@
     var builds = loadAll();
     var snap = currentSnapshot();
     if (!builds.some(function (b) { return b.id === snap.id; })) builds = builds.concat([snap]);
-    var cols = ['id', 'nom', 'personnage', 'attaques', 'abilities', 'arme', 'main', 'tete', 'corps', 'accessoires', 'assist', 'invocation', 'notes', 'modifie'];
+    var cols = ['id', 'name', 'character', 'attacks', 'abilities', 'weapon', 'hand', 'head', 'body', 'accessories', 'assist', 'summon', 'notes', 'modified']
+      .map(function (c) { return T('manager.csv.' + c); });
     var esc = function (v) { return '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"'; };
     var lines = [cols.map(esc).join(',')];
     builds.forEach(function (b) {
@@ -2108,7 +2109,7 @@
   // --- Sources --------------------------------------------------------------
   var sourcesBox = document.getElementById('bc-sources');
   if (sourcesBox) {
-    sourcesBox.appendChild(document.createTextNode('Sources : '));
+    sourcesBox.appendChild(document.createTextNode(T('sources.inline') + ' '));
     D.sources.pages.forEach(function (u, i) {
       if (i) sourcesBox.appendChild(document.createTextNode(' · '));
       sourcesBox.appendChild(el('a', { href: u, target: '_blank', rel: 'external noopener', text: u.replace(/^https?:\/\/(www\.)?/, '') }));

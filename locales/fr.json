@@ -521,6 +521,7 @@
       "summonSuffix": "(invocation)",
       "notWearable": "Équipement non portable par ce personnage : {list}.",
       "glitchNeeded": "Equip Glitch requis pour : {list} (jusqu’à 10 CP économisés par pièce).",
+      "activeSet": "Set actif : {list}.",
       "abilityBonus": "Bonus d’ability appliqué : {list}.",
       "undocumented": "non documenté"
     },
@@ -628,7 +629,23 @@
       "promptCopyLink": "Copiez ce lien :",
       "linkCorrupt": "Le lien de partage est corrompu.",
       "linkRefused": "Lien de partage refusé : {error}",
-      "linkReceived": "Build reçu par lien — enregistrez-le pour le conserver."
+      "linkReceived": "Build reçu par lien — enregistrez-le pour le conserver.",
+      "csv": {
+        "id": "id",
+        "name": "nom",
+        "character": "personnage",
+        "attacks": "attaques",
+        "abilities": "abilities",
+        "weapon": "arme",
+        "hand": "main",
+        "head": "tete",
+        "body": "corps",
+        "accessories": "accessoires",
+        "assist": "assist",
+        "summon": "invocation",
+        "notes": "notes",
+        "modified": "modifie"
+      }
     },
     "detail": {
       "countOne": "1 modificateur",
@@ -713,6 +730,9 @@
         "total": "Multiplicateur actif",
         "scope": "Décochez un booster dont la condition de combat n’est pas remplie. Le multiplicateur ne porte que sur les effets en pourcentage des accessoires — jamais sur les équipements, les sets ou les abilities, ni sur les bonus en points."
       }
+    },
+    "sources": {
+      "inline": "Sources :"
     }
   },
   "notFound": {

@@ -521,6 +521,7 @@
       "summonSuffix": "(summon)",
       "notWearable": "Equipment this character cannot wear: {list}.",
       "glitchNeeded": "Equip Glitch required for: {list} (up to 10 CP saved per piece).",
+      "activeSet": "Active set: {list}.",
       "abilityBonus": "Ability bonus applied: {list}.",
       "undocumented": "not documented"
     },
@@ -628,7 +629,23 @@
       "promptCopyLink": "Copy this link:",
       "linkCorrupt": "The share link is corrupted.",
       "linkRefused": "Share link refused: {error}",
-      "linkReceived": "Build received by link — save it to keep it."
+      "linkReceived": "Build received by link — save it to keep it.",
+      "csv": {
+        "id": "id",
+        "name": "name",
+        "character": "character",
+        "attacks": "attacks",
+        "abilities": "abilities",
+        "weapon": "weapon",
+        "hand": "hand",
+        "head": "head",
+        "body": "body",
+        "accessories": "accessories",
+        "assist": "assist",
+        "summon": "summon",
+        "notes": "notes",
+        "modified": "modified"
+      }
     },
     "detail": {
       "countOne": "1 modifier",
@@ -713,6 +730,9 @@
         "total": "Active multiplier",
         "scope": "Untick a booster whose battle condition is not met. The multiplier applies to the percentage effects of accessories only — never to equipment, sets or abilities, and never to flat point bonuses."
       }
+    },
+    "sources": {
+      "inline": "Sources:"
     }
   },
   "notFound": {
