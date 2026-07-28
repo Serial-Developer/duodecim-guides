@@ -947,6 +947,110 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
 .bc-alert-info { background: rgba(157, 134, 232, 0.12); border-color: var(--violet); color: var(--text); }
 .bc-alert-muted { background: transparent; border-color: rgba(157, 134, 232, 0.3); color: var(--muted); }
 
+/* Modificateurs détaillés — dépliant du panneau collant. Le corps est borné en
+   hauteur et défile pour lui-même : ouvert sur un build chargé, il couvrirait
+   sinon la totalité de l'écran et masquerait les onglets qu'on est en train de
+   remplir. */
+.bc-detail { margin-top: 0.5rem; font-size: 0.83rem; }
+.bc-detail summary {
+  cursor: pointer;
+  color: var(--muted);
+  padding: 0.15rem 0;
+  list-style: none;
+  display: flex;
+  gap: 0.4rem;
+  align-items: baseline;
+}
+.bc-detail summary::-webkit-details-marker { display: none; }
+.bc-detail summary::before { content: "▸"; color: var(--gold); transition: transform 120ms; }
+.bc-detail[open] summary::before { transform: rotate(90deg); }
+.bc-detail summary:hover { color: var(--text); }
+.bc-detail-count { color: var(--gold); font-family: var(--font-mono); font-size: 0.78rem; }
+/* Deux colonnes : les modificateurs à gauche, les boosters à droite. Chacune
+   défile pour elle-même — la hauteur est bornée pour que le panneau collant ne
+   recouvre pas les onglets qu'on est en train de remplir. */
+.bc-detail-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(13rem, 19rem);
+  gap: 0.4rem 1.2rem;
+  align-items: start;
+  padding: 0.2rem 0.1rem 0.1rem;
+}
+.bc-detail-main, .bc-detail-boosters { max-height: 40vh; overflow-y: auto; }
+.bc-detail-group {
+  margin: 0.7rem 0 0.3rem;
+  font-size: 0.8rem;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.bc-detail-group:first-child { margin-top: 0.2rem; }
+.bc-detail-note { margin: 0.2rem 0; color: var(--muted); font-size: 0.78rem; }
+/* Deux colonnes : le libellé garde une largeur fixe pour que les valeurs
+   s'alignent, la seconde colonne porte la valeur puis son détail. */
+.bc-detail-list { display: grid; grid-template-columns: minmax(8rem, 14rem) 1fr; gap: 0.15rem 0.7rem; margin: 0; }
+.bc-detail-list dt { color: var(--text); }
+.bc-detail-list dd { margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; }
+.bc-detail-value { font-family: var(--font-mono); color: var(--gold); font-weight: 600; }
+.bc-detail-from { color: var(--muted); font-size: 0.76rem; }
+.bc-detail-others { margin: 0.2rem 0 0; padding-left: 1.1rem; color: var(--muted); }
+.bc-detail-others li { margin-bottom: 0.15rem; }
+.bc-detail-others strong { color: var(--text); font-weight: 600; }
+
+/* Boosters : une case par booster équipé, sa condition de combat en dessous. */
+.bc-detail-boosters {
+  border-left: 1px solid rgba(157, 134, 232, 0.25);
+  padding-left: 1rem;
+}
+.bc-booster {
+  display: flex;
+  gap: 0.45rem;
+  align-items: baseline;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(157, 134, 232, 0.12);
+}
+.bc-booster:hover { color: var(--text); }
+.bc-booster input { accent-color: var(--gold); flex: none; }
+.bc-booster-text { display: flex; flex-direction: column; gap: 0.05rem; min-width: 0; }
+.bc-booster-name { display: flex; gap: 0.4rem; align-items: baseline; justify-content: space-between; }
+.bc-booster-mult { font-family: var(--font-mono); color: var(--gold); flex: none; }
+.bc-booster-req { color: var(--muted); font-size: 0.76rem; }
+/* Une case décochée reste lisible, mais visiblement hors du compte. */
+.bc-booster:has(input:not(:checked)) .bc-booster-name span { color: var(--muted); text-decoration: line-through; }
+.bc-booster:has(input:not(:checked)) .bc-booster-mult { text-decoration: line-through; }
+.bc-booster-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0;
+  padding-top: 0.4rem;
+  border-top: 1px solid rgba(157, 134, 232, 0.3);
+  font-weight: 600;
+}
+.bc-booster-total-value { font-family: var(--font-mono); color: var(--gold); font-size: 1.05em; }
+@media (max-width: 1023px) {
+  /* Sous 1024 px, la colonne des boosters passe sous les modificateurs : à deux
+     colonnes, ni l'une ni l'autre n'a la place de tenir sa ligne. */
+  .bc-detail-body { grid-template-columns: 1fr; max-height: 45vh; overflow-y: auto; }
+  .bc-detail-main, .bc-detail-boosters { max-height: none; overflow-y: visible; }
+  .bc-detail-boosters {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(157, 134, 232, 0.25);
+    padding-top: 0.4rem;
+    margin-top: 0.4rem;
+  }
+}
+@media (max-width: 599px) {
+  /* Une seule colonne : à 14 rem de libellé, la valeur se retrouvait écrasée. */
+  .bc-detail-list { grid-template-columns: 1fr; gap: 0 0; }
+  .bc-detail-list dd { margin-bottom: 0.3rem; }
+  /* Le panneau collant occupait 87 % d'un écran de téléphone une fois déplié :
+     il ne doit pas chasser de l'écran l'onglet qu'on est en train de remplir. */
+  .bc-detail-body { max-height: 32vh; }
+}
+
 /* Onglets */
 .bc-tablist { display: flex; flex-wrap: wrap; gap: 0.3rem; border-bottom: 1px solid rgba(157, 134, 232, 0.25); margin-bottom: 1rem; }
 .bc-tab {

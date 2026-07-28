@@ -20,16 +20,18 @@
   "undocumented": {
     "attackSlots": "The number of attack slots per category is not documented in any of our sources. The tool therefore does not cap the number of attacks ticked: the constraint applied is the CP budget, which is documented.",
     "hpLinks": "The sources say whether a character has HP links, but not which attacks chain. The information is shown as-is, with no per-attack detail.",
-    "maxBooster": "The multiplicative stacking of boosters is confirmed by a worked example in the multiplayer build guide (1.5 × 1.4 × 1.3 gives the stated ×2.7). Boosters act only on accessory effects, not on equipment statistics."
+    "maxBooster": "The multiplicative stacking of boosters is confirmed by a worked example in the multiplayer build guide (1.5 × 1.4 × 1.3 gives the stated ×2.7). Boosters act only on accessory effects, not on equipment statistics. The tool reads that contrast strictly: it multiplies the percentage effects of accessories and nothing else. No source says whether a flat bonus follows the multiplier, and taking LUK +4 to +10.8 or a summon recharge to +2.7 would state something the sources do not — so those values stay as written. Whether a booster is live depends on a battle condition (“When your HP is 100%”), which no build can settle: the detailed stats panel lists the equipped boosters and lets you untick the ones whose condition is not met. Those tick boxes describe the situation, not the build — they are neither saved, exported nor carried by the share link.",
+    "detailStats": "The detailed stats panel adds up modifiers of the same name across equipment, accessories, active sets and conditional abilities. No source states how two effects of the same name combine in game, so the sum is a reading of the sources, not a verified formula. Effects the sources write as a sentence — the Qu'Bia accessories, the “chance” effects — are not turned into numbers: they are reproduced word for word under “Other effects”."
   },
   "help": [
     {
       "title": "How the CP budget is calculated",
       "points": [
         "Every attack and every ability costs CP. The cost drops once the item is mastered: the tool shows the mastered cost by default, and the “Mastered costs” checkbox switches to the purchase cost.",
-        "The summary totals are base statistics at level 100 plus the bonuses of the equipped pieces. Accessory effects expressed as percentages are not folded in: the sources do not express them in points.",
+        "The summary totals are base statistics at level 100 plus the bonuses of the equipped pieces. Effects expressed as percentages are not folded in — the sources do not express them in points — but they are added up in the “Detailed stats” drop-down, below the totals.",
         "The gauge distinguishes the share consumed by attacks in apple green and the share taken by abilities in sky blue, as the game does.",
-        "Equipping Hero's Spirit or Hero's Essence raises the cap as you select: two Hero's Spirit and one Hero's Essence take capacity to 510."
+        "Equipping Hero's Spirit or Hero's Essence raises the cap as you select: two Hero's Spirit and one Hero's Essence take capacity to 510.",
+        "The “Max Booster” figure in the summary is the product of every equipped booster, all conditions assumed met. The “Active multiplier” panel, in the detailed stats drop-down, is the one you adjust: it multiplies the accessory effects listed below it."
       ]
     },
     {

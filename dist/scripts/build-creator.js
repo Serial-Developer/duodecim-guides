@@ -141,6 +141,14 @@
     showIllegal: false,
     dirty: false,
     activeTab: 'attack',
+    // Boosters écartés du multiplicateur actif. Un booster ne s'applique que si
+    // sa condition de combat est remplie (« When your HP is 100% ») : cela
+    // dépend de la situation, pas du build. Ces cases ne sont donc ni
+    // enregistrées, ni exportées, ni transportées par le lien de partage — tout
+    // est actif par défaut, ce qui redonne le Max Booster du récapitulatif.
+    // La clé associe l'emplacement et la pièce qui l'occupe : changer
+    // d'accessoire suffit à rendre une case obsolète inopérante.
+    boostersOff: {},
   };
 
   // --- Stockage -------------------------------------------------------------
@@ -276,15 +284,54 @@
 
   // Cumul multiplicatif des boosters équipés. Confirmé par l'exemple chiffré du
   // guide de builds multijoueur (1.5 × 1.4 × 1.3 = le ×2.7 annoncé).
+  //
+  // Le produit brut donne 2.7299… : on arrête le multiplicateur à la décimale
+  // que la source imprime, une fois pour toutes, et c'est cette valeur-là qui
+  // sert ensuite au calcul. Sans cet arrondi unique, le panneau afficherait
+  // ×2,7 tout en multipliant par 2,7299 — un écart que le lecteur retrouverait
+  // au bout de sa propre multiplication.
+  function roundMultiplier(value) { return Math.round(value * 10) / 10; }
+
   function maxBooster() {
-    return equippedAccessories().reduce(function (acc, a) {
+    return roundMultiplier(equippedAccessories().reduce(function (acc, a) {
       return a.category === 'booster' && a.multiplier ? acc * a.multiplier : acc;
-    }, 1);
+    }, 1));
+  }
+
+  // Boosters équipés, dans l'ordre des emplacements. L'emplacement fait partie
+  // de l'identité : deux exemplaires d'un même booster se cochent séparément.
+  function equippedBoosters() {
+    var out = [];
+    state.build.accessories.forEach(function (u, index) {
+      var a = u ? accByUid[u] : null;
+      if (!a || a.category !== 'booster' || !a.multiplier) return;
+      out.push({ key: index + ':' + a.uid, item: a });
+    });
+    return out;
+  }
+
+  // Multiplicateur réellement retenu : le produit des seuls boosters cochés.
+  // Tant qu'on ne décoche rien, il vaut le Max Booster.
+  function activeBooster() {
+    return roundMultiplier(equippedBoosters().reduce(function (acc, b) {
+      return state.boostersOff[b.key] ? acc : acc * b.item.multiplier;
+    }, 1));
+  }
+
+  // Une ability conditionnée à un équipement nomme sa catégorie au singulier
+  // (« when equipping hairpins or headbands » -> « hairpin », « headband ») ;
+  // les pièces, elles, portent la catégorie du wiki. On rapproche les deux.
+  function equippedCategories() {
+    return equippedEquipment().map(function (e) { return (e.category || '').toLowerCase(); });
+  }
+  function categoryEquipped(want, categories) {
+    return categories.some(function (have) { return have === want || have === want + 's' || have.indexOf(want) === 0; });
   }
 
   // Totaux = base niveau 100 + bonus des pièces équipées + abilities à bonus
-  // conditionnel. Les effets d'accessoires (pourcentages, effets conditionnels)
-  // n'entrent pas dans ces totaux : les sources ne les expriment pas en points.
+  // conditionnel. Les modificateurs en pourcentage n'entrent pas dans ces
+  // totaux : les sources ne les expriment pas en points. Ils sont cumulés à
+  // part, dans le panneau des statistiques détaillées.
   function computeStats() {
     var char = charBySlug[state.build.character];
     var base = D.baseStats.byCharacter[state.build.character] || {};
@@ -304,13 +351,11 @@
     });
     // Bonus d'abilities : « BRV +100 when equipping hairpins or headbands ».
     var applied = [];
-    var categories = equipped.map(function (e) { return (e.category || '').toLowerCase(); });
+    var categories = equippedCategories();
     state.build.abilities.forEach(function (id) {
       var ab = abilityById[id];
       if (!ab || !ab.statBonus) return;
-      var match = ab.statBonus.whenEquipping.some(function (want) {
-        return categories.some(function (have) { return have === want || have === want + 's' || have.indexOf(want) === 0; });
-      });
+      var match = ab.statBonus.whenEquipping.some(function (want) { return categoryEquipped(want, categories); });
       if (!match) return;
       if (totals[ab.statBonus.stat] == null) return;
       totals[ab.statBonus.stat] += ab.statBonus.value;
@@ -358,6 +403,240 @@
       }).length;
       return matched >= c.required;
     });
+  }
+
+  // --- Statistiques détaillées ---------------------------------------------
+  // Les sources n'ont pas de champ « modificateur de dégâts » : elles écrivent
+  // l'effet en clair sur la pièce (« Physical Damage +7% »), dans un ordre et
+  // une orthographe qui varient d'une page de wiki à l'autre. On relit donc ces
+  // chaînes ici, en trois temps : découper en atomes, reconnaître le libellé,
+  // additionner. Un atome dont le libellé n'est pas dans la table ci-dessous
+  // n'est jamais interprété — il est réaffiché mot pour mot, faute de quoi un
+  // effet non prévu disparaîtrait de l'écran sans que personne le sache.
+  //
+  // `from` liste toutes les orthographes rencontrées dans les sources pour un
+  // même effet : le Final Fantasy Wiki écrit « Magic Damage » sur les
+  // équipements et « Magical Damage » sur les accessoires, « Defence » sur
+  // certaines pages et « Defense » sur d'autres. Rapprocher deux graphies d'un
+  // même effet n'est pas une interprétation ; en inventer un le serait.
+  var DETAIL_STATS = [
+    { key: 'damage', group: 'damage', unit: '%', from: ['damage'] },
+    { key: 'physicalDamage', group: 'damage', unit: '%', from: ['physical damage'] },
+    { key: 'magicDamage', group: 'damage', unit: '%', from: ['magic damage', 'magical damage'] },
+    { key: 'wallRushDamage', group: 'damage', unit: '%', from: ['wall rush damage'] },
+    { key: 'wallRushBrvDamage', group: 'damage', unit: '%', from: ['wall rush brv damage', 'wall rush bravery damage'] },
+    { key: 'wallRushHpDamage', group: 'damage', unit: '%', from: ['wall rush hp damage'] },
+    { key: 'chaseBrvDamage', group: 'damage', unit: '%', from: ['chase brv damage'] },
+    { key: 'exModeDamage', group: 'damage', unit: '%', from: ['ex mode damage'] },
+    { key: 'exRevengeDamage', group: 'damage', unit: '%', from: ['ex revenge damage'] },
+    { key: 'magicCounterStrength', group: 'damage', unit: '%', from: ['magic counter strength'] },
+    { key: 'damageNearDeath', group: 'damage', unit: '%', from: ['damage boost near death'] },
+    { key: 'iaiStrike', group: 'damage', unit: '%', from: ['iai strike'] },
+    { key: 'exIaiStrike', group: 'damage', unit: '%', from: ['ex iai strike'] },
+    { key: 'assistIaiStrike', group: 'damage', unit: '%', from: ['assist iai strike'] },
+
+    { key: 'defense', group: 'defense', unit: '%', from: ['defense', 'defence'] },
+    { key: 'physicalDefense', group: 'defense', unit: '%', from: ['physical defense', 'physical defence', 'physical def'] },
+    { key: 'magicDefense', group: 'defense', unit: '%', from: ['magic defense', 'magical defense', 'magic defence', 'magical defence'] },
+    { key: 'wallRushDefense', group: 'defense', unit: '%', from: ['wall rush defense', 'wall rush defence'] },
+    { key: 'wallRushBrvDefense', group: 'defense', unit: '%', from: ['wall rush brv defense', 'wall rush brv defence'] },
+    { key: 'wallRushHpDefense', group: 'defense', unit: '%', from: ['wall rush hp defense', 'wall rush hp defence'] },
+    { key: 'chaseBrvDefense', group: 'defense', unit: '%', from: ['chase brv defense', 'chase brv defence'] },
+    { key: 'stageDefense', group: 'defense', unit: '%', from: ['stage defense', 'stage defence'] },
+    { key: 'warpDefense', group: 'defense', unit: '%', from: ['warp defense', 'warp defence'] },
+    { key: 'banishTrapDefense', group: 'defense', unit: '%', from: ['banish trap defense', 'banish trap defence'] },
+    { key: 'foeCritRate', group: 'defense', unit: '%', from: ['foe’s critical hit rate', 'foe\'s critical hit rate'] },
+
+    { key: 'initialBravery', group: 'brv', unit: '%', from: ['initial bravery'] },
+    { key: 'initialHp', group: 'brv', unit: '%', from: ['initial hp'] },
+    { key: 'brvRecovery', group: 'brv', unit: '%', from: ['brv recovery', 'bravery recovery'] },
+    { key: 'regen', group: 'brv', unit: '%', from: ['regen', 'regen rate'] },
+    { key: 'brvOnDodge', group: 'brv', unit: '%', from: ['brv boost on dodge'] },
+    { key: 'brvOnBlock', group: 'brv', unit: '%', from: ['brv boost on block'] },
+    { key: 'brvOnQuickmove', group: 'brv', unit: '%', from: ['brv boost on quickmove'] },
+    { key: 'brvOnStageDestruction', group: 'brv', unit: '%', from: ['brv boost on stage destruction', 'brv boost during stage destruction'] },
+    { key: 'lastChance', group: 'brv', unit: '%', from: ['last chance'] },
+
+    { key: 'initialExForce', group: 'ex', unit: '%', from: ['initial ex force'] },
+    { key: 'exForceAbsorption', group: 'ex', unit: '%', from: ['ex force absorption'] },
+    { key: 'exCoreAbsorption', group: 'ex', unit: '%', from: ['ex core absorption'] },
+    { key: 'exIntakeRange', group: 'ex', unit: 'm', from: ['ex intake range', 'ex intake', 'ex force absorption range'] },
+    { key: 'exModeDuration', group: 'ex', unit: '%', from: ['ex mode duration'] },
+    { key: 'exRevengeDuration', group: 'ex', unit: '%', from: ['ex revenge duration'] },
+    { key: 'exGaugeDepletion', group: 'ex', unit: '%', from: ['ex gauge depletion'] },
+
+    { key: 'initialAssistCharge', group: 'assist', unit: '%', from: ['initial assist charge'] },
+    { key: 'assistGaugeCharge', group: 'assist', unit: '%', from: ['assist gauge charge'] },
+    { key: 'assistGaugeDuration', group: 'assist', unit: '%', from: ['assist gauge duration'] },
+    { key: 'assistGaugeDepletion', group: 'assist', unit: '%', from: ['assist gauge depletion'] },
+    { key: 'astChargeOnDamage', group: 'assist', unit: '%', from: ['ast charge on damage'] },
+
+    { key: 'experienceValue', group: 'misc', unit: '%', from: ['experience value', 'exp'] },
+    { key: 'ap', group: 'misc', unit: '%', from: ['ap', 'ap earned'] },
+    { key: 'pp', group: 'misc', unit: '%', from: ['pp'] },
+    { key: 'gil', group: 'misc', unit: '%', from: ['gil', 'gil earned in battle'] },
+    { key: 'dropRate', group: 'misc', unit: '%', from: ['drop rate'] },
+    { key: 'battlegenRate', group: 'misc', unit: '%', from: ['battlegen rate'] },
+    { key: 'accessoryBreakability', group: 'misc', unit: '%', from: ['accessory breakability', 'accessories breakability'] },
+    { key: 'summonRecharge', group: 'misc', unit: '', from: ['summon recharge'] },
+
+    // Bonus en points portés par les accessoires. Les statistiques de base et
+    // les bonus d'équipement vivent dans la ligne de totaux ; ceux-ci n'y
+    // figurent pas, et le panneau le dit.
+    { key: 'hp', group: 'flat', unit: '', from: ['hp'] },
+    { key: 'brv', group: 'flat', unit: '', from: ['brv', 'brave'] },
+    { key: 'atk', group: 'flat', unit: '', from: ['atk'] },
+    { key: 'def', group: 'flat', unit: '', from: ['def'] },
+    { key: 'luk', group: 'flat', unit: '', from: ['luk', 'luck'] },
+    { key: 'cp', group: 'flat', unit: '', from: ['cp'] },
+  ];
+  var DETAIL_GROUP_ORDER = ['damage', 'defense', 'brv', 'ex', 'assist', 'misc', 'flat'];
+
+  // Deux effets énoncés d'un seul tenant : « EX Force & Core Absorption +25% »
+  // porte un seul nombre pour deux statistiques. On ne le devine pas, on le
+  // déclare — la liste est courte et fermée.
+  var DETAIL_COMPOUND = {
+    'ex force & core absorption': ['exForceAbsorption', 'exCoreAbsorption'],
+    'ex mode & ex revenge duration': ['exModeDuration', 'exRevengeDuration'],
+  };
+
+  var DETAIL_BY_LABEL = {};
+  DETAIL_STATS.forEach(function (s) { s.from.forEach(function (label) { DETAIL_BY_LABEL[label] = s.key; }); });
+  var DETAIL_BY_KEY = {};
+  DETAIL_STATS.forEach(function (s) { DETAIL_BY_KEY[s.key] = s; });
+
+  // « Adamant Chains (1/4) » sur une pièce dit son appartenance à un set, pas un
+  // effet : les sets ont leurs propres effets, comptés une fois le set actif.
+  var SET_PIECE_MARK = /\(\s*\d+\s*\/\s*\d+\s*\)$/;
+  // Le wiki suffixe l'effet des pièces exclusives au Labyrinthe. C'est la pièce
+  // qui est réservée au mode, pas l'effet qui s'y limiterait : elle porte déjà
+  // son propre marqueur, on retire donc le doublon.
+  var LABYRINTH_MARK = /\s*\(Labyrinth\)$/i;
+  var ATOM_SUFFIX = /^(.+?)\s*([+-]\s*\d+(?:\.\d+)?)\s*(%|m)?$/;
+  var ATOM_PREFIX = /^([+-]\s*\d+(?:\.\d+)?)\s*(%|m)?\s+(.+)$/;
+
+  function detailLabelKeys(label) {
+    var norm = String(label).toLowerCase().replace(/\s+/g, ' ').trim();
+    if (DETAIL_COMPOUND[norm]) return DETAIL_COMPOUND[norm];
+    return DETAIL_BY_LABEL[norm] ? [DETAIL_BY_LABEL[norm]] : null;
+  }
+
+  // Découpe un champ d'effets en atomes. Les séparateurs sont « · » et le retour
+  // à la ligne. « & » ne sépare que si ses deux membres portent un nombre : sans
+  // cela, « EX Force & Core Absorption +25% » serait coupé en deux dont un sans
+  // valeur. La virgule et le point ne séparent jamais — ils appartiennent à des
+  // effets rédigés en phrase, qu'on préfère laisser entiers plutôt que hacher.
+  function effectAtoms(text) {
+    var out = [];
+    String(text || '').split(/·|\n/).forEach(function (chunk) {
+      var part = chunk.trim().replace(LABYRINTH_MARK, '').replace(/\.$/, '').trim();
+      if (!part) return;
+      var pieces = [part];
+      if (part.indexOf('&') !== -1) {
+        var split = part.split('&');
+        if (split.every(function (p) { return /[+-]\s*\d/.test(p); })) pieces = split;
+      }
+      pieces.forEach(function (p) { if (p.trim()) out.push(p.trim()); });
+    });
+    return out;
+  }
+
+  // Un atome donne soit des valeurs chiffrées rattachées à des statistiques
+  // connues, soit rien — auquel cas il ressort tel quel.
+  function readAtom(atom) {
+    if (SET_PIECE_MARK.test(atom)) return null;
+    var label;
+    var value;
+    var m = ATOM_PREFIX.exec(atom);
+    if (m) { value = m[1]; label = m[3]; }
+    else {
+      m = ATOM_SUFFIX.exec(atom);
+      if (!m) return { raw: atom };
+      label = m[1]; value = m[2];
+    }
+    var keys = detailLabelKeys(label);
+    if (!keys) return { raw: atom };
+    // L'unité affichée est celle de la table, pas celle de la chaîne : c'est la
+    // statistique qui a une unité, pas chacune de ses formulations.
+    return { keys: keys, value: Number(value.replace(/\s/g, '')) };
+  }
+
+  // « Damage +5% when equipping swords, daggers, greatswords, or katana. » :
+  // un modificateur en pourcentage soumis à la catégorie équipée. Le parseur de
+  // données ne retient que les bonus en points (statBonus), d'où cette relecture
+  // ici — même découpage des catégories que scripts/parse-builddata.mjs.
+  var ABILITY_PERCENT = /^\s*(.+?)\s*([+-]\d+)%\s+when equipping\s+(.+?)\.?\s*$/i;
+  function abilityPercentBonus(ability) {
+    var m = ABILITY_PERCENT.exec(ability && ability.description || '');
+    if (!m) return null;
+    var keys = detailLabelKeys(m[1]);
+    if (!keys) return null;
+    var wanted = m[3].split(/,|\bor\b|\band\b/i)
+      .map(function (s) { return s.trim().replace(/s$/i, '').toLowerCase(); })
+      .filter(Boolean);
+    return { keys: keys, value: Number(m[2]), whenEquipping: wanted };
+  }
+
+  // Cumul des modificateurs portés par le build : équipements, accessoires, sets
+  // actifs et abilities conditionnelles. Les effets de même nom sont additionnés
+  // — c'est la lecture la plus simple des sources, qui énoncent chaque effet
+  // isolément et ne disent jamais comment deux d'entre eux se combinent en jeu.
+  // Le panneau le déclare plutôt que de laisser croire à une formule vérifiée.
+  //
+  // Le multiplicateur des boosters ne porte que sur les effets des accessoires,
+  // jamais sur ceux des équipements, des sets ou des abilities : c'est la règle
+  // que donne le guide de builds multijoueur. Et parmi ces effets, seuls ceux
+  // exprimés en pourcentage sont multipliés — la source oppose les « accessory
+  // effects » aux « statistics », et un LUK +4 porté à +10,8 ou une recharge
+  // d'invocation à +2,7 ne voudraient rien dire. Ce que les sources ne tranchent
+  // pas reste donc intact plutôt que d'être multiplié au jugé.
+  function computeDetailStats(multiplier) {
+    var totals = {};
+    var others = [];
+    var otherSeen = {};
+
+    function add(sourceName, text, numericOnly, boosted) {
+      effectAtoms(text).forEach(function (atom) {
+        var read = readAtom(atom);
+        if (!read) return;
+        if (read.raw) {
+          if (numericOnly) return;
+          var seen = sourceName + ' ' + read.raw;
+          if (otherSeen[seen]) { otherSeen[seen].count++; return; }
+          otherSeen[seen] = { name: sourceName, text: read.raw, count: 1 };
+          others.push(otherSeen[seen]);
+          return;
+        }
+        read.keys.forEach(function (key) {
+          var factor = boosted && DETAIL_BY_KEY[key].unit === '%' ? multiplier : 1;
+          var value = read.value * factor;
+          if (!totals[key]) totals[key] = { value: 0, from: [] };
+          totals[key].value += value;
+          totals[key].from.push({ name: sourceName, value: value });
+        });
+      });
+    }
+
+    equippedEquipment().forEach(function (e) { add(e.name, e.effects, false, false); });
+    // Les matériaux d'échange portent une description d'ambiance là où les
+    // autres accessoires portent un effet : on n'en garde que le chiffré.
+    equippedAccessories().forEach(function (a) { add(a.name, a.effect, a.category === 'trade', true); });
+    activeCombinations().forEach(function (c) { add(c.name, c.effects, false, false); });
+
+    var categories = equippedCategories();
+    state.build.abilities.forEach(function (id) {
+      var ab = abilityById[id];
+      var bonus = ab && abilityPercentBonus(ab);
+      if (!bonus) return;
+      if (!bonus.whenEquipping.some(function (want) { return categoryEquipped(want, categories); })) return;
+      bonus.keys.forEach(function (key) {
+        if (!totals[key]) totals[key] = { value: 0, from: [] };
+        totals[key].value += bonus.value;
+        totals[key].from.push({ name: ab.name, value: bonus.value });
+      });
+    });
+
+    return { totals: totals, others: others };
   }
 
   // --- Rendu : jauge et panneau d'état -------------------------------------
@@ -449,7 +728,7 @@
         ]));
       });
     statLine.appendChild(el('span', { class: 'bc-stat' }, [
-      el('strong', { text: T('equipment.maxBooster') }), ' ', el('span', { text: '×' + (Math.round(boost * 10) / 10) }),
+      el('strong', { text: T('equipment.maxBooster') }), ' ', el('span', { text: fmtMultiplier(boost) }),
     ]));
     statusBox.appendChild(statLine);
 
@@ -463,9 +742,129 @@
     infos.forEach(function (i) { statusBox.appendChild(el('p', { class: 'bc-alert bc-alert-info', text: i })); });
   }
 
+  // Le panneau détaillé vit hors de `bc-status`, que renderStatus vide à chaque
+  // rendu : le <details> reste ainsi le même élément d'un bout à l'autre de la
+  // session, et son état ouvert/fermé survit à toute modification du build.
+  var detail = {
+    count: document.getElementById('bc-detail-count'),
+    main: document.getElementById('bc-detail-main'),
+    boosters: document.getElementById('bc-detail-boosters'),
+  };
+
+  function fmtModifier(value, unit) {
+    var n = Math.round(value * 10) / 10;
+    return (n > 0 ? '+' : '') + n + unit;
+  }
+  // Le séparateur décimal appartient à la langue : le ×1,5 des règles de tournoi
+  // s'écrit ×1.5 en anglais.
+  function fmtMultiplier(value) {
+    return '×' + value.toLocaleString(BC.locale);
+  }
+
+  // Colonne de gauche : les modificateurs cumulés, multiplicateur déjà appliqué
+  // aux contributions d'accessoires. Elle se redessine seule quand on coche un
+  // booster, pour que la case gardée le focus ne soit pas recréée sous le doigt.
+  function renderDetailMain() {
+    if (!detail.main) return;
+    clear(detail.main);
+    var d = computeDetailStats(activeBooster());
+    var shown = 0;
+
+    DETAIL_GROUP_ORDER.forEach(function (group) {
+      var rows = DETAIL_STATS.filter(function (s) { return s.group === group && d.totals[s.key]; });
+      if (!rows.length) return;
+      shown += rows.length;
+      detail.main.appendChild(el('h3', { class: 'bc-detail-group', text: T('detail.groups.' + group) }));
+      if (group === 'flat') detail.main.appendChild(el('p', { class: 'bc-detail-note', text: T('detail.flatNote') }));
+      var list = el('dl', { class: 'bc-detail-list' });
+      rows.forEach(function (s) {
+        var slot = d.totals[s.key];
+        list.appendChild(el('dt', { text: T('detail.stats.' + s.key) }));
+        list.appendChild(el('dd', {}, [
+          el('span', { class: 'bc-detail-value', text: fmtModifier(slot.value, s.unit) }),
+          el('span', {
+            class: 'bc-detail-from',
+            text: slot.from.map(function (f) { return f.name + ' ' + fmtModifier(f.value, s.unit); }).join(' · '),
+          }),
+        ]));
+      });
+      detail.main.appendChild(list);
+    });
+
+    // Ce que l'outil ne sait pas chiffrer est reproduit tel quel : un effet non
+    // reconnu doit rester lisible, jamais être escamoté.
+    if (d.others.length) {
+      detail.main.appendChild(el('h3', { class: 'bc-detail-group', text: T('detail.others') }));
+      var others = el('ul', { class: 'bc-detail-others' });
+      d.others.forEach(function (o) {
+        others.appendChild(el('li', {}, [
+          el('strong', { text: o.name + (o.count > 1 ? ' ×' + o.count : '') }), ' ', o.text,
+        ]));
+      });
+      detail.main.appendChild(others);
+    }
+
+    if (!shown && !d.others.length) {
+      detail.main.appendChild(el('p', { class: 'bc-detail-note', text: T('detail.empty') }));
+    }
+    if (detail.count) {
+      detail.count.textContent = shown === 1 ? T('detail.countOne') : T('detail.countMany', { count: shown });
+    }
+  }
+
+  // Colonne de droite : les boosters équipés, un par ligne. Décocher revient à
+  // dire « cette condition n'est pas remplie » — le multiplicateur tombe, et la
+  // colonne de gauche est recalculée.
+  function renderDetailBoosters() {
+    if (!detail.boosters) return;
+    clear(detail.boosters);
+    var list = equippedBoosters();
+    detail.boosters.appendChild(el('h3', { class: 'bc-detail-group', text: T('detail.boosters.title') }));
+    if (!list.length) {
+      detail.boosters.appendChild(el('p', { class: 'bc-detail-note', text: T('detail.boosters.none') }));
+      return;
+    }
+
+    var totalValue = el('span', { class: 'bc-booster-total-value', text: fmtMultiplier(activeBooster()) });
+    list.forEach(function (b) {
+      var on = !state.boostersOff[b.key];
+      var box = el('input', {
+        type: 'checkbox',
+        checked: on,
+        onchange: function (ev) {
+          if (ev.target.checked) delete state.boostersOff[b.key];
+          else state.boostersOff[b.key] = true;
+          totalValue.textContent = fmtMultiplier(activeBooster());
+          renderDetailMain();
+        },
+      });
+      detail.boosters.appendChild(el('label', { class: 'bc-booster' }, [
+        box,
+        el('span', { class: 'bc-booster-text' }, [
+          el('span', { class: 'bc-booster-name' }, [
+            el('span', { text: b.item.name }),
+            el('span', { class: 'bc-booster-mult', text: fmtMultiplier(b.item.multiplier) }),
+          ]),
+          b.item.requirements ? el('span', { class: 'bc-booster-req', text: b.item.requirements }) : null,
+        ]),
+      ]));
+    });
+
+    detail.boosters.appendChild(el('p', { class: 'bc-booster-total' }, [
+      el('span', { text: T('detail.boosters.total') }), totalValue,
+    ]));
+    detail.boosters.appendChild(el('p', { class: 'bc-detail-note', text: T('detail.boosters.scope') }));
+  }
+
+  function renderDetailStats() {
+    renderDetailBoosters();
+    renderDetailMain();
+  }
+
   function refresh() {
     var cp = renderGauge();
     renderStatus(cp);
+    renderDetailStats();
     renderSavedList();
   }
 

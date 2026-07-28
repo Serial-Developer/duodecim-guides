@@ -30,6 +30,22 @@ function cpGauge(t) {
 </div>`;
 }
 
+// Modificateurs détaillés (dégâts, défense, BRV, EX, assist), repliés par
+// défaut : la ligne de totaux reste la lecture rapide, le dépliant porte le
+// détail. Le <details> est écrit ici plutôt que par le script, qui vide le
+// panneau d'état à chaque rendu — l'élément persiste, donc son état ouvert ou
+// fermé survit à chaque modification du build.
+function detailStats(t) {
+  return `<details class="bc-detail" id="bc-detail">
+<summary><span>${esc(t('buildCreator.detailSummary'))}</span> <span class="bc-detail-count" id="bc-detail-count"></span></summary>
+<div class="bc-detail-body">
+<div class="bc-detail-main" id="bc-detail-main"></div>
+<aside class="bc-detail-boosters" id="bc-detail-boosters" aria-label="${esc(t('buildCreator.boostersAria'))}"></aside>
+</div>
+<p class="bc-detail-note">${esc(t('buildCreator.detailNote'))}</p>
+</details>`;
+}
+
 export function renderBuildCreator({ ed, characters, hasPortrait, seo, i18nPayload, t, locale, path, alternates, availability }) {
   const L = linksFor(path, locale, availability);
   if (!ed) {
@@ -69,6 +85,7 @@ ${characterBanner(t, characters, hasPortrait, L)}
 <div class="bc-sticky">
 ${cpGauge(t)}
 <div class="bc-status" id="bc-status" role="status" aria-live="polite"></div>
+${detailStats(t)}
 </div>
 
 <div class="bc-tabs">
