@@ -1051,6 +1051,121 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
   .bc-detail-body { max-height: 32vh; }
 }
 
+/* Fenêtre de choix — ouverte depuis un emplacement à remplir. */
+body.bc-modal-open { overflow: hidden; }
+.bc-modal-back {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(8, 6, 18, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.bc-modal {
+  background: var(--surface);
+  border: 1px solid rgba(157, 134, 232, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
+  width: min(46rem, 100%);
+  max-height: min(38rem, 90vh);
+  display: flex;
+  flex-direction: column;
+}
+.bc-modal-head {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.9rem 1rem 0.6rem;
+  border-bottom: 1px solid rgba(157, 134, 232, 0.25);
+}
+.bc-modal-head h3 { margin: 0; color: var(--gold); font-size: 1.05rem; }
+.bc-modal-titles { min-width: 0; }
+.bc-modal-titles .bc-note { margin: 0.2rem 0 0; }
+/* Le corps ne défile pas lui-même : c'est la liste qu'il contient qui défile,
+   pour que la barre de recherche reste visible pendant qu'on parcourt. */
+.bc-modal-body { display: flex; flex-direction: column; min-height: 0; padding: 0.7rem 1rem 1rem; gap: 0.5rem; }
+.bc-modal-body > div { display: flex; flex-direction: column; min-height: 0; gap: 0.5rem; }
+.bc-modal-body .bc-list-scroll { max-height: none; flex: 1; overflow-y: auto; }
+
+/* Emplacements — attaques, équipements, accessoires partagent la même ligne. */
+.bc-slot-grid { display: flex; flex-direction: column; gap: 0.35rem; }
+.bc-slot-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid rgba(157, 134, 232, 0.25);
+  border-radius: 8px;
+  background: rgba(157, 134, 232, 0.06);
+  color: var(--text);
+  font: inherit;
+}
+button.bc-slot-row { cursor: pointer; }
+button.bc-slot-row:hover, button.bc-slot-row:focus-visible { border-color: var(--gold); background: rgba(212, 175, 90, 0.1); }
+.bc-slot-row.is-empty { background: transparent; border-style: dashed; }
+/* La commande, en tête de ligne : c'est elle qui identifie l'emplacement. */
+.bc-slot-badge {
+  flex: none;
+  min-width: 3.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--gold);
+  text-align: center;
+  white-space: nowrap;
+}
+.bc-badge-branch { color: var(--violet); font-size: 0.85rem; }
+.bc-slot-main { display: flex; flex-direction: column; gap: 0.1rem; min-width: 0; flex: 1; }
+.bc-slot-empty { color: var(--muted); font-style: italic; }
+.bc-slot-plus { color: var(--gold); font-size: 1.2rem; line-height: 1; flex: none; }
+.bc-slot-actions { display: flex; align-items: center; gap: 0.35rem; flex: none; flex-wrap: wrap; justify-content: flex-end; }
+.bc-btn-move { min-width: 2rem; }
+
+/* Embranchement HP : décalé sous la bravery qu'il prolonge, comme à l'écran
+   du jeu. Le trait de liaison rend la dépendance lisible sans texte. */
+.bc-branch-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-left: 1.6rem;
+  padding: 0.35rem 0.7rem;
+  border-left: 2px solid rgba(157, 134, 232, 0.4);
+  border-radius: 0 8px 8px 0;
+  background: rgba(157, 134, 232, 0.04);
+}
+.bc-branch-add {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+  padding: 0.15rem 0;
+  text-align: left;
+}
+.bc-branch-add:hover, .bc-branch-add:focus-visible { color: var(--text); }
+.bc-slot-followup .bc-slot-badge { color: var(--violet); }
+.bc-group.is-locked { opacity: 0.6; }
+
+@media (max-width: 599px) {
+  .bc-modal-back { padding: 0; }
+  .bc-modal { max-height: 100vh; height: 100%; width: 100%; border-radius: 0; border: none; }
+  /* Les actions passent sous le nom : à 375 px, nom et boutons sur une seule
+     ligne réduisaient le nom à deux mots. */
+  .bc-slot-row { flex-wrap: wrap; }
+  .bc-slot-main { flex-basis: calc(100% - 4.1rem); }
+  .bc-slot-actions { width: 100%; justify-content: flex-start; }
+  .bc-branch-row { margin-left: 0.8rem; flex-wrap: wrap; }
+}
+
 /* Onglets */
 .bc-tablist { display: flex; flex-wrap: wrap; gap: 0.3rem; border-bottom: 1px solid rgba(157, 134, 232, 0.25); margin-bottom: 1rem; }
 .bc-tab {

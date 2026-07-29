@@ -471,7 +471,12 @@
       "weapon": "Arme",
       "hand": "Main",
       "head": "Tête",
-      "body": "Corps"
+      "body": "Corps",
+      "empty": "Vide",
+      "assign": "Assigner",
+      "change": "Changer",
+      "moveUp": "Placer sur la commande précédente",
+      "moveDown": "Placer sur la commande suivante"
     },
     "accCategories": {
       "basic": "Basic",
@@ -533,15 +538,23 @@
       "hpTitle": "Attaques HP",
       "notDocumented": "{title} : non documentées pour ce personnage.",
       "followups": "Enchaînements",
-      "followupsNeedParent": "Enchaînements — équipez d’abord {name}",
       "damage": "dégâts {value}",
       "startup": "startup {value}",
-      "lockedTitle": "Équipez d’abord l’attaque de départ : un enchaînement ne s’utilise pas seul.",
-      "slotsFullTitle": "Les trois emplacements de cette catégorie sont pris — décochez une attaque pour libérer une place.",
       "unknownCost": "coût inconnu",
       "unknownCostTitle": "Le wiki ne donne pas le coût en CP de ce coup",
-      "followupsActiveOne": "Enchaînements ({count} équipé)",
-      "followupsActiveMany": "Enchaînements ({count} équipés)"
+      "filterName": "Filtrer par nom ou effet…",
+      "noneAvailable": "Plus aucune attaque à assigner ici.",
+      "replacing": "Actuellement assignée : {name}.",
+      "hpLinkAdd": "Ajouter un HP link",
+      "hpLinkFor": "HP link depuis {name}",
+      "followupsFree": "Un enchaînement prolonge une bravery et n’occupe pas d’emplacement.",
+      "followupsNeedAny": "Équipez d’abord une bravery : un enchaînement n’existe pas sans l’attaque qu’il prolonge.",
+      "input": {
+        "neutral": "Stick neutre + {button}",
+        "back": "← + {button}",
+        "forward": "→ + {button}",
+        "link": "S’embranche au {button}"
+      }
     },
     "abilities": {
       "costNote": "Coût affiché : {mode}. La case « Coûts maîtrisés » bascule les deux.",
@@ -572,21 +585,20 @@
       "labyrinth": "Obtenu dans le Labyrinthe",
       "labTag": "Lab",
       "showIllegal": "Afficher les items illégaux en tournoi (ruleset {ruleset})",
-      "maxBooster": "Max Booster"
+      "maxBooster": "Max Booster",
+      "levelShort": "niv. {level}"
     },
     "accessories": {
       "slotsTitle": "Emplacements ({count})",
-      "choose": "Choisir un accessoire",
       "filterNameEffect": "Filtrer par nom ou effet…",
       "filterAria": "Filtrer les accessoires",
       "count": "{count} accessoire(s)",
       "limit400": "Affichage limité aux 400 premiers — affinez le filtre.",
-      "empty": "vide",
       "illegal": "illégal",
       "rank": "Rang {rank}",
       "rankLimitOne": "Rang {rank} : {max} exemplaire au maximum",
       "rankLimitMany": "Rang {rank} : {max} exemplaires au maximum",
-      "allSlotsFull": "Les {count} emplacements d’accessoires sont pris."
+      "slotTitle": "Emplacement d’accessoire {index}"
     },
     "assist": {
       "title": "Assist",
@@ -733,6 +745,9 @@
     },
     "sources": {
       "inline": "Sources :"
+    },
+    "modal": {
+      "close": "Fermer"
     }
   },
   "notFound": {

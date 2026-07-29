@@ -471,7 +471,12 @@
       "weapon": "Weapon",
       "hand": "Hand",
       "head": "Head",
-      "body": "Body"
+      "body": "Body",
+      "empty": "Empty",
+      "assign": "Assign",
+      "change": "Change",
+      "moveUp": "Move to the previous input",
+      "moveDown": "Move to the next input"
     },
     "accCategories": {
       "basic": "Basic",
@@ -533,15 +538,23 @@
       "hpTitle": "HP attacks",
       "notDocumented": "{title}: not documented for this character.",
       "followups": "Followups",
-      "followupsNeedParent": "Followups — equip {name} first",
       "damage": "damage {value}",
       "startup": "startup {value}",
-      "lockedTitle": "Equip the starting attack first: a followup cannot be used on its own.",
-      "slotsFullTitle": "All three slots in this category are taken — untick an attack to free one up.",
       "unknownCost": "cost unknown",
       "unknownCostTitle": "The wiki does not give a CP cost for this move",
-      "followupsActiveOne": "Followups ({count} equipped)",
-      "followupsActiveMany": "Followups ({count} equipped)"
+      "filterName": "Filter by name or effect…",
+      "noneAvailable": "No attack left to assign here.",
+      "replacing": "Currently assigned: {name}.",
+      "hpLinkAdd": "Add an HP link",
+      "hpLinkFor": "HP link from {name}",
+      "followupsFree": "A follow-up extends a bravery attack and takes no slot of its own.",
+      "followupsNeedAny": "Equip a bravery attack first: a follow-up does not exist without the attack it extends.",
+      "input": {
+        "neutral": "Neutral stick + {button}",
+        "back": "← + {button}",
+        "forward": "→ + {button}",
+        "link": "Branches with {button}"
+      }
     },
     "abilities": {
       "costNote": "Cost shown: {mode}. The “Mastered costs” checkbox switches between the two.",
@@ -572,21 +585,20 @@
       "labyrinth": "Found in the Labyrinth",
       "labTag": "Lab",
       "showIllegal": "Show tournament-illegal items (ruleset {ruleset})",
-      "maxBooster": "Max Booster"
+      "maxBooster": "Max Booster",
+      "levelShort": "Lv {level}"
     },
     "accessories": {
       "slotsTitle": "Slots ({count})",
-      "choose": "Choose an accessory",
       "filterNameEffect": "Filter by name or effect…",
       "filterAria": "Filter accessories",
       "count": "{count} accessory(-ies)",
       "limit400": "Showing the first 400 — narrow the filter.",
-      "empty": "empty",
       "illegal": "illegal",
       "rank": "Rank {rank}",
       "rankLimitOne": "Rank {rank}: {max} copy at most",
       "rankLimitMany": "Rank {rank}: {max} copies at most",
-      "allSlotsFull": "All {count} accessory slots are taken."
+      "slotTitle": "Accessory slot {index}"
     },
     "assist": {
       "title": "Assist",
@@ -733,6 +745,9 @@
     },
     "sources": {
       "inline": "Sources:"
+    },
+    "modal": {
+      "close": "Close"
     }
   },
   "notFound": {

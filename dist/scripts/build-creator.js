@@ -915,6 +915,104 @@
     else if (key === 'assist') renderAssist(panel);
   }
 
+  // --- Fenêtre de choix -----------------------------------------------------
+  // Les onglets de sélection déroulaient jusqu'à 400 lignes sous les
+  // emplacements : on ne voyait plus ce qu'on était en train d'équiper. Le
+  // choix passe donc par une fenêtre, ouverte depuis l'emplacement à remplir.
+  //
+  // Pas de <dialog> : le site doit rester consultable en file:// et dans des
+  // navigateurs embarqués. Le piège au clavier est donc tenu à la main —
+  // sans lui, la tabulation repart derrière la fenêtre et on ne sait plus où
+  // l'on est.
+  var modal = null;
+
+  function closeModal() {
+    if (!modal) return;
+    var m = modal;
+    modal = null;
+    document.removeEventListener('keydown', m.onKey, true);
+    if (m.back.parentNode) m.back.parentNode.removeChild(m.back);
+    document.body.classList.remove('bc-modal-open');
+    if (m.opener && m.opener.focus) m.opener.focus({ preventScroll: true });
+  }
+
+  function focusables(root) {
+    var list = root.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    return Array.prototype.filter.call(list, function (n) { return !n.disabled && n.offsetParent !== null; });
+  }
+
+  // `fill(body, close)` peuple la fenêtre. On lui passe `close` pour qu'une
+  // ligne choisie referme sans avoir à connaître la mécanique.
+  function openModal(title, subtitle, fill) {
+    closeModal();
+    var opener = document.activeElement;
+    var titleId = 'bc-modal-title';
+    var body = el('div', { class: 'bc-modal-body' });
+    var box = el('div', { class: 'bc-modal', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': titleId }, [
+      el('div', { class: 'bc-modal-head' }, [
+        el('div', { class: 'bc-modal-titles' }, [
+          el('h3', { id: titleId, text: title }),
+          subtitle ? el('p', { class: 'bc-note', text: subtitle }) : null,
+        ]),
+        el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('modal.close'), onclick: function () { closeModal(); } }),
+      ]),
+      body,
+    ]);
+    var back = el('div', { class: 'bc-modal-back' }, [box]);
+    back.addEventListener('mousedown', function (e) { if (e.target === back) closeModal(); });
+
+    function onKey(e) {
+      if (e.key === 'Escape') { e.preventDefault(); closeModal(); return; }
+      if (e.key !== 'Tab') return;
+      var f = focusables(box);
+      if (!f.length) return;
+      var first = f[0];
+      var last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+    document.addEventListener('keydown', onKey, true);
+
+    modal = { back: back, box: box, body: body, onKey: onKey, opener: opener };
+    document.body.appendChild(back);
+    document.body.classList.add('bc-modal-open');
+    fill(body, closeModal);
+    var f = focusables(box);
+    // Le champ de recherche d'abord quand il y en a un : on ouvre la fenêtre
+    // pour chercher, pas pour lire le bouton de fermeture.
+    var search = box.querySelector('input[type="search"]');
+    (search || f[0] || box).focus({ preventScroll: true });
+    return closeModal;
+  }
+
+  // Un emplacement : sa commande à gauche, son contenu au milieu, ses actions à
+  // droite. Vide, la ligne entière est le bouton qui ouvre la fenêtre.
+  function slotRow(opts) {
+    var badge = el('span', { class: 'bc-slot-badge', title: opts.inputTitle || '', text: opts.input || '' });
+    if (!opts.filled) {
+      return el('button', {
+        type: 'button', class: 'bc-slot-row is-empty', onclick: opts.onAssign,
+        'aria-label': (opts.inputTitle ? opts.inputTitle + ' — ' : '') + T('slots.assign'),
+      }, [
+        badge,
+        el('span', { class: 'bc-slot-main' }, [el('span', { class: 'bc-slot-empty', text: T('slots.empty') })]),
+        el('span', { class: 'bc-slot-plus', 'aria-hidden': 'true', text: '+' }),
+      ]);
+    }
+    var row = el('div', { class: 'bc-slot-row' + (opts.className ? ' ' + opts.className : '') }, [badge]);
+    row.appendChild(opts.main);
+    var actions = el('span', { class: 'bc-slot-actions' });
+    (opts.actions || []).forEach(function (a) { if (a) actions.appendChild(a); });
+    actions.appendChild(el('button', {
+      type: 'button', class: 'bc-btn bc-btn-small', text: T('slots.change'), onclick: opts.onAssign,
+    }));
+    actions.appendChild(el('button', {
+      type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('equipment.remove'), onclick: opts.onRemove,
+    }));
+    row.appendChild(actions);
+    return row;
+  }
+
   // --- Onglet Attaques ------------------------------------------------------
   function groupLabel(key) { return T('groupLabels.' + key) || key; }
 
@@ -923,7 +1021,6 @@
   // Lightning, jobs de Cecil, moveset EX de Gabranth — ont chacun leurs
   // emplacements. Les enchaînements prolongent un coup et n'en consomment pas.
   var MAX_SLOTS = 3;
-  function poolKey(kind, groupKey, style) { return kind + '|' + groupKey + '|' + (style || ''); }
 
   // Découpe un groupe en sous-groupes de style, dans l'ordre d'apparition.
   function byStyle(moves) {
@@ -935,21 +1032,6 @@
       out[index[s]].moves.push(m);
     });
     return out;
-  }
-
-  // Les enchaînements et les attaques HP branchées prolongent un coup : ils ne
-  // comptent pas dans les emplacements de leur catégorie.
-  function poolUsage(char, kind, groupKey, style, isLinked) {
-    var used = 0;
-    (char.attacks[kind] || []).forEach(function (g) {
-      if (g.followUp || g.key !== groupKey) return;
-      g.moves.forEach(function (m) {
-        if ((m.style || null) !== (style || null)) return;
-        if (isLinked && isLinked[m.id]) return;
-        if (state.build.attacks.indexOf(m.id) !== -1) used++;
-      });
-    });
-    return used;
   }
 
   // Retire les enchaînements devenus orphelins : un « (Two) » n'a de sens que si
@@ -976,6 +1058,73 @@
     });
   }
 
+  // Commandes des trois emplacements d'une catégorie, dans l'ordre où l'écran
+  // « Abilities » du jeu les présente : stick neutre, puis les deux directions.
+  // La bravery part au rond, l'attaque HP au carré — c'est la seule différence
+  // entre les deux colonnes. Le jeu est la source ici : ni dissidia.wiki ni le
+  // Final Fantasy Wiki ne publient de table des commandes (voir
+  // `undocumented.attackSlots`).
+  var SLOT_INPUTS = ['neutral', 'back', 'forward'];
+  var KIND_BUTTON = { bravery: '○', hp: '□' };
+  var DIRECTION_GLYPH = { neutral: '', back: '←', forward: '→' };
+  function inputGlyph(kind, i) {
+    var dir = DIRECTION_GLYPH[SLOT_INPUTS[i]];
+    return (dir ? dir + ' ' : '') + KIND_BUTTON[kind];
+  }
+  function inputTitle(kind, i) {
+    return T('attacks.input.' + SLOT_INPUTS[i], { button: KIND_BUTTON[kind] });
+  }
+
+  // Descriptif court d'un coup, commun à la grille et à la fenêtre de choix.
+  function moveMeta(m) {
+    var meta = [];
+    if (m.damage) meta.push(T('attacks.damage', { value: m.damage }));
+    if (m.startup) meta.push(T('attacks.startup', { value: m.startup }));
+    if (m.type) meta.push(m.type);
+    if (m.priority) meta.push(m.priority);
+    if (m.variants) meta.push(m.variants);
+    return meta.join(' · ');
+  }
+  function cpTag(m) {
+    return el('span', { class: 'bc-cp', text: m.cp == null ? T('attacks.unknownCost') : cpOf(m) + ' CP' });
+  }
+
+  function isEquipped(id) { return state.build.attacks.indexOf(id) !== -1; }
+  function equipAttack(id) {
+    if (!isEquipped(id)) state.build.attacks.push(id);
+    afterAttackChange();
+  }
+  function unequipAttack(id) {
+    var i = state.build.attacks.indexOf(id);
+    if (i !== -1) state.build.attacks.splice(i, 1);
+    afterAttackChange();
+  }
+  // L'emplacement d'un coup est sa position parmi les coups retenus de sa
+  // catégorie : rien de plus n'est stocké, et le lien de partage — qui
+  // transporte les attaques dans l'ordre — le restitue tel quel.
+  function swapAttacks(a, b) {
+    var ia = state.build.attacks.indexOf(a);
+    var ib = state.build.attacks.indexOf(b);
+    if (ia === -1 || ib === -1) return;
+    state.build.attacks[ia] = b;
+    state.build.attacks[ib] = a;
+    afterAttackChange();
+  }
+  function afterAttackChange() {
+    pruneOrphanBranches();
+    markDirty();
+    keepScroll(null, function () { renderPanel('attack'); refresh(); });
+  }
+
+  // Ce qu'une catégorie (sol/air × style) peut recevoir, une fois retirées les
+  // attaques HP branchées — elles vivent sous leur bravery, pas dans un
+  // emplacement.
+  function categoryMoves(group, style, isLinked) {
+    return byStyle(group.moves).filter(function (sub) { return (sub.style || null) === (style || null); })
+      .reduce(function (acc, sub) { return acc.concat(sub.moves); }, [])
+      .filter(function (m) { return !isLinked[m.id]; });
+  }
+
   function renderAttacks(panel) {
     var char = charBySlug[state.build.character];
     if (char.hpLinks) {
@@ -987,6 +1136,19 @@
     }
     panel.appendChild(el('p', { class: 'bc-note', text: T('attacks.slotsNote') }));
 
+    // Attaques HP branchées sur une bravery : montrées sous elle, retirées de
+    // leur propre grille pour ne pas occuper deux fois la place.
+    var linksByParent = {};
+    var isLinked = {};
+    (char.links || []).forEach(function (l) {
+      (linksByParent[l.from] = linksByParent[l.from] || []).push(l.to);
+      isLinked[l.to] = true;
+    });
+    var moveById = {};
+    ['bravery', 'hp'].forEach(function (k) {
+      (char.attacks[k] || []).forEach(function (g) { g.moves.forEach(function (m) { moveById[m.id] = m; }); });
+    });
+
     [['bravery', T('attacks.braveryTitle')], ['hp', T('attacks.hpTitle')]].forEach(function (pair) {
       var kind = pair[0];
       var groups = char.attacks[kind];
@@ -996,111 +1158,201 @@
       }
       panel.appendChild(el('h3', { text: pair[1] }));
 
-      // Les enchaînements « (Two) » forment une réserve commune : le wiki écrit
-      // « Branching from _ (One) », le tiret bas valant pour n'importe quelle
-      // bravery « (One) ». Chaque coup d'origine propose donc toute la réserve.
-      var pool = [];
-      groups.forEach(function (g) { if (g.followUp) pool = pool.concat(g.moves); });
-      var poolIntro = (groups.filter(function (g) { return g.followUp; })[0] || {}).intro;
-
-      // Attaques HP branchées sur une bravery : affichées sous elle, retirées de
-      // leur propre liste pour ne pas apparaître deux fois.
-      var linksByParent = {};
-      var isLinked = {};
-      (char.links || []).forEach(function (l) {
-        (linksByParent[l.from] = linksByParent[l.from] || []).push(l.to);
-        isLinked[l.to] = true;
-      });
-      var moveById = {};
-      ['bravery', 'hp'].forEach(function (k) {
-        (char.attacks[k] || []).forEach(function (g) { g.moves.forEach(function (m) { moveById[m.id] = m; }); });
-      });
-
       groups.forEach(function (g) {
         if (g.followUp) return;
-        byStyle(g.moves).forEach(function (sub) {
-          var visibles = sub.moves.filter(function (m) { return !isLinked[m.id]; });
-          if (!visibles.length) return;
-          var used = poolUsage(char, kind, g.key, sub.style, isLinked);
-          var plein = used >= MAX_SLOTS;
-          var titre = groupLabel(g.key) + (sub.style ? ' — ' + sub.style : '');
-          var fs = el('fieldset', { class: 'bc-group' + (plein ? ' is-full' : '') }, [
-            el('legend', {}, [
-              el('span', { text: titre + ' ' }),
-              el('span', { class: 'bc-slots' + (plein ? ' is-full' : ''), text: used + '/' + MAX_SLOTS }),
-            ]),
-          ]);
-          if (g.intro) fs.appendChild(el('p', { class: 'bc-note', text: g.intro.split('\n')[0] }));
-          var list = el('div', { class: 'bc-list' });
-          visibles.forEach(function (m) {
-            list.appendChild(attackRow(m, plein));
-            var suites = (kind === 'bravery' ? pool : []).slice();
-            (linksByParent[m.id] || []).forEach(function (id) { if (moveById[id]) suites.push(moveById[id]); });
-            if (suites.length) list.appendChild(branch(m, suites, poolIntro));
-          });
-          fs.appendChild(list);
-          panel.appendChild(fs);
+        // Un personnage à styles (paradigmes de Lightning, jobs de Cecil,
+        // moveset EX de Gabranth) a une grille par style : ce sont bien des
+        // emplacements distincts dans le jeu.
+        var styles = byStyle(g.moves).map(function (sub) { return sub.style || null; });
+        styles.forEach(function (style) {
+          var choix = categoryMoves(g, style, isLinked);
+          if (!choix.length) return;
+          panel.appendChild(attackCategory(char, kind, g, style, choix, linksByParent, moveById, isLinked));
         });
       });
+
+      // Les enchaînements « (Two) » forment une réserve commune : le wiki écrit
+      // « Branching from _ (One) », le tiret bas valant pour n'importe quelle
+      // bravery « (One) ». Ils ne se rattachent donc pas à un emplacement
+      // précis, et n'en consomment aucun — d'où leur section à part.
+      var pool = [];
+      groups.forEach(function (gg) { if (gg.followUp) pool = pool.concat(gg.moves); });
+      if (pool.length) panel.appendChild(followUpPool(char, kind, pool, groups));
     });
   }
 
-  // Embranchement replié sous le coup qu'il prolonge. Il reste verrouillé tant
-  // que ce coup n'est pas équipé : dans le jeu, un enchaînement n'existe pas
-  // sans son attaque de départ.
-  function branch(parent, suites, intro) {
-    var parentEquipe = state.build.attacks.indexOf(parent.id) !== -1;
-    var actifs = suites.filter(function (m) { return state.build.attacks.indexOf(m.id) !== -1; }).length;
-    var det = el('details', { class: 'bc-branch' + (parentEquipe ? '' : ' is-locked') }, [
-      el('summary', {
-        text: parentEquipe
-          ? (actifs ? T(actifs > 1 ? 'attacks.followupsActiveMany' : 'attacks.followupsActiveOne', { count: actifs }) : T('attacks.followups'))
-          : T('attacks.followupsNeedParent', { name: parent.name }),
-      }),
-    ]);
-    // Équiper le coup ouvre son embranchement : c'est le moment où il devient
-    // choisissable, autant le montrer sans clic supplémentaire.
-    if (parentEquipe) det.setAttribute('open', '');
-    if (intro && parentEquipe) det.appendChild(el('p', { class: 'bc-note', text: intro.split('\n')[0] }));
-    var l = el('div', { class: 'bc-list' });
-    suites.forEach(function (m) { l.appendChild(attackRow(m, false, !parentEquipe)); });
-    det.appendChild(l);
-    return det;
-  }
+  function attackCategory(char, kind, group, style, choix, linksByParent, moveById, isLinked) {
+    var titre = groupLabel(group.key) + (style ? ' — ' + style : '');
+    var retenus = state.build.attacks
+      .map(function (id) { return moveById[id]; })
+      .filter(function (m) { return m && choix.indexOf(m) !== -1; });
 
-  function attackRow(m, poolFull, locked) {
-    var checked = state.build.attacks.indexOf(m.id) !== -1;
-    var bloque = locked || (poolFull && !checked);
-    var input = el('input', { type: 'checkbox', checked: checked, disabled: bloque });
-    input.addEventListener('change', function () {
-      var i = state.build.attacks.indexOf(m.id);
-      if (input.checked && i === -1) state.build.attacks.push(m.id);
-      else if (!input.checked && i !== -1) state.build.attacks.splice(i, 1);
-      pruneOrphanBranches();
-      markDirty();
-      keepScroll(null, function () { renderPanel('attack'); refresh(); });
-    });
-    var meta = [];
-    if (m.damage) meta.push(T('attacks.damage', { value: m.damage }));
-    if (m.startup) meta.push(T('attacks.startup', { value: m.startup }));
-    if (m.type) meta.push(m.type);
-    if (m.priority) meta.push(m.priority);
-    if (m.variants) meta.push(m.variants);
-    var row = el('label', {
-      class: 'bc-row' + (bloque ? ' is-disabled' : ''),
-      title: locked
-        ? T('attacks.lockedTitle')
-        : (bloque ? T('attacks.slotsFullTitle') : ''),
-    }, [
-      input,
-      el('span', { class: 'bc-row-main' }, [
-        el('span', { class: 'bc-row-name', text: m.name }),
-        el('span', { class: 'bc-row-meta', text: meta.join(' · ') }),
+    var fs = el('fieldset', { class: 'bc-group' }, [
+      el('legend', {}, [
+        el('span', { text: titre + ' ' }),
+        el('span', { class: 'bc-slots' + (retenus.length >= MAX_SLOTS ? ' is-full' : ''), text: retenus.length + '/' + MAX_SLOTS }),
       ]),
-      el('span', { class: 'bc-cp', text: m.cp == null ? T('attacks.unknownCost') : cpOf(m) + ' CP' }),
     ]);
-    if (m.cp == null) row.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: T('attacks.unknownCostTitle'), text: T('status.undocumented') }));
-    return row;
+    if (group.intro) fs.appendChild(el('p', { class: 'bc-note', text: group.intro.split('\n')[0] }));
+
+    var grid = el('div', { class: 'bc-slot-grid' });
+    for (var i = 0; i < MAX_SLOTS; i++) {
+      (function (index) {
+        var m = retenus[index];
+        var libre = choix.filter(function (c) { return !isEquipped(c.id); });
+        var ouvrir = function () {
+          openMoveChooser(titre + ' · ' + inputTitle(kind, index), libre, m, function (choisi) {
+            if (m) unequipAttack(m.id);
+            equipAttack(choisi.id);
+          });
+        };
+        if (!m) {
+          grid.appendChild(slotRow({
+            input: inputGlyph(kind, index), inputTitle: inputTitle(kind, index),
+            filled: false, onAssign: ouvrir,
+          }));
+          return;
+        }
+        var main = el('span', { class: 'bc-slot-main' }, [
+          el('span', { class: 'bc-row-name', text: m.name }),
+          el('span', { class: 'bc-row-meta', text: moveMeta(m) }),
+        ]);
+        var actions = [cpTag(m)];
+        if (m.cp == null) actions.push(el('span', { class: 'bc-tag bc-tag-warn', title: T('attacks.unknownCostTitle'), text: T('status.undocumented') }));
+        // Déplacer un coup change la commande qui le déclenche : c'est le seul
+        // moyen de le poser sur une autre direction, la liste étant dense.
+        if (index > 0) actions.push(el('button', {
+          type: 'button', class: 'bc-btn bc-btn-small bc-btn-move', text: '↑',
+          'aria-label': T('slots.moveUp'), title: T('slots.moveUp'),
+          onclick: function () { swapAttacks(m.id, retenus[index - 1].id); },
+        }));
+        if (index < retenus.length - 1) actions.push(el('button', {
+          type: 'button', class: 'bc-btn bc-btn-small bc-btn-move', text: '↓',
+          'aria-label': T('slots.moveDown'), title: T('slots.moveDown'),
+          onclick: function () { swapAttacks(m.id, retenus[index + 1].id); },
+        }));
+        grid.appendChild(slotRow({
+          input: inputGlyph(kind, index), inputTitle: inputTitle(kind, index),
+          filled: true, main: main, actions: actions,
+          onAssign: ouvrir,
+          onRemove: function () { unequipAttack(m.id); },
+        }));
+        // Embranchement HP : le carré prolonge la bravery, comme à l'écran du
+        // jeu. Il n'occupe pas d'emplacement.
+        var suites = (linksByParent[m.id] || []).map(function (id) { return moveById[id]; }).filter(Boolean);
+        if (suites.length) grid.appendChild(hpLinkBranch(m, suites));
+      }(i));
+    }
+    fs.appendChild(grid);
+    return fs;
+  }
+
+  // Embranchement d'attaque HP sous la bravery qui l'ouvre.
+  function hpLinkBranch(parent, suites) {
+    var box = el('div', { class: 'bc-branch-row' });
+    var pris = suites.filter(function (m) { return isEquipped(m.id); });
+    var libres = suites.filter(function (m) { return !isEquipped(m.id); });
+    var badge = el('span', { class: 'bc-slot-badge bc-badge-branch', title: T('attacks.input.link', { button: KIND_BUTTON.hp }), text: '└ ' + KIND_BUTTON.hp });
+    box.appendChild(badge);
+    if (!pris.length) {
+      var add = el('button', {
+        type: 'button', class: 'bc-branch-add', onclick: function () {
+          openMoveChooser(T('attacks.hpLinkFor', { name: parent.name }), libres, null, function (choisi) { equipAttack(choisi.id); });
+        },
+      }, [el('span', { text: T('attacks.hpLinkAdd') }), el('span', { class: 'bc-slot-plus', 'aria-hidden': 'true', text: '+' })]);
+      box.appendChild(add);
+      return box;
+    }
+    var m = pris[0];
+    box.appendChild(el('span', { class: 'bc-slot-main' }, [
+      el('span', { class: 'bc-row-name', text: m.name }),
+      el('span', { class: 'bc-row-meta', text: moveMeta(m) }),
+    ]));
+    box.appendChild(el('span', { class: 'bc-slot-actions' }, [
+      cpTag(m),
+      el('button', { type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('equipment.remove'), onclick: function () { unequipAttack(m.id); } }),
+    ]));
+    return box;
+  }
+
+  // Réserve commune des enchaînements : ils prolongent n'importe quelle bravery
+  // de départ, le wiki ne dit pas laquelle. Sans bravery équipée, ils n'ont pas
+  // lieu d'être — `pruneOrphanBranches` les retire alors du build.
+  function followUpPool(char, kind, pool, groups) {
+    var starter = false;
+    groups.forEach(function (g) {
+      if (g.followUp) return;
+      g.moves.forEach(function (m) { if (isEquipped(m.id)) starter = true; });
+    });
+    var intro = (groups.filter(function (g) { return g.followUp; })[0] || {}).intro;
+    var fs = el('fieldset', { class: 'bc-group' + (starter ? '' : ' is-locked') }, [
+      el('legend', {}, [el('span', { text: T('attacks.followups') + ' ' }), el('span', { class: 'bc-slot-badge', text: KIND_BUTTON[kind] })]),
+    ]);
+    fs.appendChild(el('p', { class: 'bc-note', text: starter ? (intro ? intro.split('\n')[0] : T('attacks.followupsFree')) : T('attacks.followupsNeedAny') }));
+    var grid = el('div', { class: 'bc-slot-grid' });
+    pool.forEach(function (m) {
+      if (!isEquipped(m.id)) return;
+      grid.appendChild(slotRow({
+        input: '└ ' + KIND_BUTTON[kind], inputTitle: T('attacks.input.link', { button: KIND_BUTTON[kind] }),
+        filled: true, className: 'bc-slot-followup',
+        main: el('span', { class: 'bc-slot-main' }, [
+          el('span', { class: 'bc-row-name', text: m.name }),
+          el('span', { class: 'bc-row-meta', text: moveMeta(m) }),
+        ]),
+        actions: [cpTag(m)],
+        onAssign: function () {
+          openMoveChooser(T('attacks.followups'), pool.filter(function (x) { return !isEquipped(x.id); }), m, function (choisi) {
+            unequipAttack(m.id); equipAttack(choisi.id);
+          });
+        },
+        onRemove: function () { unequipAttack(m.id); },
+      }));
+    });
+    var libres = pool.filter(function (m) { return !isEquipped(m.id); });
+    if (starter && libres.length) {
+      grid.appendChild(slotRow({
+        input: '└ ' + KIND_BUTTON[kind], inputTitle: T('attacks.input.link', { button: KIND_BUTTON[kind] }),
+        filled: false,
+        onAssign: function () {
+          openMoveChooser(T('attacks.followups'), libres, null, function (choisi) { equipAttack(choisi.id); });
+        },
+      }));
+    }
+    fs.appendChild(grid);
+    return fs;
+  }
+
+  // Fenêtre de choix d'un coup. Recherche par nom, et par effet : c'est souvent
+  // « celui qui fait Wall Rush » qu'on cherche, pas un nom précis.
+  function openMoveChooser(title, choix, courant, onPick) {
+    openModal(title, courant ? T('attacks.replacing', { name: courant.name }) : null, function (body, close) {
+      var listBox = el('div', { class: 'bc-list bc-list-scroll' });
+      var q = '';
+      var search = el('input', { type: 'search', placeholder: T('attacks.filterName'), 'aria-label': T('attacks.filterName') });
+      search.addEventListener('input', function () { q = search.value.toLowerCase(); paint(); });
+      body.appendChild(el('div', { class: 'bc-filters' }, [search]));
+      body.appendChild(listBox);
+      function paint() {
+        clear(listBox);
+        var items = choix.filter(function (m) {
+          return !q || (m.name + ' ' + (m.effects || '') + ' ' + (m.type || '') + ' ' + (m.priority || '')).toLowerCase().indexOf(q) !== -1;
+        });
+        if (!items.length) { listBox.appendChild(el('p', { class: 'bc-note', text: T('attacks.noneAvailable') })); return; }
+        items.forEach(function (m) {
+          listBox.appendChild(el('button', {
+            type: 'button', class: 'bc-row bc-row-btn', 'data-uid': m.id,
+            onclick: function () { close(); onPick(m); },
+          }, [
+            el('span', { class: 'bc-row-main' }, [
+              el('span', { class: 'bc-row-name', text: m.name }),
+              el('span', { class: 'bc-row-meta', text: moveMeta(m) + (m.effects ? ' · ' + m.effects : '') }),
+            ]),
+            cpTag(m),
+          ]));
+        });
+      }
+      paint();
+    });
   }
 
   // --- Onglet Abilities -----------------------------------------------------
@@ -1223,33 +1475,46 @@
 
   function renderStuff(panel) {
     panel.appendChild(illegalToggle());
-    SLOTS.forEach(function (slot) { panel.appendChild(slotSection(slot)); });
+    var grid = el('div', { class: 'bc-slot-grid' });
+    SLOTS.forEach(function (slot) { grid.appendChild(equipSlotRow(slot)); });
+    panel.appendChild(grid);
   }
 
-  function slotSection(slot) {
+  // Une ligne par emplacement ; la liste et ses filtres vivent dans la fenêtre.
+  function equipSlotRow(slot) {
     var current = state.build.equipment[slot.key] ? equipByUid[state.build.equipment[slot.key]] : null;
-    var section = el('section', { class: 'bc-slot' });
-    section.appendChild(el('h3', { text: slot.label + (current ? ' — ' + current.name : ' — vide') }));
-
-    if (current) {
-      var st = equipStatus(current);
-      var line = el('p', { class: 'bc-current' }, [
-        el('span', { text: fmtStats(current.stats) || T('equipment.noStats') }),
-        current.effects ? el('span', { class: 'bc-row-meta', text: ' · ' + current.effects }) : null,
-      ]);
-      if (st.state === 'glitch') line.appendChild(el('span', { class: 'bc-tag bc-tag-glitch', title: st.label, text: T('equipment.glitchTag') }));
-      if (st.state === 'unknown') line.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: st.label, text: T('status.undocumented') }));
-      line.appendChild(el('button', {
-        type: 'button', class: 'bc-btn bc-btn-small', text: T('equipment.remove'),
-        onclick: function () {
-          state.build.equipment[slot.key] = null;
-          markDirty();
-          keepScroll(null, function () { renderPanel('stuff'); refresh(); });
-        },
-      }));
-      section.appendChild(line);
+    var ouvrir = function () {
+      openModal(slot.label, current ? T('attacks.replacing', { name: current.name }) : null, function (body, close) {
+        body.appendChild(slotChooser(slot, close));
+      });
+    };
+    if (!current) {
+      return slotRow({
+        input: slot.label, inputTitle: slot.label, filled: false, onAssign: ouvrir,
+      });
     }
+    var st = equipStatus(current);
+    var main = el('span', { class: 'bc-slot-main' }, [
+      el('span', { class: 'bc-row-name', text: current.name }),
+      el('span', { class: 'bc-row-meta', text: [fmtStats(current.stats) || T('equipment.noStats'), current.effects].filter(Boolean).join(' · ') }),
+    ]);
+    var actions = [];
+    if (current.level) actions.push(el('span', { class: 'bc-tag bc-tag-info', text: 'Lv ' + current.level }));
+    if (st.state === 'glitch') actions.push(el('span', { class: 'bc-tag bc-tag-glitch', title: st.label, text: T('equipment.glitchTag') }));
+    if (st.state === 'unknown') actions.push(el('span', { class: 'bc-tag bc-tag-warn', title: st.label, text: T('status.undocumented') }));
+    return slotRow({
+      input: slot.label, inputTitle: slot.label, filled: true, main: main, actions: actions,
+      onAssign: ouvrir,
+      onRemove: function () {
+        state.build.equipment[slot.key] = null;
+        markDirty();
+        keepScroll(null, function () { renderPanel('stuff'); refresh(); });
+      },
+    });
+  }
 
+  function slotChooser(slot, close) {
+    var section = el('div');
     var cats = D.equipmentCategories[slot.key] || [];
     var bar = el('div', { class: 'bc-filters' });
     var search = el('input', { type: 'search', placeholder: T('equipment.filterName'), value: stuffFilters[slot.key], 'aria-label': T('equipment.filterAria', { slot: slot.label }) });
@@ -1311,14 +1576,14 @@
         return sign * (((b.stats && b.stats[key]) || 0) - ((a.stats && a.stats[key]) || 0) || byName(a, b));
       });
       listBox.appendChild(el('p', { class: 'bc-count', text: T('equipment.pieces', { count: items.length }) }));
-      items.slice(0, 400).forEach(function (e) { listBox.appendChild(equipRow(slot, e)); });
+      items.slice(0, 400).forEach(function (e) { listBox.appendChild(equipRow(slot, e, close)); });
       if (items.length > 400) listBox.appendChild(el('p', { class: 'bc-note', text: T('equipment.limit400') }));
     }
     renderList();
     return section;
   }
 
-  function equipRow(slot, e) {
+  function equipRow(slot, e, close) {
     var selected = state.build.equipment[slot.key] === e.uid;
     var st = equipStatus(e);
     var btn = el('button', {
@@ -1329,7 +1594,8 @@
       onclick: function () {
         state.build.equipment[slot.key] = selected ? null : e.uid;
         markDirty();
-        keepScroll(e.uid, function () {
+        if (close) close();
+        keepScroll(null, function () {
           renderPanel('stuff');
           refresh();
         });
@@ -1337,7 +1603,7 @@
     }, [
       el('span', { class: 'bc-row-main' }, [
         el('span', { class: 'bc-row-name', text: e.name }),
-        el('span', { class: 'bc-row-meta', text: [e.category, e.level ? 'niv. ' + e.level : '', fmtStats(e.stats), e.effects].filter(Boolean).join(' · ') }),
+        el('span', { class: 'bc-row-meta', text: [e.category, e.level ? T('equipment.levelShort', { level: e.level }) : '', fmtStats(e.stats), e.effects].filter(Boolean).join(' · ') }),
       ]),
     ]);
     if (st.state === 'glitch') btn.appendChild(el('span', { class: 'bc-tag bc-tag-glitch', title: st.label, text: '⚙' }));
@@ -1364,13 +1630,48 @@
 
   function renderAccessories(panel) {
     panel.appendChild(illegalToggle());
-
-    var slotsBox = el('div', { class: 'bc-acc-slots' });
-    for (var i = 0; i < ACCESSORY_SLOTS; i++) slotsBox.appendChild(accessorySlot(i));
     panel.appendChild(el('h3', { text: T('accessories.slotsTitle', { count: state.build.accessories.filter(Boolean).length + '/' + ACCESSORY_SLOTS }) }));
-    panel.appendChild(slotsBox);
+    var grid = el('div', { class: 'bc-slot-grid' });
+    for (var i = 0; i < ACCESSORY_SLOTS; i++) grid.appendChild(accessorySlot(i));
+    panel.appendChild(grid);
+  }
 
-    panel.appendChild(el('h3', { text: T('accessories.choose') }));
+  function accessorySlot(i) {
+    var u = state.build.accessories[i];
+    var a = u ? accByUid[u] : null;
+    var ouvrir = function () {
+      openModal(T('accessories.slotTitle', { index: i + 1 }), a ? T('attacks.replacing', { name: a.name }) : null, function (body, close) {
+        body.appendChild(accessoryChooser(i, close));
+      });
+    };
+    if (!a) {
+      return slotRow({ input: String(i + 1), inputTitle: T('accessories.slotTitle', { index: i + 1 }), filled: false, onAssign: ouvrir });
+    }
+    var main = el('span', { class: 'bc-slot-main' }, [
+      el('span', { class: 'bc-row-name', text: a.name }),
+      el('span', { class: 'bc-row-meta', text: [a.category, a.effect || a.requirements].filter(Boolean).join(' · ') }),
+    ]);
+    var actions = [];
+    if (a.multiplier) actions.push(el('span', { class: 'bc-tag bc-tag-mult', text: '×' + a.multiplier }));
+    if (a.rank) actions.push(el('span', { class: 'bc-tag bc-tag-info', title: T('accessories.rank', { rank: a.rank }), text: a.rank }));
+    if (a.legal === false) actions.push(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(a), text: T('accessories.illegal') }));
+    return slotRow({
+      input: String(i + 1), inputTitle: T('accessories.slotTitle', { index: i + 1 }),
+      filled: true, main: main, actions: actions,
+      onAssign: ouvrir,
+      onRemove: function () {
+        state.build.accessories[i] = null;
+        markDirty();
+        keepScroll(null, function () { renderPanel('accessories'); refresh(); });
+      },
+    });
+  }
+
+  // Le choix se fait pour un emplacement précis : la limite d'exemplaires se
+  // compte donc sans l'occupant actuel, qu'on est justement en train de
+  // remplacer — sans quoi un rang S déjà posé s'interdirait lui-même.
+  function accessoryChooser(index, close) {
+    var section = el('div');
     var bar = el('div', { class: 'bc-filters' });
     var search = el('input', { type: 'search', placeholder: T('accessories.filterNameEffect'), value: accFilter, 'aria-label': T('accessories.filterAria') });
     search.addEventListener('input', function () { accFilter = search.value; renderList(); });
@@ -1379,10 +1680,10 @@
     ));
     catSel.addEventListener('change', function () { accCategory = catSel.value; renderList(); });
     bar.appendChild(search); bar.appendChild(catSel);
-    panel.appendChild(bar);
+    section.appendChild(bar);
 
     var listBox = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'acc' });
-    panel.appendChild(listBox);
+    section.appendChild(listBox);
 
     function renderList() {
       clear(listBox);
@@ -1394,35 +1695,11 @@
         return true;
       });
       listBox.appendChild(el('p', { class: 'bc-count', text: T('accessories.count', { count: items.length }) }));
-      items.slice(0, 400).forEach(function (a) { listBox.appendChild(accessoryRow(a)); });
+      items.slice(0, 400).forEach(function (a) { listBox.appendChild(accessoryRow(a, index, close)); });
       if (items.length > 400) listBox.appendChild(el('p', { class: 'bc-note', text: T('accessories.limit400') }));
     }
     renderList();
-  }
-
-  function accessorySlot(i) {
-    var u = state.build.accessories[i];
-    var a = u ? accByUid[u] : null;
-    var box = el('div', { class: 'bc-acc-slot' + (a ? '' : ' is-empty') });
-    box.appendChild(el('span', { class: 'bc-acc-index', text: String(i + 1) }));
-    if (!a) {
-      box.appendChild(el('span', { class: 'bc-row-meta', text: T('accessories.empty') }));
-      return box;
-    }
-    box.appendChild(el('span', { class: 'bc-row-main' }, [
-      el('span', { class: 'bc-row-name', text: a.name }),
-      el('span', { class: 'bc-row-meta', text: [a.category, a.multiplier ? '×' + a.multiplier : '', a.effect || a.requirements].filter(Boolean).join(' · ') }),
-    ]));
-    if (a.legal === false) box.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(a), text: T('accessories.illegal') }));
-    box.appendChild(el('button', {
-      type: 'button', class: 'bc-btn bc-btn-small', text: T('equipment.remove'),
-      onclick: function () {
-        state.build.accessories[i] = null;
-        markDirty();
-        keepScroll(null, function () { renderPanel('accessories'); refresh(); });
-      },
-    }));
-    return box;
+    return section;
   }
 
   function copyLimit(a) {
@@ -1432,26 +1709,25 @@
     return state.build.accessories.filter(function (u) { return u === uid; }).length;
   }
 
-  function accessoryRow(a) {
-    var count = copiesOf(a.uid);
+  function accessoryRow(a, index, close) {
+    // L'occupant de l'emplacement visé ne se compte pas contre lui-même : on le
+    // remplace, on ne l'ajoute pas.
+    var count = copiesOf(a.uid) - (state.build.accessories[index] === a.uid ? 1 : 0);
     var limite = copyLimit(a);
     var atteinte = limite !== null && count >= limite;
-    var full = state.build.accessories.indexOf(null) === -1;
-    var bloque = full || atteinte;
     var btn = el('button', {
       type: 'button',
-      class: 'bc-row bc-row-btn' + (count ? ' is-selected' : '') + (bloque ? ' is-disabled' : ''),
-      disabled: bloque,
+      class: 'bc-row bc-row-btn' + (count ? ' is-selected' : '') + (atteinte ? ' is-disabled' : ''),
+      disabled: atteinte,
       title: atteinte
         ? T(limite > 1 ? 'accessories.rankLimitMany' : 'accessories.rankLimitOne', { rank: a.rank, max: limite })
-        : (full ? T('accessories.allSlotsFull', { count: ACCESSORY_SLOTS }) : ''),
+        : '',
       'data-uid': a.uid,
       onclick: function () {
-        var free = state.build.accessories.indexOf(null);
-        if (free === -1) return;
-        state.build.accessories[free] = a.uid;
+        state.build.accessories[index] = a.uid;
         markDirty();
-        keepScroll(a.uid, function () {
+        if (close) close();
+        keepScroll(null, function () {
           renderPanel('accessories');
           refresh();
         });
