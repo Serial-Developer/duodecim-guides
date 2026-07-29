@@ -904,6 +904,11 @@
     });
   });
 
+  // Un déplacement d'attaque redessine l'onglet : la poignée qu'on manipulait
+  // disparaît avec lui. On redonne donc le focus à celle de l'attaque déplacée,
+  // sans quoi une suite de flèches au clavier serait interrompue à chaque coup.
+  var pendingFocus = null;
+
   function renderPanel(key) {
     if (!state.build.character) return;
     var panel = panels[key];
@@ -913,6 +918,19 @@
     else if (key === 'stuff') renderStuff(panel);
     else if (key === 'accessories') renderAccessories(panel);
     else if (key === 'assist') renderAssist(panel);
+    if (pendingFocus) {
+      var handle = panel.querySelector('[data-drag-handle="' + cssEscape(pendingFocus) + '"]');
+      pendingFocus = null;
+      if (handle) handle.focus({ preventScroll: true });
+    }
+  }
+
+  // Les identifiants de coups portent espaces, parenthèses et « & » (« bravery:
+  // ground:Dart & Weave (ground) ») : ils ne peuvent pas entrer tels quels dans
+  // un sélecteur.
+  function cssEscape(value) {
+    if (window.CSS && window.CSS.escape) return window.CSS.escape(value);
+    return String(value).replace(/[^\w-]/g, function (c) { return '\\' + c; });
   }
 
   // --- Fenêtre de choix -----------------------------------------------------
@@ -999,7 +1017,12 @@
         el('span', { class: 'bc-slot-plus', 'aria-hidden': 'true', text: '+' }),
       ]);
     }
-    var row = el('div', { class: 'bc-slot-row' + (opts.className ? ' ' + opts.className : '') }, [badge]);
+    var row = el('div', {
+      class: 'bc-slot-row' + (opts.className ? ' ' + opts.className : '') + (opts.handle ? ' has-handle' : ''),
+      'data-drag-id': opts.dragId || false,
+    });
+    if (opts.handle) row.appendChild(opts.handle);
+    row.appendChild(badge);
     row.appendChild(opts.main);
     var actions = el('span', { class: 'bc-slot-actions' });
     (opts.actions || []).forEach(function (a) { if (a) actions.appendChild(a); });
@@ -1101,14 +1124,96 @@
   }
   // L'emplacement d'un coup est sa position parmi les coups retenus de sa
   // catégorie : rien de plus n'est stocké, et le lien de partage — qui
-  // transporte les attaques dans l'ordre — le restitue tel quel.
-  function swapAttacks(a, b) {
-    var ia = state.build.attacks.indexOf(a);
-    var ib = state.build.attacks.indexOf(b);
-    if (ia === -1 || ib === -1) return;
-    state.build.attacks[ia] = b;
-    state.build.attacks[ib] = a;
+  // transporte les attaques dans l'ordre — le restitue tel quel. Déplacer une
+  // attaque revient donc à permuter les positions qu'occupe sa catégorie dans
+  // la liste, sans toucher à celles des autres catégories.
+  function reorderWithin(ids, from, to) {
+    if (from === to || to < 0 || to >= ids.length) return;
+    var positions = ids.map(function (id) { return state.build.attacks.indexOf(id); });
+    if (positions.indexOf(-1) !== -1) return;
+    var next = ids.slice();
+    next.splice(to, 0, next.splice(from, 1)[0]);
+    positions.forEach(function (pos, k) { state.build.attacks[pos] = next[k]; });
+    pendingFocus = next[to];
     afterAttackChange();
+  }
+
+  // --- Déplacer une attaque d'une commande à l'autre -------------------------
+  // On la fait glisser par sa poignée. Les Pointer Events couvrent souris,
+  // doigt et stylet du même code ; le glisser-déposer HTML5, lui, ne répond pas
+  // au doigt, et le créateur se consulte largement sur téléphone.
+  //
+  // Le clavier n'est pas laissé de côté : la poignée reste un bouton, et les
+  // flèches haut/bas y déplacent l'attaque sans saisie préalable. Un
+  // glisser-déposer seul rendrait l'outil inutilisable sans souris.
+  var drag = null;
+
+  function endDrag(apply) {
+    if (!drag) return;
+    var d = drag;
+    drag = null;
+    document.removeEventListener('pointermove', d.onMove);
+    document.removeEventListener('pointerup', d.onUp);
+    document.removeEventListener('pointercancel', d.onCancel);
+    document.removeEventListener('keydown', d.onKey, true);
+    d.row.classList.remove('is-dragging');
+    d.rows.forEach(function (r) { r.classList.remove('is-drop-target'); });
+    document.body.classList.remove('bc-dragging');
+    if (apply && d.moved && d.to !== d.from) reorderWithin(d.ids, d.from, d.to);
+  }
+
+  function startDrag(handle, ids, index, ev) {
+    var row = handle.parentNode;
+    while (row && row.className.indexOf('bc-slot-row') === -1) row = row.parentNode;
+    if (!row) return;
+    var rows = Array.prototype.slice.call(row.parentNode.querySelectorAll('.bc-slot-row[data-drag-id]'));
+    if (rows.length < 2) return;
+    var d = {
+      ids: ids, from: index, to: index, row: row, rows: rows,
+      startY: ev.clientY, moved: false,
+    };
+    d.onMove = function (e) {
+      if (!drag) return;
+      if (!d.moved && Math.abs(e.clientY - d.startY) < 4) return;
+      d.moved = true;
+      // On vise la ligne survolée : c'est ce que l'œil attend, et cela reste
+      // juste même si les lignes n'ont pas toutes la même hauteur (un
+      // embranchement HP en allonge une).
+      d.rows.forEach(function (r, i) {
+        var box = r.getBoundingClientRect();
+        if (e.clientY >= box.top && e.clientY <= box.bottom) d.to = i;
+      });
+      d.rows.forEach(function (r, i) { r.classList.toggle('is-drop-target', d.moved && i === d.to && i !== d.from); });
+    };
+    d.onUp = function () { endDrag(true); };
+    d.onCancel = function () { endDrag(false); };
+    d.onKey = function (e) { if (e.key === 'Escape') { e.preventDefault(); endDrag(false); } };
+    drag = d;
+    row.classList.add('is-dragging');
+    document.body.classList.add('bc-dragging');
+    document.addEventListener('pointermove', d.onMove);
+    document.addEventListener('pointerup', d.onUp);
+    document.addEventListener('pointercancel', d.onCancel);
+    document.addEventListener('keydown', d.onKey, true);
+  }
+
+  function dragHandle(ids, index) {
+    var btn = el('button', {
+      type: 'button', class: 'bc-drag-handle',
+      'aria-label': T('slots.reorder'), title: T('slots.reorder'),
+      'data-drag-handle': ids[index],
+    }, [el('span', { 'aria-hidden': 'true', text: '⠿' })]);
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowUp') { e.preventDefault(); reorderWithin(ids, index, index - 1); }
+      else if (e.key === 'ArrowDown') { e.preventDefault(); reorderWithin(ids, index, index + 1); }
+    });
+    btn.addEventListener('pointerdown', function (e) {
+      if (e.button != null && e.button !== 0) return;
+      // Sans cela, le doigt fait défiler la page au lieu de déplacer la ligne.
+      e.preventDefault();
+      startDrag(btn, ids, index, e);
+    });
+    return btn;
   }
   function afterAttackChange() {
     pruneOrphanBranches();
@@ -1219,21 +1324,14 @@
         ]);
         var actions = [cpTag(m)];
         if (m.cp == null) actions.push(el('span', { class: 'bc-tag bc-tag-warn', title: T('attacks.unknownCostTitle'), text: T('status.undocumented') }));
-        // Déplacer un coup change la commande qui le déclenche : c'est le seul
-        // moyen de le poser sur une autre direction, la liste étant dense.
-        if (index > 0) actions.push(el('button', {
-          type: 'button', class: 'bc-btn bc-btn-small bc-btn-move', text: '↑',
-          'aria-label': T('slots.moveUp'), title: T('slots.moveUp'),
-          onclick: function () { swapAttacks(m.id, retenus[index - 1].id); },
-        }));
-        if (index < retenus.length - 1) actions.push(el('button', {
-          type: 'button', class: 'bc-btn bc-btn-small bc-btn-move', text: '↓',
-          'aria-label': T('slots.moveDown'), title: T('slots.moveDown'),
-          onclick: function () { swapAttacks(m.id, retenus[index + 1].id); },
-        }));
+        // Déplacer un coup change la commande qui le déclenche. La poignée n'a
+        // de sens qu'à partir de deux coups posés : seule, une attaque n'a
+        // nulle part où aller.
         grid.appendChild(slotRow({
           input: inputGlyph(kind, index), inputTitle: inputTitle(kind, index),
           filled: true, main: main, actions: actions,
+          dragId: m.id,
+          handle: retenus.length > 1 ? dragHandle(retenus.map(function (x) { return x.id; }), index) : null,
           onAssign: ouvrir,
           onRemove: function () { unequipAttack(m.id); },
         }));
@@ -1326,12 +1424,14 @@
   // « celui qui fait Wall Rush » qu'on cherche, pas un nom précis.
   function openMoveChooser(title, choix, courant, onPick) {
     openModal(title, courant ? T('attacks.replacing', { name: courant.name }) : null, function (body, close) {
+      var section = el('div', { class: 'bc-chooser' });
       var listBox = el('div', { class: 'bc-list bc-list-scroll' });
       var q = '';
       var search = el('input', { type: 'search', placeholder: T('attacks.filterName'), 'aria-label': T('attacks.filterName') });
       search.addEventListener('input', function () { q = search.value.toLowerCase(); paint(); });
-      body.appendChild(el('div', { class: 'bc-filters' }, [search]));
-      body.appendChild(listBox);
+      section.appendChild(el('div', { class: 'bc-filters' }, [search]));
+      section.appendChild(listBox);
+      body.appendChild(section);
       function paint() {
         clear(listBox);
         var items = choix.filter(function (m) {
@@ -1514,7 +1614,7 @@
   }
 
   function slotChooser(slot, close) {
-    var section = el('div');
+    var section = el('div', { class: 'bc-chooser' });
     var cats = D.equipmentCategories[slot.key] || [];
     var bar = el('div', { class: 'bc-filters' });
     var search = el('input', { type: 'search', placeholder: T('equipment.filterName'), value: stuffFilters[slot.key], 'aria-label': T('equipment.filterAria', { slot: slot.label }) });
@@ -1671,7 +1771,7 @@
   // compte donc sans l'occupant actuel, qu'on est justement en train de
   // remplacer — sans quoi un rang S déjà posé s'interdirait lui-même.
   function accessoryChooser(index, close) {
-    var section = el('div');
+    var section = el('div', { class: 'bc-chooser' });
     var bar = el('div', { class: 'bc-filters' });
     var search = el('input', { type: 'search', placeholder: T('accessories.filterNameEffect'), value: accFilter, 'aria-label': T('accessories.filterAria') });
     search.addEventListener('input', function () { accFilter = search.value; renderList(); });

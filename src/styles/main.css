@@ -1086,8 +1086,12 @@ body.bc-modal-open { overflow: hidden; }
 .bc-modal-titles .bc-note { margin: 0.2rem 0 0; }
 /* Le corps ne défile pas lui-même : c'est la liste qu'il contient qui défile,
    pour que la barre de recherche reste visible pendant qu'on parcourt. */
-.bc-modal-body { display: flex; flex-direction: column; min-height: 0; padding: 0.7rem 1rem 1rem; gap: 0.5rem; }
-.bc-modal-body > div { display: flex; flex-direction: column; min-height: 0; gap: 0.5rem; }
+.bc-modal-body { display: flex; flex-direction: column; min-height: 0; padding: 0.7rem 1rem 1rem; }
+/* Seule l'enveloppe du sélecteur devient une colonne. Viser tous les enfants
+   attrapait aussi la barre de filtres, dont le champ de recherche — étiré en
+   hauteur par le `flex: 1` prévu pour l'étirer en largeur — occupait alors la
+   moitié de la fenêtre. */
+.bc-modal-body > .bc-chooser { display: flex; flex-direction: column; min-height: 0; gap: 0.5rem; flex: 1; }
 .bc-modal-body .bc-list-scroll { max-height: none; flex: 1; overflow-y: auto; }
 
 /* Emplacements — attaques, équipements, accessoires partagent la même ligne. */
@@ -1123,7 +1127,28 @@ button.bc-slot-row:hover, button.bc-slot-row:focus-visible { border-color: var(-
 .bc-slot-empty { color: var(--muted); font-style: italic; }
 .bc-slot-plus { color: var(--gold); font-size: 1.2rem; line-height: 1; flex: none; }
 .bc-slot-actions { display: flex; align-items: center; gap: 0.35rem; flex: none; flex-wrap: wrap; justify-content: flex-end; }
-.bc-btn-move { min-width: 2rem; }
+
+/* Poignée de déplacement. `touch-action: none` est indispensable : sans elle,
+   le doigt fait défiler la page au lieu de déplacer la ligne. */
+.bc-drag-handle {
+  flex: none;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.2rem 0.15rem;
+  cursor: grab;
+  touch-action: none;
+  border-radius: 4px;
+}
+.bc-drag-handle:hover, .bc-drag-handle:focus-visible { color: var(--gold); }
+.bc-slot-row.is-dragging { opacity: 0.5; cursor: grabbing; }
+.bc-slot-row.is-dragging .bc-drag-handle { cursor: grabbing; }
+/* La cible se signale par un liseré or : déplacer une ligne ne réordonne rien
+   avant le relâchement, il faut donc montrer où elle atterrira. */
+.bc-slot-row.is-drop-target { border-color: var(--gold); background: rgba(212, 175, 90, 0.14); }
+body.bc-dragging { user-select: none; cursor: grabbing; }
 
 /* Embranchement HP : décalé sous la bravery qu'il prolonge, comme à l'écran
    du jeu. Le trait de liaison rend la dépendance lisible sans texte. */

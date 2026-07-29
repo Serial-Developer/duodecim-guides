@@ -475,8 +475,7 @@
       "empty": "Empty",
       "assign": "Assign",
       "change": "Change",
-      "moveUp": "Move to the previous input",
-      "moveDown": "Move to the next input"
+      "reorder": "Move to another input: drag, or use the up and down arrow keys"
     },
     "accCategories": {
       "basic": "Basic",

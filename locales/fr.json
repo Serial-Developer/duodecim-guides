@@ -475,8 +475,7 @@
       "empty": "Vide",
       "assign": "Assigner",
       "change": "Changer",
-      "moveUp": "Placer sur la commande précédente",
-      "moveDown": "Placer sur la commande suivante"
+      "reorder": "Déplacer sur une autre commande : glissez, ou utilisez les flèches haut et bas"
     },
     "accCategories": {
       "basic": "Basic",
