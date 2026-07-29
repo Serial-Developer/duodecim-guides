@@ -6,7 +6,7 @@ Dépôt : https://github.com/Serial-Developer/duodecim-guides
 /* SITE */
 Langues : English, français
 Sujet : Dissidia 012 [duodecim] Final Fantasy (PSP, 2011) — competitive guides
-Généré le : 2026-07-28
+Généré le : 2026-07-29
 Licence : code MIT, textes originaux CC BY-NC-ND 4.0 — voir LICENSE et NOTICE.md
 
 /* TECHNIQUE */
