@@ -1123,15 +1123,12 @@
     var byId = {};
     var linkParent = {};
     (char.links || []).forEach(function (l) { linkParent[l.to] = l.from; });
-    // Un enchaînement ne prolonge que les braveries que la source lui donne :
-    // Banish et Holy, chez Prishe, n'en portent aucun. Un même enchaînement
-    // peut en revanche servir plusieurs braveries (les trois de Firion).
-    var followParents = {};
-    var followsByParent = {};
-    (char.follows || []).forEach(function (f) {
-      (followParents[f.to] = followParents[f.to] || {})[f.from] = true;
-      (followsByParent[f.from] = followsByParent[f.from] || []).push(f.to);
-    });
+    // Toute bravery n'accepte pas d'enchaînement — Banish et Holy, chez Prishe,
+    // ne s'enchaînent pas — mais celles qui en acceptent un l'acceptent
+    // n'importe lequel : une « (One) » de Prishe se prolonge de n'importe
+    // quelle « (Two) », et c'est l'association choisie qui change l'effet.
+    var followStarter = {};
+    (char.followStarters || []).forEach(function (id) { followStarter[id] = true; });
     ['bravery', 'hp'].forEach(function (kind) {
       (char.attacks[kind] || []).forEach(function (g) {
         g.moves.forEach(function (m) {
@@ -1143,10 +1140,7 @@
         });
       });
     });
-    return {
-      byId: byId, linkParent: linkParent,
-      followParents: followParents, followsByParent: followsByParent,
-    };
+    return { byId: byId, linkParent: linkParent, followStarter: followStarter };
   }
 
   function scanBuild(char) {
@@ -1163,7 +1157,7 @@
         // attaque n'en porte qu'un de chaque sorte.
         var champ = info.followUp ? 'follow' : 'link';
         var recevable = last && !last[champ] && (info.followUp
-          ? !!(index.followParents[id] && index.followParents[id][last.id])
+          ? !!index.followStarter[last.id]
           : parentId === last.id);
         if (!recevable) { orphans.push(pos); return; }
         last[champ] = { id: id, pos: pos, move: info.move };
@@ -1354,6 +1348,8 @@
       }
       panel.appendChild(el('h3', { text: pair[1] }));
 
+      var pool = [];
+      groups.forEach(function (g) { if (g.followUp) pool = pool.concat(g.moves); });
       var poolIntro = (groups.filter(function (g) { return g.followUp; })[0] || {}).intro;
 
       groups.forEach(function (g) {
@@ -1367,7 +1363,7 @@
           if (!choix.length) return;
           panel.appendChild(attackCategory({
             char: char, scan: scan, kind: kind, group: g, style: style,
-            choix: choix, poolIntro: poolIntro,
+            choix: choix, pool: pool, poolIntro: poolIntro,
             linksByParent: linksByParent, moveById: moveById,
           }));
         });
@@ -1431,11 +1427,10 @@
           grid.appendChild(branchRow(slot, 'link', liens, KIND_BUTTON.hp,
             T('attacks.hpLinkAdd'), T('attacks.hpLinkFor', { name: m.name })));
         }
-        // Seules les braveries que la source désigne portent un enchaînement.
-        var suites = (ctx.scan.index.followsByParent[slot.id] || [])
-          .map(function (id) { return ctx.moveById[id]; }).filter(Boolean);
-        if (suites.length) {
-          grid.appendChild(branchRow(slot, 'follow', suites, KIND_BUTTON.bravery,
+        // Seules les braveries que la source désigne acceptent un
+        // enchaînement, mais elles acceptent toute la réserve.
+        if (ctx.pool.length && ctx.scan.index.followStarter[slot.id]) {
+          grid.appendChild(branchRow(slot, 'follow', ctx.pool, KIND_BUTTON.bravery,
             T('attacks.followupAdd'), T('attacks.followupFor', { name: m.name }), ctx.poolIntro));
         }
       }(i));

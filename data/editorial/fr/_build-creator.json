@@ -9,55 +9,16 @@
   "_abilityExclusionsNote": "Les incompatibilités sont déduites des descriptions du wiki : deux abilities qui occupent la même commande dans la même situation s'excluent (R + triangle au sol = Ground Dash, Reverse Ground Dash, Omni Ground Dash, Omni Ground Dash+), de même que les paliers d'une même ability. Un prérequis n'est pas un conflit : « available after Multi Air Slide » sort Multi Air Slide du groupe. Ce tableau ne sert qu'à déclarer un cas que la déduction raterait : [{ \"abilities\": [\"Nom A\", \"Nom B\"], \"reason\": \"…\", \"source\": \"…\" }]. Le build échoue si un nom n'existe pas.",
   "_hpLinksNote": "Le wiki n'écrit la paire bravery → attaque HP que pour une poignée de personnages (« Branching from Launch ») ; ailleurs elle est noyée dans la prose. Les paires connues se déclarent ici, par slug : [{ \"from\": \"nom de la bravery\", \"to\": \"nom de l'attaque HP\", \"source\": \"…\" }]. Les noms doivent correspondre exactement à ceux des fiches ; le build échoue sinon.",
   "hpLinks": {},
-  "_followUpsNote": "Le wiki nomme la bravery de départ dans le nom même de l'enchaînement (« Combo (One) » → « Combo (Two) »), et le parseur résout ces paires seul. Là où il ne le dit qu'en prose — Firion : « Rope Knife, Lance Combo and Reel Axe can be followed up with one of three attacks » —, les paires sont déclarées ici, par slug, dans la même forme que hpLinks. Une bravery qui ne figure dans aucune paire ne porte aucun enchaînement : Banish et Holy, chez Prishe, ne s'enchaînent pas.",
+  "_followUpsNote": "Quelles braveries acceptent un enchaînement — non pas lequel, n'importe lequel convient. Tout le principe de Prishe est qu'une (One) s'enchaîne avec n'importe quelle (Two), chaque association déclenchant un effet différent (Skillchains). Le parseur déduit seul les braveries de départ là où l'enchaînement nomme son origine (« Combo (One) » → « Combo (Two) ») ; ne les déclarer ici que là où le wiki ne le dit qu'en prose. Firion : « Rope Knife, Lance Combo and Reel Axe can be followed up with one of three attacks ». Une bravery listée nulle part ne porte aucun enchaînement : Banish et Holy, chez Prishe, ne s'enchaînent pas.",
   "followUps": {
-    "firion": [
-      {
-        "from": "Rope Knife",
-        "to": "Neutral (Punch)",
-        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
-      },
-      {
-        "from": "Rope Knife",
-        "to": "Towards (Slash and arrow)",
-        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
-      },
-      {
-        "from": "Rope Knife",
-        "to": "Away (Lance)",
-        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
-      },
-      {
-        "from": "Lance Combo",
-        "to": "Neutral (Punch)",
-        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
-      },
-      {
-        "from": "Lance Combo",
-        "to": "Towards (Slash and arrow)",
-        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
-      },
-      {
-        "from": "Lance Combo",
-        "to": "Away (Lance)",
-        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
-      },
-      {
-        "from": "Reel Axe",
-        "to": "Neutral (Punch)",
-        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
-      },
-      {
-        "from": "Reel Axe",
-        "to": "Towards (Slash and arrow)",
-        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
-      },
-      {
-        "from": "Reel Axe",
-        "to": "Away (Lance)",
-        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
-      }
-    ]
+    "firion": {
+      "starters": [
+        "Rope Knife",
+        "Lance Combo",
+        "Reel Axe"
+      ],
+      "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
+    }
   },
   "_summonEffectsNote": "La page Summons du wiki ne couvre pas toutes les invocations citées par les règles de tournoi. Les effets manquants se déclarent ici, par identifiant : { \"slug\": { \"text\": \"…\", \"source\": \"…\" } }. Le build échoue si l'identifiant ne correspond à aucune invocation.",
   "summonEffects": {
@@ -72,7 +33,7 @@
     "hpLinks": "Les sources indiquent si un personnage dispose de HP links, mais pas quelles attaques s'enchaînent. L'information est affichée telle quelle, sans détail par attaque.",
     "maxBooster": "Le cumul multiplicatif des boosters est confirmé par un exemple chiffré du guide de builds multijoueur (1.5 × 1.4 × 1.3 donne le ×2.7 annoncé). Les boosters n'agissent que sur les effets des accessoires, pas sur les statistiques des équipements. L'outil lit cette opposition à la lettre : il multiplie les effets en pourcentage des accessoires, et rien d'autre. Aucune source ne dit si un bonus en points suit le multiplicateur, et porter un LUK +4 à +10,8 ou une recharge d'invocation à +2,7 affirmerait ce que les sources taisent — ces valeurs restent donc telles quelles. Qu'un booster soit actif dépend d'une condition de combat (« When your HP is 100% »), qu'aucun build ne peut trancher : le panneau de statistiques détaillées liste les boosters équipés et permet de décocher ceux dont la condition n'est pas remplie. Ces cases décrivent la situation, pas le build — elles ne sont ni enregistrées, ni exportées, ni transportées par le lien de partage.",
     "detailStats": "Le panneau de statistiques détaillées additionne les modificateurs de même nom portés par les équipements, les accessoires, les sets actifs et les abilities conditionnelles. Aucune source ne dit comment deux effets de même nom se combinent en jeu : la somme est une lecture des sources, pas une formule vérifiée. Les effets que les sources rédigent en phrase — les accessoires Qu'Bia, les effets « chance » — ne sont pas chiffrés : ils sont reproduits mot pour mot sous « Autres effets ».",
-    "attackSlotOrder": "L'emplacement n'est pas stocké : c'est la position d'une attaque parmi celles retenues pour sa catégorie qui la place. Le lien de partage transportant déjà les attaques dans l'ordre, il restitue la disposition sans changer de format. La conséquence se voit à l'écran : retirer une attaque décale les suivantes d'une commande, et une attaque se déplace sur une autre commande en la faisant glisser par sa poignée — ou, au clavier, avec les flèches haut et bas sur cette poignée. Une même attaque peut occuper plusieurs commandes — Vaan peut poser Crossbow sur ses trois commandes de bravery au sol — aussi une attaque équipée n'est-elle jamais repérée par son nom, toujours par sa place dans la liste. Les enchaînements se rattachent à l'attaque qui les précède : chaque bravery posée porte le sien, choisi parmi tous les coups « (Two) », exactement comme le jeu les embranche."
+    "attackSlotOrder": "L'emplacement n'est pas stocké : c'est la position d'une attaque parmi celles retenues pour sa catégorie qui la place. Le lien de partage transportant déjà les attaques dans l'ordre, il restitue la disposition sans changer de format. La conséquence se voit à l'écran : retirer une attaque décale les suivantes d'une commande, et une attaque se déplace sur une autre commande en la faisant glisser par sa poignée — ou, au clavier, avec les flèches haut et bas sur cette poignée. Une même attaque peut occuper plusieurs commandes — Vaan peut poser Crossbow sur ses trois commandes de bravery au sol — aussi une attaque équipée n'est-elle jamais repérée par son nom, toujours par sa place dans la liste. Les enchaînements se rattachent à l'attaque qui les précède. Quelles braveries en acceptent un est documenté ; lequel elles reçoivent ne l'est pas — une « (One) » de Prishe s'enchaîne avec n'importe quelle « (Two) », et c'est l'association qui change l'effet."
   },
   "help": [
     {
