@@ -9,6 +9,56 @@
   "_abilityExclusionsNote": "Les incompatibilités sont déduites des descriptions du wiki : deux abilities qui occupent la même commande dans la même situation s'excluent (R + triangle au sol = Ground Dash, Reverse Ground Dash, Omni Ground Dash, Omni Ground Dash+), de même que les paliers d'une même ability. Un prérequis n'est pas un conflit : « available after Multi Air Slide » sort Multi Air Slide du groupe. Ce tableau ne sert qu'à déclarer un cas que la déduction raterait : [{ \"abilities\": [\"Nom A\", \"Nom B\"], \"reason\": \"…\", \"source\": \"…\" }]. Le build échoue si un nom n'existe pas.",
   "_hpLinksNote": "Le wiki n'écrit la paire bravery → attaque HP que pour une poignée de personnages (« Branching from Launch ») ; ailleurs elle est noyée dans la prose. Les paires connues se déclarent ici, par slug : [{ \"from\": \"nom de la bravery\", \"to\": \"nom de l'attaque HP\", \"source\": \"…\" }]. Les noms doivent correspondre exactement à ceux des fiches ; le build échoue sinon.",
   "hpLinks": {},
+  "_followUpsNote": "Le wiki nomme la bravery de départ dans le nom même de l'enchaînement (« Combo (One) » → « Combo (Two) »), et le parseur résout ces paires seul. Là où il ne le dit qu'en prose — Firion : « Rope Knife, Lance Combo and Reel Axe can be followed up with one of three attacks » —, les paires sont déclarées ici, par slug, dans la même forme que hpLinks. Une bravery qui ne figure dans aucune paire ne porte aucun enchaînement : Banish et Holy, chez Prishe, ne s'enchaînent pas.",
+  "followUps": {
+    "firion": [
+      {
+        "from": "Rope Knife",
+        "to": "Neutral (Punch)",
+        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
+      },
+      {
+        "from": "Rope Knife",
+        "to": "Towards (Slash and arrow)",
+        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
+      },
+      {
+        "from": "Rope Knife",
+        "to": "Away (Lance)",
+        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
+      },
+      {
+        "from": "Lance Combo",
+        "to": "Neutral (Punch)",
+        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
+      },
+      {
+        "from": "Lance Combo",
+        "to": "Towards (Slash and arrow)",
+        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
+      },
+      {
+        "from": "Lance Combo",
+        "to": "Away (Lance)",
+        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
+      },
+      {
+        "from": "Reel Axe",
+        "to": "Neutral (Punch)",
+        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
+      },
+      {
+        "from": "Reel Axe",
+        "to": "Towards (Slash and arrow)",
+        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
+      },
+      {
+        "from": "Reel Axe",
+        "to": "Away (Lance)",
+        "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
+      }
+    ]
+  },
   "_summonEffectsNote": "La page Summons du wiki ne couvre pas toutes les invocations citées par les règles de tournoi. Les effets manquants se déclarent ici, par identifiant : { \"slug\": { \"text\": \"…\", \"source\": \"…\" } }. Le build échoue si l'identifiant ne correspond à aucune invocation.",
   "summonEffects": {
     "barbariccia": {

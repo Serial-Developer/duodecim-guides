@@ -245,6 +245,35 @@ export function buildDataBundle(ROOT, editorial = null) {
       if (!hpLinks.some((x) => x.from === from && x.to === to)) hpLinks.push({ from, to, source: l.origine });
     }
 
+    // Enchaînements : quelle bravery prolonge quel coup. Le wiki le dit de deux
+    // façons, et une bravery absente de ces paires n'en porte aucun — Banish et
+    // Holy, chez Prishe, ne s'enchaînent pas.
+    //  - par le nom, quand l'enchaînement désigne son origine (« Combo (One) »
+    //    → « Combo (Two) ») : `parent`, résolu plus haut ;
+    //  - en prose seulement, chez Firion (« Rope Knife, Lance Combo and Reel Axe
+    //    can be followed up with one of three attacks ») : ces paires-là sont
+    //    déclarées dans l'éditorial, comme les HP links.
+    const follows = [];
+    const addFollow = (from, to, source) => {
+      if (!from || !to) return;
+      if (!follows.some((x) => x.from === from && x.to === to)) follows.push({ from, to, source });
+    };
+    for (const kind of ['bravery', 'hp']) {
+      for (const g of rawGroups[kind] || []) {
+        if (!g.followUp) continue;
+        for (const m of g.moves) if (m.parent) addFollow(m.parent, m.id, 'nom du coup');
+      }
+    }
+    for (const l of ((editorial?.followUps || {})[def.slug] || [])) {
+      const from = resolve('bravery', l.from);
+      const to = resolve('bravery', l.to);
+      if (!from || !to) {
+        unresolvedLinks.push({ slug: def.slug, from: l.from, to: l.to, manquant: !from ? 'bravery' : 'enchaînement' });
+        continue;
+      }
+      addFollow(from, to, l.source || 'déclaré dans l’éditorial');
+    }
+
     aliasedAll.push(...aliased);
     characters.push({
       slug: def.slug,
@@ -255,6 +284,8 @@ export function buildDataBundle(ROOT, editorial = null) {
       // Paires bravery -> attaque HP réellement identifiées ; l'infobox ci-dessus
       // dit seulement si le personnage en a.
       links: hpLinks,
+      // Paires bravery -> enchaînement, mêmes règles que ci-dessus.
+      follows: follows,
       // (rapprochements de noms consignés plus bas)
       native: native[def.slug] || { weapon: [], hand: [], head: [], body: [] },
       attacks,
