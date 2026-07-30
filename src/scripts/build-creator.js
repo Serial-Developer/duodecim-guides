@@ -126,6 +126,13 @@
       name: '',
       character: slug || null,
       attacks: [],
+      // Commande occupée par chaque attaque, dans sa catégorie : 0 = stick
+      // neutre, 1 = ←, 2 = →. Un tableau parallèle plutôt qu'un champ sur
+      // l'attaque, pour que sa seule absence — build ancien, lien émis avant —
+      // se lise comme « dans l'ordre », qui était le comportement d'alors.
+      // Sans lui, une attaque posée sur → atterrissait sur la première
+      // commande libre : on ne pouvait pas laisser un trou.
+      attackSlots: [],
       abilities: [],
       equipment: { weapon: null, hand: null, head: null, body: null },
       accessories: new Array(ACCESSORY_SLOTS).fill(null),
@@ -216,6 +223,14 @@
     out.attacks = (Array.isArray(b.attacks) ? b.attacks : [])
       .filter(function (id) { return typeof id === 'string'; })
       .slice(0, MAX_ATTACKS);
+    // Les commandes suivent les attaques. Une entrée absente ou aberrante vaut
+    // -1 : `scanBuild` la placera alors sur la première commande libre, ce que
+    // faisait l'outil avant que les trous soient représentables.
+    var brut = Array.isArray(b.attackSlots) ? b.attackSlots : [];
+    out.attackSlots = out.attacks.map(function (id, i) {
+      var v = Number(brut[i]);
+      return v >= 0 && v < MAX_SLOTS ? v : -1;
+    });
     out.abilities = uniq(b.abilities, function (id) { return !!abilityById[id]; });
     SLOTS.forEach(function (s) { out.equipment[s.key] = b.equipment[s.key] || null; });
     out.accessories = new Array(ACCESSORY_SLOTS).fill(null);
@@ -1019,6 +1034,9 @@
       return el('button', {
         type: 'button', class: 'bc-slot-row is-empty', onclick: opts.onAssign,
         'aria-label': (opts.inputTitle ? opts.inputTitle + ' — ' : '') + T('slots.assign'),
+        // Une commande vide reste une cible de dépôt : y déposer une attaque
+        // est le geste naturel pour la déplacer là.
+        'data-cmd': opts.cmd == null ? false : String(opts.cmd),
       }, [
         badge,
         el('span', { class: 'bc-slot-main' }, [el('span', { class: 'bc-slot-empty', text: T('slots.empty') })]),
@@ -1028,6 +1046,7 @@
     var row = el('div', {
       class: 'bc-slot-row' + (opts.className ? ' ' + opts.className : '') + (opts.handle ? ' has-handle' : ''),
       'data-drag-id': opts.dragId || false,
+      'data-cmd': opts.cmd == null ? false : String(opts.cmd),
     });
     if (opts.handle) row.appendChild(opts.handle);
     row.appendChild(badge);
@@ -1163,9 +1182,35 @@
         last[champ] = { id: id, pos: pos, move: info.move };
         return;
       }
-      slots.push({ id: id, pos: pos, move: info.move, info: info, follow: null, link: null });
+      slots.push({ id: id, pos: pos, move: info.move, info: info, follow: null, link: null, cmd: -1 });
     });
+
+    // Attribution des commandes, catégorie par catégorie. Les demandes
+    // explicites d'abord ; une commande déjà prise ou non exprimée retombe sur
+    // la première libre, dans l'ordre. Deux attaques ne peuvent pas occuper la
+    // même commande, et un build importé peut le prétendre.
+    var parCat = {};
+    slots.forEach(function (s) { (parCat[s.info.catKey] = parCat[s.info.catKey] || []).push(s); });
+    Object.keys(parCat).forEach(function (cat) {
+      var pris = {};
+      var voulu = parCat[cat];
+      voulu.forEach(function (s) {
+        var v = state.build.attackSlots ? state.build.attackSlots[s.pos] : -1;
+        if (v >= 0 && v < MAX_SLOTS && !pris[v]) { s.cmd = v; pris[v] = true; }
+      });
+      voulu.forEach(function (s) {
+        if (s.cmd !== -1) return;
+        for (var c = 0; c < MAX_SLOTS; c++) if (!pris[c]) { s.cmd = c; pris[c] = true; return; }
+      });
+    });
+
     return { slots: slots, orphans: orphans, index: index };
+  }
+
+  // La commande d'une attaque, telle que la grille l'affiche.
+  function setCmd(pos, cmd) {
+    if (!state.build.attackSlots) state.build.attackSlots = [];
+    state.build.attackSlots[pos] = cmd;
   }
 
   // Les positions occupées par un emplacement : la sienne, puis celles de ses
@@ -1177,50 +1222,47 @@
     return out.sort(function (a, b) { return a - b; });
   }
 
-  // Réécrit la liste depuis la structure lue : c'est le seul moyen de déplacer
-  // un emplacement avec ce qui s'y rattache sans tenir de comptabilité d'index.
-  function writeSlots(slots) {
-    var next = [];
-    slots.forEach(function (s) {
-      next.push(s.id);
-      if (s.link) next.push(s.link.id);
-      if (s.follow) next.push(s.follow.id);
-    });
-    state.build.attacks = next;
-  }
-
+  // Les deux tableaux restent alignés : toute insertion ou suppression touche
+  // l'un et l'autre à la même position.
   function removeAt(positions) {
-    positions.slice().sort(function (a, b) { return b - a; })
-      .forEach(function (p) { state.build.attacks.splice(p, 1); });
+    positions.slice().sort(function (a, b) { return b - a; }).forEach(function (p) {
+      state.build.attacks.splice(p, 1);
+      if (state.build.attackSlots) state.build.attackSlots.splice(p, 1);
+    });
     afterAttackChange();
   }
-  function appendAttack(id) {
+  function appendAttack(id, cmd) {
     state.build.attacks.push(id);
+    setCmd(state.build.attacks.length - 1, cmd == null ? -1 : cmd);
     afterAttackChange();
   }
-  function replaceAt(pos, id) {
+  function replaceAt(pos, id, cmd) {
     state.build.attacks[pos] = id;
+    if (cmd != null) setCmd(pos, cmd);
     afterAttackChange();
   }
   // Un prolongement se range juste après l'attaque qu'il prolonge : c'est ce
-  // rattachement positionnel que relit `scanBuild`.
+  // rattachement positionnel que relit `scanBuild`. Il n'a pas de commande
+  // propre — la sienne est celle de la touche d'embranchement.
   function attachTo(slot, id) {
     var apres = Math.max.apply(null, slotPositions(slot));
     state.build.attacks.splice(apres + 1, 0, id);
+    if (!state.build.attackSlots) state.build.attackSlots = [];
+    state.build.attackSlots.splice(apres + 1, 0, -1);
     afterAttackChange();
   }
 
-  // Déplacer un emplacement le fait changer de commande. On permute dans la
-  // structure lue, puis on réécrit : les prolongements suivent leur attaque.
-  function reorderWithin(char, catKey, from, to) {
-    var scan = scanBuild(char);
-    var mine = scan.slots.filter(function (s) { return s.info.catKey === catKey; });
-    if (from === to || to < 0 || to >= mine.length) return;
-    var ordre = mine.slice();
-    ordre.splice(to, 0, ordre.splice(from, 1)[0]);
-    var k = 0;
-    var next = scan.slots.map(function (s) { return s.info.catKey === catKey ? ordre[k++] : s; });
-    writeSlots(next);
+  // Déplacer une attaque, c'est lui donner une autre commande. Si une autre
+  // l'occupe, les deux échangent — l'ordre de la liste, lui, ne bouge pas, et
+  // les prolongements suivent leur attaque sans qu'on ait à les toucher.
+  function moveToCmd(char, catKey, from, to) {
+    if (from === to || to < 0 || to >= MAX_SLOTS) return;
+    var mine = scanBuild(char).slots.filter(function (s) { return s.info.catKey === catKey; });
+    var source = mine.filter(function (s) { return s.cmd === from; })[0];
+    if (!source) return;
+    var cible = mine.filter(function (s) { return s.cmd === to; })[0];
+    setCmd(source.pos, to);
+    if (cible) setCmd(cible.pos, from);
     pendingFocus = catKey + '#' + to;
     markDirty();
     keepScroll(null, function () { renderPanel('attack'); refresh(); });
@@ -1247,14 +1289,14 @@
     d.row.classList.remove('is-dragging');
     d.rows.forEach(function (r) { r.classList.remove('is-drop-target'); });
     document.body.classList.remove('bc-dragging');
-    if (apply && d.moved && d.to !== d.from) reorderWithin(d.char, d.catKey, d.from, d.to);
+    if (apply && d.moved && d.to !== d.from) moveToCmd(d.char, d.catKey, d.from, d.to);
   }
 
   function startDrag(handle, char, catKey, index, ev) {
     var row = handle.parentNode;
     while (row && row.className.indexOf('bc-slot-row') === -1) row = row.parentNode;
     if (!row) return;
-    var rows = Array.prototype.slice.call(row.parentNode.querySelectorAll('.bc-slot-row[data-drag-id]'));
+    var rows = Array.prototype.slice.call(row.parentNode.querySelectorAll('.bc-slot-row[data-cmd]'));
     if (rows.length < 2) return;
     var d = {
       char: char, catKey: catKey, from: index, to: index, row: row, rows: rows,
@@ -1267,11 +1309,14 @@
       // On vise la ligne survolée : c'est ce que l'œil attend, et cela reste
       // juste même si les lignes n'ont pas toutes la même hauteur (un
       // embranchement HP en allonge une).
-      d.rows.forEach(function (r, i) {
+      d.rows.forEach(function (r) {
         var box = r.getBoundingClientRect();
-        if (e.clientY >= box.top && e.clientY <= box.bottom) d.to = i;
+        if (e.clientY >= box.top && e.clientY <= box.bottom) d.to = Number(r.getAttribute('data-cmd'));
       });
-      d.rows.forEach(function (r, i) { r.classList.toggle('is-drop-target', d.moved && i === d.to && i !== d.from); });
+      d.rows.forEach(function (r) {
+        var cmd = Number(r.getAttribute('data-cmd'));
+        r.classList.toggle('is-drop-target', d.moved && cmd === d.to && cmd !== d.from);
+      });
     };
     d.onUp = function () { endDrag(true); };
     d.onCancel = function () { endDrag(false); };
@@ -1294,8 +1339,8 @@
       'data-drag-handle': catKey + '#' + index,
     }, [el('span', { 'aria-hidden': 'true', text: '⠿' })]);
     btn.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowUp') { e.preventDefault(); reorderWithin(char, catKey, index, index - 1); }
-      else if (e.key === 'ArrowDown') { e.preventDefault(); reorderWithin(char, catKey, index, index + 1); }
+      if (e.key === 'ArrowUp') { e.preventDefault(); moveToCmd(char, catKey, index, index - 1); }
+      else if (e.key === 'ArrowDown') { e.preventDefault(); moveToCmd(char, catKey, index, index + 1); }
     });
     btn.addEventListener('pointerdown', function (e) {
       if (e.button != null && e.button !== 0) return;
@@ -1385,20 +1430,26 @@
     ]);
     if (ctx.group.intro) fs.appendChild(el('p', { class: 'bc-note', text: ctx.group.intro.split('\n')[0] }));
 
+    // La grille se lit par commande, non par rang : un emplacement vide entre
+    // deux pleins doit rester vide, et une attaque choisie sur → doit s'y
+    // poser même si le stick neutre est libre.
+    var parCmd = {};
+    mine.forEach(function (s) { parCmd[s.cmd] = s; });
+
     var grid = el('div', { class: 'bc-slot-grid' });
     for (var i = 0; i < MAX_SLOTS; i++) {
       (function (index) {
-        var slot = mine[index];
+        var slot = parCmd[index];
         var ouvrir = function () {
           openMoveChooser(titre + ' · ' + inputTitle(kind, index), ctx.choix, slot ? slot.move : null, function (choisi) {
-            if (slot) replaceAt(slot.pos, choisi.id);
-            else appendAttack(choisi.id);
+            if (slot) replaceAt(slot.pos, choisi.id, index);
+            else appendAttack(choisi.id, index);
           });
         };
         if (!slot) {
           grid.appendChild(slotRow({
             input: inputGlyph(kind, index), inputTitle: inputTitle(kind, index),
-            filled: false, onAssign: ouvrir,
+            filled: false, cmd: index, onAssign: ouvrir,
           }));
           return;
         }
@@ -1412,8 +1463,10 @@
         grid.appendChild(slotRow({
           input: inputGlyph(kind, index), inputTitle: inputTitle(kind, index),
           filled: true, main: main, actions: actions,
-          dragId: catKey + '#' + index,
-          handle: mine.length > 1 ? dragHandle(ctx.char, catKey, index) : null,
+          cmd: index, dragId: catKey + '#' + index,
+          // Une attaque seule se déplace aussi : les commandes vides sont des
+          // cibles de dépôt.
+          handle: dragHandle(ctx.char, catKey, index),
           onAssign: ouvrir,
           // Retirer une attaque emporte ce qui s'y rattachait.
           onRemove: function () { removeAt(slotPositions(slot)); },
@@ -2240,6 +2293,12 @@
   // l'ancienne base64 brute — les liens déjà partagés continuent de s'ouvrir.
   var ZIP = 'z';
   var BIN = 'c';
+  // « d » : le binaire, plus la commande de chaque attaque. Un format de plus
+  // plutôt qu'une modification de « c » — des liens circulent, et un « c »
+  // relu avec la nouvelle disposition chargerait un build faux au lieu d'être
+  // refusé. Un « c » se lit donc toujours comme avant : commandes non
+  // exprimées, donc attribuées dans l'ordre.
+  var BIN_SLOTS = 'd';
 
   // --- Encodage binaire (préfixe « c ») --------------------------------------
   // Le jeu est figé depuis 2011 : équipements, accessoires, abilities et coups
@@ -2342,6 +2401,13 @@
     var attacks = b.attacks || [];
     w.put(attacks.length, 5);
     for (var i = 0; i < attacks.length; i++) w.put(idx(atk, attacks[i]), bits(atk.length));
+    // Commandes : deux bits par attaque, 3 valant « non exprimée ». Elles
+    // n'existent que dans le format « d ».
+    var cmds = b.attackSlots || [];
+    for (var ci = 0; ci < attacks.length; ci++) {
+      var cmd = Number(cmds[ci]);
+      w.put(cmd >= 0 && cmd < MAX_SLOTS ? cmd : 3, 2);
+    }
     // Abilities : un bit par entrée du catalogue — plus court qu'une liste de
     // rangs dès qu'on en équipe une dizaine, et de longueur constante.
     var owned = {};
@@ -2366,10 +2432,10 @@
       w.put(u8.length, 8);
       for (var t = 0; t < u8.length; t++) w.put(u8[t], 8);
     });
-    return BIN + b64url(w.done());
+    return BIN_SLOTS + b64url(w.done());
   }
 
-  function decodeCompact(param) {
+  function decodeCompact(param, avecCommandes) {
     var c = catalogsOf();
     var r = new BitReader(unb64url(param));
     if (r.get(8) !== catalogStamp()) throw new Error('catalogues différents');
@@ -2378,6 +2444,8 @@
     var attacks = [];
     var n = r.get(5);
     for (var i = 0; i < n; i++) attacks.push(atk[r.get(bits(atk.length))]);
+    var attackSlots = [];
+    if (avecCommandes) for (var si = 0; si < n; si++) { var cmd = r.get(2); attackSlots.push(cmd === 3 ? -1 : cmd); }
     var abilities = [];
     for (var j = 0; j < c.abilities.length; j++) if (r.get(1)) abilities.push(c.abilities[j]);
     var eqw = bits(c.equipment.length + 1);
@@ -2399,7 +2467,7 @@
     });
     return {
       schemaVersion: 1, id: uid(), name: texts[0], character: slug,
-      attacks: attacks, abilities: abilities,
+      attacks: attacks, attackSlots: attackSlots, abilities: abilities,
       equipment: { weapon: eq[0], hand: eq[1], head: eq[2], body: eq[3] },
       accessories: acc, assist: as ? c.assists[as - 1] : null,
       summon: su ? c.summons[su - 1] : null, notes: texts[1],
@@ -2425,7 +2493,7 @@
   function compactBuild(b) {
     var compact = {
       v: b.schemaVersion, c: b.character,
-      at: b.attacks, ab: b.abilities,
+      at: b.attacks, sl: b.attackSlots, ab: b.abilities,
       eq: [b.equipment.weapon, b.equipment.hand, b.equipment.head, b.equipment.body],
       ac: b.accessories, as: b.assist, su: b.summon,
     };
@@ -2462,7 +2530,8 @@
   // d'origine, sans préfixe — les liens partagés avant chaque changement
   // continuent tous de s'ouvrir.
   function decodeBuild(param) {
-    if (param.charAt(0) === BIN) return Promise.resolve(decodeCompact(param.slice(1)));
+    if (param.charAt(0) === BIN_SLOTS) return Promise.resolve(decodeCompact(param.slice(1), true));
+    if (param.charAt(0) === BIN) return Promise.resolve(decodeCompact(param.slice(1), false));
     if (param.charAt(0) !== ZIP) return Promise.resolve(fromJsonBytes(unb64url(param)));
     var packed = unb64url(param.slice(1));
     var ds = new DecompressionStream('deflate-raw');
@@ -2478,7 +2547,7 @@
     var c = JSON.parse(new TextDecoder().decode(bytes));
     return {
       schemaVersion: c.v, id: uid(), name: c.n || '', character: c.c,
-      attacks: c.at || [], abilities: c.ab || [],
+      attacks: c.at || [], attackSlots: c.sl || [], abilities: c.ab || [],
       equipment: { weapon: (c.eq || [])[0] || null, hand: (c.eq || [])[1] || null, head: (c.eq || [])[2] || null, body: (c.eq || [])[3] || null },
       accessories: c.ac || [], assist: c.as || null, summon: c.su || null, notes: c.no || '',
       created: new Date().toISOString(), modified: new Date().toISOString(),
