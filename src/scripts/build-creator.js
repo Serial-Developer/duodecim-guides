@@ -41,6 +41,10 @@
     { key: 'body', label: T('slots.body') },
   ];
   var ACCESSORY_SLOTS = 10;
+  // Plafond du nombre d'attaques d'un build : le format binaire du lien de
+  // partage code leur nombre sur 5 bits. Aucun build légitime n'en approche —
+  // c'est un garde-fou contre un lien bricolé, pas une règle du jeu.
+  var MAX_ATTACKS = 31;
   // Nombre d'exemplaires d'un même accessoire, selon son rang : 1 pour un rang S,
   // 2 pour un A, 3 pour un B, sans limite pour un C. Un accessoire sans rang
   // documenté n'est pas contraint — on le signale plutôt que de deviner.
@@ -197,8 +201,10 @@
     var out = emptyBuild(b.character);
     out.id = typeof b.id === 'string' && b.id ? b.id : out.id;
     out.name = typeof b.name === 'string' ? b.name.slice(0, 60) : '';
-    // Une attaque ou une ability ne s'équipe qu'une fois : on déduplique, sinon
-    // un lien de partage bricolé gonflerait le coût en CP.
+    // Une ability ne s'équipe qu'une fois : on déduplique, sinon un lien de
+    // partage bricolé gonflerait le coût en CP. Une attaque, si : Vaan peut
+    // poser trois fois Crossbow (ground) sur ses braveries au sol. Seul le
+    // nombre est borné, sur ce que le format binaire sait transporter.
     var uniq = function (list, keep) {
       var seen = {};
       return list.filter(function (id) {
@@ -207,7 +213,9 @@
         return true;
       });
     };
-    out.attacks = uniq(b.attacks, null);
+    out.attacks = (Array.isArray(b.attacks) ? b.attacks : [])
+      .filter(function (id) { return typeof id === 'string'; })
+      .slice(0, MAX_ATTACKS);
     out.abilities = uniq(b.abilities, function (id) { return !!abilityById[id]; });
     SLOTS.forEach(function (s) { out.equipment[s.key] = b.equipment[s.key] || null; });
     out.accessories = new Array(ACCESSORY_SLOTS).fill(null);
@@ -1057,28 +1065,17 @@
     return out;
   }
 
-  // Retire les enchaînements devenus orphelins : un « (Two) » n'a de sens que si
-  // une bravery de départ est équipée, une attaque HP branchée que si sa bravery
-  // d'origine l'est.
+  // Un prolongement qui ne se rattache plus à rien est retiré : retirer une
+  // bravery emporte l'enchaînement et le HP link qu'elle portait. La lecture
+  // positionnelle les signale d'elle-même.
   function pruneOrphanBranches() {
     var char = charBySlug[state.build.character];
     if (!char) return;
-    var followUpIds = {};
-    var starterSelected = false;
-    (char.attacks.bravery || []).forEach(function (g) {
-      g.moves.forEach(function (m) {
-        if (g.followUp) followUpIds[m.id] = true;
-        else if (state.build.attacks.indexOf(m.id) !== -1) starterSelected = true;
-      });
-    });
-    var linkParent = {};
-    (char.links || []).forEach(function (l) { linkParent[l.to] = l.from; });
-
-    state.build.attacks = state.build.attacks.filter(function (id) {
-      if (followUpIds[id]) return starterSelected;
-      if (linkParent[id]) return state.build.attacks.indexOf(linkParent[id]) !== -1;
-      return true;
-    });
+    var scan = scanBuild(char);
+    if (!scan.orphans.length) return;
+    var jeter = {};
+    scan.orphans.forEach(function (p) { jeter[p] = true; });
+    state.build.attacks = state.build.attacks.filter(function (id, pos) { return !jeter[pos]; });
   }
 
   // Commandes des trois emplacements d'une catégorie, dans l'ordre où l'écran
@@ -1112,30 +1109,114 @@
     return el('span', { class: 'bc-cp', text: m.cp == null ? T('attacks.unknownCost') : cpOf(m) + ' CP' });
   }
 
-  function isEquipped(id) { return state.build.attacks.indexOf(id) !== -1; }
-  function equipAttack(id) {
-    if (!isEquipped(id)) state.build.attacks.push(id);
+  // Une même attaque peut occuper plusieurs commandes : Vaan pose trois fois
+  // Crossbow (ground) sur ses braveries au sol. Rien ici ne repère donc une
+  // attaque équipée par son identifiant — deux exemplaires seraient
+  // indiscernables — mais toujours par sa place dans la liste.
+  //
+  // Cette liste n'a pas d'autre structure que son ordre. On en tire tout le
+  // reste par une lecture positionnelle : chaque prolongement — enchaînement
+  // « (Two) » ou attaque HP branchée — se rattache à l'attaque qui le précède
+  // immédiatement. Le lien de partage transportant les attaques dans l'ordre,
+  // la lecture est la même de l'autre côté.
+  function attackIndex(char) {
+    var byId = {};
+    var linkParent = {};
+    (char.links || []).forEach(function (l) { linkParent[l.to] = l.from; });
+    ['bravery', 'hp'].forEach(function (kind) {
+      (char.attacks[kind] || []).forEach(function (g) {
+        g.moves.forEach(function (m) {
+          byId[m.id] = {
+            move: m, kind: kind, groupKey: g.key, style: m.style || null,
+            followUp: !!g.followUp,
+            catKey: kind + '|' + g.key + '|' + (m.style || ''),
+          };
+        });
+      });
+    });
+    return { byId: byId, linkParent: linkParent };
+  }
+
+  function scanBuild(char) {
+    var index = attackIndex(char);
+    var slots = [];
+    var orphans = [];
+    state.build.attacks.forEach(function (id, pos) {
+      var info = index.byId[id];
+      if (!info) { orphans.push(pos); return; }
+      var parentId = index.linkParent[id];
+      if (info.followUp || parentId) {
+        var last = slots[slots.length - 1];
+        // Un prolongement n'existe pas sans l'attaque qu'il prolonge, et une
+        // attaque n'en porte qu'un de chaque sorte.
+        var champ = info.followUp ? 'follow' : 'link';
+        var recevable = last && !last[champ]
+          && (info.followUp ? last.info.kind === 'bravery' : parentId === last.id);
+        if (!recevable) { orphans.push(pos); return; }
+        last[champ] = { id: id, pos: pos, move: info.move };
+        return;
+      }
+      slots.push({ id: id, pos: pos, move: info.move, info: info, follow: null, link: null });
+    });
+    return { slots: slots, orphans: orphans, index: index };
+  }
+
+  // Les positions occupées par un emplacement : la sienne, puis celles de ses
+  // prolongements, qui la suivent immédiatement.
+  function slotPositions(slot) {
+    var out = [slot.pos];
+    if (slot.link) out.push(slot.link.pos);
+    if (slot.follow) out.push(slot.follow.pos);
+    return out.sort(function (a, b) { return a - b; });
+  }
+
+  // Réécrit la liste depuis la structure lue : c'est le seul moyen de déplacer
+  // un emplacement avec ce qui s'y rattache sans tenir de comptabilité d'index.
+  function writeSlots(slots) {
+    var next = [];
+    slots.forEach(function (s) {
+      next.push(s.id);
+      if (s.link) next.push(s.link.id);
+      if (s.follow) next.push(s.follow.id);
+    });
+    state.build.attacks = next;
+  }
+
+  function removeAt(positions) {
+    positions.slice().sort(function (a, b) { return b - a; })
+      .forEach(function (p) { state.build.attacks.splice(p, 1); });
     afterAttackChange();
   }
-  function unequipAttack(id) {
-    var i = state.build.attacks.indexOf(id);
-    if (i !== -1) state.build.attacks.splice(i, 1);
+  function appendAttack(id) {
+    state.build.attacks.push(id);
     afterAttackChange();
   }
-  // L'emplacement d'un coup est sa position parmi les coups retenus de sa
-  // catégorie : rien de plus n'est stocké, et le lien de partage — qui
-  // transporte les attaques dans l'ordre — le restitue tel quel. Déplacer une
-  // attaque revient donc à permuter les positions qu'occupe sa catégorie dans
-  // la liste, sans toucher à celles des autres catégories.
-  function reorderWithin(ids, from, to) {
-    if (from === to || to < 0 || to >= ids.length) return;
-    var positions = ids.map(function (id) { return state.build.attacks.indexOf(id); });
-    if (positions.indexOf(-1) !== -1) return;
-    var next = ids.slice();
-    next.splice(to, 0, next.splice(from, 1)[0]);
-    positions.forEach(function (pos, k) { state.build.attacks[pos] = next[k]; });
-    pendingFocus = next[to];
+  function replaceAt(pos, id) {
+    state.build.attacks[pos] = id;
     afterAttackChange();
+  }
+  // Un prolongement se range juste après l'attaque qu'il prolonge : c'est ce
+  // rattachement positionnel que relit `scanBuild`.
+  function attachTo(slot, id) {
+    var apres = Math.max.apply(null, slotPositions(slot));
+    state.build.attacks.splice(apres + 1, 0, id);
+    afterAttackChange();
+  }
+
+  // Déplacer un emplacement le fait changer de commande. On permute dans la
+  // structure lue, puis on réécrit : les prolongements suivent leur attaque.
+  function reorderWithin(char, catKey, from, to) {
+    var scan = scanBuild(char);
+    var mine = scan.slots.filter(function (s) { return s.info.catKey === catKey; });
+    if (from === to || to < 0 || to >= mine.length) return;
+    var ordre = mine.slice();
+    ordre.splice(to, 0, ordre.splice(from, 1)[0]);
+    var k = 0;
+    var next = scan.slots.map(function (s) { return s.info.catKey === catKey ? ordre[k++] : s; });
+    writeSlots(next);
+    pendingFocus = catKey + '#' + to;
+    markDirty();
+    keepScroll(null, function () { renderPanel('attack'); refresh(); });
   }
 
   // --- Déplacer une attaque d'une commande à l'autre -------------------------
@@ -1159,17 +1240,17 @@
     d.row.classList.remove('is-dragging');
     d.rows.forEach(function (r) { r.classList.remove('is-drop-target'); });
     document.body.classList.remove('bc-dragging');
-    if (apply && d.moved && d.to !== d.from) reorderWithin(d.ids, d.from, d.to);
+    if (apply && d.moved && d.to !== d.from) reorderWithin(d.char, d.catKey, d.from, d.to);
   }
 
-  function startDrag(handle, ids, index, ev) {
+  function startDrag(handle, char, catKey, index, ev) {
     var row = handle.parentNode;
     while (row && row.className.indexOf('bc-slot-row') === -1) row = row.parentNode;
     if (!row) return;
     var rows = Array.prototype.slice.call(row.parentNode.querySelectorAll('.bc-slot-row[data-drag-id]'));
     if (rows.length < 2) return;
     var d = {
-      ids: ids, from: index, to: index, row: row, rows: rows,
+      char: char, catKey: catKey, from: index, to: index, row: row, rows: rows,
       startY: ev.clientY, moved: false,
     };
     d.onMove = function (e) {
@@ -1197,37 +1278,41 @@
     document.addEventListener('keydown', d.onKey, true);
   }
 
-  function dragHandle(ids, index) {
+  // La poignée est repérée par sa commande, non par l'attaque qui l'occupe :
+  // deux exemplaires de la même attaque partageraient sinon le même repère.
+  function dragHandle(char, catKey, index) {
     var btn = el('button', {
       type: 'button', class: 'bc-drag-handle',
       'aria-label': T('slots.reorder'), title: T('slots.reorder'),
-      'data-drag-handle': ids[index],
+      'data-drag-handle': catKey + '#' + index,
     }, [el('span', { 'aria-hidden': 'true', text: '⠿' })]);
     btn.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowUp') { e.preventDefault(); reorderWithin(ids, index, index - 1); }
-      else if (e.key === 'ArrowDown') { e.preventDefault(); reorderWithin(ids, index, index + 1); }
+      if (e.key === 'ArrowUp') { e.preventDefault(); reorderWithin(char, catKey, index, index - 1); }
+      else if (e.key === 'ArrowDown') { e.preventDefault(); reorderWithin(char, catKey, index, index + 1); }
     });
     btn.addEventListener('pointerdown', function (e) {
       if (e.button != null && e.button !== 0) return;
       // Sans cela, le doigt fait défiler la page au lieu de déplacer la ligne.
       e.preventDefault();
-      startDrag(btn, ids, index, e);
+      startDrag(btn, char, catKey, index, e);
     });
     return btn;
   }
+
   function afterAttackChange() {
     pruneOrphanBranches();
     markDirty();
     keepScroll(null, function () { renderPanel('attack'); refresh(); });
   }
 
-  // Ce qu'une catégorie (sol/air × style) peut recevoir, une fois retirées les
-  // attaques HP branchées — elles vivent sous leur bravery, pas dans un
-  // emplacement.
-  function categoryMoves(group, style, isLinked) {
+  // Ce qu'une catégorie (sol/air × style) peut recevoir : tout son groupe, moins
+  // les attaques HP branchées — celles-là vivent sous leur bravery. La liste
+  // n'exclut pas ce qui est déjà posé : la même attaque peut occuper plusieurs
+  // commandes.
+  function categoryMoves(group, style, linkParent) {
     return byStyle(group.moves).filter(function (sub) { return (sub.style || null) === (style || null); })
       .reduce(function (acc, sub) { return acc.concat(sub.moves); }, [])
-      .filter(function (m) { return !isLinked[m.id]; });
+      .filter(function (m) { return !linkParent[m.id]; });
   }
 
   function renderAttacks(panel) {
@@ -1241,18 +1326,11 @@
     }
     panel.appendChild(el('p', { class: 'bc-note', text: T('attacks.slotsNote') }));
 
-    // Attaques HP branchées sur une bravery : montrées sous elle, retirées de
-    // leur propre grille pour ne pas occuper deux fois la place.
+    var scan = scanBuild(char);
     var linksByParent = {};
-    var isLinked = {};
-    (char.links || []).forEach(function (l) {
-      (linksByParent[l.from] = linksByParent[l.from] || []).push(l.to);
-      isLinked[l.to] = true;
-    });
+    (char.links || []).forEach(function (l) { (linksByParent[l.from] = linksByParent[l.from] || []).push(l.to); });
     var moveById = {};
-    ['bravery', 'hp'].forEach(function (k) {
-      (char.attacks[k] || []).forEach(function (g) { g.moves.forEach(function (m) { moveById[m.id] = m; }); });
-    });
+    Object.keys(scan.index.byId).forEach(function (id) { moveById[id] = scan.index.byId[id].move; });
 
     [['bravery', T('attacks.braveryTitle')], ['hp', T('attacks.hpTitle')]].forEach(function (pair) {
       var kind = pair[0];
@@ -1263,6 +1341,13 @@
       }
       panel.appendChild(el('h3', { text: pair[1] }));
 
+      // Réserve des enchaînements. Le wiki écrit « Branching from _ (One) », le
+      // tiret bas valant pour n'importe quelle bravery de départ : chaque
+      // attaque posée peut donc recevoir n'importe quel « (Two) ».
+      var pool = [];
+      groups.forEach(function (g) { if (g.followUp) pool = pool.concat(g.moves); });
+      var poolIntro = (groups.filter(function (g) { return g.followUp; })[0] || {}).intro;
+
       groups.forEach(function (g) {
         if (g.followUp) return;
         // Un personnage à styles (paradigmes de Lightning, jobs de Cecil,
@@ -1270,160 +1355,127 @@
         // emplacements distincts dans le jeu.
         var styles = byStyle(g.moves).map(function (sub) { return sub.style || null; });
         styles.forEach(function (style) {
-          var choix = categoryMoves(g, style, isLinked);
+          var choix = categoryMoves(g, style, scan.index.linkParent);
           if (!choix.length) return;
-          panel.appendChild(attackCategory(char, kind, g, style, choix, linksByParent, moveById, isLinked));
+          panel.appendChild(attackCategory({
+            char: char, scan: scan, kind: kind, group: g, style: style,
+            choix: choix, pool: pool, poolIntro: poolIntro,
+            linksByParent: linksByParent, moveById: moveById,
+          }));
         });
       });
-
-      // Les enchaînements « (Two) » forment une réserve commune : le wiki écrit
-      // « Branching from _ (One) », le tiret bas valant pour n'importe quelle
-      // bravery « (One) ». Ils ne se rattachent donc pas à un emplacement
-      // précis, et n'en consomment aucun — d'où leur section à part.
-      var pool = [];
-      groups.forEach(function (gg) { if (gg.followUp) pool = pool.concat(gg.moves); });
-      if (pool.length) panel.appendChild(followUpPool(char, kind, pool, groups));
     });
   }
 
-  function attackCategory(char, kind, group, style, choix, linksByParent, moveById, isLinked) {
-    var titre = groupLabel(group.key) + (style ? ' — ' + style : '');
-    var retenus = state.build.attacks
-      .map(function (id) { return moveById[id]; })
-      .filter(function (m) { return m && choix.indexOf(m) !== -1; });
+  function attackCategory(ctx) {
+    var kind = ctx.kind;
+    var catKey = kind + '|' + ctx.group.key + '|' + (ctx.style || '');
+    var titre = groupLabel(ctx.group.key) + (ctx.style ? ' — ' + ctx.style : '');
+    var mine = ctx.scan.slots.filter(function (s) { return s.info.catKey === catKey; });
 
     var fs = el('fieldset', { class: 'bc-group' }, [
       el('legend', {}, [
         el('span', { text: titre + ' ' }),
-        el('span', { class: 'bc-slots' + (retenus.length >= MAX_SLOTS ? ' is-full' : ''), text: retenus.length + '/' + MAX_SLOTS }),
+        el('span', { class: 'bc-slots' + (mine.length >= MAX_SLOTS ? ' is-full' : ''), text: mine.length + '/' + MAX_SLOTS }),
       ]),
     ]);
-    if (group.intro) fs.appendChild(el('p', { class: 'bc-note', text: group.intro.split('\n')[0] }));
+    if (ctx.group.intro) fs.appendChild(el('p', { class: 'bc-note', text: ctx.group.intro.split('\n')[0] }));
 
     var grid = el('div', { class: 'bc-slot-grid' });
     for (var i = 0; i < MAX_SLOTS; i++) {
       (function (index) {
-        var m = retenus[index];
-        var libre = choix.filter(function (c) { return !isEquipped(c.id); });
+        var slot = mine[index];
         var ouvrir = function () {
-          openMoveChooser(titre + ' · ' + inputTitle(kind, index), libre, m, function (choisi) {
-            if (m) unequipAttack(m.id);
-            equipAttack(choisi.id);
+          openMoveChooser(titre + ' · ' + inputTitle(kind, index), ctx.choix, slot ? slot.move : null, function (choisi) {
+            if (slot) replaceAt(slot.pos, choisi.id);
+            else appendAttack(choisi.id);
           });
         };
-        if (!m) {
+        if (!slot) {
           grid.appendChild(slotRow({
             input: inputGlyph(kind, index), inputTitle: inputTitle(kind, index),
             filled: false, onAssign: ouvrir,
           }));
           return;
         }
+        var m = slot.move;
         var main = el('span', { class: 'bc-slot-main' }, [
           el('span', { class: 'bc-row-name', text: m.name }),
           el('span', { class: 'bc-row-meta', text: moveMeta(m) }),
         ]);
         var actions = [cpTag(m)];
         if (m.cp == null) actions.push(el('span', { class: 'bc-tag bc-tag-warn', title: T('attacks.unknownCostTitle'), text: T('status.undocumented') }));
-        // Déplacer un coup change la commande qui le déclenche. La poignée n'a
-        // de sens qu'à partir de deux coups posés : seule, une attaque n'a
-        // nulle part où aller.
         grid.appendChild(slotRow({
           input: inputGlyph(kind, index), inputTitle: inputTitle(kind, index),
           filled: true, main: main, actions: actions,
-          dragId: m.id,
-          handle: retenus.length > 1 ? dragHandle(retenus.map(function (x) { return x.id; }), index) : null,
+          dragId: catKey + '#' + index,
+          handle: mine.length > 1 ? dragHandle(ctx.char, catKey, index) : null,
           onAssign: ouvrir,
-          onRemove: function () { unequipAttack(m.id); },
+          // Retirer une attaque emporte ce qui s'y rattachait.
+          onRemove: function () { removeAt(slotPositions(slot)); },
         }));
-        // Embranchement HP : le carré prolonge la bravery, comme à l'écran du
-        // jeu. Il n'occupe pas d'emplacement.
-        var suites = (linksByParent[m.id] || []).map(function (id) { return moveById[id]; }).filter(Boolean);
-        if (suites.length) grid.appendChild(hpLinkBranch(m, suites));
+
+        // Embranchements, dans la forme que le jeu leur donne : un trait sous
+        // l'attaque, et la touche qui les déclenche. Le carré pour une attaque
+        // HP, le rond pour un enchaînement de bravery.
+        var liens = (ctx.linksByParent[slot.id] || []).map(function (id) { return ctx.moveById[id]; }).filter(Boolean);
+        if (liens.length) {
+          grid.appendChild(branchRow(slot, 'link', liens, KIND_BUTTON.hp,
+            T('attacks.hpLinkAdd'), T('attacks.hpLinkFor', { name: m.name })));
+        }
+        if (kind === 'bravery' && ctx.pool.length) {
+          grid.appendChild(branchRow(slot, 'follow', ctx.pool, KIND_BUTTON.bravery,
+            T('attacks.followupAdd'), T('attacks.followupFor', { name: m.name }), ctx.poolIntro));
+        }
       }(i));
     }
     fs.appendChild(grid);
     return fs;
   }
 
-  // Embranchement d'attaque HP sous la bravery qui l'ouvre.
-  function hpLinkBranch(parent, suites) {
+  // Un prolongement rattaché à une attaque : enchaînement de bravery ou attaque
+  // HP branchée. Les deux se comportent pareil, seule la touche change.
+  function branchRow(slot, champ, choix, glyph, addLabel, titreFenetre, intro) {
+    var courant = slot[champ];
     var box = el('div', { class: 'bc-branch-row' });
-    var pris = suites.filter(function (m) { return isEquipped(m.id); });
-    var libres = suites.filter(function (m) { return !isEquipped(m.id); });
-    var badge = el('span', { class: 'bc-slot-badge bc-badge-branch', title: T('attacks.input.link', { button: KIND_BUTTON.hp }), text: '└ ' + KIND_BUTTON.hp });
-    box.appendChild(badge);
-    if (!pris.length) {
-      var add = el('button', {
-        type: 'button', class: 'bc-branch-add', onclick: function () {
-          openMoveChooser(T('attacks.hpLinkFor', { name: parent.name }), libres, null, function (choisi) { equipAttack(choisi.id); });
+    box.appendChild(el('span', {
+      class: 'bc-slot-badge bc-badge-branch',
+      title: T('attacks.input.link', { button: glyph }), text: '└ ' + glyph,
+    }));
+    if (!courant) {
+      box.appendChild(el('button', {
+        type: 'button', class: 'bc-branch-add',
+        onclick: function () {
+          openMoveChooser(titreFenetre, choix, null, function (choisi) { attachTo(slot, choisi.id); }, intro);
         },
-      }, [el('span', { text: T('attacks.hpLinkAdd') }), el('span', { class: 'bc-slot-plus', 'aria-hidden': 'true', text: '+' })]);
-      box.appendChild(add);
+      }, [el('span', { text: addLabel }), el('span', { class: 'bc-slot-plus', 'aria-hidden': 'true', text: '+' })]));
       return box;
     }
-    var m = pris[0];
     box.appendChild(el('span', { class: 'bc-slot-main' }, [
-      el('span', { class: 'bc-row-name', text: m.name }),
-      el('span', { class: 'bc-row-meta', text: moveMeta(m) }),
+      el('span', { class: 'bc-row-name', text: courant.move.name }),
+      el('span', { class: 'bc-row-meta', text: moveMeta(courant.move) }),
     ]));
     box.appendChild(el('span', { class: 'bc-slot-actions' }, [
-      cpTag(m),
-      el('button', { type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('equipment.remove'), onclick: function () { unequipAttack(m.id); } }),
+      cpTag(courant.move),
+      el('button', {
+        type: 'button', class: 'bc-btn bc-btn-small', text: T('slots.change'),
+        onclick: function () {
+          openMoveChooser(titreFenetre, choix, courant.move, function (choisi) { replaceAt(courant.pos, choisi.id); }, intro);
+        },
+      }),
+      el('button', {
+        type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('equipment.remove'),
+        onclick: function () { removeAt([courant.pos]); },
+      }),
     ]));
     return box;
   }
 
-  // Réserve commune des enchaînements : ils prolongent n'importe quelle bravery
-  // de départ, le wiki ne dit pas laquelle. Sans bravery équipée, ils n'ont pas
-  // lieu d'être — `pruneOrphanBranches` les retire alors du build.
-  function followUpPool(char, kind, pool, groups) {
-    var starter = false;
-    groups.forEach(function (g) {
-      if (g.followUp) return;
-      g.moves.forEach(function (m) { if (isEquipped(m.id)) starter = true; });
-    });
-    var intro = (groups.filter(function (g) { return g.followUp; })[0] || {}).intro;
-    var fs = el('fieldset', { class: 'bc-group' + (starter ? '' : ' is-locked') }, [
-      el('legend', {}, [el('span', { text: T('attacks.followups') + ' ' }), el('span', { class: 'bc-slot-badge', text: KIND_BUTTON[kind] })]),
-    ]);
-    fs.appendChild(el('p', { class: 'bc-note', text: starter ? (intro ? intro.split('\n')[0] : T('attacks.followupsFree')) : T('attacks.followupsNeedAny') }));
-    var grid = el('div', { class: 'bc-slot-grid' });
-    pool.forEach(function (m) {
-      if (!isEquipped(m.id)) return;
-      grid.appendChild(slotRow({
-        input: '└ ' + KIND_BUTTON[kind], inputTitle: T('attacks.input.link', { button: KIND_BUTTON[kind] }),
-        filled: true, className: 'bc-slot-followup',
-        main: el('span', { class: 'bc-slot-main' }, [
-          el('span', { class: 'bc-row-name', text: m.name }),
-          el('span', { class: 'bc-row-meta', text: moveMeta(m) }),
-        ]),
-        actions: [cpTag(m)],
-        onAssign: function () {
-          openMoveChooser(T('attacks.followups'), pool.filter(function (x) { return !isEquipped(x.id); }), m, function (choisi) {
-            unequipAttack(m.id); equipAttack(choisi.id);
-          });
-        },
-        onRemove: function () { unequipAttack(m.id); },
-      }));
-    });
-    var libres = pool.filter(function (m) { return !isEquipped(m.id); });
-    if (starter && libres.length) {
-      grid.appendChild(slotRow({
-        input: '└ ' + KIND_BUTTON[kind], inputTitle: T('attacks.input.link', { button: KIND_BUTTON[kind] }),
-        filled: false,
-        onAssign: function () {
-          openMoveChooser(T('attacks.followups'), libres, null, function (choisi) { equipAttack(choisi.id); });
-        },
-      }));
-    }
-    fs.appendChild(grid);
-    return fs;
-  }
-
   // Fenêtre de choix d'un coup. Recherche par nom, et par effet : c'est souvent
   // « celui qui fait Wall Rush » qu'on cherche, pas un nom précis.
-  function openMoveChooser(title, choix, courant, onPick) {
-    openModal(title, courant ? T('attacks.replacing', { name: courant.name }) : null, function (body, close) {
+  function openMoveChooser(title, choix, courant, onPick, intro) {
+    var sous = courant ? T('attacks.replacing', { name: courant.name }) : (intro ? intro.split('\n')[0] : null);
+    openModal(title, sous, function (body, close) {
       var section = el('div', { class: 'bc-chooser' });
       var listBox = el('div', { class: 'bc-list bc-list-scroll' });
       var q = '';

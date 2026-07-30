@@ -536,7 +536,6 @@
       "braveryTitle": "Bravery attacks",
       "hpTitle": "HP attacks",
       "notDocumented": "{title}: not documented for this character.",
-      "followups": "Followups",
       "damage": "damage {value}",
       "startup": "startup {value}",
       "unknownCost": "cost unknown",
@@ -546,14 +545,14 @@
       "replacing": "Currently assigned: {name}.",
       "hpLinkAdd": "Add an HP link",
       "hpLinkFor": "HP link from {name}",
-      "followupsFree": "A follow-up extends a bravery attack and takes no slot of its own.",
-      "followupsNeedAny": "Equip a bravery attack first: a follow-up does not exist without the attack it extends.",
       "input": {
         "neutral": "Neutral stick + {button}",
         "back": "← + {button}",
         "forward": "→ + {button}",
         "link": "Branches with {button}"
-      }
+      },
+      "followupAdd": "Add a follow-up",
+      "followupFor": "Follow-up from {name}"
     },
     "abilities": {
       "costNote": "Cost shown: {mode}. The “Mastered costs” checkbox switches between the two.",

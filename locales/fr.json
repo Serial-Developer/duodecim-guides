@@ -536,7 +536,6 @@
       "braveryTitle": "Attaques Bravery",
       "hpTitle": "Attaques HP",
       "notDocumented": "{title} : non documentées pour ce personnage.",
-      "followups": "Enchaînements",
       "damage": "dégâts {value}",
       "startup": "startup {value}",
       "unknownCost": "coût inconnu",
@@ -546,14 +545,14 @@
       "replacing": "Actuellement assignée : {name}.",
       "hpLinkAdd": "Ajouter un HP link",
       "hpLinkFor": "HP link depuis {name}",
-      "followupsFree": "Un enchaînement prolonge une bravery et n’occupe pas d’emplacement.",
-      "followupsNeedAny": "Équipez d’abord une bravery : un enchaînement n’existe pas sans l’attaque qu’il prolonge.",
       "input": {
         "neutral": "Stick neutre + {button}",
         "back": "← + {button}",
         "forward": "→ + {button}",
         "link": "S’embranche au {button}"
-      }
+      },
+      "followupAdd": "Ajouter un enchaînement",
+      "followupFor": "Enchaînement depuis {name}"
     },
     "abilities": {
       "costNote": "Coût affiché : {mode}. La case « Coûts maîtrisés » bascule les deux.",
