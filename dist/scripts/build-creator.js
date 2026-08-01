@@ -1666,6 +1666,19 @@
   // vient de toucher : un onglet en affiche plusieurs (les quatre emplacements
   // d'équipement, les accessoires et leurs slots), et le rendu les remplace
   // toutes. Chacune est repérée par son `data-slot`.
+  // Sélectionner une pièce reconstruit le panneau, donc recrée les champs de
+  // filtre : leur texte est bien restitué, mais leur curseur repart à 0. On
+  // revenait alors dans le champ pour préciser sa recherche et on écrivait
+  // AVANT ce qu'on venait de taper. Placer le curseur en fin de valeur dès la
+  // création corrige les retours au clavier comme le focus programmatique ; un
+  // clic à un endroit précis du texte reste prioritaire, puisqu'il repositionne
+  // le curseur après le focus.
+  function caretToEnd(input) {
+    var n = input.value.length;
+    if (!n) return;
+    try { input.setSelectionRange(n, n); } catch (e) { /* type d'input sans sélection */ }
+  }
+
   function keepScroll(uid, fn) {
     var y = window.scrollY;
     var saved = {};
@@ -1729,6 +1742,7 @@
     var cats = D.equipmentCategories[slot.key] || [];
     var bar = el('div', { class: 'bc-filters' });
     var search = el('input', { type: 'search', placeholder: T('equipment.filterName'), value: stuffFilters[slot.key], 'aria-label': T('equipment.filterAria', { slot: slot.label }) });
+    caretToEnd(search);
     search.addEventListener('input', function () { stuffFilters[slot.key] = search.value; renderList(); });
     var catSel = el('select', { 'aria-label': T('equipment.category') }, [el('option', { value: '', text: T('equipment.allCategories') })].concat(
       cats.concat(['Exclusive']).map(function (c) { return el('option', { value: c, text: c, selected: stuffCategory[slot.key] === c }); })
@@ -1885,6 +1899,7 @@
     var section = el('div', { class: 'bc-chooser' });
     var bar = el('div', { class: 'bc-filters' });
     var search = el('input', { type: 'search', placeholder: T('accessories.filterNameEffect'), value: accFilter, 'aria-label': T('accessories.filterAria') });
+    caretToEnd(search);
     search.addEventListener('input', function () { accFilter = search.value; renderList(); });
     var catSel = el('select', { 'aria-label': T('equipment.category') }, [el('option', { value: '', text: T('equipment.allCategories') })].concat(
       ACCESSORY_CATEGORIES.map(function (c) { return el('option', { value: c.key, text: c.label, selected: accCategory === c.key }); })
