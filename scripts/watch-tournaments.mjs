@@ -20,7 +20,7 @@
 //
 // En cas d'erreur d'une source, les données précédentes sont conservées.
 // Usage : node scripts/watch-tournaments.mjs
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -36,8 +36,16 @@ let changed = false;
 function knownUrls() {
   const urls = new Set();
   const norm = (u) => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '').toLowerCase();
-  const tournois = readJson(join(ROOT, 'data', 'editorial', '_tournois.json'), { tournois: [] });
-  for (const t of tournois.tournois) for (const l of t.liens || []) urls.add(norm(l.url));
+  // L'éditorial est rangé par langue depuis la passe d'internationalisation :
+  // lire `data/editorial/_tournois.json` renvoyait silencieusement le fallback
+  // vide, et la veille reproposait donc en candidats des tournois déjà
+  // documentés. On balaie les locales — les URLs y sont identiques, mais une
+  // langue peut manquer.
+  const edRoot = join(ROOT, 'data', 'editorial');
+  for (const locale of existsSync(edRoot) ? readdirSync(edRoot) : []) {
+    const tournois = readJson(join(edRoot, locale, '_tournois.json'), { tournois: [] });
+    for (const t of tournois.tournois) for (const l of t.liens || []) urls.add(norm(l.url));
+  }
   for (const f of ['upcoming.json', 'auto.json']) {
     for (const e of readJson(join(CAL, f), { events: [] }).events) if (e.url) urls.add(norm(e.url));
   }
