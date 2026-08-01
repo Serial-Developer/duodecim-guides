@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE = join(ROOT, 'cache');
 const CACHE_FANDOM = join(CACHE, 'fandom');
-const UA = 'dissidia012-guides-builder/0.1 (site fan non commercial; contact: jonathan@bt-consulting.io)';
+const UA = 'dissidia012-guides-builder/0.1 (site fan non commercial; contact: https://github.com/Serial-Developer/duodecim-guides)';
 const DELAY_MS = 2000;
 const force = process.argv.includes('--force');
 
