@@ -6,11 +6,11 @@ Dépôt : https://github.com/Serial-Developer/duodecim-guides
 /* SITE */
 Langues : English, français
 Sujet : Dissidia 012 [duodecim] Final Fantasy (PSP, 2011) — competitive guides
-Généré le : 2026-08-01
+Généré le : 2026-08-02
 Licence : code MIT, textes originaux CC BY-NC-ND 4.0 — voir LICENSE et NOTICE.md
 
 /* TECHNIQUE */
-Générateur : Node.js v24.13.0 (scripts/build.mjs), sans framework
+Générateur : Node.js v20.20.2 (scripts/build.mjs), sans framework
 Dépendances : cheerio ^1.2.0 (extraction), @resvg/resvg-js (images de partage)
 Hébergement : GitHub Pages
 Sources des données : dissidia.wiki (CC BY 4.0), Final Fantasy Wiki (CC BY-SA 3.0)
