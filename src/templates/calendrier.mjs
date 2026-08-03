@@ -2,6 +2,13 @@
 // candidats détectés par la veille automatique)
 import { esc, sourcesSection, pageShell, siteHeader, siteFooter, linksFor, longDate } from './helpers.mjs';
 
+// Les champs libres d'un tournoi sont relayés à la main depuis une annonce.
+// Une chaîne vaut pour les deux langues — c'est le cas d'un format écrit en
+// termes du jeu (« BO5 ») ; un objet { en, fr } permet de les traduire quand
+// c'est de la prose. `data/calendar/` n'étant pas rangé par locale, sans cela
+// un lecteur français lisait le règlement en anglais.
+const champ = (v, locale) => (v && typeof v === 'object' ? (v[locale] ?? v.en ?? '') : (v || ''));
+
 function upcomingList(t, events) {
   if (!events.length) {
     return `<div class="banner info">${t('calendar.noUpcoming')}</div>`;
@@ -10,10 +17,10 @@ function upcomingList(t, events) {
 <h3 style="margin-top:0">${esc(e.name)}</h3>
 <div class="table-scroll"><table class="stats">
 <tr><th>${t('tournaments.date')}</th><td>${esc(longDate(t, e.iso))}</td></tr>
-${e.format ? `<tr><th>${t('tournaments.format')}</th><td>${esc(e.format)}</td></tr>` : ''}
-${e.organisation ? `<tr><th>${t('tournaments.organisation')}</th><td>${esc(e.organisation)}</td></tr>` : ''}
+${champ(e.format, t.locale) ? `<tr><th>${t('tournaments.format')}</th><td>${esc(champ(e.format, t.locale))}</td></tr>` : ''}
+${champ(e.organisation, t.locale) ? `<tr><th>${t('tournaments.organisation')}</th><td>${esc(champ(e.organisation, t.locale))}</td></tr>` : ''}
 </table></div>
-${e.notes ? `<p class="mv-desc">${esc(e.notes)}</p>` : ''}
+${champ(e.notes, t.locale) ? `<p class="mv-desc">${esc(champ(e.notes, t.locale))}</p>` : ''}
 ${e.url ? `<p class="video-link"><a href="${esc(e.url)}" target="_blank" rel="external noopener">${t('calendar.signup')}</a></p>` : ''}
 </article>`).join('\n');
 }

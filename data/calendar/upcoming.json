@@ -1,4 +1,18 @@
 {
   "_doc": "Tournois à venir confirmés à la main. Un candidat détecté par la veille (inbox.json) se confirme en le recopiant ici avec sa vraie date, puis en ajoutant son messageId dans inbox.json > handled.",
-  "events": []
+  "events": [
+    {
+      "iso": "2026-08-15",
+      "name": "Flames of Rebirth — 2026 Summer Major",
+      "url": "https://challonge.com/FlamesOfRebirth26summermajor",
+      "format": {
+        "en": "Asynchronous — 3 days between rounds, BO5 (BO7 in semi-finals and grand finals)",
+        "fr": "Asynchrone — 3 jours entre les rondes, BO5 (BO7 en demi-finales et finale)"
+      },
+      "notes": {
+        "en": "Played on the latest version of Dissidia 012 Emendatus: the game must be patched to take part, and help with patching is offered on the tournament Discord. Feral Chaos banned; no summons other than countersummons; Rebellious Soul, breakable and hacked accessories banned; infinites capped at three repetitions. Nine stages, Dave's Stupid Rule in effect — a player cannot counterpick a stage they have already won on during the set. Coin flip for the first stage: the winner strikes two, the loser picks from the rest. Blind pick for characters, winner selecting first. All replays must be saved, zipped and sent to the host by Discord DM for upload to the community YouTube channel. Prizes: a  Steam gift card for first place, Discord Nitro for second and third.",
+        "fr": "Se joue sur la dernière version de Dissidia 012 Emendatus : le jeu doit être patché pour participer, et le Discord du tournoi propose de l'aide pour le faire. Feral Chaos banni ; invocations interdites hors contre-invocations ; Rebellious Soul, accessoires cassables et accessoires modifiés interdits ; infinis limités à trois répétitions. Neuf stages, Dave's Stupid Rule appliquée — on ne peut pas contre-choisir un stage sur lequel on a déjà gagné dans le set. Pile ou face pour le premier stage : le gagnant en retire deux, le perdant choisit parmi les restants. Choix des personnages à l'aveugle, le gagnant choisissant en premier. Tous les replays doivent être enregistrés, compressés et envoyés à l'organisateur en message privé Discord, pour être publiés sur la chaîne YouTube de la communauté. Récompenses : carte cadeau Steam de 50 $ pour la première place, Discord Nitro pour les deuxième et troisième."
+      }
+    }
+  ]
 }

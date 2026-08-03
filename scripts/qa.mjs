@@ -448,9 +448,10 @@ for (const locale of builtLocales) {
 // --- 3. Liens externes (optionnel) ---
 if (process.argv.includes('--links')) {
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-  // gamefaqs : 403 systématique pour les clients non-navigateur (threads vérifiés
-  // manuellement au moment de leur ajout) ; youtube : vérifié via oEmbed ci-dessous.
-  const skip = /fonts\.(googleapis|gstatic)\.com|creativecommons\.org|web\.archive\.org|gamefaqs\.gamespot\.com/;
+  // gamefaqs et challonge : 403 systématique pour les clients non-navigateur
+  // (liens vérifiés à la main au moment de leur ajout ; Challonge refuse aussi
+  // bien un fetch qu'un navigateur piloté) ; youtube : via oEmbed ci-dessous.
+  const skip = /fonts\.(googleapis|gstatic)\.com|creativecommons\.org|web\.archive\.org|gamefaqs\.gamespot\.com|challonge\.com/;
   const toCheck = [...externalLinks].filter((u) => !skip.test(u));
   console.log(`Vérification de ${toCheck.length} liens externes uniques…`);
   let done = 0;
