@@ -26,7 +26,7 @@ import { renderBuildCreator } from '../src/templates/build-creator.mjs';
 import { buildDataBundle } from './build-data-bundle.mjs';
 import { slugAnchor, speedValues, siteHeader, siteFooter, buildRoster, linksFor } from '../src/templates/helpers.mjs';
 import { PAGES, seoFor, ogPathFor, writeSitemap, write404, writeHumansTxt } from './seo.mjs';
-import { datesFor } from './git-dates.mjs';
+import { datesFor, contentLastModified } from './git-dates.mjs';
 import { sizeAttrs } from './image-size.mjs';
 import { absUrl } from '../src/site-config.mjs';
 import { LOCALES, DEFAULT_LOCALE, LOCALE_META, localeDir } from '../src/i18n/config.mjs';
@@ -409,7 +409,7 @@ const nUrls = writeSitemap(DIST, sitemap);
 }
 
 writeHumansTxt(DIST, {
-  generated: new Date().toISOString().slice(0, 10),
+  updated: contentLastModified(ROOT),
   languages: activeLocales.map((l) => createT(l)('humans.languageName')).join(', '),
   subject: createT(DEFAULT_LOCALE)('humans.subject'),
 });

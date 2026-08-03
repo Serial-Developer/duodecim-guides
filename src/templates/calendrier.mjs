@@ -21,7 +21,7 @@ ${champ(e.format, t.locale) ? `<tr><th>${t('tournaments.format')}</th><td>${esc(
 ${champ(e.organisation, t.locale) ? `<tr><th>${t('tournaments.organisation')}</th><td>${esc(champ(e.organisation, t.locale))}</td></tr>` : ''}
 </table></div>
 ${champ(e.notes, t.locale) ? `<p class="mv-desc">${esc(champ(e.notes, t.locale))}</p>` : ''}
-${e.url ? `<p class="video-link"><a href="${esc(e.url)}" target="_blank" rel="external noopener">${t('calendar.signup')}</a></p>` : ''}
+${champ(e.url, t.locale) ? `<p class="video-link"><a href="${esc(champ(e.url, t.locale))}" target="_blank" rel="external noopener">${t('calendar.signup')}</a></p>` : ''}
 </article>`).join('\n');
 }
 

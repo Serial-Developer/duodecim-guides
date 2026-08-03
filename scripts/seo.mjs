@@ -154,7 +154,12 @@ ${footer}
 // --- humans.txt ---
 // Convention humanstxt.org : le pendant lisible de robots.txt. Purement
 // informatif, il déclare qui a écrit le site et avec quoi.
-export function writeHumansTxt(dist, { generated, languages, subject }) {
+// `updated` vient de git, comme la date du pied de page — et non de l'horloge du
+// build : sinon chaque régénération prétendrait que le contenu a changé. Le
+// numéro de version de Node a disparu pour la même raison, en pire : il décrit
+// la machine qui a construit, pas le site, et faisait donc l'aller-retour entre
+// le poste de l'auteur et le runner du workflow à chaque publication.
+export function writeHumansTxt(dist, { updated, languages, subject }) {
   const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf-8'));
   writeFileSync(join(dist, 'humans.txt'), `/* AUTEUR */
 Nom : ${AUTHOR}
@@ -163,12 +168,11 @@ Dépôt : ${AUTHOR_URL}
 
 /* SITE */
 Langues : ${languages}
-Sujet : ${subject}
-Généré le : ${generated}
+Sujet : ${subject}${updated ? `\nDernière mise à jour : ${updated}` : ''}
 Licence : code MIT, textes originaux CC BY-NC-ND 4.0 — voir LICENSE et NOTICE.md
 
 /* TECHNIQUE */
-Générateur : Node.js ${process.version} (scripts/build.mjs), sans framework
+Générateur : Node.js (scripts/build.mjs), sans framework
 Dépendances : cheerio ${pkg.dependencies?.cheerio || ''} (extraction), @resvg/resvg-js (images de partage)
 Hébergement : GitHub Pages
 Sources des données : dissidia.wiki (CC BY 4.0), Final Fantasy Wiki (CC BY-SA 3.0)
