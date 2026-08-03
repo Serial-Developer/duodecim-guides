@@ -37,6 +37,26 @@ export function duplicatesHeaderRow(header, m) {
   return header.rawRows.some((row) => String(row[0] || '').trim() === m.name.trim());
 }
 
+// Une ligne orpheline : l'extraction a perdu le titre de son tableau, et elle
+// flotte donc à la suite du tableau précédent, sans rapport avec lui. Le
+// « 2nd Chain » de Jecht est dans ce cas — « Ground (Neutral) », « Ground (Up) »
+// et « Air (Neutral) » passaient pour des braveries aériennes alors que leurs
+// notes disent « Neutral 2 from Jecht Rush ».
+//
+// Quatre conditions réunies, et chacune est nécessaire :
+//  - elle suit un tableau, donc elle en dépend ;
+//  - elle n'y figure pas, sinon c'est un doublon (`duplicatesHeaderRow`) ;
+//  - elle ne prolonge pas son nom, sinon c'est une déclinaison (les niveaux de
+//    charge de Jecht, les versions EX Mode de Yuna) ;
+//  - elle ne porte aucun coût, donc elle ne s'équipe pas.
+// Sur les 31 personnages, seules les trois lignes de Jecht les remplissent.
+export function isOrphanRow(header, m) {
+  if (!header || isHeaderRow(m)) return false;
+  if (duplicatesHeaderRow(header, m)) return false;
+  if (String(m.name || '').indexOf(header.name) === 0) return false;
+  return !m.cp && !cpFromRawRows(m);
+}
+
 // « 3rd Chain » nomme un tableau d'enchaînements, il ne s'équipe pas. Trois
 // conditions le distinguent d'un vrai coup, et il faut les trois :
 //  - il ne chiffre rien, ni coût ni dégâts ;

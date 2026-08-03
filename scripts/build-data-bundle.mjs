@@ -7,7 +7,7 @@ import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { CHARACTERS } from './characters.mjs';
 import { datesFor } from './git-dates.mjs';
-import { isHeaderRow, cpFromRawRows, duplicatesHeaderRow, isTableTitle } from './move-shape.mjs';
+import { isHeaderRow, cpFromRawRows, duplicatesHeaderRow, isTableTitle, isOrphanRow } from './move-shape.mjs';
 
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf-8'));
 
@@ -166,6 +166,9 @@ export function buildDataBundle(ROOT, editorial = null) {
             // Une ligne déjà présente dans le tableau du parent en est un
             // doublon : le parseur a émis le tableau et ses lignes.
             if (duplicatesHeaderRow(header, m)) continue;
+            // Ligne dont le tableau a perdu son titre : elle ne prolonge pas ce
+            // coup-ci, elle ne se rattache a rien.
+            if (isOrphanRow(header, m)) continue;
             // Le coût du coup est parfois porté par sa première déclinaison.
             if (parent.cp == null && cp.cp != null) { parent.cp = cp.cp; parent.cpMastered = cp.cpMastered; }
             parent.variants.push([m.name, m.damage || '', m.startup || ''].join(' · ').replace(/( · )+$/, ''));

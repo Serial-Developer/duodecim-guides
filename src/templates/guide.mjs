@@ -5,7 +5,7 @@ import {
   linksFor, ordinal,
 } from './helpers.mjs';
 import { ldArticle } from './jsonld.mjs';
-import { isHeaderRow, duplicatesHeaderRow, isTableTitle } from '../../scripts/move-shape.mjs';
+import { isHeaderRow, duplicatesHeaderRow, isTableTitle, isOrphanRow } from '../../scripts/move-shape.mjs';
 
 // Champs d'un coup, dans l'ordre d'affichage. Les clés sont celles des données
 // extraites ; les libellés viennent du catalogue de la locale.
@@ -132,6 +132,9 @@ function movesGroup(t, groupKey, flow, ed, ctx, sect = '') {
       return !titre;
     }
     if (duplicatesHeaderRow(header, m)) return false;
+    // Une ligne dont le tableau a perdu son titre ne se rattache à rien : elle
+    // n'est pas un coup de ce groupe.
+    if (isOrphanRow(header, m)) return false;
     // Les lignes d'un tableau-titre le suivent : elles ne sont pas des coups.
     return !titre;
   });
