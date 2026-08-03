@@ -5,6 +5,7 @@ import {
   linksFor, ordinal,
 } from './helpers.mjs';
 import { ldArticle } from './jsonld.mjs';
+import { isHeaderRow, duplicatesHeaderRow, isTableTitle } from '../../scripts/move-shape.mjs';
 
 // Champs d'un coup, dans l'ordre d'affichage. Les clés sont celles des données
 // extraites ; les libellés viennent du catalogue de la locale.
@@ -115,12 +116,32 @@ function movesGroup(t, groupKey, flow, ed, ctx, sect = '') {
   // pointerait vers une ancre inexistante.
   const hasChainDiagram = groupKey === 'followups' && flow.moves.some((m) => /\(Two\)/i.test(m.name || ''));
   const chainRef = hasChainDiagram ? `<p class="mv-desc">${t('guide.moves.chainRef')}</p>` : '';
+  // Le wiki intercale des tableaux annexes — les enchaînements de Jecht, sous
+  // le titre « 3rd Chain » — dont l'extraction produit à la fois une ligne de
+  // titre et une ligne par entrée. Le titre ne chiffre rien : ce n'est pas un
+  // coup, et ses entrées font double emploi avec le tableau qu'il porte.
+  // S'y ajoutent les lignes d'un tableau annexe dont l'extraction a perdu le
+  // titre — le « 2nd Chain » de Jecht : elles suivent un tableau sans en
+  // prolonger le nom et sans porter de coût, faute d'être équipables.
+  let header = null;
+  let titre = null;
+  const moves = flow.moves.filter((m, i) => {
+    if (isHeaderRow(m)) {
+      header = m;
+      titre = isTableTitle(flow.moves, i) ? m.name : null;
+      return !titre;
+    }
+    if (duplicatesHeaderRow(header, m)) return false;
+    // Les lignes d'un tableau-titre le suivent : elles ne sont pas des coups.
+    return !titre;
+  });
+  if (!moves.length) return '';
   // Une variante (« X — Normal ») est indentée sous son parent quand le coup
   // qui la précède partage la même base.
-  const accordions = flow.moves.map((m, i) => {
+  const accordions = moves.map((m, i) => {
     const base = (m.name || '').split(' — ')[0];
     const isVariant = (m.name || '').includes(' — ');
-    const prevBase = i > 0 ? (flow.moves[i - 1].name || '').split(' — ')[0] : null;
+    const prevBase = i > 0 ? (moves[i - 1].name || '').split(' — ')[0] : null;
     const asChild = isVariant && prevBase === base;
     return moveAccordion(t, m, ed?.moveNotes?.[m.name], ctx, asChild);
   });

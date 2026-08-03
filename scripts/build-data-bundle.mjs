@@ -7,6 +7,7 @@ import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { CHARACTERS } from './characters.mjs';
 import { datesFor } from './git-dates.mjs';
+import { isHeaderRow, cpFromRawRows, duplicatesHeaderRow, isTableTitle } from './move-shape.mjs';
 
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf-8'));
 
@@ -20,8 +21,6 @@ const MOVE_COLS = ['id', 'name', 'cp', 'cpMastered', 'damage', 'startup', 'type'
 //  - des noms de colonnes (« CP (Mastered) », « Cancels »…) : la ligne n'est
 //    qu'un en-tête, et les lignes suivantes sont ses déclinaisons.
 // Même critère que src/templates/guide.mjs, pour que les deux rendus concordent.
-const COLUMN_LABEL = /multiplier|startup|cancel|assist|CP|force|priorit|effect|position|spawn|^type$|^version$/i;
-const isHeaderRow = (m) => Boolean(m.variants && m.variants.length > 1 && m.variants.some((v) => COLUMN_LABEL.test(String(v))));
 
 const followKey = (name) => String(name || '')
   .replace(/\((one|two)\)/ig, '')
@@ -128,10 +127,17 @@ export function buildDataBundle(ROOT, editorial = null) {
         // (Jecht : « Ground (Up) » sous Jecht Block et sous 3rd Chain).
         const moves = [];
         let parent = null;
+        let header = null;
+        let titreEnCours = null;
         for (const m of group.moves || []) {
           if (!m.name) continue;
-          const cp = parseMoveCp(m.cp);
+          // Le coût est parfois resté dans le tableau brut : il y est, la source
+          // le chiffre, seule l'extraction l'a laissé de côté.
+          const cp = parseMoveCp(m.cp || cpFromRawRows(m));
           if (isHeaderRow(m)) {
+            header = m;
+            if (isTableTitle(group.moves || [], (group.moves || []).indexOf(m))) { parent = null; titreEnCours = m.name; continue; }
+            titreEnCours = null;
             parent = {
               id: `${kind}:${key}:${m.name}`,
               name: m.name,
@@ -142,11 +148,24 @@ export function buildDataBundle(ROOT, editorial = null) {
               priority: m.priority || '',
               effects: m.effects || '',
               variants: [],
+              fromTable: true,
             };
             moves.push(parent);
             continue;
           }
+          // Un coup autonome qui suit un tableau n'en est pas une déclinaison :
+          // il porte son propre coût sans prolonger le nom du parent. Sans
+          // cette sortie, tout ce qui suivait un tableau y était absorbé pour
+          // toujours — « Jecht Beam », équipable à 30 (15) CP, disparaissait
+          // ainsi derrière « Jecht Blade ».
+          if (titreEnCours) continue;
+          const prolongeLeParent = parent && m.name.indexOf(parent.name) === 0;
+          if (parent && cp.cp != null && !prolongeLeParent) parent = null;
+
           if (parent) {
+            // Une ligne déjà présente dans le tableau du parent en est un
+            // doublon : le parseur a émis le tableau et ses lignes.
+            if (duplicatesHeaderRow(header, m)) continue;
             // Le coût du coup est parfois porté par sa première déclinaison.
             if (parent.cp == null && cp.cp != null) { parent.cp = cp.cp; parent.cpMastered = cp.cpMastered; }
             parent.variants.push([m.name, m.damage || '', m.startup || ''].join(' · ').replace(/( · )+$/, ''));
@@ -167,7 +186,7 @@ export function buildDataBundle(ROOT, editorial = null) {
             style: m.style || null,
           });
         }
-        for (const m of moves) m.variants = m.variants.length ? m.variants.join(' | ') : '';
+        for (const m of moves) { delete m.fromTable; m.variants = m.variants.length ? m.variants.join(' | ') : ''; }
         // L'intro n'est affichée qu'en première ligne : inutile d'embarquer la suite.
         const intro = group.intro ? group.intro.split('\n')[0].slice(0, 260) : null;
         if (moves.length) groups.push({ key, intro, moves, followUp: /^follow-?ups?$/i.test(key) });
