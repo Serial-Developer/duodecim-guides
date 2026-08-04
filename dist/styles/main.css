@@ -1565,7 +1565,7 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bcard-list { list-style: none; margin: 0; padding: 0; }
 .bcard-line {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.45rem;
   padding: 0.2rem 0;
   border-bottom: 1px solid rgba(157, 134, 232, 0.14);
@@ -1590,12 +1590,13 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bcard-note { display: block; color: var(--muted); font-size: 0.73rem; }
 
 /* Icône de touche : direction facultative, puis le bouton. */
-.bcard-key { flex: none; display: inline-flex; align-items: center; gap: 0.15rem; min-width: 2.9rem; }
+.bcard-key { flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.15rem; min-width: 3.6rem; }
 /* Textures du jeu, 12 à 32 px d'origine : agrandies au double sans lissage,
    comme le préconise assets/README.md. */
 .icon-d12 { image-rendering: pixelated; image-rendering: crisp-edges; display: block; }
 .bcard-btn { width: 24px; height: 24px; }
-.bcard-dpad { width: 15px; height: 15px; }
+.bcard-stick { width: 16px; height: 11px; }
+.bcard-chevron { width: 14px; height: 14px; color: var(--violet); flex: none; }
 .bcard-equip-icon { width: auto; height: 26px; }
 .bcard-summon-orb { width: 14px; height: 14px; }
 .bcard-plus { color: var(--muted); font-size: 0.7rem; }

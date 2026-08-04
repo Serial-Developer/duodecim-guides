@@ -33,7 +33,14 @@ function hydrate(t) {
 // sans lissage — voir `image-rendering: pixelated` dans la feuille de style.
 const BUTTON_ICON = { bravery: 'btn-circle.png', hp: 'btn-square.png' };
 const DIRECTIONS = ['neutral', 'back', 'forward'];
-const DPAD_ICON = { back: 'dpad-left.png', forward: 'dpad-right.png' };
+// Le jeu compose une commande dirigée en trois temps : une flèche, le stick
+// analogique, puis le bouton. C'est bien le stick — la croix directionnelle
+// existe dans les planches de textures mais ne sert pas ici. La flèche, elle,
+// n'a pas d'équivalent extrait : elle est tracée, dans la couleur du texte.
+const CHEVRON = {
+  back: '<path d="M11 3 L5 9 L11 15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>',
+  forward: '<path d="M7 3 L13 9 L7 15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>',
+};
 
 // Le libellé accessible dit la commande en toutes lettres — « Gauche + Cercle » —
 // là où le dessin ne montre que des formes.
@@ -41,12 +48,14 @@ function keyIcon(t, L, sizeOf, kind, cmd) {
   const dir = DIRECTIONS[cmd] || 'neutral';
   const label = t(`buildCard.keys.${dir}`, { button: t(`buildCard.keys.${kind}`) });
   const glyphe = (fichier, cls) => `<img class="icon-d12 ${cls}" src="${L.asset(`assets/buttons-icons/${fichier}`)}" alt="" aria-hidden="true"${sizeOf(`buttons-icons/${fichier}`)} loading="lazy">`;
-  const dpad = DPAD_ICON[dir]
-    ? glyphe(DPAD_ICON[dir], 'bcard-dpad') + '<span class="bcard-plus" aria-hidden="true">+</span>'
+  // Sans direction, la commande se réduit au bouton : le jeu n'affiche pas le
+  // stick au neutre.
+  const direction = CHEVRON[dir]
+    ? `<svg class="bcard-chevron" viewBox="0 0 18 18" aria-hidden="true" focusable="false">${CHEVRON[dir]}</svg>${glyphe('stick-analog.png', 'bcard-stick')}<span class="bcard-plus" aria-hidden="true">+</span>`
     : '';
   // Le libellé porte la commande en toutes lettres ; les images n'ont donc pas
   // à la répéter, d'où leur alt vide.
-  return `<span class="bcard-key" role="img" aria-label="${esc(label)}">${dpad}${glyphe(BUTTON_ICON[kind], 'bcard-btn')}</span>`;
+  return `<span class="bcard-key" role="img" aria-label="${esc(label)}">${direction}${glyphe(BUTTON_ICON[kind], 'bcard-btn')}</span>`;
 }
 
 // --- Icônes d'accessoire -----------------------------------------------------
