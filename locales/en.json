@@ -599,7 +599,9 @@
       "rank": "Rank {rank}",
       "rankLimitOne": "Rank {rank}: {max} copy at most",
       "rankLimitMany": "Rank {rank}: {max} copies at most",
-      "slotTitle": "Accessory slot {index}"
+      "slotTitle": "Accessory slot {index}",
+      "rankIcon": "Rank {rank}",
+      "typeIcon": "{type} booster"
     },
     "assist": {
       "title": "Assist",
@@ -812,5 +814,9 @@
     "testComplete": "Complete build",
     "testPartial": "Sparse build",
     "testPartialLede": "Same character, almost nothing equipped: the grid must stay whole and readable."
+  },
+  "accessories": {
+    "rankIcon": "Rank {rank}",
+    "typeIcon": "{type} booster"
   }
 }

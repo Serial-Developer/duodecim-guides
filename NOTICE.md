@@ -54,6 +54,11 @@ moveset (rôles et jobs par coup, coups spéciaux).
 Extrait par `scripts/scrape-builddata.mjs` vers `data/build/equipment.json` et
 `data/build/accessories.json`.
 
+S'y ajoutent quatorze icônes d'interface du jeu — quatre rangs d'accessoire et
+dix types de booster — récupérées par `scripts/fetch-accessory-icons.mjs` vers
+`assets/accessory-icons/`. Une seule copie de chaque : le site les associe aux
+551 accessoires par leur rang et leur type, déjà présents dans les données.
+
 **Clause de partage à l'identique** : toute œuvre dérivée de ces contenus doit
 être diffusée sous CC BY-SA 3.0 ou une licence compatible. Cette obligation
 prime sur la licence CC BY-NC-ND que j'applique à mes textes originaux : les

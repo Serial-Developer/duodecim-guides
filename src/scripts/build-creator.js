@@ -117,6 +117,20 @@
   // Les motifs d'illégalité sont mutualisés dans une légende (item.ill = code).
   function illegalReason(item) { return item && item.ill ? D.illegalReasons[item.ill] : null; }
 
+  // Icônes de rang et de type d'un accessoire. Quatorze fichiers couvrent les
+  // 551 accessoires : l'association se fait par `rank` et `boosterType`, que le
+  // payload porte déjà. Le type devant le nom, le rang derrière, comme le jeu.
+  var ASSET_BASE = (root.getAttribute('data-asset-base') || 'assets/');
+  function accessoryIcon(kind, valeur) {
+    if (!valeur) return null;
+    var label = T(kind === 'rank' ? 'accessories.rankIcon' : 'accessories.typeIcon',
+      kind === 'rank' ? { rank: valeur } : { type: valeur });
+    return el('img', {
+      class: 'acc-icon acc-icon-' + kind, src: ASSET_BASE + 'accessory-icons/' + kind + '-' + valeur + '.png',
+      alt: label, title: label, width: 16, height: 16, loading: 'lazy',
+    });
+  }
+
   // Un build hors budget reste valide au sens du stockage : « invalide » ne
   // désigne ici que l'état signalé à l'utilisateur.
   function emptyBuild(slug) {
@@ -1867,7 +1881,9 @@
       return slotRow({ input: String(i + 1), inputTitle: T('accessories.slotTitle', { index: i + 1 }), filled: false, onAssign: ouvrir });
     }
     var main = el('span', { class: 'bc-slot-main' }, [
-      el('span', { class: 'bc-row-name', text: a.name }),
+      el('span', { class: 'bc-row-name' }, [
+        accessoryIcon('type', a.boosterType), a.name, accessoryIcon('rank', a.rank),
+      ]),
       el('span', { class: 'bc-row-meta', text: [a.category, a.effect || a.requirements].filter(Boolean).join(' · ') }),
     ]);
     var actions = [];
@@ -1954,7 +1970,9 @@
       },
     }, [
       el('span', { class: 'bc-row-main' }, [
-        el('span', { class: 'bc-row-name', text: a.name + (count ? ' ×' + count : '') }),
+        el('span', { class: 'bc-row-name' }, [
+          accessoryIcon('type', a.boosterType), a.name + (count ? ' ×' + count : ''), accessoryIcon('rank', a.rank),
+        ]),
         el('span', { class: 'bc-row-meta', text: [a.category, a.boosterType, a.requirements, a.effect].filter(Boolean).join(' · ') }),
       ]),
     ]);

@@ -51,11 +51,27 @@ function keyIcon(t, kind, cmd) {
   return `<span class="bcard-key" role="img" aria-label="${esc(label)}">${fleche}<svg class="bcard-glyph" viewBox="0 0 18 18" aria-hidden="true" focusable="false">${BUTTON[kind]}</svg></span>`;
 }
 
+// --- Icônes d'accessoire -----------------------------------------------------
+// Quatorze icônes couvrent les 551 accessoires : quatre rangs et dix types de
+// booster. Elles s'associent par `rank` et `boosterType`, déjà portés par la
+// donnée — aucune table de correspondance à tenir.
+//
+// Disposition reprise du jeu : le type devant le nom, le rang derrière. Un
+// accessoire qui n'est pas un booster n'a que son rang.
+export function accessoryIcons(t, L, item) {
+  if (!item) return { avant: '', apres: '' };
+  const img = (fichier, label, quoi) => `<img class="acc-icon acc-icon-${quoi}" src="${L.asset(`assets/accessory-icons/${fichier}`)}" alt="${esc(label)}" title="${esc(label)}" width="16" height="16" loading="lazy">`;
+  return {
+    avant: item.boosterType ? img(`type-${item.boosterType}.png`, t('accessories.typeIcon', { type: item.boosterType }), 'type') : '',
+    apres: item.rank ? img(`rank-${item.rank}.png`, t('accessories.rankIcon', { rank: item.rank }), 'rank') : '',
+  };
+}
+
 // --- Lignes ------------------------------------------------------------------
-function slotLine(label, valeur, extra = '') {
+function slotLine(label, valeur, extra = '', ic = null) {
   return `<li class="bcard-line${valeur ? '' : ' is-empty'}">
 <span class="bcard-slot">${esc(label)}</span>
-<span class="bcard-value">${valeur ? esc(valeur) : ''}${extra}</span>
+<span class="bcard-value">${ic?.avant || ''}${valeur ? esc(valeur) : ''}${ic?.apres || ''}${extra}</span>
 </li>`;
 }
 
@@ -146,7 +162,8 @@ export function buildCard({ t, build, data, L, hasPortrait }) {
     const precision = item && homonymes[item.name] > 1 && item.requirements
       ? `<span class="bcard-note">${esc(item.requirements)}</span>`
       : '';
-    return slotLine(String(i + 1), item?.name || '', precision);
+    const ic = accessoryIcons(t, L, item);
+    return slotLine(String(i + 1), item?.name || '', precision, ic);
   }).join('\n');
 
   return `<article class="bcard">

@@ -599,7 +599,9 @@
       "rank": "Rang {rank}",
       "rankLimitOne": "Rang {rank} : {max} exemplaire au maximum",
       "rankLimitMany": "Rang {rank} : {max} exemplaires au maximum",
-      "slotTitle": "Emplacement d’accessoire {index}"
+      "slotTitle": "Emplacement d’accessoire {index}",
+      "rankIcon": "Rang {rank}",
+      "typeIcon": "Booster {type}"
     },
     "assist": {
       "title": "Assist",
@@ -812,5 +814,9 @@
     "testComplete": "Build complet",
     "testPartial": "Build lacunaire",
     "testPartialLede": "Même personnage, presque rien d’équipé : la grille doit rester entière et lisible."
+  },
+  "accessories": {
+    "rankIcon": "Rang {rank}",
+    "typeIcon": "Booster {type}"
   }
 }

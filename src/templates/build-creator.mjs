@@ -72,7 +72,7 @@ ${paras(ed.intro)}
 ${characterBanner(t, characters, hasPortrait, L)}
 </section>
 
-<section class="card bc-editor" id="bc-editor" hidden aria-labelledby="bc-step2">
+<section class="card bc-editor" id="bc-editor" hidden aria-labelledby="bc-step2" data-asset-base="${L.asset("assets/")}">
 <div class="bc-editor-head">
 <h2 id="bc-step2" style="margin:0">2. <span id="bc-current-name">${esc(t('buildCreator.step2Default'))}</span></h2>
 <div class="bc-build-meta">
