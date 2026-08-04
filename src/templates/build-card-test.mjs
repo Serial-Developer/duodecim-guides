@@ -9,7 +9,7 @@
 import { esc, pageShell, siteHeader, siteFooter } from './helpers.mjs';
 import { buildCard } from './build-card.mjs';
 
-export function renderBuildCardTest({ t, locale, build, source, data, hasPortrait, path, alternates }) {
+export function renderBuildCardTest({ t, locale, build, source, data, hasPortrait, sizeOf, path, alternates }) {
   const L = { asset: (p) => p };
 
   // Même personnage, presque rien d'équipé : une arme, deux accessoires, une
@@ -32,11 +32,11 @@ export function renderBuildCardTest({ t, locale, build, source, data, hasPortrai
 <p class="mv-desc"><a href="${esc(source)}" target="_blank" rel="external noopener">${esc(t('buildCard.testSource'))}</a></p>
 
 <h2>${esc(t('buildCard.testComplete'))}</h2>
-${buildCard({ t, build, data, L, hasPortrait })}
+${buildCard({ t, build, data, L, hasPortrait, sizeOf })}
 
 <h2>${esc(t('buildCard.testPartial'))}</h2>
 <p class="mv-desc">${esc(t('buildCard.testPartialLede'))}</p>
-${buildCard({ t, build: lacunaire, data, L, hasPortrait })}
+${buildCard({ t, build: lacunaire, data, L, hasPortrait, sizeOf })}
 </main>
 ${siteFooter(t)}`;
 

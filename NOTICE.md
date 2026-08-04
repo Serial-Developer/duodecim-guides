@@ -59,6 +59,15 @@ dix types de booster et quatre catégories — récupérées par `scripts/fetch-
 `assets/accessory-icons/`. Une seule copie de chaque : le site les associe aux
 551 accessoires par leur rang et leur type, déjà présents dans les données.
 
+### Assets extraits du jeu — © Square Enix
+
+Icônes d'interface tirées des planches de textures de Dissidia 012 (dump
+PPSSPP) : emplacements d'équipement, orbe d'invocation, touches et croix
+directionnelle, badges. Dans `assets/equipment-icons/`, `assets/summon-icons/`,
+`assets/buttons-icons/` et `assets/badges-icons/` — voir `assets/README.md`.
+
+Usage de fan, non commercial, au même titre que les portraits.
+
 **Clause de partage à l'identique** : toute œuvre dérivée de ces contenus doit
 être diffusée sous CC BY-SA 3.0 ou une licence compatible. Cette obligation
 prime sur la licence CC BY-NC-ND que j'applique à mes textes originaux : les

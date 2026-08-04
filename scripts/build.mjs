@@ -325,6 +325,7 @@ for (const locale of activeLocales) {
         source: carte.source,
         data: bundle,
         hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
+        sizeOf,
       }));
     }
   }

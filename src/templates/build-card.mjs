@@ -27,28 +27,26 @@ function hydrate(t) {
 }
 
 // --- Icônes de touches -------------------------------------------------------
-// Redessinées ici, pas reprises d'ailleurs : un cercle pour la bravery, un carré
-// pour l'attaque HP, précédés le cas échéant de leur direction. Tracées en SVG
-// pour rester nettes à toute taille et suivre la couleur du texte.
-const BUTTON = {
-  bravery: '<circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="2"/>',
-  hp: '<rect x="3.5" y="3.5" width="11" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>',
-};
-const ARROW = {
-  back: '<path d="M11 4 L5 9 L11 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
-  forward: '<path d="M7 4 L13 9 L7 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
-};
+// Icônes du jeu, extraites de ses planches de textures : le rond déclenche une
+// bravery, le carré une attaque HP, et la croix directionnelle porte le
+// modificateur. Elles sont minuscules (12 à 15 px) et s'agrandissent au double
+// sans lissage — voir `image-rendering: pixelated` dans la feuille de style.
+const BUTTON_ICON = { bravery: 'btn-circle.png', hp: 'btn-square.png' };
 const DIRECTIONS = ['neutral', 'back', 'forward'];
+const DPAD_ICON = { back: 'dpad-left.png', forward: 'dpad-right.png' };
 
 // Le libellé accessible dit la commande en toutes lettres — « Gauche + Cercle » —
 // là où le dessin ne montre que des formes.
-function keyIcon(t, kind, cmd) {
+function keyIcon(t, L, sizeOf, kind, cmd) {
   const dir = DIRECTIONS[cmd] || 'neutral';
   const label = t(`buildCard.keys.${dir}`, { button: t(`buildCard.keys.${kind}`) });
-  const fleche = ARROW[dir]
-    ? `<svg class="bcard-glyph" viewBox="0 0 18 18" aria-hidden="true" focusable="false">${ARROW[dir]}</svg><span class="bcard-plus" aria-hidden="true">+</span>`
+  const glyphe = (fichier, cls) => `<img class="icon-d12 ${cls}" src="${L.asset(`assets/buttons-icons/${fichier}`)}" alt="" aria-hidden="true"${sizeOf(`buttons-icons/${fichier}`)} loading="lazy">`;
+  const dpad = DPAD_ICON[dir]
+    ? glyphe(DPAD_ICON[dir], 'bcard-dpad') + '<span class="bcard-plus" aria-hidden="true">+</span>'
     : '';
-  return `<span class="bcard-key" role="img" aria-label="${esc(label)}">${fleche}<svg class="bcard-glyph" viewBox="0 0 18 18" aria-hidden="true" focusable="false">${BUTTON[kind]}</svg></span>`;
+  // Le libellé porte la commande en toutes lettres ; les images n'ont donc pas
+  // à la répéter, d'où leur alt vide.
+  return `<span class="bcard-key" role="img" aria-label="${esc(label)}">${dpad}${glyphe(BUTTON_ICON[kind], 'bcard-btn')}</span>`;
 }
 
 // --- Icônes d'accessoire -----------------------------------------------------
@@ -74,16 +72,16 @@ export function accessoryIcons(t, L, item) {
 }
 
 // --- Lignes ------------------------------------------------------------------
-function slotLine(label, valeur, extra = '', ic = null) {
+function slotLine(label, valeur, extra = '', ic = null, labelBrut = false) {
   return `<li class="bcard-line${valeur ? '' : ' is-empty'}">
-<span class="bcard-slot">${esc(label)}</span>
+<span class="bcard-slot">${labelBrut ? label : esc(label)}</span>
 <span class="bcard-value">${ic?.avant || ''}${valeur ? esc(valeur) : ''}${ic?.apres || ''}${extra}</span>
 </li>`;
 }
 
-function attackLine(t, kind, cmd, move) {
+function attackLine(t, L, sizeOf, kind, cmd, move) {
   return `<li class="bcard-line${move ? '' : ' is-empty'}">
-${keyIcon(t, kind, cmd)}
+${keyIcon(t, L, sizeOf, kind, cmd)}
 <span class="bcard-value">${move ? esc(move.name) : ''}</span>
 </li>`;
 }
@@ -102,7 +100,7 @@ function attackIndex(char) {
   return byId;
 }
 
-function attackGrid(t, build, char) {
+function attackGrid(t, L, sizeOf, build, char) {
   const index = attackIndex(char);
   // catégorie -> commande -> coup
   const parCat = {};
@@ -128,7 +126,7 @@ function attackGrid(t, build, char) {
   ];
   return blocs.map(([cat, kind, cle]) => {
     const cases = parCat[cat] || {};
-    const lignes = [0, 1, 2].map((c) => attackLine(t, kind, c, cases[c])).join('\n');
+    const lignes = [0, 1, 2].map((c) => attackLine(t, L, sizeOf, kind, c, cases[c])).join('\n');
     return `<section class="bcard-block">
 <h3 class="bcard-h">${esc(t(`buildCard.${cle}`))}</h3>
 <ul class="bcard-list">${lignes}</ul>
@@ -137,7 +135,7 @@ function attackGrid(t, build, char) {
 }
 
 // --- Carte -------------------------------------------------------------------
-export function buildCard({ t, build, data, L, hasPortrait }) {
+export function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '' }) {
   const char = (data.characters || []).find((c) => c.slug === build.character);
   if (!char) return '';
   const equipement = hydrate(data.equipment);
@@ -158,9 +156,13 @@ export function buildCard({ t, build, data, L, hasPortrait }) {
   const homonymes = {};
   (build.accessories || []).forEach((u) => { if (u && acc[u]) homonymes[acc[u].name] = (homonymes[acc[u].name] || 0) + 1; });
 
+  // Chaque emplacement porte l'icône que le jeu lui donne, à la place de son
+  // nom : l'écran d'équipement se lit ainsi d'un coup d'œil, sans libellé.
   const equipLignes = SLOTS.map((slot) => {
     const item = build.equipment?.[slot] ? eq[build.equipment[slot]] : null;
-    return slotLine(t(`buildCard.slots.${slot}`), item?.name || '');
+    const nom = t(`buildCard.slots.${slot}`);
+    const icone = `<img class="icon-d12 bcard-equip-icon" src="${L.asset(`assets/equipment-icons/equip-${slot}.png`)}" alt="${esc(nom)}" title="${esc(nom)}"${sizeOf(`equipment-icons/equip-${slot}.png`)} loading="lazy">`;
+    return slotLine(icone, item?.name || '', '', null, true);
   }).join('\n');
 
   const accLignes = Array.from({ length: ACCESSORY_SLOTS }, (_, i) => {
@@ -177,7 +179,7 @@ export function buildCard({ t, build, data, L, hasPortrait }) {
 <div class="bcard-ids">
 <p class="bcard-banner">${portrait(char.slug, t('buildCard.portraitAlt', { name: char.name }))}<span class="bcard-name">${esc(char.name)}</span></p>
 <p class="bcard-banner bcard-banner-assist">${assist ? portrait(assist.slug, t('buildCard.assistAlt', { name: assist.name })) : '<span class="bcard-portrait-none" aria-hidden="true"></span>'}<span class="bcard-role">${esc(t('buildCard.assist'))}</span></p>
-<p class="bcard-summon"><span class="bcard-role">${esc(t('buildCard.summon'))}</span><span class="bcard-value">${summon ? esc(summon.name) : ''}</span></p>
+<p class="bcard-summon"><img class="icon-d12 bcard-summon-orb" src="${L.asset('assets/summon-icons/summon-orb.png')}" alt="${esc(t('buildCard.summon'))}" title="${esc(t('buildCard.summon'))}"${sizeOf('summon-icons/summon-orb.png')} loading="lazy"><span class="bcard-value">${summon ? esc(summon.name) : ''}</span></p>
 </div>
 <p class="bcard-title">${build.name ? esc(build.name) : `<span class="bcard-untitled">${esc(t('buildCard.untitled'))}</span>`}</p>
 </header>
@@ -194,7 +196,7 @@ export function buildCard({ t, build, data, L, hasPortrait }) {
 </section>
 </div>
 <div class="bcard-col">
-${attackGrid(t, build, char)}
+${attackGrid(t, L, sizeOf, build, char)}
 </div>
 </div>
 
