@@ -1502,7 +1502,7 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   border-radius: var(--radius);
   padding: 1rem 1.1rem 0.8rem;
   margin: 1rem 0 2rem;
-  max-width: 62rem;
+  max-width: 40rem;
 }
 
 /* En-tête : identité à gauche, nom du build à droite. */
@@ -1550,7 +1550,7 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bcard-untitled { color: var(--muted); font-style: italic; font-size: 1rem; }
 
 /* Corps : deux colonnes, équipement à gauche, attaques à droite. */
-.bcard-body { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1.6rem; padding-top: 0.8rem; }
+.bcard-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0.4rem 1.1rem; padding-top: 0.7rem; }
 .bcard-col { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
 .bcard-block { min-width: 0; }
 .bcard-h {
@@ -1566,8 +1566,8 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bcard-line {
   display: flex;
   align-items: baseline;
-  gap: 0.6rem;
-  padding: 0.24rem 0;
+  gap: 0.45rem;
+  padding: 0.2rem 0;
   border-bottom: 1px solid rgba(157, 134, 232, 0.14);
   font-size: 0.88rem;
   min-height: 1.55rem;
@@ -1577,7 +1577,7 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bcard-line.is-empty { opacity: 0.45; }
 .bcard-slot {
   flex: none;
-  min-width: 4.2rem;
+  min-width: 3.2rem;
   color: var(--muted);
   font-size: 0.76rem;
   letter-spacing: 0.03em;
@@ -1587,7 +1587,7 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bcard-note { display: block; color: var(--muted); font-size: 0.73rem; }
 
 /* Icône de touche : direction facultative, puis le bouton. */
-.bcard-key { flex: none; display: inline-flex; align-items: center; gap: 0.15rem; color: var(--violet); min-width: 3.4rem; }
+.bcard-key { flex: none; display: inline-flex; align-items: center; gap: 0.15rem; color: var(--violet); min-width: 2.9rem; }
 .bcard-glyph { width: 1.05rem; height: 1.05rem; display: block; }
 .bcard-plus { color: var(--muted); font-size: 0.7rem; }
 
