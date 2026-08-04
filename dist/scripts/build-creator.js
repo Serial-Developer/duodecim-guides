@@ -121,10 +121,14 @@
   // 551 accessoires : l'association se fait par `rank` et `boosterType`, que le
   // payload porte déjà. Le type devant le nom, le rang derrière, comme le jeu.
   var ASSET_BASE = (root.getAttribute('data-asset-base') || 'assets/');
+  var ICON_LABEL = {
+    rank: function (v) { return T('accessories.rankIcon', { rank: v }); },
+    type: function (v) { return T('accessories.typeIcon', { type: v }); },
+    cat: function (v) { return T('accessories.categoryIcon', { category: T('accCategories.' + v) || v }); },
+  };
   function accessoryIcon(kind, valeur) {
     if (!valeur) return null;
-    var label = T(kind === 'rank' ? 'accessories.rankIcon' : 'accessories.typeIcon',
-      kind === 'rank' ? { rank: valeur } : { type: valeur });
+    var label = ICON_LABEL[kind](valeur);
     return el('img', {
       class: 'acc-icon acc-icon-' + kind, src: ASSET_BASE + 'accessory-icons/' + kind + '-' + valeur + '.png',
       alt: label, title: label, width: 16, height: 16, loading: 'lazy',
@@ -1882,7 +1886,7 @@
     }
     var main = el('span', { class: 'bc-slot-main' }, [
       el('span', { class: 'bc-row-name' }, [
-        accessoryIcon('type', a.boosterType), a.name, accessoryIcon('rank', a.rank),
+        accessoryIcon('cat', a.category), accessoryIcon('type', a.boosterType), a.name, accessoryIcon('rank', a.rank),
       ]),
       el('span', { class: 'bc-row-meta', text: [a.category, a.effect || a.requirements].filter(Boolean).join(' · ') }),
     ]);
@@ -1971,7 +1975,7 @@
     }, [
       el('span', { class: 'bc-row-main' }, [
         el('span', { class: 'bc-row-name' }, [
-          accessoryIcon('type', a.boosterType), a.name + (count ? ' ×' + count : ''), accessoryIcon('rank', a.rank),
+          accessoryIcon('cat', a.category), accessoryIcon('type', a.boosterType), a.name + (count ? ' ×' + count : ''), accessoryIcon('rank', a.rank),
         ]),
         el('span', { class: 'bc-row-meta', text: [a.category, a.boosterType, a.requirements, a.effect].filter(Boolean).join(' · ') }),
       ]),

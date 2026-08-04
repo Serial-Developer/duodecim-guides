@@ -1624,5 +1624,6 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   image-rendering: pixelated;
   flex: none;
 }
+.acc-icon-cat { margin-right: 0.3rem; }
 .acc-icon-type { margin-right: 0.35rem; }
 .acc-icon-rank { margin-left: 0.35rem; }

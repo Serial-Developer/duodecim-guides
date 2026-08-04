@@ -61,8 +61,14 @@ function keyIcon(t, kind, cmd) {
 export function accessoryIcons(t, L, item) {
   if (!item) return { avant: '', apres: '' };
   const img = (fichier, label, quoi) => `<img class="acc-icon acc-icon-${quoi}" src="${L.asset(`assets/accessory-icons/${fichier}`)}" alt="${esc(label)}" title="${esc(label)}" width="16" height="16" loading="lazy">`;
+  const categorie = item.category
+    ? img(`cat-${item.category}.png`, t('accessories.categoryIcon', { category: t(`accessories.categories.${item.category}`) || item.category }), 'cat')
+    : '';
+  const type = item.boosterType
+    ? img(`type-${item.boosterType}.png`, t('accessories.typeIcon', { type: item.boosterType }), 'type')
+    : '';
   return {
-    avant: item.boosterType ? img(`type-${item.boosterType}.png`, t('accessories.typeIcon', { type: item.boosterType }), 'type') : '',
+    avant: categorie + type,
     apres: item.rank ? img(`rank-${item.rank}.png`, t('accessories.rankIcon', { rank: item.rank }), 'rank') : '',
   };
 }

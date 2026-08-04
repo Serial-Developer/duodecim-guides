@@ -601,7 +601,8 @@
       "rankLimitMany": "Rank {rank}: {max} copies at most",
       "slotTitle": "Accessory slot {index}",
       "rankIcon": "Rank {rank}",
-      "typeIcon": "{type} booster"
+      "typeIcon": "{type} booster",
+      "categoryIcon": "{category} accessory"
     },
     "assist": {
       "title": "Assist",
@@ -817,6 +818,13 @@
   },
   "accessories": {
     "rankIcon": "Rank {rank}",
-    "typeIcon": "{type} booster"
+    "typeIcon": "{type} booster",
+    "categoryIcon": "{category} accessory",
+    "categories": {
+      "basic": "Basic",
+      "booster": "Booster",
+      "special": "Special",
+      "trade": "Trade"
+    }
   }
 }
