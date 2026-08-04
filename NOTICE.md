@@ -54,8 +54,8 @@ moveset (rôles et jobs par coup, coups spéciaux).
 Extrait par `scripts/scrape-builddata.mjs` vers `data/build/equipment.json` et
 `data/build/accessories.json`.
 
-S'y ajoutent quatorze icônes d'interface du jeu — quatre rangs d'accessoire et
-dix types de booster — récupérées par `scripts/fetch-accessory-icons.mjs` vers
+S'y ajoutent dix-huit icônes d'interface du jeu — quatre rangs d'accessoire,
+dix types de booster et quatre catégories — récupérées par `scripts/fetch-accessory-icons.mjs` vers
 `assets/accessory-icons/`. Une seule copie de chaque : le site les associe aux
 551 accessoires par leur rang et leur type, déjà présents dans les données.
 

@@ -37,6 +37,13 @@ const ICONS = {
   'DFF-STG-Icon.png': 'type-STG.png',
   'DFF-TIME-Icon.png': 'type-TIME.png',
   'DFF-LV-Icon.png': 'type-LV.png',
+  // Icônes de catégorie. Le wiki les emploie en en-tête de section, et à la
+  // place du rang sur les treize accessoires Qu'Bia — les seuls qu'il ne
+  // classe pas. C'est donc le seul repère visuel dont ceux-là disposent.
+  'DFF-Basic-Icon.png': 'cat-basic.png',
+  'DFF-Booster-Icon.png': 'cat-booster.png',
+  'DFF-Special-Icon.png': 'cat-special.png',
+  'DFF-Trade-Icon.png': 'cat-trade.png',
 };
 
 const API = 'https://finalfantasy.fandom.com/api.php';
