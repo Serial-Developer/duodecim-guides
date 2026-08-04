@@ -1491,3 +1491,124 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   .sh-tools { display: none; }
   .lang-bar { font-size: 0.85rem; padding: 0.5rem 0.75rem; }
 }
+
+/* --- Carte de build ---------------------------------------------------------
+   Récapitulatif d'un build entier, pensé pour être lu et capturé d'un seul
+   écran. Fond opaque et aucune ombre portée débordante : une capture ne doit
+   rien couper ni laisser de bord translucide. */
+.bcard {
+  background: var(--surface);
+  border: 1px solid rgba(157, 134, 232, 0.35);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem 0.8rem;
+  margin: 1rem 0 2rem;
+  max-width: 62rem;
+}
+
+/* En-tête : identité à gauche, nom du build à droite. */
+.bcard-head {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(157, 134, 232, 0.25);
+}
+.bcard-ids { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
+/* Bannière : portrait à gauche, plaque de nom à droite. */
+.bcard-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  background: rgba(157, 134, 232, 0.1);
+  border: 1px solid rgba(157, 134, 232, 0.25);
+  border-radius: 8px;
+  padding: 0.25rem 0.7rem 0.25rem 0.25rem;
+}
+.bcard-banner img, .bcard-portrait-none {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 6px;
+  flex: none;
+  object-fit: cover;
+}
+.bcard-portrait-none { background: rgba(157, 134, 232, 0.16); display: block; }
+.bcard-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--gold); font-weight: 600; }
+.bcard-role { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.bcard-summon { display: flex; align-items: baseline; gap: 0.5rem; margin: 0; padding-left: 0.25rem; }
+.bcard-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--text);
+  text-align: right;
+  flex: 1;
+  min-width: 8rem;
+}
+.bcard-untitled { color: var(--muted); font-style: italic; font-size: 1rem; }
+
+/* Corps : deux colonnes, équipement à gauche, attaques à droite. */
+.bcard-body { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1.6rem; padding-top: 0.8rem; }
+.bcard-col { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
+.bcard-block { min-width: 0; }
+.bcard-h {
+  margin: 0 0 0.3rem;
+  font-size: 0.78rem;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+.bcard-list { list-style: none; margin: 0; padding: 0; }
+.bcard-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.24rem 0;
+  border-bottom: 1px solid rgba(157, 134, 232, 0.14);
+  font-size: 0.88rem;
+  min-height: 1.55rem;
+}
+/* Un emplacement vide garde sa ligne : c'est ce qui permet de lire un build
+   « en creux ». Il est estompé sans disparaître. */
+.bcard-line.is-empty { opacity: 0.45; }
+.bcard-slot {
+  flex: none;
+  min-width: 4.2rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+}
+.bcard-list-acc .bcard-slot { min-width: 1.4rem; text-align: right; font-family: var(--font-mono); }
+.bcard-value { color: var(--text); min-width: 0; }
+.bcard-note { display: block; color: var(--muted); font-size: 0.73rem; }
+
+/* Icône de touche : direction facultative, puis le bouton. */
+.bcard-key { flex: none; display: inline-flex; align-items: center; gap: 0.15rem; color: var(--violet); min-width: 3.4rem; }
+.bcard-glyph { width: 1.05rem; height: 1.05rem; display: block; }
+.bcard-plus { color: var(--muted); font-size: 0.7rem; }
+
+.bcard-foot {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(157, 134, 232, 0.25);
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.bcard-url { font-family: var(--font-mono); }
+
+@media (max-width: 599px) {
+  /* Colonnes empilées : équipement, accessoires, puis les attaques. La carte
+     doit rester lisible sans défilement horizontal. */
+  .bcard-body { grid-template-columns: 1fr; gap: 0.9rem; }
+  .bcard-title { text-align: left; }
+  .bcard-head { gap: 0.6rem; }
+  .bcard { padding: 0.8rem; }
+}

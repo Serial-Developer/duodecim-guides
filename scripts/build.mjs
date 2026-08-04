@@ -23,6 +23,7 @@ import { renderCalendrier } from '../src/templates/calendrier.mjs';
 import { renderFeralUnlock } from '../src/templates/feral-unlock.mjs';
 import { renderMultiplayer } from '../src/templates/multiplayer.mjs';
 import { renderBuildCreator } from '../src/templates/build-creator.mjs';
+import { renderBuildCardTest } from '../src/templates/build-card-test.mjs';
 import { buildDataBundle } from './build-data-bundle.mjs';
 import { slugAnchor, speedValues, siteHeader, siteFooter, buildRoster, linksFor } from '../src/templates/helpers.mjs';
 import { PAGES, seoFor, ogPathFor, writeSitemap, write404, writeHumansTxt } from './seo.mjs';
@@ -311,6 +312,21 @@ for (const locale of activeLocales) {
       i18nPayload: buildCreatorStrings(t),
       seo,
     }));
+
+    // Page de validation de la carte de build. Hors sitemap, hors navigation et
+    // en noindex : elle sert à juger le rendu, pas à être trouvée. Elle n'est
+    // écrite que pour la langue par défaut — c'est un banc d'essai, pas une
+    // page du site.
+    const carte = readJson(join(ROOT, 'data', 'build-card-test.json'));
+    if (carte?.build) {
+      writeFileSync(join(DIST, 'build-card-test.html'), renderBuildCardTest({
+        ...i18n('build-card-test.html', {}),
+        build: carte.build,
+        source: carte.source,
+        data: bundle,
+        hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
+      }));
+    }
   }
 
   emit('techniques', (x) => renderTechniques(readEd(locale, '_shared'), x.seo, x));

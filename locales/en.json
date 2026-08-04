@@ -778,5 +778,39 @@
   "humans": {
     "languageName": "English",
     "subject": "Dissidia 012 [duodecim] Final Fantasy (PSP, 2011) — competitive guides"
+  },
+  "buildCard": {
+    "equipment": "Equipment",
+    "accessories": "Accessories",
+    "groundBravery": "Ground bravery",
+    "airBravery": "Air bravery",
+    "groundHp": "Ground HP attacks",
+    "airHp": "Air HP attacks",
+    "assist": "Assist",
+    "summon": "Summon",
+    "untitled": "Untitled build",
+    "portraitAlt": "{name} portrait",
+    "assistAlt": "{name}, assist",
+    "credit": "Dissidia 012 [duodecim] — competitive guides",
+    "creditUrl": "serial-developer.github.io/duodecim-guides",
+    "slots": {
+      "weapon": "Weapon",
+      "hand": "Hand",
+      "head": "Head",
+      "body": "Body"
+    },
+    "keys": {
+      "bravery": "Circle",
+      "hp": "Square",
+      "neutral": "{button}",
+      "back": "Left + {button}",
+      "forward": "Right + {button}"
+    },
+    "testTitle": "Build card — preview",
+    "testLede": "Test page for the build card component. Not part of the site: it is absent from the sitemap and the navigation, and declares noindex.",
+    "testSource": "Source build, in the build creator",
+    "testComplete": "Complete build",
+    "testPartial": "Sparse build",
+    "testPartialLede": "Same character, almost nothing equipped: the grid must stay whole and readable."
   }
 }

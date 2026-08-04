@@ -778,5 +778,39 @@
   "humans": {
     "languageName": "français",
     "subject": "Dissidia 012 [duodecim] Final Fantasy (PSP, 2011) — guides compétitifs"
+  },
+  "buildCard": {
+    "equipment": "Équipement",
+    "accessories": "Accessoires",
+    "groundBravery": "Braveries au sol",
+    "airBravery": "Braveries en l’air",
+    "groundHp": "Attaques HP au sol",
+    "airHp": "Attaques HP en l’air",
+    "assist": "Assist",
+    "summon": "Invocation",
+    "untitled": "Build sans nom",
+    "portraitAlt": "Portrait de {name}",
+    "assistAlt": "{name}, en assist",
+    "credit": "Dissidia 012 [duodecim] — guides compétitifs",
+    "creditUrl": "serial-developer.github.io/duodecim-guides",
+    "slots": {
+      "weapon": "Arme",
+      "hand": "Main",
+      "head": "Tête",
+      "body": "Corps"
+    },
+    "keys": {
+      "bravery": "Cercle",
+      "hp": "Carré",
+      "neutral": "{button}",
+      "back": "Gauche + {button}",
+      "forward": "Droite + {button}"
+    },
+    "testTitle": "Carte de build — aperçu",
+    "testLede": "Page d’essai du composant de carte de build. Elle n’appartient pas au site : absente du sitemap et de la navigation, elle se déclare en noindex.",
+    "testSource": "Le build source, dans le créateur de builds",
+    "testComplete": "Build complet",
+    "testPartial": "Build lacunaire",
+    "testPartialLede": "Même personnage, presque rien d’équipé : la grille doit rester entière et lisible."
   }
 }
