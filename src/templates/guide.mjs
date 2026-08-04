@@ -429,7 +429,29 @@ ${buildsTables(t, g.tables, ctx)}`;
 ${desc?.length ? paras(desc) : ''}
 ${buildsTables(t, sub.tables, ctx)}`;
   }).join('\n');
-  return `${main}\n${subsHtml}`;
+  return `${main}\n${subsHtml}\n${communityBuilds(t, opts?.community)}`;
+}
+
+// Builds relevés hors du wiki — guides et fils de forum. Ils n'ont pas de
+// tableau : la source ne donne que de la prose. Chacun porte son nom et son
+// auteur, plutôt que d'être noyé dans l'introduction de la section.
+function communityBuilds(t, community) {
+  const list = community?.builds || [];
+  if (!list.length) return '';
+  const blocs = list.map((b) => {
+    // Le nom vient de la source ; sans lui on ne rend rien plutôt que
+    // d'improviser un titre.
+    if (!b.name) return '';
+    const credit = b.source
+      ? ` <span class="mv-meta">— ${b.url ? `<a href="${esc(b.url)}" target="_blank" rel="external noopener">${esc(b.source)}</a>` : esc(b.source)}</span>`
+      : '';
+    return `<h4>${esc(b.name)}${credit}</h4>
+${paras(b.text || [])}`;
+  }).filter(Boolean).join('\n');
+  if (!blocs) return '';
+  return `<h3>${esc(t('guide.builds.communityTitle'))}</h3>
+${community.intro?.length ? paras(community.intro) : ''}
+${blocs}`;
 }
 
 // Diagramme des Skillchains (Prishe) : starter(s) --nom--> finisher(s)
@@ -732,6 +754,9 @@ ${buildsSection(t, s.builds, allMoves, {
     // Description propre à chaque build, indexée par le nom d'onglet du wiki :
     // elle s'affiche juste avant la composition qu'elle commente.
     perBuild: ed?.builds?.perBuild,
+    // Builds relevés hors wiki (guides et forums), sans tableau : ils forment
+    // leur propre bloc, chacun sous son nom et sa source.
+    community: ed?.builds?.community,
   })}
 ${ed?.builds?.notes ? `<p class="mv-desc">${esc(ed.builds.notes)}</p>` : ''}
 ${sectionSources(t, secSrc.builds)}`

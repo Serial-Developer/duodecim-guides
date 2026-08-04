@@ -122,10 +122,45 @@
         "The second documented build, “Hybrid (Seal of Lufenia)”, is an all-rounder with stronger EX depletion, recommended against characters with good EX generation or in long EX-heavy matchups (Gabranth, Gilgamesh, Prishe, Lightning, Garland, Tidus): the Lufenian set with Piggy's Stick, the Kuja or Tidus assist, Bravery Orb to improve bravery recovery, Tenacious Attacker, Hero's Essence (max CP 480) and First to Victory for the opening."
       ]
     },
-    "_communautaires": [
-      "Phaze08's guide “The Brutal Blitzer from Zanarkand” (dissidiaforums, August 2011, through the Wayback Machine) compiles three builds drawn from the “Jecht Builds” thread. The Pure EX build (credited to Hollowed) gives up assists: Jecht Beam as the pivot HP attack (huge EX gain, bypassing Assist Change and EX Revenge as a self-sufficient HP attack), Auto Assist Lock On so charged moves hit assists too, Concentration++ to force the opponent in when they flee EX Mode, EXP to EX, and Peltast's Gear to equip Excalibur II — a permanent multiplier of at least x2.7 (x4 if Large Gap in HP triggers) peaking at EX Intake Range +7 m, EX Force Absorption +65%, EX Core +25%, assist depletion +35% and permanent EX Force absorption. The Pure Assist build (the author's own) leans on boosters active 100% of the time, Together as One, Sturm and Drang and Battle Gem: +148% Wall Rush damage and +77% assist duration in total, with Assist Gauge up Dash judged “100% necessary” (Jecht builds his gauge poorly on his own) and Assist Critical Boost. The Machines build (credited to Veysey) sacrifices the assist and HP (around 7500) for raw damage: boosters all active as soon as the summon is spent, +34% physical damage, +196% and more bravery on Wall Rush, +30% on chase — every chase becomes a mixup between devastating bravery, an HP attack that drains the assist, and roughly a quarter of an EX Force bar per hit.",
-      "On the GameFAQs side, the thread “Good physical damage jecht build, who has one?” (2011) documents Espeon8's damage build, adopted by the rest of the thread: Hyper Ring, Muscle Belt and Sniper Eye (for the Wall Rush) with boosters that can be kept up continuously (HP = 100%, Pre-EX Mode, Pre-EX Revenge, Summon Unused, Large Gap in HP), and the machines outfit through Chemist's Lore > Equip Machines — Auto-Crossbow (+15% physical damage) and Chainsaw (+20% HP damage on Wall Rush) — judged superior to anything Jecht normally carries in those slots, short of the complete Ancient set."
-    ]
+    "community": {
+      "intro": [
+        "Phaze08's guide “The Brutal Blitzer from Zanarkand” (dissidiaforums, August 2011, through the Wayback Machine) compiles three builds drawn from the “Jecht Builds” thread."
+      ],
+      "builds": [
+        {
+          "name": "Pure EX",
+          "source": "Hollowed",
+          "url": "https://web.archive.org/web/20131114035245/http://dissidiaforums.com/showthread.php?11017-The-Brutal-Blitzer-From-Zanarkand-A-Guide-to-Learning-Jecht",
+          "text": [
+            "The Pure EX build (credited to Hollowed) gives up assists: Jecht Beam as the pivot HP attack (huge EX gain, bypassing Assist Change and EX Revenge as a self-sufficient HP attack), Auto Assist Lock On so charged moves hit assists too, Concentration++ to force the opponent in when they flee EX Mode, EXP to EX, and Peltast's Gear to equip Excalibur II — a permanent multiplier of at least x2.7 (x4 if Large Gap in HP triggers) peaking at EX Intake Range +7 m, EX Force Absorption +65%, EX Core +25%, assist depletion +35% and permanent EX Force absorption."
+          ]
+        },
+        {
+          "name": "Pure Assist",
+          "source": "Phaze08",
+          "url": "https://web.archive.org/web/20131114035245/http://dissidiaforums.com/showthread.php?11017-The-Brutal-Blitzer-From-Zanarkand-A-Guide-to-Learning-Jecht",
+          "text": [
+            "The Pure Assist build (the author's own) leans on boosters active 100% of the time, Together as One, Sturm and Drang and Battle Gem: +148% Wall Rush damage and +77% assist duration in total, with Assist Gauge up Dash judged “100% necessary” (Jecht builds his gauge poorly on his own) and Assist Critical Boost."
+          ]
+        },
+        {
+          "name": "Machines",
+          "source": "Veysey",
+          "url": "https://web.archive.org/web/20131114035245/http://dissidiaforums.com/showthread.php?11017-The-Brutal-Blitzer-From-Zanarkand-A-Guide-to-Learning-Jecht",
+          "text": [
+            "The Machines build (credited to Veysey) sacrifices the assist and HP (around 7500) for raw damage: boosters all active as soon as the summon is spent, +34% physical damage, +196% and more bravery on Wall Rush, +30% on chase — every chase becomes a mixup between devastating bravery, an HP attack that drains the assist, and roughly a quarter of an EX Force bar per hit."
+          ]
+        },
+        {
+          "name": "Damage",
+          "source": "Espeon8",
+          "url": "https://gamefaqs.gamespot.com/boards/605802-dissidia-012-duodecim-final-fantasy/58794910",
+          "text": [
+            "On the GameFAQs side, the thread “Good physical damage jecht build, who has one?” (2011) documents Espeon8's damage build, adopted by the rest of the thread: Hyper Ring, Muscle Belt and Sniper Eye (for the Wall Rush) with boosters that can be kept up continuously (HP = 100%, Pre-EX Mode, Pre-EX Revenge, Summon Unused, Large Gap in HP), and the machines outfit through Chemist's Lore > Equip Machines — Auto-Crossbow (+15% physical damage) and Chainsaw (+20% HP damage on Wall Rush) — judged superior to anything Jecht normally carries in those slots, short of the complete Ancient set."
+          ]
+        }
+      ]
+    }
   },
   "assist": {
     "asAssist": [

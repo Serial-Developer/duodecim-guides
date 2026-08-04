@@ -252,7 +252,8 @@
       "loadoutHp": "Attaques HP équipées",
       "creatorLink": "Composer et vérifier un build de {name} emplacement par emplacement : <a href=\"{href}\"{langAttr}>créateur de builds</a> (jauge de CP, exclusions d’abilities et règles tournoi appliquées).",
       "unnamed": "Build",
-      "unnamedNumbered": "Build {n}"
+      "unnamedNumbered": "Build {n}",
+      "communityTitle": "Builds communautaires"
     },
     "gameplan": {
       "videoFallback": "Vidéo de démonstration",
