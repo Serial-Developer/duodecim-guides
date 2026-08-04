@@ -41,25 +41,3 @@ export function pathFor(key, locale) {
 // Chemin publié du guide d'un personnage.
 export const guidePathFor = (slug, locale) => `${localeDir(locale)}characters/${slug}.html`;
 
-// Alternates d'une page : { locale -> chemin }, pour les liens hreflang et le
-// sélecteur de langue. `available` restreint aux locales où la page existe
-// réellement (voir la règle de fallback : une page sans prose n'est pas générée,
-// et ne doit alors pas être annoncée comme alternative).
-export function alternatesFor(key, { available = LOCALES } = {}) {
-  const out = {};
-  for (const l of LOCALES) if (available.includes(l)) out[l] = pathFor(key, l);
-  return out;
-}
-
-export function guideAlternatesFor(slug, { available = LOCALES } = {}) {
-  const out = {};
-  for (const l of LOCALES) if (available.includes(l)) out[l] = guidePathFor(slug, l);
-  return out;
-}
-
-// Correspondance inverse : chemin publié -> clé logique. Sert au sélecteur de
-// langue côté client, qui doit retrouver l'équivalent de la page courante.
-export function routeKeyOf(file, locale) {
-  for (const [key, entry] of Object.entries(ROUTES)) if (entry[locale] === file) return key;
-  return null;
-}

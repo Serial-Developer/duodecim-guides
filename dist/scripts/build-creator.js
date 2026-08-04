@@ -406,12 +406,6 @@
     return { state: 'glitch', label: T('equipState.needsGlitch') };
   }
 
-  function itemLegality(item) {
-    // Aucun équipement listé n'est banni par le ruleset : les artefacts, seuls
-    // équipements interdits, sont générés aléatoirement et n'ont pas de fiche.
-    if (item.legal === false) return { legal: false, reason: illegalReason(item) };
-    return { legal: true, reason: null };
-  }
 
   // --- Sets d'équipement actifs --------------------------------------------
   // Un set « à trois pièces » peut en lister quatre : trois suffisent. On compte
