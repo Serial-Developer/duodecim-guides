@@ -250,7 +250,9 @@
       "cpDesc": "The wiki leaves the equipped-moves table empty for this build (or these builds): that moveset is not documented. Instead, here is the CP cost of every move, to weigh against the build's total. The most expensive moves are at the top.",
       "loadoutBravery": "Equipped Bravery attacks",
       "loadoutHp": "Equipped HP attacks",
-      "creatorLink": "Build and check a {name} loadout slot by slot: <a href=\"{href}\"{langAttr}>build creator</a> (CP gauge, ability exclusions and tournament rules applied)."
+      "creatorLink": "Build and check a {name} loadout slot by slot: <a href=\"{href}\"{langAttr}>build creator</a> (CP gauge, ability exclusions and tournament rules applied).",
+      "unnamed": "Build",
+      "unnamedNumbered": "Build {n}"
     },
     "gameplan": {
       "videoFallback": "Demonstration video",

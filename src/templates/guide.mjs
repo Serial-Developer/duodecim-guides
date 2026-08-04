@@ -388,7 +388,12 @@ function splitBuilds(builds) {
 }
 
 function buildsSection(t, builds, allMoves, opts) {
-  const subs = (builds?.subs || []).filter((sub) => sub.text.length || sub.tables.length);
+  // Un sous-bloc n'est retenu que s'il a des tableaux : sa prose est celle du
+  // wiki, que la fiche ne rend pas (l'éditorial la remplace, comme partout
+  // ailleurs). Filtrer sur `text` laissait donc passer des blocs dont rien
+  // n'était affichable — « Build Overview », « CP Allocation », les trois
+  // « Attacks » de Jecht s'affichaient en titres sans rien dessous.
+  const subs = (builds?.subs || []).filter((sub) => sub.tables.length);
   const groups = [builds?.tables, ...subs.map((s) => s.tables)];
   const totals = collectCpTotals(groups);
   // Le panneau est requis dès qu'un tableau de moveset est vide, même si aucun total
@@ -396,18 +401,34 @@ function buildsSection(t, builds, allMoves, opts) {
   const needed = groups.some((g) => (g || []).some(isEmptyMoveset));
   const ctx = { pending: needed ? (opts?.loadout ? loadoutTables(t, opts.loadout) : cpBudgetPanel(t, totals, allMoves, opts)) : '' };
 
+  // Tous les builds passent par le même rendu, y compris quand il n'y en a
+  // qu'un : sans cela le premier build n'avait pas de titre — la prose
+  // enchaînait sur son tableau de stats — alors que les suivants, portés par
+  // des sous-blocs, en avaient un. Le lecteur ne voyait pas où il commençait.
   const builtGroups = splitBuilds(builds);
-  // Un seul build : rien à démêler, la description éditoriale le précède déjà.
-  const main = builtGroups.length < 2
-    ? buildsTables(t, builds?.tables, ctx)
-    : builtGroups.map((g) => {
-      const desc = g.name ? opts?.perBuild?.[g.name] : null;
-      return `${g.name ? `<h3>${esc(g.name)}</h3>` : ''}
+  const main = builtGroups.map((g, i) => {
+    const desc = g.name ? opts?.perBuild?.[g.name] : null;
+    // Le wiki ne nomme pas toujours son onglet (Firion). Plutôt que d'inventer
+    // un nom, on numérote : le lecteur voit où le build commence, et rien n'est
+    // affirmé sur ce qu'il est.
+    const titre = g.name || (builtGroups.length > 1
+      ? t('guide.builds.unnamedNumbered', { n: i + 1 })
+      : t('guide.builds.unnamed'));
+    return `<h3>${esc(titre)}</h3>
 ${desc?.length ? paras(desc) : ''}
 ${buildsTables(t, g.tables, ctx)}`;
-    }).join('\n');
+  }).join('\n');
 
-  const subsHtml = subs.map((sub) => `${sub.title ? `<h3>${esc(sub.title)}</h3>` : ''}${buildsTables(t, sub.tables, ctx)}`).join('\n');
+  // Un build peut arriver par un sous-bloc plutôt que par un groupe de tableaux
+  // (le wiki n'est pas régulier là-dessus) : il reçoit alors sa description
+  // éditoriale comme les autres, par le même `perBuild`, sans quoi seuls les
+  // builds du premier type en auraient une.
+  const subsHtml = subs.map((sub) => {
+    const desc = sub.title ? opts?.perBuild?.[sub.title] : null;
+    return `${sub.title ? `<h3>${esc(sub.title)}</h3>` : ''}
+${desc?.length ? paras(desc) : ''}
+${buildsTables(t, sub.tables, ctx)}`;
+  }).join('\n');
   return `${main}\n${subsHtml}`;
 }
 

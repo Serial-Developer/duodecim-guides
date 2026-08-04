@@ -250,7 +250,9 @@
       "cpDesc": "Le wiki laisse vide le tableau des coups équipés de ce ou ces builds : ce moveset n'est pas documenté. À défaut, voici le coût en CP de chaque coup, à mettre en regard du total du build. Les coups les plus chers sont en haut.",
       "loadoutBravery": "Braveries équipées",
       "loadoutHp": "Attaques HP équipées",
-      "creatorLink": "Composer et vérifier un build de {name} emplacement par emplacement : <a href=\"{href}\"{langAttr}>créateur de builds</a> (jauge de CP, exclusions d’abilities et règles tournoi appliquées)."
+      "creatorLink": "Composer et vérifier un build de {name} emplacement par emplacement : <a href=\"{href}\"{langAttr}>créateur de builds</a> (jauge de CP, exclusions d’abilities et règles tournoi appliquées).",
+      "unnamed": "Build",
+      "unnamedNumbered": "Build {n}"
     },
     "gameplan": {
       "videoFallback": "Vidéo de démonstration",
