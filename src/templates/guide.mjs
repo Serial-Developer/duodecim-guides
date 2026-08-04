@@ -388,12 +388,16 @@ function splitBuilds(builds) {
 }
 
 function buildsSection(t, builds, allMoves, opts) {
-  // Un sous-bloc n'est retenu que s'il a des tableaux : sa prose est celle du
-  // wiki, que la fiche ne rend pas (l'éditorial la remplace, comme partout
-  // ailleurs). Filtrer sur `text` laissait donc passer des blocs dont rien
-  // n'était affichable — « Build Overview », « CP Allocation », les trois
-  // « Attacks » de Jecht s'affichaient en titres sans rien dessous.
-  const subs = (builds?.subs || []).filter((sub) => sub.tables.length);
+  // Un sous-bloc n'est retenu que s'il porte un contenu qui lui est propre. Sa
+  // prose est celle du wiki, que la fiche ne rend pas (l'éditorial la remplace,
+  // comme partout ailleurs) ; et un tableau de moveset laissé vide par le wiki
+  // n'est pas un contenu — c'est un emplacement que le panneau des coûts en CP
+  // vient occuper, panneau qui décrit la page entière et non ce bloc-là.
+  // Sans ces deux exclusions, « Build Overview », « CP Allocation » et les
+  // « Attacks » s'affichaient en titres vides ou coiffaient un tableau de CP
+  // qu'ils ne décrivaient pas.
+  const aDuContenu = (tb) => tb.rows?.length && !isEmptyMoveset(tb);
+  const subs = (builds?.subs || []).filter((sub) => sub.tables.some(aDuContenu));
   const groups = [builds?.tables, ...subs.map((s) => s.tables)];
   const totals = collectCpTotals(groups);
   // Le panneau est requis dès qu'un tableau de moveset est vide, même si aucun total
@@ -429,7 +433,12 @@ ${buildsTables(t, g.tables, ctx)}`;
 ${desc?.length ? paras(desc) : ''}
 ${buildsTables(t, sub.tables, ctx)}`;
   }).join('\n');
-  return `${main}\n${subsHtml}\n${communityBuilds(t, opts?.community)}`;
+  // Le panneau des coûts en CP prend normalement la place du premier tableau de
+  // moveset vide. Si aucun n'a subsisté dans un bloc affiché, il se place en fin
+  // de section : il porte sa propre légende et n'a pas besoin d'un titre hôte.
+  const orphelin = ctx.pending || '';
+  ctx.pending = null;
+  return `${main}\n${subsHtml}\n${orphelin}\n${communityBuilds(t, opts?.community)}`;
 }
 
 // Builds relevés hors du wiki — guides et fils de forum. Ils n'ont pas de
