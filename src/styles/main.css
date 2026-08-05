@@ -1570,21 +1570,37 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    La valeur vaut pour le cadrage de Sephiroth ; le vide va de 0 % (Yuna) à 17 %
    (Lightning) selon les portraits, un recadrage par personnage sera nécessaire
    si la variante est retenue. */
-.bcard-portrait-full .bcard-aside { grid-row: 1 / -1; }
+/* Le bandeau s'arrête au corps : il descendait jusqu'au bas de la carte, et le
+   pied — décalé à sa droite comme le reste — voyait son trait démarrer au
+   milieu de la carte. Le pied reprend donc toute la largeur, et le coin
+   inférieur gauche du portrait tombe pile au départ du trait, à la marge du
+   pied près. */
+.bcard-portrait-full .bcard-aside { grid-row: 1 / 3; }
+.bcard-portrait-full > .bcard-foot { grid-column: 1 / -1; }
 .bcard-portrait-full .bcard-aside img { inset: auto 0 0 0; height: 118%; }
-/* La hauteur du seul en-tête. Le portrait y est traité en fond de carte : il
-   déborde sous le rembourrage jusqu'aux bords, coin arrondi compris, au lieu
-   de flotter en vignette détachée. Les marges négatives portent le débord, le
-   rembourrage le rend à l'image — qui, en position absolue, remplit la boîte
-   de rembourrage entière. */
+
+/* Variante 2 : le portrait devient le fond de l'en-tête. Il ne prend plus de
+   colonne — il partage sa cellule avec l'en-tête, qui passe au-dessus — donc
+   il ne décale plus rien, et il se montre entier au lieu d'être coupé en
+   bandeau. Il déborde sous le rembourrage jusqu'aux bords de la carte, coin
+   arrondi compris : les marges négatives portent le débord, le rembourrage le
+   rend à l'image, qui remplit la boîte de rembourrage entière. */
 .bcard-portrait-tall { overflow: hidden; }
+/* Seul l'en-tête laisse sa place au portrait ; le corps et le pied reprennent
+   toute la largeur. C'est là que le décalage se voyait : les colonnes et le
+   trait du pied démarraient au milieu de la carte, avec un grand vide sous le
+   portrait. */
+.bcard-portrait-tall > .bcard-body,
+.bcard-portrait-tall > .bcard-foot { grid-column: 1 / -1; }
 .bcard-portrait-tall .bcard-aside {
   grid-row: 1;
+  aspect-ratio: 1;
+  width: auto;
   margin: -1rem 0 0 -1.1rem;
   padding: 1rem 0 0 1.1rem;
-  width: calc(6.5rem + 1.1rem);
   border-radius: var(--radius) 0 0 0;
 }
+.bcard-portrait-tall .bcard-aside img { object-fit: contain; object-position: bottom center; }
 
 /* Corps : deux colonnes, équipement à gauche, attaques à droite. */
 .bcard-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0.4rem 1.1rem; padding-top: 0.7rem; }
