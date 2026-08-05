@@ -1505,7 +1505,8 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   max-width: 40rem;
 }
 
-/* En-tête : identité à gauche, nom du build à droite. */
+/* En-tête : personnage et nom du build à gauche, assist et invocation à droite —
+   les deux renforts se lisent ensemble, à l'écart de l'identité du build. */
 .bcard-head {
   display: flex;
   gap: 1rem;
@@ -1515,17 +1516,15 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   padding-bottom: 0.7rem;
   border-bottom: 1px solid rgba(157, 134, 232, 0.25);
 }
-.bcard-ids { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
-/* Bannière : portrait à gauche, plaque de nom à droite. */
+.bcard-ids { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.bcard-side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; min-width: 0; }
+/* Bannière : portrait puis nom, sans cadre — le portrait se suffit à lui-même
+   et un encadré de plus alourdissait un en-tête déjà bordé. */
 .bcard-banner {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   margin: 0;
-  background: rgba(157, 134, 232, 0.1);
-  border: 1px solid rgba(157, 134, 232, 0.25);
-  border-radius: 8px;
-  padding: 0.25rem 0.7rem 0.25rem 0.25rem;
 }
 .bcard-banner img, .bcard-portrait-none {
   width: 2.6rem;
@@ -1537,17 +1536,37 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bcard-portrait-none { background: rgba(157, 134, 232, 0.16); display: block; }
 .bcard-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--gold); font-weight: 600; }
 .bcard-role { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
-.bcard-summon { display: flex; align-items: baseline; gap: 0.5rem; margin: 0; padding-left: 0.25rem; }
+.bcard-summon { display: flex; align-items: center; gap: 0.5rem; margin: 0; }
 .bcard-title {
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.35rem;
   color: var(--text);
-  text-align: right;
-  flex: 1;
-  min-width: 8rem;
+  min-width: 0;
 }
 .bcard-untitled { color: var(--muted); font-style: italic; font-size: 1rem; }
+
+/* Portrait en bandeau latéral (variantes à l'essai). La carte passe en grille
+   pour que le bandeau puisse couvrir soit tout, soit le seul en-tête ; le nom
+   ne bouge pas, il reste en haut de l'en-tête. */
+.bcard-has-aside {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
+  column-gap: 1.1rem;
+}
+.bcard-has-aside > .bcard-head,
+.bcard-has-aside > .bcard-body,
+.bcard-has-aside > .bcard-foot { grid-column: 2; }
+/* Le portrait est en position absolue pour que sa hauteur propre n'entre pas
+   dans le calcul de la grille : sans cela un portrait carré de 104 px forçait
+   la rangée de l'en-tête à 104 px au lieu de la laisser à sa hauteur. */
+.bcard-aside { grid-column: 1; position: relative; overflow: hidden; border-radius: 8px; width: 6.5rem; }
+.bcard-aside img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+/* Toute la hauteur de la carte. */
+.bcard-portrait-full .bcard-aside { grid-row: 1 / -1; }
+/* La hauteur du seul en-tête, soit personnage + assist. */
+.bcard-portrait-tall .bcard-aside { grid-row: 1; }
 
 /* Corps : deux colonnes, équipement à gauche, attaques à droite. */
 .bcard-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0.4rem 1.1rem; padding-top: 0.7rem; }
@@ -1572,6 +1591,9 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   font-size: 0.88rem;
   min-height: 1.55rem;
 }
+/* Le trait sépare deux lignes ; sous la dernière il ne sépare rien et ne fait
+   que doubler le bord du bloc suivant. */
+.bcard-line:last-child { border-bottom: none; }
 /* Un emplacement vide garde sa ligne : c'est ce qui permet de lire un build
    « en creux ». Il est estompé sans disparaître. */
 .bcard-line.is-empty { opacity: 0.45; }
@@ -1594,7 +1616,7 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 /* Textures du jeu, 12 à 32 px d'origine : agrandies au double sans lissage,
    comme le préconise assets/README.md. */
 .icon-d12 { image-rendering: pixelated; image-rendering: crisp-edges; display: block; }
-.bcard-btn { width: 24px; height: 24px; }
+.bcard-btn { width: 20px; height: 20px; }
 .bcard-stick { width: 16px; height: 11px; }
 .bcard-chevron { width: 14px; height: 14px; color: var(--violet); flex: none; }
 .bcard-equip-icon { width: auto; height: 26px; }
@@ -1618,9 +1640,16 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   /* Colonnes empilées : équipement, accessoires, puis les attaques. La carte
      doit rester lisible sans défilement horizontal. */
   .bcard-body { grid-template-columns: 1fr; gap: 0.9rem; }
-  .bcard-title { text-align: left; }
   .bcard-head { gap: 0.6rem; }
   .bcard { padding: 0.8rem; }
+  /* Le bandeau latéral prendrait la moitié de la largeur : il redevient une
+     ligne pleine au-dessus de l'en-tête. */
+  .bcard-has-aside { grid-template-columns: 1fr; }
+  .bcard-has-aside > .bcard-head,
+  .bcard-has-aside > .bcard-body,
+  .bcard-has-aside > .bcard-foot { grid-column: 1; }
+  .bcard-aside { width: 100%; height: 7rem; margin-bottom: 0.7rem; position: relative; }
+  .bcard-portrait-full .bcard-aside, .bcard-portrait-tall .bcard-aside { grid-row: auto; }
 }
 
 /* Icônes de rang et de type des accessoires. Quatorze fichiers de 16 px pour

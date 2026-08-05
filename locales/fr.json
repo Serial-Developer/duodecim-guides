@@ -807,14 +807,20 @@
       "hp": "Carré",
       "neutral": "{button}",
       "back": "Gauche + {button}",
-      "forward": "Droite + {button}"
+      "forward": "Droite + {button}",
+      "up": "Haut + {button}",
+      "down": "Bas + {button}"
     },
     "testTitle": "Carte de build — aperçu",
     "testLede": "Page d’essai du composant de carte de build. Elle n’appartient pas au site : absente du sitemap et de la navigation, elle se déclare en noindex.",
     "testSource": "Le build source, dans le créateur de builds",
     "testComplete": "Build complet",
     "testPartial": "Build lacunaire",
-    "testPartialLede": "Même personnage, presque rien d’équipé : la grille doit rester entière et lisible."
+    "testPartialLede": "Même personnage, presque rien d’équipé : la grille doit rester entière et lisible.",
+    "testPortraitFull": "Variante — portrait sur toute la carte",
+    "testPortraitFullLede": "Le portrait passe en bandeau à gauche, sur toute la hauteur de la carte. Le nom reste en haut de l’en-tête.",
+    "testPortraitTall": "Variante — portrait sur l’en-tête",
+    "testPortraitTallLede": "Le même bandeau, coupé à la hauteur du seul en-tête — personnage et assist."
   },
   "accessories": {
     "rankIcon": "Rang {rank}",

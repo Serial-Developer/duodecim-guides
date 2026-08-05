@@ -807,14 +807,20 @@
       "hp": "Square",
       "neutral": "{button}",
       "back": "Left + {button}",
-      "forward": "Right + {button}"
+      "forward": "Right + {button}",
+      "up": "Up + {button}",
+      "down": "Down + {button}"
     },
     "testTitle": "Build card — preview",
     "testLede": "Test page for the build card component. Not part of the site: it is absent from the sitemap and the navigation, and declares noindex.",
     "testSource": "Source build, in the build creator",
     "testComplete": "Complete build",
     "testPartial": "Sparse build",
-    "testPartialLede": "Same character, almost nothing equipped: the grid must stay whole and readable."
+    "testPartialLede": "Same character, almost nothing equipped: the grid must stay whole and readable.",
+    "testPortraitFull": "Variant — portrait over the whole card",
+    "testPortraitFullLede": "The portrait moves to a left-hand band running the full height of the card. The name stays at the top of the header.",
+    "testPortraitTall": "Variant — portrait over the header",
+    "testPortraitTallLede": "Same band, cut to the height of the header alone — character and assist."
   },
   "accessories": {
     "rankIcon": "Rank {rank}",

@@ -32,26 +32,34 @@ function hydrate(t) {
 // modificateur. Elles sont minuscules (12 à 15 px) et s'agrandissent au double
 // sans lissage — voir `image-rendering: pixelated` dans la feuille de style.
 const BUTTON_ICON = { bravery: 'btn-circle.png', hp: 'btn-square.png' };
-const DIRECTIONS = ['neutral', 'back', 'forward'];
+// Les deux directions d'un emplacement ne sont pas les mêmes au sol et en
+// l'air : le sol se dirige à l'horizontale, l'air à la verticale. Une seule
+// table pour les deux affichait « Gauche + Cercle » sur des coups aériens.
+const DIRECTIONS = {
+  ground: ['neutral', 'back', 'forward'],
+  aerial: ['neutral', 'up', 'down'],
+};
 // Le jeu compose une commande dirigée en trois temps : une flèche, le stick
 // analogique, puis le bouton. C'est bien le stick — la croix directionnelle
 // existe dans les planches de textures mais ne sert pas ici. La flèche, elle,
 // n'a pas d'équivalent extrait : elle est tracée, dans la couleur du texte.
 const CHEVRON = {
-  back: '<path d="M11 3 L5 9 L11 15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>',
-  forward: '<path d="M7 3 L13 9 L7 15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>',
+  back: 'M11 3 L5 9 L11 15',
+  forward: 'M7 3 L13 9 L7 15',
+  up: 'M3 11 L9 5 L15 11',
+  down: 'M3 7 L9 13 L15 7',
 };
 
 // Le libellé accessible dit la commande en toutes lettres — « Gauche + Cercle » —
 // là où le dessin ne montre que des formes.
-function keyIcon(t, L, sizeOf, kind, cmd) {
-  const dir = DIRECTIONS[cmd] || 'neutral';
+function keyIcon(t, L, sizeOf, kind, cmd, stance) {
+  const dir = (DIRECTIONS[stance] || DIRECTIONS.ground)[cmd] || 'neutral';
   const label = t(`buildCard.keys.${dir}`, { button: t(`buildCard.keys.${kind}`) });
   const glyphe = (fichier, cls) => `<img class="icon-d12 ${cls}" src="${L.asset(`assets/buttons-icons/${fichier}`)}" alt="" aria-hidden="true"${sizeOf(`buttons-icons/${fichier}`)} loading="lazy">`;
   // Sans direction, la commande se réduit au bouton : le jeu n'affiche pas le
   // stick au neutre.
   const direction = CHEVRON[dir]
-    ? `<svg class="bcard-chevron" viewBox="0 0 18 18" aria-hidden="true" focusable="false">${CHEVRON[dir]}</svg>${glyphe('stick-analog.png', 'bcard-stick')}<span class="bcard-plus" aria-hidden="true">+</span>`
+    ? `<svg class="bcard-chevron" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="${CHEVRON[dir]}" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>${glyphe('stick-analog.png', 'bcard-stick')}<span class="bcard-plus" aria-hidden="true">+</span>`
     : '';
   // Le libellé porte la commande en toutes lettres ; les images n'ont donc pas
   // à la répéter, d'où leur alt vide.
@@ -88,9 +96,9 @@ function slotLine(label, valeur, extra = '', ic = null, labelBrut = false) {
 </li>`;
 }
 
-function attackLine(t, L, sizeOf, kind, cmd, move) {
+function attackLine(t, L, sizeOf, kind, cmd, move, stance) {
   return `<li class="bcard-line${move ? '' : ' is-empty'}">
-${keyIcon(t, L, sizeOf, kind, cmd)}
+${keyIcon(t, L, sizeOf, kind, cmd, stance)}
 <span class="bcard-value">${move ? esc(move.name) : ''}</span>
 </li>`;
 }
@@ -128,14 +136,14 @@ function attackGrid(t, L, sizeOf, build, char) {
   });
 
   const blocs = [
-    ['bravery|ground', 'bravery', 'groundBravery'],
-    ['bravery|aerial', 'bravery', 'airBravery'],
-    ['hp|ground', 'hp', 'groundHp'],
-    ['hp|aerial', 'hp', 'airHp'],
+    ['bravery|ground', 'bravery', 'groundBravery', 'ground'],
+    ['bravery|aerial', 'bravery', 'airBravery', 'aerial'],
+    ['hp|ground', 'hp', 'groundHp', 'ground'],
+    ['hp|aerial', 'hp', 'airHp', 'aerial'],
   ];
-  return blocs.map(([cat, kind, cle]) => {
+  return blocs.map(([cat, kind, cle, stance]) => {
     const cases = parCat[cat] || {};
-    const lignes = [0, 1, 2].map((c) => attackLine(t, L, sizeOf, kind, c, cases[c])).join('\n');
+    const lignes = [0, 1, 2].map((c) => attackLine(t, L, sizeOf, kind, c, cases[c], stance)).join('\n');
     return `<section class="bcard-block">
 <h3 class="bcard-h">${esc(t(`buildCard.${cle}`))}</h3>
 <ul class="bcard-list">${lignes}</ul>
@@ -144,7 +152,11 @@ function attackGrid(t, L, sizeOf, build, char) {
 }
 
 // --- Carte -------------------------------------------------------------------
-export function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '' }) {
+// `variant` ne change que la place du portrait du personnage : par défaut la
+// vignette de l'en-tête ; `portrait-full` et `portrait-tall` la sortent en
+// bandeau à gauche, sur toute la hauteur de la carte ou sur celle du seul
+// en-tête. Le nom reste en haut dans les trois cas.
+export function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant = '' }) {
   const char = (data.characters || []).find((c) => c.slug === build.character);
   if (!char) return '';
   const equipement = hydrate(data.equipment);
@@ -183,14 +195,22 @@ export function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '' })
     return slotLine(String(i + 1), item?.name || '', precision, ic);
   }).join('\n');
 
-  return `<article class="bcard">
+  // Bandeau latéral : le portrait quitte l'en-tête pour la gauche de la carte.
+  const aside = variant && hasPortrait(char.slug)
+    ? `<div class="bcard-aside"><img src="${L.asset(`assets/portraits/${char.slug}.png`)}" alt="${esc(t('buildCard.portraitAlt', { name: char.name }))}" width="512" height="512" loading="lazy"></div>`
+    : '';
+
+  return `<article class="bcard${aside ? ` bcard-has-aside bcard-${variant}` : ''}">
+${aside}
 <header class="bcard-head">
 <div class="bcard-ids">
-<p class="bcard-banner">${portrait(char.slug, t('buildCard.portraitAlt', { name: char.name }))}<span class="bcard-name">${esc(char.name)}</span></p>
+<p class="bcard-banner">${aside ? '' : portrait(char.slug, t('buildCard.portraitAlt', { name: char.name }))}<span class="bcard-name">${esc(char.name)}</span></p>
+<p class="bcard-title">${build.name ? esc(build.name) : `<span class="bcard-untitled">${esc(t('buildCard.untitled'))}</span>`}</p>
+</div>
+<div class="bcard-side">
 <p class="bcard-banner bcard-banner-assist">${assist ? portrait(assist.slug, t('buildCard.assistAlt', { name: assist.name })) : '<span class="bcard-portrait-none" aria-hidden="true"></span>'}<span class="bcard-role">${esc(t('buildCard.assist'))}</span></p>
 <p class="bcard-summon"><img class="icon-d12 bcard-summon-orb" src="${L.asset('assets/summon-icons/summon-orb.png')}" alt="${esc(t('buildCard.summon'))}" title="${esc(t('buildCard.summon'))}"${sizeOf('summon-icons/summon-orb.png')} loading="lazy"><span class="bcard-value">${summon ? esc(summon.name) : ''}</span></p>
 </div>
-<p class="bcard-title">${build.name ? esc(build.name) : `<span class="bcard-untitled">${esc(t('buildCard.untitled'))}</span>`}</p>
 </header>
 
 <div class="bcard-body">

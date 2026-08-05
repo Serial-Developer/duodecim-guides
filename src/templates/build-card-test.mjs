@@ -37,6 +37,14 @@ ${buildCard({ t, build, data, L, hasPortrait, sizeOf })}
 <h2>${esc(t('buildCard.testPartial'))}</h2>
 <p class="mv-desc">${esc(t('buildCard.testPartialLede'))}</p>
 ${buildCard({ t, build: lacunaire, data, L, hasPortrait, sizeOf })}
+
+<h2>${esc(t('buildCard.testPortraitFull'))}</h2>
+<p class="mv-desc">${esc(t('buildCard.testPortraitFullLede'))}</p>
+${buildCard({ t, build, data, L, hasPortrait, sizeOf, variant: 'portrait-full' })}
+
+<h2>${esc(t('buildCard.testPortraitTall'))}</h2>
+<p class="mv-desc">${esc(t('buildCard.testPortraitTallLede'))}</p>
+${buildCard({ t, build, data, L, hasPortrait, sizeOf, variant: 'portrait-tall' })}
 </main>
 ${siteFooter(t)}`;
 
