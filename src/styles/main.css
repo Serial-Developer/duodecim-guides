@@ -1563,8 +1563,15 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    la rangée de l'en-tête à 104 px au lieu de la laisser à sa hauteur. */
 .bcard-aside { grid-column: 1; position: relative; overflow: hidden; border-radius: 8px; width: 6.5rem; }
 .bcard-aside img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
-/* Toute la hauteur de la carte. */
+/* Toute la hauteur de la carte. Les portraits sont cadrés avec du vide au-dessus
+   de la tête : à l'échelle du bandeau, ce vide laissait le haut inoccupé, juste
+   là où le nom du build vient de libérer de la place. L'image est donc agrandie
+   et ancrée en bas, la silhouette partant du haut de la carte.
+   La valeur vaut pour le cadrage de Sephiroth ; le vide va de 0 % (Yuna) à 17 %
+   (Lightning) selon les portraits, un recadrage par personnage sera nécessaire
+   si la variante est retenue. */
 .bcard-portrait-full .bcard-aside { grid-row: 1 / -1; }
+.bcard-portrait-full .bcard-aside img { inset: auto 0 0 0; height: 118%; }
 /* La hauteur du seul en-tête. Le portrait y est traité en fond de carte : il
    déborde sous le rembourrage jusqu'aux bords, coin arrondi compris, au lieu
    de flotter en vignette détachée. Les marges négatives portent le débord, le
