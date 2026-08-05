@@ -1505,8 +1505,8 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   max-width: 40rem;
 }
 
-/* En-tête : personnage et nom du build à gauche, assist et invocation à droite —
-   les deux renforts se lisent ensemble, à l'écart de l'identité du build. */
+/* En-tête : le personnage à gauche ; à droite le nom du build, puis les deux
+   renforts sous lui — assist et invocation se lisent ensemble. */
 .bcard-head {
   display: flex;
   gap: 1rem;
@@ -1517,7 +1517,7 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   border-bottom: 1px solid rgba(157, 134, 232, 0.25);
 }
 .bcard-ids { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
-.bcard-side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; min-width: 0; }
+.bcard-side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; min-width: 0; text-align: right; }
 /* Bannière : portrait puis nom, sans cadre — le portrait se suffit à lui-même
    et un encadré de plus alourdissait un en-tête déjà bordé. */
 .bcard-banner {
@@ -1565,8 +1565,19 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bcard-aside img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
 /* Toute la hauteur de la carte. */
 .bcard-portrait-full .bcard-aside { grid-row: 1 / -1; }
-/* La hauteur du seul en-tête, soit personnage + assist. */
-.bcard-portrait-tall .bcard-aside { grid-row: 1; }
+/* La hauteur du seul en-tête. Le portrait y est traité en fond de carte : il
+   déborde sous le rembourrage jusqu'aux bords, coin arrondi compris, au lieu
+   de flotter en vignette détachée. Les marges négatives portent le débord, le
+   rembourrage le rend à l'image — qui, en position absolue, remplit la boîte
+   de rembourrage entière. */
+.bcard-portrait-tall { overflow: hidden; }
+.bcard-portrait-tall .bcard-aside {
+  grid-row: 1;
+  margin: -1rem 0 0 -1.1rem;
+  padding: 1rem 0 0 1.1rem;
+  width: calc(6.5rem + 1.1rem);
+  border-radius: var(--radius) 0 0 0;
+}
 
 /* Corps : deux colonnes, équipement à gauche, attaques à droite. */
 .bcard-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0.4rem 1.1rem; padding-top: 0.7rem; }
