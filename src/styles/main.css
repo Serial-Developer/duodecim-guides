@@ -1874,6 +1874,39 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 }
 [data-bcard-mode="attenue"] .bcard-portrait-full .bcard-aside { opacity: 0.25; }
 
+/* Carte vivante : chaque emplacement est un bouton pleine largeur. */
+.bcard-hit {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.bcard-line.is-live:hover { background: rgba(157, 134, 232, 0.12); border-radius: 4px; }
+.bcard-hit:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+.bcard-add { margin: 0.4rem 0 0; }
+.bcard-btn-add {
+  font: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: none;
+  border: 1px dashed rgba(157, 134, 232, 0.4);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  cursor: pointer;
+}
+.bcard-btn-add:hover { color: var(--gold); border-color: var(--gold); }
+.bc-card-host { margin-top: 0.8rem; }
+.bc-card-host .bcard { max-width: none; }
+
 /* Banc d'essai des cartes sur tout le roster. */
 .bcr-bar {
   display: flex;

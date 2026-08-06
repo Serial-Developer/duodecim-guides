@@ -329,6 +329,20 @@ for (const locale of activeLocales) {
         sizeOf,
       }));
     }
+    // Banc d'essai du créateur bâti sur la carte : mêmes données, mêmes fenêtres,
+    // seule l'interface change. Hors sitemap et en noindex tant qu'il n'est pas
+    // validé ; le créateur en ligne ne bouge pas.
+    writeFileSync(join(DIST, 'build-creator-card.html'), renderBuildCreator({
+      ...i18n('build-creator-card.html', {}),
+      ed,
+      characters: CHARACTERS,
+      hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
+      i18nPayload: buildCreatorStrings(t),
+      seo: { ...seo, path: 'build-creator-card.html', ldType: 'none' },
+      card: true,
+    }));
+    cpSync(join(ROOT, 'src', 'scripts', 'build-card-view.js'), join(DIST, 'scripts', 'build-card-view.js'));
+
     // Même banc d'essai, étendu aux 31 personnages : c'est là qu'on voit si un
     // cadrage de portrait gêne la lecture. Mêmes conditions — noindex, hors
     // sitemap, langue par défaut seulement.

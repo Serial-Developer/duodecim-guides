@@ -9,5 +9,10 @@ export function buildCreatorStrings(t) {
     locale: t.locale,
     ui: t.table('buildCreator'),
     app: t.table('buildCreatorApp'),
+    // Le rendu partagé de la carte lit ses libellés par le même `T` : il lui
+    // faut donc les deux tables qu'il utilise, sans quoi le créateur affiche des
+    // clés nues là où le build statique affiche du texte.
+    buildCard: t.table('buildCard'),
+    accessories: t.table('accessories'),
   };
 }

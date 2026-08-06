@@ -19,10 +19,20 @@
   // (voir src/i18n/build-creator-strings.mjs). Ce script est servi tel quel aux
   // deux langues : il ne contient donc aucun texte.
   var BC = window.BC_I18N || { locale: 'fr', ui: {}, app: {} };
-  function T(key, params) {
-    var node = BC.app;
+  // Le rendu partagé de la carte demande ses libellés au même `T`, sous des
+  // racines qui lui sont propres (« buildCard.… », « accessories.… »). Le
+  // créateur a déjà un `accessories` à lui : on cherche donc d'abord dans le
+  // sien, et l'on ne se rabat sur les tables de la carte qu'à défaut.
+  function lire(racine, key) {
+    var node = racine;
     var parts = key.split('.');
     for (var i = 0; i < parts.length && node != null; i++) node = node[parts[i]];
+    return node;
+  }
+  function T(key, params) {
+    var node = lire(BC.app, key);
+    if (node == null) node = lire(BC.ui, key);
+    if (node == null) node = lire(BC, key);
     if (node == null) return '⟨' + key + '⟩';
     if (!params) return String(node);
     return String(node).replace(/\{(\w+)\}/g, function (m, k) {
@@ -780,10 +790,13 @@
   // Le panneau détaillé vit hors de `bc-status`, que renderStatus vide à chaque
   // rendu : le <details> reste ainsi le même élément d'un bout à l'autre de la
   // session, et son état ouvert/fermé survit à toute modification du build.
+  // En mode carte, ces trois blocs vivent dans la languette « Stats » et sont
+  // recréés à chaque redessin : les retenir une fois pour toutes garderait des
+  // références mortes. On les relit donc à chaque rendu.
   var detail = {
-    count: document.getElementById('bc-detail-count'),
-    main: document.getElementById('bc-detail-main'),
-    boosters: document.getElementById('bc-detail-boosters'),
+    get count() { return document.getElementById('bc-detail-count'); },
+    get main() { return document.getElementById('bc-detail-main'); },
+    get boosters() { return document.getElementById('bc-detail-boosters'); },
   };
 
   function fmtModifier(value, unit) {
@@ -899,6 +912,7 @@
   function refresh() {
     var cp = renderGauge();
     renderStatus(cp);
+    renderCard();
     renderDetailStats();
     renderSavedList();
   }
@@ -920,7 +934,8 @@
       btn.tabIndex = on ? 0 : -1;
       if (on && focus) btn.focus();
     });
-    Object.keys(panels).forEach(function (k) { panels[k].hidden = k !== key; });
+    // En mode carte, `panels` ne contient que des nuls : il n'y a pas d'onglets.
+    Object.keys(panels).forEach(function (k) { if (panels[k]) panels[k].hidden = k !== key; });
     renderPanel(key);
   }
 
@@ -947,6 +962,9 @@
   function renderPanel(key) {
     if (!state.build.character) return;
     var panel = panels[key];
+    // En mode carte, les cinq panneaux n'existent pas : c'est la carte qui tient
+    // lieu d'interface, et elle se redessine par refresh().
+    if (!panel) return;
     clear(panel);
     if (key === 'attack') renderAttacks(panel);
     else if (key === 'abilities') renderAbilities(panel);
@@ -2655,6 +2673,116 @@
     ev.preventDefault();
     ev.returnValue = '';
   });
+
+
+  // --- Mode carte -----------------------------------------------------------
+  // Banc d'essai : la carte de build tient lieu d'interface. Elle est redessinée
+  // en entier par le rendu partagé (BuildCardView) à chaque modification, et ses
+  // emplacements portent leur position en attribut. Le clic rouvre la fenêtre
+  // que l'onglet correspondant ouvrait déjà — aucune n'est réécrite ici, c'est
+  // tout l'intérêt : la sélection, les filtres et le tri restent à un endroit.
+  var carteHote = document.getElementById('bc-card');
+  var carteBase = carteHote ? (carteHote.getAttribute('data-base') || '') : '';
+
+  function renderCard() {
+    if (!carteHote || !window.BuildCardView || !state.build.character) return;
+    // La carte repart de zéro : ses boutons radio — languette ouverte, style
+    // affiché — reviendraient au défaut à chaque clic. On les relit avant de
+    // redessiner, on les repose après.
+    var ouverts = {};
+    Array.prototype.forEach.call(carteHote.querySelectorAll('input[type="radio"]'), function (r) {
+      if (r.checked) ouverts[r.name] = r.value;
+    });
+    carteHote.innerHTML = window.BuildCardView.buildCard({
+      t: T,
+      build: state.build,
+      data: D,
+      L: { asset: function (p) { return carteBase + p; } },
+      hasPortrait: function () { return true; },
+      variant: 'portrait-full',
+      live: true,
+      mastered: state.mastered,
+      uid: 'live',
+    });
+    Array.prototype.forEach.call(carteHote.querySelectorAll('input[type="radio"]'), function (r) {
+      if (ouverts[r.name] !== undefined) r.checked = ouverts[r.name] === r.value;
+    });
+  }
+
+  // Retrouve le contexte d'une catégorie d'attaques à partir de sa clé, avec la
+  // même composition que la grille : (bravery/HP, groupe, style).
+  function categorieDe(char, catKey) {
+    var scan = scanBuild(char);
+    var trouve = null;
+    ['bravery', 'hp'].forEach(function (kind) {
+      (char.attacks[kind] || []).forEach(function (g) {
+        if (g.followUp) return;
+        byStyle(g.moves).forEach(function (sub) {
+          var style = sub.style || null;
+          if (kind + '|' + g.key + '|' + (style || '') !== catKey) return;
+          trouve = {
+            kind: kind, group: g, style: style, scan: scan, catKey: catKey,
+            choix: categoryMoves(g, style, scan.index.linkParent),
+          };
+        });
+      });
+    });
+    return trouve;
+  }
+
+  if (carteHote) {
+    carteHote.addEventListener('click', function (ev) {
+      var cible = ev.target.closest ? ev.target.closest('[data-bc]') : null;
+      if (!cible || !carteHote.contains(cible)) return;
+      var quoi = cible.getAttribute('data-bc');
+      var char = charBySlug[state.build.character];
+
+      if (quoi === 'equip') {
+        var cle = cible.getAttribute('data-slot');
+        var slot = null;
+        SLOTS.forEach(function (x) { if (x.key === cle) slot = x; });
+        if (!slot) return;
+        var pose = state.build.equipment[slot.key] ? equipByUid[state.build.equipment[slot.key]] : null;
+        openModal(slot.label, pose ? T('attacks.replacing', { name: pose.name }) : null, function (body, close) {
+          body.appendChild(slotChooser(slot, close));
+        });
+        return;
+      }
+
+      if (quoi === 'acc') {
+        var i = Number(cible.getAttribute('data-i'));
+        var a = state.build.accessories[i] ? accByUid[state.build.accessories[i]] : null;
+        openModal(T('accessories.slotTitle', { index: i + 1 }), a ? T('attacks.replacing', { name: a.name }) : null, function (body, close) {
+          body.appendChild(accessoryChooser(i, close));
+        });
+        return;
+      }
+
+      if (quoi === 'attack') {
+        var ctx = categorieDe(char, cible.getAttribute('data-cat'));
+        if (!ctx) return;
+        var cmd = Number(cible.getAttribute('data-cmd'));
+        var mien = ctx.scan.slots.filter(function (x) { return x.info.catKey === ctx.catKey; });
+        var occupe = null;
+        mien.forEach(function (x) { if (x.cmd === cmd) occupe = x; });
+        var titre = groupLabel(ctx.group.key) + (ctx.style ? ' — ' + ctx.style : '');
+        openMoveChooser(titre + ' · ' + inputTitle(ctx.kind, cmd), ctx.choix, occupe ? occupe.move : null, function (choisi) {
+          if (occupe) replaceAt(occupe.pos, choisi.id, cmd);
+          else appendAttack(choisi.id, cmd);
+        });
+        return;
+      }
+
+      if (quoi === 'abilities') {
+        openModal(T('tabs.abilities'), null, function (body) { renderAbilities(body); });
+        return;
+      }
+
+      if (quoi === 'assist' || quoi === 'summon') {
+        openModal(T('tabs.assist'), null, function (body) { renderAssist(body); });
+      }
+    });
+  }
 
   // --- Démarrage ------------------------------------------------------------
   applyCharacterUi();

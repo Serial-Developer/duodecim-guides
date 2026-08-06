@@ -46,7 +46,11 @@ function detailStats(t) {
 </details>`;
 }
 
-export function renderBuildCreator({ ed, characters, hasPortrait, seo, i18nPayload, t, locale, path, alternates, availability }) {
+// `card` bascule la page sur le banc d'essai : la carte de build tient lieu
+// d'interface à la place des cinq onglets. Le reste — bandeau de personnages,
+// gestionnaire, aide — ne bouge pas ; c'est l'intérêt de ne changer que le
+// milieu.
+export function renderBuildCreator({ ed, characters, hasPortrait, seo, i18nPayload, t, locale, path, alternates, availability, card = false }) {
   const L = linksFor(path, locale, availability);
   if (!ed) {
     return pageShell({
@@ -85,15 +89,15 @@ ${characterBanner(t, characters, hasPortrait, L)}
 <div class="bc-sticky">
 ${cpGauge(t)}
 <div class="bc-status" id="bc-status" role="status" aria-live="polite"></div>
-${detailStats(t)}
+${card ? '' : detailStats(t)}
 </div>
 
-<div class="bc-tabs">
+${card ? `<div class="bc-card-host" id="bc-card" data-base="${L.asset('')}"></div>` : `<div class="bc-tabs">
 <div class="bc-tablist" role="tablist" aria-label="${esc(t('buildCreator.tablistAria'))}">
 ${tabs.map((tb, i) => `<button type="button" class="bc-tab" role="tab" id="bc-tab-${tb.key}" aria-controls="bc-panel-${tb.key}" aria-selected="${i === 0}" tabindex="${i === 0 ? '0' : '-1'}" data-tab="${tb.key}">${esc(tb.label)}</button>`).join('\n')}
 </div>
 ${tabs.map((tb, i) => `<div class="bc-panel" role="tabpanel" id="bc-panel-${tb.key}" aria-labelledby="bc-tab-${tb.key}" tabindex="0"${i === 0 ? '' : ' hidden'}></div>`).join('\n')}
-</div>
+</div>`}
 </section>
 
 <section class="card bc-step" id="bc-manager" hidden aria-labelledby="bc-step3">
@@ -139,8 +143,12 @@ ${siteFooter(t)}`;
     jsPath: 'scripts/build-creator.js',
     // Les libellés de l'outil sont injectés avant son script : celui-ci les lit
     // à l'initialisation et ne contient donc aucun texte en dur.
+    // Le banc d'essai est hors périmètre : ni indexé, ni au sitemap, tant que
+    // l'interface n'est pas validée.
+    robots: card ? 'noindex, nofollow' : null,
     extraHead: `<script>window.BC_I18N=${JSON.stringify(i18nPayload).replace(/</g, '\\u003c')};</script>
-<script src="${L.asset('scripts/build-data.js')}" defer></script>`,
+<script src="${L.asset('scripts/build-data.js')}" defer></script>${card ? `
+<script src="${L.asset('scripts/build-card-view.js')}" defer></script>` : ''}`,
     body,
     // Ce n'est pas un article mais un outil : le type WebApplication décrit ce
     // que la page fait, et signale qu'elle est gratuite et sans compte.
