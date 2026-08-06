@@ -155,15 +155,26 @@ function categories(char) {
   return out;
 }
 
-function blockTitle(t, { kind, groupKey, style }) {
+// Le style ne complète le titre que faute d'onglets : quand ils sont là, ils le
+// disent déjà, et « Braveries au sol — Dark Knight » sous un onglet « Dark
+// Knight » ne fait que répéter.
+function blockTitle(t, { kind, groupKey, style }, onglets) {
   const cle = BLOCK_KEY[`${kind}|${groupKey}`];
   const base = cle && t.has(`buildCard.${cle}`)
     ? t(`buildCard.${cle}`)
     : t('buildCard.otherBlock', { kind: t(`buildCard.kinds.${kind}`), group: groupKey });
-  return style ? `${base} — ${style}` : base;
+  return style && !onglets ? `${base} — ${style}` : base;
 }
 
-function attackGrid(t, L, sizeOf, build, char) {
+// Les styles d'un personnage, dans l'ordre d'apparition. Un seul style — ou
+// aucun — ne justifie pas d'onglets.
+export function stylesOf(char) {
+  const vus = [];
+  for (const c of categories(char)) if (c.style && !vus.includes(c.style)) vus.push(c.style);
+  return vus.length > 1 ? vus : [];
+}
+
+function attackGrid(t, L, sizeOf, build, char, styles) {
   const index = attackIndex(char);
   // catégorie -> commande -> coup
   const parCat = {};
@@ -187,8 +198,12 @@ function attackGrid(t, L, sizeOf, build, char) {
     // sol, la seule que la source décrive.
     const stance = STANCE[c.groupKey] || 'ground';
     const lignes = [0, 1, 2].map((i) => attackLine(t, L, sizeOf, c.kind, i, cases[i], stance)).join('\n');
-    return `<section class="bcard-block">
-<h3 class="bcard-h">${esc(blockTitle(t, c))}</h3>
+    // Un bloc rattaché à un style ne s'affiche qu'avec son onglet. Un bloc sans
+    // style — les attaques HP de Cecil, communes aux deux jobs — reste visible.
+    const rang = styles.indexOf(c.style);
+    const marque = rang >= 0 ? ` data-si="${rang + 1}"` : '';
+    return `<section class="bcard-block"${marque}>
+<h3 class="bcard-h">${esc(blockTitle(t, c, styles.length > 0))}</h3>
 <ul class="bcard-list">${lignes}</ul>
 </section>`;
   }).join('\n');
@@ -199,9 +214,15 @@ function attackGrid(t, L, sizeOf, build, char) {
 // vignette de l'en-tête ; `portrait-full` et `portrait-tall` la sortent en
 // bandeau à gauche, sur toute la hauteur de la carte ou sur celle du seul
 // en-tête. Le nom reste en haut dans les trois cas.
-export function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant = '' }) {
+export function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant = '', uid = '' }) {
   const char = (data.characters || []).find((c) => c.slug === build.character);
   if (!char) return '';
+  // Les onglets de style passent par des boutons radio, sans JavaScript : la
+  // carte doit rester autonome partout où on la pose. Le nom du groupe doit être
+  // unique dans la page — deux cartes du même personnage cohabitent sur le banc
+  // d'essai —, d'où l'identifiant facultatif.
+  const styles = stylesOf(char);
+  const grpId = `bcs-${uid || char.slug}`;
   const equipement = hydrate(data.equipment);
   const accessoires = hydrate(data.accessories);
   const byUid = (list) => Object.fromEntries(list.map((x) => [x.uid, x]));
@@ -248,7 +269,19 @@ export function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', v
     : '';
   const regard = char.portraitFacing === 'left' ? ' bcard-faces-left' : '';
 
-  return `<article class="bcard${aside ? ` bcard-has-aside bcard-${variant}${regard}` : ''}">
+  // Les radios précèdent tout : la feuille de style relie l'onglet coché à ses
+  // blocs par le combinateur de frères, qui ne regarde qu'en avant.
+  const radios = styles.map((s, i) => (
+    `<input class="bcard-style-radio" type="radio" name="${esc(grpId)}" id="${esc(grpId)}-${i + 1}"${i === 0 ? ' checked' : ''}>`
+  )).join('\n');
+  const onglets = styles.length
+    ? `<p class="bcard-tabs" role="group" aria-label="${esc(t('buildCard.styleTabs'))}">${styles.map((s, i) => (
+      `<label class="bcard-tab" for="${esc(grpId)}-${i + 1}">${esc(s)}</label>`
+    )).join('')}</p>`
+    : '';
+
+  return `<article class="bcard${aside ? ` bcard-has-aside bcard-${variant}${regard}` : ''}${styles.length ? ' bcard-has-styles' : ''}">
+${radios}
 ${aside}
 <header class="bcard-head">
 ${(() => {
@@ -265,6 +298,7 @@ ${aGauche ? renforts : ''}
 <div class="bcard-side">
 <p class="bcard-title">${build.name ? esc(build.name) : `<span class="bcard-untitled">${esc(t('buildCard.untitled'))}</span>`}</p>
 ${aGauche ? '' : renforts}
+${onglets}
 </div>`;
 })()}
 </header>
@@ -281,7 +315,7 @@ ${aGauche ? '' : renforts}
 </section>
 </div>
 <div class="bcard-col">
-${attackGrid(t, L, sizeOf, build, char)}
+${attackGrid(t, L, sizeOf, build, char, styles)}
 </div>
 </div>
 

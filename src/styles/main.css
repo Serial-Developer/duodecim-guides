@@ -1546,6 +1546,56 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 }
 .bcard-untitled { color: var(--muted); font-style: italic; font-size: 1rem; }
 
+/* Onglets de style — jobs de Cecil, paradigmes de Lightning, EX Mode de
+   Gabranth. Chaque style a ses propres emplacements : les afficher tous à la
+   fois donnait huit blocs chez Cecil, dix chez Lightning.
+   Des boutons radio plutôt qu'un script : la carte doit fonctionner partout où
+   on la pose, y compris dans une page sans JavaScript. Les radios sont les
+   premiers enfants de la carte, le combinateur de frères ne regardant qu'en
+   avant. */
+.bcard-style-radio { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.bcard-tabs { display: flex; flex-wrap: wrap; gap: 0.3rem; justify-content: flex-end; margin: 0.4rem 0 0; }
+.bcard-tab {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid rgba(157, 134, 232, 0.3);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  cursor: pointer;
+}
+.bcard-tab:hover { color: var(--text); border-color: rgba(157, 134, 232, 0.55); }
+/* Un bloc de style est masqué par défaut ; son onglet le rappelle. */
+.bcard-has-styles .bcard-block[data-si] { display: none; }
+.bcard-style-radio:nth-of-type(1):checked ~ .bcard-body .bcard-block[data-si="1"],
+.bcard-style-radio:nth-of-type(2):checked ~ .bcard-body .bcard-block[data-si="2"],
+.bcard-style-radio:nth-of-type(3):checked ~ .bcard-body .bcard-block[data-si="3"],
+.bcard-style-radio:nth-of-type(4):checked ~ .bcard-body .bcard-block[data-si="4"],
+.bcard-style-radio:nth-of-type(5):checked ~ .bcard-body .bcard-block[data-si="5"],
+.bcard-style-radio:nth-of-type(6):checked ~ .bcard-body .bcard-block[data-si="6"] { display: block; }
+.bcard-style-radio:nth-of-type(1):checked ~ .bcard-head .bcard-tab:nth-of-type(1),
+.bcard-style-radio:nth-of-type(2):checked ~ .bcard-head .bcard-tab:nth-of-type(2),
+.bcard-style-radio:nth-of-type(3):checked ~ .bcard-head .bcard-tab:nth-of-type(3),
+.bcard-style-radio:nth-of-type(4):checked ~ .bcard-head .bcard-tab:nth-of-type(4),
+.bcard-style-radio:nth-of-type(5):checked ~ .bcard-head .bcard-tab:nth-of-type(5),
+.bcard-style-radio:nth-of-type(6):checked ~ .bcard-head .bcard-tab:nth-of-type(6) {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(199, 164, 90, 0.12);
+}
+/* Le radio est invisible : c'est son onglet qui doit montrer le focus, sans
+   quoi la carte devient impraticable au clavier. */
+.bcard-style-radio:nth-of-type(1):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(1),
+.bcard-style-radio:nth-of-type(2):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(2),
+.bcard-style-radio:nth-of-type(3):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(3),
+.bcard-style-radio:nth-of-type(4):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(4),
+.bcard-style-radio:nth-of-type(5):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(5),
+.bcard-style-radio:nth-of-type(6):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(6) {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
 /* Portrait en fond de carte (variantes à l'essai). Le portrait n'occupe aucune
    colonne : il partage sa cellule avec le contenu, qui passe au-dessus. C'est
    la seule façon de ne rien décaler — en colonne, il repoussait tout à droite

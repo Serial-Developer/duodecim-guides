@@ -789,6 +789,7 @@
     "airBravery": "Braveries en l’air",
     "groundHp": "Attaques HP au sol",
     "airHp": "Attaques HP en l’air",
+    "styleTabs": "Style de combat",
     "mainBravery": "Braveries principales",
     "mainHp": "Attaques HP principales",
     "otherBlock": "{kind} — {group}",

@@ -33,19 +33,19 @@ export function renderBuildCardTest({ t, locale, build, source, data, hasPortrai
 <p class="mv-desc"><a href="build-card-roster.html">${esc(t('buildCard.testRosterLink'))}</a></p>
 
 <h2>${esc(t('buildCard.testComplete'))}</h2>
-${buildCard({ t, build, data, L, hasPortrait, sizeOf })}
+${buildCard({ t, build, data, L, hasPortrait, sizeOf, uid: 'complet' })}
 
 <h2>${esc(t('buildCard.testPartial'))}</h2>
 <p class="mv-desc">${esc(t('buildCard.testPartialLede'))}</p>
-${buildCard({ t, build: lacunaire, data, L, hasPortrait, sizeOf })}
+${buildCard({ t, build: lacunaire, data, L, hasPortrait, sizeOf, uid: 'lacunaire' })}
 
 <h2>${esc(t('buildCard.testPortraitFull'))}</h2>
 <p class="mv-desc">${esc(t('buildCard.testPortraitFullLede'))}</p>
-${buildCard({ t, build, data, L, hasPortrait, sizeOf, variant: 'portrait-full' })}
+${buildCard({ t, build, data, L, hasPortrait, sizeOf, variant: 'portrait-full', uid: 'full' })}
 
 <h2>${esc(t('buildCard.testPortraitTall'))}</h2>
 <p class="mv-desc">${esc(t('buildCard.testPortraitTallLede'))}</p>
-${buildCard({ t, build, data, L, hasPortrait, sizeOf, variant: 'portrait-tall' })}
+${buildCard({ t, build, data, L, hasPortrait, sizeOf, variant: 'portrait-tall', uid: 'tall' })}
 </main>
 ${siteFooter(t)}`;
 
