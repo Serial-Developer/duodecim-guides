@@ -1635,9 +1635,15 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   border-color: var(--gold);
   background: rgba(199, 164, 90, 0.14);
 }
-/* Un seul panneau à la fois. */
+/* Un seul panneau à la fois, mais les deux occupent la même case de grille : la
+   carte garde ainsi la même hauteur d'un onglet à l'autre. Masquer par
+   `display` l'aurait fait sauter à chaque bascule, ce qui est intenable quand on
+   compare deux cartes ou qu'on en capture une. `visibility` retire aussi le
+   panneau caché du parcours au clavier et de l'arbre d'accessibilité. */
+.bcard-panels { display: grid; }
+.bcard-panels > * { grid-area: 1 / 1; }
 .bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-abilities,
-.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-body:not(.bcard-abilities) { display: none; }
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-body:not(.bcard-abilities) { visibility: hidden; }
 /* Les onglets de style ne concernent que les attaques : ils disparaissent avec
    elles. */
 .bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-tabs { display: none; }
@@ -1670,10 +1676,10 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   overflow: hidden;
 }
 .bcard-has-aside > .bcard-head { grid-area: 1 / 1; }
-.bcard-has-aside > .bcard-body { grid-area: 2 / 1; }
+.bcard-has-aside > .bcard-panels { grid-area: 2 / 1; }
 .bcard-has-aside > .bcard-foot { grid-area: 3 / 1; }
 .bcard-has-aside > .bcard-head,
-.bcard-has-aside > .bcard-body,
+.bcard-has-aside > .bcard-panels,
 .bcard-has-aside > .bcard-foot { position: relative; z-index: 1; }
 .bcard-aside { grid-column: 1; justify-self: start; z-index: 0; position: relative; overflow: hidden; }
 .bcard-aside img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }

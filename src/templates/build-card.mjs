@@ -381,6 +381,7 @@ ${aGauche ? '' : renforts}
 ${onglets}
 </header>
 
+<div class="bcard-panels">
 <div class="bcard-body">
 <div class="bcard-col">
 <section class="bcard-block">
@@ -399,6 +400,7 @@ ${attackGrid(t, L, sizeOf, build, char, styles)}
 
 <div class="bcard-body bcard-abilities">
 ${abilitiesPanel(t, build, data)}
+</div>
 </div>
 
 <footer class="bcard-foot">
