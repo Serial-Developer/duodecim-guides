@@ -83,7 +83,7 @@ function maquette(char, rang, data) {
   };
 }
 
-export function renderBuildCardRoster({ t, locale, reference, data, hasPortrait, sizeOf, path, alternates }) {
+export function renderBuildCardRoster({ t, locale, reels = {}, data, hasPortrait, sizeOf, path, alternates }) {
   const L = { asset: (p) => p };
   const persos = data.characters || [];
 
@@ -92,9 +92,9 @@ export function renderBuildCardRoster({ t, locale, reference, data, hasPortrait,
     .join('\n');
 
   const cartes = persos.map((char, rang) => {
-    // Sephiroth garde le build réel de la page d'essai : il sert de témoin.
-    const reel = reference && reference.character === char.slug;
-    const build = reel ? reference : maquette(char, rang, data);
+    // Un build réel l'emporte toujours sur la maquette.
+    const reel = reels[char.slug];
+    const build = reel || maquette(char, rang, data);
     const note = reel ? t('buildCard.rosterReal') : t('buildCard.rosterMock');
     return `<section class="bcr-item" data-bcr="${esc(char.slug)}">
 <h2 class="bcr-name">${esc(char.name)} <span class="bcr-tag">${esc(note)}</span></h2>

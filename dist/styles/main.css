@@ -1717,10 +1717,16 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 
 /* Corps : deux colonnes, équipement à gauche, attaques à droite. */
 .bcard-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0.4rem 1.1rem; padding-top: 0.7rem; }
-/* Panneau des abilities : les trois familles l'une sous l'autre. Elles n'ont pas
-   d'emplacements, leurs listes sont donc de longueur libre — en colonnes, la
-   plus courte laissait un vide au regard de la plus longue. */
-.bcard-abilities { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
+/* Panneau des abilities : les abilities de base à gauche, les deux autres
+   familles empilées à droite. C'est la répartition qui équilibre le mieux — la
+   famille de base pèse à elle seule autant que les deux autres réunies. */
+.bcard-abilities { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.9rem 1.1rem; }
+.bcard-abilities .bcard-block:first-child { grid-row: 1 / span 2; }
+
+/* Prolongement : un HP link ou un enchaînement, sous l'attaque qui le déclenche.
+   Il n'a pas de commande propre, seulement son bouton. */
+.bcard-branch { padding-left: 1.1rem; }
+.bcard-branch .bcard-key { min-width: 2.5rem; }
 .bcard-col { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
 .bcard-block { min-width: 0; }
 .bcard-h {

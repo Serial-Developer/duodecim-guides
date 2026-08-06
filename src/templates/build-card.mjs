@@ -50,6 +50,13 @@ const CHEVRON = {
   down: 'M3 7 L9 13 L15 7',
 };
 
+// Le bouton seul, sans direction : c'est ce que porte un prolongement.
+function buttonIcon(t, L, sizeOf, kind) {
+  const fichier = BUTTON_ICON[kind];
+  const label = t(`buildCard.keys.${kind}`);
+  return `<img class="icon-d12 bcard-btn" src="${L.asset(`assets/buttons-icons/${fichier}`)}" alt="${esc(label)}" title="${esc(label)}"${sizeOf(`buttons-icons/${fichier}`)} loading="lazy">`;
+}
+
 // Le libellé accessible dit la commande en toutes lettres — « Gauche + Cercle » —
 // là où le dessin ne montre que des formes.
 function keyIcon(t, L, sizeOf, kind, cmd, stance) {
@@ -96,11 +103,18 @@ function slotLine(label, valeur, extra = '', ic = null, labelBrut = false) {
 </li>`;
 }
 
-function attackLine(t, L, sizeOf, kind, cmd, move, stance) {
+function attackLine(t, L, sizeOf, kind, cmd, move, stance, branches = []) {
+  // Un prolongement se lit sous l'attaque qu'il prolonge, sans commande : il
+  // n'occupe pas d'emplacement, c'est le coup parent qui le déclenche.
+  const sous = branches.map((b) => `<li class="bcard-line bcard-branch">
+<span class="bcard-key">${buttonIcon(t, L, sizeOf, b.kind)}</span>
+<span class="bcard-value">${esc(b.move.name)}</span>
+</li>`).join('\n');
   return `<li class="bcard-line${move ? '' : ' is-empty'}">
 ${keyIcon(t, L, sizeOf, kind, cmd, stance)}
 <span class="bcard-value">${move ? esc(move.name) : ''}</span>
-</li>`;
+</li>
+${sous}`;
 }
 
 // --- Attaques ----------------------------------------------------------------
@@ -174,22 +188,51 @@ export function stylesOf(char) {
   return vus.length > 1 ? vus : [];
 }
 
+// Un prolongement — HP link ou enchaînement de bravery — se rattache à
+// l'attaque qui le précède immédiatement dans la liste : c'est la seule forme
+// que le build lui donne, et la lecture que fait le créateur. Il n'occupe pas
+// d'emplacement. Sans cette lecture, le Somersault de Tifa mangeait une des
+// trois commandes d'attaque HP au sol et le quatrième coup disparaissait.
+function branchesOf(build, index, char) {
+  const liens = {};
+  for (const l of char?.links || []) (liens[l.from] = liens[l.from] || new Set()).add(l.to);
+  const starters = new Set(char?.followStarters || []);
+  const attaches = {};
+  (build.attacks || []).forEach((id, i) => {
+    if (!i) return;
+    const info = index[id];
+    const parent = index[(build.attacks || [])[i - 1]];
+    if (!info || !parent || parent.followUp) return;
+    const estLien = info.kind === 'hp' && liens[parent.move.id]?.has(id);
+    const estEnchainement = info.followUp && starters.has(parent.move.id);
+    if (estLien || estEnchainement) attaches[i] = i - 1;
+  });
+  return attaches;
+}
+
 function attackGrid(t, L, sizeOf, build, char, styles) {
   const index = attackIndex(char);
-  // catégorie -> commande -> coup
+  const attaches = branchesOf(build, index, char);
+  // catégorie -> commande -> { coup, prolongements }
   const parCat = {};
+  const parPos = {};
   (build.attacks || []).forEach((id, i) => {
     const info = index[id];
-    // Un enchaînement prolonge un coup et n'occupe pas de commande : la carte
-    // montre les emplacements, il n'y a donc pas sa place.
-    if (!info || info.followUp) return;
+    // Un enchaînement qui ne prolonge rien n'a pas d'emplacement non plus : la
+    // carte montre les commandes, il n'y a pas sa place.
+    if (!info || info.followUp || attaches[i] !== undefined) return;
     const cat = `${info.kind}|${info.groupKey}|${info.style}`;
     const cmd = Number((build.attackSlots || [])[i]);
     const cases = (parCat[cat] = parCat[cat] || {});
     const place = cmd >= 0 && cmd < MAX_SLOTS && !cases[cmd]
       ? cmd
       : [0, 1, 2].find((c) => !cases[c]);
-    if (place !== undefined) cases[place] = info.move;
+    if (place !== undefined) { cases[place] = { move: info.move, branches: [] }; parPos[i] = cases[place]; }
+  });
+  // Deuxième passe : les prolongements rejoignent leur parent une fois posé.
+  Object.entries(attaches).forEach(([i, p]) => {
+    const info = index[(build.attacks || [])[i]];
+    if (info && parPos[p]) parPos[p].branches.push(info);
   });
 
   return categories(char).map((c) => {
@@ -197,7 +240,9 @@ function attackGrid(t, L, sizeOf, build, char, styles) {
     // Un coup « main » vaut au sol comme en l'air : sa direction est celle du
     // sol, la seule que la source décrive.
     const stance = STANCE[c.groupKey] || 'ground';
-    const lignes = [0, 1, 2].map((i) => attackLine(t, L, sizeOf, c.kind, i, cases[i], stance)).join('\n');
+    const lignes = [0, 1, 2].map((i) => (
+      attackLine(t, L, sizeOf, c.kind, i, cases[i]?.move, stance, cases[i]?.branches || [])
+    )).join('\n');
     // Un bloc rattaché à un style ne s'affiche qu'avec son onglet. Un bloc sans
     // style — les attaques HP de Cecil, communes aux deux jobs — reste visible.
     const rang = styles.indexOf(c.style);

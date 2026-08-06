@@ -332,9 +332,15 @@ for (const locale of activeLocales) {
     // Même banc d'essai, étendu aux 31 personnages : c'est là qu'on voit si un
     // cadrage de portrait gêne la lecture. Mêmes conditions — noindex, hors
     // sitemap, langue par défaut seulement.
+    // Builds réels décodés depuis les liens de partage fournis (data/build-cards.json).
+    // Ce que ce fichier ne couvre pas est rendu en maquette, et la carte le dit.
+    const reels = Object.fromEntries(
+      (readJson(join(ROOT, 'data', 'build-cards.json'))?.builds || [])
+        .map((e) => [e.build.character, e.build]),
+    );
     writeFileSync(join(DIST, 'build-card-roster.html'), renderBuildCardRoster({
       ...i18n('build-card-roster.html', {}),
-      reference: carte?.build || null,
+      reels,
       data: bundle,
       hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
       sizeOf,
