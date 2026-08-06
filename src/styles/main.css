@@ -1503,7 +1503,14 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   border-radius: var(--radius);
   padding: 1rem 1.1rem 0.8rem;
   margin: 1rem 0 2rem;
-  max-width: 40rem;
+  /* Taille figée : deux cartes côte à côte doivent se comparer sans que l'œil
+     ait à corriger l'échelle, et une capture doit toujours rendre le même
+     cadre. Les valeurs sont celles relevées à l'inspecteur — 640 × 707,33 au
+     total, bordure et rembourrage compris. */
+  width: 40rem;
+  height: 44.21rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* En-tête : le personnage à gauche ; à droite le nom du build, puis les deux
@@ -1849,6 +1856,8 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   /* Sur 337 px les languettes prennent presque toute la largeur : rien ne
      peut tenir a cote. L'en-tete passe donc dessous, et ses deux colonnes
      reprennent toute la largeur. */
+  /* Sur 337 px la hauteur figée n'a plus de sens : le contenu s'empile. */
+  .bcard { width: auto; height: auto; }
   .bcard-head { gap: 0.6rem; padding-top: 1.7rem; }
   .bcard-ids, .bcard-side { max-width: none; }
   /* Les onglets de style reprennent leur place dans le flux : sur 337 px, le
