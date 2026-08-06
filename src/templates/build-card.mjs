@@ -203,14 +203,22 @@ export function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', v
   return `<article class="bcard${aside ? ` bcard-has-aside bcard-${variant}` : ''}">
 ${aside}
 <header class="bcard-head">
-<div class="bcard-ids">
+${(() => {
+  const renforts = `<p class="bcard-banner bcard-banner-assist">${assist ? portrait(assist.slug, t('buildCard.assistAlt', { name: assist.name })) : '<span class="bcard-portrait-none" aria-hidden="true"></span>'}<span class="bcard-role">${esc(t('buildCard.assist'))}</span></p>
+<p class="bcard-summon"><img class="icon-d12 bcard-summon-orb" src="${L.asset('assets/summon-icons/summon-orb.png')}" alt="${esc(t('buildCard.summon'))}" title="${esc(t('buildCard.summon'))}"${sizeOf('summon-icons/summon-orb.png')} loading="lazy"><span class="bcard-value">${summon ? esc(summon.name) : ''}</span></p>`;
+  // Les deux renforts se rangent sous le nom du personnage quand le portrait
+  // couvre la carte, sous le nom du build sinon : à gauche le fond laisse la
+  // place, à droite il l'occuperait.
+  const aGauche = variant === 'portrait-full';
+  return `<div class="bcard-ids">
 <p class="bcard-banner">${aside ? '' : portrait(char.slug, t('buildCard.portraitAlt', { name: char.name }))}<span class="bcard-name">${esc(char.name)}</span></p>
+${aGauche ? renforts : ''}
 </div>
 <div class="bcard-side">
 <p class="bcard-title">${build.name ? esc(build.name) : `<span class="bcard-untitled">${esc(t('buildCard.untitled'))}</span>`}</p>
-<p class="bcard-banner bcard-banner-assist">${assist ? portrait(assist.slug, t('buildCard.assistAlt', { name: assist.name })) : '<span class="bcard-portrait-none" aria-hidden="true"></span>'}<span class="bcard-role">${esc(t('buildCard.assist'))}</span></p>
-<p class="bcard-summon"><img class="icon-d12 bcard-summon-orb" src="${L.asset('assets/summon-icons/summon-orb.png')}" alt="${esc(t('buildCard.summon'))}" title="${esc(t('buildCard.summon'))}"${sizeOf('summon-icons/summon-orb.png')} loading="lazy"><span class="bcard-value">${summon ? esc(summon.name) : ''}</span></p>
-</div>
+${aGauche ? '' : renforts}
+</div>`;
+})()}
 </header>
 
 <div class="bcard-body">

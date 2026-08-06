@@ -1580,8 +1580,9 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    fond et non comme un bloc — et ce qui garde les colonnes lisibles. */
 .bcard-portrait-full .bcard-aside {
   opacity: 0.45;
-  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 22%, transparent 72%);
-  mask-image: linear-gradient(to right, #000 0%, #000 22%, transparent 72%);
+  margin-left: -1.1rem;
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 22%, transparent 95%);
+  mask-image: linear-gradient(to right, #000 0%, #000 22%, transparent 95%);
 }
 
 /* Variante 2 : la hauteur du seul en-tête, dont il partage la cellule. Son bord
@@ -1592,7 +1593,7 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    hauteur vient de la rangée, et le portrait disparaissait purement et
    simplement. `contain` garantit qu'il se montre entier quelle que soit la
    hauteur que prend l'en-tête. */
-.bcard-portrait-tall .bcard-aside { grid-row: 1; width: 8rem; }
+.bcard-portrait-tall .bcard-aside { grid-row: 1; width: 7rem; }
 .bcard-portrait-tall .bcard-aside img { object-fit: contain; object-position: bottom center; }
 
 /* Corps : deux colonnes, équipement à gauche, attaques à droite. */
