@@ -1568,20 +1568,32 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bcard-aside { grid-column: 1; justify-self: start; z-index: 0; position: relative; overflow: hidden; }
 .bcard-aside img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
 
-/* Variante 1 : toute la hauteur, du haut de la carte au trait du pied. Les
-   portraits sont cadrés avec du vide au-dessus de la tête : à l'échelle du
-   bandeau ce vide laissait le haut inoccupé, l'image est donc agrandie et
-   ancrée en bas, la silhouette partant du haut de la carte.
-   La valeur vaut pour le cadrage de Sephiroth ; le vide va de 0 % (Yuna) à
-   17 % (Lightning) selon les portraits, un recadrage par personnage sera
-   nécessaire si la variante est retenue. */
-.bcard-portrait-full .bcard-aside { grid-row: 1 / 3; width: 6.5rem; }
-.bcard-portrait-full .bcard-aside img { inset: auto 0 0 0; height: 118%; }
+/* Variante 1 : du haut de la carte au trait du pied. Les portraits sont carrés
+   et leur silhouette en occupe toute la largeur — la montrer entière impose
+   donc une largeur égale à la hauteur. Le fond prend la largeur du contenu et
+   se cale en bas : son bord inférieur tombe sur le trait du pied, et il ne
+   manque que les quelques pixels par lesquels la carte est plus haute que
+   large. Un bandeau étroit, lui, coupait la silhouette à la verticale. */
+.bcard-portrait-full .bcard-aside { grid-row: 1 / 3; align-self: end; width: 100%; aspect-ratio: 1; }
+/* Entier, il couvre la carte et le texte passe dessus : il se fond donc vers la
+   droite au lieu de s'arrêter sur une arête. C'est ce qui le fait lire comme un
+   fond et non comme un bloc — et ce qui garde les colonnes lisibles. */
+.bcard-portrait-full .bcard-aside {
+  opacity: 0.45;
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 22%, transparent 72%);
+  mask-image: linear-gradient(to right, #000 0%, #000 22%, transparent 72%);
+}
 
 /* Variante 2 : la hauteur du seul en-tête, dont il partage la cellule. Son bord
    inférieur tombe donc sur le trait qui ouvre l'équipement, et son bord gauche
-   au départ de ce trait. Carré, il se montre entier au lieu d'être coupé. */
-.bcard-portrait-tall .bcard-aside { grid-row: 1; aspect-ratio: 1; }
+   au départ de ce trait.
+   Largeur fixe et image contenue plutôt que `aspect-ratio` : celui-ci ne
+   résout pas sa largeur de la même façon d'un navigateur à l'autre quand la
+   hauteur vient de la rangée, et le portrait disparaissait purement et
+   simplement. `contain` garantit qu'il se montre entier quelle que soit la
+   hauteur que prend l'en-tête. */
+.bcard-portrait-tall .bcard-aside { grid-row: 1; width: 8rem; }
+.bcard-portrait-tall .bcard-aside img { object-fit: contain; object-position: bottom center; }
 
 /* Corps : deux colonnes, équipement à gauche, attaques à droite. */
 .bcard-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0.4rem 1.1rem; padding-top: 0.7rem; }
@@ -1657,9 +1669,9 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   .bcard-body { grid-template-columns: 1fr; gap: 0.9rem; }
   .bcard-head { gap: 0.6rem; }
   .bcard { padding: 0.8rem; }
-  /* Le fond reste un fond, simplement resserré : sur 337 px un bandeau de
-     6,5 rem couvrirait le tiers de la carte. */
-  .bcard-portrait-full .bcard-aside { width: 5rem; }
+  /* Le fond garde toute la largeur de la carte : le brider en bandeau le
+     réduirait à un carré de 5 rem perdu dans un coin. */
+  .bcard-portrait-tall .bcard-aside { width: 6rem; }
 }
 
 /* Icônes de rang et de type des accessoires. Quatorze fichiers de 16 px pour
