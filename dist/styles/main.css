@@ -1922,7 +1922,7 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 /* Banc d'essai : la carte a gauche, les builds enregistres a droite. La carte
    porte l'essentiel sur peu de surface — c'est tout son principe —, la colonne
    de droite ne doit donc pas la comprimer. */
-.bc-two { display: grid; grid-template-columns: 50% minmax(0, 1fr); gap: 1.2rem; align-items: start; }
+.bc-two { display: grid; grid-template-columns: 60% minmax(0, 1fr); gap: 1.2rem; align-items: start; }
 .bc-two .bc-side { margin: 0; }
 /* Le gestionnaire passe en vertical : les actions s'empilent au lieu de courir
    sur une ligne qui ne tient plus dans une colonne etroite. */

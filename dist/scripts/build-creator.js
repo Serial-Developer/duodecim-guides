@@ -822,8 +822,9 @@
       var rows = DETAIL_STATS.filter(function (s) { return s.group === group && d.totals[s.key]; });
       if (!rows.length) return;
       shown += rows.length;
-      detail.main.appendChild(el('h3', { class: 'bc-detail-group', text: T('detail.groups.' + group) }));
-      if (group === 'flat') detail.main.appendChild(el('p', { class: 'bc-detail-note', text: T('detail.flatNote') }));
+      // Les bonus en points n'ont ni titre ni note : ce sont des valeurs
+      // absolues au milieu de pourcentages, la différence saute aux yeux.
+      if (group !== 'flat') detail.main.appendChild(el('h3', { class: 'bc-detail-group', text: T('detail.groups.' + group) }));
       var list = el('dl', { class: 'bc-detail-list' });
       rows.forEach(function (s) {
         var slot = d.totals[s.key];
@@ -868,7 +869,6 @@
     if (!detail.boosters) return;
     clear(detail.boosters);
     var list = equippedBoosters();
-    detail.boosters.appendChild(el('h3', { class: 'bc-detail-group', text: T('detail.boosters.title') }));
     if (!list.length) {
       detail.boosters.appendChild(el('p', { class: 'bc-detail-note', text: T('detail.boosters.none') }));
       return;
@@ -894,7 +894,6 @@
             el('span', { text: b.item.name }),
             el('span', { class: 'bc-booster-mult', text: fmtMultiplier(b.item.multiplier) }),
           ]),
-          b.item.requirements ? el('span', { class: 'bc-booster-req', text: b.item.requirements }) : null,
         ]),
       ]));
     });
