@@ -1704,7 +1704,12 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    entièrement recouvert ; un panneau sous les seules listes laissait les titres
    illisibles sur les portraits clairs. */
 [data-bcard-mode="calque"] .bcard-block {
-  background: var(--surface);
+  /* Translucide, pas opaque : le personnage se devine à travers le panneau, et
+     c'est lui qui porte l'identité de la carte. À 0,82 le texte garde son
+     contraste sur les portraits les plus clairs. Le liseré détache le panneau
+     du fond là où le portrait est sombre et où il se confondrait avec lui. */
+  background: rgba(29, 23, 52, 0.82);
+  border: 1px solid rgba(157, 134, 232, 0.22);
   border-radius: 8px;
   padding: 0.5rem 0.7rem 0.3rem;
 }

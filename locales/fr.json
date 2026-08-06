@@ -838,7 +838,7 @@
     "rosterReal": "build réel",
     "rosterMode": "Fond",
     "rosterModeCurrent": "Actuel",
-    "rosterModeScrim": "Support opaque sous le texte",
+    "rosterModeScrim": "Support translucide sous le texte",
     "rosterModeDim": "Portrait atténué"
   },
   "accessories": {
