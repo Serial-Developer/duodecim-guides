@@ -828,12 +828,13 @@
       rows.forEach(function (s) {
         var slot = d.totals[s.key];
         list.appendChild(el('dt', { text: T('detail.stats.' + s.key) }));
-        list.appendChild(el('dd', {}, [
+        // Seule la valeur cumulée s'affiche. Le détail des pièces qui la
+        // composent reste accessible au survol : il triplait la hauteur de la
+        // colonne pour une information qu'on ne lit qu'en cas de doute.
+        list.appendChild(el('dd', {
+          title: slot.from.map(function (f) { return f.name + ' ' + fmtModifier(f.value, s.unit); }).join(' · '),
+        }, [
           el('span', { class: 'bc-detail-value', text: fmtModifier(slot.value, s.unit) }),
-          el('span', {
-            class: 'bc-detail-from',
-            text: slot.from.map(function (f) { return f.name + ' ' + fmtModifier(f.value, s.unit); }).join(' · '),
-          }),
         ]));
       });
       detail.main.appendChild(list);
@@ -901,7 +902,6 @@
     detail.boosters.appendChild(el('p', { class: 'bc-booster-total' }, [
       el('span', { text: T('detail.boosters.total') }), totalValue,
     ]));
-    detail.boosters.appendChild(el('p', { class: 'bc-detail-note', text: T('detail.boosters.scope') }));
   }
 
   function renderDetailStats() {

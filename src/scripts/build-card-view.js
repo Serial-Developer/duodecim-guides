@@ -326,25 +326,26 @@ function capacityOf(build, data, mastered = true) {
     return e.cp != null ? e.cp : 0;
   };
   const inconnus = [];
-  let used = 0;
+  let attaques = 0;
   for (const id of build.attacks || []) {
     const m = index[id]?.move;
     if (m && m.cp == null) inconnus.push(m.name);
-    used += cout(m);
+    attaques += cout(m);
   }
+  let abilities = 0;
   const parId = {};
   for (const g of data.abilities || []) for (const a of g.abilities || []) parId[a.id] = a;
   for (const id of build.abilities || []) {
     const a = parId[id];
     if (a && a.cp == null) inconnus.push(a.name);
-    used += cout(a);
+    abilities += cout(a);
   }
   let bonus = 0;
   for (const ext of data.capacity?.extenders || []) {
     const n = (build.accessories || []).filter((u) => u === ext.uid).length;
     bonus += Math.min(n, ext.maxEquipped) * ext.cp;
   }
-  return { used, max: (data.capacity?.base || 0) + bonus, unknown: inconnus };
+  return { attaques, abilities, used: attaques + abilities, max: (data.capacity?.base || 0) + bonus, unknown: inconnus };
 }
 
 // --- Carte -------------------------------------------------------------------
@@ -494,12 +495,12 @@ ${(() => {
   // elle manquait à la carte. Le crédit qu'il portait avant fait double emploi
   // avec le pied de page du site.
   const cp = capacityOf(build, data, mastered);
-  const part = cp.max ? Math.min(100, Math.round((cp.used / cp.max) * 100)) : 0;
+  const pour = (n) => (cp.max ? Math.min(100, Math.round((n / cp.max) * 100)) : 0);
   const trop = cp.used > cp.max;
   const titre = cp.unknown.length ? ` title="${esc(t('buildCard.cpUnknown', { list: cp.unknown.join(', ') }))}"` : '';
   return `<footer class="bcard-foot${trop ? ' is-over' : ''}"${titre}>
 <span class="bcard-cp-label">${esc(t('buildCard.capacity'))}</span>
-<span class="bcard-gauge" role="img" aria-label="${esc(t('buildCard.cpGauge', { used: cp.used, max: cp.max }))}"><span class="bcard-gauge-fill" style="width:${part}%"></span></span>
+<span class="bcard-gauge" role="img" aria-label="${esc(t('buildCard.cpGauge', { used: cp.used, max: cp.max }))}"><span class="bcard-gauge-fill bc-gauge-attacks" style="width:${pour(cp.attaques)}%"></span><span class="bcard-gauge-fill bc-gauge-abilities" style="width:${pour(cp.abilities)}%"></span></span>
 <span class="bcard-cp-value">${cp.used} / ${cp.max} CP${cp.unknown.length ? ' <abbr class="bcard-cp-min">≥</abbr>' : ''}</span>
 </footer>`;
 })()}

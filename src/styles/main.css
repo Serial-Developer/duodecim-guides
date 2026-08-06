@@ -1827,7 +1827,14 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   background: rgba(157, 134, 232, 0.18);
   overflow: hidden;
 }
-.bcard-gauge-fill { display: block; height: 100%; background: var(--violet); border-radius: 999px; }
+/* Les memes deux postes que la jauge du createur : vert pomme pour les
+   attaques, bleu ciel pour les abilities. Elles se suivent dans la barre. */
+.bcard-gauge { display: flex; }
+.bcard-gauge-fill { display: block; height: 100%; }
+.bcard-gauge-fill:first-child { border-radius: 999px 0 0 999px; }
+.bcard-gauge-fill:last-child { border-radius: 0 999px 999px 0; }
+.bcard-foot.is-over .bcard-gauge-fill.bc-gauge-attacks { background: #ef8896; }
+.bcard-foot.is-over .bcard-gauge-fill.bc-gauge-abilities { background: #c4566a; }
 .bcard-cp-value { font-family: var(--font-mono); color: var(--text); }
 /* Au-dela de la capacite, le build n'est pas jouable : la jauge le dit. */
 .bcard-foot.is-over .bcard-gauge-fill { background: var(--danger, #e06c75); }
