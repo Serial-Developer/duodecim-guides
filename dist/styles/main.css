@@ -1717,10 +1717,10 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 
 /* Corps : deux colonnes, équipement à gauche, attaques à droite. */
 .bcard-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0.4rem 1.1rem; padding-top: 0.7rem; }
-/* Panneau des abilities : les trois familles côte à côte. Elles n'ont pas
-   d'emplacements, leurs listes sont donc de longueur libre — trois colonnes
-   équilibrent mieux qu'une répartition en deux. */
-.bcard-abilities { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem 0.9rem; }
+/* Panneau des abilities : les trois familles l'une sous l'autre. Elles n'ont pas
+   d'emplacements, leurs listes sont donc de longueur libre — en colonnes, la
+   plus courte laissait un vide au regard de la plus longue. */
+.bcard-abilities { grid-template-columns: minmax(0, 1fr); gap: 0.9rem; }
 .bcard-col { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
 .bcard-block { min-width: 0; }
 .bcard-h {
