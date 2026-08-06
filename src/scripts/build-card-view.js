@@ -290,12 +290,50 @@ function abilitiesPanel(t, build, data) {
   }).join('\n');
 }
 
+// --- Capacité ----------------------------------------------------------------
+// Même calcul que le créateur, au même endroit que le reste du rendu : le coût
+// des attaques et des abilities d'un côté, la capacité de base augmentée des
+// accessoires extenseurs de l'autre.
+//
+// Un coût absent des sources n'est pas un coût nul : il compte pour zéro faute
+// de mieux, mais il ressort dans `unknown` pour que le total se lise comme un
+// minimum et jamais comme une valeur exacte.
+function capacityOf(build, data, mastered = true) {
+  const char = (data.characters || []).find((c) => c.slug === build.character);
+  const index = attackIndex(char);
+  const cout = (e) => {
+    if (!e) return 0;
+    if (mastered && e.cpMastered != null) return e.cpMastered;
+    return e.cp != null ? e.cp : 0;
+  };
+  const inconnus = [];
+  let used = 0;
+  for (const id of build.attacks || []) {
+    const m = index[id]?.move;
+    if (m && m.cp == null) inconnus.push(m.name);
+    used += cout(m);
+  }
+  const parId = {};
+  for (const g of data.abilities || []) for (const a of g.abilities || []) parId[a.id] = a;
+  for (const id of build.abilities || []) {
+    const a = parId[id];
+    if (a && a.cp == null) inconnus.push(a.name);
+    used += cout(a);
+  }
+  let bonus = 0;
+  for (const ext of data.capacity?.extenders || []) {
+    const n = (build.accessories || []).filter((u) => u === ext.uid).length;
+    bonus += Math.min(n, ext.maxEquipped) * ext.cp;
+  }
+  return { used, max: (data.capacity?.base || 0) + bonus, unknown: inconnus };
+}
+
 // --- Carte -------------------------------------------------------------------
 // `variant` ne change que la place du portrait du personnage : par défaut la
 // vignette de l'en-tête ; `portrait-full` et `portrait-tall` la sortent en
 // bandeau à gauche, sur toute la hauteur de la carte ou sur celle du seul
 // en-tête. Le nom reste en haut dans les trois cas.
-function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant = '', uid = '' }) {
+function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant = '', uid = '', mastered = true }) {
   const char = (data.characters || []).find((c) => c.slug === build.character);
   if (!char) return '';
   // Les onglets de style passent par des boutons radio, sans JavaScript : la
@@ -419,10 +457,20 @@ ${abilitiesPanel(t, build, data)}
 </div>
 </div>
 
-<footer class="bcard-foot">
-<span class="bcard-credit">${esc(t('buildCard.credit'))}</span>
-<span class="bcard-url">${esc(t('buildCard.creditUrl'))}</span>
-</footer>
+${(() => {
+  // Le pied porte la capacité : c'est la contrainte qui structure un build, et
+  // elle manquait à la carte. Le crédit qu'il portait avant fait double emploi
+  // avec le pied de page du site.
+  const cp = capacityOf(build, data, mastered);
+  const part = cp.max ? Math.min(100, Math.round((cp.used / cp.max) * 100)) : 0;
+  const trop = cp.used > cp.max;
+  const titre = cp.unknown.length ? ` title="${esc(t('buildCard.cpUnknown', { list: cp.unknown.join(', ') }))}"` : '';
+  return `<footer class="bcard-foot${trop ? ' is-over' : ''}"${titre}>
+<span class="bcard-cp-label">${esc(t('buildCard.capacity'))}</span>
+<span class="bcard-gauge" role="img" aria-label="${esc(t('buildCard.cpGauge', { used: cp.used, max: cp.max }))}"><span class="bcard-gauge-fill" style="width:${part}%"></span></span>
+<span class="bcard-cp-value">${cp.used} / ${cp.max} CP${cp.unknown.length ? ' <abbr class="bcard-cp-min">≥</abbr>' : ''}</span>
+</footer>`;
+})()}
 </article>`;
 }
 
