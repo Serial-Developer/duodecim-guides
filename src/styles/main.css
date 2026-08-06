@@ -1750,7 +1750,15 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    familles empilées à droite. C'est la répartition qui équilibre le mieux — la
    famille de base pèse à elle seule autant que les deux autres réunies. */
 .bcard-abilities { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.9rem 1.1rem; }
-.bcard-abilities .bcard-block:first-child { grid-row: 1 / span 2; }
+/* Les abilities de base sont trois fois plus nombreuses que les deux autres
+   familles reunies : elles prennent toute la largeur, sur deux colonnes, et
+   support et extra se partagent la ligne suivante. */
+.bcard-abilities .bcard-block:first-child { grid-column: 1 / -1; }
+.bcard-abilities .bcard-block:first-child .bcard-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 1.1rem;
+}
 
 /* Prolongement : un HP link ou un enchaînement, sous l'attaque qui le déclenche.
    Il n'a pas de commande propre, seulement son bouton. */
