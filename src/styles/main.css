@@ -1932,7 +1932,10 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    porte l'essentiel sur peu de surface — c'est tout son principe —, la colonne
    de droite ne doit donc pas la comprimer. */
 .bc-two { display: grid; grid-template-columns: 60% minmax(0, 1fr); gap: 1.2rem; align-items: start; }
-.bc-two .bc-side { margin: 0; }
+/* Les statistiques tiennent la colonne de droite, a hauteur de la carte : on
+   voit le build et ce qu'il produit d'un seul coup d'oeil. */
+.bc-side-stats { min-width: 0; max-height: 44.21rem; overflow-y: auto; padding-right: 0.3rem; }
+.bc-side-stats .bcard-block + .bcard-block { margin-top: 0.9rem; }
 /* Le gestionnaire passe en vertical : les actions s'empilent au lieu de courir
    sur une ligne qui ne tient plus dans une colonne etroite. */
 .bc-side .bc-actions { flex-direction: column; align-items: stretch; }

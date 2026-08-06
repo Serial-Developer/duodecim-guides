@@ -92,7 +92,11 @@ ${cpGauge(t)}
 ${card ? '' : detailStats(t)}
 </div>
 
-${card ? `<div class="bc-two"><div class="bc-card-host" id="bc-card" data-base="${L.asset('')}"></div>` : `<div class="bc-tabs">
+${card ? `<div class="bc-two"><div class="bc-card-host" id="bc-card" data-base="${L.asset('')}"></div>
+<aside class="bc-side-stats">
+<section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelStats'))}</h3><div id="bc-detail-main"></div></section>
+<section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelBoosters'))}</h3><div id="bc-detail-boosters"></div></section>
+</aside></div>` : `<div class="bc-tabs">
 <div class="bc-tablist" role="tablist" aria-label="${esc(t('buildCreator.tablistAria'))}">
 ${tabs.map((tb, i) => `<button type="button" class="bc-tab" role="tab" id="bc-tab-${tb.key}" aria-controls="bc-panel-${tb.key}" aria-selected="${i === 0}" tabindex="${i === 0 ? '0' : '-1'}" data-tab="${tb.key}">${esc(tb.label)}</button>`).join('\n')}
 </div>
@@ -100,7 +104,7 @@ ${tabs.map((tb, i) => `<div class="bc-panel" role="tabpanel" id="bc-panel-${tb.k
 </div>`}
 ${card ? '' : '</section>'}
 
-<section class="card bc-step${card ? ' bc-side' : ''}" id="bc-manager" hidden aria-labelledby="bc-step3">
+<section class="card bc-step" id="bc-manager" hidden aria-labelledby="bc-step3">
 <h2 id="bc-step3" style="margin-top:0.2rem">${esc(t('buildCreator.step3'))}</h2>
 <div class="bc-actions">
 <button type="button" class="bc-btn bc-btn-primary" id="bc-save">${esc(t('buildCreator.save'))}</button>
@@ -115,7 +119,7 @@ ${card ? '' : '</section>'}
 <p class="bc-notes-label"><label for="bc-notes">${esc(t('buildCreator.notesLabel'))}</label></p>
 <textarea id="bc-notes" rows="3" placeholder="${esc(t('buildCreator.notesPlaceholder'))}"></textarea>
 </section>
-${card ? '</div></section>' : ''}
+${card ? '</section>' : ''}
 
 <section class="card" aria-labelledby="bc-help">
 <h2 id="bc-help" style="margin-top:0.2rem">${esc(t('buildCreator.help'))}</h2>

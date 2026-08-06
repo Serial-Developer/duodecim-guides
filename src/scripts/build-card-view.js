@@ -418,7 +418,6 @@ function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant 
   const radios = [
     `<input class="bcard-panel-radio" type="radio" name="${esc(grpId)}-p" id="${esc(grpId)}-p1" value="gear" checked>`,
     `<input class="bcard-panel-radio" type="radio" name="${esc(grpId)}-p" id="${esc(grpId)}-p2" value="abilities">`,
-    live ? `<input class="bcard-panel-radio" type="radio" name="${esc(grpId)}-p" id="${esc(grpId)}-p3" value="stats">` : '',
     ...styles.map((s, i) => (
       `<input class="bcard-style-radio" type="radio" name="${esc(grpId)}" id="${esc(grpId)}-${i + 1}" value="${i + 1}"${i === 0 ? ' checked' : ''}>`
     )),
@@ -431,7 +430,6 @@ function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant 
   const languettes = `<p class="bcard-flaps" role="group" aria-label="${esc(t('buildCard.panelTabs'))}">
 <label class="bcard-flap" data-panel="gear" for="${esc(grpId)}-p1">${esc(t('buildCard.panelGear'))}</label>
 <label class="bcard-flap" data-panel="abilities" for="${esc(grpId)}-p2">${esc(t('buildCard.panelAbilities'))}</label>
-${live ? `<label class="bcard-flap" data-panel="stats" for="${esc(grpId)}-p3">${esc(t('buildCard.panelStats'))}</label>` : ''}
 </p>`;
 
   const onglets = styles.length
@@ -484,10 +482,6 @@ ${attackGrid(t, L, sizeOf, build, char, styles, live)}
 <div class="bcard-body bcard-abilities">
 ${abilitiesPanel(t, build, data, live)}
 </div>
-${live ? `<div class="bcard-body bcard-stats">
-<section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelStats'))}</h3><div id="bc-detail-main"></div></section>
-<section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelBoosters'))}</h3><div id="bc-detail-boosters"></div></section>
-</div>` : ''}
 </div>
 
 ${(() => {
