@@ -1497,6 +1497,7 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    écran. Fond opaque et aucune ombre portée débordante : une capture ne doit
    rien couper ni laisser de bord translucide. */
 .bcard {
+  position: relative;
   background: var(--surface);
   border: 1px solid rgba(157, 134, 232, 0.35);
   border-radius: var(--radius);
@@ -1508,6 +1509,7 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 /* En-tête : le personnage à gauche ; à droite le nom du build, puis les deux
    renforts sous lui — assist et invocation se lisent ensemble. */
 .bcard-head {
+  position: relative;
   display: flex;
   gap: 1rem;
   align-items: flex-start;
@@ -1553,8 +1555,19 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    on la pose, y compris dans une page sans JavaScript. Les radios sont les
    premiers enfants de la carte, le combinateur de frères ne regardant qu'en
    avant. */
-.bcard-style-radio { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
-.bcard-tabs { display: flex; flex-wrap: wrap; gap: 0.3rem; justify-content: flex-end; margin: 0.4rem 0 0; }
+.bcard-style-radio, .bcard-panel-radio { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+/* Les onglets de style descendent sur le bas de l'en-tête, hors du flux : ils
+   se rangent ainsi sous le nom du build sans en dicter la hauteur. */
+.bcard-tabs {
+  position: absolute;
+  right: 0;
+  bottom: 0.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  justify-content: flex-end;
+  margin: 0;
+}
 .bcard-tab {
   font-size: 0.72rem;
   letter-spacing: 0.05em;
@@ -1566,32 +1579,79 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   cursor: pointer;
 }
 .bcard-tab:hover { color: var(--text); border-color: rgba(157, 134, 232, 0.55); }
-/* Un bloc de style est masqué par défaut ; son onglet le rappelle. */
+/* Un bloc de style est masqué par défaut ; son onglet le rappelle.
+   `:has()` sur la carte plutôt qu'un sélecteur de position : les deux groupes de
+   radios — panneaux et styles — se comptent ensemble dès qu'on les positionne,
+   et le nombre de styles varie d'un personnage à l'autre. La valeur du radio
+   porte le rattachement, la structure n'entre plus en jeu. */
 .bcard-has-styles .bcard-block[data-si] { display: none; }
-.bcard-style-radio:nth-of-type(1):checked ~ .bcard-body .bcard-block[data-si="1"],
-.bcard-style-radio:nth-of-type(2):checked ~ .bcard-body .bcard-block[data-si="2"],
-.bcard-style-radio:nth-of-type(3):checked ~ .bcard-body .bcard-block[data-si="3"],
-.bcard-style-radio:nth-of-type(4):checked ~ .bcard-body .bcard-block[data-si="4"],
-.bcard-style-radio:nth-of-type(5):checked ~ .bcard-body .bcard-block[data-si="5"],
-.bcard-style-radio:nth-of-type(6):checked ~ .bcard-body .bcard-block[data-si="6"] { display: block; }
-.bcard-style-radio:nth-of-type(1):checked ~ .bcard-head .bcard-tab:nth-of-type(1),
-.bcard-style-radio:nth-of-type(2):checked ~ .bcard-head .bcard-tab:nth-of-type(2),
-.bcard-style-radio:nth-of-type(3):checked ~ .bcard-head .bcard-tab:nth-of-type(3),
-.bcard-style-radio:nth-of-type(4):checked ~ .bcard-head .bcard-tab:nth-of-type(4),
-.bcard-style-radio:nth-of-type(5):checked ~ .bcard-head .bcard-tab:nth-of-type(5),
-.bcard-style-radio:nth-of-type(6):checked ~ .bcard-head .bcard-tab:nth-of-type(6) {
+.bcard:has(> .bcard-style-radio[value="1"]:checked) .bcard-block[data-si="1"],
+.bcard:has(> .bcard-style-radio[value="2"]:checked) .bcard-block[data-si="2"],
+.bcard:has(> .bcard-style-radio[value="3"]:checked) .bcard-block[data-si="3"],
+.bcard:has(> .bcard-style-radio[value="4"]:checked) .bcard-block[data-si="4"],
+.bcard:has(> .bcard-style-radio[value="5"]:checked) .bcard-block[data-si="5"],
+.bcard:has(> .bcard-style-radio[value="6"]:checked) .bcard-block[data-si="6"] { display: block; }
+.bcard:has(> .bcard-style-radio[value="1"]:checked) .bcard-tab[data-si="1"],
+.bcard:has(> .bcard-style-radio[value="2"]:checked) .bcard-tab[data-si="2"],
+.bcard:has(> .bcard-style-radio[value="3"]:checked) .bcard-tab[data-si="3"],
+.bcard:has(> .bcard-style-radio[value="4"]:checked) .bcard-tab[data-si="4"],
+.bcard:has(> .bcard-style-radio[value="5"]:checked) .bcard-tab[data-si="5"],
+.bcard:has(> .bcard-style-radio[value="6"]:checked) .bcard-tab[data-si="6"] {
   color: var(--gold);
   border-color: var(--gold);
   background: rgba(199, 164, 90, 0.12);
 }
-/* Le radio est invisible : c'est son onglet qui doit montrer le focus, sans
-   quoi la carte devient impraticable au clavier. */
-.bcard-style-radio:nth-of-type(1):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(1),
-.bcard-style-radio:nth-of-type(2):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(2),
-.bcard-style-radio:nth-of-type(3):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(3),
-.bcard-style-radio:nth-of-type(4):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(4),
-.bcard-style-radio:nth-of-type(5):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(5),
-.bcard-style-radio:nth-of-type(6):focus-visible ~ .bcard-head .bcard-tab:nth-of-type(6) {
+
+/* Languettes de panneau : équipement et attaques d'un côté, abilities de
+   l'autre. Elles partent du bord supérieur de la carte, hors du flux pour ne
+   pas repousser l'en-tête. */
+.bcard-flaps {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  z-index: 2;
+}
+.bcard-flap {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-2);
+  border: 1px solid rgba(157, 134, 232, 0.3);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 0.25rem 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.bcard-flap:hover { color: var(--text); }
+.bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-flap[data-panel="gear"],
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-flap[data-panel="abilities"] {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(199, 164, 90, 0.14);
+}
+/* Un seul panneau à la fois. */
+.bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-abilities,
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-body:not(.bcard-abilities) { display: none; }
+/* Les onglets de style ne concernent que les attaques : ils disparaissent avec
+   elles. */
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-tabs { display: none; }
+
+/* Le radio est invisible : c'est son onglet qui doit montrer le focus, sans quoi
+   la carte devient impraticable au clavier. */
+.bcard:has(> .bcard-style-radio[value="1"]:focus-visible) .bcard-tab[data-si="1"],
+.bcard:has(> .bcard-style-radio[value="2"]:focus-visible) .bcard-tab[data-si="2"],
+.bcard:has(> .bcard-style-radio[value="3"]:focus-visible) .bcard-tab[data-si="3"],
+.bcard:has(> .bcard-style-radio[value="4"]:focus-visible) .bcard-tab[data-si="4"],
+.bcard:has(> .bcard-style-radio[value="5"]:focus-visible) .bcard-tab[data-si="5"],
+.bcard:has(> .bcard-style-radio[value="6"]:focus-visible) .bcard-tab[data-si="6"],
+.bcard:has(> .bcard-panel-radio[value="gear"]:focus-visible) .bcard-flap[data-panel="gear"],
+.bcard:has(> .bcard-panel-radio[value="abilities"]:focus-visible) .bcard-flap[data-panel="abilities"] {
   outline: 2px solid var(--gold);
   outline-offset: 2px;
 }
@@ -1657,6 +1717,10 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 
 /* Corps : deux colonnes, équipement à gauche, attaques à droite. */
 .bcard-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0.4rem 1.1rem; padding-top: 0.7rem; }
+/* Panneau des abilities : les trois familles côte à côte. Elles n'ont pas
+   d'emplacements, leurs listes sont donc de longueur libre — trois colonnes
+   équilibrent mieux qu'une répartition en deux. */
+.bcard-abilities { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem 0.9rem; }
 .bcard-col { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
 .bcard-block { min-width: 0; }
 .bcard-h {
@@ -1728,8 +1792,11 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 @media (max-width: 599px) {
   /* Colonnes empilées : équipement, accessoires, puis les attaques. La carte
      doit rester lisible sans défilement horizontal. */
-  .bcard-body { grid-template-columns: 1fr; gap: 0.9rem; }
+  .bcard-body, .bcard-abilities { grid-template-columns: 1fr; gap: 0.9rem; }
   .bcard-head { gap: 0.6rem; }
+  /* Les onglets de style reprennent leur place dans le flux : sur 337 px, le
+     coin inférieur droit de l'en-tête est déjà occupé. */
+  .bcard-tabs { position: static; justify-content: flex-start; margin-top: 0.4rem; }
   .bcard { padding: 0.8rem; }
   /* Le fond garde toute la largeur de la carte : le brider en bandeau le
      réduirait à un carré de 5 rem perdu dans un coin. */

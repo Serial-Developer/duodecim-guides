@@ -56,6 +56,18 @@ function maquette(char, rang, data) {
     }
   }
 
+  // Quelques abilities par famille, pour que le panneau ne soit pas vide. Celles
+  // qu'un `only` réserve à d'autres personnages sont écartées : une maquette
+  // reste un assemblage arbitraire, pas un assemblage impossible.
+  const abilities = [];
+  (data.abilities || []).forEach((g, gi) => {
+    const dispo = (g.abilities || []).filter((a) => !a.only || a.only.includes(char.slug));
+    const combien = [6, 3, 4][gi] ?? 3;
+    for (let i = 0; i < combien && dispo.length; i++) {
+      abilities.push(dispo[(rang * 5 + i * 7) % dispo.length].id);
+    }
+  });
+
   const assists = data.assists || [];
   const summons = data.summons || [];
   return {
@@ -63,6 +75,7 @@ function maquette(char, rang, data) {
     name: '',
     equipment,
     accessories,
+    abilities: [...new Set(abilities)],
     attacks,
     attackSlots,
     assist: assists.length ? assists[(rang + 1) % assists.length].slug : null,

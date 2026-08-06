@@ -789,6 +789,14 @@
     "airBravery": "Braveries en l’air",
     "groundHp": "Attaques HP au sol",
     "airHp": "Attaques HP en l’air",
+    "panelTabs": "Panneau de la carte",
+    "panelGear": "Équipement & attaques",
+    "panelAbilities": "Abilities",
+    "abilityGroups": {
+      "basic": "Abilities de base",
+      "support": "Abilities de support",
+      "extra": "Abilities extra"
+    },
     "styleTabs": "Style de combat",
     "mainBravery": "Braveries principales",
     "mainHp": "Attaques HP principales",

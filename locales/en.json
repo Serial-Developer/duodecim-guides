@@ -789,6 +789,14 @@
     "airBravery": "Air bravery",
     "groundHp": "Ground HP attacks",
     "airHp": "Air HP attacks",
+    "panelTabs": "Card panel",
+    "panelGear": "Gear & attacks",
+    "panelAbilities": "Abilities",
+    "abilityGroups": {
+      "basic": "Basic abilities",
+      "support": "Support abilities",
+      "extra": "Extra abilities"
+    },
     "styleTabs": "Combat style",
     "mainBravery": "Main bravery",
     "mainHp": "Main HP attacks",

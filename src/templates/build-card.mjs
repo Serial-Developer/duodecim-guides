@@ -209,6 +209,26 @@ function attackGrid(t, L, sizeOf, build, char, styles) {
   }).join('\n');
 }
 
+// --- Abilities ---------------------------------------------------------------
+// Trois familles, telles que le payload les livre : basic, support, extra. Elles
+// n'ont pas d'emplacements — seule la capacité en points les borne —, la carte
+// liste donc ce qui est équipé, sans ligne vide de réserve. Une famille sans
+// rien garde sa ligne estompée : lire un build en creux vaut ici aussi.
+function abilitiesPanel(t, build, data) {
+  const equipees = new Set(build.abilities || []);
+  return (data.abilities || []).map((g) => {
+    const liste = (g.abilities || []).filter((a) => equipees.has(a.id));
+    const lignes = liste.length
+      ? liste.map((a) => `<li class="bcard-line"><span class="bcard-value">${esc(a.name)}</span></li>`).join('\n')
+      : '<li class="bcard-line is-empty"><span class="bcard-value"></span></li>';
+    const titre = t.has(`buildCard.abilityGroups.${g.key}`) ? t(`buildCard.abilityGroups.${g.key}`) : g.label;
+    return `<section class="bcard-block">
+<h3 class="bcard-h">${esc(titre)}</h3>
+<ul class="bcard-list">${lignes}</ul>
+</section>`;
+  }).join('\n');
+}
+
 // --- Carte -------------------------------------------------------------------
 // `variant` ne change que la place du portrait du personnage : par défaut la
 // vignette de l'en-tête ; `portrait-full` et `portrait-tall` la sortent en
@@ -269,19 +289,32 @@ export function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', v
     : '';
   const regard = char.portraitFacing === 'left' ? ' bcard-faces-left' : '';
 
-  // Les radios précèdent tout : la feuille de style relie l'onglet coché à ses
-  // blocs par le combinateur de frères, qui ne regarde qu'en avant.
-  const radios = styles.map((s, i) => (
-    `<input class="bcard-style-radio" type="radio" name="${esc(grpId)}" id="${esc(grpId)}-${i + 1}"${i === 0 ? ' checked' : ''}>`
-  )).join('\n');
+  // Radios d'onglets, en tête de carte. La feuille de style les relie à leurs
+  // panneaux par `:has()` sur la carte : un sélecteur de position aurait lié les
+  // deux groupes entre eux, leur nombre variant d'un personnage à l'autre.
+  const radios = [
+    `<input class="bcard-panel-radio" type="radio" name="${esc(grpId)}-p" id="${esc(grpId)}-p1" value="gear" checked>`,
+    `<input class="bcard-panel-radio" type="radio" name="${esc(grpId)}-p" id="${esc(grpId)}-p2" value="abilities">`,
+    ...styles.map((s, i) => (
+      `<input class="bcard-style-radio" type="radio" name="${esc(grpId)}" id="${esc(grpId)}-${i + 1}" value="${i + 1}"${i === 0 ? ' checked' : ''}>`
+    )),
+  ].join('\n');
+
+  // Languettes de panneau, attachées au bord supérieur de la carte.
+  const languettes = `<p class="bcard-flaps" role="group" aria-label="${esc(t('buildCard.panelTabs'))}">
+<label class="bcard-flap" data-panel="gear" for="${esc(grpId)}-p1">${esc(t('buildCard.panelGear'))}</label>
+<label class="bcard-flap" data-panel="abilities" for="${esc(grpId)}-p2">${esc(t('buildCard.panelAbilities'))}</label>
+</p>`;
+
   const onglets = styles.length
     ? `<p class="bcard-tabs" role="group" aria-label="${esc(t('buildCard.styleTabs'))}">${styles.map((s, i) => (
-      `<label class="bcard-tab" for="${esc(grpId)}-${i + 1}">${esc(s)}</label>`
+      `<label class="bcard-tab" data-si="${i + 1}" for="${esc(grpId)}-${i + 1}">${esc(s)}</label>`
     )).join('')}</p>`
     : '';
 
   return `<article class="bcard${aside ? ` bcard-has-aside bcard-${variant}${regard}` : ''}${styles.length ? ' bcard-has-styles' : ''}">
 ${radios}
+${languettes}
 ${aside}
 <header class="bcard-head">
 ${(() => {
@@ -298,9 +331,9 @@ ${aGauche ? renforts : ''}
 <div class="bcard-side">
 <p class="bcard-title">${build.name ? esc(build.name) : `<span class="bcard-untitled">${esc(t('buildCard.untitled'))}</span>`}</p>
 ${aGauche ? '' : renforts}
-${onglets}
 </div>`;
 })()}
+${onglets}
 </header>
 
 <div class="bcard-body">
@@ -317,6 +350,10 @@ ${onglets}
 <div class="bcard-col">
 ${attackGrid(t, L, sizeOf, build, char, styles)}
 </div>
+</div>
+
+<div class="bcard-body bcard-abilities">
+${abilitiesPanel(t, build, data)}
 </div>
 
 <footer class="bcard-foot">
