@@ -1518,6 +1518,11 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   padding-bottom: 0.7rem;
   border-bottom: 1px solid rgba(157, 134, 232, 0.25);
 }
+/* Les languettes occupent le milieu du bord supérieur : les deux côtés de
+   l'en-tête s'arrêtent avant elles. Sans cette borne, un nom de build un peu
+   long — « Champion of blitzball » — passait dessous. Il se replie sur deux
+   lignes plutôt que de glisser derrière. */
+.bcard-ids, .bcard-side { max-width: calc(50% - 7rem); }
 .bcard-ids { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
 .bcard-side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; min-width: 0; text-align: right; }
 /* Bannière : portrait puis nom, sans cadre — le portrait se suffit à lui-même
@@ -1543,8 +1548,11 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   margin: 0;
   font-family: var(--font-display);
   font-size: 1.35rem;
+  line-height: 1.15;
   color: var(--text);
   min-width: 0;
+  /* Un nom d'un seul tenant plus large que sa colonne déborderait sans ceci. */
+  overflow-wrap: anywhere;
 }
 .bcard-untitled { color: var(--muted); font-style: italic; font-size: 1rem; }
 
@@ -1805,7 +1813,11 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   /* Colonnes empilées : équipement, accessoires, puis les attaques. La carte
      doit rester lisible sans défilement horizontal. */
   .bcard-body, .bcard-abilities { grid-template-columns: 1fr; gap: 0.9rem; }
-  .bcard-head { gap: 0.6rem; }
+  /* Sur 337 px les languettes prennent presque toute la largeur : rien ne
+     peut tenir a cote. L'en-tete passe donc dessous, et ses deux colonnes
+     reprennent toute la largeur. */
+  .bcard-head { gap: 0.6rem; padding-top: 1.7rem; }
+  .bcard-ids, .bcard-side { max-width: none; }
   /* Les onglets de style reprennent leur place dans le flux : sur 337 px, le
      coin inférieur droit de l'en-tête est déjà occupé. */
   .bcard-tabs { position: static; justify-content: flex-start; margin-top: 0.4rem; }
