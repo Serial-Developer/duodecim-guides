@@ -105,8 +105,7 @@
 </header>
 <main class="wrap bc-main">
 <h1 style="color:var(--gold)">Créateur de builds</h1>
-<p>Cet outil reproduit l'écran de personnalisation de Dissidia 012 : attaques, abilities, équipement, accessoires, assist et invocation. Tout se passe dans votre navigateur — rien n'est envoyé sur un serveur, et vos builds restent stockés sur votre machine.</p>
-<p>La jauge de CP suit les règles du jeu : 450 points de capacité au niveau 100, extensibles à 510 avec les accessoires Hero's Spirit et Hero's Essence. Un build qui dépasse son budget reste modifiable et sauvegardable, mais il est signalé comme invalide.</p>
+
 
 <noscript><div class="banner info">Le créateur de builds a besoin de JavaScript pour fonctionner. Les données de jeu restent consultables sur les fiches de personnages.</div></noscript>
 
@@ -265,10 +264,10 @@
 
 </div>
 
-<div class="bc-card-host" id="bc-card" data-base=""></div>
-</section>
+<div class="bc-two"><div class="bc-card-host" id="bc-card" data-base=""></div>
 
-<section class="card bc-step" id="bc-manager" hidden aria-labelledby="bc-step3">
+
+<section class="card bc-step bc-side" id="bc-manager" hidden aria-labelledby="bc-step3">
 <h2 id="bc-step3" style="margin-top:0.2rem">3. Builds enregistrés</h2>
 <div class="bc-actions">
 <button type="button" class="bc-btn bc-btn-primary" id="bc-save">Enregistrer le build</button>
@@ -283,6 +282,7 @@
 <p class="bc-notes-label"><label for="bc-notes">Notes libres sur ce build</label></p>
 <textarea id="bc-notes" rows="3" placeholder="Remarques, matchups visés, variantes…"></textarea>
 </section>
+</div></section>
 
 <section class="card" aria-labelledby="bc-help">
 <h2 id="bc-help" style="margin-top:0.2rem">Repères</h2>
@@ -300,6 +300,8 @@
 </ul>
 </section>
 
+<section class="card"><p>Cet outil reproduit l'écran de personnalisation de Dissidia 012 : attaques, abilities, équipement, accessoires, assist et invocation. Tout se passe dans votre navigateur — rien n'est envoyé sur un serveur, et vos builds restent stockés sur votre machine.</p>
+<p>La jauge de CP suit les règles du jeu : 450 points de capacité au niveau 100, extensibles à 510 avec les accessoires Hero's Spirit et Hero's Essence. Un build qui dépasse son budget reste modifiable et sauvegardable, mais il est signalé comme invalide.</p></section>
 <p class="sources-list" id="bc-sources"></p>
 </main>
 <footer class="site">

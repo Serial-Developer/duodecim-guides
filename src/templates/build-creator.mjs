@@ -67,7 +67,7 @@ export function renderBuildCreator({ ed, characters, hasPortrait, seo, i18nPaylo
   const body = `${siteHeader(t, { path, locale, alternates, availability, active: 'createur' })}
 <main class="wrap bc-main">
 <h1 style="color:var(--gold)">${esc(ed.title)}</h1>
-${paras(ed.intro)}
+${card ? '' : paras(ed.intro)}
 
 <noscript>${infoBanner(t('buildCreator.noscript'))}</noscript>
 
@@ -92,15 +92,15 @@ ${cpGauge(t)}
 ${card ? '' : detailStats(t)}
 </div>
 
-${card ? `<div class="bc-card-host" id="bc-card" data-base="${L.asset('')}"></div>` : `<div class="bc-tabs">
+${card ? `<div class="bc-two"><div class="bc-card-host" id="bc-card" data-base="${L.asset('')}"></div>` : `<div class="bc-tabs">
 <div class="bc-tablist" role="tablist" aria-label="${esc(t('buildCreator.tablistAria'))}">
 ${tabs.map((tb, i) => `<button type="button" class="bc-tab" role="tab" id="bc-tab-${tb.key}" aria-controls="bc-panel-${tb.key}" aria-selected="${i === 0}" tabindex="${i === 0 ? '0' : '-1'}" data-tab="${tb.key}">${esc(tb.label)}</button>`).join('\n')}
 </div>
 ${tabs.map((tb, i) => `<div class="bc-panel" role="tabpanel" id="bc-panel-${tb.key}" aria-labelledby="bc-tab-${tb.key}" tabindex="0"${i === 0 ? '' : ' hidden'}></div>`).join('\n')}
 </div>`}
-</section>
+${card ? '' : '</section>'}
 
-<section class="card bc-step" id="bc-manager" hidden aria-labelledby="bc-step3">
+<section class="card bc-step${card ? ' bc-side' : ''}" id="bc-manager" hidden aria-labelledby="bc-step3">
 <h2 id="bc-step3" style="margin-top:0.2rem">${esc(t('buildCreator.step3'))}</h2>
 <div class="bc-actions">
 <button type="button" class="bc-btn bc-btn-primary" id="bc-save">${esc(t('buildCreator.save'))}</button>
@@ -115,6 +115,7 @@ ${tabs.map((tb, i) => `<div class="bc-panel" role="tabpanel" id="bc-panel-${tb.k
 <p class="bc-notes-label"><label for="bc-notes">${esc(t('buildCreator.notesLabel'))}</label></p>
 <textarea id="bc-notes" rows="3" placeholder="${esc(t('buildCreator.notesPlaceholder'))}"></textarea>
 </section>
+${card ? '</div></section>' : ''}
 
 <section class="card" aria-labelledby="bc-help">
 <h2 id="bc-help" style="margin-top:0.2rem">${esc(t('buildCreator.help'))}</h2>
@@ -126,6 +127,7 @@ ${Object.values(ed.undocumented || {}).map((u) => `<li>${esc(u)}</li>`).join('\n
 </ul>
 </section>
 
+${card ? `<section class="card">${paras(ed.intro)}</section>` : ''}
 <p class="sources-list" id="bc-sources"></p>
 </main>
 ${siteFooter(t)}`;

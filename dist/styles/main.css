@@ -1650,8 +1650,16 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    panneau caché du parcours au clavier et de l'arbre d'accessibilité. */
 .bcard-panels { display: grid; }
 .bcard-panels > * { grid-area: 1 / 1; }
+/* Une regle par couple : `:not(.bcard-abilities)` attrapait l'equipement ET les
+   stats des que la troisieme languette est apparue, et les deux se
+   superposaient. Chaque panneau est nomme, aucun ne depend de l'absence d'un
+   autre. */
 .bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-abilities,
-.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-body:not(.bcard-abilities) { visibility: hidden; }
+.bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-stats,
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-gear,
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-stats,
+.bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-gear,
+.bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-abilities { visibility: hidden; }
 /* Les onglets de style ne concernent que les attaques : ils disparaissent avec
    elles. */
 .bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-tabs { display: none; }
@@ -1904,6 +1912,27 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   cursor: pointer;
 }
 .bcard-btn-add:hover { color: var(--gold); border-color: var(--gold); }
+/* Banc d'essai : la carte a gauche, les builds enregistres a droite. La carte
+   porte l'essentiel sur peu de surface — c'est tout son principe —, la colonne
+   de droite ne doit donc pas la comprimer. */
+.bc-two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(15rem, 20rem); gap: 1.2rem; align-items: start; }
+.bc-two .bc-side { margin: 0; }
+/* Le gestionnaire passe en vertical : les actions s'empilent au lieu de courir
+   sur une ligne qui ne tient plus dans une colonne etroite. */
+.bc-side .bc-actions { flex-direction: column; align-items: stretch; }
+.bc-side .bc-actions .bc-btn { width: 100%; text-align: center; }
+.bc-side .bc-saved-list { max-height: 22rem; overflow-y: auto; }
+@media (max-width: 899px) { .bc-two { grid-template-columns: minmax(0, 1fr); } }
+
+/* Choix du personnage : meme grille que l'ecran de selection de l'accueil. */
+.bc-roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.2rem, 1fr));
+  gap: 0.5rem;
+}
+.bc-roster .bc-char { flex-direction: column; width: auto; }
+.bc-roster .bc-char img { width: 100%; height: auto; aspect-ratio: 1; border-radius: 8px; }
+
 .bc-card-host { margin-top: 0.8rem; }
 .bc-card-host .bcard { max-width: none; }
 

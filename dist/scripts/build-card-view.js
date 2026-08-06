@@ -464,7 +464,7 @@ ${onglets}
 </header>
 
 <div class="bcard-panels">
-<div class="bcard-body">
+<div class="bcard-body bcard-gear">
 <div class="bcard-col">
 <section class="bcard-block">
 <h3 class="bcard-h">${esc(t('buildCard.equipment'))}</h3>
