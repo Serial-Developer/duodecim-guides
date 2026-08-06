@@ -1654,7 +1654,9 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    comme le préconise assets/README.md. */
 .icon-d12 { image-rendering: pixelated; image-rendering: crisp-edges; display: block; }
 .bcard-btn { width: 20px; height: 20px; }
-.bcard-stick { width: 16px; height: 11px; }
+/* Le stick était à sa taille d'origine quand le bouton est agrandi de moitié :
+   à côté du rond il disparaissait. Même facteur pour les deux. */
+.bcard-stick { width: 24px; height: 17px; }
 .bcard-chevron { width: 14px; height: 14px; color: var(--violet); flex: none; }
 .bcard-equip-icon { width: auto; height: 26px; }
 .bcard-summon-orb { width: 14px; height: 14px; }
@@ -1683,6 +1685,30 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
      réduirait à un carré de 5 rem perdu dans un coin. */
   .bcard-portrait-tall .bcard-aside { width: 6rem; }
 }
+
+/* Deux traitements du fond, à comparer sur le banc d'essai. Le portrait rend la
+   lecture inégale d'un personnage à l'autre : certains cadrages posent une zone
+   claire et chargée pile sous une colonne.
+   A — un support opaque sous le texte : le portrait garde toute sa force, mais
+   chaque ligne se lit sur une surface unie. Il ne reste visible qu'autour des
+   panneaux.
+   B — le portrait atténué : rien ne s'interpose, il s'efface. */
+[data-bcard-mode="calque"] .bcard-portrait-full .bcard-aside {
+  opacity: 1;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+/* Le support se pose bloc par bloc, titre compris, et non sur la colonne
+   entière : le personnage se voit dans l'en-tête, la gouttière, les marges et
+   les intervalles entre blocs. Un panneau par colonne l'aurait presque
+   entièrement recouvert ; un panneau sous les seules listes laissait les titres
+   illisibles sur les portraits clairs. */
+[data-bcard-mode="calque"] .bcard-block {
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem 0.3rem;
+}
+[data-bcard-mode="attenue"] .bcard-portrait-full .bcard-aside { opacity: 0.25; }
 
 /* Banc d'essai des cartes sur tout le roster. */
 .bcr-bar {

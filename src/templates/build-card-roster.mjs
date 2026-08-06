@@ -101,6 +101,12 @@ ${buildCard({ t, build, data, L, hasPortrait, sizeOf, variant: 'portrait-full' }
 <option value="*">${esc(t('buildCard.rosterAll'))}</option>
 ${options}
 </select>
+<label for="bcr-mode">${esc(t('buildCard.rosterMode'))}</label>
+<select id="bcr-mode">
+<option value="">${esc(t('buildCard.rosterModeCurrent'))}</option>
+<option value="calque">${esc(t('buildCard.rosterModeScrim'))}</option>
+<option value="attenue">${esc(t('buildCard.rosterModeDim'))}</option>
+</select>
 </p>
 
 ${cartes}

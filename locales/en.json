@@ -835,7 +835,11 @@
     "rosterPick": "Character",
     "rosterAll": "All characters",
     "rosterMock": "mock-up",
-    "rosterReal": "real build"
+    "rosterReal": "real build",
+    "rosterMode": "Background",
+    "rosterModeCurrent": "Current",
+    "rosterModeScrim": "Opaque support under the text",
+    "rosterModeDim": "Dimmed portrait"
   },
   "accessories": {
     "rankIcon": "Rank {rank}",
