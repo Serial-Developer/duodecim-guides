@@ -1548,6 +1548,29 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   object-fit: cover;
 }
 .bcard-portrait-none { background: rgba(157, 134, 232, 0.16); display: block; }
+
+/* Vignette d'assist : les portraits sont carrés et montrent le personnage en
+   pied. Réduits à 2,6 rem, on ne distinguait plus rien. Le cadre recadre sur
+   la tête et le haut du buste — la seule partie lisible à cette taille. */
+.bcard-face {
+  display: block;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 6px;
+  overflow: hidden;
+  flex: none;
+}
+.bcard-face img { width: 100%; height: 100%; border-radius: 0; transform: scale(2.1); transform-origin: 50% 26%; }
+/* Aerith n'a aucun portrait Dissidia 012 : le sien est un artwork Final
+   Fantasy VII, cadré plus large et plus haut que les planches de sélection.
+   Il lui faut son propre recadrage, sans quoi elle reste minuscule dans le
+   coin de la vignette. */
+/* Mesuré sur le fichier : sa silhouette n'occupe que 39 % de la largeur et
+   toute la hauteur — c'est un personnage en pied, là où les planches de
+   sélection cadrent déjà au buste. Sa tête tient autour de (48 %, 10 %) : le
+   zoom part de ce point, qui reste donc en haut de la vignette avec le buste
+   dessous. */
+.bcard-face[data-assist="aerith"] img { transform: scale(4.6); transform-origin: 48% 10%; }
 .bcard-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--gold); font-weight: 600; }
 .bcard-role { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
 .bcard-summon { display: flex; align-items: center; gap: 0.5rem; margin: 0; }
