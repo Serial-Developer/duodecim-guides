@@ -1762,8 +1762,24 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 
 /* Prolongement : un HP link ou un enchaînement, sous l'attaque qui le déclenche.
    Il n'a pas de commande propre, seulement son bouton. */
-.bcard-branch { padding-left: 1.1rem; }
+.bcard-line.bcard-branch { position: relative; padding-left: 1.7rem; }
 .bcard-branch .bcard-key { min-width: 2.5rem; }
+/* Coude de rattachement, comme a l'ecran « Abilities » du jeu : un trait part de
+   sous l'attaque parente et vient chercher la ligne du prolongement. */
+.bcard-branch::before {
+  content: '';
+  position: absolute;
+  left: 0.55rem;
+  top: -0.3rem;
+  bottom: 50%;
+  width: 0.7rem;
+  border-left: 2px solid rgba(157, 134, 232, 0.45);
+  border-bottom: 2px solid rgba(157, 134, 232, 0.45);
+  border-bottom-left-radius: 5px;
+  pointer-events: none;
+}
+/* Deux prolongements de suite : le trait du second part du premier. */
+.bcard-branch + .bcard-branch::before { top: -1.55rem; }
 .bcard-col { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
 .bcard-block { min-width: 0; }
 .bcard-h {
@@ -1961,6 +1977,8 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bc-roster .bc-char img { width: 100%; height: auto; aspect-ratio: 1; border-radius: 8px; }
 
 .bc-card-host { margin-top: 0.8rem; }
+.bc-card-host .bcard { margin: 0; }
+.bc-side-stats { margin-top: 0.8rem; }
 .bc-card-host .bcard { max-width: none; }
 
 /* Banc d'essai des cartes sur tout le roster. */
