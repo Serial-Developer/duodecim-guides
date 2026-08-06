@@ -790,7 +790,7 @@
     "groundHp": "Attaques HP au sol",
     "airHp": "Attaques HP en l’air",
     "panelTabs": "Panneau de la carte",
-    "panelGear": "Équipement & attaques",
+    "panelGear": "Équipement",
     "panelAbilities": "Abilities",
     "abilityGroups": {
       "basic": "Abilities de base",
