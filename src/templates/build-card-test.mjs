@@ -30,6 +30,7 @@ export function renderBuildCardTest({ t, locale, build, source, data, hasPortrai
 <h1 style="color:var(--gold)">${esc(t('buildCard.testTitle'))}</h1>
 <p class="mv-desc">${esc(t('buildCard.testLede'))}</p>
 <p class="mv-desc"><a href="${esc(source)}" target="_blank" rel="external noopener">${esc(t('buildCard.testSource'))}</a></p>
+<p class="mv-desc"><a href="build-card-roster.html">${esc(t('buildCard.testRosterLink'))}</a></p>
 
 <h2>${esc(t('buildCard.testComplete'))}</h2>
 ${buildCard({ t, build, data, L, hasPortrait, sizeOf })}

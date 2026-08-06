@@ -33,6 +33,21 @@ const followKey = (name) => String(name || '')
 const EQUIP_COLS = ['uid', 'name', 'slot', 'category', 'level', 'stats', 'effects', 'combination', 'exclusiveTo', 'labyrinth', 'documented'];
 const ACC_COLS = ['uid', 'name', 'category', 'boosterType', 'effect', 'requirements', 'multiplier', 'acquired', 'rank', 'breakable', 'legal', 'documented', 'ill'];
 
+// Sens du regard sur le portrait de l'écran de sélection : les deux camps se
+// font face, les héros regardent vers la gauche, les autres vers la droite.
+//
+// Liste donnée par l'auteur du site et recoupée sur les 31 portraits. Elle ne
+// se déduit pas du champ « Alignment » de l'infobox : quatre personnages y
+// portent deux camps, un par épisode, et c'est le camp de l'autre épisode qui
+// correspondrait au regard — un rapprochement que rien dans la source ne
+// justifie. Une liste tenue à la main vaut mieux qu'une règle inventée.
+const REGARD_GAUCHE = new Set([
+  'warrior-of-light', 'firion', 'onion-knight', 'cecil-harvey', 'bartz-klauser',
+  'terra-branford', 'cloud-strife', 'squall-leonhart', 'zidane-tribal', 'tidus',
+  'shantotto', 'prishe', 'vaan', 'lightning', 'laguna-loire', 'yuna',
+  'tifa-lockhart', 'kain-highwind',
+]);
+
 // « 20 (10) » -> { cp: 20, cpMastered: 10 }. Le wiki écrit parfois « 20 » seul.
 function parseMoveCp(raw) {
   if (!raw) return { cp: null, cpMastered: null };
@@ -301,6 +316,9 @@ export function buildDataBundle(ROOT, editorial = null) {
       slug: def.slug,
       name: def.name,
       origin: def.origin,
+      // Sens du regard du portrait (voir REGARD_GAUCHE) : la carte de build s'en
+      // sert pour ancrer le portrait du côté auquel le personnage tourne le dos.
+      portraitFacing: REGARD_GAUCHE.has(def.slug) ? 'left' : 'right',
       // Valeur brute de l'infobox : « Yes », « No », « Yes (Combos only) »…
       hpLinks: data.infobox?.['HP Links'] || null,
       // Paires bravery -> attaque HP réellement identifiées ; l'infobox ci-dessus

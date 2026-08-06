@@ -24,6 +24,7 @@ import { renderFeralUnlock } from '../src/templates/feral-unlock.mjs';
 import { renderMultiplayer } from '../src/templates/multiplayer.mjs';
 import { renderBuildCreator } from '../src/templates/build-creator.mjs';
 import { renderBuildCardTest } from '../src/templates/build-card-test.mjs';
+import { renderBuildCardRoster } from '../src/templates/build-card-roster.mjs';
 import { buildDataBundle } from './build-data-bundle.mjs';
 import { slugAnchor, speedValues, siteHeader, siteFooter, buildRoster, linksFor } from '../src/templates/helpers.mjs';
 import { PAGES, seoFor, ogPathFor, writeSitemap, write404, writeHumansTxt } from './seo.mjs';
@@ -328,6 +329,17 @@ for (const locale of activeLocales) {
         sizeOf,
       }));
     }
+    // Même banc d'essai, étendu aux 31 personnages : c'est là qu'on voit si un
+    // cadrage de portrait gêne la lecture. Mêmes conditions — noindex, hors
+    // sitemap, langue par défaut seulement.
+    writeFileSync(join(DIST, 'build-card-roster.html'), renderBuildCardRoster({
+      ...i18n('build-card-roster.html', {}),
+      reference: carte?.build || null,
+      data: bundle,
+      hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
+      sizeOf,
+    }));
+    cpSync(join(ROOT, 'src', 'scripts', 'build-card-roster.js'), join(DIST, 'scripts', 'build-card-roster.js'));
   }
 
   emit('techniques', (x) => renderTechniques(readEd(locale, '_shared'), x.seo, x));

@@ -789,6 +789,13 @@
     "airBravery": "Air bravery",
     "groundHp": "Ground HP attacks",
     "airHp": "Air HP attacks",
+    "mainBravery": "Main bravery",
+    "mainHp": "Main HP attacks",
+    "otherBlock": "{kind} — {group}",
+    "kinds": {
+      "bravery": "Bravery",
+      "hp": "HP attacks"
+    },
     "assist": "Assist",
     "summon": "Summon",
     "untitled": "Untitled build",
@@ -820,7 +827,15 @@
     "testPortraitFull": "Variant — portrait over the whole card",
     "testPortraitFullLede": "The portrait moves to a left-hand band running the full height of the card. The name stays at the top of the header.",
     "testPortraitTall": "Variant — portrait over the header",
-    "testPortraitTallLede": "Same band, cut to the height of the header alone — character and assist."
+    "testPortraitTallLede": "Same band, cut to the height of the header alone — character and assist.",
+    "testRosterLink": "The same variant across all 31 characters",
+    "rosterTitle": "Build card — every character",
+    "rosterLede": "The full-card portrait variant, rendered for the 31 playable characters. The point is to check that no framing gets in the way of reading the card.",
+    "rosterMockNote": "Only one build here is real. The others are mock-ups: their contents come from the game data — the character's own moves, plus equipment, accessories, assists and summons — but the combination is arbitrary and carries no advice.",
+    "rosterPick": "Character",
+    "rosterAll": "All characters",
+    "rosterMock": "mock-up",
+    "rosterReal": "real build"
   },
   "accessories": {
     "rankIcon": "Rank {rank}",

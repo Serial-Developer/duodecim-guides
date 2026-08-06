@@ -17,7 +17,7 @@ const MAX_SLOTS = 3;
 
 // Les longues listes du payload voyagent en colonnes : on les remet en objets,
 // exactement comme le fait le créateur côté navigateur.
-function hydrate(t) {
+export function hydrate(t) {
   if (!t || !t.c) return t || [];
   return t.r.map((row) => {
     const o = {};
@@ -111,10 +111,56 @@ function attackIndex(char) {
   const byId = {};
   for (const kind of ['bravery', 'hp']) {
     for (const g of char?.attacks?.[kind] || []) {
-      for (const m of hydrate(g.moves)) byId[m.id] = { move: m, kind, groupKey: g.key, followUp: !!g.followUp };
+      for (const m of hydrate(g.moves)) {
+        byId[m.id] = { move: m, kind, groupKey: g.key, style: m.style || '', followUp: !!g.followUp };
+      }
     }
   }
   return byId;
+}
+
+// Une catégorie d'emplacements, c'est le triplet (bravery/HP, groupe, style) —
+// la définition qu'en donne le créateur, et donc l'écran du jeu. Les quatre
+// blocs figés d'avant (sol/air × bravery/HP) ne couvraient pas les personnages
+// dont les coups valent au sol comme en l'air : Exdeath, Kefka, Ultimecia,
+// Kuja et Vaan rangent les leurs sous « main », et la carte les perdait tous.
+// Elle ignorait aussi les styles, si bien que les trois paradigmes de Lightning
+// se disputaient trois emplacements au lieu d'en avoir trois chacun.
+const STANCE = { ground: 'ground', aerial: 'aerial' };
+const BLOCK_KEY = {
+  'bravery|ground': 'groundBravery',
+  'bravery|aerial': 'airBravery',
+  'bravery|main': 'mainBravery',
+  'hp|ground': 'groundHp',
+  'hp|aerial': 'airHp',
+  'hp|main': 'mainHp',
+};
+
+// Les catégories du personnage, dans l'ordre où ses coups les déclarent.
+function categories(char) {
+  const vues = new Set();
+  const out = [];
+  for (const kind of ['bravery', 'hp']) {
+    for (const g of char?.attacks?.[kind] || []) {
+      if (g.followUp) continue;
+      for (const m of hydrate(g.moves)) {
+        const style = m.style || '';
+        const cat = `${kind}|${g.key}|${style}`;
+        if (vues.has(cat)) continue;
+        vues.add(cat);
+        out.push({ cat, kind, groupKey: g.key, style });
+      }
+    }
+  }
+  return out;
+}
+
+function blockTitle(t, { kind, groupKey, style }) {
+  const cle = BLOCK_KEY[`${kind}|${groupKey}`];
+  const base = cle && t.has(`buildCard.${cle}`)
+    ? t(`buildCard.${cle}`)
+    : t('buildCard.otherBlock', { kind: t(`buildCard.kinds.${kind}`), group: groupKey });
+  return style ? `${base} — ${style}` : base;
 }
 
 function attackGrid(t, L, sizeOf, build, char) {
@@ -126,7 +172,7 @@ function attackGrid(t, L, sizeOf, build, char) {
     // Un enchaînement prolonge un coup et n'occupe pas de commande : la carte
     // montre les emplacements, il n'y a donc pas sa place.
     if (!info || info.followUp) return;
-    const cat = `${info.kind}|${info.groupKey}`;
+    const cat = `${info.kind}|${info.groupKey}|${info.style}`;
     const cmd = Number((build.attackSlots || [])[i]);
     const cases = (parCat[cat] = parCat[cat] || {});
     const place = cmd >= 0 && cmd < MAX_SLOTS && !cases[cmd]
@@ -135,17 +181,14 @@ function attackGrid(t, L, sizeOf, build, char) {
     if (place !== undefined) cases[place] = info.move;
   });
 
-  const blocs = [
-    ['bravery|ground', 'bravery', 'groundBravery', 'ground'],
-    ['bravery|aerial', 'bravery', 'airBravery', 'aerial'],
-    ['hp|ground', 'hp', 'groundHp', 'ground'],
-    ['hp|aerial', 'hp', 'airHp', 'aerial'],
-  ];
-  return blocs.map(([cat, kind, cle, stance]) => {
-    const cases = parCat[cat] || {};
-    const lignes = [0, 1, 2].map((c) => attackLine(t, L, sizeOf, kind, c, cases[c], stance)).join('\n');
+  return categories(char).map((c) => {
+    const cases = parCat[c.cat] || {};
+    // Un coup « main » vaut au sol comme en l'air : sa direction est celle du
+    // sol, la seule que la source décrive.
+    const stance = STANCE[c.groupKey] || 'ground';
+    const lignes = [0, 1, 2].map((i) => attackLine(t, L, sizeOf, c.kind, i, cases[i], stance)).join('\n');
     return `<section class="bcard-block">
-<h3 class="bcard-h">${esc(t(`buildCard.${cle}`))}</h3>
+<h3 class="bcard-h">${esc(blockTitle(t, c))}</h3>
 <ul class="bcard-list">${lignes}</ul>
 </section>`;
   }).join('\n');
@@ -195,12 +238,17 @@ export function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', v
     return slotLine(String(i + 1), item?.name || '', precision, ic);
   }).join('\n');
 
-  // Bandeau latéral : le portrait quitte l'en-tête pour la gauche de la carte.
+  // Bandeau latéral : le portrait quitte l'en-tête pour le fond de la carte.
+  // Les portraits de l'écran de sélection se font face — Cosmos regarde vers la
+  // gauche, Chaos vers la droite. Un portrait qui regarde vers l'extérieur de la
+  // carte la fuit : on l'ancre donc du côté auquel il tourne le dos, et le fondu
+  // part dans l'autre sens.
   const aside = variant && hasPortrait(char.slug)
     ? `<div class="bcard-aside"><img src="${L.asset(`assets/portraits/${char.slug}.png`)}" alt="${esc(t('buildCard.portraitAlt', { name: char.name }))}" width="512" height="512" loading="lazy"></div>`
     : '';
+  const regard = char.portraitFacing === 'left' ? ' bcard-faces-left' : '';
 
-  return `<article class="bcard${aside ? ` bcard-has-aside bcard-${variant}` : ''}">
+  return `<article class="bcard${aside ? ` bcard-has-aside bcard-${variant}${regard}` : ''}">
 ${aside}
 <header class="bcard-head">
 ${(() => {

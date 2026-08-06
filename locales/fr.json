@@ -789,6 +789,13 @@
     "airBravery": "Braveries en l’air",
     "groundHp": "Attaques HP au sol",
     "airHp": "Attaques HP en l’air",
+    "mainBravery": "Braveries principales",
+    "mainHp": "Attaques HP principales",
+    "otherBlock": "{kind} — {group}",
+    "kinds": {
+      "bravery": "Braveries",
+      "hp": "Attaques HP"
+    },
     "assist": "Assist",
     "summon": "Invocation",
     "untitled": "Build sans nom",
@@ -820,7 +827,15 @@
     "testPortraitFull": "Variante — portrait sur toute la carte",
     "testPortraitFullLede": "Le portrait passe en bandeau à gauche, sur toute la hauteur de la carte. Le nom reste en haut de l’en-tête.",
     "testPortraitTall": "Variante — portrait sur l’en-tête",
-    "testPortraitTallLede": "Le même bandeau, coupé à la hauteur du seul en-tête — personnage et assist."
+    "testPortraitTallLede": "Le même bandeau, coupé à la hauteur du seul en-tête — personnage et assist.",
+    "testRosterLink": "La même variante sur les 31 personnages",
+    "rosterTitle": "Carte de build — tous les personnages",
+    "rosterLede": "La variante au portrait en fond de carte, rendue pour les 31 personnages jouables. L’objet est de vérifier qu’aucun cadrage ne gêne la lecture de la carte.",
+    "rosterMockNote": "Un seul build est réel ici. Les autres sont des maquettes : leur garniture vient des données du jeu — les coups du personnage, des équipements, des accessoires, des assists et des invocations — mais l’assemblage est arbitraire et n’a aucune valeur de conseil.",
+    "rosterPick": "Personnage",
+    "rosterAll": "Tous les personnages",
+    "rosterMock": "maquette",
+    "rosterReal": "build réel"
   },
   "accessories": {
     "rankIcon": "Rang {rank}",

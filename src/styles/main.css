@@ -1584,6 +1584,15 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   -webkit-mask-image: linear-gradient(to right, #000 0%, #000 22%, transparent 95%);
   mask-image: linear-gradient(to right, #000 0%, #000 22%, transparent 95%);
 }
+/* Un guerrier de Cosmos regarde vers la gauche : ancré à gauche il sortirait de
+   la carte. Il se cale donc à droite, et le fondu s'inverse avec lui. */
+.bcard-portrait-full.bcard-faces-left .bcard-aside {
+  justify-self: end;
+  margin-left: 0;
+  margin-right: -1.1rem;
+  -webkit-mask-image: linear-gradient(to left, #000 0%, #000 22%, transparent 95%);
+  mask-image: linear-gradient(to left, #000 0%, #000 22%, transparent 95%);
+}
 
 /* Variante 2 : la hauteur du seul en-tête, dont il partage la cellule. Son bord
    inférieur tombe donc sur le trait qui ouvre l'équipement, et son bord gauche
@@ -1673,6 +1682,43 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   /* Le fond garde toute la largeur de la carte : le brider en bandeau le
      réduirait à un carré de 5 rem perdu dans un coin. */
   .bcard-portrait-tall .bcard-aside { width: 6rem; }
+}
+
+/* Banc d'essai des cartes sur tout le roster. */
+.bcr-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 1.2rem 0 1.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg);
+  padding: 0.6rem 0;
+}
+.bcr-bar label { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.bcr-bar select {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid rgba(157, 134, 232, 0.35);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  font-size: 0.95rem;
+}
+.bcr-item[hidden] { display: none; }
+.bcr-name { font-size: 1.1rem; margin: 1.4rem 0 0.2rem; }
+.bcr-tag {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid rgba(157, 134, 232, 0.3);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  vertical-align: middle;
 }
 
 /* Icônes de rang et de type des accessoires. Quatorze fichiers de 16 px pour
