@@ -822,9 +822,11 @@
       var rows = DETAIL_STATS.filter(function (s) { return s.group === group && d.totals[s.key]; });
       if (!rows.length) return;
       shown += rows.length;
-      // Les bonus en points n'ont ni titre ni note : ce sont des valeurs
-      // absolues au milieu de pourcentages, la différence saute aux yeux.
-      if (group !== 'flat') detail.main.appendChild(el('h3', { class: 'bc-detail-group', text: T('detail.groups.' + group) }));
+      detail.main.appendChild(el('h3', { class: 'bc-detail-group', text: T('detail.groups.' + group) }));
+      // Les bonus en points sont des valeurs absolues au milieu de pourcentages,
+      // et ils ne sont pas comptés dans les totaux qui précèdent : la note le dit,
+      // sans quoi on les additionnerait par erreur.
+      if (group === 'flat') detail.main.appendChild(el('p', { class: 'bc-detail-note', text: T('detail.flatNote') }));
       var list = el('dl', { class: 'bc-detail-list' });
       rows.forEach(function (s) {
         var slot = d.totals[s.key];
