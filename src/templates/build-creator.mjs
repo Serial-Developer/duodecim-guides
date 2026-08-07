@@ -87,7 +87,7 @@ ${characterBanner(t, characters, hasPortrait, L)}
 </div>
 
 <div class="bc-sticky">
-${cpGauge(t)}
+${card ? '' : cpGauge(t)}
 <div class="bc-status" id="bc-status" role="status" aria-live="polite"></div>
 ${card ? '' : detailStats(t)}
 </div>
@@ -96,7 +96,7 @@ ${card ? `<div class="bc-two"><div class="bc-card-host" id="bc-card" data-base="
 <aside class="bc-side-stats">
 <section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelStats'))}</h3><div id="bc-detail-main"></div></section>
 <section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelBoosters'))}</h3><div id="bc-detail-boosters"></div></section>
-</aside></div>` : `<div class="bc-tabs">
+</aside>${cpGauge(t)}</div>` : `<div class="bc-tabs">
 <div class="bc-tablist" role="tablist" aria-label="${esc(t('buildCreator.tablistAria'))}">
 ${tabs.map((tb, i) => `<button type="button" class="bc-tab" role="tab" id="bc-tab-${tb.key}" aria-controls="bc-panel-${tb.key}" aria-selected="${i === 0}" tabindex="${i === 0 ? '0' : '-1'}" data-tab="${tb.key}">${esc(tb.label)}</button>`).join('\n')}
 </div>

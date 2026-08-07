@@ -1983,7 +1983,32 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 /* Banc d'essai : la carte a gauche, les builds enregistres a droite. La carte
    porte l'essentiel sur peu de surface — c'est tout son principe —, la colonne
    de droite ne doit donc pas la comprimer. */
-.bc-two { display: grid; grid-template-columns: 60% minmax(0, 1fr); gap: 1.2rem; align-items: start; }
+.bc-two { display: grid; grid-template-columns: 60% minmax(0, 1fr) auto; gap: 1.2rem; align-items: start; }
+/* La jauge tient la troisième colonne, à la verticale : la barre est celle du
+   créateur, pivotée d'un quart de tour. Le script continue d'y écrire des
+   largeurs — c'est la rotation qui les lit comme des hauteurs, et les deux
+   postes gardent leurs couleurs. */
+.bc-two > .bc-gauge-wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 0.6rem;
+  height: 44.21rem;
+  margin: 0;
+}
+.bc-two > .bc-gauge-wrap { width: 3.4rem; }
+.bc-two > .bc-gauge-wrap .bc-gauge {
+  /* La barre garde sa largeur d'origine puis pivote : le script continue d'y
+     ecrire des pourcentages de largeur. Les marges negatives ramenent son
+     encombrement a celui de la barre couchee. */
+  width: 40rem;
+  height: 14px;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  margin: 0 calc(-20rem + 7px);
+  flex: none;
+}
+.bc-two > .bc-gauge-wrap .bc-gauge-text { writing-mode: vertical-rl; transform: rotate(180deg); text-align: left; margin: 0; }
 /* Les statistiques tiennent la colonne de droite, a hauteur de la carte : on
    voit le build et ce qu'il produit d'un seul coup d'oeil. */
 .bc-side-stats {
