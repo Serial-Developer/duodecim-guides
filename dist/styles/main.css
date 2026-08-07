@@ -2022,7 +2022,17 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   line-height: 1.5;
   white-space: nowrap;
 }
-.bc-two > .bc-gauge-wrap .bc-legend { display: block; }
+/* La regle de base espacait la pastille et son libelle par le `gap` de la
+   boite flexible : le paragraphe repasse en bloc, l'espacement se pose donc a
+   la main. */
+.bc-two > .bc-gauge-wrap .bc-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.3rem;
+}
+.bc-two > .bc-gauge-wrap .bc-legend:first-of-type { margin-top: 0.55rem; }
 /* Les statistiques tiennent la colonne de droite, a hauteur de la carte : on
    voit le build et ce qu'il produit d'un seul coup d'oeil. */
 .bc-side-stats {
