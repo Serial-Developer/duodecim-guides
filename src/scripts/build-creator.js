@@ -2719,6 +2719,20 @@
     Array.prototype.forEach.call(carteHote.querySelectorAll('input[type="radio"]'), function (r) {
       if (ouverts[r.name] !== undefined) r.checked = ouverts[r.name] === r.value;
     });
+    mesurerCarte();
+  }
+
+  // La carte ne tient plus dans une hauteur figée : un build dense la fait
+  // grandir. Les deux colonnes qui l'encadrent — les stats et la jauge — se
+  // calaient sur la même constante recopiée dans la feuille de style ; elles
+  // lisent désormais la hauteur réellement rendue, publiée ici après chaque
+  // dessin. Elles vivent dans d'autres colonnes de la grille, leur taille ne
+  // peut donc pas rejaillir sur celle de la carte.
+  function mesurerCarte() {
+    var deux = carteHote.closest ? carteHote.closest('.bc-two') : null;
+    var carte = carteHote.querySelector('.bcard');
+    if (!deux || !carte) return;
+    deux.style.setProperty('--bc-carte-mesure', carte.getBoundingClientRect().height + 'px');
   }
 
   // Retrouve le contexte d'une catégorie d'attaques à partir de sa clé, avec la
