@@ -1848,6 +1848,15 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bcard-list-acc .bcard-slot { min-width: 1.4rem; text-align: right; font-family: var(--font-mono); }
 .bcard-value { color: var(--text); min-width: 0; }
 .bcard-note { display: block; color: var(--muted); font-size: 0.73rem; }
+/* Marqueur d'Equip Glitch, derrière le nom de la pièce : le vert de
+   .bc-tag-glitch, la même marque que porte la liste des emplacements du
+   créateur. Aucune espace ne le sépare du nom dans le HTML, il ne peut donc pas
+   se retrouver seul à la ligne suivante — la carte a une taille figée. */
+.bcard-flag { display: inline-flex; align-items: center; margin-left: 0.3rem; color: var(--success); }
+/* La roue est visée par son parent : « .bcard-gear » nomme déjà le panneau
+   d'équipement de la carte, et cette classe posée sur le SVG l'écrasait à 13 px
+   de large — la colonne entière s'y pliait. */
+.bcard-flag svg { width: 13px; height: 13px; flex: none; }
 
 /* Icône de touche : direction facultative, puis le bouton. */
 .bcard-key { flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.15rem; min-width: 3.6rem; }

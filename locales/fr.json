@@ -527,7 +527,6 @@
       "illegalItems": "Items illégaux en tournoi : {list}.",
       "summonSuffix": "(invocation)",
       "notWearable": "Équipement non portable par ce personnage : {list}.",
-      "glitchNeeded": "Equip Glitch requis pour : {list} (jusqu’à 10 CP économisés par pièce).",
       "activeSet": "Set actif : {list}.",
       "abilityBonus": "Bonus d’ability appliqué : {list}.",
       "undocumented": "non documenté"
@@ -818,6 +817,7 @@
     "assistAlt": "{name}, en assist",
     "credit": "Dissidia 012 [duodecim] — guides compétitifs",
     "creditUrl": "serial-developer.github.io/duodecim-guides",
+    "needsGlitch": "Nécessite l’Equip Glitch",
     "slots": {
       "weapon": "Arme",
       "hand": "Main",

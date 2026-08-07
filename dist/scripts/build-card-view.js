@@ -111,6 +111,36 @@ function accessoryIcons(t, L, item) {
   };
 }
 
+// --- Marqueur d'Equip Glitch -------------------------------------------------
+// Une pièce dont la catégorie n'est pas native se porte quand même, au prix
+// d'une manipulation — l'Equip Glitch. La carte le signale sur la ligne de la
+// pièce, comme le jeu pose le rang derrière un accessoire.
+//
+// Elle ne le calcule pas : l'état d'un équipement dépend des catégories natives
+// du personnage, et le seul endroit qui les lit est `equipStatus`, dans le
+// créateur. Il descend jusqu'ici emplacement par emplacement. Un deuxième calcul
+// du même état, c'est précisément ce que ce fichier existe pour empêcher.
+//
+// La roue dentée est tracée, comme le chevron des commandes : le jeu n'a pas
+// d'icône pour une manipulation qui lui échappe, et le caractère « ⚙ » passe en
+// emoji couleur sur plusieurs systèmes — sur une carte de taille figée, une
+// image dont la hauteur dépend du poste ne va pas.
+//
+// Huit dents autour d'un moyeu évidé. Elle se lit à 13 px : des dents plus fines
+// ou un moyeu plus petit donnaient un astérisque, pas une roue. Les dents
+// s'arrêtent à 7,8 — leur épaisseur de 2,4 les mène pile au bord du cadre, et
+// une dent plus longue serait rognée à plat aux quatre points cardinaux.
+const GEAR = Array.from({ length: 8 }, (_, i) => {
+  const a = (i * Math.PI) / 4;
+  const p = (r) => `${(9 + Math.cos(a) * r).toFixed(2)} ${(9 + Math.sin(a) * r).toFixed(2)}`;
+  return `M${p(5.6)}L${p(7.8)}`;
+}).join('');
+
+function glitchFlag(t) {
+  const label = t('buildCard.needsGlitch');
+  return `<span class="bcard-flag" role="img" aria-label="${esc(label)}" title="${esc(label)}"><svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="4.6" fill="none" stroke="currentColor" stroke-width="3"/><path d="${GEAR}" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>`;
+}
+
 // Le `t` du build statique expose `has()`, celui du créateur non : il n'a que
 // les clés de son propre catalogue. On teste donc la clé sans le supposer.
 function aCle(t, cle) {
@@ -357,7 +387,9 @@ function capacityOf(build, data, mastered = true) {
 // bouton porteur de sa position, et une troisième languette accueille les
 // statistiques. La carte ne sait rien de ce qui les remplit — elle pose les
 // poignées, le créateur les écoute.
-function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant = '', uid = '', mastered = true, live = false }) {
+// `glitch` marque les emplacements d'équipement qui exigent l'Equip Glitch, par
+// clé d'emplacement : le créateur le calcule, la carte le montre.
+function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant = '', uid = '', mastered = true, live = false, glitch = {} }) {
   const char = (data.characters || []).find((c) => c.slug === build.character);
   if (!char) return '';
   // Les onglets de style passent par des boutons radio, sans JavaScript : la
@@ -390,7 +422,9 @@ function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant 
     const item = build.equipment?.[slot] ? eq[build.equipment[slot]] : null;
     const nom = t(`buildCard.slots.${slot}`);
     const icone = `<img class="icon-d12 bcard-equip-icon" src="${L.asset(`assets/equipment-icons/equip-${slot}.png`)}" alt="${esc(nom)}" title="${esc(nom)}"${sizeOf(`equipment-icons/equip-${slot}.png`)} loading="lazy">`;
-    return slotLine(icone, item?.name || '', '', null, true, live ? ` data-bc="equip" data-slot="${slot}"` : '');
+    // Un emplacement vide ne peut rien exiger : la marque suit la pièce.
+    const marque = item && glitch[slot] ? glitchFlag(t) : '';
+    return slotLine(icone, item?.name || '', marque, null, true, live ? ` data-bc="equip" data-slot="${slot}"` : '');
   }).join('\n');
 
   const accLignes = Array.from({ length: ACCESSORY_SLOTS }, (_, i) => {

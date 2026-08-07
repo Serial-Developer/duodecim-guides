@@ -750,15 +750,16 @@
     }
     if (illegal.length) problems.push(T('status.illegalItems', { list: illegal.join(', ') }));
 
-    var glitch = [];
+    // L'Equip Glitch ne se rappelle plus ici : chaque pièce qui l'exige porte sa
+    // roue dentée, sur la carte comme sur sa ligne d'emplacement. Une phrase en
+    // bas de la colonne redisait, loin des pièces, ce que la ligne montre.
+    // Un équipement qu'aucune manipulation ne rend portable, lui, reste un
+    // problème : il se dit en toutes lettres.
     var unavailable = [];
     equippedEquipment().forEach(function (e) {
-      var st = equipStatus(e);
-      if (st.state === 'glitch') glitch.push(e.name);
-      if (st.state === 'unavailable') unavailable.push(e.name);
+      if (equipStatus(e).state === 'unavailable') unavailable.push(e.name);
     });
     if (unavailable.length) problems.push(T('status.notWearable', { list: unavailable.join(', ') }));
-    if (glitch.length) infos.push(T('status.glitchNeeded', { list: glitch.join(', ') }));
 
     var combos = activeCombinations();
     if (combos.length) infos.push(T('status.activeSet', { list: combos.map(function (c) { return c.name + ' — ' + c.effects; }).join(' ; ') }));
@@ -2694,10 +2695,20 @@
     Array.prototype.forEach.call(carteHote.querySelectorAll('input[type="radio"]'), function (r) {
       if (r.checked) ouverts[r.name] = r.value;
     });
+    // Quelles pièces exigent l'Equip Glitch : la carte ne sait pas le calculer —
+    // il faut les catégories natives du personnage — et ne doit pas l'apprendre.
+    // `equipStatus` reste le seul juge, et la carte reçoit son verdict.
+    var glitch = {};
+    SLOTS.forEach(function (s) {
+      var pose = state.build.equipment[s.key];
+      var piece = pose ? equipByUid[pose] : null;
+      if (piece && equipStatus(piece).state === 'glitch') glitch[s.key] = true;
+    });
     carteHote.innerHTML = window.BuildCardView.buildCard({
       t: T,
       build: state.build,
       data: D,
+      glitch: glitch,
       L: { asset: function (p) { return carteBase + p; } },
       hasPortrait: function () { return true; },
       variant: 'portrait-full',
