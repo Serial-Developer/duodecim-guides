@@ -1990,25 +1990,36 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    postes gardent leurs couleurs. */
 .bc-two > .bc-gauge-wrap {
   display: flex;
-  flex-direction: column-reverse;
+  /* La barre d'abord, ses chiffres dessous : on lit le remplissage puis le
+     detail, et le texte reste horizontal. */
+  flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.8rem;
   height: 44.21rem;
   margin: 0;
 }
-.bc-two > .bc-gauge-wrap { width: 3.4rem; }
+.bc-two > .bc-gauge-wrap { width: 7rem; }
 .bc-two > .bc-gauge-wrap .bc-gauge {
   /* La barre garde sa largeur d'origine puis pivote : le script continue d'y
      ecrire des pourcentages de largeur. Les marges negatives ramenent son
      encombrement a celui de la barre couchee. */
-  width: 40rem;
-  height: 14px;
+  width: 38.5rem;
+  height: 26px;
+  border-radius: 999px;
   transform: rotate(-90deg);
   transform-origin: center;
-  margin: 0 calc(-20rem + 7px);
+  margin: calc(19.25rem - 13px) calc(-19.25rem + 13px);
   flex: none;
 }
-.bc-two > .bc-gauge-wrap .bc-gauge-text { writing-mode: vertical-rl; transform: rotate(180deg); text-align: left; margin: 0; }
+.bc-two > .bc-gauge-wrap .bc-gauge-text {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.78rem;
+}
 /* Les statistiques tiennent la colonne de droite, a hauteur de la carte : on
    voit le build et ce qu'il produit d'un seul coup d'oeil. */
 .bc-side-stats {
