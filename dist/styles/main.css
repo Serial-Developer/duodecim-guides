@@ -1568,9 +1568,9 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 /* Mesuré sur le fichier : sa silhouette n'occupe que 39 % de la largeur et
    toute la hauteur — c'est un personnage en pied, là où les planches de
    sélection cadrent déjà au buste. Sa tête tient autour de (48 %, 10 %) : le
-   zoom part de ce point, qui reste donc en haut de la vignette avec le buste
-   dessous. */
-.bcard-face[data-assist="aerith"] img { transform: scale(4.6); transform-origin: 48% 10%; }
+   silhouette commence des le premier pixel : le zoom part du haut de l image,
+   sa tete y tient donc et le buste suit. */
+.bcard-face[data-assist="aerith"] img { transform: scale(4.6); transform-origin: 48% 0; }
 .bcard-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--gold); font-weight: 600; }
 .bcard-role { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
 .bcard-summon { display: flex; align-items: center; gap: 0.5rem; margin: 0; }
