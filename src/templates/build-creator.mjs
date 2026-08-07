@@ -86,14 +86,15 @@ ${characterBanner(t, characters, hasPortrait, L)}
 </div>
 </div>
 
-<div class="bc-sticky">
-${card ? '' : cpGauge(t)}
+${card ? '' : `<div class="bc-sticky">
+${cpGauge(t)}
 <div class="bc-status" id="bc-status" role="status" aria-live="polite"></div>
-${card ? '' : detailStats(t)}
-</div>
+${detailStats(t)}
+</div>`}
 
 ${card ? `<div class="bc-two"><div class="bc-card-host" id="bc-card" data-base="${L.asset('')}"></div>
 <aside class="bc-side-stats">
+<div class="bc-status" id="bc-status" role="status" aria-live="polite"></div>
 <section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelStats'))}</h3><div id="bc-detail-main"></div></section>
 <section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelBoosters'))}</h3><div id="bc-detail-boosters"></div></section>
 </aside>${cpGauge(t)}</div>` : `<div class="bc-tabs">
