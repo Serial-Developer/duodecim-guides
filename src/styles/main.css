@@ -2084,6 +2084,18 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   padding: 1rem 1.1rem;
 }
 .bc-side-stats .bcard-block + .bcard-block { margin-top: 0.9rem; }
+/* Les totaux et le détail des modificateurs sont deux lectures d'un même build,
+   et ils se suivaient sans rien entre eux : « Dégâts infligés » passait pour la
+   légende de « Max Booster », la ligne juste au-dessus. Un trait les sépare,
+   celui qui sépare déjà les lignes de la carte. */
+.bc-side-detail {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(157, 134, 232, 0.3);
+}
+/* Le premier groupe portait ce retrait lui-même ; il vient maintenant du bloc,
+   sans quoi il s'ajouterait au trait. */
+.bc-side-detail .bc-detail-group:first-child { margin-top: 0; }
 /* Le gestionnaire passe en vertical : les actions s'empilent au lieu de courir
    sur une ligne qui ne tient plus dans une colonne etroite. */
 .bc-side .bc-actions { flex-direction: column; align-items: stretch; }
