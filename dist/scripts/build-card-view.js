@@ -518,10 +518,15 @@ ${abilitiesPanel(t, build, data, live)}
 </div>
 </div>
 
-${(() => {
+${live ? '' : (() => {
   // Le pied porte la capacité : c'est la contrainte qui structure un build, et
   // elle manquait à la carte. Le crédit qu'il portait avant fait double emploi
   // avec le pied de page du site.
+  //
+  // Le créateur, lui, a déjà sa jauge de CP à côté de la carte, et elle en dit
+  // plus — la part des attaques et celle des abilities. Deux lectures du même
+  // nombre à quelques centimètres l'une de l'autre, c'en est une de trop : le
+  // pied ne sert que là où rien d'autre ne porte la capacité.
   const cp = capacityOf(build, data, mastered);
   const pour = (n) => (cp.max ? Math.min(100, Math.round((n / cp.max) * 100)) : 0);
   const trop = cp.used > cp.max;

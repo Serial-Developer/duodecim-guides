@@ -2007,7 +2007,17 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    L'indirection sert la règle mobile plus bas : le script pose son style en
    ligne, qu'aucune feuille ne peut reprendre — c'est donc `--bc-carte-h`, qui
    n'est écrite qu'ici, que la requête média redéfinit. */
-.bc-two { display: grid; grid-template-columns: 60% minmax(0, 1fr) auto; gap: 1.2rem; align-items: start; --bc-carte-h: var(--bc-carte-mesure, 44.21rem); }
+.bc-two {
+  display: grid;
+  grid-template-columns: 60% minmax(0, 1fr) auto;
+  gap: 1.2rem;
+  align-items: start;
+  --bc-carte-h: var(--bc-carte-mesure, 44.21rem);
+  /* Longueur de la barre : la hauteur de la carte moins la place que prennent
+     ses chiffres en dessous, puis un dixième de moins — elle courait jusqu'au
+     bord et pesait plus lourd que ce qu'elle mesure. */
+  --bc-jauge-l: calc((var(--bc-carte-h) - 5.71rem) * 0.9);
+}
 /* La jauge tient la troisième colonne, à la verticale : la barre est celle du
    créateur, pivotée d'un quart de tour. Le script continue d'y écrire des
    largeurs — c'est la rotation qui les lit comme des hauteurs, et les deux
@@ -2019,21 +2029,23 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
-  height: var(--bc-carte-h);
-  margin: 0;
+  height: calc(var(--bc-jauge-l) + 5.71rem);
+  /* Même retrait que la carte et que la colonne de stats : les trois colonnes
+     partent du même trait. Sans lui, la jauge démarrait 0,8 rem plus haut que
+     la carte qu'elle mesure. */
+  margin: 0.8rem 0 0;
 }
 .bc-two > .bc-gauge-wrap { width: 7rem; }
 .bc-two > .bc-gauge-wrap .bc-gauge {
   /* La barre garde sa largeur d'origine puis pivote : le script continue d'y
      ecrire des pourcentages de largeur. Les marges negatives ramenent son
-     encombrement a celui de la barre couchee. Sa longueur, c'est la hauteur de
-     la carte moins la place que prennent les chiffres en dessous. */
-  width: calc(var(--bc-carte-h) - 5.71rem);
+     encombrement a celui de la barre couchee. */
+  width: var(--bc-jauge-l);
   height: 26px;
   border-radius: 999px;
   transform: rotate(-90deg);
   transform-origin: center;
-  margin: calc((var(--bc-carte-h) - 5.71rem) / 2 - 13px) calc(13px - (var(--bc-carte-h) - 5.71rem) / 2);
+  margin: calc(var(--bc-jauge-l) / 2 - 13px) calc(13px - var(--bc-jauge-l) / 2);
   flex: none;
 }
 /* Le paragraphe reste du texte : en boite flexible, « 450 », « / » et
