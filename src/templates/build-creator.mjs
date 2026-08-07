@@ -94,8 +94,9 @@ ${detailStats(t)}
 
 ${card ? `<div class="bc-two"><div class="bc-card-host" id="bc-card" data-base="${L.asset('')}"></div>
 <aside class="bc-side-stats">
+<section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelStats'))}</h3>
 <div class="bc-status" id="bc-status" role="status" aria-live="polite"></div>
-<section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelStats'))}</h3><div id="bc-detail-main"></div></section>
+<div id="bc-detail-main"></div></section>
 <section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelBoosters'))}</h3><div id="bc-detail-boosters"></div></section>
 </aside>${cpGauge(t)}</div>` : `<div class="bc-tabs">
 <div class="bc-tablist" role="tablist" aria-label="${esc(t('buildCreator.tablistAria'))}">
