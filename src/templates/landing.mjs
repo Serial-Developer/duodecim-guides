@@ -1,43 +1,36 @@
 // Landing : reproduction de l'écran « Player Select » du mode versus du jeu —
 // panneau d'infos à gauche mis à jour au survol, grande illustration à droite,
 // grille en rangées (nouveaux venus 012 / héros / antagonistes / rangée bonus).
-import { esc, pageShell, siteHeader, siteFooter, linksFor } from './helpers.mjs';
+import { esc, pageShell, siteHeader, siteFooter, linksFor, ROSTER_ROWS, rosterGrid } from './helpers.mjs';
 import { ldWebSite } from './jsonld.mjs';
-
-// Rangées inspirées de l'écran de sélection du jeu (roster exact, ordre libre §3)
-const ROWS = [
-  ['lightning', 'vaan', 'laguna-loire', 'yuna', 'kain-highwind', 'tifa-lockhart'],
-  ['warrior-of-light', 'firion', 'onion-knight', 'cecil-harvey', 'bartz-klauser', 'terra-branford', 'cloud-strife', 'squall-leonhart', 'zidane-tribal', 'tidus'],
-  ['garland', 'the-emperor', 'cloud-of-darkness', 'golbez', 'exdeath', 'kefka-palazzo', 'sephiroth', 'ultimecia', 'kuja', 'jecht'],
-  ['shantotto', 'gabranth', 'prishe', 'gilgamesh', 'feral-chaos'],
-];
 
 export function renderLanding({ characters, tierBySlug, taglineBySlug, ogImage, dates, t, locale, path, alternates, availability }) {
   const L = linksFor(path, locale, availability);
   const bySlug = Object.fromEntries(characters.map((c) => [c.slug, c]));
-  const first = bySlug[ROWS[0][0]];
+  const first = bySlug[ROSTER_ROWS[0][0]];
 
   // Un guide qui n'existe pas encore dans cette langue reste atteignable, mais
   // vers sa version publiée : la vignette pointe alors l'autre langue et le
   // déclare (`hreflang`), plutôt que de mener à une page absente.
   const linkFor = (slug) => ({ href: L.guide(slug), lang: L.guideLang(slug) });
 
-  const rows = ROWS.map((row) => `<li class="char-row">
-${row.map((slug) => {
-    const c = bySlug[slug];
-    if (!c) return '';
-    const tier = tierBySlug[slug];
-    const link = linkFor(slug);
-    return `<span class="char-cell"><a href="${link.href}"${link.lang ? ` hreflang="${link.lang}"` : ''}
+  // Chaque vignette porte de quoi remplir le panneau d'infos au survol : c'est
+  // `site.js` qui le lit, la page ne recharge rien.
+  const grille = rosterGrid({
+    bySlug,
+    tierBySlug,
+    id: 'char-grid',
+    ariaLabel: t('landing.gridAria'),
+    cell: (slug, c) => {
+      const link = linkFor(slug);
+      return `<a href="${link.href}"${link.lang ? ` hreflang="${link.lang}"` : ''}
  data-name="${esc(c.name)}" data-origin="${esc(c.origin)}"
- data-tier="${esc(tier || '')}" data-tagline="${esc(taglineBySlug[slug] || '')}"
+ data-tier="${esc(tierBySlug[slug] || '')}" data-tagline="${esc(taglineBySlug[slug] || '')}"
  data-portrait="${L.asset(`assets/portraits/${slug}.png`)}">
 <img src="${L.asset(`assets/portraits/${slug}.png`)}" alt="${esc(c.name)}" width="80" height="80" loading="lazy">
-</a>
-${tier ? `<span class="tier-badge" aria-hidden="true">${esc(tier)}</span>` : ''}
-</span>`;
-  }).join('\n')}
-</li>`).join('\n');
+</a>`;
+    },
+  });
 
   const body = `${siteHeader(t, { path, locale, alternates, availability, active: 'index', h1: true })}
 <main class="select-screen">
@@ -48,9 +41,7 @@ ${tier ? `<span class="tier-badge" aria-hidden="true">${esc(tier)}</span>` : ''}
 <h2 class="vs-name vs-anim" id="np-name">${esc(first.name)}</h2>
 <p class="vs-sub vs-anim" id="np-sub">${tierBySlug[first.slug] ? `<span class="badge prio-melee-high">${esc(t('landing.tierBadge', { tier: tierBySlug[first.slug] }))}</span>` : ''}${esc(taglineBySlug[first.slug] || '')}</p>
 </div>
-<ul class="char-grid" id="char-grid" aria-label="${esc(t('landing.gridAria'))}">
-${rows}
-</ul>
+${grille}
 <p class="select-extras">${t('landing.rankNote')} <a href="https://dissidia.wiki/Tier_List_(Dissidia_012)" target="_blank" rel="external noopener">dissidia.wiki</a></p>
 </div>
 <div class="vs-right">

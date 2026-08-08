@@ -311,6 +311,7 @@ for (const locale of activeLocales) {
       // côte à côte) : ce sont les portraits carrés qu'il faut afficher ici.
       hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
       i18nPayload: buildCreatorStrings(t),
+      tierBySlug,
       seo,
     }));
 
@@ -338,6 +339,7 @@ for (const locale of activeLocales) {
       characters: CHARACTERS,
       hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
       i18nPayload: buildCreatorStrings(t),
+      tierBySlug,
       seo: { ...seo, path: 'build-creator-card.html', ldType: 'none' },
       card: true,
     }));

@@ -1,18 +1,27 @@
 // Page « Créateur de builds » : structure statique (bandeau de personnages,
 // onglets, jauge, panneau d'état). Tout le comportement vit dans
 // src/scripts/build-creator.js, alimenté par window.BUILD_DATA et window.BC_I18N.
-import { esc, paras, banner, infoBanner, pageShell, siteHeader, siteFooter, linksFor } from './helpers.mjs';
+import { esc, paras, banner, infoBanner, pageShell, siteHeader, siteFooter, linksFor, rosterGrid } from './helpers.mjs';
 import { ldWebApplication } from './jsonld.mjs';
 
 const TAB_KEYS = ['attack', 'abilities', 'stuff', 'accessories', 'assist'];
 
-function characterBanner(t, characters, hasPortrait, L) {
-  return `<div class="bc-roster" role="radiogroup" aria-label="${esc(t('buildCreator.rosterAria'))}">
-${characters.map((c) => `<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="${esc(c.slug)}" title="${esc(c.name)}">
-${hasPortrait(c.slug) ? `<img src="${L.asset(`assets/portraits/${esc(c.slug)}.png`)}" alt="" loading="lazy" width="56" height="56">` : '<span class="bc-char-fallback" aria-hidden="true"></span>'}
-<span class="bc-char-name">${esc(c.name)}</span>
-</button>`).join('\n')}
-</div>`;
+// Le choix du personnage reprend la grille de la page d'accueil — l'écran
+// « Player Select » du jeu. Les cases sont ici des boutons plutôt que des liens :
+// on choisit qui l'on équipe, on ne quitte pas la page. Le nom n'est plus écrit
+// sous la vignette, comme à l'accueil ; il reste porté par le bouton, donc lu à
+// la souris comme au lecteur d'écran, et la carte l'affiche en grand dès qu'un
+// personnage est choisi.
+function characterBanner(t, characters, hasPortrait, L, tierBySlug) {
+  return rosterGrid({
+    bySlug: Object.fromEntries(characters.map((c) => [c.slug, c])),
+    tierBySlug,
+    role: 'radiogroup',
+    ariaLabel: t('buildCreator.rosterAria'),
+    cell: (slug, c) => `<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="${esc(slug)}" title="${esc(c.name)}" aria-label="${esc(c.name)}">
+${hasPortrait(slug) ? `<img src="${L.asset(`assets/portraits/${esc(slug)}.png`)}" alt="" loading="lazy" width="80" height="80">` : '<span class="bc-char-fallback" aria-hidden="true"></span>'}
+</button>`,
+  });
 }
 
 // Case « Coûts maîtrisés » : elle commande ce que la jauge compte, et n'a donc
@@ -60,7 +69,7 @@ function detailStats(t) {
 // d'interface à la place des cinq onglets. Le reste — bandeau de personnages,
 // gestionnaire, aide — ne bouge pas ; c'est l'intérêt de ne changer que le
 // milieu.
-export function renderBuildCreator({ ed, characters, hasPortrait, seo, i18nPayload, t, locale, path, alternates, availability, card = false }) {
+export function renderBuildCreator({ ed, characters, hasPortrait, seo, i18nPayload, t, locale, path, alternates, availability, tierBySlug = {}, card = false }) {
   const L = linksFor(path, locale, availability);
   if (!ed) {
     return pageShell({
@@ -83,7 +92,7 @@ ${card ? '' : paras(ed.intro)}
 
 <section class="card bc-step" aria-labelledby="bc-step1">
 <h2 id="bc-step1" style="margin-top:0.2rem">${esc(t('buildCreator.step1'))}</h2>
-${characterBanner(t, characters, hasPortrait, L)}
+${characterBanner(t, characters, hasPortrait, L, tierBySlug)}
 </section>
 
 <section class="card bc-editor" id="bc-editor" hidden aria-labelledby="bc-step2" data-asset-base="${L.asset("assets/")}">

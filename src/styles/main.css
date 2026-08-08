@@ -350,7 +350,9 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
 .char-grid { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
 .char-row { display: flex; justify-content: center; gap: 7px; }
 .char-cell { position: relative; }
-.char-cell a {
+/* La case est un lien à l'accueil, un bouton dans le créateur de builds : même
+   vignette, deux gestes. */
+.char-cell a, .char-cell .bc-char {
   display: block;
   width: clamp(52px, 6.4vw, 78px);
   border: 2px solid var(--surface-2);
@@ -360,7 +362,8 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
   transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
 }
 .char-cell img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
-.char-cell a:hover, .char-cell a:focus-visible {
+.char-cell a:hover, .char-cell a:focus-visible,
+.char-cell .bc-char:hover, .char-cell .bc-char:focus-visible {
   border-color: var(--gold);
   box-shadow: 0 0 16px rgba(240, 192, 90, 0.45);
   transform: scale(1.07);
@@ -368,7 +371,7 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
   outline: none;
 }
 /* Curseur de sélection : main dorée à gauche de la case, comme en jeu */
-.char-cell a::before {
+.char-cell a::before, .char-cell .bc-char::before {
   content: "☞";
   position: absolute;
   left: -1.15em;
@@ -380,7 +383,8 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
   pointer-events: none;
   text-shadow: 0 0 8px rgba(240, 192, 90, 0.7);
 }
-.char-cell a:hover::before, .char-cell a:focus-visible::before {
+.char-cell a:hover::before, .char-cell a:focus-visible::before,
+.char-cell .bc-char:hover::before, .char-cell .bc-char:focus-visible::before {
   opacity: 1;
   animation: cursor-nudge 700ms ease-in-out infinite;
 }
@@ -797,8 +801,8 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
   .vs-right { order: -1; }
   .plate-row { justify-content: flex-start; padding: 1rem 1.2rem 0; }
   .vs-info { min-height: 5.2rem; }
-  .char-cell a { width: clamp(56px, 20vw, 72px); }
-  .char-cell a::before { display: none; }
+  .char-cell a, .char-cell .bc-char { width: clamp(56px, 20vw, 72px); }
+  .char-cell a::before, .char-cell .bc-char::before { display: none; }
   /* Hero mobile : portrait flotté en haut à gauche, nom/tagline à côté,
      chips en dessous sur toute la largeur en rangées équilibrées */
   .hero { display: block; padding: 1.1rem; }
@@ -880,31 +884,17 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
 .bc-main { padding-bottom: 3rem; }
 
 /* Bandeau des 31 personnages : défilement horizontal en petit écran */
-.bc-roster {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
-  gap: 0.5rem;
+/* Choix du personnage : la grille de l'accueil, dont les cases sont des boutons.
+   Tout le dessin de la vignette vient de `.char-cell` — un seul endroit pour les
+   deux écrans. Ne restent ici que les deux différences : un bouton n'a ni fond
+   ni rembourrage par défaut, et celui qui est choisi garde le liseré or que le
+   lien n'allume qu'au survol. */
+.bc-char { padding: 0; font: inherit; cursor: pointer; }
+.bc-char-fallback { display: block; width: 100%; aspect-ratio: 1; background: var(--surface-2); }
+.char-cell .bc-char[aria-checked="true"] {
+  border-color: var(--gold);
+  box-shadow: 0 0 16px rgba(240, 192, 90, 0.45);
 }
-.bc-char {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0.4rem 0.2rem;
-  background: var(--bg);
-  border: 1px solid rgba(157, 134, 232, 0.25);
-  border-radius: var(--radius);
-  color: var(--muted);
-  font: inherit;
-  font-size: 0.7rem;
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s, transform 0.15s;
-}
-.bc-char img { border-radius: 6px; display: block; width: 56px; height: 56px; aspect-ratio: 1; object-fit: cover; }
-.bc-char-fallback { width: 56px; height: 56px; border-radius: 6px; background: var(--surface-2); display: block; }
-.bc-char-name { text-align: center; line-height: 1.2; }
-.bc-char:hover { border-color: var(--violet); color: var(--text); transform: translateY(-2px); }
-.bc-char[aria-checked="true"] { border-color: var(--gold); color: var(--gold); background: var(--surface-2); }
 
 /* Jauge de CP : couleurs du jeu — vert pomme les attaques, bleu ciel les abilities */
 .bc-sticky {
@@ -1397,19 +1387,6 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   .bc-sticky { top: var(--mob-header-h); }
 }
 @media (max-width: 599px) {
-  /* Bandeau de personnages sur deux rangées qui défilent horizontalement :
-     à une seule rangée, retrouver un personnage demandait trop de défilement. */
-  .bc-roster {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(2, auto);
-    grid-auto-columns: 5.2rem;
-    overflow-x: auto;
-    gap: 0.4rem;
-    padding-bottom: 0.4rem;
-    scroll-snap-type: x proximity;
-  }
-  .bc-char { scroll-snap-align: start; }
   .bc-tablist { flex-wrap: nowrap; overflow-x: auto; }
   .bc-tab { white-space: nowrap; padding: 0.45rem 0.7rem; font-size: 0.85rem; }
   .bc-acc-slots { grid-template-columns: 1fr; }
@@ -2152,15 +2129,6 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 @media (max-width: 899px) {
   .bc-two { grid-template-columns: minmax(0, 1fr); --bc-carte-h: 44.21rem; }
 }
-
-/* Choix du personnage : meme grille que l'ecran de selection de l'accueil. */
-.bc-roster {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(5.2rem, 1fr));
-  gap: 0.5rem;
-}
-.bc-roster .bc-char { flex-direction: column; width: auto; }
-.bc-roster .bc-char img { width: 100%; height: auto; aspect-ratio: 1; border-radius: 8px; }
 
 .bc-card-host { margin-top: 0.8rem; }
 .bc-card-host .bcard { margin: 0; }
