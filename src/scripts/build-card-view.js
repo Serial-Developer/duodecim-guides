@@ -276,6 +276,15 @@ function branchesOf(build, index, char) {
     (liens[l.from] = liens[l.from] || new Set()).add(l.to);
     parentDe[l.to] = l.from;
   }
+  // Enchaînement de bravery à partenaire imposé : les quatre d'Onion Knight. Il
+  // se lit au rond comme les autres enchaînements, mais n'accepte que son
+  // origine et ne s'équipe pas seul.
+  const chaines = {};
+  const chaineDe = {};
+  for (const c of char?.chains || []) {
+    (chaines[c.from] = chaines[c.from] || new Set()).add(c.to);
+    chaineDe[c.to] = c.from;
+  }
   const starters = new Set(char?.followStarters || []);
   const attaches = {};
   const pris = {};
@@ -283,24 +292,24 @@ function branchesOf(build, index, char) {
   (build.attacks || []).forEach((id, i) => {
     const info = index[id];
     if (!info) return;
-    // Une attaque HP que la source rattache à une bravery ne s'équipe jamais
-    // seule : ou elle prolonge, ou elle ne tient pas dans le build.
-    if (!info.followUp && !parentDe[id]) { dernier = i; return; }
+    // Un prolongement ne s'équipe jamais seul : ou il prolonge, ou il ne tient
+    // pas dans le build.
+    if (!info.followUp && !parentDe[id] && !chaineDe[id]) { dernier = i; return; }
     const parent = dernier >= 0 ? index[(build.attacks || [])[dernier]] : null;
-    const champ = info.followUp ? 'follow' : 'link';
-    const recevable = parent && !(pris[dernier] || {})[champ] && (info.followUp
-      ? starters.has(parent.move.id)
-      : liens[parent.move.id]?.has(id));
+    const champ = parentDe[id] ? 'link' : 'follow';
+    const recevable = parent && !(pris[dernier] || {})[champ] && (chaineDe[id]
+      ? chaineDe[id] === parent.move.id
+      : (info.followUp ? starters.has(parent.move.id) : liens[parent.move.id]?.has(id)));
     if (!recevable) return;
     attaches[i] = dernier;
     (pris[dernier] = pris[dernier] || {})[champ] = true;
   });
-  return { attaches, liens, parentDe, starters };
+  return { attaches, liens, parentDe, chaines, chaineDe, starters };
 }
 
 function attackGrid(t, L, sizeOf, build, char, styles, live) {
   const index = attackIndex(char);
-  const { attaches, liens: liensDe, parentDe, starters } = branchesOf(build, index, char);
+  const { attaches, liens: liensDe, parentDe, chaines, chaineDe, starters } = branchesOf(build, index, char);
   // catégorie -> commande -> { coup, prolongements }
   const parCat = {};
   const parPos = {};
@@ -309,7 +318,7 @@ function attackGrid(t, L, sizeOf, build, char, styles, live) {
     const info = index[id];
     // Un prolongement n'a pas d'emplacement, qu'il en trouve un à prolonger ou
     // non : la carte montre les commandes, il n'y a pas sa place.
-    if (!info || info.followUp || parentDe[id]) return;
+    if (!info || info.followUp || parentDe[id] || chaineDe[id]) return;
     const cat = `${info.kind}|${info.groupKey}|${info.style}`;
     (enAttente[cat] = enAttente[cat] || []).push({ i, info, cmd: Number((build.attackSlots || [])[i]) });
   });
@@ -336,12 +345,13 @@ function attackGrid(t, L, sizeOf, build, char, styles, live) {
   });
 
   // Ce qu'une attaque peut recevoir : une attaque HP branchée si la source lui
-  // en associe une, un enchaînement si elle figure parmi les braveries de
-  // départ. Les deux à la fois arrivent, et se posent ensemble.
+  // en associe une, un enchaînement si elle en désigne un ou si elle figure
+  // parmi les braveries de départ. Les deux à la fois arrivent, et se posent
+  // ensemble — c'est ce que montre l'écran du jeu sous Multi-Hit.
   //
-  // La réserve d'enchaînements est commune à tout le personnage : elle
+  // La réserve d'enchaînements, elle, est commune à tout le personnage : elle
   // n'occupe pas d'emplacement, et n'importe laquelle prolonge n'importe quelle
-  // bravery de départ. Son genre donne le bouton de la ligne vide.
+  // bravery de départ.
   const reserve = {};
   for (const kind of ['bravery', 'hp']) {
     for (const g of char?.attacks?.[kind] || []) if (g.followUp && hydrate(g.moves).length) reserve[kind] = kind;
@@ -351,13 +361,18 @@ function attackGrid(t, L, sizeOf, build, char, styles, live) {
   // puis, sur la carte vivante, celles qui restent à pourvoir.
   function branchLines(place, kind) {
     const rows = (place?.branches || []).map((info) => ({
-      kind: info.kind, move: info.move, champ: info.followUp ? 'follow' : 'link',
+      kind: info.kind, move: info.move, champ: (chaineDe[info.move.id] || info.followUp) ? 'follow' : 'link',
     }));
     if (!live || !place) return rows;
     const aLien = rows.some((r) => r.champ === 'link');
     const aSuite = rows.some((r) => r.champ === 'follow');
     if (!aLien && liensDe[place.move.id]?.size) rows.push({ kind: 'hp', move: null, champ: 'link' });
-    if (!aSuite && starters.has(place.move.id) && reserve[kind]) rows.push({ kind: reserve[kind], move: null, champ: 'follow' });
+    // Un enchaînement à partenaire imposé ouvre la même ligne qu'un
+    // enchaînement à réserve commune : c'est le même bouton, seule la liste
+    // proposée change.
+    const peutSuivre = chaines[place.move.id]?.size
+      || (starters.has(place.move.id) && reserve[kind]);
+    if (!aSuite && peutSuivre) rows.push({ kind: 'bravery', move: null, champ: 'follow' });
     return rows;
   }
 

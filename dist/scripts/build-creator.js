@@ -1192,6 +1192,15 @@
     var byId = {};
     var linkParent = {};
     (char.links || []).forEach(function (l) { linkParent[l.to] = l.from; });
+    // Enchaînement de bravery à partenaire imposé : les quatre d'Onion Knight,
+    // seuls du jeu. Ils se rattachent comme un enchaînement — au rond — mais
+    // n'acceptent que leur origine, et ne s'équipent pas seuls.
+    var chainParent = {};
+    var chainsDe = {};
+    (char.chains || []).forEach(function (c) {
+      chainParent[c.to] = c.from;
+      (chainsDe[c.from] = chainsDe[c.from] || []).push(c.to);
+    });
     // Toute bravery n'accepte pas d'enchaînement — Banish et Holy, chez Prishe,
     // ne s'enchaînent pas — mais celles qui en acceptent un l'acceptent
     // n'importe lequel : une « (One) » de Prishe se prolonge de n'importe
@@ -1209,7 +1218,10 @@
         });
       });
     });
-    return { byId: byId, linkParent: linkParent, followStarter: followStarter };
+    return {
+      byId: byId, linkParent: linkParent, followStarter: followStarter,
+      chainParent: chainParent, chainsDe: chainsDe,
+    };
   }
 
   function scanBuild(char) {
@@ -1220,14 +1232,17 @@
       var info = index.byId[id];
       if (!info) { orphans.push(pos); return; }
       var parentId = index.linkParent[id];
-      if (info.followUp || parentId) {
+      var chaineId = index.chainParent[id];
+      if (info.followUp || parentId || chaineId) {
         var last = slots[slots.length - 1];
         // Un prolongement n'existe pas sans l'attaque qu'il prolonge, et une
-        // attaque n'en porte qu'un de chaque sorte.
-        var champ = info.followUp ? 'follow' : 'link';
-        var recevable = last && !last[champ] && (info.followUp
-          ? !!index.followStarter[last.id]
-          : parentId === last.id);
+        // attaque n'en porte qu'un de chaque sorte : l'attaque HP branchée au
+        // carré, l'enchaînement de bravery au rond. Les deux ensemble sont la
+        // règle chez Onion Knight comme chez Firion.
+        var champ = parentId ? 'link' : 'follow';
+        var recevable = last && !last[champ] && (chaineId
+          ? chaineId === last.id
+          : (info.followUp ? !!index.followStarter[last.id] : parentId === last.id));
         if (!recevable) { orphans.push(pos); return; }
         last[champ] = { id: id, pos: pos, move: info.move };
         return;
@@ -1414,13 +1429,13 @@
   }
 
   // Ce qu'une catégorie (sol/air × style) peut recevoir : tout son groupe, moins
-  // les attaques HP branchées — celles-là vivent sous leur bravery. La liste
-  // n'exclut pas ce qui est déjà posé : la même attaque peut occuper plusieurs
-  // commandes.
-  function categoryMoves(group, style, linkParent) {
+  // les prolongements — attaques HP branchées et enchaînements à partenaire
+  // imposé vivent sous leur bravery, jamais sur une commande. La liste n'exclut
+  // pas ce qui est déjà posé : la même attaque peut occuper plusieurs commandes.
+  function categoryMoves(group, style, index) {
     return byStyle(group.moves).filter(function (sub) { return (sub.style || null) === (style || null); })
       .reduce(function (acc, sub) { return acc.concat(sub.moves); }, [])
-      .filter(function (m) { return !linkParent[m.id]; });
+      .filter(function (m) { return !index.linkParent[m.id] && !index.chainParent[m.id]; });
   }
 
   function renderAttacks(panel) {
@@ -1460,7 +1475,7 @@
         // emplacements distincts dans le jeu.
         var styles = byStyle(g.moves).map(function (sub) { return sub.style || null; });
         styles.forEach(function (style) {
-          var choix = categoryMoves(g, style, scan.index.linkParent);
+          var choix = categoryMoves(g, style, scan.index);
           if (!choix.length) return;
           panel.appendChild(attackCategory({
             char: char, scan: scan, kind: kind, group: g, style: style,
@@ -1536,9 +1551,14 @@
           grid.appendChild(branchRow(slot, 'link', liens, KIND_BUTTON.hp,
             T('attacks.hpLinkAdd'), T('attacks.hpLinkFor', { name: m.name })));
         }
-        // Seules les braveries que la source désigne acceptent un
-        // enchaînement, mais elles acceptent toute la réserve.
-        if (ctx.pool.length && ctx.scan.index.followStarter[slot.id]) {
+        // Enchaînement de bravery. Deux formes : à partenaire imposé, la source
+        // ne propose que ce qu'elle associe à ce coup ; à réserve commune, elle
+        // désigne les braveries de départ et laisse le choix du partenaire.
+        var chaines = (ctx.scan.index.chainsDe[slot.id] || []).map(function (id) { return ctx.moveById[id]; }).filter(Boolean);
+        if (chaines.length) {
+          grid.appendChild(branchRow(slot, 'follow', chaines, KIND_BUTTON.bravery,
+            T('attacks.followupAdd'), T('attacks.followupFor', { name: m.name })));
+        } else if (ctx.pool.length && ctx.scan.index.followStarter[slot.id]) {
           grid.appendChild(branchRow(slot, 'follow', ctx.pool, KIND_BUTTON.bravery,
             T('attacks.followupAdd'), T('attacks.followupFor', { name: m.name }), ctx.poolIntro));
         }
@@ -2881,7 +2901,7 @@
           if (kind + '|' + g.key + '|' + (style || '') !== catKey) return;
           trouve = {
             kind: kind, group: g, style: style, scan: scan, catKey: catKey,
-            choix: categoryMoves(g, style, scan.index.linkParent),
+            choix: categoryMoves(g, style, scan.index),
           };
         });
       });
@@ -2964,15 +2984,20 @@
           }).filter(Boolean);
           titre = T('attacks.hpLinkFor', { name: parent.move.name });
         } else {
-          // Les enchaînements gardent une réserve commune : n'importe lequel
+          // Deux formes d'enchaînement : à partenaire imposé, la source n'en
+          // associe qu'un à ce coup ; à réserve commune, n'importe lequel
           // prolonge n'importe quelle bravery de départ, et c'est l'association
           // choisie qui fait l'effet.
-          choix = [];
-          (char.attacks[ctxB.kind] || []).forEach(function (g) {
-            if (!g.followUp) return;
-            choix = choix.concat(g.moves);
-            if (!intro) intro = g.intro;
-          });
+          choix = (ctxB.scan.index.chainsDe[parent.id] || []).map(function (id) {
+            return ctxB.scan.index.byId[id] ? ctxB.scan.index.byId[id].move : null;
+          }).filter(Boolean);
+          if (!choix.length) {
+            (char.attacks[ctxB.kind] || []).forEach(function (g) {
+              if (!g.followUp) return;
+              choix = choix.concat(g.moves);
+              if (!intro) intro = g.intro;
+            });
+          }
           titre = T('attacks.followupFor', { name: parent.move.name });
         }
         if (!choix.length) return;
@@ -2984,7 +3009,17 @@
       }
 
       if (quoi === 'abilities') {
-        openModal(T('tabs.abilities'), null, function (body) { renderAbilities(body); });
+        // Les 122 abilities débordaient la fenêtre : elle ne met en colonne que
+        // son sélecteur, et le panneau, posé nu, poussait la liste hors du
+        // cadre. Elle prend donc la même enveloppe que les autres — une zone
+        // qui défile à l'intérieur de la fenêtre, pas la fenêtre qui s'allonge.
+        openModal(T('tabs.abilities'), null, function (body) {
+          var section = el('div', { class: 'bc-chooser' });
+          var liste = el('div', { class: 'bc-list-scroll', 'data-slot': 'abilities' });
+          renderAbilities(liste);
+          section.appendChild(liste);
+          body.appendChild(section);
+        });
         return;
       }
 

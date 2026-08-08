@@ -221,6 +221,12 @@ export function buildDataBundle(ROOT, editorial = null) {
           moves.push({
             id,
             name: m.name,
+            // La description ne part pas dans le payload ; elle sert ici à lire
+            // les enchaînements de bravery, que la source n'écrit qu'en prose
+            // (« Branching from Multi-Hit. »). Elle suit la duplication des
+            // paradigmes, sans quoi les coups reversés dans les deux postures
+            // la perdraient.
+            desc: m.description || '',
             ...cp,
             damage: m.damage || '',
             startup: m.startup || '',
@@ -309,6 +315,37 @@ export function buildDataBundle(ROOT, editorial = null) {
       if (!hpLinks.some((x) => x.from === from && x.to === to)) hpLinks.push({ from, to, source: l.origine });
     }
 
+    // Enchaînements de bravery à partenaire imposé. Le wiki ne les déclare nulle
+    // part : il les écrit en tête de la description du coup — « Branching from
+    // Multi-Hit. » —, exactement comme pour les attaques HP branchées, dont les
+    // paires viennent par ailleurs du Final Fantasy Wiki. Ce sont les quatre
+    // d'Onion Knight, et les seules du jeu : Extra Slice sous Multi-Hit,
+    // Blizzaga sous Blizzard, Extra Lunge sous Turbo-Hit, Thundaga sous Thunder.
+    //
+    // Rien à voir avec les Skillchains de Prishe, qui vivent dans un groupe
+    // « follow-ups » et acceptent n'importe quel partenaire : ceux-ci n'en ont
+    // qu'un, et ne s'équipent pas seuls — le jeu les montre sous leur parent.
+    const chains = [];
+    const braveryParNom = {};
+    for (const g of rawGroups.bravery || []) {
+      if (g.followUp) continue;
+      for (const m of g.moves) braveryParNom[moveKey(m.name)] = m.id;
+    }
+    for (const g of rawGroups.bravery || []) {
+      if (g.followUp) continue;
+      for (const m of g.moves) {
+        const dit = /^\s*Branching from ([^.]+)\./.exec(m.desc || '');
+        if (!dit) continue;
+        const from = braveryParNom[moveKey(dit[1])];
+        if (!from || from === m.id) {
+          unresolvedLinks.push({ slug: def.slug, from: dit[1], to: m.name, manquant: 'bravery de départ' });
+          continue;
+        }
+        chains.push({ from, to: m.id, source: data.url || null });
+      }
+    }
+    for (const kind of ['bravery', 'hp']) for (const g of rawGroups[kind] || []) for (const m of g.moves) delete m.desc;
+
     // Braveries qui acceptent un enchaînement — non pas lequel : n'importe
     // quel « (Two) » convient sous n'importe quelle « (One) », et c'est tout le
     // principe des Skillchains de Prishe, où l'association choisie change
@@ -351,6 +388,9 @@ export function buildDataBundle(ROOT, editorial = null) {
       // Paires bravery -> attaque HP réellement identifiées ; l'infobox ci-dessus
       // dit seulement si le personnage en a.
       links: hpLinks,
+      // Enchaînements de bravery à partenaire imposé (voir plus haut) : ceux-là
+      // désignent leur origine et ne s'équipent que sous elle.
+      chains,
       // Braveries qui acceptent un enchaînement. Lequel n'est pas contraint :
       // la réserve du personnage vaut pour chacune d'elles.
       followStarters: [...starters],

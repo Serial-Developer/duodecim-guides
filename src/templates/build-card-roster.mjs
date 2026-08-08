@@ -45,13 +45,15 @@ function maquette(char, rang, data) {
   // écartait déjà pour les enchaînements ; sans cela, elle posait sur une
   // commande un coup que la carte n'y montre pas, et l'emplacement paraissait
   // vide.
-  const branches = new Set((char.links || []).map((l) => l.to));
+  const branches = new Set([...(char.links || []), ...(char.chains || [])].map((l) => l.to));
   // Un prolongement ne prend pas de commande : il se range juste après l'attaque
   // qu'il prolonge, et la maquette le pose là où le jeu le montre. C'est aussi
   // ce que ce banc doit donner à voir — onze personnages ont des HP links, et
   // trois braveries de Firion portent en plus un enchaînement.
   const liensDe = {};
   for (const l of char.links || []) (liensDe[l.from] = liensDe[l.from] || []).push(l.to);
+  const chainesDe = {};
+  for (const c of char.chains || []) (chainesDe[c.from] = chainesDe[c.from] || []).push(c.to);
   const starters = new Set(char.followStarters || []);
   const reserve = [];
   for (const kind of ['bravery', 'hp']) {
@@ -74,7 +76,8 @@ function maquette(char, rang, data) {
       liste.slice(0, MAX_SLOTS).forEach((m, i) => {
         poser(m.id, i);
         if ((liensDe[m.id] || []).length) poser(liensDe[m.id][0], -1);
-        if (starters.has(m.id) && reserve.length) poser(reserve[0], -1);
+        if ((chainesDe[m.id] || []).length) poser(chainesDe[m.id][0], -1);
+        else if (starters.has(m.id) && reserve.length) poser(reserve[0], -1);
       });
     }
   }
