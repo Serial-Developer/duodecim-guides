@@ -2735,6 +2735,15 @@
     deux.style.setProperty('--bc-carte-mesure', carte.getBoundingClientRect().height + 'px');
   }
 
+  // Le build n'est pas seul à changer la hauteur de la carte : la fenêtre s'y
+  // met aussi, un nom qui passe à la ligne suffit. Mesurer au seul redessin
+  // laissait la valeur se périmer — on l'a vue rester à la hauteur d'une carte
+  // rendue dans une fenêtre étroite, et la jauge s'étirer d'autant. L'observateur
+  // la remesure chaque fois que la boîte bouge, d'où qu'elle vienne. Les
+  // colonnes qu'il alimente sont d'autres cases de la grille, elles ne peuvent
+  // pas renvoyer la carte grandir : pas de boucle.
+  if (carteHote && window.ResizeObserver) new ResizeObserver(mesurerCarte).observe(carteHote);
+
   // Retrouve le contexte d'une catégorie d'attaques à partir de sa clé, avec la
   // même composition que la grille : (bravery/HP, groupe, style).
   function categorieDe(char, catKey) {

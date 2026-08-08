@@ -15,9 +15,18 @@ ${hasPortrait(c.slug) ? `<img src="${L.asset(`assets/portraits/${esc(c.slug)}.pn
 </div>`;
 }
 
+// Case « Coûts maîtrisés » : elle commande ce que la jauge compte, et n'a donc
+// qu'un seul endroit juste — sous ses chiffres. Sous les onglets elle reste
+// dans l'en-tête, à côté du nom du build : la jauge y est couchée dans une
+// barre collante, une case sous elle couperait la page en deux.
+// Elle ne doit exister qu'une fois : `#bc-mastered` est lu par son identifiant.
+function masteredToggle(t) {
+  return `<label class="bc-field bc-field-inline"><input type="checkbox" id="bc-mastered" checked> <span>${esc(t('buildCreator.masteredCosts'))}</span></label>`;
+}
+
 // Jauge de CP : couleurs du jeu (vert pomme = attaques, bleu ciel = abilities).
 // L'équivalent textuel est porté par aria-valuetext, mis à jour par le script.
-function cpGauge(t) {
+function cpGauge(t, { mastered = false } = {}) {
   return `<div class="bc-gauge-wrap" id="bc-gauge-wrap">
 <div class="bc-gauge" id="bc-gauge" role="meter" aria-valuemin="0" aria-valuemax="450" aria-valuenow="0" aria-valuetext="${esc(t('buildCreator.gaugeValueText'))}" aria-labelledby="bc-gauge-label">
 <span class="bc-gauge-fill bc-gauge-attacks" id="bc-gauge-attacks"></span>
@@ -27,6 +36,7 @@ function cpGauge(t) {
 <span class="bc-legend"><span class="bc-dot bc-dot-attacks"></span>${esc(t('buildCreator.gaugeAttacks'))} <span id="bc-gauge-a">0</span></span>
 <span class="bc-legend"><span class="bc-dot bc-dot-abilities"></span>${esc(t('buildCreator.gaugeAbilities'))} <span id="bc-gauge-b">0</span></span>
 </p>
+${mastered ? masteredToggle(t) : ''}
 </div>`;
 }
 
@@ -82,7 +92,7 @@ ${characterBanner(t, characters, hasPortrait, L)}
 <div class="bc-build-meta">
 <label class="bc-field"><span>${esc(t('buildCreator.buildName'))}</span>
 <input type="text" id="bc-build-name" maxlength="60" placeholder="${esc(t('buildCreator.buildNamePlaceholder'))}" autocomplete="off"></label>
-<label class="bc-field bc-field-inline"><input type="checkbox" id="bc-mastered" checked> <span>${esc(t('buildCreator.masteredCosts'))}</span></label>
+${card ? '' : masteredToggle(t)}
 </div>
 </div>
 
@@ -98,7 +108,7 @@ ${card ? `<div class="bc-two"><div class="bc-card-host" id="bc-card" data-base="
 <div class="bc-status" id="bc-status" role="status" aria-live="polite"></div>
 <div class="bc-side-detail" id="bc-detail-main"></div></section>
 <section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelBoosters'))}</h3><div id="bc-detail-boosters"></div></section>
-</aside>${cpGauge(t)}</div>` : `<div class="bc-tabs">
+</aside>${cpGauge(t, { mastered: true })}</div>` : `<div class="bc-tabs">
 <div class="bc-tablist" role="tablist" aria-label="${esc(t('buildCreator.tablistAria'))}">
 ${tabs.map((tb, i) => `<button type="button" class="bc-tab" role="tab" id="bc-tab-${tb.key}" aria-controls="bc-panel-${tb.key}" aria-selected="${i === 0}" tabindex="${i === 0 ? '0' : '-1'}" data-tab="${tb.key}">${esc(tb.label)}</button>`).join('\n')}
 </div>

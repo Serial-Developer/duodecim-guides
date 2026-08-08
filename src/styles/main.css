@@ -1567,7 +1567,10 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   overflow: hidden;
   flex: none;
 }
-.bcard-face img { width: 100%; height: 100%; border-radius: 0; transform: scale(2.1); transform-origin: 50% 26%; }
+/* Le zoom passe par une variable : le retournement ci-dessous doit le reprendre,
+   `transform` n'étant qu'une seule propriété — un `scaleX(-1)` posé à part
+   écraserait l'agrandissement et rendrait la vignette minuscule. */
+.bcard-face img { --bcard-zoom: 2.1; width: 100%; height: 100%; border-radius: 0; transform: scale(var(--bcard-zoom)); transform-origin: 50% 26%; }
 /* Aerith n'a aucun portrait Dissidia 012 : le sien est un artwork Final
    Fantasy VII, cadré plus large et plus haut que les planches de sélection.
    Il lui faut son propre recadrage, sans quoi elle reste minuscule dans le
@@ -1577,7 +1580,13 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    sélection cadrent déjà au buste. Sa tête tient autour de (48 %, 10 %) : le
    silhouette commence des le premier pixel : le zoom part du haut de l image,
    sa tete y tient donc et le buste suit. */
-.bcard-face[data-assist="aerith"] img { transform: scale(4.6); transform-origin: 48% 0; }
+.bcard-face[data-assist="aerith"] img { --bcard-zoom: 4.6; transform-origin: 48% 0; }
+/* Les dix-huit héros regardent vers la gauche sur leur portrait ; en vignette
+   d'assist, retournés, ils regardent du même côté que tous les autres. Le point
+   d'origine est celui du visage : il reste fixe sous la symétrie, le cadrage ne
+   bouge donc pas. Cette règle vient après celle d'Aerith, à spécificité égale,
+   pour l'emporter sur la seule propriété `transform`. */
+.bcard-face.is-mirrored img { transform: scale(calc(var(--bcard-zoom) * -1), var(--bcard-zoom)); }
 .bcard-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--gold); font-weight: 600; }
 .bcard-role { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
 .bcard-summon { display: flex; align-items: center; gap: 0.5rem; margin: 0; }
@@ -2029,7 +2038,9 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
-  height: calc(var(--bc-jauge-l) + 5.71rem);
+  /* Hauteur libre : les marges de la barre couchée réservent déjà sa longueur
+     dans le flux, et la colonne porte maintenant la case « Coûts maîtrisés »
+     sous les chiffres. Une hauteur fixée l'aurait laissée déborder. */
   /* Même retrait que la carte et que la colonne de stats : les trois colonnes
      partent du même trait. Sans lui, la jauge démarrait 0,8 rem plus haut que
      la carte qu'elle mesure. */
