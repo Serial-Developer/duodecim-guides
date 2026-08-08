@@ -2505,10 +2505,22 @@
   // Le cliché fige ce que la carte montre au repos : l'équipement, le premier
   // style, et les prolongements repliés. C'est la lecture d'ensemble d'un build,
   // pas son détail — celui-ci se lit dans l'outil.
+  var numeroCliche = 0;
+
   function preparerClone(carte) {
     var clone = carte.cloneNode(true);
     var chaque = function (sel, fn) { Array.prototype.forEach.call(clone.querySelectorAll(sel), fn); };
     clone.style.margin = '0';
+    // Le clone entre dans la page le temps d'être mesuré : ses identifiants et
+    // ses noms de groupe y côtoient ceux de la carte vivante. Deux radios de
+    // même nom ne font qu'un seul groupe — cocher celui du clone décochait
+    // celui de la carte, et les deux panneaux s'y superposaient une fois
+    // l'image faite. On lui donne donc les siens. La feuille de style ne s'y
+    // trompe pas : elle vise les valeurs, jamais les identifiants.
+    var marque = 'cliche' + (numeroCliche += 1);
+    chaque('[id]', function (n) { n.id = marque + '-' + n.id; });
+    chaque('label[for]', function (n) { n.setAttribute('for', marque + '-' + n.getAttribute('for')); });
+    chaque('input[name]', function (n) { n.setAttribute('name', marque + '-' + n.getAttribute('name')); });
     chaque('.bcard-panel-radio', function (r) { r.checked = r.value === 'gear'; });
     chaque('.bcard-style-radio', function (r, i) { r.checked = i === 0; });
     chaque('.bcard-fold', function (c) { c.checked = true; });
