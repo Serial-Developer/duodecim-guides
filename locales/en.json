@@ -608,7 +608,11 @@
       "note": "One assist per build. Feral Chaos has no assist form; Aerith is only playable as one.",
       "summonTitle": "Summon",
       "summonNote": "The tournament ruleset only allows counter summons: {list}.",
-      "undocumentedEffect": "Effect not documented by our sources"
+      "undocumentedEffect": "Effect not documented by our sources",
+      "sortDefault": "Default order",
+      "sortEpisode": "By Final Fantasy",
+      "sortCosmos": "Cosmos first",
+      "sortChaos": "Chaos first"
     },
     "manager": {
       "confirmChangeChar": "The current build is not saved. Switching character will overwrite it. Continue?",

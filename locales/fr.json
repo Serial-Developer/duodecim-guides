@@ -608,7 +608,11 @@
       "note": "Un assist par build. Feral Chaos n’existe pas en assist ; Aerith n’est jouable que sous cette forme.",
       "summonTitle": "Invocation",
       "summonNote": "Le ruleset de tournoi n’autorise que les counter summons : {list}.",
-      "undocumentedEffect": "Effet non documenté par nos sources"
+      "undocumentedEffect": "Effet non documenté par nos sources",
+      "sortDefault": "Ordre par défaut",
+      "sortEpisode": "Par Final Fantasy",
+      "sortCosmos": "Cosmos d’abord",
+      "sortChaos": "Chaos d’abord"
     },
     "manager": {
       "confirmChangeChar": "Le build en cours n’est pas enregistré. Changer de personnage l’écrasera. Continuer ?",

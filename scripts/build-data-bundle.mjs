@@ -53,6 +53,28 @@ const REGARD_GAUCHE = new Set([
   'tifa-lockhart', 'kain-highwind', 'aerith',
 ]);
 
+// Ordre d'affichage des renforts, donné par l'auteur du site : les guerriers de
+// Cosmos puis ceux de Chaos, chaque camp dans l'ordre de l'écran de sélection —
+// les dix d'origine, puis ceux que Duodecim ajoute. Ce n'est ni l'ordre
+// alphabétique, ni celui des épisodes : c'est celui dans lequel on cherche un
+// assist quand on connaît le jeu.
+//
+// La liste reçue en comptait trente ; Aerith y manquait. Elle est placée
+// derrière Tifa, du côté de Cosmos : le jeu la range en dernier de Final
+// Fantasy VII, et cette liste-ci sépare les deux camps.
+//
+// L'ordre par épisode, lui, ne se déclare pas : c'est celui du tableau des
+// assists, tel que la source le donne.
+const ORDRE_ASSISTS = [
+  'warrior-of-light', 'firion', 'onion-knight', 'cecil-harvey', 'bartz-klauser',
+  'terra-branford', 'cloud-strife', 'squall-leonhart', 'zidane-tribal', 'tidus',
+  'shantotto', 'lightning', 'vaan', 'laguna-loire', 'yuna', 'kain-highwind',
+  'tifa-lockhart', 'aerith', 'prishe',
+  'garland', 'the-emperor', 'cloud-of-darkness', 'golbez', 'exdeath',
+  'kefka-palazzo', 'sephiroth', 'ultimecia', 'kuja', 'jecht', 'gabranth',
+  'gilgamesh',
+];
+
 // « 20 (10) » -> { cp: 20, cpMastered: 10 }. Le wiki écrit parfois « 20 » seul.
 function parseMoveCp(raw) {
   if (!raw) return { cp: null, cpMastered: null };
@@ -430,9 +452,13 @@ export function buildDataBundle(ROOT, editorial = null) {
     // Le sens du regard voyage avec l'assist, pas seulement avec le personnage
     // jouable : Aerith n'est renfort que, et c'est en vignette de renfort que la
     // carte retourne les portraits pour qu'ils regardent tous du même côté.
+    // `order` porte l'ordre d'affichage voulu ; le rang du tableau, lui, reste
+    // celui des épisodes. Un renfort absent de la liste passerait en fin de
+    // classement plutôt que de disparaître.
     assists: assists.items.map((a) => ({
       slug: a.slug, name: a.name, attacks: a.attacks, documented: a.documented,
       portraitFacing: REGARD_GAUCHE.has(a.slug) ? 'left' : 'right',
+      order: ORDRE_ASSISTS.indexOf(a.slug) === -1 ? ORDRE_ASSISTS.length : ORDRE_ASSISTS.indexOf(a.slug),
     })),
     summons: summonsOut,
   };

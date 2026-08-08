@@ -2077,7 +2077,42 @@
   // lignes distinctes, et chacune ouvre sa fenêtre. Les changer ensemble parce
   // qu'ils partagent un onglet était un héritage de la mise en page, pas une
   // règle du jeu.
+  // Trente et un renforts : sans filtre ni tri, on les parcourait des yeux.
+  // L'ordre par défaut est celui de l'écran de sélection, camp par camp — celui
+  // dans lequel on cherche un assist quand on connaît le jeu. L'alphabétique,
+  // lui, éparpille les deux camps et les épisodes.
+  //
+  // Le rang par épisode n'est pas déclaré : c'est celui du tableau des assists,
+  // que la source donne dans l'ordre des Final Fantasy.
+  var ordreEpisode = {};
+  (D.assists || []).forEach(function (a, i) { ordreEpisode[a.slug] = i; });
+  var TRIS_ASSIST = [
+    { key: 'default', label: function () { return T('assist.sortDefault'); }, cmp: function (a, b) { return (a.order || 0) - (b.order || 0); } },
+    { key: 'episode', label: function () { return T('assist.sortEpisode'); }, cmp: function (a, b) { return ordreEpisode[a.slug] - ordreEpisode[b.slug]; } },
+    { key: 'name', label: function () { return T('equipment.sortName'); }, cmp: byName },
+    { key: 'cosmos', label: function () { return T('assist.sortCosmos'); }, cmp: function (a, b) { return camp(a) - camp(b) || (a.order || 0) - (b.order || 0); } },
+    { key: 'chaos', label: function () { return T('assist.sortChaos'); }, cmp: function (a, b) { return camp(b) - camp(a) || (a.order || 0) - (b.order || 0); } },
+  ];
+  // Le camp se lit sur le sens du regard du portrait : les deux camps se font
+  // face à l'écran de sélection, et c'est la seule marque que les données en
+  // portent.
+  function camp(a) { return a.portraitFacing === 'left' ? 0 : 1; }
+  var assistFilter = '';
+  var assistSort = 'default';
+
   function assistList(close) {
+    var section = el('div', { class: 'bc-chooser' });
+    var bar = el('div', { class: 'bc-filters' });
+    var search = el('input', { type: 'search', placeholder: T('equipment.filterName'), value: assistFilter, 'aria-label': T('equipment.filterName') });
+    caretToEnd(search);
+    search.addEventListener('input', function () { assistFilter = search.value; redessiner(); });
+    var triSel = el('select', { 'aria-label': T('equipment.sort') }, TRIS_ASSIST.map(function (t) {
+      return el('option', { value: t.key, text: t.label(), selected: assistSort === t.key });
+    }));
+    triSel.addEventListener('change', function () { assistSort = triSel.value; redessiner(); });
+    bar.appendChild(search); bar.appendChild(triSel);
+    section.appendChild(bar);
+
     var box = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'assist' });
     var pose = (D.assists || []).filter(function (a) { return a.slug === state.build.assist; })[0];
     var poser = function (slug) {
@@ -2086,23 +2121,35 @@
       if (close) close();
       keepScroll(slug, function () { renderPanel('assist'); refresh(); });
     };
-    if (pose) box.appendChild(clearRow(pose.name, function () { poser(null); }));
-    D.assists.slice().sort(function (a, b) { return byName(a, b); }).forEach(function (a) {
-      var selected = state.build.assist === a.slug;
-      var btn = el('button', {
-        type: 'button', class: 'bc-row bc-row-btn' + (selected ? ' is-selected' : ''), 'aria-pressed': selected ? 'true' : 'false',
-        'data-uid': a.slug,
-        onclick: function () { poser(selected ? null : a.slug); },
-      }, [
-        el('span', { class: 'bc-row-main' }, [
-          el('span', { class: 'bc-row-name', text: a.name }),
-          el('span', { class: 'bc-row-meta', text: a.attacks.map(function (x) { return x.name + (x.startup ? ' (' + x.startup + ')' : ''); }).join(' · ') }),
-        ]),
-      ]);
-      if (!a.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: T('status.undocumented') }));
-      box.appendChild(btn);
-    });
-    return box;
+    if (pose) section.appendChild(clearRow(pose.name, function () { poser(null); }));
+    section.appendChild(box);
+
+    // Le filtre porte aussi sur les coups du renfort : on cherche souvent
+    // « celui qui pose un mur de bravery », pas un nom.
+    function redessiner() {
+      clear(box);
+      var tri = TRIS_ASSIST.filter(function (t) { return t.key === assistSort; })[0] || TRIS_ASSIST[0];
+      var q = assistFilter.toLowerCase();
+      D.assists.filter(function (a) {
+        return !q || (a.name + ' ' + a.attacks.map(function (x) { return x.name; }).join(' ')).toLowerCase().indexOf(q) !== -1;
+      }).sort(tri.cmp).forEach(function (a) {
+        var selected = state.build.assist === a.slug;
+        var btn = el('button', {
+          type: 'button', class: 'bc-row bc-row-btn' + (selected ? ' is-selected' : ''), 'aria-pressed': selected ? 'true' : 'false',
+          'data-uid': a.slug,
+          onclick: function () { poser(selected ? null : a.slug); },
+        }, [
+          el('span', { class: 'bc-row-main' }, [
+            el('span', { class: 'bc-row-name', text: a.name }),
+            el('span', { class: 'bc-row-meta', text: a.attacks.map(function (x) { return x.name + (x.startup ? ' (' + x.startup + ')' : ''); }).join(' · ') }),
+          ]),
+        ]);
+        if (!a.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: T('status.undocumented') }));
+        box.appendChild(btn);
+      });
+    }
+    redessiner();
+    return section;
   }
 
   function summonList(close) {
