@@ -1675,7 +1675,6 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 0.25rem;
   margin: 0;
   z-index: 2;
 }
@@ -1687,10 +1686,24 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   background: var(--surface-2);
   border: 1px solid rgba(157, 134, 232, 0.3);
   border-top: none;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0;
   padding: 0.25rem 0.8rem;
   cursor: pointer;
   white-space: nowrap;
+}
+/* Les languettes se touchent et ne partagent qu'un trait : la seconde remonte
+   d'un pixel sur la première au lieu de poser le sien à côté. Seuls les deux
+   angles extérieurs sont arrondis — l'ensemble se lit comme un onglet à deux
+   cases, et non comme deux boutons voisins. */
+.bcard-flap:first-of-type { border-bottom-left-radius: 8px; }
+.bcard-flap:last-of-type { border-bottom-right-radius: 8px; }
+.bcard-flap + .bcard-flap { margin-left: -1px; }
+/* Le trait commun revient à la languette ouverte : c'est son or qui doit
+   fermer le contour, pas le violet éteint de sa voisine. */
+.bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-flap[data-panel="gear"],
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-flap[data-panel="abilities"] {
+  position: relative;
+  z-index: 1;
 }
 .bcard-flap:hover { color: var(--text); }
 .bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-flap[data-panel="gear"],
