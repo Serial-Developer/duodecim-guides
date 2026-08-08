@@ -2940,6 +2940,49 @@
         return;
       }
 
+      // Un prolongement : l'attaque HP branchée sous une bravery, ou
+      // l'enchaînement qui la prolonge. Une même bravery peut porter les deux —
+      // le Multi-Hit d'Onion Knight ouvre sur Extra Slice au rond et sur
+      // Swordshower au carré —, chacun sur sa ligne et dans sa propre fenêtre.
+      if (quoi === 'branch') {
+        var ctxB = categorieDe(char, cible.getAttribute('data-cat'));
+        if (!ctxB) return;
+        var cmdB = Number(cible.getAttribute('data-cmd'));
+        var champ = cible.getAttribute('data-champ');
+        var parent = null;
+        ctxB.scan.slots.forEach(function (x) { if (x.info.catKey === ctxB.catKey && x.cmd === cmdB) parent = x; });
+        if (!parent) return;
+        var courant = parent[champ];
+        var choix, titre, intro;
+        if (champ === 'link') {
+          // Ce que la source associe à cette bravery, et rien d'autre : les HP
+          // links sont appariés un à un.
+          var vers = {};
+          (char.links || []).forEach(function (l) { if (l.from === parent.id) vers[l.to] = true; });
+          choix = Object.keys(vers).map(function (id) {
+            return ctxB.scan.index.byId[id] ? ctxB.scan.index.byId[id].move : null;
+          }).filter(Boolean);
+          titre = T('attacks.hpLinkFor', { name: parent.move.name });
+        } else {
+          // Les enchaînements gardent une réserve commune : n'importe lequel
+          // prolonge n'importe quelle bravery de départ, et c'est l'association
+          // choisie qui fait l'effet.
+          choix = [];
+          (char.attacks[ctxB.kind] || []).forEach(function (g) {
+            if (!g.followUp) return;
+            choix = choix.concat(g.moves);
+            if (!intro) intro = g.intro;
+          });
+          titre = T('attacks.followupFor', { name: parent.move.name });
+        }
+        if (!choix.length) return;
+        openMoveChooser(titre, choix, courant ? courant.move : null, function (choisi) {
+          if (courant) replaceAt(courant.pos, choisi.id);
+          else attachTo(parent, choisi.id);
+        }, intro, courant ? function () { removeAt([courant.pos]); } : null);
+        return;
+      }
+
       if (quoi === 'abilities') {
         openModal(T('tabs.abilities'), null, function (body) { renderAbilities(body); });
         return;

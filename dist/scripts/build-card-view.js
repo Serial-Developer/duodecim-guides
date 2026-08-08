@@ -162,12 +162,19 @@ function slotLine(label, valeur, extra = '', ic = null, labelBrut = false, hook 
 
 function attackLine(t, L, sizeOf, kind, cmd, move, stance, branches = [], hook = '', hookBranche = () => '') {
   // Un prolongement se lit sous l'attaque qu'il prolonge, sans commande : il
-  // n'occupe pas d'emplacement, c'est le coup parent qui le déclenche.
+  // n'occupe pas d'emplacement, c'est le coup parent qui le déclenche. Son
+  // bouton dit lequel : le rond pour un enchaînement de bravery, le carré pour
+  // une attaque HP branchée — la touche qu'on presse dans le jeu.
+  //
+  // Une place vide en est une aussi : sur la carte vivante, une bravery qui
+  // accepte un prolongement montre la ligne où il irait, comme un emplacement
+  // libre montre le sien. Sans elle, retirer un prolongement le rendrait
+  // impossible à reposer.
   const sous = branches.map((b, i) => {
     const dedans = `<span class="bcard-key">${buttonIcon(t, L, sizeOf, b.kind)}</span>
-<span class="bcard-value">${esc(b.move.name)}</span>`;
+<span class="bcard-value">${b.move ? esc(b.move.name) : ''}</span>`;
     const h = hookBranche(b, i);
-    return `<li class="bcard-line bcard-branch${h ? ' is-live' : ''}">${
+    return `<li class="bcard-line bcard-branch${b.move ? '' : ' is-empty'}${h ? ' is-live' : ''}">${
       h ? `<button type="button" class="bcard-hit"${h}>${dedans}</button>` : dedans
     }</li>`;
   }).join('\n');
@@ -250,40 +257,59 @@ function stylesOf(char) {
   return vus.length > 1 ? vus : [];
 }
 
-// Un prolongement — HP link ou enchaînement de bravery — se rattache à
-// l'attaque qui le précède immédiatement dans la liste : c'est la seule forme
-// que le build lui donne, et la lecture que fait le créateur. Il n'occupe pas
-// d'emplacement. Sans cette lecture, le Somersault de Tifa mangeait une des
-// trois commandes d'attaque HP au sol et le quatrième coup disparaissait.
+// Un prolongement — HP link ou enchaînement de bravery — se range juste après
+// l'attaque qu'il prolonge : c'est la seule forme que le build lui donne. Il
+// n'occupe pas d'emplacement. Sans cette lecture, le Somersault de Tifa
+// mangeait une des trois commandes d'attaque HP au sol et le quatrième coup
+// disparaissait.
+//
+// Il se rattache au dernier **emplacement** rencontré, et non à l'entrée qui le
+// précède : une attaque en porte deux à la fois — le Multi-Hit d'Onion Knight
+// ouvre sur Extra Slice au rond et sur Swordshower au carré, et le jeu les
+// affiche tous deux sous lui. En visant l'entrée précédente, la carte perdait
+// le second : il passait pour une attaque et mangeait une commande. C'est mot
+// pour mot la lecture de `scanBuild`, côté créateur — une place par sorte.
 function branchesOf(build, index, char) {
   const liens = {};
-  for (const l of char?.links || []) (liens[l.from] = liens[l.from] || new Set()).add(l.to);
+  const parentDe = {};
+  for (const l of char?.links || []) {
+    (liens[l.from] = liens[l.from] || new Set()).add(l.to);
+    parentDe[l.to] = l.from;
+  }
   const starters = new Set(char?.followStarters || []);
   const attaches = {};
+  const pris = {};
+  let dernier = -1;
   (build.attacks || []).forEach((id, i) => {
-    if (!i) return;
     const info = index[id];
-    const parent = index[(build.attacks || [])[i - 1]];
-    if (!info || !parent || parent.followUp) return;
-    const estLien = info.kind === 'hp' && liens[parent.move.id]?.has(id);
-    const estEnchainement = info.followUp && starters.has(parent.move.id);
-    if (estLien || estEnchainement) attaches[i] = i - 1;
+    if (!info) return;
+    // Une attaque HP que la source rattache à une bravery ne s'équipe jamais
+    // seule : ou elle prolonge, ou elle ne tient pas dans le build.
+    if (!info.followUp && !parentDe[id]) { dernier = i; return; }
+    const parent = dernier >= 0 ? index[(build.attacks || [])[dernier]] : null;
+    const champ = info.followUp ? 'follow' : 'link';
+    const recevable = parent && !(pris[dernier] || {})[champ] && (info.followUp
+      ? starters.has(parent.move.id)
+      : liens[parent.move.id]?.has(id));
+    if (!recevable) return;
+    attaches[i] = dernier;
+    (pris[dernier] = pris[dernier] || {})[champ] = true;
   });
-  return attaches;
+  return { attaches, liens, parentDe, starters };
 }
 
 function attackGrid(t, L, sizeOf, build, char, styles, live) {
   const index = attackIndex(char);
-  const attaches = branchesOf(build, index, char);
+  const { attaches, liens: liensDe, parentDe, starters } = branchesOf(build, index, char);
   // catégorie -> commande -> { coup, prolongements }
   const parCat = {};
   const parPos = {};
   const enAttente = {};
   (build.attacks || []).forEach((id, i) => {
     const info = index[id];
-    // Un enchaînement qui ne prolonge rien n'a pas d'emplacement non plus : la
-    // carte montre les commandes, il n'y a pas sa place.
-    if (!info || info.followUp || attaches[i] !== undefined) return;
+    // Un prolongement n'a pas d'emplacement, qu'il en trouve un à prolonger ou
+    // non : la carte montre les commandes, il n'y a pas sa place.
+    if (!info || info.followUp || parentDe[id]) return;
     const cat = `${info.kind}|${info.groupKey}|${info.style}`;
     (enAttente[cat] = enAttente[cat] || []).push({ i, info, cmd: Number((build.attackSlots || [])[i]) });
   });
@@ -309,15 +335,44 @@ function attackGrid(t, L, sizeOf, build, char, styles, live) {
     if (info && parPos[p]) parPos[p].branches.push(info);
   });
 
+  // Ce qu'une attaque peut recevoir : une attaque HP branchée si la source lui
+  // en associe une, un enchaînement si elle figure parmi les braveries de
+  // départ. Les deux à la fois arrivent, et se posent ensemble.
+  //
+  // La réserve d'enchaînements est commune à tout le personnage : elle
+  // n'occupe pas d'emplacement, et n'importe laquelle prolonge n'importe quelle
+  // bravery de départ. Son genre donne le bouton de la ligne vide.
+  const reserve = {};
+  for (const kind of ['bravery', 'hp']) {
+    for (const g of char?.attacks?.[kind] || []) if (g.followUp && hydrate(g.moves).length) reserve[kind] = kind;
+  }
+
+  // Les lignes de prolongement d'un emplacement : celles qui portent un coup,
+  // puis, sur la carte vivante, celles qui restent à pourvoir.
+  function branchLines(place, kind) {
+    const rows = (place?.branches || []).map((info) => ({
+      kind: info.kind, move: info.move, champ: info.followUp ? 'follow' : 'link',
+    }));
+    if (!live || !place) return rows;
+    const aLien = rows.some((r) => r.champ === 'link');
+    const aSuite = rows.some((r) => r.champ === 'follow');
+    if (!aLien && liensDe[place.move.id]?.size) rows.push({ kind: 'hp', move: null, champ: 'link' });
+    if (!aSuite && starters.has(place.move.id) && reserve[kind]) rows.push({ kind: reserve[kind], move: null, champ: 'follow' });
+    return rows;
+  }
+
   return categories(char).map((c) => {
     const cases = parCat[c.cat] || {};
     // Un coup « main » vaut au sol comme en l'air : sa direction est celle du
     // sol, la seule que la source décrive.
     const stance = STANCE[c.groupKey] || 'ground';
     const lignes = [0, 1, 2].map((i) => attackLine(
-      t, L, sizeOf, c.kind, i, cases[i]?.move, stance, cases[i]?.branches || [],
+      t, L, sizeOf, c.kind, i, cases[i]?.move, stance, branchLines(cases[i], c.kind),
       live ? ` data-bc="attack" data-cat="${esc(c.cat)}" data-cmd="${i}"` : '',
-      live ? (b) => ` data-bc="branch" data-id="${esc(b.move.id)}"` : () => '',
+      // Le prolongement se désigne par l'emplacement qui le porte et par sa
+      // sorte, jamais par le coup posé : deux exemplaires du même coup seraient
+      // indiscernables, et une place vide n'en a pas.
+      live ? (b) => ` data-bc="branch" data-cat="${esc(c.cat)}" data-cmd="${i}" data-champ="${b.champ}"` : () => '',
     )).join('\n');
     // Un bloc rattaché à un style ne s'affiche qu'avec son onglet. Un bloc sans
     // style — les attaques HP de Cecil, communes aux deux jobs — reste visible.

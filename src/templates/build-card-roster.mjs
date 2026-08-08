@@ -40,19 +40,42 @@ function maquette(char, rang, data) {
   // sans quoi la maquette laisserait vides les grilles des personnages dont les
   // coups valent au sol comme en l'air. Les groupes d'enchaînements ne
   // consomment pas d'emplacement : ils sont écartés.
+  // Une attaque HP que la source rattache à une bravery ne s'équipe pas seule —
+  // le Swordshower d'Onion Knight ne part que de Multi-Hit. La maquette les
+  // écartait déjà pour les enchaînements ; sans cela, elle posait sur une
+  // commande un coup que la carte n'y montre pas, et l'emplacement paraissait
+  // vide.
+  const branches = new Set((char.links || []).map((l) => l.to));
+  // Un prolongement ne prend pas de commande : il se range juste après l'attaque
+  // qu'il prolonge, et la maquette le pose là où le jeu le montre. C'est aussi
+  // ce que ce banc doit donner à voir — onze personnages ont des HP links, et
+  // trois braveries de Firion portent en plus un enchaînement.
+  const liensDe = {};
+  for (const l of char.links || []) (liensDe[l.from] = liensDe[l.from] || []).push(l.to);
+  const starters = new Set(char.followStarters || []);
+  const reserve = [];
+  for (const kind of ['bravery', 'hp']) {
+    for (const g of char.attacks?.[kind] || []) if (g.followUp) reserve.push(...hydrate(g.moves).map((m) => m.id));
+  }
   const attacks = [];
   const attackSlots = [];
+  const poser = (id, cmd) => { attacks.push(id); attackSlots.push(cmd); };
   for (const kind of ['bravery', 'hp']) {
     const parCat = {};
     for (const g of char.attacks?.[kind] || []) {
       if (g.followUp) continue;
       for (const m of hydrate(g.moves)) {
+        if (branches.has(m.id)) continue;
         const cat = `${g.key}|${m.style || ''}`;
         (parCat[cat] = parCat[cat] || []).push(m);
       }
     }
     for (const liste of Object.values(parCat)) {
-      liste.slice(0, MAX_SLOTS).forEach((m, i) => { attacks.push(m.id); attackSlots.push(i); });
+      liste.slice(0, MAX_SLOTS).forEach((m, i) => {
+        poser(m.id, i);
+        if ((liensDe[m.id] || []).length) poser(liensDe[m.id][0], -1);
+        if (starters.has(m.id) && reserve.length) poser(reserve[0], -1);
+      });
     }
   }
 
