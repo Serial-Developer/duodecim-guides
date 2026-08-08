@@ -278,18 +278,30 @@ function attackGrid(t, L, sizeOf, build, char, styles, live) {
   // catégorie -> commande -> { coup, prolongements }
   const parCat = {};
   const parPos = {};
+  const enAttente = {};
   (build.attacks || []).forEach((id, i) => {
     const info = index[id];
     // Un enchaînement qui ne prolonge rien n'a pas d'emplacement non plus : la
     // carte montre les commandes, il n'y a pas sa place.
     if (!info || info.followUp || attaches[i] !== undefined) return;
     const cat = `${info.kind}|${info.groupKey}|${info.style}`;
-    const cmd = Number((build.attackSlots || [])[i]);
+    (enAttente[cat] = enAttente[cat] || []).push({ i, info, cmd: Number((build.attackSlots || [])[i]) });
+  });
+  // Les demandes explicites d'abord, les autres ensuite dans l'ordre de la
+  // liste : c'est mot pour mot la règle de `scanBuild`, côté créateur. Placer
+  // en une seule passe donnait un autre résultat dès qu'une commande non
+  // exprimée précédait une commande demandée — la carte montrait alors une
+  // grille que le créateur ne lisait pas comme elle, et le déplacement d'une
+  // attaque, qui s'appuie sur cette correspondance, aurait visé à côté.
+  Object.keys(enAttente).forEach((cat) => {
     const cases = (parCat[cat] = parCat[cat] || {});
-    const place = cmd >= 0 && cmd < MAX_SLOTS && !cases[cmd]
-      ? cmd
-      : [0, 1, 2].find((c) => !cases[c]);
-    if (place !== undefined) { cases[place] = { move: info.move, branches: [] }; parPos[i] = cases[place]; }
+    const poser = (e, place) => { cases[place] = { move: e.info.move, branches: [] }; parPos[e.i] = cases[place]; };
+    enAttente[cat].forEach((e) => { if (e.cmd >= 0 && e.cmd < MAX_SLOTS && !cases[e.cmd]) poser(e, e.cmd); });
+    enAttente[cat].forEach((e) => {
+      if (parPos[e.i]) return;
+      const libre = [0, 1, 2].find((c) => !cases[c]);
+      if (libre !== undefined) poser(e, libre);
+    });
   });
   // Deuxième passe : les prolongements rejoignent leur parent une fois posé.
   Object.entries(attaches).forEach(([i, p]) => {

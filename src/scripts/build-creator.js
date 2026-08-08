@@ -1058,6 +1058,24 @@
     return closeModal;
   }
 
+  // Première ligne de toute fenêtre de choix quand l'emplacement est occupé :
+  // le vider. Sans elle, on pouvait remplacer mais jamais retirer — la fenêtre
+  // n'offrait que d'autres pièces. Elle ne s'affiche pas sur un emplacement
+  // libre : il n'y a rien à en retirer.
+  //
+  // Le second geste est dans les lignes elles-mêmes : rechoisir ce qui est déjà
+  // là le retire. Les deux se rejoignent, l'un se voit, l'autre se devine.
+  function clearRow(occupant, onClear) {
+    return el('button', {
+      type: 'button', class: 'bc-row bc-row-btn bc-row-clear', onclick: onClear,
+    }, [
+      el('span', { class: 'bc-row-main' }, [
+        el('span', { class: 'bc-row-name', text: T('equipment.remove') }),
+        el('span', { class: 'bc-row-meta', text: occupant || '' }),
+      ]),
+    ]);
+  }
+
   // Un emplacement : sa commande à gauche, son contenu au milieu, ses actions à
   // droite. Vide, la ligne entière est le bouton qui ouvre la fenêtre.
   function slotRow(opts) {
@@ -1293,6 +1311,12 @@
     var source = mine.filter(function (s) { return s.cmd === from; })[0];
     if (!source) return;
     var cible = mine.filter(function (s) { return s.cmd === to; })[0];
+    // Une commande non exprimée se recale « dans l'ordre » à chaque lecture :
+    // libérer une case en aurait fait remonter une autre, qui n'avait rien
+    // demandé. Déplacer une attaque vers une case libre faisait ainsi bouger sa
+    // voisine. On fige donc la catégorie sur ce qu'elle montre — les deux
+    // formats de lien transportent ces commandes — avant d'échanger.
+    mine.forEach(function (s) { setCmd(s.pos, s.cmd); });
     setCmd(source.pos, to);
     if (cible) setCmd(cible.pos, from);
     pendingFocus = catKey + '#' + to;
@@ -1564,7 +1588,10 @@
 
   // Fenêtre de choix d'un coup. Recherche par nom, et par effet : c'est souvent
   // « celui qui fait Wall Rush » qu'on cherche, pas un nom précis.
-  function openMoveChooser(title, choix, courant, onPick, intro) {
+  //
+  // `onClear` n'est passé que là où l'emplacement n'a pas de bouton « Retirer »
+  // à côté de lui — sur la carte. Sous les onglets, la ligne en porte déjà un.
+  function openMoveChooser(title, choix, courant, onPick, intro, onClear) {
     var sous = courant ? T('attacks.replacing', { name: courant.name }) : (intro ? intro.split('\n')[0] : null);
     openModal(title, sous, function (body, close) {
       var section = el('div', { class: 'bc-chooser' });
@@ -1573,6 +1600,7 @@
       var search = el('input', { type: 'search', placeholder: T('attacks.filterName'), 'aria-label': T('attacks.filterName') });
       search.addEventListener('input', function () { q = search.value.toLowerCase(); paint(); });
       section.appendChild(el('div', { class: 'bc-filters' }, [search]));
+      if (courant && onClear) section.appendChild(clearRow(courant.name, function () { close(); onClear(); }));
       section.appendChild(listBox);
       body.appendChild(section);
       function paint() {
@@ -1582,9 +1610,15 @@
         });
         if (!items.length) { listBox.appendChild(el('p', { class: 'bc-note', text: T('attacks.noneAvailable') })); return; }
         items.forEach(function (m) {
+          // Rechoisir le coup déjà posé sur cette commande le retire — même
+          // geste que pour l'équipement ou l'assist.
+          var ici = !!(courant && onClear && m.id === courant.id);
           listBox.appendChild(el('button', {
-            type: 'button', class: 'bc-row bc-row-btn', 'data-uid': m.id,
-            onclick: function () { close(); onPick(m); },
+            type: 'button', class: 'bc-row bc-row-btn' + (ici ? ' is-selected' : ''), 'data-uid': m.id,
+            'aria-pressed': ici ? 'true' : 'false',
+            onclick: ici
+              ? function () { close(); onClear(); }
+              : function () { close(); onPick(m); },
           }, [
             el('span', { class: 'bc-row-main' }, [
               el('span', { class: 'bc-row-name', text: m.name }),
@@ -1806,6 +1840,16 @@
     bar.appendChild(search); bar.appendChild(catSel); bar.appendChild(sortSel); bar.appendChild(dirBtn);
     section.appendChild(bar);
 
+    var pose = state.build.equipment[slot.key] ? equipByUid[state.build.equipment[slot.key]] : null;
+    if (pose) {
+      section.appendChild(clearRow(pose.name, function () {
+        state.build.equipment[slot.key] = null;
+        markDirty();
+        if (close) close();
+        keepScroll(null, function () { renderPanel('stuff'); refresh(); });
+      }));
+    }
+
     var listBox = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': slot.key });
     section.appendChild(listBox);
 
@@ -1942,6 +1986,16 @@
     bar.appendChild(search); bar.appendChild(catSel);
     section.appendChild(bar);
 
+    var pose = state.build.accessories[index] ? accByUid[state.build.accessories[index]] : null;
+    if (pose) {
+      section.appendChild(clearRow(pose.name, function () {
+        state.build.accessories[index] = null;
+        markDirty();
+        if (close) close();
+        keepScroll(null, function () { renderPanel('accessories'); refresh(); });
+      }));
+    }
+
     var listBox = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'acc' });
     section.appendChild(listBox);
 
@@ -1972,19 +2026,23 @@
   function accessoryRow(a, index, close) {
     // L'occupant de l'emplacement visé ne se compte pas contre lui-même : on le
     // remplace, on ne l'ajoute pas.
-    var count = copiesOf(a.uid) - (state.build.accessories[index] === a.uid ? 1 : 0);
+    var ici = state.build.accessories[index] === a.uid;
+    var count = copiesOf(a.uid) - (ici ? 1 : 0);
     var limite = copyLimit(a);
     var atteinte = limite !== null && count >= limite;
     var btn = el('button', {
       type: 'button',
-      class: 'bc-row bc-row-btn' + (count ? ' is-selected' : '') + (atteinte ? ' is-disabled' : ''),
+      class: 'bc-row bc-row-btn' + (count || ici ? ' is-selected' : '') + (atteinte ? ' is-disabled' : ''),
       disabled: atteinte,
+      'aria-pressed': ici ? 'true' : 'false',
       title: atteinte
         ? T(limite > 1 ? 'accessories.rankLimitMany' : 'accessories.rankLimitOne', { rank: a.rank, max: limite })
         : '',
       'data-uid': a.uid,
       onclick: function () {
-        state.build.accessories[index] = a.uid;
+        // Rechoisir ce qui occupe déjà l'emplacement le vide : le même geste
+        // pose et retire, comme pour l'équipement, l'assist et l'invocation.
+        state.build.accessories[index] = ici ? null : a.uid;
         markDirty();
         if (close) close();
         keepScroll(null, function () {
@@ -2014,22 +2072,27 @@
   }
 
   // --- Onglet Assist & invocation -------------------------------------------
-  function renderAssist(panel) {
-    panel.appendChild(illegalToggle());
-
-    panel.appendChild(el('h3', { text: T('assist.title') }));
-    panel.appendChild(el('p', { class: 'bc-note', text: T('assist.note') }));
-    var alist = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'assist' });
+  // Les deux listes se rendent séparément : sous les onglets elles se suivent
+  // dans le même panneau, mais sur la carte l'assist et l'invocation sont deux
+  // lignes distinctes, et chacune ouvre sa fenêtre. Les changer ensemble parce
+  // qu'ils partagent un onglet était un héritage de la mise en page, pas une
+  // règle du jeu.
+  function assistList(close) {
+    var box = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'assist' });
+    var pose = (D.assists || []).filter(function (a) { return a.slug === state.build.assist; })[0];
+    var poser = function (slug) {
+      state.build.assist = slug;
+      markDirty();
+      if (close) close();
+      keepScroll(slug, function () { renderPanel('assist'); refresh(); });
+    };
+    if (pose) box.appendChild(clearRow(pose.name, function () { poser(null); }));
     D.assists.slice().sort(function (a, b) { return byName(a, b); }).forEach(function (a) {
       var selected = state.build.assist === a.slug;
       var btn = el('button', {
         type: 'button', class: 'bc-row bc-row-btn' + (selected ? ' is-selected' : ''), 'aria-pressed': selected ? 'true' : 'false',
         'data-uid': a.slug,
-        onclick: function () {
-          state.build.assist = selected ? null : a.slug;
-          markDirty();
-          keepScroll(a.slug, function () { renderPanel('assist'); refresh(); });
-        },
+        onclick: function () { poser(selected ? null : a.slug); },
       }, [
         el('span', { class: 'bc-row-main' }, [
           el('span', { class: 'bc-row-name', text: a.name }),
@@ -2037,13 +2100,21 @@
         ]),
       ]);
       if (!a.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: T('status.undocumented') }));
-      alist.appendChild(btn);
+      box.appendChild(btn);
     });
-    panel.appendChild(alist);
+    return box;
+  }
 
-    panel.appendChild(el('h3', { text: T('assist.summonTitle') }));
-    panel.appendChild(el('p', { class: 'bc-note', text: T('assist.summonNote', { list: D.ruleset.legalSummons.join(', ') }) }));
-    var slist = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'summon' });
+  function summonList(close) {
+    var box = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'summon' });
+    var pose = (D.summons || []).filter(function (s) { return s.id === state.build.summon; })[0];
+    var poser = function (id) {
+      state.build.summon = id;
+      markDirty();
+      if (close) close();
+      keepScroll(id, function () { renderPanel('assist'); refresh(); });
+    };
+    if (pose) box.appendChild(clearRow(pose.name, function () { poser(null); }));
     D.summons.filter(function (s) { return state.showIllegal || s.legal !== false; })
       .sort(function (a, b) { return byName(a, b); })
       .forEach(function (s) {
@@ -2051,22 +2122,28 @@
         var btn = el('button', {
           type: 'button', class: 'bc-row bc-row-btn' + (selected ? ' is-selected' : ''), 'aria-pressed': selected ? 'true' : 'false',
           'data-uid': s.id,
-          onclick: function () {
-            state.build.summon = selected ? null : s.id;
-            markDirty();
-            keepScroll(s.id, function () { renderPanel('assist'); refresh(); });
-          },
+          onclick: function () { poser(selected ? null : s.id); },
         }, [
           el('span', { class: 'bc-row-main' }, [
             el('span', { class: 'bc-row-name', text: s.name }),
             el('span', { class: 'bc-row-meta', text: (s.text || '').split('\n')[0].slice(0, 150) }),
           ]),
         ]);
-        if (s.legal === false) btn.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(s), text: 'illégal' }));
+        if (s.legal === false) btn.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(s), text: T('accessories.illegal') }));
         if (!s.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: T('assist.undocumentedEffect'), text: T('status.undocumented') }));
-        slist.appendChild(btn);
+        box.appendChild(btn);
       });
-    panel.appendChild(slist);
+    return box;
+  }
+
+  function renderAssist(panel) {
+    panel.appendChild(illegalToggle());
+    panel.appendChild(el('h3', { text: T('assist.title') }));
+    panel.appendChild(el('p', { class: 'bc-note', text: T('assist.note') }));
+    panel.appendChild(assistList(null));
+    panel.appendChild(el('h3', { text: T('assist.summonTitle') }));
+    panel.appendChild(el('p', { class: 'bc-note', text: T('assist.summonNote', { list: D.ruleset.legalSummons.join(', ') }) }));
+    panel.appendChild(summonList(null));
   }
 
   // --- Sélection du personnage ---------------------------------------------
@@ -2767,6 +2844,9 @@
 
   if (carteHote) {
     carteHote.addEventListener('click', function (ev) {
+      // Un déplacement vient de se terminer sur cette ligne : le clic qui suit
+      // le relâchement n'est pas une demande d'ouvrir sa fenêtre.
+      if (vientDeGlisser) { vientDeGlisser = false; return; }
       var cible = ev.target.closest ? ev.target.closest('[data-bc]') : null;
       if (!cible || !carteHote.contains(cible)) return;
       var quoi = cible.getAttribute('data-bc');
@@ -2804,7 +2884,12 @@
         openMoveChooser(titre + ' · ' + inputTitle(ctx.kind, cmd), ctx.choix, occupe ? occupe.move : null, function (choisi) {
           if (occupe) replaceAt(occupe.pos, choisi.id, cmd);
           else appendAttack(choisi.id, cmd);
-        });
+        }, null, occupe ? function () {
+          // Retirer un coup emporte ce qui pend sous lui — HP link ou
+          // enchaînement : ils se rattachent à sa position, plus rien ne les
+          // retiendrait.
+          removeAt(slotPositions(occupe));
+        } : null);
         return;
       }
 
@@ -2813,9 +2898,196 @@
         return;
       }
 
-      if (quoi === 'assist' || quoi === 'summon') {
-        openModal(T('tabs.assist'), null, function (body) { renderAssist(body); });
+      // L'assist et l'invocation ont chacun leur fenêtre : ce sont deux lignes
+      // distinctes de la carte, et rien n'oblige à revoir l'un pour changer
+      // l'autre.
+      if (quoi === 'assist') {
+        var monAssist = (D.assists || []).filter(function (a) { return a.slug === state.build.assist; })[0];
+        openModal(T('assist.title'), monAssist ? T('attacks.replacing', { name: monAssist.name }) : null, function (body, close) {
+          body.appendChild(el('p', { class: 'bc-note', text: T('assist.note') }));
+          body.appendChild(assistList(close));
+        });
+        return;
       }
+
+      if (quoi === 'summon') {
+        var monSummon = (D.summons || []).filter(function (s) { return s.id === state.build.summon; })[0];
+        openModal(T('assist.summonTitle'), monSummon ? T('attacks.replacing', { name: monSummon.name }) : null, function (body, close) {
+          body.appendChild(el('p', { class: 'bc-note', text: T('assist.summonNote', { list: D.ruleset.legalSummons.join(', ') }) }));
+          body.appendChild(summonList(close));
+        });
+      }
+    });
+  }
+
+  // --- Déplacer une ligne de la carte ---------------------------------------
+  // Le créateur à onglets déplace ses attaques par une poignée ; la carte, elle,
+  // n'a que ses lignes, et chacune est déjà le bouton qui ouvre sa fenêtre. Le
+  // glissement part donc de la ligne : au-delà de quatre pixels on déplace, en
+  // deçà le clic ouvre la fenêtre comme avant.
+  //
+  // Deux lignes ne s'échangent que si elles désignent le même genre
+  // d'emplacement : deux attaques d'une même catégorie, deux accessoires. Les
+  // quatre emplacements d'équipement ont chacun leur catégorie de pièces — une
+  // arme ne se pose pas sur la tête —, ils ne se déplacent donc pas, et
+  // l'assist et l'invocation n'ont pas de pair.
+  function familleDe(hit) {
+    if (!hit || !hit.getAttribute) return null;
+    var quoi = hit.getAttribute('data-bc');
+    if (quoi === 'attack') return 'attack|' + hit.getAttribute('data-cat');
+    if (quoi === 'acc') return 'acc';
+    return null;
+  }
+
+  function pairesDe(famille) {
+    return Array.prototype.filter.call(carteHote.querySelectorAll('.bcard-hit'), function (h) {
+      return familleDe(h) === famille;
+    });
+  }
+
+  // Échanger, jamais insérer : les deux emplacements permutent leur contenu, y
+  // compris quand l'un est vide. Une attaque ne bouge pas dans la liste — elle
+  // change de commande, et ses prolongements la suivent sans qu'on y touche.
+  function echanger(source, cible) {
+    if (source === cible) return;
+    if (source.getAttribute('data-bc') === 'acc') {
+      var i = Number(source.getAttribute('data-i'));
+      var j = Number(cible.getAttribute('data-i'));
+      var liste = state.build.accessories;
+      var garde = liste[i];
+      liste[i] = liste[j];
+      liste[j] = garde;
+      markDirty();
+      keepScroll(null, function () { renderPanel('accessories'); refresh(); });
+      return;
+    }
+    moveToCmd(charBySlug[state.build.character], source.getAttribute('data-cat'),
+      Number(source.getAttribute('data-cmd')), Number(cible.getAttribute('data-cmd')));
+  }
+
+  // Les Pointer Events couvrent souris, doigt et stylet du même code ; le
+  // glisser-déposer HTML5 ne répond pas au doigt. Au doigt justement, le
+  // déplacement demande un appui maintenu : sans ce délai, tout défilement
+  // commencé sur une ligne aurait déplacé une attaque, et la carte se parcourt
+  // surtout au pouce.
+  var APPUI_LONG = 350;
+  var SEUIL_GLISSE = 4;
+  var glisse = null;
+  var vientDeGlisser = false;
+
+  function finGlisse(appliquer) {
+    if (!glisse) return;
+    var d = glisse;
+    glisse = null;
+    if (d.minuteur) clearTimeout(d.minuteur);
+    document.removeEventListener('pointermove', d.onMove);
+    document.removeEventListener('pointerup', d.onUp);
+    document.removeEventListener('pointercancel', d.onCancel);
+    document.removeEventListener('keydown', d.onKey, true);
+    document.body.classList.remove('bc-dragging');
+    peindre(d, null);
+    if (d.ligne) d.ligne.classList.remove('is-dragging');
+    if (appliquer && d.bouge && d.sur && d.sur !== d.hit) {
+      // Le clic qui suit le relâchement rouvrirait la fenêtre de l'emplacement
+      // qu'on vient de déplacer. Le drapeau tombe au tour suivant, après lui.
+      vientDeGlisser = true;
+      setTimeout(function () { vientDeGlisser = false; }, 0);
+      echanger(d.hit, d.sur);
+    }
+  }
+
+  function peindre(d, sur) {
+    d.cibles.forEach(function (h) {
+      var ligne = h.closest ? h.closest('.bcard-line') : null;
+      if (ligne) ligne.classList.toggle('is-drop-target', !!sur && h === sur && h !== d.hit);
+    });
+  }
+
+  function debutGlisse(hit, ligne, ev) {
+    var famille = familleDe(hit);
+    var cibles = pairesDe(famille);
+    if (cibles.length < 2) return;
+    var d = {
+      hit: hit, ligne: ligne, cibles: cibles,
+      x: ev.clientX, y: ev.clientY, bouge: false, sur: null,
+      // À la souris et au stylet le geste est déjà explicite ; au doigt il faut
+      // le distinguer d'un défilement.
+      arme: ev.pointerType !== 'touch',
+      minuteur: null,
+    };
+    d.onMove = function (e) {
+      if (!glisse) return;
+      var dx = Math.abs(e.clientX - d.x);
+      var dy = Math.abs(e.clientY - d.y);
+      if (!d.arme) {
+        // Le doigt est parti avant la fin de l'appui : c'est un défilement.
+        if (dx > SEUIL_GLISSE || dy > SEUIL_GLISSE) finGlisse(false);
+        return;
+      }
+      if (!d.bouge) {
+        if (dx < SEUIL_GLISSE && dy < SEUIL_GLISSE) return;
+        d.bouge = true;
+        d.ligne.classList.add('is-dragging');
+        document.body.classList.add('bc-dragging');
+      }
+      // On vise la ligne survolée : c'est ce que l'œil attend, et cela reste
+      // juste même si les lignes n'ont pas toutes la même hauteur.
+      d.sur = null;
+      d.cibles.forEach(function (h) {
+        var box = h.getBoundingClientRect();
+        if (e.clientY >= box.top && e.clientY <= box.bottom) d.sur = h;
+      });
+      peindre(d, d.sur);
+    };
+    d.onUp = function () { finGlisse(true); };
+    d.onCancel = function () { finGlisse(false); };
+    d.onKey = function (e) { if (e.key === 'Escape') { e.preventDefault(); finGlisse(false); } };
+    glisse = d;
+    if (!d.arme) {
+      d.minuteur = setTimeout(function () {
+        d.arme = true;
+        d.ligne.classList.add('is-dragging');
+        document.body.classList.add('bc-dragging');
+      }, APPUI_LONG);
+    }
+    document.addEventListener('pointermove', d.onMove);
+    document.addEventListener('pointerup', d.onUp);
+    document.addEventListener('pointercancel', d.onCancel);
+    document.addEventListener('keydown', d.onKey, true);
+  }
+
+  if (carteHote) {
+    carteHote.addEventListener('pointerdown', function (ev) {
+      if (ev.button != null && ev.button !== 0) return;
+      var hit = ev.target.closest ? ev.target.closest('.bcard-hit') : null;
+      if (!hit || !familleDe(hit)) return;
+      var ligne = hit.closest('.bcard-line');
+      // On ne déplace que ce qui est posé ; une ligne vide reste une cible.
+      if (!ligne || ligne.classList.contains('is-empty')) return;
+      debutGlisse(hit, ligne, ev);
+    });
+    // Tant qu'un déplacement est armé, la page ne défile pas sous le doigt.
+    // L'écouteur doit être déclaré non passif pour pouvoir s'y opposer.
+    carteHote.addEventListener('touchmove', function (ev) {
+      if (glisse && glisse.arme) ev.preventDefault();
+    }, { passive: false });
+
+    // Sans souris : Alt + flèches déplace la ligne qui a le focus. Les flèches
+    // seules restent au navigateur — la carte est une suite de boutons, on la
+    // parcourt avant de la réorganiser.
+    carteHote.addEventListener('keydown', function (ev) {
+      if (!ev.altKey || (ev.key !== 'ArrowUp' && ev.key !== 'ArrowDown')) return;
+      var hit = ev.target.closest ? ev.target.closest('.bcard-hit') : null;
+      var famille = familleDe(hit);
+      if (!famille) return;
+      var ligne = hit.closest('.bcard-line');
+      if (!ligne || ligne.classList.contains('is-empty')) return;
+      var cibles = pairesDe(famille);
+      var i = cibles.indexOf(hit);
+      var j = i + (ev.key === 'ArrowUp' ? -1 : 1);
+      if (i === -1 || j < 0 || j >= cibles.length) return;
+      ev.preventDefault();
+      echanger(hit, cibles[j]);
     });
   }
 
