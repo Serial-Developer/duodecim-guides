@@ -1349,7 +1349,10 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   padding: 0.6rem 0.7rem 0.6rem 1rem;
   font-size: 0.85rem;
   max-width: min(90vw, 34rem);
-  z-index: 50;
+  /* Au-dessus de la fenêtre de choix, qui est à 50 : le bandeau explique
+     souvent ce qu'un clic dans cette fenêtre vient de faire — « Air Dash
+     retiré : même commande » —, et il passait derrière le voile. */
+  z-index: 60;
   transition: transform 0.2s ease, opacity 0.2s ease, visibility 0s linear 0.2s;
 }
 .bc-toast-text { flex: 1; }

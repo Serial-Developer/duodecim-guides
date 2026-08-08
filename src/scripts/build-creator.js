@@ -1694,9 +1694,20 @@
     return names;
   }
 
+  // Le build est seul juge de ce qui est équipé : les cases le suivent. Sous les
+  // onglets, le panneau se redessinait à chaque changement et la question ne se
+  // posait pas ; la fenêtre de la carte, elle, reste telle quelle — cocher
+  // Reverse Air Dash retirait bien Air Dash du build, mais sa case restait
+  // cochée sous les yeux.
+  function syncAbilityChecks() {
+    Array.prototype.forEach.call(document.querySelectorAll('input[data-ability]'), function (input) {
+      input.checked = state.build.abilities.indexOf(input.getAttribute('data-ability')) !== -1;
+    });
+  }
+
   function abilityRow(a) {
     var checked = state.build.abilities.indexOf(a.id) !== -1;
-    var input = el('input', { type: 'checkbox', checked: checked });
+    var input = el('input', { type: 'checkbox', checked: checked, 'data-ability': a.id });
     input.addEventListener('change', function () {
       var i = state.build.abilities.indexOf(a.id);
       if (input.checked && i === -1) {
@@ -1717,6 +1728,7 @@
       }
       markDirty();
       keepScroll(null, function () { renderPanel('abilities'); refresh(); });
+      syncAbilityChecks();
     });
     var children = [
       input,
