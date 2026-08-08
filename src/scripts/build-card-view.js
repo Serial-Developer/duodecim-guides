@@ -160,7 +160,20 @@ function slotLine(label, valeur, extra = '', ic = null, labelBrut = false, hook 
   }</li>`;
 }
 
-function attackLine(t, L, sizeOf, kind, cmd, move, stance, branches = [], hook = '', hookBranche = () => '') {
+// Un identifiant d'attaque porte espaces, parenthèses et « & » : il ne peut pas
+// servir tel quel d'attribut `id`.
+const idSafe = (s) => String(s).replace(/[^\w-]+/g, '-');
+
+// Repli des prolongements : une case à cocher dans la ligne du parent, et les
+// lignes qui la suivent se cachent avec elle. Pas de script — la carte se lit
+// aussi sur une page statique, où le même pliage doit marcher. C'est la méthode
+// de ses languettes, appliquée plus bas.
+function foldToggle(t, id) {
+  return `<input class="bcard-fold" type="checkbox" id="${esc(id)}" aria-label="${esc(t('buildCard.foldBranches'))}">
+<label class="bcard-fold-tab" for="${esc(id)}" title="${esc(t('buildCard.foldBranches'))}"><svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M4 7 L9 12 L14 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></label>`;
+}
+
+function attackLine(t, L, sizeOf, kind, cmd, move, stance, branches = [], hook = '', hookBranche = () => '', foldId = '') {
   // Un prolongement se lit sous l'attaque qu'il prolonge, sans commande : il
   // n'occupe pas d'emplacement, c'est le coup parent qui le déclenche. Son
   // bouton dit lequel : le rond pour un enchaînement de bravery, le carré pour
@@ -180,9 +193,14 @@ function attackLine(t, L, sizeOf, kind, cmd, move, stance, branches = [], hook =
   }).join('\n');
   const dedans = `${keyIcon(t, L, sizeOf, kind, cmd, stance)}
 <span class="bcard-value">${move ? esc(move.name) : ''}</span>`;
-  return `<li class="bcard-line${move ? '' : ' is-empty'}${hook ? ' is-live' : ''}">${
+  // La poignée de repli ne s'affiche que s'il y a quelque chose à replier, et
+  // elle se range au bout de la ligne : posée devant, elle décalait les icônes
+  // de commande des seules attaques qui portent un prolongement, et la colonne
+  // ne s'alignait plus.
+  const plier = foldId && branches.length ? foldToggle(t, foldId) : '';
+  return `<li class="bcard-line${move ? '' : ' is-empty'}${hook ? ' is-live' : ''}${plier ? ' has-fold' : ''}">${
     hook ? `<button type="button" class="bcard-hit"${hook}>${dedans}</button>` : dedans
-  }</li>
+  }${plier}</li>
 ${sous}`;
 }
 
@@ -307,7 +325,7 @@ function branchesOf(build, index, char) {
   return { attaches, liens, parentDe, chaines, chaineDe, starters };
 }
 
-function attackGrid(t, L, sizeOf, build, char, styles, live) {
+function attackGrid(t, L, sizeOf, build, char, styles, live, grpId) {
   const index = attackIndex(char);
   const { attaches, liens: liensDe, parentDe, chaines, chaineDe, starters } = branchesOf(build, index, char);
   // catégorie -> commande -> { coup, prolongements }
@@ -388,6 +406,7 @@ function attackGrid(t, L, sizeOf, build, char, styles, live) {
       // sorte, jamais par le coup posé : deux exemplaires du même coup seraient
       // indiscernables, et une place vide n'en a pas.
       live ? (b) => ` data-bc="branch" data-cat="${esc(c.cat)}" data-cmd="${i}" data-champ="${b.champ}"` : () => '',
+      `${grpId}-f-${idSafe(c.cat)}-${i}`,
     )).join('\n');
     // Un bloc rattaché à un style ne s'affiche qu'avec son onglet. Un bloc sans
     // style — les attaques HP de Cecil, communes aux deux jobs — reste visible.
@@ -598,7 +617,7 @@ ${onglets}
 </section>
 </div>
 <div class="bcard-col">
-${attackGrid(t, L, sizeOf, build, char, styles, live)}
+${attackGrid(t, L, sizeOf, build, char, styles, live, grpId)}
 </div>
 </div>
 

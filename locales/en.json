@@ -822,6 +822,7 @@
     "credit": "Dissidia 012 [duodecim] — competitive guides",
     "creditUrl": "serial-developer.github.io/duodecim-guides",
     "needsGlitch": "Requires the Equip Glitch",
+    "foldBranches": "Fold or unfold the branches",
     "slots": {
       "weapon": "Weapon",
       "hand": "Hand",

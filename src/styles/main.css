@@ -1809,6 +1809,35 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    .bcard-line est fixée plus bas dans la feuille et l'emporterait sinon. */
 .bcard-abilities .bcard-line { font-size: 0.75rem; min-height: 1.3rem; }
 
+/* Repli des prolongements : une case à cocher dans la ligne du parent, et les
+   lignes qui la suivent se cachent avec elle. Aucun script — la carte se lit
+   aussi sur une page statique, et ses languettes marchent déjà ainsi.
+   Deux règles suffisent : une attaque ne porte qu'un prolongement par sorte,
+   donc deux lignes au plus. Dépliée par défaut, la case n'étant pas cochée. */
+.bcard-fold { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.bcard-line:has(> .bcard-fold:checked) + .bcard-branch,
+.bcard-line:has(> .bcard-fold:checked) + .bcard-branch + .bcard-branch { display: none; }
+.bcard-fold-tab {
+  flex: none;
+  display: flex;
+  align-items: center;
+  padding: 0 0.15rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+.bcard-fold-tab svg { width: 14px; height: 14px; transition: transform 120ms ease; }
+.bcard-fold-tab:hover { color: var(--gold); }
+/* Replié, le chevron pointe vers la ligne qu'il cache. */
+.bcard-line:has(> .bcard-fold:checked) .bcard-fold-tab svg { transform: rotate(-90deg); }
+/* La case est invisible : c'est son chevron qui doit montrer le focus, sans quoi
+   la carte devient impraticable au clavier. */
+.bcard-line:has(> .bcard-fold:focus-visible) .bcard-fold-tab {
+  color: var(--gold);
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* Prolongement : un HP link ou un enchaînement, sous l'attaque qui le déclenche.
    Il n'a pas de commande propre, seulement son bouton. */
 .bcard-line.bcard-branch { position: relative; padding-left: 1.7rem; }

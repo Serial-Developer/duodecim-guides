@@ -1653,10 +1653,15 @@
   }
 
   // --- Onglet Abilities -----------------------------------------------------
-  function renderAbilities(panel) {
+  // `groupKey` restreint le rendu à une famille : sur la carte, chacune a son
+  // bouton et donc sa fenêtre — on vient modifier ses abilities de base, ou ses
+  // abilities de support, pas les cent vingt-deux d'un coup. Sous les onglets,
+  // le panneau les rend toutes, comme avant.
+  function renderAbilities(panel, groupKey) {
     var slug = state.build.character;
     panel.appendChild(el('p', { class: 'bc-note', text: T('abilities.costNote', { mode: state.mastered ? T('abilities.modeMastered') : T('abilities.modePurchase') }) }));
     D.abilities.forEach(function (g) {
+      if (groupKey && g.key !== groupKey) return;
       var usable = g.abilities.filter(function (a) { return !a.only || a.only.indexOf(slug) !== -1; });
       if (!usable.length) return;
       var fs = el('fieldset', { class: 'bc-group' }, [el('legend', { text: g.label })]);
@@ -2833,11 +2838,15 @@
   function renderCard() {
     if (!carteHote || !window.BuildCardView || !state.build.character) return;
     // La carte repart de zéro : ses boutons radio — languette ouverte, style
-    // affiché — reviendraient au défaut à chaque clic. On les relit avant de
-    // redessiner, on les repose après.
+    // affiché — et ses cases de repli reviendraient au défaut à chaque clic. On
+    // les relit avant de redessiner, on les repose après.
     var ouverts = {};
+    var replies = {};
     Array.prototype.forEach.call(carteHote.querySelectorAll('input[type="radio"]'), function (r) {
       if (r.checked) ouverts[r.name] = r.value;
+    });
+    Array.prototype.forEach.call(carteHote.querySelectorAll('.bcard-fold'), function (c) {
+      if (c.checked) replies[c.id] = true;
     });
     // Quelles pièces exigent l'Equip Glitch : la carte ne sait pas le calculer —
     // il faut les catégories natives du personnage — et ne doit pas l'apprendre.
@@ -2862,6 +2871,9 @@
     });
     Array.prototype.forEach.call(carteHote.querySelectorAll('input[type="radio"]'), function (r) {
       if (ouverts[r.name] !== undefined) r.checked = ouverts[r.name] === r.value;
+    });
+    Array.prototype.forEach.call(carteHote.querySelectorAll('.bcard-fold'), function (c) {
+      c.checked = !!replies[c.id];
     });
     mesurerCarte();
   }
@@ -3013,10 +3025,12 @@
         // son sélecteur, et le panneau, posé nu, poussait la liste hors du
         // cadre. Elle prend donc la même enveloppe que les autres — une zone
         // qui défile à l'intérieur de la fenêtre, pas la fenêtre qui s'allonge.
-        openModal(T('tabs.abilities'), null, function (body) {
+        var famille = cible.getAttribute('data-group');
+        var groupe = (D.abilities || []).filter(function (g) { return g.key === famille; })[0];
+        openModal(groupe ? groupe.label : T('tabs.abilities'), null, function (body) {
           var section = el('div', { class: 'bc-chooser' });
           var liste = el('div', { class: 'bc-list-scroll', 'data-slot': 'abilities' });
-          renderAbilities(liste);
+          renderAbilities(liste, famille);
           section.appendChild(liste);
           body.appendChild(section);
         });
