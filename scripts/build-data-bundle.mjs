@@ -41,11 +41,16 @@ const ACC_COLS = ['uid', 'name', 'category', 'boosterType', 'effect', 'requireme
 // portent deux camps, un par épisode, et c'est le camp de l'autre épisode qui
 // correspondrait au regard — un rapprochement que rien dans la source ne
 // justifie. Une liste tenue à la main vaut mieux qu'une règle inventée.
+//
+// Aerith n'est pas dans ce cas : elle n'a pas de portrait Dissidia 012, le sien
+// est un artwork Final Fantasy VII (voir NOTICE.md). Elle y figure quand même,
+// sur décision de l'auteur, parce qu'elle apparaît en renfort à côté des dix-huit
+// autres et que son artwork regarde du même côté qu'eux.
 const REGARD_GAUCHE = new Set([
   'warrior-of-light', 'firion', 'onion-knight', 'cecil-harvey', 'bartz-klauser',
   'terra-branford', 'cloud-strife', 'squall-leonhart', 'zidane-tribal', 'tidus',
   'shantotto', 'prishe', 'vaan', 'lightning', 'laguna-loire', 'yuna',
-  'tifa-lockhart', 'kain-highwind',
+  'tifa-lockhart', 'kain-highwind', 'aerith',
 ]);
 
 // « 20 (10) » -> { cp: 20, cpMastered: 10 }. Le wiki écrit parfois « 20 » seul.
@@ -422,7 +427,13 @@ export function buildDataBundle(ROOT, editorial = null) {
       abilities: g.abilities.map((a) => trim(a, ['id', 'name', 'cp', 'cpMastered', 'ap', 'description', 'notes', 'only', 'statBonus', 'documented'])),
     })),
     combinations: combinations.items.map((c) => trim(c, ['id', 'name', 'level', 'pieces', 'required', 'effects', 'documented'])),
-    assists: assists.items.map((a) => ({ slug: a.slug, name: a.name, attacks: a.attacks, documented: a.documented })),
+    // Le sens du regard voyage avec l'assist, pas seulement avec le personnage
+    // jouable : Aerith n'est renfort que, et c'est en vignette de renfort que la
+    // carte retourne les portraits pour qu'ils regardent tous du même côté.
+    assists: assists.items.map((a) => ({
+      slug: a.slug, name: a.name, attacks: a.attacks, documented: a.documented,
+      portraitFacing: REGARD_GAUCHE.has(a.slug) ? 'left' : 'right',
+    })),
     summons: summonsOut,
   };
 }

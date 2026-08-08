@@ -481,11 +481,10 @@ ${(() => {
   // Sur l'écran de sélection les deux camps se font face : les héros regardent
   // vers la gauche, les autres vers la droite. En vignette d'assist, seule au
   // coin de la carte, cette moitié-là tourne le dos à tout le reste — on la
-  // retourne pour que tous les renforts regardent du même côté. Le sens vient du
-  // personnage correspondant dans le payload, jamais d'une règle déduite du
-  // camp : quatre personnages changent de camp d'un épisode à l'autre.
-  const regardAssist = (data.characters || []).find((c) => c.slug === assist?.slug)?.portraitFacing;
-  const miroir = regardAssist === 'left' ? ' is-mirrored' : '';
+  // retourne pour que tous les renforts regardent du même côté. Le sens est
+  // porté par l'assist lui-même, jamais déduit d'un camp : quatre personnages
+  // changent de camp d'un épisode à l'autre, et Aerith n'est renfort que.
+  const miroir = assist?.portraitFacing === 'left' ? ' is-mirrored' : '';
   const renforts = `<p class="bcard-banner bcard-banner-assist">${live ? '<button type="button" class="bcard-hit" data-bc="assist">' : ''}${assist ? `<span class="bcard-face${miroir}" data-assist="${esc(assist.slug)}">${portrait(assist.slug, t('buildCard.assistAlt', { name: assist.name }))}</span>` : '<span class="bcard-portrait-none" aria-hidden="true"></span>'}<span class="bcard-role">${esc(t('buildCard.assist'))}</span>${live ? '</button>' : ''}</p>
 <p class="bcard-summon">${live ? '<button type="button" class="bcard-hit" data-bc="summon">' : ''}<img class="icon-d12 bcard-summon-orb" src="${L.asset('assets/summon-icons/summon-orb.png')}" alt="${esc(t('buildCard.summon'))}" title="${esc(t('buildCard.summon'))}"${sizeOf('summon-icons/summon-orb.png')} loading="lazy"><span class="bcard-value">${summon ? esc(summon.name) : ''}</span>${live ? '</button>' : ''}</p>`;
   // Les deux renforts se rangent sous le nom du personnage quand le portrait
