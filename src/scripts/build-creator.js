@@ -2430,6 +2430,170 @@
     download('dissidia012-builds.csv', '﻿' + lines.join('\r\n'), 'text/csv');
   });
 
+  // --- Cliché de la carte ---------------------------------------------------
+  // Partager un build, c'est souvent coller une image. La carte est déjà le
+  // récapitulatif d'un build en un écran : on la photographie telle quelle,
+  // sans bibliothèque — le site n'en charge aucune et n'a pas de serveur.
+  //
+  // Le navigateur sait dessiner du HTML dans un canevas par un seul chemin : une
+  // image SVG qui embarque le fragment dans un `foreignObject`. Cette image est
+  // rendue hors ligne, sans accès au réseau : tout ce qu'elle affiche doit être
+  // dans le fichier. D'où les deux préparations ci-dessous — la feuille de style
+  // recopiée, les images retournées en `data:`.
+  //
+  // Les polices, elles, ne suivent pas : le repli du design system s'applique,
+  // comme pour les images de partage que `npm run og` génère déjà en Times.
+  var cacheImages = {};
+
+  function enDataUri(url) {
+    if (cacheImages[url]) return cacheImages[url];
+    cacheImages[url] = fetch(url).then(function (r) {
+      if (!r.ok) throw new Error(url);
+      return r.blob();
+    }).then(function (blob) {
+      return new Promise(function (resolve, reject) {
+        var lecteur = new FileReader();
+        lecteur.onload = function () { resolve(String(lecteur.result)); };
+        lecteur.onerror = reject;
+        lecteur.readAsDataURL(blob);
+      });
+    });
+    return cacheImages[url];
+  }
+
+  // Les polices du site viennent de Google Fonts, que l'image ne peut pas aller
+  // chercher : sans elles, le titre retomberait sur le Times du repli — le même
+  // que celui des images de partage. On les embarque donc en `data:`, et
+  // seulement le sous-ensemble latin : les vingt-cinq déclarations couvrent le
+  // cyrillique et le grec, que la carte n'affiche pas.
+  //
+  // Au moindre accroc — hors ligne, requête refusée — on rend l'image sans :
+  // une carte en Times vaut mieux que pas de carte.
+  var policesPromesse = null;
+
+  function policesEmbarquees() {
+    if (policesPromesse) return policesPromesse;
+    var lien = null;
+    Array.prototype.forEach.call(document.querySelectorAll('link[rel="stylesheet"]'), function (l) {
+      if (/fonts\.googleapis\.com/.test(l.href)) lien = l.href;
+    });
+    if (!lien) return (policesPromesse = Promise.resolve(''));
+    policesPromesse = fetch(lien).then(function (r) { return r.text(); }).then(function (css) {
+      var blocs = css.split('@font-face').slice(1).map(function (b) { return '@font-face' + b.split('}')[0] + '}'; });
+      var latins = blocs.filter(function (b) { return b.indexOf('U+0000-00FF') !== -1; });
+      return Promise.all(latins.map(function (bloc) {
+        var m = /url\((https:[^)]+)\)/.exec(bloc);
+        if (!m) return '';
+        return enDataUri(m[1]).then(function (uri) { return bloc.replace(m[1], uri); }).catch(function () { return ''; });
+      })).then(function (out) { return out.join('\n'); });
+    }).catch(function () { return ''; });
+    return policesPromesse;
+  }
+
+  // La feuille de style entière : le tri des règles utiles coûterait plus cher
+  // que de tout recopier, et une règle oubliée se verrait sur l'image.
+  function feuilleDeStyle() {
+    var out = [];
+    Array.prototype.forEach.call(document.styleSheets, function (f) {
+      var regles;
+      try { regles = f.cssRules; } catch (e) { return; }
+      Array.prototype.forEach.call(regles, function (r) { out.push(r.cssText); });
+    });
+    return out.join('\n');
+  }
+
+  // Le cliché fige ce que la carte montre au repos : l'équipement, le premier
+  // style, et les prolongements repliés. C'est la lecture d'ensemble d'un build,
+  // pas son détail — celui-ci se lit dans l'outil.
+  function preparerClone(carte) {
+    var clone = carte.cloneNode(true);
+    var chaque = function (sel, fn) { Array.prototype.forEach.call(clone.querySelectorAll(sel), fn); };
+    clone.style.margin = '0';
+    chaque('.bcard-panel-radio', function (r) { r.checked = r.value === 'gear'; });
+    chaque('.bcard-style-radio', function (r, i) { r.checked = i === 0; });
+    chaque('.bcard-fold', function (c) { c.checked = true; });
+    // Une case cochée par script ne l'est pas dans le HTML sérialisé : c'est
+    // l'attribut que l'image lira, pas la propriété.
+    chaque('input[type="radio"], input[type="checkbox"]', function (i) {
+      if (i.checked) i.setAttribute('checked', 'checked'); else i.removeAttribute('checked');
+    });
+    // Le panneau caché occupe la même case de grille que celui qu'on montre :
+    // laissé en place, il imposerait sa hauteur à l'image.
+    var abilities = clone.querySelector('.bcard-abilities');
+    if (abilities) abilities.parentNode.removeChild(abilities);
+    // Poignées et boutons sont des gestes : ils n'ont rien à faire sur une image.
+    chaque('.bcard-fold-tab', function (n) { n.parentNode.removeChild(n); });
+    chaque('.bcard-hit', function (b) {
+      var span = document.createElement('span');
+      span.className = 'bcard-hit';
+      span.innerHTML = b.innerHTML;
+      b.parentNode.replaceChild(span, b);
+    });
+    return clone;
+  }
+
+  function cliche() {
+    var carte = carteHote && carteHote.querySelector('.bcard');
+    if (!carte) return;
+    toast(T('imageBuilding'));
+    var clone = preparerClone(carte);
+    // C'est le clone qu'on mesure, hors écran et dans les conditions de
+    // l'image : replié, il est plus court que la carte affichée, et il garde sa
+    // largeur de référence même si la fenêtre est étroite. Mesurer la carte à
+    // l'écran donnait une image à la taille du navigateur de celui qui exporte.
+    var banc = el('div', { class: 'bc-cliche-banc' }, [clone]);
+    document.body.appendChild(banc);
+    var boite = clone.getBoundingClientRect();
+    var largeur = Math.round(boite.width);
+    var hauteur = Math.ceil(boite.height);
+
+    Promise.all([policesEmbarquees()].concat(Array.prototype.map.call(clone.querySelectorAll('img'), function (img) {
+      return enDataUri(img.getAttribute('src')).then(function (uri) { img.setAttribute('src', uri); });
+    }))).then(function (resultats) {
+      var polices = resultats[0] || '';
+      // L'image SVG est lue en XML, pas en HTML : `outerHTML` y échoue sans
+      // rien dire — il laisse les balises vides ouvertes (`<img …>`), et le
+      // fichier entier est rejeté. Le sérialiseur XML les referme. La feuille de
+      // style, elle, passe en CDATA : une accolade ou une esperluette y seraient
+      // lues comme du balisage.
+      var doc = '<div xmlns="http://www.w3.org/1999/xhtml" class="bc-cliche">'
+        + '<style><![CDATA[' + polices + '\n' + feuilleDeStyle() + ']]></style>'
+        + new XMLSerializer().serializeToString(clone) + '</div>';
+      var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + largeur + '" height="' + hauteur + '">'
+        + '<foreignObject width="100%" height="100%">' + doc + '</foreignObject></svg>';
+      return new Promise(function (resolve, reject) {
+        var img = new Image();
+        img.onload = function () { resolve(img); };
+        img.onerror = function () { reject(new Error('svg')); };
+        img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+      });
+    }).then(function (img) {
+      // Deux fois la taille : une carte partagée est souvent relue de près.
+      var echelle = 2;
+      var canevas = el('canvas', { width: largeur * echelle, height: hauteur * echelle });
+      var ctx = canevas.getContext('2d');
+      ctx.scale(echelle, echelle);
+      ctx.drawImage(img, 0, 0);
+      return new Promise(function (resolve) { canevas.toBlob(resolve, 'image/png'); });
+    }).then(function (blob) {
+      if (!blob) throw new Error('canvas');
+      var url = URL.createObjectURL(blob);
+      var a = el('a', { href: url, download: safeName(state.build.name || charBySlug[state.build.character].name) + '.png' });
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      toast(T('imageDone'));
+    }).catch(function () {
+      toast(T('imageFailed'), true);
+    }).then(function () {
+      if (banc.parentNode) banc.parentNode.removeChild(banc);
+    });
+  }
+
+  var boutonImage = document.getElementById('bc-export-img');
+  if (boutonImage) boutonImage.addEventListener('click', cliche);
+
   document.getElementById('bc-import').addEventListener('change', function (ev) {
     var file = ev.target.files && ev.target.files[0];
     if (!file) return;

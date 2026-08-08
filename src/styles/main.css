@@ -2162,6 +2162,16 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   .bc-two { grid-template-columns: minmax(0, 1fr); --bc-carte-h: 44.21rem; }
 }
 
+/* Banc de mesure du cliché : le clone doit être mis en page pour qu'on lise sa
+   hauteur — repliée, la carte est plus courte que celle qu'on regarde — mais il
+   ne doit pas se voir. Hors écran, donc, et non `display: none`, qui ne mesure
+   rien. */
+.bc-cliche-banc { position: fixed; left: -10000px; top: 0; pointer-events: none; }
+/* Le cliché rend toujours la carte à sa largeur de référence : sur un écran
+   étroit, le `max-width: 100%` de la carte l'aurait rétrécie, et l'image aurait
+   dépendu de la fenêtre de celui qui l'exporte. */
+.bc-cliche-banc .bcard { max-width: none; }
+
 .bc-card-host { margin-top: 0.8rem; }
 .bc-card-host .bcard { margin: 0; }
 .bc-side-stats { margin-top: 0.8rem; }

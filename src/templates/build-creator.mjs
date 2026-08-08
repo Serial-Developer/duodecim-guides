@@ -134,6 +134,7 @@ ${card ? '' : '</section>'}
 <button type="button" class="bc-btn" id="bc-export">${esc(t('buildCreator.exportJson'))}</button>
 <button type="button" class="bc-btn" id="bc-export-all">${esc(t('buildCreator.exportAll'))}</button>
 <button type="button" class="bc-btn" id="bc-export-csv">${esc(t('buildCreator.exportCsv'))}</button>
+${card ? `<button type="button" class="bc-btn" id="bc-export-img">${esc(t('buildCreator.exportImage'))}</button>` : ''}
 <label class="bc-btn bc-btn-file">${esc(t('buildCreator.import'))}<input type="file" id="bc-import" accept="application/json,.json" hidden></label>
 </div>
 <div id="bc-saved-list" class="bc-saved-list"></div>
