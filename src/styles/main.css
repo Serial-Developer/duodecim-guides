@@ -2223,10 +2223,13 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
     transform: none;
     display: flex;
     width: 100%;
-    margin: 0 0 0.7rem;
+    /* Aucune marge sous les languettes : c'est le retrait de l'en-tête qui les
+       sépare du portrait, et les deux s'additionnaient. */
+    margin: 0;
     padding-top: 0.2rem;
     background: var(--surface);
   }
+  .bc-card-host .bcard-head { padding-top: 0.7rem; }
   .bc-card-host .bcard-flap {
     flex: 1 1 0;
     justify-content: center;
@@ -2295,6 +2298,10 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
     height: 4.4rem;
     border-radius: 8px;
   }
+  /* Même retournement que les vignettes d'assist : les portraits des héros
+     regardent vers la gauche, et leur silhouette laisse alors du vide de ce
+     côté-là du cadre. Retournés, ils remplissent la vignette. */
+  .bc-card-host .bcard-ids .bcard-banner img.is-mirrored { transform: scaleX(-1); }
   .bc-card-host .bcard-ids .bcard-name { grid-column: 2; align-self: end; }
   .bc-card-host .bcard-ids .bcard-title {
     grid-column: 2;

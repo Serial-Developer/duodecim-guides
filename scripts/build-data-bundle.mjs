@@ -137,6 +137,8 @@ export function buildDataBundle(ROOT, editorial = null) {
   const hpLinkPairs = readJson(join(dir, 'hp-links.json'));
   const native = nativeByCharacter(equipment);
   const unresolvedLinks = [];
+  // Tableaux du wiki ecartes du createur faute de coût — rapportes, jamais tus.
+  const tableauxEcartes = [];
   const aliasedAll = [];
 
   // Fichiers dont ce payload est la mise en forme : ils datent le bundle (voir
@@ -273,7 +275,23 @@ export function buildDataBundle(ROOT, editorial = null) {
         for (const m of g.moves) m.parent = parents.get(followKey(m.name)) || null;
       }
 
-      const kept = groups.filter((g) => g.moves.length);
+      // Un tableau dont aucune ligne ne coûte de CP n'est pas une liste de coups
+      // équipables : dans le jeu, tout ce qui s'équipe se paie. Deux tableaux du
+      // wiki entraient pourtant dans le créateur comme des attaques —
+      // « Tentacle Pain 1st » chez Cloud of Darkness, dont l'intro annonce
+      // « All bravery attack starters share the following properties » et dont
+      // la note décrit la posture à trois temps, et « Maelstrom Counterstrategy »
+      // chez Exdeath, qui explique comment dévier Maelstrom. Le premier ouvrait
+      // même une catégorie entière, avec ses trois commandes.
+      //
+      // Les enchaînements sont épargnés : le wiki ne les chiffre pas non plus —
+      // les trois de Firion n'ont pas de coût — et ils ne s'équipent pas, ils
+      // prolongent. Le coût des tableaux, lui, a déjà été récupéré plus haut
+      // (`cpFromRawRows`) : un groupe qui n'en a toujours aucun n'en a pas.
+      const sansCout = groups.filter((g) => !g.followUp && g.moves.length
+        && !g.moves.some((m) => m.cp != null || m.cpMastered != null));
+      for (const g of sansCout) tableauxEcartes.push({ slug: def.slug, kind, group: g.key, moves: g.moves.map((m) => m.name) });
+      const kept = groups.filter((g) => g.moves.length && sansCout.indexOf(g) === -1);
       rawGroups[kind] = kept;
       if (kept.length) attacks[kind] = kept.map((g) => ({ key: g.key, intro: g.intro, followUp: g.followUp, moves: table(g.moves, MOVE_COLS) }));
     }
@@ -451,6 +469,7 @@ export function buildDataBundle(ROOT, editorial = null) {
     dataModified: datesFor(ROOT, sourceFiles).dateModified,
     capacity: { base: capacity.base, max: capacity.max, quote: capacity.quote, extenders: capacity.extenders, documented: capacity.documented },
     unresolvedHpLinks: unresolvedLinks,
+    discardedTables: tableauxEcartes,
     aliasedHpLinks: aliasedAll,
     baseStats: { shared: baseStats.shared, byCharacter: baseStats.byCharacter, documented: baseStats.documented },
     ruleset: {

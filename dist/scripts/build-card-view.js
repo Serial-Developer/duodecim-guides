@@ -513,8 +513,8 @@ function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant 
   const assist = (data.assists || []).find((a) => a.slug === build.assist);
   const summon = (data.summons || []).find((s) => s.id === build.summon);
 
-  const portrait = (slug, alt) => (hasPortrait(slug)
-    ? `<img src="${L.asset(`assets/portraits/${slug}.png`)}" alt="${esc(alt)}" width="56" height="56" loading="lazy">`
+  const portrait = (slug, alt, miroir = '') => (hasPortrait(slug)
+    ? `<img class="${miroir}" src="${L.asset(`assets/portraits/${slug}.png`)}" alt="${esc(alt)}" width="56" height="56" loading="lazy">`
     : '<span class="bcard-portrait-none" aria-hidden="true"></span>');
 
   // Deux accessoires peuvent porter le même nom — « Summon Unused » existe pour
@@ -614,7 +614,7 @@ ${(() => {
   // à côté du portrait, l'un sous l'autre. Séparés, ils s'empilaient sur deux
   // lignes de même poids sans qu'on sache laquelle nomme quoi.
   return `<div class="bcard-ids">
-<p class="bcard-banner">${aside ? '' : portrait(char.slug, t('buildCard.portraitAlt', { name: char.name }))}<span class="bcard-name">${esc(char.name)}</span></p>
+<p class="bcard-banner">${aside ? '' : portrait(char.slug, t('buildCard.portraitAlt', { name: char.name }), compact && char.portraitFacing === 'left' ? 'is-mirrored' : '')}<span class="bcard-name">${esc(char.name)}</span></p>
 ${compact ? titre : ''}
 ${aGauche ? renforts : ''}
 </div>

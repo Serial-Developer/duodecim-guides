@@ -3077,13 +3077,18 @@
   // Les statistiques sont rendues dans les nœuds de la page — le script les
   // remplit par identifiant. On ne les recopie donc pas : on les déplace, dans
   // la carte ou hors d'elle, et le rendu suit sans rien savoir de l'endroit.
+  //
+  // Ils doivent en sortir AVANT que la carte ne se redessine : `innerHTML`
+  // remplace tout, et les emporterait. Le panneau restait alors vide pour de
+  // bon — les statistiques n'avaient plus de nœuds où s'écrire, et changer
+  // d'accessoire ne montrait plus rien.
   function rangerStats(compact) {
     var aside = document.querySelector('.bc-side-stats');
     if (!aside) return;
     var dedans = carteHote.querySelector('.bcard-stats');
-    var cible = compact ? dedans : aside;
-    if (!cible) return;
-    var source = compact ? aside : (dedans || aside);
+    var cible = compact && dedans ? dedans : aside;
+    var source = cible === aside ? dedans : aside;
+    if (!source || source === cible) return;
     Array.prototype.slice.call(source.children).forEach(function (n) { cible.appendChild(n); });
   }
 
@@ -3100,6 +3105,9 @@
     Array.prototype.forEach.call(carteHote.querySelectorAll('.bcard-fold'), function (c) {
       if (c.checked) replies[c.id] = true;
     });
+    // Les statistiques regagnent leur colonne le temps du redessin : la carte
+    // qu'elles habitent est sur le point d'être remplacée.
+    rangerStats(false);
     // Quelles pièces exigent l'Equip Glitch : la carte ne sait pas le calculer —
     // il faut les catégories natives du personnage — et ne doit pas l'apprendre.
     // `equipStatus` reste le seul juge, et la carte reçoit son verdict.
