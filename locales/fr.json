@@ -800,6 +800,7 @@
     "cpGauge": "{used} sur {max} CP",
     "cpUnknown": "Total minimum — coût non documenté pour : {list}",
     "panelStats": "Stats",
+    "panelAttacks": "Attaques",
     "panelBoosters": "Multiplicateur actif",
     "editAbilities": "Modifier…",
     "panelTabs": "Panneau de la carte",

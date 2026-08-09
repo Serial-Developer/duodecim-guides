@@ -1686,13 +1686,19 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 /* Le trait commun revient à la languette ouverte : c'est son or qui doit
    fermer le contour, pas le violet éteint de sa voisine. */
 .bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-flap[data-panel="gear"],
-.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-flap[data-panel="abilities"] {
+.bcard:has(> .bcard-panel-radio[value="stuff"]:checked) .bcard-flap[data-panel="stuff"],
+.bcard:has(> .bcard-panel-radio[value="attacks"]:checked) .bcard-flap[data-panel="attacks"],
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-flap[data-panel="abilities"],
+.bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-flap[data-panel="stats"] {
   position: relative;
   z-index: 1;
 }
 .bcard-flap:hover { color: var(--text); }
 .bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-flap[data-panel="gear"],
-.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-flap[data-panel="abilities"] {
+.bcard:has(> .bcard-panel-radio[value="stuff"]:checked) .bcard-flap[data-panel="stuff"],
+.bcard:has(> .bcard-panel-radio[value="attacks"]:checked) .bcard-flap[data-panel="attacks"],
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-flap[data-panel="abilities"],
+.bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-flap[data-panel="stats"] {
   color: var(--gold);
   border-color: var(--gold);
   background: rgba(199, 164, 90, 0.14);
@@ -1704,16 +1710,17 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    panneau caché du parcours au clavier et de l'arbre d'accessibilité. */
 .bcard-panels { display: grid; }
 .bcard-panels > * { grid-area: 1 / 1; }
-/* Une regle par couple : `:not(.bcard-abilities)` attrapait l'equipement ET les
-   stats des que la troisieme languette est apparue, et les deux se
-   superposaient. Chaque panneau est nomme, aucun ne depend de l'absence d'un
-   autre. */
-.bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-abilities,
-.bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-stats,
-.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-gear,
-.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-stats,
-.bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-gear,
-.bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-abilities { visibility: hidden; }
+/* On cache tout, on ne montre que le panneau désigné : la carte en compte deux
+   au large et quatre à l'étroit, et une règle par couple les aurait tous
+   énumérés deux à deux. Chaque panneau est nommé, aucun ne dépend de l'absence
+   d'un autre — c'est ce qui manquait quand `:not(.bcard-abilities)` attrapait
+   l'équipement et les stats à la fois. */
+.bcard-panels > .bcard-body { visibility: hidden; }
+.bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-gear,
+.bcard:has(> .bcard-panel-radio[value="stuff"]:checked) .bcard-stuff,
+.bcard:has(> .bcard-panel-radio[value="attacks"]:checked) .bcard-attacks,
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-abilities,
+.bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-stats { visibility: visible; }
 /* Les onglets de style ne concernent que les attaques : ils disparaissent avec
    elles. */
 .bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-tabs { display: none; }
@@ -2160,6 +2167,104 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    interne — la mesure ne sert que la mise en page à trois colonnes. */
 @media (max-width: 899px) {
   .bc-two { grid-template-columns: minmax(0, 1fr); --bc-carte-h: 44.21rem; }
+  /* La jauge se couche et passe devant : on l'équipe en la regardant se
+     remplir, et debout sous la carte elle ne se voyait jamais. Le script y
+     écrit des pourcentages de largeur — c'est sa forme d'origine, la rotation
+     était l'exception. */
+  .bc-two > .bc-gauge-wrap {
+    order: -1;
+    position: sticky;
+    top: var(--bc-collant);
+    z-index: 6;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0.5rem 0 0.6rem;
+    background: var(--surface);
+    border-bottom: 1px solid rgba(157, 134, 232, 0.25);
+    gap: 0.35rem;
+  }
+  .bc-two > .bc-gauge-wrap .bc-gauge {
+    width: 100%;
+    height: 20px;
+    transform: none;
+    margin: 0;
+  }
+  .bc-two > .bc-gauge-wrap .bc-gauge-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.3rem 0.8rem;
+  }
+  .bc-two > .bc-gauge-wrap .bc-legend { margin: 0; }
+  /* Vidée de ses blocs, partis dans la languette « Stats » de la carte, la
+     colonne n'a plus lieu d'occuper une ligne. `:empty` ne l'aurait pas vue
+     vide : il reste les retours à la ligne du gabarit entre ses balises. */
+  .bc-two > .bc-side-stats { display: none; }
+}
+/* Hauteur à laquelle se collent la jauge puis les languettes : sous le header
+   du site quand il est lui-même collant, en haut de l'écran sinon. */
+@media (max-width: 899px) { .bc-two { --bc-collant: var(--mob-header-h, 0px); } }
+@media (min-width: 768px) and (max-width: 899px) { .bc-two { --bc-collant: 0px; } }
+
+/* --- La carte à l'étroit --------------------------------------------------- */
+/* Quatre languettes au lieu de deux, et chacune ne montre que son panneau. */
+@media (max-width: 899px) {
+  /* Les languettes descendent dans le flux : accrochées au bord supérieur et
+     centrées, les quatre débordaient la carte. Elles se partagent la largeur. */
+  /* Les languettes se collent sous la jauge : elles commandent la lecture, et
+     passaient dessous des le premier defilement. La hauteur de la jauge est
+     mesuree par le script — elle change avec le repli de sa legende. */
+  .bc-card-host .bcard-flaps {
+    position: sticky;
+    top: calc(var(--bc-collant, 0px) + var(--bc-jauge-h, 0px));
+    z-index: 5;
+    transform: none;
+    display: flex;
+    width: 100%;
+    margin: 0 0 0.7rem;
+    padding-top: 0.2rem;
+    background: var(--surface);
+  }
+  .bc-card-host .bcard-flap {
+    flex: 1 1 0;
+    justify-content: center;
+    text-align: center;
+    padding: 0.35rem 0.2rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.02em;
+    white-space: normal;
+    border-top: 1px solid rgba(157, 134, 232, 0.3);
+    border-radius: 6px 6px 0 0;
+  }
+  .bc-card-host .bcard-flap:first-of-type { border-bottom-left-radius: 0; }
+  .bc-card-host .bcard-flap:last-of-type { border-bottom-right-radius: 0; }
+  /* Les panneaux ne se superposent plus : chacun prend la hauteur de son
+     contenu. Dans la même case de grille, la carte gardait la hauteur du plus
+     long — les abilities — quelle que soit la languette ouverte, et l'onglet
+     n'aurait rien raccourci. Le plancher tombe pour la même raison. */
+  /* `overflow: hidden` retient le portrait de fond dans le cadre ; à l'étroit il
+     n'y a pas de portrait de fond, et cet overflow empêchait les languettes de
+     se coller — un élément collant ne se décolle jamais de son ascendant qui
+     coupe. */
+  .bc-card-host .bcard { min-height: 0; overflow: visible; }
+  .bc-card-host .bcard-panels { display: block; }
+  .bc-card-host .bcard-panels > .bcard-body { display: none; visibility: visible; }
+  .bc-card-host .bcard:has(> .bcard-panel-radio[value="stuff"]:checked) .bcard-stuff,
+  .bc-card-host .bcard:has(> .bcard-panel-radio[value="attacks"]:checked) .bcard-attacks,
+  .bc-card-host .bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-abilities,
+  .bc-card-host .bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-stats { display: grid; }
+  /* Une seule colonne : la grille à deux colonnes du panneau large donnerait à
+     son unique colonne la moitié de la carte. */
+  .bc-card-host .bcard-stuff,
+  .bc-card-host .bcard-attacks,
+  .bc-card-host .bcard-stats { grid-template-columns: minmax(0, 1fr); }
+  /* Les onglets de style ont suivi les attaques dans leur languette. */
+  .bc-card-host .bcard-attacks .bcard-tabs { margin: 0 0 0.6rem; justify-content: flex-start; }
+  /* Les statistiques déménagent dans la carte : elles y perdent le fond et le
+     cadre de leur colonne, que la carte porte déjà. */
+  .bc-card-host .bcard-stats > * { min-width: 0; }
 }
 
 /* Banc de mesure du cliché : le clone doit être mis en page pour qu'on lise sa

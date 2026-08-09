@@ -800,6 +800,7 @@
     "cpGauge": "{used} of {max} CP",
     "cpUnknown": "Minimum total — cost not documented for: {list}",
     "panelStats": "Stats",
+    "panelAttacks": "Attacks",
     "panelBoosters": "Active multiplier",
     "editAbilities": "Edit…",
     "panelTabs": "Card panel",

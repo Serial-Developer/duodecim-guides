@@ -490,7 +490,13 @@ function capacityOf(build, data, mastered = true) {
 // poignées, le créateur les écoute.
 // `glitch` marque les emplacements d'équipement qui exigent l'Equip Glitch, par
 // clé d'emplacement : le créateur le calcule, la carte le montre.
-function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant = '', uid = '', mastered = true, live = false, glitch = {} }) {
+// `compact` resserre la carte pour un écran étroit : la double colonne de
+// l'équipement et des attaques n'y tient pas, chacune prend donc sa languette,
+// les onglets de style descendent dans celle des attaques, et une quatrième
+// accueille les statistiques que le créateur affiche à côté de la carte au
+// large. Le portrait, lui, revient dans l'en-tête — c'est l'affaire de
+// `variant`, que l'appelant laisse vide.
+function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant = '', uid = '', mastered = true, live = false, glitch = {}, compact = false }) {
   const char = (data.characters || []).find((c) => c.slug === build.character);
   if (!char) return '';
   // Les onglets de style passent par des boutons radio, sans JavaScript : la
@@ -550,9 +556,21 @@ function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant 
   // Radios d'onglets, en tête de carte. La feuille de style les relie à leurs
   // panneaux par `:has()` sur la carte : un sélecteur de position aurait lié les
   // deux groupes entre eux, leur nombre variant d'un personnage à l'autre.
+  const panneaux = compact
+    ? [
+      { key: 'stuff', label: t('buildCard.panelGear') },
+      { key: 'attacks', label: t('buildCard.panelAttacks') },
+      { key: 'abilities', label: t('buildCard.panelAbilities') },
+      { key: 'stats', label: t('buildCard.panelStats') },
+    ]
+    : [
+      { key: 'gear', label: t('buildCard.panelGear') },
+      { key: 'abilities', label: t('buildCard.panelAbilities') },
+    ];
   const radios = [
-    `<input class="bcard-panel-radio" type="radio" name="${esc(grpId)}-p" id="${esc(grpId)}-p1" value="gear" checked>`,
-    `<input class="bcard-panel-radio" type="radio" name="${esc(grpId)}-p" id="${esc(grpId)}-p2" value="abilities">`,
+    ...panneaux.map((p, i) => (
+      `<input class="bcard-panel-radio" type="radio" name="${esc(grpId)}-p" id="${esc(grpId)}-p${i + 1}" value="${p.key}"${i === 0 ? ' checked' : ''}>`
+    )),
     ...styles.map((s, i) => (
       `<input class="bcard-style-radio" type="radio" name="${esc(grpId)}" id="${esc(grpId)}-${i + 1}" value="${i + 1}"${i === 0 ? ' checked' : ''}>`
     )),
@@ -563,8 +581,7 @@ function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant 
   // détaillées se lisent dans les chaînes d'effets à l'affichage, et c'est le
   // créateur qui sait le faire. Une page statique n'a rien à y mettre.
   const languettes = `<p class="bcard-flaps" role="group" aria-label="${esc(t('buildCard.panelTabs'))}">
-<label class="bcard-flap" data-panel="gear" for="${esc(grpId)}-p1">${esc(t('buildCard.panelGear'))}</label>
-<label class="bcard-flap" data-panel="abilities" for="${esc(grpId)}-p2">${esc(t('buildCard.panelAbilities'))}</label>
+${panneaux.map((p, i) => `<label class="bcard-flap" data-panel="${p.key}" for="${esc(grpId)}-p${i + 1}">${esc(p.label)}</label>`).join('\n')}
 </p>`;
 
   const onglets = styles.length
@@ -601,12 +618,12 @@ ${aGauche ? renforts : ''}
 ${aGauche ? '' : renforts}
 </div>`;
 })()}
-${onglets}
+${compact ? '' : onglets}
 </header>
 
 <div class="bcard-panels">
-<div class="bcard-body bcard-gear">
-<div class="bcard-col">
+${(() => {
+  const colonneStuff = `<div class="bcard-col">
 <section class="bcard-block">
 <h3 class="bcard-h">${esc(t('buildCard.equipment'))}</h3>
 <ul class="bcard-list">${equipLignes}</ul>
@@ -615,15 +632,22 @@ ${onglets}
 <h3 class="bcard-h">${esc(t('buildCard.accessories'))}</h3>
 <ul class="bcard-list bcard-list-acc">${accLignes}</ul>
 </section>
-</div>
-<div class="bcard-col">
+</div>`;
+  const colonneAttaques = `<div class="bcard-col">
 ${attackGrid(t, L, sizeOf, build, char, styles, live, grpId)}
-</div>
-</div>
-
-<div class="bcard-body bcard-abilities">
+</div>`;
+  const abilities = `<div class="bcard-body bcard-abilities">
 ${abilitiesPanel(t, build, data, live)}
-</div>
+</div>`;
+  // À l'étroit, les onglets de style suivent les attaques dans leur languette :
+  // ils ne commandent qu'elles, et l'en-tête n'a pas la place.
+  if (!compact) return `<div class="bcard-body bcard-gear">${colonneStuff}${colonneAttaques}</div>
+${abilities}`;
+  return `<div class="bcard-body bcard-stuff">${colonneStuff}</div>
+<div class="bcard-body bcard-attacks">${onglets}${colonneAttaques}</div>
+${abilities}
+<div class="bcard-body bcard-stats"></div>`;
+})()}
 </div>
 
 ${live ? '' : (() => {

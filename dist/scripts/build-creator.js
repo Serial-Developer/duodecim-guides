@@ -3053,6 +3053,27 @@
   var carteHote = document.getElementById('bc-card');
   var carteBase = carteHote ? (carteHote.getAttribute('data-base') || '') : '';
 
+  // À l'étroit, la carte se resserre : le portrait revient dans l'en-tête — en
+  // fond il ne laissait plus rien lire —, l'équipement et les attaques prennent
+  // chacun leur languette, et la colonne de stats vient les rejoindre au lieu de
+  // s'empiler sous la carte. Le seuil est celui où la mise en page à trois
+  // colonnes rend les armes.
+  var petitEcran = window.matchMedia ? window.matchMedia('(max-width: 899px)') : null;
+  function estCompact() { return !!(petitEcran && petitEcran.matches); }
+
+  // Les statistiques sont rendues dans les nœuds de la page — le script les
+  // remplit par identifiant. On ne les recopie donc pas : on les déplace, dans
+  // la carte ou hors d'elle, et le rendu suit sans rien savoir de l'endroit.
+  function rangerStats(compact) {
+    var aside = document.querySelector('.bc-side-stats');
+    if (!aside) return;
+    var dedans = carteHote.querySelector('.bcard-stats');
+    var cible = compact ? dedans : aside;
+    if (!cible) return;
+    var source = compact ? aside : (dedans || aside);
+    Array.prototype.slice.call(source.children).forEach(function (n) { cible.appendChild(n); });
+  }
+
   function renderCard() {
     if (!carteHote || !window.BuildCardView || !state.build.character) return;
     // La carte repart de zéro : ses boutons radio — languette ouverte, style
@@ -3082,7 +3103,8 @@
       glitch: glitch,
       L: { asset: function (p) { return carteBase + p; } },
       hasPortrait: function () { return true; },
-      variant: 'portrait-full',
+      variant: estCompact() ? '' : 'portrait-full',
+      compact: estCompact(),
       live: true,
       mastered: state.mastered,
       uid: 'live',
@@ -3093,6 +3115,7 @@
     Array.prototype.forEach.call(carteHote.querySelectorAll('.bcard-fold'), function (c) {
       c.checked = !!replies[c.id];
     });
+    rangerStats(estCompact());
     mesurerCarte();
   }
 
@@ -3107,6 +3130,11 @@
     var carte = carteHote.querySelector('.bcard');
     if (!deux || !carte) return;
     deux.style.setProperty('--bc-carte-mesure', carte.getBoundingClientRect().height + 'px');
+    // À l'étroit, les languettes se collent sous la jauge : encore faut-il
+    // savoir ce qu'elle mesure. Sa hauteur change avec sa légende, qui se replie
+    // sur deux lignes selon la largeur.
+    var jauge = deux.querySelector('.bc-gauge-wrap');
+    if (jauge) deux.style.setProperty('--bc-jauge-h', jauge.getBoundingClientRect().height + 'px');
   }
 
   // Le build n'est pas seul à changer la hauteur de la carte : la fenêtre s'y
@@ -3117,6 +3145,15 @@
   // colonnes qu'il alimente sont d'autres cases de la grille, elles ne peuvent
   // pas renvoyer la carte grandir : pas de boucle.
   if (carteHote && window.ResizeObserver) new ResizeObserver(mesurerCarte).observe(carteHote);
+
+  // Franchir le seuil change la carte elle-même, pas seulement sa mise en page :
+  // on la redessine. `addListener` reste là pour les navigateurs qui ne
+  // connaissent pas encore `addEventListener` sur une requête média.
+  if (petitEcran) {
+    var surSeuil = function () { renderCard(); };
+    if (petitEcran.addEventListener) petitEcran.addEventListener('change', surSeuil);
+    else if (petitEcran.addListener) petitEcran.addListener(surSeuil);
+  }
 
   // Retrouve le contexte d'une catégorie d'attaques à partir de sa clé, avec la
   // même composition que la grille : (bravery/HP, groupe, style).
