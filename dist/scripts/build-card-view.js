@@ -609,12 +609,17 @@ ${(() => {
   // couvre la carte, sous le nom du build sinon : à gauche le fond laisse la
   // place, à droite il l'occuperait.
   const aGauche = variant === 'portrait-full';
+  const titre = `<p class="bcard-title">${build.name ? esc(build.name) : `<span class="bcard-untitled">${esc(t('buildCard.untitled'))}</span>`}</p>`;
+  // À l'étroit, le nom du build rejoint celui du personnage : les deux se lisent
+  // à côté du portrait, l'un sous l'autre. Séparés, ils s'empilaient sur deux
+  // lignes de même poids sans qu'on sache laquelle nomme quoi.
   return `<div class="bcard-ids">
 <p class="bcard-banner">${aside ? '' : portrait(char.slug, t('buildCard.portraitAlt', { name: char.name }))}<span class="bcard-name">${esc(char.name)}</span></p>
+${compact ? titre : ''}
 ${aGauche ? renforts : ''}
 </div>
 <div class="bcard-side">
-<p class="bcard-title">${build.name ? esc(build.name) : `<span class="bcard-untitled">${esc(t('buildCard.untitled'))}</span>`}</p>
+${compact ? '' : titre}
 ${aGauche ? '' : renforts}
 </div>`;
 })()}

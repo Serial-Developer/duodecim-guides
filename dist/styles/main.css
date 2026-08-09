@@ -2274,10 +2274,41 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   .bc-card-host .bcard-head { flex-direction: column; align-items: stretch; gap: 0.5rem; }
   .bc-card-host .bcard-ids,
   .bc-card-host .bcard-side { max-width: none; align-items: flex-start; text-align: left; }
-  /* Le nom du build sur sa ligne, les deux renforts sur la suivante : ils se
-     lisent ensemble et tiennent côte à côte. */
+  /* Bloc d'identité : le portrait à gauche, sur deux rangs, et les deux noms à
+     sa droite — celui du personnage, celui du build. `display: contents` sur la
+     bannière verse ses deux éléments dans cette grille : sans cela le portrait
+     et le nom du personnage restaient soudés dans leur paragraphe, et le nom du
+     build tombait dessous à la même taille, sans qu'on sache lequel nommait
+     quoi. Le portrait passe de 2,6 à 4,4 rem : la place est là. */
+  .bc-card-host .bcard-ids {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: 0.8rem;
+    row-gap: 0.1rem;
+  }
+  .bc-card-host .bcard-ids .bcard-banner { display: contents; }
+  .bc-card-host .bcard-ids .bcard-banner img,
+  .bc-card-host .bcard-ids .bcard-portrait-none {
+    grid-row: 1 / span 2;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 8px;
+  }
+  .bc-card-host .bcard-ids .bcard-name { grid-column: 2; align-self: end; }
+  .bc-card-host .bcard-ids .bcard-title {
+    grid-column: 2;
+    align-self: start;
+    /* Sous-titre, pas second titre : plus petit que le nom du personnage, dans
+       la couleur du texte courant, il se lit comme ce qu'il est — le nom qu'on
+       a donné à ce build. */
+    font-size: 0.95rem;
+    line-height: 1.25;
+    color: var(--muted);
+  }
+  .bc-card-host .bcard-ids .bcard-title .bcard-untitled { font-size: 0.9rem; }
+  /* Les deux renforts se lisent ensemble, côte à côte. */
   .bc-card-host .bcard-side { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.1rem; }
-  .bc-card-host .bcard-title { flex: 1 0 100%; font-size: 1.05rem; }
   .bc-card-host .bcard-banner-assist + .bcard-summon { margin-top: 0; }
 }
 
