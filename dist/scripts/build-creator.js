@@ -2373,7 +2373,20 @@
     setCharacter(state.build.character);
   });
 
-  document.getElementById('bc-build-name').addEventListener('input', markDirty);
+  // Le nom du build ne partait dans l'objet qu'à l'enregistrement : sous les
+  // onglets, rien ne l'affichait, et personne ne l'a vu. La carte, elle, le
+  // porte en titre — il restait celui d'avant pendant toute la frappe. On le
+  // pose donc à chaque touche, et on écrit le titre à la main plutôt que de
+  // redessiner la carte entière à chaque lettre.
+  document.getElementById('bc-build-name').addEventListener('input', function (ev) {
+    state.build.name = ev.target.value;
+    markDirty();
+    var titre = carteHote && carteHote.querySelector('.bcard-title');
+    if (!titre) return;
+    clear(titre);
+    if (state.build.name) titre.appendChild(document.createTextNode(state.build.name));
+    else titre.appendChild(el('span', { class: 'bcard-untitled', text: T('buildCard.untitled') }));
+  });
   document.getElementById('bc-notes').addEventListener('input', markDirty);
 
   document.getElementById('bc-mastered').addEventListener('change', function (ev) {

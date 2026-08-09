@@ -2265,6 +2265,20 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   /* Les statistiques déménagent dans la carte : elles y perdent le fond et le
      cadre de leur colonne, que la carte porte déjà. */
   .bc-card-host .bcard-stats > * { min-width: 0; }
+
+  /* L'en-tête tient en une colonne. Ses deux côtés sont bornés à la moitié de
+     la carte moins la place des languettes, qui se posent au milieu du bord
+     supérieur ; ici les languettes sont descendues dans le flux et cette borne
+     ne laissait plus que quarante pixels à chaque côté — un mot par ligne, et
+     un en-tête trois fois trop haut pour ce qu'il dit. */
+  .bc-card-host .bcard-head { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+  .bc-card-host .bcard-ids,
+  .bc-card-host .bcard-side { max-width: none; align-items: flex-start; text-align: left; }
+  /* Le nom du build sur sa ligne, les deux renforts sur la suivante : ils se
+     lisent ensemble et tiennent côte à côte. */
+  .bc-card-host .bcard-side { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.1rem; }
+  .bc-card-host .bcard-title { flex: 1 0 100%; font-size: 1.05rem; }
+  .bc-card-host .bcard-banner-assist + .bcard-summon { margin-top: 0; }
 }
 
 /* Banc de mesure du cliché : le clone doit être mis en page pour qu'on lise sa
