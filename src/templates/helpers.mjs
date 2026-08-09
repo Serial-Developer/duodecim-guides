@@ -76,8 +76,16 @@ export function priorityBadge(prio) {
 }
 
 // "11F", "32F (charge), 2F (release)" -> 11 / 32 ; null si absent
+//
+// Un « + » en tête dit que le chiffre se compte à partir d'autre chose : les
+// variantes de Cloud of Darkness sortent « +4F » après le coup de fouet de sa
+// posture, laquelle démarre à 13F. Lue comme un startup, cette valeur en faisait
+// l'attaque la plus rapide du jeu. Un nombre relatif n'a pas de place sur un axe
+// absolu : on le rend nul, faute d'avoir de quoi le convertir.
 export function startupFrames(s) {
-  const m = String(s ?? '').match(/(\d+)\s*F/i);
+  const brut = String(s ?? '').trim();
+  if (brut.startsWith('+')) return null;
+  const m = brut.match(/(\d+)\s*F/i);
   return m ? parseInt(m[1], 10) : null;
 }
 

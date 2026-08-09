@@ -20,6 +20,16 @@
       "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
     }
   },
+  "_moveCostsNote": "dissidia.wiki sometimes leaves an attack's CP unwritten — « ?? » for Cloud of Darkness's Tentacle of Pain, whose three siblings all cost 60 (30). The Final Fantasy Wiki's move table gives it. Missing costs are declared here, by slug: { \"slug\": [{ \"move\": \"…\", \"cp\": \"60 (30)\", \"source\": \"…\" }] }. The name must match the character page exactly, and a declaration that overwrites a cost the wiki already gives is refused: this fills gaps, it does not arbitrate between sources.",
+  "moveCosts": {
+    "cloud-of-darkness": [
+      {
+        "move": "Tentacle of Pain",
+        "cp": "60 (30)",
+        "source": "https://finalfantasy.fandom.com/wiki/Cloud_of_Darkness_(Dissidia_012)"
+      }
+    ]
+  },
   "_summonEffectsNote": "The wiki's Summons page does not cover every summon cited by the tournament rules. Missing effects are declared here, by identifier: { \"slug\": { \"text\": \"…\", \"source\": \"…\" } }. The build fails if the identifier matches no summon.",
   "summonEffects": {
     "barbariccia": {

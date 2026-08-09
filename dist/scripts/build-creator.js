@@ -1164,14 +1164,21 @@
     return T('attacks.input.' + SLOT_INPUTS[i], { button: KIND_BUTTON[kind] });
   }
 
+  // Un coup à variantes porte une valeur par variante : Cloud of Darkness change
+  // de portée et de type selon le moment où l'on presse le rond, et la source
+  // donne les trois. Séparées par des barres obliques, elles se lisent comme
+  // trois valeurs ; laissées telles quelles, la virgule les collait à celles qui
+  // vivent déjà à l'intérieur d'un chiffre — « 30 (8, 8, 14),48 (12 x 4) ».
+  function champ(v) { return Array.isArray(v) ? v.join(' / ') : v; }
+
   // Descriptif court d'un coup, commun à la grille et à la fenêtre de choix.
   function moveMeta(m) {
     var meta = [];
-    if (m.damage) meta.push(T('attacks.damage', { value: m.damage }));
-    if (m.startup) meta.push(T('attacks.startup', { value: m.startup }));
-    if (m.type) meta.push(m.type);
-    if (m.priority) meta.push(m.priority);
-    if (m.variants) meta.push(m.variants);
+    if (m.damage) meta.push(T('attacks.damage', { value: champ(m.damage) }));
+    if (m.startup) meta.push(T('attacks.startup', { value: champ(m.startup) }));
+    if (m.type) meta.push(champ(m.type));
+    if (m.priority) meta.push(champ(m.priority));
+    if (m.variants) meta.push(champ(m.variants));
     return meta.join(' · ');
   }
   function cpTag(m) {
@@ -1642,7 +1649,7 @@
           }, [
             el('span', { class: 'bc-row-main' }, [
               el('span', { class: 'bc-row-name', text: m.name }),
-              el('span', { class: 'bc-row-meta', text: moveMeta(m) + (m.effects ? ' · ' + m.effects : '') }),
+              el('span', { class: 'bc-row-meta', text: moveMeta(m) + (m.effects ? ' · ' + champ(m.effects) : '') }),
             ]),
             cpTag(m),
           ]));

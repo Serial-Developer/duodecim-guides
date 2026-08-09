@@ -139,6 +139,8 @@ export function buildDataBundle(ROOT, editorial = null) {
   const unresolvedLinks = [];
   // Tableaux du wiki ecartes du createur faute de coût — rapportes, jamais tus.
   const tableauxEcartes = [];
+  // Déclarations de coût sans effet : nom inconnu, ou coût déjà donné par le wiki.
+  const coutsRefuses = [];
   const aliasedAll = [];
 
   // Fichiers dont ce payload est la mise en forme : ils datent le bundle (voir
@@ -159,6 +161,10 @@ export function buildDataBundle(ROOT, editorial = null) {
     const attacks = {};
     const rawGroups = {};
     const notesById = {};
+    // Les coups déclarés retrouvés, toutes catégories confondues : une bravery ne
+    // se trouve pas dans le tableau des attaques HP, et l'annoncer introuvable à
+    // chaque passage aurait rapporté un manque qui n'existe pas.
+    const coutsPoses = {};
     for (const kind of ['bravery', 'hp']) {
       const section = data.sections?.[kind];
       if (!section?.groups) continue;
@@ -288,6 +294,23 @@ export function buildDataBundle(ROOT, editorial = null) {
       // les trois de Firion n'ont pas de coût — et ils ne s'équipent pas, ils
       // prolongent. Le coût des tableaux, lui, a déjà été récupéré plus haut
       // (`cpFromRawRows`) : un groupe qui n'en a toujours aucun n'en a pas.
+      // Coûts déclarés à la main : dissidia.wiki écrit « ?? » là où le Final
+      // Fantasy Wiki chiffre. On ne comble que les trous — une déclaration qui
+      // écraserait un coût déjà donné est refusée et rapportée : arbitrer entre
+      // deux sources n'est pas le rôle d'un fichier éditorial.
+      for (const decl of ((editorial?.moveCosts || {})[def.slug] || [])) {
+        for (const g of groups) {
+          for (const m of g.moves) {
+            if (moveKey(m.name) !== moveKey(decl.move)) continue;
+            coutsPoses[moveKey(decl.move)] = true;
+            if (m.cp != null) { coutsRefuses.push({ slug: def.slug, move: m.name, raison: 'déjà chiffré par le wiki' }); continue; }
+            const chiffre = parseMoveCp(decl.cp);
+            m.cp = chiffre.cp;
+            if (chiffre.cpMastered != null) m.cpMastered = chiffre.cpMastered;
+          }
+        }
+      }
+
       const sansCout = groups.filter((g) => !g.followUp && g.moves.length
         && !g.moves.some((m) => m.cp != null || m.cpMastered != null));
       for (const g of sansCout) tableauxEcartes.push({ slug: def.slug, kind, group: g.key, moves: g.moves.map((m) => m.name) });
@@ -361,6 +384,9 @@ export function buildDataBundle(ROOT, editorial = null) {
         }
         chains.push({ from, to: m.id, source: data.url || null });
       }
+    }
+    for (const decl of ((editorial?.moveCosts || {})[def.slug] || [])) {
+      if (!coutsPoses[moveKey(decl.move)]) coutsRefuses.push({ slug: def.slug, move: decl.move, raison: 'coup introuvable' });
     }
     for (const kind of ['bravery', 'hp']) for (const g of rawGroups[kind] || []) for (const m of g.moves) delete m.desc;
 
@@ -470,6 +496,7 @@ export function buildDataBundle(ROOT, editorial = null) {
     capacity: { base: capacity.base, max: capacity.max, quote: capacity.quote, extenders: capacity.extenders, documented: capacity.documented },
     unresolvedHpLinks: unresolvedLinks,
     discardedTables: tableauxEcartes,
+    rejectedMoveCosts: coutsRefuses,
     aliasedHpLinks: aliasedAll,
     baseStats: { shared: baseStats.shared, byCharacter: baseStats.byCharacter, documented: baseStats.documented },
     ruleset: {
