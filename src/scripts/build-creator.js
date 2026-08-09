@@ -2523,7 +2523,12 @@
     chaque('input[name]', function (n) { n.setAttribute('name', marque + '-' + n.getAttribute('name')); });
     chaque('.bcard-panel-radio', function (r) { r.checked = r.value === 'gear'; });
     chaque('.bcard-style-radio', function (r, i) { r.checked = i === 0; });
-    chaque('.bcard-fold', function (c) { c.checked = true; });
+    // Les prolongements restent dépliés : ce sont eux qui font la lecture d'un
+    // build — le HP link sous sa bravery, l'enchaînement au rond. Les places
+    // encore libres, elles, s'effacent : sur une image, une ligne vide ne se
+    // remplira jamais. Les cases de repli partent avec leur chevron.
+    chaque('.bcard-fold', function (c) { c.parentNode.removeChild(c); });
+    chaque('.bcard-branch.is-empty', function (l) { l.parentNode.removeChild(l); });
     // Une case cochée par script ne l'est pas dans le HTML sérialisé : c'est
     // l'attribut que l'image lira, pas la propriété.
     chaque('input[type="radio"], input[type="checkbox"]', function (i) {
@@ -2544,32 +2549,59 @@
     return clone;
   }
 
+  // La carte fait quarante rem de large, par construction. C'est cette largeur
+  // que l'image reprend, et non celle qu'a la carte à l'écran : le créateur se
+  // consulte beaucoup sur téléphone, où la carte se resserre, et une image qui
+  // dépendrait de l'appareil de celui qui l'exporte ne serait plus la même carte.
+  function largeurDeReference() {
+    return Math.round(40 * parseFloat(getComputedStyle(document.documentElement).fontSize || '16'));
+  }
+
+  // La hauteur, elle, se mesure — et dans les conditions du rendu. Les règles
+  // d'affichage changent avec la largeur de la fenêtre : mesurée dans la page
+  // depuis un téléphone, la carte donnait la hauteur de sa mise en page mobile,
+  // et l'image sortait tronquée. On la met donc en page dans un cadre de la
+  // largeur de l'image, avec la même feuille de style et les mêmes polices.
+  function mesurerHauteur(clone, styles, largeur) {
+    var cadre = el('iframe', { class: 'bc-cliche-banc', width: String(largeur), height: '100' });
+    document.body.appendChild(cadre);
+    var doc = cadre.contentDocument;
+    doc.open();
+    doc.write('<!doctype html><html><head><meta charset="utf-8"></head><body></body></html>');
+    doc.close();
+    var style = doc.createElement('style');
+    style.textContent = styles;
+    doc.head.appendChild(style);
+    doc.body.style.margin = '0';
+    doc.body.appendChild(doc.importNode(clone, true));
+    var hauteur = Math.ceil(doc.body.firstChild.getBoundingClientRect().height);
+    cadre.parentNode.removeChild(cadre);
+    return hauteur;
+  }
+
   function cliche() {
     var carte = carteHote && carteHote.querySelector('.bcard');
     if (!carte) return;
     toast(T('imageBuilding'));
     var clone = preparerClone(carte);
-    // C'est le clone qu'on mesure, hors écran et dans les conditions de
-    // l'image : replié, il est plus court que la carte affichée, et il garde sa
-    // largeur de référence même si la fenêtre est étroite. Mesurer la carte à
-    // l'écran donnait une image à la taille du navigateur de celui qui exporte.
-    var banc = el('div', { class: 'bc-cliche-banc' }, [clone]);
-    document.body.appendChild(banc);
-    var boite = clone.getBoundingClientRect();
-    var largeur = Math.round(boite.width);
-    var hauteur = Math.ceil(boite.height);
+    var largeur = largeurDeReference();
+    var hauteur = 0;
+    clone.style.width = largeur + 'px';
+    clone.style.maxWidth = 'none';
 
     Promise.all([policesEmbarquees()].concat(Array.prototype.map.call(clone.querySelectorAll('img'), function (img) {
       return enDataUri(img.getAttribute('src')).then(function (uri) { img.setAttribute('src', uri); });
     }))).then(function (resultats) {
       var polices = resultats[0] || '';
+      var styles = polices + '\n' + feuilleDeStyle();
+      hauteur = mesurerHauteur(clone, styles, largeur);
       // L'image SVG est lue en XML, pas en HTML : `outerHTML` y échoue sans
       // rien dire — il laisse les balises vides ouvertes (`<img …>`), et le
       // fichier entier est rejeté. Le sérialiseur XML les referme. La feuille de
       // style, elle, passe en CDATA : une accolade ou une esperluette y seraient
       // lues comme du balisage.
       var doc = '<div xmlns="http://www.w3.org/1999/xhtml" class="bc-cliche">'
-        + '<style><![CDATA[' + polices + '\n' + feuilleDeStyle() + ']]></style>'
+        + '<style><![CDATA[' + styles + ']]></style>'
         + new XMLSerializer().serializeToString(clone) + '</div>';
       var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + largeur + '" height="' + hauteur + '">'
         + '<foreignObject width="100%" height="100%">' + doc + '</foreignObject></svg>';
@@ -2598,8 +2630,6 @@
       toast(T('imageDone'));
     }).catch(function () {
       toast(T('imageFailed'), true);
-    }).then(function () {
-      if (banc.parentNode) banc.parentNode.removeChild(banc);
     });
   }
 

@@ -2166,11 +2166,12 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    hauteur — repliée, la carte est plus courte que celle qu'on regarde — mais il
    ne doit pas se voir. Hors écran, donc, et non `display: none`, qui ne mesure
    rien. */
-.bc-cliche-banc { position: fixed; left: -10000px; top: 0; pointer-events: none; }
-/* Le cliché rend toujours la carte à sa largeur de référence : sur un écran
-   étroit, le `max-width: 100%` de la carte l'aurait rétrécie, et l'image aurait
-   dépendu de la fenêtre de celui qui l'exporte. */
-.bc-cliche-banc .bcard { max-width: none; }
+/* Cadre de mesure du cliché : la carte y est mise en page à la largeur de
+   l'image, hors écran. Un cadre plutôt qu'un simple bloc parce que les règles
+   d'affichage dépendent de la largeur de la fenêtre : mesurée dans la page
+   depuis un téléphone, la carte aurait donné la hauteur de sa mise en page
+   mobile, et l'image serait sortie tronquée. */
+.bc-cliche-banc { position: fixed; left: -10000px; top: 0; border: 0; pointer-events: none; }
 
 .bc-card-host { margin-top: 0.8rem; }
 .bc-card-host .bcard { margin: 0; }
