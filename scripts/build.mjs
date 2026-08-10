@@ -273,7 +273,10 @@ for (const locale of activeLocales) {
       dates,
       ogImage: ogPathFor(ROOT, def.slug, locale),
       roster,
-      buildCards: buildsFromWiki(data, def.slug, bundlePartage, cartesRefusees),
+      // La prose vient toujours de l'anglais : le build est le même dans les
+      // deux langues, ses coups aussi. Lire la locale rendue ferait diverger la
+      // carte française de l'anglaise.
+      buildCards: buildsFromWiki(data, def.slug, bundlePartage, cartesRefusees, Object.values(readEd('en', def.slug)?.builds?.perBuild || {}).map((x) => (Array.isArray(x) ? x.join(' ') : String(x || '')))),
       cardData: bundlePartage,
     }));
     sitemap.push({ path, lastmod: dates.dateModified, alternates: altsForGuide(def.slug) });
@@ -480,7 +483,7 @@ if (cartesRefusees.length) {
     const k = `${r.slug}/${r.cle}/${r.valeur}`;
     if (vus.has(k)) continue;
     vus.add(k);
-    console.warn(`(build du wiki non converti — ${r.slug} / ${r.cle} « ${r.valeur} » : ${r.raison})`);
+    console.warn(`(${r.releve ? 'attaque relevée dans la prose' : 'build du wiki non converti'} — ${r.slug} / ${r.cle} « ${r.valeur} »${r.releve ? '' : ` : ${r.raison}`})`);
   }
 }
 console.log(`dist/ généré : ${activeLocales.join(' + ')} — ${nGuides} guides, ${nPages} pages transverses`);

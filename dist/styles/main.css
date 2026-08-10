@@ -897,6 +897,13 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
    donne (40 rem). Sur un écran plus étroit, c'est le cadre qui défile — jamais
    la page, comme pour les tableaux larges. */
 .mv-card-wrap { overflow-x: auto; margin: 0.8rem 0 1.2rem; }
+/* La carte et les chiffres que la source annonce, côte à côte : sept valeurs
+   occupaient toute la largeur pour rien. Sous 1024 px la colonne passe dessous —
+   la carte fait 40 rem à elle seule. */
+.mv-card-row { display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+.mv-card-row > .mv-card-wrap { flex: 0 1 auto; min-width: 0; }
+.mv-card-stats { flex: 1 1 12rem; min-width: 12rem; }
+.mv-card-stats table { width: 100%; }
 .mv-card-wrap .bcard { margin: 0; }
 .bc-char-fallback { display: block; width: 100%; aspect-ratio: 1; background: var(--surface-2); }
 /* Bouton qui rouvre la grille repliée : le script ne le montre qu'à l'étroit,

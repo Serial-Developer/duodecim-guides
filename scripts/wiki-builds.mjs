@@ -55,7 +55,14 @@ function trouve(pool, nom, opp) {
   return null;
 }
 
-export function buildsFromWiki(char, slug, data, journal = []) {
+// `prose` : les descriptions éditoriales des builds, dans l'ordre des onglets du
+// wiki — le même que celui des tableaux. Elles nomment souvent les coups que le
+// tableau de moveset a laissés vides : ce sont les builds meta du personnage, et
+// un coup qu'elles citent est un coup du build, pas une invention. On ne les lit
+// que pour un build dont la source ne donne aucune attaque, et le coup trouvé
+// prend la première commande libre de sa propre catégorie (-1 le dit à
+// `scanBuild`), faute que la prose exprime une direction.
+export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
   const equipement = hydrate(data.equipment);
   const accessoires = hydrate(data.accessories);
   const assists = hydrate(data.assists);
@@ -178,6 +185,25 @@ export function buildsFromWiki(char, slug, data, journal = []) {
 
     // Section muette : la source n'en dit rien, ce n'est pas qu'elle la laisse
     // vide. Le jeton le dit une fois pour toute la section.
+    if (!build.attacks.length) {
+      const texte = String(prose[builds.length] || '');
+      if (texte) {
+        // Les noms longs d'abord : « Army of One » avant « Army », sans quoi le
+        // premier mangerait le second.
+        const noms = Object.keys(coupsParNom).sort((a, b) => b.length - a.length);
+        const bas = texte.toLowerCase();
+        const vus = new Set();
+        for (const n of noms) {
+          // Le nom porte parfois sa posture : la prose, elle, ne l'écrit pas.
+          const nu = n.replace(/\s*\((ground|midair)\)$/i, '');
+          if (vus.has(coupsParNom[n]) || bas.indexOf(nu) === -1) continue;
+          vus.add(coupsParNom[n]);
+          build.attacks.push(coupsParNom[n]);
+          build.attackSlots.push(-1);
+          journal.push({ slug, cle: 'attaque', valeur: n, raison: 'relevée dans la prose du build', releve: true });
+        }
+      }
+    }
     if (!build.attacks.length) { build.attacks = [ANY]; build.attackSlots = [-1]; }
     if (!build.abilities.length) build.abilities = [ANY];
     builds.push(build);

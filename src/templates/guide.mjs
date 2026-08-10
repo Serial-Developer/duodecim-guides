@@ -419,8 +419,12 @@ function buildsSection(t, builds, allMoves, opts) {
   // « Equipment » et « Bravery attacks » qu'elle reprend disparaissent, celui
   // des stats reste — ce sont les chiffres que la source annonce, que la carte
   // statique n'affiche pas.
-  const REPRIS = new Set(['Equipment', 'Bravery attacks']);
-  const sansCarte = (tables) => (opts?.cards?.length ? tables.filter((tb) => !(tb.rows?.[0]?.length === 1 && REPRIS.has(tb.rows[0][0]))) : tables);
+  // Le tableau des stats les rejoint : sept valeurs n'ont pas besoin de toute
+  // la largeur, et à côté de la carte elles se lisent avec elle.
+  const REPRIS = new Set(['Equipment', 'Bravery attacks', 'Stats']);
+  const avecCartes = !!opts?.cards?.length;
+  const sansCarte = (tables) => (avecCartes ? tables.filter((tb) => !(tb.rows?.[0]?.length === 1 && REPRIS.has(tb.rows[0][0]))) : tables);
+  const statsDe = (tables) => (tables || []).find((tb) => tb.rows?.[0]?.length === 1 && tb.rows[0][0] === 'Stats');
   const main = builtGroups.map((g, i) => {
     const desc = g.name ? opts?.perBuild?.[g.name] : null;
     // Le wiki ne nomme pas toujours son onglet (Firion). Plutôt que d'inventer
@@ -431,7 +435,7 @@ function buildsSection(t, builds, allMoves, opts) {
       : t('guide.builds.unnamed'));
     return `<h3>${esc(titre)}</h3>
 ${desc?.length ? paras(desc) : ''}
-${opts?.cards?.[i] || ''}
+${opts?.cards?.[i] ? `<div class="mv-card-row">${opts.cards[i]}${statsDe(g.tables) ? `<div class="mv-card-stats">${genericTables([statsDe(g.tables)])}</div>` : ''}</div>` : ''}
 ${buildsTables(t, sansCarte(g.tables), ctx)}`;
   }).join('\n');
 
