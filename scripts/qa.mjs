@@ -48,7 +48,9 @@ for (const file of htmlFiles) {
       externalLinks.add(url);
       return;
     }
-    const target = join(base, url.split('#')[0]);
+    // Une ancre ne fait pas partie du chemin, une query string non plus : les
+    // cartes de build lient le créateur avec le build en paramètre.
+    const target = join(base, url.split('#')[0].split('?')[0]);
     if (!existsSync(target)) errors.push(`${file.replace(DIST, 'dist')} -> ressource locale manquante : ${url}`);
   });
   // ancres internes

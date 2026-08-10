@@ -223,3 +223,23 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
   }
   return builds;
 }
+
+// Lien de partage d'un build, à coller derrière `?build=` : le créateur relit
+// ce format depuis toujours — la base64 brute du build compacté, sans préfixe.
+// Les deux autres formats (binaire, deflate) sont plus courts mais l'un
+// suppose les catalogues du navigateur et l'autre une compression que Node
+// n'écrit pas de la même façon ; celui-ci n'a besoin de rien. Aucun risque de
+// confusion de préfixe : la base64 d'un objet JSON commence toujours par « e ».
+export function shareCode(b) {
+  const c = {
+    v: b.schemaVersion, c: b.character,
+    at: b.attacks, sl: b.attackSlots, ab: b.abilities,
+    eq: [b.equipment.weapon, b.equipment.hand, b.equipment.head, b.equipment.body],
+    ac: b.accessories, as: b.assist, su: b.summon,
+  };
+  if (b.name) c.n = b.name;
+  if (b.notes) c.no = b.notes;
+  if ((b.level || 100) !== 100) c.lv = b.level;
+  return Buffer.from(JSON.stringify(c), 'utf-8').toString('base64')
+    .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}

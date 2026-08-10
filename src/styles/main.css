@@ -904,6 +904,8 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
 .mv-card-row > .mv-card-wrap { flex: 0 1 auto; min-width: 0; }
 .mv-card-stats { flex: 1 1 12rem; min-width: 12rem; }
 .mv-card-stats table { width: 100%; }
+.mv-card-open { margin: 0.6rem 0 0; }
+.mv-card-open a { display: inline-block; text-decoration: none; }
 /* Sous 600 px la carte n'a plus de largeur figée : elle suit son contenu, et le
    panneau des abilities est plus court que celui de l'équipement — d'une
    languette à l'autre, elle changeait de largeur. Dans une fiche, c'est le

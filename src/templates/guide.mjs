@@ -6,6 +6,7 @@ import {
 } from './helpers.mjs';
 import { ldArticle } from './jsonld.mjs';
 import { buildCard } from './build-card.mjs';
+import { shareCode } from '../../scripts/wiki-builds.mjs';
 import { isHeaderRow, duplicatesHeaderRow, isTableTitle, isOrphanRow } from '../../scripts/move-shape.mjs';
 
 // Champs d'un coup, dans l'ordre d'affichage. Les clés sont celles des données
@@ -435,7 +436,7 @@ function buildsSection(t, builds, allMoves, opts) {
       : t('guide.builds.unnamed'));
     return `<h3>${esc(titre)}</h3>
 ${desc?.length ? paras(desc) : ''}
-${opts?.cards?.[i] ? `<div class="mv-card-row">${opts.cards[i]}${statsDe(g.tables) ? `<div class="mv-card-stats">${genericTables([statsDe(g.tables)])}</div>` : ''}</div>` : ''}
+${opts?.cards?.[i] ? `<div class="mv-card-row">${opts.cards[i]}<div class="mv-card-stats">${statsDe(g.tables) ? genericTables([statsDe(g.tables)]) : ''}${opts.cardLinks?.[i] ? `<p class="mv-card-open"><a class="bc-btn" href="${esc(opts.cardLinks[i])}">${esc(t('guide.builds.openInCreator'))}</a></p>` : ''}</div></div>` : ''}
 ${buildsTables(t, sansCarte(g.tables), ctx)}`;
   }).join('\n');
 
@@ -784,6 +785,9 @@ ${buildsSection(t, s.builds, allMoves, {
     community: ed?.builds?.community,
     // Une carte par build, rendue par le build : c'est le même composant que le
     // créateur, nourri des identifiants que `wiki-builds.mjs` a résolus.
+    // Chaque carte ouvre le créateur préremplie : c'est le même build, porté
+    // par le lien de partage que le créateur relit déjà.
+    cardLinks: buildCards.map((b) => `${L.page('buildCreator')}?build=${shareCode(b)}`),
     cards: cardData ? buildCards.map((b, i) => `<div class="mv-card-wrap">${buildCard({
       t, build: b, data: cardData, L, sizeOf,
       // Tous les personnages du jeu ont leur portrait, renforts compris.

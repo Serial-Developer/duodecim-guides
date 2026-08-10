@@ -252,6 +252,7 @@
       "loadoutHp": "Equipped HP attacks",
       "creatorLink": "Build and check a {name} loadout slot by slot: <a href=\"{href}\"{langAttr}>build creator</a> (CP gauge, ability exclusions and tournament rules applied).",
       "unnamed": "Build",
+      "openInCreator": "Open in the build creator",
       "unnamedNumbered": "Build {n}",
       "communityTitle": "Community builds"
     },
