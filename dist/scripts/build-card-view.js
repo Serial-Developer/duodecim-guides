@@ -36,6 +36,20 @@ const ACCESSORY_SLOTS = 10;
 // choix », et laisse des sections entières non précisées. La valeur vaut pour
 // n'importe quelle entrée de la carte, d'où un seul jeton pour toutes.
 const ANY = 'any';
+// Deux formes du même jeton. Nu, il vaut pour toute une section — c'est ce que
+// disent les builds publiés, dont la source ne remplit jamais la grille. Suffixé
+// de sa catégorie (`any:bravery|ground|`), il vaut pour un emplacement précis :
+// c'est ce que pose le créateur quand on désigne une commande. La forme longue
+// se comporte alors en tout point comme un coup — elle occupe sa place, s'y
+// affiche seule, se retire et se déplace —, sauf qu'elle ne coûte rien.
+const ANY_SLOT = 'any:';
+function anyInfo(t, id) {
+  const [kind, groupKey, style] = String(id).slice(ANY_SLOT.length).split('|');
+  return {
+    move: { id, name: t('buildCard.any'), cp: 0, cpMastered: 0 },
+    kind, groupKey, style: style || null, followUp: false,
+  };
+}
 const MAX_SLOTS = 3;
 
 // Les longues listes du payload voyagent en colonnes : on les remet en objets,
@@ -315,6 +329,9 @@ function branchesOf(build, index, char) {
   const pris = {};
   let dernier = -1;
   (build.attacks || []).forEach((id, i) => {
+    // Un jeton ne porte pas de prolongement et n'en est pas un : il ne devient
+    // pas non plus le parent du suivant.
+    if (String(id).indexOf(ANY_SLOT) === 0) return;
     const info = index[id];
     if (!info) return;
     // Un prolongement ne s'équipe jamais seul : ou il prolonge, ou il ne tient
@@ -340,7 +357,7 @@ function attackGrid(t, L, sizeOf, build, char, styles, live, grpId, H = 'h3') {
   const parPos = {};
   const enAttente = {};
   (build.attacks || []).forEach((id, i) => {
-    const info = index[id];
+    const info = String(id).indexOf(ANY_SLOT) === 0 ? anyInfo(t, id) : index[id];
     // Un prolongement n'a pas d'emplacement, qu'il en trouve un à prolonger ou
     // non : la carte montre les commandes, il n'y a pas sa place.
     if (!info || info.followUp || parentDe[id] || chaineDe[id]) return;

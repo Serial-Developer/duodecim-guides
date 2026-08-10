@@ -1079,6 +1079,23 @@
   // ce qu'on veut. La ligne suit celle du retrait : les deux réponses qui ne
   // sont pas un nom de pièce se tiennent en tête de liste.
   var ANY = 'any';
+  // Deux formes du même jeton. Nu, il vaut pour toute une section — c'est ce
+  // que disent les builds publiés, dont la source ne remplit jamais la grille.
+  // Suffixé de sa catégorie, il vaut pour un emplacement précis : c'est ce que
+  // pose le créateur quand on désigne une commande. La forme longue se comporte
+  // alors comme un coup — elle occupe sa place, s'y affiche seule, se retire et
+  // se déplace —, sauf qu'elle ne coûte rien.
+  var ANY_SLOT = 'any:';
+  function estAnySlot(id) { return String(id).indexOf(ANY_SLOT) === 0; }
+  function infoAnySlot(id) {
+    var parts = String(id).slice(ANY_SLOT.length).split('|');
+    return {
+      move: { id: id, name: T('buildCard.any'), cp: 0, cpMastered: 0 },
+      kind: parts[0], groupKey: parts[1], style: parts[2] || null,
+      followUp: false, catKey: parts.join('|'),
+    };
+  }
+
   function niveauBuild() {
     var v = Math.round(Number(state.build.level));
     return v >= 1 && v <= 100 ? v : 100;
@@ -1088,7 +1105,10 @@
     if (!b) return false;
     if ((Number(b.level) || 100) !== 100) return true;
     if (b.assist === ANY || b.summon === ANY) return true;
-    if ((b.attacks || []).indexOf(ANY) !== -1 || (b.abilities || []).indexOf(ANY) !== -1) return true;
+    if ((b.abilities || []).indexOf(ANY) !== -1) return true;
+    // Les deux formes du jeton, la nue et celle qui porte sa catégorie : ni
+    // l'une ni l'autre n'a de rang dans les catalogues du format binaire.
+    if ((b.attacks || []).some(function (id) { return id === ANY || estAnySlot(id); })) return true;
     if ((b.accessories || []).indexOf(ANY) !== -1) return true;
     return SLOTS.some(function (s) { return (b.equipment || {})[s.key] === ANY; });
   }
@@ -1281,7 +1301,7 @@
       // n'est pas orphelin pour autant — il dit que la section est laissée au
       // joueur, et le supprimer effacerait cette réponse-là.
       if (id === ANY) return;
-      var info = index.byId[id];
+      var info = estAnySlot(id) ? infoAnySlot(id) : index.byId[id];
       if (!info) { orphans.push(pos); return; }
       var parentId = index.linkParent[id];
       var chaineId = index.chainParent[id];
@@ -3358,13 +3378,10 @@
           // retiendrait.
           removeAt(slotPositions(occupe));
         } : null, function () {
-          // Le jeton vaut pour la section : re-cliquer dessus le retire, comme
-          // rechoisir une pièce déjà posée la retire de son emplacement.
-          var deja = state.build.attacks.indexOf(ANY);
-          if (deja !== -1) { removeAt([deja]); return; }
-          if (occupe) replaceAt(occupe.pos, ANY, cmd);
-          else appendAttack(ANY, cmd);
-        }, state.build.attacks.indexOf(ANY) !== -1);
+          var jeton = ANY_SLOT + ctx.catKey;
+          if (occupe) replaceAt(occupe.pos, jeton, cmd);
+          else appendAttack(jeton, cmd);
+        }, !!(occupe && estAnySlot(occupe.id)));
         return;
       }
 
