@@ -3369,19 +3369,28 @@
         var occupe = null;
         mien.forEach(function (x) { if (x.cmd === cmd) occupe = x; });
         var titre = groupLabel(ctx.group.key) + (ctx.style ? ' — ' + ctx.style : '');
-        openMoveChooser(titre + ' · ' + inputTitle(ctx.kind, cmd), ctx.choix, occupe ? occupe.move : null, function (choisi) {
-          if (occupe) replaceAt(occupe.pos, choisi.id, cmd);
-          else appendAttack(choisi.id, cmd);
-        }, null, occupe ? function () {
+        // Le jeton nu vaut pour toute la section : c'est lui que portent les
+        // builds venus des fiches. Un emplacement libre affiche alors « au
+        // choix » sans rien occuper — la fenêtre doit tout de même proposer de
+        // le reprendre, faute de quoi la réponse était irréversible.
+        var nu = function () { return state.build.attacks.indexOf(ANY); };
+        var auChoixIci = !occupe && nu() !== -1;
+        var faux = { id: ANY, name: T('buildCard.any') };
+        var retirer = occupe
           // Retirer un coup emporte ce qui pend sous lui — HP link ou
           // enchaînement : ils se rattachent à sa position, plus rien ne les
           // retiendrait.
-          removeAt(slotPositions(occupe));
-        } : null, function () {
+          ? function () { removeAt(slotPositions(occupe)); }
+          : (auChoixIci ? function () { removeAt([nu()]); } : null);
+        openMoveChooser(titre + ' · ' + inputTitle(ctx.kind, cmd), ctx.choix, occupe ? occupe.move : (auChoixIci ? faux : null), function (choisi) {
+          if (occupe) replaceAt(occupe.pos, choisi.id, cmd);
+          else appendAttack(choisi.id, cmd);
+        }, null, retirer, function () {
+          if (auChoixIci) { removeAt([nu()]); return; }
           var jeton = ANY_SLOT + ctx.catKey;
           if (occupe) replaceAt(occupe.pos, jeton, cmd);
           else appendAttack(jeton, cmd);
-        }, !!(occupe && estAnySlot(occupe.id)));
+        }, auChoixIci || !!(occupe && estAnySlot(occupe.id)));
         return;
       }
 
