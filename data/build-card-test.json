@@ -1,0 +1,56 @@
+{
+  "_doc": "Build de démonstration de la carte, pour /build-card-test.html. Ce n'est pas une donnée du jeu : c'est la sortie du décodeur du créateur de builds, relevée telle quelle pour le lien ci-dessous. Aucune valeur n'y est saisie à la main. Le jour où la carte lira un lien directement, ce fichier disparaît.",
+  "source": "https://serial-developer.github.io/duodecim-guides/build-creator.html?build=d8ZsYpi9zhNXAYZmLdAADAAAoJlgAABwAgDEosLFFBAUCoMBGA4lhuQpCHQWL5A9PbmUgd2luZ2VkIER1ZGUA",
+  "build": {
+    "character": "sephiroth",
+    "name": "One winged Dude",
+    "attacks": [
+      "bravery:ground:Shadow Flare (ground)",
+      "bravery:aerial:Shadow Flare (midair)",
+      "hp:aerial:Hell's Gate",
+      "hp:aerial:Heaven's Light",
+      "hp:aerial:Scintilla (midair)",
+      "hp:ground:Octaslash (ground)",
+      "hp:ground:Black Materia",
+      "hp:ground:Scintilla (ground)",
+      "bravery:aerial:Oblivion",
+      "bravery:aerial:Sudden Cruelty",
+      "bravery:ground:Reaper",
+      "bravery:ground:Transience"
+    ],
+    "attackSlots": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2
+    ],
+    "equipment": {
+      "weapon": "weapon:one-winged-angel-weapon:lv100",
+      "hand": "hand:lufenian-dirk:lv100",
+      "head": "head:lufenian-hairpin:lv100",
+      "body": "body:lufenian-vest:lv100"
+    },
+    "accessories": [
+      "basic::hyper-ring",
+      "basic::muscle-belt",
+      "basic::sniper-eye",
+      "basic::battle-hammer",
+      "booster:ETC:summon-unused",
+      "booster:ATK:pre-ex-mode",
+      "booster:STG:aerial",
+      "booster:OPP:summon-unused",
+      "special::tenacious-attacker",
+      "special::glutton"
+    ],
+    "assist": "kuja",
+    "summon": "rubicante"
+  }
+}

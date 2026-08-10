@@ -5,6 +5,8 @@ import {
   linksFor, ordinal,
 } from './helpers.mjs';
 import { ldArticle } from './jsonld.mjs';
+import { buildCard } from './build-card.mjs';
+import { shareCode } from '../../scripts/wiki-builds.mjs';
 import { isHeaderRow, duplicatesHeaderRow, isTableTitle, isOrphanRow } from '../../scripts/move-shape.mjs';
 
 // Champs d'un coup, dans l'ordre d'affichage. Les clés sont celles des données
@@ -403,13 +405,46 @@ function buildsSection(t, builds, allMoves, opts) {
   // Le panneau est requis dès qu'un tableau de moveset est vide, même si aucun total
   // CP ne le précède (le budget est alors simplement omis de la légende).
   const needed = groups.some((g) => (g || []).some(isEmptyMoveset));
-  const ctx = { pending: needed ? (opts?.loadout ? loadoutTables(t, opts.loadout) : cpBudgetPanel(t, totals, allMoves, opts)) : '' };
+  // Le panneau des coûts en CP occupait la place du tableau de moveset vide :
+  // la carte porte désormais les coups du build et sa capacité, il fait double
+  // emploi. Le relevé rédigé de l'éditorial (`movesetLoadout`) reste, lui : il
+  // dit ce que le tableau du wiki taisait.
+  const ctx = { pending: needed && opts?.loadout ? loadoutTables(t, opts.loadout) : '' };
 
   // Tous les builds passent par le même rendu, y compris quand il n'y en a
   // qu'un : sans cela le premier build n'avait pas de titre — la prose
   // enchaînait sur son tableau de stats — alors que les suivants, portés par
   // des sous-blocs, en avaient un. Le lecteur ne voyait pas où il commençait.
   const builtGroups = splitBuilds(builds);
+  // La composition du build est désormais portée par sa carte : les tableaux
+  // « Equipment » et « Bravery attacks » qu'elle reprend disparaissent, celui
+  // des stats reste — ce sont les chiffres que la source annonce, que la carte
+  // statique n'affiche pas.
+  // Le tableau des stats les rejoint : sept valeurs n'ont pas besoin de toute
+  // la largeur, et à côté de la carte elles se lisent avec elle.
+  const REPRIS = new Set(['Equipment', 'Bravery attacks', 'Stats']);
+  const avecCartes = !!opts?.cards?.length;
+  const sansCarte = (tables) => (avecCartes ? tables.filter((tb) => !(tb.rows?.[0]?.length === 1 && REPRIS.has(tb.rows[0][0]))) : tables);
+  const statsDe = (tables) => (tables || []).find((tb) => tb.rows?.[0]?.length === 1 && tb.rows[0][0] === 'Stats');
+  // Un bloc porte un build s'il porte un tableau d'équipement — c'est la règle
+  // de la conversion, et l'ordre est le sien : les groupes de tableaux d'abord,
+  // les sous-blocs ensuite. Cinq personnages n'ont leurs builds que dans des
+  // sous-blocs (Cloud, le Guerrier de la Lumière, Cloud of Darkness, l'Empereur,
+  // Zidane) : sans ce chemin-là, leurs onze builds restaient sans carte.
+  const aUnBuild = (tables) => (tables || []).some((tb) => tb.rows?.[0]?.length === 1 && tb.rows[0][0] === 'Equipment');
+  const attendus = builtGroups.filter((g) => aUnBuild(g.tables)).length + subs.filter((sub) => aUnBuild(sub.tables)).length;
+  // Un décalage donnerait à un build la carte d'un autre : à la moindre
+  // divergence de compte, on n'en pose aucune.
+  const cartes = (opts?.cards || []).length === attendus ? opts.cards : [];
+  let iCarte = 0;
+  const carteDe = (tables) => (aUnBuild(tables) ? (cartes[iCarte++] || '') : '');
+  const bloc = (tables) => {
+    const carte = carteDe(tables);
+    if (!carte) return '';
+    const stats = statsDe(tables);
+    return `<div class="mv-card-row">${carte}<div class="mv-card-stats">${stats ? genericTables([stats]) : ''}${cartes.length && cardLien(iCarte - 1)}</div></div>`;
+  };
+  const cardLien = (i) => (opts?.cardLinks?.[i] ? `<p class="mv-card-open"><a class="bc-btn" href="${esc(opts.cardLinks[i])}">${esc(t('guide.builds.openInCreator'))}</a></p>` : '');
   const main = builtGroups.map((g, i) => {
     const desc = g.name ? opts?.perBuild?.[g.name] : null;
     // Le wiki ne nomme pas toujours son onglet (Firion). Plutôt que d'inventer
@@ -420,7 +455,8 @@ function buildsSection(t, builds, allMoves, opts) {
       : t('guide.builds.unnamed'));
     return `<h3>${esc(titre)}</h3>
 ${desc?.length ? paras(desc) : ''}
-${buildsTables(t, g.tables, ctx)}`;
+${bloc(g.tables)}
+${buildsTables(t, sansCarte(g.tables), ctx)}`;
   }).join('\n');
 
   // Un build peut arriver par un sous-bloc plutôt que par un groupe de tableaux
@@ -431,7 +467,8 @@ ${buildsTables(t, g.tables, ctx)}`;
     const desc = sub.title ? opts?.perBuild?.[sub.title] : null;
     return `${sub.title ? `<h3>${esc(sub.title)}</h3>` : ''}
 ${desc?.length ? paras(desc) : ''}
-${buildsTables(t, sub.tables, ctx)}`;
+${bloc(sub.tables)}
+${buildsTables(t, sansCarte(sub.tables), ctx)}`;
   }).join('\n');
   // Le panneau des coûts en CP prend normalement la place du premier tableau de
   // moveset vide. Si aucun n'a subsisté dans un bloc affiché, il se place en fin
@@ -493,10 +530,24 @@ function heroChips(t, info) {
   add(t('guide.chips.dash'), (info['Dash Speed'] || '').split(',')[0]);
   add(t('guide.chips.atk'), (info['Base ATK (LV100)'] || '').split(' ')[0]);
   add(t('guide.chips.def'), (info['Base DEF (LV100)'] || '').split(' ')[0]);
+  // La source ne répond pas toujours par oui ou par non : elle nomme souvent
+  // ce dont elle parle — « Energy Ray » pour le HP en un coup de Yuna, « Yes
+  // (Combos only) » pour les HP links de Squall. Chercher « yes » en tête
+  // rendait donc « non » là où la source dit oui et détaille, et taisait la
+  // nuance partout ailleurs. Seuls « No » et « None » valent non ; le reste
+  // vaut oui, et sa précision s'affiche telle que la source l'écrit.
+  const ouiNon = (val, label) => {
+    const brut = String(val).trim();
+    const negatif = /^(no|none)$/i.test(brut);
+    const detail = negatif ? '' : (/^yes\b/i.test(brut)
+      ? (brut.match(/\(([^)]*)\)/) || [])[1] || ''
+      : brut);
+    return `<span class="chip ${negatif ? 'no' : 'ok'}" title="${esc(`${label} : ${brut}`)}">${label} <b>${negatif ? no : yes}</b>${detail ? `<span class="chip-note">${esc(detail)}</span>` : ''}</span>`;
+  };
   const oneHit = info['1-Hit HP'];
-  if (oneHit) chips.push(`<span class="chip ${/^yes/i.test(oneHit) ? 'ok' : 'no'}">${t('guide.chips.oneHitHp')} <b>${/^yes/i.test(oneHit) ? yes : no}</b></span>`);
+  if (oneHit) chips.push(ouiNon(oneHit, t('guide.chips.oneHitHp')));
   const links = info['HP Links'];
-  if (links) chips.push(`<span class="chip ${/^yes/i.test(links) ? 'ok' : 'no'}">${t('guide.chips.hpLinks')} <b>${/^yes/i.test(links) ? yes : no}</b></span>`);
+  if (links) chips.push(ouiNon(links, t('guide.chips.hpLinks')));
   return `<div class="chips">${chips.join('')}</div>`;
 }
 
@@ -582,7 +633,7 @@ const SECTION_IDS = ['meta', 'overview', 'unlock', 'moves', 'unique', 'gameplan'
 
 export function renderGuide({
   char, ed, tierEntry, castStats, hasPortrait, moveImages, sizeOf, dates, ogImage,
-  roster = [], t, locale, path, alternates, availability,
+  roster = [], t, locale, path, alternates, availability, buildCards = [], cardData = null,
 }) {
   const L = linksFor(path, locale, availability);
   const ctx = { slug: char.slug, moveImages, sizeOf, L };
@@ -766,6 +817,22 @@ ${buildsSection(t, s.builds, allMoves, {
     // Builds relevés hors wiki (guides et forums), sans tableau : ils forment
     // leur propre bloc, chacun sous son nom et sa source.
     community: ed?.builds?.community,
+    // Une carte par build, rendue par le build : c'est le même composant que le
+    // créateur, nourri des identifiants que `wiki-builds.mjs` a résolus.
+    // Chaque carte ouvre le créateur préremplie : c'est le même build, porté
+    // par le lien de partage que le créateur relit déjà.
+    cardLinks: buildCards.map((b) => `${L.page('buildCreator')}?build=${shareCode(b)}`),
+    cards: cardData ? buildCards.map((b, i) => `<div class="mv-card-wrap">${buildCard({
+      t, build: b, data: cardData, L, sizeOf,
+      // Tous les personnages du jeu ont leur portrait, renforts compris.
+      hasPortrait: () => true,
+      variant: 'portrait-full',
+      uid: `${char.slug}-${i}`,
+      mastered: true,
+      // Chaque build porte déjà un h3 dans la fiche : les panneaux de sa carte
+      // se rangent dessous.
+      hLevel: 4,
+    })}</div>`) : [],
   })}
 ${ed?.builds?.notes ? `<p class="mv-desc">${esc(ed.builds.notes)}</p>` : ''}
 ${sectionSources(t, secSrc.builds)}`

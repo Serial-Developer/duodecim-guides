@@ -29,6 +29,36 @@ export function infoBanner(html) {
 
 export const paras = (arr) => (arr || []).map((p) => `<p>${esc(p)}</p>`).join('\n');
 
+// Grille de sélection des personnages, reprise de l'écran « Player Select » du
+// jeu : les venus de Duodecim, les guerriers de Cosmos, ceux de Chaos, puis la
+// rangée d'appoint. Roster exact, ordre des rangées libre.
+export const ROSTER_ROWS = [
+  ['lightning', 'vaan', 'laguna-loire', 'yuna', 'kain-highwind', 'tifa-lockhart'],
+  ['warrior-of-light', 'firion', 'onion-knight', 'cecil-harvey', 'bartz-klauser', 'terra-branford', 'cloud-strife', 'squall-leonhart', 'zidane-tribal', 'tidus'],
+  ['garland', 'the-emperor', 'cloud-of-darkness', 'golbez', 'exdeath', 'kefka-palazzo', 'sephiroth', 'ultimecia', 'kuja', 'jecht'],
+  ['shantotto', 'gabranth', 'prishe', 'gilgamesh', 'feral-chaos'],
+];
+
+// La landing pose dans ces cases des liens vers les guides, le créateur de
+// builds des boutons de sélection : même disposition, mêmes vignettes, deux
+// usages. `cell(slug, char)` rend le contenu de la case ; le badge de tier, lui,
+// appartient à la grille — ancré à la cellule et non au contenu, il reste
+// immobile quand la vignette grandit au survol.
+export function rosterGrid({ bySlug, cell, tierBySlug = {}, id = '', role = '', ariaLabel = '' }) {
+  const rows = ROSTER_ROWS.map((row) => `<li class="char-row">
+${row.map((slug) => {
+    const c = bySlug[slug];
+    if (!c) return '';
+    const tier = tierBySlug[slug];
+    return `<span class="char-cell">${cell(slug, c)}
+${tier ? `<span class="tier-badge" aria-hidden="true">${esc(tier)}</span>` : ''}</span>`;
+  }).filter(Boolean).join('\n')}
+</li>`).join('\n');
+  return `<ul class="char-grid"${id ? ` id="${id}"` : ''}${role ? ` role="${role}"` : ''}${ariaLabel ? ` aria-label="${esc(ariaLabel)}"` : ''}>
+${rows}
+</ul>`;
+}
+
 // Ancre stable depuis un nom ("Day to Die" -> "t-day-to-die") — partagée entre
 // les cartes de tournois.html et les liens du calendrier.
 export const slugAnchor = (name) => 't-' + String(name)
@@ -46,8 +76,16 @@ export function priorityBadge(prio) {
 }
 
 // "11F", "32F (charge), 2F (release)" -> 11 / 32 ; null si absent
+//
+// Un « + » en tête dit que le chiffre se compte à partir d'autre chose : les
+// variantes de Cloud of Darkness sortent « +4F » après le coup de fouet de sa
+// posture, laquelle démarre à 13F. Lue comme un startup, cette valeur en faisait
+// l'attaque la plus rapide du jeu. Un nombre relatif n'a pas de place sur un axe
+// absolu : on le rend nul, faute d'avoir de quoi le convertir.
 export function startupFrames(s) {
-  const m = String(s ?? '').match(/(\d+)\s*F/i);
+  const brut = String(s ?? '').trim();
+  if (brut.startsWith('+')) return null;
+  const m = brut.match(/(\d+)\s*F/i);
   return m ? parseInt(m[1], 10) : null;
 }
 

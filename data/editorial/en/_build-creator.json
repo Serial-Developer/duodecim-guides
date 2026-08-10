@@ -9,6 +9,23 @@
   "_abilityExclusionsNote": "Incompatibilities are inferred from the wiki's descriptions: two abilities that occupy the same command in the same situation exclude each other (R + triangle on the ground = Ground Dash, Reverse Ground Dash, Omni Ground Dash, Omni Ground Dash+), as do the tiers of a single ability. A prerequisite is not a conflict: “available after Multi Air Slide” takes Multi Air Slide out of the group. This table only exists to declare a case the inference would miss: [{ \"abilities\": [\"Name A\", \"Name B\"], \"reason\": \"…\", \"source\": \"…\" }]. The build fails if a name does not exist.",
   "_hpLinksNote": "The wiki only writes out the bravery → HP attack pair for a handful of characters (“Branching from Launch”); elsewhere it is buried in the prose. Known pairs are declared here, by slug: [{ \"from\": \"bravery attack name\", \"to\": \"HP attack name\", \"source\": \"…\" }]. The names must match those on the character pages exactly; the build fails otherwise.",
   "hpLinks": {},
+  "_hpLinkFixesNote": "The Final Fantasy Wiki's link table and dissidia.wiki's move descriptions disagree on which bravery opens which HP attack. Warrior of Light's two Bitter End are swapped there: « Bitter End A » says « Branching from Rising Buckler », « Bitter End B » says « Branching from Shield Strike ». Corrections are declared here, by slug: { \"slug\": [{ \"to\": \"…\", \"from\": \"…\", \"was\": \"…\", \"source\": \"…\" }] }. `was` is the origin the table currently gives: a declaration whose `was` no longer matches is refused and reported, so a re-scrape that fixes the source cannot leave a stale arbitration in place.",
+  "hpLinkFixes": {
+    "warrior-of-light": [
+      {
+        "to": "Bitter End A",
+        "from": "Rising Buckler",
+        "was": "Shield Strike",
+        "source": "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      },
+      {
+        "to": "Bitter End B",
+        "from": "Shield Strike",
+        "was": "Rising Buckler",
+        "source": "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      }
+    ]
+  },
   "_followUpsNote": "Which bravery attacks accept a follow-up — not which follow-up, any of them will do. Prishe's whole point is that a (One) chains into any (Two), each pairing triggering a different effect (Skillchains). The parser derives the starters on its own where the follow-up names its origin (« Combo (One) » → « Combo (Two) »); declare them here only where the wiki says it in prose. Firion: « Rope Knife, Lance Combo and Reel Axe can be followed up with one of three attacks ». A bravery listed nowhere carries no follow-up: Prishe's Banish and Holy do not chain.",
   "followUps": {
     "firion": {
@@ -19,6 +36,37 @@
       ],
       "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
     }
+  },
+  "_moveCostsNote": "dissidia.wiki sometimes leaves an attack's CP unwritten — « ?? » for Cloud of Darkness's Tentacle of Pain, whose three siblings all cost 60 (30). The Final Fantasy Wiki's move table gives it. Missing costs are declared here, by slug: { \"slug\": [{ \"move\": \"…\", \"cp\": \"60 (30)\", \"source\": \"…\" }] }. The name must match the character page exactly, and a declaration that overwrites a cost the wiki already gives is refused: this fills gaps, it does not arbitrate between sources.",
+  "moveCosts": {
+    "cloud-of-darkness": [
+      {
+        "move": "Tentacle of Pain",
+        "cp": "60 (30)",
+        "source": "https://finalfantasy.fandom.com/wiki/Cloud_of_Darkness_(Dissidia_012)"
+      }
+    ]
+  },
+  "_moveFixesNote": "The two sources disagree on a few cells of a move table, and this is where the arbitration is written down, by slug: { \"slug\": [{ \"move\": \"…\", \"field\": \"effects\", \"variant\": 2, \"was\": \"--\", \"value\": \"Absorb\", \"source\": \"…\" }] }. `variant` counts from 1, as the tables do; drop it when the field holds a single value. Unlike `moveCosts`, which only fills gaps, these declarations overwrite dissidia.wiki — so each one recalls the value it replaces (`was`), and a declaration whose original value no longer matches is refused and reported instead of being applied.",
+  "moveFixes": {
+    "cloud-of-darkness": [
+      {
+        "move": "Tentacle of Spite",
+        "field": "effects",
+        "variant": 2,
+        "was": "--",
+        "value": "Absorb",
+        "source": "https://finalfantasy.fandom.com/wiki/Cloud_of_Darkness_(Dissidia_012)"
+      },
+      {
+        "move": "Tentacle of Scorn",
+        "field": "effects",
+        "variant": 1,
+        "was": "Wall Rush",
+        "value": "--",
+        "source": "https://finalfantasy.fandom.com/wiki/Cloud_of_Darkness_(Dissidia_012)"
+      }
+    ]
   },
   "_summonEffectsNote": "The wiki's Summons page does not cover every summon cited by the tournament rules. Missing effects are declared here, by identifier: { \"slug\": { \"text\": \"…\", \"source\": \"…\" } }. The build fails if the identifier matches no summon.",
   "summonEffects": {
@@ -33,7 +81,8 @@
     "hpLinks": "The sources say whether a character has HP links, but not which attacks chain. The information is shown as-is, with no per-attack detail.",
     "maxBooster": "The multiplicative stacking of boosters is confirmed by a worked example in the multiplayer build guide (1.5 × 1.4 × 1.3 gives the stated ×2.7). Boosters act only on accessory effects, not on equipment statistics. The tool reads that contrast strictly: it multiplies the percentage effects of accessories and nothing else. No source says whether a flat bonus follows the multiplier, and taking LUK +4 to +10.8 or a summon recharge to +2.7 would state something the sources do not — so those values stay as written. Whether a booster is live depends on a battle condition (“When your HP is 100%”), which no build can settle: the detailed stats panel lists the equipped boosters and lets you untick the ones whose condition is not met. Those tick boxes describe the situation, not the build — they are neither saved, exported nor carried by the share link.",
     "detailStats": "The detailed stats panel adds up modifiers of the same name across equipment, accessories, active sets and conditional abilities. No source states how two effects of the same name combine in game, so the sum is a reading of the sources, not a verified formula. Effects the sources write as a sentence — the Qu'Bia accessories, the “chance” effects — are not turned into numbers: they are reproduced word for word under “Other effects”.",
-    "attackSlotOrder": "A slot is not stored: an attack’s position among the attacks kept for its category is what places it. Each attack carries the command it occupies, so a command can be left empty between two filled ones — picking an attack on → puts it on →, even with the neutral stick free. The share link gained a format for this (prefix « d »); the older « c » still reads, its commands simply unstated and therefore filled in order. An attack moves to another command by dragging it by its handle — onto an empty command it moves, onto a filled one the two swap — or, from the keyboard, with the up and down arrow keys on that handle. A same attack may occupy several inputs — Vaan can put Crossbow on all three of his ground bravery commands — so an equipped attack is never identified by its name, always by its place in the list. Follow-ups attach to the attack that precedes them. Which bravery attacks accept one is documented; which follow-up they take is not constrained — a Prishe “(One)” chains into any “(Two)”, and the pairing is what changes the effect."
+    "attackSlotOrder": "A slot is not stored: an attack’s position among the attacks kept for its category is what places it. Each attack carries the command it occupies, so a command can be left empty between two filled ones — picking an attack on → puts it on →, even with the neutral stick free. The share link gained a format for this (prefix « d »); the older « c » still reads, its commands simply unstated and therefore filled in order. An attack moves to another command by dragging it by its handle — onto an empty command it moves, onto a filled one the two swap — or, from the keyboard, with the up and down arrow keys on that handle. A same attack may occupy several inputs — Vaan can put Crossbow on all three of his ground bravery commands — so an equipped attack is never identified by its name, always by its place in the list. Follow-ups attach to the attack that precedes them. Which bravery attacks accept one is documented; which follow-up they take is not constrained — a Prishe “(One)” chains into any “(Two)”, and the pairing is what changes the effect.",
+    "characterLevel": "Character level only decides what can be equipped: a piece is worn from the level it requires, never before. It does not change the totals — the sources give base statistics at level 100 only, so HP, BRV, ATK and DEF stay those of a level-100 character whatever the level shown."
   },
   "help": [
     {

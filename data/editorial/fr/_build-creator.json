@@ -9,6 +9,23 @@
   "_abilityExclusionsNote": "Les incompatibilités sont déduites des descriptions du wiki : deux abilities qui occupent la même commande dans la même situation s'excluent (R + triangle au sol = Ground Dash, Reverse Ground Dash, Omni Ground Dash, Omni Ground Dash+), de même que les paliers d'une même ability. Un prérequis n'est pas un conflit : « available after Multi Air Slide » sort Multi Air Slide du groupe. Ce tableau ne sert qu'à déclarer un cas que la déduction raterait : [{ \"abilities\": [\"Nom A\", \"Nom B\"], \"reason\": \"…\", \"source\": \"…\" }]. Le build échoue si un nom n'existe pas.",
   "_hpLinksNote": "Le wiki n'écrit la paire bravery → attaque HP que pour une poignée de personnages (« Branching from Launch ») ; ailleurs elle est noyée dans la prose. Les paires connues se déclarent ici, par slug : [{ \"from\": \"nom de la bravery\", \"to\": \"nom de l'attaque HP\", \"source\": \"…\" }]. Les noms doivent correspondre exactement à ceux des fiches ; le build échoue sinon.",
   "hpLinks": {},
+  "_hpLinkFixesNote": "La table de liens du Final Fantasy Wiki et les descriptions de coups de dissidia.wiki se contredisent sur la bravery qui ouvre une attaque HP. Les deux Bitter End du Guerrier de la Lumière y sont inversées : « Bitter End A » dit « Branching from Rising Buckler », « Bitter End B » dit « Branching from Shield Strike ». Les corrections se déclarent ici, par slug : { \"slug\": [{ \"to\": \"…\", \"from\": \"…\", \"was\": \"…\", \"source\": \"…\" }] }. `was` est l'origine que la table donne aujourd'hui : une déclaration dont le `was` ne correspond plus est refusée et rapportée, si bien qu'un re-scrape qui corrige la source ne peut pas laisser vivre un arbitrage périmé.",
+  "hpLinkFixes": {
+    "warrior-of-light": [
+      {
+        "to": "Bitter End A",
+        "from": "Rising Buckler",
+        "was": "Shield Strike",
+        "source": "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      },
+      {
+        "to": "Bitter End B",
+        "from": "Shield Strike",
+        "was": "Rising Buckler",
+        "source": "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      }
+    ]
+  },
   "_followUpsNote": "Quelles braveries acceptent un enchaînement — non pas lequel, n'importe lequel convient. Tout le principe de Prishe est qu'une (One) s'enchaîne avec n'importe quelle (Two), chaque association déclenchant un effet différent (Skillchains). Le parseur déduit seul les braveries de départ là où l'enchaînement nomme son origine (« Combo (One) » → « Combo (Two) ») ; ne les déclarer ici que là où le wiki ne le dit qu'en prose. Firion : « Rope Knife, Lance Combo and Reel Axe can be followed up with one of three attacks ». Une bravery listée nulle part ne porte aucun enchaînement : Banish et Holy, chez Prishe, ne s'enchaînent pas.",
   "followUps": {
     "firion": {
@@ -19,6 +36,37 @@
       ],
       "source": "https://dissidia.wiki/Firion_(Dissidia_012)"
     }
+  },
+  "_moveCostsNote": "dissidia.wiki laisse parfois le coût d'un coup en blanc — « ?? » pour le Tentacle of Pain de Cloud of Darkness, dont les trois voisins coûtent tous 60 (30). Le tableau des coups du Final Fantasy Wiki le donne. Les coûts manquants se déclarent ici, par slug : { \"slug\": [{ \"move\": \"…\", \"cp\": \"60 (30)\", \"source\": \"…\" }] }. Le nom doit correspondre exactement à celui de la page du personnage, et une déclaration qui écraserait un coût déjà donné par le wiki est refusée : on comble un trou, on n'arbitre pas entre deux sources.",
+  "moveCosts": {
+    "cloud-of-darkness": [
+      {
+        "move": "Tentacle of Pain",
+        "cp": "60 (30)",
+        "source": "https://finalfantasy.fandom.com/wiki/Cloud_of_Darkness_(Dissidia_012)"
+      }
+    ]
+  },
+  "_moveFixesNote": "Les deux sources se contredisent sur quelques cellules d'un tableau de coups : c'est ici qu'est consigné l'arbitrage, par slug : { \"slug\": [{ \"move\": \"…\", \"field\": \"effects\", \"variant\": 2, \"was\": \"--\", \"value\": \"Absorb\", \"source\": \"…\" }] }. `variant` se compte à partir de 1, comme les tableaux ; on l'omet quand le champ ne porte qu'une valeur. À la différence de `moveCosts`, qui ne comble que des trous, ces déclarations écrasent dissidia.wiki — chacune rappelle donc la valeur qu'elle remplace (`was`), et une déclaration dont la valeur d'origine ne correspond plus est refusée et rapportée au lieu d'être appliquée.",
+  "moveFixes": {
+    "cloud-of-darkness": [
+      {
+        "move": "Tentacle of Spite",
+        "field": "effects",
+        "variant": 2,
+        "was": "--",
+        "value": "Absorb",
+        "source": "https://finalfantasy.fandom.com/wiki/Cloud_of_Darkness_(Dissidia_012)"
+      },
+      {
+        "move": "Tentacle of Scorn",
+        "field": "effects",
+        "variant": 1,
+        "was": "Wall Rush",
+        "value": "--",
+        "source": "https://finalfantasy.fandom.com/wiki/Cloud_of_Darkness_(Dissidia_012)"
+      }
+    ]
   },
   "_summonEffectsNote": "La page Summons du wiki ne couvre pas toutes les invocations citées par les règles de tournoi. Les effets manquants se déclarent ici, par identifiant : { \"slug\": { \"text\": \"…\", \"source\": \"…\" } }. Le build échoue si l'identifiant ne correspond à aucune invocation.",
   "summonEffects": {
@@ -33,7 +81,8 @@
     "hpLinks": "Les sources indiquent si un personnage dispose de HP links, mais pas quelles attaques s'enchaînent. L'information est affichée telle quelle, sans détail par attaque.",
     "maxBooster": "Le cumul multiplicatif des boosters est confirmé par un exemple chiffré du guide de builds multijoueur (1.5 × 1.4 × 1.3 donne le ×2.7 annoncé). Les boosters n'agissent que sur les effets des accessoires, pas sur les statistiques des équipements. L'outil lit cette opposition à la lettre : il multiplie les effets en pourcentage des accessoires, et rien d'autre. Aucune source ne dit si un bonus en points suit le multiplicateur, et porter un LUK +4 à +10,8 ou une recharge d'invocation à +2,7 affirmerait ce que les sources taisent — ces valeurs restent donc telles quelles. Qu'un booster soit actif dépend d'une condition de combat (« When your HP is 100% »), qu'aucun build ne peut trancher : le panneau de statistiques détaillées liste les boosters équipés et permet de décocher ceux dont la condition n'est pas remplie. Ces cases décrivent la situation, pas le build — elles ne sont ni enregistrées, ni exportées, ni transportées par le lien de partage.",
     "detailStats": "Le panneau de statistiques détaillées additionne les modificateurs de même nom portés par les équipements, les accessoires, les sets actifs et les abilities conditionnelles. Aucune source ne dit comment deux effets de même nom se combinent en jeu : la somme est une lecture des sources, pas une formule vérifiée. Les effets que les sources rédigent en phrase — les accessoires Qu'Bia, les effets « chance » — ne sont pas chiffrés : ils sont reproduits mot pour mot sous « Autres effets ».",
-    "attackSlotOrder": "L'emplacement n'est pas stocké : c'est la position d'une attaque parmi celles retenues pour sa catégorie qui la place. Chaque attaque porte la commande qu'elle occupe, si bien qu'une commande peut rester vide entre deux pleines — choisir une attaque sur → la pose sur →, même si le stick neutre est libre. Le lien de partage a gagné un format pour cela (préfixe « d ») ; l'ancien « c » se lit toujours, ses commandes simplement non exprimées, donc attribuées dans l'ordre. Une attaque se déplace sur une autre commande en la faisant glisser par sa poignée — sur une commande vide elle s'y installe, sur une commande occupée les deux échangent — ou, au clavier, avec les flèches haut et bas sur cette poignée. Une même attaque peut occuper plusieurs commandes — Vaan peut poser Crossbow sur ses trois commandes de bravery au sol — aussi une attaque équipée n'est-elle jamais repérée par son nom, toujours par sa place dans la liste. Les enchaînements se rattachent à l'attaque qui les précède. Quelles braveries en acceptent un est documenté ; lequel elles reçoivent ne l'est pas — une « (One) » de Prishe s'enchaîne avec n'importe quelle « (Two) », et c'est l'association qui change l'effet."
+    "attackSlotOrder": "L'emplacement n'est pas stocké : c'est la position d'une attaque parmi celles retenues pour sa catégorie qui la place. Chaque attaque porte la commande qu'elle occupe, si bien qu'une commande peut rester vide entre deux pleines — choisir une attaque sur → la pose sur →, même si le stick neutre est libre. Le lien de partage a gagné un format pour cela (préfixe « d ») ; l'ancien « c » se lit toujours, ses commandes simplement non exprimées, donc attribuées dans l'ordre. Une attaque se déplace sur une autre commande en la faisant glisser par sa poignée — sur une commande vide elle s'y installe, sur une commande occupée les deux échangent — ou, au clavier, avec les flèches haut et bas sur cette poignée. Une même attaque peut occuper plusieurs commandes — Vaan peut poser Crossbow sur ses trois commandes de bravery au sol — aussi une attaque équipée n'est-elle jamais repérée par son nom, toujours par sa place dans la liste. Les enchaînements se rattachent à l'attaque qui les précède. Quelles braveries en acceptent un est documenté ; lequel elles reçoivent ne l'est pas — une « (One) » de Prishe s'enchaîne avec n'importe quelle « (Two) », et c'est l'association qui change l'effet.",
+    "characterLevel": "Le niveau du personnage ne décide que de ce qui peut s'équiper : une pièce se porte à partir du niveau qu'elle exige, jamais avant. Il ne change pas les totaux — les sources ne donnent les statistiques de base qu'au niveau 100, donc HP, BRV, ATK et DEF restent ceux d'un personnage de niveau 100 quel que soit le niveau affiché."
   },
   "help": [
     {

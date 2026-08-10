@@ -19,10 +19,20 @@
   // (voir src/i18n/build-creator-strings.mjs). Ce script est servi tel quel aux
   // deux langues : il ne contient donc aucun texte.
   var BC = window.BC_I18N || { locale: 'fr', ui: {}, app: {} };
-  function T(key, params) {
-    var node = BC.app;
+  // Le rendu partagé de la carte demande ses libellés au même `T`, sous des
+  // racines qui lui sont propres (« buildCard.… », « accessories.… »). Le
+  // créateur a déjà un `accessories` à lui : on cherche donc d'abord dans le
+  // sien, et l'on ne se rabat sur les tables de la carte qu'à défaut.
+  function lire(racine, key) {
+    var node = racine;
     var parts = key.split('.');
     for (var i = 0; i < parts.length && node != null; i++) node = node[parts[i]];
+    return node;
+  }
+  function T(key, params) {
+    var node = lire(BC.app, key);
+    if (node == null) node = lire(BC.ui, key);
+    if (node == null) node = lire(BC, key);
     if (node == null) return '⟨' + key + '⟩';
     if (!params) return String(node);
     return String(node).replace(/\{(\w+)\}/g, function (m, k) {
@@ -117,6 +127,24 @@
   // Les motifs d'illégalité sont mutualisés dans une légende (item.ill = code).
   function illegalReason(item) { return item && item.ill ? D.illegalReasons[item.ill] : null; }
 
+  // Icônes de rang et de type d'un accessoire. Quatorze fichiers couvrent les
+  // 551 accessoires : l'association se fait par `rank` et `boosterType`, que le
+  // payload porte déjà. Le type devant le nom, le rang derrière, comme le jeu.
+  var ASSET_BASE = (root.getAttribute('data-asset-base') || 'assets/');
+  var ICON_LABEL = {
+    rank: function (v) { return T('accessories.rankIcon', { rank: v }); },
+    type: function (v) { return T('accessories.typeIcon', { type: v }); },
+    cat: function (v) { return T('accessories.categoryIcon', { category: T('accCategories.' + v) || v }); },
+  };
+  function accessoryIcon(kind, valeur) {
+    if (!valeur) return null;
+    var label = ICON_LABEL[kind](valeur);
+    return el('img', {
+      class: 'acc-icon acc-icon-' + kind, src: ASSET_BASE + 'accessory-icons/' + kind + '-' + valeur + '.png',
+      alt: label, title: label, width: 16, height: 16, loading: 'lazy',
+    });
+  }
+
   // Un build hors budget reste valide au sens du stockage : « invalide » ne
   // désigne ici que l'état signalé à l'utilisateur.
   function emptyBuild(slug) {
@@ -134,6 +162,11 @@
       // commande libre : on ne pouvait pas laisser un trou.
       attackSlots: [],
       abilities: [],
+      // Niveau du personnage, de 1 à 100 : il ne change rien aux totaux — les
+      // sources ne donnent les statistiques de base qu'au niveau 100 — mais il
+      // décide de ce qui peut s'équiper, une pièce ne se portant qu'à partir du
+      // niveau qu'elle exige. 100 par défaut, le niveau du jeu compétitif.
+      level: 100,
       equipment: { weapon: null, hand: null, head: null, body: null },
       accessories: new Array(ACCESSORY_SLOTS).fill(null),
       assist: null,
@@ -191,15 +224,17 @@
     if (!Array.isArray(b.attacks) || !Array.isArray(b.abilities)) return { ok: false, error: T('err.lists') };
     if (!b.equipment || typeof b.equipment !== 'object') return { ok: false, error: T('err.equipBlock') };
     if (!Array.isArray(b.accessories)) return { ok: false, error: T('err.accList') };
+    // « any » n'est pas un identifiant de catalogue : c'est le jeton qui laisse
+    // l'emplacement à la main du joueur. Il vaut partout où un identifiant vaut.
     var badSlot = SLOTS.some(function (s) {
       var v = b.equipment[s.key];
-      return v != null && (typeof v !== 'string' || !equipByUid[v]);
+      return v != null && v !== ANY && (typeof v !== 'string' || !equipByUid[v]);
     });
     if (badSlot) return { ok: false, error: T('err.unknownEquip') };
-    var badAcc = b.accessories.some(function (v) { return v != null && (typeof v !== 'string' || !accByUid[v]); });
+    var badAcc = b.accessories.some(function (v) { return v != null && v !== ANY && (typeof v !== 'string' || !accByUid[v]); });
     if (badAcc) return { ok: false, error: T('err.unknownAcc') };
-    if (b.assist != null && !assistBySlug[b.assist]) return { ok: false, error: T('err.unknownAssist', { name: b.assist }) };
-    if (b.summon != null && !summonById[b.summon]) return { ok: false, error: T('err.unknownSummon', { name: b.summon }) };
+    if (b.assist != null && b.assist !== ANY && !assistBySlug[b.assist]) return { ok: false, error: T('err.unknownAssist', { name: b.assist }) };
+    if (b.summon != null && b.summon !== ANY && !summonById[b.summon]) return { ok: false, error: T('err.unknownSummon', { name: b.summon }) };
     return { ok: true };
   }
 
@@ -231,12 +266,14 @@
       var v = Number(brut[i]);
       return v >= 0 && v < MAX_SLOTS ? v : -1;
     });
-    out.abilities = uniq(b.abilities, function (id) { return !!abilityById[id]; });
+    out.abilities = uniq(b.abilities, function (id) { return id === ANY || !!abilityById[id]; });
     SLOTS.forEach(function (s) { out.equipment[s.key] = b.equipment[s.key] || null; });
     out.accessories = new Array(ACCESSORY_SLOTS).fill(null);
     b.accessories.slice(0, ACCESSORY_SLOTS).forEach(function (v, i) { out.accessories[i] = v || null; });
     out.assist = b.assist || null;
     out.summon = b.summon || null;
+    var lv = Math.round(Number(b.level));
+    out.level = lv >= 1 && lv <= 100 ? lv : 100;
     out.notes = typeof b.notes === 'string' ? b.notes.slice(0, 2000) : '';
     out.created = typeof b.created === 'string' ? b.created : out.created;
     out.modified = new Date().toISOString();
@@ -722,15 +759,16 @@
     }
     if (illegal.length) problems.push(T('status.illegalItems', { list: illegal.join(', ') }));
 
-    var glitch = [];
+    // L'Equip Glitch ne se rappelle plus ici : chaque pièce qui l'exige porte sa
+    // roue dentée, sur la carte comme sur sa ligne d'emplacement. Une phrase en
+    // bas de la colonne redisait, loin des pièces, ce que la ligne montre.
+    // Un équipement qu'aucune manipulation ne rend portable, lui, reste un
+    // problème : il se dit en toutes lettres.
     var unavailable = [];
     equippedEquipment().forEach(function (e) {
-      var st = equipStatus(e);
-      if (st.state === 'glitch') glitch.push(e.name);
-      if (st.state === 'unavailable') unavailable.push(e.name);
+      if (equipStatus(e).state === 'unavailable') unavailable.push(e.name);
     });
     if (unavailable.length) problems.push(T('status.notWearable', { list: unavailable.join(', ') }));
-    if (glitch.length) infos.push(T('status.glitchNeeded', { list: glitch.join(', ') }));
 
     var combos = activeCombinations();
     if (combos.length) infos.push(T('status.activeSet', { list: combos.map(function (c) { return c.name + ' — ' + c.effects; }).join(' ; ') }));
@@ -762,10 +800,13 @@
   // Le panneau détaillé vit hors de `bc-status`, que renderStatus vide à chaque
   // rendu : le <details> reste ainsi le même élément d'un bout à l'autre de la
   // session, et son état ouvert/fermé survit à toute modification du build.
+  // En mode carte, ces trois blocs vivent dans la languette « Stats » et sont
+  // recréés à chaque redessin : les retenir une fois pour toutes garderait des
+  // références mortes. On les relit donc à chaque rendu.
   var detail = {
-    count: document.getElementById('bc-detail-count'),
-    main: document.getElementById('bc-detail-main'),
-    boosters: document.getElementById('bc-detail-boosters'),
+    get count() { return document.getElementById('bc-detail-count'); },
+    get main() { return document.getElementById('bc-detail-main'); },
+    get boosters() { return document.getElementById('bc-detail-boosters'); },
   };
 
   function fmtModifier(value, unit) {
@@ -792,17 +833,21 @@
       if (!rows.length) return;
       shown += rows.length;
       detail.main.appendChild(el('h3', { class: 'bc-detail-group', text: T('detail.groups.' + group) }));
+      // Les bonus en points sont des valeurs absolues au milieu de pourcentages,
+      // et ils ne sont pas comptés dans les totaux qui précèdent : la note le dit,
+      // sans quoi on les additionnerait par erreur.
       if (group === 'flat') detail.main.appendChild(el('p', { class: 'bc-detail-note', text: T('detail.flatNote') }));
       var list = el('dl', { class: 'bc-detail-list' });
       rows.forEach(function (s) {
         var slot = d.totals[s.key];
         list.appendChild(el('dt', { text: T('detail.stats.' + s.key) }));
-        list.appendChild(el('dd', {}, [
+        // Seule la valeur cumulée s'affiche. Le détail des pièces qui la
+        // composent reste accessible au survol : il triplait la hauteur de la
+        // colonne pour une information qu'on ne lit qu'en cas de doute.
+        list.appendChild(el('dd', {
+          title: slot.from.map(function (f) { return f.name + ' ' + fmtModifier(f.value, s.unit); }).join(' · '),
+        }, [
           el('span', { class: 'bc-detail-value', text: fmtModifier(slot.value, s.unit) }),
-          el('span', {
-            class: 'bc-detail-from',
-            text: slot.from.map(function (f) { return f.name + ' ' + fmtModifier(f.value, s.unit); }).join(' · '),
-          }),
         ]));
       });
       detail.main.appendChild(list);
@@ -836,7 +881,6 @@
     if (!detail.boosters) return;
     clear(detail.boosters);
     var list = equippedBoosters();
-    detail.boosters.appendChild(el('h3', { class: 'bc-detail-group', text: T('detail.boosters.title') }));
     if (!list.length) {
       detail.boosters.appendChild(el('p', { class: 'bc-detail-note', text: T('detail.boosters.none') }));
       return;
@@ -862,7 +906,6 @@
             el('span', { text: b.item.name }),
             el('span', { class: 'bc-booster-mult', text: fmtMultiplier(b.item.multiplier) }),
           ]),
-          b.item.requirements ? el('span', { class: 'bc-booster-req', text: b.item.requirements }) : null,
         ]),
       ]));
     });
@@ -870,7 +913,6 @@
     detail.boosters.appendChild(el('p', { class: 'bc-booster-total' }, [
       el('span', { text: T('detail.boosters.total') }), totalValue,
     ]));
-    detail.boosters.appendChild(el('p', { class: 'bc-detail-note', text: T('detail.boosters.scope') }));
   }
 
   function renderDetailStats() {
@@ -881,74 +923,12 @@
   function refresh() {
     var cp = renderGauge();
     renderStatus(cp);
+    renderCard();
     renderDetailStats();
     renderSavedList();
   }
 
   function markDirty() { state.dirty = true; }
-
-  // --- Rendu : onglets ------------------------------------------------------
-  var panels = {};
-  ['attack', 'abilities', 'stuff', 'accessories', 'assist'].forEach(function (k) {
-    panels[k] = document.getElementById('bc-panel-' + k);
-  });
-  var tabButtons = [].slice.call(document.querySelectorAll('.bc-tab'));
-
-  function selectTab(key, focus) {
-    state.activeTab = key;
-    tabButtons.forEach(function (btn) {
-      var on = btn.dataset.tab === key;
-      btn.setAttribute('aria-selected', on ? 'true' : 'false');
-      btn.tabIndex = on ? 0 : -1;
-      if (on && focus) btn.focus();
-    });
-    Object.keys(panels).forEach(function (k) { panels[k].hidden = k !== key; });
-    renderPanel(key);
-  }
-
-  tabButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () { selectTab(btn.dataset.tab, false); });
-    btn.addEventListener('keydown', function (ev) {
-      var i = tabButtons.indexOf(btn);
-      var next = null;
-      if (ev.key === 'ArrowRight') next = tabButtons[(i + 1) % tabButtons.length];
-      else if (ev.key === 'ArrowLeft') next = tabButtons[(i - 1 + tabButtons.length) % tabButtons.length];
-      else if (ev.key === 'Home') next = tabButtons[0];
-      else if (ev.key === 'End') next = tabButtons[tabButtons.length - 1];
-      if (!next) return;
-      ev.preventDefault();
-      selectTab(next.dataset.tab, true);
-    });
-  });
-
-  // Un déplacement d'attaque redessine l'onglet : la poignée qu'on manipulait
-  // disparaît avec lui. On redonne donc le focus à celle de l'attaque déplacée,
-  // sans quoi une suite de flèches au clavier serait interrompue à chaque coup.
-  var pendingFocus = null;
-
-  function renderPanel(key) {
-    if (!state.build.character) return;
-    var panel = panels[key];
-    clear(panel);
-    if (key === 'attack') renderAttacks(panel);
-    else if (key === 'abilities') renderAbilities(panel);
-    else if (key === 'stuff') renderStuff(panel);
-    else if (key === 'accessories') renderAccessories(panel);
-    else if (key === 'assist') renderAssist(panel);
-    if (pendingFocus) {
-      var handle = panel.querySelector('[data-drag-handle="' + cssEscape(pendingFocus) + '"]');
-      pendingFocus = null;
-      if (handle) handle.focus({ preventScroll: true });
-    }
-  }
-
-  // Les identifiants de coups portent espaces, parenthèses et « & » (« bravery:
-  // ground:Dart & Weave (ground) ») : ils ne peuvent pas entrer tels quels dans
-  // un sélecteur.
-  function cssEscape(value) {
-    if (window.CSS && window.CSS.escape) return window.CSS.escape(value);
-    return String(value).replace(/[^\w-]/g, function (c) { return '\\' + c; });
-  }
 
   // --- Fenêtre de choix -----------------------------------------------------
   // Les onglets de sélection déroulaient jusqu'à 400 lignes sous les
@@ -1020,41 +1000,104 @@
     return closeModal;
   }
 
-  // Un emplacement : sa commande à gauche, son contenu au milieu, ses actions à
-  // droite. Vide, la ligne entière est le bouton qui ouvre la fenêtre.
-  function slotRow(opts) {
-    var badge = el('span', { class: 'bc-slot-badge', title: opts.inputTitle || '', text: opts.input || '' });
-    if (!opts.filled) {
-      return el('button', {
-        type: 'button', class: 'bc-slot-row is-empty', onclick: opts.onAssign,
-        'aria-label': (opts.inputTitle ? opts.inputTitle + ' — ' : '') + T('slots.assign'),
-        // Une commande vide reste une cible de dépôt : y déposer une attaque
-        // est le geste naturel pour la déplacer là.
-        'data-cmd': opts.cmd == null ? false : String(opts.cmd),
-      }, [
-        badge,
-        el('span', { class: 'bc-slot-main' }, [el('span', { class: 'bc-slot-empty', text: T('slots.empty') })]),
-        el('span', { class: 'bc-slot-plus', 'aria-hidden': 'true', text: '+' }),
-      ]);
-    }
-    var row = el('div', {
-      class: 'bc-slot-row' + (opts.className ? ' ' + opts.className : '') + (opts.handle ? ' has-handle' : ''),
-      'data-drag-id': opts.dragId || false,
-      'data-cmd': opts.cmd == null ? false : String(opts.cmd),
+  // Première ligne de toute fenêtre de choix quand l'emplacement est occupé :
+  // le vider. Sans elle, on pouvait remplacer mais jamais retirer — la fenêtre
+  // n'offrait que d'autres pièces. Elle ne s'affiche pas sur un emplacement
+  // libre : il n'y a rien à en retirer.
+  //
+  // Le second geste est dans les lignes elles-mêmes : rechoisir ce qui est déjà
+  // là le retire. Les deux se rejoignent, l'un se voit, l'autre se devine.
+  // « Au choix » : l'emplacement est laissé à la main du joueur. Ce n'est pas
+  // « rien » — un emplacement vide dit qu'on n'y met rien, celui-ci qu'on y met
+  // ce qu'on veut. La ligne suit celle du retrait : les deux réponses qui ne
+  // sont pas un nom de pièce se tiennent en tête de liste.
+  var ANY = 'any';
+  // Deux formes du même jeton. Nu, il vaut pour toute une section — c'est ce
+  // que disent les builds publiés, dont la source ne remplit jamais la grille.
+  // Suffixé de sa catégorie, il vaut pour un emplacement précis : c'est ce que
+  // pose le créateur quand on désigne une commande. La forme longue se comporte
+  // alors comme un coup — elle occupe sa place, s'y affiche seule, se retire et
+  // se déplace —, sauf qu'elle ne coûte rien.
+  var ANY_SLOT = 'any:';
+  function estAnySlot(id) { return String(id).indexOf(ANY_SLOT) === 0; }
+  function infoAnySlot(id) {
+    var parts = String(id).slice(ANY_SLOT.length).split('|');
+    return {
+      move: { id: id, name: T('buildCard.any'), cp: 0, cpMastered: 0 },
+      kind: parts[0], groupKey: parts[1], style: parts[2] || '',
+      followUp: false, catKey: parts.join('|'),
+    };
+  }
+
+  // Le jeton nu vaut pour toute la section : agir sur un seul emplacement
+  // demande d'abord de le développer en un jeton par place libre. Chacun devient
+  // alors une entrée ordinaire — on en retire une sans toucher aux autres.
+  // `sauf` est la place qu'on vient de reprendre : elle ne reçoit rien.
+  function developperAuChoix(char, sauf) {
+    var nu = state.build.attacks.indexOf(ANY);
+    if (nu === -1 || !char) return false;
+    var scan = scanBuild(char);
+    var pris = {};
+    scan.slots.forEach(function (x) { pris[x.info.catKey + '#' + x.cmd] = true; });
+    var index = attackIndex(char);
+    var cats = {};
+    // Mêmes catégories que la grille de la carte : tout groupe qui n'est pas
+    // une réserve de prolongements en ouvre une, y compris quand tous ses coups
+    // se branchent sous un autre — la grille lui montre ses trois commandes.
+    Object.keys(index.byId).forEach(function (id) {
+      var info = index.byId[id];
+      if (!info.followUp) cats[info.catKey] = true;
     });
-    if (opts.handle) row.appendChild(opts.handle);
-    row.appendChild(badge);
-    row.appendChild(opts.main);
-    var actions = el('span', { class: 'bc-slot-actions' });
-    (opts.actions || []).forEach(function (a) { if (a) actions.appendChild(a); });
-    actions.appendChild(el('button', {
-      type: 'button', class: 'bc-btn bc-btn-small', text: T('slots.change'), onclick: opts.onAssign,
-    }));
-    actions.appendChild(el('button', {
-      type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('equipment.remove'), onclick: opts.onRemove,
-    }));
-    row.appendChild(actions);
-    return row;
+    removeAt([nu]);
+    Object.keys(cats).forEach(function (cat) {
+      for (var c = 0; c < MAX_SLOTS; c++) {
+        if (pris[cat + '#' + c]) continue;
+        if (sauf && sauf.catKey === cat && sauf.cmd === c) continue;
+        state.build.attacks.push(ANY_SLOT + cat);
+        setCmd(state.build.attacks.length - 1, c);
+      }
+    });
+    return true;
+  }
+
+  function niveauBuild() {
+    var v = Math.round(Number(state.build.level));
+    return v >= 1 && v <= 100 ? v : 100;
+  }
+
+  function porteAuChoix(b) {
+    if (!b) return false;
+    if ((Number(b.level) || 100) !== 100) return true;
+    if (b.assist === ANY || b.summon === ANY) return true;
+    if ((b.abilities || []).indexOf(ANY) !== -1) return true;
+    // Les deux formes du jeton, la nue et celle qui porte sa catégorie : ni
+    // l'une ni l'autre n'a de rang dans les catalogues du format binaire.
+    if ((b.attacks || []).some(function (id) { return id === ANY || estAnySlot(id); })) return true;
+    if ((b.accessories || []).indexOf(ANY) !== -1) return true;
+    return SLOTS.some(function (s) { return (b.equipment || {})[s.key] === ANY; });
+  }
+
+  function anyRow(actif, onPick) {
+    return el('button', {
+      type: 'button', class: 'bc-row bc-row-btn bc-row-any' + (actif ? ' is-selected' : ''),
+      'aria-pressed': actif ? 'true' : 'false', onclick: onPick,
+    }, [
+      el('span', { class: 'bc-row-main' }, [
+        el('span', { class: 'bc-row-name', text: T('buildCard.any') }),
+        el('span', { class: 'bc-row-meta', text: T('equipment.anyHint') }),
+      ]),
+    ]);
+  }
+
+  function clearRow(occupant, onClear) {
+    return el('button', {
+      type: 'button', class: 'bc-row bc-row-btn bc-row-clear', onclick: onClear,
+    }, [
+      el('span', { class: 'bc-row-main' }, [
+        el('span', { class: 'bc-row-name', text: T('equipment.remove') }),
+        el('span', { class: 'bc-row-meta', text: occupant || '' }),
+      ]),
+    ]);
   }
 
   // --- Onglet Attaques ------------------------------------------------------
@@ -1100,22 +1143,25 @@
   var SLOT_INPUTS = ['neutral', 'back', 'forward'];
   var KIND_BUTTON = { bravery: '○', hp: '□' };
   var DIRECTION_GLYPH = { neutral: '', back: '←', forward: '→' };
-  function inputGlyph(kind, i) {
-    var dir = DIRECTION_GLYPH[SLOT_INPUTS[i]];
-    return (dir ? dir + ' ' : '') + KIND_BUTTON[kind];
-  }
   function inputTitle(kind, i) {
     return T('attacks.input.' + SLOT_INPUTS[i], { button: KIND_BUTTON[kind] });
   }
 
+  // Un coup à variantes porte une valeur par variante : Cloud of Darkness change
+  // de portée et de type selon le moment où l'on presse le rond, et la source
+  // donne les trois. Séparées par des barres obliques, elles se lisent comme
+  // trois valeurs ; laissées telles quelles, la virgule les collait à celles qui
+  // vivent déjà à l'intérieur d'un chiffre — « 30 (8, 8, 14),48 (12 x 4) ».
+  function champ(v) { return Array.isArray(v) ? v.join(' / ') : v; }
+
   // Descriptif court d'un coup, commun à la grille et à la fenêtre de choix.
   function moveMeta(m) {
     var meta = [];
-    if (m.damage) meta.push(T('attacks.damage', { value: m.damage }));
-    if (m.startup) meta.push(T('attacks.startup', { value: m.startup }));
-    if (m.type) meta.push(m.type);
-    if (m.priority) meta.push(m.priority);
-    if (m.variants) meta.push(m.variants);
+    if (m.damage) meta.push(T('attacks.damage', { value: champ(m.damage) }));
+    if (m.startup) meta.push(T('attacks.startup', { value: champ(m.startup) }));
+    if (m.type) meta.push(champ(m.type));
+    if (m.priority) meta.push(champ(m.priority));
+    if (m.variants) meta.push(champ(m.variants));
     return meta.join(' · ');
   }
   function cpTag(m) {
@@ -1136,6 +1182,15 @@
     var byId = {};
     var linkParent = {};
     (char.links || []).forEach(function (l) { linkParent[l.to] = l.from; });
+    // Enchaînement de bravery à partenaire imposé : les quatre d'Onion Knight,
+    // seuls du jeu. Ils se rattachent comme un enchaînement — au rond — mais
+    // n'acceptent que leur origine, et ne s'équipent pas seuls.
+    var chainParent = {};
+    var chainsDe = {};
+    (char.chains || []).forEach(function (c) {
+      chainParent[c.to] = c.from;
+      (chainsDe[c.from] = chainsDe[c.from] || []).push(c.to);
+    });
     // Toute bravery n'accepte pas d'enchaînement — Banish et Holy, chez Prishe,
     // ne s'enchaînent pas — mais celles qui en acceptent un l'acceptent
     // n'importe lequel : une « (One) » de Prishe se prolonge de n'importe
@@ -1153,7 +1208,10 @@
         });
       });
     });
-    return { byId: byId, linkParent: linkParent, followStarter: followStarter };
+    return {
+      byId: byId, linkParent: linkParent, followStarter: followStarter,
+      chainParent: chainParent, chainsDe: chainsDe,
+    };
   }
 
   function scanBuild(char) {
@@ -1161,17 +1219,25 @@
     var slots = [];
     var orphans = [];
     state.build.attacks.forEach(function (id, pos) {
-      var info = index.byId[id];
+      // Le jeton « au choix » n'est pas un coup du personnage : il n'a pas
+      // d'entrée au catalogue, n'occupe aucun emplacement et ne coûte rien. Il
+      // n'est pas orphelin pour autant — il dit que la section est laissée au
+      // joueur, et le supprimer effacerait cette réponse-là.
+      if (id === ANY) return;
+      var info = estAnySlot(id) ? infoAnySlot(id) : index.byId[id];
       if (!info) { orphans.push(pos); return; }
       var parentId = index.linkParent[id];
-      if (info.followUp || parentId) {
+      var chaineId = index.chainParent[id];
+      if (info.followUp || parentId || chaineId) {
         var last = slots[slots.length - 1];
         // Un prolongement n'existe pas sans l'attaque qu'il prolonge, et une
-        // attaque n'en porte qu'un de chaque sorte.
-        var champ = info.followUp ? 'follow' : 'link';
-        var recevable = last && !last[champ] && (info.followUp
-          ? !!index.followStarter[last.id]
-          : parentId === last.id);
+        // attaque n'en porte qu'un de chaque sorte : l'attaque HP branchée au
+        // carré, l'enchaînement de bravery au rond. Les deux ensemble sont la
+        // règle chez Onion Knight comme chez Firion.
+        var champ = parentId ? 'link' : 'follow';
+        var recevable = last && !last[champ] && (chaineId
+          ? chaineId === last.id
+          : (info.followUp ? !!index.followStarter[last.id] : parentId === last.id));
         if (!recevable) { orphans.push(pos); return; }
         last[champ] = { id: id, pos: pos, move: info.move };
         return;
@@ -1255,278 +1321,40 @@
     var source = mine.filter(function (s) { return s.cmd === from; })[0];
     if (!source) return;
     var cible = mine.filter(function (s) { return s.cmd === to; })[0];
+    // Une commande non exprimée se recale « dans l'ordre » à chaque lecture :
+    // libérer une case en aurait fait remonter une autre, qui n'avait rien
+    // demandé. Déplacer une attaque vers une case libre faisait ainsi bouger sa
+    // voisine. On fige donc la catégorie sur ce qu'elle montre — les deux
+    // formats de lien transportent ces commandes — avant d'échanger.
+    mine.forEach(function (s) { setCmd(s.pos, s.cmd); });
     setCmd(source.pos, to);
     if (cible) setCmd(cible.pos, from);
-    pendingFocus = catKey + '#' + to;
     markDirty();
-    keepScroll(null, function () { renderPanel('attack'); refresh(); });
-  }
-
-  // --- Déplacer une attaque d'une commande à l'autre -------------------------
-  // On la fait glisser par sa poignée. Les Pointer Events couvrent souris,
-  // doigt et stylet du même code ; le glisser-déposer HTML5, lui, ne répond pas
-  // au doigt, et le créateur se consulte largement sur téléphone.
-  //
-  // Le clavier n'est pas laissé de côté : la poignée reste un bouton, et les
-  // flèches haut/bas y déplacent l'attaque sans saisie préalable. Un
-  // glisser-déposer seul rendrait l'outil inutilisable sans souris.
-  var drag = null;
-
-  function endDrag(apply) {
-    if (!drag) return;
-    var d = drag;
-    drag = null;
-    document.removeEventListener('pointermove', d.onMove);
-    document.removeEventListener('pointerup', d.onUp);
-    document.removeEventListener('pointercancel', d.onCancel);
-    document.removeEventListener('keydown', d.onKey, true);
-    d.row.classList.remove('is-dragging');
-    d.rows.forEach(function (r) { r.classList.remove('is-drop-target'); });
-    document.body.classList.remove('bc-dragging');
-    if (apply && d.moved && d.to !== d.from) moveToCmd(d.char, d.catKey, d.from, d.to);
-  }
-
-  function startDrag(handle, char, catKey, index, ev) {
-    var row = handle.parentNode;
-    while (row && row.className.indexOf('bc-slot-row') === -1) row = row.parentNode;
-    if (!row) return;
-    var rows = Array.prototype.slice.call(row.parentNode.querySelectorAll('.bc-slot-row[data-cmd]'));
-    if (rows.length < 2) return;
-    var d = {
-      char: char, catKey: catKey, from: index, to: index, row: row, rows: rows,
-      startY: ev.clientY, moved: false,
-    };
-    d.onMove = function (e) {
-      if (!drag) return;
-      if (!d.moved && Math.abs(e.clientY - d.startY) < 4) return;
-      d.moved = true;
-      // On vise la ligne survolée : c'est ce que l'œil attend, et cela reste
-      // juste même si les lignes n'ont pas toutes la même hauteur (un
-      // embranchement HP en allonge une).
-      d.rows.forEach(function (r) {
-        var box = r.getBoundingClientRect();
-        if (e.clientY >= box.top && e.clientY <= box.bottom) d.to = Number(r.getAttribute('data-cmd'));
-      });
-      d.rows.forEach(function (r) {
-        var cmd = Number(r.getAttribute('data-cmd'));
-        r.classList.toggle('is-drop-target', d.moved && cmd === d.to && cmd !== d.from);
-      });
-    };
-    d.onUp = function () { endDrag(true); };
-    d.onCancel = function () { endDrag(false); };
-    d.onKey = function (e) { if (e.key === 'Escape') { e.preventDefault(); endDrag(false); } };
-    drag = d;
-    row.classList.add('is-dragging');
-    document.body.classList.add('bc-dragging');
-    document.addEventListener('pointermove', d.onMove);
-    document.addEventListener('pointerup', d.onUp);
-    document.addEventListener('pointercancel', d.onCancel);
-    document.addEventListener('keydown', d.onKey, true);
-  }
-
-  // La poignée est repérée par sa commande, non par l'attaque qui l'occupe :
-  // deux exemplaires de la même attaque partageraient sinon le même repère.
-  function dragHandle(char, catKey, index) {
-    var btn = el('button', {
-      type: 'button', class: 'bc-drag-handle',
-      'aria-label': T('slots.reorder'), title: T('slots.reorder'),
-      'data-drag-handle': catKey + '#' + index,
-    }, [el('span', { 'aria-hidden': 'true', text: '⠿' })]);
-    btn.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowUp') { e.preventDefault(); moveToCmd(char, catKey, index, index - 1); }
-      else if (e.key === 'ArrowDown') { e.preventDefault(); moveToCmd(char, catKey, index, index + 1); }
-    });
-    btn.addEventListener('pointerdown', function (e) {
-      if (e.button != null && e.button !== 0) return;
-      // Sans cela, le doigt fait défiler la page au lieu de déplacer la ligne.
-      e.preventDefault();
-      startDrag(btn, char, catKey, index, e);
-    });
-    return btn;
+    keepScroll(null, refresh);
   }
 
   function afterAttackChange() {
     pruneOrphanBranches();
     markDirty();
-    keepScroll(null, function () { renderPanel('attack'); refresh(); });
+    keepScroll(null, refresh);
   }
 
   // Ce qu'une catégorie (sol/air × style) peut recevoir : tout son groupe, moins
-  // les attaques HP branchées — celles-là vivent sous leur bravery. La liste
-  // n'exclut pas ce qui est déjà posé : la même attaque peut occuper plusieurs
-  // commandes.
-  function categoryMoves(group, style, linkParent) {
+  // les prolongements — attaques HP branchées et enchaînements à partenaire
+  // imposé vivent sous leur bravery, jamais sur une commande. La liste n'exclut
+  // pas ce qui est déjà posé : la même attaque peut occuper plusieurs commandes.
+  function categoryMoves(group, style, index) {
     return byStyle(group.moves).filter(function (sub) { return (sub.style || null) === (style || null); })
       .reduce(function (acc, sub) { return acc.concat(sub.moves); }, [])
-      .filter(function (m) { return !linkParent[m.id]; });
-  }
-
-  function renderAttacks(panel) {
-    var char = charBySlug[state.build.character];
-    if (char.hpLinks) {
-      var aDesLinks = !/^no\b/i.test(char.hpLinks);
-      panel.appendChild(el('p', {
-        class: 'bc-note',
-        text: T('attacks.hpLinks', { value: char.hpLinks }) + (aDesLinks ? T('attacks.hpLinksNoDetail') : ''),
-      }));
-    }
-    panel.appendChild(el('p', { class: 'bc-note', text: T('attacks.slotsNote') }));
-
-    var scan = scanBuild(char);
-    var linksByParent = {};
-    (char.links || []).forEach(function (l) { (linksByParent[l.from] = linksByParent[l.from] || []).push(l.to); });
-    var moveById = {};
-    Object.keys(scan.index.byId).forEach(function (id) { moveById[id] = scan.index.byId[id].move; });
-
-    [['bravery', T('attacks.braveryTitle')], ['hp', T('attacks.hpTitle')]].forEach(function (pair) {
-      var kind = pair[0];
-      var groups = char.attacks[kind];
-      if (!groups || !groups.length) {
-        panel.appendChild(el('p', { class: 'bc-alert bc-alert-muted', text: T('attacks.notDocumented', { title: pair[1] }) }));
-        return;
-      }
-      panel.appendChild(el('h3', { text: pair[1] }));
-
-      var pool = [];
-      groups.forEach(function (g) { if (g.followUp) pool = pool.concat(g.moves); });
-      var poolIntro = (groups.filter(function (g) { return g.followUp; })[0] || {}).intro;
-
-      groups.forEach(function (g) {
-        if (g.followUp) return;
-        // Un personnage à styles (paradigmes de Lightning, jobs de Cecil,
-        // moveset EX de Gabranth) a une grille par style : ce sont bien des
-        // emplacements distincts dans le jeu.
-        var styles = byStyle(g.moves).map(function (sub) { return sub.style || null; });
-        styles.forEach(function (style) {
-          var choix = categoryMoves(g, style, scan.index.linkParent);
-          if (!choix.length) return;
-          panel.appendChild(attackCategory({
-            char: char, scan: scan, kind: kind, group: g, style: style,
-            choix: choix, pool: pool, poolIntro: poolIntro,
-            linksByParent: linksByParent, moveById: moveById,
-          }));
-        });
-      });
-    });
-  }
-
-  function attackCategory(ctx) {
-    var kind = ctx.kind;
-    var catKey = kind + '|' + ctx.group.key + '|' + (ctx.style || '');
-    var titre = groupLabel(ctx.group.key) + (ctx.style ? ' — ' + ctx.style : '');
-    var mine = ctx.scan.slots.filter(function (s) { return s.info.catKey === catKey; });
-
-    var fs = el('fieldset', { class: 'bc-group' }, [
-      el('legend', {}, [
-        el('span', { text: titre + ' ' }),
-        el('span', { class: 'bc-slots' + (mine.length >= MAX_SLOTS ? ' is-full' : ''), text: mine.length + '/' + MAX_SLOTS }),
-      ]),
-    ]);
-    if (ctx.group.intro) fs.appendChild(el('p', { class: 'bc-note', text: ctx.group.intro.split('\n')[0] }));
-
-    // La grille se lit par commande, non par rang : un emplacement vide entre
-    // deux pleins doit rester vide, et une attaque choisie sur → doit s'y
-    // poser même si le stick neutre est libre.
-    var parCmd = {};
-    mine.forEach(function (s) { parCmd[s.cmd] = s; });
-
-    var grid = el('div', { class: 'bc-slot-grid' });
-    for (var i = 0; i < MAX_SLOTS; i++) {
-      (function (index) {
-        var slot = parCmd[index];
-        var ouvrir = function () {
-          openMoveChooser(titre + ' · ' + inputTitle(kind, index), ctx.choix, slot ? slot.move : null, function (choisi) {
-            if (slot) replaceAt(slot.pos, choisi.id, index);
-            else appendAttack(choisi.id, index);
-          });
-        };
-        if (!slot) {
-          grid.appendChild(slotRow({
-            input: inputGlyph(kind, index), inputTitle: inputTitle(kind, index),
-            filled: false, cmd: index, onAssign: ouvrir,
-          }));
-          return;
-        }
-        var m = slot.move;
-        var main = el('span', { class: 'bc-slot-main' }, [
-          el('span', { class: 'bc-row-name', text: m.name }),
-          el('span', { class: 'bc-row-meta', text: moveMeta(m) }),
-        ]);
-        var actions = [cpTag(m)];
-        if (m.cp == null) actions.push(el('span', { class: 'bc-tag bc-tag-warn', title: T('attacks.unknownCostTitle'), text: T('status.undocumented') }));
-        grid.appendChild(slotRow({
-          input: inputGlyph(kind, index), inputTitle: inputTitle(kind, index),
-          filled: true, main: main, actions: actions,
-          cmd: index, dragId: catKey + '#' + index,
-          // Une attaque seule se déplace aussi : les commandes vides sont des
-          // cibles de dépôt.
-          handle: dragHandle(ctx.char, catKey, index),
-          onAssign: ouvrir,
-          // Retirer une attaque emporte ce qui s'y rattachait.
-          onRemove: function () { removeAt(slotPositions(slot)); },
-        }));
-
-        // Embranchements, dans la forme que le jeu leur donne : un trait sous
-        // l'attaque, et la touche qui les déclenche. Le carré pour une attaque
-        // HP, le rond pour un enchaînement de bravery.
-        var liens = (ctx.linksByParent[slot.id] || []).map(function (id) { return ctx.moveById[id]; }).filter(Boolean);
-        if (liens.length) {
-          grid.appendChild(branchRow(slot, 'link', liens, KIND_BUTTON.hp,
-            T('attacks.hpLinkAdd'), T('attacks.hpLinkFor', { name: m.name })));
-        }
-        // Seules les braveries que la source désigne acceptent un
-        // enchaînement, mais elles acceptent toute la réserve.
-        if (ctx.pool.length && ctx.scan.index.followStarter[slot.id]) {
-          grid.appendChild(branchRow(slot, 'follow', ctx.pool, KIND_BUTTON.bravery,
-            T('attacks.followupAdd'), T('attacks.followupFor', { name: m.name }), ctx.poolIntro));
-        }
-      }(i));
-    }
-    fs.appendChild(grid);
-    return fs;
-  }
-
-  // Un prolongement rattaché à une attaque : enchaînement de bravery ou attaque
-  // HP branchée. Les deux se comportent pareil, seule la touche change.
-  function branchRow(slot, champ, choix, glyph, addLabel, titreFenetre, intro) {
-    var courant = slot[champ];
-    var box = el('div', { class: 'bc-branch-row' });
-    box.appendChild(el('span', {
-      class: 'bc-slot-badge bc-badge-branch',
-      title: T('attacks.input.link', { button: glyph }), text: '└ ' + glyph,
-    }));
-    if (!courant) {
-      box.appendChild(el('button', {
-        type: 'button', class: 'bc-branch-add',
-        onclick: function () {
-          openMoveChooser(titreFenetre, choix, null, function (choisi) { attachTo(slot, choisi.id); }, intro);
-        },
-      }, [el('span', { text: addLabel }), el('span', { class: 'bc-slot-plus', 'aria-hidden': 'true', text: '+' })]));
-      return box;
-    }
-    box.appendChild(el('span', { class: 'bc-slot-main' }, [
-      el('span', { class: 'bc-row-name', text: courant.move.name }),
-      el('span', { class: 'bc-row-meta', text: moveMeta(courant.move) }),
-    ]));
-    box.appendChild(el('span', { class: 'bc-slot-actions' }, [
-      cpTag(courant.move),
-      el('button', {
-        type: 'button', class: 'bc-btn bc-btn-small', text: T('slots.change'),
-        onclick: function () {
-          openMoveChooser(titreFenetre, choix, courant.move, function (choisi) { replaceAt(courant.pos, choisi.id); }, intro);
-        },
-      }),
-      el('button', {
-        type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('equipment.remove'),
-        onclick: function () { removeAt([courant.pos]); },
-      }),
-    ]));
-    return box;
+      .filter(function (m) { return !index.linkParent[m.id] && !index.chainParent[m.id]; });
   }
 
   // Fenêtre de choix d'un coup. Recherche par nom, et par effet : c'est souvent
   // « celui qui fait Wall Rush » qu'on cherche, pas un nom précis.
-  function openMoveChooser(title, choix, courant, onPick, intro) {
+  //
+  // `onClear` n'est passé que là où l'emplacement n'a pas de bouton « Retirer »
+  // à côté de lui — sur la carte. Sous les onglets, la ligne en porte déjà un.
+  function openMoveChooser(title, choix, courant, onPick, intro, onClear, onAny, anyActif) {
     var sous = courant ? T('attacks.replacing', { name: courant.name }) : (intro ? intro.split('\n')[0] : null);
     openModal(title, sous, function (body, close) {
       var section = el('div', { class: 'bc-chooser' });
@@ -1535,6 +1363,10 @@
       var search = el('input', { type: 'search', placeholder: T('attacks.filterName'), 'aria-label': T('attacks.filterName') });
       search.addEventListener('input', function () { q = search.value.toLowerCase(); paint(); });
       section.appendChild(el('div', { class: 'bc-filters' }, [search]));
+      if (courant && onClear) section.appendChild(clearRow(courant.name, function () { close(); onClear(); }));
+      // Un emplacement d'attaque se laisse aussi au choix du joueur. Le jeton ne
+      // coûte rien : ce n'est pas un coup, c'est la place qu'on lui garde.
+      if (onAny) section.appendChild(anyRow(!!anyActif, function () { close(); onAny(); }));
       section.appendChild(listBox);
       body.appendChild(section);
       function paint() {
@@ -1544,13 +1376,19 @@
         });
         if (!items.length) { listBox.appendChild(el('p', { class: 'bc-note', text: T('attacks.noneAvailable') })); return; }
         items.forEach(function (m) {
+          // Rechoisir le coup déjà posé sur cette commande le retire — même
+          // geste que pour l'équipement ou l'assist.
+          var ici = !!(courant && onClear && m.id === courant.id);
           listBox.appendChild(el('button', {
-            type: 'button', class: 'bc-row bc-row-btn', 'data-uid': m.id,
-            onclick: function () { close(); onPick(m); },
+            type: 'button', class: 'bc-row bc-row-btn' + (ici ? ' is-selected' : ''), 'data-uid': m.id,
+            'aria-pressed': ici ? 'true' : 'false',
+            onclick: ici
+              ? function () { close(); onClear(); }
+              : function () { close(); onPick(m); },
           }, [
             el('span', { class: 'bc-row-main' }, [
               el('span', { class: 'bc-row-name', text: m.name }),
-              el('span', { class: 'bc-row-meta', text: moveMeta(m) + (m.effects ? ' · ' + m.effects : '') }),
+              el('span', { class: 'bc-row-meta', text: moveMeta(m) + (m.effects ? ' · ' + champ(m.effects) : '') }),
             ]),
             cpTag(m),
           ]));
@@ -1561,10 +1399,15 @@
   }
 
   // --- Onglet Abilities -----------------------------------------------------
-  function renderAbilities(panel) {
+  // `groupKey` restreint le rendu à une famille : sur la carte, chacune a son
+  // bouton et donc sa fenêtre — on vient modifier ses abilities de base, ou ses
+  // abilities de support, pas les cent vingt-deux d'un coup. Sous les onglets,
+  // le panneau les rend toutes, comme avant.
+  function renderAbilities(panel, groupKey) {
     var slug = state.build.character;
     panel.appendChild(el('p', { class: 'bc-note', text: T('abilities.costNote', { mode: state.mastered ? T('abilities.modeMastered') : T('abilities.modePurchase') }) }));
     D.abilities.forEach(function (g) {
+      if (groupKey && g.key !== groupKey) return;
       var usable = g.abilities.filter(function (a) { return !a.only || a.only.indexOf(slug) !== -1; });
       if (!usable.length) return;
       var fs = el('fieldset', { class: 'bc-group' }, [el('legend', { text: g.label })]);
@@ -1597,9 +1440,20 @@
     return names;
   }
 
+  // Le build est seul juge de ce qui est équipé : les cases le suivent. Sous les
+  // onglets, le panneau se redessinait à chaque changement et la question ne se
+  // posait pas ; la fenêtre de la carte, elle, reste telle quelle — cocher
+  // Reverse Air Dash retirait bien Air Dash du build, mais sa case restait
+  // cochée sous les yeux.
+  function syncAbilityChecks() {
+    Array.prototype.forEach.call(document.querySelectorAll('input[data-ability]'), function (input) {
+      input.checked = state.build.abilities.indexOf(input.getAttribute('data-ability')) !== -1;
+    });
+  }
+
   function abilityRow(a) {
     var checked = state.build.abilities.indexOf(a.id) !== -1;
-    var input = el('input', { type: 'checkbox', checked: checked });
+    var input = el('input', { type: 'checkbox', checked: checked, 'data-ability': a.id });
     input.addEventListener('change', function () {
       var i = state.build.abilities.indexOf(a.id);
       if (input.checked && i === -1) {
@@ -1619,7 +1473,8 @@
         state.build.abilities.splice(i, 1);
       }
       markDirty();
-      keepScroll(null, function () { renderPanel('abilities'); refresh(); });
+      keepScroll(null, refresh);
+      syncAbilityChecks();
     });
     var children = [
       input,
@@ -1691,46 +1546,6 @@
     }
   }
 
-  function renderStuff(panel) {
-    panel.appendChild(illegalToggle());
-    var grid = el('div', { class: 'bc-slot-grid' });
-    SLOTS.forEach(function (slot) { grid.appendChild(equipSlotRow(slot)); });
-    panel.appendChild(grid);
-  }
-
-  // Une ligne par emplacement ; la liste et ses filtres vivent dans la fenêtre.
-  function equipSlotRow(slot) {
-    var current = state.build.equipment[slot.key] ? equipByUid[state.build.equipment[slot.key]] : null;
-    var ouvrir = function () {
-      openModal(slot.label, current ? T('attacks.replacing', { name: current.name }) : null, function (body, close) {
-        body.appendChild(slotChooser(slot, close));
-      });
-    };
-    if (!current) {
-      return slotRow({
-        input: slot.label, inputTitle: slot.label, filled: false, onAssign: ouvrir,
-      });
-    }
-    var st = equipStatus(current);
-    var main = el('span', { class: 'bc-slot-main' }, [
-      el('span', { class: 'bc-row-name', text: current.name }),
-      el('span', { class: 'bc-row-meta', text: [fmtStats(current.stats) || T('equipment.noStats'), current.effects].filter(Boolean).join(' · ') }),
-    ]);
-    var actions = [];
-    if (current.level) actions.push(el('span', { class: 'bc-tag bc-tag-info', text: 'Lv ' + current.level }));
-    if (st.state === 'glitch') actions.push(el('span', { class: 'bc-tag bc-tag-glitch', title: st.label, text: T('equipment.glitchTag') }));
-    if (st.state === 'unknown') actions.push(el('span', { class: 'bc-tag bc-tag-warn', title: st.label, text: T('status.undocumented') }));
-    return slotRow({
-      input: slot.label, inputTitle: slot.label, filled: true, main: main, actions: actions,
-      onAssign: ouvrir,
-      onRemove: function () {
-        state.build.equipment[slot.key] = null;
-        markDirty();
-        keepScroll(null, function () { renderPanel('stuff'); refresh(); });
-      },
-    });
-  }
-
   function slotChooser(slot, close) {
     var section = el('div', { class: 'bc-chooser' });
     var cats = D.equipmentCategories[slot.key] || [];
@@ -1768,6 +1583,19 @@
     bar.appendChild(search); bar.appendChild(catSel); bar.appendChild(sortSel); bar.appendChild(dirBtn);
     section.appendChild(bar);
 
+    var poseUid = state.build.equipment[slot.key];
+    var pose = poseUid && poseUid !== ANY ? equipByUid[poseUid] : null;
+    var poserEquip = function (v) {
+      state.build.equipment[slot.key] = v;
+      markDirty();
+      if (close) close();
+      keepScroll(null, refresh);
+    };
+    if (pose || poseUid === ANY) {
+      section.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poserEquip(null); }));
+    }
+    section.appendChild(anyRow(poseUid === ANY, function () { poserEquip(poseUid === ANY ? null : ANY); }));
+
     var listBox = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': slot.key });
     section.appendChild(listBox);
 
@@ -1776,6 +1604,9 @@
       var q = stuffFilters[slot.key].toLowerCase();
       var items = D.equipment.filter(function (e) {
         if (e.slot !== slot.key) return false;
+        // Une pièce se porte à partir du niveau qu'elle exige, jamais avant :
+        // au niveau 60, on voit les pièces de niveau 1, 30 et 60.
+        if ((e.level || 1) > niveauBuild()) return false;
         var st = equipStatus(e);
         if (st.state === 'unavailable') return false;
         if (stuffCategory[slot.key] && e.category !== stuffCategory[slot.key]) return false;
@@ -1814,10 +1645,7 @@
         state.build.equipment[slot.key] = selected ? null : e.uid;
         markDirty();
         if (close) close();
-        keepScroll(null, function () {
-          renderPanel('stuff');
-          refresh();
-        });
+        keepScroll(null, refresh);
       },
     }, [
       el('span', { class: 'bc-row-main' }, [
@@ -1840,50 +1668,10 @@
     var input = el('input', { type: 'checkbox', checked: state.showIllegal });
     input.addEventListener('change', function () {
       state.showIllegal = input.checked;
-      renderPanel(state.activeTab);
     });
     return el('label', { class: 'bc-field bc-field-inline bc-illegal-toggle' }, [
       input, el('span', { text: T('equipment.showIllegal', { ruleset: D.ruleset.name }) }),
     ]);
-  }
-
-  function renderAccessories(panel) {
-    panel.appendChild(illegalToggle());
-    panel.appendChild(el('h3', { text: T('accessories.slotsTitle', { count: state.build.accessories.filter(Boolean).length + '/' + ACCESSORY_SLOTS }) }));
-    var grid = el('div', { class: 'bc-slot-grid' });
-    for (var i = 0; i < ACCESSORY_SLOTS; i++) grid.appendChild(accessorySlot(i));
-    panel.appendChild(grid);
-  }
-
-  function accessorySlot(i) {
-    var u = state.build.accessories[i];
-    var a = u ? accByUid[u] : null;
-    var ouvrir = function () {
-      openModal(T('accessories.slotTitle', { index: i + 1 }), a ? T('attacks.replacing', { name: a.name }) : null, function (body, close) {
-        body.appendChild(accessoryChooser(i, close));
-      });
-    };
-    if (!a) {
-      return slotRow({ input: String(i + 1), inputTitle: T('accessories.slotTitle', { index: i + 1 }), filled: false, onAssign: ouvrir });
-    }
-    var main = el('span', { class: 'bc-slot-main' }, [
-      el('span', { class: 'bc-row-name', text: a.name }),
-      el('span', { class: 'bc-row-meta', text: [a.category, a.effect || a.requirements].filter(Boolean).join(' · ') }),
-    ]);
-    var actions = [];
-    if (a.multiplier) actions.push(el('span', { class: 'bc-tag bc-tag-mult', text: '×' + a.multiplier }));
-    if (a.rank) actions.push(el('span', { class: 'bc-tag bc-tag-info', title: T('accessories.rank', { rank: a.rank }), text: a.rank }));
-    if (a.legal === false) actions.push(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(a), text: T('accessories.illegal') }));
-    return slotRow({
-      input: String(i + 1), inputTitle: T('accessories.slotTitle', { index: i + 1 }),
-      filled: true, main: main, actions: actions,
-      onAssign: ouvrir,
-      onRemove: function () {
-        state.build.accessories[i] = null;
-        markDirty();
-        keepScroll(null, function () { renderPanel('accessories'); refresh(); });
-      },
-    });
   }
 
   // Le choix se fait pour un emplacement précis : la limite d'exemplaires se
@@ -1901,6 +1689,19 @@
     catSel.addEventListener('change', function () { accCategory = catSel.value; renderList(); });
     bar.appendChild(search); bar.appendChild(catSel);
     section.appendChild(bar);
+
+    var poseUid = state.build.accessories[index];
+    var pose = poseUid && poseUid !== ANY ? accByUid[poseUid] : null;
+    var poserAcc = function (v) {
+      state.build.accessories[index] = v;
+      markDirty();
+      if (close) close();
+      keepScroll(null, refresh);
+    };
+    if (pose || poseUid === ANY) {
+      section.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poserAcc(null); }));
+    }
+    section.appendChild(anyRow(poseUid === ANY, function () { poserAcc(poseUid === ANY ? null : ANY); }));
 
     var listBox = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'acc' });
     section.appendChild(listBox);
@@ -1932,29 +1733,32 @@
   function accessoryRow(a, index, close) {
     // L'occupant de l'emplacement visé ne se compte pas contre lui-même : on le
     // remplace, on ne l'ajoute pas.
-    var count = copiesOf(a.uid) - (state.build.accessories[index] === a.uid ? 1 : 0);
+    var ici = state.build.accessories[index] === a.uid;
+    var count = copiesOf(a.uid) - (ici ? 1 : 0);
     var limite = copyLimit(a);
     var atteinte = limite !== null && count >= limite;
     var btn = el('button', {
       type: 'button',
-      class: 'bc-row bc-row-btn' + (count ? ' is-selected' : '') + (atteinte ? ' is-disabled' : ''),
+      class: 'bc-row bc-row-btn' + (count || ici ? ' is-selected' : '') + (atteinte ? ' is-disabled' : ''),
       disabled: atteinte,
+      'aria-pressed': ici ? 'true' : 'false',
       title: atteinte
         ? T(limite > 1 ? 'accessories.rankLimitMany' : 'accessories.rankLimitOne', { rank: a.rank, max: limite })
         : '',
       'data-uid': a.uid,
       onclick: function () {
-        state.build.accessories[index] = a.uid;
+        // Rechoisir ce qui occupe déjà l'emplacement le vide : le même geste
+        // pose et retire, comme pour l'équipement, l'assist et l'invocation.
+        state.build.accessories[index] = ici ? null : a.uid;
         markDirty();
         if (close) close();
-        keepScroll(null, function () {
-          renderPanel('accessories');
-          refresh();
-        });
+        keepScroll(null, refresh);
       },
     }, [
       el('span', { class: 'bc-row-main' }, [
-        el('span', { class: 'bc-row-name', text: a.name + (count ? ' ×' + count : '') }),
+        el('span', { class: 'bc-row-name' }, [
+          accessoryIcon('cat', a.category), accessoryIcon('type', a.boosterType), a.name + (count ? ' ×' + count : ''), accessoryIcon('rank', a.rank),
+        ]),
         el('span', { class: 'bc-row-meta', text: [a.category, a.boosterType, a.requirements, a.effect].filter(Boolean).join(' · ') }),
       ]),
     ]);
@@ -1972,36 +1776,102 @@
   }
 
   // --- Onglet Assist & invocation -------------------------------------------
-  function renderAssist(panel) {
-    panel.appendChild(illegalToggle());
+  // Les deux listes se rendent séparément : sous les onglets elles se suivent
+  // dans le même panneau, mais sur la carte l'assist et l'invocation sont deux
+  // lignes distinctes, et chacune ouvre sa fenêtre. Les changer ensemble parce
+  // qu'ils partagent un onglet était un héritage de la mise en page, pas une
+  // règle du jeu.
+  // Trente et un renforts : sans filtre ni tri, on les parcourait des yeux.
+  // L'ordre par défaut est celui de l'écran de sélection, camp par camp — celui
+  // dans lequel on cherche un assist quand on connaît le jeu. L'alphabétique,
+  // lui, éparpille les deux camps et les épisodes.
+  //
+  // Le rang par épisode n'est pas déclaré : c'est celui du tableau des assists,
+  // que la source donne dans l'ordre des Final Fantasy.
+  var ordreEpisode = {};
+  (D.assists || []).forEach(function (a, i) { ordreEpisode[a.slug] = i; });
+  var TRIS_ASSIST = [
+    { key: 'default', label: function () { return T('assist.sortDefault'); }, cmp: function (a, b) { return (a.order || 0) - (b.order || 0); } },
+    { key: 'episode', label: function () { return T('assist.sortEpisode'); }, cmp: function (a, b) { return ordreEpisode[a.slug] - ordreEpisode[b.slug]; } },
+    { key: 'name', label: function () { return T('equipment.sortName'); }, cmp: byName },
+    { key: 'cosmos', label: function () { return T('assist.sortCosmos'); }, cmp: function (a, b) { return camp(a) - camp(b) || (a.order || 0) - (b.order || 0); } },
+    { key: 'chaos', label: function () { return T('assist.sortChaos'); }, cmp: function (a, b) { return camp(b) - camp(a) || (a.order || 0) - (b.order || 0); } },
+  ];
+  // Le camp se lit sur le sens du regard du portrait : les deux camps se font
+  // face à l'écran de sélection, et c'est la seule marque que les données en
+  // portent.
+  function camp(a) { return a.portraitFacing === 'left' ? 0 : 1; }
+  var assistFilter = '';
+  var assistSort = 'default';
 
-    panel.appendChild(el('h3', { text: T('assist.title') }));
-    panel.appendChild(el('p', { class: 'bc-note', text: T('assist.note') }));
-    var alist = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'assist' });
-    D.assists.slice().sort(function (a, b) { return byName(a, b); }).forEach(function (a) {
-      var selected = state.build.assist === a.slug;
-      var btn = el('button', {
-        type: 'button', class: 'bc-row bc-row-btn' + (selected ? ' is-selected' : ''), 'aria-pressed': selected ? 'true' : 'false',
-        'data-uid': a.slug,
-        onclick: function () {
-          state.build.assist = selected ? null : a.slug;
-          markDirty();
-          keepScroll(a.slug, function () { renderPanel('assist'); refresh(); });
-        },
-      }, [
-        el('span', { class: 'bc-row-main' }, [
-          el('span', { class: 'bc-row-name', text: a.name }),
-          el('span', { class: 'bc-row-meta', text: a.attacks.map(function (x) { return x.name + (x.startup ? ' (' + x.startup + ')' : ''); }).join(' · ') }),
-        ]),
-      ]);
-      if (!a.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: T('status.undocumented') }));
-      alist.appendChild(btn);
-    });
-    panel.appendChild(alist);
+  function assistList(close) {
+    var section = el('div', { class: 'bc-chooser' });
+    var bar = el('div', { class: 'bc-filters' });
+    var search = el('input', { type: 'search', placeholder: T('equipment.filterName'), value: assistFilter, 'aria-label': T('equipment.filterName') });
+    caretToEnd(search);
+    search.addEventListener('input', function () { assistFilter = search.value; redessiner(); });
+    var triSel = el('select', { 'aria-label': T('equipment.sort') }, TRIS_ASSIST.map(function (t) {
+      return el('option', { value: t.key, text: t.label(), selected: assistSort === t.key });
+    }));
+    triSel.addEventListener('change', function () { assistSort = triSel.value; redessiner(); });
+    bar.appendChild(search); bar.appendChild(triSel);
+    section.appendChild(bar);
 
-    panel.appendChild(el('h3', { text: T('assist.summonTitle') }));
-    panel.appendChild(el('p', { class: 'bc-note', text: T('assist.summonNote', { list: D.ruleset.legalSummons.join(', ') }) }));
-    var slist = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'summon' });
+    var box = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'assist' });
+    var pose = (D.assists || []).filter(function (a) { return a.slug === state.build.assist; })[0];
+    var poser = function (slug) {
+      state.build.assist = slug;
+      markDirty();
+      if (close) close();
+      keepScroll(slug, refresh);
+    };
+    if (pose || state.build.assist === ANY) {
+      section.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poser(null); }));
+    }
+    section.appendChild(anyRow(state.build.assist === ANY, function () { poser(state.build.assist === ANY ? null : ANY); }));
+    section.appendChild(box);
+
+    // Le filtre porte aussi sur les coups du renfort : on cherche souvent
+    // « celui qui pose un mur de bravery », pas un nom.
+    function redessiner() {
+      clear(box);
+      var tri = TRIS_ASSIST.filter(function (t) { return t.key === assistSort; })[0] || TRIS_ASSIST[0];
+      var q = assistFilter.toLowerCase();
+      D.assists.filter(function (a) {
+        return !q || (a.name + ' ' + a.attacks.map(function (x) { return x.name; }).join(' ')).toLowerCase().indexOf(q) !== -1;
+      }).sort(tri.cmp).forEach(function (a) {
+        var selected = state.build.assist === a.slug;
+        var btn = el('button', {
+          type: 'button', class: 'bc-row bc-row-btn' + (selected ? ' is-selected' : ''), 'aria-pressed': selected ? 'true' : 'false',
+          'data-uid': a.slug,
+          onclick: function () { poser(selected ? null : a.slug); },
+        }, [
+          el('span', { class: 'bc-row-main' }, [
+            el('span', { class: 'bc-row-name', text: a.name }),
+            el('span', { class: 'bc-row-meta', text: a.attacks.map(function (x) { return x.name + (x.startup ? ' (' + x.startup + ')' : ''); }).join(' · ') }),
+          ]),
+        ]);
+        if (!a.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', text: T('status.undocumented') }));
+        box.appendChild(btn);
+      });
+    }
+    redessiner();
+    return section;
+  }
+
+  function summonList(close) {
+    var box = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'summon' });
+    var pose = (D.summons || []).filter(function (s) { return s.id === state.build.summon; })[0];
+    var poser = function (id) {
+      state.build.summon = id;
+      markDirty();
+      if (close) close();
+      keepScroll(id, refresh);
+    };
+    if (pose || state.build.summon === ANY) {
+      box.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poser(null); }));
+    }
+    box.appendChild(anyRow(state.build.summon === ANY, function () { poser(state.build.summon === ANY ? null : ANY); }));
     D.summons.filter(function (s) { return state.showIllegal || s.legal !== false; })
       .sort(function (a, b) { return byName(a, b); })
       .forEach(function (s) {
@@ -2009,22 +1879,18 @@
         var btn = el('button', {
           type: 'button', class: 'bc-row bc-row-btn' + (selected ? ' is-selected' : ''), 'aria-pressed': selected ? 'true' : 'false',
           'data-uid': s.id,
-          onclick: function () {
-            state.build.summon = selected ? null : s.id;
-            markDirty();
-            keepScroll(s.id, function () { renderPanel('assist'); refresh(); });
-          },
+          onclick: function () { poser(selected ? null : s.id); },
         }, [
           el('span', { class: 'bc-row-main' }, [
             el('span', { class: 'bc-row-name', text: s.name }),
             el('span', { class: 'bc-row-meta', text: (s.text || '').split('\n')[0].slice(0, 150) }),
           ]),
         ]);
-        if (s.legal === false) btn.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(s), text: 'illégal' }));
+        if (s.legal === false) btn.appendChild(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(s), text: T('accessories.illegal') }));
         if (!s.documented) btn.appendChild(el('span', { class: 'bc-tag bc-tag-warn', title: T('assist.undocumentedEffect'), text: T('status.undocumented') }));
-        slist.appendChild(btn);
+        box.appendChild(btn);
       });
-    panel.appendChild(slist);
+    return box;
   }
 
   // --- Sélection du personnage ---------------------------------------------
@@ -2032,17 +1898,41 @@
   rosterButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var slug = btn.dataset.slug;
-      if (slug === state.build.character) return;
+      // Rechoisir celui qu'on édite déjà, c'est refermer la grille : sur
+      // téléphone elle est ouverte pour qu'on en change, pas pour rien.
+      if (slug === state.build.character) { replierRoster(true); return; }
       if (state.dirty && !window.confirm(T('manager.confirmChangeChar'))) return;
       setCharacter(slug);
     });
   });
 
+  // À l'étroit, les 31 vignettes occupent plus d'un écran et demi : la carte
+  // qu'on édite ne commençait qu'à 1469 px du haut. Une fois le personnage
+  // choisi, la grille se replie derrière son bouton. Sur grand écran elle reste
+  // dépliée — la place ne manque pas, et le choix se voit d'un coup d'œil.
+  var rosterGrille = document.getElementById('bc-roster');
+  var rosterBouton = document.getElementById('bc-roster-toggle');
+  function replierRoster(replie) {
+    if (!rosterGrille || !rosterBouton) return;
+    var replier = replie && estCompact() && !!state.build.character;
+    rosterGrille.hidden = replier;
+    rosterBouton.hidden = !replier;
+    rosterBouton.setAttribute('aria-expanded', replier ? 'false' : 'true');
+  }
+  if (rosterBouton) {
+    rosterBouton.addEventListener('click', function () {
+      replierRoster(false);
+      // Le focus rejoint le personnage en cours : la grille rouverte, c'est de
+      // lui qu'on part pour en choisir un autre.
+      var courant = rosterGrille.querySelector('.bc-char[aria-checked="true"]');
+      if (courant) courant.focus();
+    });
+  }
+
   function setCharacter(slug) {
     state.build = emptyBuild(slug);
     state.dirty = false;
     applyCharacterUi();
-    selectTab('attack', false);
     refresh();
   }
 
@@ -2054,6 +1944,7 @@
     document.getElementById('bc-current-name').textContent = char ? T('manager.buildOf', { name: char.name }) : BC.ui.step2Default;
     document.getElementById('bc-build-name').value = state.build.name;
     document.getElementById('bc-notes').value = state.build.notes;
+    replierRoster(true);
   }
 
   // --- Gestion des builds ---------------------------------------------------
@@ -2104,6 +1995,12 @@
       box.appendChild(el('h3', { text: char ? char.name : slug }));
       byChar[slug].forEach(function (b) {
         box.appendChild(el('div', { class: 'bc-saved' }, [
+          // Le portrait ne dit rien de plus que le titre de groupe juste
+          // au-dessus : il repère la ligne à l'œil, il ne s'annonce pas.
+          el('img', {
+            class: 'bc-saved-portrait', src: ASSET_BASE + 'portraits/' + slug + '.png',
+            alt: '', width: 40, height: 40, loading: 'lazy',
+          }),
           el('span', { class: 'bc-row-main' }, [
             el('span', { class: 'bc-row-name', text: b.name || T('manager.untitled') }),
             el('span', { class: 'bc-row-meta', text: T('manager.modifiedOn', { date: new Date(b.modified).toLocaleDateString(BC.locale) }) }),
@@ -2111,6 +2008,8 @@
           el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.load'), onclick: function () { loadBuild(b); } }),
           el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.duplicate'), onclick: function () { duplicateBuild(b); } }),
           el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.rename'), onclick: function () { renameBuild(b); } }),
+          el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.share'), onclick: function () { copyShareUrl(b); } }),
+          el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.export'), onclick: function () { exportBuild(b); } }),
           el('button', { type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('manager.delete'), onclick: function () { deleteBuild(b); } }),
         ]));
       });
@@ -2123,8 +2022,10 @@
     state.build.id = b.id;
     state.dirty = false;
     applyCharacterUi();
-    selectTab(state.activeTab, false);
     refresh();
+    // Le bouton « Charger » vit sous la carte, dans la liste des enregistrés :
+    // sans ce retour en haut, on ne voyait rien du build qu'on vient d'ouvrir.
+    if (root.scrollIntoView) root.scrollIntoView({ block: 'start' });
     toast(T('manager.loaded', { name: b.name || T('manager.untitled') }));
   }
 
@@ -2170,12 +2071,24 @@
     setCharacter(state.build.character);
   });
 
-  document.getElementById('bc-build-name').addEventListener('input', markDirty);
+  // Le nom du build ne partait dans l'objet qu'à l'enregistrement : sous les
+  // onglets, rien ne l'affichait, et personne ne l'a vu. La carte, elle, le
+  // porte en titre — il restait celui d'avant pendant toute la frappe. On le
+  // pose donc à chaque touche, et on écrit le titre à la main plutôt que de
+  // redessiner la carte entière à chaque lettre.
+  document.getElementById('bc-build-name').addEventListener('input', function (ev) {
+    state.build.name = ev.target.value;
+    markDirty();
+    var titre = carteHote && carteHote.querySelector('.bcard-title');
+    if (!titre) return;
+    clear(titre);
+    if (state.build.name) titre.appendChild(document.createTextNode(state.build.name));
+    else titre.appendChild(el('span', { class: 'bcard-untitled', text: T('buildCard.untitled') }));
+  });
   document.getElementById('bc-notes').addEventListener('input', markDirty);
 
   document.getElementById('bc-mastered').addEventListener('change', function (ev) {
     state.mastered = ev.target.checked;
-    renderPanel(state.activeTab);
     refresh();
   });
 
@@ -2191,10 +2104,12 @@
   }
   function safeName(s) { return (s || 'build').replace(/[^a-z0-9-_]+/gi, '-').replace(/^-+|-+$/g, '').toLowerCase() || 'build'; }
 
-  document.getElementById('bc-export').addEventListener('click', function () {
-    var snap = currentSnapshot();
-    download('dissidia012-' + safeName(snap.character + '-' + snap.name) + '.json', JSON.stringify(snap, null, 2), 'application/json');
-  });
+  // Un build seul s'exporte depuis sa ligne dans la liste des enregistrés — le
+  // format est celui de la collection, moins l'enveloppe : `importPayload` sait
+  // relire un objet isolé comme un tableau d'un élément.
+  function exportBuild(b) {
+    download('dissidia012-' + safeName(b.character + '-' + b.name) + '.json', JSON.stringify(b, null, 2), 'application/json');
+  }
 
   document.getElementById('bc-export-all').addEventListener('click', function () {
     var builds = loadAll();
@@ -2202,30 +2117,211 @@
     download('dissidia012-builds.json', JSON.stringify({ schemaVersion: SCHEMA_VERSION, builds: builds }, null, 2), 'application/json');
   });
 
-  // Export secondaire à plat : une ligne par build, listes agrégées. Le JSON
-  // reste le format d'échange de référence — le CSV perd la structure.
-  document.getElementById('bc-export-csv').addEventListener('click', function () {
-    var builds = loadAll();
-    var snap = currentSnapshot();
-    if (!builds.some(function (b) { return b.id === snap.id; })) builds = builds.concat([snap]);
-    var cols = ['id', 'name', 'character', 'attacks', 'abilities', 'weapon', 'hand', 'head', 'body', 'accessories', 'assist', 'summon', 'notes', 'modified']
-      .map(function (c) { return T('manager.csv.' + c); });
-    var esc = function (v) { return '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"'; };
-    var lines = [cols.map(esc).join(',')];
-    builds.forEach(function (b) {
-      var nameOf = function (uidv, index) { return uidv && index[uidv] ? index[uidv].name : ''; };
-      lines.push([
-        b.id, b.name, b.character,
-        b.attacks.join(' | '),
-        b.abilities.map(function (id) { return abilityById[id] ? abilityById[id].name : id; }).join(' | '),
-        nameOf(b.equipment.weapon, equipByUid), nameOf(b.equipment.hand, equipByUid),
-        nameOf(b.equipment.head, equipByUid), nameOf(b.equipment.body, equipByUid),
-        b.accessories.map(function (u) { return nameOf(u, accByUid); }).filter(Boolean).join(' | '),
-        b.assist || '', b.summon || '', b.notes, b.modified,
-      ].map(esc).join(','));
+  // --- Cliché de la carte ---------------------------------------------------
+  // Partager un build, c'est souvent coller une image. La carte est déjà le
+  // récapitulatif d'un build en un écran : on la photographie telle quelle,
+  // sans bibliothèque — le site n'en charge aucune et n'a pas de serveur.
+  //
+  // Le navigateur sait dessiner du HTML dans un canevas par un seul chemin : une
+  // image SVG qui embarque le fragment dans un `foreignObject`. Cette image est
+  // rendue hors ligne, sans accès au réseau : tout ce qu'elle affiche doit être
+  // dans le fichier. D'où les deux préparations ci-dessous — la feuille de style
+  // recopiée, les images retournées en `data:`.
+  //
+  // Les polices, elles, ne suivent pas : le repli du design system s'applique,
+  // comme pour les images de partage que `npm run og` génère déjà en Times.
+  var cacheImages = {};
+
+  function enDataUri(url) {
+    if (cacheImages[url]) return cacheImages[url];
+    cacheImages[url] = fetch(url).then(function (r) {
+      if (!r.ok) throw new Error(url);
+      return r.blob();
+    }).then(function (blob) {
+      return new Promise(function (resolve, reject) {
+        var lecteur = new FileReader();
+        lecteur.onload = function () { resolve(String(lecteur.result)); };
+        lecteur.onerror = reject;
+        lecteur.readAsDataURL(blob);
+      });
     });
-    download('dissidia012-builds.csv', '﻿' + lines.join('\r\n'), 'text/csv');
-  });
+    return cacheImages[url];
+  }
+
+  // Les polices du site viennent de Google Fonts, que l'image ne peut pas aller
+  // chercher : sans elles, le titre retomberait sur le Times du repli — le même
+  // que celui des images de partage. On les embarque donc en `data:`, et
+  // seulement le sous-ensemble latin : les vingt-cinq déclarations couvrent le
+  // cyrillique et le grec, que la carte n'affiche pas.
+  //
+  // Au moindre accroc — hors ligne, requête refusée — on rend l'image sans :
+  // une carte en Times vaut mieux que pas de carte.
+  var policesPromesse = null;
+
+  function policesEmbarquees() {
+    if (policesPromesse) return policesPromesse;
+    var lien = null;
+    Array.prototype.forEach.call(document.querySelectorAll('link[rel="stylesheet"]'), function (l) {
+      if (/fonts\.googleapis\.com/.test(l.href)) lien = l.href;
+    });
+    if (!lien) return (policesPromesse = Promise.resolve(''));
+    policesPromesse = fetch(lien).then(function (r) { return r.text(); }).then(function (css) {
+      var blocs = css.split('@font-face').slice(1).map(function (b) { return '@font-face' + b.split('}')[0] + '}'; });
+      var latins = blocs.filter(function (b) { return b.indexOf('U+0000-00FF') !== -1; });
+      return Promise.all(latins.map(function (bloc) {
+        var m = /url\((https:[^)]+)\)/.exec(bloc);
+        if (!m) return '';
+        return enDataUri(m[1]).then(function (uri) { return bloc.replace(m[1], uri); }).catch(function () { return ''; });
+      })).then(function (out) { return out.join('\n'); });
+    }).catch(function () { return ''; });
+    return policesPromesse;
+  }
+
+  // La feuille de style entière : le tri des règles utiles coûterait plus cher
+  // que de tout recopier, et une règle oubliée se verrait sur l'image.
+  function feuilleDeStyle() {
+    var out = [];
+    Array.prototype.forEach.call(document.styleSheets, function (f) {
+      var regles;
+      try { regles = f.cssRules; } catch (e) { return; }
+      Array.prototype.forEach.call(regles, function (r) { out.push(r.cssText); });
+    });
+    return out.join('\n');
+  }
+
+  // Le cliché fige ce que la carte montre au repos : l'équipement, le premier
+  // style, et les prolongements repliés. C'est la lecture d'ensemble d'un build,
+  // pas son détail — celui-ci se lit dans l'outil.
+  var numeroCliche = 0;
+
+  function preparerClone(carte) {
+    var clone = carte.cloneNode(true);
+    var chaque = function (sel, fn) { Array.prototype.forEach.call(clone.querySelectorAll(sel), fn); };
+    clone.style.margin = '0';
+    // Le clone entre dans la page le temps d'être mesuré : ses identifiants et
+    // ses noms de groupe y côtoient ceux de la carte vivante. Deux radios de
+    // même nom ne font qu'un seul groupe — cocher celui du clone décochait
+    // celui de la carte, et les deux panneaux s'y superposaient une fois
+    // l'image faite. On lui donne donc les siens. La feuille de style ne s'y
+    // trompe pas : elle vise les valeurs, jamais les identifiants.
+    var marque = 'cliche' + (numeroCliche += 1);
+    chaque('[id]', function (n) { n.id = marque + '-' + n.id; });
+    chaque('label[for]', function (n) { n.setAttribute('for', marque + '-' + n.getAttribute('for')); });
+    chaque('input[name]', function (n) { n.setAttribute('name', marque + '-' + n.getAttribute('name')); });
+    chaque('.bcard-panel-radio', function (r) { r.checked = r.value === 'gear'; });
+    chaque('.bcard-style-radio', function (r, i) { r.checked = i === 0; });
+    // Les prolongements restent dépliés : ce sont eux qui font la lecture d'un
+    // build — le HP link sous sa bravery, l'enchaînement au rond. Les places
+    // encore libres, elles, s'effacent : sur une image, une ligne vide ne se
+    // remplira jamais. Les cases de repli partent avec leur chevron.
+    chaque('.bcard-fold', function (c) { c.parentNode.removeChild(c); });
+    chaque('.bcard-branch.is-empty', function (l) { l.parentNode.removeChild(l); });
+    // Une case cochée par script ne l'est pas dans le HTML sérialisé : c'est
+    // l'attribut que l'image lira, pas la propriété.
+    chaque('input[type="radio"], input[type="checkbox"]', function (i) {
+      if (i.checked) i.setAttribute('checked', 'checked'); else i.removeAttribute('checked');
+    });
+    // Le panneau caché occupe la même case de grille que celui qu'on montre :
+    // laissé en place, il imposerait sa hauteur à l'image.
+    var abilities = clone.querySelector('.bcard-abilities');
+    if (abilities) abilities.parentNode.removeChild(abilities);
+    // Poignées et boutons sont des gestes : ils n'ont rien à faire sur une image.
+    chaque('.bcard-fold-tab', function (n) { n.parentNode.removeChild(n); });
+    chaque('.bcard-hit', function (b) {
+      var span = document.createElement('span');
+      span.className = 'bcard-hit';
+      span.innerHTML = b.innerHTML;
+      b.parentNode.replaceChild(span, b);
+    });
+    return clone;
+  }
+
+  // La carte fait quarante rem de large, par construction. C'est cette largeur
+  // que l'image reprend, et non celle qu'a la carte à l'écran : le créateur se
+  // consulte beaucoup sur téléphone, où la carte se resserre, et une image qui
+  // dépendrait de l'appareil de celui qui l'exporte ne serait plus la même carte.
+  function largeurDeReference() {
+    return Math.round(40 * parseFloat(getComputedStyle(document.documentElement).fontSize || '16'));
+  }
+
+  // La hauteur, elle, se mesure — et dans les conditions du rendu. Les règles
+  // d'affichage changent avec la largeur de la fenêtre : mesurée dans la page
+  // depuis un téléphone, la carte donnait la hauteur de sa mise en page mobile,
+  // et l'image sortait tronquée. On la met donc en page dans un cadre de la
+  // largeur de l'image, avec la même feuille de style et les mêmes polices.
+  function mesurerHauteur(clone, styles, largeur) {
+    var cadre = el('iframe', { class: 'bc-cliche-banc', width: String(largeur), height: '100' });
+    document.body.appendChild(cadre);
+    var doc = cadre.contentDocument;
+    doc.open();
+    doc.write('<!doctype html><html><head><meta charset="utf-8"></head><body></body></html>');
+    doc.close();
+    var style = doc.createElement('style');
+    style.textContent = styles;
+    doc.head.appendChild(style);
+    doc.body.style.margin = '0';
+    doc.body.appendChild(doc.importNode(clone, true));
+    var hauteur = Math.ceil(doc.body.firstChild.getBoundingClientRect().height);
+    cadre.parentNode.removeChild(cadre);
+    return hauteur;
+  }
+
+  function cliche() {
+    var carte = carteHote && carteHote.querySelector('.bcard');
+    if (!carte) return;
+    toast(T('imageBuilding'));
+    var clone = preparerClone(carte);
+    var largeur = largeurDeReference();
+    var hauteur = 0;
+    clone.style.width = largeur + 'px';
+    clone.style.maxWidth = 'none';
+
+    Promise.all([policesEmbarquees()].concat(Array.prototype.map.call(clone.querySelectorAll('img'), function (img) {
+      return enDataUri(img.getAttribute('src')).then(function (uri) { img.setAttribute('src', uri); });
+    }))).then(function (resultats) {
+      var polices = resultats[0] || '';
+      var styles = polices + '\n' + feuilleDeStyle();
+      hauteur = mesurerHauteur(clone, styles, largeur);
+      // L'image SVG est lue en XML, pas en HTML : `outerHTML` y échoue sans
+      // rien dire — il laisse les balises vides ouvertes (`<img …>`), et le
+      // fichier entier est rejeté. Le sérialiseur XML les referme. La feuille de
+      // style, elle, passe en CDATA : une accolade ou une esperluette y seraient
+      // lues comme du balisage.
+      var doc = '<div xmlns="http://www.w3.org/1999/xhtml" class="bc-cliche">'
+        + '<style><![CDATA[' + styles + ']]></style>'
+        + new XMLSerializer().serializeToString(clone) + '</div>';
+      var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + largeur + '" height="' + hauteur + '">'
+        + '<foreignObject width="100%" height="100%">' + doc + '</foreignObject></svg>';
+      return new Promise(function (resolve, reject) {
+        var img = new Image();
+        img.onload = function () { resolve(img); };
+        img.onerror = function () { reject(new Error('svg')); };
+        img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+      });
+    }).then(function (img) {
+      // Deux fois la taille : une carte partagée est souvent relue de près.
+      var echelle = 2;
+      var canevas = el('canvas', { width: largeur * echelle, height: hauteur * echelle });
+      var ctx = canevas.getContext('2d');
+      ctx.scale(echelle, echelle);
+      ctx.drawImage(img, 0, 0);
+      return new Promise(function (resolve) { canevas.toBlob(resolve, 'image/png'); });
+    }).then(function (blob) {
+      if (!blob) throw new Error('canvas');
+      var url = URL.createObjectURL(blob);
+      var a = el('a', { href: url, download: safeName(state.build.name || charBySlug[state.build.character].name) + '.png' });
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      toast(T('imageDone'));
+    }).catch(function () {
+      toast(T('imageFailed'), true);
+    });
+  }
+
+  var boutonImage = document.getElementById('bc-export-img');
+  if (boutonImage) boutonImage.addEventListener('click', cliche);
 
   document.getElementById('bc-import').addEventListener('change', function (ev) {
     var file = ev.target.files && ev.target.files[0];
@@ -2286,7 +2382,6 @@
     state.build.id = b.id;
     state.dirty = false;
     applyCharacterUi();
-    selectTab('attack', false);
     refresh();
   }
 
@@ -2401,6 +2496,13 @@
   }
 
   function encodeCompact(b) {
+    // Le format binaire remplace chaque identifiant par son rang dans un
+    // catalogue : le jeton « au choix » n'y figure pas, et lui réserver un rang
+    // décalerait tous les autres — les liens déjà partagés chargeraient un build
+    // faux. On refuse donc, et `encodeBuild` retombe sur le format long, qui
+    // transporte le build tel quel. Refus explicite, pas exception avalée : un
+    // repli silencieux avait déjà triplé la longueur des liens sans qu'on le voie.
+    if (porteAuChoix(b)) throw new Error('any');
     var c = catalogsOf();
     var atk = c.attacks[b.character] || [];
     var w = new BitWriter();
@@ -2506,6 +2608,8 @@
       eq: [b.equipment.weapon, b.equipment.hand, b.equipment.head, b.equipment.body],
       ac: b.accessories, as: b.assist, su: b.summon,
     };
+    // Absent des liens émis avant ce champ : `fromJsonBytes` lit alors 100.
+    if ((b.level || 100) !== 100) compact.lv = b.level;
     // Un nom ou des notes vides n'ont pas à occuper l'URL.
     if (b.name) compact.n = b.name;
     if (b.notes) compact.no = b.notes;
@@ -2559,18 +2663,25 @@
       attacks: c.at || [], attackSlots: c.sl || [], abilities: c.ab || [],
       equipment: { weapon: (c.eq || [])[0] || null, hand: (c.eq || [])[1] || null, head: (c.eq || [])[2] || null, body: (c.eq || [])[3] || null },
       accessories: c.ac || [], assist: c.as || null, summon: c.su || null, notes: c.no || '',
+      level: c.lv || 100,
       created: new Date().toISOString(), modified: new Date().toISOString(),
     };
   }
 
-  function shareUrl(base) {
-    return encodeBuild(currentSnapshot()).then(function (code) {
+  // Sans build donné, c'est celui qu'on est en train de composer : la barre
+  // d'actions et le sélecteur de langue partagent l'état vivant. Les lignes de
+  // la liste, elles, partagent le build enregistré tel qu'il est rangé.
+  function shareUrl(base, build) {
+    return encodeBuild(build || currentSnapshot()).then(function (code) {
       return (base || location.origin + location.pathname) + '?build=' + code;
     });
   }
 
-  document.getElementById('bc-share').addEventListener('click', function () {
-    shareUrl().then(function (url) {
+  // Le presse-papiers n'est pas toujours accessible — page en `file://`, refus
+  // de l'utilisateur : on retombe alors sur une invite où le lien est
+  // sélectionnable.
+  function copyShareUrl(build) {
+    shareUrl(null, build).then(function (url) {
       var done = function () { toast(T('manager.linkCopied')); };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(done, function () { window.prompt(T('manager.promptCopyLink'), url); });
@@ -2578,7 +2689,9 @@
         window.prompt(T('manager.promptCopyLink'), url);
       }
     });
-  });
+  }
+
+  document.getElementById('bc-share').addEventListener('click', function () { copyShareUrl(); });
 
   // Changer de langue depuis le créateur emporte le build en cours — y compris
   // les retouches faites depuis l'ouverture du lien, que la query string de la
@@ -2633,6 +2746,510 @@
     ev.preventDefault();
     ev.returnValue = '';
   });
+
+
+  // --- Mode carte -----------------------------------------------------------
+  // Banc d'essai : la carte de build tient lieu d'interface. Elle est redessinée
+  // en entier par le rendu partagé (BuildCardView) à chaque modification, et ses
+  // emplacements portent leur position en attribut. Le clic rouvre la fenêtre
+  // que l'onglet correspondant ouvrait déjà — aucune n'est réécrite ici, c'est
+  // tout l'intérêt : la sélection, les filtres et le tri restent à un endroit.
+  var carteHote = document.getElementById('bc-card');
+  var carteBase = carteHote ? (carteHote.getAttribute('data-base') || '') : '';
+
+  // Le règlement de tournoi retire des accessoires et des invocations des
+  // listes. Sous les onglets, la case qui les rend au choix ouvre les panneaux
+  // « Équipement » et « Accessoires » ; en mode carte, ces panneaux n'existent
+  // pas et la case n'existait nulle part : ce qu'écarte le règlement était
+  // devenu inatteignable. Elle rejoint l'en-tête, à côté du nom du build — la
+  // colonne de la jauge, large de 7 rem, ne peut pas porter sa phrase.
+  if (carteHote) {
+    var meta = document.querySelector('.bc-build-meta');
+    if (meta) meta.appendChild(illegalToggle());
+  }
+
+  // À l'étroit, la carte se resserre : le portrait revient dans l'en-tête — en
+  // fond il ne laissait plus rien lire —, l'équipement et les attaques prennent
+  // chacun leur languette, et la colonne de stats vient les rejoindre au lieu de
+  // s'empiler sous la carte. Le seuil est celui où la mise en page à trois
+  // colonnes rend les armes.
+  var petitEcran = window.matchMedia ? window.matchMedia('(max-width: 899px)') : null;
+  function estCompact() { return !!(petitEcran && petitEcran.matches); }
+
+  // Les statistiques sont rendues dans les nœuds de la page — le script les
+  // remplit par identifiant. On ne les recopie donc pas : on les déplace, dans
+  // la carte ou hors d'elle, et le rendu suit sans rien savoir de l'endroit.
+  //
+  // Ils doivent en sortir AVANT que la carte ne se redessine : `innerHTML`
+  // remplace tout, et les emporterait. Le panneau restait alors vide pour de
+  // bon — les statistiques n'avaient plus de nœuds où s'écrire, et changer
+  // d'accessoire ne montrait plus rien.
+  function rangerStats(compact) {
+    var aside = document.querySelector('.bc-side-stats');
+    if (!aside) return;
+    var dedans = carteHote.querySelector('.bcard-stats');
+    var cible = compact && dedans ? dedans : aside;
+    var source = cible === aside ? dedans : aside;
+    if (!source || source === cible) return;
+    Array.prototype.slice.call(source.children).forEach(function (n) { cible.appendChild(n); });
+  }
+
+  function renderCard() {
+    if (!carteHote || !window.BuildCardView || !state.build.character) return;
+    // La carte repart de zéro : ses boutons radio — languette ouverte, style
+    // affiché — et ses cases de repli reviendraient au défaut à chaque clic. On
+    // les relit avant de redessiner, on les repose après.
+    var ouverts = {};
+    var replies = {};
+    Array.prototype.forEach.call(carteHote.querySelectorAll('input[type="radio"]'), function (r) {
+      if (r.checked) ouverts[r.name] = r.value;
+    });
+    Array.prototype.forEach.call(carteHote.querySelectorAll('.bcard-fold'), function (c) {
+      if (c.checked) replies[c.id] = true;
+    });
+    // Les statistiques regagnent leur colonne le temps du redessin : la carte
+    // qu'elles habitent est sur le point d'être remplacée.
+    rangerStats(false);
+    // Quelles pièces exigent l'Equip Glitch : la carte ne sait pas le calculer —
+    // il faut les catégories natives du personnage — et ne doit pas l'apprendre.
+    // `equipStatus` reste le seul juge, et la carte reçoit son verdict.
+    var glitch = {};
+    SLOTS.forEach(function (s) {
+      var pose = state.build.equipment[s.key];
+      var piece = pose ? equipByUid[pose] : null;
+      if (piece && equipStatus(piece).state === 'glitch') glitch[s.key] = true;
+    });
+    carteHote.innerHTML = window.BuildCardView.buildCard({
+      t: T,
+      build: state.build,
+      data: D,
+      glitch: glitch,
+      L: { asset: function (p) { return carteBase + p; } },
+      hasPortrait: function () { return true; },
+      variant: estCompact() ? '' : 'portrait-full',
+      compact: estCompact(),
+      live: true,
+      mastered: state.mastered,
+      uid: 'live',
+    });
+    Array.prototype.forEach.call(carteHote.querySelectorAll('input[type="radio"]'), function (r) {
+      if (ouverts[r.name] !== undefined) r.checked = ouverts[r.name] === r.value;
+    });
+    Array.prototype.forEach.call(carteHote.querySelectorAll('.bcard-fold'), function (c) {
+      c.checked = !!replies[c.id];
+    });
+    rangerStats(estCompact());
+    mesurerCarte();
+  }
+
+  // La carte ne tient plus dans une hauteur figée : un build dense la fait
+  // grandir. Les deux colonnes qui l'encadrent — les stats et la jauge — se
+  // calaient sur la même constante recopiée dans la feuille de style ; elles
+  // lisent désormais la hauteur réellement rendue, publiée ici après chaque
+  // dessin. Elles vivent dans d'autres colonnes de la grille, leur taille ne
+  // peut donc pas rejaillir sur celle de la carte.
+  function mesurerCarte() {
+    var deux = carteHote.closest ? carteHote.closest('.bc-two') : null;
+    var carte = carteHote.querySelector('.bcard');
+    if (!deux || !carte) return;
+    deux.style.setProperty('--bc-carte-mesure', carte.getBoundingClientRect().height + 'px');
+    // À l'étroit, les languettes se collent sous la jauge : encore faut-il
+    // savoir ce qu'elle mesure. Sa hauteur change avec sa légende, qui se replie
+    // sur deux lignes selon la largeur.
+    var jauge = deux.querySelector('.bc-gauge-wrap');
+    if (jauge) deux.style.setProperty('--bc-jauge-h', jauge.getBoundingClientRect().height + 'px');
+  }
+
+  // Le build n'est pas seul à changer la hauteur de la carte : la fenêtre s'y
+  // met aussi, un nom qui passe à la ligne suffit. Mesurer au seul redessin
+  // laissait la valeur se périmer — on l'a vue rester à la hauteur d'une carte
+  // rendue dans une fenêtre étroite, et la jauge s'étirer d'autant. L'observateur
+  // la remesure chaque fois que la boîte bouge, d'où qu'elle vienne. Les
+  // colonnes qu'il alimente sont d'autres cases de la grille, elles ne peuvent
+  // pas renvoyer la carte grandir : pas de boucle.
+  if (carteHote && window.ResizeObserver) new ResizeObserver(mesurerCarte).observe(carteHote);
+
+  // Franchir le seuil change la carte elle-même, pas seulement sa mise en page :
+  // on la redessine. `addListener` reste là pour les navigateurs qui ne
+  // connaissent pas encore `addEventListener` sur une requête média.
+  if (petitEcran) {
+    var surSeuil = function () { renderCard(); replierRoster(true); };
+    if (petitEcran.addEventListener) petitEcran.addEventListener('change', surSeuil);
+    else if (petitEcran.addListener) petitEcran.addListener(surSeuil);
+  }
+
+  // Retrouve le contexte d'une catégorie d'attaques à partir de sa clé, avec la
+  // même composition que la grille : (bravery/HP, groupe, style).
+  function categorieDe(char, catKey) {
+    var scan = scanBuild(char);
+    var trouve = null;
+    ['bravery', 'hp'].forEach(function (kind) {
+      (char.attacks[kind] || []).forEach(function (g) {
+        if (g.followUp) return;
+        byStyle(g.moves).forEach(function (sub) {
+          var style = sub.style || null;
+          if (kind + '|' + g.key + '|' + (style || '') !== catKey) return;
+          trouve = {
+            kind: kind, group: g, style: style, scan: scan, catKey: catKey,
+            choix: categoryMoves(g, style, scan.index),
+          };
+        });
+      });
+    });
+    return trouve;
+  }
+
+  if (carteHote) {
+    carteHote.addEventListener('click', function (ev) {
+      // Un déplacement vient de se terminer sur cette ligne : le clic qui suit
+      // le relâchement n'est pas une demande d'ouvrir sa fenêtre.
+      if (vientDeGlisser) { vientDeGlisser = false; return; }
+      var cible = ev.target.closest ? ev.target.closest('[data-bc]') : null;
+      if (!cible || !carteHote.contains(cible)) return;
+      var quoi = cible.getAttribute('data-bc');
+      var char = charBySlug[state.build.character];
+
+      if (quoi === 'equip') {
+        var cle = cible.getAttribute('data-slot');
+        var slot = null;
+        SLOTS.forEach(function (x) { if (x.key === cle) slot = x; });
+        if (!slot) return;
+        var pose = state.build.equipment[slot.key] ? equipByUid[state.build.equipment[slot.key]] : null;
+        openModal(slot.label, pose ? T('attacks.replacing', { name: pose.name }) : null, function (body, close) {
+          body.appendChild(slotChooser(slot, close));
+        });
+        return;
+      }
+
+      if (quoi === 'acc') {
+        var i = Number(cible.getAttribute('data-i'));
+        var a = state.build.accessories[i] ? accByUid[state.build.accessories[i]] : null;
+        openModal(T('accessories.slotTitle', { index: i + 1 }), a ? T('attacks.replacing', { name: a.name }) : null, function (body, close) {
+          body.appendChild(accessoryChooser(i, close));
+        });
+        return;
+      }
+
+      if (quoi === 'attack') {
+        var ctx = categorieDe(char, cible.getAttribute('data-cat'));
+        if (!ctx) return;
+        var cmd = Number(cible.getAttribute('data-cmd'));
+        var mien = ctx.scan.slots.filter(function (x) { return x.info.catKey === ctx.catKey; });
+        var occupe = null;
+        mien.forEach(function (x) { if (x.cmd === cmd) occupe = x; });
+        var titre = groupLabel(ctx.group.key) + (ctx.style ? ' — ' + ctx.style : '');
+        // Le jeton nu vaut pour toute la section : c'est lui que portent les
+        // builds venus des fiches. Un emplacement libre affiche alors « au
+        // choix » sans rien occuper — la fenêtre doit tout de même proposer de
+        // le reprendre, faute de quoi la réponse était irréversible.
+        var nu = function () { return state.build.attacks.indexOf(ANY); };
+        var auChoixIci = !occupe && nu() !== -1;
+        var faux = { id: ANY, name: T('buildCard.any') };
+        var retirer = occupe
+          // Retirer un coup emporte ce qui pend sous lui — HP link ou
+          // enchaînement : ils se rattachent à sa position, plus rien ne les
+          // retiendrait.
+          ? function () { removeAt(slotPositions(occupe)); }
+          : (auChoixIci ? function () { developperAuChoix(char, { catKey: ctx.catKey, cmd: cmd }); afterAttackChange(); } : null);
+        openMoveChooser(titre + ' · ' + inputTitle(ctx.kind, cmd), ctx.choix, occupe ? occupe.move : (auChoixIci ? faux : null), function (choisi) {
+          if (occupe) replaceAt(occupe.pos, choisi.id, cmd);
+          else appendAttack(choisi.id, cmd);
+        }, null, retirer, function () {
+          if (auChoixIci) { developperAuChoix(char, { catKey: ctx.catKey, cmd: cmd }); afterAttackChange(); return; }
+          var jeton = ANY_SLOT + ctx.catKey;
+          if (occupe) replaceAt(occupe.pos, jeton, cmd);
+          else appendAttack(jeton, cmd);
+        }, auChoixIci || !!(occupe && estAnySlot(occupe.id)));
+        return;
+      }
+
+      // Un prolongement : l'attaque HP branchée sous une bravery, ou
+      // l'enchaînement qui la prolonge. Une même bravery peut porter les deux —
+      // le Multi-Hit d'Onion Knight ouvre sur Extra Slice au rond et sur
+      // Swordshower au carré —, chacun sur sa ligne et dans sa propre fenêtre.
+      if (quoi === 'branch') {
+        var ctxB = categorieDe(char, cible.getAttribute('data-cat'));
+        if (!ctxB) return;
+        var cmdB = Number(cible.getAttribute('data-cmd'));
+        var champ = cible.getAttribute('data-champ');
+        var parent = null;
+        ctxB.scan.slots.forEach(function (x) { if (x.info.catKey === ctxB.catKey && x.cmd === cmdB) parent = x; });
+        if (!parent) return;
+        var courant = parent[champ];
+        var choix, titre, intro;
+        if (champ === 'link') {
+          // Ce que la source associe à cette bravery, et rien d'autre : les HP
+          // links sont appariés un à un.
+          var vers = {};
+          (char.links || []).forEach(function (l) { if (l.from === parent.id) vers[l.to] = true; });
+          choix = Object.keys(vers).map(function (id) {
+            return ctxB.scan.index.byId[id] ? ctxB.scan.index.byId[id].move : null;
+          }).filter(Boolean);
+          titre = T('attacks.hpLinkFor', { name: parent.move.name });
+        } else {
+          // Deux formes d'enchaînement : à partenaire imposé, la source n'en
+          // associe qu'un à ce coup ; à réserve commune, n'importe lequel
+          // prolonge n'importe quelle bravery de départ, et c'est l'association
+          // choisie qui fait l'effet.
+          choix = (ctxB.scan.index.chainsDe[parent.id] || []).map(function (id) {
+            return ctxB.scan.index.byId[id] ? ctxB.scan.index.byId[id].move : null;
+          }).filter(Boolean);
+          if (!choix.length) {
+            (char.attacks[ctxB.kind] || []).forEach(function (g) {
+              if (!g.followUp) return;
+              choix = choix.concat(g.moves);
+              if (!intro) intro = g.intro;
+            });
+          }
+          titre = T('attacks.followupFor', { name: parent.move.name });
+        }
+        if (!choix.length) return;
+        openMoveChooser(titre, choix, courant ? courant.move : null, function (choisi) {
+          if (courant) replaceAt(courant.pos, choisi.id);
+          else attachTo(parent, choisi.id);
+        }, intro, courant ? function () { removeAt([courant.pos]); } : null);
+        return;
+      }
+
+      if (quoi === 'abilities') {
+        // Les 122 abilities débordaient la fenêtre : elle ne met en colonne que
+        // son sélecteur, et le panneau, posé nu, poussait la liste hors du
+        // cadre. Elle prend donc la même enveloppe que les autres — une zone
+        // qui défile à l'intérieur de la fenêtre, pas la fenêtre qui s'allonge.
+        var famille = cible.getAttribute('data-group');
+        var groupe = (D.abilities || []).filter(function (g) { return g.key === famille; })[0];
+        openModal(groupe ? groupe.label : T('tabs.abilities'), null, function (body) {
+          var section = el('div', { class: 'bc-chooser' });
+          var liste = el('div', { class: 'bc-list-scroll', 'data-slot': 'abilities' });
+          renderAbilities(liste, famille);
+          section.appendChild(liste);
+          body.appendChild(section);
+        });
+        return;
+      }
+
+      // L'assist et l'invocation ont chacun leur fenêtre : ce sont deux lignes
+      // distinctes de la carte, et rien n'oblige à revoir l'un pour changer
+      // l'autre.
+      if (quoi === 'assist') {
+        var monAssist = (D.assists || []).filter(function (a) { return a.slug === state.build.assist; })[0];
+        openModal(T('assist.title'), monAssist ? T('attacks.replacing', { name: monAssist.name }) : null, function (body, close) {
+          body.appendChild(el('p', { class: 'bc-note', text: T('assist.note') }));
+          body.appendChild(assistList(close));
+        });
+        return;
+      }
+
+      if (quoi === 'summon') {
+        var monSummon = (D.summons || []).filter(function (s) { return s.id === state.build.summon; })[0];
+        openModal(T('assist.summonTitle'), monSummon ? T('attacks.replacing', { name: monSummon.name }) : null, function (body, close) {
+          body.appendChild(el('p', { class: 'bc-note', text: T('assist.summonNote', { list: D.ruleset.legalSummons.join(', ') }) }));
+          body.appendChild(summonList(close));
+        });
+      }
+    });
+  }
+
+  // --- Déplacer une ligne de la carte ---------------------------------------
+  // Le créateur à onglets déplace ses attaques par une poignée ; la carte, elle,
+  // n'a que ses lignes, et chacune est déjà le bouton qui ouvre sa fenêtre. Le
+  // glissement part donc de la ligne : au-delà de quatre pixels on déplace, en
+  // deçà le clic ouvre la fenêtre comme avant.
+  //
+  // Deux lignes ne s'échangent que si elles désignent le même genre
+  // d'emplacement : deux attaques d'une même catégorie, deux accessoires. Les
+  // quatre emplacements d'équipement ont chacun leur catégorie de pièces — une
+  // arme ne se pose pas sur la tête —, ils ne se déplacent donc pas, et
+  // l'assist et l'invocation n'ont pas de pair.
+  function familleDe(hit) {
+    if (!hit || !hit.getAttribute) return null;
+    var quoi = hit.getAttribute('data-bc');
+    if (quoi === 'attack') return 'attack|' + hit.getAttribute('data-cat');
+    if (quoi === 'acc') return 'acc';
+    return null;
+  }
+
+  function pairesDe(famille) {
+    return Array.prototype.filter.call(carteHote.querySelectorAll('.bcard-hit'), function (h) {
+      return familleDe(h) === famille;
+    });
+  }
+
+  // Échanger, jamais insérer : les deux emplacements permutent leur contenu, y
+  // compris quand l'un est vide. Une attaque ne bouge pas dans la liste — elle
+  // change de commande, et ses prolongements la suivent sans qu'on y touche.
+  function echanger(source, cible) {
+    if (source === cible) return;
+    if (source.getAttribute('data-bc') === 'acc') {
+      var i = Number(source.getAttribute('data-i'));
+      var j = Number(cible.getAttribute('data-i'));
+      var liste = state.build.accessories;
+      var garde = liste[i];
+      liste[i] = liste[j];
+      liste[j] = garde;
+      markDirty();
+      keepScroll(null, refresh);
+      return;
+    }
+    moveToCmd(charBySlug[state.build.character], source.getAttribute('data-cat'),
+      Number(source.getAttribute('data-cmd')), Number(cible.getAttribute('data-cmd')));
+  }
+
+  // Les Pointer Events couvrent souris, doigt et stylet du même code ; le
+  // glisser-déposer HTML5 ne répond pas au doigt. Au doigt justement, le
+  // déplacement demande un appui maintenu : sans ce délai, tout défilement
+  // commencé sur une ligne aurait déplacé une attaque, et la carte se parcourt
+  // surtout au pouce.
+  var APPUI_LONG = 350;
+  var SEUIL_GLISSE = 4;
+  var glisse = null;
+  var vientDeGlisser = false;
+
+  function finGlisse(appliquer) {
+    if (!glisse) return;
+    var d = glisse;
+    glisse = null;
+    if (d.minuteur) clearTimeout(d.minuteur);
+    document.removeEventListener('pointermove', d.onMove);
+    document.removeEventListener('pointerup', d.onUp);
+    document.removeEventListener('pointercancel', d.onCancel);
+    document.removeEventListener('keydown', d.onKey, true);
+    document.body.classList.remove('bc-dragging');
+    peindre(d, null);
+    if (d.ligne) d.ligne.classList.remove('is-dragging');
+    if (appliquer && d.bouge && d.sur && d.sur !== d.hit) {
+      // Le clic qui suit le relâchement rouvrirait la fenêtre de l'emplacement
+      // qu'on vient de déplacer. Le drapeau tombe au tour suivant, après lui.
+      vientDeGlisser = true;
+      setTimeout(function () { vientDeGlisser = false; }, 0);
+      echanger(d.hit, d.sur);
+    }
+  }
+
+  function peindre(d, sur) {
+    d.cibles.forEach(function (h) {
+      var ligne = h.closest ? h.closest('.bcard-line') : null;
+      if (ligne) ligne.classList.toggle('is-drop-target', !!sur && h === sur && h !== d.hit);
+    });
+  }
+
+  function debutGlisse(hit, ligne, ev) {
+    var famille = familleDe(hit);
+    var cibles = pairesDe(famille);
+    if (cibles.length < 2) return;
+    var d = {
+      hit: hit, ligne: ligne, cibles: cibles,
+      x: ev.clientX, y: ev.clientY, bouge: false, sur: null,
+      // À la souris et au stylet le geste est déjà explicite ; au doigt il faut
+      // le distinguer d'un défilement.
+      arme: ev.pointerType !== 'touch',
+      minuteur: null,
+    };
+    d.onMove = function (e) {
+      if (!glisse) return;
+      var dx = Math.abs(e.clientX - d.x);
+      var dy = Math.abs(e.clientY - d.y);
+      if (!d.arme) {
+        // Le doigt est parti avant la fin de l'appui : c'est un défilement.
+        if (dx > SEUIL_GLISSE || dy > SEUIL_GLISSE) finGlisse(false);
+        return;
+      }
+      if (!d.bouge) {
+        if (dx < SEUIL_GLISSE && dy < SEUIL_GLISSE) return;
+        d.bouge = true;
+        d.ligne.classList.add('is-dragging');
+        document.body.classList.add('bc-dragging');
+      }
+      // On vise la ligne survolée : c'est ce que l'œil attend, et cela reste
+      // juste même si les lignes n'ont pas toutes la même hauteur.
+      d.sur = null;
+      d.cibles.forEach(function (h) {
+        var box = h.getBoundingClientRect();
+        if (e.clientY >= box.top && e.clientY <= box.bottom) d.sur = h;
+      });
+      peindre(d, d.sur);
+    };
+    d.onUp = function () { finGlisse(true); };
+    d.onCancel = function () { finGlisse(false); };
+    d.onKey = function (e) { if (e.key === 'Escape') { e.preventDefault(); finGlisse(false); } };
+    glisse = d;
+    if (!d.arme) {
+      d.minuteur = setTimeout(function () {
+        d.arme = true;
+        d.ligne.classList.add('is-dragging');
+        document.body.classList.add('bc-dragging');
+      }, APPUI_LONG);
+    }
+    document.addEventListener('pointermove', d.onMove);
+    document.addEventListener('pointerup', d.onUp);
+    document.addEventListener('pointercancel', d.onCancel);
+    document.addEventListener('keydown', d.onKey, true);
+  }
+
+  if (carteHote) {
+    // Le niveau se règle dans la carte, qui se redessine en entier à chaque
+    // modification : l'écouteur vit sur l'hôte, pas sur le champ, qui ne
+    // survit pas au redessin. Hors bornes, on retombe sur 100.
+    carteHote.addEventListener('change', function (ev) {
+      var champ = ev.target.closest ? ev.target.closest('[data-bc="level"]') : null;
+      if (!champ) return;
+      var v = Math.round(Number(champ.value));
+      v = v >= 1 && v <= 100 ? v : 100;
+      // Descendre de niveau peut rendre inéquipable une pièce déjà posée : on
+      // demande avant de la retirer, et on ne change rien si la réponse est
+      // non — le champ revient au niveau qui tenait.
+      var perdus = SLOTS.filter(function (s) {
+        var u = state.build.equipment[s.key];
+        var e = u && u !== ANY ? equipByUid[u] : null;
+        return e && (e.level || 1) > v;
+      });
+      if (perdus.length) {
+        var noms = perdus.map(function (s) { return equipByUid[state.build.equipment[s.key]].name; });
+        if (!window.confirm(T('equipment.levelDrop', { level: v, list: noms.join(', ') }))) {
+          champ.value = state.build.level;
+          return;
+        }
+        perdus.forEach(function (s) { state.build.equipment[s.key] = null; });
+      }
+      state.build.level = v;
+      champ.value = v;
+      markDirty();
+      refresh();
+    });
+
+    carteHote.addEventListener('pointerdown', function (ev) {
+      if (ev.button != null && ev.button !== 0) return;
+      var hit = ev.target.closest ? ev.target.closest('.bcard-hit') : null;
+      if (!hit || !familleDe(hit)) return;
+      var ligne = hit.closest('.bcard-line');
+      // On ne déplace que ce qui est posé ; une ligne vide reste une cible.
+      if (!ligne || ligne.classList.contains('is-empty')) return;
+      debutGlisse(hit, ligne, ev);
+    });
+    // Tant qu'un déplacement est armé, la page ne défile pas sous le doigt.
+    // L'écouteur doit être déclaré non passif pour pouvoir s'y opposer.
+    carteHote.addEventListener('touchmove', function (ev) {
+      if (glisse && glisse.arme) ev.preventDefault();
+    }, { passive: false });
+
+    // Sans souris : Alt + flèches déplace la ligne qui a le focus. Les flèches
+    // seules restent au navigateur — la carte est une suite de boutons, on la
+    // parcourt avant de la réorganiser.
+    carteHote.addEventListener('keydown', function (ev) {
+      if (!ev.altKey || (ev.key !== 'ArrowUp' && ev.key !== 'ArrowDown')) return;
+      var hit = ev.target.closest ? ev.target.closest('.bcard-hit') : null;
+      var famille = familleDe(hit);
+      if (!famille) return;
+      var ligne = hit.closest('.bcard-line');
+      if (!ligne || ligne.classList.contains('is-empty')) return;
+      var cibles = pairesDe(famille);
+      var i = cibles.indexOf(hit);
+      var j = i + (ev.key === 'ArrowUp' ? -1 : 1);
+      if (i === -1 || j < 0 || j >= cibles.length) return;
+      ev.preventDefault();
+      echanger(hit, cibles[j]);
+    });
+  }
 
   // --- Démarrage ------------------------------------------------------------
   applyCharacterUi();

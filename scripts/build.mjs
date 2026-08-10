@@ -23,7 +23,11 @@ import { renderCalendrier } from '../src/templates/calendrier.mjs';
 import { renderFeralUnlock } from '../src/templates/feral-unlock.mjs';
 import { renderMultiplayer } from '../src/templates/multiplayer.mjs';
 import { renderBuildCreator } from '../src/templates/build-creator.mjs';
+import { renderBuildCardTest } from '../src/templates/build-card-test.mjs';
+import { renderBuildCardRoster } from '../src/templates/build-card-roster.mjs';
 import { buildDataBundle } from './build-data-bundle.mjs';
+import { applyMoveFixes } from './move-fixes.mjs';
+import { buildsFromWiki } from './wiki-builds.mjs';
 import { slugAnchor, speedValues, siteHeader, siteFooter, buildRoster, linksFor } from '../src/templates/helpers.mjs';
 import { PAGES, seoFor, ogPathFor, writeSitemap, write404, writeHumansTxt } from './seo.mjs';
 import { datesFor, contentLastModified } from './git-dates.mjs';
@@ -73,12 +77,25 @@ for (const e of meta?.tierList?.entries || []) {
 
 // Données de jeu des personnages : partagées entre les langues (ce sont des
 // chiffres et des noms propres). Seule la prose éditoriale est par locale.
+// Payload du créateur : les fiches s'en servent aussi, pour convertir les
+// builds du wiki en cartes. Il ne dépend pas de la langue rendue.
+const bundlePartage = buildDataBundle(ROOT, readEd('en', '_build-creator'));
+// Cellules des builds du wiki que la conversion n'a pas su résoudre : elles
+// sont dites, jamais tues.
+const cartesRefusees = [];
 const chars = [];
+// Cellules arbitrées entre les deux wikis : déclarées dans l'éditorial anglais,
+// langue des données de jeu, et appliquées ici comme dans le payload du
+// créateur — la fiche et le créateur affichent la même attaque.
+const moveFixes = readEd('en', '_build-creator')?.moveFixes;
+const correctionsRefusees = [];
 for (const c of [...CHARACTERS, ...SPECIAL]) {
   const data = readJson(join(ROOT, 'data', 'characters', `${c.slug}.json`));
   if (!data) { console.warn(`(pas de données pour ${c.slug})`); continue; }
+  applyMoveFixes(c.slug, data, moveFixes, correctionsRefusees);
   chars.push({ def: c, data });
 }
+for (const r of correctionsRefusees) console.warn(`(correction ignorée — ${r.slug} / ${r.move} / ${r.field} : ${r.raison})`);
 
 // Statistiques du cast (31 jouables) pour le profil de mobilité :
 // valeurs triées (plus bas = plus rapide), min/max/moyenne et rang par perso
@@ -256,6 +273,11 @@ for (const locale of activeLocales) {
       dates,
       ogImage: ogPathFor(ROOT, def.slug, locale),
       roster,
+      // La prose vient toujours de l'anglais : le build est le même dans les
+      // deux langues, ses coups aussi. Lire la locale rendue ferait diverger la
+      // carte française de l'anglaise.
+      buildCards: buildsFromWiki(data, def.slug, bundlePartage, cartesRefusees, Object.values(readEd('en', def.slug)?.builds?.perBuild || {}).map((x) => (Array.isArray(x) ? x.join(' ') : String(x || '')))),
+      cardData: bundlePartage,
     }));
     sitemap.push({ path, lastmod: dates.dateModified, alternates: altsForGuide(def.slug) });
     nGuides++;
@@ -293,10 +315,13 @@ for (const locale of activeLocales) {
     // français sur le site anglais. On l'assemble donc toujours depuis
     // l'anglais, langue des données de jeu — comme les descriptions du wiki que
     // le payload embarque déjà et que le site français affiche telles quelles.
-    const bundle = buildDataBundle(ROOT, readEd('en', '_build-creator'));
+    const bundle = bundlePartage;
     // Le payload de données est partagé par toutes les langues (identifiants,
     // chiffres et noms propres du jeu) : il est écrit une seule fois.
     writeFileSync(join(DIST, 'scripts', 'build-data.js'), `window.BUILD_DATA=${JSON.stringify(bundle)};\n`);
+    // Le rendu partagé de la carte : le créateur s'en sert dans le navigateur,
+    // les pages de build statiques l'appellent au build. Un seul fichier.
+    cpSync(join(ROOT, 'src', 'scripts', 'build-card-view.js'), join(DIST, 'scripts', 'build-card-view.js'));
     const seo = seoOf('buildCreator', {
       ogSlug: 'createur-de-builds',
       ogAlt: t('buildCreator.ogAlt'),
@@ -309,8 +334,42 @@ for (const locale of activeLocales) {
       // côte à côte) : ce sont les portraits carrés qu'il faut afficher ici.
       hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
       i18nPayload: buildCreatorStrings(t),
+      tierBySlug,
       seo,
     }));
+
+    // Page de validation de la carte de build. Hors sitemap, hors navigation et
+    // en noindex : elle sert à juger le rendu, pas à être trouvée. Elle n'est
+    // écrite que pour la langue par défaut — c'est un banc d'essai, pas une
+    // page du site.
+    const carte = readJson(join(ROOT, 'data', 'build-card-test.json'));
+    if (carte?.build) {
+      writeFileSync(join(DIST, 'build-card-test.html'), renderBuildCardTest({
+        ...i18n('build-card-test.html', {}),
+        build: carte.build,
+        source: carte.source,
+        data: bundle,
+        hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
+        sizeOf,
+      }));
+    }
+    // Même banc d'essai, étendu aux 31 personnages : c'est là qu'on voit si un
+    // cadrage de portrait gêne la lecture. Mêmes conditions — noindex, hors
+    // sitemap, langue par défaut seulement.
+    // Builds réels décodés depuis les liens de partage fournis (data/build-cards.json).
+    // Ce que ce fichier ne couvre pas est rendu en maquette, et la carte le dit.
+    const reels = Object.fromEntries(
+      (readJson(join(ROOT, 'data', 'build-cards.json'))?.builds || [])
+        .map((e) => [e.build.character, e.build]),
+    );
+    writeFileSync(join(DIST, 'build-card-roster.html'), renderBuildCardRoster({
+      ...i18n('build-card-roster.html', {}),
+      reels,
+      data: bundle,
+      hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
+      sizeOf,
+    }));
+    cpSync(join(ROOT, 'src', 'scripts', 'build-card-roster.js'), join(DIST, 'scripts', 'build-card-roster.js'));
   }
 
   emit('techniques', (x) => renderTechniques(readEd(locale, '_shared'), x.seo, x));
@@ -414,6 +473,15 @@ writeHumansTxt(DIST, {
   subject: createT(DEFAULT_LOCALE)('humans.subject'),
 });
 
+if (cartesRefusees.length) {
+  const vus = new Set();
+  for (const r of cartesRefusees) {
+    const k = `${r.slug}/${r.cle}/${r.valeur}`;
+    if (vus.has(k)) continue;
+    vus.add(k);
+    console.warn(`(${r.releve ? 'attaque relevée dans la prose' : 'build du wiki non converti'} — ${r.slug} / ${r.cle} « ${r.valeur} »${r.releve ? '' : ` : ${r.raison}`})`);
+  }
+}
 console.log(`dist/ généré : ${activeLocales.join(' + ')} — ${nGuides} guides, ${nPages} pages transverses`);
 console.log(`référencement : sitemap.xml (${nUrls} URLs), 404.html, humans.txt`);
 if (missingKeys.size) {

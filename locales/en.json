@@ -252,6 +252,7 @@
       "loadoutHp": "Equipped HP attacks",
       "creatorLink": "Build and check a {name} loadout slot by slot: <a href=\"{href}\"{langAttr}>build creator</a> (CP gauge, ability exclusions and tournament rules applied).",
       "unnamed": "Build",
+      "openInCreator": "Open in the build creator",
       "unnamedNumbered": "Build {n}",
       "communityTitle": "Community builds"
     },
@@ -429,16 +430,10 @@
     "metaDescription": "Run a Dissidia 012 [duodecim] tournament: the Tournament Organizer role, ruleset, start.gg or Challonge bracket, announcement, refereeing and wrap-up."
   },
   "buildCreator": {
-    "tabs": {
-      "attack": "Attacks",
-      "abilities": "Abilities",
-      "stuff": "Equipment",
-      "accessories": "Accessories",
-      "assist": "Assist & summon"
-    },
     "rosterAria": "Pick a character",
     "noscript": "The build creator needs JavaScript to run. The game data stays readable on the character guides.",
     "step1": "1. Pick a character",
+    "changeCharacter": "Change character",
     "step2Default": "Build the loadout",
     "buildName": "Build name",
     "buildNamePlaceholder": "Untitled",
@@ -446,14 +441,15 @@
     "gaugeValueText": "0 of 450 CP — attacks 0, abilities 0",
     "gaugeAttacks": "attacks",
     "gaugeAbilities": "abilities",
-    "tablistAria": "Build sections",
     "step3": "3. Saved builds",
     "save": "Save build",
     "new": "New build",
     "share": "Copy share link",
-    "exportJson": "Export (JSON)",
-    "exportAll": "Export all",
-    "exportCsv": "Export (CSV)",
+    "exportAll": "Export all builds",
+    "exportImage": "Convert to image",
+    "imageBuilding": "Building the image…",
+    "imageDone": "Image saved.",
+    "imageFailed": "Could not compose the image.",
     "import": "Import…",
     "notesLabel": "Free notes on this build",
     "notesPlaceholder": "Remarks, target matchups, variants…",
@@ -464,10 +460,7 @@
     "appName": "Dissidia 012 [duodecim] build creator",
     "ogAlt": "Dissidia 012 [duodecim] build creator",
     "fallbackTitle": "Build creator — Dissidia 012 [duodecim]",
-    "fallbackDescription": "Build a Dissidia 012 [duodecim] loadout.",
-    "detailSummary": "Detailed stats",
-    "detailNote": "Modifiers of the same name are added up. The sources state each effect on its own and never say how two of them combine in game.",
-    "boostersAria": "Active multiplier"
+    "fallbackDescription": "Build a Dissidia 012 [duodecim] loadout."
   },
   "buildCreatorApp": {
     "slots": {
@@ -527,7 +520,6 @@
       "illegalItems": "Tournament-illegal items: {list}.",
       "summonSuffix": "(summon)",
       "notWearable": "Equipment this character cannot wear: {list}.",
-      "glitchNeeded": "Equip Glitch required for: {list} (up to 10 CP saved per piece).",
       "activeSet": "Active set: {list}.",
       "abilityBonus": "Ability bonus applied: {list}.",
       "undocumented": "not documented"
@@ -586,6 +578,8 @@
       "labyrinth": "Found in the Labyrinth",
       "labTag": "Lab",
       "showIllegal": "Show tournament-illegal items (ruleset {ruleset})",
+      "anyHint": "Player decides",
+      "levelDrop": "At level {level}, these pieces can no longer be worn: {list}. Remove them and change level?",
       "maxBooster": "Max Booster",
       "levelShort": "Lv {level}"
     },
@@ -599,14 +593,21 @@
       "rank": "Rank {rank}",
       "rankLimitOne": "Rank {rank}: {max} copy at most",
       "rankLimitMany": "Rank {rank}: {max} copies at most",
-      "slotTitle": "Accessory slot {index}"
+      "slotTitle": "Accessory slot {index}",
+      "rankIcon": "Rank {rank}",
+      "typeIcon": "{type} booster",
+      "categoryIcon": "{category} accessory"
     },
     "assist": {
       "title": "Assist",
       "note": "One assist per build. Feral Chaos has no assist form; Aerith is only playable as one.",
       "summonTitle": "Summon",
       "summonNote": "The tournament ruleset only allows counter summons: {list}.",
-      "undocumentedEffect": "Effect not documented by our sources"
+      "undocumentedEffect": "Effect not documented by our sources",
+      "sortDefault": "Default order",
+      "sortEpisode": "By Final Fantasy",
+      "sortCosmos": "Cosmos first",
+      "sortChaos": "Chaos first"
     },
     "manager": {
       "confirmChangeChar": "The current build is not saved. Switching character will overwrite it. Continue?",
@@ -620,6 +621,8 @@
       "duplicate": "Duplicate",
       "rename": "Rename",
       "delete": "Delete",
+      "share": "Copy link",
+      "export": "Export",
       "confirmReplace": "The current build is not saved. Replace it?",
       "loaded": "Build “{name}” loaded.",
       "copySuffix": " (copy)",
@@ -642,23 +645,7 @@
       "promptCopyLink": "Copy this link:",
       "linkCorrupt": "The share link is corrupted.",
       "linkRefused": "Share link refused: {error}",
-      "linkReceived": "Build received by link — save it to keep it.",
-      "csv": {
-        "id": "id",
-        "name": "name",
-        "character": "character",
-        "attacks": "attacks",
-        "abilities": "abilities",
-        "weapon": "weapon",
-        "hand": "hand",
-        "head": "head",
-        "body": "body",
-        "accessories": "accessories",
-        "assist": "assist",
-        "summon": "summon",
-        "notes": "notes",
-        "modified": "modified"
-      }
+      "linkReceived": "Build received by link — save it to keep it."
     },
     "detail": {
       "countOne": "1 modifier",
@@ -778,5 +765,98 @@
   "humans": {
     "languageName": "English",
     "subject": "Dissidia 012 [duodecim] Final Fantasy (PSP, 2011) — competitive guides"
+  },
+  "buildCard": {
+    "level": "Character level (1 to 100)",
+    "levelShort": "Lv.",
+    "levelValue": "Lv. {level}",
+    "any": "Any",
+    "anyShort": "≡",
+    "equipment": "Equipment",
+    "accessories": "Accessories",
+    "groundBravery": "Ground bravery",
+    "airBravery": "Air bravery",
+    "groundHp": "Ground HP attacks",
+    "airHp": "Air HP attacks",
+    "capacity": "Capacity",
+    "cpGauge": "{used} of {max} CP",
+    "cpUnknown": "Minimum total — cost not documented for: {list}",
+    "panelStats": "Stats",
+    "panelAttacks": "Attacks",
+    "panelBoosters": "Active multiplier",
+    "editAbilities": "Edit…",
+    "panelTabs": "Card panel",
+    "panelGear": "Gear",
+    "panelAbilities": "Abilities",
+    "abilityGroups": {
+      "basic": "Basic abilities",
+      "support": "Support abilities",
+      "extra": "Extra abilities"
+    },
+    "styleTabs": "Combat style",
+    "mainBravery": "Main bravery",
+    "mainHp": "Main HP attacks",
+    "otherBlock": "{kind} — {group}",
+    "kinds": {
+      "bravery": "Bravery",
+      "hp": "HP attacks"
+    },
+    "assist": "Assist",
+    "summon": "Summon",
+    "untitled": "Untitled build",
+    "portraitAlt": "{name} portrait",
+    "assistAlt": "{name}, assist",
+    "credit": "Dissidia 012 [duodecim] — competitive guides",
+    "creditUrl": "serial-developer.github.io/duodecim-guides",
+    "needsGlitch": "Requires the Equip Glitch",
+    "foldBranches": "Fold or unfold the branches",
+    "slots": {
+      "weapon": "Weapon",
+      "hand": "Hand",
+      "head": "Head",
+      "body": "Body"
+    },
+    "keys": {
+      "bravery": "Circle",
+      "hp": "Square",
+      "neutral": "{button}",
+      "back": "Left + {button}",
+      "forward": "Right + {button}",
+      "up": "Up + {button}",
+      "down": "Down + {button}"
+    },
+    "testTitle": "Build card — preview",
+    "testLede": "Test page for the build card component. Not part of the site: it is absent from the sitemap and the navigation, and declares noindex.",
+    "testSource": "Source build, in the build creator",
+    "testComplete": "Complete build",
+    "testPartial": "Sparse build",
+    "testPartialLede": "Same character, almost nothing equipped: the grid must stay whole and readable.",
+    "testPortraitFull": "Variant — portrait over the whole card",
+    "testPortraitFullLede": "The portrait moves to a left-hand band running the full height of the card. The name stays at the top of the header.",
+    "testPortraitTall": "Variant — portrait over the header",
+    "testPortraitTallLede": "Same band, cut to the height of the header alone — character and assist.",
+    "testRosterLink": "The same variant across all 31 characters",
+    "rosterTitle": "Build card — every character",
+    "rosterLede": "The full-card portrait variant, rendered for the 31 playable characters. The point is to check that no framing gets in the way of reading the card.",
+    "rosterMockNote": "Only one build here is real. The others are mock-ups: their contents come from the game data — the character's own moves, plus equipment, accessories, assists and summons — but the combination is arbitrary and carries no advice.",
+    "rosterPick": "Character",
+    "rosterAll": "All characters",
+    "rosterMock": "mock-up",
+    "rosterReal": "real build",
+    "rosterMode": "Background",
+    "rosterModeCurrent": "Current",
+    "rosterModeScrim": "Translucent support under the text",
+    "rosterModeDim": "Dimmed portrait"
+  },
+  "accessories": {
+    "rankIcon": "Rank {rank}",
+    "typeIcon": "{type} booster",
+    "categoryIcon": "{category} accessory",
+    "categories": {
+      "basic": "Basic",
+      "booster": "Booster",
+      "special": "Special",
+      "trade": "Trade"
+    }
   }
 }

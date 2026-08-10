@@ -8,6 +8,7 @@ import { join } from 'node:path';
 import { CHARACTERS } from './characters.mjs';
 import { datesFor } from './git-dates.mjs';
 import { isHeaderRow, cpFromRawRows, duplicatesHeaderRow, isTableTitle, isOrphanRow } from './move-shape.mjs';
+import { applyMoveFixes } from './move-fixes.mjs';
 
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf-8'));
 
@@ -32,6 +33,48 @@ const followKey = (name) => String(name || '')
   .join(' ');
 const EQUIP_COLS = ['uid', 'name', 'slot', 'category', 'level', 'stats', 'effects', 'combination', 'exclusiveTo', 'labyrinth', 'documented'];
 const ACC_COLS = ['uid', 'name', 'category', 'boosterType', 'effect', 'requirements', 'multiplier', 'acquired', 'rank', 'breakable', 'legal', 'documented', 'ill'];
+
+// Sens du regard sur le portrait de l'écran de sélection : les deux camps se
+// font face, les héros regardent vers la gauche, les autres vers la droite.
+//
+// Liste donnée par l'auteur du site et recoupée sur les 31 portraits. Elle ne
+// se déduit pas du champ « Alignment » de l'infobox : quatre personnages y
+// portent deux camps, un par épisode, et c'est le camp de l'autre épisode qui
+// correspondrait au regard — un rapprochement que rien dans la source ne
+// justifie. Une liste tenue à la main vaut mieux qu'une règle inventée.
+//
+// Aerith n'est pas dans ce cas : elle n'a pas de portrait Dissidia 012, le sien
+// est un artwork Final Fantasy VII (voir NOTICE.md). Elle y figure quand même,
+// sur décision de l'auteur, parce qu'elle apparaît en renfort à côté des dix-huit
+// autres et que son artwork regarde du même côté qu'eux.
+const REGARD_GAUCHE = new Set([
+  'warrior-of-light', 'firion', 'onion-knight', 'cecil-harvey', 'bartz-klauser',
+  'terra-branford', 'cloud-strife', 'squall-leonhart', 'zidane-tribal', 'tidus',
+  'shantotto', 'prishe', 'vaan', 'lightning', 'laguna-loire', 'yuna',
+  'tifa-lockhart', 'kain-highwind', 'aerith',
+]);
+
+// Ordre d'affichage des renforts, donné par l'auteur du site : les guerriers de
+// Cosmos puis ceux de Chaos, chaque camp dans l'ordre de l'écran de sélection —
+// les dix d'origine, puis ceux que Duodecim ajoute. Ce n'est ni l'ordre
+// alphabétique, ni celui des épisodes : c'est celui dans lequel on cherche un
+// assist quand on connaît le jeu.
+//
+// La liste reçue en comptait trente ; Aerith y manquait. Elle est placée
+// derrière Tifa, du côté de Cosmos : le jeu la range en dernier de Final
+// Fantasy VII, et cette liste-ci sépare les deux camps.
+//
+// L'ordre par épisode, lui, ne se déclare pas : c'est celui du tableau des
+// assists, tel que la source le donne.
+const ORDRE_ASSISTS = [
+  'warrior-of-light', 'firion', 'onion-knight', 'cecil-harvey', 'bartz-klauser',
+  'terra-branford', 'cloud-strife', 'squall-leonhart', 'zidane-tribal', 'tidus',
+  'shantotto', 'lightning', 'vaan', 'laguna-loire', 'yuna', 'kain-highwind',
+  'tifa-lockhart', 'aerith', 'prishe',
+  'garland', 'the-emperor', 'cloud-of-darkness', 'golbez', 'exdeath',
+  'kefka-palazzo', 'sephiroth', 'ultimecia', 'kuja', 'jecht', 'gabranth',
+  'gilgamesh',
+];
 
 // « 20 (10) » -> { cp: 20, cpMastered: 10 }. Le wiki écrit parfois « 20 » seul.
 function parseMoveCp(raw) {
@@ -95,6 +138,12 @@ export function buildDataBundle(ROOT, editorial = null) {
   const hpLinkPairs = readJson(join(dir, 'hp-links.json'));
   const native = nativeByCharacter(equipment);
   const unresolvedLinks = [];
+  // Tableaux du wiki ecartes du createur faute de coût — rapportes, jamais tus.
+  const tableauxEcartes = [];
+  // Déclarations de coût sans effet : nom inconnu, ou coût déjà donné par le wiki.
+  const coutsRefuses = [];
+  // Arbitrages entre les deux wikis restés sans effet (voir move-fixes.mjs).
+  const correctionsRefusees = [];
   const aliasedAll = [];
 
   // Fichiers dont ce payload est la mise en forme : ils datent le bundle (voir
@@ -108,6 +157,10 @@ export function buildDataBundle(ROOT, editorial = null) {
     if (!existsSync(p)) continue;
     sourceFiles.push(`data/characters/${def.slug}.json`);
     const data = readJson(p);
+    // Les cellules arbitrées entre les deux wikis sont corrigées avant toute
+    // lecture : la fiche du personnage applique les mêmes déclarations, sinon
+    // la même attaque se lirait différemment d'une page à l'autre.
+    applyMoveFixes(def.slug, data, editorial?.moveFixes, correctionsRefusees);
 
     // Les coups gardent la structure de la page wiki du personnage : les groupes
     // portent les noms du jeu (ground/aerial, mais aussi « Medic » chez Lightning
@@ -115,6 +168,10 @@ export function buildDataBundle(ROOT, editorial = null) {
     const attacks = {};
     const rawGroups = {};
     const notesById = {};
+    // Les coups déclarés retrouvés, toutes catégories confondues : une bravery ne
+    // se trouve pas dans le tableau des attaques HP, et l'annoncer introuvable à
+    // chaque passage aurait rapporté un manque qui n'existe pas.
+    const coutsPoses = {};
     for (const kind of ['bravery', 'hp']) {
       const section = data.sections?.[kind];
       if (!section?.groups) continue;
@@ -179,6 +236,12 @@ export function buildDataBundle(ROOT, editorial = null) {
           moves.push({
             id,
             name: m.name,
+            // La description ne part pas dans le payload ; elle sert ici à lire
+            // les enchaînements de bravery, que la source n'écrit qu'en prose
+            // (« Branching from Multi-Hit. »). Elle suit la duplication des
+            // paradigmes, sans quoi les coups reversés dans les deux postures
+            // la perdraient.
+            desc: m.description || '',
             ...cp,
             damage: m.damage || '',
             startup: m.startup || '',
@@ -225,7 +288,40 @@ export function buildDataBundle(ROOT, editorial = null) {
         for (const m of g.moves) m.parent = parents.get(followKey(m.name)) || null;
       }
 
-      const kept = groups.filter((g) => g.moves.length);
+      // Un tableau dont aucune ligne ne coûte de CP n'est pas une liste de coups
+      // équipables : dans le jeu, tout ce qui s'équipe se paie. Deux tableaux du
+      // wiki entraient pourtant dans le créateur comme des attaques —
+      // « Tentacle Pain 1st » chez Cloud of Darkness, dont l'intro annonce
+      // « All bravery attack starters share the following properties » et dont
+      // la note décrit la posture à trois temps, et « Maelstrom Counterstrategy »
+      // chez Exdeath, qui explique comment dévier Maelstrom. Le premier ouvrait
+      // même une catégorie entière, avec ses trois commandes.
+      //
+      // Les enchaînements sont épargnés : le wiki ne les chiffre pas non plus —
+      // les trois de Firion n'ont pas de coût — et ils ne s'équipent pas, ils
+      // prolongent. Le coût des tableaux, lui, a déjà été récupéré plus haut
+      // (`cpFromRawRows`) : un groupe qui n'en a toujours aucun n'en a pas.
+      // Coûts déclarés à la main : dissidia.wiki écrit « ?? » là où le Final
+      // Fantasy Wiki chiffre. On ne comble que les trous — une déclaration qui
+      // écraserait un coût déjà donné est refusée et rapportée : arbitrer entre
+      // deux sources n'est pas le rôle d'un fichier éditorial.
+      for (const decl of ((editorial?.moveCosts || {})[def.slug] || [])) {
+        for (const g of groups) {
+          for (const m of g.moves) {
+            if (moveKey(m.name) !== moveKey(decl.move)) continue;
+            coutsPoses[moveKey(decl.move)] = true;
+            if (m.cp != null) { coutsRefuses.push({ slug: def.slug, move: m.name, raison: 'déjà chiffré par le wiki' }); continue; }
+            const chiffre = parseMoveCp(decl.cp);
+            m.cp = chiffre.cp;
+            if (chiffre.cpMastered != null) m.cpMastered = chiffre.cpMastered;
+          }
+        }
+      }
+
+      const sansCout = groups.filter((g) => !g.followUp && g.moves.length
+        && !g.moves.some((m) => m.cp != null || m.cpMastered != null));
+      for (const g of sansCout) tableauxEcartes.push({ slug: def.slug, kind, group: g.key, moves: g.moves.map((m) => m.name) });
+      const kept = groups.filter((g) => g.moves.length && sansCout.indexOf(g) === -1);
       rawGroups[kind] = kept;
       if (kept.length) attacks[kind] = kept.map((g) => ({ key: g.key, intro: g.intro, followUp: g.followUp, moves: table(g.moves, MOVE_COLS) }));
     }
@@ -253,8 +349,22 @@ export function buildDataBundle(ROOT, editorial = null) {
       return null;
     };
     const hpLinks = [];
+    // Arbitrage déclaré : la table de liens et les descriptions de coups se
+    // contredisent sur la bravery qui ouvre une attaque HP — les deux Bitter End
+    // du Guerrier de la Lumière y sont inversées. La déclaration rappelle
+    // l'origine que la table donne (`was`) ; si elle ne correspond plus, la
+    // correction est refusée et rapportée plutôt qu'appliquée à l'aveugle.
+    const correctionsLien = (editorial?.hpLinkFixes || {})[def.slug] || [];
+    const corrige = (l) => {
+      const fix = correctionsLien.find((f) => f.to === l.to && f.was === l.from);
+      if (fix) return { ...l, from: fix.from, source: fix.source };
+      if (correctionsLien.some((f) => f.to === l.to && f.from !== l.from)) {
+        unresolvedLinks.push({ slug: def.slug, from: l.from, to: l.to, manquant: 'correction refusée — la table ne dit plus ce que la déclaration attendait' });
+      }
+      return l;
+    };
     const sources = [
-      ...hpLinkPairs.items.filter((l) => l.slug === def.slug).map((l) => ({ ...l, origine: l.source })),
+      ...hpLinkPairs.items.filter((l) => l.slug === def.slug).map(corrige).map((l) => ({ ...l, origine: l.source })),
       ...((editorial?.hpLinks || {})[def.slug] || []).map((l) => ({ ...l, origine: l.source || 'déclaré dans l’éditorial' })),
     ];
     for (const l of sources) {
@@ -266,6 +376,40 @@ export function buildDataBundle(ROOT, editorial = null) {
       }
       if (!hpLinks.some((x) => x.from === from && x.to === to)) hpLinks.push({ from, to, source: l.origine });
     }
+
+    // Enchaînements de bravery à partenaire imposé. Le wiki ne les déclare nulle
+    // part : il les écrit en tête de la description du coup — « Branching from
+    // Multi-Hit. » —, exactement comme pour les attaques HP branchées, dont les
+    // paires viennent par ailleurs du Final Fantasy Wiki. Ce sont les quatre
+    // d'Onion Knight, et les seules du jeu : Extra Slice sous Multi-Hit,
+    // Blizzaga sous Blizzard, Extra Lunge sous Turbo-Hit, Thundaga sous Thunder.
+    //
+    // Rien à voir avec les Skillchains de Prishe, qui vivent dans un groupe
+    // « follow-ups » et acceptent n'importe quel partenaire : ceux-ci n'en ont
+    // qu'un, et ne s'équipent pas seuls — le jeu les montre sous leur parent.
+    const chains = [];
+    const braveryParNom = {};
+    for (const g of rawGroups.bravery || []) {
+      if (g.followUp) continue;
+      for (const m of g.moves) braveryParNom[moveKey(m.name)] = m.id;
+    }
+    for (const g of rawGroups.bravery || []) {
+      if (g.followUp) continue;
+      for (const m of g.moves) {
+        const dit = /^\s*Branching from ([^.]+)\./.exec(m.desc || '');
+        if (!dit) continue;
+        const from = braveryParNom[moveKey(dit[1])];
+        if (!from || from === m.id) {
+          unresolvedLinks.push({ slug: def.slug, from: dit[1], to: m.name, manquant: 'bravery de départ' });
+          continue;
+        }
+        chains.push({ from, to: m.id, source: data.url || null });
+      }
+    }
+    for (const decl of ((editorial?.moveCosts || {})[def.slug] || [])) {
+      if (!coutsPoses[moveKey(decl.move)]) coutsRefuses.push({ slug: def.slug, move: decl.move, raison: 'coup introuvable' });
+    }
+    for (const kind of ['bravery', 'hp']) for (const g of rawGroups[kind] || []) for (const m of g.moves) delete m.desc;
 
     // Braveries qui acceptent un enchaînement — non pas lequel : n'importe
     // quel « (Two) » convient sous n'importe quelle « (One) », et c'est tout le
@@ -301,11 +445,17 @@ export function buildDataBundle(ROOT, editorial = null) {
       slug: def.slug,
       name: def.name,
       origin: def.origin,
+      // Sens du regard du portrait (voir REGARD_GAUCHE) : la carte de build s'en
+      // sert pour ancrer le portrait du côté auquel le personnage tourne le dos.
+      portraitFacing: REGARD_GAUCHE.has(def.slug) ? 'left' : 'right',
       // Valeur brute de l'infobox : « Yes », « No », « Yes (Combos only) »…
       hpLinks: data.infobox?.['HP Links'] || null,
       // Paires bravery -> attaque HP réellement identifiées ; l'infobox ci-dessus
       // dit seulement si le personnage en a.
       links: hpLinks,
+      // Enchaînements de bravery à partenaire imposé (voir plus haut) : ceux-là
+      // désignent leur origine et ne s'équipent que sous elle.
+      chains,
       // Braveries qui acceptent un enchaînement. Lequel n'est pas contraint :
       // la réserve du personnage vaut pour chacune d'elles.
       followStarters: [...starters],
@@ -366,6 +516,9 @@ export function buildDataBundle(ROOT, editorial = null) {
     dataModified: datesFor(ROOT, sourceFiles).dateModified,
     capacity: { base: capacity.base, max: capacity.max, quote: capacity.quote, extenders: capacity.extenders, documented: capacity.documented },
     unresolvedHpLinks: unresolvedLinks,
+    discardedTables: tableauxEcartes,
+    rejectedMoveCosts: coutsRefuses,
+    rejectedMoveFixes: correctionsRefusees,
     aliasedHpLinks: aliasedAll,
     baseStats: { shared: baseStats.shared, byCharacter: baseStats.byCharacter, documented: baseStats.documented },
     ruleset: {
@@ -404,7 +557,17 @@ export function buildDataBundle(ROOT, editorial = null) {
       abilities: g.abilities.map((a) => trim(a, ['id', 'name', 'cp', 'cpMastered', 'ap', 'description', 'notes', 'only', 'statBonus', 'documented'])),
     })),
     combinations: combinations.items.map((c) => trim(c, ['id', 'name', 'level', 'pieces', 'required', 'effects', 'documented'])),
-    assists: assists.items.map((a) => ({ slug: a.slug, name: a.name, attacks: a.attacks, documented: a.documented })),
+    // Le sens du regard voyage avec l'assist, pas seulement avec le personnage
+    // jouable : Aerith n'est renfort que, et c'est en vignette de renfort que la
+    // carte retourne les portraits pour qu'ils regardent tous du même côté.
+    // `order` porte l'ordre d'affichage voulu ; le rang du tableau, lui, reste
+    // celui des épisodes. Un renfort absent de la liste passerait en fin de
+    // classement plutôt que de disparaître.
+    assists: assists.items.map((a) => ({
+      slug: a.slug, name: a.name, attacks: a.attacks, documented: a.documented,
+      portraitFacing: REGARD_GAUCHE.has(a.slug) ? 'left' : 'right',
+      order: ORDRE_ASSISTS.indexOf(a.slug) === -1 ? ORDRE_ASSISTS.length : ORDRE_ASSISTS.indexOf(a.slug),
+    })),
     summons: summonsOut,
   };
 }

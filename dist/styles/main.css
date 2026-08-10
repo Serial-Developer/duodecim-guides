@@ -348,9 +348,14 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
 
 /* Grille en rangées, comme l'écran du jeu (rangées partielles centrées) */
 .char-grid { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+/* `display: flex` l'emporte sur la règle `[hidden]` du navigateur : sans cette
+   ligne, la grille repliée par le script restait affichée. */
+.char-grid[hidden] { display: none; }
 .char-row { display: flex; justify-content: center; gap: 7px; }
 .char-cell { position: relative; }
-.char-cell a {
+/* La case est un lien à l'accueil, un bouton dans le créateur de builds : même
+   vignette, deux gestes. */
+.char-cell a, .char-cell .bc-char {
   display: block;
   width: clamp(52px, 6.4vw, 78px);
   border: 2px solid var(--surface-2);
@@ -360,7 +365,8 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
   transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
 }
 .char-cell img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
-.char-cell a:hover, .char-cell a:focus-visible {
+.char-cell a:hover, .char-cell a:focus-visible,
+.char-cell .bc-char:hover, .char-cell .bc-char:focus-visible {
   border-color: var(--gold);
   box-shadow: 0 0 16px rgba(240, 192, 90, 0.45);
   transform: scale(1.07);
@@ -368,7 +374,7 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
   outline: none;
 }
 /* Curseur de sélection : main dorée à gauche de la case, comme en jeu */
-.char-cell a::before {
+.char-cell a::before, .char-cell .bc-char::before {
   content: "☞";
   position: absolute;
   left: -1.15em;
@@ -380,7 +386,8 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
   pointer-events: none;
   text-shadow: 0 0 8px rgba(240, 192, 90, 0.7);
 }
-.char-cell a:hover::before, .char-cell a:focus-visible::before {
+.char-cell a:hover::before, .char-cell a:focus-visible::before,
+.char-cell .bc-char:hover::before, .char-cell .bc-char:focus-visible::before {
   opacity: 1;
   animation: cursor-nudge 700ms ease-in-out infinite;
 }
@@ -437,6 +444,9 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
   white-space: nowrap;
 }
 .chip b { color: var(--gold); font-weight: 600; }
+/* Ce que la source précise à côté de son oui : les coups concernés, ou la
+   condition qui les rend possibles. */
+.chip-note { color: var(--muted); font-size: 0.92em; margin-left: 0.35rem; }
 .chip.ok b { color: var(--success); }
 .chip.no b { color: var(--danger); }
 
@@ -797,8 +807,8 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
   .vs-right { order: -1; }
   .plate-row { justify-content: flex-start; padding: 1rem 1.2rem 0; }
   .vs-info { min-height: 5.2rem; }
-  .char-cell a { width: clamp(56px, 20vw, 72px); }
-  .char-cell a::before { display: none; }
+  .char-cell a, .char-cell .bc-char { width: clamp(56px, 20vw, 72px); }
+  .char-cell a::before, .char-cell .bc-char::before { display: none; }
   /* Hero mobile : portrait flotté en haut à gauche, nom/tagline à côté,
      chips en dessous sur toute la largeur en rangées équilibrées */
   .hero { display: block; padding: 1.1rem; }
@@ -880,55 +890,48 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
 .bc-main { padding-bottom: 3rem; }
 
 /* Bandeau des 31 personnages : défilement horizontal en petit écran */
-.bc-roster {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
-  gap: 0.5rem;
+/* Choix du personnage : la grille de l'accueil, dont les cases sont des boutons.
+   Tout le dessin de la vignette vient de `.char-cell` — un seul endroit pour les
+   deux écrans. Ne restent ici que les deux différences : un bouton n'a ni fond
+   ni rembourrage par défaut, et celui qui est choisi garde le liseré or que le
+   lien n'allume qu'au survol. */
+.bc-char { padding: 0; font: inherit; cursor: pointer; }
+/* Carte de build dans une fiche : elle a la largeur fixe que son format lui
+   donne (40 rem). Sur un écran plus étroit, c'est le cadre qui défile — jamais
+   la page, comme pour les tableaux larges. */
+.mv-card-wrap { overflow-x: auto; margin: 0.8rem 0 1.2rem; }
+/* La carte et les chiffres que la source annonce, côte à côte : sept valeurs
+   occupaient toute la largeur pour rien. Sous 1024 px la colonne passe dessous —
+   la carte fait 40 rem à elle seule. */
+.mv-card-row { display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+.mv-card-row > .mv-card-wrap { flex: 0 1 auto; min-width: 0; }
+.mv-card-stats { flex: 1 1 12rem; min-width: 12rem; }
+.mv-card-stats table { width: 100%; }
+.mv-card-open { margin: 0.6rem 0 0; }
+.mv-card-open a { display: inline-block; text-decoration: none; }
+/* Sous 600 px la carte n'a plus de largeur figée : elle suit son contenu, et le
+   panneau des abilities est plus court que celui de l'équipement — d'une
+   languette à l'autre, elle changeait de largeur. Dans une fiche, c'est le
+   cadre qui la donne : il ne dépend d'aucun panneau. */
+@media (max-width: 599px) {
+  .mv-card-row > .mv-card-wrap { flex: 1 1 100%; }
+  .mv-card-wrap .bcard { width: 100%; }
 }
-.bc-char {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0.4rem 0.2rem;
-  background: var(--bg);
-  border: 1px solid rgba(157, 134, 232, 0.25);
-  border-radius: var(--radius);
-  color: var(--muted);
-  font: inherit;
-  font-size: 0.7rem;
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+.mv-card-wrap .bcard { margin: 0; }
+.bc-char-fallback { display: block; width: 100%; aspect-ratio: 1; background: var(--surface-2); }
+/* Bouton qui rouvre la grille repliée : le script ne le montre qu'à l'étroit,
+   une fois le personnage choisi. Pleine largeur, c'est une cible au doigt.
+   Le `display` doit reprendre la règle `[hidden]` du navigateur, comme pour la
+   grille juste au-dessus : sans elle, le bouton restait affiché grille ouverte,
+   et même avant qu'aucun personnage ne soit choisi. */
+.bc-roster-toggle { display: block; width: 100%; padding: 0.6rem 0.8rem; }
+.bc-roster-toggle[hidden] { display: none; }
+.char-cell .bc-char[aria-checked="true"] {
+  border-color: var(--gold);
+  box-shadow: 0 0 16px rgba(240, 192, 90, 0.45);
 }
-.bc-char img { border-radius: 6px; display: block; width: 56px; height: 56px; aspect-ratio: 1; object-fit: cover; }
-.bc-char-fallback { width: 56px; height: 56px; border-radius: 6px; background: var(--surface-2); display: block; }
-.bc-char-name { text-align: center; line-height: 1.2; }
-.bc-char:hover { border-color: var(--violet); color: var(--text); transform: translateY(-2px); }
-.bc-char[aria-checked="true"] { border-color: var(--gold); color: var(--gold); background: var(--surface-2); }
 
 /* Jauge de CP : couleurs du jeu — vert pomme les attaques, bleu ciel les abilities */
-.bc-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  /* Fond opaque : un dégradé vers le transparent laissait le contenu des onglets
-     transparaître sous le panneau d'état quand la page défilait. */
-  background: var(--surface);
-  padding: 0.6rem 0 0.5rem;
-  margin: 0.6rem 0 1rem;
-  border-bottom: 1px solid rgba(157, 134, 232, 0.2);
-}
-.bc-gauge {
-  display: flex;
-  height: 1.1rem;
-  border-radius: 999px;
-  background: var(--bg);
-  border: 1px solid rgba(157, 134, 232, 0.35);
-  overflow: hidden;
-}
-.bc-gauge-fill { display: block; height: 100%; transition: width 0.18s ease; }
-.bc-gauge-attacks { background: #86d94b; }
-.bc-gauge-abilities { background: #66c6f0; }
 .bc-gauge-wrap.is-over .bc-gauge { border-color: var(--danger); box-shadow: 0 0 0 2px rgba(239, 136, 150, 0.35); }
 .bc-gauge-wrap.is-over .bc-gauge-attacks { background: #ef8896; }
 .bc-gauge-wrap.is-over .bc-gauge-abilities { background: #c4566a; }
@@ -951,31 +954,10 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
    hauteur et défile pour lui-même : ouvert sur un build chargé, il couvrirait
    sinon la totalité de l'écran et masquerait les onglets qu'on est en train de
    remplir. */
-.bc-detail { margin-top: 0.5rem; font-size: 0.83rem; }
-.bc-detail summary {
-  cursor: pointer;
-  color: var(--muted);
-  padding: 0.15rem 0;
-  list-style: none;
-  display: flex;
-  gap: 0.4rem;
-  align-items: baseline;
-}
-.bc-detail summary::-webkit-details-marker { display: none; }
-.bc-detail summary::before { content: "▸"; color: var(--gold); transition: transform 120ms; }
-.bc-detail[open] summary::before { transform: rotate(90deg); }
-.bc-detail summary:hover { color: var(--text); }
 .bc-detail-count { color: var(--gold); font-family: var(--font-mono); font-size: 0.78rem; }
 /* Deux colonnes : les modificateurs à gauche, les boosters à droite. Chacune
    défile pour elle-même — la hauteur est bornée pour que le panneau collant ne
    recouvre pas les onglets qu'on est en train de remplir. */
-.bc-detail-body {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(13rem, 19rem);
-  gap: 0.4rem 1.2rem;
-  align-items: start;
-  padding: 0.2rem 0.1rem 0.1rem;
-}
 .bc-detail-main, .bc-detail-boosters { max-height: 40vh; overflow-y: auto; }
 .bc-detail-group {
   margin: 0.7rem 0 0.3rem;
@@ -985,9 +967,6 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
   text-transform: uppercase;
 }
 .bc-detail-group:first-child { margin-top: 0.2rem; }
-.bc-detail-note { margin: 0.2rem 0; color: var(--muted); font-size: 0.78rem; }
-/* Deux colonnes : le libellé garde une largeur fixe pour que les valeurs
-   s'alignent, la seconde colonne porte la valeur puis son détail. */
 .bc-detail-list { display: grid; grid-template-columns: minmax(8rem, 14rem) 1fr; gap: 0.15rem 0.7rem; margin: 0; }
 .bc-detail-list dt { color: var(--text); }
 .bc-detail-list dd { margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; }
@@ -1032,7 +1011,6 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
 @media (max-width: 1023px) {
   /* Sous 1024 px, la colonne des boosters passe sous les modificateurs : à deux
      colonnes, ni l'une ni l'autre n'a la place de tenir sa ligne. */
-  .bc-detail-body { grid-template-columns: 1fr; max-height: 45vh; overflow-y: auto; }
   .bc-detail-main, .bc-detail-boosters { max-height: none; overflow-y: visible; }
   .bc-detail-boosters {
     border-left: none;
@@ -1048,7 +1026,6 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
   .bc-detail-list dd { margin-bottom: 0.3rem; }
   /* Le panneau collant occupait 87 % d'un écran de téléphone une fois déplié :
      il ne doit pas chasser de l'écran l'onglet qu'on est en train de remplir. */
-  .bc-detail-body { max-height: 32vh; }
 }
 
 /* Fenêtre de choix — ouverte depuis un emplacement à remplir. */
@@ -1191,23 +1168,6 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   .bc-branch-row { margin-left: 0.8rem; flex-wrap: wrap; }
 }
 
-/* Onglets */
-.bc-tablist { display: flex; flex-wrap: wrap; gap: 0.3rem; border-bottom: 1px solid rgba(157, 134, 232, 0.25); margin-bottom: 1rem; }
-.bc-tab {
-  background: none;
-  border: 1px solid transparent;
-  border-bottom: none;
-  border-radius: 8px 8px 0 0;
-  padding: 0.5rem 0.9rem;
-  color: var(--muted);
-  font: inherit;
-  font-weight: 500;
-  cursor: pointer;
-}
-.bc-tab:hover { color: var(--text); }
-.bc-tab[aria-selected="true"] { color: var(--gold); border-color: rgba(157, 134, 232, 0.35); background: var(--surface-2); }
-.bc-panel:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
-
 /* Listes d'items */
 .bc-group { border: 1px solid rgba(157, 134, 232, 0.2); border-radius: var(--radius); padding: 0.6rem 0.8rem 0.8rem; margin: 0 0 1rem; }
 .bc-group legend { color: var(--violet); font-weight: 600; padding: 0 0.4rem; }
@@ -1259,6 +1219,11 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bc-followups { margin-left: 0; margin-bottom: 1rem; }
 .bc-row-btn.is-selected { border-color: var(--gold); background: var(--surface-2); }
 .bc-row-btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+/* Vider l'emplacement : première ligne de la fenêtre, dans le rouge des actions
+   qui retirent — c'est la seule qui enlève au lieu de poser. */
+.bc-row-clear { border-color: rgba(239, 136, 150, 0.45); }
+.bc-row-clear .bc-row-name { color: var(--danger); }
+.bc-row-clear:hover, .bc-row-clear:focus-visible { border-color: var(--danger); }
 .bc-row-main { display: flex; flex-direction: column; min-width: 0; flex: 1; }
 .bc-row-name { font-weight: 500; }
 .bc-row-meta { font-size: 0.78rem; color: var(--muted); }
@@ -1294,6 +1259,9 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bc-acc-slot.is-empty { border-style: dashed; color: var(--muted); }
 .bc-acc-index { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); min-width: 1.2rem; }
 
+/* Charger un build ramène ici : la marge de visée laisse respirer le titre, et
+   le dégage du header collant du téléphone, qui le recouvrirait sinon. */
+.bc-editor { scroll-margin-top: 0.8rem; }
 .bc-editor-head { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; justify-content: space-between; }
 .bc-build-meta { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: flex-end; }
 .bc-field { display: flex; flex-direction: column; gap: 0.2rem; font-size: 0.8rem; color: var(--muted); }
@@ -1332,6 +1300,25 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bc-btn-file { display: inline-flex; align-items: center; }
 .bc-saved { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; padding: 0.4rem 0.6rem; background: var(--bg); border: 1px solid rgba(157, 134, 232, 0.18); border-radius: 8px; margin-bottom: 0.3rem; }
 .bc-saved-list { margin-bottom: 1rem; }
+/* Le nom et sa date réclament leur largeur avant que les boutons ne se servent :
+   à base nulle, ils se réduisaient à une colonne de deux lettres sur téléphone.
+   Quand la place manque, ce sont les boutons qui passent à la ligne. */
+.bc-saved .bc-row-main { flex-basis: 9rem; }
+/* Vignette de repérage : la ligne se retrouve à l'œil dans une liste longue.
+   Carrée comme tous les portraits du site, donc jamais déformée. */
+.bc-saved-portrait {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(157, 134, 232, 0.25);
+  background: var(--surface-2);
+  object-fit: cover;
+}
+/* Les notes suivent la carte, au-dessus des builds enregistrés : c'est du
+   commentaire sur le build qu'on est en train de composer, pas une option du
+   gestionnaire. */
+.bc-notes { margin-top: 1.2rem; }
 .bc-notes-label { margin: 0 0 0.3rem; font-size: 0.8rem; color: var(--muted); }
 
 .bc-toast {
@@ -1354,7 +1341,10 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   padding: 0.6rem 0.7rem 0.6rem 1rem;
   font-size: 0.85rem;
   max-width: min(90vw, 34rem);
-  z-index: 50;
+  /* Au-dessus de la fenêtre de choix, qui est à 50 : le bandeau explique
+     souvent ce qu'un clic dans cette fenêtre vient de faire — « Air Dash
+     retiré : même commande » —, et il passait derrière le voile. */
+  z-index: 60;
   transition: transform 0.2s ease, opacity 0.2s ease, visibility 0s linear 0.2s;
 }
 .bc-toast-text { flex: 1; }
@@ -1387,26 +1377,11 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   .bc-list-scroll { max-height: 22rem; }
 }
 @media (max-width: 767px) {
-  /* Sous 768px le header du site devient collant : la jauge se cale dessous,
-     comme la barre de sections des guides. */
-  .bc-sticky { top: var(--mob-header-h); }
+  /* Le même header recouvrirait le titre de la partie 2 quand un build chargé
+     la ramène à l'écran : la visée s'arrête plus haut. */
+  .bc-editor { scroll-margin-top: calc(var(--mob-header-h, 0px) + 0.6rem); }
 }
 @media (max-width: 599px) {
-  /* Bandeau de personnages sur deux rangées qui défilent horizontalement :
-     à une seule rangée, retrouver un personnage demandait trop de défilement. */
-  .bc-roster {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(2, auto);
-    grid-auto-columns: 5.2rem;
-    overflow-x: auto;
-    gap: 0.4rem;
-    padding-bottom: 0.4rem;
-    scroll-snap-type: x proximity;
-  }
-  .bc-char { scroll-snap-align: start; }
-  .bc-tablist { flex-wrap: nowrap; overflow-x: auto; }
-  .bc-tab { white-space: nowrap; padding: 0.45rem 0.7rem; font-size: 0.85rem; }
   .bc-acc-slots { grid-template-columns: 1fr; }
   .bc-editor-head { flex-direction: column; align-items: stretch; }
   .bc-row { flex-wrap: wrap; }
@@ -1491,3 +1466,940 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   .sh-tools { display: none; }
   .lang-bar { font-size: 0.85rem; padding: 0.5rem 0.75rem; }
 }
+
+/* --- Carte de build ---------------------------------------------------------
+   Récapitulatif d'un build entier, pensé pour être lu et capturé d'un seul
+   écran. Fond opaque et aucune ombre portée débordante : une capture ne doit
+   rien couper ni laisser de bord translucide. */
+.bcard {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid rgba(157, 134, 232, 0.35);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem 0.8rem;
+  margin: 1rem 0 2rem;
+  /* Largeur figée : deux cartes côte à côte doivent se comparer sans que l'œil
+     ait à corriger l'échelle, et une capture doit toujours rendre le même
+     cadre. La hauteur, elle, n'est qu'un plancher — celui relevé à
+     l'inspecteur, 707,33 px bordure et rembourrage compris.
+     Elle a d'abord été figée elle aussi, et la carte coupait : le pied et ses
+     CP passaient sous le bord dès qu'un build était dense. Cinq des trente et
+     une cartes du banc d'essai étaient déjà tronquées, dont celle de Tifa (+4
+     px) et celle de Cloud of Darkness (+137). Aucune hauteur ne peut les tenir
+     toutes : les cinq builds réels portent 23 à 25 abilities, la liste en
+     accepte 64 sous les 450 CP, et les prolongements de Prishe ajoutent autant
+     de lignes. Une carte plus haute se lit ; une carte coupée ment. */
+  width: 40rem;
+  min-height: 44.21rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* En-tête : le personnage à gauche ; à droite le nom du build, puis les deux
+   renforts sous lui — assist et invocation se lisent ensemble. */
+.bcard-head {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(157, 134, 232, 0.25);
+}
+/* Les languettes occupent le milieu du bord supérieur : les deux côtés de
+   l'en-tête s'arrêtent avant elles. Sans cette borne, un nom de build un peu
+   long — « Champion of blitzball » — passait dessous. Il se replie sur deux
+   lignes plutôt que de glisser derrière. */
+.bcard-ids, .bcard-side { max-width: calc(50% - 7rem); }
+.bcard-ids { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.bcard-side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; min-width: 0; text-align: right; }
+/* Bannière : portrait puis nom, sans cadre — le portrait se suffit à lui-même
+   et un encadré de plus alourdissait un en-tête déjà bordé. */
+.bcard-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+}
+.bcard-banner img, .bcard-portrait-none {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 6px;
+  flex: none;
+  object-fit: cover;
+}
+.bcard-portrait-none { background: rgba(157, 134, 232, 0.16); display: block; }
+
+/* Vignette d'assist : les portraits sont carrés et montrent le personnage en
+   pied. Réduits à 2,6 rem, on ne distinguait plus rien. Le cadre recadre sur
+   la tête et le haut du buste — la seule partie lisible à cette taille. */
+.bcard-face {
+  display: block;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 6px;
+  overflow: hidden;
+  flex: none;
+}
+/* Le zoom passe par une variable : le retournement ci-dessous doit le reprendre,
+   `transform` n'étant qu'une seule propriété — un `scaleX(-1)` posé à part
+   écraserait l'agrandissement et rendrait la vignette minuscule. */
+.bcard-face img { --bcard-zoom: 2.1; width: 100%; height: 100%; border-radius: 0; transform: scale(var(--bcard-zoom)); transform-origin: 50% 26%; }
+/* Aerith n'a aucun portrait Dissidia 012 : le sien est un artwork Final
+   Fantasy VII, cadré plus large et plus haut que les planches de sélection.
+   Il lui faut son propre recadrage, sans quoi elle reste minuscule dans le
+   coin de la vignette. */
+/* Mesuré sur le fichier : sa silhouette n'occupe que 39 % de la largeur et
+   toute la hauteur — c'est un personnage en pied, là où les planches de
+   sélection cadrent déjà au buste. Sa tête tient autour de (48 %, 10 %) : le
+   silhouette commence des le premier pixel : le zoom part du haut de l image,
+   sa tete y tient donc et le buste suit. */
+.bcard-face[data-assist="aerith"] img { --bcard-zoom: 4.6; transform-origin: 48% 0; }
+/* La plaque « au choix » n'est pas un portrait : rien à recadrer sur un visage,
+   et elle n'est pas carrée — elle tient dans la vignette au lieu de la remplir. */
+.bcard-face.is-any img { --bcard-zoom: 1; transform-origin: 50% 50%; object-fit: contain; }
+/* Les dix-huit héros regardent vers la gauche sur leur portrait ; en vignette
+   d'assist, retournés, ils regardent du même côté que tous les autres. Le point
+   d'origine est celui du visage : il reste fixe sous la symétrie, le cadrage ne
+   bouge donc pas. Cette règle vient après celle d'Aerith, à spécificité égale,
+   pour l'emporter sur la seule propriété `transform`. */
+.bcard-face.is-mirrored img { transform: scale(calc(var(--bcard-zoom) * -1), var(--bcard-zoom)); }
+.bcard-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--gold); font-weight: 600; }
+.bcard-role { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
+/* La ligne garde la hauteur d'une ligne de texte, invocation ou non : sans elle
+   la ligne vide se réduisait à l'orbe (14 px), et poser une invocation la faisait
+   passer à 26,4 px — l'orbe, centré, descendait de 6 px sous le nom au moment
+   même où on le remplissait. C'est la hauteur de ligne du site (1,65) : la même
+   valeur que celle qu'un nom y impose. */
+.bcard-summon { display: flex; align-items: center; gap: 0.5rem; margin: 0; min-height: 1.65rem; }
+/* Les deux renforts se suivent, et l'écart de la colonne — 0,15 rem — était
+   celui de deux lignes de texte : sous une vignette de 2,6 rem, l'orbe
+   d'invocation venait s'y coller. Ils se lisent ensemble, ils ne se touchent
+   pas pour autant. */
+.bcard-banner-assist + .bcard-summon { margin-top: 0.4rem; }
+.bcard-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.15;
+  color: var(--text);
+  min-width: 0;
+  /* Un nom d'un seul tenant plus large que sa colonne déborderait sans ceci. */
+  overflow-wrap: anywhere;
+}
+.bcard-untitled { color: var(--muted); font-style: italic; font-size: 1rem; }
+
+/* Onglets de style — jobs de Cecil, paradigmes de Lightning, EX Mode de
+   Gabranth. Chaque style a ses propres emplacements : les afficher tous à la
+   fois donnait huit blocs chez Cecil, dix chez Lightning.
+   Des boutons radio plutôt qu'un script : la carte doit fonctionner partout où
+   on la pose, y compris dans une page sans JavaScript. Les radios sont les
+   premiers enfants de la carte, le combinateur de frères ne regardant qu'en
+   avant. */
+.bcard-style-radio, .bcard-panel-radio { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+/* Les onglets de style descendent sur le bas de l'en-tête, hors du flux : ils
+   se rangent ainsi sous le nom du build sans en dicter la hauteur. */
+.bcard-tabs {
+  position: absolute;
+  right: 0;
+  bottom: 0.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  justify-content: flex-end;
+  margin: 0;
+}
+.bcard-tab {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid rgba(157, 134, 232, 0.3);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  cursor: pointer;
+}
+.bcard-tab:hover { color: var(--text); border-color: rgba(157, 134, 232, 0.55); }
+/* Un bloc de style est masqué par défaut ; son onglet le rappelle.
+   `:has()` sur la carte plutôt qu'un sélecteur de position : les deux groupes de
+   radios — panneaux et styles — se comptent ensemble dès qu'on les positionne,
+   et le nombre de styles varie d'un personnage à l'autre. La valeur du radio
+   porte le rattachement, la structure n'entre plus en jeu. */
+.bcard-has-styles .bcard-block[data-si] { display: none; }
+.bcard:has(> .bcard-style-radio[value="1"]:checked) .bcard-block[data-si="1"],
+.bcard:has(> .bcard-style-radio[value="2"]:checked) .bcard-block[data-si="2"],
+.bcard:has(> .bcard-style-radio[value="3"]:checked) .bcard-block[data-si="3"],
+.bcard:has(> .bcard-style-radio[value="4"]:checked) .bcard-block[data-si="4"],
+.bcard:has(> .bcard-style-radio[value="5"]:checked) .bcard-block[data-si="5"],
+.bcard:has(> .bcard-style-radio[value="6"]:checked) .bcard-block[data-si="6"] { display: block; }
+.bcard:has(> .bcard-style-radio[value="1"]:checked) .bcard-tab[data-si="1"],
+.bcard:has(> .bcard-style-radio[value="2"]:checked) .bcard-tab[data-si="2"],
+.bcard:has(> .bcard-style-radio[value="3"]:checked) .bcard-tab[data-si="3"],
+.bcard:has(> .bcard-style-radio[value="4"]:checked) .bcard-tab[data-si="4"],
+.bcard:has(> .bcard-style-radio[value="5"]:checked) .bcard-tab[data-si="5"],
+.bcard:has(> .bcard-style-radio[value="6"]:checked) .bcard-tab[data-si="6"] {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(199, 164, 90, 0.12);
+}
+
+/* Languettes de panneau : équipement et attaques d'un côté, abilities de
+   l'autre. Elles partent du bord supérieur de la carte, hors du flux pour ne
+   pas repousser l'en-tête. */
+.bcard-flaps {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  margin: 0;
+  z-index: 2;
+}
+.bcard-flap {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-2);
+  border: 1px solid rgba(157, 134, 232, 0.3);
+  border-top: none;
+  border-radius: 0;
+  padding: 0.25rem 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+/* Les languettes se touchent et ne partagent qu'un trait : la seconde remonte
+   d'un pixel sur la première au lieu de poser le sien à côté. Seuls les deux
+   angles extérieurs sont arrondis — l'ensemble se lit comme un onglet à deux
+   cases, et non comme deux boutons voisins. */
+.bcard-flap:first-of-type { border-bottom-left-radius: 8px; }
+.bcard-flap:last-of-type { border-bottom-right-radius: 8px; }
+.bcard-flap + .bcard-flap { margin-left: -1px; }
+/* Le trait commun revient à la languette ouverte : c'est son or qui doit
+   fermer le contour, pas le violet éteint de sa voisine. */
+.bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-flap[data-panel="gear"],
+.bcard:has(> .bcard-panel-radio[value="stuff"]:checked) .bcard-flap[data-panel="stuff"],
+.bcard:has(> .bcard-panel-radio[value="attacks"]:checked) .bcard-flap[data-panel="attacks"],
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-flap[data-panel="abilities"],
+.bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-flap[data-panel="stats"] {
+  position: relative;
+  z-index: 1;
+}
+.bcard-flap:hover { color: var(--text); }
+.bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-flap[data-panel="gear"],
+.bcard:has(> .bcard-panel-radio[value="stuff"]:checked) .bcard-flap[data-panel="stuff"],
+.bcard:has(> .bcard-panel-radio[value="attacks"]:checked) .bcard-flap[data-panel="attacks"],
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-flap[data-panel="abilities"],
+.bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-flap[data-panel="stats"] {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(199, 164, 90, 0.14);
+}
+/* Un seul panneau à la fois, mais les deux occupent la même case de grille : la
+   carte garde ainsi la même hauteur d'un onglet à l'autre. Masquer par
+   `display` l'aurait fait sauter à chaque bascule, ce qui est intenable quand on
+   compare deux cartes ou qu'on en capture une. `visibility` retire aussi le
+   panneau caché du parcours au clavier et de l'arbre d'accessibilité. */
+.bcard-panels { display: grid; }
+.bcard-panels > * { grid-area: 1 / 1; }
+/* On cache tout, on ne montre que le panneau désigné : la carte en compte deux
+   au large et quatre à l'étroit, et une règle par couple les aurait tous
+   énumérés deux à deux. Chaque panneau est nommé, aucun ne dépend de l'absence
+   d'un autre — c'est ce qui manquait quand `:not(.bcard-abilities)` attrapait
+   l'équipement et les stats à la fois. */
+.bcard-panels > .bcard-body { visibility: hidden; }
+.bcard:has(> .bcard-panel-radio[value="gear"]:checked) .bcard-gear,
+.bcard:has(> .bcard-panel-radio[value="stuff"]:checked) .bcard-stuff,
+.bcard:has(> .bcard-panel-radio[value="attacks"]:checked) .bcard-attacks,
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-abilities,
+.bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-stats { visibility: visible; }
+/* Les onglets de style ne concernent que les attaques : ils disparaissent avec
+   elles. */
+.bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-tabs { display: none; }
+
+/* Le radio est invisible : c'est son onglet qui doit montrer le focus, sans quoi
+   la carte devient impraticable au clavier. */
+.bcard:has(> .bcard-style-radio[value="1"]:focus-visible) .bcard-tab[data-si="1"],
+.bcard:has(> .bcard-style-radio[value="2"]:focus-visible) .bcard-tab[data-si="2"],
+.bcard:has(> .bcard-style-radio[value="3"]:focus-visible) .bcard-tab[data-si="3"],
+.bcard:has(> .bcard-style-radio[value="4"]:focus-visible) .bcard-tab[data-si="4"],
+.bcard:has(> .bcard-style-radio[value="5"]:focus-visible) .bcard-tab[data-si="5"],
+.bcard:has(> .bcard-style-radio[value="6"]:focus-visible) .bcard-tab[data-si="6"],
+.bcard:has(> .bcard-panel-radio[value="gear"]:focus-visible) .bcard-flap[data-panel="gear"],
+.bcard:has(> .bcard-panel-radio[value="abilities"]:focus-visible) .bcard-flap[data-panel="abilities"] {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Portrait en fond de carte (variantes à l'essai). Le portrait n'occupe aucune
+   colonne : il partage sa cellule avec le contenu, qui passe au-dessus. C'est
+   la seule façon de ne rien décaler — en colonne, il repoussait tout à droite
+   et les traits de séparation démarraient au milieu de la carte. La grille est
+   donc à une seule colonne, chaque bloc placé explicitement : le portrait
+   occupant déjà la cellule (1,1), le placement automatique aurait renvoyé
+   l'en-tête à la rangée suivante au lieu de le superposer. */
+.bcard-has-aside {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
+  overflow: hidden;
+}
+.bcard-has-aside > .bcard-head { grid-area: 1 / 1; }
+.bcard-has-aside > .bcard-panels { grid-area: 2 / 1; }
+.bcard-has-aside > .bcard-foot { grid-area: 3 / 1; }
+.bcard-has-aside > .bcard-head,
+.bcard-has-aside > .bcard-panels,
+.bcard-has-aside > .bcard-foot { position: relative; z-index: 1; }
+.bcard-aside { grid-column: 1; justify-self: start; z-index: 0; position: relative; overflow: hidden; }
+.bcard-aside img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+
+/* Variante 1 : du haut de la carte au trait du pied. Les portraits sont carrés
+   et leur silhouette en occupe toute la largeur — la montrer entière impose
+   donc une largeur égale à la hauteur. Le fond prend la largeur du contenu et
+   se cale en bas : son bord inférieur tombe sur le trait du pied, et il ne
+   manque que les quelques pixels par lesquels la carte est plus haute que
+   large. Un bandeau étroit, lui, coupait la silhouette à la verticale. */
+.bcard-portrait-full .bcard-aside { grid-row: 1 / 3; align-self: end; width: 100%; aspect-ratio: 1; }
+/* Entier, il couvre la carte et le texte passe dessus : il se fond donc vers la
+   droite au lieu de s'arrêter sur une arête. C'est ce qui le fait lire comme un
+   fond et non comme un bloc — et ce qui garde les colonnes lisibles. */
+.bcard-portrait-full .bcard-aside {
+  opacity: 0.45;
+  margin-left: -1.1rem;
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 22%, transparent 95%);
+  mask-image: linear-gradient(to right, #000 0%, #000 22%, transparent 95%);
+}
+/* Un guerrier de Cosmos regarde vers la gauche : ancré à gauche il sortirait de
+   la carte. Il se cale donc à droite, et le fondu s'inverse avec lui. */
+.bcard-portrait-full.bcard-faces-left .bcard-aside {
+  justify-self: end;
+  margin-left: 0;
+  margin-right: -1.1rem;
+  -webkit-mask-image: linear-gradient(to left, #000 0%, #000 22%, transparent 95%);
+  mask-image: linear-gradient(to left, #000 0%, #000 22%, transparent 95%);
+}
+
+/* Variante 2 : la hauteur du seul en-tête, dont il partage la cellule. Son bord
+   inférieur tombe donc sur le trait qui ouvre l'équipement, et son bord gauche
+   au départ de ce trait.
+   Largeur fixe et image contenue plutôt que `aspect-ratio` : celui-ci ne
+   résout pas sa largeur de la même façon d'un navigateur à l'autre quand la
+   hauteur vient de la rangée, et le portrait disparaissait purement et
+   simplement. `contain` garantit qu'il se montre entier quelle que soit la
+   hauteur que prend l'en-tête. */
+.bcard-portrait-tall .bcard-aside { grid-row: 1; width: 7rem; }
+.bcard-portrait-tall .bcard-aside img { object-fit: contain; object-position: bottom center; }
+
+/* Corps : deux colonnes, équipement à gauche, attaques à droite. */
+.bcard-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0.4rem 1.1rem; padding-top: 0.7rem; }
+/* Panneau des abilities : les abilities de base à gauche, les deux autres
+   familles empilées à droite. C'est la répartition qui équilibre le mieux — la
+   famille de base pèse à elle seule autant que les deux autres réunies. */
+.bcard-abilities { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.9rem 1.1rem; }
+/* Les abilities de base sont trois fois plus nombreuses que les deux autres
+   familles reunies : elles prennent toute la largeur, sur deux colonnes, et
+   support et extra se partagent la ligne suivante. */
+.bcard-abilities .bcard-block:first-child { grid-column: 1 / -1; }
+.bcard-abilities .bcard-block:first-child .bcard-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 0.9rem;
+}
+/* Les abilities ne portent qu'un nom, sans icône ni valeur : elles se lisent à
+   une taille plus serrée que les emplacements, et c'est ce qui permet de les
+   tenir sur trois colonnes. Les deux classes sont nommées — la taille de
+   .bcard-line est fixée plus bas dans la feuille et l'emporterait sinon. */
+.bcard-abilities .bcard-line { font-size: 0.75rem; min-height: 1.3rem; }
+
+/* Repli des prolongements : une case à cocher dans la ligne du parent, et les
+   lignes qui la suivent se cachent avec elle. Aucun script — la carte se lit
+   aussi sur une page statique, et ses languettes marchent déjà ainsi.
+   Deux règles suffisent : une attaque ne porte qu'un prolongement par sorte,
+   donc deux lignes au plus. Dépliée par défaut, la case n'étant pas cochée. */
+.bcard-fold { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.bcard-line:has(> .bcard-fold:checked) + .bcard-branch,
+.bcard-line:has(> .bcard-fold:checked) + .bcard-branch + .bcard-branch { display: none; }
+.bcard-fold-tab {
+  flex: none;
+  display: flex;
+  align-items: center;
+  padding: 0 0.15rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+.bcard-fold-tab svg { width: 14px; height: 14px; transition: transform 120ms ease; }
+.bcard-fold-tab:hover { color: var(--gold); }
+/* Replié, le chevron pointe vers la ligne qu'il cache. */
+.bcard-line:has(> .bcard-fold:checked) .bcard-fold-tab svg { transform: rotate(-90deg); }
+/* La case est invisible : c'est son chevron qui doit montrer le focus, sans quoi
+   la carte devient impraticable au clavier. */
+.bcard-line:has(> .bcard-fold:focus-visible) .bcard-fold-tab {
+  color: var(--gold);
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Prolongement : un HP link ou un enchaînement, sous l'attaque qui le déclenche.
+   Il n'a pas de commande propre, seulement son bouton. */
+.bcard-line.bcard-branch { position: relative; padding-left: 1.7rem; }
+.bcard-branch .bcard-key { min-width: 2.5rem; }
+/* Coude de rattachement, comme a l'ecran « Abilities » du jeu : un trait part de
+   sous l'attaque parente et vient chercher la ligne du prolongement. */
+.bcard-branch::before {
+  content: '';
+  position: absolute;
+  left: 0.55rem;
+  top: -0.3rem;
+  bottom: 50%;
+  width: 0.7rem;
+  border-left: 2px solid rgba(157, 134, 232, 0.45);
+  border-bottom: 2px solid rgba(157, 134, 232, 0.45);
+  border-bottom-left-radius: 5px;
+  pointer-events: none;
+}
+/* Deux prolongements de suite : le trait du second part du premier. */
+.bcard-branch + .bcard-branch::before { top: -1.55rem; }
+.bcard-col { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
+.bcard-block { min-width: 0; }
+/* Le niveau se range au bout de l'en-tête de l'équipement, aligné à droite :
+   c'est ce qu'il commande. Le titre reste à gauche, quelle que soit la largeur. */
+.bcard-h { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; }
+.bcard-lvl { display: inline-flex; align-items: baseline; gap: 0.3rem; font-size: 0.72rem; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--muted); }
+.bcard-lvl input {
+  width: 3.2rem;
+  padding: 0.1rem 0.3rem;
+  background: var(--bg);
+  border: 1px solid rgba(157, 134, 232, 0.35);
+  border-radius: 6px;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.78rem;
+  text-align: right;
+  /* Les flèches natives sont hautes de deux lignes dans un en-tête qui n'en
+     fait qu'une, et chaque navigateur les dessine à sa façon. Le champ reste
+     un `number` — clavier numérique sur téléphone, bornes tenues par le
+     navigateur —, il n'en montre simplement pas la garniture. */
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.bcard-lvl input::-webkit-outer-spin-button,
+.bcard-lvl input::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
+.bcard-lvl input:focus-visible { border-color: var(--gold); outline: 2px solid var(--gold); outline-offset: 1px; }
+.bcard-h {
+  margin: 0 0 0.3rem;
+  font-size: 0.78rem;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+.bcard-list { list-style: none; margin: 0; padding: 0; }
+.bcard-line {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid rgba(157, 134, 232, 0.14);
+  font-size: 0.88rem;
+  min-height: 1.55rem;
+}
+/* Le trait sépare deux lignes ; sous la dernière il ne sépare rien et ne fait
+   que doubler le bord du bloc suivant. */
+.bcard-line:last-child { border-bottom: none; }
+/* Un emplacement vide garde sa ligne : c'est ce qui permet de lire un build
+   « en creux ». Il est estompé sans disparaître. */
+.bcard-line.is-empty { opacity: 0.45; }
+.bcard-slot {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.2rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+}
+.bcard-list-acc .bcard-slot { min-width: 1.4rem; text-align: right; font-family: var(--font-mono); }
+.bcard-value { color: var(--text); min-width: 0; }
+.bcard-note { display: block; color: var(--muted); font-size: 0.73rem; }
+/* Marqueur d'Equip Glitch, derrière le nom de la pièce : le vert de
+   .bc-tag-glitch, la même marque que porte la liste des emplacements du
+   créateur. Aucune espace ne le sépare du nom dans le HTML, il ne peut donc pas
+   se retrouver seul à la ligne suivante — la carte a une taille figée. */
+.bcard-flag { display: inline-flex; align-items: center; margin-left: 0.3rem; color: var(--success); }
+/* La roue est visée par son parent : « .bcard-gear » nomme déjà le panneau
+   d'équipement de la carte, et cette classe posée sur le SVG l'écrasait à 13 px
+   de large — la colonne entière s'y pliait. */
+.bcard-flag svg { width: 13px; height: 13px; flex: none; }
+
+/* Icône de touche : direction facultative, puis le bouton. */
+.bcard-key { flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.15rem; min-width: 3.6rem; }
+/* Textures du jeu, 12 à 32 px d'origine : agrandies au double sans lissage,
+   comme le préconise assets/README.md. */
+.icon-d12 { image-rendering: pixelated; image-rendering: crisp-edges; display: block; }
+.bcard-btn { width: 20px; height: 20px; }
+/* Le stick était à sa taille d'origine quand le bouton est agrandi de moitié :
+   à côté du rond il disparaissait. Même facteur pour les deux. */
+.bcard-stick { width: 24px; height: 17px; }
+.bcard-chevron { width: 14px; height: 14px; color: var(--violet); flex: none; }
+.bcard-equip-icon { width: auto; height: 26px; }
+.bcard-summon-orb { width: 14px; height: 14px; }
+.bcard-plus { color: var(--muted); font-size: 0.7rem; }
+
+.bcard-foot {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(157, 134, 232, 0.25);
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.bcard-url { font-family: var(--font-mono); }
+
+/* Le pied porte la capacite : la contrainte qui structure un build. */
+.bcard-cp-label { letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.7rem; }
+.bcard-gauge {
+  flex: 1;
+  min-width: 4rem;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(157, 134, 232, 0.18);
+  overflow: hidden;
+}
+/* Les memes deux postes que la jauge du createur : vert pomme pour les
+   attaques, bleu ciel pour les abilities. Elles se suivent dans la barre. */
+.bcard-gauge { display: flex; }
+.bcard-gauge-fill { display: block; height: 100%; }
+.bcard-gauge-fill:first-child { border-radius: 999px 0 0 999px; }
+.bcard-gauge-fill:last-child { border-radius: 0 999px 999px 0; }
+.bcard-foot.is-over .bcard-gauge-fill.bc-gauge-attacks { background: #ef8896; }
+.bcard-foot.is-over .bcard-gauge-fill.bc-gauge-abilities { background: #c4566a; }
+.bcard-cp-value { font-family: var(--font-mono); color: var(--text); }
+/* Au-dela de la capacite, le build n'est pas jouable : la jauge le dit. */
+.bcard-foot.is-over .bcard-gauge-fill { background: var(--danger, #e06c75); }
+.bcard-foot.is-over .bcard-cp-value { color: var(--danger, #e06c75); }
+/* Un cout absent des sources compte pour zero : le total est un minimum. */
+.bcard-cp-min { border: none; text-decoration: none; color: var(--muted); }
+
+@media (max-width: 599px) {
+  /* Colonnes empilées : équipement, accessoires, puis les attaques. La carte
+     doit rester lisible sans défilement horizontal. */
+  .bcard-body, .bcard-abilities { grid-template-columns: 1fr; gap: 0.9rem; }
+  /* Sur 337 px les languettes prennent presque toute la largeur : rien ne
+     peut tenir a cote. L'en-tete passe donc dessous, et ses deux colonnes
+     reprennent toute la largeur. */
+  /* Sur 337 px la hauteur figée n'a plus de sens : le contenu s'empile. */
+  .bcard { width: auto; height: auto; }
+  .bcard-head { gap: 0.6rem; padding-top: 1.7rem; }
+  .bcard-ids, .bcard-side { max-width: none; }
+  /* Les onglets de style reprennent leur place dans le flux : sur 337 px, le
+     coin inférieur droit de l'en-tête est déjà occupé. */
+  .bcard-tabs { position: static; justify-content: flex-start; margin-top: 0.4rem; }
+  .bcard { padding: 0.8rem; }
+  /* Le fond garde toute la largeur de la carte : le brider en bandeau le
+     réduirait à un carré de 5 rem perdu dans un coin. */
+  .bcard-portrait-tall .bcard-aside { width: 6rem; }
+}
+
+/* Deux traitements du fond, à comparer sur le banc d'essai. Le portrait rend la
+   lecture inégale d'un personnage à l'autre : certains cadrages posent une zone
+   claire et chargée pile sous une colonne.
+   A — un support opaque sous le texte : le portrait garde toute sa force, mais
+   chaque ligne se lit sur une surface unie. Il ne reste visible qu'autour des
+   panneaux.
+   B — le portrait atténué : rien ne s'interpose, il s'efface. */
+[data-bcard-mode="calque"] .bcard-portrait-full .bcard-aside {
+  opacity: 1;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+/* Le support se pose bloc par bloc, titre compris, et non sur la colonne
+   entière : le personnage se voit dans l'en-tête, la gouttière, les marges et
+   les intervalles entre blocs. Un panneau par colonne l'aurait presque
+   entièrement recouvert ; un panneau sous les seules listes laissait les titres
+   illisibles sur les portraits clairs. */
+[data-bcard-mode="calque"] .bcard-block {
+  /* Translucide, pas opaque : le personnage se devine à travers le panneau, et
+     c'est lui qui porte l'identité de la carte. À 0,82 le texte garde son
+     contraste sur les portraits les plus clairs. Le liseré détache le panneau
+     du fond là où le portrait est sombre et où il se confondrait avec lui. */
+  background: rgba(29, 23, 52, 0.82);
+  border: 1px solid rgba(157, 134, 232, 0.22);
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem 0.3rem;
+}
+[data-bcard-mode="attenue"] .bcard-portrait-full .bcard-aside { opacity: 0.25; }
+
+/* Carte vivante : chaque emplacement est un bouton pleine largeur. */
+.bcard-hit {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.bcard-line.is-live:hover { background: rgba(157, 134, 232, 0.12); border-radius: 4px; }
+/* Déplacement d'une ligne : la ligne prise s'efface, celle qui la recevra
+   prend le liseré or. Rien ne bouge avant le relâchement — il faut donc montrer
+   où l'échange se fera, comme dans la grille des onglets. */
+.bcard-line.is-dragging { opacity: 0.45; }
+.bcard-line.is-drop-target { background: rgba(212, 175, 90, 0.16); border-radius: 4px; box-shadow: inset 0 0 0 1px var(--gold); }
+.bcard-hit:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+.bcard-add { margin: 0.4rem 0 0; }
+.bcard-btn-add {
+  font: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: none;
+  border: 1px dashed rgba(157, 134, 232, 0.4);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  cursor: pointer;
+}
+.bcard-btn-add:hover { color: var(--gold); border-color: var(--gold); }
+/* Banc d'essai : la carte a gauche, les builds enregistres a droite. La carte
+   porte l'essentiel sur peu de surface — c'est tout son principe —, la colonne
+   de droite ne doit donc pas la comprimer. */
+/* Les trois colonnes se calent sur la hauteur de la carte, que le script mesure
+   après chaque rendu et publie en `--bc-carte-mesure`. Elle valait autrefois
+   44,21 rem des trois côtés, recopiée à la main : la carte pouvant désormais
+   grandir sous un build dense, la colonne de stats et la jauge la suivent au
+   lieu de s'arrêter court. À défaut de mesure, le plancher de la carte.
+   L'indirection sert la règle mobile plus bas : le script pose son style en
+   ligne, qu'aucune feuille ne peut reprendre — c'est donc `--bc-carte-h`, qui
+   n'est écrite qu'ici, que la requête média redéfinit. */
+.bc-two {
+  display: grid;
+  grid-template-columns: 60% minmax(0, 1fr) auto;
+  gap: 1.2rem;
+  align-items: start;
+  --bc-carte-h: var(--bc-carte-mesure, 44.21rem);
+  /* Longueur de la barre : la hauteur de la carte moins la place que prennent
+     ses chiffres en dessous, puis un dixième de moins — elle courait jusqu'au
+     bord et pesait plus lourd que ce qu'elle mesure. */
+  --bc-jauge-l: calc((var(--bc-carte-h) - 5.71rem) * 0.9);
+}
+/* La jauge tient la troisième colonne, à la verticale : la barre est celle du
+   créateur, pivotée d'un quart de tour. Le script continue d'y écrire des
+   largeurs — c'est la rotation qui les lit comme des hauteurs, et les deux
+   postes gardent leurs couleurs. */
+.bc-two > .bc-gauge-wrap {
+  display: flex;
+  /* La barre d'abord, ses chiffres dessous : on lit le remplissage puis le
+     detail, et le texte reste horizontal. */
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  /* Hauteur libre : les marges de la barre couchée réservent déjà sa longueur
+     dans le flux, et la colonne porte maintenant la case « Coûts maîtrisés »
+     sous les chiffres. Une hauteur fixée l'aurait laissée déborder. */
+  /* Même retrait que la carte et que la colonne de stats : les trois colonnes
+     partent du même trait. Sans lui, la jauge démarrait 0,8 rem plus haut que
+     la carte qu'elle mesure. */
+  margin: 0.8rem 0 0;
+}
+.bc-two > .bc-gauge-wrap { width: 7rem; }
+.bc-two > .bc-gauge-wrap .bc-gauge {
+  /* La barre garde sa largeur d'origine puis pivote : le script continue d'y
+     ecrire des pourcentages de largeur. Les marges negatives ramenent son
+     encombrement a celui de la barre couchee. */
+  width: var(--bc-jauge-l);
+  height: 26px;
+  border-radius: 999px;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  margin: calc(var(--bc-jauge-l) / 2 - 13px) calc(13px - var(--bc-jauge-l) / 2);
+  flex: none;
+}
+/* Le paragraphe reste du texte : en boite flexible, « 450 », « / » et
+   « 450 CP » devenaient trois elements anonymes, donc trois lignes. Seules les
+   deux legendes passent en bloc. */
+.bc-two > .bc-gauge-wrap .bc-gauge-text {
+  display: block;
+  margin: 0;
+  text-align: center;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+/* La regle de base espacait la pastille et son libelle par le `gap` de la
+   boite flexible : le paragraphe repasse en bloc, l'espacement se pose donc a
+   la main. */
+.bc-two > .bc-gauge-wrap .bc-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.3rem;
+}
+.bc-two > .bc-gauge-wrap .bc-legend:first-of-type { margin-top: 0.55rem; }
+/* Les statistiques tiennent la colonne de droite, a hauteur de la carte : on
+   voit le build et ce qu'il produit d'un seul coup d'oeil. */
+.bc-side-stats {
+  min-width: 0;
+  max-height: var(--bc-carte-h);
+  overflow-y: auto;
+  /* Fond et bordure comme la carte : la colonne se lit comme un panneau à
+     part entière, et non comme du texte posé sur la page. */
+  background: var(--surface);
+  border: 1px solid rgba(157, 134, 232, 0.35);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+.bc-side-stats .bcard-block + .bcard-block { margin-top: 0.9rem; }
+/* Les totaux et le détail des modificateurs sont deux lectures d'un même build,
+   et ils se suivaient sans rien entre eux : « Dégâts infligés » passait pour la
+   légende de « Max Booster », la ligne juste au-dessus. Un trait les sépare,
+   celui qui sépare déjà les lignes de la carte. */
+.bc-side-detail {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(157, 134, 232, 0.3);
+}
+/* Le premier groupe portait ce retrait lui-même ; il vient maintenant du bloc,
+   sans quoi il s'ajouterait au trait. */
+.bc-side-detail .bc-detail-group:first-child { margin-top: 0; }
+/* Le gestionnaire passe en vertical : les actions s'empilent au lieu de courir
+   sur une ligne qui ne tient plus dans une colonne etroite. */
+.bc-side .bc-actions { flex-direction: column; align-items: stretch; }
+.bc-side .bc-actions .bc-btn { width: 100%; text-align: center; }
+.bc-side .bc-saved-list { max-height: 22rem; overflow-y: auto; }
+/* Empilées, les trois colonnes n'ont plus rien à aligner : une carte de 1 400 px
+   sur téléphone entraînerait une jauge de 1 400 px, seule sous les stats. La
+   hauteur revient donc à son plancher, et la colonne de stats à son défilement
+   interne — la mesure ne sert que la mise en page à trois colonnes. */
+@media (max-width: 899px) {
+  .bc-two { grid-template-columns: minmax(0, 1fr); --bc-carte-h: 44.21rem; }
+  /* La jauge se couche et passe devant : on l'équipe en la regardant se
+     remplir, et debout sous la carte elle ne se voyait jamais. Le script y
+     écrit des pourcentages de largeur — c'est sa forme d'origine, la rotation
+     était l'exception. */
+  .bc-two > .bc-gauge-wrap {
+    order: -1;
+    position: sticky;
+    top: var(--bc-collant);
+    z-index: 6;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0.5rem 0 0.6rem;
+    background: var(--surface);
+    border-bottom: 1px solid rgba(157, 134, 232, 0.25);
+    gap: 0.35rem;
+  }
+  .bc-two > .bc-gauge-wrap .bc-gauge {
+    width: 100%;
+    height: 20px;
+    transform: none;
+    margin: 0;
+  }
+  .bc-two > .bc-gauge-wrap .bc-gauge-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.3rem 0.8rem;
+  }
+  .bc-two > .bc-gauge-wrap .bc-legend { margin: 0; }
+  /* Vidée de ses blocs, partis dans la languette « Stats » de la carte, la
+     colonne n'a plus lieu d'occuper une ligne. `:empty` ne l'aurait pas vue
+     vide : il reste les retours à la ligne du gabarit entre ses balises. */
+  .bc-two > .bc-side-stats { display: none; }
+}
+/* Hauteur à laquelle se collent la jauge puis les languettes : sous le header
+   du site quand il est lui-même collant, en haut de l'écran sinon. */
+@media (max-width: 899px) { .bc-two { --bc-collant: var(--mob-header-h, 0px); } }
+@media (min-width: 768px) and (max-width: 899px) { .bc-two { --bc-collant: 0px; } }
+
+/* --- La carte à l'étroit --------------------------------------------------- */
+/* Quatre languettes au lieu de deux, et chacune ne montre que son panneau. */
+@media (max-width: 899px) {
+  /* Les languettes descendent dans le flux : accrochées au bord supérieur et
+     centrées, les quatre débordaient la carte. Elles se partagent la largeur. */
+  /* Les languettes se collent sous la jauge : elles commandent la lecture, et
+     passaient dessous des le premier defilement. La hauteur de la jauge est
+     mesuree par le script — elle change avec le repli de sa legende. */
+  .bc-card-host .bcard-flaps {
+    position: sticky;
+    top: calc(var(--bc-collant, 0px) + var(--bc-jauge-h, 0px));
+    z-index: 5;
+    transform: none;
+    display: flex;
+    width: 100%;
+    /* Aucune marge sous les languettes : c'est le retrait de l'en-tête qui les
+       sépare du portrait, et les deux s'additionnaient. */
+    margin: 0;
+    padding-top: 0.2rem;
+    background: var(--surface);
+  }
+  .bc-card-host .bcard-head { padding-top: 0.7rem; }
+  .bc-card-host .bcard-flap {
+    flex: 1 1 0;
+    justify-content: center;
+    text-align: center;
+    padding: 0.35rem 0.2rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.02em;
+    white-space: normal;
+    border-top: 1px solid rgba(157, 134, 232, 0.3);
+    border-radius: 6px 6px 0 0;
+  }
+  .bc-card-host .bcard-flap:first-of-type { border-bottom-left-radius: 0; }
+  .bc-card-host .bcard-flap:last-of-type { border-bottom-right-radius: 0; }
+  /* Les panneaux ne se superposent plus : chacun prend la hauteur de son
+     contenu. Dans la même case de grille, la carte gardait la hauteur du plus
+     long — les abilities — quelle que soit la languette ouverte, et l'onglet
+     n'aurait rien raccourci. Le plancher tombe pour la même raison. */
+  /* `overflow: hidden` retient le portrait de fond dans le cadre ; à l'étroit il
+     n'y a pas de portrait de fond, et cet overflow empêchait les languettes de
+     se coller — un élément collant ne se décolle jamais de son ascendant qui
+     coupe. */
+  .bc-card-host .bcard { min-height: 0; overflow: visible; }
+  .bc-card-host .bcard-panels { display: block; }
+  .bc-card-host .bcard-panels > .bcard-body { display: none; visibility: visible; }
+  .bc-card-host .bcard:has(> .bcard-panel-radio[value="stuff"]:checked) .bcard-stuff,
+  .bc-card-host .bcard:has(> .bcard-panel-radio[value="attacks"]:checked) .bcard-attacks,
+  .bc-card-host .bcard:has(> .bcard-panel-radio[value="abilities"]:checked) .bcard-abilities,
+  .bc-card-host .bcard:has(> .bcard-panel-radio[value="stats"]:checked) .bcard-stats { display: grid; }
+  /* Une seule colonne : la grille à deux colonnes du panneau large donnerait à
+     son unique colonne la moitié de la carte. */
+  .bc-card-host .bcard-stuff,
+  .bc-card-host .bcard-attacks,
+  .bc-card-host .bcard-stats { grid-template-columns: minmax(0, 1fr); }
+  /* Les onglets de style ont suivi les attaques dans leur languette. */
+  .bc-card-host .bcard-attacks .bcard-tabs { margin: 0 0 0.6rem; justify-content: flex-start; }
+  /* Les statistiques déménagent dans la carte : elles y perdent le fond et le
+     cadre de leur colonne, que la carte porte déjà. */
+  .bc-card-host .bcard-stats > * { min-width: 0; }
+
+  /* L'en-tête tient en une colonne. Ses deux côtés sont bornés à la moitié de
+     la carte moins la place des languettes, qui se posent au milieu du bord
+     supérieur ; ici les languettes sont descendues dans le flux et cette borne
+     ne laissait plus que quarante pixels à chaque côté — un mot par ligne, et
+     un en-tête trois fois trop haut pour ce qu'il dit. */
+  .bc-card-host .bcard-head { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+  .bc-card-host .bcard-ids,
+  .bc-card-host .bcard-side { max-width: none; align-items: flex-start; text-align: left; }
+  /* Bloc d'identité : le portrait à gauche, sur deux rangs, et les deux noms à
+     sa droite — celui du personnage, celui du build. `display: contents` sur la
+     bannière verse ses deux éléments dans cette grille : sans cela le portrait
+     et le nom du personnage restaient soudés dans leur paragraphe, et le nom du
+     build tombait dessous à la même taille, sans qu'on sache lequel nommait
+     quoi. Le portrait passe de 2,6 à 4,4 rem : la place est là. */
+  .bc-card-host .bcard-ids {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: 0.8rem;
+    row-gap: 0.1rem;
+  }
+  .bc-card-host .bcard-ids .bcard-banner { display: contents; }
+  .bc-card-host .bcard-ids .bcard-banner img,
+  .bc-card-host .bcard-ids .bcard-portrait-none {
+    grid-row: 1 / span 2;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 8px;
+  }
+  /* Même retournement que les vignettes d'assist : les portraits des héros
+     regardent vers la gauche, et leur silhouette laisse alors du vide de ce
+     côté-là du cadre. Retournés, ils remplissent la vignette. */
+  .bc-card-host .bcard-ids .bcard-banner img.is-mirrored { transform: scaleX(-1); }
+  .bc-card-host .bcard-ids .bcard-name { grid-column: 2; align-self: end; }
+  .bc-card-host .bcard-ids .bcard-title {
+    grid-column: 2;
+    align-self: start;
+    /* Sous-titre, pas second titre : plus petit que le nom du personnage, dans
+       la couleur du texte courant, il se lit comme ce qu'il est — le nom qu'on
+       a donné à ce build. */
+    font-size: 0.95rem;
+    line-height: 1.25;
+    color: var(--muted);
+  }
+  .bc-card-host .bcard-ids .bcard-title .bcard-untitled { font-size: 0.9rem; }
+  /* Les deux renforts se lisent ensemble, côte à côte. */
+  .bc-card-host .bcard-side { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.1rem; }
+  .bc-card-host .bcard-banner-assist + .bcard-summon { margin-top: 0; }
+}
+
+/* Banc de mesure du cliché : le clone doit être mis en page pour qu'on lise sa
+   hauteur — repliée, la carte est plus courte que celle qu'on regarde — mais il
+   ne doit pas se voir. Hors écran, donc, et non `display: none`, qui ne mesure
+   rien. */
+/* Cadre de mesure du cliché : la carte y est mise en page à la largeur de
+   l'image, hors écran. Un cadre plutôt qu'un simple bloc parce que les règles
+   d'affichage dépendent de la largeur de la fenêtre : mesurée dans la page
+   depuis un téléphone, la carte aurait donné la hauteur de sa mise en page
+   mobile, et l'image serait sortie tronquée. */
+.bc-cliche-banc { position: fixed; left: -10000px; top: 0; border: 0; pointer-events: none; }
+
+.bc-card-host { margin-top: 0.8rem; }
+.bc-card-host .bcard { margin: 0; }
+.bc-side-stats { margin-top: 0.8rem; }
+.bc-card-host .bcard { max-width: none; }
+
+/* Banc d'essai des cartes sur tout le roster. */
+.bcr-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 1.2rem 0 1.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg);
+  padding: 0.6rem 0;
+}
+.bcr-bar label { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.bcr-bar select {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid rgba(157, 134, 232, 0.35);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  font-size: 0.95rem;
+}
+.bcr-item[hidden] { display: none; }
+.bcr-name { font-size: 1.1rem; margin: 1.4rem 0 0.2rem; }
+.bcr-tag {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid rgba(157, 134, 232, 0.3);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  vertical-align: middle;
+}
+
+/* Icônes de rang et de type des accessoires. Quatorze fichiers de 16 px pour
+   551 accessoires : elles se posent par `rank` et `boosterType`, le type devant
+   le nom et le rang derrière, comme à l'écran du jeu. `pixelated` parce que ce
+   sont des icônes d'origine 16×16 : les lisser les rendrait floues. */
+.acc-icon {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: -0.18em;
+  image-rendering: pixelated;
+  flex: none;
+}
+.acc-icon-cat { margin-right: 0.3rem; }
+.acc-icon-type { margin-right: 0.35rem; }
+.acc-icon-rank { margin-left: 0.35rem; }
