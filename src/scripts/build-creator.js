@@ -2369,6 +2369,9 @@
     applyCharacterUi();
     selectTab(state.activeTab, false);
     refresh();
+    // Le bouton « Charger » vit sous la carte, dans la liste des enregistrés :
+    // sans ce retour en haut, on ne voyait rien du build qu'on vient d'ouvrir.
+    if (root.scrollIntoView) root.scrollIntoView({ block: 'start' });
     toast(T('manager.loaded', { name: b.name || T('manager.untitled') }));
   }
 

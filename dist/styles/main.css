@@ -895,8 +895,12 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
 .bc-char { padding: 0; font: inherit; cursor: pointer; }
 .bc-char-fallback { display: block; width: 100%; aspect-ratio: 1; background: var(--surface-2); }
 /* Bouton qui rouvre la grille repliée : le script ne le montre qu'à l'étroit,
-   une fois le personnage choisi. Pleine largeur, c'est une cible au doigt. */
+   une fois le personnage choisi. Pleine largeur, c'est une cible au doigt.
+   Le `display` doit reprendre la règle `[hidden]` du navigateur, comme pour la
+   grille juste au-dessus : sans elle, le bouton restait affiché grille ouverte,
+   et même avant qu'aucun personnage ne soit choisi. */
 .bc-roster-toggle { display: block; width: 100%; padding: 0.6rem 0.8rem; }
+.bc-roster-toggle[hidden] { display: none; }
 .char-cell .bc-char[aria-checked="true"] {
   border-color: var(--gold);
   box-shadow: 0 0 16px rgba(240, 192, 90, 0.45);
@@ -1295,6 +1299,9 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bc-acc-slot.is-empty { border-style: dashed; color: var(--muted); }
 .bc-acc-index { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); min-width: 1.2rem; }
 
+/* Charger un build ramène ici : la marge de visée laisse respirer le titre, et
+   le dégage du header collant du téléphone, qui le recouvrirait sinon. */
+.bc-editor { scroll-margin-top: 0.8rem; }
 .bc-editor-head { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; justify-content: space-between; }
 .bc-build-meta { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: flex-end; }
 .bc-field { display: flex; flex-direction: column; gap: 0.2rem; font-size: 0.8rem; color: var(--muted); }
@@ -1413,6 +1420,9 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   /* Sous 768px le header du site devient collant : la jauge se cale dessous,
      comme la barre de sections des guides. */
   .bc-sticky { top: var(--mob-header-h); }
+  /* Le même header recouvrirait le titre de la partie 2 quand un build chargé
+     la ramène à l'écran : la visée s'arrête plus haut. */
+  .bc-editor { scroll-margin-top: calc(var(--mob-header-h, 0px) + 0.6rem); }
 }
 @media (max-width: 599px) {
   .bc-tablist { flex-wrap: nowrap; overflow-x: auto; }
