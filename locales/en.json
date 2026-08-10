@@ -590,6 +590,7 @@
       "labTag": "Lab",
       "showIllegal": "Show tournament-illegal items (ruleset {ruleset})",
       "anyHint": "Player decides",
+      "levelDrop": "At level {level}, these pieces can no longer be worn: {list}. Remove them and change level?",
       "maxBooster": "Max Booster",
       "levelShort": "Lv {level}"
     },

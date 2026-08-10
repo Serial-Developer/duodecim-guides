@@ -590,6 +590,7 @@
       "labTag": "Lab",
       "showIllegal": "Afficher les items illégaux en tournoi (ruleset {ruleset})",
       "anyHint": "Le joueur choisit",
+      "levelDrop": "Au niveau {level}, ces pièces ne peuvent plus être portées : {list}. Les retirer et changer de niveau ?",
       "maxBooster": "Max Booster",
       "levelShort": "niv. {level}"
     },

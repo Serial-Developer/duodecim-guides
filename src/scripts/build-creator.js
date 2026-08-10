@@ -1276,6 +1276,11 @@
     var slots = [];
     var orphans = [];
     state.build.attacks.forEach(function (id, pos) {
+      // Le jeton « au choix » n'est pas un coup du personnage : il n'a pas
+      // d'entrée au catalogue, n'occupe aucun emplacement et ne coûte rien. Il
+      // n'est pas orphelin pour autant — il dit que la section est laissée au
+      // joueur, et le supprimer effacerait cette réponse-là.
+      if (id === ANY) return;
       var info = index.byId[id];
       if (!info) { orphans.push(pos); return; }
       var parentId = index.linkParent[id];
@@ -1658,7 +1663,7 @@
   //
   // `onClear` n'est passé que là où l'emplacement n'a pas de bouton « Retirer »
   // à côté de lui — sur la carte. Sous les onglets, la ligne en porte déjà un.
-  function openMoveChooser(title, choix, courant, onPick, intro, onClear) {
+  function openMoveChooser(title, choix, courant, onPick, intro, onClear, onAny) {
     var sous = courant ? T('attacks.replacing', { name: courant.name }) : (intro ? intro.split('\n')[0] : null);
     openModal(title, sous, function (body, close) {
       var section = el('div', { class: 'bc-chooser' });
@@ -1668,6 +1673,9 @@
       search.addEventListener('input', function () { q = search.value.toLowerCase(); paint(); });
       section.appendChild(el('div', { class: 'bc-filters' }, [search]));
       if (courant && onClear) section.appendChild(clearRow(courant.name, function () { close(); onClear(); }));
+      // Un emplacement d'attaque se laisse aussi au choix du joueur. Le jeton ne
+      // coûte rien : ce n'est pas un coup, c'est la place qu'on lui garde.
+      if (onAny) section.appendChild(anyRow(courant && courant.id === ANY, function () { close(); onAny(); }));
       section.appendChild(listBox);
       body.appendChild(section);
       function paint() {
@@ -3349,7 +3357,10 @@
           // enchaînement : ils se rattachent à sa position, plus rien ne les
           // retiendrait.
           removeAt(slotPositions(occupe));
-        } : null);
+        } : null, function () {
+          if (occupe) replaceAt(occupe.pos, ANY, cmd);
+          else appendAttack(ANY, cmd);
+        });
         return;
       }
 
@@ -3584,8 +3595,25 @@
       var champ = ev.target.closest ? ev.target.closest('[data-bc="level"]') : null;
       if (!champ) return;
       var v = Math.round(Number(champ.value));
-      state.build.level = v >= 1 && v <= 100 ? v : 100;
-      champ.value = state.build.level;
+      v = v >= 1 && v <= 100 ? v : 100;
+      // Descendre de niveau peut rendre inéquipable une pièce déjà posée : on
+      // demande avant de la retirer, et on ne change rien si la réponse est
+      // non — le champ revient au niveau qui tenait.
+      var perdus = SLOTS.filter(function (s) {
+        var u = state.build.equipment[s.key];
+        var e = u && u !== ANY ? equipByUid[u] : null;
+        return e && (e.level || 1) > v;
+      });
+      if (perdus.length) {
+        var noms = perdus.map(function (s) { return equipByUid[state.build.equipment[s.key]].name; });
+        if (!window.confirm(T('equipment.levelDrop', { level: v, list: noms.join(', ') }))) {
+          champ.value = state.build.level;
+          return;
+        }
+        perdus.forEach(function (s) { state.build.equipment[s.key] = null; });
+      }
+      state.build.level = v;
+      champ.value = v;
       markDirty();
       refresh();
     });
