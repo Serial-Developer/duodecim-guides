@@ -510,10 +510,24 @@ function heroChips(t, info) {
   add(t('guide.chips.dash'), (info['Dash Speed'] || '').split(',')[0]);
   add(t('guide.chips.atk'), (info['Base ATK (LV100)'] || '').split(' ')[0]);
   add(t('guide.chips.def'), (info['Base DEF (LV100)'] || '').split(' ')[0]);
+  // La source ne répond pas toujours par oui ou par non : elle nomme souvent
+  // ce dont elle parle — « Energy Ray » pour le HP en un coup de Yuna, « Yes
+  // (Combos only) » pour les HP links de Squall. Chercher « yes » en tête
+  // rendait donc « non » là où la source dit oui et détaille, et taisait la
+  // nuance partout ailleurs. Seuls « No » et « None » valent non ; le reste
+  // vaut oui, et sa précision s'affiche telle que la source l'écrit.
+  const ouiNon = (val, label) => {
+    const brut = String(val).trim();
+    const negatif = /^(no|none)$/i.test(brut);
+    const detail = negatif ? '' : (/^yes\b/i.test(brut)
+      ? (brut.match(/\(([^)]*)\)/) || [])[1] || ''
+      : brut);
+    return `<span class="chip ${negatif ? 'no' : 'ok'}" title="${esc(`${label} : ${brut}`)}">${label} <b>${negatif ? no : yes}</b>${detail ? `<span class="chip-note">${esc(detail)}</span>` : ''}</span>`;
+  };
   const oneHit = info['1-Hit HP'];
-  if (oneHit) chips.push(`<span class="chip ${/^yes/i.test(oneHit) ? 'ok' : 'no'}">${t('guide.chips.oneHitHp')} <b>${/^yes/i.test(oneHit) ? yes : no}</b></span>`);
+  if (oneHit) chips.push(ouiNon(oneHit, t('guide.chips.oneHitHp')));
   const links = info['HP Links'];
-  if (links) chips.push(`<span class="chip ${/^yes/i.test(links) ? 'ok' : 'no'}">${t('guide.chips.hpLinks')} <b>${/^yes/i.test(links) ? yes : no}</b></span>`);
+  if (links) chips.push(ouiNon(links, t('guide.chips.hpLinks')));
   return `<div class="chips">${chips.join('')}</div>`;
 }
 
