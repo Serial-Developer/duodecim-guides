@@ -893,6 +893,11 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
    ni rembourrage par défaut, et celui qui est choisi garde le liseré or que le
    lien n'allume qu'au survol. */
 .bc-char { padding: 0; font: inherit; cursor: pointer; }
+/* Carte de build dans une fiche : elle a la largeur fixe que son format lui
+   donne (40 rem). Sur un écran plus étroit, c'est le cadre qui défile — jamais
+   la page, comme pour les tableaux larges. */
+.mv-card-wrap { overflow-x: auto; margin: 0.8rem 0 1.2rem; }
+.mv-card-wrap .bcard { margin: 0; }
 .bc-char-fallback { display: block; width: 100%; aspect-ratio: 1; background: var(--surface-2); }
 /* Bouton qui rouvre la grille repliée : le script ne le montre qu'à l'étroit,
    une fois le personnage choisi. Pleine largeur, c'est une cible au doigt.

@@ -5,6 +5,7 @@ import {
   linksFor, ordinal,
 } from './helpers.mjs';
 import { ldArticle } from './jsonld.mjs';
+import { buildCard } from './build-card.mjs';
 import { isHeaderRow, duplicatesHeaderRow, isTableTitle, isOrphanRow } from '../../scripts/move-shape.mjs';
 
 // Champs d'un coup, dans l'ordre d'affichage. Les clés sont celles des données
@@ -410,6 +411,12 @@ function buildsSection(t, builds, allMoves, opts) {
   // enchaînait sur son tableau de stats — alors que les suivants, portés par
   // des sous-blocs, en avaient un. Le lecteur ne voyait pas où il commençait.
   const builtGroups = splitBuilds(builds);
+  // La composition du build est désormais portée par sa carte : les tableaux
+  // « Equipment » et « Bravery attacks » qu'elle reprend disparaissent, celui
+  // des stats reste — ce sont les chiffres que la source annonce, que la carte
+  // statique n'affiche pas.
+  const REPRIS = new Set(['Equipment', 'Bravery attacks']);
+  const sansCarte = (tables) => (opts?.cards?.length ? tables.filter((tb) => !(tb.rows?.[0]?.length === 1 && REPRIS.has(tb.rows[0][0]))) : tables);
   const main = builtGroups.map((g, i) => {
     const desc = g.name ? opts?.perBuild?.[g.name] : null;
     // Le wiki ne nomme pas toujours son onglet (Firion). Plutôt que d'inventer
@@ -420,7 +427,8 @@ function buildsSection(t, builds, allMoves, opts) {
       : t('guide.builds.unnamed'));
     return `<h3>${esc(titre)}</h3>
 ${desc?.length ? paras(desc) : ''}
-${buildsTables(t, g.tables, ctx)}`;
+${opts?.cards?.[i] || ''}
+${buildsTables(t, sansCarte(g.tables), ctx)}`;
   }).join('\n');
 
   // Un build peut arriver par un sous-bloc plutôt que par un groupe de tableaux
@@ -582,7 +590,7 @@ const SECTION_IDS = ['meta', 'overview', 'unlock', 'moves', 'unique', 'gameplan'
 
 export function renderGuide({
   char, ed, tierEntry, castStats, hasPortrait, moveImages, sizeOf, dates, ogImage,
-  roster = [], t, locale, path, alternates, availability,
+  roster = [], t, locale, path, alternates, availability, buildCards = [], cardData = null,
 }) {
   const L = linksFor(path, locale, availability);
   const ctx = { slug: char.slug, moveImages, sizeOf, L };
@@ -766,6 +774,16 @@ ${buildsSection(t, s.builds, allMoves, {
     // Builds relevés hors wiki (guides et forums), sans tableau : ils forment
     // leur propre bloc, chacun sous son nom et sa source.
     community: ed?.builds?.community,
+    // Une carte par build, rendue par le build : c'est le même composant que le
+    // créateur, nourri des identifiants que `wiki-builds.mjs` a résolus.
+    cards: cardData ? buildCards.map((b, i) => `<div class="mv-card-wrap">${buildCard({
+      t, build: b, data: cardData, L, sizeOf,
+      // Tous les personnages du jeu ont leur portrait, renforts compris.
+      hasPortrait: () => true,
+      variant: 'portrait-full',
+      uid: `${char.slug}-${i}`,
+      mastered: true,
+    })}</div>`) : [],
   })}
 ${ed?.builds?.notes ? `<p class="mv-desc">${esc(ed.builds.notes)}</p>` : ''}
 ${sectionSources(t, secSrc.builds)}`

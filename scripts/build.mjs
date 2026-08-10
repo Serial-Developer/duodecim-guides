@@ -27,6 +27,7 @@ import { renderBuildCardTest } from '../src/templates/build-card-test.mjs';
 import { renderBuildCardRoster } from '../src/templates/build-card-roster.mjs';
 import { buildDataBundle } from './build-data-bundle.mjs';
 import { applyMoveFixes } from './move-fixes.mjs';
+import { buildsFromWiki } from './wiki-builds.mjs';
 import { slugAnchor, speedValues, siteHeader, siteFooter, buildRoster, linksFor } from '../src/templates/helpers.mjs';
 import { PAGES, seoFor, ogPathFor, writeSitemap, write404, writeHumansTxt } from './seo.mjs';
 import { datesFor, contentLastModified } from './git-dates.mjs';
@@ -76,6 +77,12 @@ for (const e of meta?.tierList?.entries || []) {
 
 // Données de jeu des personnages : partagées entre les langues (ce sont des
 // chiffres et des noms propres). Seule la prose éditoriale est par locale.
+// Payload du créateur : les fiches s'en servent aussi, pour convertir les
+// builds du wiki en cartes. Il ne dépend pas de la langue rendue.
+const bundlePartage = buildDataBundle(ROOT, readEd('en', '_build-creator'));
+// Cellules des builds du wiki que la conversion n'a pas su résoudre : elles
+// sont dites, jamais tues.
+const cartesRefusees = [];
 const chars = [];
 // Cellules arbitrées entre les deux wikis : déclarées dans l'éditorial anglais,
 // langue des données de jeu, et appliquées ici comme dans le payload du
@@ -266,6 +273,8 @@ for (const locale of activeLocales) {
       dates,
       ogImage: ogPathFor(ROOT, def.slug, locale),
       roster,
+      buildCards: buildsFromWiki(data, def.slug, bundlePartage, cartesRefusees),
+      cardData: bundlePartage,
     }));
     sitemap.push({ path, lastmod: dates.dateModified, alternates: altsForGuide(def.slug) });
     nGuides++;
@@ -303,7 +312,7 @@ for (const locale of activeLocales) {
     // français sur le site anglais. On l'assemble donc toujours depuis
     // l'anglais, langue des données de jeu — comme les descriptions du wiki que
     // le payload embarque déjà et que le site français affiche telles quelles.
-    const bundle = buildDataBundle(ROOT, readEd('en', '_build-creator'));
+    const bundle = bundlePartage;
     // Le payload de données est partagé par toutes les langues (identifiants,
     // chiffres et noms propres du jeu) : il est écrit une seule fois.
     writeFileSync(join(DIST, 'scripts', 'build-data.js'), `window.BUILD_DATA=${JSON.stringify(bundle)};\n`);
@@ -465,6 +474,15 @@ writeHumansTxt(DIST, {
   subject: createT(DEFAULT_LOCALE)('humans.subject'),
 });
 
+if (cartesRefusees.length) {
+  const vus = new Set();
+  for (const r of cartesRefusees) {
+    const k = `${r.slug}/${r.cle}/${r.valeur}`;
+    if (vus.has(k)) continue;
+    vus.add(k);
+    console.warn(`(build du wiki non converti — ${r.slug} / ${r.cle} « ${r.valeur} » : ${r.raison})`);
+  }
+}
 console.log(`dist/ généré : ${activeLocales.join(' + ')} — ${nGuides} guides, ${nPages} pages transverses`);
 console.log(`référencement : sitemap.xml (${nUrls} URLs), 404.html, humans.txt`);
 if (missingKeys.size) {
