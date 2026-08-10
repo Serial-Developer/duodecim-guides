@@ -526,7 +526,7 @@ function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant 
   const niveau = Math.min(Math.max(Number(build.level) || 100, 1), 100);
   const niveauChamp = live
     ? `<span class="bcard-lvl"><label for="bcl-${esc(uid || 'x')}">${esc(t('buildCard.levelShort'))}</label><input id="bcl-${esc(uid || 'x')}" type="number" min="1" max="100" step="1" value="${niveau}" data-bc="level" title="${esc(t('buildCard.level'))}" inputmode="numeric"></span>`
-    : (niveau !== 100 ? `<span class="bcard-lvl">${esc(t('buildCard.levelValue', { level: niveau }))}</span>` : '');
+    : `<span class="bcard-lvl">${esc(t('buildCard.levelValue', { level: niveau }))}</span>`;
   const char = (data.characters || []).find((c) => c.slug === build.character);
   if (!char) return '';
   // Les onglets de style passent par des boutons radio, sans JavaScript : la

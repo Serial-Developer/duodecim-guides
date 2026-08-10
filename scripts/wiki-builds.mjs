@@ -183,6 +183,19 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
       }
     }
 
+    // Niveau : 100 sauf mention contraire dans la description du build. Les
+    // builds publiés sont des builds de niveau 100 — c'est le niveau du jeu
+    // compétitif —, et seule une note qui dit le contraire fait exception.
+    const texteNiveau = String(prose[builds.length] || '');
+    // Le motif doit désigner le personnage, pas n'importe quel « niveau » du
+    // texte : « every LV2 Assist Change » parle du rang d'un assist, pas d'un
+    // build de niveau 2. On exige donc le mot en toutes lettres, séparé de son
+    // nombre, et une valeur qui soit un palier plausible.
+    const mention = /\b(?:niveau|level)\s*:?\s*(\d{1,3})\b/i.exec(texteNiveau);
+    const lu = mention ? Number(mention[1]) : 100;
+    build.level = lu >= 1 && lu <= 100 ? lu : 100;
+    if (build.level !== 100) journal.push({ slug, cle: 'niveau', valeur: String(build.level), raison: 'lu dans la description du build', releve: true });
+
     // Section muette : la source n'en dit rien, ce n'est pas qu'elle la laisse
     // vide. Le jeton le dit une fois pour toute la section.
     if (!build.attacks.length) {

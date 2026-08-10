@@ -1942,7 +1942,15 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   font: inherit;
   font-size: 0.78rem;
   text-align: right;
+  /* Les flèches natives sont hautes de deux lignes dans un en-tête qui n'en
+     fait qu'une, et chaque navigateur les dessine à sa façon. Le champ reste
+     un `number` — clavier numérique sur téléphone, bornes tenues par le
+     navigateur —, il n'en montre simplement pas la garniture. */
+  appearance: textfield;
+  -moz-appearance: textfield;
 }
+.bcard-lvl input::-webkit-outer-spin-button,
+.bcard-lvl input::-webkit-inner-spin-button { -webkit-appearance: none; appearance: none; margin: 0; }
 .bcard-lvl input:focus-visible { border-color: var(--gold); outline: 2px solid var(--gold); outline-offset: 1px; }
 .bcard-h {
   margin: 0 0 0.3rem;
