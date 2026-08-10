@@ -219,15 +219,17 @@
     if (!Array.isArray(b.attacks) || !Array.isArray(b.abilities)) return { ok: false, error: T('err.lists') };
     if (!b.equipment || typeof b.equipment !== 'object') return { ok: false, error: T('err.equipBlock') };
     if (!Array.isArray(b.accessories)) return { ok: false, error: T('err.accList') };
+    // « any » n'est pas un identifiant de catalogue : c'est le jeton qui laisse
+    // l'emplacement à la main du joueur. Il vaut partout où un identifiant vaut.
     var badSlot = SLOTS.some(function (s) {
       var v = b.equipment[s.key];
-      return v != null && (typeof v !== 'string' || !equipByUid[v]);
+      return v != null && v !== ANY && (typeof v !== 'string' || !equipByUid[v]);
     });
     if (badSlot) return { ok: false, error: T('err.unknownEquip') };
-    var badAcc = b.accessories.some(function (v) { return v != null && (typeof v !== 'string' || !accByUid[v]); });
+    var badAcc = b.accessories.some(function (v) { return v != null && v !== ANY && (typeof v !== 'string' || !accByUid[v]); });
     if (badAcc) return { ok: false, error: T('err.unknownAcc') };
-    if (b.assist != null && !assistBySlug[b.assist]) return { ok: false, error: T('err.unknownAssist', { name: b.assist }) };
-    if (b.summon != null && !summonById[b.summon]) return { ok: false, error: T('err.unknownSummon', { name: b.summon }) };
+    if (b.assist != null && b.assist !== ANY && !assistBySlug[b.assist]) return { ok: false, error: T('err.unknownAssist', { name: b.assist }) };
+    if (b.summon != null && b.summon !== ANY && !summonById[b.summon]) return { ok: false, error: T('err.unknownSummon', { name: b.summon }) };
     return { ok: true };
   }
 
@@ -259,7 +261,7 @@
       var v = Number(brut[i]);
       return v >= 0 && v < MAX_SLOTS ? v : -1;
     });
-    out.abilities = uniq(b.abilities, function (id) { return !!abilityById[id]; });
+    out.abilities = uniq(b.abilities, function (id) { return id === ANY || !!abilityById[id]; });
     SLOTS.forEach(function (s) { out.equipment[s.key] = b.equipment[s.key] || null; });
     out.accessories = new Array(ACCESSORY_SLOTS).fill(null);
     b.accessories.slice(0, ACCESSORY_SLOTS).forEach(function (v, i) { out.accessories[i] = v || null; });
@@ -1065,6 +1067,31 @@
   //
   // Le second geste est dans les lignes elles-mêmes : rechoisir ce qui est déjà
   // là le retire. Les deux se rejoignent, l'un se voit, l'autre se devine.
+  // « Au choix » : l'emplacement est laissé à la main du joueur. Ce n'est pas
+  // « rien » — un emplacement vide dit qu'on n'y met rien, celui-ci qu'on y met
+  // ce qu'on veut. La ligne suit celle du retrait : les deux réponses qui ne
+  // sont pas un nom de pièce se tiennent en tête de liste.
+  var ANY = 'any';
+  function porteAuChoix(b) {
+    if (!b) return false;
+    if (b.assist === ANY || b.summon === ANY) return true;
+    if ((b.attacks || []).indexOf(ANY) !== -1 || (b.abilities || []).indexOf(ANY) !== -1) return true;
+    if ((b.accessories || []).indexOf(ANY) !== -1) return true;
+    return SLOTS.some(function (s) { return (b.equipment || {})[s.key] === ANY; });
+  }
+
+  function anyRow(actif, onPick) {
+    return el('button', {
+      type: 'button', class: 'bc-row bc-row-btn bc-row-any' + (actif ? ' is-selected' : ''),
+      'aria-pressed': actif ? 'true' : 'false', onclick: onPick,
+    }, [
+      el('span', { class: 'bc-row-main' }, [
+        el('span', { class: 'bc-row-name', text: T('buildCard.any') }),
+        el('span', { class: 'bc-row-meta', text: T('equipment.anyHint') }),
+      ]),
+    ]);
+  }
+
   function clearRow(occupant, onClear) {
     return el('button', {
       type: 'button', class: 'bc-row bc-row-btn bc-row-clear', onclick: onClear,
@@ -1884,15 +1911,18 @@
     bar.appendChild(search); bar.appendChild(catSel); bar.appendChild(sortSel); bar.appendChild(dirBtn);
     section.appendChild(bar);
 
-    var pose = state.build.equipment[slot.key] ? equipByUid[state.build.equipment[slot.key]] : null;
-    if (pose) {
-      section.appendChild(clearRow(pose.name, function () {
-        state.build.equipment[slot.key] = null;
-        markDirty();
-        if (close) close();
-        keepScroll(null, function () { renderPanel('stuff'); refresh(); });
-      }));
+    var poseUid = state.build.equipment[slot.key];
+    var pose = poseUid && poseUid !== ANY ? equipByUid[poseUid] : null;
+    var poserEquip = function (v) {
+      state.build.equipment[slot.key] = v;
+      markDirty();
+      if (close) close();
+      keepScroll(null, function () { renderPanel('stuff'); refresh(); });
+    };
+    if (pose || poseUid === ANY) {
+      section.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poserEquip(null); }));
     }
+    section.appendChild(anyRow(poseUid === ANY, function () { poserEquip(poseUid === ANY ? null : ANY); }));
 
     var listBox = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': slot.key });
     section.appendChild(listBox);
@@ -2030,15 +2060,18 @@
     bar.appendChild(search); bar.appendChild(catSel);
     section.appendChild(bar);
 
-    var pose = state.build.accessories[index] ? accByUid[state.build.accessories[index]] : null;
-    if (pose) {
-      section.appendChild(clearRow(pose.name, function () {
-        state.build.accessories[index] = null;
-        markDirty();
-        if (close) close();
-        keepScroll(null, function () { renderPanel('accessories'); refresh(); });
-      }));
+    var poseUid = state.build.accessories[index];
+    var pose = poseUid && poseUid !== ANY ? accByUid[poseUid] : null;
+    var poserAcc = function (v) {
+      state.build.accessories[index] = v;
+      markDirty();
+      if (close) close();
+      keepScroll(null, function () { renderPanel('accessories'); refresh(); });
+    };
+    if (pose || poseUid === ANY) {
+      section.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poserAcc(null); }));
     }
+    section.appendChild(anyRow(poseUid === ANY, function () { poserAcc(poseUid === ANY ? null : ANY); }));
 
     var listBox = el('div', { class: 'bc-list bc-list-scroll', 'data-slot': 'acc' });
     section.appendChild(listBox);
@@ -2165,7 +2198,10 @@
       if (close) close();
       keepScroll(slug, function () { renderPanel('assist'); refresh(); });
     };
-    if (pose) section.appendChild(clearRow(pose.name, function () { poser(null); }));
+    if (pose || state.build.assist === ANY) {
+      section.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poser(null); }));
+    }
+    section.appendChild(anyRow(state.build.assist === ANY, function () { poser(state.build.assist === ANY ? null : ANY); }));
     section.appendChild(box);
 
     // Le filtre porte aussi sur les coups du renfort : on cherche souvent
@@ -2205,7 +2241,10 @@
       if (close) close();
       keepScroll(id, function () { renderPanel('assist'); refresh(); });
     };
-    if (pose) box.appendChild(clearRow(pose.name, function () { poser(null); }));
+    if (pose || state.build.summon === ANY) {
+      box.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poser(null); }));
+    }
+    box.appendChild(anyRow(state.build.summon === ANY, function () { poser(state.build.summon === ANY ? null : ANY); }));
     D.summons.filter(function (s) { return state.showIllegal || s.legal !== false; })
       .sort(function (a, b) { return byName(a, b); })
       .forEach(function (s) {
@@ -2844,6 +2883,13 @@
   }
 
   function encodeCompact(b) {
+    // Le format binaire remplace chaque identifiant par son rang dans un
+    // catalogue : le jeton « au choix » n'y figure pas, et lui réserver un rang
+    // décalerait tous les autres — les liens déjà partagés chargeraient un build
+    // faux. On refuse donc, et `encodeBuild` retombe sur le format long, qui
+    // transporte le build tel quel. Refus explicite, pas exception avalée : un
+    // repli silencieux avait déjà triplé la longueur des liens sans qu'on le voie.
+    if (porteAuChoix(b)) throw new Error('any');
     var c = catalogsOf();
     var atk = c.attacks[b.character] || [];
     var w = new BitWriter();

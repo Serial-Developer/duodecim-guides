@@ -588,6 +588,7 @@
       "labyrinth": "Obtenu dans le Labyrinthe",
       "labTag": "Lab",
       "showIllegal": "Afficher les items illégaux en tournoi (ruleset {ruleset})",
+      "anyHint": "Le joueur choisit",
       "maxBooster": "Max Booster",
       "levelShort": "niv. {level}"
     },

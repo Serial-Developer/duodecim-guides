@@ -627,7 +627,11 @@ ${(() => {
   // porté par l'assist lui-même, jamais déduit d'un camp : quatre personnages
   // changent de camp d'un épisode à l'autre, et Aerith n'est renfort que.
   const miroir = assist?.portraitFacing === 'left' ? ' is-mirrored' : '';
-  const renforts = `<p class="bcard-banner bcard-banner-assist">${live ? '<button type="button" class="bcard-hit" data-bc="assist">' : ''}${assist ? `<span class="bcard-face${miroir}" data-assist="${esc(assist.slug)}">${portrait(assist.slug, t('buildCard.assistAlt', { name: assist.name }))}</span>` : `<span class="bcard-portrait-none"${assistAuChoix ? ` title="${esc(t('buildCard.any'))}"` : ' aria-hidden="true"'}>${assistAuChoix ? esc(t('buildCard.anyShort')) : ''}</span>`}<span class="bcard-role">${esc(t('buildCard.assist'))}</span>${live ? '</button>' : ''}</p>
+  const renforts = `<p class="bcard-banner bcard-banner-assist">${live ? '<button type="button" class="bcard-hit" data-bc="assist">' : ''}${assist ? `<span class="bcard-face${miroir}" data-assist="${esc(assist.slug)}">${portrait(assist.slug, t('buildCard.assistAlt', { name: assist.name }))}</span>` : (assistAuChoix
+    // Le renfort laissé au choix porte la plaque au point d'interrogation, celle
+    // que le jeu montre à un emplacement non déterminé.
+    ? `<span class="bcard-face is-any"><img src="${L.asset('assets/portraits/any.png')}" alt="${esc(t('buildCard.any'))}" title="${esc(t('buildCard.any'))}" width="56" height="56" loading="lazy"></span>`
+    : '<span class="bcard-portrait-none" aria-hidden="true"></span>')}<span class="bcard-role">${esc(t('buildCard.assist'))}</span>${live ? '</button>' : ''}</p>
 <p class="bcard-summon">${live ? '<button type="button" class="bcard-hit" data-bc="summon">' : ''}<img class="icon-d12 bcard-summon-orb" src="${L.asset('assets/summon-icons/summon-orb.png')}" alt="${esc(t('buildCard.summon'))}" title="${esc(t('buildCard.summon'))}"${sizeOf('summon-icons/summon-orb.png')} loading="lazy"><span class="bcard-value">${summon ? esc(summon.name) : (summonAuChoix ? esc(t('buildCard.any')) : '')}</span>${live ? '</button>' : ''}</p>`;
   // Les deux renforts se rangent sous le nom du personnage quand le portrait
   // couvre la carte, sous le nom du build sinon : à gauche le fond laisse la

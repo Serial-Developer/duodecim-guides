@@ -588,6 +588,7 @@
       "labyrinth": "Found in the Labyrinth",
       "labTag": "Lab",
       "showIllegal": "Show tournament-illegal items (ruleset {ruleset})",
+      "anyHint": "Player decides",
       "maxBooster": "Max Booster",
       "levelShort": "Lv {level}"
     },

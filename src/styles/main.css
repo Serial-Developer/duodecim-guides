@@ -1606,6 +1606,9 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
    silhouette commence des le premier pixel : le zoom part du haut de l image,
    sa tete y tient donc et le buste suit. */
 .bcard-face[data-assist="aerith"] img { --bcard-zoom: 4.6; transform-origin: 48% 0; }
+/* La plaque « au choix » n'est pas un portrait : rien à recadrer sur un visage,
+   et elle n'est pas carrée — elle tient dans la vignette au lieu de la remplir. */
+.bcard-face.is-any img { --bcard-zoom: 1; transform-origin: 50% 50%; object-fit: contain; }
 /* Les dix-huit héros regardent vers la gauche sur leur portrait ; en vignette
    d'assist, retournés, ils regardent du même côté que tous les autres. Le point
    d'origine est celui du visage : il reste fixe sous la symétrie, le cadrage ne
