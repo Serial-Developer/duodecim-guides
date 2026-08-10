@@ -933,6 +933,20 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
 
 /* Jauge de CP : couleurs du jeu — vert pomme les attaques, bleu ciel les abilities */
 .bc-gauge-wrap.is-over .bc-gauge { border-color: var(--danger); box-shadow: 0 0 0 2px rgba(239, 136, 150, 0.35); }
+.bc-gauge {
+  display: flex;
+  height: 1.1rem;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid rgba(157, 134, 232, 0.35);
+  overflow: hidden;
+}
+.bc-gauge-fill { display: block; height: 100%; transition: width 0.18s ease; }
+/* Les couleurs du jeu, portées par les deux postes. Elles servent aussi bien la
+   jauge du créateur que celle du pied de carte, qui reprend ces classes-là. */
+.bc-gauge-attacks { background: #86d94b; }
+.bc-gauge-abilities { background: #66c6f0; }
+.bc-gauge-wrap.is-over .bc-gauge { border-color: var(--danger); box-shadow: 0 0 0 2px rgba(239, 136, 150, 0.35); }
 .bc-gauge-wrap.is-over .bc-gauge-attacks { background: #ef8896; }
 .bc-gauge-wrap.is-over .bc-gauge-abilities { background: #c4566a; }
 .bc-gauge-text { margin: 0.35rem 0 0; font-size: 0.85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: baseline; }
