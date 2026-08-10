@@ -217,7 +217,12 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
         }
       }
     }
-    if (!build.attacks.length) { build.attacks = [ANY]; build.attackSlots = [-1]; }
+    // Le jeton accompagne toujours les attaques, même quand la source en donne :
+    // aucun build publié ne remplit la grille — Lightning n'a que deux braveries
+    // en Ravageur sur trois commandes. Ce qui reste est laissé au joueur, et une
+    // place vide le dirait à tort autrement.
+    build.attacks.push(ANY);
+    build.attackSlots.push(-1);
     if (!build.abilities.length) build.abilities = [ANY];
     builds.push(build);
   }

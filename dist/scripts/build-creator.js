@@ -1663,7 +1663,7 @@
   //
   // `onClear` n'est passé que là où l'emplacement n'a pas de bouton « Retirer »
   // à côté de lui — sur la carte. Sous les onglets, la ligne en porte déjà un.
-  function openMoveChooser(title, choix, courant, onPick, intro, onClear, onAny) {
+  function openMoveChooser(title, choix, courant, onPick, intro, onClear, onAny, anyActif) {
     var sous = courant ? T('attacks.replacing', { name: courant.name }) : (intro ? intro.split('\n')[0] : null);
     openModal(title, sous, function (body, close) {
       var section = el('div', { class: 'bc-chooser' });
@@ -1675,7 +1675,7 @@
       if (courant && onClear) section.appendChild(clearRow(courant.name, function () { close(); onClear(); }));
       // Un emplacement d'attaque se laisse aussi au choix du joueur. Le jeton ne
       // coûte rien : ce n'est pas un coup, c'est la place qu'on lui garde.
-      if (onAny) section.appendChild(anyRow(courant && courant.id === ANY, function () { close(); onAny(); }));
+      if (onAny) section.appendChild(anyRow(!!anyActif, function () { close(); onAny(); }));
       section.appendChild(listBox);
       body.appendChild(section);
       function paint() {
@@ -3358,9 +3358,13 @@
           // retiendrait.
           removeAt(slotPositions(occupe));
         } : null, function () {
+          // Le jeton vaut pour la section : re-cliquer dessus le retire, comme
+          // rechoisir une pièce déjà posée la retire de son emplacement.
+          var deja = state.build.attacks.indexOf(ANY);
+          if (deja !== -1) { removeAt([deja]); return; }
           if (occupe) replaceAt(occupe.pos, ANY, cmd);
           else appendAttack(ANY, cmd);
-        });
+        }, state.build.attacks.indexOf(ANY) !== -1);
         return;
       }
 
