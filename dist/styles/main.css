@@ -1928,6 +1928,22 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bcard-branch + .bcard-branch::before { top: -1.55rem; }
 .bcard-col { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
 .bcard-block { min-width: 0; }
+/* Le niveau se range au bout de l'en-tête de l'équipement, aligné à droite :
+   c'est ce qu'il commande. Le titre reste à gauche, quelle que soit la largeur. */
+.bcard-h { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; }
+.bcard-lvl { display: inline-flex; align-items: baseline; gap: 0.3rem; font-size: 0.72rem; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--muted); }
+.bcard-lvl input {
+  width: 3.2rem;
+  padding: 0.1rem 0.3rem;
+  background: var(--bg);
+  border: 1px solid rgba(157, 134, 232, 0.35);
+  border-radius: 6px;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.78rem;
+  text-align: right;
+}
+.bcard-lvl input:focus-visible { border-color: var(--gold); outline: 2px solid var(--gold); outline-offset: 1px; }
 .bcard-h {
   margin: 0 0 0.3rem;
   font-size: 0.78rem;

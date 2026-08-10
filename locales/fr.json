@@ -776,6 +776,9 @@
     "subject": "Dissidia 012 [duodecim] Final Fantasy (PSP, 2011) — guides compétitifs"
   },
   "buildCard": {
+    "level": "Niveau du personnage (1 à 100)",
+    "levelShort": "Niv.",
+    "levelValue": "Niv. {level}",
     "any": "Au choix",
     "anyShort": "≡",
     "equipment": "Équipement",

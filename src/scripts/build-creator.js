@@ -162,6 +162,11 @@
       // commande libre : on ne pouvait pas laisser un trou.
       attackSlots: [],
       abilities: [],
+      // Niveau du personnage, de 1 à 100 : il ne change rien aux totaux — les
+      // sources ne donnent les statistiques de base qu'au niveau 100 — mais il
+      // décide de ce qui peut s'équiper, une pièce ne se portant qu'à partir du
+      // niveau qu'elle exige. 100 par défaut, le niveau du jeu compétitif.
+      level: 100,
       equipment: { weapon: null, hand: null, head: null, body: null },
       accessories: new Array(ACCESSORY_SLOTS).fill(null),
       assist: null,
@@ -267,6 +272,8 @@
     b.accessories.slice(0, ACCESSORY_SLOTS).forEach(function (v, i) { out.accessories[i] = v || null; });
     out.assist = b.assist || null;
     out.summon = b.summon || null;
+    var lv = Math.round(Number(b.level));
+    out.level = lv >= 1 && lv <= 100 ? lv : 100;
     out.notes = typeof b.notes === 'string' ? b.notes.slice(0, 2000) : '';
     out.created = typeof b.created === 'string' ? b.created : out.created;
     out.modified = new Date().toISOString();
@@ -1072,8 +1079,14 @@
   // ce qu'on veut. La ligne suit celle du retrait : les deux réponses qui ne
   // sont pas un nom de pièce se tiennent en tête de liste.
   var ANY = 'any';
+  function niveauBuild() {
+    var v = Math.round(Number(state.build.level));
+    return v >= 1 && v <= 100 ? v : 100;
+  }
+
   function porteAuChoix(b) {
     if (!b) return false;
+    if ((Number(b.level) || 100) !== 100) return true;
     if (b.assist === ANY || b.summon === ANY) return true;
     if ((b.attacks || []).indexOf(ANY) !== -1 || (b.abilities || []).indexOf(ANY) !== -1) return true;
     if ((b.accessories || []).indexOf(ANY) !== -1) return true;
@@ -1932,6 +1945,9 @@
       var q = stuffFilters[slot.key].toLowerCase();
       var items = D.equipment.filter(function (e) {
         if (e.slot !== slot.key) return false;
+        // Une pièce se porte à partir du niveau qu'elle exige, jamais avant :
+        // au niveau 60, on voit les pièces de niveau 1, 30 et 60.
+        if ((e.level || 1) > niveauBuild()) return false;
         var st = equipStatus(e);
         if (st.state === 'unavailable') return false;
         if (stuffCategory[slot.key] && e.category !== stuffCategory[slot.key]) return false;
@@ -2995,6 +3011,8 @@
       eq: [b.equipment.weapon, b.equipment.hand, b.equipment.head, b.equipment.body],
       ac: b.accessories, as: b.assist, su: b.summon,
     };
+    // Absent des liens émis avant ce champ : `fromJsonBytes` lit alors 100.
+    if ((b.level || 100) !== 100) compact.lv = b.level;
     // Un nom ou des notes vides n'ont pas à occuper l'URL.
     if (b.name) compact.n = b.name;
     if (b.notes) compact.no = b.notes;
@@ -3048,6 +3066,7 @@
       attacks: c.at || [], attackSlots: c.sl || [], abilities: c.ab || [],
       equipment: { weapon: (c.eq || [])[0] || null, hand: (c.eq || [])[1] || null, head: (c.eq || [])[2] || null, body: (c.eq || [])[3] || null },
       accessories: c.ac || [], assist: c.as || null, summon: c.su || null, notes: c.no || '',
+      level: c.lv || 100,
       created: new Date().toISOString(), modified: new Date().toISOString(),
     };
   }
@@ -3558,6 +3577,19 @@
   }
 
   if (carteHote) {
+    // Le niveau se règle dans la carte, qui se redessine en entier à chaque
+    // modification : l'écouteur vit sur l'hôte, pas sur le champ, qui ne
+    // survit pas au redessin. Hors bornes, on retombe sur 100.
+    carteHote.addEventListener('change', function (ev) {
+      var champ = ev.target.closest ? ev.target.closest('[data-bc="level"]') : null;
+      if (!champ) return;
+      var v = Math.round(Number(champ.value));
+      state.build.level = v >= 1 && v <= 100 ? v : 100;
+      champ.value = state.build.level;
+      markDirty();
+      refresh();
+    });
+
     carteHote.addEventListener('pointerdown', function (ev) {
       if (ev.button != null && ev.button !== 0) return;
       var hit = ev.target.closest ? ev.target.closest('.bcard-hit') : null;
