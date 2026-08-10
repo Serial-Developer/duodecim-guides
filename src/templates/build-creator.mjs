@@ -173,13 +173,11 @@ ${siteFooter(t)}`;
     description,
     jsPath: 'scripts/build-creator.js',
     // Les libellés de l'outil sont injectés avant son script : celui-ci les lit
-    // à l'initialisation et ne contient donc aucun texte en dur.
-    // Le banc d'essai est hors périmètre : ni indexé, ni au sitemap, tant que
-    // l'interface n'est pas validée.
-    robots: card ? 'noindex, nofollow' : null,
+    // à l'initialisation et ne contient donc aucun texte en dur. Le rendu
+    // partagé de la carte suit — c'est lui qui dessine l'interface.
     extraHead: `<script>window.BC_I18N=${JSON.stringify(i18nPayload).replace(/</g, '\\u003c')};</script>
-<script src="${L.asset('scripts/build-data.js')}" defer></script>${card ? `
-<script src="${L.asset('scripts/build-card-view.js')}" defer></script>` : ''}`,
+<script src="${L.asset('scripts/build-data.js')}" defer></script>
+<script src="${L.asset('scripts/build-card-view.js')}" defer></script>`,
     body,
     // Ce n'est pas un article mais un outil : le type WebApplication décrit ce
     // que la page fait, et signale qu'elle est gratuite et sans compte.

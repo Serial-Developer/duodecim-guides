@@ -307,6 +307,9 @@ for (const locale of activeLocales) {
     // Le payload de données est partagé par toutes les langues (identifiants,
     // chiffres et noms propres du jeu) : il est écrit une seule fois.
     writeFileSync(join(DIST, 'scripts', 'build-data.js'), `window.BUILD_DATA=${JSON.stringify(bundle)};\n`);
+    // Le rendu partagé de la carte : le créateur s'en sert dans le navigateur,
+    // les pages de build statiques l'appellent au build. Un seul fichier.
+    cpSync(join(ROOT, 'src', 'scripts', 'build-card-view.js'), join(DIST, 'scripts', 'build-card-view.js'));
     const seo = seoOf('buildCreator', {
       ogSlug: 'createur-de-builds',
       ogAlt: t('buildCreator.ogAlt'),
@@ -321,6 +324,10 @@ for (const locale of activeLocales) {
       i18nPayload: buildCreatorStrings(t),
       tierBySlug,
       seo,
+      // La carte de build tient lieu d'interface depuis le 10/08/2026 : elle a
+      // remplacé les cinq onglets, qui montraient des listes là où le jeu
+      // montre un écran d'équipement.
+      card: true,
     }));
 
     // Page de validation de la carte de build. Hors sitemap, hors navigation et
@@ -338,21 +345,6 @@ for (const locale of activeLocales) {
         sizeOf,
       }));
     }
-    // Banc d'essai du créateur bâti sur la carte : mêmes données, mêmes fenêtres,
-    // seule l'interface change. Hors sitemap et en noindex tant qu'il n'est pas
-    // validé ; le créateur en ligne ne bouge pas.
-    writeFileSync(join(DIST, 'build-creator-card.html'), renderBuildCreator({
-      ...i18n('build-creator-card.html', {}),
-      ed,
-      characters: CHARACTERS,
-      hasPortrait: (slug) => existsSync(join(ROOT, 'assets', 'portraits', `${slug}.png`)),
-      i18nPayload: buildCreatorStrings(t),
-      tierBySlug,
-      seo: { ...seo, path: 'build-creator-card.html', ldType: 'none' },
-      card: true,
-    }));
-    cpSync(join(ROOT, 'src', 'scripts', 'build-card-view.js'), join(DIST, 'scripts', 'build-card-view.js'));
-
     // Même banc d'essai, étendu aux 31 personnages : c'est là qu'on voit si un
     // cadrage de portrait gêne la lecture. Mêmes conditions — noindex, hors
     // sitemap, langue par défaut seulement.
