@@ -30,6 +30,27 @@
       }
     ]
   },
+  "_moveFixesNote": "The two sources disagree on a few cells of a move table, and this is where the arbitration is written down, by slug: { \"slug\": [{ \"move\": \"…\", \"field\": \"effects\", \"variant\": 2, \"was\": \"--\", \"value\": \"Absorb\", \"source\": \"…\" }] }. `variant` counts from 1, as the tables do; drop it when the field holds a single value. Unlike `moveCosts`, which only fills gaps, these declarations overwrite dissidia.wiki — so each one recalls the value it replaces (`was`), and a declaration whose original value no longer matches is refused and reported instead of being applied.",
+  "moveFixes": {
+    "cloud-of-darkness": [
+      {
+        "move": "Tentacle of Spite",
+        "field": "effects",
+        "variant": 2,
+        "was": "--",
+        "value": "Absorb",
+        "source": "https://finalfantasy.fandom.com/wiki/Cloud_of_Darkness_(Dissidia_012)"
+      },
+      {
+        "move": "Tentacle of Scorn",
+        "field": "effects",
+        "variant": 1,
+        "was": "Wall Rush",
+        "value": "--",
+        "source": "https://finalfantasy.fandom.com/wiki/Cloud_of_Darkness_(Dissidia_012)"
+      }
+    ]
+  },
   "_summonEffectsNote": "The wiki's Summons page does not cover every summon cited by the tournament rules. Missing effects are declared here, by identifier: { \"slug\": { \"text\": \"…\", \"source\": \"…\" } }. The build fails if the identifier matches no summon.",
   "summonEffects": {
     "barbariccia": {

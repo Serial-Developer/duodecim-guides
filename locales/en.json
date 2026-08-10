@@ -439,6 +439,7 @@
     "rosterAria": "Pick a character",
     "noscript": "The build creator needs JavaScript to run. The game data stays readable on the character guides.",
     "step1": "1. Pick a character",
+    "changeCharacter": "Change character",
     "step2Default": "Build the loadout",
     "buildName": "Build name",
     "buildNamePlaceholder": "Untitled",

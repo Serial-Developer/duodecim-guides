@@ -30,6 +30,27 @@
       }
     ]
   },
+  "_moveFixesNote": "Les deux sources se contredisent sur quelques cellules d'un tableau de coups : c'est ici qu'est consigné l'arbitrage, par slug : { \"slug\": [{ \"move\": \"…\", \"field\": \"effects\", \"variant\": 2, \"was\": \"--\", \"value\": \"Absorb\", \"source\": \"…\" }] }. `variant` se compte à partir de 1, comme les tableaux ; on l'omet quand le champ ne porte qu'une valeur. À la différence de `moveCosts`, qui ne comble que des trous, ces déclarations écrasent dissidia.wiki — chacune rappelle donc la valeur qu'elle remplace (`was`), et une déclaration dont la valeur d'origine ne correspond plus est refusée et rapportée au lieu d'être appliquée.",
+  "moveFixes": {
+    "cloud-of-darkness": [
+      {
+        "move": "Tentacle of Spite",
+        "field": "effects",
+        "variant": 2,
+        "was": "--",
+        "value": "Absorb",
+        "source": "https://finalfantasy.fandom.com/wiki/Cloud_of_Darkness_(Dissidia_012)"
+      },
+      {
+        "move": "Tentacle of Scorn",
+        "field": "effects",
+        "variant": 1,
+        "was": "Wall Rush",
+        "value": "--",
+        "source": "https://finalfantasy.fandom.com/wiki/Cloud_of_Darkness_(Dissidia_012)"
+      }
+    ]
+  },
   "_summonEffectsNote": "La page Summons du wiki ne couvre pas toutes les invocations citées par les règles de tournoi. Les effets manquants se déclarent ici, par identifiant : { \"slug\": { \"text\": \"…\", \"source\": \"…\" } }. Le build échoue si l'identifiant ne correspond à aucune invocation.",
   "summonEffects": {
     "barbariccia": {

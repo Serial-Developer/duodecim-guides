@@ -2242,11 +2242,36 @@
   rosterButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var slug = btn.dataset.slug;
-      if (slug === state.build.character) return;
+      // Rechoisir celui qu'on édite déjà, c'est refermer la grille : sur
+      // téléphone elle est ouverte pour qu'on en change, pas pour rien.
+      if (slug === state.build.character) { replierRoster(true); return; }
       if (state.dirty && !window.confirm(T('manager.confirmChangeChar'))) return;
       setCharacter(slug);
     });
   });
+
+  // À l'étroit, les 31 vignettes occupent plus d'un écran et demi : la carte
+  // qu'on édite ne commençait qu'à 1469 px du haut. Une fois le personnage
+  // choisi, la grille se replie derrière son bouton. Sur grand écran elle reste
+  // dépliée — la place ne manque pas, et le choix se voit d'un coup d'œil.
+  var rosterGrille = document.getElementById('bc-roster');
+  var rosterBouton = document.getElementById('bc-roster-toggle');
+  function replierRoster(replie) {
+    if (!rosterGrille || !rosterBouton) return;
+    var replier = replie && estCompact() && !!state.build.character;
+    rosterGrille.hidden = replier;
+    rosterBouton.hidden = !replier;
+    rosterBouton.setAttribute('aria-expanded', replier ? 'false' : 'true');
+  }
+  if (rosterBouton) {
+    rosterBouton.addEventListener('click', function () {
+      replierRoster(false);
+      // Le focus rejoint le personnage en cours : la grille rouverte, c'est de
+      // lui qu'on part pour en choisir un autre.
+      var courant = rosterGrille.querySelector('.bc-char[aria-checked="true"]');
+      if (courant) courant.focus();
+    });
+  }
 
   function setCharacter(slug) {
     state.build = emptyBuild(slug);
@@ -2264,6 +2289,7 @@
     document.getElementById('bc-current-name').textContent = char ? T('manager.buildOf', { name: char.name }) : BC.ui.step2Default;
     document.getElementById('bc-build-name').value = state.build.name;
     document.getElementById('bc-notes').value = state.build.notes;
+    replierRoster(true);
   }
 
   // --- Gestion des builds ---------------------------------------------------
@@ -3066,6 +3092,17 @@
   var carteHote = document.getElementById('bc-card');
   var carteBase = carteHote ? (carteHote.getAttribute('data-base') || '') : '';
 
+  // Le règlement de tournoi retire des accessoires et des invocations des
+  // listes. Sous les onglets, la case qui les rend au choix ouvre les panneaux
+  // « Équipement » et « Accessoires » ; en mode carte, ces panneaux n'existent
+  // pas et la case n'existait nulle part : ce qu'écarte le règlement était
+  // devenu inatteignable. Elle rejoint l'en-tête, à côté du nom du build — la
+  // colonne de la jauge, large de 7 rem, ne peut pas porter sa phrase.
+  if (carteHote) {
+    var meta = document.querySelector('.bc-build-meta');
+    if (meta) meta.appendChild(illegalToggle());
+  }
+
   // À l'étroit, la carte se resserre : le portrait revient dans l'en-tête — en
   // fond il ne laissait plus rien lire —, l'équipement et les attaques prennent
   // chacun leur languette, et la colonne de stats vient les rejoindre au lieu de
@@ -3171,7 +3208,7 @@
   // on la redessine. `addListener` reste là pour les navigateurs qui ne
   // connaissent pas encore `addEventListener` sur une requête média.
   if (petitEcran) {
-    var surSeuil = function () { renderCard(); };
+    var surSeuil = function () { renderCard(); replierRoster(true); };
     if (petitEcran.addEventListener) petitEcran.addEventListener('change', surSeuil);
     else if (petitEcran.addListener) petitEcran.addListener(surSeuil);
   }

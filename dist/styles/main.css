@@ -348,6 +348,9 @@ a.sh-brand:hover .gold { text-shadow: 0 0 14px rgba(240, 192, 90, 0.55); }
 
 /* Grille en rangées, comme l'écran du jeu (rangées partielles centrées) */
 .char-grid { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+/* `display: flex` l'emporte sur la règle `[hidden]` du navigateur : sans cette
+   ligne, la grille repliée par le script restait affichée. */
+.char-grid[hidden] { display: none; }
 .char-row { display: flex; justify-content: center; gap: 7px; }
 .char-cell { position: relative; }
 /* La case est un lien à l'accueil, un bouton dans le créateur de builds : même
@@ -891,6 +894,9 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
    lien n'allume qu'au survol. */
 .bc-char { padding: 0; font: inherit; cursor: pointer; }
 .bc-char-fallback { display: block; width: 100%; aspect-ratio: 1; background: var(--surface-2); }
+/* Bouton qui rouvre la grille repliée : le script ne le montre qu'à l'étroit,
+   une fois le personnage choisi. Pleine largeur, c'est une cible au doigt. */
+.bc-roster-toggle { display: block; width: 100%; padding: 0.6rem 0.8rem; }
 .char-cell .bc-char[aria-checked="true"] {
   border-color: var(--gold);
   box-shadow: 0 0 16px rgba(240, 192, 90, 0.45);

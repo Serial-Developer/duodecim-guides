@@ -26,6 +26,7 @@ import { renderBuildCreator } from '../src/templates/build-creator.mjs';
 import { renderBuildCardTest } from '../src/templates/build-card-test.mjs';
 import { renderBuildCardRoster } from '../src/templates/build-card-roster.mjs';
 import { buildDataBundle } from './build-data-bundle.mjs';
+import { applyMoveFixes } from './move-fixes.mjs';
 import { slugAnchor, speedValues, siteHeader, siteFooter, buildRoster, linksFor } from '../src/templates/helpers.mjs';
 import { PAGES, seoFor, ogPathFor, writeSitemap, write404, writeHumansTxt } from './seo.mjs';
 import { datesFor, contentLastModified } from './git-dates.mjs';
@@ -76,11 +77,18 @@ for (const e of meta?.tierList?.entries || []) {
 // Données de jeu des personnages : partagées entre les langues (ce sont des
 // chiffres et des noms propres). Seule la prose éditoriale est par locale.
 const chars = [];
+// Cellules arbitrées entre les deux wikis : déclarées dans l'éditorial anglais,
+// langue des données de jeu, et appliquées ici comme dans le payload du
+// créateur — la fiche et le créateur affichent la même attaque.
+const moveFixes = readEd('en', '_build-creator')?.moveFixes;
+const correctionsRefusees = [];
 for (const c of [...CHARACTERS, ...SPECIAL]) {
   const data = readJson(join(ROOT, 'data', 'characters', `${c.slug}.json`));
   if (!data) { console.warn(`(pas de données pour ${c.slug})`); continue; }
+  applyMoveFixes(c.slug, data, moveFixes, correctionsRefusees);
   chars.push({ def: c, data });
 }
+for (const r of correctionsRefusees) console.warn(`(correction ignorée — ${r.slug} / ${r.move} / ${r.field} : ${r.raison})`);
 
 // Statistiques du cast (31 jouables) pour le profil de mobilité :
 // valeurs triées (plus bas = plus rapide), min/max/moyenne et rang par perso

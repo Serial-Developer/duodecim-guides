@@ -16,6 +16,7 @@ function characterBanner(t, characters, hasPortrait, L, tierBySlug) {
   return rosterGrid({
     bySlug: Object.fromEntries(characters.map((c) => [c.slug, c])),
     tierBySlug,
+    id: 'bc-roster',
     role: 'radiogroup',
     ariaLabel: t('buildCreator.rosterAria'),
     cell: (slug, c) => `<button type="button" class="bc-char" role="radio" aria-checked="false" data-slug="${esc(slug)}" title="${esc(c.name)}" aria-label="${esc(c.name)}">
@@ -93,6 +94,7 @@ ${card ? '' : paras(ed.intro)}
 <section class="card bc-step" aria-labelledby="bc-step1">
 <h2 id="bc-step1" style="margin-top:0.2rem">${esc(t('buildCreator.step1'))}</h2>
 ${characterBanner(t, characters, hasPortrait, L, tierBySlug)}
+${card ? `<button type="button" class="bc-btn bc-roster-toggle" id="bc-roster-toggle" hidden aria-expanded="true" aria-controls="bc-roster">${esc(t('buildCreator.changeCharacter'))}</button>` : ''}
 </section>
 
 <section class="card bc-editor" id="bc-editor" hidden aria-labelledby="bc-step2" data-asset-base="${L.asset("assets/")}">

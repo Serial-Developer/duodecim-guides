@@ -8,6 +8,7 @@ import { join } from 'node:path';
 import { CHARACTERS } from './characters.mjs';
 import { datesFor } from './git-dates.mjs';
 import { isHeaderRow, cpFromRawRows, duplicatesHeaderRow, isTableTitle, isOrphanRow } from './move-shape.mjs';
+import { applyMoveFixes } from './move-fixes.mjs';
 
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf-8'));
 
@@ -141,6 +142,8 @@ export function buildDataBundle(ROOT, editorial = null) {
   const tableauxEcartes = [];
   // Déclarations de coût sans effet : nom inconnu, ou coût déjà donné par le wiki.
   const coutsRefuses = [];
+  // Arbitrages entre les deux wikis restés sans effet (voir move-fixes.mjs).
+  const correctionsRefusees = [];
   const aliasedAll = [];
 
   // Fichiers dont ce payload est la mise en forme : ils datent le bundle (voir
@@ -154,6 +157,10 @@ export function buildDataBundle(ROOT, editorial = null) {
     if (!existsSync(p)) continue;
     sourceFiles.push(`data/characters/${def.slug}.json`);
     const data = readJson(p);
+    // Les cellules arbitrées entre les deux wikis sont corrigées avant toute
+    // lecture : la fiche du personnage applique les mêmes déclarations, sinon
+    // la même attaque se lirait différemment d'une page à l'autre.
+    applyMoveFixes(def.slug, data, editorial?.moveFixes, correctionsRefusees);
 
     // Les coups gardent la structure de la page wiki du personnage : les groupes
     // portent les noms du jeu (ground/aerial, mais aussi « Medic » chez Lightning
@@ -497,6 +504,7 @@ export function buildDataBundle(ROOT, editorial = null) {
     unresolvedHpLinks: unresolvedLinks,
     discardedTables: tableauxEcartes,
     rejectedMoveCosts: coutsRefuses,
+    rejectedMoveFixes: correctionsRefusees,
     aliasedHpLinks: aliasedAll,
     baseStats: { shared: baseStats.shared, byCharacter: baseStats.byCharacter, documented: baseStats.documented },
     ruleset: {

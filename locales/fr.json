@@ -439,6 +439,7 @@
     "rosterAria": "Choisir un personnage",
     "noscript": "Le créateur de builds a besoin de JavaScript pour fonctionner. Les données de jeu restent consultables sur les fiches de personnages.",
     "step1": "1. Choisir un personnage",
+    "changeCharacter": "Changer de personnage",
     "step2Default": "Composer le build",
     "buildName": "Nom du build",
     "buildNamePlaceholder": "Sans titre",
