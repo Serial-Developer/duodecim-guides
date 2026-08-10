@@ -451,9 +451,7 @@
     "save": "Save build",
     "new": "New build",
     "share": "Copy share link",
-    "exportJson": "Export (JSON)",
-    "exportAll": "Export all",
-    "exportCsv": "Export (CSV)",
+    "exportAll": "Export all builds",
     "exportImage": "Convert to image",
     "imageBuilding": "Building the image…",
     "imageDone": "Image saved.",
@@ -630,6 +628,7 @@
       "duplicate": "Duplicate",
       "rename": "Rename",
       "delete": "Delete",
+      "export": "Export",
       "confirmReplace": "The current build is not saved. Replace it?",
       "loaded": "Build “{name}” loaded.",
       "copySuffix": " (copy)",
@@ -652,23 +651,7 @@
       "promptCopyLink": "Copy this link:",
       "linkCorrupt": "The share link is corrupted.",
       "linkRefused": "Share link refused: {error}",
-      "linkReceived": "Build received by link — save it to keep it.",
-      "csv": {
-        "id": "id",
-        "name": "name",
-        "character": "character",
-        "attacks": "attacks",
-        "abilities": "abilities",
-        "weapon": "weapon",
-        "hand": "hand",
-        "head": "head",
-        "body": "body",
-        "accessories": "accessories",
-        "assist": "assist",
-        "summon": "summon",
-        "notes": "notes",
-        "modified": "modified"
-      }
+      "linkReceived": "Build received by link — save it to keep it."
     },
     "detail": {
       "countOne": "1 modifier",

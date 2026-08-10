@@ -2314,6 +2314,12 @@
       box.appendChild(el('h3', { text: char ? char.name : slug }));
       byChar[slug].forEach(function (b) {
         box.appendChild(el('div', { class: 'bc-saved' }, [
+          // Le portrait ne dit rien de plus que le titre de groupe juste
+          // au-dessus : il repère la ligne à l'œil, il ne s'annonce pas.
+          el('img', {
+            class: 'bc-saved-portrait', src: ASSET_BASE + 'portraits/' + slug + '.png',
+            alt: '', width: 40, height: 40, loading: 'lazy',
+          }),
           el('span', { class: 'bc-row-main' }, [
             el('span', { class: 'bc-row-name', text: b.name || T('manager.untitled') }),
             el('span', { class: 'bc-row-meta', text: T('manager.modifiedOn', { date: new Date(b.modified).toLocaleDateString(BC.locale) }) }),
@@ -2321,6 +2327,7 @@
           el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.load'), onclick: function () { loadBuild(b); } }),
           el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.duplicate'), onclick: function () { duplicateBuild(b); } }),
           el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.rename'), onclick: function () { renameBuild(b); } }),
+          el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.export'), onclick: function () { exportBuild(b); } }),
           el('button', { type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('manager.delete'), onclick: function () { deleteBuild(b); } }),
         ]));
       });
@@ -2414,40 +2421,17 @@
   }
   function safeName(s) { return (s || 'build').replace(/[^a-z0-9-_]+/gi, '-').replace(/^-+|-+$/g, '').toLowerCase() || 'build'; }
 
-  document.getElementById('bc-export').addEventListener('click', function () {
-    var snap = currentSnapshot();
-    download('dissidia012-' + safeName(snap.character + '-' + snap.name) + '.json', JSON.stringify(snap, null, 2), 'application/json');
-  });
+  // Un build seul s'exporte depuis sa ligne dans la liste des enregistrés — le
+  // format est celui de la collection, moins l'enveloppe : `importPayload` sait
+  // relire un objet isolé comme un tableau d'un élément.
+  function exportBuild(b) {
+    download('dissidia012-' + safeName(b.character + '-' + b.name) + '.json', JSON.stringify(b, null, 2), 'application/json');
+  }
 
   document.getElementById('bc-export-all').addEventListener('click', function () {
     var builds = loadAll();
     if (!builds.length) { toast(T('manager.noneToExport'), true); return; }
     download('dissidia012-builds.json', JSON.stringify({ schemaVersion: SCHEMA_VERSION, builds: builds }, null, 2), 'application/json');
-  });
-
-  // Export secondaire à plat : une ligne par build, listes agrégées. Le JSON
-  // reste le format d'échange de référence — le CSV perd la structure.
-  document.getElementById('bc-export-csv').addEventListener('click', function () {
-    var builds = loadAll();
-    var snap = currentSnapshot();
-    if (!builds.some(function (b) { return b.id === snap.id; })) builds = builds.concat([snap]);
-    var cols = ['id', 'name', 'character', 'attacks', 'abilities', 'weapon', 'hand', 'head', 'body', 'accessories', 'assist', 'summon', 'notes', 'modified']
-      .map(function (c) { return T('manager.csv.' + c); });
-    var esc = function (v) { return '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"'; };
-    var lines = [cols.map(esc).join(',')];
-    builds.forEach(function (b) {
-      var nameOf = function (uidv, index) { return uidv && index[uidv] ? index[uidv].name : ''; };
-      lines.push([
-        b.id, b.name, b.character,
-        b.attacks.join(' | '),
-        b.abilities.map(function (id) { return abilityById[id] ? abilityById[id].name : id; }).join(' | '),
-        nameOf(b.equipment.weapon, equipByUid), nameOf(b.equipment.hand, equipByUid),
-        nameOf(b.equipment.head, equipByUid), nameOf(b.equipment.body, equipByUid),
-        b.accessories.map(function (u) { return nameOf(u, accByUid); }).filter(Boolean).join(' | '),
-        b.assist || '', b.summon || '', b.notes, b.modified,
-      ].map(esc).join(','));
-    });
-    download('dissidia012-builds.csv', '﻿' + lines.join('\r\n'), 'text/csv');
   });
 
   // --- Cliché de la carte ---------------------------------------------------

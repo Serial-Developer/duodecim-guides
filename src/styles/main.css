@@ -1327,6 +1327,25 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
 .bc-btn-file { display: inline-flex; align-items: center; }
 .bc-saved { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; padding: 0.4rem 0.6rem; background: var(--bg); border: 1px solid rgba(157, 134, 232, 0.18); border-radius: 8px; margin-bottom: 0.3rem; }
 .bc-saved-list { margin-bottom: 1rem; }
+/* Le nom et sa date réclament leur largeur avant que les boutons ne se servent :
+   à base nulle, ils se réduisaient à une colonne de deux lettres sur téléphone.
+   Quand la place manque, ce sont les boutons qui passent à la ligne. */
+.bc-saved .bc-row-main { flex-basis: 9rem; }
+/* Vignette de repérage : la ligne se retrouve à l'œil dans une liste longue.
+   Carrée comme tous les portraits du site, donc jamais déformée. */
+.bc-saved-portrait {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(157, 134, 232, 0.25);
+  background: var(--surface-2);
+  object-fit: cover;
+}
+/* Les notes suivent la carte, au-dessus des builds enregistrés : c'est du
+   commentaire sur le build qu'on est en train de composer, pas une option du
+   gestionnaire. */
+.bc-notes { margin-top: 1.2rem; }
 .bc-notes-label { margin: 0 0 0.3rem; font-size: 0.8rem; color: var(--muted); }
 
 .bc-toast {

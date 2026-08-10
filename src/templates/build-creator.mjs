@@ -123,6 +123,11 @@ ${tabs.map((tb, i) => `<button type="button" class="bc-tab" role="tab" id="bc-ta
 </div>
 ${tabs.map((tb, i) => `<div class="bc-panel" role="tabpanel" id="bc-panel-${tb.key}" aria-labelledby="bc-tab-${tb.key}" tabindex="0"${i === 0 ? '' : ' hidden'}></div>`).join('\n')}
 </div>`}
+
+<div class="bc-notes">
+<p class="bc-notes-label"><label for="bc-notes">${esc(t('buildCreator.notesLabel'))}</label></p>
+<textarea id="bc-notes" rows="3" placeholder="${esc(t('buildCreator.notesPlaceholder'))}"></textarea>
+</div>
 ${card ? '' : '</section>'}
 
 <section class="card bc-step" id="bc-manager" hidden aria-labelledby="bc-step3">
@@ -131,15 +136,11 @@ ${card ? '' : '</section>'}
 <button type="button" class="bc-btn bc-btn-primary" id="bc-save">${esc(t('buildCreator.save'))}</button>
 <button type="button" class="bc-btn" id="bc-new">${esc(t('buildCreator.new'))}</button>
 <button type="button" class="bc-btn" id="bc-share">${esc(t('buildCreator.share'))}</button>
-<button type="button" class="bc-btn" id="bc-export">${esc(t('buildCreator.exportJson'))}</button>
-<button type="button" class="bc-btn" id="bc-export-all">${esc(t('buildCreator.exportAll'))}</button>
-<button type="button" class="bc-btn" id="bc-export-csv">${esc(t('buildCreator.exportCsv'))}</button>
 ${card ? `<button type="button" class="bc-btn" id="bc-export-img">${esc(t('buildCreator.exportImage'))}</button>` : ''}
+<button type="button" class="bc-btn" id="bc-export-all">${esc(t('buildCreator.exportAll'))}</button>
 <label class="bc-btn bc-btn-file">${esc(t('buildCreator.import'))}<input type="file" id="bc-import" accept="application/json,.json" hidden></label>
 </div>
 <div id="bc-saved-list" class="bc-saved-list"></div>
-<p class="bc-notes-label"><label for="bc-notes">${esc(t('buildCreator.notesLabel'))}</label></p>
-<textarea id="bc-notes" rows="3" placeholder="${esc(t('buildCreator.notesPlaceholder'))}"></textarea>
 </section>
 ${card ? '</section>' : ''}
 
