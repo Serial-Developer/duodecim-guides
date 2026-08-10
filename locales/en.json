@@ -628,6 +628,7 @@
       "duplicate": "Duplicate",
       "rename": "Rename",
       "delete": "Delete",
+      "share": "Copy link",
       "export": "Export",
       "confirmReplace": "The current build is not saved. Replace it?",
       "loaded": "Build “{name}” loaded.",

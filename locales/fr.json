@@ -628,6 +628,7 @@
       "duplicate": "Dupliquer",
       "rename": "Renommer",
       "delete": "Supprimer",
+      "share": "Copier le lien",
       "export": "Exporter",
       "confirmReplace": "Le build en cours n’est pas enregistré. Le remplacer ?",
       "loaded": "Build « {name} » chargé.",

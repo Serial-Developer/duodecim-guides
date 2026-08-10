@@ -2327,6 +2327,7 @@
           el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.load'), onclick: function () { loadBuild(b); } }),
           el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.duplicate'), onclick: function () { duplicateBuild(b); } }),
           el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.rename'), onclick: function () { renameBuild(b); } }),
+          el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.share'), onclick: function () { copyShareUrl(b); } }),
           el('button', { type: 'button', class: 'bc-btn bc-btn-small', text: T('manager.export'), onclick: function () { exportBuild(b); } }),
           el('button', { type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('manager.delete'), onclick: function () { deleteBuild(b); } }),
         ]));
@@ -2976,14 +2977,20 @@
     };
   }
 
-  function shareUrl(base) {
-    return encodeBuild(currentSnapshot()).then(function (code) {
+  // Sans build donné, c'est celui qu'on est en train de composer : la barre
+  // d'actions et le sélecteur de langue partagent l'état vivant. Les lignes de
+  // la liste, elles, partagent le build enregistré tel qu'il est rangé.
+  function shareUrl(base, build) {
+    return encodeBuild(build || currentSnapshot()).then(function (code) {
       return (base || location.origin + location.pathname) + '?build=' + code;
     });
   }
 
-  document.getElementById('bc-share').addEventListener('click', function () {
-    shareUrl().then(function (url) {
+  // Le presse-papiers n'est pas toujours accessible — page en `file://`, refus
+  // de l'utilisateur : on retombe alors sur une invite où le lien est
+  // sélectionnable.
+  function copyShareUrl(build) {
+    shareUrl(null, build).then(function (url) {
       var done = function () { toast(T('manager.linkCopied')); };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(done, function () { window.prompt(T('manager.promptCopyLink'), url); });
@@ -2991,7 +2998,9 @@
         window.prompt(T('manager.promptCopyLink'), url);
       }
     });
-  });
+  }
+
+  document.getElementById('bc-share').addEventListener('click', function () { copyShareUrl(); });
 
   // Changer de langue depuis le créateur emporte le build en cours — y compris
   // les retouches faites depuis l'ouverture du lien, que la query string de la
