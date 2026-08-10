@@ -9,6 +9,23 @@
   "_abilityExclusionsNote": "Les incompatibilités sont déduites des descriptions du wiki : deux abilities qui occupent la même commande dans la même situation s'excluent (R + triangle au sol = Ground Dash, Reverse Ground Dash, Omni Ground Dash, Omni Ground Dash+), de même que les paliers d'une même ability. Un prérequis n'est pas un conflit : « available after Multi Air Slide » sort Multi Air Slide du groupe. Ce tableau ne sert qu'à déclarer un cas que la déduction raterait : [{ \"abilities\": [\"Nom A\", \"Nom B\"], \"reason\": \"…\", \"source\": \"…\" }]. Le build échoue si un nom n'existe pas.",
   "_hpLinksNote": "Le wiki n'écrit la paire bravery → attaque HP que pour une poignée de personnages (« Branching from Launch ») ; ailleurs elle est noyée dans la prose. Les paires connues se déclarent ici, par slug : [{ \"from\": \"nom de la bravery\", \"to\": \"nom de l'attaque HP\", \"source\": \"…\" }]. Les noms doivent correspondre exactement à ceux des fiches ; le build échoue sinon.",
   "hpLinks": {},
+  "_hpLinkFixesNote": "La table de liens du Final Fantasy Wiki et les descriptions de coups de dissidia.wiki se contredisent sur la bravery qui ouvre une attaque HP. Les deux Bitter End du Guerrier de la Lumière y sont inversées : « Bitter End A » dit « Branching from Rising Buckler », « Bitter End B » dit « Branching from Shield Strike ». Les corrections se déclarent ici, par slug : { \"slug\": [{ \"to\": \"…\", \"from\": \"…\", \"was\": \"…\", \"source\": \"…\" }] }. `was` est l'origine que la table donne aujourd'hui : une déclaration dont le `was` ne correspond plus est refusée et rapportée, si bien qu'un re-scrape qui corrige la source ne peut pas laisser vivre un arbitrage périmé.",
+  "hpLinkFixes": {
+    "warrior-of-light": [
+      {
+        "to": "Bitter End A",
+        "from": "Rising Buckler",
+        "was": "Shield Strike",
+        "source": "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      },
+      {
+        "to": "Bitter End B",
+        "from": "Shield Strike",
+        "was": "Rising Buckler",
+        "source": "https://dissidia.wiki/Warrior_of_Light_(Dissidia_012)"
+      }
+    ]
+  },
   "_followUpsNote": "Quelles braveries acceptent un enchaînement — non pas lequel, n'importe lequel convient. Tout le principe de Prishe est qu'une (One) s'enchaîne avec n'importe quelle (Two), chaque association déclenchant un effet différent (Skillchains). Le parseur déduit seul les braveries de départ là où l'enchaînement nomme son origine (« Combo (One) » → « Combo (Two) ») ; ne les déclarer ici que là où le wiki ne le dit qu'en prose. Firion : « Rope Knife, Lance Combo and Reel Axe can be followed up with one of three attacks ». Une bravery listée nulle part ne porte aucun enchaînement : Banish et Holy, chez Prishe, ne s'enchaînent pas.",
   "followUps": {
     "firion": {

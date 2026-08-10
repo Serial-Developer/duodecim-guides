@@ -70,13 +70,41 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
   const perso = (data.characters || []).find((c) => c.slug === slug);
 
   const abilitiesParNom = {};
-  for (const g of data.abilities || []) for (const a of g.abilities || []) abilitiesParNom[a.name.toLowerCase()] = a.id;
+  // Paliers d'une même ability : le payload les sépare par le coût dans
+  // l'identifiant (`jump-times-boost` à 20 CP, `jump-times-boost-cp40` à 40).
+  // La page builds, elle, ajoute un « + » au nom.
+  const abilitiesParAlias = {};
+  for (const g of data.abilities || []) for (const a of g.abilities || []) {
+    const bas = a.name.toLowerCase();
+    if (abilitiesParNom[bas] === undefined) abilitiesParNom[bas] = a.id;
+    else abilitiesParAlias[`${bas}+`] = a.id;
+  }
+  // La liste de coups met le qualificatif entre crochets — « [Anti-air]
+  // Particle Beam » —, le tableau de build ne les écrit pas. Les deux graphies
+  // mènent au même coup : les six faisceaux de Cloud of Darkness en dépendaient.
+  const sansCrochets = (n) => n.replace(/[[\]]/g, '').replace(/\s+/g, ' ').trim();
   const coupsParNom = {};
   for (const kind of ['bravery', 'hp']) {
     for (const g of (perso?.attacks?.[kind] || [])) {
-      for (const m of hydrate(g.moves)) if (m.name) coupsParNom[m.name.toLowerCase()] = m.id;
+      for (const m of hydrate(g.moves)) {
+        if (!m.name) continue;
+        coupsParNom[m.name.toLowerCase()] = m.id;
+        coupsParNom[sansCrochets(m.name).toLowerCase()] = m.id;
+      }
     }
   }
+  // Prolongement dont la source ne dit pas la version : « Branch: Bitter End »
+  // quand le personnage en a deux. C'est la bravery qui précède qui tranche —
+  // le lien HP la désigne, et c'est la règle du modèle : un prolongement se
+  // rattache à l'attaque qu'il suit.
+  const liens = perso?.links || [];
+  const brancheDe = (parentId, nom) => {
+    const bas = nom.toLowerCase();
+    const cible = liens.filter((l) => l.from === parentId)
+      .map((l) => l.to)
+      .find((to) => String(to).toLowerCase().indexOf(bas) !== -1);
+    return cible || null;
+  };
 
   const bloque = (cle, brut) => {
     const parts = String(brut).split('/').map(nettoie).filter(Boolean);
@@ -103,15 +131,21 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
   };
 
   // Les tableaux d'un même build se suivent : un nouveau commence à « Stats ».
-  const tables = [...(char.sections?.builds?.tables || []), ...(char.sections?.builds?.subs || []).flatMap((s) => s.tables || [])];
+  // Un build vient d'un groupe de tableaux ou d'un sous-bloc. Le sous-bloc porte
+  // son titre — « Hybrid », « Damage (High Base BRV) » — que le wiki n'écrit
+  // pas en onglet : cinq personnages ne nomment leurs builds que là.
+  const tables = [
+    ...(char.sections?.builds?.tables || []).map((tb) => ({ tb, titre: null })),
+    ...(char.sections?.builds?.subs || []).flatMap((s) => (s.tables || []).map((tb) => ({ tb, titre: s.title || null }))),
+  ];
   const groupes = [];
-  for (const tb of tables) {
+  for (const { tb, titre } of tables) {
     const tete = tb.rows?.[0];
     if (!tete) continue;
     // « Equipment | Replacement | Notes » propose des échanges, il ne compose
     // pas un build : seul le tableau à en-tête unique en est un.
     if (tete.length > 1) continue;
-    if (tete[0] === 'Stats' || !groupes.length) groupes.push({ tables: [] });
+    if (tete[0] === 'Stats' || !groupes.length) groupes.push({ tables: [], titre });
     groupes[groupes.length - 1].tables.push(tb);
   }
 
@@ -169,8 +203,10 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
         const aerien = colonne === 1;
         // La page builds nomme le coup sans sa posture, que la colonne porte ;
         // la liste de coups, elle, la met dans le nom.
+        const precedent = build.attacks[build.attacks.length - 1];
         const id = coupsParNom[nom.toLowerCase()]
-          || coupsParNom[`${nom} (${aerien ? 'midair' : 'ground'})`.toLowerCase()];
+          || coupsParNom[`${nom} (${aerien ? 'midair' : 'ground'})`.toLowerCase()]
+          || (/^branch\s*:/i.test(brut) && precedent ? brancheDe(precedent, nom) : null);
         if (!id) { journal.push({ slug, cle: 'attaque', valeur: nom, raison: 'coup inconnu' }); continue; }
         const cmd = !direction ? 0
           : (aerien && direction[1] === '↑') ? 1
@@ -187,8 +223,14 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
       if (!['Basic Abilities', 'Support', 'Extra'].includes(tb.rows[0][0])) continue;
       for (const row of tb.rows.slice(1)) {
         const nom = nettoie(row[0]);
-        if (!nom || RIEN.test(nom)) continue;
-        const id = abilitiesParNom[nom.toLowerCase()];
+        // Certains tableaux d'abilities portent un second en-tête au milieu :
+        // « Actions » n'est pas une ability, c'est le titre de sa colonne.
+        if (!nom || RIEN.test(nom) || /^actions$/i.test(nom)) continue;
+        // « Jump Times Boost+ » : le wiki oublie le « + » d'une des deux, que le
+        // payload distingue par son coût — l'identifiant du palier supérieur
+        // est suffixé de celui-ci. Le « + » de la page builds la désigne.
+        const id = abilitiesParNom[nom.toLowerCase()]
+          || (nom.endsWith('+') ? abilitiesParAlias[nom.toLowerCase()] : null);
         if (!id) { journal.push({ slug, cle: 'ability', valeur: nom, raison: 'ability inconnue' }); continue; }
         build.abilities.push(id);
       }
@@ -235,8 +277,12 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
     build.attacks.push(ANY);
     build.attackSlots.push(-1);
     if (!build.abilities.length) build.abilities = [ANY];
+    if (g.titre) build.name = g.titre;
     builds.push(build);
   }
+  // Les onglets nomment dans l'ordre, et seulement si le compte concorde — un
+  // décalage donnerait à un build le nom d'un autre. Un titre de sous-bloc
+  // déjà posé n'est pas écrasé pour autant.
   if (noms.length === builds.length) builds.forEach((b, i) => { b.name = noms[i]; });
   return builds;
 }

@@ -349,8 +349,22 @@ export function buildDataBundle(ROOT, editorial = null) {
       return null;
     };
     const hpLinks = [];
+    // Arbitrage déclaré : la table de liens et les descriptions de coups se
+    // contredisent sur la bravery qui ouvre une attaque HP — les deux Bitter End
+    // du Guerrier de la Lumière y sont inversées. La déclaration rappelle
+    // l'origine que la table donne (`was`) ; si elle ne correspond plus, la
+    // correction est refusée et rapportée plutôt qu'appliquée à l'aveugle.
+    const correctionsLien = (editorial?.hpLinkFixes || {})[def.slug] || [];
+    const corrige = (l) => {
+      const fix = correctionsLien.find((f) => f.to === l.to && f.was === l.from);
+      if (fix) return { ...l, from: fix.from, source: fix.source };
+      if (correctionsLien.some((f) => f.to === l.to && f.from !== l.from)) {
+        unresolvedLinks.push({ slug: def.slug, from: l.from, to: l.to, manquant: 'correction refusée — la table ne dit plus ce que la déclaration attendait' });
+      }
+      return l;
+    };
     const sources = [
-      ...hpLinkPairs.items.filter((l) => l.slug === def.slug).map((l) => ({ ...l, origine: l.source })),
+      ...hpLinkPairs.items.filter((l) => l.slug === def.slug).map(corrige).map((l) => ({ ...l, origine: l.source })),
       ...((editorial?.hpLinks || {})[def.slug] || []).map((l) => ({ ...l, origine: l.source || 'déclaré dans l’éditorial' })),
     ];
     for (const l of sources) {

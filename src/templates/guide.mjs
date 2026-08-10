@@ -426,6 +426,25 @@ function buildsSection(t, builds, allMoves, opts) {
   const avecCartes = !!opts?.cards?.length;
   const sansCarte = (tables) => (avecCartes ? tables.filter((tb) => !(tb.rows?.[0]?.length === 1 && REPRIS.has(tb.rows[0][0]))) : tables);
   const statsDe = (tables) => (tables || []).find((tb) => tb.rows?.[0]?.length === 1 && tb.rows[0][0] === 'Stats');
+  // Un bloc porte un build s'il porte un tableau d'équipement — c'est la règle
+  // de la conversion, et l'ordre est le sien : les groupes de tableaux d'abord,
+  // les sous-blocs ensuite. Cinq personnages n'ont leurs builds que dans des
+  // sous-blocs (Cloud, le Guerrier de la Lumière, Cloud of Darkness, l'Empereur,
+  // Zidane) : sans ce chemin-là, leurs onze builds restaient sans carte.
+  const aUnBuild = (tables) => (tables || []).some((tb) => tb.rows?.[0]?.length === 1 && tb.rows[0][0] === 'Equipment');
+  const attendus = builtGroups.filter((g) => aUnBuild(g.tables)).length + subs.filter((sub) => aUnBuild(sub.tables)).length;
+  // Un décalage donnerait à un build la carte d'un autre : à la moindre
+  // divergence de compte, on n'en pose aucune.
+  const cartes = (opts?.cards || []).length === attendus ? opts.cards : [];
+  let iCarte = 0;
+  const carteDe = (tables) => (aUnBuild(tables) ? (cartes[iCarte++] || '') : '');
+  const bloc = (tables) => {
+    const carte = carteDe(tables);
+    if (!carte) return '';
+    const stats = statsDe(tables);
+    return `<div class="mv-card-row">${carte}<div class="mv-card-stats">${stats ? genericTables([stats]) : ''}${cartes.length && cardLien(iCarte - 1)}</div></div>`;
+  };
+  const cardLien = (i) => (opts?.cardLinks?.[i] ? `<p class="mv-card-open"><a class="bc-btn" href="${esc(opts.cardLinks[i])}">${esc(t('guide.builds.openInCreator'))}</a></p>` : '');
   const main = builtGroups.map((g, i) => {
     const desc = g.name ? opts?.perBuild?.[g.name] : null;
     // Le wiki ne nomme pas toujours son onglet (Firion). Plutôt que d'inventer
@@ -436,7 +455,7 @@ function buildsSection(t, builds, allMoves, opts) {
       : t('guide.builds.unnamed'));
     return `<h3>${esc(titre)}</h3>
 ${desc?.length ? paras(desc) : ''}
-${opts?.cards?.[i] ? `<div class="mv-card-row">${opts.cards[i]}<div class="mv-card-stats">${statsDe(g.tables) ? genericTables([statsDe(g.tables)]) : ''}${opts.cardLinks?.[i] ? `<p class="mv-card-open"><a class="bc-btn" href="${esc(opts.cardLinks[i])}">${esc(t('guide.builds.openInCreator'))}</a></p>` : ''}</div></div>` : ''}
+${bloc(g.tables)}
 ${buildsTables(t, sansCarte(g.tables), ctx)}`;
   }).join('\n');
 
@@ -448,7 +467,8 @@ ${buildsTables(t, sansCarte(g.tables), ctx)}`;
     const desc = sub.title ? opts?.perBuild?.[sub.title] : null;
     return `${sub.title ? `<h3>${esc(sub.title)}</h3>` : ''}
 ${desc?.length ? paras(desc) : ''}
-${buildsTables(t, sub.tables, ctx)}`;
+${bloc(sub.tables)}
+${buildsTables(t, sansCarte(sub.tables), ctx)}`;
   }).join('\n');
   // Le panneau des coûts en CP prend normalement la place du premier tableau de
   // moveset vide. Si aucun n'a subsisté dans un bloc affiché, il se place en fin
