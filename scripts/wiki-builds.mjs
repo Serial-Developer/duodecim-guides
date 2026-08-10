@@ -115,6 +115,16 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
     groupes[groupes.length - 1].tables.push(tb);
   }
 
+  // Noms d'onglets du wiki, dans l'ordre — « |-|Adamant Chains + EX= ». Même
+  // lecture que la fiche, y compris sa prudence : on ne nomme que si le compte
+  // concorde, un décalage donnant à un build le nom d'un autre.
+  const EMPTY_TAB = /^build\s*#?\s*\d+\s*$/i;
+  const noms = (char.sections?.builds?.text || [])
+    .map((x) => String(x).trim())
+    .filter((x) => x.startsWith('|-|'))
+    .map((x) => x.replace(/^\|-\|/, '').replace(/=[\s\S]*$/, '').trim())
+    .filter((x) => x && !EMPTY_TAB.test(x) && !/add build here/i.test(x));
+
   const builds = [];
   for (const g of groupes) {
     const equipTable = g.tables.find((tb) => tb.rows[0][0] === 'Equipment');
@@ -122,6 +132,7 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
     const build = {
       schemaVersion: 1,
       character: slug,
+      name: '',
       attacks: [],
       attackSlots: [],
       abilities: [],
@@ -226,6 +237,7 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
     if (!build.abilities.length) build.abilities = [ANY];
     builds.push(build);
   }
+  if (noms.length === builds.length) builds.forEach((b, i) => { b.name = noms[i]; });
   return builds;
 }
 
