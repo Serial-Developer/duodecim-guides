@@ -775,6 +775,8 @@
     "subject": "Dissidia 012 [duodecim] Final Fantasy (PSP, 2011) — competitive guides"
   },
   "buildCard": {
+    "any": "Any",
+    "anyShort": "≡",
     "equipment": "Equipment",
     "accessories": "Accessories",
     "groundBravery": "Ground bravery",

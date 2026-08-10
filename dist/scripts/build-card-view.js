@@ -29,6 +29,13 @@
 
 const SLOTS = ['weapon', 'hand', 'head', 'body'];
 const ACCESSORY_SLOTS = 10;
+
+// « Au choix » : une entrée laissée à la main du joueur. Ce n'est pas un vide —
+// un emplacement vide dit « rien ici », celui-ci dit « ce que vous voulez ». Les
+// builds publiés en sont pleins : le wiki propose une pièce « ou celle de votre
+// choix », et laisse des sections entières non précisées. La valeur vaut pour
+// n'importe quelle entrée de la carte, d'où un seul jeton pour toutes.
+const ANY = 'any';
 const MAX_SLOTS = 3;
 
 // Les longues listes du payload voyagent en colonnes : on les remet en objets,
@@ -394,13 +401,17 @@ function attackGrid(t, L, sizeOf, build, char, styles, live, grpId) {
     return rows;
   }
 
+  // Section laissée au choix du joueur : les emplacements libres le disent, au
+  // lieu de passer pour des places que le build aurait laissées vides.
+  const auChoix = (build.attacks || []).indexOf(ANY) !== -1 ? { name: t('buildCard.any') } : null;
+
   return categories(char).map((c) => {
     const cases = parCat[c.cat] || {};
     // Un coup « main » vaut au sol comme en l'air : sa direction est celle du
     // sol, la seule que la source décrive.
     const stance = STANCE[c.groupKey] || 'ground';
     const lignes = [0, 1, 2].map((i) => attackLine(
-      t, L, sizeOf, c.kind, i, cases[i]?.move, stance, branchLines(cases[i], c.kind),
+      t, L, sizeOf, c.kind, i, cases[i]?.move || auChoix, stance, branchLines(cases[i], c.kind),
       live ? ` data-bc="attack" data-cat="${esc(c.cat)}" data-cmd="${i}"` : '',
       // Le prolongement se désigne par l'emplacement qui le porte et par sa
       // sorte, jamais par le coup posé : deux exemplaires du même coup seraient
@@ -426,11 +437,14 @@ function attackGrid(t, L, sizeOf, build, char, styles, live, grpId) {
 // rien garde sa ligne estompée : lire un build en creux vaut ici aussi.
 function abilitiesPanel(t, build, data, live) {
   const equipees = new Set(build.abilities || []);
+  // Une section laissée au choix du joueur porte le jeton une seule fois : les
+  // trois familles l'affichent alors, faute de savoir laquelle il visait.
+  const auChoix = equipees.has(ANY);
   return (data.abilities || []).map((g) => {
     const liste = (g.abilities || []).filter((a) => equipees.has(a.id));
     const lignes = liste.length
       ? liste.map((a) => `<li class="bcard-line"><span class="bcard-value">${esc(a.name)}</span></li>`).join('\n')
-      : '<li class="bcard-line is-empty"><span class="bcard-value"></span></li>';
+      : `<li class="bcard-line${auChoix ? '' : ' is-empty'}"><span class="bcard-value">${auChoix ? esc(t('buildCard.any')) : ''}</span></li>`;
     const titre = aCle(t, `buildCard.abilityGroups.${g.key}`) ? t(`buildCard.abilityGroups.${g.key}`) : g.label;
     return `<section class="bcard-block">
 <h3 class="bcard-h">${esc(titre)}</h3>
@@ -512,6 +526,8 @@ function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant 
   const acc = byUid(accessoires);
   const assist = (data.assists || []).find((a) => a.slug === build.assist);
   const summon = (data.summons || []).find((s) => s.id === build.summon);
+  const assistAuChoix = build.assist === ANY;
+  const summonAuChoix = build.summon === ANY;
 
   const portrait = (slug, alt, miroir = '') => (hasPortrait(slug)
     ? `<img class="${miroir}" src="${L.asset(`assets/portraits/${slug}.png`)}" alt="${esc(alt)}" width="56" height="56" loading="lazy">`
@@ -525,22 +541,30 @@ function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant 
 
   // Chaque emplacement porte l'icône que le jeu lui donne, à la place de son
   // nom : l'écran d'équipement se lit ainsi d'un coup d'œil, sans libellé.
+  const auChoix = t('buildCard.any');
+  // Une entrée porte soit un identifiant, soit le jeton « au choix » : le nom
+  // affiché vient de l'un ou de l'autre, et l'emplacement n'est vide que si elle
+  // ne porte ni l'un ni l'autre.
+  const valeurDe = (brut, item) => (item ? item.name : (brut === ANY ? auChoix : ''));
+
   const equipLignes = SLOTS.map((slot) => {
-    const item = build.equipment?.[slot] ? eq[build.equipment[slot]] : null;
+    const pose = build.equipment?.[slot];
+    const item = pose && pose !== ANY ? eq[pose] : null;
     const nom = t(`buildCard.slots.${slot}`);
     const icone = `<img class="icon-d12 bcard-equip-icon" src="${L.asset(`assets/equipment-icons/equip-${slot}.png`)}" alt="${esc(nom)}" title="${esc(nom)}"${sizeOf(`equipment-icons/equip-${slot}.png`)} loading="lazy">`;
     // Un emplacement vide ne peut rien exiger : la marque suit la pièce.
     const marque = item && glitch[slot] ? glitchFlag(t) : '';
-    return slotLine(icone, item?.name || '', marque, null, true, live ? ` data-bc="equip" data-slot="${slot}"` : '');
+    return slotLine(icone, valeurDe(pose, item), marque, null, true, live ? ` data-bc="equip" data-slot="${slot}"` : '');
   }).join('\n');
 
   const accLignes = Array.from({ length: ACCESSORY_SLOTS }, (_, i) => {
-    const item = build.accessories?.[i] ? acc[build.accessories[i]] : null;
+    const pose = build.accessories?.[i];
+    const item = pose && pose !== ANY ? acc[pose] : null;
     const precision = item && homonymes[item.name] > 1 && item.requirements
       ? `<span class="bcard-note">${esc(item.requirements)}</span>`
       : '';
     const ic = accessoryIcons(t, L, item);
-    return slotLine(String(i + 1), item?.name || '', precision, ic, false, live ? ` data-bc="acc" data-i="${i}"` : '');
+    return slotLine(String(i + 1), valeurDe(pose, item), precision, ic, false, live ? ` data-bc="acc" data-i="${i}"` : '');
   }).join('\n');
 
   // Bandeau latéral : le portrait quitte l'en-tête pour le fond de la carte.
@@ -603,8 +627,8 @@ ${(() => {
   // porté par l'assist lui-même, jamais déduit d'un camp : quatre personnages
   // changent de camp d'un épisode à l'autre, et Aerith n'est renfort que.
   const miroir = assist?.portraitFacing === 'left' ? ' is-mirrored' : '';
-  const renforts = `<p class="bcard-banner bcard-banner-assist">${live ? '<button type="button" class="bcard-hit" data-bc="assist">' : ''}${assist ? `<span class="bcard-face${miroir}" data-assist="${esc(assist.slug)}">${portrait(assist.slug, t('buildCard.assistAlt', { name: assist.name }))}</span>` : '<span class="bcard-portrait-none" aria-hidden="true"></span>'}<span class="bcard-role">${esc(t('buildCard.assist'))}</span>${live ? '</button>' : ''}</p>
-<p class="bcard-summon">${live ? '<button type="button" class="bcard-hit" data-bc="summon">' : ''}<img class="icon-d12 bcard-summon-orb" src="${L.asset('assets/summon-icons/summon-orb.png')}" alt="${esc(t('buildCard.summon'))}" title="${esc(t('buildCard.summon'))}"${sizeOf('summon-icons/summon-orb.png')} loading="lazy"><span class="bcard-value">${summon ? esc(summon.name) : ''}</span>${live ? '</button>' : ''}</p>`;
+  const renforts = `<p class="bcard-banner bcard-banner-assist">${live ? '<button type="button" class="bcard-hit" data-bc="assist">' : ''}${assist ? `<span class="bcard-face${miroir}" data-assist="${esc(assist.slug)}">${portrait(assist.slug, t('buildCard.assistAlt', { name: assist.name }))}</span>` : `<span class="bcard-portrait-none"${assistAuChoix ? ` title="${esc(t('buildCard.any'))}"` : ' aria-hidden="true"'}>${assistAuChoix ? esc(t('buildCard.anyShort')) : ''}</span>`}<span class="bcard-role">${esc(t('buildCard.assist'))}</span>${live ? '</button>' : ''}</p>
+<p class="bcard-summon">${live ? '<button type="button" class="bcard-hit" data-bc="summon">' : ''}<img class="icon-d12 bcard-summon-orb" src="${L.asset('assets/summon-icons/summon-orb.png')}" alt="${esc(t('buildCard.summon'))}" title="${esc(t('buildCard.summon'))}"${sizeOf('summon-icons/summon-orb.png')} loading="lazy"><span class="bcard-value">${summon ? esc(summon.name) : (summonAuChoix ? esc(t('buildCard.any')) : '')}</span>${live ? '</button>' : ''}</p>`;
   // Les deux renforts se rangent sous le nom du personnage quand le portrait
   // couvre la carte, sous le nom du build sinon : à gauche le fond laisse la
   // place, à droite il l'occuperait.
