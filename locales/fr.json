@@ -430,13 +430,6 @@
     "metaDescription": "Organiser un tournoi Dissidia 012 [duodecim] : rôle Tournament Organizer, règlement, bracket start.gg ou Challonge, annonce, arbitrage et clôture."
   },
   "buildCreator": {
-    "tabs": {
-      "attack": "Attaques",
-      "abilities": "Abilities",
-      "stuff": "Équipement",
-      "accessories": "Accessoires",
-      "assist": "Assist & invocation"
-    },
     "rosterAria": "Choisir un personnage",
     "noscript": "Le créateur de builds a besoin de JavaScript pour fonctionner. Les données de jeu restent consultables sur les fiches de personnages.",
     "step1": "1. Choisir un personnage",
@@ -448,7 +441,6 @@
     "gaugeValueText": "0 sur 450 CP — attaques 0, abilities 0",
     "gaugeAttacks": "attaques",
     "gaugeAbilities": "abilities",
-    "tablistAria": "Sections du build",
     "step3": "3. Builds enregistrés",
     "save": "Enregistrer le build",
     "new": "Nouveau build",
@@ -468,10 +460,7 @@
     "appName": "Créateur de builds Dissidia 012 [duodecim]",
     "ogAlt": "Créateur de builds Dissidia 012 [duodecim]",
     "fallbackTitle": "Créateur de builds — Dissidia 012 [duodecim]",
-    "fallbackDescription": "Composer un build Dissidia 012 [duodecim].",
-    "detailSummary": "Statistiques détaillées",
-    "detailNote": "Les modificateurs de même nom sont additionnés. Les sources énoncent chaque effet isolément et ne disent jamais comment deux d’entre eux se combinent en jeu.",
-    "boostersAria": "Multiplicateur actif"
+    "fallbackDescription": "Composer un build Dissidia 012 [duodecim]."
   },
   "buildCreatorApp": {
     "slots": {

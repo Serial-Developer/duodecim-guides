@@ -932,28 +932,6 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
 }
 
 /* Jauge de CP : couleurs du jeu — vert pomme les attaques, bleu ciel les abilities */
-.bc-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  /* Fond opaque : un dégradé vers le transparent laissait le contenu des onglets
-     transparaître sous le panneau d'état quand la page défilait. */
-  background: var(--surface);
-  padding: 0.6rem 0 0.5rem;
-  margin: 0.6rem 0 1rem;
-  border-bottom: 1px solid rgba(157, 134, 232, 0.2);
-}
-.bc-gauge {
-  display: flex;
-  height: 1.1rem;
-  border-radius: 999px;
-  background: var(--bg);
-  border: 1px solid rgba(157, 134, 232, 0.35);
-  overflow: hidden;
-}
-.bc-gauge-fill { display: block; height: 100%; transition: width 0.18s ease; }
-.bc-gauge-attacks { background: #86d94b; }
-.bc-gauge-abilities { background: #66c6f0; }
 .bc-gauge-wrap.is-over .bc-gauge { border-color: var(--danger); box-shadow: 0 0 0 2px rgba(239, 136, 150, 0.35); }
 .bc-gauge-wrap.is-over .bc-gauge-attacks { background: #ef8896; }
 .bc-gauge-wrap.is-over .bc-gauge-abilities { background: #c4566a; }
@@ -976,31 +954,10 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
    hauteur et défile pour lui-même : ouvert sur un build chargé, il couvrirait
    sinon la totalité de l'écran et masquerait les onglets qu'on est en train de
    remplir. */
-.bc-detail { margin-top: 0.5rem; font-size: 0.83rem; }
-.bc-detail summary {
-  cursor: pointer;
-  color: var(--muted);
-  padding: 0.15rem 0;
-  list-style: none;
-  display: flex;
-  gap: 0.4rem;
-  align-items: baseline;
-}
-.bc-detail summary::-webkit-details-marker { display: none; }
-.bc-detail summary::before { content: "▸"; color: var(--gold); transition: transform 120ms; }
-.bc-detail[open] summary::before { transform: rotate(90deg); }
-.bc-detail summary:hover { color: var(--text); }
 .bc-detail-count { color: var(--gold); font-family: var(--font-mono); font-size: 0.78rem; }
 /* Deux colonnes : les modificateurs à gauche, les boosters à droite. Chacune
    défile pour elle-même — la hauteur est bornée pour que le panneau collant ne
    recouvre pas les onglets qu'on est en train de remplir. */
-.bc-detail-body {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(13rem, 19rem);
-  gap: 0.4rem 1.2rem;
-  align-items: start;
-  padding: 0.2rem 0.1rem 0.1rem;
-}
 .bc-detail-main, .bc-detail-boosters { max-height: 40vh; overflow-y: auto; }
 .bc-detail-group {
   margin: 0.7rem 0 0.3rem;
@@ -1010,9 +967,6 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
   text-transform: uppercase;
 }
 .bc-detail-group:first-child { margin-top: 0.2rem; }
-.bc-detail-note { margin: 0.2rem 0; color: var(--muted); font-size: 0.78rem; }
-/* Deux colonnes : le libellé garde une largeur fixe pour que les valeurs
-   s'alignent, la seconde colonne porte la valeur puis son détail. */
 .bc-detail-list { display: grid; grid-template-columns: minmax(8rem, 14rem) 1fr; gap: 0.15rem 0.7rem; margin: 0; }
 .bc-detail-list dt { color: var(--text); }
 .bc-detail-list dd { margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; }
@@ -1057,7 +1011,6 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
 @media (max-width: 1023px) {
   /* Sous 1024 px, la colonne des boosters passe sous les modificateurs : à deux
      colonnes, ni l'une ni l'autre n'a la place de tenir sa ligne. */
-  .bc-detail-body { grid-template-columns: 1fr; max-height: 45vh; overflow-y: auto; }
   .bc-detail-main, .bc-detail-boosters { max-height: none; overflow-y: visible; }
   .bc-detail-boosters {
     border-left: none;
@@ -1073,7 +1026,6 @@ footer.site a:hover, footer.site a:focus-visible { color: var(--gold); text-deco
   .bc-detail-list dd { margin-bottom: 0.3rem; }
   /* Le panneau collant occupait 87 % d'un écran de téléphone une fois déplié :
      il ne doit pas chasser de l'écran l'onglet qu'on est en train de remplir. */
-  .bc-detail-body { max-height: 32vh; }
 }
 
 /* Fenêtre de choix — ouverte depuis un emplacement à remplir. */
@@ -1215,23 +1167,6 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   .bc-slot-actions { width: 100%; justify-content: flex-start; }
   .bc-branch-row { margin-left: 0.8rem; flex-wrap: wrap; }
 }
-
-/* Onglets */
-.bc-tablist { display: flex; flex-wrap: wrap; gap: 0.3rem; border-bottom: 1px solid rgba(157, 134, 232, 0.25); margin-bottom: 1rem; }
-.bc-tab {
-  background: none;
-  border: 1px solid transparent;
-  border-bottom: none;
-  border-radius: 8px 8px 0 0;
-  padding: 0.5rem 0.9rem;
-  color: var(--muted);
-  font: inherit;
-  font-weight: 500;
-  cursor: pointer;
-}
-.bc-tab:hover { color: var(--text); }
-.bc-tab[aria-selected="true"] { color: var(--gold); border-color: rgba(157, 134, 232, 0.35); background: var(--surface-2); }
-.bc-panel:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
 
 /* Listes d'items */
 .bc-group { border: 1px solid rgba(157, 134, 232, 0.2); border-radius: var(--radius); padding: 0.6rem 0.8rem 0.8rem; margin: 0 0 1rem; }
@@ -1442,16 +1377,11 @@ body.bc-dragging { user-select: none; cursor: grabbing; }
   .bc-list-scroll { max-height: 22rem; }
 }
 @media (max-width: 767px) {
-  /* Sous 768px le header du site devient collant : la jauge se cale dessous,
-     comme la barre de sections des guides. */
-  .bc-sticky { top: var(--mob-header-h); }
   /* Le même header recouvrirait le titre de la partie 2 quand un build chargé
      la ramène à l'écran : la visée s'arrête plus haut. */
   .bc-editor { scroll-margin-top: calc(var(--mob-header-h, 0px) + 0.6rem); }
 }
 @media (max-width: 599px) {
-  .bc-tablist { flex-wrap: nowrap; overflow-x: auto; }
-  .bc-tab { white-space: nowrap; padding: 0.45rem 0.7rem; font-size: 0.85rem; }
   .bc-acc-slots { grid-template-columns: 1fr; }
   .bc-editor-head { flex-direction: column; align-items: stretch; }
   .bc-row { flex-wrap: wrap; }

@@ -930,73 +930,6 @@
 
   function markDirty() { state.dirty = true; }
 
-  // --- Rendu : onglets ------------------------------------------------------
-  var panels = {};
-  ['attack', 'abilities', 'stuff', 'accessories', 'assist'].forEach(function (k) {
-    panels[k] = document.getElementById('bc-panel-' + k);
-  });
-  var tabButtons = [].slice.call(document.querySelectorAll('.bc-tab'));
-
-  function selectTab(key, focus) {
-    state.activeTab = key;
-    tabButtons.forEach(function (btn) {
-      var on = btn.dataset.tab === key;
-      btn.setAttribute('aria-selected', on ? 'true' : 'false');
-      btn.tabIndex = on ? 0 : -1;
-      if (on && focus) btn.focus();
-    });
-    // En mode carte, `panels` ne contient que des nuls : il n'y a pas d'onglets.
-    Object.keys(panels).forEach(function (k) { if (panels[k]) panels[k].hidden = k !== key; });
-    renderPanel(key);
-  }
-
-  tabButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () { selectTab(btn.dataset.tab, false); });
-    btn.addEventListener('keydown', function (ev) {
-      var i = tabButtons.indexOf(btn);
-      var next = null;
-      if (ev.key === 'ArrowRight') next = tabButtons[(i + 1) % tabButtons.length];
-      else if (ev.key === 'ArrowLeft') next = tabButtons[(i - 1 + tabButtons.length) % tabButtons.length];
-      else if (ev.key === 'Home') next = tabButtons[0];
-      else if (ev.key === 'End') next = tabButtons[tabButtons.length - 1];
-      if (!next) return;
-      ev.preventDefault();
-      selectTab(next.dataset.tab, true);
-    });
-  });
-
-  // Un déplacement d'attaque redessine l'onglet : la poignée qu'on manipulait
-  // disparaît avec lui. On redonne donc le focus à celle de l'attaque déplacée,
-  // sans quoi une suite de flèches au clavier serait interrompue à chaque coup.
-  var pendingFocus = null;
-
-  function renderPanel(key) {
-    if (!state.build.character) return;
-    var panel = panels[key];
-    // En mode carte, les cinq panneaux n'existent pas : c'est la carte qui tient
-    // lieu d'interface, et elle se redessine par refresh().
-    if (!panel) return;
-    clear(panel);
-    if (key === 'attack') renderAttacks(panel);
-    else if (key === 'abilities') renderAbilities(panel);
-    else if (key === 'stuff') renderStuff(panel);
-    else if (key === 'accessories') renderAccessories(panel);
-    else if (key === 'assist') renderAssist(panel);
-    if (pendingFocus) {
-      var handle = panel.querySelector('[data-drag-handle="' + cssEscape(pendingFocus) + '"]');
-      pendingFocus = null;
-      if (handle) handle.focus({ preventScroll: true });
-    }
-  }
-
-  // Les identifiants de coups portent espaces, parenthèses et « & » (« bravery:
-  // ground:Dart & Weave (ground) ») : ils ne peuvent pas entrer tels quels dans
-  // un sélecteur.
-  function cssEscape(value) {
-    if (window.CSS && window.CSS.escape) return window.CSS.escape(value);
-    return String(value).replace(/[^\w-]/g, function (c) { return '\\' + c; });
-  }
-
   // --- Fenêtre de choix -----------------------------------------------------
   // Les onglets de sélection déroulaient jusqu'à 400 lignes sous les
   // emplacements : on ne voyait plus ce qu'on était en train d'équiper. Le
@@ -1167,43 +1100,6 @@
     ]);
   }
 
-  // Un emplacement : sa commande à gauche, son contenu au milieu, ses actions à
-  // droite. Vide, la ligne entière est le bouton qui ouvre la fenêtre.
-  function slotRow(opts) {
-    var badge = el('span', { class: 'bc-slot-badge', title: opts.inputTitle || '', text: opts.input || '' });
-    if (!opts.filled) {
-      return el('button', {
-        type: 'button', class: 'bc-slot-row is-empty', onclick: opts.onAssign,
-        'aria-label': (opts.inputTitle ? opts.inputTitle + ' — ' : '') + T('slots.assign'),
-        // Une commande vide reste une cible de dépôt : y déposer une attaque
-        // est le geste naturel pour la déplacer là.
-        'data-cmd': opts.cmd == null ? false : String(opts.cmd),
-      }, [
-        badge,
-        el('span', { class: 'bc-slot-main' }, [el('span', { class: 'bc-slot-empty', text: T('slots.empty') })]),
-        el('span', { class: 'bc-slot-plus', 'aria-hidden': 'true', text: '+' }),
-      ]);
-    }
-    var row = el('div', {
-      class: 'bc-slot-row' + (opts.className ? ' ' + opts.className : '') + (opts.handle ? ' has-handle' : ''),
-      'data-drag-id': opts.dragId || false,
-      'data-cmd': opts.cmd == null ? false : String(opts.cmd),
-    });
-    if (opts.handle) row.appendChild(opts.handle);
-    row.appendChild(badge);
-    row.appendChild(opts.main);
-    var actions = el('span', { class: 'bc-slot-actions' });
-    (opts.actions || []).forEach(function (a) { if (a) actions.appendChild(a); });
-    actions.appendChild(el('button', {
-      type: 'button', class: 'bc-btn bc-btn-small', text: T('slots.change'), onclick: opts.onAssign,
-    }));
-    actions.appendChild(el('button', {
-      type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('equipment.remove'), onclick: opts.onRemove,
-    }));
-    row.appendChild(actions);
-    return row;
-  }
-
   // --- Onglet Attaques ------------------------------------------------------
   function groupLabel(key) { return T('groupLabels.' + key) || key; }
 
@@ -1247,10 +1143,6 @@
   var SLOT_INPUTS = ['neutral', 'back', 'forward'];
   var KIND_BUTTON = { bravery: '○', hp: '□' };
   var DIRECTION_GLYPH = { neutral: '', back: '←', forward: '→' };
-  function inputGlyph(kind, i) {
-    var dir = DIRECTION_GLYPH[SLOT_INPUTS[i]];
-    return (dir ? dir + ' ' : '') + KIND_BUTTON[kind];
-  }
   function inputTitle(kind, i) {
     return T('attacks.input.' + SLOT_INPUTS[i], { button: KIND_BUTTON[kind] });
   }
@@ -1437,98 +1329,14 @@
     mine.forEach(function (s) { setCmd(s.pos, s.cmd); });
     setCmd(source.pos, to);
     if (cible) setCmd(cible.pos, from);
-    pendingFocus = catKey + '#' + to;
     markDirty();
-    keepScroll(null, function () { renderPanel('attack'); refresh(); });
-  }
-
-  // --- Déplacer une attaque d'une commande à l'autre -------------------------
-  // On la fait glisser par sa poignée. Les Pointer Events couvrent souris,
-  // doigt et stylet du même code ; le glisser-déposer HTML5, lui, ne répond pas
-  // au doigt, et le créateur se consulte largement sur téléphone.
-  //
-  // Le clavier n'est pas laissé de côté : la poignée reste un bouton, et les
-  // flèches haut/bas y déplacent l'attaque sans saisie préalable. Un
-  // glisser-déposer seul rendrait l'outil inutilisable sans souris.
-  var drag = null;
-
-  function endDrag(apply) {
-    if (!drag) return;
-    var d = drag;
-    drag = null;
-    document.removeEventListener('pointermove', d.onMove);
-    document.removeEventListener('pointerup', d.onUp);
-    document.removeEventListener('pointercancel', d.onCancel);
-    document.removeEventListener('keydown', d.onKey, true);
-    d.row.classList.remove('is-dragging');
-    d.rows.forEach(function (r) { r.classList.remove('is-drop-target'); });
-    document.body.classList.remove('bc-dragging');
-    if (apply && d.moved && d.to !== d.from) moveToCmd(d.char, d.catKey, d.from, d.to);
-  }
-
-  function startDrag(handle, char, catKey, index, ev) {
-    var row = handle.parentNode;
-    while (row && row.className.indexOf('bc-slot-row') === -1) row = row.parentNode;
-    if (!row) return;
-    var rows = Array.prototype.slice.call(row.parentNode.querySelectorAll('.bc-slot-row[data-cmd]'));
-    if (rows.length < 2) return;
-    var d = {
-      char: char, catKey: catKey, from: index, to: index, row: row, rows: rows,
-      startY: ev.clientY, moved: false,
-    };
-    d.onMove = function (e) {
-      if (!drag) return;
-      if (!d.moved && Math.abs(e.clientY - d.startY) < 4) return;
-      d.moved = true;
-      // On vise la ligne survolée : c'est ce que l'œil attend, et cela reste
-      // juste même si les lignes n'ont pas toutes la même hauteur (un
-      // embranchement HP en allonge une).
-      d.rows.forEach(function (r) {
-        var box = r.getBoundingClientRect();
-        if (e.clientY >= box.top && e.clientY <= box.bottom) d.to = Number(r.getAttribute('data-cmd'));
-      });
-      d.rows.forEach(function (r) {
-        var cmd = Number(r.getAttribute('data-cmd'));
-        r.classList.toggle('is-drop-target', d.moved && cmd === d.to && cmd !== d.from);
-      });
-    };
-    d.onUp = function () { endDrag(true); };
-    d.onCancel = function () { endDrag(false); };
-    d.onKey = function (e) { if (e.key === 'Escape') { e.preventDefault(); endDrag(false); } };
-    drag = d;
-    row.classList.add('is-dragging');
-    document.body.classList.add('bc-dragging');
-    document.addEventListener('pointermove', d.onMove);
-    document.addEventListener('pointerup', d.onUp);
-    document.addEventListener('pointercancel', d.onCancel);
-    document.addEventListener('keydown', d.onKey, true);
-  }
-
-  // La poignée est repérée par sa commande, non par l'attaque qui l'occupe :
-  // deux exemplaires de la même attaque partageraient sinon le même repère.
-  function dragHandle(char, catKey, index) {
-    var btn = el('button', {
-      type: 'button', class: 'bc-drag-handle',
-      'aria-label': T('slots.reorder'), title: T('slots.reorder'),
-      'data-drag-handle': catKey + '#' + index,
-    }, [el('span', { 'aria-hidden': 'true', text: '⠿' })]);
-    btn.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowUp') { e.preventDefault(); moveToCmd(char, catKey, index, index - 1); }
-      else if (e.key === 'ArrowDown') { e.preventDefault(); moveToCmd(char, catKey, index, index + 1); }
-    });
-    btn.addEventListener('pointerdown', function (e) {
-      if (e.button != null && e.button !== 0) return;
-      // Sans cela, le doigt fait défiler la page au lieu de déplacer la ligne.
-      e.preventDefault();
-      startDrag(btn, char, catKey, index, e);
-    });
-    return btn;
+    keepScroll(null, refresh);
   }
 
   function afterAttackChange() {
     pruneOrphanBranches();
     markDirty();
-    keepScroll(null, function () { renderPanel('attack'); refresh(); });
+    keepScroll(null, refresh);
   }
 
   // Ce qu'une catégorie (sol/air × style) peut recevoir : tout son groupe, moins
@@ -1539,174 +1347,6 @@
     return byStyle(group.moves).filter(function (sub) { return (sub.style || null) === (style || null); })
       .reduce(function (acc, sub) { return acc.concat(sub.moves); }, [])
       .filter(function (m) { return !index.linkParent[m.id] && !index.chainParent[m.id]; });
-  }
-
-  function renderAttacks(panel) {
-    var char = charBySlug[state.build.character];
-    if (char.hpLinks) {
-      var aDesLinks = !/^no\b/i.test(char.hpLinks);
-      panel.appendChild(el('p', {
-        class: 'bc-note',
-        text: T('attacks.hpLinks', { value: char.hpLinks }) + (aDesLinks ? T('attacks.hpLinksNoDetail') : ''),
-      }));
-    }
-    panel.appendChild(el('p', { class: 'bc-note', text: T('attacks.slotsNote') }));
-
-    var scan = scanBuild(char);
-    var linksByParent = {};
-    (char.links || []).forEach(function (l) { (linksByParent[l.from] = linksByParent[l.from] || []).push(l.to); });
-    var moveById = {};
-    Object.keys(scan.index.byId).forEach(function (id) { moveById[id] = scan.index.byId[id].move; });
-
-    [['bravery', T('attacks.braveryTitle')], ['hp', T('attacks.hpTitle')]].forEach(function (pair) {
-      var kind = pair[0];
-      var groups = char.attacks[kind];
-      if (!groups || !groups.length) {
-        panel.appendChild(el('p', { class: 'bc-alert bc-alert-muted', text: T('attacks.notDocumented', { title: pair[1] }) }));
-        return;
-      }
-      panel.appendChild(el('h3', { text: pair[1] }));
-
-      var pool = [];
-      groups.forEach(function (g) { if (g.followUp) pool = pool.concat(g.moves); });
-      var poolIntro = (groups.filter(function (g) { return g.followUp; })[0] || {}).intro;
-
-      groups.forEach(function (g) {
-        if (g.followUp) return;
-        // Un personnage à styles (paradigmes de Lightning, jobs de Cecil,
-        // moveset EX de Gabranth) a une grille par style : ce sont bien des
-        // emplacements distincts dans le jeu.
-        var styles = byStyle(g.moves).map(function (sub) { return sub.style || null; });
-        styles.forEach(function (style) {
-          var choix = categoryMoves(g, style, scan.index);
-          if (!choix.length) return;
-          panel.appendChild(attackCategory({
-            char: char, scan: scan, kind: kind, group: g, style: style,
-            choix: choix, pool: pool, poolIntro: poolIntro,
-            linksByParent: linksByParent, moveById: moveById,
-          }));
-        });
-      });
-    });
-  }
-
-  function attackCategory(ctx) {
-    var kind = ctx.kind;
-    var catKey = kind + '|' + ctx.group.key + '|' + (ctx.style || '');
-    var titre = groupLabel(ctx.group.key) + (ctx.style ? ' — ' + ctx.style : '');
-    var mine = ctx.scan.slots.filter(function (s) { return s.info.catKey === catKey; });
-
-    var fs = el('fieldset', { class: 'bc-group' }, [
-      el('legend', {}, [
-        el('span', { text: titre + ' ' }),
-        el('span', { class: 'bc-slots' + (mine.length >= MAX_SLOTS ? ' is-full' : ''), text: mine.length + '/' + MAX_SLOTS }),
-      ]),
-    ]);
-    if (ctx.group.intro) fs.appendChild(el('p', { class: 'bc-note', text: ctx.group.intro.split('\n')[0] }));
-
-    // La grille se lit par commande, non par rang : un emplacement vide entre
-    // deux pleins doit rester vide, et une attaque choisie sur → doit s'y
-    // poser même si le stick neutre est libre.
-    var parCmd = {};
-    mine.forEach(function (s) { parCmd[s.cmd] = s; });
-
-    var grid = el('div', { class: 'bc-slot-grid' });
-    for (var i = 0; i < MAX_SLOTS; i++) {
-      (function (index) {
-        var slot = parCmd[index];
-        var ouvrir = function () {
-          openMoveChooser(titre + ' · ' + inputTitle(kind, index), ctx.choix, slot ? slot.move : null, function (choisi) {
-            if (slot) replaceAt(slot.pos, choisi.id, index);
-            else appendAttack(choisi.id, index);
-          });
-        };
-        if (!slot) {
-          grid.appendChild(slotRow({
-            input: inputGlyph(kind, index), inputTitle: inputTitle(kind, index),
-            filled: false, cmd: index, onAssign: ouvrir,
-          }));
-          return;
-        }
-        var m = slot.move;
-        var main = el('span', { class: 'bc-slot-main' }, [
-          el('span', { class: 'bc-row-name', text: m.name }),
-          el('span', { class: 'bc-row-meta', text: moveMeta(m) }),
-        ]);
-        var actions = [cpTag(m)];
-        if (m.cp == null) actions.push(el('span', { class: 'bc-tag bc-tag-warn', title: T('attacks.unknownCostTitle'), text: T('status.undocumented') }));
-        grid.appendChild(slotRow({
-          input: inputGlyph(kind, index), inputTitle: inputTitle(kind, index),
-          filled: true, main: main, actions: actions,
-          cmd: index, dragId: catKey + '#' + index,
-          // Une attaque seule se déplace aussi : les commandes vides sont des
-          // cibles de dépôt.
-          handle: dragHandle(ctx.char, catKey, index),
-          onAssign: ouvrir,
-          // Retirer une attaque emporte ce qui s'y rattachait.
-          onRemove: function () { removeAt(slotPositions(slot)); },
-        }));
-
-        // Embranchements, dans la forme que le jeu leur donne : un trait sous
-        // l'attaque, et la touche qui les déclenche. Le carré pour une attaque
-        // HP, le rond pour un enchaînement de bravery.
-        var liens = (ctx.linksByParent[slot.id] || []).map(function (id) { return ctx.moveById[id]; }).filter(Boolean);
-        if (liens.length) {
-          grid.appendChild(branchRow(slot, 'link', liens, KIND_BUTTON.hp,
-            T('attacks.hpLinkAdd'), T('attacks.hpLinkFor', { name: m.name })));
-        }
-        // Enchaînement de bravery. Deux formes : à partenaire imposé, la source
-        // ne propose que ce qu'elle associe à ce coup ; à réserve commune, elle
-        // désigne les braveries de départ et laisse le choix du partenaire.
-        var chaines = (ctx.scan.index.chainsDe[slot.id] || []).map(function (id) { return ctx.moveById[id]; }).filter(Boolean);
-        if (chaines.length) {
-          grid.appendChild(branchRow(slot, 'follow', chaines, KIND_BUTTON.bravery,
-            T('attacks.followupAdd'), T('attacks.followupFor', { name: m.name })));
-        } else if (ctx.pool.length && ctx.scan.index.followStarter[slot.id]) {
-          grid.appendChild(branchRow(slot, 'follow', ctx.pool, KIND_BUTTON.bravery,
-            T('attacks.followupAdd'), T('attacks.followupFor', { name: m.name }), ctx.poolIntro));
-        }
-      }(i));
-    }
-    fs.appendChild(grid);
-    return fs;
-  }
-
-  // Un prolongement rattaché à une attaque : enchaînement de bravery ou attaque
-  // HP branchée. Les deux se comportent pareil, seule la touche change.
-  function branchRow(slot, champ, choix, glyph, addLabel, titreFenetre, intro) {
-    var courant = slot[champ];
-    var box = el('div', { class: 'bc-branch-row' });
-    box.appendChild(el('span', {
-      class: 'bc-slot-badge bc-badge-branch',
-      title: T('attacks.input.link', { button: glyph }), text: '└ ' + glyph,
-    }));
-    if (!courant) {
-      box.appendChild(el('button', {
-        type: 'button', class: 'bc-branch-add',
-        onclick: function () {
-          openMoveChooser(titreFenetre, choix, null, function (choisi) { attachTo(slot, choisi.id); }, intro);
-        },
-      }, [el('span', { text: addLabel }), el('span', { class: 'bc-slot-plus', 'aria-hidden': 'true', text: '+' })]));
-      return box;
-    }
-    box.appendChild(el('span', { class: 'bc-slot-main' }, [
-      el('span', { class: 'bc-row-name', text: courant.move.name }),
-      el('span', { class: 'bc-row-meta', text: moveMeta(courant.move) }),
-    ]));
-    box.appendChild(el('span', { class: 'bc-slot-actions' }, [
-      cpTag(courant.move),
-      el('button', {
-        type: 'button', class: 'bc-btn bc-btn-small', text: T('slots.change'),
-        onclick: function () {
-          openMoveChooser(titreFenetre, choix, courant.move, function (choisi) { replaceAt(courant.pos, choisi.id); }, intro);
-        },
-      }),
-      el('button', {
-        type: 'button', class: 'bc-btn bc-btn-small bc-btn-danger', text: T('equipment.remove'),
-        onclick: function () { removeAt([courant.pos]); },
-      }),
-    ]));
-    return box;
   }
 
   // Fenêtre de choix d'un coup. Recherche par nom, et par effet : c'est souvent
@@ -1833,7 +1473,7 @@
         state.build.abilities.splice(i, 1);
       }
       markDirty();
-      keepScroll(null, function () { renderPanel('abilities'); refresh(); });
+      keepScroll(null, refresh);
       syncAbilityChecks();
     });
     var children = [
@@ -1906,46 +1546,6 @@
     }
   }
 
-  function renderStuff(panel) {
-    panel.appendChild(illegalToggle());
-    var grid = el('div', { class: 'bc-slot-grid' });
-    SLOTS.forEach(function (slot) { grid.appendChild(equipSlotRow(slot)); });
-    panel.appendChild(grid);
-  }
-
-  // Une ligne par emplacement ; la liste et ses filtres vivent dans la fenêtre.
-  function equipSlotRow(slot) {
-    var current = state.build.equipment[slot.key] ? equipByUid[state.build.equipment[slot.key]] : null;
-    var ouvrir = function () {
-      openModal(slot.label, current ? T('attacks.replacing', { name: current.name }) : null, function (body, close) {
-        body.appendChild(slotChooser(slot, close));
-      });
-    };
-    if (!current) {
-      return slotRow({
-        input: slot.label, inputTitle: slot.label, filled: false, onAssign: ouvrir,
-      });
-    }
-    var st = equipStatus(current);
-    var main = el('span', { class: 'bc-slot-main' }, [
-      el('span', { class: 'bc-row-name', text: current.name }),
-      el('span', { class: 'bc-row-meta', text: [fmtStats(current.stats) || T('equipment.noStats'), current.effects].filter(Boolean).join(' · ') }),
-    ]);
-    var actions = [];
-    if (current.level) actions.push(el('span', { class: 'bc-tag bc-tag-info', text: 'Lv ' + current.level }));
-    if (st.state === 'glitch') actions.push(el('span', { class: 'bc-tag bc-tag-glitch', title: st.label, text: T('equipment.glitchTag') }));
-    if (st.state === 'unknown') actions.push(el('span', { class: 'bc-tag bc-tag-warn', title: st.label, text: T('status.undocumented') }));
-    return slotRow({
-      input: slot.label, inputTitle: slot.label, filled: true, main: main, actions: actions,
-      onAssign: ouvrir,
-      onRemove: function () {
-        state.build.equipment[slot.key] = null;
-        markDirty();
-        keepScroll(null, function () { renderPanel('stuff'); refresh(); });
-      },
-    });
-  }
-
   function slotChooser(slot, close) {
     var section = el('div', { class: 'bc-chooser' });
     var cats = D.equipmentCategories[slot.key] || [];
@@ -1989,7 +1589,7 @@
       state.build.equipment[slot.key] = v;
       markDirty();
       if (close) close();
-      keepScroll(null, function () { renderPanel('stuff'); refresh(); });
+      keepScroll(null, refresh);
     };
     if (pose || poseUid === ANY) {
       section.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poserEquip(null); }));
@@ -2045,10 +1645,7 @@
         state.build.equipment[slot.key] = selected ? null : e.uid;
         markDirty();
         if (close) close();
-        keepScroll(null, function () {
-          renderPanel('stuff');
-          refresh();
-        });
+        keepScroll(null, refresh);
       },
     }, [
       el('span', { class: 'bc-row-main' }, [
@@ -2071,52 +1668,10 @@
     var input = el('input', { type: 'checkbox', checked: state.showIllegal });
     input.addEventListener('change', function () {
       state.showIllegal = input.checked;
-      renderPanel(state.activeTab);
     });
     return el('label', { class: 'bc-field bc-field-inline bc-illegal-toggle' }, [
       input, el('span', { text: T('equipment.showIllegal', { ruleset: D.ruleset.name }) }),
     ]);
-  }
-
-  function renderAccessories(panel) {
-    panel.appendChild(illegalToggle());
-    panel.appendChild(el('h3', { text: T('accessories.slotsTitle', { count: state.build.accessories.filter(Boolean).length + '/' + ACCESSORY_SLOTS }) }));
-    var grid = el('div', { class: 'bc-slot-grid' });
-    for (var i = 0; i < ACCESSORY_SLOTS; i++) grid.appendChild(accessorySlot(i));
-    panel.appendChild(grid);
-  }
-
-  function accessorySlot(i) {
-    var u = state.build.accessories[i];
-    var a = u ? accByUid[u] : null;
-    var ouvrir = function () {
-      openModal(T('accessories.slotTitle', { index: i + 1 }), a ? T('attacks.replacing', { name: a.name }) : null, function (body, close) {
-        body.appendChild(accessoryChooser(i, close));
-      });
-    };
-    if (!a) {
-      return slotRow({ input: String(i + 1), inputTitle: T('accessories.slotTitle', { index: i + 1 }), filled: false, onAssign: ouvrir });
-    }
-    var main = el('span', { class: 'bc-slot-main' }, [
-      el('span', { class: 'bc-row-name' }, [
-        accessoryIcon('cat', a.category), accessoryIcon('type', a.boosterType), a.name, accessoryIcon('rank', a.rank),
-      ]),
-      el('span', { class: 'bc-row-meta', text: [a.category, a.effect || a.requirements].filter(Boolean).join(' · ') }),
-    ]);
-    var actions = [];
-    if (a.multiplier) actions.push(el('span', { class: 'bc-tag bc-tag-mult', text: '×' + a.multiplier }));
-    if (a.rank) actions.push(el('span', { class: 'bc-tag bc-tag-info', title: T('accessories.rank', { rank: a.rank }), text: a.rank }));
-    if (a.legal === false) actions.push(el('span', { class: 'bc-tag bc-tag-illegal', title: illegalReason(a), text: T('accessories.illegal') }));
-    return slotRow({
-      input: String(i + 1), inputTitle: T('accessories.slotTitle', { index: i + 1 }),
-      filled: true, main: main, actions: actions,
-      onAssign: ouvrir,
-      onRemove: function () {
-        state.build.accessories[i] = null;
-        markDirty();
-        keepScroll(null, function () { renderPanel('accessories'); refresh(); });
-      },
-    });
   }
 
   // Le choix se fait pour un emplacement précis : la limite d'exemplaires se
@@ -2141,7 +1696,7 @@
       state.build.accessories[index] = v;
       markDirty();
       if (close) close();
-      keepScroll(null, function () { renderPanel('accessories'); refresh(); });
+      keepScroll(null, refresh);
     };
     if (pose || poseUid === ANY) {
       section.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poserAcc(null); }));
@@ -2197,10 +1752,7 @@
         state.build.accessories[index] = ici ? null : a.uid;
         markDirty();
         if (close) close();
-        keepScroll(null, function () {
-          renderPanel('accessories');
-          refresh();
-        });
+        keepScroll(null, refresh);
       },
     }, [
       el('span', { class: 'bc-row-main' }, [
@@ -2271,7 +1823,7 @@
       state.build.assist = slug;
       markDirty();
       if (close) close();
-      keepScroll(slug, function () { renderPanel('assist'); refresh(); });
+      keepScroll(slug, refresh);
     };
     if (pose || state.build.assist === ANY) {
       section.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poser(null); }));
@@ -2314,7 +1866,7 @@
       state.build.summon = id;
       markDirty();
       if (close) close();
-      keepScroll(id, function () { renderPanel('assist'); refresh(); });
+      keepScroll(id, refresh);
     };
     if (pose || state.build.summon === ANY) {
       box.appendChild(clearRow(pose ? pose.name : T('buildCard.any'), function () { poser(null); }));
@@ -2339,16 +1891,6 @@
         box.appendChild(btn);
       });
     return box;
-  }
-
-  function renderAssist(panel) {
-    panel.appendChild(illegalToggle());
-    panel.appendChild(el('h3', { text: T('assist.title') }));
-    panel.appendChild(el('p', { class: 'bc-note', text: T('assist.note') }));
-    panel.appendChild(assistList(null));
-    panel.appendChild(el('h3', { text: T('assist.summonTitle') }));
-    panel.appendChild(el('p', { class: 'bc-note', text: T('assist.summonNote', { list: D.ruleset.legalSummons.join(', ') }) }));
-    panel.appendChild(summonList(null));
   }
 
   // --- Sélection du personnage ---------------------------------------------
@@ -2391,7 +1933,6 @@
     state.build = emptyBuild(slug);
     state.dirty = false;
     applyCharacterUi();
-    selectTab('attack', false);
     refresh();
   }
 
@@ -2481,7 +2022,6 @@
     state.build.id = b.id;
     state.dirty = false;
     applyCharacterUi();
-    selectTab(state.activeTab, false);
     refresh();
     // Le bouton « Charger » vit sous la carte, dans la liste des enregistrés :
     // sans ce retour en haut, on ne voyait rien du build qu'on vient d'ouvrir.
@@ -2549,7 +2089,6 @@
 
   document.getElementById('bc-mastered').addEventListener('change', function (ev) {
     state.mastered = ev.target.checked;
-    renderPanel(state.activeTab);
     refresh();
   });
 
@@ -2843,7 +2382,6 @@
     state.build.id = b.id;
     state.dirty = false;
     applyCharacterUi();
-    selectTab('attack', false);
     refresh();
   }
 
@@ -3550,7 +3088,7 @@
       liste[i] = liste[j];
       liste[j] = garde;
       markDirty();
-      keepScroll(null, function () { renderPanel('accessories'); refresh(); });
+      keepScroll(null, refresh);
       return;
     }
     moveToCmd(charBySlug[state.build.character], source.getAttribute('data-cat'),

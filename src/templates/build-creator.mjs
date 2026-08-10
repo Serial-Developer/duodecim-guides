@@ -4,8 +4,6 @@
 import { esc, paras, banner, infoBanner, pageShell, siteHeader, siteFooter, linksFor, rosterGrid } from './helpers.mjs';
 import { ldWebApplication } from './jsonld.mjs';
 
-const TAB_KEYS = ['attack', 'abilities', 'stuff', 'accessories', 'assist'];
-
 // Le choix du personnage reprend la grille de la page d'accueil — l'écran
 // « Player Select » du jeu. Les cases sont ici des boutons plutôt que des liens :
 // on choisit qui l'on équipe, on ne quitte pas la page. Le nom n'est plus écrit
@@ -26,9 +24,7 @@ ${hasPortrait(slug) ? `<img src="${L.asset(`assets/portraits/${esc(slug)}.png`)}
 }
 
 // Case « Coûts maîtrisés » : elle commande ce que la jauge compte, et n'a donc
-// qu'un seul endroit juste — sous ses chiffres. Sous les onglets elle reste
-// dans l'en-tête, à côté du nom du build : la jauge y est couchée dans une
-// barre collante, une case sous elle couperait la page en deux.
+// qu'un seul endroit juste — sous ses chiffres.
 // Elle ne doit exister qu'une fois : `#bc-mastered` est lu par son identifiant.
 function masteredToggle(t) {
   return `<label class="bc-field bc-field-inline"><input type="checkbox" id="bc-mastered" checked> <span>${esc(t('buildCreator.masteredCosts'))}</span></label>`;
@@ -50,27 +46,11 @@ ${mastered ? masteredToggle(t) : ''}
 </div>`;
 }
 
-// Modificateurs détaillés (dégâts, défense, BRV, EX, assist), repliés par
-// défaut : la ligne de totaux reste la lecture rapide, le dépliant porte le
-// détail. Le <details> est écrit ici plutôt que par le script, qui vide le
-// panneau d'état à chaque rendu — l'élément persiste, donc son état ouvert ou
-// fermé survit à chaque modification du build.
-function detailStats(t) {
-  return `<details class="bc-detail" id="bc-detail">
-<summary><span>${esc(t('buildCreator.detailSummary'))}</span> <span class="bc-detail-count" id="bc-detail-count"></span></summary>
-<div class="bc-detail-body">
-<div class="bc-detail-main" id="bc-detail-main"></div>
-<aside class="bc-detail-boosters" id="bc-detail-boosters" aria-label="${esc(t('buildCreator.boostersAria'))}"></aside>
-</div>
-<p class="bc-detail-note">${esc(t('buildCreator.detailNote'))}</p>
-</details>`;
-}
-
-// `card` bascule la page sur le banc d'essai : la carte de build tient lieu
-// d'interface à la place des cinq onglets. Le reste — bandeau de personnages,
-// gestionnaire, aide — ne bouge pas ; c'est l'intérêt de ne changer que le
-// milieu.
-export function renderBuildCreator({ ed, characters, hasPortrait, seo, i18nPayload, t, locale, path, alternates, availability, tierBySlug = {}, card = false }) {
+// La carte de build tient lieu d'interface depuis le 10/08/2026 : elle a
+// remplacé cinq onglets qui déroulaient des listes là où le jeu montre un écran
+// d'équipement. Le reste de la page — bandeau de personnages, gestionnaire,
+// aide — n'a pas bougé pour autant.
+export function renderBuildCreator({ ed, characters, hasPortrait, seo, i18nPayload, t, locale, path, alternates, availability, tierBySlug = {} }) {
   const L = linksFor(path, locale, availability);
   if (!ed) {
     return pageShell({
@@ -82,19 +62,16 @@ export function renderBuildCreator({ ed, characters, hasPortrait, seo, i18nPaylo
     });
   }
 
-  const tabs = TAB_KEYS.map((key) => ({ key, label: t(`buildCreator.tabs.${key}`) }));
-
   const body = `${siteHeader(t, { path, locale, alternates, availability, active: 'createur' })}
 <main class="wrap bc-main">
 <h1 style="color:var(--gold)">${esc(ed.title)}</h1>
-${card ? '' : paras(ed.intro)}
 
 <noscript>${infoBanner(t('buildCreator.noscript'))}</noscript>
 
 <section class="card bc-step" aria-labelledby="bc-step1">
 <h2 id="bc-step1" style="margin-top:0.2rem">${esc(t('buildCreator.step1'))}</h2>
 ${characterBanner(t, characters, hasPortrait, L, tierBySlug)}
-${card ? `<button type="button" class="bc-btn bc-roster-toggle" id="bc-roster-toggle" hidden aria-expanded="true" aria-controls="bc-roster">${esc(t('buildCreator.changeCharacter'))}</button>` : ''}
+<button type="button" class="bc-btn bc-roster-toggle" id="bc-roster-toggle" hidden aria-expanded="true" aria-controls="bc-roster">${esc(t('buildCreator.changeCharacter'))}</button>
 </section>
 
 <section class="card bc-editor" id="bc-editor" hidden aria-labelledby="bc-step2" data-asset-base="${L.asset("assets/")}">
@@ -103,34 +80,21 @@ ${card ? `<button type="button" class="bc-btn bc-roster-toggle" id="bc-roster-to
 <div class="bc-build-meta">
 <label class="bc-field"><span>${esc(t('buildCreator.buildName'))}</span>
 <input type="text" id="bc-build-name" maxlength="60" placeholder="${esc(t('buildCreator.buildNamePlaceholder'))}" autocomplete="off"></label>
-${card ? '' : masteredToggle(t)}
 </div>
 </div>
 
-${card ? '' : `<div class="bc-sticky">
-${cpGauge(t)}
-<div class="bc-status" id="bc-status" role="status" aria-live="polite"></div>
-${detailStats(t)}
-</div>`}
-
-${card ? `<div class="bc-two"><div class="bc-card-host" id="bc-card" data-base="${L.asset('')}"></div>
+<div class="bc-two"><div class="bc-card-host" id="bc-card" data-base="${L.asset('')}"></div>
 <aside class="bc-side-stats">
 <section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelStats'))}</h3>
 <div class="bc-status" id="bc-status" role="status" aria-live="polite"></div>
 <div class="bc-side-detail" id="bc-detail-main"></div></section>
 <section class="bcard-block"><h3 class="bcard-h">${esc(t('buildCard.panelBoosters'))}</h3><div id="bc-detail-boosters"></div></section>
-</aside>${cpGauge(t, { mastered: true })}</div>` : `<div class="bc-tabs">
-<div class="bc-tablist" role="tablist" aria-label="${esc(t('buildCreator.tablistAria'))}">
-${tabs.map((tb, i) => `<button type="button" class="bc-tab" role="tab" id="bc-tab-${tb.key}" aria-controls="bc-panel-${tb.key}" aria-selected="${i === 0}" tabindex="${i === 0 ? '0' : '-1'}" data-tab="${tb.key}">${esc(tb.label)}</button>`).join('\n')}
-</div>
-${tabs.map((tb, i) => `<div class="bc-panel" role="tabpanel" id="bc-panel-${tb.key}" aria-labelledby="bc-tab-${tb.key}" tabindex="0"${i === 0 ? '' : ' hidden'}></div>`).join('\n')}
-</div>`}
+</aside>${cpGauge(t, { mastered: true })}</div>
 
 <div class="bc-notes">
 <p class="bc-notes-label"><label for="bc-notes">${esc(t('buildCreator.notesLabel'))}</label></p>
 <textarea id="bc-notes" rows="3" placeholder="${esc(t('buildCreator.notesPlaceholder'))}"></textarea>
 </div>
-${card ? '' : '</section>'}
 
 <section class="card bc-step" id="bc-manager" hidden aria-labelledby="bc-step3">
 <h2 id="bc-step3" style="margin-top:0.2rem">${esc(t('buildCreator.step3'))}</h2>
@@ -138,13 +102,13 @@ ${card ? '' : '</section>'}
 <button type="button" class="bc-btn bc-btn-primary" id="bc-save">${esc(t('buildCreator.save'))}</button>
 <button type="button" class="bc-btn" id="bc-new">${esc(t('buildCreator.new'))}</button>
 <button type="button" class="bc-btn" id="bc-share">${esc(t('buildCreator.share'))}</button>
-${card ? `<button type="button" class="bc-btn" id="bc-export-img">${esc(t('buildCreator.exportImage'))}</button>` : ''}
+<button type="button" class="bc-btn" id="bc-export-img">${esc(t('buildCreator.exportImage'))}</button>
 <button type="button" class="bc-btn" id="bc-export-all">${esc(t('buildCreator.exportAll'))}</button>
 <label class="bc-btn bc-btn-file">${esc(t('buildCreator.import'))}<input type="file" id="bc-import" accept="application/json,.json" hidden></label>
 </div>
 <div id="bc-saved-list" class="bc-saved-list"></div>
 </section>
-${card ? '</section>' : ''}
+</section>
 
 <section class="card" aria-labelledby="bc-help">
 <h2 id="bc-help" style="margin-top:0.2rem">${esc(t('buildCreator.help'))}</h2>
@@ -156,7 +120,7 @@ ${Object.values(ed.undocumented || {}).map((u) => `<li>${esc(u)}</li>`).join('\n
 </ul>
 </section>
 
-${card ? `<section class="card">${paras(ed.intro)}</section>` : ''}
+<section class="card">${paras(ed.intro)}</section>
 <p class="sources-list" id="bc-sources"></p>
 </main>
 ${siteFooter(t)}`;

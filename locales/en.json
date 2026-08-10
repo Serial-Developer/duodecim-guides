@@ -430,13 +430,6 @@
     "metaDescription": "Run a Dissidia 012 [duodecim] tournament: the Tournament Organizer role, ruleset, start.gg or Challonge bracket, announcement, refereeing and wrap-up."
   },
   "buildCreator": {
-    "tabs": {
-      "attack": "Attacks",
-      "abilities": "Abilities",
-      "stuff": "Equipment",
-      "accessories": "Accessories",
-      "assist": "Assist & summon"
-    },
     "rosterAria": "Pick a character",
     "noscript": "The build creator needs JavaScript to run. The game data stays readable on the character guides.",
     "step1": "1. Pick a character",
@@ -448,7 +441,6 @@
     "gaugeValueText": "0 of 450 CP — attacks 0, abilities 0",
     "gaugeAttacks": "attacks",
     "gaugeAbilities": "abilities",
-    "tablistAria": "Build sections",
     "step3": "3. Saved builds",
     "save": "Save build",
     "new": "New build",
@@ -468,10 +460,7 @@
     "appName": "Dissidia 012 [duodecim] build creator",
     "ogAlt": "Dissidia 012 [duodecim] build creator",
     "fallbackTitle": "Build creator — Dissidia 012 [duodecim]",
-    "fallbackDescription": "Build a Dissidia 012 [duodecim] loadout.",
-    "detailSummary": "Detailed stats",
-    "detailNote": "Modifiers of the same name are added up. The sources state each effect on its own and never say how two of them combine in game.",
-    "boostersAria": "Active multiplier"
+    "fallbackDescription": "Build a Dissidia 012 [duodecim] loadout."
   },
   "buildCreatorApp": {
     "slots": {

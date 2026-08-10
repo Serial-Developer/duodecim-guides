@@ -336,10 +336,6 @@ for (const locale of activeLocales) {
       i18nPayload: buildCreatorStrings(t),
       tierBySlug,
       seo,
-      // La carte de build tient lieu d'interface depuis le 10/08/2026 : elle a
-      // remplacé les cinq onglets, qui montraient des listes là où le jeu
-      // montre un écran d'équipement.
-      card: true,
     }));
 
     // Page de validation de la carte de build. Hors sitemap, hors navigation et
