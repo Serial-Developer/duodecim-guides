@@ -332,7 +332,7 @@ function branchesOf(build, index, char) {
   return { attaches, liens, parentDe, chaines, chaineDe, starters };
 }
 
-function attackGrid(t, L, sizeOf, build, char, styles, live, grpId) {
+function attackGrid(t, L, sizeOf, build, char, styles, live, grpId, H = 'h3') {
   const index = attackIndex(char);
   const { attaches, liens: liensDe, parentDe, chaines, chaineDe, starters } = branchesOf(build, index, char);
   // catégorie -> commande -> { coup, prolongements }
@@ -424,7 +424,7 @@ function attackGrid(t, L, sizeOf, build, char, styles, live, grpId) {
     const rang = styles.indexOf(c.style);
     const marque = rang >= 0 ? ` data-si="${rang + 1}"` : '';
     return `<section class="bcard-block"${marque}>
-<h3 class="bcard-h">${esc(blockTitle(t, c, styles.length > 0))}</h3>
+<${H} class="bcard-h">${esc(blockTitle(t, c, styles.length > 0))}</${H}>
 <ul class="bcard-list">${lignes}</ul>
 </section>`;
   }).join('\n');
@@ -435,7 +435,7 @@ function attackGrid(t, L, sizeOf, build, char, styles, live, grpId) {
 // n'ont pas d'emplacements — seule la capacité en points les borne —, la carte
 // liste donc ce qui est équipé, sans ligne vide de réserve. Une famille sans
 // rien garde sa ligne estompée : lire un build en creux vaut ici aussi.
-function abilitiesPanel(t, build, data, live) {
+function abilitiesPanel(t, build, data, live, H = 'h3') {
   const equipees = new Set(build.abilities || []);
   // Une section laissée au choix du joueur porte le jeton une seule fois : les
   // trois familles l'affichent alors, faute de savoir laquelle il visait.
@@ -447,7 +447,7 @@ function abilitiesPanel(t, build, data, live) {
       : `<li class="bcard-line${auChoix ? '' : ' is-empty'}"><span class="bcard-value">${auChoix ? esc(t('buildCard.any')) : ''}</span></li>`;
     const titre = aCle(t, `buildCard.abilityGroups.${g.key}`) ? t(`buildCard.abilityGroups.${g.key}`) : g.label;
     return `<section class="bcard-block">
-<h3 class="bcard-h">${esc(titre)}</h3>
+<${H} class="bcard-h">${esc(titre)}</${H}>
 <ul class="bcard-list">${lignes}</ul>
 ${live ? `<p class="bcard-add"><button type="button" class="bcard-btn-add" data-bc="abilities" data-group="${esc(g.key)}">${esc(t('buildCard.editAbilities'))}</button></p>` : ''}
 </section>`;
@@ -510,7 +510,14 @@ function capacityOf(build, data, mastered = true) {
 // accueille les statistiques que le créateur affiche à côté de la carte au
 // large. Le portrait, lui, revient dans l'en-tête — c'est l'affaire de
 // `variant`, que l'appelant laisse vide.
-function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant = '', uid = '', mastered = true, live = false, glitch = {}, compact = false }) {
+// `hLevel` : le rang des titres de panneau dans le plan de la page hôte. La
+// carte les écrit en h3 chez elle — sous le titre de niveau 2 du créateur —,
+// mais dans une fiche de personnage chaque build porte déjà un h3 : ses
+// panneaux passent alors en h4, pour ne pas se lire comme des frères du titre
+// qu'ils détaillent. Seule la balise change ; la classe `bcard-h`, qui porte
+// toute la mise en forme, ne bouge pas.
+function buildCard({ t, build, data, L, hasPortrait, sizeOf = () => '', variant = '', uid = '', mastered = true, live = false, glitch = {}, compact = false, hLevel = 3 }) {
+  const H = `h${Math.min(Math.max(Number(hLevel) || 3, 2), 6)}`;
   const char = (data.characters || []).find((c) => c.slug === build.character);
   if (!char) return '';
   // Les onglets de style passent par des boutons radio, sans JavaScript : la
@@ -658,19 +665,19 @@ ${compact ? '' : onglets}
 ${(() => {
   const colonneStuff = `<div class="bcard-col">
 <section class="bcard-block">
-<h3 class="bcard-h">${esc(t('buildCard.equipment'))}</h3>
+<${H} class="bcard-h">${esc(t('buildCard.equipment'))}</${H}>
 <ul class="bcard-list">${equipLignes}</ul>
 </section>
 <section class="bcard-block">
-<h3 class="bcard-h">${esc(t('buildCard.accessories'))}</h3>
+<${H} class="bcard-h">${esc(t('buildCard.accessories'))}</${H}>
 <ul class="bcard-list bcard-list-acc">${accLignes}</ul>
 </section>
 </div>`;
   const colonneAttaques = `<div class="bcard-col">
-${attackGrid(t, L, sizeOf, build, char, styles, live, grpId)}
+${attackGrid(t, L, sizeOf, build, char, styles, live, grpId, H)}
 </div>`;
   const abilities = `<div class="bcard-body bcard-abilities">
-${abilitiesPanel(t, build, data, live)}
+${abilitiesPanel(t, build, data, live, H)}
 </div>`;
   // À l'étroit, les onglets de style suivent les attaques dans leur languette :
   // ils ne commandent qu'elles, et l'en-tête n'a pas la place.

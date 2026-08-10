@@ -791,6 +791,9 @@ ${buildsSection(t, s.builds, allMoves, {
       variant: 'portrait-full',
       uid: `${char.slug}-${i}`,
       mastered: true,
+      // Chaque build porte déjà un h3 dans la fiche : les panneaux de sa carte
+      // se rangent dessous.
+      hLevel: 4,
     })}</div>`) : [],
   })}
 ${ed?.builds?.notes ? `<p class="mv-desc">${esc(ed.builds.notes)}</p>` : ''}
