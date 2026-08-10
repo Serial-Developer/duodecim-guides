@@ -404,7 +404,11 @@ function buildsSection(t, builds, allMoves, opts) {
   // Le panneau est requis dès qu'un tableau de moveset est vide, même si aucun total
   // CP ne le précède (le budget est alors simplement omis de la légende).
   const needed = groups.some((g) => (g || []).some(isEmptyMoveset));
-  const ctx = { pending: needed ? (opts?.loadout ? loadoutTables(t, opts.loadout) : cpBudgetPanel(t, totals, allMoves, opts)) : '' };
+  // Le panneau des coûts en CP occupait la place du tableau de moveset vide :
+  // la carte porte désormais les coups du build et sa capacité, il fait double
+  // emploi. Le relevé rédigé de l'éditorial (`movesetLoadout`) reste, lui : il
+  // dit ce que le tableau du wiki taisait.
+  const ctx = { pending: needed && opts?.loadout ? loadoutTables(t, opts.loadout) : '' };
 
   // Tous les builds passent par le même rendu, y compris quand il n'y en a
   // qu'un : sans cela le premier build n'avait pas de titre — la prose
