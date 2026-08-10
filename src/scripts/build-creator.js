@@ -1091,9 +1091,40 @@
     var parts = String(id).slice(ANY_SLOT.length).split('|');
     return {
       move: { id: id, name: T('buildCard.any'), cp: 0, cpMastered: 0 },
-      kind: parts[0], groupKey: parts[1], style: parts[2] || null,
+      kind: parts[0], groupKey: parts[1], style: parts[2] || '',
       followUp: false, catKey: parts.join('|'),
     };
+  }
+
+  // Le jeton nu vaut pour toute la section : agir sur un seul emplacement
+  // demande d'abord de le développer en un jeton par place libre. Chacun devient
+  // alors une entrée ordinaire — on en retire une sans toucher aux autres.
+  // `sauf` est la place qu'on vient de reprendre : elle ne reçoit rien.
+  function developperAuChoix(char, sauf) {
+    var nu = state.build.attacks.indexOf(ANY);
+    if (nu === -1 || !char) return false;
+    var scan = scanBuild(char);
+    var pris = {};
+    scan.slots.forEach(function (x) { pris[x.info.catKey + '#' + x.cmd] = true; });
+    var index = attackIndex(char);
+    var cats = {};
+    // Mêmes catégories que la grille de la carte : tout groupe qui n'est pas
+    // une réserve de prolongements en ouvre une, y compris quand tous ses coups
+    // se branchent sous un autre — la grille lui montre ses trois commandes.
+    Object.keys(index.byId).forEach(function (id) {
+      var info = index.byId[id];
+      if (!info.followUp) cats[info.catKey] = true;
+    });
+    removeAt([nu]);
+    Object.keys(cats).forEach(function (cat) {
+      for (var c = 0; c < MAX_SLOTS; c++) {
+        if (pris[cat + '#' + c]) continue;
+        if (sauf && sauf.catKey === cat && sauf.cmd === c) continue;
+        state.build.attacks.push(ANY_SLOT + cat);
+        setCmd(state.build.attacks.length - 1, c);
+      }
+    });
+    return true;
   }
 
   function niveauBuild() {
@@ -3381,12 +3412,12 @@
           // enchaînement : ils se rattachent à sa position, plus rien ne les
           // retiendrait.
           ? function () { removeAt(slotPositions(occupe)); }
-          : (auChoixIci ? function () { removeAt([nu()]); } : null);
+          : (auChoixIci ? function () { developperAuChoix(char, { catKey: ctx.catKey, cmd: cmd }); afterAttackChange(); } : null);
         openMoveChooser(titre + ' · ' + inputTitle(ctx.kind, cmd), ctx.choix, occupe ? occupe.move : (auChoixIci ? faux : null), function (choisi) {
           if (occupe) replaceAt(occupe.pos, choisi.id, cmd);
           else appendAttack(choisi.id, cmd);
         }, null, retirer, function () {
-          if (auChoixIci) { removeAt([nu()]); return; }
+          if (auChoixIci) { developperAuChoix(char, { catKey: ctx.catKey, cmd: cmd }); afterAttackChange(); return; }
           var jeton = ANY_SLOT + ctx.catKey;
           if (occupe) replaceAt(occupe.pos, jeton, cmd);
           else appendAttack(jeton, cmd);

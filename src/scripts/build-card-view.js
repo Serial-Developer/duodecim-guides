@@ -47,7 +47,10 @@ function anyInfo(t, id) {
   const [kind, groupKey, style] = String(id).slice(ANY_SLOT.length).split('|');
   return {
     move: { id, name: t('buildCard.any'), cp: 0, cpMastered: 0 },
-    kind, groupKey, style: style || null, followUp: false,
+    // Le style vide reste une chaîne vide : la clé de catégorie l'interpole,
+    // et un `null` y aurait écrit « null » — les attaques HP, qui n'ont pas de
+    // style, tombaient alors dans une catégorie que la grille ne connaît pas.
+    kind, groupKey, style: style || '', followUp: false,
   };
 }
 const MAX_SLOTS = 3;
