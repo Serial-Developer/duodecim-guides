@@ -1410,7 +1410,9 @@
       if (groupKey && g.key !== groupKey) return;
       var usable = g.abilities.filter(function (a) { return !a.only || a.only.indexOf(slug) !== -1; });
       if (!usable.length) return;
-      var fs = el('fieldset', { class: 'bc-group' }, [el('legend', { text: g.label })]);
+      var titreGroupe = T('buildCard.abilityGroups.' + g.key);
+      if (/^⟨/.test(titreGroupe)) titreGroupe = g.label;
+      var fs = el('fieldset', { class: 'bc-group' }, [el('legend', { text: titreGroupe })]);
       var list = el('div', { class: 'bc-list' });
       usable.forEach(function (a) { list.appendChild(abilityRow(a)); });
       fs.appendChild(list);
