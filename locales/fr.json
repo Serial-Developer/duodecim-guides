@@ -789,7 +789,7 @@
     "panelGear": "Équipement",
     "panelAbilities": "Abilities",
     "abilityGroups": {
-      "basic": "Abilities d'action",
+      "basic": "Action abilities",
       "support": "Abilities de support",
       "extra": "Abilities extra"
     },
