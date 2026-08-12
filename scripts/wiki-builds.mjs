@@ -220,7 +220,13 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
     }
 
     for (const tb of g.tables) {
-      if (!['Basic Abilities', 'Support', 'Extra'].includes(tb.rows[0][0])) continue;
+      // Le wiki intitule ce tableau « Actions » sur certaines pages et
+      // « Basic Abilities » sur d'autres : c'est la meme sous-categorie, et
+      // n'accepter que la seconde graphie faisait perdre TOUTES les abilities
+      // des personnages concernes — Yuna en annoncait 0 pour 210 CP la ou sa
+      // source en donne 19 pour 425. Le CP affiche etait donc faux, sans que
+      // rien ne le signale.
+      if (!['Basic Abilities', 'Actions', 'Support', 'Extra'].includes(tb.rows[0][0])) continue;
       for (const row of tb.rows.slice(1)) {
         const nom = nettoie(row[0]);
         // Certains tableaux d'abilities portent un second en-tête au milieu :
