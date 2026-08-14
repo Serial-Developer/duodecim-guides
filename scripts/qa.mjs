@@ -9,6 +9,7 @@ import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { LOCALES, DEFAULT_LOCALE, LOCALE_META, localeDir } from '../src/i18n/config.mjs';
 import { guidePathFor } from '../src/i18n/routes.mjs';
+import { buildsFromWiki } from './wiki-builds.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -279,6 +280,135 @@ for (const locale of builtLocales) {
       for (const u of D.unresolvedHpLinks || []) {
         errors.push(`créateur de builds : HP link non résolu chez ${u.slug} — ${u.to} <- ${u.from} (${u.manquant} introuvable)`);
       }
+    }
+  }
+}
+
+// --- 2e. Cartes de build : la jauge de CP contre le build qu'elle résume ---
+// Une jauge fausse ne se voit pas : elle affiche un nombre plausible sur une
+// carte par ailleurs complète. Le bug « Actions » a tenu ainsi — six
+// personnages perdaient TOUTES leurs abilities, jauge comprise, et la carte
+// restait présentable.
+//
+// D'où deux lectures, qui n'attrapent pas la même chose :
+//   1. la jauge publiée contre le build publié. La page porte le lien de
+//      partage de chaque carte : on le décode et on additionne. C'est le
+//      contrôle du rendu — il relit l'artefact, pas la fonction qui l'a écrit,
+//      et il passe sur les deux langues.
+//   2. notre total contre celui que la source annonce. C'est le seul témoin
+//      extérieur : lui seul dit qu'une liste a été perdue avant d'être rendue,
+//      puisqu'une perte fausse du même coup la jauge et le recalcul.
+// Les désaccords connus avec la source sont nommés un par un, avec leur écart :
+// un nouveau ressort, et un ancien qui bouge aussi.
+{
+  const bundlePath = join(DIST, 'scripts', 'build-data.js');
+  const D = existsSync(bundlePath)
+    ? JSON.parse(readFileSync(bundlePath, 'utf-8').replace(/^window\.BUILD_DATA=/, '').replace(/;\s*$/, ''))
+    : null;
+
+  // La source se contredit sur ces builds : le total qu'elle affiche ne
+  // correspond pas à la liste d'abilities qu'elle publie sur la même page. Les
+  // deux lectures ont été refaites sur la page en ligne, et notre addition est
+  // corroborée par les cinq autres builds chiffrés, qui retombent au CP près.
+  // Rien n'est ajusté pour faire tomber le compte juste — l'écart est déclaré.
+  const DESACCORDS_SOURCE = {
+    'yuna#0': 55,
+    'the-emperor#0': 20,
+  };
+
+  const cout = (e) => (!e ? 0 : (e.cpMastered != null ? e.cpMastered : (e.cp != null ? e.cp : 0)));
+
+  function capacite(build, char) {
+    const parId = {};
+    for (const g of D.abilities || []) for (const a of g.abilities || []) parId[a.id] = a;
+    const coups = {};
+    for (const kind of ['bravery', 'hp']) {
+      for (const g of char?.attacks?.[kind] || []) {
+        const cols = g.moves.c;
+        for (const row of g.moves.r) coups[row[cols.indexOf('id')]] = Object.fromEntries(cols.map((k, i) => [k, row[i]]));
+      }
+    }
+    let used = 0;
+    for (const id of build.attacks || []) used += cout(coups[id]);
+    for (const id of build.abilities || []) used += cout(parId[id]);
+    let bonus = 0;
+    for (const ext of D.capacity?.extenders || []) {
+      const n = (build.accessories || []).filter((u) => u === ext.uid).length;
+      bonus += Math.min(n, ext.maxEquipped) * ext.cp;
+    }
+    return { used, max: (D.capacity?.base || 0) + bonus };
+  }
+
+  // Le lien de partage de la carte porte le build entier, par identifiants : la
+  // base64 brute d'un JSON, le format que `decodeBuild` relit depuis toujours.
+  function decodeLien(code) {
+    const b64 = code.replace(/-/g, '+').replace(/_/g, '/');
+    const c = JSON.parse(Buffer.from(b64 + '='.repeat((4 - (b64.length % 4)) % 4), 'base64').toString('utf-8'));
+    return { character: c.c, attacks: c.at || [], abilities: c.ab || [], accessories: c.ac || [] };
+  }
+
+  if (!D) {
+    errors.push('cartes de build : payload absent, contrôle du CP impossible');
+  } else {
+    const charBySlug = Object.fromEntries((D.characters || []).map((c) => [c.slug, c]));
+
+    // 1. Ce qui est publié : jauge contre lien de partage, page par page.
+    for (const locale of builtLocales) {
+      for (const def of CHARACTERS) {
+        const file = join(DIST, guidePathFor(def.slug, locale));
+        if (!existsSync(file)) continue;
+        const html = readFileSync(file, 'utf-8');
+        const jauges = [...html.matchAll(/bcard-cp-value">\s*(\d+)\s*\/\s*(\d+)/g)];
+        const liens = [...html.matchAll(/\?build=([A-Za-z0-9_-]+)/g)];
+        const qui = `${relative(DIST, file).replace(/\\/g, '/')}`;
+        if (jauges.length !== liens.length) {
+          errors.push(`cartes de build : ${qui} — ${jauges.length} jauge(s) de CP pour ${liens.length} lien(s) de partage`);
+          continue;
+        }
+        jauges.forEach((j, i) => {
+          let build;
+          try { build = decodeLien(liens[i][1]); } catch (e) {
+            errors.push(`cartes de build : ${qui} carte ${i} — lien de partage illisible (${e.message})`);
+            return;
+          }
+          const attendu = capacite(build, charBySlug[build.character]);
+          const lu = { used: Number(j[1]), max: Number(j[2]) };
+          if (lu.used !== attendu.used || lu.max !== attendu.max) {
+            errors.push(`cartes de build : ${qui} carte ${i} — jauge ${lu.used}/${lu.max}, build recalculé ${attendu.used}/${attendu.max}`);
+          }
+          if (attendu.used > attendu.max) {
+            errors.push(`cartes de build : ${qui} carte ${i} — ${attendu.used} CP pour un plafond de ${attendu.max}`);
+          }
+        });
+      }
+    }
+
+    // 2. Ce que la source annonce, quand elle l'annonce.
+    for (const def of CHARACTERS) {
+      const char = readJson(join(ROOT, 'data', 'characters', `${def.slug}.json`));
+      if (!char) continue;
+      const ed = readJson(join(ROOT, 'data', 'editorial', 'en', `${def.slug}.json`));
+      const prose = Object.values(ed?.builds?.perBuild || {}).map((x) => (Array.isArray(x) ? x.join(' ') : String(x || '')));
+      const builds = buildsFromWiki(char, def.slug, D, [], prose);
+      builds.forEach((b, i) => {
+        if (!b.declaredCp) return;
+        const nous = capacite(b, charBySlug[def.slug]);
+        const ecart = b.declaredCp.used - nous.used;
+        const cle = `${def.slug}#${i}`;
+        const connu = DESACCORDS_SOURCE[cle];
+        if (b.declaredCp.max !== nous.max) {
+          errors.push(`cartes de build : ${cle} — plafond ${nous.max} calculé, ${b.declaredCp.max} annoncé par la source`);
+        }
+        if (ecart === 0) {
+          if (connu != null) errors.push(`cartes de build : ${cle} — désaccord déclaré de ${connu} CP alors que le compte tombe juste ; retirer l'exception`);
+          return;
+        }
+        if (connu == null) {
+          errors.push(`cartes de build : ${cle} — ${nous.used} CP calculés contre ${b.declaredCp.used} annoncés par la source (écart ${ecart})`);
+        } else if (connu !== ecart) {
+          errors.push(`cartes de build : ${cle} — désaccord avec la source passé de ${connu} à ${ecart} CP`);
+        }
+      });
     }
   }
 }

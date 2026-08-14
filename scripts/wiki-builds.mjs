@@ -227,20 +227,46 @@ export function buildsFromWiki(char, slug, data, journal = [], prose = []) {
       // source en donne 19 pour 425. Le CP affiche etait donc faux, sans que
       // rien ne le signale.
       if (!['Basic Abilities', 'Actions', 'Support', 'Extra'].includes(tb.rows[0][0])) continue;
+      // Le wiki écrit ce bloc sous deux formes : trois tableaux à une colonne
+      // (« Actions », « Support », « Extra ») ou un seul récapitulatif à trois
+      // colonnes, une par catégorie, sous l'en-tête « Basic Abilities ». Ne lire
+      // que la première colonne perdait en silence tout le Support et tout
+      // l'Extra de qui n'a que la seconde forme — Tifa, Feral Chaos, et deux des
+      // trois builds de Tidus. On parcourt donc toute la ligne : un tableau à
+      // une colonne se lit de la même façon.
       for (const row of tb.rows.slice(1)) {
-        const nom = nettoie(row[0]);
-        // Certains tableaux d'abilities portent un second en-tête au milieu :
-        // « Actions » n'est pas une ability, c'est le titre de sa colonne.
-        if (!nom || RIEN.test(nom) || /^actions$/i.test(nom)) continue;
-        // « Jump Times Boost+ » : le wiki oublie le « + » d'une des deux, que le
-        // payload distingue par son coût — l'identifiant du palier supérieur
-        // est suffixé de celui-ci. Le « + » de la page builds la désigne.
-        const id = abilitiesParNom[nom.toLowerCase()]
-          || (nom.endsWith('+') ? abilitiesParAlias[nom.toLowerCase()] : null);
-        if (!id) { journal.push({ slug, cle: 'ability', valeur: nom, raison: 'ability inconnue' }); continue; }
-        build.abilities.push(id);
+        for (const cellule of row) {
+          const nom = nettoie(cellule);
+          // Le récapitulatif porte un second en-tête au milieu : « Actions »,
+          // « Support » et « Extra » y nomment les colonnes, pas des abilities.
+          if (!nom || RIEN.test(nom) || /^(actions|support|extra)$/i.test(nom)) continue;
+          // « Jump Times Boost+ » : le wiki oublie le « + » d'une des deux, que le
+          // payload distingue par son coût — l'identifiant du palier supérieur
+          // est suffixé de celui-ci. Le « + » de la page builds la désigne.
+          const id = abilitiesParNom[nom.toLowerCase()]
+            || (nom.endsWith('+') ? abilitiesParAlias[nom.toLowerCase()] : null);
+          if (!id) { journal.push({ slug, cle: 'ability', valeur: nom, raison: 'ability inconnue' }); continue; }
+          build.abilities.push(id);
+        }
       }
     }
+    // Tidus écrit les deux formes pour un même build : sans dédoublonnage, sa
+    // colonne « Actions » comptait deux fois et sa carte annonçait 635 CP sur
+    // un plafond de 450. Une ability ne s'équipe qu'une fois — contrairement à
+    // une attaque, qu'on peut poser sur plusieurs commandes et qu'on ne
+    // dédoublonne donc jamais.
+    build.abilities = [...new Set(build.abilities)];
+
+    // Le total que la source annonce elle-même pour ce build : un tableau à
+    // en-tête « CP » et à ligne unique « 425 / 450 », posé dans le même groupe
+    // que les tableaux qu'il chiffre. C'est le seul témoin indépendant de notre
+    // lecture — il vient du wiki, pas de notre addition —, et donc le seul qui
+    // puisse signaler qu'une liste d'abilities a été perdue en silence. On le
+    // relève ici, où le groupe est connu : l'apparier après coup, par rang,
+    // donnerait le total d'un build à un autre chez qui n'en publie qu'un.
+    const tbCp = g.tables.find((tb) => tb.rows[0][0] === 'CP' && tb.rows.length === 2);
+    const mCp = tbCp && /^\s*(\d+)\s*\/\s*(\d+)\s*$/.exec(String(tbCp.rows[1][0] || ''));
+    if (mCp) build.declaredCp = { used: Number(mCp[1]), max: Number(mCp[2]) };
 
     // Niveau : 100 sauf mention contraire dans la description du build. Les
     // builds publiés sont des builds de niveau 100 — c'est le niveau du jeu
