@@ -443,6 +443,21 @@
     return { state: 'glitch', label: T('equipState.needsGlitch') };
   }
 
+  // Quelles pièces exigent l'Equip Glitch : la carte ne sait pas le calculer —
+  // il faut les catégories natives du personnage — et ne doit pas l'apprendre.
+  // `equipStatus` reste le seul juge, et la carte reçoit son verdict. Les deux
+  // rendus de la carte le demandent, celui de l'écran et celui du cliché : le
+  // calculer à deux endroits les ferait diverger dès la première retouche.
+  function glitchParEmplacement() {
+    var glitch = {};
+    SLOTS.forEach(function (s) {
+      var pose = state.build.equipment[s.key];
+      var piece = pose ? equipByUid[pose] : null;
+      if (piece && equipStatus(piece).state === 'glitch') glitch[s.key] = true;
+    });
+    return glitch;
+  }
+
 
   // --- Sets d'équipement actifs --------------------------------------------
   // Un set « à trois pièces » peut en lister quatre : trois suffisent. On compte
@@ -2192,50 +2207,82 @@
   }
 
   // Le cliché fige ce que la carte montre au repos : l'équipement, le premier
-  // style, et les prolongements repliés. C'est la lecture d'ensemble d'un build,
+  // style, et les prolongements dépliés. C'est la lecture d'ensemble d'un build,
   // pas son détail — celui-ci se lit dans l'outil.
+  //
+  // Il ne photographie PAS la carte de l'écran, il en redessine une. Deux
+  // raisons, dont la seconde n'est apparue qu'en exportant depuis un téléphone :
+  //
+  //  - la carte vivante suit l'appareil. Sous 900 px, `estCompact()` la
+  //    resserre — portrait dans l'en-tête, quatre languettes au lieu de deux,
+  //    stats à l'intérieur —, si bien que le même build sortait en deux images
+  //    différentes selon qu'on l'exportait du bureau ou du téléphone ;
+  //  - elle est *vivante*. Ses emplacements sont des boutons, ses replis des
+  //    cases à cocher, et son niveau un champ numérique dont le navigateur
+  //    dessine les flèches jusque dans l'image.
+  //
+  // La carte non interactive n'a rien de tout cela — son niveau est déjà du
+  // texte, ses emplacements de simples lignes. C'est celle que publient les
+  // fiches perso, et c'est la mise en page voulue pour l'image.
   var numeroCliche = 0;
 
-  function preparerClone(carte) {
-    var clone = carte.cloneNode(true);
-    var chaque = function (sel, fn) { Array.prototype.forEach.call(clone.querySelectorAll(sel), fn); };
-    clone.style.margin = '0';
-    // Le clone entre dans la page le temps d'être mesuré : ses identifiants et
-    // ses noms de groupe y côtoient ceux de la carte vivante. Deux radios de
-    // même nom ne font qu'un seul groupe — cocher celui du clone décochait
-    // celui de la carte, et les deux panneaux s'y superposaient une fois
-    // l'image faite. On lui donne donc les siens. La feuille de style ne s'y
-    // trompe pas : elle vise les valeurs, jamais les identifiants.
-    var marque = 'cliche' + (numeroCliche += 1);
-    chaque('[id]', function (n) { n.id = marque + '-' + n.id; });
-    chaque('label[for]', function (n) { n.setAttribute('for', marque + '-' + n.getAttribute('for')); });
-    chaque('input[name]', function (n) { n.setAttribute('name', marque + '-' + n.getAttribute('name')); });
-    chaque('.bcard-panel-radio', function (r) { r.checked = r.value === 'gear'; });
-    chaque('.bcard-style-radio', function (r, i) { r.checked = i === 0; });
-    // Les prolongements restent dépliés : ce sont eux qui font la lecture d'un
-    // build — le HP link sous sa bravery, l'enchaînement au rond. Les places
-    // encore libres, elles, s'effacent : sur une image, une ligne vide ne se
-    // remplira jamais. Les cases de repli partent avec leur chevron.
-    chaque('.bcard-fold', function (c) { c.parentNode.removeChild(c); });
-    chaque('.bcard-branch.is-empty', function (l) { l.parentNode.removeChild(l); });
-    // Une case cochée par script ne l'est pas dans le HTML sérialisé : c'est
-    // l'attribut que l'image lira, pas la propriété.
-    chaque('input[type="radio"], input[type="checkbox"]', function (i) {
-      if (i.checked) i.setAttribute('checked', 'checked'); else i.removeAttribute('checked');
+  function carteDuCliche() {
+    var hote = el('div');
+    hote.innerHTML = window.BuildCardView.buildCard({
+      t: T,
+      build: state.build,
+      data: D,
+      glitch: glitchParEmplacement(),
+      L: { asset: function (p) { return carteBase + p; } },
+      hasPortrait: function () { return true; },
+      variant: 'portrait-full',
+      compact: false,
+      live: false,
+      mastered: state.mastered,
+      // L'identifiant préfixe les `id` et les noms de groupe de la carte. Un
+      // par cliché : deux radios de même nom ne feraient qu'un seul groupe.
+      uid: 'cliche' + (numeroCliche += 1),
     });
+    return hote.firstElementChild;
+  }
+
+  function preparerCliche(carte) {
+    var chaque = function (sel, fn) { Array.prototype.forEach.call(carte.querySelectorAll(sel), fn); };
+    carte.style.margin = '0';
+    // Les languettes désignent des panneaux qu'on ne peut pas atteindre sur une
+    // image : elles promettent un geste que le fichier ne rendra jamais.
+    chaque('.bcard-flaps', function (n) { n.parentNode.removeChild(n); });
+    // Les prolongements restent dépliés : ce sont eux qui font la lecture d'un
+    // build — le HP link sous sa bravery, l'enchaînement au rond. Les cases de
+    // repli partent avec leur chevron.
+    chaque('.bcard-fold', function (c) { c.parentNode.removeChild(c); });
+    chaque('.bcard-fold-tab', function (n) { n.parentNode.removeChild(n); });
     // Le panneau caché occupe la même case de grille que celui qu'on montre :
     // laissé en place, il imposerait sa hauteur à l'image.
-    var abilities = clone.querySelector('.bcard-abilities');
+    var abilities = carte.querySelector('.bcard-abilities');
     if (abilities) abilities.parentNode.removeChild(abilities);
-    // Poignées et boutons sont des gestes : ils n'ont rien à faire sur une image.
-    chaque('.bcard-fold-tab', function (n) { n.parentNode.removeChild(n); });
-    chaque('.bcard-hit', function (b) {
-      var span = document.createElement('span');
-      span.className = 'bcard-hit';
-      span.innerHTML = b.innerHTML;
-      b.parentNode.replaceChild(span, b);
+    // Ce qui reste visible tient à `.bcard:has(> input:checked)`. Le cliché ne
+    // s'y fie pas et l'écrit sur l'élément, pour deux raisons.
+    //
+    // La première est le défaut qui a mené ici : le clone cochait le radio de
+    // valeur « gear », or ce panneau n'existe que sur la carte large. Sous
+    // 900 px la carte compacte porte « stuff », « attacks », « abilities » et
+    // « stats » — aucun radio ne correspondait, aucun panneau n'était révélé,
+    // et comme ils sont masqués par `visibility` ils gardaient leur place :
+    // l'image sortait avec son en-tête et, dessous, un vide de la hauteur
+    // exacte de ce qui manquait. Redessiner la carte large règle la cause ;
+    // l'écrire en clair fait que le cliché ne dépend plus de quel panneau
+    // porte quel nom.
+    //
+    // La seconde est la portée de `:has()`, inégale sur les navigateurs de
+    // téléphone. Gecko le résout dans une image SVG — vérifié —, mais le
+    // cliché doit se rendre partout, et il n'a rien à déduire : il sait ce
+    // qu'il montre. La carte vivante, elle, garde ses règles.
+    chaque('.bcard-panels > .bcard-body', function (p) { p.style.visibility = 'visible'; });
+    chaque('.bcard-block[data-si]', function (b) {
+      b.style.display = b.getAttribute('data-si') === '1' ? 'block' : 'none';
     });
-    return clone;
+    return carte;
   }
 
   // La carte fait quarante rem de large, par construction. C'est cette largeur
@@ -2287,10 +2334,9 @@
   }
 
   function cliche() {
-    var carte = carteHote && carteHote.querySelector('.bcard');
-    if (!carte) return;
+    if (!carteHote || !carteHote.querySelector('.bcard')) return;
     toast(T('imageBuilding'));
-    var clone = preparerClone(carte);
+    var clone = preparerCliche(carteDuCliche());
     var largeur = largeurDeReference();
     var hauteur = 0;
     clone.style.width = largeur + 'px';
@@ -2836,20 +2882,11 @@
     // Les statistiques regagnent leur colonne le temps du redessin : la carte
     // qu'elles habitent est sur le point d'être remplacée.
     rangerStats(false);
-    // Quelles pièces exigent l'Equip Glitch : la carte ne sait pas le calculer —
-    // il faut les catégories natives du personnage — et ne doit pas l'apprendre.
-    // `equipStatus` reste le seul juge, et la carte reçoit son verdict.
-    var glitch = {};
-    SLOTS.forEach(function (s) {
-      var pose = state.build.equipment[s.key];
-      var piece = pose ? equipByUid[pose] : null;
-      if (piece && equipStatus(piece).state === 'glitch') glitch[s.key] = true;
-    });
     carteHote.innerHTML = window.BuildCardView.buildCard({
       t: T,
       build: state.build,
       data: D,
-      glitch: glitch,
+      glitch: glitchParEmplacement(),
       L: { asset: function (p) { return carteBase + p; } },
       hasPortrait: function () { return true; },
       variant: estCompact() ? '' : 'portrait-full',
