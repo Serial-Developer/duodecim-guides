@@ -450,6 +450,7 @@
     "imageBuilding": "Image en préparation…",
     "imageDone": "Image enregistrée.",
     "imageFailed": "Impossible de composer l’image.",
+    "imageBlank": "Ce navigateur n’a pas su dessiner la carte : rien n’a été enregistré.",
     "import": "Importer…",
     "notesLabel": "Notes libres sur ce build",
     "notesPlaceholder": "Remarques, matchups visés, variantes…",

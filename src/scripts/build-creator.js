@@ -2268,6 +2268,24 @@
     return hauteur;
   }
 
+  // Un canevas sur lequel rien n'a été peint n'a qu'une seule couleur : le noir
+  // transparent d'origine s'il est resté intact, ou l'uni qu'un rendu raté y a
+  // laissé. Une carte n'est jamais dans ce cas — fond sombre, texte or, jauge,
+  // portrait. La première couleur qui diffère prouve donc le rendu et arrête la
+  // lecture ; le parcours entier n'est payé que par l'échec.
+  function canevasUniforme(ctx, largeur, hauteur) {
+    var pixels;
+    // Un canevas teinté refuse d'être relu. On ne peut alors rien affirmer :
+    // laisser passer une image peut-être bonne vaut mieux que la refuser.
+    try { pixels = ctx.getImageData(0, 0, largeur, hauteur).data; } catch (e) { return false; }
+    if (pixels.length < 4) return true;
+    for (var i = 4; i < pixels.length; i += 4) {
+      if (pixels[i] !== pixels[0] || pixels[i + 1] !== pixels[1]
+        || pixels[i + 2] !== pixels[2] || pixels[i + 3] !== pixels[3]) return false;
+    }
+    return true;
+  }
+
   function cliche() {
     var carte = carteHote && carteHote.querySelector('.bcard');
     if (!carte) return;
@@ -2307,6 +2325,12 @@
       var ctx = canevas.getContext('2d');
       ctx.scale(echelle, echelle);
       ctx.drawImage(img, 0, 0);
+      // WebKit ne rastérise pas un `foreignObject` dessiné au canevas. Rien ne
+      // le signale : l'image se charge, `drawImage` ne lève pas, `toBlob` rend
+      // un PNG valide — et vide. Sur iOS, où tous les navigateurs sont des
+      // habillages de WebKit, le seul retour était donc un fichier blanc
+      // annoncé comme enregistré. On relit le canevas plutôt que de le croire.
+      if (canevasUniforme(ctx, canevas.width, canevas.height)) throw new Error('vide');
       return new Promise(function (resolve) { canevas.toBlob(resolve, 'image/png'); });
     }).then(function (blob) {
       if (!blob) throw new Error('canvas');
@@ -2317,8 +2341,8 @@
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
       toast(T('imageDone'));
-    }).catch(function () {
-      toast(T('imageFailed'), true);
+    }).catch(function (erreur) {
+      toast(T(erreur && erreur.message === 'vide' ? 'imageBlank' : 'imageFailed'), true);
     });
   }
 

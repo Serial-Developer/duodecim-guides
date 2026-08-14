@@ -450,6 +450,7 @@
     "imageBuilding": "Building the image…",
     "imageDone": "Image saved.",
     "imageFailed": "Could not compose the image.",
+    "imageBlank": "This browser could not draw the card: nothing was saved.",
     "import": "Import…",
     "notesLabel": "Free notes on this build",
     "notesPlaceholder": "Remarks, target matchups, variants…",
