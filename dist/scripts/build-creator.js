@@ -655,7 +655,7 @@
         if (!read) return;
         if (read.raw) {
           if (numericOnly) return;
-          var seen = sourceName + ' ' + read.raw;
+          var seen = sourceName + '\u0000' + read.raw;
           if (otherSeen[seen]) { otherSeen[seen].count++; return; }
           otherSeen[seen] = { name: sourceName, text: read.raw, count: 1 };
           others.push(otherSeen[seen]);
